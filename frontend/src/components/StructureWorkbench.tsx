@@ -23,19 +23,23 @@ export default function StructureWorkbench({
   onPh,
   seed,
   locked,
+  preparing,
   onDatasetLoaded,
   onPreparationStarted,
+  onPreparationRequest,
 }: {
   dataset: Dataset | null;
   ph: number;
   onPh: (ph: number) => void;
   seed: number;
   locked: boolean;
+  preparing: boolean;
   onDatasetLoaded: (
     d: Dataset,
     options?: { showWater?: boolean; showHydrogens?: boolean },
   ) => Promise<void>;
   onPreparationStarted: (job: Job) => void;
+  onPreparationRequest: (busy: boolean, error?: string) => void;
 }) {
   const [tab, setTab] = useState<'upload' | 'fetch' | 'smiles'>('upload');
   const [provider, setProvider] = useState<'pdb' | 'pubchem'>('pdb');
@@ -47,6 +51,7 @@ export default function StructureWorkbench({
     [inspection, setInspection] = useState<Inspection | null>(null),
     [inspecting, setInspecting] = useState(false),
     [inspectionError, setInspectionError] = useState('');
+  const [submittingPreparation, setSubmittingPreparation] = useState(false);
   const [options, setOptions] = useState(false),
     [buildMissing, setBuildMissing] = useState(false),
     [addAtoms, setAddAtoms] = useState(true),
@@ -99,9 +104,12 @@ export default function StructureWorkbench({
     await load(() => api.importStructure(form));
   }
   async function prepare() {
-    if (!dataset) return;
+    if (!dataset || locked || busy) return;
     setBusy(true);
+    setSubmittingPreparation(true);
+    onPreparationRequest(true);
     setError('');
+    let requestError: string | undefined;
     try {
       const job = await api.prepare({
         dataset_id: dataset.id,
@@ -116,9 +124,11 @@ export default function StructureWorkbench({
       });
       onPreparationStarted(job);
     } catch (e) {
-      setError((e as Error).message);
+      requestError = (e as Error).message;
     } finally {
       setBusy(false);
+      setSubmittingPreparation(false);
+      onPreparationRequest(false, requestError);
     }
   }
   const missingCount = inspection?.missing_residues.reduce((n, r) => n + r.count, 0) ?? 0;
@@ -274,7 +284,7 @@ export default function StructureWorkbench({
           </p>
         </div>
       )}
-      {busy && (
+      {busy && !submittingPreparation && (
         <div className="studio-working" role="status">
           <LoaderCircle size={13} className="spin" /> Preparing your request…
         </div>
@@ -386,9 +396,19 @@ export default function StructureWorkbench({
                 type="button"
                 className="primary-button"
                 disabled={disabled || !hasProtein || inspecting}
+                aria-busy={submittingPreparation || preparing}
                 onClick={() => void prepare()}
               >
-                <WandSparkles size={14} /> Prep protein
+                {submittingPreparation || preparing ? (
+                  <LoaderCircle size={14} className="spin" />
+                ) : (
+                  <WandSparkles size={14} />
+                )}
+                {submittingPreparation
+                  ? 'Starting preparation…'
+                  : preparing
+                    ? 'Preparing protein…'
+                    : 'Prep protein'}
               </button>
             </div>
             <p className="form-note">

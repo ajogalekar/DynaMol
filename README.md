@@ -38,6 +38,8 @@ DynaMol also accepts `DYNAMOL_GMX=/absolute/path/to/gmx`. The current workspace 
 
 **Prepare.** Open Simulate to upload a PDB, mmCIF, MOL2, SDF or SMILES file, fetch a PDB accession or PubChem molecule, or paste SMILES to generate a local 3D conformer. Each result loads immediately beside the controls. Click **Prep protein** to rebuild hydrogens for the selected pH, repair missing heavy atoms and refine side-chain rotamers/clashes with a restrained backbone. Inspection warns about missing sequence and backbone gaps; known short internal loops can be built with an explicit checkbox. The resulting structure, settings and warnings are saved as a separate dataset.
 
+The Prep button spins immediately. A monitor above the scrolling controls shows the current stage, completed-stage percentage, elapsed time, cancellation and logs. It reconnects when the studio is reopened and distinguishes a completed preparation from a structure still loading in the viewer. Errors stay visible, with an Open result action to retry a failed display load.
+
 **Solvate.** After preparation, select **Explicit water**. A background job builds an actual TIP3P box, displays water and ions, and saves the system. OpenMM reuses those coordinates and protonation states. Update box applies the chosen padding; switching back to implicit returns to the unsolvated parent. A solvent preview has not been equilibrated.
 
 **Simulate.** Choose OpenMM or GROMACS, configure temperature, duration, solvent and optional advanced settings, then start a real local job. Follow stages, step counts, progress and logs while exploring another trajectory. Cancel a running job, open the completed result, or download its files with configuration, seed, versions, provenance, and engine output.

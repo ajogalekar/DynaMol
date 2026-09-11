@@ -127,6 +127,8 @@ export default function App() {
     [details, setDetails] = useState(false),
     [inspector, setInspector] = useState(true),
     [focusQuery, setFocusQuery] = useState('');
+  const [viewerError, setViewerError] = useState('');
+  const [viewerLoadRevision, setViewerLoadRevision] = useState(0);
   const viewer = useRef<ViewerHandle>(null),
     frameRef = useRef(0),
     loadToken = useRef(0),
@@ -152,11 +154,17 @@ export default function App() {
   const loadDataset = useCallback(
     async (
       d: Dataset,
-      options: { keepStudio?: boolean; showWater?: boolean; showHydrogens?: boolean } = {},
+      options: {
+        keepStudio?: boolean;
+        showWater?: boolean;
+        showHydrogens?: boolean;
+        throwOnError?: boolean;
+      } = {},
     ) => {
       const token = ++loadToken.current;
       setLoading(true);
       setReady(false);
+      setViewerError('');
       setLoadingMessage(`Loading ${d.name}…`);
       setPlaying(false);
       setError('');
@@ -172,6 +180,7 @@ export default function App() {
         if (token !== loadToken.current) return;
         setDataset(d);
         setCoordinates(coords);
+        setViewerLoadRevision((revision) => revision + 1);
         setVisibility({
           protein: true,
           water: options.showWater ?? !!d.solvation,
@@ -209,6 +218,7 @@ export default function App() {
         }
       } catch (e) {
         if (token === loadToken.current) setError((e as Error).message);
+        if (options.throwOnError) throw e;
       } finally {
         if (token === loadToken.current) setLoading(false);
       }
@@ -466,9 +476,13 @@ export default function App() {
   const currentConfig = measureConfig[kind],
     running = jobs.filter(isActive),
     lastTime = dataset?.times_ps[dataset.n_frames - 1] ?? 0;
-  const handleReady = useCallback(() => setReady(true), []),
+  const handleReady = useCallback(() => {
+      setViewerError('');
+      setReady(true);
+    }, []),
     handleViewerError = useCallback((message: string) => {
       setError(message);
+      setViewerError(message);
       setReady(false);
     }, []);
   function openStudio() {
@@ -803,6 +817,7 @@ export default function App() {
             </div>
             <div className="ngl-host">
               <MolecularViewer
+                key={viewerLoadRevision}
                 ref={viewer}
                 dataset={dataset}
                 coordinates={coordinates}
@@ -1337,6 +1352,8 @@ export default function App() {
           dataset={dataset}
           health={health}
           jobs={jobs}
+          viewerReady={ready && !loading}
+          viewerError={viewerError}
           onClose={() => setModal(null)}
           onStarted={(j) => {
             setJobs((prev) => [j, ...prev.filter((existing) => existing.id !== j.id)]);
@@ -1348,7 +1365,7 @@ export default function App() {
           }}
           onLoad={(id, showWater) => void openById(id, { keepStudio: true, showWater })}
           onDatasetLoaded={async (d, options) => {
-            await loadDataset(d, { keepStudio: true, ...options });
+            await loadDataset(d, { keepStudio: true, throwOnError: true, ...options });
           }}
           onWaterVisibility={(show) =>
             setVisibility((v) => ({ ...v, water: show, ions: show || v.ions }))

@@ -1,0 +1,76 @@
+{
+  "validated_at": "2026-09-11T02:59:23.733Z",
+  "summary": {
+    "startTime": "2026-09-11T02:59:23.733Z",
+    "duration": 16859.122000000003,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "scope": "Preparation progress UI, viewer loading failure/retry, actual preparation and solvation, desktop viewer interaction. Scientific preparation algorithms were unchanged.",
+  "checks": [
+    {
+      "test": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+      "file": "e2e.spec.ts",
+      "status": "passed",
+      "duration_ms": 2629,
+      "evidence": []
+    },
+    {
+      "test": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+      "file": "preparation-jobs.spec.ts",
+      "status": "passed",
+      "duration_ms": 5933,
+      "evidence": [
+        {
+          "source_dataset_id": "3e0f35fdaf994713",
+          "prepared_dataset_id": "d28b45fc694e4174",
+          "solvated_dataset_id": "c092ed13f0a546c0",
+          "preparation_job_id": "4981827ace794efe",
+          "solvation_job_id": "5e0b9ea767a04f71",
+          "prepared_atoms": 114,
+          "water_atoms": 3663,
+          "differing_water_pixels": 2088
+        }
+      ]
+    },
+    {
+      "test": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "file": "preparation-progress.spec.ts",
+      "status": "passed",
+      "duration_ms": 3049,
+      "evidence": [
+        {
+          "source_id": "a802bddd60f94cfd",
+          "job_id": "b9ef88e71b484cc0",
+          "prepared_id": "a5ba9a5a56a642bf"
+        }
+      ]
+    },
+    {
+      "test": "a rejected preparation exposes the real error beside the header and restores the prep button",
+      "file": "preparation-progress.spec.ts",
+      "status": "passed",
+      "duration_ms": 942,
+      "evidence": []
+    },
+    {
+      "test": "a prepared topology display failure stops the spinner and retries the same real result",
+      "file": "preparation-progress.spec.ts",
+      "status": "passed",
+      "duration_ms": 3248,
+      "evidence": [
+        {
+          "source_id": "9cd1ebdb9bb94b7b",
+          "job_id": "72f317576628486a",
+          "prepared_id": "291b14c2b7974d0c",
+          "failed_topology": "http://127.0.0.1:8765/api/datasets/291b14c2b7974d0c/topology"
+        }
+      ]
+    }
+  ],
+  "test_data_archive": "data/integration-checks/preparation-progress-tests",
+  "archived_datasets": 25,
+  "archived_jobs": 11
+}

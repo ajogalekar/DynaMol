@@ -471,7 +471,9 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
     useEffect(() => {
       const stage = stageRef.current;
       const dataset = props.dataset;
-      if (!stage) return;
+      // Stage creation updates stageVersion after this effect's first pass.
+      // Wait for that update so a new scene starts only one topology request.
+      if (!stage || stageVersion === 0) return;
       if (componentRef.current) stage.removeComponent(componentRef.current);
       componentRef.current = null;
       groupsRef.current = null;

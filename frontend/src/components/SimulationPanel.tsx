@@ -19,11 +19,15 @@ import {
 import type { Dataset, Health, Job, SimulationConfig } from '../types';
 import { api } from '../api';
 import StructureWorkbench from './StructureWorkbench';
+import StructureJobMonitor from './StructureJobMonitor';
 const active = (j: Job) => !['completed', 'failed', 'cancelled', 'interrupted'].includes(j.status);
+const structureJob = (j: Job) => ['preparation', 'solvation'].includes(j.engine);
 export default function SimulationPanel({
   dataset,
   health,
   jobs,
+  viewerReady,
+  viewerError,
   onClose,
   onStarted,
   onLoad,
@@ -34,6 +38,8 @@ export default function SimulationPanel({
   dataset: Dataset | null;
   health: Health | null;
   jobs: Job[];
+  viewerReady: boolean;
+  viewerError: string;
   onClose: () => void;
   onStarted: (job: Job) => void;
   onLoad: (id: string, showWater?: boolean) => void;
@@ -61,6 +67,11 @@ export default function SimulationPanel({
     [error, setError] = useState(''),
     [openLog, setOpenLog] = useState<string | null>(null);
   const [ph, setPh] = useState(dataset?.preparation?.ph ?? 7);
+  const [submitting, setSubmitting] = useState<'preparation' | 'solvation' | null>(null);
+  const [monitorId, setMonitorId] = useState<string | null>(null);
+  const [dismissed, setDismissed] = useState<string[]>([]);
+  const [monitorError, setMonitorError] = useState('');
+  const [loadingResult, setLoadingResult] = useState(false);
   const [pending, setPending] = useState<{
     id: string;
     sourceId: string;
@@ -68,22 +79,55 @@ export default function SimulationPanel({
   } | null>(null);
   const datasetRef = useRef(dataset);
   datasetRef.current = dataset;
+  const loadingJob = useRef<string | null>(null);
+  const jobCards = useRef(new Map<string, HTMLElement>());
   const pendingJob = jobs.find((j) => j.id === pending?.id);
+  const monitoredJob =
+    jobs.find((j) => j.id === monitorId) ??
+    jobs.find(
+      (j) =>
+        structureJob(j) &&
+        !dismissed.includes(j.id) &&
+        (active(j) || j.config.dataset_id === dataset?.id || j.dataset_id === dataset?.id),
+    );
   const anyActive = jobs.some(active);
+  const resultSelected = !!monitoredJob?.dataset_id && dataset?.id === monitoredJob.dataset_id;
+  const resultViewerError =
+    resultSelected && viewerError ? `Could not display the prepared structure: ${viewerError}` : '';
   useEffect(() => {
     setError('');
+    setMonitorError('');
     setPh(dataset?.preparation?.ph ?? 7);
     if (dataset?.solvation) {
       setSolvent('explicit');
       setPadding(dataset.solvation.padding_nm);
     }
   }, [dataset?.id]);
+  // Reconnect to a background preparation when the studio is reopened.
+  useEffect(() => {
+    if (pending || !dataset) return;
+    const job = jobs.find(
+      (j) => structureJob(j) && active(j) && j.config.dataset_id === dataset.id,
+    );
+    if (!job) return;
+    setMonitorId(job.id);
+    setPending({
+      id: job.id,
+      sourceId: dataset.id,
+      operation: job.engine as 'preparation' | 'solvation',
+    });
+  }, [jobs, pending, dataset?.id]);
   useEffect(() => {
     if (!pending || !pendingJob || active(pendingJob)) return;
     const action = pending;
-    setPending(null);
     if (pendingJob.status === 'completed' && pendingJob.dataset_id) {
-      if (datasetRef.current?.id !== action.sourceId) return;
+      if (loadingJob.current === pendingJob.id) return;
+      if (datasetRef.current?.id !== action.sourceId) {
+        setPending(null);
+        return;
+      }
+      loadingJob.current = pendingJob.id;
+      setLoadingResult(true);
       api
         .dataset(pendingJob.dataset_id)
         .then(async (next) => {
@@ -97,16 +141,44 @@ export default function SimulationPanel({
             onWaterVisibility(true);
           } else setSolvent('implicit');
         })
-        .catch((e) => setError((e as Error).message));
-    } else if (pendingJob.status !== 'cancelled')
-      setError(pendingJob.error ?? 'Structure preparation did not complete. See the job log.');
+        .catch((e) =>
+          setMonitorError(
+            `The structure is prepared, but could not be opened: ${(e as Error).message}`,
+          ),
+        )
+        .finally(() => {
+          setPending(null);
+          setLoadingResult(false);
+          loadingJob.current = null;
+        });
+    } else setPending(null);
   }, [pending, pendingJob, onDatasetLoaded, onWaterVisibility]);
   function prepared(job: Job) {
     if (!dataset) return;
     setError('');
+    setMonitorError('');
+    setMonitorId(job.id);
     setPending({ id: job.id, sourceId: dataset.id, operation: 'preparation' });
     setOpenLog(job.id);
     onStarted(job);
+  }
+  async function openResult() {
+    if (!monitoredJob?.dataset_id || loadingResult) return;
+    const sourceId = datasetRef.current?.id;
+    setLoadingResult(true);
+    setMonitorError('');
+    try {
+      const result = await api.dataset(monitoredJob.dataset_id);
+      if (datasetRef.current?.id !== sourceId) return;
+      await onDatasetLoaded(result, {
+        showWater: monitoredJob.engine === 'solvation',
+        showHydrogens: monitoredJob.engine === 'preparation',
+      });
+    } catch (e) {
+      setMonitorError(`Could not open the prepared structure: ${(e as Error).message}`);
+    } finally {
+      setLoadingResult(false);
+    }
   }
   async function previewWater(force = false) {
     if (!dataset || busy) return;
@@ -121,16 +193,21 @@ export default function SimulationPanel({
     }
     if (dataset.solvation && !force) return;
     setBusy(true);
+    setSubmitting('solvation');
+    setMonitorId(null);
+    setMonitorError('');
     try {
       const source = force && dataset.solvation ? dataset.solvation.parent_dataset_id : dataset.id;
       const job = await api.solvate(source, padding, ph, seed);
+      setMonitorId(job.id);
       setPending({ id: job.id, sourceId: dataset.id, operation: 'solvation' });
       setOpenLog(job.id);
       onStarted(job);
     } catch (e) {
-      setError((e as Error).message);
+      setMonitorError((e as Error).message);
     } finally {
       setBusy(false);
+      setSubmitting(null);
     }
   }
   async function changeSolvent(value: 'implicit' | 'explicit') {
@@ -204,6 +281,35 @@ export default function SimulationPanel({
             <X size={20} />
           </button>
         </header>
+        <StructureJobMonitor
+          job={submitting || (monitorError && !monitorId) ? undefined : monitoredJob}
+          submitting={submitting}
+          loadingResult={loadingResult || (resultSelected && !viewerReady && !viewerError)}
+          loadError={monitorError || resultViewerError}
+          resultInView={resultSelected && viewerReady && !viewerError}
+          onCancel={async () => {
+            if (!monitoredJob) return;
+            try {
+              await api.cancel(monitoredJob.id);
+              onRefresh();
+            } catch (e) {
+              setMonitorError(`Could not cancel preparation: ${(e as Error).message}`);
+            }
+          }}
+          onOpenResult={() => void openResult()}
+          onViewLog={() => {
+            if (!monitoredJob) return;
+            setOpenLog(monitoredJob.id);
+            jobCards.current
+              .get(monitoredJob.id)
+              ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
+          onDismiss={() => {
+            if (monitoredJob) setDismissed((ids) => [...ids, monitoredJob.id]);
+            setMonitorId(null);
+            setMonitorError('');
+          }}
+        />
         <div className="drawer-scroll">
           <form onSubmit={start}>
             <p className="modal-subtitle">
@@ -214,33 +320,16 @@ export default function SimulationPanel({
               ph={ph}
               onPh={setPh}
               seed={seed}
-              locked={busy || anyActive || !!pending}
+              locked={busy || anyActive || !!pending || !!submitting || loadingResult}
+              preparing={!!pending && pending.operation === 'preparation'}
               onDatasetLoaded={onDatasetLoaded}
               onPreparationStarted={prepared}
+              onPreparationRequest={(starting, requestError) => {
+                setSubmitting(starting ? 'preparation' : null);
+                setMonitorError(requestError ?? '');
+                if (starting) setMonitorId(null);
+              }}
             />
-            {pending && (
-              <div className="pending-preparation" role="status">
-                <LoaderCircle size={16} className="spin" />
-                <div>
-                  <strong>
-                    {pending.operation === 'solvation'
-                      ? 'Building explicit water'
-                      : 'Preparing protein'}
-                  </strong>
-                  <span>{pendingJob?.stage ?? 'Starting background worker…'}</span>
-                </div>
-                <button
-                  type="button"
-                  className="text-button"
-                  onClick={async () => {
-                    await api.cancel(pending.id);
-                    onRefresh();
-                  }}
-                >
-                  Cancel
-                </button>
-              </div>
-            )}
             <div className="field-heading">
               <span>01</span>
               <h3>Choose your engine</h3>
@@ -516,6 +605,7 @@ export default function SimulationPanel({
               className="primary-button full-width run-button"
               disabled={
                 busy ||
+                !!submitting ||
                 !!pending ||
                 anyActive ||
                 (engine === 'gromacs' && !!dataset?.preparation) ||
@@ -553,7 +643,14 @@ export default function SimulationPanel({
               </div>
             ) : (
               jobs.map((job) => (
-                <article className="job-card" key={job.id}>
+                <article
+                  className="job-card"
+                  key={job.id}
+                  ref={(node) => {
+                    if (node) jobCards.current.set(job.id, node);
+                    else jobCards.current.delete(job.id);
+                  }}
+                >
                   <div className="job-top">
                     <div>
                       <strong>{job.name}</strong>

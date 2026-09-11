@@ -3680,3 +3680,219 @@ kbd {
     display: none;
   }
 }
+.structure-job-monitor {
+  flex-shrink: 0;
+  margin: 0 20px 12px;
+  padding: 12px;
+  border: 1px solid #4a9d876b;
+  border-radius: 10px;
+  background: linear-gradient(125deg, #18332f, #17272d);
+  box-shadow:
+    0 4px 20px #07120f25,
+    inset 0 1px #a9efce08;
+}
+.structure-job-monitor-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+.structure-job-monitor-icon {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  color: var(--accent);
+  background: #80dfc611;
+  border: 1px solid #80dfc622;
+  border-radius: 8px;
+}
+.structure-job-monitor-status {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+.structure-job-monitor-status strong {
+  color: #dcf5eb;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.structure-job-monitor-status > span {
+  color: #a7c6bf;
+  font-size: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.structure-job-monitor-dismiss {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin: -4px -5px 0 0;
+  flex-shrink: 0;
+  color: #9db7b0;
+  border-radius: 5px;
+}
+.structure-job-monitor-dismiss:hover {
+  color: #fff;
+  background: #ffffff0b;
+}
+.structure-job-monitor-progress {
+  margin-top: 11px;
+}
+.structure-job-monitor-track {
+  overflow: hidden;
+  height: 5px;
+  border-radius: 4px;
+  background: #091b19;
+}
+.structure-job-monitor-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #53bc9f, #a0ebcd);
+  transition: width 0.3s ease;
+}
+.structure-job-monitor-progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 9px;
+  line-height: 1.5;
+  color: #96b4ac;
+}
+.structure-job-monitor-progress-label b {
+  color: #acdbca;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.structure-job-monitor-footer,
+.structure-job-monitor-actions,
+.structure-job-monitor-elapsed,
+.structure-job-monitor-actions button {
+  display: flex;
+  align-items: center;
+}
+.structure-job-monitor-footer {
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 8px;
+}
+.structure-job-monitor-elapsed {
+  gap: 4px;
+  flex-shrink: 0;
+  color: #92aaa6;
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+}
+.structure-job-monitor-actions {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.structure-job-monitor-actions button {
+  justify-content: center;
+  gap: 4px;
+  min-height: 25px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 9px;
+  color: #b5d5c9;
+}
+.structure-job-monitor-actions button:hover {
+  color: #e5fff4;
+  background: #ffffff09;
+}
+.structure-job-monitor-actions .structure-job-monitor-open {
+  background: #80dfc61a;
+  color: #a3ebd0;
+}
+.structure-job-monitor-error {
+  margin-top: 9px;
+  color: #f0bdad;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.structure-job-monitor-error summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  cursor: pointer;
+  list-style: none;
+}
+.structure-job-monitor-error summary::-webkit-details-marker {
+  display: none;
+}
+.structure-job-monitor-error summary > span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-wrap: anywhere;
+}
+.structure-job-monitor-error summary > b {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.structure-job-monitor-error p {
+  max-height: 90px;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  margin-top: 6px;
+  padding: 8px;
+  background: #120e0c40;
+  border-radius: 5px;
+}
+.structure-job-monitor.needs-attention {
+  border-color: #bb70584f;
+  background: linear-gradient(125deg, #352924, #29232a);
+}
+.structure-job-monitor.needs-attention .structure-job-monitor-icon {
+  color: #efb494;
+  background: #edb9960c;
+  border-color: #edb99622;
+}
+.structure-job-monitor.needs-attention .structure-job-monitor-status strong {
+  color: #f6ddce;
+}
+.structure-job-monitor.needs-attention .structure-job-monitor-status > span {
+  color: #cab0a4;
+}
+.structure-job-monitor-spinner {
+  animation: structure-job-monitor-spin 0.9s linear infinite;
+}
+@keyframes structure-job-monitor-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 900px) {
+  .structure-job-monitor {
+    margin: 0 16px 9px;
+    padding: 10px 11px;
+    max-height: min(220px, 29dvh);
+    overflow-y: auto;
+  }
+  .structure-job-monitor-status strong {
+    font-size: 11px;
+  }
+  .structure-job-monitor-progress {
+    margin-top: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .structure-job-monitor-spinner {
+    animation: none;
+  }
+  .structure-job-monitor-track > span {
+    transition: none;
+  }
+}
