@@ -100,6 +100,9 @@ type PickSignal = {
   add(fn: (proxy?: PickProxy) => void): void;
   remove(fn: (proxy?: PickProxy) => void): void;
 };
+interface CameraAnimation {
+  readonly done: boolean;
+}
 interface Stage {
   loadFile(file: Blob, options: Record<string, unknown>): Promise<StructureComponent>;
   removeComponent(component: StructureComponent): void;
@@ -128,6 +131,13 @@ interface Stage {
   animationControls: {
     zoom(distance: number, duration?: number): void;
     zoomMove(center: Vector, distance: number, duration?: number): void;
+    value(
+      from: number,
+      to: number,
+      update: (value: number) => void,
+      duration?: number,
+    ): CameraAnimation;
+    remove(animation: CameraAnimation): void;
   };
 }
 
@@ -178,6 +188,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
     const hostRef = useRef<HTMLDivElement>(null);
     const tooltipRef = useRef<HTMLDivElement>(null);
     const stageRef = useRef<Stage | null>(null);
+    const buttonZoomRef = useRef<{ animation: CameraAnimation; target: number } | null>(null);
     const componentRef = useRef<StructureComponent | null>(null);
     const groupsRef = useRef<RenderGroups | null>(null);
     const measurementRepresentations = useRef(new Map<string, RenderRepresentation>());
@@ -204,6 +215,12 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       setError(message);
       setStatus('error');
       latest.current.onError(message);
+    }, []);
+
+    const cancelButtonZoom = useCallback(() => {
+      if (buttonZoomRef.current)
+        stageRef.current?.animationControls.remove(buttonZoomRef.current.animation);
+      buttonZoomRef.current = null;
     }, []);
 
     const updateLabels = useCallback(() => {
@@ -245,24 +262,28 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       }
     }, []);
 
-    const focus = useCallback((indices: number[]) => {
-      const component = componentRef.current;
-      const stage = stageRef.current;
-      const dataset = latest.current.dataset;
-      if (!component || !stage || !dataset) return;
-      const valid = indices.filter(
-        (index) => Number.isInteger(index) && index >= 0 && index < dataset.n_atoms,
-      );
-      if (!valid.length) return;
-      const selection = atomSelection(valid);
-      // Keep a useful neighborhood around a single atom instead of zooming into
-      // a near-zero bounding box. The camera orientation is preserved.
-      stage.animationControls.zoomMove(
-        component.getCenter(selection),
-        -Math.max(24, Math.abs(component.getZoom(selection))),
-        450,
-      );
-    }, []);
+    const focus = useCallback(
+      (indices: number[]) => {
+        const component = componentRef.current;
+        const stage = stageRef.current;
+        const dataset = latest.current.dataset;
+        if (!component || !stage || !dataset) return;
+        const valid = indices.filter(
+          (index) => Number.isInteger(index) && index >= 0 && index < dataset.n_atoms,
+        );
+        if (!valid.length) return;
+        cancelButtonZoom();
+        const selection = atomSelection(valid);
+        // Keep a useful neighborhood around a single atom instead of zooming into
+        // a near-zero bounding box. The camera orientation is preserved.
+        stage.animationControls.zoomMove(
+          component.getCenter(selection),
+          -Math.max(24, Math.abs(component.getZoom(selection))),
+          450,
+        );
+      },
+      [cancelButtonZoom],
+    );
 
     useImperativeHandle(
       ref,
@@ -271,6 +292,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           const component = componentRef.current;
           const dataset = latest.current.dataset;
           if (!component || !dataset) return;
+          cancelButtonZoom();
           const visible = dataset.atoms.filter((atom) =>
             atomIsVisible(atom, latest.current.visibility),
           );
@@ -282,12 +304,30 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         },
         zoom(factor) {
           const stage = stageRef.current;
-          if (stage && Number.isFinite(factor) && factor > 0) {
-            stage.animationControls.zoom(
-              Math.max(3, stage.viewerControls.getCameraDistance() / factor),
+          if (!stage || !componentRef.current || !Number.isFinite(factor) || factor <= 0) return;
+          const current = stage.viewerControls.getCameraDistance();
+          const pending = buttonZoomRef.current;
+          const target = Math.max(
+            3,
+            Math.min(
+              100_000,
+              (pending && !pending.animation.done ? pending.target : current) / factor,
+            ),
+          );
+          cancelButtonZoom();
+          // NGL's zoom animation starts at camera.position.z (negative), while
+          // getCameraDistance() is positive. Interpolate positive distances via
+          // the same control as pinch zoom so the path never crosses zero.
+          // Retarget an unfinished click rather than running competing zooms.
+          buttonZoomRef.current = {
+            target,
+            animation: stage.animationControls.value(
+              current,
+              target,
+              (distance) => stage.viewerControls.distance(distance),
               180,
-            );
-          }
+            ),
+          };
         },
         focus,
         getCamera() {
@@ -296,8 +336,10 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
             : null;
         },
         setCamera(orientation) {
-          if (orientation.length === 16 && orientation.every(Number.isFinite))
+          if (orientation.length === 16 && orientation.every(Number.isFinite)) {
+            cancelButtonZoom();
             stageRef.current?.viewerControls.orient(orientation);
+          }
         },
         async snapshot() {
           const stage = stageRef.current;
@@ -365,7 +407,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           }
         },
       }),
-      [focus],
+      [focus, cancelButtonZoom],
     );
 
     useEffect(() => {
@@ -407,12 +449,16 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       const releaseGestures = bindViewerGestures(host, {
         zoom(factor) {
           if (!componentRef.current) return;
+          cancelButtonZoom();
           stage.viewerControls.distance(
             Math.max(3, Math.min(100_000, stage.viewerControls.getCameraDistance() / factor)),
           );
         },
         pan(dx, dy) {
-          if (componentRef.current && (dx || dy)) stage.trackballControls.pan(dx, dy);
+          if (componentRef.current && (dx || dy)) {
+            cancelButtonZoom();
+            stage.trackballControls.pan(dx, dy);
+          }
         },
       });
 
@@ -493,7 +539,8 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         // Opening the studio reduces the canvas. Preserve the visible molecular
         // field instead of cropping a zoomed scene to the smaller viewport.
         if (previousExtent > 0 && extent > 0 && componentRef.current && extent !== previousExtent) {
-          stage.animationControls.zoom(Math.max(3, (distance * previousExtent) / extent), 0);
+          cancelButtonZoom();
+          stage.viewerControls.distance(Math.max(3, (distance * previousExtent) / extent));
         }
         previousExtent = extent;
         updateLabels();
@@ -501,6 +548,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       resize.observe(host);
       setStageVersion((version) => version + 1);
       return () => {
+        cancelButtonZoom();
         releaseGestures();
         resize.disconnect();
         stage.signals.clicked.remove(onClick);
@@ -519,7 +567,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         // StrictMode remount must not retain that blank canvas above the new one.
         host.replaceChildren();
       };
-    }, [fail, focus, updateLabels]);
+    }, [fail, focus, updateLabels, cancelButtonZoom]);
 
     useEffect(() => {
       const stage = stageRef.current;
@@ -527,6 +575,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       // Stage creation updates stageVersion after this effect's first pass.
       // Wait for that update so a new scene starts only one topology request.
       if (!stage || stageVersion === 0) return;
+      cancelButtonZoom();
       if (componentRef.current) stage.removeComponent(componentRef.current);
       componentRef.current = null;
       groupsRef.current = null;
@@ -657,7 +706,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           0,
         );
         // Give the opening composition a little breathing room.
-        stage.animationControls.zoom(stage.viewerControls.getCameraDistance() * 0.92, 0);
+        stage.viewerControls.distance(stage.viewerControls.getCameraDistance() * 0.92);
         stage.setSpin(latest.current.spin);
         setComponentVersion((version) => version + 1);
         setStatus('ready');
@@ -671,7 +720,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         obsolete = true;
         controller.abort();
       };
-    }, [props.dataset?.id, props.dataset?.topology_url, stageVersion, fail]);
+    }, [props.dataset?.id, props.dataset?.topology_url, stageVersion, fail, cancelButtonZoom]);
 
     useEffect(() => {
       const dataset = props.dataset;

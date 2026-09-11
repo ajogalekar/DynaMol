@@ -127,6 +127,12 @@ export default function App() {
     [selectedAtoms, setSelectedAtoms] = useState<number[]>([]),
     [measureBusy, setMeasureBusy] = useState(false),
     [atomSearch, setAtomSearch] = useState('');
+  const [addingMeasurement, setAddingMeasurement] = useState(false);
+  const [measurementError, setMeasurementError] = useState('');
+  const measurementRequest = useRef<AbortController | null>(null);
+  const measurementKey = JSON.stringify([dataset?.id, kind, selectedAtoms]);
+  const currentMeasurementKey = useRef(measurementKey);
+  currentMeasurementKey.current = measurementKey;
   const [modal, setModal] = useState<'import' | 'simulation' | 'help' | 'projects' | null>(null),
     [library, setLibrary] = useState(false),
     [details, setDetails] = useState(false),
@@ -249,6 +255,10 @@ export default function App() {
       setPlaying(false);
       setError('');
       setMeasurements([]);
+      measurementRequest.current?.abort();
+      measurementRequest.current = null;
+      setAddingMeasurement(false);
+      setMeasurementError('');
       setMeasureBusy(false);
       setActiveMeasurement(null);
       setSelectedAtoms([]);
@@ -490,6 +500,35 @@ export default function App() {
     setPlaying((p) => !p);
   }, [dataset, ready]);
   useEffect(() => {
+    setMeasureBusy(false);
+    setMeasurementError('');
+    return () => {
+      measurementRequest.current?.abort();
+      measurementRequest.current = null;
+    };
+  }, [measurementKey]);
+  useEffect(() => {
+    if (addingMeasurement && selectedAtoms.length === measureConfig[kind].count) void measure();
+  }, [addingMeasurement, measurementKey]);
+  function cancelMeasurementDraft(clearSelection = true) {
+    measurementRequest.current?.abort();
+    measurementRequest.current = null;
+    setAddingMeasurement(false);
+    setMeasureBusy(false);
+    setMeasurementError('');
+    if (clearSelection) setSelectedAtoms([]);
+    setPicking(false);
+  }
+  function beginMeasurement() {
+    cancelMeasurementDraft();
+    setError('');
+    setAddingMeasurement(true);
+    setInspector(true);
+    setPicking(true);
+    setPlaying(false);
+    if (kind === 'hbond') setVisibility((v) => ({ ...v, hydrogens: 'polar' }));
+  }
+  useEffect(() => {
     const key = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
       if (e.key === 'Escape') {
@@ -499,8 +538,7 @@ export default function App() {
           return;
         }
         setModal(null);
-        setPicking(false);
-        setSelectedAtoms([]);
+        cancelMeasurementDraft();
         setLibrary(false);
         return;
       }
@@ -526,8 +564,11 @@ export default function App() {
       }
       if (e.key.toLowerCase() === 'f') viewer.current?.fit();
       if (e.key.toLowerCase() === 'm') {
-        if (!picking) setPlaying(false);
-        setPicking(!picking);
+        if (picking) cancelMeasurementDraft(false);
+        else {
+          setPlaying(false);
+          setPicking(true);
+        }
       }
       if (e.key === '?') setModal('help');
     };
@@ -579,13 +620,27 @@ export default function App() {
     [picking, kind],
   );
   async function measure() {
-    if (!dataset || selectedAtoms.length !== measureConfig[kind].count) return;
+    if (
+      !dataset ||
+      selectedAtoms.length !== measureConfig[kind].count ||
+      measurementRequest.current
+    )
+      return;
+    const controller = new AbortController();
+    measurementRequest.current = controller;
+    const requestKey = measurementKey;
     setMeasureBusy(true);
+    setMeasurementError('');
     setError('');
     const currentLoadToken = loadToken.current;
     try {
-      const m = await api.measure(dataset.id, kind, selectedAtoms);
-      if (currentLoadToken !== loadToken.current) return;
+      const m = await api.measure(dataset.id, kind, selectedAtoms, controller.signal);
+      if (
+        controller.signal.aborted ||
+        currentLoadToken !== loadToken.current ||
+        requestKey !== currentMeasurementKey.current
+      )
+        return;
       const id = crypto.randomUUID();
       const label = selectedAtoms
         .map((i) => `${dataset.atoms[i].residue}${dataset.atoms[i].resid}:${dataset.atoms[i].name}`)
@@ -595,13 +650,24 @@ export default function App() {
         { ...m, id, label, color: palette[prev.length % palette.length] },
       ]);
       setActiveMeasurement(id);
+      setAddingMeasurement(false);
       setPicking(false);
       setSelectedAtoms([]);
       setToast('Measurement added. Click the plot to explore it.');
     } catch (e) {
-      setError((e as Error).message);
+      if (
+        !controller.signal.aborted &&
+        requestKey === currentMeasurementKey.current &&
+        currentLoadToken === loadToken.current
+      ) {
+        if (addingMeasurement) setMeasurementError((e as Error).message);
+        else setError((e as Error).message);
+      }
     } finally {
-      setMeasureBusy(false);
+      if (measurementRequest.current === controller) {
+        measurementRequest.current = null;
+        setMeasureBusy(false);
+      }
     }
   }
   function focusSelection() {
@@ -615,6 +681,7 @@ export default function App() {
         `${a.chain}:${a.resid}`.toLowerCase() === q,
     );
     if (matches.length) {
+      cancelMeasurementDraft();
       setSelectedAtoms(matches.map((a) => a.index));
       setPicking(false);
       viewer.current?.focus(matches.map((a) => a.index));
@@ -841,6 +908,7 @@ export default function App() {
               ])
             }
             onSelect={(atoms) => {
+              cancelMeasurementDraft();
               setSelectedAtoms(atoms);
               setPicking(false);
               setPlaying(false);
@@ -1166,7 +1234,7 @@ export default function App() {
                 <span>
                   Pick {currentConfig.count} atoms · {selectedAtoms.length} selected
                 </span>
-                <button onClick={() => setPicking(false)} aria-label="Stop picking">
+                <button onClick={() => cancelMeasurementDraft(false)} aria-label="Stop picking">
                   <X size={13} />
                 </button>
               </div>
@@ -1313,11 +1381,20 @@ export default function App() {
               )
             }
             onSeek={seek}
-            onAdd={() => {
-              setInspector(true);
-              setPicking(true);
-              setPlaying(false);
-            }}
+            onAdd={beginMeasurement}
+            draft={
+              addingMeasurement
+                ? {
+                    name: currentConfig.name,
+                    selected: selectedAtoms.length,
+                    required: currentConfig.count,
+                    busy: measureBusy,
+                    error: measurementError,
+                  }
+                : null
+            }
+            onCancelDraft={() => cancelMeasurementDraft()}
+            onRetryDraft={() => void measure()}
           />
           <TrajectoryAnalysis
             key={`analysis-${dataset?.id}-${viewerLoadRevision}`}
@@ -1331,6 +1408,7 @@ export default function App() {
             onExpandedChange={setAnalysisExpanded}
             onSeek={seek}
             onSelectAtoms={(atoms: number[]) => {
+              cancelMeasurementDraft();
               setSelectedAtoms(atoms);
               setPicking(false);
               viewer.current?.focus(atoms);
@@ -1399,7 +1477,8 @@ export default function App() {
               <button
                 className={`pick-button ${picking ? 'picking' : ''}`}
                 onClick={() => {
-                  setPicking(!picking);
+                  if (picking) cancelMeasurementDraft(false);
+                  else setPicking(true);
                   setPlaying(false);
                   if (kind === 'hbond') setVisibility((v) => ({ ...v, hydrogens: 'polar' }));
                 }}
@@ -1507,13 +1586,7 @@ export default function App() {
                 Plot over time <ArrowRight size={14} />
               </button>
               {selectedAtoms.length > 0 && (
-                <button
-                  className="text-button center"
-                  onClick={() => {
-                    setSelectedAtoms([]);
-                    setPicking(false);
-                  }}
-                >
+                <button className="text-button center" onClick={() => cancelMeasurementDraft()}>
                   Clear selection
                 </button>
               )}

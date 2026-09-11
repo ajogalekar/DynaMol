@@ -1,0 +1,392 @@
+{
+  "date": "2026-09-11",
+  "base_url": "http://127.0.0.1:8773",
+  "mode": "production frontend; real API; isolated data directory; Chrome WebGL",
+  "stats": {
+    "startTime": "2026-09-11T15:16:48.727Z",
+    "duration": 58287.854,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": [
+    {
+      "file": "add-measurement.spec.ts",
+      "title": "bottom Add automatically plots distance, angle and dihedral and restores saved plots",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2479,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "add-measurement.spec.ts",
+      "title": "bottom draft shows a failed calculation and retries once successfully",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 679,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "add-measurement.spec.ts",
+      "title": "cancel and changed measurement types discard pending results",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1091,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "add-measurement.spec.ts",
+      "title": "stopping or escaping an Add draft keeps subsequent inspection from creating a plot",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 687,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1296,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1374,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1425,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1313,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen state follows browser exits and handles an absent API",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 555,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "live-measurements.spec.ts",
+      "title": "live measurements appear before Plot, update with frames, and reset with selection",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2270,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "live-measurements.spec.ts",
+      "title": "live readout rejects invalid hydrogen-bond selection immediately and handles a new selection",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2175,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "live-measurements.spec.ts",
+      "title": "live scene labels follow molecular visibility while inspector retains selected geometry",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 650,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2175,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2081,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "slow touchscreen pinch continues zooming while its center drifts and pans",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3817,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "ordinary unmodified wheel still zooms both ways",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2180,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: navigation, structure details, library, guide links and modal focus controls",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3627,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: every representation and color choice changes the actual rendered geometry",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3824,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 6002,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: timeline boundaries, every speed, loop behavior and keyboard shortcuts",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2268,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1690,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: Escape exits picking after the pick button receives focus",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 451,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: keyboard picking pauses a playing trajectory",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 477,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2678,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: invalid hydrogen-bond selection reports a dismissible error and keeps the workspace",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 799,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: import chooser actions, cancel, drag and drop, form bounds and timing override",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1897,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: Studio source chooser, invalid fetch, all default and advanced configuration controls",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1349,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "zoom-buttons.spec.ts",
+      "title": "zoom buttons change molecular scale smoothly throughout each animation",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2385,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "zoom-buttons.spec.ts",
+      "title": "pinching interrupts an unfinished button zoom without a later rebound",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1793,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "zoom-buttons.spec.ts",
+      "title": "rapid repeated zoom clicks accumulate without overlapping camera jumps",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1842,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "frontend/src/App.tsx": "bb4cc7e1bc9023160c55f08d8fcde2cfa3ecd78351c0794661cc377a6d685fa3",
+    "frontend/src/api.ts": "5e3f25856ed5021cd7cd67594f32d1692a1faa7cf6ba72ba01ead0fe9bcb33a1",
+    "frontend/src/components/PlotPanel.tsx": "9802dd9e441553d517faecd9a5c296bea0b05f16598a5983fa8e7df8211dfe40",
+    "frontend/src/components/MolecularViewer.tsx": "c554d1d9bed988bec74dc9af5ef655e403edb60ef9fe20628c5b8c4a1da049c3",
+    "frontend/src/styles.css": "fb104c2261d8028723111e687ed71c3ca1bf7e39077f899c519be5d1bb9a92bc",
+    "frontend/tests/add-measurement.spec.ts": "52de7e366607ae4607eb3fcd31d115df205d553efde897cc78606739b5174572",
+    "frontend/tests/zoom-buttons.spec.ts": "293f1326b844d95656204985c1ab239bd913bb83d082544d25cde49e050ffa7c"
+  },
+  "limits": [
+    "Synthetic pinch events in Chrome, not physical trackpad or Safari certification.",
+    "30 focused browser checks; prior native chemistry/engine suite was not repeated for frontend-only fixes."
+  ],
+  "exploratory_notes": [
+    "An initial production test invocation was interrupted after its isolated server origin was still configured for Vite8774, blocking JS/CSS with403. Restarting only the isolated API with its production8773 origin resolved the setup error.",
+    "Baseline viewer loaded through a read-only Vite module override reproduced the transient zoom enlargement and blank frame."
+  ]
+}

@@ -1140,6 +1140,31 @@ input[type='checkbox'] {
   min-height: 216px;
   flex-shrink: 0;
 }
+.measurement-draft {
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid #386454;
+  border-radius: 10px;
+  background: #152820;
+  color: #cae4da;
+  font-size: 12px;
+}
+.measurement-draft-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.measurement-draft-heading strong {
+  flex: 1;
+}
+.measurement-draft p {
+  margin: 7px 0 0;
+  color: #a8c4b9;
+  line-height: 1.5;
+}
+.measurement-draft [role='alert'] {
+  color: #f1c894;
+}
 .plot-heading {
   display: flex;
   align-items: center;

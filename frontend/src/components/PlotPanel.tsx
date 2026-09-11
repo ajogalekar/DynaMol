@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Activity, Download, Plus, X, Eye, EyeOff } from 'lucide-react';
+import { Activity, Download, Plus, X, Eye, EyeOff, LoaderCircle } from 'lucide-react';
 import type { Dataset, Measurement } from '../types';
 
 interface Props {
@@ -12,6 +12,9 @@ interface Props {
   onToggleVisibility: (id: string) => void;
   onSeek: (frame: number) => void;
   onAdd: () => void;
+  draft?: { name: string; selected: number; required: number; busy: boolean; error: string } | null;
+  onCancelDraft?: () => void;
+  onRetryDraft?: () => void;
 }
 
 /** Use physical timestamps for spacing; angular summaries respect the torsion branch cut. */
@@ -123,6 +126,9 @@ export default function PlotPanel({
   onToggleVisibility,
   onSeek,
   onAdd,
+  draft,
+  onCancelDraft,
+  onRetryDraft,
 }: Props) {
   const [hover, setHover] = useState<number | null>(null);
   const current = measurements.find((m) => m.id === activeId) ?? measurements[0];
@@ -170,6 +176,39 @@ export default function PlotPanel({
           </button>
         </div>
       </div>
+      {draft && (
+        <div className="measurement-draft" aria-label="New measurement">
+          <div className="measurement-draft-heading" role="status">
+            {draft.busy ? <LoaderCircle size={15} className="spin" /> : <Activity size={15} />}
+            <strong>
+              {draft.busy
+                ? `Adding ${draft.name.toLowerCase()} plot…`
+                : `${draft.name} · ${draft.selected}/${draft.required} atoms selected`}
+            </strong>
+            <button
+              className="icon-button compact"
+              aria-label="Cancel new measurement"
+              onClick={onCancelDraft}
+            >
+              <X size={14} />
+            </button>
+          </div>
+          {draft.error ? (
+            <>
+              <p role="alert">{draft.error}</p>
+              <button className="text-button" onClick={onRetryDraft}>
+                Retry adding measurement
+              </button>
+            </>
+          ) : (
+            <p>
+              {draft.busy
+                ? 'Calculating the selected measurement over saved frames.'
+                : 'Choose a measurement type and pick atoms in order. Its plot will appear here automatically.'}
+            </p>
+          )}
+        </div>
+      )}
       {current && plot ? (
         <>
           <div className="measurement-tabs">
@@ -334,7 +373,7 @@ export default function PlotPanel({
             </div>
           )}
         </>
-      ) : (
+      ) : !draft ? (
         <div className="plot-empty">
           <Activity size={25} />
           <div>
@@ -348,7 +387,7 @@ export default function PlotPanel({
             Add a measurement <Plus size={14} />
           </button>
         </div>
-      )}
+      ) : null}
     </section>
   );
 }

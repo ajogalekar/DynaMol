@@ -72,11 +72,12 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ padding_nm, ph, seed }),
     }),
-  measure: (id: string, kind: MeasureKind, atoms: number[]) =>
+  measure: (id: string, kind: MeasureKind, atoms: number[], signal?: AbortSignal) =>
     request<Omit<Measurement, 'id' | 'label' | 'color'>>(`/api/datasets/${id}/measurements`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ kind, atoms }),
+      signal,
     }),
   previewMeasurement: (id: string, kind: MeasureKind, atoms: number[], signal: AbortSignal) =>
     request<MeasurementPreview>(`/api/datasets/${id}/measurement-preview`, {
