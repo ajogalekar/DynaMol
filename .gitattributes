@@ -3,3 +3,8 @@
 *.bin binary
 *.npz binary
 *.png binary
+
+# Preserve exact native-engine audit outputs and their recorded hashes.
+docs/audit/preparation-gromacs-probes/** -whitespace
+docs/audit/preparation-worker-evidence/** -whitespace
+docs/audit/preparation-fixtures/** -whitespace
