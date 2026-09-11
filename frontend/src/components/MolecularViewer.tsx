@@ -693,24 +693,18 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
               : [],
         ),
       );
-      const hydrogenContext = new Set<number>();
-      if (
-        props.representation === 'cartoon' &&
-        !props.picking &&
-        props.visibility.hydrogens !== 'none'
-      ) {
-        const hydrogens = new Set(
-          visible.protein.filter((index) =>
-            ['H', 'D', 'T'].includes(dataset.atoms[index].element.toUpperCase()),
-          ),
-        );
-        hydrogens.forEach((index) => hydrogenContext.add(index));
-        dataset.bonds.forEach(([a, b]) => {
-          if (hydrogens.has(a)) hydrogenContext.add(b);
-          if (hydrogens.has(b)) hydrogenContext.add(a);
-        });
-      }
-      groups.hydrogen.setSelection(atomSelection([...hydrogenContext]));
+      // Keep the whole heavy-atom skeleton behind the selected hydrogens.
+      // Selecting only H and its donor leaves disconnected side-chain fragments.
+      // Short fragments already have a complete atomic trace in groups.detail.
+      groups.hydrogen.setSelection(
+        atomSelection(
+          props.representation === 'cartoon' &&
+            !props.picking &&
+            props.visibility.hydrogens !== 'none'
+            ? visible.protein.filter((index) => !ribbonFallback.has(index))
+            : [],
+        ),
+      );
       stageRef.current?.viewer.requestRender();
     }, [
       props.visibility,
