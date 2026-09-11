@@ -1,0 +1,55 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 49,
+  "query": "molecular representation stereochemistry tautomers reproducibility",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-05-06",
+      "score": 46.0,
+      "tags": [
+        "Tautomers"
+      ],
+      "title": "The Trouble With Tautomers",
+      "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-01-03T11:55:00.002-08:00",
+      "score": 25.0,
+      "tags": [],
+      "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 24.0,
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-08T06:48:00.000-08:00",
+      "score": 23.0,
+      "tags": [],
+      "title": "AI in Drug Discovery - A Highly Opinionated Literature Review (Part II) ",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-highly-opinionated.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-02-01T06:23:00.000-08:00",
+      "score": 23.0,
+      "tags": [],
+      "title": " Generative Molecular Design - We Need to Raise the Bar",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/02/generative-molecular-design-we-need-to.html"
+    }
+  ],
+  "excerpt_policy": "Source metadata only; no long excerpts reproduced."
+}

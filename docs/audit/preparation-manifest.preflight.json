@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T01:43:52.691285+00:00",
+  "purpose": "Implement and verify molecular import, explicit user-selected protein preparation, and visible explicit-solvent preview in DynaMol. Only tiny protein preparation/simulation smoke checks; no claims of accurate reconstruction, protein-design success, experimentally valid protonation or equilibrated MD.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "versions_at_preflight": {
+      "pdbfixer": "1.12.0",
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "rdkit": "2026.3.6",
+      "numpy": "2.4.6"
+    },
+    "python": "3.12.13",
+    "source_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+    "planned_seed": 2026,
+    "scope": "Existing source file is retained; new remote imports must retain original response bytes, source identifiers, dates and hashes."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve original sequence metadata and atom identity; do not infer residue identities from numbering gaps. Missing-residue building must be opt-in and based on explicit sequence evidence; rebuilt coordinates labeled modeled/uncertain. Protonation edits must be explicit, recorded and carried through engines without silent reset. Solvent preview must use exact retained coordinates for subsequent simulation, without double solvation. SMILES/source molecular states retain stereochemical and conformer provenance."
+  },
+  "validation": {
+    "status": "Preflight only; implementation and smoke checks pending.",
+    "scope": "Test sequence provenance, missing-atom restoration, unsupported chemistry rejection, pH state preservation, index mapping, parameterizability, no duplicate solvent, viewer/source coordinate equivalence, and recorded alterations."
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No accuracy benchmark or scientific method comparison planned."
+  },
+  "review_identity": "Language-model implementation/evidence review; PatAgent is an automated public-writing-inspired checklist, not Pat Walters or expert certification."
+}

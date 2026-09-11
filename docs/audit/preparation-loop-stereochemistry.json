@@ -1,0 +1,28 @@
+{
+  "scope": "CA signed-volume check on the single actual opt-in ILE3 loop fixture; no broad stereochemical validation.",
+  "status": "fail",
+  "original_CA_volume_nm3": {
+    "1": 0.0025079015270000043,
+    "2": 0.002521624418000012,
+    "4": 0.0026811628240000023,
+    "5": 0.002627601838,
+    "6": 0.0026693155419999916
+  },
+  "prepared_CA_volume_nm3": {
+    "1": 0.002457638202000004,
+    "2": 0.00254499564899999,
+    "3": -0.0025442599829999754,
+    "4": 0.0024760658859999973,
+    "5": 0.0025537386299999843,
+    "6": 0.002540035344999996
+  },
+  "all_original_CA_signs_preserved": true,
+  "new_ILE3_same_handedness_as_neighbors": false,
+  "original_1UBQ_ILE3_CA_volume_nm3": 0.0025000995420000156,
+  "finding": "New standard ILE3 has inverted N/CA/C/CB handedness relative to source and retained L residues. Validation/rejection required before simulation-ready output. This failure was found after basic pipeline functional checks passed.",
+  "worker_job_id": "dfafc6cf4b0649aa",
+  "ILE3_CB_signed_volume_nm3": {
+    "original": 0.0026117605499999903,
+    "rebuilt": -0.0023399726279999884
+  }
+}

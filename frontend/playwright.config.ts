@@ -3,7 +3,7 @@ import { defineConfig } from '@playwright/test';
 /** Run the real local API and Vite first (./start.sh); no API or viewer mocks. */
 export default defineConfig({
   testDir: './tests',
-  testMatch: '**/e2e.spec.ts',
+  testMatch: '**/*.spec.ts',
   fullyParallel: false,
   workers: 1,
   timeout: 90_000,

@@ -1,0 +1,565 @@
+{
+  "scope": "Tiny synthetic peptide end-to-end preparation and one-step MD software checks. Not loop accuracy, pKa validation, or MD convergence.",
+  "results": [
+    {
+      "name": "Actual preparation restores missing heavy/terminal atoms and parameterizes tiny peptide",
+      "status": "pass",
+      "evidence": {
+        "job_id": "4b8a57be4ad24d2e",
+        "atoms": 114,
+        "restored": [
+          "LYS6 NZ",
+          "LYS6 OXT"
+        ],
+        "preparation": {
+          "parent_dataset_id": "ea69caaa857c4e8d",
+          "ph": 7.0,
+          "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment",
+          "summary": [
+            "Explicitly removed 0 existing hydrogens before pH reassignment, 0 water heavy atoms, and 0 other heavy atoms.",
+            "Added 2 heavy/terminal atoms across existing residues and 0 rebuilt internal segment(s).",
+            "Added 61 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded."
+          ],
+          "warnings": [
+            "Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics."
+          ],
+          "seed": 2026,
+          "forcefield_files": [
+            "amber14/protein.ff14SB.xml",
+            "implicit/gbn2.xml"
+          ],
+          "simulation_ready": true,
+          "exact_topology_file": "prepared.pdb",
+          "protonation_states": [
+            {
+              "chain": "A",
+              "resid": "1",
+              "residue": "MET",
+              "state": "MET",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H",
+                  "H2",
+                  "H3"
+                ],
+                "O": [],
+                "SD": []
+              },
+              "hydrogen_count": 11,
+              "forcefield_charge_e": 1.0
+            },
+            {
+              "chain": "A",
+              "resid": "2",
+              "residue": "GLN",
+              "state": "GLN",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": [],
+                "OE1": [],
+                "NE2": [
+                  "HE21",
+                  "HE22"
+                ]
+              },
+              "hydrogen_count": 8,
+              "forcefield_charge_e": 6.028164079019405e-17
+            },
+            {
+              "chain": "A",
+              "resid": "3",
+              "residue": "ILE",
+              "state": "ILE",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 11,
+              "forcefield_charge_e": 3.469446951953614e-17
+            },
+            {
+              "chain": "A",
+              "resid": "4",
+              "residue": "PHE",
+              "state": "PHE",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 9,
+              "forcefield_charge_e": 7.762887554996212e-17
+            },
+            {
+              "chain": "A",
+              "resid": "5",
+              "residue": "VAL",
+              "state": "VAL",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 9,
+              "forcefield_charge_e": 1.0061396160665481e-16
+            },
+            {
+              "chain": "A",
+              "resid": "6",
+              "residue": "LYS",
+              "state": "LYS",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": [],
+                "NZ": [
+                  "HZ1",
+                  "HZ2",
+                  "HZ3"
+                ],
+                "OXT": []
+              },
+              "hydrogen_count": 13,
+              "forcefield_charge_e": -1.6306400674181987e-16
+            }
+          ],
+          "selected_variants": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "removed_atom_counts": {},
+          "rebuilt_segments": [],
+          "repaired_atoms": [
+            {
+              "chain": "A",
+              "resid": "6",
+              "residue": "LYS",
+              "atoms": [
+                "NZ"
+              ]
+            }
+          ],
+          "sidechain_adjustment": {
+            "method": "Skipped by user",
+            "adjustments": [],
+            "adjusted_chi_count": 0
+          },
+          "relaxation": {
+            "performed": false,
+            "reason": "Sidechain adjustment not requested"
+          },
+          "original_to_prepared_atom_map_file": "atom-map.json",
+          "net_forcefield_charge_e": 1.0,
+          "stereochemistry": {
+            "method": "Signed N/C/CB volume at nonglycine CA and CA/branch1/branch2 volume at ILE/THR CB versus PDBFixer standard templates; absolute volume must exceed 0.0001 nm\u00b3.",
+            "checked_centers": 7,
+            "violations": [],
+            "centers": [
+              {
+                "chain": "A",
+                "resid": "1",
+                "residue": "MET",
+                "center": "CA",
+                "signed_volume_nm3": 0.0025079015270000043,
+                "template_signed_volume_nm3": 0.0024850265000000023
+              },
+              {
+                "chain": "A",
+                "resid": "2",
+                "residue": "GLN",
+                "center": "CA",
+                "signed_volume_nm3": 0.002521624418000012,
+                "template_signed_volume_nm3": 0.0022360880000000033
+              },
+              {
+                "chain": "A",
+                "resid": "3",
+                "residue": "ILE",
+                "center": "CA",
+                "signed_volume_nm3": 0.0025000995420000156,
+                "template_signed_volume_nm3": 0.0024868904000000004
+              },
+              {
+                "chain": "A",
+                "resid": "3",
+                "residue": "ILE",
+                "center": "CB",
+                "signed_volume_nm3": 0.0026117605499999903,
+                "template_signed_volume_nm3": 0.002706884199999999
+              },
+              {
+                "chain": "A",
+                "resid": "4",
+                "residue": "PHE",
+                "center": "CA",
+                "signed_volume_nm3": 0.0026811628240000023,
+                "template_signed_volume_nm3": 0.002420361000000002
+              },
+              {
+                "chain": "A",
+                "resid": "5",
+                "residue": "VAL",
+                "center": "CA",
+                "signed_volume_nm3": 0.002627601838,
+                "template_signed_volume_nm3": 0.0024078560000000008
+              },
+              {
+                "chain": "A",
+                "resid": "6",
+                "residue": "LYS",
+                "center": "CA",
+                "signed_volume_nm3": 0.0026693155419999916,
+                "template_signed_volume_nm3": 0.0026400489999999993
+              }
+            ]
+          },
+          "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."
+        }
+      }
+    },
+    {
+      "name": "Repreparing pH2 histidine at pH7 actually replaces hydrogen state",
+      "status": "pass",
+      "evidence": {
+        "ph2_job": "3b7e31cc8bbf4d10",
+        "ph7_job": "834a5edbbc814600",
+        "ph2_HIS_atoms": [
+          "C",
+          "CA",
+          "CB",
+          "CD2",
+          "CE1",
+          "CG",
+          "H",
+          "HA",
+          "HB2",
+          "HB3",
+          "HD1",
+          "HD2",
+          "HE1",
+          "HE2",
+          "N",
+          "ND1",
+          "NE2",
+          "O"
+        ],
+        "ph7_HIS_atoms": [
+          "C",
+          "CA",
+          "CB",
+          "CD2",
+          "CE1",
+          "CG",
+          "H",
+          "HA",
+          "HB2",
+          "HB3",
+          "HD1",
+          "HD2",
+          "HE1",
+          "N",
+          "ND1",
+          "NE2",
+          "O"
+        ],
+        "ph2_atoms": 132,
+        "ph7_atoms": 131,
+        "preparation": {
+          "parent_dataset_id": "0a3ec55d0d4848aa",
+          "ph": 7.0,
+          "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment",
+          "summary": [
+            "Explicitly removed 72 existing hydrogens before pH reassignment, 0 water heavy atoms, and 0 other heavy atoms.",
+            "Added 0 heavy/terminal atoms across existing residues and 0 rebuilt internal segment(s).",
+            "Added 71 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded."
+          ],
+          "warnings": [
+            "Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics."
+          ],
+          "seed": 2026,
+          "forcefield_files": [
+            "amber14/protein.ff14SB.xml",
+            "implicit/gbn2.xml"
+          ],
+          "simulation_ready": true,
+          "exact_topology_file": "prepared.pdb",
+          "protonation_states": [
+            {
+              "chain": "A",
+              "resid": "66",
+              "residue": "THR",
+              "state": "THR",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H",
+                  "H2",
+                  "H3"
+                ],
+                "O": [],
+                "OG1": [
+                  "HG1"
+                ]
+              },
+              "hydrogen_count": 9,
+              "forcefield_charge_e": 0.9999999999999999
+            },
+            {
+              "chain": "A",
+              "resid": "67",
+              "residue": "LEU",
+              "state": "LEU",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 11,
+              "forcefield_charge_e": 6.245004513516506e-17
+            },
+            {
+              "chain": "A",
+              "resid": "68",
+              "residue": "HIS",
+              "state": "HID",
+              "openmm_returned_variant": "HID",
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": [],
+                "ND1": [
+                  "HD1"
+                ],
+                "NE2": []
+              },
+              "hydrogen_count": 7,
+              "forcefield_charge_e": 6.591949208711867e-17
+            },
+            {
+              "chain": "A",
+              "resid": "69",
+              "residue": "LEU",
+              "state": "LEU",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 11,
+              "forcefield_charge_e": 6.245004513516506e-17
+            },
+            {
+              "chain": "A",
+              "resid": "70",
+              "residue": "VAL",
+              "state": "VAL",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 9,
+              "forcefield_charge_e": 1.0061396160665481e-16
+            },
+            {
+              "chain": "A",
+              "resid": "71",
+              "residue": "LEU",
+              "state": "LEU",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": []
+              },
+              "hydrogen_count": 11,
+              "forcefield_charge_e": 6.245004513516506e-17
+            },
+            {
+              "chain": "A",
+              "resid": "72",
+              "residue": "ARG",
+              "state": "ARG",
+              "openmm_returned_variant": null,
+              "bonded_hydrogens": {
+                "N": [
+                  "H"
+                ],
+                "O": [],
+                "NE": [
+                  "HE"
+                ],
+                "NH1": [
+                  "HH11",
+                  "HH12"
+                ],
+                "NH2": [
+                  "HH21",
+                  "HH22"
+                ],
+                "OXT": []
+              },
+              "hydrogen_count": 13,
+              "forcefield_charge_e": -2.42861286636753e-16
+            }
+          ],
+          "selected_variants": [
+            null,
+            null,
+            "HID",
+            null,
+            null,
+            null,
+            null
+          ],
+          "removed_atom_counts": {
+            "hydrogens": 72
+          },
+          "rebuilt_segments": [],
+          "repaired_atoms": [],
+          "sidechain_adjustment": {
+            "method": "Skipped by user",
+            "adjustments": [],
+            "adjusted_chi_count": 0
+          },
+          "relaxation": {
+            "performed": false,
+            "reason": "Sidechain adjustment not requested"
+          },
+          "original_to_prepared_atom_map_file": "atom-map.json",
+          "net_forcefield_charge_e": 1.0,
+          "stereochemistry": {
+            "method": "Signed N/C/CB volume at nonglycine CA and CA/branch1/branch2 volume at ILE/THR CB versus PDBFixer standard templates; absolute volume must exceed 0.0001 nm\u00b3.",
+            "checked_centers": 8,
+            "violations": [],
+            "centers": [
+              {
+                "chain": "A",
+                "resid": "66",
+                "residue": "THR",
+                "center": "CA",
+                "signed_volume_nm3": 0.0026452397520000006,
+                "template_signed_volume_nm3": 0.0024571120000000017
+              },
+              {
+                "chain": "A",
+                "resid": "66",
+                "residue": "THR",
+                "center": "CB",
+                "signed_volume_nm3": 0.002769657234999984,
+                "template_signed_volume_nm3": 0.00252586
+              },
+              {
+                "chain": "A",
+                "resid": "67",
+                "residue": "LEU",
+                "center": "CA",
+                "signed_volume_nm3": 0.0028498013799999906,
+                "template_signed_volume_nm3": 0.0025476760000000013
+              },
+              {
+                "chain": "A",
+                "resid": "68",
+                "residue": "HIS",
+                "center": "CA",
+                "signed_volume_nm3": 0.0028611490360000236,
+                "template_signed_volume_nm3": 0.0024369660000000005
+              },
+              {
+                "chain": "A",
+                "resid": "69",
+                "residue": "LEU",
+                "center": "CA",
+                "signed_volume_nm3": 0.002570086684000017,
+                "template_signed_volume_nm3": 0.0025476760000000013
+              },
+              {
+                "chain": "A",
+                "resid": "70",
+                "residue": "VAL",
+                "center": "CA",
+                "signed_volume_nm3": 0.0026567985030000038,
+                "template_signed_volume_nm3": 0.0024078560000000008
+              },
+              {
+                "chain": "A",
+                "resid": "71",
+                "residue": "LEU",
+                "center": "CA",
+                "signed_volume_nm3": 0.0026215578130000116,
+                "template_signed_volume_nm3": 0.0025476760000000013
+              },
+              {
+                "chain": "A",
+                "resid": "72",
+                "residue": "ARG",
+                "center": "CA",
+                "signed_volume_nm3": 0.0027913088780000153,
+                "template_signed_volume_nm3": 0.002475992999999999
+              }
+            ]
+          },
+          "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."
+        }
+      }
+    },
+    {
+      "name": "Opt-in sequence-supported loop produces checked geometry or rejects invalid stereochemistry before publication",
+      "status": "pass",
+      "evidence": {
+        "job_id": "eafbd2696b2f4a8c",
+        "invalid_geometry_rejected_before_publication": true,
+        "reason": "Repaired structure has inverted or near-planar standard residue stereochemistry at A:3 ILE CA. The model is rejected; use an externally validated repair instead.",
+        "scope": "This ILE attempt is rejected. The separate ALA28 positive control demonstrates accepted construction."
+      }
+    },
+    {
+      "name": "Prepared GROMACS state is rejected before any silent protonation reset",
+      "status": "pass",
+      "evidence": {
+        "rejection": "The current GROMACS adapter cannot yet preserve an explicitly prepared protonation state or solvent preview. Use OpenMM for this prepared dataset; GROMACS requires a separate validated state-conversion workflow."
+      }
+    },
+    {
+      "name": "One-step real OpenMM continuation uses exact prepared input and preserves actual pH2 hydrogen state",
+      "status": "pass",
+      "evidence": {
+        "job_id": "e477130f8075492a",
+        "input_sha256": "635f8b713c943b1949e2fedcdb064a61132cdaf8292276082869ef63b64031ee",
+        "all_atom_identities_retained": true,
+        "ph2_HIP_retained": true,
+        "frames": 2,
+        "times_ps": [
+          0.0,
+          0.002
+        ]
+      }
+    }
+  ],
+  "guard_test_note": "The loop-control expectation explicitly permits rejection of invalid geometry; separate fixed-seed ALA28 construction is reported in preparation-positive-loop.json. Initial invalid accepted geometry is retained as historical failure evidence."
+}

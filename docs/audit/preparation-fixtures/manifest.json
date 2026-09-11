@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-09-11T01:45:41.173398+00:00",
+  "original_source": "data/sources/1UBQ.pdb",
+  "original_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+  "fixtures": [
+    {
+      "name": "six_residues_intact",
+      "path": "docs/audit/preparation-fixtures/six_residues_intact.pdb",
+      "sha256": "039779d649c37c7f01f56fceebcc5bab28ec0d21ca68df877f875d04d14af1a1",
+      "synthetic_fixture": true,
+      "description": "Coordinate excerpt from 1UBQ deliberately truncated/altered for software checks, not a experimental construct or validated structure.",
+      "source_residue_range": [
+        1,
+        6
+      ],
+      "seqres_supplied": true,
+      "deleted_residue": null,
+      "deleted_atom_names": []
+    },
+    {
+      "name": "six_residues_missing_atom",
+      "path": "docs/audit/preparation-fixtures/six_residues_missing_atom.pdb",
+      "sha256": "ae3bcb18009841e26412334baf8a7652b430e43d5e358f3a045f943ef7606a49",
+      "synthetic_fixture": true,
+      "description": "Coordinate excerpt from 1UBQ deliberately truncated/altered for software checks, not a experimental construct or validated structure.",
+      "source_residue_range": [
+        1,
+        6
+      ],
+      "seqres_supplied": true,
+      "deleted_residue": null,
+      "deleted_atom_names": [
+        [
+          6,
+          "NZ"
+        ]
+      ]
+    },
+    {
+      "name": "six_residues_known_gap",
+      "path": "docs/audit/preparation-fixtures/six_residues_known_gap.pdb",
+      "sha256": "61a0fe21f847db1c9f9f3578ea4117350a3b3aa65279fb69d14e905ec35dfc3a",
+      "synthetic_fixture": true,
+      "description": "Coordinate excerpt from 1UBQ deliberately truncated/altered for software checks, not a experimental construct or validated structure.",
+      "source_residue_range": [
+        1,
+        6
+      ],
+      "seqres_supplied": true,
+      "deleted_residue": 3,
+      "deleted_atom_names": []
+    },
+    {
+      "name": "six_residues_numbering_gap_only",
+      "path": "docs/audit/preparation-fixtures/six_residues_numbering_gap_only.pdb",
+      "sha256": "a8bc6d77c3b39254ffbb6923a14c924248d44b9ab4a4cf203d5ab9810ea9e3fe",
+      "synthetic_fixture": true,
+      "description": "Coordinate excerpt from 1UBQ deliberately truncated/altered for software checks, not a experimental construct or validated structure.",
+      "source_residue_range": [
+        1,
+        6
+      ],
+      "seqres_supplied": false,
+      "deleted_residue": 3,
+      "deleted_atom_names": []
+    },
+    {
+      "name": "histidine_fragment",
+      "path": "docs/audit/preparation-fixtures/histidine_fragment.pdb",
+      "sha256": "aaf4c9525cd32c2e773f6f094327eadd2da4ec094f71a711593339ec50146b04",
+      "synthetic_fixture": true,
+      "description": "Coordinate excerpt from 1UBQ deliberately truncated/altered for software checks, not a experimental construct or validated structure.",
+      "source_residue_range": [
+        66,
+        72
+      ],
+      "seqres_supplied": true,
+      "deleted_residue": null,
+      "deleted_atom_names": []
+    }
+  ],
+  "additional_fixtures": [
+    {
+      "file": "known_gap_multichar_chain.cif",
+      "sha256": "3f9010cc6a7028938ee1f3e3ada6adf8c19126a5f15332f8e32003a372cc5eba",
+      "description": "Synthetic known-ILE-gap fixture in mmCIF with original chain AA and entity_poly_seq; generated using OpenMM PDBxFile, not an experimental construct."
+    },
+    {
+      "file": "known_gap_label_auth_chain.cif",
+      "sha256": "6e4c3ae9c9d7ec6f470a26650f3de4d7398cb035ec3f022281f2036671b3516f",
+      "description": "Synthetic mmCIF sequence-gap fixture with label_asym_id AA and auth_asym_id X, deliberately different to test sequence/coordinate mapping."
+    },
+    {
+      "file": "known_alanine_gap.pdb",
+      "sha256": "d654d31a4a6fa799fa47b8596ac50516343fb586d9d8ee9c425b259094c14958",
+      "description": "Synthetic 1UBQ26\u201330 fragment with known ALA28 removed and sequence retained, generated for a bounded positive loop-control attempt."
+    }
+  ]
+}

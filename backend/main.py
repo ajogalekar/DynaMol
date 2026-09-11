@@ -17,7 +17,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 from . import config, jobs, storage
 from .analysis import measure
-from .models import MeasurementRequest, SimulationConfig
+from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest
 
 
 class LocalOriginMiddleware(BaseHTTPMiddleware):
@@ -86,6 +86,15 @@ def topology(dataset_id: str):
 def coordinates(dataset_id: str):
     storage.get_dataset(dataset_id)
     return FileResponse(storage.dataset_dir(dataset_id) / "coordinates.bin", media_type="application/octet-stream", headers={"Cache-Control": "private, max-age=3600"})
+
+
+@app.get("/api/datasets/{dataset_id}/prepared")
+def prepared_structure(dataset_id: str):
+    storage.get_dataset(dataset_id)
+    path = storage.dataset_dir(dataset_id) / "prepared.pdb"
+    if not path.is_file():
+        raise FileNotFoundError("This dataset has no prepared PDB. Prepare the protein first.")
+    return FileResponse(path, media_type="chemical/x-pdb", filename="DynaMol-prepared.pdb")
 
 
 async def save_upload(upload: UploadFile, folder: Path, name: str) -> Path:
@@ -162,6 +171,44 @@ def download(job_id: str):
             if path.is_file() and path != target and path.suffix != ".tmp":
                 archive.write(path, arcname=path.name)
     return FileResponse(target, media_type="application/zip", filename=f"DynaMol-{job_id}.zip")
+
+
+@app.post("/api/structures/upload")
+async def import_structure(file: UploadFile = File(...)):
+    from . import sources
+    with tempfile.TemporaryDirectory(prefix="source-", dir=config.DATA_ROOT) as temporary:
+        path = await save_upload(file, Path(temporary), "structure")
+        return await run_in_threadpool(sources.import_structure, path, Path(file.filename or "Molecule").stem, {"source_name": file.filename})
+
+
+@app.post("/api/structures/fetch")
+async def fetch_structure(settings: StructureFetchRequest):
+    from . import sources
+    return await run_in_threadpool(sources.fetch_structure, **settings.model_dump())
+
+
+@app.post("/api/structures/smiles")
+async def smiles_structure(settings: SmilesRequest):
+    from . import sources
+    return await run_in_threadpool(sources.create_smiles, **settings.model_dump())
+
+
+@app.get("/api/datasets/{dataset_id}/inspection")
+async def inspect_protein(dataset_id: str):
+    from . import preparation
+    return await run_in_threadpool(preparation.inspect_preparation, dataset_id)
+
+
+@app.post("/api/preparations", status_code=201)
+def prepare_protein(settings: PreparationRequest):
+    from . import preparation
+    return preparation.submit_preparation(settings.model_dump())
+
+
+@app.post("/api/datasets/{dataset_id}/solvate", status_code=201)
+def solvate_structure(dataset_id: str, settings: SolvationRequest):
+    from . import preparation
+    return preparation.submit_solvation(dataset_id, settings.model_dump())
 
 
 # API routes above remain authoritative. A production build can run as one

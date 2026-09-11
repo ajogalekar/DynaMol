@@ -4,6 +4,7 @@ import {
   useEffect,
   useImperativeHandle,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -15,6 +16,7 @@ import {
   atomSelection,
   createCoordinateInterpolator,
   visibleGroups,
+  shortProteinFragments,
 } from './viewerGeometry';
 import './MolecularViewer.css';
 
@@ -56,6 +58,7 @@ interface AtomProxy extends Vector {
   resname: string;
   resno: number;
   chainname: string;
+  element: string;
 }
 interface Signal<T extends (...args: never[]) => unknown = () => void> {
   add(fn: T): void;
@@ -148,8 +151,10 @@ function validateTopology(component: StructureComponent, dataset: Dataset) {
     const atom = dataset.atoms[index];
     if (
       atom.index !== index ||
-      proxy.atomname.trim() !== atom.name.trim() ||
-      proxy.resname.trim() !== atom.residue.trim().slice(0, 3)
+      // NGL's AtomMap uppercases atom names and elements (e.g. Cl -> CL).
+      proxy.atomname.trim().toUpperCase() !== atom.name.trim().toUpperCase() ||
+      proxy.resname.trim().toUpperCase() !== atom.residue.trim().slice(0, 3).toUpperCase() ||
+      (atom.element !== 'X' && proxy.element.toUpperCase() !== atom.element.toUpperCase())
     ) {
       throw new Error(
         `Topology atom ordering differs at atom ${index + 1}. Display is stopped to prevent incorrect measurements.`,
@@ -177,6 +182,13 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
     const [error, setError] = useState('');
     const activeDatasetId = useRef<string | null>(null);
     const representationType = useRef<Representation>('cartoon');
+    const ribbonFallback = useMemo(
+      () =>
+        props.dataset && props.coordinates
+          ? shortProteinFragments(props.dataset, props.coordinates)
+          : new Set<number>(),
+      [props.dataset?.id, props.coordinates],
+    );
 
     const fail = useCallback((message: string) => {
       setError(message);
@@ -423,8 +435,17 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       stage.viewerControls.signals.changed.add(updateLabels);
       host.addEventListener('dblclick', onDoubleClick);
       host.addEventListener('webglcontextlost', onContextLost, true);
+      let previousExtent = Math.min(host.clientWidth, host.clientHeight);
       const resize = new ResizeObserver(() => {
+        const extent = Math.min(host.clientWidth, host.clientHeight);
+        const distance = stage.viewerControls.getCameraDistance();
         stage.handleResize();
+        // Opening the studio reduces the canvas. Preserve the visible molecular
+        // field instead of cropping a zoomed scene to the smaller viewport.
+        if (previousExtent > 0 && extent > 0 && componentRef.current && extent !== previousExtent) {
+          stage.animationControls.zoom(Math.max(3, (distance * previousExtent) / extent), 0);
+        }
+        previousExtent = extent;
         updateLabels();
       });
       resize.observe(host);
@@ -570,11 +591,13 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           .map((atom) => atom.index);
         component.autoView(
           atomSelection(
-            polymer.length
-              ? polymer
-              : solute.length
-                ? solute
-                : dataset.atoms.map((atom) => atom.index),
+            dataset.solvation && latest.current.visibility.water
+              ? dataset.atoms.map((atom) => atom.index)
+              : polymer.length
+                ? polymer
+                : solute.length
+                  ? solute
+                  : dataset.atoms.map((atom) => atom.index),
           ),
           0,
         );
@@ -663,7 +686,9 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         atomSelection(
           props.picking && ['cartoon', 'surface'].includes(props.representation)
             ? visible.protein
-            : [],
+            : props.representation === 'cartoon'
+              ? visible.protein.filter((index) => ribbonFallback.has(index))
+              : [],
         ),
       );
       const hydrogenContext = new Set<number>();
@@ -692,6 +717,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       props.picking,
       props.dataset?.id,
       componentVersion,
+      ribbonFallback,
     ]);
 
     useEffect(() => {

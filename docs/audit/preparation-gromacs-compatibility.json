@@ -1,0 +1,2581 @@
+{
+  "scope": "Upstream parser compatibility on modeled tiny peptide fixtures, no MD. No general state preservation guarantee.",
+  "results": [
+    {
+      "fixture": "histidine-acid",
+      "ph": 2.0,
+      "mode": "plain",
+      "variants": [
+        {
+          "id": "66",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "67",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "68",
+          "name": "HIS",
+          "variant": "HIP",
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD1",
+            "HD2",
+            "HE1",
+            "HE2"
+          ]
+        },
+        {
+          "id": "69",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "70",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "71",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "72",
+          "name": "ARG",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE",
+            "HH11",
+            "HH12",
+            "HH21",
+            "HH22"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 67 was not found in rtp entry LEU with 19 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "histidine-acid",
+      "ph": 2.0,
+      "mode": "variants",
+      "variants": [
+        {
+          "id": "66",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "67",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "68",
+          "name": "HIS",
+          "variant": "HIP",
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD1",
+            "HD2",
+            "HE1",
+            "HE2"
+          ]
+        },
+        {
+          "id": "69",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "70",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "71",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "72",
+          "name": "ARG",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE",
+            "HH11",
+            "HH12",
+            "HH21",
+            "HH22"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 67 was not found in rtp entry LEU with 19 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "histidine-acid",
+      "ph": 2.0,
+      "mode": "variants_hmap",
+      "variants": [
+        {
+          "id": "66",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "67",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "68",
+          "name": "HIS",
+          "variant": "HIP",
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD1",
+            "HD2",
+            "HE1",
+            "HE2"
+          ]
+        },
+        {
+          "id": "69",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "70",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "71",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "72",
+          "name": "ARG",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE",
+            "HH11",
+            "HH12",
+            "HH21",
+            "HH22"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [
+        {
+          "residue": "66",
+          "center": "N",
+          "old": "H",
+          "new": "H1"
+        },
+        {
+          "residue": "67",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "68",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "69",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "71",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "72",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "72",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "72",
+          "center": "CD",
+          "old": "HD3",
+          "new": "HD1"
+        }
+      ],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 0,
+      "all_atoms_preserved_after_terminal_aliases": true,
+      "max_displacement_after_aliases_angstrom": 0.0,
+      "input_atoms": 132,
+      "output_atoms": 132,
+      "missing": [
+        "6:O",
+        "6:OXT"
+      ],
+      "added": [
+        "6:OC1",
+        "6:OC2"
+      ],
+      "max_common_displacement_angstrom": 0.0,
+      "reordered": true,
+      "terminal_aliases": {
+        "O": "OC2",
+        "OXT": "OC1"
+      }
+    },
+    {
+      "fixture": "histidine-neutral",
+      "ph": 7.0,
+      "mode": "plain",
+      "variants": [
+        {
+          "id": "66",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "67",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "68",
+          "name": "HIS",
+          "variant": "HID",
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD1",
+            "HD2",
+            "HE1"
+          ]
+        },
+        {
+          "id": "69",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "70",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "71",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "72",
+          "name": "ARG",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE",
+            "HH11",
+            "HH12",
+            "HH21",
+            "HH22"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 67 was not found in rtp entry LEU with 19 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "histidine-neutral",
+      "ph": 7.0,
+      "mode": "variants",
+      "variants": [
+        {
+          "id": "66",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "67",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "68",
+          "name": "HIS",
+          "variant": "HID",
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD1",
+            "HD2",
+            "HE1"
+          ]
+        },
+        {
+          "id": "69",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "70",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "71",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "72",
+          "name": "ARG",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE",
+            "HH11",
+            "HH12",
+            "HH21",
+            "HH22"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 67 was not found in rtp entry LEU with 19 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "histidine-neutral",
+      "ph": 7.0,
+      "mode": "variants_hmap",
+      "variants": [
+        {
+          "id": "66",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "67",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "68",
+          "name": "HIS",
+          "variant": "HID",
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD1",
+            "HD2",
+            "HE1"
+          ]
+        },
+        {
+          "id": "69",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "70",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "71",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "72",
+          "name": "ARG",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE",
+            "HH11",
+            "HH12",
+            "HH21",
+            "HH22"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [
+        {
+          "residue": "66",
+          "center": "N",
+          "old": "H",
+          "new": "H1"
+        },
+        {
+          "residue": "67",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "68",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "69",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "71",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "72",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "72",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "72",
+          "center": "CD",
+          "old": "HD3",
+          "new": "HD1"
+        }
+      ],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 0,
+      "all_atoms_preserved_after_terminal_aliases": true,
+      "max_displacement_after_aliases_angstrom": 0.0,
+      "input_atoms": 131,
+      "output_atoms": 131,
+      "missing": [
+        "6:O",
+        "6:OXT"
+      ],
+      "added": [
+        "6:OC1",
+        "6:OC2"
+      ],
+      "max_common_displacement_angstrom": 0.0,
+      "reordered": true,
+      "terminal_aliases": {
+        "O": "OC2",
+        "OXT": "OC1"
+      }
+    },
+    {
+      "fixture": "acidic-acid",
+      "ph": 2.0,
+      "mode": "plain",
+      "variants": [
+        {
+          "id": "15",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "16",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HE2"
+          ]
+        },
+        {
+          "id": "17",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "18",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HE2"
+          ]
+        },
+        {
+          "id": "19",
+          "name": "PRO",
+          "variant": null,
+          "hydrogens": [
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3"
+          ]
+        },
+        {
+          "id": "20",
+          "name": "SER",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG"
+          ]
+        },
+        {
+          "id": "21",
+          "name": "ASP",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD2"
+          ]
+        },
+        {
+          "id": "22",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 15 was not found in rtp entry NLEU with 21 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "acidic-acid",
+      "ph": 2.0,
+      "mode": "variants",
+      "variants": [
+        {
+          "id": "15",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "16",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HE2"
+          ]
+        },
+        {
+          "id": "17",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "18",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HE2"
+          ]
+        },
+        {
+          "id": "19",
+          "name": "PRO",
+          "variant": null,
+          "hydrogens": [
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3"
+          ]
+        },
+        {
+          "id": "20",
+          "name": "SER",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG"
+          ]
+        },
+        {
+          "id": "21",
+          "name": "ASP",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD2"
+          ]
+        },
+        {
+          "id": "22",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 15 was not found in rtp entry NLEU with 21 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "acidic-acid",
+      "ph": 2.0,
+      "mode": "variants_hmap",
+      "variants": [
+        {
+          "id": "15",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "16",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HE2"
+          ]
+        },
+        {
+          "id": "17",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "18",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HE2"
+          ]
+        },
+        {
+          "id": "19",
+          "name": "PRO",
+          "variant": null,
+          "hydrogens": [
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3"
+          ]
+        },
+        {
+          "id": "20",
+          "name": "SER",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG"
+          ]
+        },
+        {
+          "id": "21",
+          "name": "ASP",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD2"
+          ]
+        },
+        {
+          "id": "22",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [
+        {
+          "residue": "15",
+          "center": "N",
+          "old": "H",
+          "new": "H1"
+        },
+        {
+          "residue": "15",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "16",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "16",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "18",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "18",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "19",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "19",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "19",
+          "center": "CD",
+          "old": "HD3",
+          "new": "HD1"
+        },
+        {
+          "residue": "20",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "21",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        }
+      ],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 0,
+      "all_atoms_preserved_after_terminal_aliases": true,
+      "max_displacement_after_aliases_angstrom": 0.0,
+      "input_atoms": 122,
+      "output_atoms": 122,
+      "missing": [
+        "7:O",
+        "7:OXT"
+      ],
+      "added": [
+        "7:OC1",
+        "7:OC2"
+      ],
+      "max_common_displacement_angstrom": 0.0,
+      "reordered": true,
+      "terminal_aliases": {
+        "O": "OC2",
+        "OXT": "OC1"
+      }
+    },
+    {
+      "fixture": "acidic-neutral",
+      "ph": 7.0,
+      "mode": "plain",
+      "variants": [
+        {
+          "id": "15",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "16",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "17",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "18",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "19",
+          "name": "PRO",
+          "variant": null,
+          "hydrogens": [
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3"
+          ]
+        },
+        {
+          "id": "20",
+          "name": "SER",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG"
+          ]
+        },
+        {
+          "id": "21",
+          "name": "ASP",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3"
+          ]
+        },
+        {
+          "id": "22",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 15 was not found in rtp entry NLEU with 21 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "acidic-neutral",
+      "ph": 7.0,
+      "mode": "variants",
+      "variants": [
+        {
+          "id": "15",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "16",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "17",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "18",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "19",
+          "name": "PRO",
+          "variant": null,
+          "hydrogens": [
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3"
+          ]
+        },
+        {
+          "id": "20",
+          "name": "SER",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG"
+          ]
+        },
+        {
+          "id": "21",
+          "name": "ASP",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3"
+          ]
+        },
+        {
+          "id": "22",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue LEU 15 was not found in rtp entry NLEU with 21 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "acidic-neutral",
+      "ph": 7.0,
+      "mode": "variants_hmap",
+      "variants": [
+        {
+          "id": "15",
+          "name": "LEU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG",
+            "HD11",
+            "HD12",
+            "HD13",
+            "HD21",
+            "HD22",
+            "HD23"
+          ]
+        },
+        {
+          "id": "16",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "17",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "18",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "19",
+          "name": "PRO",
+          "variant": null,
+          "hydrogens": [
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3"
+          ]
+        },
+        {
+          "id": "20",
+          "name": "SER",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG"
+          ]
+        },
+        {
+          "id": "21",
+          "name": "ASP",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3"
+          ]
+        },
+        {
+          "id": "22",
+          "name": "THR",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG1",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [
+        {
+          "residue": "15",
+          "center": "N",
+          "old": "H",
+          "new": "H1"
+        },
+        {
+          "residue": "15",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "16",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "16",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "18",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "18",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "19",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "19",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "19",
+          "center": "CD",
+          "old": "HD3",
+          "new": "HD1"
+        },
+        {
+          "residue": "20",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "21",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        }
+      ],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 0,
+      "all_atoms_preserved_after_terminal_aliases": true,
+      "max_displacement_after_aliases_angstrom": 0.0,
+      "input_atoms": 119,
+      "output_atoms": 119,
+      "missing": [
+        "7:O",
+        "7:OXT"
+      ],
+      "added": [
+        "7:OC1",
+        "7:OC2"
+      ],
+      "max_common_displacement_angstrom": 0.0,
+      "reordered": true,
+      "terminal_aliases": {
+        "O": "OC2",
+        "OXT": "OC1"
+      }
+    },
+    {
+      "fixture": "lysine-basic",
+      "ph": 12.0,
+      "mode": "plain",
+      "variants": [
+        {
+          "id": "24",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "25",
+          "name": "ASN",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD21",
+            "HD22"
+          ]
+        },
+        {
+          "id": "26",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "27",
+          "name": "LYS",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE2",
+            "HE3",
+            "HZ1",
+            "HZ2"
+          ]
+        },
+        {
+          "id": "28",
+          "name": "ALA",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB1",
+            "HB2",
+            "HB3"
+          ]
+        },
+        {
+          "id": "29",
+          "name": "LYS",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE2",
+            "HE3",
+            "HZ1",
+            "HZ2"
+          ]
+        },
+        {
+          "id": "30",
+          "name": "ILE",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23",
+            "HD11",
+            "HD12",
+            "HD13"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue GLU 24 was not found in rtp entry NGLU with 17 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "lysine-basic",
+      "ph": 12.0,
+      "mode": "variants",
+      "variants": [
+        {
+          "id": "24",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "25",
+          "name": "ASN",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD21",
+            "HD22"
+          ]
+        },
+        {
+          "id": "26",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "27",
+          "name": "LYS",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE2",
+            "HE3",
+            "HZ1",
+            "HZ2"
+          ]
+        },
+        {
+          "id": "28",
+          "name": "ALA",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB1",
+            "HB2",
+            "HB3"
+          ]
+        },
+        {
+          "id": "29",
+          "name": "LYS",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE2",
+            "HE3",
+            "HZ1",
+            "HZ2"
+          ]
+        },
+        {
+          "id": "30",
+          "name": "ILE",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23",
+            "HD11",
+            "HD12",
+            "HD13"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 1,
+      "error_tail": "Fatal error:\nAtom HB3 in residue GLU 24 was not found in rtp entry NGLU with 17 atoms\nwhile sorting atoms.\n\nFor a hydrogen, this can be a different protonation state, or it\nmight have had a different number in the PDB file and was rebuilt\n(it might for instance have been H3, and we only expected H1 & H2).\nNote that hydrogens might have been added to the entry for the N-terminus.\nRemove this hydrogen or choose a different protonation state to solve it.\nOption -ignh will ignore all hydrogens in the input.\n\n"
+    },
+    {
+      "fixture": "lysine-basic",
+      "ph": 12.0,
+      "mode": "variants_hmap",
+      "variants": [
+        {
+          "id": "24",
+          "name": "GLU",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "H2",
+            "H3",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3"
+          ]
+        },
+        {
+          "id": "25",
+          "name": "ASN",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HD21",
+            "HD22"
+          ]
+        },
+        {
+          "id": "26",
+          "name": "VAL",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG11",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23"
+          ]
+        },
+        {
+          "id": "27",
+          "name": "LYS",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE2",
+            "HE3",
+            "HZ1",
+            "HZ2"
+          ]
+        },
+        {
+          "id": "28",
+          "name": "ALA",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB1",
+            "HB2",
+            "HB3"
+          ]
+        },
+        {
+          "id": "29",
+          "name": "LYS",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB2",
+            "HB3",
+            "HG2",
+            "HG3",
+            "HD2",
+            "HD3",
+            "HE2",
+            "HE3",
+            "HZ1",
+            "HZ2"
+          ]
+        },
+        {
+          "id": "30",
+          "name": "ILE",
+          "variant": null,
+          "hydrogens": [
+            "H",
+            "HA",
+            "HB",
+            "HG12",
+            "HG13",
+            "HG21",
+            "HG22",
+            "HG23",
+            "HD11",
+            "HD12",
+            "HD13"
+          ]
+        }
+      ],
+      "hydrogen_name_mapping": [
+        {
+          "residue": "30",
+          "old": "CD1",
+          "new": "CD",
+          "element": "C"
+        },
+        {
+          "residue": "24",
+          "center": "N",
+          "old": "H",
+          "new": "H1"
+        },
+        {
+          "residue": "24",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "24",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "25",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "27",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "27",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "27",
+          "center": "CD",
+          "old": "HD3",
+          "new": "HD1"
+        },
+        {
+          "residue": "27",
+          "center": "CE",
+          "old": "HE3",
+          "new": "HE1"
+        },
+        {
+          "residue": "29",
+          "center": "CB",
+          "old": "HB3",
+          "new": "HB1"
+        },
+        {
+          "residue": "29",
+          "center": "CG",
+          "old": "HG3",
+          "new": "HG1"
+        },
+        {
+          "residue": "29",
+          "center": "CD",
+          "old": "HD3",
+          "new": "HD1"
+        },
+        {
+          "residue": "29",
+          "center": "CE",
+          "old": "HE3",
+          "new": "HE1"
+        },
+        {
+          "residue": "30",
+          "center": "CG1",
+          "old": "HG13",
+          "new": "HG11"
+        },
+        {
+          "residue": "30",
+          "center": "CD",
+          "old": "HD11",
+          "new": "HD1"
+        },
+        {
+          "residue": "30",
+          "center": "CD",
+          "old": "HD12",
+          "new": "HD2"
+        },
+        {
+          "residue": "30",
+          "center": "CD",
+          "old": "HD13",
+          "new": "HD3"
+        }
+      ],
+      "command": [
+        "pdb2gmx",
+        "-f",
+        "input.pdb",
+        "-o",
+        "processed.pdb",
+        "-p",
+        "topol.top",
+        "-i",
+        "posre.itp",
+        "-ff",
+        "amber99sb-ildn",
+        "-water",
+        "tip3p",
+        "-n",
+        "mapping.ndx"
+      ],
+      "exit_code": 0,
+      "all_atoms_preserved_after_terminal_aliases": true,
+      "max_displacement_after_aliases_angstrom": 0.0,
+      "input_atoms": 119,
+      "output_atoms": 119,
+      "missing": [
+        "6:O",
+        "6:OXT"
+      ],
+      "added": [
+        "6:OC1",
+        "6:OC2"
+      ],
+      "max_common_displacement_angstrom": 0.0,
+      "reordered": true,
+      "terminal_aliases": {
+        "O": "OC2",
+        "OXT": "OC1"
+      }
+    }
+  ],
+  "limitations": [
+    "Five short modeled fragments only; no comprehensive residue, terminal, disulfide, covalent-partner or template coverage.",
+    "H-name reassignment among hydrogens on one heavy atom is an exploratory compatibility mapping, not a validated prochiral-naming mapping.",
+    "GROMACS must remain blocked for prepared states until such mapping is implemented and independently validated at the app boundary."
+  ]
+}

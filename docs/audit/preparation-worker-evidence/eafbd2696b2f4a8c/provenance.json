@@ -1,0 +1,28 @@
+{
+  "application": "DynaMol 0.1.0",
+  "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.",
+  "config": {
+    "name": "Protein preparation",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": true,
+    "optimize_sidechains": true,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "seed": 2026,
+    "dataset_id": "3afec3ebb0904d38",
+    "operation": "prepare"
+  },
+  "input_sha256": "e9f77491b27618f56e6ee36e6b74e9825c039d04f3fc920f8706faf182dc0772",
+  "cpu_threads": 2,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6"
+  },
+  "commands": [],
+  "preparation": [],
+  "worker_source_sha256": "a97e740626b89b39d123316988fcbb1b451b2302a5c38bb21cbb163e792a65f9",
+  "source_dataset_id": "3afec3ebb0904d38",
+  "failure": "Repaired structure has inverted or near-planar standard residue stereochemistry at A:3 ILE CA. The model is rejected; use an externally validated repair instead."
+}

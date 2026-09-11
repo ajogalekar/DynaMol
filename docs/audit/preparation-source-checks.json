@@ -1,0 +1,229 @@
+{
+  "scope": "Independent import/inspection boundary checks; temporary data; no MD or loop reconstruction in this script.",
+  "results": [
+    {
+      "name": "Original SEQRES preserved; known sequence gap distinguished from numbering-only gap",
+      "status": "pass",
+      "evidence": {
+        "six_residues_intact": {
+          "has_sequence": true,
+          "missing_residues": [],
+          "missing_atoms": [
+            {
+              "chain": "A",
+              "resid": "6",
+              "residue": "LYS",
+              "atoms": [
+                "OXT"
+              ]
+            }
+          ],
+          "gaps": [],
+          "source_hash": "039779d649c37c7f01f56fceebcc5bab28ec0d21ca68df877f875d04d14af1a1"
+        },
+        "six_residues_missing_atom": {
+          "has_sequence": true,
+          "missing_residues": [],
+          "missing_atoms": [
+            {
+              "chain": "A",
+              "resid": "6",
+              "residue": "LYS",
+              "atoms": [
+                "NZ",
+                "OXT"
+              ]
+            }
+          ],
+          "gaps": [],
+          "source_hash": "ae3bcb18009841e26412334baf8a7652b430e43d5e358f3a045f943ef7606a49"
+        },
+        "six_residues_known_gap": {
+          "has_sequence": true,
+          "missing_residues": [
+            {
+              "chain": "A",
+              "position": 2,
+              "residues": [
+                "ILE"
+              ],
+              "count": 1,
+              "terminal": false,
+              "buildable": true,
+              "chain_index": 0
+            }
+          ],
+          "missing_atoms": [
+            {
+              "chain": "A",
+              "resid": "6",
+              "residue": "LYS",
+              "atoms": [
+                "OXT"
+              ]
+            }
+          ],
+          "gaps": [
+            {
+              "chain": "A",
+              "after": "2",
+              "before": "4",
+              "message": "Backbone C\u2013N separation is 4.56 \u00c5; this connection requires repair before force-field preparation.",
+              "backbone_distance_angstrom": 4.564985542145782,
+              "structural_break": true
+            }
+          ],
+          "source_hash": "61a0fe21f847db1c9f9f3578ea4117350a3b3aa65279fb69d14e905ec35dfc3a"
+        },
+        "six_residues_numbering_gap_only": {
+          "has_sequence": false,
+          "missing_residues": [],
+          "missing_atoms": [
+            {
+              "chain": "A",
+              "resid": "6",
+              "residue": "LYS",
+              "atoms": [
+                "OXT"
+              ]
+            }
+          ],
+          "gaps": [
+            {
+              "chain": "A",
+              "after": "2",
+              "before": "4",
+              "message": "Backbone C\u2013N separation is 4.56 \u00c5; this connection requires repair before force-field preparation.",
+              "backbone_distance_angstrom": 4.564985542145782,
+              "structural_break": true
+            }
+          ],
+          "source_hash": "a8bc6d77c3b39254ffbb6923a14c924248d44b9ab4a4cf203d5ab9810ea9e3fe"
+        },
+        "histidine_fragment": {
+          "has_sequence": true,
+          "missing_residues": [],
+          "missing_atoms": [
+            {
+              "chain": "A",
+              "resid": "72",
+              "residue": "ARG",
+              "atoms": [
+                "OXT"
+              ]
+            }
+          ],
+          "gaps": [],
+          "source_hash": "aaf4c9525cd32c2e773f6f094327eadd2da4ec094f71a711593339ec50146b04"
+        }
+      }
+    },
+    {
+      "name": "mmCIF original polymer sequence maps after multicharacter chain normalization",
+      "status": "pass",
+      "evidence": {
+        "display_chains": [
+          "A"
+        ],
+        "has_sequence": true,
+        "missing_residues": [
+          {
+            "chain": "A",
+            "position": 2,
+            "residues": [
+              "ILE"
+            ],
+            "count": 1,
+            "terminal": false,
+            "buildable": true,
+            "chain_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "mmCIF label/auth chain distinction preserves known missing sequence",
+      "status": "pass",
+      "evidence": {
+        "display_chains": [
+          "X"
+        ],
+        "has_sequence": true,
+        "missing_residues": [
+          {
+            "chain": "X",
+            "position": 2,
+            "residues": [
+              "ILE"
+            ],
+            "count": 1,
+            "terminal": false,
+            "buildable": true,
+            "chain_index": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "Unresolved gaps fail before worker launch; known short-loop building requires opt-in",
+      "status": "pass",
+      "evidence": {
+        "rejections": [
+          "Unresolved internal sequence gaps would create artificial peptide connections. Enable short missing-loop building, or repair the structure externally before protein preparation.",
+          "An unresolved long backbone connection has no supported missing sequence. Supply the original PDB/mmCIF sequence records or repair the gap externally; residue identities will not be guessed."
+        ],
+        "known_short_loop_optin_accepted": true,
+        "worker_launch": "mocked; no preparation performed by this check"
+      }
+    },
+    {
+      "name": "SMILES defined stereochemistry, unspecified-center warning, seeded reproducibility",
+      "status": "pass",
+      "evidence": {
+        "canonical_isomeric_smiles": "C[C@H](N)C(=O)O",
+        "identical_seed_coordinates": true,
+        "atoms": 13,
+        "stereo_warning": [
+          "Computed 3D conformer from SMILES; protonation and tautomer state come from your input. Ligand MD parameters are not assigned.",
+          "The input has unspecified stereocenters; the displayed conformer does not establish their experimental configuration.",
+          "No periodic box: measurements use ordinary Cartesian geometry."
+        ],
+        "salt_rejection": "3D generation supports one connected molecule with at most 500 atoms. Load separate molecules individually."
+      }
+    },
+    {
+      "name": "MOL2 interleaved residue atom-coordinate association preserved or rejected",
+      "status": "pass",
+      "evidence": {
+        "correctly_rejected": "Could not import this structure: MOL2 atoms from each residue must be contiguous; interleaved residues cannot preserve atom ordering. Export an ordered PDB/mmCIF or MOL2."
+      }
+    },
+    {
+      "name": "Retained RCSB 1UBQ PDB/mmCIF inputs agree in atoms, coordinates, and crystal box",
+      "status": "pass",
+      "evidence": {
+        "atoms": 660,
+        "coordinate_arrays_identical": true,
+        "unitcell_lengths_nm": [
+          [
+            5.084000110626221,
+            4.2769999504089355,
+            2.8949999809265137
+          ]
+        ],
+        "pdb_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+        "cif_sha256": "056f98710cb2b36f633c45e41902a02eb446e82871da21ff2dd44f74a56ca0f6",
+        "source_cif": "data/datasets/28d695aa1b804e44/source.cif"
+      }
+    },
+    {
+      "name": "Remote source identifiers cannot become arbitrary URLs",
+      "status": "pass",
+      "evidence": {
+        "pdb_url": "Enter an RCSB PDB accession such as 1UBQ or pdb_00001ubq, not a URL.",
+        "pubchem_url": "Enter a PubChem CID or compound name (maximum 200 characters), not a URL.",
+        "arbitrary_provider": "Choose the PDB or PubChem structure provider."
+      }
+    }
+  ]
+}

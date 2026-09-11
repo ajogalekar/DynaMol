@@ -1,0 +1,342 @@
+{
+  "scope": "Upstream parser inspection only; no coordinates built.",
+  "results": [
+    {
+      "fixture": "histidine_fragment",
+      "sequence_record_count": 1,
+      "missing_residues": {},
+      "missing_atoms": {},
+      "missing_terminals": {
+        "72:ARG": [
+          "OXT"
+        ]
+      },
+      "parsed_interresidue_bonds": [
+        {
+          "residues": [
+            "66",
+            "67"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3378168783506947
+        },
+        {
+          "residues": [
+            "67",
+            "68"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.285165748065205
+        },
+        {
+          "residues": [
+            "68",
+            "69"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.322626553491193
+        },
+        {
+          "residues": [
+            "69",
+            "70"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2935354653042914
+        },
+        {
+          "residues": [
+            "70",
+            "71"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3123753274120977
+        },
+        {
+          "residues": [
+            "71",
+            "72"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2803226155934344
+        }
+      ]
+    },
+    {
+      "fixture": "six_residues_intact",
+      "sequence_record_count": 1,
+      "missing_residues": {},
+      "missing_atoms": {},
+      "missing_terminals": {
+        "6:LYS": [
+          "OXT"
+        ]
+      },
+      "parsed_interresidue_bonds": [
+        {
+          "residues": [
+            "1",
+            "2"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2991435640451763
+        },
+        {
+          "residues": [
+            "2",
+            "3"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3242488436846007
+        },
+        {
+          "residues": [
+            "3",
+            "4"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3115128668831288
+        },
+        {
+          "residues": [
+            "4",
+            "5"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3290440173297515
+        },
+        {
+          "residues": [
+            "5",
+            "6"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2873247453537142
+        }
+      ]
+    },
+    {
+      "fixture": "six_residues_known_gap",
+      "sequence_record_count": 1,
+      "missing_residues": {
+        "(0, 2)": [
+          "ILE"
+        ]
+      },
+      "missing_atoms": {},
+      "missing_terminals": {
+        "6:LYS": [
+          "OXT"
+        ]
+      },
+      "parsed_interresidue_bonds": [
+        {
+          "residues": [
+            "1",
+            "2"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2991435640451763
+        },
+        {
+          "residues": [
+            "2",
+            "4"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 4.564985542145782
+        },
+        {
+          "residues": [
+            "4",
+            "5"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3290440173297515
+        },
+        {
+          "residues": [
+            "5",
+            "6"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2873247453537142
+        }
+      ]
+    },
+    {
+      "fixture": "six_residues_missing_atom",
+      "sequence_record_count": 1,
+      "missing_residues": {},
+      "missing_atoms": {
+        "6:LYS": [
+          "NZ"
+        ]
+      },
+      "missing_terminals": {
+        "6:LYS": [
+          "OXT"
+        ]
+      },
+      "parsed_interresidue_bonds": [
+        {
+          "residues": [
+            "1",
+            "2"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2991435640451763
+        },
+        {
+          "residues": [
+            "2",
+            "3"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3242488436846007
+        },
+        {
+          "residues": [
+            "3",
+            "4"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3115128668831288
+        },
+        {
+          "residues": [
+            "4",
+            "5"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3290440173297515
+        },
+        {
+          "residues": [
+            "5",
+            "6"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2873247453537142
+        }
+      ]
+    },
+    {
+      "fixture": "six_residues_numbering_gap_only",
+      "sequence_record_count": 0,
+      "missing_residues": {},
+      "missing_atoms": {},
+      "missing_terminals": {
+        "6:LYS": [
+          "OXT"
+        ]
+      },
+      "parsed_interresidue_bonds": [
+        {
+          "residues": [
+            "1",
+            "2"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2991435640451763
+        },
+        {
+          "residues": [
+            "2",
+            "4"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 4.564985542145782
+        },
+        {
+          "residues": [
+            "4",
+            "5"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.3290440173297515
+        },
+        {
+          "residues": [
+            "5",
+            "6"
+          ],
+          "atoms": [
+            "C",
+            "N"
+          ],
+          "distance_angstrom": 1.2873247453537142
+        }
+      ]
+    }
+  ]
+}

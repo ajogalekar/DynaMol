@@ -1,0 +1,110 @@
+{
+  "ethanol": {
+    "dataset_id": "72e3eae1ee6b4df1",
+    "n_atoms": 9,
+    "n_residues": 1,
+    "provenance": {
+      "provider": "smiles",
+      "conformer": {
+        "method": "RDKit ETKDGv3",
+        "seed": 2026,
+        "optimization": "MMFF94s",
+        "optimization_converged": true,
+        "interpretation": "Computed conformer; neither experimental coordinates nor a parameterized MD system."
+      },
+      "input_smiles": "CCO",
+      "source_file": "source.smiles",
+      "source_format": "smiles",
+      "source_sha256": "ab1de819ede91df490e6441934decfa9041b49f91d6bbadbba4df634ccff57fa",
+      "retrieved_at": "2026-09-11T01:56:38.169715+00:00"
+    }
+  },
+  "pubchem_caffeine": {
+    "dataset_id": "45ab20411ca84fc6",
+    "n_atoms": 24,
+    "n_residues": 1,
+    "provenance": {
+      "provider": "pubchem",
+      "identifier": "caffeine",
+      "cid": 2519,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2519/SDF?record_type=3d",
+      "lookup_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/caffeine/cids/JSON",
+      "conformer": {
+        "method": "PubChem computed 3D conformer",
+        "interpretation": "Computed PubChem conformer; not experimental coordinates or MD parameters."
+      },
+      "source_file": "source.sdf",
+      "source_format": "sdf",
+      "source_sha256": "2c121cbc29687965f6a5bf00619d9c07441c305948a4878de81f52a2f8d000a4",
+      "retrieved_at": "2026-09-11T01:56:38.692192+00:00"
+    }
+  },
+  "rcsb_1ubq": {
+    "dataset_id": "c0f0e5c8ec33466e",
+    "n_atoms": 660,
+    "n_residues": 134,
+    "provenance": {
+      "provider": "rcsb_pdb",
+      "identifier": "1UBQ",
+      "url": "https://files.rcsb.org/download/1ubq.cif",
+      "assembly": "deposited coordinate model; no biological-assembly reconstruction",
+      "source_file": "source.cif",
+      "source_format": "cif",
+      "source_sha256": "056f98710cb2b36f633c45e41902a02eb446e82871da21ff2dd44f74a56ca0f6",
+      "retrieved_at": "2026-09-11T01:56:38.925104+00:00"
+    }
+  },
+  "real_explicit_water": {
+    "dataset_id": "c6b13b5e0e8e47bd",
+    "n_atoms": 18556,
+    "n_residues": 5851,
+    "provenance": {
+      "operation": "explicit_water_preview",
+      "parent_dataset_id": "a3d195a9d7df4138",
+      "preparation": {
+        "ph": 7,
+        "method": "Existing validated demo topology",
+        "summary": [
+          "Existing simulation protein topology, solvent smoke test only"
+        ]
+      },
+      "solvation": {
+        "parent_dataset_id": "a3d195a9d7df4138",
+        "padding_nm": 1,
+        "water_model": "tip3p",
+        "seed": 2026,
+        "added_water_atoms": 17325,
+        "water_atoms": 17325,
+        "neutralizing_ions": 0,
+        "ionic_strength_molar": 0,
+        "box_shape": "cube",
+        "box_vectors_nm": [
+          [
+            5.813782228144517,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            5.813782228144517,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            5.813782228144517
+          ]
+        ],
+        "openmm_version": "8.6.0.dev-c6173db",
+        "forcefield": [
+          "amber14/protein.ff14SB.xml",
+          "amber14/tip3p.xml"
+        ],
+        "prepared_pdb": "prepared.pdb",
+        "input_sha256": "098537c627a77eacf82ea61cc7f287e70980c02aca17ab58f98937ee49d06e74",
+        "equilibrated": false,
+        "preserves_prepared_protonation": true
+      }
+    }
+  }
+}

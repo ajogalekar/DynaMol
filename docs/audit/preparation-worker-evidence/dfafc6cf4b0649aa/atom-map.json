@@ -1,0 +1,1191 @@
+{
+  "input_to_output": [
+    {
+      "input_index": 0,
+      "output_index": 0,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "N"
+      ]
+    },
+    {
+      "input_index": 1,
+      "output_index": 4,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 2,
+      "output_index": 6,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "C"
+      ]
+    },
+    {
+      "input_index": 3,
+      "output_index": 7,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "O"
+      ]
+    },
+    {
+      "input_index": 4,
+      "output_index": 8,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 5,
+      "output_index": 11,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "CG"
+      ]
+    },
+    {
+      "input_index": 6,
+      "output_index": 14,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "SD"
+      ]
+    },
+    {
+      "input_index": 7,
+      "output_index": 15,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "CE"
+      ]
+    },
+    {
+      "input_index": 8,
+      "output_index": 19,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "N"
+      ]
+    },
+    {
+      "input_index": 9,
+      "output_index": 21,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 10,
+      "output_index": 23,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "C"
+      ]
+    },
+    {
+      "input_index": 11,
+      "output_index": 24,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "O"
+      ]
+    },
+    {
+      "input_index": 12,
+      "output_index": 25,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 13,
+      "output_index": 28,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "CG"
+      ]
+    },
+    {
+      "input_index": 14,
+      "output_index": 31,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "CD"
+      ]
+    },
+    {
+      "input_index": 15,
+      "output_index": 32,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "OE1"
+      ]
+    },
+    {
+      "input_index": 16,
+      "output_index": 33,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "NE2"
+      ]
+    },
+    {
+      "input_index": 17,
+      "output_index": 55,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "N"
+      ]
+    },
+    {
+      "input_index": 18,
+      "output_index": 57,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 19,
+      "output_index": 59,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "C"
+      ]
+    },
+    {
+      "input_index": 20,
+      "output_index": 60,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "O"
+      ]
+    },
+    {
+      "input_index": 21,
+      "output_index": 61,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 22,
+      "output_index": 64,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CG"
+      ]
+    },
+    {
+      "input_index": 23,
+      "output_index": 65,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CD1"
+      ]
+    },
+    {
+      "input_index": 24,
+      "output_index": 67,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CD2"
+      ]
+    },
+    {
+      "input_index": 25,
+      "output_index": 69,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CE1"
+      ]
+    },
+    {
+      "input_index": 26,
+      "output_index": 71,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CE2"
+      ]
+    },
+    {
+      "input_index": 27,
+      "output_index": 73,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "CZ"
+      ]
+    },
+    {
+      "input_index": 28,
+      "output_index": 75,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "N"
+      ]
+    },
+    {
+      "input_index": 29,
+      "output_index": 77,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 30,
+      "output_index": 79,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "C"
+      ]
+    },
+    {
+      "input_index": 31,
+      "output_index": 80,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "O"
+      ]
+    },
+    {
+      "input_index": 32,
+      "output_index": 81,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 33,
+      "output_index": 83,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "CG1"
+      ]
+    },
+    {
+      "input_index": 34,
+      "output_index": 87,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "CG2"
+      ]
+    },
+    {
+      "input_index": 35,
+      "output_index": 91,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "N"
+      ]
+    },
+    {
+      "input_index": 36,
+      "output_index": 93,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 37,
+      "output_index": 95,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "C"
+      ]
+    },
+    {
+      "input_index": 38,
+      "output_index": 96,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "O"
+      ]
+    },
+    {
+      "input_index": 39,
+      "output_index": 97,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 40,
+      "output_index": 100,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "CG"
+      ]
+    },
+    {
+      "input_index": 41,
+      "output_index": 103,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "CD"
+      ]
+    },
+    {
+      "input_index": 42,
+      "output_index": 106,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "CE"
+      ]
+    },
+    {
+      "input_index": 43,
+      "output_index": 109,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "NZ"
+      ]
+    }
+  ],
+  "added_atoms": [
+    {
+      "output_index": 1,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "H"
+      ]
+    },
+    {
+      "output_index": 2,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "H2"
+      ]
+    },
+    {
+      "output_index": 3,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "H3"
+      ]
+    },
+    {
+      "output_index": 5,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 9,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 10,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 12,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HG2"
+      ]
+    },
+    {
+      "output_index": 13,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HG3"
+      ]
+    },
+    {
+      "output_index": 16,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HE1"
+      ]
+    },
+    {
+      "output_index": 17,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HE2"
+      ]
+    },
+    {
+      "output_index": 18,
+      "identity": [
+        "A",
+        "1",
+        " ",
+        "MET",
+        "HE3"
+      ]
+    },
+    {
+      "output_index": 20,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "H"
+      ]
+    },
+    {
+      "output_index": 22,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 26,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 27,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 29,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HG2"
+      ]
+    },
+    {
+      "output_index": 30,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HG3"
+      ]
+    },
+    {
+      "output_index": 34,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HE21"
+      ]
+    },
+    {
+      "output_index": 35,
+      "identity": [
+        "A",
+        "2",
+        " ",
+        "GLN",
+        "HE22"
+      ]
+    },
+    {
+      "output_index": 36,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "N"
+      ]
+    },
+    {
+      "output_index": 37,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "H"
+      ]
+    },
+    {
+      "output_index": 38,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "CA"
+      ]
+    },
+    {
+      "output_index": 39,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 40,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "CB"
+      ]
+    },
+    {
+      "output_index": 41,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HB"
+      ]
+    },
+    {
+      "output_index": 42,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "CG2"
+      ]
+    },
+    {
+      "output_index": 43,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HG21"
+      ]
+    },
+    {
+      "output_index": 44,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HG22"
+      ]
+    },
+    {
+      "output_index": 45,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HG23"
+      ]
+    },
+    {
+      "output_index": 46,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "CG1"
+      ]
+    },
+    {
+      "output_index": 47,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HG12"
+      ]
+    },
+    {
+      "output_index": 48,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HG13"
+      ]
+    },
+    {
+      "output_index": 49,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "CD1"
+      ]
+    },
+    {
+      "output_index": 50,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HD11"
+      ]
+    },
+    {
+      "output_index": 51,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HD12"
+      ]
+    },
+    {
+      "output_index": 52,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "HD13"
+      ]
+    },
+    {
+      "output_index": 53,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "C"
+      ]
+    },
+    {
+      "output_index": 54,
+      "identity": [
+        "A",
+        "3",
+        "",
+        "ILE",
+        "O"
+      ]
+    },
+    {
+      "output_index": 56,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "H"
+      ]
+    },
+    {
+      "output_index": 58,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 62,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 63,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 66,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HD1"
+      ]
+    },
+    {
+      "output_index": 68,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HD2"
+      ]
+    },
+    {
+      "output_index": 70,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HE1"
+      ]
+    },
+    {
+      "output_index": 72,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HE2"
+      ]
+    },
+    {
+      "output_index": 74,
+      "identity": [
+        "A",
+        "4",
+        " ",
+        "PHE",
+        "HZ"
+      ]
+    },
+    {
+      "output_index": 76,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "H"
+      ]
+    },
+    {
+      "output_index": 78,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 82,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HB"
+      ]
+    },
+    {
+      "output_index": 84,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HG11"
+      ]
+    },
+    {
+      "output_index": 85,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HG12"
+      ]
+    },
+    {
+      "output_index": 86,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HG13"
+      ]
+    },
+    {
+      "output_index": 88,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HG21"
+      ]
+    },
+    {
+      "output_index": 89,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HG22"
+      ]
+    },
+    {
+      "output_index": 90,
+      "identity": [
+        "A",
+        "5",
+        " ",
+        "VAL",
+        "HG23"
+      ]
+    },
+    {
+      "output_index": 92,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "H"
+      ]
+    },
+    {
+      "output_index": 94,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 98,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 99,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 101,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HG2"
+      ]
+    },
+    {
+      "output_index": 102,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HG3"
+      ]
+    },
+    {
+      "output_index": 104,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HD2"
+      ]
+    },
+    {
+      "output_index": 105,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HD3"
+      ]
+    },
+    {
+      "output_index": 107,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HE2"
+      ]
+    },
+    {
+      "output_index": 108,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HE3"
+      ]
+    },
+    {
+      "output_index": 110,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HZ1"
+      ]
+    },
+    {
+      "output_index": 111,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HZ2"
+      ]
+    },
+    {
+      "output_index": 112,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "HZ3"
+      ]
+    },
+    {
+      "output_index": 113,
+      "identity": [
+        "A",
+        "6",
+        " ",
+        "LYS",
+        "OXT"
+      ]
+    }
+  ],
+  "note": "Original hydrogens were removed and regenerated; matching H names do not imply retained hydrogen coordinates."
+}

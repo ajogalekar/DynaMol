@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity,
   ArrowLeft,
@@ -131,6 +131,10 @@ export default function App() {
     frameRef = useRef(0),
     loadToken = useRef(0),
     workspace = useRef<HTMLDivElement>(null);
+  const visibleMeasurements = useMemo(
+    () => measurements.filter((m) => m.visible !== false),
+    [measurements],
+  );
   const time = dataset?.times_ps[Math.min((dataset?.n_frames ?? 1) - 1, Math.round(frame))] ?? 0;
   const refreshJobs = useCallback(() => {
     api
@@ -146,7 +150,10 @@ export default function App() {
   }, []);
 
   const loadDataset = useCallback(
-    async (d: Dataset) => {
+    async (
+      d: Dataset,
+      options: { keepStudio?: boolean; showWater?: boolean; showHydrogens?: boolean } = {},
+    ) => {
       const token = ++loadToken.current;
       setLoading(true);
       setReady(false);
@@ -154,6 +161,8 @@ export default function App() {
       setPlaying(false);
       setError('');
       setMeasurements([]);
+      setMeasureBusy(false);
+      setActiveMeasurement(null);
       setSelectedAtoms([]);
       setPicking(false);
       setFrame(0);
@@ -165,13 +174,13 @@ export default function App() {
         setCoordinates(coords);
         setVisibility({
           protein: true,
-          water: false,
+          water: options.showWater ?? !!d.solvation,
           ligands: true,
           ions: true,
-          hydrogens: 'none',
+          hydrogens: options.showHydrogens ? 'polar' : 'none',
         });
         setRepresentation('cartoon');
-        setModal(null);
+        if (!options.keepStudio) setModal(null);
         setLibrary(false);
         refreshLibrary();
         const ca = d.atoms.filter((a) => a.name === 'CA' && a.category === 'protein');
@@ -190,6 +199,7 @@ export default function App() {
                   ...m,
                   id,
                   color: palette[0],
+                  visible: false,
                   label: `${d.atoms[atoms[0]].residue}${d.atoms[atoms[0]].resid} ↔ ${d.atoms[atoms[1]].residue}${d.atoms[atoms[1]].resid}`,
                 },
               ]);
@@ -306,7 +316,7 @@ export default function App() {
         setSelectedAtoms([]);
         setLibrary(false);
       }
-      if (modal) return;
+      if (modal && modal !== 'simulation') return;
       if (e.code === 'Space') {
         e.preventDefault();
         togglePlayback();
@@ -327,7 +337,7 @@ export default function App() {
     return () => window.removeEventListener('keydown', key);
   }, [modal, seek, togglePlayback]);
   useEffect(() => {
-    if (!modal) return;
+    if (!modal || modal === 'simulation') return;
     const previous = document.activeElement as HTMLElement | null;
     const dialog = document.querySelector<HTMLElement>('[role="dialog"]');
     const getFocusable = () =>
@@ -425,12 +435,15 @@ export default function App() {
       setError((e as Error).message);
     }
   }
-  async function openById(id: string) {
+  async function openById(
+    id: string,
+    options: { keepStudio?: boolean; showWater?: boolean; showHydrogens?: boolean } = {},
+  ) {
     const requestToken = ++loadToken.current;
     setPlaying(false);
     try {
       const next = await api.dataset(id);
-      if (requestToken === loadToken.current) await loadDataset(next);
+      if (requestToken === loadToken.current) await loadDataset(next, options);
     } catch (e) {
       if (requestToken === loadToken.current) setError((e as Error).message);
     }
@@ -458,8 +471,12 @@ export default function App() {
       setError(message);
       setReady(false);
     }, []);
+  function openStudio() {
+    setModal('simulation');
+  }
+
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${modal === 'simulation' ? 'studio-open' : ''}`}>
       <header className="app-header">
         <a
           className="brand"
@@ -483,10 +500,7 @@ export default function App() {
           <button className={modal !== 'simulation' ? 'active' : ''} onClick={() => setModal(null)}>
             <Box size={16} /> Explore
           </button>
-          <button
-            className={modal === 'simulation' ? 'active' : ''}
-            onClick={() => setModal('simulation')}
-          >
+          <button className={modal === 'simulation' ? 'active' : ''} onClick={openStudio}>
             <FlaskConical size={16} /> Simulate
             {running.length > 0 && <span className="nav-count">{running.length}</span>}
           </button>
@@ -527,7 +541,7 @@ export default function App() {
           <button className="secondary-button" onClick={() => setModal('import')}>
             <FolderOpen size={15} /> Open files
           </button>
-          <button className="primary-button" onClick={() => setModal('simulation')}>
+          <button className="primary-button" onClick={openStudio}>
             <Plus size={16} /> New simulation
           </button>
         </div>
@@ -562,7 +576,10 @@ export default function App() {
           </button>
         </div>
       )}
-      <main className={`workspace-grid ${inspector ? '' : 'inspector-hidden'}`} ref={workspace}>
+      <main
+        className={`workspace-grid ${inspector && modal !== 'simulation' ? '' : 'inspector-hidden'}`}
+        ref={workspace}
+      >
         <aside className="scene-panel">
           <div className="panel-heading">
             <span className="section-label">
@@ -794,7 +811,7 @@ export default function App() {
                 representation={representation}
                 colorScheme={colorScheme}
                 selectedAtoms={selectedAtoms}
-                measurements={measurements}
+                measurements={visibleMeasurements}
                 picking={picking}
                 spin={spin}
                 onAtomPick={onAtomPick}
@@ -837,6 +854,25 @@ export default function App() {
               </div>
             )}
             <div className="canvas-tools">
+              <button
+                className={`icon-button ${visibleMeasurements.length ? 'selected' : ''}`}
+                title={
+                  visibleMeasurements.length
+                    ? 'Hide measurement lines and labels (keep plots)'
+                    : 'Show measurement lines and labels'
+                }
+                aria-label={visibleMeasurements.length ? 'Hide measurements' : 'Show measurements'}
+                aria-pressed={visibleMeasurements.length > 0}
+                disabled={!measurements.length}
+                onClick={() =>
+                  setMeasurements((ms) =>
+                    ms.map((m) => ({ ...m, visible: visibleMeasurements.length === 0 })),
+                  )
+                }
+              >
+                {visibleMeasurements.length ? <Eye size={17} /> : <EyeOff size={17} />}
+              </button>
+              <span />
               <button
                 className="icon-button"
                 title="Zoom in"
@@ -1043,6 +1079,11 @@ export default function App() {
             activeId={activeMeasurement}
             onActive={setActiveMeasurement}
             onRemove={(id) => setMeasurements((ms) => ms.filter((m) => m.id !== id))}
+            onToggleVisibility={(id) =>
+              setMeasurements((ms) =>
+                ms.map((m) => (m.id === id ? { ...m, visible: m.visible === false } : m)),
+              )
+            }
             onSeek={seek}
             onAdd={() => {
               setInspector(true);
@@ -1065,7 +1106,7 @@ export default function App() {
             </div>
           )}
         </section>
-        {inspector && (
+        {inspector && modal !== 'simulation' && (
           <aside className="measurement-panel">
             <div className="panel-heading">
               <span className="section-label">
@@ -1270,8 +1311,8 @@ export default function App() {
         </span>
         <span>
           {running.length ? (
-            <button onClick={() => setModal('simulation')}>
-              <LoaderCircle size={11} className="spin" /> {running.length} simulation
+            <button onClick={openStudio}>
+              <LoaderCircle size={11} className="spin" /> {running.length} background job
               {running.length > 1 ? 's' : ''} running · view progress <ChevronRight size={11} />
             </button>
           ) : (
@@ -1298,10 +1339,20 @@ export default function App() {
           jobs={jobs}
           onClose={() => setModal(null)}
           onStarted={(j) => {
-            setJobs((prev) => [j, ...prev]);
-            setToast('Simulation started. You can keep exploring.');
+            setJobs((prev) => [j, ...prev.filter((existing) => existing.id !== j.id)]);
+            setToast(
+              ['preparation', 'solvation'].includes(j.engine)
+                ? 'Preparing your structure. Progress appears in the studio.'
+                : 'Simulation started. You can keep exploring.',
+            );
           }}
-          onLoad={(id) => void openById(id)}
+          onLoad={(id, showWater) => void openById(id, { keepStudio: true, showWater })}
+          onDatasetLoaded={async (d, options) => {
+            await loadDataset(d, { keepStudio: true, ...options });
+          }}
+          onWaterVisibility={(show) =>
+            setVisibility((v) => ({ ...v, water: show, ions: show || v.ions }))
+          }
           onRefresh={refreshJobs}
         />
       )}

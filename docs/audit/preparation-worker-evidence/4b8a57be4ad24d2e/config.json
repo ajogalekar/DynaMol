@@ -1,0 +1,12 @@
+{
+  "name": "Protein preparation",
+  "ph": 7.0,
+  "add_missing_atoms": true,
+  "build_missing_residues": false,
+  "optimize_sidechains": false,
+  "remove_waters": true,
+  "remove_heterogens": false,
+  "seed": 2026,
+  "dataset_id": "ea69caaa857c4e8d",
+  "operation": "prepare"
+}

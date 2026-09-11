@@ -1,0 +1,38 @@
+{
+  "id": "36c7e8a6c5c64685",
+  "name": "My simulation",
+  "engine": "openmm",
+  "status": "completed",
+  "stage": "Complete",
+  "progress": 100,
+  "completed_steps": 1,
+  "total_steps": 1,
+  "elapsed_seconds": 0.23,
+  "logs": [
+    "Queued 1 production steps on 2 CPU threads.",
+    "Preserving exact prepared topology and hydrogens at recorded pH 2; no automatic hydrogen reassignment.",
+    "Reusing the exact prepared TIP3P solvent preview (3,485 atoms); no water or ions added and no new box generated.",
+    "Production started: 1 steps, 2 fs, seed 2026; OpenMM 8.6 CPU.",
+    "Step 0/1 \u00b7 0 ps \u00b7 potential -11192.15 kJ/mol",
+    "Step 1/1 \u00b7 0.002 ps \u00b7 potential -28236.23 kJ/mol",
+    "Complete: 2 frames, 3,485 atoms. Output files and reproducibility manifest saved."
+  ],
+  "config": {
+    "dataset_id": "f5b3811db80543e9",
+    "engine": "openmm",
+    "name": "My simulation",
+    "duration_ps": 0.002,
+    "temperature_k": 300,
+    "timestep_fs": 2,
+    "report_interval": 1,
+    "friction_ps": 1,
+    "seed": 2026,
+    "solvent": "explicit",
+    "minimize": false,
+    "equilibration_steps": 0,
+    "padding_nm": 1
+  },
+  "created_at": "2026-09-11T02:14:45.351069+00:00",
+  "worker_pid": 77928,
+  "dataset_id": "701dfc7acabf4bce"
+}

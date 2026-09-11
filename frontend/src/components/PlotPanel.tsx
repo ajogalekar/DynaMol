@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Activity, Download, Plus, X } from 'lucide-react';
+import { Activity, Download, Plus, X, Eye, EyeOff } from 'lucide-react';
 import type { Dataset, Measurement } from '../types';
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
   activeId: string | null;
   onActive: (id: string) => void;
   onRemove: (id: string) => void;
+  onToggleVisibility: (id: string) => void;
   onSeek: (frame: number) => void;
   onAdd: () => void;
 }
@@ -119,6 +120,7 @@ export default function PlotPanel({
   activeId,
   onActive,
   onRemove,
+  onToggleVisibility,
   onSeek,
   onAdd,
 }: Props) {
@@ -185,6 +187,19 @@ export default function PlotPanel({
                 >
                   <i />
                   {m.label}
+                </button>
+                <button
+                  title={
+                    m.visible === false
+                      ? 'Show this measurement in the 3D view'
+                      : 'Hide this measurement in the 3D view (keep plot)'
+                  }
+                  aria-label={`${m.visible === false ? 'Show' : 'Hide'} ${m.label} in view`}
+                  aria-pressed={m.visible !== false}
+                  className="measurement-eye"
+                  onClick={() => onToggleVisibility(m.id)}
+                >
+                  {m.visible === false ? <EyeOff size={12} /> : <Eye size={12} />}
                 </button>
                 <button aria-label={`Remove ${m.label}`} onClick={() => onRemove(m.id)}>
                   <X size={11} />

@@ -1,0 +1,960 @@
+{
+  "input_to_output": [
+    {
+      "input_index": 0,
+      "output_index": 0,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "N"
+      ]
+    },
+    {
+      "input_index": 1,
+      "output_index": 4,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 2,
+      "output_index": 6,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "C"
+      ]
+    },
+    {
+      "input_index": 3,
+      "output_index": 7,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "O"
+      ]
+    },
+    {
+      "input_index": 4,
+      "output_index": 8,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 5,
+      "output_index": 10,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "CG1"
+      ]
+    },
+    {
+      "input_index": 6,
+      "output_index": 14,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "CG2"
+      ]
+    },
+    {
+      "input_index": 7,
+      "output_index": 18,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "N"
+      ]
+    },
+    {
+      "input_index": 8,
+      "output_index": 20,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 9,
+      "output_index": 22,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "C"
+      ]
+    },
+    {
+      "input_index": 10,
+      "output_index": 23,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "O"
+      ]
+    },
+    {
+      "input_index": 11,
+      "output_index": 24,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 12,
+      "output_index": 27,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "CG"
+      ]
+    },
+    {
+      "input_index": 13,
+      "output_index": 30,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "CD"
+      ]
+    },
+    {
+      "input_index": 14,
+      "output_index": 33,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "CE"
+      ]
+    },
+    {
+      "input_index": 15,
+      "output_index": 36,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "NZ"
+      ]
+    },
+    {
+      "input_index": 16,
+      "output_index": 50,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "N"
+      ]
+    },
+    {
+      "input_index": 17,
+      "output_index": 52,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 18,
+      "output_index": 54,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "C"
+      ]
+    },
+    {
+      "input_index": 19,
+      "output_index": 55,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "O"
+      ]
+    },
+    {
+      "input_index": 20,
+      "output_index": 56,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 21,
+      "output_index": 59,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "CG"
+      ]
+    },
+    {
+      "input_index": 22,
+      "output_index": 62,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "CD"
+      ]
+    },
+    {
+      "input_index": 23,
+      "output_index": 65,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "CE"
+      ]
+    },
+    {
+      "input_index": 24,
+      "output_index": 68,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "NZ"
+      ]
+    },
+    {
+      "input_index": 25,
+      "output_index": 72,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "N"
+      ]
+    },
+    {
+      "input_index": 26,
+      "output_index": 74,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "CA"
+      ]
+    },
+    {
+      "input_index": 27,
+      "output_index": 76,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "C"
+      ]
+    },
+    {
+      "input_index": 28,
+      "output_index": 77,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "O"
+      ]
+    },
+    {
+      "input_index": 29,
+      "output_index": 78,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "CB"
+      ]
+    },
+    {
+      "input_index": 30,
+      "output_index": 80,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "CG1"
+      ]
+    },
+    {
+      "input_index": 31,
+      "output_index": 83,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "CG2"
+      ]
+    },
+    {
+      "input_index": 32,
+      "output_index": 87,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "CD1"
+      ]
+    }
+  ],
+  "added_atoms": [
+    {
+      "output_index": 1,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "H"
+      ]
+    },
+    {
+      "output_index": 2,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "H2"
+      ]
+    },
+    {
+      "output_index": 3,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "H3"
+      ]
+    },
+    {
+      "output_index": 5,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 9,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HB"
+      ]
+    },
+    {
+      "output_index": 11,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HG11"
+      ]
+    },
+    {
+      "output_index": 12,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HG12"
+      ]
+    },
+    {
+      "output_index": 13,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HG13"
+      ]
+    },
+    {
+      "output_index": 15,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HG21"
+      ]
+    },
+    {
+      "output_index": 16,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HG22"
+      ]
+    },
+    {
+      "output_index": 17,
+      "identity": [
+        "A",
+        "26",
+        " ",
+        "VAL",
+        "HG23"
+      ]
+    },
+    {
+      "output_index": 19,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "H"
+      ]
+    },
+    {
+      "output_index": 21,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 25,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 26,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 28,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HG2"
+      ]
+    },
+    {
+      "output_index": 29,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HG3"
+      ]
+    },
+    {
+      "output_index": 31,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HD2"
+      ]
+    },
+    {
+      "output_index": 32,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HD3"
+      ]
+    },
+    {
+      "output_index": 34,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HE2"
+      ]
+    },
+    {
+      "output_index": 35,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HE3"
+      ]
+    },
+    {
+      "output_index": 37,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HZ1"
+      ]
+    },
+    {
+      "output_index": 38,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HZ2"
+      ]
+    },
+    {
+      "output_index": 39,
+      "identity": [
+        "A",
+        "27",
+        " ",
+        "LYS",
+        "HZ3"
+      ]
+    },
+    {
+      "output_index": 40,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "N"
+      ]
+    },
+    {
+      "output_index": 41,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "H"
+      ]
+    },
+    {
+      "output_index": 42,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "CA"
+      ]
+    },
+    {
+      "output_index": 43,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 44,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "CB"
+      ]
+    },
+    {
+      "output_index": 45,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "HB1"
+      ]
+    },
+    {
+      "output_index": 46,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 47,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 48,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "C"
+      ]
+    },
+    {
+      "output_index": 49,
+      "identity": [
+        "A",
+        "28",
+        "",
+        "ALA",
+        "O"
+      ]
+    },
+    {
+      "output_index": 51,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "H"
+      ]
+    },
+    {
+      "output_index": 53,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 57,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HB2"
+      ]
+    },
+    {
+      "output_index": 58,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HB3"
+      ]
+    },
+    {
+      "output_index": 60,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HG2"
+      ]
+    },
+    {
+      "output_index": 61,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HG3"
+      ]
+    },
+    {
+      "output_index": 63,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HD2"
+      ]
+    },
+    {
+      "output_index": 64,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HD3"
+      ]
+    },
+    {
+      "output_index": 66,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HE2"
+      ]
+    },
+    {
+      "output_index": 67,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HE3"
+      ]
+    },
+    {
+      "output_index": 69,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HZ1"
+      ]
+    },
+    {
+      "output_index": 70,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HZ2"
+      ]
+    },
+    {
+      "output_index": 71,
+      "identity": [
+        "A",
+        "29",
+        " ",
+        "LYS",
+        "HZ3"
+      ]
+    },
+    {
+      "output_index": 73,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "H"
+      ]
+    },
+    {
+      "output_index": 75,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HA"
+      ]
+    },
+    {
+      "output_index": 79,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HB"
+      ]
+    },
+    {
+      "output_index": 81,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HG12"
+      ]
+    },
+    {
+      "output_index": 82,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HG13"
+      ]
+    },
+    {
+      "output_index": 84,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HG21"
+      ]
+    },
+    {
+      "output_index": 85,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HG22"
+      ]
+    },
+    {
+      "output_index": 86,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HG23"
+      ]
+    },
+    {
+      "output_index": 88,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HD11"
+      ]
+    },
+    {
+      "output_index": 89,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HD12"
+      ]
+    },
+    {
+      "output_index": 90,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "HD13"
+      ]
+    },
+    {
+      "output_index": 91,
+      "identity": [
+        "A",
+        "30",
+        " ",
+        "ILE",
+        "OXT"
+      ]
+    }
+  ],
+  "note": "Original hydrogens were removed and regenerated; matching H names do not imply retained hydrogen coordinates."
+}

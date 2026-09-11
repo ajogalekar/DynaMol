@@ -3,6 +3,7 @@
 Run only through jobs.submit_job. All preparation, logs and actual output remain
 in a persistent job directory for inspection and download.
 """
+import copy
 import hashlib
 import importlib.metadata
 import json
@@ -19,7 +20,7 @@ from pathlib import Path
 
 from . import config
 from .jobs import gromacs_executable
-from .storage import atomic_json, save_dataset, safe_id
+from .storage import atomic_json, save_dataset, safe_id, dataset_dir
 
 
 class Cancelled(Exception):
@@ -35,6 +36,8 @@ class Worker:
                 break
             time.sleep(0.02)
         self.settings = self.job["config"]
+        state_path = self.folder / "input-state.json"
+        self.input_state = json.loads(state_path.read_text()) if state_path.exists() else {}
         self.started = time.monotonic()
         self.provenance = {"application": "DynaMol 0.1.0", "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.", "config": self.settings, "input_sha256": hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest(), "cpu_threads": config.CPU_THREADS, "versions": {name: importlib.metadata.version(name) for name in ("openmm", "mdtraj", "numpy")}, "commands": [], "preparation": [], "worker_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "source_dataset_id": self.settings["dataset_id"]}
 
@@ -104,21 +107,32 @@ class Worker:
         modeller = app.Modeller(pdb.topology, pdb.positions)
         implicit = settings["solvent"] == "implicit"
         files = ["amber14/protein.ff14SB.xml", "implicit/gbn2.xml"] if implicit else ["amber14/protein.ff14SB.xml", "amber14/tip3p.xml"]
-        self.provenance.update(forcefield_files=files, integrator="LangevinMiddleIntegrator", ensemble="NVT", solvent="GBn2 implicit" if implicit else "TIP3P explicit", ph=7.0, platform="CPU")
+        prepared_state = self.input_state.get("preparation")
+        solvent_state = self.input_state.get("solvation")
+        self.provenance.update(forcefield_files=files, integrator="LangevinMiddleIntegrator", ensemble="NVT", solvent="GBn2 implicit" if implicit else "TIP3P explicit", ph=prepared_state.get("ph", 7.0) if prepared_state else 7.0, platform="CPU", input_preparation=prepared_state, input_solvation=solvent_state)
         random.seed(settings["seed"])
         np.random.seed(settings["seed"])
         self.provenance["preparation_random_seed"] = settings["seed"]
         ff = app.ForceField(*files)
         before = modeller.topology.getNumAtoms()
-        modeller.addHydrogens(ff, pH=7.0)
-        self.record_preparation(f"Added {modeller.topology.getNumAtoms() - before} hydrogens using OpenMM templates at pH 7; retained all input atoms. Protonation uses heuristic residue defaults and must be reviewed for scientific studies.")
+        if prepared_state:
+            self.record_preparation(f"Preserving exact prepared topology and hydrogens at recorded pH {prepared_state['ph']:g}; no automatic hydrogen reassignment.")
+        else:
+            modeller.addHydrogens(ff, pH=7.0)
+            self.record_preparation(f"Added {modeller.topology.getNumAtoms() - before} hydrogens using OpenMM templates at pH 7; retained all input atoms. Protonation uses heuristic residue defaults and must be reviewed for scientific studies.")
         if implicit:
             modeller.topology.setPeriodicBoxVectors(None)
             system = ff.createSystem(modeller.topology, nonbondedMethod=app.NoCutoff, constraints=app.HBonds)
         else:
             before = modeller.topology.getNumAtoms()
-            modeller.addSolvent(ff, model="tip3p", padding=settings["padding_nm"] * unit.nanometer, ionicStrength=0 * unit.molar, neutralize=True)
-            self.record_preparation(f"Added explicit TIP3P solvent and neutralizing counterions with {settings['padding_nm']:g} nm padding ({modeller.topology.getNumAtoms() - before:,} added atoms); fixed volume NVT, no pressure equilibration.")
+            if solvent_state:
+                if modeller.topology.getPeriodicBoxVectors() is None:
+                    raise ValueError("Prepared solvent preview has no periodic box; regenerate the preview.")
+                self.record_preparation(f"Reusing the exact prepared TIP3P solvent preview ({before:,} atoms); no water or ions added and no new box generated.")
+            else:
+                modeller.addSolvent(ff, model="tip3p", padding=settings["padding_nm"] * unit.nanometer, ionicStrength=0 * unit.molar, neutralize=True)
+                self.record_preparation(f"Added explicit TIP3P solvent and neutralizing counterions with {settings['padding_nm']:g} nm padding ({modeller.topology.getNumAtoms() - before:,} added atoms); fixed volume NVT, no pressure equilibration.")
+                self.output_solvation = {"parent_dataset_id": settings["dataset_id"], "padding_nm": settings["padding_nm"], "seed": settings["seed"], "water_model": "tip3p", "method": "Legacy OpenMM simulation setup; retained to prevent duplicate solvation on continuation", "added_atoms": modeller.topology.getNumAtoms() - before}
             system = ff.createSystem(modeller.topology, nonbondedMethod=app.PME, nonbondedCutoff=1 * unit.nanometer, constraints=app.HBonds)
         total = self.job["total_steps"]
         frames = math.ceil(total / settings["report_interval"]) + 1
@@ -282,6 +296,23 @@ pcoupl = no
             atomic_json(self.folder / "provenance.json", self.provenance)
             warnings = ["Short exploratory simulation. This run does not establish equilibration, convergence, biological function, or binding stability.", "Protein force-field templates, terminal states and protonation require scientific review before a production study."]
             dataset = save_dataset(trajectory, self.settings["name"], f"{self.settings['engine']} simulation", f"{trajectory.time[-1]:g} ps of real {self.settings['engine']} dynamics at {self.settings['temperature_k']:g} K. Fixed-volume exploratory NVT trajectory; seed {self.settings['seed']}.", warnings=warnings, provenance=self.provenance)
+            # A simulation result is itself a valid starting dataset. Carry exact
+            # preparation/solvent state forward so continuation cannot reset pH or
+            # regenerate a second solvent box.
+            prepared_state = copy.deepcopy(self.input_state.get("preparation"))
+            solvent_state = copy.deepcopy(self.input_state.get("solvation") or getattr(self, "output_solvation", None))
+            dataset["parent_dataset_id"] = self.settings["dataset_id"]
+            if prepared_state:
+                dataset["preparation"] = prepared_state
+            if solvent_state:
+                dataset["solvation"] = solvent_state
+            if prepared_state or solvent_state:
+                import shutil
+                exact_topology = self.folder / "prepared.pdb"
+                if not exact_topology.is_file():
+                    raise ValueError("Simulation output lacks the exact prepared first-frame topology required to preserve its state.")
+                shutil.copy2(exact_topology, dataset_dir(dataset["id"]) / "prepared.pdb")
+            atomic_json(dataset_dir(dataset["id"]) / "metadata.json", dataset)
             self.update(status="completed", stage="Complete", dataset_id=dataset["id"], message=f"Complete: {trajectory.n_frames} frames, {trajectory.n_atoms:,} atoms. Output files and reproducibility manifest saved.")
         except (Cancelled, KeyboardInterrupt):
             self.job.update(status="cancelled", stage="Cancelled", error="Cancelled by user. Partial outputs retained.", elapsed_seconds=round(time.monotonic() - self.started, 2))

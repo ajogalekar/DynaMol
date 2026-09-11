@@ -1,0 +1,36 @@
+{
+  "id": "3e42a64c72734742",
+  "name": "Protein preparation",
+  "engine": "preparation",
+  "status": "completed",
+  "stage": "Prepared protein ready",
+  "progress": 100,
+  "completed_steps": 7,
+  "total_steps": 7,
+  "elapsed_seconds": 0.1,
+  "logs": [
+    "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+    "Inspecting original sequence evidence and current first-frame coordinates.",
+    "Explicitly removed 0 existing hydrogens before pH reassignment, 0 water heavy atoms, and 0 other heavy atoms.",
+    "Added 2 heavy/terminal atoms across existing residues and 0 rebuilt internal segment(s).",
+    "Sidechain sampling skipped by request.",
+    "Added 61 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded.",
+    "Local relaxation stage complete.",
+    "Saved prepared dataset 512adc7bd4754c3e: 114 atoms. Protonation and modeling caveats retained."
+  ],
+  "config": {
+    "name": "Protein preparation",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": false,
+    "optimize_sidechains": false,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "seed": 2026,
+    "dataset_id": "1b05f09d9ba14683",
+    "operation": "prepare"
+  },
+  "created_at": "2026-09-11T02:13:23.668932+00:00",
+  "worker_pid": 77567,
+  "dataset_id": "512adc7bd4754c3e"
+}

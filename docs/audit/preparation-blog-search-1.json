@@ -1,0 +1,58 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 64,
+  "query": "protein preparation protonation structure validity",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2020-03-30T12:37:00.000-07:00",
+      "score": 37.0,
+      "tags": [],
+      "title": "Building on the Fragments From the Diamond/XChem SARS-CoV-2 Main Protease (MPro) Fragment Screen (Part II) Structure-Base Evaluation of Expanded Fragments",
+      "url": "https://practicalcheminformatics.blogspot.com/2020/03/building-on-fragments-from-diamondxchem_30.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-11-03",
+      "score": 36.0,
+      "tags": [
+        "Cofolding"
+      ],
+      "title": "We Still Haven\u2019t Found What We\u2019re Looking For - The Continuing Evolution of Protein-Ligand Co-Folding Methods",
+      "url": "https://patwalters.github.io/Cofolding-Evolution/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2020-05-04T10:50:00.000-07:00",
+      "score": 30.0,
+      "tags": [],
+      "title": "Exploring the SARS-CoV-2 Main Protease (MPro) Structures",
+      "url": "https://practicalcheminformatics.blogspot.com/2020/05/analyzing-sars-cov-2-main-protease-mpro.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 26.0,
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-07-21",
+      "score": 24.0,
+      "tags": [
+        "Cofolding",
+        "Validation"
+      ],
+      "title": "Three Papers Demonstrating That Cofolding Still Has a Ways to Go",
+      "url": "https://patwalters.github.io/Three-Papers-Demonstrating-That-Cofolding-Still-Has-a-Ways-to-Go/"
+    }
+  ],
+  "excerpt_policy": "Source metadata only; no long excerpts reproduced."
+}

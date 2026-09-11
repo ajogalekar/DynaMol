@@ -1,0 +1,860 @@
+{
+  "id": "f55e2ba63bf149a1",
+  "name": "histidine_fragment",
+  "n_atoms": 59,
+  "n_residues": 7,
+  "n_frames": 1,
+  "times_ps": [
+    0
+  ],
+  "time_unit": "ps",
+  "source": "upload",
+  "description": "Imported molecular structure",
+  "topology_url": "/api/datasets/f55e2ba63bf149a1/topology",
+  "coordinates_url": "/api/datasets/f55e2ba63bf149a1/coordinates",
+  "atoms": [
+    {
+      "index": 0,
+      "name": "N",
+      "element": "N",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 1,
+      "name": "CA",
+      "element": "C",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 2,
+      "name": "C",
+      "element": "C",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 3,
+      "name": "O",
+      "element": "O",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 4,
+      "name": "CB",
+      "element": "C",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 5,
+      "name": "OG1",
+      "element": "O",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 6,
+      "name": "CG2",
+      "element": "C",
+      "residue": "THR",
+      "resid": 66,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 7,
+      "name": "N",
+      "element": "N",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 8,
+      "name": "CA",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 9,
+      "name": "C",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 10,
+      "name": "O",
+      "element": "O",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 11,
+      "name": "CB",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 12,
+      "name": "CG",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 13,
+      "name": "CD1",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 14,
+      "name": "CD2",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 67,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 15,
+      "name": "N",
+      "element": "N",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 16,
+      "name": "CA",
+      "element": "C",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 17,
+      "name": "C",
+      "element": "C",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 18,
+      "name": "O",
+      "element": "O",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 19,
+      "name": "CB",
+      "element": "C",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 20,
+      "name": "CG",
+      "element": "C",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 21,
+      "name": "ND1",
+      "element": "N",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 22,
+      "name": "CD2",
+      "element": "C",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 23,
+      "name": "CE1",
+      "element": "C",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 24,
+      "name": "NE2",
+      "element": "N",
+      "residue": "HIS",
+      "resid": 68,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 25,
+      "name": "N",
+      "element": "N",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 26,
+      "name": "CA",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 27,
+      "name": "C",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 28,
+      "name": "O",
+      "element": "O",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 29,
+      "name": "CB",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 30,
+      "name": "CG",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 31,
+      "name": "CD1",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 32,
+      "name": "CD2",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 69,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 33,
+      "name": "N",
+      "element": "N",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 34,
+      "name": "CA",
+      "element": "C",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 35,
+      "name": "C",
+      "element": "C",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 36,
+      "name": "O",
+      "element": "O",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 37,
+      "name": "CB",
+      "element": "C",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 38,
+      "name": "CG1",
+      "element": "C",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 39,
+      "name": "CG2",
+      "element": "C",
+      "residue": "VAL",
+      "resid": 70,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 40,
+      "name": "N",
+      "element": "N",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 41,
+      "name": "CA",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 42,
+      "name": "C",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 43,
+      "name": "O",
+      "element": "O",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 44,
+      "name": "CB",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 45,
+      "name": "CG",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 46,
+      "name": "CD1",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 47,
+      "name": "CD2",
+      "element": "C",
+      "residue": "LEU",
+      "resid": 71,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 48,
+      "name": "N",
+      "element": "N",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 49,
+      "name": "CA",
+      "element": "C",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 50,
+      "name": "C",
+      "element": "C",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 51,
+      "name": "O",
+      "element": "O",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 52,
+      "name": "CB",
+      "element": "C",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 53,
+      "name": "CG",
+      "element": "C",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 54,
+      "name": "CD",
+      "element": "C",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 55,
+      "name": "NE",
+      "element": "N",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 56,
+      "name": "CZ",
+      "element": "C",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 57,
+      "name": "NH1",
+      "element": "N",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    },
+    {
+      "index": 58,
+      "name": "NH2",
+      "element": "N",
+      "residue": "ARG",
+      "resid": 72,
+      "chain": "A",
+      "category": "protein",
+      "nonpolar_hydrogen": false
+    }
+  ],
+  "bonds": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      9,
+      15
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      16,
+      19
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      22
+    ],
+    [
+      22,
+      24
+    ],
+    [
+      21,
+      23
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      17,
+      25
+    ],
+    [
+      26,
+      27
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      26,
+      29
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      30,
+      32
+    ],
+    [
+      27,
+      33
+    ],
+    [
+      34,
+      35
+    ],
+    [
+      35,
+      36
+    ],
+    [
+      34,
+      37
+    ],
+    [
+      33,
+      34
+    ],
+    [
+      37,
+      38
+    ],
+    [
+      37,
+      39
+    ],
+    [
+      35,
+      40
+    ],
+    [
+      41,
+      42
+    ],
+    [
+      42,
+      43
+    ],
+    [
+      41,
+      44
+    ],
+    [
+      40,
+      41
+    ],
+    [
+      44,
+      45
+    ],
+    [
+      45,
+      46
+    ],
+    [
+      45,
+      47
+    ],
+    [
+      42,
+      48
+    ],
+    [
+      49,
+      50
+    ],
+    [
+      50,
+      51
+    ],
+    [
+      49,
+      52
+    ],
+    [
+      48,
+      49
+    ],
+    [
+      52,
+      53
+    ],
+    [
+      53,
+      54
+    ],
+    [
+      54,
+      55
+    ],
+    [
+      55,
+      56
+    ],
+    [
+      56,
+      57
+    ],
+    [
+      56,
+      58
+    ]
+  ],
+  "has_unitcell": false,
+  "warnings": [
+    "The first coordinate model is loaded. Original source and polymer sequence records are retained for protein preparation.",
+    "No periodic box: measurements use ordinary Cartesian geometry.",
+    "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+  ],
+  "source_file": "source.pdb",
+  "source_format": "pdb",
+  "chain_id_mapping": [
+    {
+      "index": 0,
+      "original": "A",
+      "canonical": "A"
+    }
+  ]
+}

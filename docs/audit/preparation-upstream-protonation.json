@@ -1,0 +1,48 @@
+{
+  "scope": "Tiny upstream behavior probe; generated fixture only, no experimentally validated states.",
+  "results": [
+    {
+      "ph": 2.0,
+      "histidine_residue_id": "68",
+      "histidine_hydrogens": [
+        "H",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2"
+      ],
+      "histidine_variant": "HIP",
+      "atoms": 132,
+      "particles": 132,
+      "after_auto_addH_at_pH7_existing_H": [
+        "H",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1",
+        "HE2"
+      ]
+    },
+    {
+      "ph": 7.0,
+      "histidine_residue_id": "68",
+      "histidine_hydrogens": [
+        "H",
+        "HA",
+        "HB2",
+        "HB3",
+        "HD1",
+        "HD2",
+        "HE1"
+      ],
+      "histidine_variant": "HID",
+      "atoms": 131,
+      "particles": 131
+    }
+  ]
+}

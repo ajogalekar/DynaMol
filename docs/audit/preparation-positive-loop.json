@@ -1,0 +1,68 @@
+{
+  "scope": "Single fixed-seed positive-control attempt; a synthetic 1UBQ 26\u201330 fragment missing known ALA28, not a real observed truncated construct or accurate-loop benchmark.",
+  "seed": 2026,
+  "optimize_sidechains": false,
+  "fixture": "docs/audit/preparation-fixtures/known_alanine_gap.pdb",
+  "fixture_sha256": "d654d31a4a6fa799fa47b8596ac50516343fb586d9d8ee9c425b259094c14958",
+  "job_id": "876eb6401cfb422b",
+  "status": "pass",
+  "atoms": 92,
+  "rebuilt_segments": [
+    {
+      "chain": "A",
+      "position": 2,
+      "residues": [
+        "ALA"
+      ],
+      "count": 1,
+      "confidence": "low",
+      "method": "PDBFixer template placement and local optimization; no independent structure prediction or validation"
+    }
+  ],
+  "validated_center_volumes": [
+    {
+      "resid": "26",
+      "residue": "VAL",
+      "center": "CA",
+      "signed_volume_nm3": 0.002450616312000008
+    },
+    {
+      "resid": "27",
+      "residue": "LYS",
+      "center": "CA",
+      "signed_volume_nm3": 0.002541461117999998
+    },
+    {
+      "resid": "28",
+      "residue": "ALA",
+      "center": "CA",
+      "signed_volume_nm3": 0.0031394836080000112
+    },
+    {
+      "resid": "29",
+      "residue": "LYS",
+      "center": "CA",
+      "signed_volume_nm3": 0.002569953857999981
+    },
+    {
+      "resid": "30",
+      "residue": "ILE",
+      "center": "CA",
+      "signed_volume_nm3": 0.0026189339450000096
+    },
+    {
+      "resid": "30",
+      "residue": "ILE",
+      "center": "CB",
+      "signed_volume_nm3": 0.002686670549999989
+    }
+  ],
+  "no_long_backbone_gap": true,
+  "uncertainty_warnings": [
+    "Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics.",
+    "LOW-CONFIDENCE REBUILT SEGMENTS: chain A, insertion position 2, ALA. These coordinates are template-derived models, not experimentally resolved loops; validate them before scientific use.",
+    "No periodic box: measurements use ordinary Cartesian geometry.",
+    "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+  ],
+  "elapsed_seconds": 0.09
+}

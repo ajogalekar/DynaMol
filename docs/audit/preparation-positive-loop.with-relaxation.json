@@ -1,0 +1,9 @@
+{
+  "scope": "Single fixed-seed positive-control attempt; a synthetic 1UBQ 26\u201330 fragment missing known ALA28, not a real observed truncated construct or accurate-loop benchmark.",
+  "seed": 2026,
+  "fixture": "docs/audit/preparation-fixtures/known_alanine_gap.pdb",
+  "fixture_sha256": "d654d31a4a6fa799fa47b8596ac50516343fb586d9d8ee9c425b259094c14958",
+  "job_id": "470a68640ea94d89",
+  "status": "fail",
+  "error": "AssertionError('Final prepared structure has inverted or near-planar standard residue stereochemistry at A:30 ILE CA. The model is rejected; use an externally validated repair instead.')"
+}

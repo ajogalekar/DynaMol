@@ -1,0 +1,33 @@
+{
+  "scope": "Retained preparation review evidence snapshot; includes historical rejected-model findings, not only successful tests.",
+  "sha256": {
+    "docs/audit/preparation-backend-tests.txt": "8e7823d696df38d0f82492e2266036c344fd25abfa1035d76b27258960207a88",
+    "docs/audit/preparation-blog-search-1.json": "ab04b95450f02382a1d9b69c8780d94ac3eadd8886a09216420eaa71c2991195",
+    "docs/audit/preparation-blog-search-2.json": "92e3c9992d69b3c83e681a40eb074e49628ea816c932dec6c11652ad1e7fb742",
+    "docs/audit/preparation-continuity-checks.before-state-fix.json": "8616f9212063a153555179c1e75c4b075e0f6c86c4875e72a6b7b8506a36136b",
+    "docs/audit/preparation-continuity-checks.json": "8a0d28ec81632b357daa5c1b2560e7121405bd129ab2c247b1e8e1a359c8c729",
+    "docs/audit/preparation-continuity-checks.log": "8a0d28ec81632b357daa5c1b2560e7121405bd129ab2c247b1e8e1a359c8c729",
+    "docs/audit/preparation-geometry-checks.json": "d649b0f340f259b757b10c2cc8786bd2470628003ef34554eed4b0b69c3d3de2",
+    "docs/audit/preparation-geometry-checks.log": "d649b0f340f259b757b10c2cc8786bd2470628003ef34554eed4b0b69c3d3de2",
+    "docs/audit/preparation-gromacs-compatibility.json": "72d919eb48eb7f30f560263352e55847a73a5142732951c6833de70b9462b0d0",
+    "docs/audit/preparation-kabsch-reflection.json": "a08b37fdeb20419003aba9fd00ccc529a7af21f931ee47165fe60746ea7ad5cc",
+    "docs/audit/preparation-loop-stereochemistry.json": "459f4eb3a8e3bd291fc356ddffb491a030a4dd051fecfe8ffe2ab2c5c89d8ebb",
+    "docs/audit/preparation-manifest.postflight.json": "9de57ac57e6117c48a419c7441ce4cd92170e946f02006237bf3a03469b3e9e0",
+    "docs/audit/preparation-manifest.preflight.json": "38323335cc8b2e4566eaf8c36db3e210bfcfc65c8f66106efe0b82f2e8e89350",
+    "docs/audit/preparation-pdbfixer-inspection.json": "39d87e96c2ceabb06147cea76cf0602b7b259ef5a75e41914afc94e0e311ea7c",
+    "docs/audit/preparation-pipeline-checks.before-chirality-fix.json": "3f50ca4514397d78b3d3999fdce46b460ac10437662d31e1384749059915e163",
+    "docs/audit/preparation-pipeline-checks.json": "3e834bea048b8e0f0317361e9a375e44dfbdf6c7806147bec4b6ac71c4afe507",
+    "docs/audit/preparation-pipeline-checks.log": "ccb022847bcb5c030b60b7ad294416a264af6a88fba4f375f39db3f8af053aaf",
+    "docs/audit/preparation-positive-loop.json": "8212aec7875ecb9f94e214396e860ef4cbebecb89deb1c4889ff6936fc896feb",
+    "docs/audit/preparation-positive-loop.log": "8212aec7875ecb9f94e214396e860ef4cbebecb89deb1c4889ff6936fc896feb",
+    "docs/audit/preparation-positive-loop.with-relaxation.json": "1314994bfd6711b40d5e7137d43920bdd42dfaa47422cc878642d7e4428d7a82",
+    "docs/audit/preparation-postflight.json": "f4ba15666788a7707735ff4ab0a26080ca5bb8d235af0bebc42ed35a52964479",
+    "docs/audit/preparation-preflight.json": "40f3b4d7a141f48c808eee0d5821d7c899b9a1288a48f1090ec9f9ed0a1040c5",
+    "docs/audit/preparation-reviewed-code-sha256.json": "b0c599bbcb38e58d7b8b7deb3097859f3ec5ef1331042844e0f935526ab717e2",
+    "docs/audit/preparation-solvent-checks.json": "977e07447dbe2cf9361dc3b09786c54cecd9b18f067d840b5d7afbd1407a7194",
+    "docs/audit/preparation-solvent-checks.log": "977e07447dbe2cf9361dc3b09786c54cecd9b18f067d840b5d7afbd1407a7194",
+    "docs/audit/preparation-source-checks.json": "4aa527a01c3a3fcf716dc049a03772742a7a324a6a6731e9633620e2e17395b2",
+    "docs/audit/preparation-source-checks.log": "4aa527a01c3a3fcf716dc049a03772742a7a324a6a6731e9633620e2e17395b2",
+    "docs/audit/preparation-upstream-protonation.json": "ed40a0a886a0ec0ae2322ed6f21664ad761424b64a93908445061306bed97141"
+  }
+}

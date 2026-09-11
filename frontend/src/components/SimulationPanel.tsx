@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ArrowDownToLine,
   ArrowRight,
@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Clock3,
   Cpu,
+  Droplets,
   FlaskConical,
   LoaderCircle,
   Play,
@@ -17,6 +18,7 @@ import {
 } from 'lucide-react';
 import type { Dataset, Health, Job, SimulationConfig } from '../types';
 import { api } from '../api';
+import StructureWorkbench from './StructureWorkbench';
 const active = (j: Job) => !['completed', 'failed', 'cancelled', 'interrupted'].includes(j.status);
 export default function SimulationPanel({
   dataset,
@@ -26,14 +28,21 @@ export default function SimulationPanel({
   onStarted,
   onLoad,
   onRefresh,
+  onDatasetLoaded,
+  onWaterVisibility,
 }: {
   dataset: Dataset | null;
   health: Health | null;
   jobs: Job[];
   onClose: () => void;
   onStarted: (job: Job) => void;
-  onLoad: (id: string) => void;
+  onLoad: (id: string, showWater?: boolean) => void;
   onRefresh: () => void;
+  onDatasetLoaded: (
+    d: Dataset,
+    options?: { showWater?: boolean; showHydrogens?: boolean },
+  ) => Promise<void>;
+  onWaterVisibility: (show: boolean) => void;
 }) {
   const [engine, setEngine] = useState<'openmm' | 'gromacs'>('openmm'),
     [name, setName] = useState('My molecular journey'),
@@ -51,6 +60,99 @@ export default function SimulationPanel({
     [busy, setBusy] = useState(false),
     [error, setError] = useState(''),
     [openLog, setOpenLog] = useState<string | null>(null);
+  const [ph, setPh] = useState(dataset?.preparation?.ph ?? 7);
+  const [pending, setPending] = useState<{
+    id: string;
+    sourceId: string;
+    operation: 'preparation' | 'solvation';
+  } | null>(null);
+  const datasetRef = useRef(dataset);
+  datasetRef.current = dataset;
+  const pendingJob = jobs.find((j) => j.id === pending?.id);
+  const anyActive = jobs.some(active);
+  useEffect(() => {
+    setError('');
+    setPh(dataset?.preparation?.ph ?? 7);
+    if (dataset?.solvation) {
+      setSolvent('explicit');
+      setPadding(dataset.solvation.padding_nm);
+    }
+  }, [dataset?.id]);
+  useEffect(() => {
+    if (!pending || !pendingJob || active(pendingJob)) return;
+    const action = pending;
+    setPending(null);
+    if (pendingJob.status === 'completed' && pendingJob.dataset_id) {
+      if (datasetRef.current?.id !== action.sourceId) return;
+      api
+        .dataset(pendingJob.dataset_id)
+        .then(async (next) => {
+          if (datasetRef.current?.id !== action.sourceId) return;
+          await onDatasetLoaded(next, {
+            showWater: action.operation === 'solvation',
+            showHydrogens: action.operation === 'preparation',
+          });
+          if (action.operation === 'solvation') {
+            setSolvent('explicit');
+            onWaterVisibility(true);
+          } else setSolvent('implicit');
+        })
+        .catch((e) => setError((e as Error).message));
+    } else if (pendingJob.status !== 'cancelled')
+      setError(pendingJob.error ?? 'Structure preparation did not complete. See the job log.');
+  }, [pending, pendingJob, onDatasetLoaded, onWaterVisibility]);
+  function prepared(job: Job) {
+    if (!dataset) return;
+    setError('');
+    setPending({ id: job.id, sourceId: dataset.id, operation: 'preparation' });
+    setOpenLog(job.id);
+    onStarted(job);
+  }
+  async function previewWater(force = false) {
+    if (!dataset || busy) return;
+    setSolvent('explicit');
+    onWaterVisibility(true);
+    setError('');
+    if (!dataset.preparation) {
+      setError(
+        'Press Prep protein above first, then build the explicit-water box. The preview will retain the selected protonation state.',
+      );
+      return;
+    }
+    if (dataset.solvation && !force) return;
+    setBusy(true);
+    try {
+      const source = force && dataset.solvation ? dataset.solvation.parent_dataset_id : dataset.id;
+      const job = await api.solvate(source, padding, ph, seed);
+      setPending({ id: job.id, sourceId: dataset.id, operation: 'solvation' });
+      setOpenLog(job.id);
+      onStarted(job);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function changeSolvent(value: 'implicit' | 'explicit') {
+    if (value === 'explicit') {
+      await previewWater();
+      return;
+    }
+    setSolvent('implicit');
+    onWaterVisibility(false);
+    if (dataset?.solvation?.parent_dataset_id) {
+      setBusy(true);
+      try {
+        await onDatasetLoaded(await api.dataset(dataset.solvation.parent_dataset_id), {
+          showWater: false,
+        });
+      } catch (e) {
+        setError((e as Error).message);
+      } finally {
+        setBusy(false);
+      }
+    }
+  }
   const selected = health?.engines.find((e) => e.id === engine),
     steps = Math.round((duration * 1000) / step),
     frames = Math.ceil(steps / interval) + 1;
@@ -73,7 +175,7 @@ export default function SimulationPanel({
         solvent: engine === 'gromacs' ? 'explicit' : solvent,
         minimize,
         equilibration_steps: equil,
-        padding_nm: padding,
+        padding_nm: dataset.solvation?.padding_nm ?? padding,
       } as SimulationConfig);
       onStarted(job);
       setOpenLog(job.id);
@@ -84,16 +186,11 @@ export default function SimulationPanel({
     }
   }
   return (
-    <div
-      className="modal-backdrop drawer-backdrop"
-      onMouseDown={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
-    >
+    <div className="studio-dock">
       <section
         className="simulation-drawer"
         role="dialog"
-        aria-modal="true"
+        aria-modal="false"
         aria-labelledby="simulation-title"
       >
         <header className="drawer-header">
@@ -112,19 +209,38 @@ export default function SimulationPanel({
             <p className="modal-subtitle">
               A few good defaults. All the controls when you need them.
             </p>
-            <div className="source-summary">
-              <FileMolecule />
-              <div>
-                <span>Starting structure · first saved frame</span>
-                <strong>{dataset?.name ?? 'Open a structure to begin'}</strong>
-                <small>
-                  {dataset
-                    ? `${dataset.n_atoms.toLocaleString()} atoms · ${dataset.n_residues} residues`
-                    : ''}
-                </small>
+            <StructureWorkbench
+              dataset={dataset}
+              ph={ph}
+              onPh={setPh}
+              seed={seed}
+              locked={busy || anyActive || !!pending}
+              onDatasetLoaded={onDatasetLoaded}
+              onPreparationStarted={prepared}
+            />
+            {pending && (
+              <div className="pending-preparation" role="status">
+                <LoaderCircle size={16} className="spin" />
+                <div>
+                  <strong>
+                    {pending.operation === 'solvation'
+                      ? 'Building explicit water'
+                      : 'Preparing protein'}
+                  </strong>
+                  <span>{pendingJob?.stage ?? 'Starting background worker…'}</span>
+                </div>
+                <button
+                  type="button"
+                  className="text-button"
+                  onClick={async () => {
+                    await api.cancel(pending.id);
+                    onRefresh();
+                  }}
+                >
+                  Cancel
+                </button>
               </div>
-              <Check size={15} />
-            </div>
+            )}
             <div className="field-heading">
               <span>01</span>
               <h3>Choose your engine</h3>
@@ -142,8 +258,12 @@ export default function SimulationPanel({
                     className={`engine-card ${engine === id ? 'selected' : ''}`}
                     onClick={() => {
                       setEngine(id);
-                      if (id === 'gromacs') setSolvent('explicit');
+                      if (id === 'gromacs') {
+                        setSolvent('explicit');
+                        onWaterVisibility(true);
+                      }
                     }}
+                    disabled={busy || !!pending}
                   >
                     <div className="engine-title">
                       {id === 'openmm' ? <Zap size={18} /> : <Cpu size={18} />}
@@ -166,6 +286,12 @@ export default function SimulationPanel({
             {!selected?.available && (
               <div className="inline-warning">
                 {selected?.message ?? 'Checking the local engine…'}
+              </div>
+            )}
+            {engine === 'gromacs' && dataset?.preparation && (
+              <div className="inline-warning">
+                Use OpenMM for this prepared structure. Transferring its protonation states and
+                saved solvent box to the GROMACS preset is not yet supported.
               </div>
             )}
             <div className="field-heading">
@@ -217,13 +343,40 @@ export default function SimulationPanel({
               Solvent environment
               <select
                 value={engine === 'gromacs' ? 'explicit' : solvent}
-                onChange={(e) => setSolvent(e.target.value as 'implicit' | 'explicit')}
-                disabled={engine === 'gromacs'}
+                onChange={(e) => void changeSolvent(e.target.value as 'implicit' | 'explicit')}
+                disabled={engine === 'gromacs' || busy || !!pending}
               >
                 <option value="implicit">Implicit water · faster exploration</option>
                 <option value="explicit">Explicit water · periodic box</option>
               </select>
             </label>
+            {(solvent === 'explicit' || engine === 'gromacs') && (
+              <div className="solvent-preview-card">
+                <Droplets size={17} />
+                <div>
+                  <b>
+                    {dataset?.solvation
+                      ? 'Explicit water is in the view'
+                      : 'Explicit water preview'}
+                  </b>
+                  <span>
+                    {dataset?.solvation
+                      ? `${dataset.atoms.filter((a) => a.category === 'water').length.toLocaleString()} water atoms · ${dataset.solvation.water_model ?? 'TIP3P'} · ${dataset.solvation.padding_nm} nm padding`
+                      : dataset?.preparation
+                        ? 'Build a real solvent box and inspect it before you run.'
+                        : 'Prepare the protein above to create a visible solvent box.'}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  className="text-button"
+                  disabled={busy || anyActive || !!pending || !dataset?.preparation}
+                  onClick={() => void previewWater(true)}
+                >
+                  {dataset?.solvation ? 'Update box' : 'Build water'}
+                </button>
+              </div>
+            )}
             <p className="form-note">
               {engine === 'openmm'
                 ? 'Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P.'
@@ -361,7 +514,16 @@ export default function SimulationPanel({
             )}
             <button
               className="primary-button full-width run-button"
-              disabled={busy || !dataset || !selected?.available || frames < 1}
+              disabled={
+                busy ||
+                !!pending ||
+                anyActive ||
+                (engine === 'gromacs' && !!dataset?.preparation) ||
+                (engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation) ||
+                !dataset ||
+                !selected?.available ||
+                frames < 1
+              }
             >
               {busy ? (
                 <LoaderCircle size={17} className="spin" />
@@ -372,7 +534,9 @@ export default function SimulationPanel({
               <ArrowRight size={17} />
             </button>
             <p className="under-button">
-              Keep exploring while your simulation runs in the background.
+              {engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation
+                ? 'Prepare the protein and build its water preview before starting.'
+                : 'Keep exploring while your simulation runs in the background.'}
             </p>
           </form>
           <section className="jobs-section">
@@ -380,7 +544,7 @@ export default function SimulationPanel({
               <span>
                 <ActivityIcon />
               </span>
-              <h3>Simulation activity</h3>
+              <h3>Background activity</h3>
               <b>{jobs.length}</b>
             </div>
             {jobs.length === 0 ? (
@@ -408,7 +572,9 @@ export default function SimulationPanel({
                   <div className="job-progress">
                     <span>
                       {job.completed_steps.toLocaleString()} / {job.total_steps.toLocaleString()}{' '}
-                      steps
+                      {job.engine === 'preparation' || job.engine === 'solvation'
+                        ? 'stages'
+                        : 'steps'}
                     </span>
                     <b>{Math.round(job.progress)}%</b>
                   </div>
@@ -444,9 +610,17 @@ export default function SimulationPanel({
                         <button
                           type="button"
                           className="text-button accent"
-                          onClick={() => onLoad(job.dataset_id!)}
+                          onClick={() =>
+                            onLoad(
+                              job.dataset_id!,
+                              job.config.solvent === 'explicit' || job.engine === 'solvation',
+                            )
+                          }
                         >
-                          Open trajectory <ArrowRight size={13} />
+                          {job.engine === 'preparation' || job.engine === 'solvation'
+                            ? 'Open structure'
+                            : 'Open trajectory'}{' '}
+                          <ArrowRight size={13} />
                         </button>
                       </>
                     ) : null}
@@ -462,13 +636,6 @@ export default function SimulationPanel({
           </section>
         </div>
       </section>
-    </div>
-  );
-}
-function FileMolecule() {
-  return (
-    <div className="source-icon">
-      <FlaskConical size={22} />
     </div>
   );
 }

@@ -34,6 +34,41 @@ export function visibleGroups(dataset: Dataset, visibility: Visibility) {
   return groups;
 }
 
+/** Short or interrupted backbones cannot produce useful ribbon geometry. */
+export function shortProteinFragments(dataset: Dataset, coordinates: Float32Array) {
+  const residues = new Map<string, { atoms: number[]; ca?: number; chain: string }>();
+  for (const atom of dataset.atoms) {
+    if (atom.category !== 'protein') continue;
+    const key = `${atom.chain}:${atom.resid}:${atom.residue}`;
+    if (!residues.has(key)) residues.set(key, { atoms: [], chain: atom.chain });
+    const residue = residues.get(key)!;
+    residue.atoms.push(atom.index);
+    if (atom.name === 'CA') residue.ca = atom.index;
+  }
+  const fallback = new Set<number>();
+  let segment: { atoms: number[]; ca?: number; chain: string }[] = [];
+  const flush = () => {
+    if (segment.length < 4) segment.forEach((r) => r.atoms.forEach((i) => fallback.add(i)));
+    segment = [];
+  };
+  for (const residue of residues.values()) {
+    const previous = segment.at(-1);
+    const distance =
+      previous?.ca !== undefined && residue.ca !== undefined
+        ? Math.hypot(
+            ...[0, 1, 2].map(
+              (axis) => coordinates[previous.ca! * 3 + axis] - coordinates[residue.ca! * 3 + axis],
+            ),
+          )
+        : Infinity;
+    if (previous && (previous.chain !== residue.chain || distance > 4.5)) flush();
+    segment.push(residue);
+    if (residue.ca === undefined) flush();
+  }
+  flush();
+  return fallback;
+}
+
 /**
  * Interpolation belongs only to rendering. The input buffer remains immutable;
  * scientific measurements are obtained from the backend's saved coordinates.

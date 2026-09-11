@@ -1,0 +1,64 @@
+{
+  "scope": "Pure geometry/graph fixtures. No empirical rotamer or native-pose validation.",
+  "results": [
+    {
+      "name": "Clash-lowering rotation preserves covalent lengths, fixed backbone, and CA handedness",
+      "status": "pass",
+      "evidence": {
+        "adjustment_count": 1,
+        "score_before": 1.3037779425463893,
+        "score_after": 0.629320992328838,
+        "max_bond_length_change_nm": 5.551115123125783e-17,
+        "backbone_exactly_unchanged": true,
+        "beta_carbon_unchanged_within_1e-12_nm": true,
+        "CA_signed_volume_preserved": 0.0005600000000000002,
+        "target_chi_reached": true,
+        "note": "Synthetic steric collision demonstrates numerical invariants, not biological geometry accuracy."
+      }
+    },
+    {
+      "name": "Distal covalent crosslink prevents rotating a sidechain into another residue",
+      "status": "pass",
+      "evidence": {
+        "all_coordinates_unchanged": true,
+        "skipped": [
+          "A:1:chi1 (ring/crosslink/backbone constraint)"
+        ],
+        "note": "Generic covalent crosslink fixture, not a real cysteine molecular model."
+      }
+    },
+    {
+      "name": "Template alignment recovers rigid motion while forbidding reflections",
+      "status": "pass",
+      "evidence": {
+        "known_proper_rotation_and_translation_recovered": true,
+        "mirror_target_still_gets_det_plus_one_rotation": true
+      }
+    },
+    {
+      "name": "Historical inverted ILE alpha and beta centers are both detected and rejected",
+      "status": "pass",
+      "evidence": {
+        "violations": [
+          {
+            "chain": "A",
+            "resid": "3",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0025442599829999754,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "3",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": -0.0023399726279999884,
+            "template_signed_volume_nm3": 0.002706884199999999
+          }
+        ],
+        "rejection": "Regression fixture has inverted or near-planar standard residue stereochemistry at A:3 ILE CA. The model is rejected; use an externally validated repair instead."
+      }
+    }
+  ]
+}

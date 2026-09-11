@@ -1,0 +1,268 @@
+{
+  "application": "DynaMol 0.1.0",
+  "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.",
+  "config": {
+    "dataset_id": "f5b3811db80543e9",
+    "engine": "openmm",
+    "name": "My simulation",
+    "duration_ps": 0.002,
+    "temperature_k": 300,
+    "timestep_fs": 2,
+    "report_interval": 1,
+    "friction_ps": 1,
+    "seed": 2026,
+    "solvent": "explicit",
+    "minimize": false,
+    "equilibration_steps": 0,
+    "padding_nm": 1
+  },
+  "input_sha256": "9f6aed511e62ee8fc3fdf7a7bac0379418e4575db169490ed90fcacb1006bcf2",
+  "cpu_threads": 2,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6"
+  },
+  "commands": [],
+  "preparation": [
+    "Preserving exact prepared topology and hydrogens at recorded pH 2; no automatic hydrogen reassignment.",
+    "Reusing the exact prepared TIP3P solvent preview (3,485 atoms); no water or ions added and no new box generated."
+  ],
+  "worker_source_sha256": "cd260b1614c067e6dc7f6536bd9e17daafdafc7627de16d94f7425298c7f21bc",
+  "source_dataset_id": "f5b3811db80543e9",
+  "forcefield_files": [
+    "amber14/protein.ff14SB.xml",
+    "amber14/tip3p.xml"
+  ],
+  "integrator": "LangevinMiddleIntegrator",
+  "ensemble": "NVT",
+  "solvent": "TIP3P explicit",
+  "ph": 2.0,
+  "platform": "CPU",
+  "input_preparation": {
+    "parent_dataset_id": "7c242835d405458e",
+    "ph": 2.0,
+    "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment",
+    "summary": [
+      "Explicitly removed 0 existing hydrogens before pH reassignment, 0 water heavy atoms, and 0 other heavy atoms.",
+      "Added 1 heavy/terminal atoms across existing residues and 0 rebuilt internal segment(s).",
+      "Added 72 hydrogens at requested pH 2; actual residue states and bonded-H inventories are recorded."
+    ],
+    "warnings": [
+      "Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics."
+    ],
+    "seed": 2026,
+    "forcefield_files": [
+      "amber14/protein.ff14SB.xml",
+      "implicit/gbn2.xml"
+    ],
+    "simulation_ready": true,
+    "exact_topology_file": "prepared.pdb",
+    "protonation_states": [
+      {
+        "chain": "A",
+        "resid": "66",
+        "residue": "THR",
+        "state": "THR",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H",
+            "H2",
+            "H3"
+          ],
+          "O": [],
+          "OG1": [
+            "HG1"
+          ]
+        },
+        "hydrogen_count": 9,
+        "forcefield_charge_e": 0.9999999999999999
+      },
+      {
+        "chain": "A",
+        "resid": "67",
+        "residue": "LEU",
+        "state": "LEU",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": []
+        },
+        "hydrogen_count": 11,
+        "forcefield_charge_e": 6.245004513516506e-17
+      },
+      {
+        "chain": "A",
+        "resid": "68",
+        "residue": "HIS",
+        "state": "HIP",
+        "openmm_returned_variant": "HIP",
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": [],
+          "ND1": [
+            "HD1"
+          ],
+          "NE2": [
+            "HE2"
+          ]
+        },
+        "hydrogen_count": 8,
+        "forcefield_charge_e": 1.0
+      },
+      {
+        "chain": "A",
+        "resid": "69",
+        "residue": "LEU",
+        "state": "LEU",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": []
+        },
+        "hydrogen_count": 11,
+        "forcefield_charge_e": 6.245004513516506e-17
+      },
+      {
+        "chain": "A",
+        "resid": "70",
+        "residue": "VAL",
+        "state": "VAL",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": []
+        },
+        "hydrogen_count": 9,
+        "forcefield_charge_e": 1.0061396160665481e-16
+      },
+      {
+        "chain": "A",
+        "resid": "71",
+        "residue": "LEU",
+        "state": "LEU",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": []
+        },
+        "hydrogen_count": 11,
+        "forcefield_charge_e": 6.245004513516506e-17
+      },
+      {
+        "chain": "A",
+        "resid": "72",
+        "residue": "ARG",
+        "state": "ARG",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": [],
+          "NE": [
+            "HE"
+          ],
+          "NH1": [
+            "HH11",
+            "HH12"
+          ],
+          "NH2": [
+            "HH21",
+            "HH22"
+          ],
+          "OXT": []
+        },
+        "hydrogen_count": 13,
+        "forcefield_charge_e": -2.42861286636753e-16
+      }
+    ],
+    "selected_variants": [
+      null,
+      null,
+      "HIP",
+      null,
+      null,
+      null,
+      null
+    ],
+    "removed_atom_counts": {},
+    "rebuilt_segments": [],
+    "repaired_atoms": [],
+    "sidechain_adjustment": {
+      "method": "Skipped by user",
+      "adjustments": [],
+      "adjusted_chi_count": 0
+    },
+    "relaxation": {
+      "performed": false,
+      "reason": "Sidechain adjustment not requested"
+    },
+    "original_to_prepared_atom_map_file": "atom-map.json",
+    "net_forcefield_charge_e": 2.0
+  },
+  "input_solvation": {
+    "parent_dataset_id": "7ec29b9b15574214",
+    "padding_nm": 1,
+    "water_model": "tip3p",
+    "seed": 2026,
+    "added_water_atoms": 3351,
+    "water_atoms": 3351,
+    "neutralizing_ions": 2,
+    "ionic_strength_molar": 0,
+    "box_shape": "cube",
+    "box_vectors_nm": [
+      [
+        3.3668068742506225,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        3.3668068742506225,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.3668068742506225
+      ]
+    ],
+    "openmm_version": "8.6.0.dev-c6173db",
+    "forcefield": [
+      "amber14/protein.ff14SB.xml",
+      "amber14/tip3p.xml"
+    ],
+    "prepared_pdb": "prepared.pdb",
+    "input_sha256": "21d85e0ef255e948af5dee7cb57fad306acb3dee47b7a2d568dfe8f47bde7cbb",
+    "equilibrated": false,
+    "preserves_prepared_protonation": true
+  },
+  "preparation_random_seed": 2026,
+  "timestamp_note": "frame_times_ps.csv and XTC carry exact production times. DCD readers may discard timing; use the sidecar. Final frame can have a shorter interval.",
+  "outputs": {
+    "prepared.pdb": "9f6aed511e62ee8fc3fdf7a7bac0379418e4575db169490ed90fcacb1006bcf2",
+    "energies.csv": "b939fc7663fdb3c37159275904c6107f071ccf9f6ff222f96a5d4208a0114670",
+    "trajectory.dcd": "47c41a670ca4b185ad11780aa90820d9086462501c1e5bee14752c26b2ee1fa9",
+    "config.json": "2f262d9565dde827ba6f1da117e930259fec60c7404c995f528e4dd731ef6e3b",
+    "input.pdb": "9f6aed511e62ee8fc3fdf7a7bac0379418e4575db169490ed90fcacb1006bcf2",
+    "integrator.xml": "168236c63862f5668bd70543f344ace33aec2f23a72a3ba03ea5c5ee2ad3b6e9",
+    "system.xml": "a736b92d7a213f4a7bb6786184cc434e39c8cda5947ea046c856b64cdf8efcb2",
+    "final.pdb": "c18f816b45b5cc820b6801d52eaacfc114290cc8fef7a2bde83b6c99fc807a08",
+    "frame_times_ps.csv": "5abe8dfda71e53afebc8458f6b9e409c88fbefc31bcb315c331f7caed182e38c",
+    "input-state.json": "19aa76c41fd80fc2bc7858550a67b02e09f122ef5c6bca2fa18f6af9b4f07b7f",
+    "checkpoint.chk": "e33d4875b8e1f9af1f4614cd1586341db304b616548c9384ce2b4c7a6bd5b87c",
+    "trajectory.xtc": "8c676fd4bcab838cd1e0901e80b08b1de3838fc8f4307659511b000a59589e21"
+  }
+}

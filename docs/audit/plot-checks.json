@@ -1,8 +1,8 @@
 {
-  "recorded_at": "2026-09-11T01:16:40.941Z",
+  "recorded_at": "2026-09-11T02:24:12.402Z",
   "scope": "Analytic chart calculations only; these tests do not assess MD convergence.",
   "node_version": "v22.17.0",
-  "source_sha256": "2cd9eae6ccb228d091c27568053e27ac52b3afd886100ec46bd8b7e4252f5213",
+  "source_sha256": "7c33a84e6df0126e114a1b47f9392af8d7826fca668d81b38695e3abb959dca1",
   "checks": [
     {
       "name": "Nonuniform timestamps determine x positions and nearest-time seek",

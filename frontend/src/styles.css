@@ -3067,3 +3067,616 @@ kbd {
 .measurement-panel > * {
   flex-shrink: 0;
 }
+
+/* The studio is a working dock: structures stay visible and interactive. */
+.studio-dock {
+  position: fixed;
+  top: 78px;
+  bottom: 28px;
+  right: 0;
+  width: 454px;
+  z-index: 20;
+  pointer-events: none;
+}
+.studio-dock .simulation-drawer {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  box-shadow: -8px 0 25px #0002;
+  animation: none;
+}
+.studio-dock .drawer-header {
+  padding: 20px 23px;
+}
+.studio-dock .drawer-header h2 {
+  font-size: 22px;
+}
+.studio-dock .drawer-scroll {
+  padding: 20px 23px 30px;
+}
+.studio-open > .workspace-bar,
+.studio-open > .workspace-grid {
+  margin-right: 454px;
+}
+.studio-open .workspace-grid {
+  grid-template-columns: 202px minmax(0, 1fr);
+}
+.studio-open .measurement-panel {
+  display: none;
+}
+.studio-open .workspace-actions > .primary-button {
+  display: none;
+}
+.studio-open .canvas-subtitle {
+  display: none;
+}
+.studio-open .timeline-meta > span:last-child {
+  display: none;
+}
+.studio-open .desktop-label {
+  display: none;
+}
+.studio-open .plot-readout {
+  width: 82px;
+}
+.studio-open .plot-readout > strong {
+  font-size: 22px;
+}
+.structure-workbench {
+  border-bottom: 1px solid #304650;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+}
+.source-heading {
+  margin-top: 0;
+}
+.source-heading > small {
+  margin-left: auto;
+  color: #749686;
+  font-size: 8px;
+}
+.source-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 7px;
+  border: 1px solid #304551;
+  background: #101c27;
+  margin-bottom: 12px;
+}
+.source-tabs > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+  padding: 8px 3px;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #7d9aab;
+}
+.source-tabs > button.active {
+  background: #2a423a;
+  color: #b8e1cc;
+}
+.studio-upload {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 1px dashed #4b6f69;
+  background: #192e30;
+  border-radius: 8px;
+  padding: 17px 14px;
+  text-align: left;
+  width: 100%;
+  color: #8ecbb1;
+}
+.studio-upload:hover:not(:disabled) {
+  border-color: #95d1b4;
+  background: #223f37;
+}
+.studio-upload > span {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.studio-upload b {
+  font-size: 11px;
+  font-weight: 500;
+  color: #bdd7cf;
+}
+.studio-upload small {
+  font-size: 9px;
+  color: #799e98;
+}
+.studio-source-form {
+  border: 1px solid #2f4552;
+  border-radius: 7px;
+  background: #101e29;
+  padding: 13px;
+}
+.studio-source-form > label {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  color: #96b0bd;
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+.studio-source-form > label > small {
+  font-size: 8px;
+  display: inline;
+  color: #658897;
+}
+.studio-source-form input,
+.studio-source-form select,
+.studio-source-form textarea,
+.source-fetch-row input {
+  background: #0c1722;
+  border: 1px solid #365462;
+  border-radius: 5px;
+  padding: 9px 10px;
+  font-size: 11px;
+  color: #c7dfe0;
+  width: 100%;
+  min-width: 0;
+}
+.studio-source-form textarea {
+  resize: vertical;
+  font-family: monospace;
+  line-height: 1.6;
+}
+.source-fetch-row {
+  display: flex;
+  gap: 8px;
+}
+.source-fetch-row > .secondary-button {
+  height: 34px;
+  flex-shrink: 0;
+}
+.studio-source-form > .form-note {
+  margin-bottom: 0;
+  font-size: 9px;
+}
+.structure-workbench > .source-summary {
+  margin-top: 17px;
+}
+.source-summary strong {
+  overflow-wrap: anywhere;
+}
+.studio-working {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #94baa7;
+  padding: 13px 0;
+}
+.prep-section {
+  margin-top: 21px;
+}
+.prep-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.prep-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #94c8b0;
+}
+.prep-heading h3 {
+  font-size: 12px;
+  color: #c1d7d5;
+  font-weight: 550;
+}
+.prep-heading > span {
+  font-size: 8px;
+  color: #789b91;
+}
+.inspection-summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #9ac6aa;
+  background: #22372b66;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.6;
+}
+.inspection-summary.has-issues {
+  background: #4d3e202e;
+  color: #d0b77f;
+}
+.prep-sequence-note {
+  font-size: 9px;
+}
+.prep-action-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-top: 16px;
+}
+.prep-ph {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #8faaae;
+  flex: 1;
+}
+.prep-ph > input {
+  background: #101d28;
+  border: 1px solid #3a5a62;
+  border-radius: 5px;
+  padding: 9px 12px;
+  height: 35px;
+  color: #d5e6df;
+  width: 100%;
+  font-size: 12px;
+}
+.prep-action-row > .primary-button {
+  flex: 1.7;
+  height: 35px;
+}
+.prep-section > .form-note {
+  font-size: 9px;
+  margin: 10px 0;
+}
+.prep-options-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #7caaa0;
+  font-size: 10px;
+  padding: 5px 0;
+}
+.prep-options {
+  padding: 5px 0 0;
+}
+.prep-options > .checkbox-label {
+  font-size: 10px;
+  margin: 11px 0;
+  line-height: 1.7;
+}
+.prep-options > .checkbox-label input {
+  flex-shrink: 0;
+}
+.prep-options .loop-option {
+  border-top: 1px solid #334a52;
+  margin-top: 13px;
+  padding-top: 13px;
+  color: #78958f;
+}
+.prep-options .loop-option.available {
+  color: #d0c6a4;
+}
+.prep-options > .form-note {
+  font-size: 9px;
+  margin: 8px 0 0;
+}
+.missing-residues {
+  border: 1px solid #70624344;
+  border-radius: 5px;
+  padding: 12px;
+  margin: 10px 0;
+  background: #3e332020;
+}
+.missing-residues > b {
+  font-size: 10px;
+  font-weight: 500;
+  color: #cfbd94;
+}
+.missing-residues > div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.missing-residues span {
+  font-size: 10px;
+  color: #bba989;
+}
+.missing-residues small {
+  font-size: 8px;
+  line-height: 1.6;
+  color: #8e9687;
+  overflow-wrap: anywhere;
+}
+.preparation-result {
+  border: 1px solid #49785d66;
+  background: #1e372c88;
+  padding: 12px;
+  border-radius: 7px;
+  margin-top: 15px;
+}
+.preparation-result > b {
+  font-size: 10px;
+  color: #b2d9bb;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.preparation-result p {
+  font-size: 9px;
+  color: #88ae9b;
+  line-height: 1.8;
+  margin: 6px 0;
+}
+.preparation-result .prep-result-warning {
+  color: #c9b78e;
+}
+.preparation-result > a {
+  font-size: 9px;
+  margin-top: 6px;
+  color: #a3c9b0;
+}
+.pending-preparation {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: #203c34;
+  border: 1px solid #54755d;
+  border-radius: 8px;
+  padding: 15px 12px;
+  margin: 0 0 22px;
+  color: #a4d2b5;
+}
+.pending-preparation > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pending-preparation strong {
+  font-size: 11px;
+  font-weight: 550;
+  color: #c7e1cc;
+}
+.pending-preparation span {
+  font-size: 9px;
+  line-height: 1.7;
+  color: #89ad98;
+}
+.pending-preparation .text-button {
+  font-size: 9px;
+  color: #a1c0ae;
+}
+.solvent-preview-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #345b6b;
+  border-radius: 6px;
+  background: #1a2f3a;
+  padding: 12px;
+  margin: 12px 0;
+  color: #8fbecb;
+}
+.solvent-preview-card > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.solvent-preview-card b {
+  font-size: 10px;
+  font-weight: 500;
+  color: #b2d6df;
+}
+.solvent-preview-card span {
+  font-size: 9px;
+  line-height: 1.7;
+  color: #7d9daa;
+}
+.solvent-preview-card .text-button {
+  font-size: 9px;
+  color: #9dccd6;
+}
+.measurement-tab .measurement-eye {
+  opacity: 0.8;
+  padding: 2px;
+  margin-left: 5px;
+}
+.measurement-tab .measurement-eye[aria-pressed='false'] {
+  opacity: 0.45;
+}
+@media (max-width: 1250px) and (min-width: 901px) {
+  .studio-dock {
+    width: 400px;
+  }
+  .studio-open > .workspace-bar,
+  .studio-open > .workspace-grid {
+    margin-right: 400px;
+  }
+  .studio-open .workspace-grid {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+  .studio-open .scene-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .studio-open .canvas-title {
+    font-size: 13px;
+  }
+  .studio-open .time-display > span {
+    display: none;
+  }
+  .studio-open .playback-buttons .icon-button {
+    width: 19px;
+  }
+  .studio-dock .drawer-scroll {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .studio-open .breadcrumb > span:first-child,
+  .studio-open .breadcrumb > svg,
+  .studio-open .tag {
+    display: none;
+  }
+  .studio-open .plot-footer {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+}
+@media (max-width: 1040px) and (min-width: 901px) {
+  .studio-open .scene-panel {
+    grid-row: 1;
+  }
+  .studio-open .viewer-column {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .studio-open .app-shell {
+    height: 100dvh;
+  }
+}
+@media (max-width: 900px) {
+  .studio-dock {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    order: 4;
+    pointer-events: auto;
+  }
+  .studio-dock .simulation-drawer {
+    max-height: none;
+    height: auto;
+    border-left: 0;
+    border-top: 1px solid #3d5059;
+  }
+  .studio-dock .drawer-scroll {
+    overflow: visible;
+  }
+  .studio-open > .workspace-bar,
+  .studio-open > .workspace-grid {
+    margin-right: 0;
+  }
+  .studio-open .workspace-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .studio-open .scene-panel {
+    display: none;
+  }
+  .studio-open .viewer-column {
+    min-height: 570px;
+  }
+  .studio-open .molecule-viewport {
+    min-height: 350px;
+  }
+  .studio-open > .status-bar {
+    order: 5;
+  }
+  .studio-open .canvas-subtitle {
+    display: inline;
+  }
+  .studio-open .plot-panel {
+    min-height: 208px;
+  }
+  .studio-open .main-nav > button.active {
+    background: #223b34;
+  }
+  .source-heading > small {
+    font-size: 8px;
+  }
+  .studio-dock .drawer-header {
+    position: sticky;
+    top: 0;
+    background: #131f2a;
+    z-index: 2;
+  }
+  .studio-open .workspace-actions > .primary-button {
+    display: none;
+  }
+  .studio-open .workspace-bar {
+    flex-shrink: 0;
+  }
+  .studio-open > .app-header {
+    order: 0;
+  }
+  .studio-open .source-summary {
+    padding: 12px;
+  }
+}
+
+.studio-view-link {
+  display: none;
+}
+@media (max-width: 900px) {
+  .studio-open .workspace-grid {
+    min-height: 0;
+    flex: none;
+  }
+  .studio-view-link {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+}
+
+/* Keep preparation and its live result visible together in narrow app panels. */
+@media (max-width: 900px) {
+  .app-shell.studio-open {
+    height: 100dvh;
+    min-height: 620px;
+    overflow: hidden;
+  }
+  .studio-open .workspace-grid {
+    flex: 1;
+    min-height: 235px;
+    overflow: hidden;
+  }
+  .studio-open .viewer-column {
+    min-height: 0;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .studio-open .molecule-viewport {
+    min-height: 140px;
+    flex: 1;
+  }
+  .studio-open .plot-panel {
+    display: none;
+  }
+  .studio-open .timeline-panel {
+    flex-shrink: 0;
+  }
+  .studio-dock {
+    height: 46dvh;
+    min-height: 230px;
+    flex: 0 0 46dvh;
+    overflow: hidden;
+  }
+  .studio-dock .simulation-drawer {
+    height: 100%;
+    min-height: 0;
+  }
+  .studio-dock .drawer-scroll {
+    overflow-y: auto;
+    min-height: 0;
+    padding-top: 15px;
+  }
+  .studio-dock .drawer-header {
+    position: static;
+    padding: 13px 20px;
+  }
+  .studio-dock .drawer-header h2 {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .studio-view-link {
+    display: none;
+  }
+}

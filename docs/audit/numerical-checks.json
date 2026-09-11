@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-09-11T01:16:40.846887+00:00",
+  "recorded_at": "2026-09-11T02:24:12.308385+00:00",
   "scope": "Analytic software fixtures only; these do not establish scientific validity or simulation convergence.",
   "packages": {
     "numpy": "2.4.6",

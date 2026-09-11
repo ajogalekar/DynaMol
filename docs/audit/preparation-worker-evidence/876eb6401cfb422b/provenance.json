@@ -1,0 +1,238 @@
+{
+  "application": "DynaMol 0.1.0",
+  "purpose": "Exploratory protein preparation, not a validated protonation, rotamer or loop prediction",
+  "config": {
+    "name": "Protein preparation",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": true,
+    "optimize_sidechains": false,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "seed": 2026,
+    "dataset_id": "d63b644e8b4a48d4",
+    "operation": "prepare"
+  },
+  "input_sha256": "a8f2984e4075b5f8144f67232fe550f0449103ceb6ff0be51d1cc083d7ba132d",
+  "cpu_threads": 2,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6",
+    "pdbfixer": "1.12.0"
+  },
+  "commands": [],
+  "preparation": [],
+  "worker_source_sha256": "a97e740626b89b39d123316988fcbb1b451b2302a5c38bb21cbb163e792a65f9",
+  "source_dataset_id": "d63b644e8b4a48d4",
+  "operation": "prepare",
+  "preparation_state": {
+    "parent_dataset_id": "d63b644e8b4a48d4",
+    "ph": 7.0,
+    "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment",
+    "summary": [
+      "Explicitly removed 0 existing hydrogens before pH reassignment, 0 water heavy atoms, and 0 other heavy atoms.",
+      "Added 6 heavy/terminal atoms across existing residues and 1 rebuilt internal segment(s).",
+      "Added 53 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded."
+    ],
+    "warnings": [
+      "Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics.",
+      "LOW-CONFIDENCE REBUILT SEGMENTS: chain A, insertion position 2, ALA. These coordinates are template-derived models, not experimentally resolved loops; validate them before scientific use."
+    ],
+    "seed": 2026,
+    "forcefield_files": [
+      "amber14/protein.ff14SB.xml",
+      "implicit/gbn2.xml"
+    ],
+    "simulation_ready": true,
+    "exact_topology_file": "prepared.pdb",
+    "protonation_states": [
+      {
+        "chain": "A",
+        "resid": "26",
+        "residue": "VAL",
+        "state": "VAL",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H",
+            "H2",
+            "H3"
+          ],
+          "O": []
+        },
+        "hydrogen_count": 11,
+        "forcefield_charge_e": 0.9999999999999999
+      },
+      {
+        "chain": "A",
+        "resid": "27",
+        "residue": "LYS",
+        "state": "LYS",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": [],
+          "NZ": [
+            "HZ1",
+            "HZ2",
+            "HZ3"
+          ]
+        },
+        "hydrogen_count": 13,
+        "forcefield_charge_e": 1.0
+      },
+      {
+        "chain": "A",
+        "resid": "28",
+        "residue": "ALA",
+        "state": "ALA",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": []
+        },
+        "hydrogen_count": 5,
+        "forcefield_charge_e": 5.551115123125783e-17
+      },
+      {
+        "chain": "A",
+        "resid": "29",
+        "residue": "LYS",
+        "state": "LYS",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": [],
+          "NZ": [
+            "HZ1",
+            "HZ2",
+            "HZ3"
+          ]
+        },
+        "hydrogen_count": 13,
+        "forcefield_charge_e": 1.0
+      },
+      {
+        "chain": "A",
+        "resid": "30",
+        "residue": "ILE",
+        "state": "ILE",
+        "openmm_returned_variant": null,
+        "bonded_hydrogens": {
+          "N": [
+            "H"
+          ],
+          "O": [],
+          "OXT": []
+        },
+        "hydrogen_count": 11,
+        "forcefield_charge_e": -0.9999999999999999
+      }
+    ],
+    "selected_variants": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "removed_atom_counts": {},
+    "rebuilt_segments": [
+      {
+        "chain": "A",
+        "position": 2,
+        "residues": [
+          "ALA"
+        ],
+        "count": 1,
+        "confidence": "low",
+        "method": "PDBFixer template placement and local optimization; no independent structure prediction or validation"
+      }
+    ],
+    "repaired_atoms": [],
+    "sidechain_adjustment": {
+      "method": "Skipped by user",
+      "adjustments": [],
+      "adjusted_chi_count": 0
+    },
+    "relaxation": {
+      "performed": false,
+      "reason": "Sidechain adjustment not requested"
+    },
+    "original_to_prepared_atom_map_file": "atom-map.json",
+    "net_forcefield_charge_e": 2.0,
+    "stereochemistry": {
+      "method": "Signed N/C/CB volume at nonglycine CA and CA/branch1/branch2 volume at ILE/THR CB versus PDBFixer standard templates; absolute volume must exceed 0.0001 nm\u00b3.",
+      "checked_centers": 6,
+      "violations": [],
+      "centers": [
+        {
+          "chain": "A",
+          "resid": "26",
+          "residue": "VAL",
+          "center": "CA",
+          "signed_volume_nm3": 0.002450616312000008,
+          "template_signed_volume_nm3": 0.0024078560000000008
+        },
+        {
+          "chain": "A",
+          "resid": "27",
+          "residue": "LYS",
+          "center": "CA",
+          "signed_volume_nm3": 0.002541461117999998,
+          "template_signed_volume_nm3": 0.0026400489999999993
+        },
+        {
+          "chain": "A",
+          "resid": "28",
+          "residue": "ALA",
+          "center": "CA",
+          "signed_volume_nm3": 0.0031422857049688145,
+          "template_signed_volume_nm3": 0.0024989330000000014
+        },
+        {
+          "chain": "A",
+          "resid": "29",
+          "residue": "LYS",
+          "center": "CA",
+          "signed_volume_nm3": 0.002569953857999981,
+          "template_signed_volume_nm3": 0.0026400489999999993
+        },
+        {
+          "chain": "A",
+          "resid": "30",
+          "residue": "ILE",
+          "center": "CA",
+          "signed_volume_nm3": 0.0026189339450000096,
+          "template_signed_volume_nm3": 0.0024868904000000004
+        },
+        {
+          "chain": "A",
+          "resid": "30",
+          "residue": "ILE",
+          "center": "CB",
+          "signed_volume_nm3": 0.002686670549999989,
+          "template_signed_volume_nm3": 0.002706884199999999
+        }
+      ]
+    },
+    "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."
+  },
+  "source_sequence_sha256": "d654d31a4a6fa799fa47b8596ac50516343fb586d9d8ee9c425b259094c14958",
+  "preparation_worker_sha256": "abb31e280ab433b328ab25ca2a72c0817fcc9cc415499d593823b27f0978b680",
+  "parent_dataset_id": "d63b644e8b4a48d4",
+  "outputs": {
+    "preparation.json": "5df820a29a757e57faa27eee315b569ce49a045763226bd2c8648eb96bd8a92d",
+    "atom-map.json": "22ea63c7f869f85a6b04a86f3414478c4cadb88aa38953fe8b268b68eccbe830",
+    "prepared.pdb": "ddf5f49cd5f84d06c21213253a8d9a2632123dd62d3e6ccc14129d74b13040c0",
+    "config.json": "573eaad0e13479e5b25765b37737b45334a266b6f47807d7d73f272ce5a2f2a7",
+    "input.pdb": "a8f2984e4075b5f8144f67232fe550f0449103ceb6ff0be51d1cc083d7ba132d"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T02:27:01.686339+00:00",
+  "purpose": "Deliver and test local structure import, explicit user-controlled standard-protein preparation, bounded opt-in short loop construction, and saved TIP3P preview reuse. Functional and numerical software checks only; no claim of experimental loop accuracy, pKa prediction, correct native rotamers, equilibrated solvent or scientific MD results.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "versions_at_preflight": {
+      "pdbfixer": "1.12.0",
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "rdkit": "2026.3.6",
+      "numpy": "2.4.6"
+    },
+    "python": "3.12.13",
+    "source_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+    "planned_seed": 2026,
+    "scope": "Existing source file is retained; new remote imports must retain original response bytes, source identifiers, dates and hashes.",
+    "outputs_and_exclusions_recorded": true,
+    "versions_at_postflight": {
+      "pdbfixer": "1.12.0",
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "scipy": "1.18.1",
+      "rdkit": "2026.3.6",
+      "gromacs": "2025.4-conda_forge"
+    },
+    "artifacts": [
+      "docs/audit/preparation-source-checks.json",
+      "docs/audit/preparation-solvent-checks.json",
+      "docs/audit/preparation-geometry-checks.json",
+      "docs/audit/preparation-pipeline-checks.json",
+      "docs/audit/preparation-positive-loop.json",
+      "docs/audit/preparation-continuity-checks.json",
+      "docs/audit/preparation-worker-evidence/",
+      "docs/audit/preparation-reviewed-code-sha256.json",
+      "docs/audit/preparation-backend-tests.txt"
+    ],
+    "exclusions": "Temporary isolated datasets and solvent arrays were removed after checks. Worker inputs, coordinate PDBs, metadata, status, logs and small XML/CSV outputs are retained in preparation-worker-evidence. Full trajectory DCD/NPZ arrays are not retained for these one-step audit jobs; their finite coordinate, timestamp and atom-count assertions are recorded. App jobs themselves retain the full output bundle."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve original sequence metadata and atom identity; do not infer residue identities from numbering gaps. Missing-residue building must be opt-in and based on explicit sequence evidence; rebuilt coordinates labeled modeled/uncertain. Protonation edits must be explicit, recorded and carried through engines without silent reset. Solvent preview must use exact retained coordinates for subsequent simulation, without double solvation. SMILES/source molecular states retain stereochemical and conformer provenance.",
+    "accepted_model_geometry": "All current accepted checked fixtures meet finite-coordinate, backbone-gap, and targeted stereocenter checks. Invalid attempted loop models are explicitly rejected before dataset publication; their failure evidence is retained."
+  },
+  "validation": {
+    "scope": "Independent source, geometry, preservation, rejection and tiny end-to-end runtime checks, not validation of native molecular geometry.",
+    "independent_source_groups": 8,
+    "independent_solvent_groups": 3,
+    "independent_geometry_groups": 4,
+    "independent_pipeline_groups": 5,
+    "accepted_positive_loop": "ALA28 gap in synthetic 1UBQ26\u201330; seed2026; sidechain optimization disabled;92atoms;expected CA/ILE-CB signs and no long gap;explicit low-confidence warning.",
+    "periodic_continuation": "3485atoms,2frames0\u20130.002ps;exact saved first-frame coordinates;box preserved;no new atoms;output preparation/solvation markers and GROMACS guard retained.",
+    "historical_findings_resolved": [
+      "MOL2 interleaved atom blocks fail clearly before storage",
+      "mmCIF long-chain and label/auth sequence mappings preserved",
+      "Improper PDBFixer template alignments constrained to det+1; stereochemistry guards reject later invalid models",
+      "Simulation outputs retain exact first-frame state and preparation/solvation markers"
+    ],
+    "runtime_caveat": "The ILE3 loop attempt and optional relaxation of the ALA-gap fixture remain unsuitable and are rejected; a successful alternative does not validate their accuracy.",
+    "backend_tests": "48 passed, 2 deprecation warnings in2.00s; actual output docs/audit/preparation-backend-tests.txt"
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "notes": "No scientific method comparison or accuracy claim. No uncertainty intervals or prospective/experimental validation. Generic postflight scientific-promotion gate remains unresolved by software tests."
+  },
+  "review_identity": "Language-model implementation/evidence review; PatAgent is an automated public-writing-inspired checklist, not Pat Walters or expert certification.",
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "notes": "Only two one-step continuation checks and small preparation fixtures. No equilibrium estimates or production MD conclusions."
+  },
+  "known_limitations": [
+    "Protein presets support standard amino-acid chemistry only; arbitrary ligand/nucleic parameterization remains external.",
+    "GROMACS explicitly rejects DynaMol-prepared or solvent-preview states until a validated naming/state conversion exists.",
+    "Short loop construction is opt-in, bounded, sequence-supported, low-confidence, and can fail geometry checks.",
+    "Stereocenter, gap and finite-coordinate checks are necessary but insufficient to establish native-loop or sidechain accuracy.",
+    "The local chi search is one bounded steric heuristic, not empirical rotamer packing; optional relaxation may be rejected for geometry defects.",
+    "pH assignment is heuristic/template-based and does not calculate site-specific pKa or constant-pH equilibria.",
+    "TIP3P previews are unequilibrated, fixed boxes; PDB reuse introduces standard coordinate rounding up to0.00005nm.",
+    "The scoped PDBFixer private-helper override requires revalidation when the dependency changes."
+  ]
+}

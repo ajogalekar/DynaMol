@@ -92,6 +92,14 @@ def submit_job(settings: SimulationConfig) -> dict:
     metadata = get_dataset(settings.dataset_id)
     if any(atom["category"] == "nucleic" for atom in metadata["atoms"]):
         raise ValueError("This simulation preset supports standard proteins only. RNA/DNA can be viewed and analyzed, but nucleic-acid and protein–nucleic-acid simulations require a separately parameterized workflow. No atoms were removed.")
+    preparation_state = metadata.get("preparation")
+    solvation_state = metadata.get("solvation")
+    if (preparation_state or solvation_state) and settings.engine == "gromacs":
+        raise ValueError("The current GROMACS adapter cannot yet preserve an explicitly prepared protonation state or solvent preview. Use OpenMM for this prepared dataset; GROMACS requires a separate validated state-conversion workflow.")
+    if preparation_state and settings.solvent == "explicit" and not solvation_state:
+        raise ValueError("Create the explicit-water preview first so the simulation uses the periodic box you inspected. No hidden solvent box will be generated for a prepared protein.")
+    if preparation_state and not preparation_state.get("simulation_ready", True):
+        raise ValueError("This preparation is not marked simulation-ready; repair its unresolved structural issues first.")
     standard = {"ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL", "HID", "HIE", "HIP", "CYX", "ASH", "GLH", "LYN"}
     unsupported = sorted({atom["residue"] for atom in metadata["atoms"] if atom["category"] == "ligands" or (atom["category"] == "protein" and atom["residue"] not in standard)})
     if unsupported:
@@ -100,6 +108,14 @@ def submit_job(settings: SimulationConfig) -> dict:
         raise ValueError("Choose a structure containing a standard amino-acid protein.")
     if settings.solvent == "implicit" and any(atom["category"] in {"water", "ions"} for atom in metadata["atoms"]):
         raise ValueError("Implicit solvent requires a protein-only input. This structure has explicit waters or ions; choose explicit solvent or upload a prepared protein-only structure. No atoms were removed.")
+    from .preparation import exact_input_path, backbone_gaps
+    from openmm import app
+    input_path = exact_input_path(settings.dataset_id)
+    if (preparation_state or solvation_state) and input_path.name != "prepared.pdb":
+        raise ValueError("The exact prepared topology is missing. Repeat preparation to preserve the requested protonation state.")
+    input_structure = app.PDBFile(str(input_path))
+    if any(gap["structural_break"] for gap in backbone_gaps(input_structure.topology, input_structure.positions)):
+        raise ValueError("A long backbone C–N connection indicates an unresolved structural gap. Inspect and repair the protein before simulation; an artificial stretched peptide bond will not be simulated.")
     engine = next(engine for engine in health()["engines"] if engine["id"] == settings.engine)
     if not engine["available"]:
         raise ValueError(engine["message"])
@@ -113,7 +129,8 @@ def submit_job(settings: SimulationConfig) -> dict:
         now = dt.datetime.now(dt.timezone.utc).isoformat()
         job = {"id": job_id, "name": settings.name, "engine": settings.engine, "status": "queued", "stage": "Starting worker", "progress": 0, "completed_steps": 0, "total_steps": total, "elapsed_seconds": 0, "logs": [f"Queued {total:,} production steps on {config.CPU_THREADS} CPU threads."], "config": settings.model_dump(), "created_at": now}
         atomic_json(folder / "config.json", settings.model_dump())
-        shutil.copy2(dataset_dir(settings.dataset_id) / "topology.pdb", folder / "input.pdb")
+        shutil.copy2(input_path, folder / "input.pdb")
+        atomic_json(folder / "input-state.json", {"preparation": preparation_state, "solvation": solvation_state})
         atomic_json(folder / "status.json", job)
         environment = os.environ.copy()
         environment.update(OPENMM_CPU_THREADS=str(config.CPU_THREADS), OMP_NUM_THREADS=str(config.CPU_THREADS), OPENBLAS_NUM_THREADS=str(config.CPU_THREADS), MKL_NUM_THREADS=str(config.CPU_THREADS), DYNAMOL_DATA_DIR=str(config.DATA_ROOT), PYTHONUNBUFFERED="1")
@@ -135,12 +152,12 @@ def cancel_job(job_id: str) -> dict:
         pid = job.get("worker_pid")
         if pid:
             probe = subprocess.run(["ps", "-p", str(pid), "-o", "command="], capture_output=True, text=True)
-            if "backend.worker" in probe.stdout and job_id in probe.stdout:
+            if any(module in probe.stdout for module in ("backend.worker", "backend.preparation_worker")) and job_id in probe.stdout:
                 try:
                     os.killpg(pid, signal.SIGTERM)
                     time.sleep(0.2)
                     still_running = subprocess.run(["ps", "-p", str(pid), "-o", "command="], capture_output=True, text=True)
-                    if "backend.worker" in still_running.stdout and job_id in still_running.stdout:
+                    if any(module in still_running.stdout for module in ("backend.worker", "backend.preparation_worker")) and job_id in still_running.stdout:
                         os.killpg(pid, signal.SIGKILL)
                 except ProcessLookupError:
                     pass

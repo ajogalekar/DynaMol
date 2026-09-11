@@ -1,0 +1,20 @@
+{
+  "scope": "One-step OpenMM continuation with minimization disabled solely to test exact saved input geometry/box continuity, not physical stability or equilibrium.",
+  "status": "pass",
+  "job_id": "36c7e8a6c5c64685",
+  "atoms": 3485,
+  "frames": 2,
+  "times_ps": [
+    0.0,
+    0.002
+  ],
+  "input_pdb_sha256": "9f6aed511e62ee8fc3fdf7a7bac0379418e4575db169490ed90fcacb1006bcf2",
+  "first_frame_exact_saved_preview_coordinates": true,
+  "box_retained_within_1e_6_nm": true,
+  "atom_count_unchanged": true,
+  "actual_preparation_provenance_carried": true,
+  "preparation_log": [
+    "Preserving exact prepared topology and hydrogens at recorded pH 2; no automatic hydrogen reassignment.",
+    "Reusing the exact prepared TIP3P solvent preview (3,485 atoms); no water or ions added and no new box generated."
+  ]
+}

@@ -54,6 +54,32 @@ def load_physical(dataset_id: str) -> md.Trajectory:
     get_dataset(dataset_id)
     with np.load(folder / "physical.npz", allow_pickle=False) as data:
         top = md.load_topology(str(folder / "topology.pdb"))
+        chemistry_path = folder / "chemistry.json"
+        if chemistry_path.is_file():
+            chemistry = json.loads(chemistry_path.read_text())
+            if chemistry.get("authoritative_bonds"):
+                # PDB cannot retain bond orders and may infer extra bonds from
+                # residue names. Rebuild from the uploaded chemical graph.
+                if len(chemistry["atoms"]) != top.n_atoms:
+                    raise ValueError("Stored chemical graph does not match the coordinate atom count.")
+                restored = md.Topology()
+                chains, residues, atoms = {}, {}, []
+                for chain in top.chains:
+                    chains[chain.index] = restored.add_chain(chain.chain_id)
+                for residue in top.residues:
+                    residues[residue.index] = restored.add_residue(residue.name, chains[residue.chain.index], residue.resSeq, residue.segment_id)
+                for atom in top.atoms:
+                    chemical = chemistry["atoms"][atom.index]
+                    if chemical["index"] != atom.index:
+                        raise ValueError("Stored chemical graph has inconsistent atom ordering.")
+                    atoms.append(restored.add_atom(atom.name, atom.element, residues[atom.residue.index], atom.serial, chemical.get("formal_charge")))
+                for bond in chemistry["bonds"]:
+                    a, b = bond["atoms"]
+                    if not (0 <= a < len(atoms) and 0 <= b < len(atoms)) or a == b:
+                        raise ValueError("Stored chemical graph contains an invalid bond.")
+                    order = bond.get("order")
+                    restored.add_bond(atoms[a], atoms[b], type=md.core.topology.Aromatic if bond.get("aromatic") else None, order=int(order) if order is not None and float(order).is_integer() else None)
+                top = restored
         traj = md.Trajectory(data["xyz"], top, time=data["time"])
         if "lengths" in data:
             traj.unitcell_lengths = data["lengths"]

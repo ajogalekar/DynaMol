@@ -1,0 +1,14 @@
+{
+  "scope": "Root-cause numerical probe of installed PDBFixer 1.12 _overlayPoints on missing ILE3 placement against PHE4 common-name atoms.",
+  "shared_names": [
+    "N",
+    "CA",
+    "CB",
+    "CD1",
+    "C",
+    "O"
+  ],
+  "upstream_transform_determinant": -1.0000000000000002,
+  "proper_rotation_determinant": 0.9999999999999987,
+  "finding": "The upstream fitted transform is an improper rotation (reflection), explaining simultaneous alpha/beta inversion of rebuilt ILE3. Proper-rotation placement still requires subsequent geometry validation."
+}

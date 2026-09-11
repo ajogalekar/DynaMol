@@ -1,4 +1,13 @@
-import type { Dataset, Health, Job, MeasureKind, Measurement, SimulationConfig } from './types';
+import type {
+  Dataset,
+  Health,
+  Job,
+  MeasureKind,
+  Measurement,
+  SimulationConfig,
+  Inspection,
+  PreparationConfig,
+} from './types';
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
   const response = await fetch(url, options);
   if (!response.ok) {
@@ -28,6 +37,33 @@ export const api = {
   },
   upload: (data: FormData) =>
     request<Dataset>('/api/datasets/upload', { method: 'POST', body: data }),
+  importStructure: (data: FormData) =>
+    request<Dataset>('/api/structures/upload', { method: 'POST', body: data }),
+  fetchStructure: (provider: 'pdb' | 'pubchem', identifier: string) =>
+    request<Dataset>('/api/structures/fetch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ provider, identifier }),
+    }),
+  smiles: (smiles: string, name?: string) =>
+    request<Dataset>('/api/structures/smiles', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ smiles, name }),
+    }),
+  inspect: (id: string) => request<Inspection>(`/api/datasets/${id}/inspection`),
+  prepare: (config: PreparationConfig) =>
+    request<Job>('/api/preparations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(config),
+    }),
+  solvate: (id: string, padding_nm: number, ph: number, seed: number) =>
+    request<Job>(`/api/datasets/${id}/solvate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ padding_nm, ph, seed }),
+    }),
   measure: (id: string, kind: MeasureKind, atoms: number[]) =>
     request<Omit<Measurement, 'id' | 'label' | 'color'>>(`/api/datasets/${id}/measurements`, {
       method: 'POST',

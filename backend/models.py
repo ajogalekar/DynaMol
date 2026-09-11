@@ -33,3 +33,34 @@ class SimulationConfig(BaseModel):
 class MeasurementRequest(BaseModel):
     kind: Literal["distance", "angle", "dihedral", "hbond"]
     atoms: list[int] = Field(min_length=2, max_length=4)
+
+
+class StructureFetchRequest(BaseModel):
+    provider: Literal["pdb", "pubchem"] = "pdb"
+    identifier: str = Field(min_length=1, max_length=200)
+    name: str | None = Field(default=None, max_length=100)
+    seed: int = Field(default=2026, ge=1, le=2_147_483_646)
+
+
+class SmilesRequest(BaseModel):
+    smiles: str = Field(min_length=1, max_length=10000)
+    name: str | None = Field(default=None, max_length=100)
+    seed: int = Field(default=2026, ge=1, le=2_147_483_646)
+
+
+class PreparationRequest(BaseModel):
+    dataset_id: str = Field(min_length=1, max_length=80, pattern=r"^[A-Za-z0-9_-]+$")
+    name: str = Field(default="Protein preparation", min_length=1, max_length=100)
+    ph: float = Field(default=7, ge=0, le=14, allow_inf_nan=False)
+    add_missing_atoms: bool = True
+    build_missing_residues: bool = False
+    optimize_sidechains: bool = True
+    remove_waters: bool = True
+    remove_heterogens: bool = False
+    seed: int = Field(default=2026, ge=1, le=2_147_483_646)
+
+
+class SolvationRequest(BaseModel):
+    padding_nm: float = Field(default=1, ge=1, le=3, allow_inf_nan=False)
+    ph: float = Field(default=7, ge=0, le=14, allow_inf_nan=False)
+    seed: int = Field(default=2026, ge=1, le=2_147_483_646)

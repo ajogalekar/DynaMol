@@ -1,0 +1,92 @@
+{
+  "scope": "Direct app solvent helper with synthetic upstream-prepared tiny peptide. No dynamics or equilibration; temporary generated solvent outputs.",
+  "input_sha256": "d5bd986f1a43c4cfc8da0b6c339a3f8fdc6b8b814e7b61edd8275fa9a9af6218",
+  "results": [
+    {
+      "name": "Real TIP3P preview retains prepared atom order, hydrogen state, and physical solute coordinates",
+      "status": "pass",
+      "evidence": {
+        "solute_atoms": 132,
+        "total_atoms": 3485,
+        "solute_prefix_exact": true,
+        "ph": 2.0,
+        "histidine_HE2_retained": true,
+        "max_pdb_roundtrip_error_nm": 4.027709961018644e-05,
+        "box_vectors_nm": [
+          [
+            [
+              3.3672800064086914,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              3.3672800064086914,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              3.3672800064086914
+            ]
+          ]
+        ],
+        "solvation": {
+          "parent_dataset_id": "513fe38ac05a4c2d",
+          "padding_nm": 1,
+          "water_model": "tip3p",
+          "seed": 2026,
+          "added_water_atoms": 3351,
+          "water_atoms": 3351,
+          "neutralizing_ions": 2,
+          "ionic_strength_molar": 0,
+          "box_shape": "cube",
+          "box_vectors_nm": [
+            [
+              3.3672800784867007,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              3.3672800784867007,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              3.3672800784867007
+            ]
+          ],
+          "openmm_version": "8.6.0.dev-c6173db",
+          "forcefield": [
+            "amber14/protein.ff14SB.xml",
+            "amber14/tip3p.xml"
+          ],
+          "prepared_pdb": "prepared.pdb",
+          "input_sha256": "d5bd986f1a43c4cfc8da0b6c339a3f8fdc6b8b814e7b61edd8275fa9a9af6218",
+          "equilibrated": false,
+          "preserves_prepared_protonation": true
+        }
+      }
+    },
+    {
+      "name": "Identical solvent-preview settings return the same dataset without double solvation",
+      "status": "pass",
+      "evidence": {
+        "same_dataset_id": true,
+        "atoms_unchanged": true
+      }
+    },
+    {
+      "name": "Changed padding rebuilds from original prepared solute and warns if requested pH differs",
+      "status": "pass",
+      "evidence": {
+        "new_total_atoms": 3815,
+        "rebuilt_from_original_prepared_parent": true,
+        "original_ph_retained": true,
+        "ph_mismatch_warned": true
+      }
+    }
+  ]
+}

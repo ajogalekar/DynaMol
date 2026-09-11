@@ -1,6 +1,6 @@
 # DynaMol local API
 
-Start from the project root with `.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8765`. The interactive API reference is at `http://127.0.0.1:8765/docs`. `DYNAMOL_DATA_DIR` changes the default `data/` directory; `DYNAMOL_CPU_THREADS` selects 1–4 threads (default 2). Use one API process. The runner starts one independent simulation process at a time, persists progress in JSON, and retains intermediate files after failure or cancellation. Engine availability probes are shared and cached for 30 seconds across browser polling.
+Start from the project root with `.venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8765`. The interactive API reference is at `http://127.0.0.1:8765/docs`. `DYNAMOL_DATA_DIR` changes the default `data/` directory; `DYNAMOL_CPU_THREADS` selects 1–4 threads (default 2). Use one API process. The runner starts one independent simulation, protein-preparation or solvation process at a time, persists progress in JSON, and retains intermediate files after failure or cancellation. Engine availability probes are shared and cached for 30 seconds across browser polling.
 
 ## Molecular files and measurements
 
@@ -14,9 +14,21 @@ DCD reader timestamps, structure-only files and trajectory formats without trust
 
 A hydrogen-bond selection is **donor, explicit hydrogen, acceptor**. Hydrogen connectivity is validated. The custom geometric occupancy is the fraction of saved frames with D–A ≤ 3.5 Å and D–H–A ≥ 150° (angle at H). N/O/S element screening does not establish donor/acceptor chemical eligibility, protonation or electronic state. This criterion is not a claim of equivalence with another analysis tool's defaults.
 
+## Structure preparation and solvent preview
+
+Simulate sources use `/api/structures/upload`, `/api/structures/fetch` and `/api/structures/smiles`. Fetch is restricted to fixed RCSB/PubChem endpoints, with bounded responses and identifiers. Source files and hashes are retained. SMILES produces a seeded RDKit conformer; small-molecule chemical graphs are preserved in `chemistry.json` and restored for physical analysis instead of inferring authoritative bonds from PDB. No ligand parameterization is performed.
+
+`GET /api/datasets/{id}/inspection` reports missing atoms, sequence-supported residues, chain gaps and blockers. Sequence evidence comes from retained PDB/mmCIF records, including parent datasets, while preparation uses the current dataset coordinates. Residue numbering alone never supplies missing sequence identities. Unresolved long backbone connections are blocked before force-field minimization.
+
+`POST /api/preparations` creates a cancellable subprocess job. Defaults repair missing atoms, remove existing waters, rebuild hydrogens at pH 7 and refine side chains. Heterogen removal and loop construction require explicit options. pH-based template heuristics are not a site-specific pKₐ calculation; short-loop reconstruction and bounded rotamer refinement are uncertain starting models. Missing internal loops are capped at 6 residues per gap and 12 total; missing terminal regions and larger gaps require other modeling. Exact OpenMM-prepared coordinates and hydrogen names are retained in `prepared.pdb`, separately from normalized viewer topology, and downloadable at `/api/datasets/{id}/prepared`.
+
+`POST /api/datasets/{id}/solvate` submits a real TIP3P box-building job around a prepared standard protein, with 1–3 nm padding, neutralizing ions and seeded ion placement. It preserves solute coordinates and protonation, validates templates, records box/provenance, and produces a new dataset. Repeated identical requests reuse the saved preview; changing settings rebuilds from the unsolvated parent. This is an unequilibrated starting system. OpenMM consumes the exact saved `prepared.pdb`, including existing solvent. GROMACS prepared-state transfer is explicitly rejected until state and coordinate fidelity are validated for that engine.
+
+See [API contract](../docs/PREPARATION_CONTRACT.md) and [preparation review](../docs/preparation-review.md).
+
 ## Real simulation workflows
 
-OpenMM: Amber ff14SB protein parameters; GBn2 implicit solvent or TIP3P explicit water with PME and neutralizing ions. Langevin-middle dynamics, hydrogen-bond constraints, up to 2 fs timestep, fixed-volume NVT. Hydrogens are added with pH 7 template heuristics. Optional minimization uses tolerance 10 kJ/mol/nm and at most 1,000 iterations. Python/NumPy preparation RNG, integrator and velocities are seeded in current jobs.
+OpenMM: Amber ff14SB protein parameters; GBn2 implicit solvent or TIP3P explicit water with PME and neutralizing ions. Langevin-middle dynamics, hydrogen-bond constraints, up to 2 fs timestep, fixed-volume NVT. Unprepared inputs use pH 7 hydrogen template heuristics; prepared inputs retain their saved hydrogen/protonation states. Optional minimization uses tolerance 10 kJ/mol/nm and at most 1,000 iterations. Python/NumPy preparation RNG, integrator and velocities are seeded in current jobs.
 
 GROMACS: Amber99SB-ILDN protein parameters, TIP3P water, PME and stochastic dynamics (`sd`), hydrogen-bond constraints, fixed-volume NVT. `pdb2gmx -ignh` explicitly rebuilds hydrogen coordinates; input heavy-atom retention is checked. Protein protonation/termini use GROMACS defaults. Solvent coordinates use the standard `spc216.gro` packing template, with TIP3P parameters selected in topology. An explicit index restricts neutralizing-ion replacement to newly added solvent; existing input waters are retained. Optional steepest-descent minimization uses at most 2,000 steps and an emtol of 1,000 kJ/mol/nm. No grompp warnings are suppressed. Set `DYNAMOL_GMX` or put `gmx` on PATH; project-local `.gromacs/bin/gmx` and `.tools/gromacs/bin/gmx` are also discovered.
 

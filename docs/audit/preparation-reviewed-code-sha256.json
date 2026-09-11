@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-11T02:27:01.686339+00:00",
+  "versions": {
+    "pdbfixer": "1.12.0",
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "rdkit": "2026.3.6"
+  },
+  "sha256": {
+    "backend/preparation.py": "3dd4fc34059b8cf261457bcf7a9aa4de2288ee68d5c0abcaf6457ad7123fcddd",
+    "backend/preparation_worker.py": "abb31e280ab433b328ab25ca2a72c0817fcc9cc415499d593823b27f0978b680",
+    "backend/worker.py": "e1b67473e27de0b79c4e08745a79e915cc7d05ea8bc838a8540d05d1fc8d12d9",
+    "backend/jobs.py": "47b380317cf4e67b0427972c43cf4c9b7db705cbaea61afadc3808464d9eb3e2",
+    "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+    "backend/solvent.py": "e7da6f43fa9ae3d3125fe2e79ccd8650418bd32fa737f9091b01a1a5d11d675e",
+    "backend/storage.py": "c0eaebc76dc4597768e819476b34f100d1f22db17b22fc0afd04dfee96bd5a43",
+    "backend/models.py": "dbe237d95ed6d6996594826f03472eb88a19929db034d8d2a21c93ab6b61a830",
+    "backend/main.py": "4eea7dfcb60c1f0e31778e1f65fa143f6b6c6fd9b98a9a2976e719aa9b34479c",
+    "pyproject.toml": "0715f66dbb6f76aa3aff47cbb3b373df0ad5bc0b5370f0d6734efab48fca49a9",
+    "uv.lock": "aed46e8001f2d93e73c35f6b4e7d0f372010b89f61f95de85ebc4d14b65a86f9"
+  },
+  "targeted_refresh": {
+    "created_at": "2026-09-11T02:33:49.646625+00:00",
+    "file": "backend/preparation.py",
+    "previous_sha256": "26054751ab993c809e5d6e2d90917facfc4b04af57a99c4116e0351d3fbc07c2",
+    "current_sha256": "3dd4fc34059b8cf261457bcf7a9aa4de2288ee68d5c0abcaf6457ad7123fcddd",
+    "review": "Confirmed equivalent for valid atom metadata: existence of a protein atom with matching chain and str(resid) is exactly membership of (residue.chain.id, residue.id) in the precomputed set of those pairs. The nonstandard-residue filter and sorted-name output are unchanged. Only this reviewed module changed; scientific postflight conclusions are unchanged."
+  }
+}

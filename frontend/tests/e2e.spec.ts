@@ -358,7 +358,7 @@ test('simulation studio launches real OpenMM dynamics, reports 100%, and opens i
   await expect(card.locator('.job-progress b')).toHaveText('100%');
   await expect(card.locator('.progress-track > div')).toHaveAttribute('style', /width: 100%/);
   await card.getByRole('button', { name: 'Open trajectory', exact: false }).click();
-  await expect(dialog).toHaveCount(0);
+  await expect(dialog).toBeVisible();
   await expect(page.locator('.structure-card h2')).toHaveText(name);
   await expect(page.getByRole('button', { name: 'Play trajectory', exact: true })).toBeEnabled();
   await expect(page.locator('.timeline-meta')).toContainText('3 saved frames');
@@ -379,6 +379,14 @@ test('responsive workspace retains a usable scene, playback, imports and simulat
   await page.getByRole('button', { name: 'Pause trajectory', exact: true }).click();
   await page.getByRole('button', { name: 'New simulation', exact: true }).click();
   await expect(page.getByRole('dialog', { name: 'Set molecules in motion.' })).toBeVisible();
+  const sceneBounds = await page.locator('.molecular-viewer__canvas canvas').boundingBox();
+  const studioBounds = await page
+    .getByRole('dialog', { name: 'Set molecules in motion.' })
+    .boundingBox();
+  expect(sceneBounds!.height).toBeGreaterThan(150);
+  expect(studioBounds!.y).toBeGreaterThan(sceneBounds!.y + sceneBounds!.height);
+  expect(studioBounds!.y + studioBounds!.height).toBeLessThanOrEqual(1181);
+  await page.screenshot({ path: testInfo.outputPath('tablet-studio.png') });
   await page.getByRole('button', { name: 'Close simulation studio', exact: true }).click();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.getByRole('button', { name: 'Open files', exact: true })).toBeVisible();

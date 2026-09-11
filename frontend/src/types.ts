@@ -24,6 +24,21 @@ export interface Dataset {
   bonds: [number, number][];
   has_unitcell: boolean;
   warnings: string[];
+  parent_dataset_id?: string;
+  preparation?: {
+    ph: number;
+    method?: string;
+    summary?: string[];
+    warnings?: string[];
+    [key: string]: unknown;
+  };
+  solvation?: {
+    parent_dataset_id: string;
+    padding_nm: number;
+    water_model: string;
+    added_water_atoms?: number;
+    [key: string]: unknown;
+  };
 }
 export interface Visibility {
   protein: boolean;
@@ -43,9 +58,44 @@ export interface Measurement {
   values: number[];
   times_ps: number[];
   color: string;
+  visible?: boolean;
   occupancy?: number;
   warnings?: string[];
   angle_values?: number[];
+}
+
+export interface Inspection {
+  dataset_id: string;
+  protein_atoms: number;
+  hydrogen_atoms: number;
+  water_atoms: number;
+  heterogen_residues: string[];
+  can_prepare: boolean;
+  has_sequence: boolean;
+  missing_atoms: { chain: string; resid: string; residue: string; atoms: string[] }[];
+  missing_residues: {
+    chain: string;
+    position: number;
+    residues: string[];
+    count: number;
+    terminal: boolean;
+    buildable: boolean;
+  }[];
+  gaps: { chain: string; after: string; before: string; message: string }[];
+  warnings: string[];
+  blockers: string[];
+}
+
+export interface PreparationConfig {
+  dataset_id: string;
+  name?: string;
+  ph: number;
+  add_missing_atoms: boolean;
+  build_missing_residues: boolean;
+  optimize_sidechains: boolean;
+  remove_waters: boolean;
+  remove_heterogens: boolean;
+  seed: number;
 }
 export interface Job {
   id: string;

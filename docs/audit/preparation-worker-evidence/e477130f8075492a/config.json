@@ -1,0 +1,15 @@
+{
+  "dataset_id": "0a3ec55d0d4848aa",
+  "engine": "openmm",
+  "name": "My simulation",
+  "duration_ps": 0.002,
+  "temperature_k": 300,
+  "timestep_fs": 2,
+  "report_interval": 1,
+  "friction_ps": 1,
+  "seed": 2026,
+  "solvent": "implicit",
+  "minimize": true,
+  "equilibration_steps": 0,
+  "padding_nm": 1
+}

@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-09-11T02:31:59.404611+00:00",
+  "backend_tests": {
+    "passed": 48,
+    "command": ".venv/bin/python -m pytest -q",
+    "upstream_deprecation_warnings": 2
+  },
+  "browser_tests": {
+    "passed": 13,
+    "failed": 0,
+    "command": "DYNAMOL_BASE_URL=http://127.0.0.1:8765 npm --prefix frontend run test:e2e",
+    "stats": {
+      "startTime": "2026-09-11T02:25:51.070Z",
+      "duration": 23068.879,
+      "expected": 13,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "responsive_followup": {
+    "passed": 2,
+    "change": "Narrow panels keep the live molecular view above scrolling preparation controls; camera framing scales with canvas size.",
+    "command": "DYNAMOL_BASE_URL=http://127.0.0.1:8765 npm --prefix frontend run test:e2e -- --grep 'desktop renders|responsive workspace'"
+  },
+  "numerical_checks_passed": 8,
+  "plot_checks_passed": 6,
+  "production_build": "TypeScript and Vite pass; existing large NGL bundle warning",
+  "live_user_example": {
+    "prepared_dataset_id": "e6b002d0067a46c4",
+    "solvated_dataset_id": "0609f5051bdf4c0e",
+    "atoms": 18589,
+    "water_atoms": 17358,
+    "stereocenters_checked": 84,
+    "equilibrated": false
+  },
+  "limits": [
+    "Prepared-state transfer is available with OpenMM; GROMACS conversion remains explicitly blocked.",
+    "Loop construction is opt-in, sequence-supported, bounded and rejects invalid stereochemistry. Accepted loop models remain uncertain.",
+    "pH assignment uses heuristics, not residue pKa prediction.",
+    "Small-molecule imports do not assign MD force-field parameters."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "e477130f8075492a",
+  "name": "My simulation",
+  "engine": "openmm",
+  "status": "completed",
+  "stage": "Complete",
+  "progress": 100,
+  "completed_steps": 1,
+  "total_steps": 1,
+  "elapsed_seconds": 0.45,
+  "logs": [
+    "Queued 1 production steps on 2 CPU threads.",
+    "Preserving exact prepared topology and hydrogens at recorded pH 2; no automatic hydrogen reassignment.",
+    "Minimizing up to 1,000 iterations (tolerance 10 kJ/mol/nm).",
+    "Production started: 1 steps, 2 fs, seed 2026; OpenMM 8.6 CPU.",
+    "Step 0/1 \u00b7 0 ps \u00b7 potential -1945.44 kJ/mol",
+    "Step 1/1 \u00b7 0.002 ps \u00b7 potential -1882.52 kJ/mol",
+    "Complete: 2 frames, 132 atoms. Output files and reproducibility manifest saved."
+  ],
+  "config": {
+    "dataset_id": "0a3ec55d0d4848aa",
+    "engine": "openmm",
+    "name": "My simulation",
+    "duration_ps": 0.002,
+    "temperature_k": 300,
+    "timestep_fs": 2,
+    "report_interval": 1,
+    "friction_ps": 1,
+    "seed": 2026,
+    "solvent": "implicit",
+    "minimize": true,
+    "equilibration_steps": 0,
+    "padding_nm": 1
+  },
+  "created_at": "2026-09-11T02:21:17.257255+00:00",
+  "worker_pid": 79790,
+  "dataset_id": "b1815d630ccf4c65"
+}
