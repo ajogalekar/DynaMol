@@ -2,6 +2,8 @@
 
 Audit date: September 10–11, 2026. Application: local DynaMol at `http://127.0.0.1:8765/`.
 
+The latest workspace/recovery/analysis pass has **82 distinct browser cases with passing latest results and zero skips**, assembled from documented isolated runs, plus **251 passing backend tests**. See [the coverage union](audit/release-readiness/ui-coverage-union.md) and [release additions](RELEASE_READINESS.md). Earlier counts below are historical snapshots; their results have not been relabeled as current tests. Current browser regressions require a disposable data root and refuse user-facing ports; use [frontend/TESTING.md](../frontend/TESTING.md).
+
 ## Scope and method
 
 This audit inventories distinct interactive controls from `App`, `ImportDialog`, `StructureWorkbench`, `SimulationPanel`, `StructureJobMonitor`, `MolecularViewer`, and `PlotPanel`. It combines the existing browser regressions with additional real Chrome/Playwright interaction tests. Molecular rendering uses the actual NGL/WebGL viewer; structure imports, measurements, preparation, solvation, and dynamics use the local API and installed engines. Camera, representation, hydrogen-context, and group-visibility checks inspect actual canvas output rather than trusting selected-button state alone.
@@ -91,3 +93,13 @@ After the package-origin correction and missing-modified-sequence guard, the com
 Package launch testing subsequently exposed an origin allowlist tied to fixed development ports. The launcher now supplies one exact, validated localhost origin for its allocated port; middleware and CORS use the same list. Foreign origins and other unconfigured ports remain rejected. `backend/tests/test_packaged_origin.py` covers dynamic-port requests, CORS preflight and invalid configuration. Packaged browser and job-lifecycle validation is recorded under `packaging/validation/`.
 
 Final preparation review also found that PDBFixer substituted ordinary parent amino acids for missing modified sequence residues. The corrected alignment retains exact residue identities; ten regression cases cover SEP/TPO/PTR/HYP/MSE/ALY/unknown identities, submission and worker guards, and unchanged ordinary short-loop support. The real TPO preparation → solvation → MD continuity check was repeated successfully on the final worker.
+
+## Workspaces, recovery and informative analysis
+
+The final additions extend the inventory with automatic scene/camera restoration; named project save/update/open/export/import; library search/rename/archive/trash/restore; named atom selections; preparation/simulation readiness with shared admission limits; live native energy/temperature plots; checkpoint Resume; RMSD/RMSF settings, numeric curves, click-to-seek/select, CSV and JSON analysis records. Fullscreen coverage now includes Projects and its modal, and workspace restoration includes expanded analysis layout.
+
+The [82-case union](audit/release-readiness/ui-coverage-union.json) retains each test's command, source report hash, available build evidence and run history. The first remaining legacy run had five failures: two assertions expected invalid preparation to remain clickable, one isolated fixture lacked its native preparation-job folder, and two exposed a real startup-cancellation classification bug. Corrected readiness assertions and the complete fixture passed on retry. The supervisor now distinguishes requested cancellation from unexpected interruption after the worker exits; both original browser cancellation regressions and four additional native startup checks pass. Earlier failure records remain available.
+
+All listed molecular format families were exercised again. The native whole-9AX6 prepared PDB and parameter archive download was checked without skipping, as was real 1UA2 inspection with four TPO and four ATP records plus unresolved sequence gaps. These checks do not claim that the full 1UA2 structure was prepared or that the whole 9AX6 complex fits the viewer's explicit-solvent size cap. The broader [chemistry support matrix](CHEMISTRY_SUPPORT.md) records molecular models and expected unsupported cases separately.
+
+New views: [structural analysis](audit/release-readiness/structural-analysis-desktop.png), [narrow analysis](audit/release-readiness/structural-analysis-narrow.png), [ready-to-run estimates](audit/release-readiness/simulation-readiness.png), and [restored workspace](audit/release-readiness/workspace-restored.png).

@@ -1,10 +1,20 @@
-import { test, expect } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect } from '@playwright/test';
 
 test('1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuine gap warnings', async ({
   page,
   request,
 }) => {
-  const id = process.env.DYNAMOL_MODIFIED_DATASET || 'f491cb784d7f4fbf';
+  let id = process.env.DYNAMOL_MODIFIED_DATASET;
+  if (!id) {
+    const fetched = await request.post('/api/structures/fetch', {
+      data: { provider: 'pdb', identifier: '1UA2' },
+    });
+    expect(fetched.ok(), `The online RCSB fixture fetch failed: ${await fetched.text()}`).toBe(
+      true,
+    );
+    id = (await fetched.json()).id;
+  }
   const response = await request.get(`/api/datasets/${id}`);
   expect(
     response.ok(),
@@ -15,12 +25,13 @@ test('1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuin
   await expect(page.getByRole('button', { name: 'Save snapshot', exact: true })).toBeEnabled();
   await page.getByTitle('Switch dataset', { exact: true }).click();
   await page
-    .locator('.library-popover button')
+    .locator('.workspace-library__row')
     .filter({
       has: page.locator('b', {
         hasText: new RegExp(`^${dataset.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`),
       }),
     })
+    .getByRole('button', { name: 'Open', exact: true })
     .click();
   await expect(page.locator('.structure-card h2')).toHaveText(dataset.name);
   await page.getByRole('button', { name: 'Simulate', exact: true }).click();

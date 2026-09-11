@@ -6,6 +6,8 @@ Unzip `DynaMol-0.1.0-macos-arm64.zip`, put `DynaMol.app` in a writable folder su
 
 The runtime requires Apple Silicon and macOS 14 or newer (the bundled NumPy and SciPy wheels require macOS 14); platform-specific wheels and native engines cannot be reused for Windows or Linux. The app includes only the public Ubiquitin examples, not the developer's uploaded structures or jobs. Fetching new database structures still needs internet. Native ligand preparation needs either cached CCD chemistry or an explicit supplied graph; arbitrary uncached ligands are not promised to work offline. Prepared complex simulation remains OpenMM with explicit TIP3P.
 
+The updated workbench includes durable scene restoration, Projects and portable backups, named selections, readiness estimates, live native diagnostics and RMSD/RMSF. Quit offers a choice to leave active jobs running or stop them first; compatible dynamics can resume from a saved production checkpoint. Preparation and solvent construction must be restarted if stopped. See the [release additions](../docs/RELEASE_READINESS.md) for current functional and chemistry coverage. Guides, cited audit evidence and frontend/backend test sources are included with this prototype.
+
 ## Build
 
 On the prepared source checkout, install the build-only packing tool:

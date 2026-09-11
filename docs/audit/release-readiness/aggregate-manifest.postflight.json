@@ -1,0 +1,2831 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T07:42:31.097441+00:00",
+  "purpose": "Aggregate release-readiness review for the requested workspace/project restoration, simulation recovery, readiness, library management, diagnostics, RMSD/RMSF and chemistry support changes. Assess bounded local software behavior and native numerical consistency only; do not promote biological accuracy, universal chemical coverage, protonation populations, coordination energetics, affinity or converged dynamics.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13",
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1",
+      "gemmi": "0.7.5",
+      "dimorphite-dl": "2.0.2"
+    },
+    "planned_seed": 2026,
+    "hardware": "Local Apple Silicon CPU; native AmberTools and OpenMM Reference/CPU; no cloud or GPU compute",
+    "budget": "At most 12 unique ligand native parameterizations, 10-minute timeout per native command; <=20-step chemistry numerical-continuity simulations; recovery fixtures up to 400 OpenMM or 3,000 GROMACS steps to reach a checkpoint before interrupt/cancel/resume; existing curated PTM parity fixtures; no long production MD",
+    "inputs": {
+      "matrix": "Standard residue templates/protonation variants/termini/disulfide; SEP,TPO,PTR,HYP; neutral alcohol/aromatic, anionic carboxylate/phosphate, cationic amine, ATP/ADP/NAD/FAD; Na/Cl/K/Mg/Ca; expected rejection of unsupported elements, radicals, missing ligand atoms, covalent inhibitors/cofactors and unregistered amino acids. MSE/ALY only if compatible published parameters and native parity can be established."
+    },
+    "outputs_and_exclusions_recorded": true,
+    "actual_compute_scope": "Representative native chemistry fixtures use five 0.2-fs Reference-platform steps. Native recovery script uses 400 OpenMM and 3,000 GROMACS production steps; separate actual-browser OpenMM recovery uses 500 steps. Additional bounded legacy UI workflows are described in their reports. No production convergence study.",
+    "evidence_sha256": {
+      "docs/audit/release-readiness/aggregate_ui.py": "10ca1ae799d82e4e7ffc046e2e46b120c57d04cb7fc6dc9675c26599cf0e4b8f",
+      "docs/audit/release-readiness/analysis-ui.json": "8712b106686b5b7d189a7d2a2932b1af208a851892837ff5f19ee877dec281c6",
+      "docs/audit/release-readiness/backend-tests.txt": "c171812458f8f0550a01745914be03c9fa122798b3160d5ab24c641bb863de21",
+      "docs/audit/release-readiness/blog-search.json": "cf88b6454f94ba7991f93d4dcbf1b7496f334a7f58291a0c98006ddc86ced606",
+      "docs/audit/release-readiness/cancellation-startup.json": "455571b7d8499f9728a2a7d5fe50a6cb2a9b8163e1b37f4356539affac09b0a5",
+      "docs/audit/release-readiness/chemistry-boundaries.json": "80e5ac6f8cb6423c3caf79ee7c74ea4ca65cc14fc552b82bf8b178f752117ddb",
+      "docs/audit/release-readiness/chemistry-boundaries.log": "e6c624a56dd100ce5d707444f282334b2bcb7cbdd899602e015adf9acdd3a8ad",
+      "docs/audit/release-readiness/chemistry-inputs/ADP.cif": "fa9eabb464c85c7c5a44146d492b907acd3151a250a4598001cc6abba8da84af",
+      "docs/audit/release-readiness/chemistry-inputs/ATP.cif": "06d876e9fe28b6981725288cd03943818ef6faf4839782c2a0a8929d65c85336",
+      "docs/audit/release-readiness/chemistry-inputs/FAD.cif": "85fc5af9d315a3cdbfb0efe1c30dc1aa7d227ddc8fa9b3054de81f1ffe4d0851",
+      "docs/audit/release-readiness/chemistry-inputs/HEM.cif": "55b1660d3f3fda1cf4fcb6610857bfde5b14d54258938d7158d7d8b3e8bcddab",
+      "docs/audit/release-readiness/chemistry-inputs/NAD.cif": "f202c206d06c8aafa01516df17e91d21a6c60ed1a02f815e60bca00d12a62439",
+      "docs/audit/release-readiness/chemistry-manifest.postflight.json": "9704214d586460a66c64c4e075a6746cebaddaa92918ac58490e79930f2c3cec",
+      "docs/audit/release-readiness/chemistry-matrix.initial.json": "3d10f8fa68b5f19cd492597c51ee059c758fdad9866546ca1a6fbc9e74d06688",
+      "docs/audit/release-readiness/chemistry-matrix.json": "4fbcf91ef16caf6cc1d44a21313c3ceb59b0cbe486b960c215f33e44de182968",
+      "docs/audit/release-readiness/chemistry-postflight.json": "f4ba15666788a7707735ff4ab0a26080ca5bb8d235af0bebc42ed35a52964479",
+      "docs/audit/release-readiness/chemistry-run.initial.log": "251d9177797e87e40feb366830768aa883f0fa5117b9571b9ed0b0b0df6bbc6a",
+      "docs/audit/release-readiness/chemistry-run.log": "bc0d2c937309350af12bb1f0dec0c419961bd805f6844935b8fe28dc0b44ca5e",
+      "docs/audit/release-readiness/chemistry-tests.txt": "67ec4884bbe25f76e8ee56972b2942353d6559821feea7d4a6ee60032b491389",
+      "docs/audit/release-readiness/corpus-manifest.json": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+      "docs/audit/release-readiness/manifest.preflight.json": "8148c6b06d994fb81dbd44354d47dc93715980dbc93d4b4f8c4f78351ad77cc2",
+      "docs/audit/release-readiness/preflight.json": "40f3b4d7a141f48c808eee0d5821d7c899b9a1288a48f1090ec9f9ed0a1040c5",
+      "docs/audit/release-readiness/recovery-native.json": "0cbe01d25f3383e884e928a100653fd5e4851a0ec5cdb47fb5b0a0822fc717ed",
+      "docs/audit/release-readiness/recovery-review.md": "23d39c6e59cd83ba73ff6008017bdb29e6624203204b8a962d511d5646a5104b",
+      "docs/audit/release-readiness/recovery-validation.json": "4b8c1dd82a8f5388b8b9fcb8777ee30ed1df0eb6e3c04d94892ad5586dc04651",
+      "docs/audit/release-readiness/release-review-blog-search.json": "e3540fc75737cbcf817b6ca895ddd280c18112f2ee901ea07d0672e67f6ddb66",
+      "docs/audit/release-readiness/rmsd-record.json": "536a9448f4146a6cdfc893848671c3ccd368c0f8b67400d5c6935c30d0b25665",
+      "docs/audit/release-readiness/simulation-readiness.png": "4ddaf08e67b1b99270e10cd7fe5eebf99192acea5e77699bb6673b54687e5cf8",
+      "docs/audit/release-readiness/structural-analysis-desktop.png": "a185257def7515cccca21f99e76d38545a61e693aef2ed74477499f6300a27a4",
+      "docs/audit/release-readiness/structural-analysis-narrow.png": "21b69f26a199bcc5b3a30e0a4721b060cb85b9491c0591922fb54e48dc5fb429",
+      "docs/audit/release-readiness/structural-analysis.json": "ca2657c1ffc1cae838ec27c2147b744eee3dd267604e2c7707206ce4172b6541",
+      "docs/audit/release-readiness/ui-coverage-union.json": "89fbd4e0ef86cb989842681c54cecef2afc6f4d057702bf591b48af60855abba",
+      "docs/audit/release-readiness/ui-coverage-union.md": "cf8c54583bdfb627d098333bfe2793ba48c7e7c361dcad17f6c734a910a10dba",
+      "docs/audit/release-readiness/workspace-cancellation-ui.json": "c9b58e491b4a7653080382e903697668c26d9010f16cc391907247d5d2d78aca",
+      "docs/audit/release-readiness/workspace-final-ui.json": "12d3a5c816d74620db4353c3aa8beb515514c06bcf950932dacae2181101399c",
+      "docs/audit/release-readiness/workspace-legacy-ui.json": "4be9079f523968840c020beb0320985cfb6ddd4bad6a40e56201dbb15d5caeb2",
+      "docs/audit/release-readiness/workspace-release-ui.json": "828e1af3f2bde044866f8da559e1a4abb97bd8b3e1a7a1cdc92dd24c1c33be77",
+      "docs/audit/release-readiness/workspace-restored.json": "c78f7a5b5fa8d8ce42b6012ad09d5aa375dd05742769d60df8b806a0f6a6186f",
+      "docs/audit/release-readiness/workspace-restored.png": "936e68f1423cd80e089927319404b1953911bb8d8f014decbe1ae36bf66e9926",
+      "docs/audit/release-readiness/workspace-ui.json": "507034c3b96cf0bb8f6307c9e2752dda0438f58a6a6af5e086ab4512827dc175",
+      "docs/audit/release-readiness/workspace-validation.md": "36492fbb084611aac03bfb1df2c1186ce59b703dd0d3c0b79eb898db57214c18"
+    },
+    "source_sha256": {
+      "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backend/analysis.py": "01236ff60cb4addefc1606ac88bbee4399eff6df548e24447b7771fafc723c6e",
+      "backend/complex_topology.py": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542",
+      "backend/config.py": "5061c332a68d2c358e56c24fd8b04b5cde1c3146b0f3bf212dcced45d67b7055",
+      "backend/diagnostics.py": "952e2b8a420840ce1cf0fd846fbd91901ceb54cfc7c207000d6731f2ad370397",
+      "backend/file_responses.py": "d90f8579a39298c07ead27cc01995d59d48b305349e1886cb880d5b80ace5626",
+      "backend/ions.py": "b75a6c9a7b45d13067b0a2be4a7b64986086a8b7ebe609df706cf20c48955479",
+      "backend/jobs.py": "a728e33341e7d71119b5a591217136b9a0b4da24e9228bd11d6977bb9835967a",
+      "backend/ligands.py": "1917b3636c4e474421894c492b8ce546b0362b57aad09c1553b659579fd3eb2f",
+      "backend/main.py": "76e5cd85b21dbd43d53c42f9352a53c224fbb59b25ebf355cc8ca78d8f86a4ab",
+      "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+      "backend/modified_residues.py": "89d7c817bdbd13a0c91837b69a2ffcc6fddf2a56f00cba07130e750d5e84a0ec",
+      "backend/preparation.py": "5cb8f7e98375ecc9005b11801a2b935a7894f2b853a2fc0183d70472c305663b",
+      "backend/preparation_worker.py": "ad9d898fdf02f03b35dbf3823f90e05ea90199e19483da18bf5b0564c30baece",
+      "backend/prepared_system.py": "b1771289a005dc2b846057aa7ba18ec3abe0b4853753fd793c58ef093df8e847",
+      "backend/readiness.py": "0d2007932f3e221a1487e9c54cdbc8a8240f3da042d5bd96e750c7943c787715",
+      "backend/recovery.py": "ce34989623a41583629661a5fa9e745da6fe4ad6ecae3496b3c176ca0845f40e",
+      "backend/residue_identity.py": "0ef884673e39ca010ba0abf512f4652c036f836b98240b8e698d494e5a51baf3",
+      "backend/resources.py": "cc61cf14bb6bb17d101f9df5893cb2c58afa8aa872a8bca663a641064d778b1c",
+      "backend/solvent.py": "269c4e4d858c560d1361b68d1a05fceb4f0d542f54666b855c851b08bf5d76f8",
+      "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+      "backend/storage.py": "295e50c209ee35152a7702ca7f2e27ca8c47a74481c23992fb801e932df1903c",
+      "backend/structural_analysis.py": "94e2ebdb6f3ca046546a3b57a18e8cdf0f9ec90c7226f3fe5015c1e000e98bb1",
+      "backend/tests/test_backend.py": "b969e827e3ff53aa6f4b0c20f6469681119585da8c324b79993beb8e9218c90d",
+      "backend/tests/test_chemistry_support.py": "9274e6de34c2087c8250e0b2fbb8eda18413a85cebda12afae7c6b29d114e72f",
+      "backend/tests/test_complex_topology.py": "469ad96e32f8fd1ca32bcbc6233a1bf3cfa2998da6a5d8f4b9d0f09d672f4e0c",
+      "backend/tests/test_job_download_snapshots.py": "735b360c566000c5adf0682ad0bacd1569c17e31ae86949c9c15c71ab214b6a7",
+      "backend/tests/test_ligands.py": "55bb1b8f0ce8cdbcbf7c08f60b8194adb39cde308587b1c57ada0604bff879f2",
+      "backend/tests/test_measurement_preview.py": "f7850edca8435f4302744975dc3112923ab58e75bdeb1ccb7612826d6d9c619b",
+      "backend/tests/test_missing_modified_sequence.py": "faed8fc8b62f254ba4feb7c9021da1495f6a3ee658e120258d7f7a879203f16b",
+      "backend/tests/test_modified_bundle.py": "04a398304cc82f58fbb5313623578d52f2e8d9cc9b21683cdc93dd9579856587",
+      "backend/tests/test_modified_residues.py": "335236a830b1998b6a3d143ccdcf575b1f13550a942b8afcb1615fd7d76b6f13",
+      "backend/tests/test_packaged_origin.py": "a564ecdafafd832b2eb91e1a9a6077eefe8dabbccd993211a3238d4d2eb68c19",
+      "backend/tests/test_preparation.py": "f443b3b376dc3556d2852877d5c2f926cb01c3f0c4fc20c0946f8dd3e6943dfc",
+      "backend/tests/test_prepared_system.py": "260fcad14c179c26a18621f52ae858b89e9a159ab4e391902e7da0fdd486cdc7",
+      "backend/tests/test_readiness_diagnostics.py": "df57f6f2fd49411cbe06838582456e826f163934d570331a83149c56b1db8379",
+      "backend/tests/test_recovery.py": "2c7fa3a3ff4519d1554589dbdcc4b9c634f1a91378c91bf9abdc3c8e0ad50005",
+      "backend/tests/test_residue_identity.py": "f4a2950a278c05139c96e3f63b62febcb7b419938da97cd219dc6905deaad94e",
+      "backend/tests/test_resource_submission.py": "1762f671545c125b52c41f5472bd219647f64929f3f15c7390b539dd68dba878",
+      "backend/tests/test_sources_solvent.py": "22436fdaf891a1166140e0ff9cf27d64860916c0e872844776e334973cc582be",
+      "backend/tests/test_structural_analysis.py": "950dccc838a8713e38d0a225473d2b97a4eab14c2fa7bd347e0d95a27fcb575f",
+      "backend/tests/test_ui_audit_formats.py": "5e9038ef9a903c93f76a123b3cc20545e6a86007e856553b82602f64e1536397",
+      "backend/tests/test_workspaces.py": "05e3cc628a3826c584087c071bf03370e5ecdcfbe4fd981f75d8995def012d64",
+      "backend/worker.py": "9e4e004cf26ec655b0316a7910df3765ff94eec19d78b4fd85df31db5359611e",
+      "backend/workspaces.py": "90e2ae88e9be8089f18c084cbc133966347b48c3c982000a3d01015391a2a67a",
+      "frontend/src/App.tsx": "890956651d70e598973d63827cf67b02c879750c421933f77c37badc8adfd28a",
+      "frontend/src/api.ts": "61998b7254e95165f8d850c806824ac83dda03ee373019aed4cd4427ac587843",
+      "frontend/src/components/ImportDialog.tsx": "0a71def397e44889883d56b5c332392aa2676610ba191a3e0c7f9a0bc7ec8351",
+      "frontend/src/components/LiveMeasurement.css": "de4eab3933b7adc08017753a42466b0983db60fc51154f4c7d622ff663ce1cca",
+      "frontend/src/components/LiveMeasurement.tsx": "80645b685646abf70078c1a949fc60d7f6815d4daec72bb49c3abc48f78e327f",
+      "frontend/src/components/ModifiedResidues.css": "34b3174acde0302242f6e431491070fd03a7308c5dabe360f574b02c49250c2a",
+      "frontend/src/components/MolecularViewer.css": "bd50f90f24f02ed515f6011274dd44b3fb21ae2046dd29c9f37e33922f7fa8dd",
+      "frontend/src/components/MolecularViewer.tsx": "2961ab189cea87daeab207174fb59e382e817ffa3b61a47d9ec4eaf365f95374",
+      "frontend/src/components/PlotPanel.tsx": "7c33a84e6df0126e114a1b47f9392af8d7826fca668d81b38695e3abb959dca1",
+      "frontend/src/components/ReadinessPanel.tsx": "efa424f686b85b856613b8a388ef899c5a6d5bdee0bb66c3369d3f21cf45a67d",
+      "frontend/src/components/RunDiagnostics.tsx": "e796e90f680bb226b0d27ef78af2976870a1f71c870a74dd7d7ce943abd16c0d",
+      "frontend/src/components/ScientificAnalysis.css": "1de0a6cb4b659f1c19690e04af97c7a40acd957e1493300d75e40239c07a8737",
+      "frontend/src/components/ScientificCharts.tsx": "c3118f47511271757ba5db40c6312d4fd6d422d5a56a29921fd13805cef78f16",
+      "frontend/src/components/SimulationPanel.tsx": "e759606e41160d3d20511a6e40a98a1551892126e4108b91f7a2c535d077802e",
+      "frontend/src/components/StructureJobMonitor.tsx": "3970b4aca600d9237138ae5023302639c26fab6962fc038c9fd2d7034deb5e11",
+      "frontend/src/components/StructureWorkbench.tsx": "60f7c4f20ecafe8a45d396cb5391914726bc5a8902cc084839b40b351b9e30e0",
+      "frontend/src/components/TrajectoryAnalysis.tsx": "3b651eacdfb0a4c411d69c823c7b0d8e2c860d72897f335732bc25625fb929a7",
+      "frontend/src/components/WorkspaceLibrary.css": "1f5d22907496495144537de89bc4f4c9fb245067a1086240a8538feed91a517c",
+      "frontend/src/components/WorkspaceLibrary.tsx": "4d05523c58be0ae0441afc6d0cffa61981b5c99b3faac3fc80f7a24dc0d7fbed",
+      "frontend/src/components/viewerGeometry.ts": "59a802c940664da4fedb90897a242a3c6418431bdab67897f5e832f4d45ab3c7",
+      "frontend/src/components/viewerGestures.ts": "1e2f87c0db484d2d09e35e25154c180b0fb9a46d75aab64ab50b8656c955f09f",
+      "frontend/src/main.tsx": "e53a8b4c503129843e0bddf179689c21edfb7380a6da8a4a220f558cceb5ecec",
+      "frontend/src/styles.css": "731d0bf5f41b5bd681f2c43dd4f591df7df19780cbb541005511752bbb5af050",
+      "frontend/src/types.ts": "854485f6128a8dec488e0507cb012c3f6577d4d12a8f95d416c5e14b82ac6bbf",
+      "frontend/src/workspace.ts": "33569b0f79e4964e3a7e4b9b981f0d6e0d3c1fff1296657538441e6a476961b8",
+      "frontend/tests/e2e.spec.ts": "b54b6bd4a09cd9e811002fd2e24c8280832203a88b5929c6d1b71af0fee01195",
+      "frontend/tests/fullscreen-header.spec.ts": "1839b25ddc828c8859c52f4bd2b1aa4fa7b6a630e25028224daeede04f11f6a5",
+      "frontend/tests/hydrogen-context.spec.ts": "46c81a9ade046e21f63ca95debcb2cafa031e33b45b6ec4d9af320a4000a25f3",
+      "frontend/tests/live-measurements.spec.ts": "e4262fc3d717994570689af0b4d31d37ee16e85152ac9a217401832e301535c1",
+      "frontend/tests/modified-residue-inspection.spec.ts": "307813015e144d04ee657e6fdadf417c3c6a381a43cae49ac544ff59eca0f8f6",
+      "frontend/tests/pinch-zoom.spec.ts": "efc7da8f0409e5c550c7d9e8efa7de03eacf2fea9be87a3e57e239300c275d33",
+      "frontend/tests/preparation-jobs.spec.ts": "fb97f5c7bdcf82e78b668a745dc18eff9b3af733db9f841be5980533f1b607be",
+      "frontend/tests/preparation-progress.spec.ts": "5beec5f4090b2e32eb4709c8a7e5d44df8b48477149ab279a8d076c75c848da9",
+      "frontend/tests/preparation.e2e.spec.ts": "55732292e55d323a4e547b1b315e7f0403f2440bd0c5ea56de1e3fae208a76e1",
+      "frontend/tests/recovery-controls.spec.ts": "7262007609bb931b8542b0efafe3c5ddb338c3eaa70c5e6973603873a869096b",
+      "frontend/tests/structural-analysis.spec.ts": "b0e7bcbd788f8667aa0e85dca66ef7ad799d533ccd365ee19e09e500a67f8ad2",
+      "frontend/tests/testWorkspace.ts": "42d13a19439d9d335968bc275ec8874ca138dc39dada89684206ceb1e846a0b0",
+      "frontend/tests/ui-audit-controls.spec.ts": "3f64e1eefb1a53939b2118929bbaa418df71bbddddd81f097b55e139b46baa56",
+      "frontend/tests/ui-audit-imports.spec.ts": "5742c7669c89642283edbfed8363607e1371b4ee591baa7710490511acdfe869",
+      "frontend/tests/ui-audit-jobs.spec.ts": "bb011e022a046e0512fbd4b9bc5e39c35cb1b83ef6da07a4fc8055873ec030c5",
+      "frontend/tests/ui-audit-recovery.spec.ts": "2b74ade405ad746d7c440a58929008f934cc70895a192823830b079b6b55e0e8",
+      "frontend/tests/ui-audit-sources.spec.ts": "255a5ff133abfa0d544176a91711f767e79aefa8a862e71bb535f5e3a5d84172",
+      "frontend/tests/workspace-library.spec.ts": "3fb29e75aec34290a9c7fdd0d5128a011419ed6f276fdf6e9d2d4808e74aef0e",
+      "packaging/macos/Launcher.swift": "90ca81100a0eebadfe1f11ab70f3e2718854de8ba427f36dba2f89c75a1bd5a3",
+      "scripts/check_9ax6_complex.py": "60c66d0065a66a73c10c73b6802999b066ec4162b274903587165635764ed04c",
+      "scripts/check_chemistry_boundaries.py": "48d382a988c65132704dbc5910f2fd9dfc6caa6def598c5ad665e8f26dcebd41",
+      "scripts/check_chemistry_matrix.py": "06f3341a36c772df156f978fdd342cc22985d635dd6d62b3a1770f17e34f2acb",
+      "scripts/check_modified_residue.py": "bc4c87e5fa1beb967556f906d7387da0b86e0cbb37e6eab806e1e98dfcf9a490",
+      "scripts/check_recovery.py": "f90d5d40ab732c675074c33df210af980630b1ace5cb88bee05343598b28afc0",
+      "scripts/generate_demo.py": "c83a75b945eff93a597ef125455a76988cee0ba6762d1c71d25a341eba4be927",
+      "scripts/generate_modified_residue_xml.py": "3b6fe57879d3ff9582a8425be1734c997dc89ce42893445bda985c3d16e3dc3d",
+      "scripts/open_browser.py": "2c72c15e37aac4bb0b199374bbf520dd064f325e5b786778e1e19a743e540089",
+      "scripts/package_macos.py": "0883b039d2fc95bbfaa7a7788996b2f720b22522cd74457e91f87c6d2800d599",
+      "scripts/seed_demo.py": "df4a2b7a22d82f5b86f0e6b2e8c199764100d50887e786ad3234847504131b07"
+    },
+    "source_hash_scope": "Source snapshot used for this aggregate report; not a signed packaged release. Native per-case provenance retains the exact code/runtime hashes used by each native fixture."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve identities, elements, all deposited heavy atoms and stereochemistry; no parent-residue mutation, arbitrary GAFF on covalent proteins, fabricated parameters or silent removal. Keep view/identity/preparation/native-check status separate. Explicitly disclose fixed protonation assumptions and nonbonded ion limitations. Resume must preserve topology/system/config/platform compatibility and retained coordinates. RMSD/RMSF use documented selections, alignment/reference, units and handling of periodic boundaries."
+  },
+  "validation": {
+    "status": "Recorded bounded software and native numerical checks passed; scientific accuracy and production convergence remain unvalidated",
+    "backend": {
+      "passed": 251,
+      "failed": 0,
+      "evidence": "docs/audit/release-readiness/backend-tests.txt"
+    },
+    "browser_reports": [
+      {
+        "file": "docs/audit/release-readiness/analysis-ui.json",
+        "passed": 4,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "seconds": 9.779,
+        "started_at": "2026-09-11T07:31:44.888Z"
+      },
+      {
+        "file": "docs/audit/release-readiness/workspace-cancellation-ui.json",
+        "passed": 2,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "seconds": 12.714,
+        "started_at": "2026-09-11T07:37:24.857Z"
+      },
+      {
+        "file": "docs/audit/release-readiness/workspace-final-ui.json",
+        "passed": 10,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "seconds": 21.546,
+        "started_at": "2026-09-11T07:18:49.577Z"
+      },
+      {
+        "file": "docs/audit/release-readiness/workspace-legacy-ui.json",
+        "passed": 44,
+        "failed": 5,
+        "flaky": 0,
+        "skipped": 0,
+        "seconds": 342.801,
+        "started_at": "2026-09-11T07:23:57.359Z"
+      },
+      {
+        "file": "docs/audit/release-readiness/workspace-release-ui.json",
+        "passed": 13,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "seconds": 32.342,
+        "started_at": "2026-09-11T07:32:06.963Z"
+      },
+      {
+        "file": "docs/audit/release-readiness/workspace-ui.json",
+        "passed": 27,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "seconds": 56.49,
+        "started_at": "2026-09-11T07:11:32.421Z"
+      }
+    ],
+    "browser_coverage_union": {
+      "generated_at": "2026-09-11T07:40:05.997791+00:00",
+      "scope": "latest-per-test UI coverage union",
+      "summary": {
+        "unique_cases": 82,
+        "statuses": {
+          "passed": 82
+        },
+        "all_latest_passed": true
+      },
+      "notes": [
+        "This is the latest-per-test union of separate runs, not one monolithic run of all tests on one source revision.",
+        "The preparation rejection case was renamed to its intended readiness replacement and is counted once; old failures remain in history.",
+        "Historical product hashes were not captured. Report hashes authenticate the evidence bytes; current source hashes describe the final source snapshot only and are not assigned retroactively to earlier runs.",
+        "Final layout/workspace/readiness/native-complex and structural-analysis checks were rerun on index-YBadVVti.js; early cancellation cases were rerun after the supervisor fix.",
+        "Native recovery continuity is a software check on short trajectories, not proof of equilibration, convergence or bitwise reproducibility."
+      ],
+      "runs": [
+        {
+          "report": "workspace-ui.json",
+          "sha256": "507034c3b96cf0bb8f6307c9e2752dda0438f58a6a6af5e086ab4512827dc175",
+          "stats": {
+            "startTime": "2026-09-11T07:11:32.421Z",
+            "duration": 56489.648,
+            "expected": 27,
+            "skipped": 0,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8767",
+            "PLAYWRIGHT_JSON_OUTPUT_FILE": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/release-readiness/workspace-ui.json"
+          },
+          "command": "npx playwright test workspace-library.spec.ts ui-audit-controls.spec.ts fullscreen-header.spec.ts live-measurements.spec.ts pinch-zoom.spec.ts --output=../data/integration-checks/workspace-ui-artifacts --reporter=list,json",
+          "cwd": "frontend",
+          "reported_tested_bundle": null,
+          "historical_product_sha256": null,
+          "top_level_errors": []
+        },
+        {
+          "report": "workspace-final-ui.json",
+          "sha256": "12d3a5c816d74620db4353c3aa8beb515514c06bcf950932dacae2181101399c",
+          "stats": {
+            "startTime": "2026-09-11T07:18:49.577Z",
+            "duration": 21545.857,
+            "expected": 10,
+            "skipped": 0,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8767",
+            "PLAYWRIGHT_JSON_OUTPUT_FILE": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/release-readiness/workspace-final-ui.json"
+          },
+          "command": "npx playwright test workspace-library.spec.ts fullscreen-header.spec.ts --output=../data/integration-checks/workspace-final-artifacts --reporter=list,json",
+          "cwd": "frontend",
+          "reported_tested_bundle": "index-CG7UGSbg.js",
+          "historical_product_sha256": null,
+          "top_level_errors": []
+        },
+        {
+          "report": "workspace-legacy-ui.json",
+          "sha256": "4be9079f523968840c020beb0320985cfb6ddd4bad6a40e56201dbb15d5caeb2",
+          "stats": {
+            "startTime": "2026-09-11T07:23:57.359Z",
+            "duration": 342800.808,
+            "expected": 44,
+            "skipped": 0,
+            "unexpected": 5,
+            "flaky": 0
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8767",
+            "DYNAMOL_AUDIT_COMPLEX_DATASET": "4cf5bcedf38847c1",
+            "DYNAMOL_MODIFIED_DATASET": "f491cb784d7f4fbf",
+            "PLAYWRIGHT_JSON_OUTPUT_FILE": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/release-readiness/workspace-legacy-ui.json"
+          },
+          "command": "npx playwright test e2e.spec.ts ui-audit-imports.spec.ts ui-audit-jobs.spec.ts ui-audit-recovery.spec.ts ui-audit-sources.spec.ts preparation-jobs.spec.ts preparation-progress.spec.ts preparation.e2e.spec.ts hydrogen-context.spec.ts modified-residue-inspection.spec.ts --output=../data/integration-checks/workspace-legacy-artifacts --reporter=list,json",
+          "cwd": "frontend",
+          "reported_tested_bundle": "index-CG7UGSbg.js",
+          "historical_product_sha256": null,
+          "top_level_errors": []
+        },
+        {
+          "report": "workspace-release-ui.json",
+          "sha256": "828e1af3f2bde044866f8da559e1a4abb97bd8b3e1a7a1cdc92dd24c1c33be77",
+          "stats": {
+            "startTime": "2026-09-11T07:32:06.963Z",
+            "duration": 32341.821,
+            "expected": 13,
+            "skipped": 0,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8767",
+            "DYNAMOL_AUDIT_COMPLEX_DATASET": "4cf5bcedf38847c1",
+            "DYNAMOL_MODIFIED_DATASET": "f491cb784d7f4fbf",
+            "PLAYWRIGHT_JSON_OUTPUT_FILE": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/release-readiness/workspace-release-ui.json"
+          },
+          "command": "npx playwright test workspace-library.spec.ts fullscreen-header.spec.ts preparation-progress.spec.ts preparation.e2e.spec.ts ui-audit-sources.spec.ts --grep 'workspace|fullscreen|Projects|preparation readiness|Studio PDB upload|validated complex' --output=../data/integration-checks/workspace-release-artifacts --reporter=list,json",
+          "cwd": "frontend",
+          "reported_tested_bundle": "index-YBadVVti.js",
+          "historical_product_sha256": null,
+          "top_level_errors": []
+        },
+        {
+          "report": "workspace-cancellation-ui.json",
+          "sha256": "c9b58e491b4a7653080382e903697668c26d9010f16cc391907247d5d2d78aca",
+          "stats": {
+            "startTime": "2026-09-11T07:37:24.857Z",
+            "duration": 12713.989000000001,
+            "expected": 2,
+            "skipped": 0,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8767",
+            "PLAYWRIGHT_JSON_OUTPUT_FILE": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/release-readiness/workspace-cancellation-ui.json"
+          },
+          "command": "npx playwright test ui-audit-jobs.spec.ts --grep 'running OpenMM monitor|prepared PDB download' --output=../data/integration-checks/workspace-cancellation-artifacts --reporter=list,json",
+          "cwd": "frontend",
+          "reported_tested_bundle": "index-YBadVVti.js",
+          "historical_product_sha256": null,
+          "top_level_errors": []
+        },
+        {
+          "report": "analysis-ui.json",
+          "sha256": "8712b106686b5b7d189a7d2a2932b1af208a851892837ff5f19ee877dec281c6",
+          "stats": {
+            "startTime": "2026-09-11T07:31:44.888Z",
+            "duration": 9779.203,
+            "expected": 4,
+            "skipped": 0,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8768",
+            "PLAYWRIGHT_JSON_OUTPUT_FILE": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/release-readiness/analysis-ui.json"
+          },
+          "command": "npx playwright test tests/structural-analysis.spec.ts --output=test-results/analysis-ui --reporter=list,json",
+          "cwd": "frontend",
+          "reported_tested_bundle": "index-YBadVVti.js",
+          "historical_product_sha256": null,
+          "top_level_errors": []
+        },
+        {
+          "report": "recovery-validation.json",
+          "sha256": "4b8c1dd82a8f5388b8b9fcb8777ee30ed1df0eb6e3c04d94892ad5586dc04651",
+          "stats": {
+            "expected": 1,
+            "unexpected": 0,
+            "skipped": 0,
+            "duration": 31700
+          },
+          "environment": {
+            "DYNAMOL_TEST_ISOLATED": "1",
+            "DYNAMOL_BASE_URL": "http://127.0.0.1:8874",
+            "DYNAMOL_RECOVERY_TEST_INPUT": "recovery-ui-protein"
+          },
+          "command": "npx playwright test recovery-controls.spec.ts --output=/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/recovery-browser-artifacts --reporter=list",
+          "cwd": "frontend",
+          "reported_tested_bundle": "index-YBadVVti.js",
+          "historical_product_sha256": null,
+          "checks": [
+            "Live native temperature appears in a plotted chart while running",
+            "Stop reaches cancelled and enables compatible Resume",
+            "Cancelled job Files downloads a nonempty ZIP",
+            "Resume button launches continuation of the same job",
+            "Completion retains Files and opens the result trajectory",
+            "No page JavaScript errors",
+            "Simulation readiness suspends while a job is active",
+            "Readiness rechecks after completion and Start simulation becomes enabled again"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "file": "e2e.spec.ts",
+          "title": "a delayed real measurement cannot contaminate a newly selected dataset",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "a delayed real measurement cannot contaminate a newly selected dataset",
+              "started_at": "2026-09-11T07:24:02.416Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1368,
+              "line": 236
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "a delayed real measurement cannot contaminate a newly selected dataset",
+            "started_at": "2026-09-11T07:24:02.416Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1368,
+            "line": 236
+          }
+        },
+        {
+          "file": "e2e.spec.ts",
+          "title": "a slower earlier dataset lookup cannot overwrite the latest library selection",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "a slower earlier dataset lookup cannot overwrite the latest library selection",
+              "started_at": "2026-09-11T07:24:03.791Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1277,
+              "line": 275
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "a slower earlier dataset lookup cannot overwrite the latest library selection",
+            "started_at": "2026-09-11T07:24:03.791Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1277,
+            "line": 275
+          }
+        },
+        {
+          "file": "e2e.spec.ts",
+          "title": "atom search produces real distance and hydrogen-bond plots with CSV export",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "atom search produces real distance and hydrogen-bond plots with CSV export",
+              "started_at": "2026-09-11T07:24:00.509Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 854,
+              "line": 140
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "atom search produces real distance and hydrogen-bond plots with CSV export",
+            "started_at": "2026-09-11T07:24:00.509Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 854,
+            "line": 140
+          }
+        },
+        {
+          "file": "e2e.spec.ts",
+          "title": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+              "started_at": "2026-09-11T07:23:57.743Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2429,
+              "line": 88
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+            "started_at": "2026-09-11T07:23:57.743Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2429,
+            "line": 88
+          }
+        },
+        {
+          "file": "e2e.spec.ts",
+          "title": "import reports invalid data, then loads a genuine topology with correct single-frame behavior",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "import reports invalid data, then loads a genuine topology with correct single-frame behavior",
+              "started_at": "2026-09-11T07:24:01.369Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1041,
+              "line": 199
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "import reports invalid data, then loads a genuine topology with correct single-frame behavior",
+            "started_at": "2026-09-11T07:24:01.369Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1041,
+            "line": 199
+          }
+        },
+        {
+          "file": "e2e.spec.ts",
+          "title": "responsive workspace retains a usable scene, playback, imports and simulation controls",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "responsive workspace retains a usable scene, playback, imports and simulation controls",
+              "started_at": "2026-09-11T07:24:10.472Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1156,
+              "line": 371
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "responsive workspace retains a usable scene, playback, imports and simulation controls",
+            "started_at": "2026-09-11T07:24:10.472Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1156,
+            "line": 371
+          }
+        },
+        {
+          "file": "e2e.spec.ts",
+          "title": "simulation studio launches real OpenMM dynamics, reports 100%, and opens its output",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "simulation studio launches real OpenMM dynamics, reports 100%, and opens its output",
+              "started_at": "2026-09-11T07:24:05.076Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 5390,
+              "line": 328
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "simulation studio launches real OpenMM dynamics, reports 100%, and opens its output",
+            "started_at": "2026-09-11T07:24:05.076Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 5390,
+            "line": 328
+          }
+        },
+        {
+          "file": "fullscreen-header.spec.ts",
+          "title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+              "started_at": "2026-09-11T07:11:34.127Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 975,
+              "line": 21
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+              "started_at": "2026-09-11T07:18:51.645Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1343,
+              "line": 21
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+              "started_at": "2026-09-11T07:32:08.863Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1313,
+              "line": 21
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+            "started_at": "2026-09-11T07:32:08.863Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1313,
+            "line": 21
+          }
+        },
+        {
+          "file": "fullscreen-header.spec.ts",
+          "title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+              "started_at": "2026-09-11T07:11:32.737Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1072,
+              "line": 21
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+              "started_at": "2026-09-11T07:18:49.864Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1448,
+              "line": 21
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+              "started_at": "2026-09-11T07:32:07.267Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1442,
+              "line": 21
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+            "started_at": "2026-09-11T07:32:07.267Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1442,
+            "line": 21
+          }
+        },
+        {
+          "file": "fullscreen-header.spec.ts",
+          "title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+              "started_at": "2026-09-11T07:11:36.090Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 951,
+              "line": 21
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+              "started_at": "2026-09-11T07:18:54.329Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1261,
+              "line": 21
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+              "started_at": "2026-09-11T07:32:11.517Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1302,
+              "line": 21
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+            "started_at": "2026-09-11T07:32:11.517Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1302,
+            "line": 21
+          }
+        },
+        {
+          "file": "fullscreen-header.spec.ts",
+          "title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+              "started_at": "2026-09-11T07:11:35.108Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 976,
+              "line": 21
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+              "started_at": "2026-09-11T07:18:52.997Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1327,
+              "line": 21
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+              "started_at": "2026-09-11T07:32:10.183Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1328,
+              "line": 21
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+            "started_at": "2026-09-11T07:32:10.183Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1328,
+            "line": 21
+          }
+        },
+        {
+          "file": "fullscreen-header.spec.ts",
+          "title": "fullscreen state follows browser exits and handles an absent API",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "fullscreen state follows browser exits and handles an absent API",
+              "started_at": "2026-09-11T07:11:37.047Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 467,
+              "line": 75
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "fullscreen state follows browser exits and handles an absent API",
+              "started_at": "2026-09-11T07:18:55.598Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 496,
+              "line": 91
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "fullscreen state follows browser exits and handles an absent API",
+              "started_at": "2026-09-11T07:32:12.825Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 471,
+              "line": 91
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "fullscreen state follows browser exits and handles an absent API",
+            "started_at": "2026-09-11T07:32:12.825Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 471,
+            "line": 91
+          }
+        },
+        {
+          "file": "hydrogen-context.spec.ts",
+          "title": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+              "started_at": "2026-09-11T07:24:11.639Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 4177,
+              "line": 34
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+            "started_at": "2026-09-11T07:24:11.639Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 4177,
+            "line": 34
+          }
+        },
+        {
+          "file": "live-measurements.spec.ts",
+          "title": "live measurements appear before Plot, update with frames, and reset with selection",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "live measurements appear before Plot, update with frames, and reset with selection",
+              "started_at": "2026-09-11T07:11:37.526Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2160,
+              "line": 21
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "live measurements appear before Plot, update with frames, and reset with selection",
+            "started_at": "2026-09-11T07:11:37.526Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2160,
+            "line": 21
+          }
+        },
+        {
+          "file": "live-measurements.spec.ts",
+          "title": "live readout rejects invalid hydrogen-bond selection immediately and handles a new selection",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "live readout rejects invalid hydrogen-bond selection immediately and handles a new selection",
+              "started_at": "2026-09-11T07:11:39.692Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1714,
+              "line": 89
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "live readout rejects invalid hydrogen-bond selection immediately and handles a new selection",
+            "started_at": "2026-09-11T07:11:39.692Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1714,
+            "line": 89
+          }
+        },
+        {
+          "file": "live-measurements.spec.ts",
+          "title": "live scene labels follow molecular visibility while inspector retains selected geometry",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "live scene labels follow molecular visibility while inspector retains selected geometry",
+              "started_at": "2026-09-11T07:11:41.414Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 608,
+              "line": 130
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "live scene labels follow molecular visibility while inspector retains selected geometry",
+            "started_at": "2026-09-11T07:11:41.414Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 608,
+            "line": 130
+          }
+        },
+        {
+          "file": "modified-residue-inspection.spec.ts",
+          "title": "1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuine gap warnings",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuine gap warnings",
+              "started_at": "2026-09-11T07:24:15.825Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 4173,
+              "line": 4
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuine gap warnings",
+            "started_at": "2026-09-11T07:24:15.825Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 4173,
+            "line": 4
+          }
+        },
+        {
+          "file": "pinch-zoom.spec.ts",
+          "title": "WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive",
+              "started_at": "2026-09-11T07:11:44.193Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2094,
+              "line": 109
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive",
+            "started_at": "2026-09-11T07:11:44.193Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2094,
+            "line": 109
+          }
+        },
+        {
+          "file": "pinch-zoom.spec.ts",
+          "title": "ordinary unmodified wheel still zooms both ways",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "ordinary unmodified wheel still zooms both ways",
+              "started_at": "2026-09-11T07:11:50.043Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2123,
+              "line": 199
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "ordinary unmodified wheel still zooms both ways",
+            "started_at": "2026-09-11T07:11:50.043Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2123,
+            "line": 199
+          }
+        },
+        {
+          "file": "pinch-zoom.spec.ts",
+          "title": "slow touchscreen pinch continues zooming while its center drifts and pans",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "slow touchscreen pinch continues zooming while its center drifts and pans",
+              "started_at": "2026-09-11T07:11:46.293Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3742,
+              "line": 152
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "slow touchscreen pinch continues zooming while its center drifts and pans",
+            "started_at": "2026-09-11T07:11:46.293Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3742,
+            "line": 152
+          }
+        },
+        {
+          "file": "pinch-zoom.spec.ts",
+          "title": "trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page",
+              "started_at": "2026-09-11T07:11:42.034Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2153,
+              "line": 87
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page",
+            "started_at": "2026-09-11T07:11:42.034Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2153,
+            "line": 87
+          }
+        },
+        {
+          "file": "preparation-jobs.spec.ts",
+          "title": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+              "started_at": "2026-09-11T07:24:20.009Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 6020,
+              "line": 16
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+            "started_at": "2026-09-11T07:24:20.009Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 6020,
+            "line": 16
+          }
+        },
+        {
+          "file": "preparation-progress.spec.ts",
+          "title": "a prepared topology display failure stops the spinner and retries the same real result",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "a prepared topology display failure stops the spinner and retries the same real result",
+              "started_at": "2026-09-11T07:26:00.588Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3496,
+              "line": 234
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "a prepared topology display failure stops the spinner and retries the same real result",
+            "started_at": "2026-09-11T07:26:00.588Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3496,
+            "line": 234
+          }
+        },
+        {
+          "file": "preparation-progress.spec.ts",
+          "title": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+              "started_at": "2026-09-11T07:24:26.040Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3770,
+              "line": 58
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+            "started_at": "2026-09-11T07:24:26.040Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3770,
+            "line": 58
+          }
+        },
+        {
+          "file": "preparation-progress.spec.ts",
+          "title": "preparation readiness blocks incomplete atoms before submission and clears when repair is restored",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "a rejected preparation exposes the real error beside the header and restores the prep button",
+              "started_at": "2026-09-11T07:24:29.814Z",
+              "status": "timedOut",
+              "classification": "unexpected",
+              "duration_ms": 90202,
+              "line": 196
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "preparation readiness blocks incomplete atoms before submission and clears when repair is restored",
+              "started_at": "2026-09-11T07:32:13.309Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3090,
+              "line": 196
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "preparation readiness blocks incomplete atoms before submission and clears when repair is restored",
+            "started_at": "2026-09-11T07:32:13.309Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3090,
+            "line": 196
+          }
+        },
+        {
+          "file": "preparation.e2e.spec.ts",
+          "title": "SMILES errors preserve the current scene, then a named 3D conformer loads without leaving Studio",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "SMILES errors preserve the current scene, then a named 3D conformer loads without leaving Studio",
+              "started_at": "2026-09-11T07:26:23.897Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 737,
+              "line": 180
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "SMILES errors preserve the current scene, then a named 3D conformer loads without leaving Studio",
+            "started_at": "2026-09-11T07:26:23.897Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 737,
+            "line": 180
+          }
+        },
+        {
+          "file": "preparation.e2e.spec.ts",
+          "title": "Studio MOL2 upload preserves explicit atoms, bonds, and source charges in the viewed molecule",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "Studio MOL2 upload preserves explicit atoms, bonds, and source charges in the viewed molecule",
+              "started_at": "2026-09-11T07:26:22.156Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1534,
+              "line": 147
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "Studio MOL2 upload preserves explicit atoms, bonds, and source charges in the viewed molecule",
+            "started_at": "2026-09-11T07:26:22.156Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1534,
+            "line": 147
+          }
+        },
+        {
+          "file": "preparation.e2e.spec.ts",
+          "title": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+              "started_at": "2026-09-11T07:26:05.201Z",
+              "status": "failed",
+              "classification": "unexpected",
+              "duration_ms": 16524,
+              "line": 107
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+              "started_at": "2026-09-11T07:32:16.411Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3193,
+              "line": 107
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+            "started_at": "2026-09-11T07:32:16.411Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3193,
+            "line": 107
+          }
+        },
+        {
+          "file": "preparation.e2e.spec.ts",
+          "title": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+              "started_at": "2026-09-11T07:26:24.640Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2352,
+              "line": 213
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+            "started_at": "2026-09-11T07:26:24.640Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2352,
+            "line": 213
+          }
+        },
+        {
+          "file": "preparation.e2e.spec.ts",
+          "title": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+              "started_at": "2026-09-11T07:26:04.436Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 760,
+              "line": 68
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+            "started_at": "2026-09-11T07:26:04.436Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 760,
+            "line": 68
+          }
+        },
+        {
+          "file": "recovery-controls.spec.ts",
+          "title": "Stop saves a checkpoint, Resume continues it, and terminal jobs retain Files",
+          "history": [
+            {
+              "report": "recovery-validation.json",
+              "original_title": "Stop saves a checkpoint, Resume continues it, and terminal jobs retain Files",
+              "started_at": "2026-09-11T07:38:17.144024+00:00",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 31700,
+              "evidence_kind": "agent-recorded successful real-browser run; list reporter, .last-run.json and native job artifacts",
+              "job_id": "68ba585758b14594"
+            }
+          ],
+          "latest": {
+            "report": "recovery-validation.json",
+            "original_title": "Stop saves a checkpoint, Resume continues it, and terminal jobs retain Files",
+            "started_at": "2026-09-11T07:38:17.144024+00:00",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 31700,
+            "evidence_kind": "agent-recorded successful real-browser run; list reporter, .last-run.json and native job artifacts",
+            "job_id": "68ba585758b14594"
+          }
+        },
+        {
+          "file": "structural-analysis.spec.ts",
+          "title": "analysis remains usable in the narrow layout",
+          "history": [
+            {
+              "report": "analysis-ui.json",
+              "original_title": "analysis remains usable in the narrow layout",
+              "started_at": "2026-09-11T07:31:53.987Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 554,
+              "line": 162
+            }
+          ],
+          "latest": {
+            "report": "analysis-ui.json",
+            "original_title": "analysis remains usable in the narrow layout",
+            "started_at": "2026-09-11T07:31:53.987Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 554,
+            "line": 162
+          }
+        },
+        {
+          "file": "structural-analysis.spec.ts",
+          "title": "named ligand-sized selections support unfitted analysis and explain undefined fits",
+          "history": [
+            {
+              "report": "analysis-ui.json",
+              "original_title": "named ligand-sized selections support unfitted analysis and explain undefined fits",
+              "started_at": "2026-09-11T07:31:49.827Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 633,
+              "line": 88
+            }
+          ],
+          "latest": {
+            "report": "analysis-ui.json",
+            "original_title": "named ligand-sized selections support unfitted analysis and explain undefined fits",
+            "started_at": "2026-09-11T07:31:49.827Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 633,
+            "line": 88
+          }
+        },
+        {
+          "file": "structural-analysis.spec.ts",
+          "title": "readiness exposes resource limits before submission and recovers when settings are corrected",
+          "history": [
+            {
+              "report": "analysis-ui.json",
+              "original_title": "readiness exposes resource limits before submission and recovers when settings are corrected",
+              "started_at": "2026-09-11T07:31:50.467Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3515,
+              "line": 126
+            }
+          ],
+          "latest": {
+            "report": "analysis-ui.json",
+            "original_title": "readiness exposes resource limits before submission and recovers when settings are corrected",
+            "started_at": "2026-09-11T07:31:50.467Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3515,
+            "line": 126
+          }
+        },
+        {
+          "file": "structural-analysis.spec.ts",
+          "title": "real RMSD/RMSF plots, frame seeking, atom selection and CSV agree with saved-coordinate analysis",
+          "history": [
+            {
+              "report": "analysis-ui.json",
+              "original_title": "real RMSD/RMSF plots, frame seeking, atom selection and CSV agree with saved-coordinate analysis",
+              "started_at": "2026-09-11T07:31:45.155Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1348,
+              "line": 5
+            }
+          ],
+          "latest": {
+            "report": "analysis-ui.json",
+            "original_title": "real RMSD/RMSF plots, frame seeking, atom selection and CSV agree with saved-coordinate analysis",
+            "started_at": "2026-09-11T07:31:45.155Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1348,
+            "line": 5
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: Escape exits picking after the pick button receives focus",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: Escape exits picking after the pick button receives focus",
+              "started_at": "2026-09-11T07:12:08.798Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 416,
+              "line": 362
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: Escape exits picking after the pick button receives focus",
+            "started_at": "2026-09-11T07:12:08.798Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 416,
+            "line": 362
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: Studio source chooser, invalid fetch, all default and advanced configuration controls",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: Studio source chooser, invalid fetch, all default and advanced configuration controls",
+              "started_at": "2026-09-11T07:12:14.528Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1318,
+              "line": 521
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: Studio source chooser, invalid fetch, all default and advanced configuration controls",
+            "started_at": "2026-09-11T07:12:14.528Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1318,
+            "line": 521
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+              "started_at": "2026-09-11T07:12:07.226Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1566,
+              "line": 279
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+            "started_at": "2026-09-11T07:12:07.226Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1566,
+            "line": 279
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: every representation and color choice changes the actual rendered geometry",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: every representation and color choice changes the actual rendered geometry",
+              "started_at": "2026-09-11T07:11:55.376Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3826,
+              "line": 105
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: every representation and color choice changes the actual rendered geometry",
+            "started_at": "2026-09-11T07:11:55.376Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3826,
+            "line": 105
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: import chooser actions, cancel, drag and drop, form bounds and timing override",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: import chooser actions, cancel, drag and drop, form bounds and timing override",
+              "started_at": "2026-09-11T07:12:12.870Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1653,
+              "line": 459
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: import chooser actions, cancel, drag and drop, form bounds and timing override",
+            "started_at": "2026-09-11T07:12:12.870Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1653,
+            "line": 459
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: invalid hydrogen-bond selection reports a dismissible error and keeps the workspace",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: invalid hydrogen-bond selection reports a dismissible error and keeps the workspace",
+              "started_at": "2026-09-11T07:12:12.128Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 736,
+              "line": 437
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: invalid hydrogen-bond selection reports a dismissible error and keeps the workspace",
+            "started_at": "2026-09-11T07:12:12.128Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 736,
+            "line": 437
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: keyboard picking pauses a playing trajectory",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: keyboard picking pauses a playing trajectory",
+              "started_at": "2026-09-11T07:12:09.220Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 433,
+              "line": 370
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: keyboard picking pauses a playing trajectory",
+            "started_at": "2026-09-11T07:12:09.220Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 433,
+            "line": 370
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+              "started_at": "2026-09-11T07:11:59.208Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 5894,
+              "line": 135
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+            "started_at": "2026-09-11T07:11:59.208Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 5894,
+            "line": 135
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: navigation, structure details, library, guide links and modal focus controls",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: navigation, structure details, library, guide links and modal focus controls",
+              "started_at": "2026-09-11T07:11:52.180Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3191,
+              "line": 45
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: navigation, structure details, library, guide links and modal focus controls",
+            "started_at": "2026-09-11T07:11:52.180Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3191,
+            "line": 45
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+              "started_at": "2026-09-11T07:12:09.659Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2463,
+              "line": 379
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+            "started_at": "2026-09-11T07:12:09.659Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2463,
+            "line": 379
+          }
+        },
+        {
+          "file": "ui-audit-controls.spec.ts",
+          "title": "audit: timeline boundaries, every speed, loop behavior and keyboard shortcuts",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "audit: timeline boundaries, every speed, loop behavior and keyboard shortcuts",
+              "started_at": "2026-09-11T07:12:05.109Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2111,
+              "line": 213
+            }
+          ],
+          "latest": {
+            "report": "workspace-ui.json",
+            "original_title": "audit: timeline boundaries, every speed, loop behavior and keyboard shortcuts",
+            "started_at": "2026-09-11T07:12:05.109Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2111,
+            "line": 213
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: cif loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: cif loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:27.710Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 704,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: cif loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:27.710Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 704,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: dcd loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: dcd loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:30.706Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 736,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: dcd loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:30.706Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 736,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: gro loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: gro loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:28.420Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 714,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: gro loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:28.420Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 714,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: h5 loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: h5 loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:29.140Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 835,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: h5 loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:29.140Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 835,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: lammpstrj loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: lammpstrj loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:34.401Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 720,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: lammpstrj loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:34.401Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 720,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: mdcrd loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: mdcrd loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:33.689Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 707,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: mdcrd loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:33.689Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 707,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: nc loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: nc loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:32.157Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 801,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: nc loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:32.157Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 801,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: pdb loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: pdb loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:27.005Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 700,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: pdb loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:27.005Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 700,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: trr loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: trr loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:31.448Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 704,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: trr loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:31.448Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 704,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: xtc loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: xtc loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:29.981Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 720,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: xtc loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:29.981Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 720,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit import format: xyz loads genuine coordinates, stride and explicit timing",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit import format: xyz loads genuine coordinates, stride and explicit timing",
+              "started_at": "2026-09-11T07:26:32.964Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 719,
+              "line": 32
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit import format: xyz loads genuine coordinates, stride and explicit timing",
+            "started_at": "2026-09-11T07:26:32.964Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 719,
+            "line": 32
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+              "started_at": "2026-09-11T07:26:41.843Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 15366,
+              "line": 177
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+            "started_at": "2026-09-11T07:26:41.843Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 15366,
+            "line": 177
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+              "started_at": "2026-09-11T07:26:57.215Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2793,
+              "line": 248
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+            "started_at": "2026-09-11T07:26:57.215Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2793,
+            "line": 248
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+              "started_at": "2026-09-11T07:26:35.127Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 5939,
+              "line": 108
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+            "started_at": "2026-09-11T07:26:35.127Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 5939,
+            "line": 108
+          }
+        },
+        {
+          "file": "ui-audit-imports.spec.ts",
+          "title": "audit: trajectory and topology mismatch is reported without replacing the current structure",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: trajectory and topology mismatch is reported without replacing the current structure",
+              "started_at": "2026-09-11T07:26:41.072Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 765,
+              "line": 157
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit: trajectory and topology mismatch is reported without replacing the current structure",
+            "started_at": "2026-09-11T07:26:41.072Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 765,
+            "line": 157
+          }
+        },
+        {
+          "file": "ui-audit-jobs.spec.ts",
+          "title": "audit native: preparation monitor Cancel stops a real preparation job",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit native: preparation monitor Cancel stops a real preparation job",
+              "started_at": "2026-09-11T07:27:33.841Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3452,
+              "line": 146
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit native: preparation monitor Cancel stops a real preparation job",
+            "started_at": "2026-09-11T07:27:33.841Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3452,
+            "line": 146
+          }
+        },
+        {
+          "file": "ui-audit-jobs.spec.ts",
+          "title": "audit native: prepared PDB download, water update, water log and setup cancellation",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit native: prepared PDB download, water update, water log and setup cancellation",
+              "started_at": "2026-09-11T07:27:37.601Z",
+              "status": "failed",
+              "classification": "unexpected",
+              "duration_ms": 21481,
+              "line": 198
+            },
+            {
+              "report": "workspace-cancellation-ui.json",
+              "original_title": "audit native: prepared PDB download, water update, water log and setup cancellation",
+              "started_at": "2026-09-11T07:37:28.033Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 9386,
+              "line": 198
+            }
+          ],
+          "latest": {
+            "report": "workspace-cancellation-ui.json",
+            "original_title": "audit native: prepared PDB download, water update, water log and setup cancellation",
+            "started_at": "2026-09-11T07:37:28.033Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 9386,
+            "line": 198
+          }
+        },
+        {
+          "file": "ui-audit-jobs.spec.ts",
+          "title": "audit native: running OpenMM monitor reopens from footer and Stop cancels the worker",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit native: running OpenMM monitor reopens from footer and Stop cancels the worker",
+              "started_at": "2026-09-11T07:27:16.439Z",
+              "status": "failed",
+              "classification": "unexpected",
+              "duration_ms": 16805,
+              "line": 99
+            },
+            {
+              "report": "workspace-cancellation-ui.json",
+              "original_title": "audit native: running OpenMM monitor reopens from footer and Stop cancels the worker",
+              "started_at": "2026-09-11T07:37:25.135Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2704,
+              "line": 99
+            }
+          ],
+          "latest": {
+            "report": "workspace-cancellation-ui.json",
+            "original_title": "audit native: running OpenMM monitor reopens from footer and Stop cancels the worker",
+            "started_at": "2026-09-11T07:37:25.135Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2704,
+            "line": 99
+          }
+        },
+        {
+          "file": "ui-audit-jobs.spec.ts",
+          "title": "audit native: short GROMACS run, log show/hide, output ZIP and completed trajectory",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit native: short GROMACS run, log show/hide, output ZIP and completed trajectory",
+              "started_at": "2026-09-11T07:27:00.022Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 16412,
+              "line": 22
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit native: short GROMACS run, log show/hide, output ZIP and completed trajectory",
+            "started_at": "2026-09-11T07:27:00.022Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 16412,
+            "line": 22
+          }
+        },
+        {
+          "file": "ui-audit-recovery.spec.ts",
+          "title": "audit recovery: graphics context loss blocks snapshots and reload restores the scene",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit recovery: graphics context loss blocks snapshots and reload restores the scene",
+              "started_at": "2026-09-11T07:28:01.000Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 523,
+              "line": 40
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit recovery: graphics context loss blocks snapshots and reload restores the scene",
+            "started_at": "2026-09-11T07:28:01.000Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 523,
+            "line": 40
+          }
+        },
+        {
+          "file": "ui-audit-recovery.spec.ts",
+          "title": "audit recovery: unavailable fullscreen reports a dismissible notification",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit recovery: unavailable fullscreen reports a dismissible notification",
+              "started_at": "2026-09-11T07:28:00.571Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 423,
+              "line": 22
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit recovery: unavailable fullscreen reports a dismissible notification",
+            "started_at": "2026-09-11T07:28:00.571Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 423,
+            "line": 22
+          }
+        },
+        {
+          "file": "ui-audit-recovery.spec.ts",
+          "title": "audit recovery: unavailable initial example exposes import and a working fallback example",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit recovery: unavailable initial example exposes import and a working fallback example",
+              "started_at": "2026-09-11T07:27:59.732Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 594,
+              "line": 4
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit recovery: unavailable initial example exposes import and a working fallback example",
+            "started_at": "2026-09-11T07:27:59.732Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 594,
+            "line": 4
+          }
+        },
+        {
+          "file": "ui-audit-recovery.spec.ts",
+          "title": "audit responsive: phone scene, inspector and Studio controls remain reachable",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit responsive: phone scene, inspector and Studio controls remain reachable",
+              "started_at": "2026-09-11T07:28:01.528Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 957,
+              "line": 56
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit responsive: phone scene, inspector and Studio controls remain reachable",
+            "started_at": "2026-09-11T07:28:01.528Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 957,
+            "line": 56
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit Studio upload format: cif displays the imported structure",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit Studio upload format: cif displays the imported structure",
+              "started_at": "2026-09-11T07:28:02.500Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 469,
+              "line": 11
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit Studio upload format: cif displays the imported structure",
+            "started_at": "2026-09-11T07:28:02.500Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 469,
+            "line": 11
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit Studio upload format: mol displays the imported structure",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit Studio upload format: mol displays the imported structure",
+              "started_at": "2026-09-11T07:28:02.974Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 468,
+              "line": 11
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit Studio upload format: mol displays the imported structure",
+            "started_at": "2026-09-11T07:28:02.974Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 468,
+            "line": 11
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit Studio upload format: sdf displays the imported structure",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit Studio upload format: sdf displays the imported structure",
+              "started_at": "2026-09-11T07:28:03.448Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 485,
+              "line": 11
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit Studio upload format: sdf displays the imported structure",
+            "started_at": "2026-09-11T07:28:03.448Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 485,
+            "line": 11
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit Studio upload format: smi displays the imported structure",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit Studio upload format: smi displays the imported structure",
+              "started_at": "2026-09-11T07:28:03.938Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 486,
+              "line": 11
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit Studio upload format: smi displays the imported structure",
+            "started_at": "2026-09-11T07:28:03.938Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 486,
+            "line": 11
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit Studio upload format: smiles displays the imported structure",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit Studio upload format: smiles displays the imported structure",
+              "started_at": "2026-09-11T07:28:04.431Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 473,
+              "line": 11
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit Studio upload format: smiles displays the imported structure",
+            "started_at": "2026-09-11T07:28:04.431Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 473,
+            "line": 11
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit: failed inspection retries against the real service without reloading the molecule",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: failed inspection retries against the real service without reloading the molecule",
+              "started_at": "2026-09-11T07:28:04.910Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2142,
+              "line": 46
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit: failed inspection retries against the real service without reloading the molecule",
+            "started_at": "2026-09-11T07:28:04.910Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2142,
+            "line": 46
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit: ligand details, explicit-state SMILES and pH trigger real inspection updates",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: ligand details, explicit-state SMILES and pH trigger real inspection updates",
+              "started_at": "2026-09-11T07:28:07.059Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 2687,
+              "line": 65
+            }
+          ],
+          "latest": {
+            "report": "workspace-legacy-ui.json",
+            "original_title": "audit: ligand details, explicit-state SMILES and pH trigger real inspection updates",
+            "started_at": "2026-09-11T07:28:07.059Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 2687,
+            "line": 65
+          }
+        },
+        {
+          "file": "ui-audit-sources.spec.ts",
+          "title": "audit: validated complex result exposes prepared coordinates and parameter downloads",
+          "history": [
+            {
+              "report": "workspace-legacy-ui.json",
+              "original_title": "audit: validated complex result exposes prepared coordinates and parameter downloads",
+              "started_at": "2026-09-11T07:28:09.752Z",
+              "status": "timedOut",
+              "classification": "unexpected",
+              "duration_ms": 90169,
+              "line": 136
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "audit: validated complex result exposes prepared coordinates and parameter downloads",
+              "started_at": "2026-09-11T07:32:19.615Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1420,
+              "line": 136
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "audit: validated complex result exposes prepared coordinates and parameter downloads",
+            "started_at": "2026-09-11T07:32:19.615Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1420,
+            "line": 136
+          }
+        },
+        {
+          "file": "workspace-library.spec.ts",
+          "title": "a delayed project open cannot replace a newer molecule or close its simulation pane",
+          "history": [
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "a delayed project open cannot replace a newer molecule or close its simulation pane",
+              "started_at": "2026-09-11T07:19:09.236Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1746,
+              "line": 273
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "a delayed project open cannot replace a newer molecule or close its simulation pane",
+              "started_at": "2026-09-11T07:32:37.488Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1653,
+              "line": 273
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "a delayed project open cannot replace a newer molecule or close its simulation pane",
+            "started_at": "2026-09-11T07:32:37.488Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1653,
+            "line": 273
+          }
+        },
+        {
+          "file": "workspace-library.spec.ts",
+          "title": "bad backup and protected source failures remain visible without losing the current workspace",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "bad backup and protected source failures remain visible without losing the current workspace",
+              "started_at": "2026-09-11T07:12:27.832Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 904,
+              "line": 245
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "bad backup and protected source failures remain visible without losing the current workspace",
+              "started_at": "2026-09-11T07:19:08.307Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 923,
+              "line": 245
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "bad backup and protected source failures remain visible without losing the current workspace",
+              "started_at": "2026-09-11T07:32:36.493Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 988,
+              "line": 245
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "bad backup and protected source failures remain visible without losing the current workspace",
+            "started_at": "2026-09-11T07:32:36.493Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 988,
+            "line": 245
+          }
+        },
+        {
+          "file": "workspace-library.spec.ts",
+          "title": "molecule library search, rename, archive, recoverable trash and restore operate on a disposable upload",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "molecule library search, rename, archive, recoverable trash and restore operate on a disposable upload",
+              "started_at": "2026-09-11T07:12:26.432Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1394,
+              "line": 183
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "molecule library search, rename, archive, recoverable trash and restore operate on a disposable upload",
+              "started_at": "2026-09-11T07:19:06.781Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1519,
+              "line": 183
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "molecule library search, rename, archive, recoverable trash and restore operate on a disposable upload",
+              "started_at": "2026-09-11T07:32:34.585Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1902,
+              "line": 183
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "molecule library search, rename, archive, recoverable trash and restore operate on a disposable upload",
+            "started_at": "2026-09-11T07:32:34.585Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 1902,
+            "line": 183
+          }
+        },
+        {
+          "file": "workspace-library.spec.ts",
+          "title": "named project save, update, reopen, export and import preserve a reviewable scene",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "named project save, update, reopen, export and import preserve a reviewable scene",
+              "started_at": "2026-09-11T07:12:24.465Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1961,
+              "line": 123
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "named project save, update, reopen, export and import preserve a reviewable scene",
+              "started_at": "2026-09-11T07:19:04.784Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 1990,
+              "line": 123
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "named project save, update, reopen, export and import preserve a reviewable scene",
+              "started_at": "2026-09-11T07:32:31.557Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 3022,
+              "line": 123
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "named project save, update, reopen, export and import preserve a reviewable scene",
+            "started_at": "2026-09-11T07:32:31.557Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 3022,
+            "line": 123
+          }
+        },
+        {
+          "file": "workspace-library.spec.ts",
+          "title": "workspace survives a reload with camera, frame, rendering, plots and named atom selections",
+          "history": [
+            {
+              "report": "workspace-ui.json",
+              "original_title": "workspace survives a reload with camera, frame, rendering, plots and named atom selections",
+              "started_at": "2026-09-11T07:12:15.858Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 8602,
+              "line": 42
+            },
+            {
+              "report": "workspace-final-ui.json",
+              "original_title": "workspace survives a reload with camera, frame, rendering, plots and named atom selections",
+              "started_at": "2026-09-11T07:18:56.108Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 8669,
+              "line": 42
+            },
+            {
+              "report": "workspace-release-ui.json",
+              "original_title": "workspace survives a reload with camera, frame, rendering, plots and named atom selections",
+              "started_at": "2026-09-11T07:32:21.046Z",
+              "status": "passed",
+              "classification": "expected",
+              "duration_ms": 10504,
+              "line": 42
+            }
+          ],
+          "latest": {
+            "report": "workspace-release-ui.json",
+            "original_title": "workspace survives a reload with camera, frame, rendering, plots and named atom selections",
+            "started_at": "2026-09-11T07:32:21.046Z",
+            "status": "passed",
+            "classification": "expected",
+            "duration_ms": 10504,
+            "line": 42
+          }
+        }
+      ],
+      "current_source_snapshot": {
+        "sha256": "9facb1e6a7df2182cff1f58b7c8a5a5017b7cfc292a145a6e43087bdae2d6df7",
+        "files": {
+          "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "backend/analysis.py": "01236ff60cb4addefc1606ac88bbee4399eff6df548e24447b7771fafc723c6e",
+          "backend/complex_topology.py": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542",
+          "backend/config.py": "5061c332a68d2c358e56c24fd8b04b5cde1c3146b0f3bf212dcced45d67b7055",
+          "backend/diagnostics.py": "952e2b8a420840ce1cf0fd846fbd91901ceb54cfc7c207000d6731f2ad370397",
+          "backend/file_responses.py": "d90f8579a39298c07ead27cc01995d59d48b305349e1886cb880d5b80ace5626",
+          "backend/ions.py": "b75a6c9a7b45d13067b0a2be4a7b64986086a8b7ebe609df706cf20c48955479",
+          "backend/jobs.py": "a728e33341e7d71119b5a591217136b9a0b4da24e9228bd11d6977bb9835967a",
+          "backend/ligands.py": "1917b3636c4e474421894c492b8ce546b0362b57aad09c1553b659579fd3eb2f",
+          "backend/main.py": "76e5cd85b21dbd43d53c42f9352a53c224fbb59b25ebf355cc8ca78d8f86a4ab",
+          "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+          "backend/modified_residues.py": "89d7c817bdbd13a0c91837b69a2ffcc6fddf2a56f00cba07130e750d5e84a0ec",
+          "backend/preparation.py": "5cb8f7e98375ecc9005b11801a2b935a7894f2b853a2fc0183d70472c305663b",
+          "backend/preparation_worker.py": "ad9d898fdf02f03b35dbf3823f90e05ea90199e19483da18bf5b0564c30baece",
+          "backend/prepared_system.py": "b1771289a005dc2b846057aa7ba18ec3abe0b4853753fd793c58ef093df8e847",
+          "backend/readiness.py": "0d2007932f3e221a1487e9c54cdbc8a8240f3da042d5bd96e750c7943c787715",
+          "backend/recovery.py": "ce34989623a41583629661a5fa9e745da6fe4ad6ecae3496b3c176ca0845f40e",
+          "backend/residue_identity.py": "0ef884673e39ca010ba0abf512f4652c036f836b98240b8e698d494e5a51baf3",
+          "backend/resources.py": "cc61cf14bb6bb17d101f9df5893cb2c58afa8aa872a8bca663a641064d778b1c",
+          "backend/solvent.py": "269c4e4d858c560d1361b68d1a05fceb4f0d542f54666b855c851b08bf5d76f8",
+          "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+          "backend/storage.py": "295e50c209ee35152a7702ca7f2e27ca8c47a74481c23992fb801e932df1903c",
+          "backend/structural_analysis.py": "94e2ebdb6f3ca046546a3b57a18e8cdf0f9ec90c7226f3fe5015c1e000e98bb1",
+          "backend/tests/test_backend.py": "b969e827e3ff53aa6f4b0c20f6469681119585da8c324b79993beb8e9218c90d",
+          "backend/tests/test_chemistry_support.py": "9274e6de34c2087c8250e0b2fbb8eda18413a85cebda12afae7c6b29d114e72f",
+          "backend/tests/test_complex_topology.py": "469ad96e32f8fd1ca32bcbc6233a1bf3cfa2998da6a5d8f4b9d0f09d672f4e0c",
+          "backend/tests/test_job_download_snapshots.py": "735b360c566000c5adf0682ad0bacd1569c17e31ae86949c9c15c71ab214b6a7",
+          "backend/tests/test_ligands.py": "55bb1b8f0ce8cdbcbf7c08f60b8194adb39cde308587b1c57ada0604bff879f2",
+          "backend/tests/test_measurement_preview.py": "f7850edca8435f4302744975dc3112923ab58e75bdeb1ccb7612826d6d9c619b",
+          "backend/tests/test_missing_modified_sequence.py": "faed8fc8b62f254ba4feb7c9021da1495f6a3ee658e120258d7f7a879203f16b",
+          "backend/tests/test_modified_bundle.py": "04a398304cc82f58fbb5313623578d52f2e8d9cc9b21683cdc93dd9579856587",
+          "backend/tests/test_modified_residues.py": "335236a830b1998b6a3d143ccdcf575b1f13550a942b8afcb1615fd7d76b6f13",
+          "backend/tests/test_packaged_origin.py": "a564ecdafafd832b2eb91e1a9a6077eefe8dabbccd993211a3238d4d2eb68c19",
+          "backend/tests/test_preparation.py": "f443b3b376dc3556d2852877d5c2f926cb01c3f0c4fc20c0946f8dd3e6943dfc",
+          "backend/tests/test_prepared_system.py": "260fcad14c179c26a18621f52ae858b89e9a159ab4e391902e7da0fdd486cdc7",
+          "backend/tests/test_readiness_diagnostics.py": "df57f6f2fd49411cbe06838582456e826f163934d570331a83149c56b1db8379",
+          "backend/tests/test_recovery.py": "2c7fa3a3ff4519d1554589dbdcc4b9c634f1a91378c91bf9abdc3c8e0ad50005",
+          "backend/tests/test_residue_identity.py": "f4a2950a278c05139c96e3f63b62febcb7b419938da97cd219dc6905deaad94e",
+          "backend/tests/test_resource_submission.py": "1762f671545c125b52c41f5472bd219647f64929f3f15c7390b539dd68dba878",
+          "backend/tests/test_sources_solvent.py": "22436fdaf891a1166140e0ff9cf27d64860916c0e872844776e334973cc582be",
+          "backend/tests/test_structural_analysis.py": "950dccc838a8713e38d0a225473d2b97a4eab14c2fa7bd347e0d95a27fcb575f",
+          "backend/tests/test_ui_audit_formats.py": "5e9038ef9a903c93f76a123b3cc20545e6a86007e856553b82602f64e1536397",
+          "backend/tests/test_workspaces.py": "05e3cc628a3826c584087c071bf03370e5ecdcfbe4fd981f75d8995def012d64",
+          "backend/worker.py": "9e4e004cf26ec655b0316a7910df3765ff94eec19d78b4fd85df31db5359611e",
+          "backend/workspaces.py": "90e2ae88e9be8089f18c084cbc133966347b48c3c982000a3d01015391a2a67a",
+          "frontend/dist/assets/index-YBadVVti.js": "de5e0cb5c27f290c762702e1b23c2f3cdcc2aca73ab8b76c4af90b8e4143c6a8",
+          "frontend/dist/assets/index-tmaNs6UA.css": "2e0c54658069702a901b5984fb6183fc93610c1aeddbb2665c06bf0c38011843",
+          "frontend/src/App.tsx": "890956651d70e598973d63827cf67b02c879750c421933f77c37badc8adfd28a",
+          "frontend/src/api.ts": "61998b7254e95165f8d850c806824ac83dda03ee373019aed4cd4427ac587843",
+          "frontend/src/components/ImportDialog.tsx": "0a71def397e44889883d56b5c332392aa2676610ba191a3e0c7f9a0bc7ec8351",
+          "frontend/src/components/LiveMeasurement.css": "de4eab3933b7adc08017753a42466b0983db60fc51154f4c7d622ff663ce1cca",
+          "frontend/src/components/LiveMeasurement.tsx": "80645b685646abf70078c1a949fc60d7f6815d4daec72bb49c3abc48f78e327f",
+          "frontend/src/components/ModifiedResidues.css": "34b3174acde0302242f6e431491070fd03a7308c5dabe360f574b02c49250c2a",
+          "frontend/src/components/MolecularViewer.css": "bd50f90f24f02ed515f6011274dd44b3fb21ae2046dd29c9f37e33922f7fa8dd",
+          "frontend/src/components/MolecularViewer.tsx": "2961ab189cea87daeab207174fb59e382e817ffa3b61a47d9ec4eaf365f95374",
+          "frontend/src/components/PlotPanel.tsx": "7c33a84e6df0126e114a1b47f9392af8d7826fca668d81b38695e3abb959dca1",
+          "frontend/src/components/ReadinessPanel.tsx": "efa424f686b85b856613b8a388ef899c5a6d5bdee0bb66c3369d3f21cf45a67d",
+          "frontend/src/components/RunDiagnostics.tsx": "e796e90f680bb226b0d27ef78af2976870a1f71c870a74dd7d7ce943abd16c0d",
+          "frontend/src/components/ScientificAnalysis.css": "1de0a6cb4b659f1c19690e04af97c7a40acd957e1493300d75e40239c07a8737",
+          "frontend/src/components/ScientificCharts.tsx": "c3118f47511271757ba5db40c6312d4fd6d422d5a56a29921fd13805cef78f16",
+          "frontend/src/components/SimulationPanel.tsx": "e759606e41160d3d20511a6e40a98a1551892126e4108b91f7a2c535d077802e",
+          "frontend/src/components/StructureJobMonitor.tsx": "3970b4aca600d9237138ae5023302639c26fab6962fc038c9fd2d7034deb5e11",
+          "frontend/src/components/StructureWorkbench.tsx": "60f7c4f20ecafe8a45d396cb5391914726bc5a8902cc084839b40b351b9e30e0",
+          "frontend/src/components/TrajectoryAnalysis.tsx": "3b651eacdfb0a4c411d69c823c7b0d8e2c860d72897f335732bc25625fb929a7",
+          "frontend/src/components/WorkspaceLibrary.css": "1f5d22907496495144537de89bc4f4c9fb245067a1086240a8538feed91a517c",
+          "frontend/src/components/WorkspaceLibrary.tsx": "4d05523c58be0ae0441afc6d0cffa61981b5c99b3faac3fc80f7a24dc0d7fbed",
+          "frontend/src/components/viewerGeometry.ts": "59a802c940664da4fedb90897a242a3c6418431bdab67897f5e832f4d45ab3c7",
+          "frontend/src/components/viewerGestures.ts": "1e2f87c0db484d2d09e35e25154c180b0fb9a46d75aab64ab50b8656c955f09f",
+          "frontend/src/main.tsx": "e53a8b4c503129843e0bddf179689c21edfb7380a6da8a4a220f558cceb5ecec",
+          "frontend/src/styles.css": "731d0bf5f41b5bd681f2c43dd4f591df7df19780cbb541005511752bbb5af050",
+          "frontend/src/types.ts": "854485f6128a8dec488e0507cb012c3f6577d4d12a8f95d416c5e14b82ac6bbf",
+          "frontend/src/workspace.ts": "33569b0f79e4964e3a7e4b9b981f0d6e0d3c1fff1296657538441e6a476961b8",
+          "frontend/tests/e2e.spec.ts": "b54b6bd4a09cd9e811002fd2e24c8280832203a88b5929c6d1b71af0fee01195",
+          "frontend/tests/fullscreen-header.spec.ts": "1839b25ddc828c8859c52f4bd2b1aa4fa7b6a630e25028224daeede04f11f6a5",
+          "frontend/tests/hydrogen-context.spec.ts": "46c81a9ade046e21f63ca95debcb2cafa031e33b45b6ec4d9af320a4000a25f3",
+          "frontend/tests/live-measurements.spec.ts": "e4262fc3d717994570689af0b4d31d37ee16e85152ac9a217401832e301535c1",
+          "frontend/tests/modified-residue-inspection.spec.ts": "307813015e144d04ee657e6fdadf417c3c6a381a43cae49ac544ff59eca0f8f6",
+          "frontend/tests/pinch-zoom.spec.ts": "efc7da8f0409e5c550c7d9e8efa7de03eacf2fea9be87a3e57e239300c275d33",
+          "frontend/tests/preparation-jobs.spec.ts": "fb97f5c7bdcf82e78b668a745dc18eff9b3af733db9f841be5980533f1b607be",
+          "frontend/tests/preparation-progress.spec.ts": "5beec5f4090b2e32eb4709c8a7e5d44df8b48477149ab279a8d076c75c848da9",
+          "frontend/tests/preparation.e2e.spec.ts": "55732292e55d323a4e547b1b315e7f0403f2440bd0c5ea56de1e3fae208a76e1",
+          "frontend/tests/recovery-controls.spec.ts": "7262007609bb931b8542b0efafe3c5ddb338c3eaa70c5e6973603873a869096b",
+          "frontend/tests/structural-analysis.spec.ts": "b0e7bcbd788f8667aa0e85dca66ef7ad799d533ccd365ee19e09e500a67f8ad2",
+          "frontend/tests/testWorkspace.ts": "42d13a19439d9d335968bc275ec8874ca138dc39dada89684206ceb1e846a0b0",
+          "frontend/tests/ui-audit-controls.spec.ts": "3f64e1eefb1a53939b2118929bbaa418df71bbddddd81f097b55e139b46baa56",
+          "frontend/tests/ui-audit-imports.spec.ts": "5742c7669c89642283edbfed8363607e1371b4ee591baa7710490511acdfe869",
+          "frontend/tests/ui-audit-jobs.spec.ts": "bb011e022a046e0512fbd4b9bc5e39c35cb1b83ef6da07a4fc8055873ec030c5",
+          "frontend/tests/ui-audit-recovery.spec.ts": "2b74ade405ad746d7c440a58929008f934cc70895a192823830b079b6b55e0e8",
+          "frontend/tests/ui-audit-sources.spec.ts": "255a5ff133abfa0d544176a91711f767e79aefa8a862e71bb535f5e3a5d84172",
+          "frontend/tests/workspace-library.spec.ts": "3fb29e75aec34290a9c7fdd0d5128a011419ed6f276fdf6e9d2d4808e74aef0e"
+        }
+      }
+    },
+    "browser_count_note": "Separate reports overlap and include retained historical failures resolved in later runs. The coverage union records each unique test result and its evidence; report counts must not be summed as an independent benchmark sample size.",
+    "chemistry": {
+      "positive_cases": 43,
+      "boundary_and_retained_ion_pipeline_checks": 6,
+      "passed": true,
+      "evidence": [
+        "docs/audit/release-readiness/chemistry-matrix.json",
+        "docs/audit/release-readiness/chemistry-boundaries.json"
+      ]
+    },
+    "recovery": {
+      "native_engines": [
+        "openmm",
+        "gromacs"
+      ],
+      "passed": true,
+      "browser": {
+        "test": "frontend/tests/recovery-controls.spec.ts",
+        "passed": 1,
+        "seconds": 31.7,
+        "server": "http://127.0.0.1:8874",
+        "data_directory": "data/integration-checks/recovery-ui",
+        "job_id": "68ba585758b14594",
+        "actual_engine": "OpenMM CPU",
+        "result_status": "completed",
+        "production_steps": 500,
+        "resume_attempts": 1,
+        "checks": [
+          "Live native temperature appears in a plotted chart while running",
+          "Stop reaches cancelled and enables compatible Resume",
+          "Cancelled job Files downloads a nonempty ZIP",
+          "Resume button launches continuation of the same job",
+          "Completion retains Files and opens the result trajectory",
+          "No page JavaScript errors",
+          "Simulation readiness suspends while a job is active",
+          "Readiness rechecks after completion and Start simulation becomes enabled again"
+        ],
+        "artifact_note": "First attempt completed its real MD workflow but Playwright disposal failed because another concurrent test run removed the shared trace directory. Rerun used a separate output directory and passed.",
+        "dist_asset": "index-YBadVVti.js",
+        "artifact_directory": "data/integration-checks/recovery-browser-artifacts",
+        "command": "DYNAMOL_TEST_ISOLATED=1 DYNAMOL_BASE_URL=http://127.0.0.1:8874 DYNAMOL_RECOVERY_TEST_INPUT=recovery-ui-protein npx playwright test recovery-controls.spec.ts --output=/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/recovery-browser-artifacts --reporter=list"
+      },
+      "evidence": [
+        "docs/audit/release-readiness/recovery-native.json",
+        "docs/audit/release-readiness/recovery-validation.json"
+      ]
+    },
+    "analytical_checks": [
+      "Proper rigid rotation/translation removal without reflecting chirality",
+      "Planar three-atom fitting",
+      "Independent MDTraj comparison on nondegenerate perturbed coordinates",
+      "Known RMSD/RMSF and residue variance aggregation",
+      "Periodic box crossing and source-coordinate preservation",
+      "Invalid fit groups/frame windows and timestamp-axis fallback",
+      "Partial/non-finite/negative/fractional diagnostics and extrema-preserving downsampling"
+    ],
+    "review_findings_resolved": [
+      "Malformed non-finite diagnostic step caused an uncaught OverflowError; step/time validation and regression added",
+      "Non-increasing imported timestamps could collapse the endpoint-scaled plot domain; explicit saved-frame axis and warning added",
+      "CSV alone omitted calculation provenance; companion JSON analysis record added",
+      "Legacy cancellation cases exposed a cancelled worker being classified as interrupted; persisted cancellation marker is now respected after exit, with backend and native UI regressions"
+    ],
+    "test_design": "Iterative implementation/regression testing, with initial chemistry failures retained. Not a blind benchmark, not an experimental comparison, and not a prospective study.",
+    "limitations": [
+      "Representative chemical fixtures are not an exhaustive applicability-domain study",
+      "Five-step vacuum numerical tests do not validate aqueous dynamics or equilibrium",
+      "Fixed ligand/PTM protonation and nonbonded ion models are assumptions, not experimentally validated populations or coordination energetics",
+      "Unregistered unnatural residues, organometallics, covalent ligands/cofactors, radicals and incomplete/ambiguous graphs remain explicitly unsupported",
+      "Prepared complex/PTM/ion state transfer to GROMACS remains unsupported",
+      "Native Quit-menu clicks were not exercised because the desktop was locked",
+      "Public bundle signing/notarization, clean-machine verification and complete redistribution materials remain separate packaging acceptance work",
+      "Large-trajectory streaming was not part of the requested additions; existing caps remain"
+    ]
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "notes": "Deterministic software/numerical checks do not establish meaningful uncertainty intervals for scientific accuracy. No comparative efficacy/affinity or convergence claim."
+  },
+  "review_identity": "Language-model code and evidence review with an automated PatAgent checklist; not expert certification or Pat Walters endorsement.",
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "scope": "Checkpoint/file continuity and native parameter transfer, not converged production dynamics."
+  },
+  "blog_context": {
+    "records": 91,
+    "source_counts": {
+      "blogger": 74,
+      "github-pages": 17
+    },
+    "coverage": "Complete cached public corpus at the recorded sync, not exhaustive access to paywalled writing",
+    "search_evidence": "docs/audit/release-readiness/release-review-blog-search.json",
+    "application": "Applying general representation/provenance/benchmark principles to this MD software audit is this language model review\u2019s inference."
+  },
+  "review_tool": {
+    "sha256": "4b08e006bd4ea6e24a6910c5a8193d265591ad2c870b6ac0d693cc86604decbe",
+    "version": "0.1.0",
+    "smoke_test": {
+      "agent_version": "0.1.0",
+      "ok": true,
+      "tests": {
+        "deliberately_flawed_pipeline_fixture": "blocked",
+        "embedded_image_payload_stripping": "pass",
+        "evidence_catalog": 17,
+        "guest_post_attribution": "pass",
+        "passing_pipeline_fixture": "pass",
+        "required_blockers_detected": [
+          "baseline",
+          "duplicate-conflicts",
+          "provenance",
+          "split-overlap",
+          "structure-parse",
+          "test-untouched"
+        ]
+      }
+    },
+    "scope": "Checks audit/parser behavior; not molecular-science validation."
+  }
+}

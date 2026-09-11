@@ -1,0 +1,247 @@
+.readiness-panel {
+  margin: 14px 0;
+  padding: 13px;
+  border: 1px solid #344a54;
+  border-radius: 12px;
+  background: #121f29;
+  color: #cadbdc;
+  font-size: 12px;
+}
+.readiness-ready {
+  border-color: #386b58;
+  background: #142822;
+}
+.readiness-blocked {
+  border-color: #766039;
+  background: #2c261c;
+}
+.readiness-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.readiness-heading b {
+  flex: 1;
+}
+.readiness-ready .readiness-heading {
+  color: #9aeac5;
+}
+.readiness-blocked .readiness-heading {
+  color: #f1cb8b;
+}
+.readiness-blockers {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+.readiness-estimates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+.readiness-estimates span {
+  color: #a6bac0;
+}
+.readiness-estimates strong {
+  color: #e0ece8;
+}
+.readiness-panel details {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.readiness-panel summary {
+  cursor: pointer;
+  color: #a9c6c2;
+}
+.science-control-row {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.science-control-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  color: #a7c0c5;
+}
+.science-control-row input,
+.science-control-row select,
+.analysis-controls input,
+.analysis-controls select {
+  color: #dce9e7;
+  background: #12212b;
+  border: 1px solid #344653;
+  border-radius: 7px;
+  padding: 7px;
+  min-width: 0;
+  font: inherit;
+}
+.science-empty {
+  padding: 15px 0;
+  color: #9eb5bb;
+  font-size: 12px;
+}
+.scientific-chart {
+  min-width: 0;
+  margin-top: 12px;
+}
+.scientific-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  color: #cce1df;
+}
+.scientific-chart-heading output {
+  color: #94c6b5;
+  font-variant-numeric: tabular-nums;
+}
+.scientific-chart svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+.scientific-chart svg text {
+  fill: #92aab4;
+  font: 10px sans-serif;
+}
+.scientific-chart svg line {
+  stroke: #2a3a46;
+  stroke-width: 1;
+}
+.scientific-chart svg .scientific-chart-line {
+  stroke: #87daba;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linejoin: round;
+}
+.scientific-chart svg .scientific-chart-cursor {
+  stroke: #e6c58a;
+  stroke-dasharray: 3 3;
+}
+.scientific-chart-dot {
+  fill: #87daba;
+}
+.is-interactive {
+  cursor: crosshair;
+}
+.run-diagnostics {
+  margin-top: 12px;
+  border: 1px solid #2c424b;
+  border-radius: 10px;
+  background: #101b24;
+}
+.run-diagnostics > summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.run-diagnostics > summary > span {
+  margin-left: auto;
+  color: #96adb2;
+  font-size: 10px;
+}
+.diagnostic-body {
+  padding: 0 12px 10px;
+}
+.diagnostic-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #a8bfba;
+  font-size: 10px;
+}
+.trajectory-analysis {
+  flex-shrink: 0;
+  margin: 12px 0;
+  border: 1px solid #30434d;
+  background: #101c26;
+  border-radius: 13px;
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .studio-open .trajectory-analysis {
+    display: none;
+  }
+}
+.trajectory-analysis > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px 16px;
+  color: #d6e8e3;
+  font-weight: 650;
+  font-size: 13px;
+}
+.trajectory-analysis > summary small {
+  font-weight: 400;
+  color: #8da9b0;
+  margin-left: auto;
+}
+.trajectory-analysis-body {
+  padding: 0 16px 16px;
+}
+.analysis-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.analysis-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  color: #a6bdc1;
+}
+.analysis-controls input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.analysis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+.analysis-summary {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  margin-top: 12px;
+  color: #bfdcd4;
+  flex-wrap: wrap;
+}
+.analysis-note {
+  font-size: 11px;
+  color: #9cb3ba;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+.analysis-warning {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #edc58f;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .analysis-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+  .scientific-chart-heading {
+    flex-wrap: wrap;
+  }
+  .trajectory-analysis > summary small {
+    display: none;
+  }
+  .readiness-estimates {
+    font-size: 10px;
+  }
+}

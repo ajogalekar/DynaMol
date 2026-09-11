@@ -46,6 +46,10 @@ import PlotPanel from './components/PlotPanel';
 import LiveMeasurement, { useLiveMeasurement } from './components/LiveMeasurement';
 import ImportDialog from './components/ImportDialog';
 import SimulationPanel from './components/SimulationPanel';
+import WorkspaceLibrary, { NamedSelections } from './components/WorkspaceLibrary';
+import TrajectoryAnalysis from './components/TrajectoryAnalysis';
+import type { AnalysisSettings } from './components/TrajectoryAnalysis';
+import { workspaceApi, type NamedSelection, type WorkspaceState } from './workspace';
 import { api } from './api';
 import type {
   AtomInfo,
@@ -95,7 +99,6 @@ const isActive = (j: Job) =>
 export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null),
     [coordinates, setCoordinates] = useState<Float32Array | null>(null),
-    [datasets, setDatasets] = useState<Dataset[]>([]),
     [health, setHealth] = useState<Health | null>(null),
     [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState(true),
@@ -124,7 +127,7 @@ export default function App() {
     [selectedAtoms, setSelectedAtoms] = useState<number[]>([]),
     [measureBusy, setMeasureBusy] = useState(false),
     [atomSearch, setAtomSearch] = useState('');
-  const [modal, setModal] = useState<'import' | 'simulation' | 'help' | null>(null),
+  const [modal, setModal] = useState<'import' | 'simulation' | 'help' | 'projects' | null>(null),
     [library, setLibrary] = useState(false),
     [details, setDetails] = useState(false),
     [inspector, setInspector] = useState(true),
@@ -132,6 +135,66 @@ export default function App() {
   const [viewerError, setViewerError] = useState('');
   const [fullscreen, setFullscreen] = useState(false);
   const [viewerLoadRevision, setViewerLoadRevision] = useState(0);
+  const [namedSelections, setNamedSelections] = useState<NamedSelection[]>([]);
+  const [analysisSettings, setAnalysisSettings] = useState<AnalysisSettings | null>(null);
+  const [analysisExpanded, setAnalysisExpanded] = useState(false);
+  const [camera, setCamera] = useState<number[] | null>(null);
+  const [workspaceIdentity, setWorkspaceIdentity] = useState<{
+    atom_signature?: string;
+    trajectory_signature?: string;
+  }>({});
+  const [saveStatus, setSaveStatus] = useState('Opening workspace…');
+  const [workspaceHydrated, setWorkspaceHydrated] = useState(false);
+  const pendingCamera = useRef<number[] | null>(null);
+  const currentState = useRef<WorkspaceState | null>(null);
+  const savedState = useRef('');
+  const saveInFlight = useRef(false);
+  const stateReady = useRef(false);
+  const workspaceState = useMemo<WorkspaceState | null>(
+    () =>
+      dataset
+        ? {
+            version: 1,
+            dataset_id: dataset.id,
+            ...workspaceIdentity,
+            frame,
+            camera,
+            representation,
+            visibility,
+            color_scheme: colorScheme,
+            measurements,
+            active_measurement: activeMeasurement,
+            selected_atoms: selectedAtoms,
+            named_selections: namedSelections,
+            analysis_settings: analysisSettings,
+            analysis_expanded: analysisExpanded,
+            measure_kind: kind,
+            inspector,
+            speed,
+            loop,
+          }
+        : null,
+    [
+      dataset,
+      workspaceIdentity,
+      frame,
+      camera,
+      representation,
+      visibility,
+      colorScheme,
+      measurements,
+      activeMeasurement,
+      selectedAtoms,
+      namedSelections,
+      analysisSettings,
+      analysisExpanded,
+      kind,
+      inspector,
+      speed,
+      loop,
+    ],
+  );
+  currentState.current = workspaceState;
   const viewer = useRef<ViewerHandle>(null),
     frameRef = useRef(0),
     loadToken = useRef(0),
@@ -163,10 +226,7 @@ export default function App() {
       .catch(() => {});
   }, []);
   const refreshLibrary = useCallback(() => {
-    api
-      .datasets()
-      .then(setDatasets)
-      .catch(() => {});
+    // The library dialog reads its fresh disk index when opened.
   }, []);
 
   const loadDataset = useCallback(
@@ -177,9 +237,11 @@ export default function App() {
         showWater?: boolean;
         showHydrogens?: boolean;
         throwOnError?: boolean;
+        workspace?: WorkspaceState;
       } = {},
     ) => {
       const token = ++loadToken.current;
+      stateReady.current = false;
       setLoading(true);
       setReady(false);
       setViewerError('');
@@ -191,6 +253,15 @@ export default function App() {
       setActiveMeasurement(null);
       setSelectedAtoms([]);
       setPicking(false);
+      setNamedSelections([]);
+      setAnalysisSettings(options.workspace?.analysis_settings ?? null);
+      setAnalysisExpanded(options.workspace?.analysis_expanded ?? false);
+      setCamera(null);
+      setWorkspaceIdentity({
+        atom_signature: options.workspace?.atom_signature,
+        trajectory_signature: options.workspace?.trajectory_signature,
+      });
+      pendingCamera.current = options.workspace?.camera ?? null;
       setFrame(0);
       frameRef.current = 0;
       try {
@@ -198,6 +269,7 @@ export default function App() {
         if (token !== loadToken.current) return;
         setDataset(d);
         setCoordinates(coords);
+        setWorkspaceHydrated(true);
         setViewerLoadRevision((revision) => revision + 1);
         setVisibility({
           protein: true,
@@ -207,11 +279,28 @@ export default function App() {
           hydrogens: options.showHydrogens ? 'polar' : 'none',
         });
         setRepresentation('cartoon');
+        if (options.workspace) {
+          const restored = options.workspace;
+          setFrame(restored.frame);
+          frameRef.current = restored.frame;
+          setVisibility(restored.visibility);
+          setRepresentation(restored.representation);
+          setColorScheme(restored.color_scheme);
+          setMeasurements(restored.measurements);
+          setActiveMeasurement(restored.active_measurement);
+          setSelectedAtoms(restored.selected_atoms);
+          setNamedSelections(restored.named_selections);
+          setKind(restored.measure_kind);
+          setInspector(restored.inspector);
+          setSpeed(restored.speed);
+          setLoop(restored.loop);
+          setCamera(restored.camera);
+        }
         if (!options.keepStudio) setModal(null);
         setLibrary(false);
         refreshLibrary();
         const ca = d.atoms.filter((a) => a.name === 'CA' && a.category === 'protein');
-        if (ca.length > 5 && d.n_frames > 1) {
+        if (!options.workspace && ca.length > 5 && d.n_frames > 1) {
           const atoms = [
             ca[Math.floor(ca.length * 0.27)].index,
             ca[Math.floor(ca.length * 0.67)].index,
@@ -256,15 +345,22 @@ export default function App() {
             'The local molecular service is offline. Start DynaMol with ./start.sh, then reload this page.',
           );
       });
-    api
-      .demo()
-      .then((d) => {
-        if (live) void loadDataset(d);
+    workspaceApi
+      .current()
+      .then(async (saved) => {
+        if (!live) return;
+        if (saved.warning) setToast(saved.warning);
+        const d = saved.state ? await api.dataset(saved.state.dataset_id) : await api.demo();
+        if (live) {
+          await loadDataset(d, { workspace: saved.state ?? undefined });
+          setWorkspaceHydrated(true);
+        }
       })
       .catch((e) => {
         if (live) {
           setError((e as Error).message);
           setLoading(false);
+          setSaveStatus('Workspace unavailable');
         }
       });
     refreshJobs();
@@ -284,6 +380,71 @@ export default function App() {
       ++loadToken.current;
     };
   }, [loadDataset, refreshJobs, refreshLibrary]);
+  useEffect(() => {
+    if (workspaceHydrated && stateReady.current) setSaveStatus('Saving locally…');
+  }, [workspaceState, workspaceHydrated]);
+  useEffect(() => {
+    if (!workspaceHydrated) return;
+    let live = true;
+    const save = async () => {
+      if (!stateReady.current || saveInFlight.current || !currentState.current) return;
+      const state = {
+        ...currentState.current,
+        camera: viewer.current?.getCamera() ?? currentState.current.camera,
+      };
+      const serialized = JSON.stringify(state);
+      if (serialized === savedState.current) {
+        if (live) setSaveStatus('Saved locally');
+        return;
+      }
+      saveInFlight.current = true;
+      if (live) setSaveStatus('Saving locally…');
+      try {
+        const identity = await workspaceApi.saveCurrent(state);
+        savedState.current = serialized;
+        if (live) {
+          if (
+            currentState.current?.dataset_id === state.dataset_id &&
+            (!state.atom_signature || !state.trajectory_signature)
+          )
+            setWorkspaceIdentity({
+              atom_signature: identity.atom_signature,
+              trajectory_signature: identity.trajectory_signature,
+            });
+          setSaveStatus('Saved locally');
+        }
+      } catch (e) {
+        if (live) setSaveStatus(`Save failed: ${(e as Error).message}`);
+      } finally {
+        saveInFlight.current = false;
+      }
+    };
+    const timer = window.setInterval(() => void save(), 700);
+    const closing = () => {
+      if (!stateReady.current || !currentState.current) return;
+      const body = JSON.stringify({
+        state: {
+          ...currentState.current,
+          camera: viewer.current?.getCamera() ?? currentState.current.camera,
+        },
+      });
+      // Browsers cap queued keepalive bodies at 64 KiB. Larger workspaces are
+      // saved by the regular interval; status always exposes a failed save.
+      if (new Blob([body]).size < 60_000)
+        navigator.sendBeacon('/api/workspace', new Blob([body], { type: 'application/json' }));
+    };
+    const visibilityChanged = () => {
+      if (document.visibilityState === 'hidden') void save();
+    };
+    window.addEventListener('pagehide', closing);
+    document.addEventListener('visibilitychange', visibilityChanged);
+    return () => {
+      live = false;
+      window.clearInterval(timer);
+      window.removeEventListener('pagehide', closing);
+      document.removeEventListener('visibilitychange', visibilityChanged);
+    };
+  }, [workspaceHydrated]);
   useEffect(() => {
     if (!toast) return;
     const t = window.setTimeout(() => setToast(''), 4500);
@@ -332,6 +493,11 @@ export default function App() {
     const key = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
       if (e.key === 'Escape') {
+        if (modal) {
+          setModal(null);
+          setLibrary(false);
+          return;
+        }
         setModal(null);
         setPicking(false);
         setSelectedAtoms([]);
@@ -449,6 +615,8 @@ export default function App() {
         `${a.chain}:${a.resid}`.toLowerCase() === q,
     );
     if (matches.length) {
+      setSelectedAtoms(matches.map((a) => a.index));
+      setPicking(false);
       viewer.current?.focus(matches.map((a) => a.index));
       setToast(`Focused on ${q.toUpperCase()}`);
     } else setToast('No matching residue. Try a residue number, GLY35, or A:35.');
@@ -499,8 +667,13 @@ export default function App() {
     running = jobs.filter(isActive),
     lastTime = dataset?.times_ps[dataset.n_frames - 1] ?? 0;
   const handleReady = useCallback(() => {
+      if (pendingCamera.current) {
+        viewer.current?.setCamera(pendingCamera.current);
+        pendingCamera.current = null;
+      }
       setViewerError('');
       setReady(true);
+      stateReady.current = true;
     }, []),
     handleViewerError = useCallback((message: string) => {
       setError(message);
@@ -565,7 +738,10 @@ export default function App() {
           <span>Workspace</span>
           <ChevronRight size={13} />
           <button
-            onClick={() => setLibrary(!library)}
+            onClick={() => {
+              setLibrary(true);
+              setModal('projects');
+            }}
             className="dataset-switch"
             title="Switch dataset"
           >
@@ -577,6 +753,24 @@ export default function App() {
           )}
         </div>
         <div className="workspace-actions">
+          <span
+            className="workspace-save-status"
+            role="status"
+            data-state={saveStatus.startsWith('Save failed') ? 'error' : 'ok'}
+            title={saveStatus}
+          >
+            {saveStatus.startsWith('Save failed') ? 'Save failed · open Projects' : saveStatus}
+          </span>
+          <button
+            className="secondary-button"
+            onClick={() => {
+              setLibrary(false);
+              setModal('projects');
+            }}
+          >
+            <BookOpen size={15} />
+            Projects
+          </button>
           <button className="secondary-button" onClick={() => setModal('import')}>
             <FolderOpen size={15} /> Open files
           </button>
@@ -584,27 +778,6 @@ export default function App() {
             <Plus size={16} /> New simulation
           </button>
         </div>
-        {library && (
-          <div className="library-popover">
-            <span className="section-label">IN THIS WORKSPACE</span>
-            {datasets.length ? (
-              datasets.map((d) => (
-                <button key={d.id} onClick={() => void openById(d.id)}>
-                  <Box size={15} />
-                  <span>
-                    <b>{d.name}</b>
-                    <small>
-                      {d.n_atoms.toLocaleString()} atoms · {d.n_frames} frames
-                    </small>
-                  </span>
-                  {dataset?.id === d.id && <Check size={14} />}
-                </button>
-              ))
-            ) : (
-              <p>No datasets yet.</p>
-            )}
-          </div>
-        )}
       </div>
       {error && (
         <div className="global-error" role="alert">
@@ -658,6 +831,25 @@ export default function App() {
               </div>
             )}
           </div>
+          <NamedSelections
+            selections={namedSelections}
+            selectedAtoms={selectedAtoms}
+            onSave={(name) =>
+              setNamedSelections((previous) => [
+                ...previous,
+                { id: crypto.randomUUID(), name, atoms: [...selectedAtoms] },
+              ])
+            }
+            onSelect={(atoms) => {
+              setSelectedAtoms(atoms);
+              setPicking(false);
+              setPlaying(false);
+              viewer.current?.focus(atoms);
+            }}
+            onRemove={(id) =>
+              setNamedSelections((previous) => previous.filter((selection) => selection.id !== id))
+            }
+          />
           <div className="scene-section">
             <div className="section-title">
               <h3>Representation</h3>
@@ -857,6 +1049,7 @@ export default function App() {
                 onAtomPick={onAtomPick}
                 onReady={handleReady}
                 onError={handleViewerError}
+                onCameraChange={setCamera}
               />
             </div>
             {(loading || (!ready && dataset && !error)) && (
@@ -1126,6 +1319,23 @@ export default function App() {
               setPlaying(false);
             }}
           />
+          <TrajectoryAnalysis
+            key={`analysis-${dataset?.id}-${viewerLoadRevision}`}
+            dataset={dataset}
+            frame={frame}
+            selectedAtoms={selectedAtoms}
+            namedSelections={namedSelections}
+            savedState={analysisSettings}
+            onStateChange={setAnalysisSettings}
+            expanded={analysisExpanded}
+            onExpandedChange={setAnalysisExpanded}
+            onSeek={seek}
+            onSelectAtoms={(atoms: number[]) => {
+              setSelectedAtoms(atoms);
+              setPicking(false);
+              viewer.current?.focus(atoms);
+            }}
+          />
           {dataset?.warnings.some((w) =>
             /time.*(unavailable|unknown|not|index)|frame indices|timestamps|physical time/i.test(w),
           ) && (
@@ -1365,6 +1575,36 @@ export default function App() {
           <Terminal size={11} /> Keyboard shortcuts <kbd>?</kbd>
         </button>
       </footer>
+      {modal === 'projects' && (
+        <WorkspaceLibrary
+          dataset={dataset}
+          state={() =>
+            currentState.current
+              ? {
+                  ...currentState.current,
+                  camera: viewer.current?.getCamera() ?? currentState.current.camera,
+                }
+              : null
+          }
+          initialTab={library ? 'library' : 'projects'}
+          saveStatus={saveStatus}
+          onClose={() => {
+            setModal((current) => (current === 'projects' ? null : current));
+            setLibrary(false);
+          }}
+          onOpenDataset={(id) => openById(id)}
+          onOpenProject={async (state) => {
+            const requestToken = ++loadToken.current;
+            const d = await api.dataset(state.dataset_id);
+            if (requestToken === loadToken.current)
+              await loadDataset(d, { workspace: state, throwOnError: true });
+          }}
+          onDatasetChanged={(changed) => {
+            if (changed && changed.id === dataset?.id) setDataset(changed);
+            refreshLibrary();
+          }}
+        />
+      )}
       {modal === 'import' && (
         <ImportDialog onClose={() => setModal(null)} onLoaded={(d) => void loadDataset(d)} />
       )}{' '}

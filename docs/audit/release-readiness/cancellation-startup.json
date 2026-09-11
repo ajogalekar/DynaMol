@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "server": "http://127.0.0.1:8874",
+  "fixtures": "isolated recovery-ui; pre-minimized ubiquitin and six-residue prepared protein",
+  "checks": [
+    {
+      "engine": "openmm",
+      "job_id": "e6ea5e41614f4ac1",
+      "status": "cancelled",
+      "elapsed_wall_seconds": 0.014,
+      "worker_exited": true,
+      "completed_steps": 0
+    },
+    {
+      "engine": "solvation",
+      "job_id": "510be37f07d9477f",
+      "status": "cancelled",
+      "elapsed_wall_seconds": 0.238,
+      "worker_exited": true,
+      "completed_steps": 0
+    },
+    {
+      "engine": "openmm",
+      "job_id": "616eab9ed099401d",
+      "status": "cancelled",
+      "elapsed_wall_seconds": 0.014,
+      "worker_exited": true,
+      "completed_steps": 0
+    },
+    {
+      "engine": "solvation",
+      "job_id": "1c68f237ffc24f84",
+      "status": "cancelled",
+      "elapsed_wall_seconds": 0.238,
+      "worker_exited": true,
+      "completed_steps": 0
+    }
+  ]
+}

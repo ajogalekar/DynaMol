@@ -11,6 +11,7 @@ import {
   FlaskConical,
   LoaderCircle,
   Play,
+  RotateCcw,
   Square,
   Terminal,
   X,
@@ -20,6 +21,15 @@ import type { Dataset, Health, Job, SimulationConfig } from '../types';
 import { api } from '../api';
 import StructureWorkbench from './StructureWorkbench';
 import StructureJobMonitor from './StructureJobMonitor';
+import RunDiagnostics from './RunDiagnostics';
+import ReadinessPanel from './ReadinessPanel';
+interface RecoveryInfo {
+  available: boolean;
+  checkpoint_saved?: boolean;
+  step?: number;
+  reason: string;
+}
+const recovery = (job: Job) => (job as Job & { recovery?: RecoveryInfo }).recovery;
 const active = (j: Job) => !['completed', 'failed', 'cancelled', 'interrupted'].includes(j.status);
 const structureJob = (j: Job) => ['preparation', 'solvation'].includes(j.engine);
 export default function SimulationPanel({
@@ -66,6 +76,12 @@ export default function SimulationPanel({
     [busy, setBusy] = useState(false),
     [error, setError] = useState(''),
     [openLog, setOpenLog] = useState<string | null>(null);
+  const [runReady, setRunReady] = useState(false);
+  const [resuming, setResuming] = useState<string | null>(null);
+  const [recoveryDetails, setRecoveryDetails] = useState<Record<string, RecoveryInfo>>({});
+  const checkedRecovery = useRef(new Set<string>());
+  const recoveryFor = (job: Job) =>
+    recoveryDetails[`${job.id}:${job.status}:${recovery(job)?.step ?? ''}`] ?? recovery(job);
   const [ph, setPh] = useState(dataset?.preparation?.ph ?? 7);
   const [submitting, setSubmitting] = useState<'preparation' | 'solvation' | null>(null);
   const [monitorId, setMonitorId] = useState<string | null>(null);
@@ -90,11 +106,32 @@ export default function SimulationPanel({
         !dismissed.includes(j.id) &&
         (active(j) || j.config.dataset_id === dataset?.id || j.dataset_id === dataset?.id),
     );
+  useEffect(() => {
+    for (const job of jobs) {
+      if (
+        active(job) ||
+        structureJob(job) ||
+        job.status === 'completed' ||
+        !recovery(job)?.available
+      )
+        continue;
+      const key = `${job.id}:${job.status}:${recovery(job)?.step ?? ''}`;
+      if (checkedRecovery.current.has(key)) continue;
+      checkedRecovery.current.add(key);
+      void fetch(`/api/jobs/${job.id}/recovery`)
+        .then(async (response) => {
+          if (!response.ok) throw new Error('Could not verify this checkpoint.');
+          const info = (await response.json()) as RecoveryInfo;
+          setRecoveryDetails((previous) => ({ ...previous, [key]: info }));
+        })
+        .catch(() => checkedRecovery.current.delete(key));
+    }
+  }, [jobs]);
   const anyActive = jobs.some(active);
   const resultSelected = !!monitoredJob?.dataset_id && dataset?.id === monitoredJob.dataset_id;
   const complexPrepared = !!dataset?.preparation?.ligand_parameters;
-  const modifiedPrepared = !!dataset?.preparation?.requires_explicit_solvent;
-  const requiresExplicit = complexPrepared || modifiedPrepared;
+  const modifiedPrepared = !!dataset?.preparation?.modified_residues?.length;
+  const requiresExplicit = complexPrepared || !!dataset?.preparation?.requires_explicit_solvent;
   const resultViewerError =
     resultSelected && viewerError ? `Could not display the prepared structure: ${viewerError}` : '';
   useEffect(() => {
@@ -244,27 +281,28 @@ export default function SimulationPanel({
   const selected = health?.engines.find((e) => e.id === engine),
     steps = Math.round((duration * 1000) / step),
     frames = Math.ceil(steps / interval) + 1;
+  const simulationSettings = {
+    dataset_id: dataset?.id ?? '',
+    engine,
+    name,
+    duration_ps: duration,
+    temperature_k: temp,
+    timestep_fs: step,
+    report_interval: interval,
+    friction_ps: friction,
+    seed,
+    solvent: engine === 'gromacs' ? 'explicit' : solvent,
+    minimize,
+    equilibration_steps: equil,
+    padding_nm: dataset?.solvation?.padding_nm ?? padding,
+  } as SimulationConfig;
   async function start(e: React.FormEvent) {
     e.preventDefault();
     if (!dataset) return;
     setBusy(true);
     setError('');
     try {
-      const job = await api.start({
-        dataset_id: dataset.id,
-        engine,
-        name,
-        duration_ps: duration,
-        temperature_k: temp,
-        timestep_fs: step,
-        report_interval: interval,
-        friction_ps: friction,
-        seed,
-        solvent: engine === 'gromacs' ? 'explicit' : solvent,
-        minimize,
-        equilibration_steps: equil,
-        padding_nm: dataset.solvation?.padding_nm ?? padding,
-      } as SimulationConfig);
+      const job = await api.start(simulationSettings);
       onStarted(job);
       setOpenLog(job.id);
     } catch (e) {
@@ -610,19 +648,29 @@ export default function SimulationPanel({
               <span>~{frames.toLocaleString()} saved frames</span>
             </div>
             <p className="form-note">
-              Starts from the first frame. Equilibration precedes production; short runs are for
-              exploration and do not establish convergence. Configuration, seed, logs, and outputs
-              are saved with each job.
+              Starts from the first frame. Initial relaxation precedes production. Native
+              checkpoints are saved automatically during production; Resume retains the original
+              configuration. Short runs do not establish convergence.
             </p>
             {error && (
               <div className="error-box" role="alert">
                 {error}
               </div>
             )}
+            {dataset && (
+              <ReadinessPanel
+                mode="simulation"
+                datasetId={dataset.id}
+                settings={simulationSettings}
+                onReadyChange={setRunReady}
+                suspended={anyActive}
+              />
+            )}
             <button
               className="primary-button full-width run-button"
               disabled={
                 busy ||
+                !runReady ||
                 !!submitting ||
                 !!pending ||
                 anyActive ||
@@ -702,10 +750,56 @@ export default function SimulationPanel({
                     >
                       <Terminal size={13} /> {openLog === job.id ? 'Hide' : 'View'} log
                     </button>
+                    {!active(job) && (
+                      <a className="text-button" href={`/api/jobs/${job.id}/download`}>
+                        <ArrowDownToLine size={13} /> Files
+                      </a>
+                    )}
+                    {!active(job) && !structureJob(job) && job.status !== 'completed' && (
+                      <button
+                        type="button"
+                        className="text-button accent"
+                        disabled={anyActive || resuming === job.id || !recoveryFor(job)?.available}
+                        title={
+                          recoveryFor(job)?.reason ??
+                          'No native checkpoint is available for this job.'
+                        }
+                        onClick={async () => {
+                          setResuming(job.id);
+                          setError('');
+                          try {
+                            const response = await fetch(`/api/jobs/${job.id}/resume`, {
+                              method: 'POST',
+                            });
+                            const result = await response.json();
+                            if (!response.ok)
+                              throw new Error(
+                                typeof result.detail === 'string'
+                                  ? result.detail
+                                  : 'Could not resume this checkpoint.',
+                              );
+                            onStarted(result as Job);
+                            setOpenLog(job.id);
+                          } catch (e) {
+                            setError((e as Error).message);
+                          } finally {
+                            setResuming(null);
+                          }
+                        }}
+                      >
+                        {resuming === job.id ? (
+                          <LoaderCircle size={13} className="spin" />
+                        ) : (
+                          <RotateCcw size={13} />
+                        )}
+                        {resuming === job.id ? 'Resuming…' : 'Resume'}
+                      </button>
+                    )}
                     {active(job) ? (
                       <button
                         type="button"
                         className="text-button danger"
+                        disabled={job.status === 'cancelling'}
                         onClick={async () => {
                           try {
                             await api.cancel(job.id);
@@ -715,13 +809,10 @@ export default function SimulationPanel({
                           }
                         }}
                       >
-                        <Square size={11} /> Stop
+                        <Square size={11} /> {job.status === 'cancelling' ? 'Stopping…' : 'Stop'}
                       </button>
                     ) : job.status === 'completed' && job.dataset_id ? (
                       <>
-                        <a className="text-button" href={`/api/jobs/${job.id}/download`}>
-                          <ArrowDownToLine size={13} /> Files
-                        </a>
                         <button
                           type="button"
                           className="text-button accent"
@@ -740,6 +831,15 @@ export default function SimulationPanel({
                       </>
                     ) : null}
                   </div>
+                  {!active(job) && !structureJob(job) && job.status !== 'completed' && (
+                    <p className="form-note">
+                      {recoveryFor(job)?.reason ??
+                        'No production checkpoint is available. Files still contains the saved inputs and logs.'}
+                    </p>
+                  )}
+                  {!structureJob(job) && (active(job) || openLog === job.id) && (
+                    <RunDiagnostics job={job} />
+                  )}
                   {openLog === job.id && (
                     <pre className="job-log">
                       {job.logs.length ? job.logs.join('\n') : 'Waiting for engine output…'}

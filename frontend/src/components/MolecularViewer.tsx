@@ -27,6 +27,8 @@ export interface ViewerHandle {
   /** Factors greater than one zoom in; factors between zero and one zoom out. */
   zoom(factor: number): void;
   focus(indices: number[]): void;
+  getCamera(): number[] | null;
+  setCamera(orientation: number[]): void;
   snapshot(): Promise<Blob | null>;
 }
 
@@ -45,6 +47,7 @@ export interface MolecularViewerProps {
   onAtomPick(index: number): void;
   onReady(): void;
   onError(message: string): void;
+  onCameraChange?(orientation: number[]): void;
 }
 
 // A small public-API boundary keeps the component independent of NGL's evolving
@@ -114,6 +117,8 @@ interface Stage {
     signals: { rendered: Signal };
   };
   viewerControls: {
+    getOrientation(): { elements: number[] };
+    orient(orientation: number[]): void;
     getCameraDistance(): number;
     distance(distance: number): void;
     getPositionOnCanvas(position: Vector): { x: number; y: number };
@@ -285,6 +290,15 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           }
         },
         focus,
+        getCamera() {
+          return stageRef.current && componentRef.current
+            ? Array.from(stageRef.current.viewerControls.getOrientation().elements)
+            : null;
+        },
+        setCamera(orientation) {
+          if (orientation.length === 16 && orientation.every(Number.isFinite))
+            stageRef.current?.viewerControls.orient(orientation);
+        },
         async snapshot() {
           const stage = stageRef.current;
           if (!stage || !componentRef.current) return null;
@@ -457,6 +471,18 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       stage.signals.hovered.add(onHover);
       stage.viewer.signals.rendered.add(updateLabels);
       stage.viewerControls.signals.changed.add(updateLabels);
+      let cameraTimer = 0;
+      const cameraChanged = () => {
+        if (cameraTimer) return;
+        cameraTimer = window.setTimeout(() => {
+          cameraTimer = 0;
+          if (componentRef.current)
+            latest.current.onCameraChange?.(
+              Array.from(stage.viewerControls.getOrientation().elements),
+            );
+        }, 200);
+      };
+      stage.viewerControls.signals.changed.add(cameraChanged);
       host.addEventListener('dblclick', onDoubleClick);
       host.addEventListener('webglcontextlost', onContextLost, true);
       let previousExtent = Math.min(host.clientWidth, host.clientHeight);
@@ -481,6 +507,8 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         stage.signals.hovered.remove(onHover);
         stage.viewer.signals.rendered.remove(updateLabels);
         stage.viewerControls.signals.changed.remove(updateLabels);
+        stage.viewerControls.signals.changed.remove(cameraChanged);
+        window.clearTimeout(cameraTimer);
         host.removeEventListener('dblclick', onDoubleClick);
         host.removeEventListener('webglcontextlost', onContextLost, true);
         stageRef.current = null;

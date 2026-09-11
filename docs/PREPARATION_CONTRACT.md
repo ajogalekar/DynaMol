@@ -34,6 +34,8 @@ Optional `name` labels the result. The interface displays an active spinner, cur
 
 PDBFixer repairs supported heavy atoms; OpenMM assigns protein hydrogen states at the requested pH. A bounded steric chi-angle search records its accepted changes and stereochemistry checks. These are not residue pKa calculations or exhaustive rotamer packing.
 
+`validate_preparation(settings)` is shared by readiness and job submission. It returns normalized settings plus inspection without creating a dataset/job. Missing CCD references may populate the reference cache. LYN/CYM input protonation aliases use the same LYS/CYS heavy-atom graphs during explicit pH reassignment; `input_protonation_aliases` records this normalization. Other unnatural sidechains are never replaced by parent residues. Built-in ACE/NME caps are accepted, and a thiolate CYM is distinguished from a bonded CYX disulfide in the actual hydrogen/connectivity inventory.
+
 Noncovalent complexes retain supported ligands and ions by default. Observed metal-coordinating waters survive removal of other water, and coordinating protein donors are protected during chi sampling. Explicit heterogen removal prepares the protein alone while retaining modified amino acids in its polymer chains. Unsupported chemistry produces a specific failure without silently deleting molecules.
 
 ## Modified and unnatural amino acids
@@ -81,6 +83,8 @@ Install optional native tools with `scripts/install_ligand_tools.sh`; its privat
 The implemented complex path is **ff14SB protein + GAFF2/AM1-BCC ligand + TIP3P explicit-water OpenMM**. Complexes require explicit solvent: bundled implicit GBn2 has no validated ligand parameters. Complex prep skips implicit relaxation; minimize the assembled explicit system before dynamics. GROMACS currently rejects prepared-state inputs because its conversion path does not preserve this parameter/state bundle.
 
 Supported simple ions include Na, Cl, K, Mg and Ca using the bundled Amber/TIP3P nonbonded model. Preserving metal-donor coordinates does not validate coordination energetics or create metal bonds. Covalent ligands, metal-organic bonding, unsupported metals/cofactors, radicals and incomplete or ambiguous graphs require a specialized externally parameterized workflow. Nucleic-acid complexes are outside this preparation path.
+
+Inspection returns `ions` with exact names/elements, declared charges, support and error fields. A named ion must be monatomic and match its expected element; other oxidation-state models are not guessed. Prepared ion records persist through solvation, and retained ions set `requires_explicit_solvent` even without an organic ligand. The [chemistry support matrix](CHEMISTRY_SUPPORT.md) records tested examples and limits.
 
 Dataset `preparation` and `solvation` metadata record summaries, warnings, state choices, parent IDs, atom maps and parameter provenance. `prepared.pdb` is the exact downstream input. Successful preparation establishes parameterization support; water construction and a short MD smoke establish software continuity. Neither demonstrates equilibration, convergence, native protonation or binding affinity. See [the complex review](complex-preparation-review.md) for validation evidence.
 

@@ -91,8 +91,9 @@ _atom_site.label_seq_id
     assert (residue_key(residue) in protein_residue_keys('fixture', top)) is expected
 
 
-def test_unsupported_uaa_is_reported_per_residue_and_never_sent_to_ligand_params():
-    top, positions = peptide()
+@pytest.mark.parametrize('name', ['ZZZ', 'MSE', 'ALY', 'CSO', 'FME', 'DLY'])
+def test_unsupported_uaa_is_reported_per_residue_and_never_sent_to_ligand_params(name):
+    top, positions = peptide(('ALA', name, 'GLY'))
     traj = md.Trajectory(np.array(positions.value_in_unit(unit.nanometer))[None], md.Topology.from_openmm(top))
     meta = storage.save_dataset(traj, 'Unknown peptide', 'Analytical fixture', 'Preservation check')
     assert all(atom['category'] == 'protein' for atom in meta['atoms'])
@@ -100,9 +101,9 @@ def test_unsupported_uaa_is_reported_per_residue_and_never_sent_to_ligand_params
     before = hashlib.sha256(path.read_bytes()).hexdigest()
     inspection = preparation.inspect_preparation(meta['id'])
     assert inspection['ligands'] == []
-    record = next(row for row in inspection['modified_residues'] if row['residue'] == 'ZZZ')
+    record = next(row for row in inspection['modified_residues'] if row['residue'] == name)
     assert record['supported'] is False
-    assert 'ZZZ A:2' in record['error']
+    assert f'{name} A:2' in record['error']
     assert 'covalent amino-acid template' in record['error']
     for remove in [False, True]:
         with pytest.raises(ValueError, match='identity and atoms are preserved'):

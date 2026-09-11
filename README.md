@@ -47,6 +47,8 @@ The first inspection of an unfamiliar PDB ligand may need internet to retrieve i
 
 ## Inside the workbench
 
+**Keep your workspace.** DynaMol automatically restores your molecule, camera, frame, display settings, measurements and named selections. **Projects** saves named snapshots and exports portable backups with the required molecular files and parameter records. The molecule library supports search, rename, archive and recoverable trash. See [workspaces and backups](docs/WORKSPACES.md).
+
 **Explore.** Ribbons by default, with ball-and-stick, sticks, and molecular surface views. Rotate by dragging, zoom with a pinch, wheel or explicit buttons, pan with right-drag, and focus on a residue by name or number. Show or hide proteins/nucleic acids, ligands, waters, ions, all hydrogens, or only polar hydrogens. Save the scene as a PNG. Fullscreen includes the top toolbar and dialogs. Short or interrupted protein fragments are shown as atoms when a ribbon cannot be drawn.
 
 In ribbon view, **Polar only** retains a light trace of the full heavy-atom structure with attached polar hydrogens; non-polar hydrogens are hidden. **All** adds the remaining hydrogens, and **Hidden** returns to the ribbon view.
@@ -54,6 +56,8 @@ In ribbon view, **Polar only** retains a light trace of the full heavy-atom stru
 **Play.** Frame stepping, scrubbing, looped playback, variable speed, and a linked timeline. Nonperiodic trajectories use interpolated visual transitions without changing saved coordinates. Periodic trajectories currently play saved frames, avoiding interpolation across box discontinuities. The camera is preserved throughout playback.
 
 **Measure.** Pick two atoms for distance, three for an angle, or four for a signed dihedral. The current value appears in the scene and inspector as soon as the selection is complete, without creating a plot. Pick donor–hydrogen–acceptor for a geometric hydrogen-bond trace and occupancy. Atom search supplements direct 3D picking. Plots use actual timestamps, support click-to-seek, and export CSV; torsion summaries use circular statistics. Measurements come from original saved coordinates with minimum-image periodic geometry when valid box data exists. Interpolation and display alignment do not affect the calculated values.
+
+**Analyze.** Expand **Structural analysis** below the measurement plot for RMSD and RMSF. Choose the atoms, fit, reference, frame window and periodic handling. Named selections are available here. Click RMSD to seek a frame or RMSF to select a residue; download CSV values and an analysis record containing the exact settings and atom indices. See [analysis and diagnostics](docs/ANALYSIS.md).
 
 **Prepare.** Open Simulate to upload a PDB, mmCIF, MOL2, SDF or SMILES file, fetch a PDB accession or PubChem molecule, or paste SMILES to generate a local 3D conformer. Each result loads immediately beside the controls. **Prep protein** repairs missing protein atoms, rebuilds hydrogens for the selected pH, and samples side-chain clashes. With ligands present, the action becomes **Prep complex**: it retains their bound poses, assigns documented molecular states and actual GAFF2/AM1-BCC parameters, and keeps supported ions and observed metal-coordinating waters. Inspect each ligand's selected SMILES and charge; an explicit-state SMILES override is available when a different state is needed.
 
@@ -65,6 +69,8 @@ The Prep button spins immediately. A monitor above the scrolling controls shows 
 
 **Simulate.** Choose OpenMM or GROMACS, configure temperature, duration, solvent and optional advanced settings, then start a real local job. Follow stages, step counts, progress and logs while exploring another trajectory. Cancel a running job, open the completed result, or download its files with configuration, seed, versions, provenance, and engine output.
 
+Readiness panels explain known chemistry and resource blockers before starting, including estimated system size, saved frames and disk use. Native energy and temperature plots appear as the engine records observations. Compatible stopped or interrupted dynamics can **Resume** from a validated checkpoint, retaining the same run and existing frame prefix; incompatible or missing checkpoints receive a specific explanation. See [checkpoint recovery](docs/CHECKPOINT_RECOVERY.md).
+
 ### File support
 
 | Input | Supported formats |
@@ -72,7 +78,7 @@ The Prep button spins immediately. A monitor above the scrolling controls shows 
 | Simulation structure | PDB, mmCIF, MOL2, SDF/MOL, SMILES; RCSB/PubChem fetch |
 | Trajectory topology | PDB, mmCIF, GRO, MDTraj HDF5 |
 | Trajectory | XTC, DCD, TRR, NetCDF, multi-model PDB, MDTraj HDF5, MDCRD, LAMMPS text, XYZ |
-| Exports | PNG scene, CSV measurements, simulation output ZIP |
+| Exports | PNG scene, CSV measurements/RMSD/RMSF/diagnostics, analysis JSON, simulation output ZIP, project backup ZIP |
 
 Topology and trajectory must have identical atom ordering. Self-describing trajectories undergo atom-identity checks; binary formats only allow atom-count validation. Original uploads and hashes are retained. If a reader cannot supply trustworthy timing, DynaMol labels its axis as frame indices; enter an interval in picoseconds during import to provide physical time. The interval is per original frame, before stride.
 
@@ -95,6 +101,8 @@ The Simulate structure loader accepts one molecule per SDF/SMILES file and one M
 
 Automatic preparation supports **standard amino-acid proteins, SEP/TPO/PTR/HYP modifications, and supported noncovalent protein–ligand complexes**. Ligands are retained by default. An unknown chemical graph, missing ligand heavy atoms, unsupported element, covalent ligand linkage, or unassigned force-field term produces a component-specific error; source molecules are not silently removed. Other unnatural residues are recognized and retained, with a specific template blocker; this does not provide parameters for every unnatural amino acid. Nucleic acids require another preparation workflow.
 
+The [chemistry support matrix](docs/CHEMISTRY_SUPPORT.md) records checks across all 20 standard amino-acid types, representative charge states, termini/caps, disulfides, organic ligands, ATP/ADP/NAD/FAD and Na+/Cl−/K+/Mg2+/Ca2+. Heme, covalent cofactors, other metal states and unregistered unnatural amino acids still need specialized validated templates. Loading these structures remains separate from eligibility for MD preparation.
+
 - **OpenMM:** ff14SB with GBn2 implicit solvent, or TIP3P explicit solvent with PME. Langevin-middle, hydrogen-bond constraints, up to 2 fs integration steps. Implicit mode requires a protein-only input.
 - **Protein–ligand OpenMM:** ff14SB protein + GAFF2/AM1-BCC organic ligands + TIP3P-compatible Amber ions/water. Each ligand is limited to 200 heavy atoms and supported closed-shell organic chemistry. Bound heavy-atom coordinates are preserved during preparation. XML templates, atom mappings, native charge/parameter files and logs remain attached through solvation and dynamics.
 - **Modified residues:** SEP, TPO and PTR use fixed −2 phosaa14SB states; HYP uses neutral internal ff14SB HYP or −1 C-terminal CHYP. Compatible terminal forms and covalent connectivity are checked. Their peptide links, heavy-atom chemistry, stereochemistry and parameter hashes are preserved; OpenMM explicit water is required. See [supported states and native validation](docs/MODIFIED_RESIDUES.md). MSE, ALY and other unregistered modifications currently require additional validated templates.
@@ -115,10 +123,10 @@ See the [complex preparation review](docs/complex-preparation-review.md), [prote
 ./start.sh --dev                         # API 8765 + Vite 5173
 .venv/bin/python -m pytest -q            # Backend tests
 npm --prefix frontend run build         # TypeScript + production build
-cd frontend && npm run test:e2e         # Live Chrome + real local API/engines
+cd frontend                            # See TESTING.md for isolated browser tests
 ```
 
-Browser tests require Google Chrome installed and the local app running. Set `DYNAMOL_BASE_URL=http://127.0.0.1:8765` to test the production build. They use actual molecular data and a tiny real OpenMM job, and create test datasets/jobs in the local workspace.
+Browser tests require Google Chrome and a disposable data root on a dedicated test port. They restore a known demo scene before each case and create real datasets/jobs. Follow [the isolated test instructions](frontend/TESTING.md); the suite refuses normal user-facing ports.
 
 The [UI functional audit](docs/UI_FUNCTIONAL_AUDIT.md) records exercised controls, real-canvas checks, format fixtures, defects and the current browser-test results. The [complex preparation review](docs/complex-preparation-review.md) records native ligand validation and a bounded OpenMM continuity run. The full prepared 9AX6 structure is retained, but its complete explicit-water box exceeds the alpha's 100,000-atom cap; the documented native MD check uses one complete observed complex selected from its two copies.
 
@@ -141,7 +149,7 @@ To regenerate the example with the current preparation pipeline:
 
 This downloads public PDB 1UBQ if necessary and starts a short real CPU simulation. It explicitly selects protein for the implicit-solvent demo and records the excluded crystallographic waters. Regeneration replaces the local `demo` dataset; ordinary uploads are unaffected.
 
-Good next contributions: bounded trajectory streaming, verified continuous periodic display paths, validated prepared-state transfer to GROMACS, broader ligand and metal models, GPU controls, reusable projects and selections, RMSD/RMSF/contact maps, and accessible atom tables for very large structures. Please include representative molecular files or reproducible fixtures with format/analysis changes, and preserve the separation between display coordinates and physical analysis.
+Good next contributions: bounded trajectory streaming, verified continuous periodic display paths, validated prepared-state transfer to GROMACS, broader ligand and metal models, GPU controls, contact maps, and accessible atom tables for very large structures. Please include representative molecular files or reproducible fixtures with format/analysis changes, and preserve the separation between display coordinates and physical analysis.
 
 ## Credits and license
 

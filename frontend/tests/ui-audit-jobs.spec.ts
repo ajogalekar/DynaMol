@@ -1,4 +1,5 @@
-import { test, expect, type Page, type APIRequestContext } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page, type APIRequestContext } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -234,10 +235,10 @@ test('audit native: prepared PDB download, water update, water log and setup can
   await expect(page.getByRole('button', { name: 'Save snapshot', exact: true })).toBeEnabled();
   await page.getByTitle('Switch dataset', { exact: true }).click();
   await page
-    .locator('.library-popover')
-    .getByRole('button')
+    .locator('.workspace-library__row')
     .filter({ hasText: name })
     .first()
+    .getByRole('button', { name: 'Open', exact: true })
     .click();
   await expect(page.locator('.structure-card h2')).toHaveText(name);
   await page.getByRole('button', { name: 'New simulation', exact: true }).click();

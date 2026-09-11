@@ -1,0 +1,319 @@
+.workspace-library {
+  width: min(850px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  padding: 28px !important;
+}
+.workspace-library__heading {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.workspace-library__heading h2 {
+  margin: 8px 0;
+  font-size: 27px;
+}
+.workspace-library__heading p,
+.workspace-library__footnote {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted, #91a1b5);
+}
+.workspace-library__tabs {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 24px 0 18px;
+  border-bottom: 1px solid #283342;
+  padding-bottom: 12px;
+}
+.workspace-library__tabs button {
+  padding: 8px 13px;
+  border-radius: 7px;
+  color: #92a4b8;
+  background: none;
+  border: 0;
+}
+.workspace-library__tabs button[aria-pressed='true'] {
+  color: #8ce1cf;
+  background: #173a39;
+}
+.workspace-library__tabs > span {
+  margin-left: auto;
+  color: #9db3aa;
+  font-size: 11px;
+}
+.workspace-library__save {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+.workspace-library label {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  font-size: 12px;
+  color: #a0b0c3;
+}
+.workspace-library input,
+.workspace-library select,
+.named-selections input {
+  background: #0b1420;
+  border: 1px solid #2a3a4d;
+  color: #e1e9f3;
+  border-radius: 7px;
+  padding: 10px;
+  font: inherit;
+  min-width: 0;
+}
+.workspace-library__save label {
+  flex: 1;
+}
+.workspace-library__tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 20px 0 12px;
+  font-size: 12px;
+  color: #9eafc2;
+}
+.workspace-library__search {
+  flex: 1;
+  flex-direction: row !important;
+  align-items: center;
+  border: 1px solid #2a3a4d;
+  border-radius: 7px;
+  padding-left: 10px;
+}
+.workspace-library__search input {
+  width: 100%;
+  border: 0;
+}
+.workspace-library__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 360px;
+  overflow: auto;
+}
+.workspace-library__row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid #243346;
+  border-radius: 9px;
+  background: #101c2a;
+  color: #8fbfb6;
+}
+.workspace-library__description {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.workspace-library__description b {
+  font-size: 13px;
+  color: #e1eaf5;
+  overflow-wrap: anywhere;
+}
+.workspace-library__description small {
+  color: #8ea1b7;
+  font-size: 11px;
+}
+.workspace-library__row > .secondary-button {
+  padding: 7px 11px;
+}
+.workspace-library__row > .icon-button {
+  flex-shrink: 0;
+}
+.workspace-library__open {
+  font-size: 9px;
+  margin-left: 8px;
+  color: #80d5bd;
+}
+.workspace-library__empty {
+  padding: 25px;
+  text-align: center;
+  color: #90a0b3;
+  font-size: 13px;
+}
+.workspace-library__error,
+.workspace-library__notice {
+  padding: 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.workspace-library__error {
+  background: #45202d;
+  color: #ffb7c4;
+}
+.workspace-library__notice {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #173933;
+  color: #9de7cc;
+}
+.workspace-library__disk {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px;
+  background: #0c1722;
+  border-radius: 8px;
+  color: #9bafbd;
+  font-size: 12px;
+}
+.workspace-library__disk p {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+.workspace-library__confirm {
+  margin-top: 15px;
+  padding: 17px;
+  border: 1px solid #597169;
+  background: #172c2b;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 13px;
+}
+.workspace-library__confirm p {
+  margin: 0;
+  color: #bdccc9;
+}
+.workspace-library__confirm > div {
+  display: flex;
+  gap: 9px;
+  justify-content: flex-end;
+}
+.workspace-library__busy {
+  position: sticky;
+  bottom: -28px;
+  margin: 12px -28px -28px;
+  padding: 12px 28px;
+  display: flex;
+  gap: 10px;
+  background: #12312d;
+  color: #a4e9d7;
+  font-size: 12px;
+}
+.named-selections form {
+  display: flex;
+  gap: 5px;
+}
+.named-selections input {
+  font-size: 11px;
+  width: 100%;
+  padding: 7px;
+}
+.named-selections p {
+  font-size: 10px;
+  color: #8394a7;
+  line-height: 1.5;
+}
+.named-selections__row {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #233144;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+.named-selections__row > button:first-child {
+  background: none;
+  border: 0;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+  color: #b4ccc9;
+}
+.named-selections__row b {
+  font-size: 11px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.named-selections__row span {
+  font-size: 10px;
+  color: #8496aa;
+  margin-top: 3px;
+}
+.workspace-save-status {
+  font-size: 10px;
+  color: #8ba99f;
+  white-space: nowrap;
+}
+.workspace-save-status[data-state='error'] {
+  color: #efb4a7;
+}
+.workspace-bar .breadcrumb {
+  min-width: 0;
+}
+.workspace-bar .dataset-switch {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 1040px) {
+  .workspace-save-status {
+    display: none;
+  }
+}
+@media (max-width: 460px) {
+  .app-shell > .workspace-bar {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 62px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+  .workspace-bar .breadcrumb {
+    flex-basis: 100%;
+  }
+  .workspace-bar .workspace-actions {
+    margin-left: auto;
+  }
+}
+@media (max-width: 650px) {
+  .workspace-library {
+    padding: 18px !important;
+  }
+  .workspace-library__row {
+    flex-wrap: wrap;
+  }
+  .workspace-library__description {
+    flex-basis: 65%;
+  }
+  .workspace-library__save {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .workspace-library__tabs {
+    flex-wrap: wrap;
+  }
+  .workspace-library__tabs > span {
+    width: 100%;
+    margin: 0;
+  }
+  .workspace-library__tools {
+    flex-wrap: wrap;
+  }
+  .workspace-library__busy {
+    bottom: -18px;
+    margin: 12px -18px -18px;
+    padding: 12px 18px;
+  }
+  .workspace-save-status {
+    display: none;
+  }
+}

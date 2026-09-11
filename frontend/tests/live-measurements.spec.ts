@@ -1,4 +1,5 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page } from '@playwright/test';
 
 type Atom = { index: number; name: string; residue: string; resid: number; element: string };
 async function pick(page: Page, atom: Atom) {

@@ -1,0 +1,2528 @@
+{
+  "created_at": "2026-09-11T06:31:43.351222+00:00",
+  "seed": 2026,
+  "scope": "Representative software/numerical checks, not universal chemistry or biological accuracy. Native artifacts retained in isolated data root.",
+  "rows": [
+    {
+      "id": "ALA",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ALA",
+          "state": "ALA",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 5.551115123125783e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ALA",
+            "state": "ALA",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 5.551115123125783e-17
+          }
+        ],
+        "charge_e": 0.0
+      },
+      "runtime": {
+        "atoms": 22,
+        "charge_e": 0.0,
+        "finite_energy_kj_mol": -83.83647258270007,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ARG",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ARG",
+          "state": "ARG",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "NE": [
+              "HE"
+            ],
+            "NH1": [
+              "HH11",
+              "HH12"
+            ],
+            "NH2": [
+              "HH21",
+              "HH22"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 13,
+          "forcefield_charge_e": 0.9999999999999999
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ARG",
+            "state": "ARG",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NE": [
+                "HE"
+              ],
+              "NH1": [
+                "HH11",
+                "HH12"
+              ],
+              "NH2": [
+                "HH21",
+                "HH22"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 13,
+            "forcefield_charge_e": 0.9999999999999999
+          }
+        ],
+        "charge_e": 0.9999999999999998
+      },
+      "runtime": {
+        "atoms": 36,
+        "charge_e": 0.9999999999999998,
+        "finite_energy_kj_mol": -604.3147064068522,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ASN",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ASN",
+          "state": "ASN",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OD1": [],
+            "ND2": [
+              "HD21",
+              "HD22"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 6,
+          "forcefield_charge_e": -3.469446951953614e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ASN",
+            "state": "ASN",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OD1": [],
+              "ND2": [
+                "HD21",
+                "HD22"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 6,
+            "forcefield_charge_e": -3.469446951953614e-17
+          }
+        ],
+        "charge_e": -9.020562075079397e-17
+      },
+      "runtime": {
+        "atoms": 26,
+        "charge_e": -9.020562075079397e-17,
+        "finite_energy_kj_mol": -393.8215530366691,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ASP",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ASP",
+          "state": "ASP",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OD1": [],
+            "OD2": [],
+            "O": []
+          },
+          "hydrogen_count": 4,
+          "forcefield_charge_e": -1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ASP",
+            "state": "ASP",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OD1": [],
+              "OD2": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": -1.0
+          }
+        ],
+        "charge_e": -1.0
+      },
+      "runtime": {
+        "atoms": 24,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": -104.75554050420219,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "CYS",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "CYS",
+          "state": "CYS",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SG": [
+              "HG"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 2.7755575615628914e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "CYS",
+            "state": "CYS",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [
+                "HG"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 2.7755575615628914e-17
+          }
+        ],
+        "charge_e": -2.7755575615628914e-17
+      },
+      "runtime": {
+        "atoms": 23,
+        "charge_e": -2.7755575615628914e-17,
+        "finite_energy_kj_mol": -69.32634314296716,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLN",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLN",
+          "state": "GLN",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OE1": [],
+            "NE2": [
+              "HE21",
+              "HE22"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 8,
+          "forcefield_charge_e": 6.028164079019405e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLN",
+            "state": "GLN",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OE1": [],
+              "NE2": [
+                "HE21",
+                "HE22"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 8,
+            "forcefield_charge_e": 6.028164079019405e-17
+          }
+        ],
+        "charge_e": 4.7704895589362195e-18
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": 4.7704895589362195e-18,
+        "finite_energy_kj_mol": -306.8955393646582,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLU",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLU",
+          "state": "GLU",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OE1": [],
+            "OE2": [],
+            "O": []
+          },
+          "hydrogen_count": 6,
+          "forcefield_charge_e": -0.9999999999999999
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLU",
+            "state": "GLU",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OE1": [],
+              "OE2": [],
+              "O": []
+            },
+            "hydrogen_count": 6,
+            "forcefield_charge_e": -0.9999999999999999
+          }
+        ],
+        "charge_e": -1.0
+      },
+      "runtime": {
+        "atoms": 27,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": -43.668647546332245,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLY",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLY",
+          "state": "GLY",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 3,
+          "forcefield_charge_e": 5.551115123125783e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLY",
+            "state": "GLY",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 3,
+            "forcefield_charge_e": 5.551115123125783e-17
+          }
+        ],
+        "charge_e": 0.0
+      },
+      "runtime": {
+        "atoms": 19,
+        "charge_e": 0.0,
+        "finite_energy_kj_mol": -120.6399348443952,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "HID",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "HIS",
+          "state": "HID",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "ND1": [
+              "HD1"
+            ],
+            "NE2": [],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 6.591949208711867e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "HIS",
+            "state": "HID",
+            "openmm_returned_variant": "HID",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "ND1": [
+                "HD1"
+              ],
+              "NE2": [],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 6.591949208711867e-17
+          }
+        ],
+        "charge_e": 1.0408340855860843e-17
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": 1.0408340855860843e-17,
+        "finite_energy_kj_mol": -26.95296551701219,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "HIE",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "HIS",
+          "state": "HIE",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "ND1": [],
+            "NE2": [
+              "HE2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": -1.0408340855860843e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "HIS",
+            "state": "HID",
+            "openmm_returned_variant": "HID",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "ND1": [
+                "HD1"
+              ],
+              "NE2": [],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 6.591949208711867e-17
+          }
+        ],
+        "charge_e": 1.0408340855860843e-17
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": -6.591949208711867e-17,
+        "finite_energy_kj_mol": -49.0404297092161,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "HIP",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "HIS",
+          "state": "HIP",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "ND1": [
+              "HD1"
+            ],
+            "NE2": [
+              "HE2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 8,
+          "forcefield_charge_e": 1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 2,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "HIS",
+            "state": "HIP",
+            "openmm_returned_variant": "HIP",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "ND1": [
+                "HD1"
+              ],
+              "NE2": [
+                "HE2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 8,
+            "forcefield_charge_e": 1.0
+          }
+        ],
+        "charge_e": 0.9999999999999999
+      },
+      "runtime": {
+        "atoms": 30,
+        "charge_e": 0.9999999999999999,
+        "finite_energy_kj_mol": 240.7608780518763,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ILE",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ILE",
+          "state": "ILE",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 11,
+          "forcefield_charge_e": 3.469446951953614e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ILE",
+            "state": "ILE",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 11,
+            "forcefield_charge_e": 3.469446951953614e-17
+          }
+        ],
+        "charge_e": -2.0816681711721685e-17
+      },
+      "runtime": {
+        "atoms": 31,
+        "charge_e": -2.0816681711721685e-17,
+        "finite_energy_kj_mol": -83.60433968099834,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "LEU",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "LEU",
+          "state": "LEU",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 11,
+          "forcefield_charge_e": 6.245004513516506e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "LEU",
+            "state": "LEU",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 11,
+            "forcefield_charge_e": 6.245004513516506e-17
+          }
+        ],
+        "charge_e": 6.938893903907228e-18
+      },
+      "runtime": {
+        "atoms": 31,
+        "charge_e": 6.938893903907228e-18,
+        "finite_energy_kj_mol": -168.74258460921234,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "LYS",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "LYS",
+          "state": "LYS",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "NZ": [
+              "HZ1",
+              "HZ2",
+              "HZ3"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 13,
+          "forcefield_charge_e": 1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "LYS",
+            "state": "LYS",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NZ": [
+                "HZ1",
+                "HZ2",
+                "HZ3"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 13,
+            "forcefield_charge_e": 1.0
+          }
+        ],
+        "charge_e": 1.0
+      },
+      "runtime": {
+        "atoms": 34,
+        "charge_e": 1.0,
+        "finite_energy_kj_mol": 97.16648752802848,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "MET",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "MET",
+          "state": "MET",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SD": [],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 5.2475385148298415e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "MET",
+            "state": "MET",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SD": [],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 5.2475385148298415e-17
+          }
+        ],
+        "charge_e": -3.0357660829594124e-18
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": -3.0357660829594124e-18,
+        "finite_energy_kj_mol": -79.32176982988756,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "PHE",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "PHE",
+          "state": "PHE",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 7.762887554996212e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "PHE",
+            "state": "PHE",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 7.762887554996212e-17
+          }
+        ],
+        "charge_e": 2.211772431870429e-17
+      },
+      "runtime": {
+        "atoms": 32,
+        "charge_e": 2.211772431870429e-17,
+        "finite_energy_kj_mol": -75.4934568425298,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "PRO",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "PRO",
+          "state": "PRO",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 1.6479873021779667e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "PRO",
+            "state": "PRO",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 1.6479873021779667e-17
+          }
+        ],
+        "charge_e": -3.903127820947816e-17
+      },
+      "runtime": {
+        "atoms": 26,
+        "charge_e": -3.903127820947816e-17,
+        "finite_energy_kj_mol": 3.1359953552275073,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "SER",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "SER",
+          "state": "SER",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OG": [
+              "HG"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 9.020562075079397e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "SER",
+            "state": "SER",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OG": [
+                "HG"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 9.020562075079397e-17
+          }
+        ],
+        "charge_e": 3.469446951953614e-17
+      },
+      "runtime": {
+        "atoms": 23,
+        "charge_e": 3.469446951953614e-17,
+        "finite_energy_kj_mol": -110.34711944663432,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "THR",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "THR",
+          "state": "THR",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OG1": [
+              "HG1"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 2.2551405187698492e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "THR",
+            "state": "THR",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OG1": [
+                "HG1"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 2.2551405187698492e-17
+          }
+        ],
+        "charge_e": -3.2959746043559335e-17
+      },
+      "runtime": {
+        "atoms": 26,
+        "charge_e": -3.2959746043559335e-17,
+        "finite_energy_kj_mol": -170.35185201495878,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "TRP",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "TRP",
+          "state": "TRP",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "NE1": [
+              "HE1"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 10,
+          "forcefield_charge_e": 9.80118763926896e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "TRP",
+            "state": "TRP",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NE1": [
+                "HE1"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 10,
+            "forcefield_charge_e": 9.80118763926896e-17
+          }
+        ],
+        "charge_e": 4.2500725161431774e-17
+      },
+      "runtime": {
+        "atoms": 36,
+        "charge_e": 4.2500725161431774e-17,
+        "finite_energy_kj_mol": -39.789316133207585,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "TYR",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "TYR",
+          "state": "TYR",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OH": [
+              "HH"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 9.063930161978817e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "TYR",
+            "state": "TYR",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OH": [
+                "HH"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 9.063930161978817e-17
+          }
+        ],
+        "charge_e": 3.5128150388530344e-17
+      },
+      "runtime": {
+        "atoms": 33,
+        "charge_e": 3.5128150388530344e-17,
+        "finite_energy_kj_mol": -151.70221994029387,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "VAL",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "VAL",
+          "state": "VAL",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 1.0061396160665481e-16
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "VAL",
+            "state": "VAL",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 1.0061396160665481e-16
+          }
+        ],
+        "charge_e": 4.5102810375396984e-17
+      },
+      "runtime": {
+        "atoms": 28,
+        "charge_e": 4.5102810375396984e-17,
+        "finite_energy_kj_mol": -163.19065656999692,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ASH",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ASP",
+          "state": "ASH",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OD1": [],
+            "OD2": [
+              "HD2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 1.1796119636642288e-16
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 2,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ASP",
+            "state": "ASH",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OD1": [],
+              "OD2": [
+                "HD2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 1.1796119636642288e-16
+          }
+        ],
+        "charge_e": 6.245004513516506e-17
+      },
+      "runtime": {
+        "atoms": 25,
+        "charge_e": 6.245004513516506e-17,
+        "finite_energy_kj_mol": -254.28811171314192,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLH",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLU",
+          "state": "GLH",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OE1": [],
+            "OE2": [
+              "HE2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 1.0061396160665481e-16
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 2,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLU",
+            "state": "GLH",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OE1": [],
+              "OE2": [
+                "HE2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 1.0061396160665481e-16
+          }
+        ],
+        "charge_e": 4.5102810375396984e-17
+      },
+      "runtime": {
+        "atoms": 28,
+        "charge_e": 4.5102810375396984e-17,
+        "finite_energy_kj_mol": -203.2346685591079,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "LYN",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [],
+      "pH_reassignment": {
+        "ph": 12,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "LYS",
+            "state": "LYN",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NZ": [
+                "HZ1",
+                "HZ2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 12,
+            "forcefield_charge_e": 1.5265566588595902e-16
+          }
+        ],
+        "charge_e": 9.71445146547012e-17
+      },
+      "runtime": {
+        "atoms": 33,
+        "charge_e": 9.71445146547012e-17,
+        "finite_energy_kj_mol": -127.74864224334331,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "CYM",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [],
+      "pH_reassignment": {
+        "ph": 12,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "CYS",
+            "state": "CYM",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": -0.9999999999999999
+          }
+        ],
+        "charge_e": -1.0
+      },
+      "runtime": {
+        "atoms": 22,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": -92.236823587854,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "termini",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "1",
+          "residue": "ALA",
+          "state": "ALA",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H",
+              "H2",
+              "H3"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 0.9999999999999999
+        },
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLY",
+          "state": "GLY",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": [],
+            "OXT": []
+          },
+          "hydrogen_count": 3,
+          "forcefield_charge_e": -1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "1",
+            "residue": "ALA",
+            "state": "ALA",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H",
+                "H2",
+                "H3"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 0.9999999999999999
+          },
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLY",
+            "state": "GLY",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": [],
+              "OXT": []
+            },
+            "hydrogen_count": 3,
+            "forcefield_charge_e": -1.0
+          }
+        ],
+        "charge_e": -9.71445146547012e-17
+      },
+      "runtime": {
+        "atoms": 20,
+        "charge_e": -9.71445146547012e-17,
+        "finite_energy_kj_mol": -264.5936349454257,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "disulfide",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "CYS",
+          "state": "CYX",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SG": [],
+            "O": []
+          },
+          "hydrogen_count": 4,
+          "forcefield_charge_e": 4.85722573273506e-17
+        },
+        {
+          "chain": "1",
+          "resid": "3",
+          "residue": "GLY",
+          "state": "GLY",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 3,
+          "forcefield_charge_e": 5.551115123125783e-17
+        },
+        {
+          "chain": "1",
+          "resid": "4",
+          "residue": "CYS",
+          "state": "CYX",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SG": [],
+            "O": []
+          },
+          "hydrogen_count": 4,
+          "forcefield_charge_e": 4.85722573273506e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "CYS",
+            "state": "CYX",
+            "openmm_returned_variant": "CYX",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": 4.85722573273506e-17
+          },
+          {
+            "chain": " ",
+            "resid": "3",
+            "residue": "GLY",
+            "state": "GLY",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 3,
+            "forcefield_charge_e": 5.551115123125783e-17
+          },
+          {
+            "chain": " ",
+            "resid": "4",
+            "residue": "CYS",
+            "state": "CYX",
+            "openmm_returned_variant": "CYX",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": 4.85722573273506e-17
+          }
+        ],
+        "charge_e": 9.71445146547012e-17
+      },
+      "runtime": {
+        "atoms": 39,
+        "charge_e": 9.71445146547012e-17,
+        "finite_energy_kj_mol": 16.294438348687148,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "NA",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::NA",
+        "residue": "NA",
+        "element": "Na",
+        "formal_charge": 1,
+        "supported": true,
+        "error": null,
+        "model": "TIP3P-compatible Amber nonbonded ion; not a bonded coordination or oxidation-state model."
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 1.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "CL",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::CL",
+        "residue": "CL",
+        "element": "Cl",
+        "formal_charge": -1,
+        "supported": true,
+        "error": null,
+        "model": "TIP3P-compatible Amber nonbonded ion; not a bonded coordination or oxidation-state model."
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "K",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::K",
+        "residue": "K",
+        "element": "K",
+        "formal_charge": 1,
+        "supported": true,
+        "error": null,
+        "model": "TIP3P-compatible Amber nonbonded ion; not a bonded coordination or oxidation-state model."
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 1.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "MG",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::MG",
+        "residue": "MG",
+        "element": "Mg",
+        "formal_charge": 2,
+        "supported": true,
+        "error": null,
+        "model": "TIP3P-compatible Amber nonbonded ion; not a bonded coordination or oxidation-state model."
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 2.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "CA",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::CA",
+        "residue": "CA",
+        "element": "Ca",
+        "formal_charge": 2,
+        "supported": true,
+        "error": null,
+        "model": "TIP3P-compatible Amber nonbonded ion; not a bonded coordination or oxidation-state model."
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 2.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "ethanol",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "5801fb163de54baf",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "CCO",
+      "formal_charge": 0,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 3,
+      "heavy_coordinate_max_displacement_nm": 1.3877787807814457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -8.407278485774983,
+            "xml_energy_kj_mol": -8.407278482101097,
+            "energy_delta_kj_mol": 3.6738860842433496e-09,
+            "maximum_force_delta_kj_mol_nm": 2.5742622256075265e-08
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -8.419469221994005,
+            "xml_energy_kj_mol": -8.419469218310667,
+            "energy_delta_kj_mol": 3.6833380789857983e-09,
+            "maximum_force_delta_kj_mol_nm": 2.591193037915218e-08
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -8.35768600799415,
+            "xml_energy_kj_mol": -8.357686004341396,
+            "energy_delta_kj_mol": 3.6527545432818442e-09,
+            "maximum_force_delta_kj_mol_nm": 2.5653832835814683e-08
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 9,
+        "charge_e": -9.87800646834458e-10,
+        "finite_energy_kj_mol": -8.766387060346162,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/ethanol/ligand-ab1de819ede9"
+    },
+    {
+      "id": "acetate",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "3b364e1040cb40db",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "CC(=O)[O-]",
+      "formal_charge": -1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 4,
+      "heavy_coordinate_max_displacement_nm": 1.3877787807814457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 244.0771238799871,
+            "xml_energy_kj_mol": 244.0771238670857,
+            "energy_delta_kj_mol": -1.290140971832443e-08,
+            "maximum_force_delta_kj_mol_nm": 1.4252873370423913e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 249.90533712901046,
+            "xml_energy_kj_mol": 249.90533711604814,
+            "energy_delta_kj_mol": -1.2962317441633786e-08,
+            "maximum_force_delta_kj_mol_nm": 1.4319311958388425e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 244.39423421994962,
+            "xml_energy_kj_mol": 244.39423420706106,
+            "energy_delta_kj_mol": -1.2888563105661888e-08,
+            "maximum_force_delta_kj_mol_nm": 1.4217857824405655e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 7,
+        "charge_e": -1.0000000005487784,
+        "finite_energy_kj_mol": 183.73916698095695,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/acetate/ligand-5549c0cf909d"
+    },
+    {
+      "id": "methylammonium",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "65330c06a56846ad",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "C[NH3+]",
+      "formal_charge": 1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 2,
+      "heavy_coordinate_max_displacement_nm": 1.5515838457795457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 238.55438522475595,
+            "xml_energy_kj_mol": 238.55438522474856,
+            "energy_delta_kj_mol": -7.389644451905042e-12,
+            "maximum_force_delta_kj_mol_nm": 1.8320633898838423e-10
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 239.35860338647828,
+            "xml_energy_kj_mol": 239.35860338647097,
+            "energy_delta_kj_mol": -7.30437932361383e-12,
+            "maximum_force_delta_kj_mol_nm": 1.8553691916167736e-10
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 239.61154573744102,
+            "xml_energy_kj_mol": 239.6115457374335,
+            "energy_delta_kj_mol": -7.531752999057062e-12,
+            "maximum_force_delta_kj_mol_nm": 1.9133494788547978e-10
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 8,
+        "charge_e": 0.9999999989024435,
+        "finite_energy_kj_mol": 232.56287397546265,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/methylammonium/ligand-6da39e332aa7"
+    },
+    {
+      "id": "halogen-aromatic",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "b2a7de03355e46e2",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "Fc1cc(Cl)cc(Br)c1",
+      "formal_charge": 0,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 9,
+      "heavy_coordinate_max_displacement_nm": 3.925231146709438e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -44.841838879891704,
+            "xml_energy_kj_mol": -44.84183888719803,
+            "energy_delta_kj_mol": -7.3063262107098126e-09,
+            "maximum_force_delta_kj_mol_nm": 1.286235260522517e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -44.3552035016127,
+            "xml_energy_kj_mol": -44.35520350895542,
+            "energy_delta_kj_mol": -7.342720209635445e-09,
+            "maximum_force_delta_kj_mol_nm": 1.2979396046830516e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -43.798085277504136,
+            "xml_energy_kj_mol": -43.79808528490332,
+            "energy_delta_kj_mol": -7.3991870408463e-09,
+            "maximum_force_delta_kj_mol_nm": 1.2899585044578998e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 12,
+        "charge_e": 8.673617379884035e-19,
+        "finite_energy_kj_mol": -47.474836414292206,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/halogen-aromatic/ligand-ef6ffb35bca5"
+    },
+    {
+      "id": "phosphate",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "9b2764e067ab4cdb",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "COP(=O)([O-])[O-]",
+      "formal_charge": -2,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 6,
+      "heavy_coordinate_max_displacement_nm": 3.122502256758253e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -1.1230520589975015,
+            "xml_energy_kj_mol": -1.1230520552863368,
+            "energy_delta_kj_mol": 3.7111647088750033e-09,
+            "maximum_force_delta_kj_mol_nm": 2.2855692805023864e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -2.3693210391594732,
+            "xml_energy_kj_mol": -2.3693210354227006,
+            "energy_delta_kj_mol": 3.736772669071797e-09,
+            "maximum_force_delta_kj_mol_nm": 2.2998028725851327e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 2.6367953936439505,
+            "xml_energy_kj_mol": 2.6367953972504807,
+            "energy_delta_kj_mol": 3.606530185606971e-09,
+            "maximum_force_delta_kj_mol_nm": 2.2379026631824672e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 9,
+        "charge_e": -2.0000000071341155,
+        "finite_energy_kj_mol": -90.08892160551545,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/phosphate/ligand-a90414c3737c"
+    },
+    {
+      "id": "chiral-amide",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "bc3b1271200e4afc",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "CC(=O)N[C@@H](C)C[NH+](C)C",
+      "formal_charge": 1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 10,
+      "heavy_coordinate_max_displacement_nm": 1.3877787807814457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 320.76970512080254,
+            "xml_energy_kj_mol": 320.7697051128406,
+            "energy_delta_kj_mol": -7.961943992995657e-09,
+            "maximum_force_delta_kj_mol_nm": 4.947927436660393e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 323.09155218246786,
+            "xml_energy_kj_mol": 323.0915521750406,
+            "energy_delta_kj_mol": -7.427274795190897e-09,
+            "maximum_force_delta_kj_mol_nm": 4.976520813215757e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 322.8173908985855,
+            "xml_energy_kj_mol": 322.81739089038183,
+            "energy_delta_kj_mol": -8.203642209991813e-09,
+            "maximum_force_delta_kj_mol_nm": 4.889349725090142e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 27,
+        "charge_e": 0.9999999961585528,
+        "finite_energy_kj_mol": 225.95771560253485,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/chiral-amide/ligand-06c59d7849bf"
+    },
+    {
+      "id": "ATP",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "0fc8ab92205f4e65",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "ATP",
+        "url": "https://files.rcsb.org/ligands/download/ATP.cif",
+        "sha256": "06d876e9fe28b6981725288cd03943818ef6faf4839782c2a0a8929d65c85336",
+        "retrieved_at": "2026-09-11T06:25:15.539917+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO[P@@](=O)([O-])O[P@](=O)([O-])OP(=O)([O-])[O-])[C@@H](O)[C@H]1O",
+      "formal_charge": -4,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 31,
+      "heavy_coordinate_max_displacement_nm": 1.1443916996305594e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -546.5784340802898,
+            "xml_energy_kj_mol": -546.5784342125123,
+            "energy_delta_kj_mol": -1.3222256711742375e-07,
+            "maximum_force_delta_kj_mol_nm": 1.8440014173393138e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -539.2845649635681,
+            "xml_energy_kj_mol": -539.2845650952052,
+            "energy_delta_kj_mol": -1.3163707990315743e-07,
+            "maximum_force_delta_kj_mol_nm": 1.8284267753188033e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -542.6761272865185,
+            "xml_energy_kj_mol": -542.676127417316,
+            "energy_delta_kj_mol": -1.307975026065833e-07,
+            "maximum_force_delta_kj_mol_nm": 1.8440196072333492e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 43,
+        "charge_e": -4.000000015365788,
+        "finite_energy_kj_mol": -1129.4783123830352,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/ATP/ligand-986b707ed3d4"
+    },
+    {
+      "id": "ADP",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "e492be4549dd42c5",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "ADP",
+        "url": "https://files.rcsb.org/ligands/download/ADP.cif",
+        "sha256": "fa9eabb464c85c7c5a44146d492b907acd3151a250a4598001cc6abba8da84af",
+        "retrieved_at": "2026-09-11T06:25:44.297383+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO[P@](=O)([O-])OP(=O)([O-])[O-])[C@@H](O)[C@H]1O",
+      "formal_charge": -3,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 27,
+      "heavy_coordinate_max_displacement_nm": 1.1123893155135927e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -306.9099449502272,
+            "xml_energy_kj_mol": -306.90994500504166,
+            "energy_delta_kj_mol": -5.4814449867990334e-08,
+            "maximum_force_delta_kj_mol_nm": 1.7772363207768649e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -302.89955243086,
+            "xml_energy_kj_mol": -302.89955248622573,
+            "energy_delta_kj_mol": -5.536571734410245e-08,
+            "maximum_force_delta_kj_mol_nm": 1.800947757146787e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -309.663858664396,
+            "xml_energy_kj_mol": -309.6638587190637,
+            "energy_delta_kj_mol": -5.466768016049173e-08,
+            "maximum_force_delta_kj_mol_nm": 1.7858465071185492e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 39,
+        "charge_e": -3.0000000010152394,
+        "finite_energy_kj_mol": -629.5064168146886,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/ADP/ligand-f245fc15ccf1"
+    },
+    {
+      "id": "NAD",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "2639fbef35344720",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "NAD",
+        "url": "https://files.rcsb.org/ligands/download/NAD.cif",
+        "sha256": "f202c206d06c8aafa01516df17e91d21a6c60ed1a02f815e60bca00d12a62439",
+        "retrieved_at": "2026-09-11T06:26:08.987845+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO[P@@](=O)([O-])O[P@@](=O)([O-])OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3O)[C@@H](O)[C@H]2O)c1",
+      "formal_charge": -1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking. A missing protonation-tool atom map was restored by a unique element/connectivity match constrained by all retained maps."
+      ],
+      "heavy_atoms": 44,
+      "heavy_coordinate_max_displacement_nm": 1.1102230246251565e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -1201.9308490942701,
+            "xml_energy_kj_mol": -1201.9308491386166,
+            "energy_delta_kj_mol": -4.4346506911097094e-08,
+            "maximum_force_delta_kj_mol_nm": 2.639477315824479e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -1197.401612695083,
+            "xml_energy_kj_mol": -1197.4016127385498,
+            "energy_delta_kj_mol": -4.346679816080723e-08,
+            "maximum_force_delta_kj_mol_nm": 2.594449597381754e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -1199.8396970000572,
+            "xml_energy_kj_mol": -1199.8396970421154,
+            "energy_delta_kj_mol": -4.205821824143641e-08,
+            "maximum_force_delta_kj_mol_nm": 2.5519470909785014e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 70,
+        "charge_e": -1.0000000145426204,
+        "finite_energy_kj_mol": -1528.3304764961003,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/NAD/ligand-719251ab1bf8"
+    },
+    {
+      "id": "FAD",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "40b997c05dff4f20",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "FAD",
+        "url": "https://files.rcsb.org/ligands/download/FAD.cif",
+        "sha256": "85fc5af9d315a3cdbfb0efe1c30dc1aa7d227ddc8fa9b3054de81f1ffe4d0851",
+        "retrieved_at": "2026-09-11T06:26:09.071712+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "Cc1cc2nc3c(=O)[nH]c(=O)nc-3n(C[C@H](O)[C@H](O)[C@H](O)CO[P@@](=O)([O-])O[P@](=O)([O-])OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3O)c2cc1C",
+      "formal_charge": -2,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 53,
+      "heavy_coordinate_max_displacement_nm": 2.220446049250313e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -990.5667861215946,
+            "xml_energy_kj_mol": -990.5667861741958,
+            "energy_delta_kj_mol": -5.260119451122591e-08,
+            "maximum_force_delta_kj_mol_nm": 1.922275714605348e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -989.4426288089385,
+            "xml_energy_kj_mol": -989.4426288609068,
+            "energy_delta_kj_mol": -5.1968299885629676e-08,
+            "maximum_force_delta_kj_mol_nm": 1.9075428099313285e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -986.4109243830942,
+            "xml_energy_kj_mol": -986.4109244368217,
+            "energy_delta_kj_mol": -5.372749001253396e-08,
+            "maximum_force_delta_kj_mol_nm": 1.9296089703857433e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 84,
+        "charge_e": -2.0000000362303325,
+        "finite_energy_kj_mol": -1498.3212004780426,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/release-chemistry/chemistry-matrix/FAD/ligand-be2f484fd8ce"
+    }
+  ],
+  "passed": true,
+  "finished_at": "2026-09-11T06:41:27.477511+00:00",
+  "versions": {
+    "openmm": "8.6.0",
+    "rdkit": "2025.9.6",
+    "pdbfixer": "1.12.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6",
+    "parmed": "4.3.1",
+    "gemmi": "0.7.5",
+    "dimorphite-dl": "2.0.2"
+  },
+  "native_source": {
+    "runtime": {
+      "ambertools_version": "24.8",
+      "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+      "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+      "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+      "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+    },
+    "files": {
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ALA.inpcrd": "389e8309634f3b7966a610c61052eb9633927adbf86986f4aa0e393a35e40c9c",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ALA.pdb": "dd50bd9cb68713d7705e204fbc84897e2c3a9b33c135fd3574bda0edebaa3bd4",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ALA.prmtop": "ccd216b60a118a83616290b1ff9897424a4a2336a94a114153177378f81627e7",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ARG.inpcrd": "1cf6efca037a7775686726fe264e9b9b39c0d2218e58695f08ed9a6f00ee5912",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ARG.pdb": "29355c4bead1fd7f0bc214b98a08daf9aa34f5df02bef97cc76b126a077679c5",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ARG.prmtop": "702e8a1974741fff4968e980ac2d186c9a87c59a3d84f260efa3b4fca028a2e7",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASH.inpcrd": "325c0d4a8b85dbebbeaaa621c3f5e6c612eeb0e1a587bf3372a4cc9458531ea4",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASH.pdb": "34fcb34762416f1028b8df9eca7b482d4c916943caad2b7f5535e42cda4737c5",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASH.prmtop": "bf87ccaafc582bd908baea8afb48a9c51139e12dc4c5ff69206f2e75b4687aeb",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASN.inpcrd": "383ff7e0624af0703fbf9f7f9113eecf1ab2c76d85801b1cd67f291c2277dac3",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASN.pdb": "802aaebd57229306784fa548ce6f1c5054a029dcda1224580bd584925951ef2a",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASN.prmtop": "9e73801915310609c8a37a3d3ff0fba92221ab868dacd8e6c345221966281306",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASP.inpcrd": "5c11add72ef7994d55b6480213bb6d758bbf524db6b38fd1c52a416d72a7fb44",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASP.pdb": "b7c4df21da1abd12dadbfc451ef4b6069817fbeb0cfd5e905edc8516f4767666",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ASP.prmtop": "120faf2ca775e6839e6fc3a4dd310f6d20332793de0c7fa40ba32d1e8332c37a",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/CYM.inpcrd": "eea3be5953623b5c8165c67d2ebd65ed3cbd034b130b05baa215ef3b6124536f",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/CYM.pdb": "52e8bd8fe137824a8573c2eb40244a9c90acc38097a554da90a059363a37ea25",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/CYM.prmtop": "494114de2bb4d0c9c8c8f0fe4b70f636ea266558056db6b833d5d74f7b467b81",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/CYS.inpcrd": "99fd817809987c92ed700e99fb9028feeb566c459b611ae449bc3c9185742555",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/CYS.pdb": "b57b7bb2bd3326f70e04dbac3c1b1337d3686c3c0bbae647adcc13a0c27c16b8",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/CYS.prmtop": "095702cab0847aff62693dd115bf0df7e5e9ea856b8d5955df41003bff15e68b",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLH.inpcrd": "5eb2290ce94f8aac47e0a4acdcd55c785221617006ee469755a16497b8a7fe57",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLH.pdb": "c646bf798f95c7dcc579e1815f190bc4e16c6ce33dfa4635334f99dda27559cf",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLH.prmtop": "84b0f9926e66c61a1d74baf8da87fb2cb1b374f790e8d998c90763e3a1ee9b2b",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLN.inpcrd": "74975a0ec050881e87d01977a39d59b63674175332e4ee2464e415fb4f56983d",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLN.pdb": "7876772dcc13031ca36ce4bb7415039c1bf87d96dcd3f78e94cd2f29513cf912",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLN.prmtop": "700be4b0fc473f56be89c8e86839ab6e1e33bfd9d31973d9104598d84c543e77",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLU.inpcrd": "13b6818df1476a1d21cd94746a215dd38168c9772ab66728f795b0662df9fb10",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLU.pdb": "b8cd206ca415356211dfa68b7ccadac653b30855a688f9e787ea41b86872d55f",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLU.prmtop": "a5f6eb6b4042c12fa9c1e8b1e50a99c64767d2fa9da330359709a0406fe31e67",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLY.inpcrd": "81461737555ae996d3f9dd277c72bf8f65e2a09737283926ebc567b7c74ec67f",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLY.pdb": "f4ed0cd39e8c49e79daed8f7d1be71a1d0a8ec22ef4f54a2c00725378b63c9ba",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/GLY.prmtop": "bd390486bc48f370adfa6a11c2b343c578093663b04c161fcf0227a5f4d8f6b2",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HID.inpcrd": "f5ab6951aeb223c0e20e9f5506c35a1de4544ff397dfc4fd196d42d69ad77792",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HID.pdb": "66059b4683328f108647c6f3c304856828a4b45d49efb26ab81d9f0f763af8ba",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HID.prmtop": "9d993743904161832df486e5904b699912e167e4ea19873ce3e75fd0d10b417b",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HIE.inpcrd": "6f6b09d120dec1319139c4276b447d87bbf22bfb17d30f7bcc93537e71d3108a",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HIE.pdb": "abb97c643fc8bde1061778e74624bf5ad0cf5b1d0568af9ccf6f1ba27ab0c4d8",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HIE.prmtop": "364c6585c67d6ba05fe03da0ed7a018c136d95c3f9323ee39308f0cd6d268dda",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HIP.inpcrd": "260fa36f893074e108a0dccdedc952c06c15af2600feea925c8d65d2cc8a2c22",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HIP.pdb": "61e76bec1c8395fa03b6da417c54c528047c9c9d123ead4bc4037aa6b83b0b51",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/HIP.prmtop": "6ffc899bebc5d5d3b5b0e38d806d0c6e7e6fc0033b2321b44464f3c3ba4381fc",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ILE.inpcrd": "bcc62a350815f55822cc661959998fcb61831b36b2cae56aaf4f512f229eb6d5",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ILE.pdb": "6cb339df3748f07e5737959742b946b97ac17739043b3eb29dd1d4380f256f3c",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/ILE.prmtop": "96f78d8d738ddcf690016d58040542b9422308418959e87b83a6280e8ba6dc91",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LEU.inpcrd": "3bf3e8a52e24808d453e7b22a1e9ba6bc91072b035d69277cc700cbb2ce41602",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LEU.pdb": "8ece6f9e0fbe49bf764cab6e86409f2478e6b09003c93c6dbb9d3b6aab261659",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LEU.prmtop": "e5f5df82918d4ece1bd8203c3907e0ba3d8c9751e7a501625cd435e7ac28f912",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LYN.inpcrd": "30fda60825e32a535e133897a10435cc6b58990b97e8c0b081c037b27ac30696",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LYN.pdb": "e1f46f6f7e9091aca8e9bbd738894a45ec63be9599ee282c40027659a3456af8",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LYN.prmtop": "2db45d9413dab7bd8b7188497951de19e55b46a928b6110fb4663f3a4bc9e6d7",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LYS.inpcrd": "322d64beaef33261dc03e016890cc6546d0b636184ba5482c1a23994b34a202d",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LYS.pdb": "9c38deb80e44c4640f9e037630a2d839954202f965fd9226f7be5f1191be72cb",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/LYS.prmtop": "312d688f1e339fbda132940493e4faf11dbd15ed731de7a537e4f3a5f4b2c3c6",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/MET.inpcrd": "9a6e0b38a1fa11e1334ec3b0cfca2610386648d663121eccc8518707687f3401",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/MET.pdb": "015330febd8366fc7fa0dd4e6d8ea7148ab59fb72716b07388cd93148668175f",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/MET.prmtop": "6a12f890bd69dee7dbba66843b57d38725e62e8ef60678f64bb7546fbdbdd7ba",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/PHE.inpcrd": "6f3c0a82668cc509131c5db6c6233858428800a211a8db026541cce8af3987c3",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/PHE.pdb": "2772fb6dce64afeb6025146560376100cd99caacf24f8ea1f827786baf002c13",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/PHE.prmtop": "14b74da71a2484a72782d320a821a54491970ca68d36f301e70099f26727dabe",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/PRO.inpcrd": "c3439fe3c6ebc9ef872be62c2c11a5b89e893ac1c0a031c700fbfb7430bdc3c0",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/PRO.pdb": "226ee252a65b943a5d22fc83a6c1f4725f5460f6f17c2ccf132b0c43865d97db",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/PRO.prmtop": "6b3480d987bad180f5d861c669739a505663d66b815f5045c16166d9aa967b39",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/SER.inpcrd": "83aa74e485661fed2026b9af1fa74043a14638980c325fd644300cb7b062bd2e",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/SER.pdb": "c2dc3822783137cae939472b59a4826fb59fa2faf80346db868a4c2df147223c",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/SER.prmtop": "dcc51557dd2b5d0e496392f4b728d161f659ac72a7899eba2a76f79c9ad9088a",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/THR.inpcrd": "020c5cb62e6f1038c36da7882866638e5d26b58f6329db3272c414679c85be29",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/THR.pdb": "6b154abca48be2b722e339fd63dcce0780e15ef2edc2e3793126b811af16df0f",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/THR.prmtop": "356dffbe1f848f055d262b39f0d3fd98f2f3de3cf1097a5fd5ebab0a71c82751",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/TRP.inpcrd": "8ca4472ad47e8d2bcccf694b8827690ebd44e9d16a0e807d9fd82559baba8ff5",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/TRP.pdb": "0a78b92ba08871599ad4dc4d1a5879a4cf62d1b518324a7b23a19b59cb4e6d07",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/TRP.prmtop": "8b74de253dc2ba922f1e3288df2fcb0acc4601a08ea644871bd34cfd1a0dcf2f",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/TYR.inpcrd": "42374543806d255df89c838e0ed1c7d704b04cf23f5a18c762b58aeb20f2f996",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/TYR.pdb": "c8af867450355b6c0a7c76e4cf01c7e5a1f4e45c12ba167ad1e6630606024cea",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/TYR.prmtop": "453ff8dd05e511d3a5eaebce46b7e0722e81d11b3eb43cd0efc9f79f396c8df7",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/VAL.inpcrd": "5da8766ab9daa5ca8e1d92985742bb481a606db2a30d037f2025737f4114fe9d",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/VAL.pdb": "71ce3e262bea52d50519a0cf0a7cf29293e0936beb4b08d6510fb09e9c4e7996",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/VAL.prmtop": "78016813d961c8eded3f312b53a86a3228a56c29d1b94e7cb014b1d50d7ab406",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/disulfide.inpcrd": "99598c37a81e117f48bcbaa1e8f20914dfdfb96be425759afd7654707d9b5860",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/disulfide.pdb": "c166bb0d73396377ed0e0c57a0ff9fbcb553ff909c56b17dcdba40796030957e",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/disulfide.prmtop": "f6190f08170a7173496d32c5342256b8b7e057108084ab05234ac384d6430e9e",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/leap.in": "61ba0eba2afb0d405db90a383e7a0a7703b873aa4109a6a1d9afab0f056606c4",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/termini.inpcrd": "aaabfc1e4273560673d40b8321468a144a64cab3f8e1e11728dacfe1e4998138",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/termini.pdb": "fa93aa6937b67552577b1b23e8c3d02f186a03180a5c692735e4bfda818fb3f7",
+      "data/integration-checks/release-chemistry/chemistry-matrix/protein-native/termini.prmtop": "259b9e3637b5b477d69babde1f5490e5a921ce977ed1963049e695981fa1d3f0"
+    }
+  },
+  "script_sha256": "06f3341a36c772df156f978fdd342cc22985d635dd6d62b3a1770f17e34f2acb",
+  "script_hash_note": "Current reproducible script snapshot; native per-ligand provenance records its executed implementation hash. Final script bookkeeping adds versions, native input hashes and finish time."
+}

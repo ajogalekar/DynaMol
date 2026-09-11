@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -93,16 +94,41 @@ def main():
             import hashlib
             expected = hashlib.sha256((resources/'app/backend/worker.py').read_bytes()).hexdigest()
             assert provenance['worker_source_sha256'] == expected
+            diagnostics = fetch(url+f"api/jobs/{job['id']}/diagnostics")
+            assert diagnostics['recorded_points'] > 0
+            assert 'temperature_k' in diagnostics['available']
             jobs.append({'engine': engine, 'job_id': job['id'], 'status': status['status'], 'dataset_id': dataset['id'], 'atoms': dataset['n_atoms'], 'frames': dataset['n_frames'], 'worker_source_sha256': expected})
+        readiness = fetch(url+'api/datasets/demo/readiness', {'mode': 'simulation', 'settings': {'engine': 'openmm', 'duration_ps': 0.02}})
+        assert readiness['ready'] and readiness['resources']['saved_frames'] >= 2
+        analysis = fetch(url+'api/datasets/demo/structural-analysis', {'kind': 'rmsd'})
+        assert len(analysis['values']) == 101 and all(math.isfinite(v) for v in analysis['values'])
+        assert abs(analysis['values'][0]) < 1e-5
+        demo = fetch(url+'api/datasets/demo')
+        selected = [a['index'] for a in demo['atoms'] if a['name'] == 'CA'][:3]
+        workspace = {'version': 1, 'dataset_id': 'demo', 'frame': 12, 'representation': 'cartoon',
+                     'named_selections': [{'id': 'packaged-backbone', 'name': 'Packaged backbone', 'atoms': selected}],
+                     'selected_atoms': selected, 'analysis_expanded': True,
+                     'analysis_settings': {'kind': 'rmsf', 'selection': 'named:packaged-backbone', 'alignment': 'ca', 'reference': 1, 'start': 1, 'end': 101, 'stride': 2, 'periodic': 'whole', 'residue_average': True}}
+        fetch(url+'api/workspace', {'state': workspace})
+        saved_workspace = fetch(url+'api/workspace')['state']
+        project = fetch(url+'api/projects', {'name': 'Packaged workspace proof', 'state': saved_workspace})
+        saved_project = fetch(url+f"api/projects/{project['id']}")['state']
         before_restart = {item['id'] for item in fetch(url+'api/datasets')}
         stop(home, child)
         assert child.wait(timeout=15) == 0
         restarted, new_state = start()
+        assert new_state['url'] != url, 'Restart must exercise a different assigned port.'
         assert before_restart == {item['id'] for item in fetch(new_state['url']+'api/datasets')}
         assert len(fetch(new_state['url']+'api/jobs')) == 2
+        assert fetch(new_state['url']+'api/workspace')['state'] == saved_workspace
+        assert fetch(new_state['url']+f"api/projects/{project['id']}")['state'] == saved_project
+        assert any(p['id'] == project['id'] for p in fetch(new_state['url']+'api/projects'))
         stop(home, restarted)
         assert restarted.wait(timeout=15) == 0
         report = {'passed': True, 'resources': str(resources), 'home': str(home), 'build_id': state['build_id'], 'health': health, 'initial_datasets': sorted(item['id'] for item in library), 'startup_progress_page': True, 'same_service_reused': True, 'shutdown_and_restart_preserved_data': True, 'sanitized_path': env['PATH'], 'jobs': jobs, 'limitations': 'Local relocated app with paths containing spaces on the development Mac; no separate clean-machine, notarization, or Gatekeeper validation.'}
+        report.update(workspace_and_named_project_preserved_on_new_port=True, named_selection_and_analysis_settings_preserved=True,
+                      readiness_checked=True, structural_rmsd_frames=len(analysis['values']), both_engines_record_native_temperature=True,
+                      restart_ports=[url, new_state['url']])
         (home/'app-validation.json').write_text(json.dumps(report, indent=2)+'\n')
         print(json.dumps({'passed': True, 'report': str(home/'app-validation.json')},indent=2))
     finally:

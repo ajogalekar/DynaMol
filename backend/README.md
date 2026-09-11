@@ -56,6 +56,8 @@ The first bundled 1UBQ demonstration predates preparation RNG seeding. Its dynam
 
 ## Verification
 
+Additional local APIs support durable workspaces/projects and library management (`backend/workspaces.py`), read-only readiness and enforced submission resource limits (`backend/readiness.py`, `backend/resources.py`), compatible checkpoint recovery (`backend/recovery.py`), native run diagnostics (`backend/diagnostics.py`) and saved-coordinate RMSD/RMSF (`backend/structural_analysis.py`). See [workspaces](../docs/WORKSPACES.md), [recovery](../docs/CHECKPOINT_RECOVERY.md), [analysis](../docs/ANALYSIS.md) and [chemistry coverage](../docs/CHEMISTRY_SUPPORT.md) for contracts and limits. Project/partial-job downloads use private locked snapshots with cleanup on completion, invalid range requests or disconnected clients.
+
 Run `.venv/bin/python -m pytest -q` for API, unit/PBC geometry, explicit H-bond selection, identity-order checking, file timing, retained uploads and error handling. `docs/audit/check_numerics.py` supplies a separate analytical fixture audit. Actual OpenMM and GROMACS integration jobs and cancellation were also executed during this build; their evidence is recorded in the scientific audit and local `data/` artifacts.
 
 Ligand preparation has additional native Amber→OpenMM energy/force equivalence and parameter-continuity checks. See [complex preparation review](../docs/complex-preparation-review.md) for current release validation and unresolved limits. Test execution is not a claim that a fixed protonation state, metal model or short trajectory is scientifically accurate.

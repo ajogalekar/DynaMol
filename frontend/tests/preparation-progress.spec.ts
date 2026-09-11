@@ -1,4 +1,5 @@
-import { test, expect, type Page, type Locator } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page, type Locator } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
@@ -192,42 +193,42 @@ test('preparation has immediate feedback, survives reopening Studio, and announc
   }
 });
 
-test('a rejected preparation exposes the real error beside the header and restores the prep button', async ({
+test('preparation readiness blocks incomplete atoms before submission and clears when repair is restored', async ({
   page,
   request,
 }, testInfo) => {
   const { studio, source } = await importProtein(page, 'validation');
+  let submissions = 0;
+  page.on('request', (response) => {
+    if (response.url().endsWith('/api/preparations') && response.method() === 'POST') submissions++;
+  });
   await studio.getByRole('button', { name: 'Preparation options', exact: true }).click();
-  await studio.getByRole('checkbox', { name: 'Add missing heavy atoms', exact: true }).uncheck();
-  const submitted = page.waitForResponse(
-    (response) =>
-      response.url().endsWith('/api/preparations') && response.request().method() === 'POST',
+  const repair = studio.getByRole('checkbox', { name: 'Add missing heavy atoms', exact: true });
+  await repair.uncheck();
+  const readiness = studio.getByLabel('Preparation readiness', { exact: true });
+  await expect(readiness).toContainText('Before you continue');
+  await expect(readiness).toContainText(
+    'Missing heavy/terminal atoms prevent force-field preparation',
   );
-  await studio.getByRole('button', { name: 'Prep protein', exact: true }).click();
-  const response = await submitted;
-  expect(response.status()).toBe(422);
-  const failure = await response.json();
-  expect(failure.detail).toContain('Missing heavy/terminal atoms prevent force-field preparation');
-  const monitor = studio.locator('.structure-job-monitor');
-  await expect(monitor).toContainText(failure.detail);
-  await expect(studio.getByRole('button', { name: 'Prep protein', exact: true })).toBeEnabled();
-  await expect(monitor.locator('.structure-job-monitor-spinner')).toHaveCount(0);
-  await expect(
-    monitor.getByRole('button', { name: 'Cancel protein preparation', exact: true }),
-  ).toHaveCount(0);
+  await expect(studio.getByRole('button', { name: 'Prep protein', exact: true })).toBeDisabled();
+  await expect(studio.locator('.structure-job-monitor')).toHaveCount(0);
+  expect(submissions).toBe(0);
   const jobs = await (await request.get('/api/jobs')).json();
   expect(
     jobs.filter((job: { config: { dataset_id: string } }) => job.config.dataset_id === source.id),
   ).toEqual([]);
   await expect(page.locator('.structure-card h2')).toHaveText(source.name);
   await page.setViewportSize({ width: 547, height: 637 });
-  await expectPinnedMonitor(page, studio);
-  await testInfo.attach('preparation-validation-error-narrow-window', {
+  await readiness.scrollIntoViewIfNeeded();
+  await expect(readiness).toBeInViewport();
+  await testInfo.attach('preparation-readiness-error-narrow-window', {
     body: await page.screenshot(),
     contentType: 'image/png',
   });
-  await monitor.getByRole('button', { name: 'Dismiss preparation status', exact: true }).click();
-  await expect(monitor).toHaveCount(0);
+  await repair.check();
+  await expect(readiness).toContainText('Ready to prepare');
+  await expect(studio.getByRole('button', { name: 'Prep protein', exact: true })).toBeEnabled();
+  expect(submissions).toBe(0);
 });
 
 test('a prepared topology display failure stops the spinner and retries the same real result', async ({

@@ -1,0 +1,59 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 49,
+  "query": "tautomer protonation molecular representation reproducibility uncertainty",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-05-06",
+      "score": 46.0,
+      "snippet": "…ntroduction One factor often overlooked when applying machine learning (ML) in small-molecule drug discovery is the influence of tautomers on model predictions. Drug-like molecules, especially those containing heterocycles and conjugated pi systems, can exist in several different tautomeric forms. These forms feature varying bond orders between the atoms. Consequently, the molecular representation used in an ML model varies. This remains true regardless of whether we’re using molecular fingerprints, topological de…",
+      "tags": [
+        "Tautomers"
+      ],
+      "title": "The Trouble With Tautomers",
+      "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2021-01-18T15:43:00.003-08:00",
+      "score": 34.0,
+      "snippet": "…list reflects a few interesting trends I saw this year. More of a practical focus on active learning Efforts to address model uncertainty, as well as the admission that it's a very difficult problem The (re)emergence of molecular representations that incorporate 3D structure Several interesting strategies for data augmentation Additional efforts toward model interpretability, coupled with the acknowledgment that this is also a difficult problem The application of generative models to more practical objectiv…",
+      "tags": [],
+      "title": "AI in Drug Discovery 2020 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2021/01/ai-in-drug-discovery-2020-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 28.0,
+      "snippet": "…well as conventional methods when pockets are predefined. Do Deep Learning Models Really Outperform Traditional Approaches in Molecular Docking https://arxiv.org/abs/2302.07134 1.2 Training/test Set Bias Most DL docking programs were trained and tested on time splits from the PDB. For instance, DiffDock was trained on structures deposited in the PDB before 2019 and tested on structures deposited in 2019 and later. Quite a few structures in the test set are similar to those in the training set. In these cas…",
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-01-03T11:55:00.002-08:00",
+      "score": 25.0,
+      "snippet": "…shing AlphaFold2 in New Directions 4. Model Interpretability 5. QM Methods 6. Utralarge Chemical Libraries 7. Active Learning 8. Molecular Representation 1. Are Deep Neural Networks Better for QSAR? Based on papers I read and reviewed in 2022, there seems to be a perception that Deep Neural Networks have become ubiquitous in QSAR modeling. In fact, the introduction to a recent special issue of JCIM contained this statement. “However, after the Kaggle Merck Molecular Activity Challenge 2013 and the Tox21…",
+      "tags": [],
+      "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-08T06:48:00.000-08:00",
+      "score": 23.0,
+      "snippet": "…Chemistry, White proposed that “The Future of Chemistry is Language”. He pointed out that LLMs like GPT-4 can translate between molecular formats, look up chemical names and properties, and provide input files for quantum chemical calculations. He described how LLMs can summarize complex documents and streamline workflows. White also highlighted the challenges arising from the tendency of LLMs to hallucinate and generate incorrect text. He suggested several strategies for addressing hallucinations, including pr…",
+      "tags": [],
+      "title": "AI in Drug Discovery - A Highly Opinionated Literature Review (Part II) ",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-highly-opinionated.html"
+    }
+  ]
+}

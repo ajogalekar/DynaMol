@@ -139,15 +139,15 @@ def build() -> Path:
     for folder in ('backend', 'examples'):
         shutil.copytree(ROOT / folder, app / folder, symlinks=False, ignore=ignore_copy)
     shutil.copytree(ROOT / 'frontend' / 'dist', app / 'frontend' / 'dist')
-    (app / 'docs').mkdir()
-    for document in (ROOT / 'docs').glob('*.md'):
-        shutil.copy2(document, app / 'docs' / document.name)
+    # Include the cited audit evidence and screenshots alongside the guides.
+    shutil.copytree(ROOT / 'docs', app / 'docs', ignore=ignore_copy)
     for name in ('pyproject.toml', 'uv.lock', 'LICENSE', 'README.md', 'THIRD_PARTY.md'):
         shutil.copy2(ROOT / name, app / name)
     # The app source is included alongside the binaries; user datasets/jobs are
     # deliberately never inputs to this builder.
     shutil.copytree(ROOT / 'frontend' / 'src', app / 'frontend-source' / 'src', ignore=ignore_copy)
-    for name in ('package.json', 'package-lock.json', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json', 'index.html'):
+    shutil.copytree(ROOT / 'frontend' / 'tests', app / 'frontend-source' / 'tests', ignore=ignore_copy)
+    for name in ('package.json', 'package-lock.json', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json', 'index.html', 'playwright.config.ts', 'TESTING.md'):
         if (ROOT / 'frontend' / name).exists():
             shutil.copy2(ROOT / 'frontend' / name, app / 'frontend-source' / name)
     shutil.copytree(ROOT / 'scripts', app / 'scripts', ignore=ignore_copy)

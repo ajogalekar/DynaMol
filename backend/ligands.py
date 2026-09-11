@@ -28,9 +28,9 @@ from rdkit.Chem import AllChem
 
 from . import config, storage
 from .sources import STANDARD_RESIDUES
+from .ions import SUPPORTED_IONS, inspect_ions
 
 ORGANIC_ELEMENTS = {"H", "C", "N", "O", "F", "P", "S", "Cl", "Br", "I"}
-SUPPORTED_IONS = {"NA", "CL", "K", "MG", "CA", "SOD", "CLA", "POT", "CAL"}
 MAX_LIGAND_HEAVY_ATOMS = 200
 
 
@@ -212,6 +212,10 @@ def _graph(residue, coordinates, chemistry=None, block=None):
         raise ValueError(f"Ligands are limited to 1–{MAX_LIGAND_HEAVY_ATOMS} heavy atoms.")
     if any(atom.element.symbol not in ORGANIC_ELEMENTS for atom in atoms):
         raise ValueError("This residue contains elements outside the supported organic GAFF2 chemistry. Coordinated metals and organometallic ligands need a specialized model.")
+    if chemistry and chemistry.get("canonical_isomeric_smiles"):
+        reference = Chem.MolFromSmiles(chemistry["canonical_isomeric_smiles"])
+        if reference is not None and any(a.GetNumRadicalElectrons() for a in reference.GetAtoms()):
+            raise ValueError("Each ligand must be one connected, closed-shell chemical graph. Radical states require a specialized model; the source state was retained.")
     rw = Chem.RWMol()
     expected_stereo, expected_bonds = {}, {}
     if block is not None:
@@ -298,6 +302,8 @@ def _mapped_variant(mol, smiles):
     if selected is None:
         raise ValueError("The ligand SMILES override is invalid.")
     selected = Chem.RemoveHs(selected)
+    if len(Chem.GetMolFrags(selected)) != 1 or any(a.GetNumRadicalElectrons() for a in selected.GetAtoms()):
+        raise ValueError("Ligand overrides must describe one connected, closed-shell state; radicals require a specialized model.")
     if selected.GetNumAtoms() != mol.GetNumAtoms():
         raise ValueError("Selected protonation/SMILES must retain every ligand heavy atom.")
     maps = [atom.GetAtomMapNum() for atom in selected.GetAtoms()]
@@ -371,11 +377,18 @@ def _select_state(mol, names, component_id, ph, override):
         protected_n = {match[0] for match in mol.GetSubstructMatches(amide)}
         protected_n.update(a.GetIdx() for a in mol.GetAtoms() if a.GetSymbol() == 'N'
                            and any(n.GetSymbol() == 'N' for n in a.GetNeighbors()))
-        variants, filtered = [], set()
+        variants, filtered, restored_maps = [], set(), False
         for smiles in raw:
             proposed = Chem.MolFromSmiles(smiles)
             if proposed is None:
                 raise ValueError('The pH heuristic produced invalid ligand chemistry.')
+            if {a.GetAtomMapNum() for a in proposed.GetAtoms()} != set(range(1, mol.GetNumAtoms() + 1)):
+                # Dimorphite's normalization can omit an existing phosphate-O
+                # map (observed for CCD NAD). Recover it only from a unique
+                # element/connectivity mapping constrained by every surviving
+                # map, never from atom order or geometric proximity.
+                proposed = _restore_protonation_maps(mapped, proposed)
+                restored_maps = True
             by_map = {a.GetAtomMapNum(): a for a in proposed.GetAtoms()}
             if set(by_map) != set(range(1, mol.GetNumAtoms() + 1)):
                 raise ValueError('The pH heuristic lost the ligand atom identity map.')
@@ -396,11 +409,47 @@ def _select_state(mol, names, component_id, ph, override):
         selected = variants[0]
         if filtered:
             warning += " Unsupported amide/N–N protonation proposals at " + ', '.join(sorted(filtered)) + " were filtered; source states retained. Review these sites or supply an explicit ligand SMILES state."
+        if restored_maps:
+            warning += " A missing protonation-tool atom map was restored by a unique element/connectivity match constrained by all retained maps."
         method = "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N–N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking"
     return selected, {"original_smiles": original, "original_formal_charge": Chem.GetFormalCharge(mol),
                       "selected_smiles": Chem.MolToSmiles(selected, isomericSmiles=True),
                       "formal_charge": Chem.GetFormalCharge(selected), "candidate_smiles": candidates,
                       "protonation_method": method, "ph": ph, "warnings": [warning]}
+
+
+def _restore_protonation_maps(original, proposed):
+    """Recover omitted maps only when graph identity has one possible solution."""
+    if original.GetNumAtoms() != proposed.GetNumAtoms():
+        raise ValueError("The pH heuristic changed ligand atom count.")
+    known = [a.GetAtomMapNum() for a in proposed.GetAtoms() if a.GetAtomMapNum()]
+    if len(known) != len(set(known)) or any(i < 1 or i > original.GetNumAtoms() for i in known):
+        raise ValueError("The pH heuristic produced conflicting ligand atom identity maps.")
+    query = Chem.RWMol()
+    for atom in original.GetAtoms():
+        query.AddAtom(Chem.AtomFromSmarts(f"[#{atom.GetAtomicNum()}]"))
+    for bond in original.GetBonds():
+        query.AddBond(bond.GetBeginAtomIdx(), bond.GetEndAtomIdx(), Chem.BondType.UNSPECIFIED)
+        query.ReplaceBond(query.GetNumBonds()-1, Chem.BondFromSmarts('~'))
+    matches = []
+    candidates = proposed.GetSubstructMatches(query.GetMol(), uniquify=False, maxMatches=4096)
+    if len(candidates) >= 4096:
+        raise ValueError("Protonation atom-map recovery exceeded its bounded graph search. Supply an explicit atom-mapped state.")
+    for match in candidates:
+        if all(proposed.GetAtomWithIdx(j).GetAtomMapNum() in (0, i+1) for i,j in enumerate(match)):
+            matches.append(match)
+            if len(matches) > 1:
+                break
+    if len(matches) != 1:
+        raise ValueError("The pH heuristic lost the ligand atom identity map and it cannot be restored uniquely. Supply an explicit atom-mapped state.")
+    result = Chem.Mol(proposed)
+    for i,j in enumerate(matches[0]):
+        result.GetAtomWithIdx(j).SetAtomMapNum(i+1)
+    edges = {tuple(sorted((result.GetAtomWithIdx(b.GetBeginAtomIdx()).GetAtomMapNum(), result.GetAtomWithIdx(b.GetEndAtomIdx()).GetAtomMapNum()))) for b in result.GetBonds()}
+    expected = {tuple(sorted((b.GetBeginAtomIdx()+1,b.GetEndAtomIdx()+1))) for b in original.GetBonds()}
+    if edges != expected:
+        raise ValueError("The pH heuristic changed ligand heavy-atom connectivity.")
+    return result
 
 
 def _graph_from_override(residue, coordinates, smiles):
@@ -412,6 +461,8 @@ def _graph_from_override(residue, coordinates, smiles):
     if selected is None:
         raise ValueError('The ligand SMILES override is invalid.')
     selected = Chem.RemoveHs(selected)
+    if len(Chem.GetMolFrags(selected)) != 1 or any(a.GetNumRadicalElectrons() for a in selected.GetAtoms()):
+        raise ValueError("Ligand overrides must describe one connected, closed-shell state; radicals require a specialized model.")
     if selected.GetNumAtoms() != len(atoms) or len(set(names)) != len(names):
         raise ValueError('The ligand SMILES must match every uniquely named bound heavy atom.')
     if len(atoms) > MAX_LIGAND_HEAVY_ATOMS or any(a.element.symbol not in ORGANIC_ELEMENTS for a in atoms):
@@ -511,6 +562,8 @@ def _models(dataset_id, ph=7.0, overrides=None):
     from .residue_identity import protein_residue_keys
     register_topology_definitions()
     loaded = app.PDBFile(str(exact_input_path(dataset_id)))
+    from .preparation import canonicalize_protonation_aliases
+    canonicalize_protonation_aliases(loaded.topology)
     protein_keys = protein_residue_keys(dataset_id, loaded.topology, loaded.positions)
     coordinates = np.asarray(loaded.positions.value_in_unit(unit.angstrom))
     components, source_cif = _component_ids(dataset_id, loaded.topology)
@@ -520,18 +573,20 @@ def _models(dataset_id, ph=7.0, overrides=None):
     if chemistry and (not chemistry.get("authoritative_bonds") or len(chemistry["atoms"]) != loaded.topology.getNumAtoms()):
         chemistry = None
     models = []
+    ion_records = {record["key"]: record for record in inspect_ions(loaded.topology)}
     for residue in loaded.topology.residues():
         if residue_key(residue) in protein_keys or residue.name in STANDARD_RESIDUES or residue.name.upper() in storage.WATERS:
             continue
         if residue.name.upper() in SUPPORTED_IONS:
-            if len(list(residue.atoms())) != 1:
-                raise ValueError(f'{_key(residue)} is named as an ion but contains multiple atoms; it cannot be silently skipped.')
-            continue
+            if not ion_records[_key(residue)]["error"]:
+                continue
         key = _key(residue)
         description = {"key": key, "chain": residue.chain.id, "resid": residue.id, "insertion_code": residue.insertionCode,
                        "residue": residue.name, "component_id": components.get(key, residue.name), "error": None,
                        "atom_indices": [atom.index for atom in residue.atoms()]}
         try:
+            if key in ion_records and ion_records[key]["error"]:
+                raise ValueError(ion_records[key]["error"])
             for bond in loaded.topology.bonds():
                 a, b = bond
                 if (a.residue == residue) != (b.residue == residue):
@@ -729,6 +784,11 @@ def _parameterize(mol, folder, namespace, on_progress, check_cancel):
     for dihedral in structure.dihedrals:
         if dihedral.improper:
             atoms = [dihedral.atom1, dihedral.atom2, dihedral.atom3, dihedral.atom4]
+            # Amber can reverse a quartet to avoid a negative zero atom index
+            # in prmtop's sign-coded improper records. Reversing all four atoms
+            # preserves the signed torsion and its energy/forces exactly.
+            if all(atom in atoms[1].bond_partners for atom in (atoms[0], atoms[2], atoms[3])):
+                atoms.reverse()
             if not all(atom in atoms[2].bond_partners for atom in [atoms[0], atoms[1], atoms[3]]):
                 raise ValueError('An Amber improper does not use the expected central third atom.')
             key = tuple(atom.type for atom in atoms)

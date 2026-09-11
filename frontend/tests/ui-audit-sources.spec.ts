@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect } from '@playwright/test';
 import { fileURLToPath } from 'node:url';
 import { readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
@@ -149,10 +150,10 @@ test('audit: validated complex result exposes prepared coordinates and parameter
   await expect(page.getByRole('button', { name: 'Save snapshot', exact: true })).toBeEnabled();
   await page.getByTitle('Switch dataset', { exact: true }).click();
   await page
-    .locator('.library-popover')
-    .getByRole('button')
+    .locator('.workspace-library__row')
     .filter({ hasText: dataset.name })
     .first()
+    .getByRole('button', { name: 'Open', exact: true })
     .click();
   await expect(page.locator('.structure-card h2')).toHaveText(dataset.name);
   await expect(page.getByRole('button', { name: 'Save snapshot', exact: true })).toBeEnabled();

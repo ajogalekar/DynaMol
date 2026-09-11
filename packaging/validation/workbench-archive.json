@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "build_id": "9413166b6b1729cb",
+  "archive": "/Users/ashujo/Documents/Science/DynaMol/build/releases/DynaMol-0.1.0-macos-arm64.zip",
+  "bytes": 536728341,
+  "sha256": "ed851d1e1e1f41f94b202b7d641c9a9b6f1d8e5525803de563f3f7a5761f63d3",
+  "internal_source_files_verified": 615,
+  "zip_crc_verified": true,
+  "private_datasets_or_jobs_included": false,
+  "frontend_asset": "index-YBadVVti.js",
+  "native_signing": "ad-hoc launcher only; not Apple Developer signed or notarized",
+  "minimum_macos": "14.0",
+  "architecture": "arm64",
+  "current_source_parity_files_checked": 615,
+  "application_validation": "workbench-app.json"
+}

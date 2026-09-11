@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "scope": "Software checkpoint continuity on short ubiquitin NVT tests; no equilibration, convergence or bitwise reproducibility claim.",
+  "seed": 2026,
+  "engines": {
+    "openmm": {
+      "job_id": "e0337f3fbb9d44ba",
+      "config": {
+        "dataset_id": "c1cd9ae428b34949",
+        "engine": "openmm",
+        "name": "Recovery openmm",
+        "duration_ps": 0.8,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 50,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "implicit",
+        "minimize": true,
+        "equilibration_steps": 10,
+        "padding_nm": 1
+      },
+      "interrupted_checkpoint_step": 50,
+      "diagnostics_available_while_running": true,
+      "live_diagnostics_before_resume": true,
+      "tampered_system_rejected": true,
+      "different_runtime_rejected": true,
+      "cooperative_stop_checkpoint_step": 150,
+      "status": "completed",
+      "saved_frames": 9,
+      "atoms": 1231,
+      "final_time_ps": 0.8,
+      "unique_strictly_increasing_times": true,
+      "saved_prefix_unchanged": true,
+      "finite_energy_temperature_coordinates": true,
+      "energy_rows": 9,
+      "restart_provenance": [
+        {
+          "requested_at": "2026-09-11T06:53:14.012006+00:00",
+          "previous_status": "interrupted",
+          "checkpoint_sha256": "ea23fee1294249fb1cdb097e29522b8bf81271d4a640e1ebe7aff3ae32ae3d97",
+          "checkpoint_step": 50,
+          "previous_elapsed_seconds": 95.4,
+          "original_configuration_retained": true
+        },
+        {
+          "requested_at": "2026-09-11T06:53:19.150537+00:00",
+          "previous_status": "cancelled",
+          "checkpoint_sha256": "99d42bc7e0a9ccb9f3c558864da5b407a6d295f0402e748f056f05a3801dfb87",
+          "checkpoint_step": 150,
+          "previous_elapsed_seconds": 100.38,
+          "original_configuration_retained": true
+        }
+      ],
+      "outputs_sha256": {
+        "energies.csv": "b0feb11a3ca12d1a0e95b7d254ca4661a14817e8f643f17c63f5605193fe0c54",
+        "provenance.json": "a06add809cc8afe9972dea0dc0ec126d824dbf98f5b9e8217c08f1ed1a02b08f"
+      }
+    },
+    "gromacs": {
+      "job_id": "be90711eee84481d",
+      "config": {
+        "dataset_id": "c1cd9ae428b34949",
+        "engine": "gromacs",
+        "name": "Recovery gromacs",
+        "duration_ps": 6.0,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 100,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 10,
+        "padding_nm": 1
+      },
+      "interrupted_checkpoint_step": 900,
+      "diagnostics_available_while_running": true,
+      "orphaned_native_child_stopped_before_resume": true,
+      "live_diagnostics_before_resume": true,
+      "tampered_system_rejected": true,
+      "different_runtime_rejected": true,
+      "cooperative_stop_checkpoint_step": 1050,
+      "verified_retained_prefix_frames": 11,
+      "status": "completed",
+      "saved_frames": 31,
+      "atoms": 26842,
+      "final_time_ps": 6.0,
+      "unique_strictly_increasing_times": true,
+      "saved_prefix_unchanged": true,
+      "finite_energy_temperature_coordinates": true,
+      "energy_rows": 31,
+      "restart_provenance": [
+        {
+          "requested_at": "2026-09-11T06:53:50.743034+00:00",
+          "previous_status": "interrupted",
+          "checkpoint_sha256": "f2b5b73ed245a5520e0a65c4403dfc00517145cb8a05448ffa4ea71ee5c84a48",
+          "checkpoint_step": null,
+          "previous_elapsed_seconds": 17.76,
+          "original_configuration_retained": true
+        },
+        {
+          "requested_at": "2026-09-11T06:53:51.501741+00:00",
+          "previous_status": "cancelled",
+          "checkpoint_sha256": "f2b5b73ed245a5520e0a65c4403dfc00517145cb8a05448ffa4ea71ee5c84a48",
+          "checkpoint_step": null,
+          "previous_elapsed_seconds": 18.36,
+          "original_configuration_retained": true
+        }
+      ],
+      "outputs_sha256": {
+        "energies.csv": "bf61688b2b0a7eaa127cee9506f5c1cffa99bb341d5771735b7757f9779322ec",
+        "provenance.json": "bf62cef5cfcfe4bdec3eb14de1644f9d7d65e141876828032da3ec8d2c27c9fb"
+      }
+    }
+  },
+  "input_sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9"
+}

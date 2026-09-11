@@ -1,0 +1,75 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 28,
+  "query": "reproducibility uncertainty tautomer benchmark",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-05-06",
+      "score": 29.0,
+      "snippet": "…ntroduction One factor often overlooked when applying machine learning (ML) in small-molecule drug discovery is the influence of tautomers on model predictions. Drug-like molecules, especially those containing heterocycles and conjugated pi systems, can exist in several different tautomeric forms. These forms feature varying bond orders between the atoms. Consequently, the molecular representation used in an ML model varies. This remains true regardless of whether we’re using molecular fingerprints, topological de…",
+      "tags": [
+        "Tautomers"
+      ],
+      "title": "The Trouble With Tautomers",
+      "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-08-03T06:03:00.001-07:00",
+      "score": 26.0,
+      "snippet": "Most papers describing new methods for machine learning (ML) in drug discovery report some sort of benchmark comparing their algorithm and/or molecular representation with the current state of the art. In the past, I’ve written extensively about statistics and how methods should be compared. In this post, I’d like to focus instead on the datasets we use to benchmark and compare methods. Many papers I’ve read recently use the MoleculeNet dataset, released by the Pande group at Stanford in 2017, as the “standard”…",
+      "tags": [],
+      "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2026-04-12",
+      "score": 25.0,
+      "snippet": "…- | :--- | :--- | :--- | | 2026-02-07 | AI in Drug Discovery - Please Stop Fishing in the Bathtub! | GitHub | AI, Drug Discovery, Benchmarking | Critiques the misuse of the DUD-E dataset for validating machine learning models, arguing that models often \"cheat\" by recognizing simple chemical patterns rather than actual protein-ligand interactions. | | 2026-01-17 | Practical Cheminformatics with Marimo | GitHub | Marimo, Jupyter, Python, Visualization | Introduces Marimo, a reactive Python notebook, as a superior alt…",
+      "tags": [
+        "Index"
+      ],
+      "title": "Practical Cheminformatics Index",
+      "url": "https://patwalters.github.io/Practical-Cheminformatics-Index/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2026-08-29",
+      "score": 24.0,
+      "snippet": "How I benchmarked three new chemistry foundation models on two ADMET datasets without cloning a single Git repository. A Whole New World Few things in computational work are as satisfying as reading a compelling paper, grabbing the code off GitHub, and testing it on a trusted dataset. Yet all too often, that initial enthusiasm gets derailed by practical headaches. Hours disappear into debugging version conflicts across CUDA, PyTorch, PyTorch Lightning, and an endless web of dependencies. Even when the code runs,…",
+      "tags": [
+        "ADMET",
+        "Machine Learning",
+        "LLM"
+      ],
+      "title": "Let the Agents Do the Benchmarking",
+      "url": "https://patwalters.github.io/Let-the-Agents-Do-the-Benchmarking/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 16.0,
+      "snippet": "…to three parts, with parts II and III to be posted in the next couple of weeks. I. Docking, protein structure prediction, and benchmarking II. Large Language Models, active learning, federated learning, generative models, and explainable AI III. Review articles 2023 was a bit of a mixed bag for AI in drug discovery. Several groups reported that the deep learning methods for protein-ligand docking weren’t quite what they were initially cracked up to be. AlphaFold2 became pervasive, and people started to inves…",
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2021-01-18T15:43:00.003-08:00",
+      "score": 12.0,
+      "snippet": "…list reflects a few interesting trends I saw this year. More of a practical focus on active learning Efforts to address model uncertainty, as well as the admission that it's a very difficult problem The (re)emergence of molecular representations that incorporate 3D structure Several interesting strategies for data augmentation Additional efforts toward model interpretability, coupled with the acknowledgment that this is also a difficult problem The application of generative models to more practical objectiv…",
+      "tags": [],
+      "title": "AI in Drug Discovery 2020 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2021/01/ai-in-drug-discovery-2020-highly.html"
+    }
+  ]
+}

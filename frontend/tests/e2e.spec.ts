@@ -1,4 +1,5 @@
-import { test, expect, type Page, type APIRequestContext, type TestInfo } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page, type APIRequestContext, type TestInfo } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 
 type Atom = { index: number; name: string; residue: string; resid: number; element: string };
@@ -40,10 +41,10 @@ async function pickAtom(page: Page, atom: Atom) {
 async function chooseDataset(page: Page, name: string) {
   await page.getByTitle('Switch dataset', { exact: true }).click();
   await page
-    .locator('.library-popover')
-    .getByRole('button')
+    .locator('.workspace-library__row')
     .filter({ hasText: name })
     .first()
+    .getByRole('button', { name: 'Open', exact: true })
     .click();
   await expect(page.locator('.structure-card h2')).toHaveText(name);
   await expect(page.getByRole('button', { name: 'Save snapshot', exact: true })).toBeEnabled();
@@ -127,7 +128,7 @@ test('desktop renders molecular geometry; playback, seeking, camera and visibili
   await assertRenderedScene(page, testInfo, 'desktop-ball-stick');
   await page.getByRole('textbox', { name: 'Find a residue', exact: true }).fill('35');
   await page.getByRole('button', { name: 'Focus residue', exact: true }).click();
-  await expect(page.getByRole('status')).toContainText('Focused on 35');
+  await expect(page.locator('.toast')).toContainText('Focused on 35');
   const snapshot = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Save snapshot', exact: true }).click();
   const download = await snapshot;
@@ -306,17 +307,17 @@ test('a slower earlier dataset lookup cannot overwrite the latest library select
   });
   await page.getByTitle('Switch dataset', { exact: true }).click();
   await page
-    .locator('.library-popover')
-    .getByRole('button')
+    .locator('.workspace-library__row')
     .filter({ hasText: older.name })
     .first()
+    .getByRole('button', { name: 'Open', exact: true })
     .click();
   await observed;
   await page
-    .locator('.library-popover')
-    .getByRole('button')
+    .locator('.workspace-library__row')
     .filter({ hasText: latest.name })
     .first()
+    .getByRole('button', { name: 'Open', exact: true })
     .click();
   await expect(page.locator('.structure-card h2')).toHaveText(latest.name);
   release();

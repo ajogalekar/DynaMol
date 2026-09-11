@@ -1,4 +1,5 @@
-import { expect, test, type Locator, type Page } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 async function expectOnscreen(page: Page, locator: Locator) {
   await expect(locator).toBeVisible();
@@ -34,8 +35,10 @@ for (const viewport of [
     ).toHaveAttribute('aria-pressed', 'true');
     const open = page.getByRole('button', { name: 'Open files', exact: true });
     const simulate = page.getByRole('button', { name: 'New simulation', exact: true });
+    const projects = page.getByRole('button', { name: 'Projects', exact: true });
     await expectOnscreen(page, open);
     await expectOnscreen(page, simulate);
+    await expectOnscreen(page, projects);
     await expectOnscreen(page, page.getByRole('link', { name: 'DynaMol home' }));
     const canvas = await page.locator('.molecular-viewer__canvas canvas').boundingBox();
     expect(canvas!.width).toBeGreaterThan(100);
@@ -53,6 +56,20 @@ for (const viewport of [
     );
     await expectOnscreen(page, page.getByRole('button', { name: 'Close import', exact: true }));
     await page.getByRole('button', { name: 'Close import', exact: true }).click();
+    await projects.click();
+    const projectDialog = page.getByRole('dialog', {
+      name: 'Pick up where you left off.',
+      exact: true,
+    });
+    await expect(projectDialog).toBeVisible();
+    expect(await projectDialog.evaluate((node) => document.fullscreenElement?.contains(node))).toBe(
+      true,
+    );
+    await expectOnscreen(
+      page,
+      page.getByRole('button', { name: 'Close workspace library', exact: true }),
+    );
+    await page.getByRole('button', { name: 'Close workspace library', exact: true }).click();
     await simulate.click();
     const studio = page.getByRole('dialog', { name: 'Set molecules in motion.' });
     await expect(studio).toBeVisible();
@@ -88,7 +105,5 @@ test('fullscreen state follows browser exits and handles an absent API', async (
     }),
   );
   await page.getByRole('button', { name: 'Full screen', exact: true }).click();
-  await expect(page.getByRole('status')).toContainText(
-    'Fullscreen is unavailable in this browser.',
-  );
+  await expect(page.locator('.toast')).toContainText('Fullscreen is unavailable in this browser.');
 });

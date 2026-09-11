@@ -1,4 +1,5 @@
-import { test, expect, type Page, type TestInfo } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page, type TestInfo } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
@@ -129,8 +130,12 @@ test('Studio PDB upload stays beside the live view and exposes known missing loo
   await expect(build).not.toBeChecked();
   await build.check();
   await expect(build).toBeChecked();
-  await build.uncheck();
   await expect(studio.getByRole('button', { name: 'Prep protein', exact: true })).toBeEnabled();
+  await build.uncheck();
+  await expect(studio.getByLabel('Preparation readiness', { exact: true })).toContainText(
+    'Unresolved internal sequence gaps would create artificial peptide connections',
+  );
+  await expect(studio.getByRole('button', { name: 'Prep protein', exact: true })).toBeDisabled();
   await expect(studio.getByLabel('Preparation pH', { exact: true })).toHaveValue('7');
   const inspection = await (await request.get(`/api/datasets/${imported.id}/inspection`)).json();
   expect(inspection.has_sequence).toBe(true);
@@ -153,13 +158,11 @@ test('Studio MOL2 upload preserves explicit atoms, bonds, and source charges in 
   const response = page.waitForResponse(
     (r) => r.url().endsWith('/api/structures/upload') && r.request().method() === 'POST',
   );
-  await studio
-    .getByLabel('Upload simulation structure', { exact: true })
-    .setInputFiles({
-      name: `${name}.mol2`,
-      mimeType: 'chemical/x-mol2',
-      buffer: Buffer.from(mol2),
-    });
+  await studio.getByLabel('Upload simulation structure', { exact: true }).setInputFiles({
+    name: `${name}.mol2`,
+    mimeType: 'chemical/x-mol2',
+    buffer: Buffer.from(mol2),
+  });
   const imported = await (await response).json();
   await sourceLoaded(page, name);
   expect(imported.n_atoms).toBe(3);

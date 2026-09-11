@@ -17,6 +17,7 @@ import {
 import type { Dataset, Inspection, Job } from '../types';
 import { api } from '../api';
 import './ModifiedResidues.css';
+import ReadinessPanel from './ReadinessPanel';
 
 export default function StructureWorkbench({
   dataset,
@@ -53,6 +54,7 @@ export default function StructureWorkbench({
     [inspecting, setInspecting] = useState(false),
     [inspectionError, setInspectionError] = useState('');
   const [submittingPreparation, setSubmittingPreparation] = useState(false);
+  const [prepReady, setPrepReady] = useState(false);
   const [options, setOptions] = useState(false),
     [buildMissing, setBuildMissing] = useState(false),
     [addAtoms, setAddAtoms] = useState(true),
@@ -118,7 +120,7 @@ export default function StructureWorkbench({
     await load(() => api.importStructure(form));
   }
   async function prepare() {
-    if (!dataset || locked || busy) return;
+    if (!dataset || locked || busy || !prepReady) return;
     setBusy(true);
     setSubmittingPreparation(true);
     onPreparationRequest(true);
@@ -540,6 +542,16 @@ export default function StructureWorkbench({
             {!!inspection?.blockers.length && (
               <div className="inline-warning">{inspection.blockers.join(' ')}</div>
             )}
+            <ReadinessPanel
+              mode="preparation"
+              datasetId={dataset.id}
+              settings={{ph, add_missing_atoms: addAtoms, build_missing_residues: buildMissing,
+                optimize_sidechains: optimize, remove_waters: removeWaters,
+                remove_heterogens: removeHeterogens, ligand_overrides: Object.fromEntries(
+                  Object.entries(ligandOverrides).filter(([, value]) => value.trim())), seed}}
+              onReadyChange={setPrepReady}
+              suspended={locked || preparing}
+            />
             <div className="prep-action-row">
               <label className="prep-ph">
                 Target pH
@@ -557,7 +569,7 @@ export default function StructureWorkbench({
               <button
                 type="button"
                 className="primary-button"
-                disabled={disabled || !hasProtein || inspecting}
+                disabled={disabled || !hasProtein || inspecting || !prepReady}
                 aria-busy={submittingPreparation || preparing}
                 onClick={() => void prepare()}
               >

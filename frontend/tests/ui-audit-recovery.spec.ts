@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect } from '@playwright/test';
 
 test('audit recovery: unavailable initial example exposes import and a working fallback example', async ({
   page,
@@ -29,11 +30,11 @@ test('audit recovery: unavailable fullscreen reports a dismissible notification'
       Promise.reject(new Error('Unavailable in audit browser'));
   });
   await page.getByRole('button', { name: 'Full screen', exact: true }).click();
-  await expect(page.getByRole('status')).toContainText(
+  await expect(page.locator('.toast')).toContainText(
     'Fullscreen is unavailable in this browser.',
   );
   await page.getByRole('button', { name: 'Dismiss notification', exact: true }).click();
-  await expect(page.getByRole('status')).toHaveCount(0);
+  await expect(page.locator('.toast')).toHaveCount(0);
 });
 
 test('audit recovery: graphics context loss blocks snapshots and reload restores the scene', async ({

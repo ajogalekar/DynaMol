@@ -31,6 +31,8 @@ export interface Dataset {
     summary?: string[];
     warnings?: string[];
     job_id?: string;
+    modified_residues?: ModifiedResidueInspection[];
+    requires_explicit_solvent?: boolean;
     ligand_parameters?: {
       forcefield: string;
       charge_method: string;
@@ -107,6 +109,7 @@ export interface Inspection {
   ligands: LigandInspection[];
   modified_residues?: ModifiedResidueInspection[];
   ligand_errors: string[];
+  ions?: {key: string; residue: string; element: string; formal_charge: number; supported: boolean; error?: string | null; model?: string}[];
   ligand_runtime?: { available: boolean; message?: string } | null;
   metal_environment?: { retained_coordinating_waters: string[][]; contacts: unknown[] };
 }

@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "recorded_at": "2026-09-11T07:38:17.144024+00:00",
+  "backend_targeted_tests": {
+    "passed": 98,
+    "seconds": 10.63,
+    "scope": "Recovery, resource admission, diagnostics/readiness, immutable downloads, workspace backups, preparation and parameter continuity"
+  },
+  "browser": {
+    "test": "frontend/tests/recovery-controls.spec.ts",
+    "passed": 1,
+    "seconds": 31.7,
+    "server": "http://127.0.0.1:8874",
+    "data_directory": "data/integration-checks/recovery-ui",
+    "job_id": "68ba585758b14594",
+    "actual_engine": "OpenMM CPU",
+    "result_status": "completed",
+    "production_steps": 500,
+    "resume_attempts": 1,
+    "checks": [
+      "Live native temperature appears in a plotted chart while running",
+      "Stop reaches cancelled and enables compatible Resume",
+      "Cancelled job Files downloads a nonempty ZIP",
+      "Resume button launches continuation of the same job",
+      "Completion retains Files and opens the result trajectory",
+      "No page JavaScript errors",
+      "Simulation readiness suspends while a job is active",
+      "Readiness rechecks after completion and Start simulation becomes enabled again"
+    ],
+    "artifact_note": "First attempt completed its real MD workflow but Playwright disposal failed because another concurrent test run removed the shared trace directory. Rerun used a separate output directory and passed.",
+    "dist_asset": "index-YBadVVti.js",
+    "artifact_directory": "data/integration-checks/recovery-browser-artifacts",
+    "command": "DYNAMOL_TEST_ISOLATED=1 DYNAMOL_BASE_URL=http://127.0.0.1:8874 DYNAMOL_RECOVERY_TEST_INPUT=recovery-ui-protein npx playwright test recovery-controls.spec.ts --output=/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/recovery-browser-artifacts --reporter=list"
+  },
+  "native_engine_report": "recovery-native.json",
+  "native_engine_report_sha256": "0cbe01d25f3383e884e928a100653fd5e4851a0ec5cdb47fb5b0a0822fc717ed",
+  "native_engines_passed": true,
+  "native_menu": {
+    "swift_typecheck": "passed",
+    "actual_menu_clicks": "not tested; requires unlocked desktop"
+  },
+  "review": "recovery-review.md",
+  "final_integration": {
+    "resource_guards": "Shared estimates/blockers enforced by both readiness and actual HTTP submission; rejected requests do not create jobs or alter datasets",
+    "job_downloads": "Unique immutable ZIP snapshots serialize with Resume only during archive construction; simultaneous responses own separate paths",
+    "temporary_download_cleanup": "Job and project ZIP responses clean up on normal completion, rejected Range headers and interrupted sends",
+    "build": "Latest root production build; index-YBadVVti.js (browser recovery verified against this asset)",
+    "source_frozen": true
+  },
+  "startup_cancellation_report": "cancellation-startup.json",
+  "startup_cancellation": "Repeated real OpenMM and solvation startup cancellations finish cancelled and their worker processes exit; six deterministic regressions preserve cancellation intent, unexpected interruption, and native orphan ownership."
+}

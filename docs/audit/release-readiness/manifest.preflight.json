@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T06:20:24.445375+00:00",
+  "purpose": "Verify DynaMol release-readiness software: representative amino-acid/ligand/ion/cofactor identity and force-field support; interrupted simulation checkpoint/recovery; RMSD/RMSF and live energy/temperature diagnostics. Bounded CPU/native consistency and functional tests; no biological accuracy, pKa population, coordination-shell, convergence, efficacy or comparative scientific claims.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13",
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1",
+      "gemmi": "0.7.5",
+      "dimorphite-dl": "2.0.2"
+    },
+    "planned_seed": 2026,
+    "hardware": "Local Apple Silicon CPU; native AmberTools and OpenMM Reference/CPU; no cloud or GPU compute",
+    "budget": "At most 12 unique ligand native parameterizations, 10-minute timeout per native command; <=20-step chemistry numerical-continuity simulations; recovery fixtures up to 400 OpenMM or 3,000 GROMACS steps to reach a checkpoint before interrupt/cancel/resume; existing curated PTM parity fixtures; no long production MD",
+    "inputs": {
+      "matrix": "Standard residue templates/protonation variants/termini/disulfide; SEP,TPO,PTR,HYP; neutral alcohol/aromatic, anionic carboxylate/phosphate, cationic amine, ATP/ADP/NAD/FAD; Na/Cl/K/Mg/Ca; expected rejection of unsupported elements, radicals, missing ligand atoms, covalent inhibitors/cofactors and unregistered amino acids. MSE/ALY only if compatible published parameters and native parity can be established."
+    }
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve identities, elements, all deposited heavy atoms and stereochemistry; no parent-residue mutation, arbitrary GAFF on covalent proteins, fabricated parameters or silent removal. Keep view/identity/preparation/native-check status separate. Explicitly disclose fixed protonation assumptions and nonbonded ion limitations. Resume must preserve topology/system/config/platform compatibility and retained coordinates. RMSD/RMSF use documented selections, alignment/reference, units and handling of periodic boundaries."
+  },
+  "validation": {
+    "status": "Preflight design; execution pending",
+    "scope": "Tests against native Amber/OpenMM and analytic/synthetic motion baselines; exact charges/connectivity/stereochemistry checks, failure-case regressions; checkpoint compatibility and output continuity; finite simulation diagnostics. Representative tests cannot establish universal chemical coverage."
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "Software checks, no scientific ranking, held-out experimental benchmark or convergence claim."
+  },
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not a domain-expert certification or Pat Walters endorsement."
+}

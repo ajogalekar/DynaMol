@@ -19,6 +19,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 from . import config, jobs, storage
 from .analysis import measure, preview
+from .file_responses import TemporaryFileResponse
 from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest, InspectionRequest
 
 
@@ -183,16 +184,26 @@ def cancel(job_id: str):
 
 @app.get("/api/jobs/{job_id}/download")
 def download(job_id: str):
-    job = jobs.get_job(job_id)
-    if job["status"] in {"queued", "running", "cancelling"}:
-        raise HTTPException(409, "Wait for the job to finish, or cancel it, before downloading a consistent output archive.")
-    folder = config.JOBS_DIR / storage.safe_id(job_id)
-    target = folder / "dynamol-output.zip"
-    with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
-        for path in sorted(folder.rglob("*")):
-            if path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(folder.resolve()) and path != target and path.suffix != ".tmp":
-                archive.write(path, arcname=str(path.relative_to(folder)))
-    return FileResponse(target, media_type="application/zip", filename=f"DynaMol-{job_id}.zip")
+    target = None
+    try:
+        # Resume and job state transitions take this same lock. Freeze a private
+        # archive here, then stream it without holding the computation lock.
+        with jobs._lock:
+            job = jobs.get_job(job_id)
+            if job["status"] in {"queued", "running", "cancelling"}:
+                raise HTTPException(409, "Wait for the job to finish, or cancel it, before downloading a consistent output archive.")
+            folder = config.JOBS_DIR / storage.safe_id(job_id)
+            with tempfile.NamedTemporaryFile(prefix="dynamol-job-", suffix=".zip", delete=False) as temporary:
+                target = Path(temporary.name)
+            with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
+                for path in sorted(folder.rglob("*")):
+                    if path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(folder.resolve()) and path.suffix not in {".zip", ".tmp"}:
+                        archive.write(path, arcname=str(path.relative_to(folder)))
+        return TemporaryFileResponse(target, media_type="application/zip", filename=f"DynaMol-{job_id}.zip")
+    except Exception:
+        if target is not None:
+            target.unlink(missing_ok=True)
+        raise
 
 
 @app.post("/api/structures/upload")
@@ -237,6 +248,11 @@ async def inspect_complex(dataset_id: str, settings: InspectionRequest):
 def solvate_structure(dataset_id: str, settings: SolvationRequest):
     from . import preparation
     return preparation.submit_solvation(dataset_id, settings.model_dump())
+
+
+from . import workspaces, recovery, readiness, diagnostics, structural_analysis
+for router_module in (workspaces, recovery, readiness, diagnostics, structural_analysis):
+    app.include_router(router_module.router)
 
 
 # API routes above remain authoritative. A production build can run as one

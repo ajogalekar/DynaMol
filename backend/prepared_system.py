@@ -112,6 +112,8 @@ def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent:
 
     if solvent not in {"implicit", "explicit"}:
         raise ValueError("Choose implicit or explicit solvent.")
+    if (preparation or {}).get("ions") and solvent != "explicit":
+        raise ValueError("Prepared ions require explicit TIP3P water; the retained ion model has no validated implicit-solvent treatment.")
     bundle = _bundle(preparation)
     modified = (preparation or {}).get("modified_residues", [])
     if modified and solvent != "explicit":

@@ -1,4 +1,5 @@
-import { test, expect, type Page, type TestInfo } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page, type TestInfo } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
@@ -50,10 +51,9 @@ test('audit: navigation, structure details, library, guide links and modal focus
   await page.getByRole('button', { name: 'Structure details', exact: true }).click();
   await expect(page.locator('.dataset-details')).toHaveCount(0);
   await page.getByTitle('Switch dataset', { exact: true }).click();
-  await expect(page.locator('.library-popover')).toBeVisible();
-  await idleKeyboard(page);
+  await expect(page.locator('.workspace-library')).toBeVisible();
   await page.keyboard.press('Escape');
-  await expect(page.locator('.library-popover')).toHaveCount(0);
+  await expect(page.locator('.workspace-library')).toHaveCount(0);
   await studio(page);
   await page.getByRole('button', { name: 'Explore', exact: true }).click();
   await expect(page.getByRole('dialog')).toHaveCount(0);
@@ -197,11 +197,11 @@ test('audit: mouse camera controls, auto rotation, focus validation and full scr
   for (const query of ['GLY35', 'A:35', '999999']) {
     await page.getByRole('textbox', { name: 'Find a residue', exact: true }).fill(query);
     await page.getByRole('button', { name: 'Focus residue', exact: true }).click();
-    await expect(page.getByRole('status')).toContainText(
+    await expect(page.locator('.toast')).toContainText(
       query === '999999' ? 'No matching residue' : `Focused on ${query}`,
     );
     await page.getByRole('button', { name: 'Dismiss notification', exact: true }).click();
-    await expect(page.getByRole('status')).toHaveCount(0);
+    await expect(page.locator('.toast')).toHaveCount(0);
   }
   await page.getByRole('button', { name: 'Full screen', exact: true }).click();
   await expect.poll(() => page.evaluate(() => !!document.fullscreenElement)).toBe(true);

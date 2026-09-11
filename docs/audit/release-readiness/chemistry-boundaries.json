@@ -1,0 +1,69 @@
+{
+  "scope": "Expected unsupported chemistry remains preserved and visibly rejected; real retained-ion/capped-peptide preparation and solvation checks. No coordination accuracy claim.",
+  "checks": [
+    {
+      "id": "boronic acid outside validated organic element set",
+      "expected": "unsupported",
+      "passed": true,
+      "messages": [
+        "This residue contains elements outside the supported organic GAFF2 chemistry. Coordinated metals and organometallic ligands need a specialized model."
+      ],
+      "dataset_id": "311820795c5c4ee5"
+    },
+    {
+      "id": "radical methyl",
+      "expected": "unsupported",
+      "passed": true,
+      "messages": [
+        "Each ligand must be one connected, closed-shell chemical graph. Radical states require a specialized model; the source state was retained."
+      ],
+      "dataset_id": "9fa61ee54c024d09"
+    },
+    {
+      "id": "heme with iron",
+      "expected": "unsupported",
+      "passed": true,
+      "messages": [
+        "This residue contains elements outside the supported organic GAFF2 chemistry. Coordinated metals and organometallic ligands need a specialized model."
+      ],
+      "dataset_id": "09465faa05554e1c"
+    },
+    {
+      "id": "covalently linked FAD",
+      "expected": "unsupported",
+      "passed": true,
+      "messages": [
+        "Original structure records a covalent ligand/polymer link. This ligand requires a specialized covalent force-field model; no molecule was removed."
+      ],
+      "dataset_id": "ebd1ede663ec4869"
+    },
+    {
+      "id": "ATP missing heavy atom",
+      "expected": "unsupported",
+      "passed": true,
+      "messages": [
+        "CCD heavy-atom identity mismatch (missing ['O1A'], extra []). Missing ligand heavy atoms will not be guessed."
+      ],
+      "dataset_id": "36b04ea191314885"
+    },
+    {
+      "id": "capped protein with five retained ions",
+      "passed": true,
+      "preparation_job": "b4ba55d720204dbb",
+      "solvation_job": "d61d0ef68bdf478c",
+      "prepared_dataset": "73ae73f5d51f4f39",
+      "solvated_dataset": "fffc21865d2b499a",
+      "charge_states_e": {
+        "NA": 1.0,
+        "CL": -1.0,
+        "K": 1.0,
+        "MG": 2.0,
+        "CA": 2.0
+      },
+      "solvated_atoms": 3785,
+      "requires_explicit_solvent": true,
+      "all_ion_provenance_retained": true
+    }
+  ],
+  "passed": true
+}

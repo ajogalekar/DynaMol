@@ -1,4 +1,5 @@
-import { test, expect, type Page, type TestInfo } from '@playwright/test';
+import { test } from './testWorkspace';
+import { expect, type Page, type TestInfo } from '@playwright/test';
 
 type ScenePixels = { neutral: number; white: number; ribbon: number };
 

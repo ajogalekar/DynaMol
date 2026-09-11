@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T06:42:33.750046+00:00",
+  "purpose": "Chemistry subtask postflight: representative protein state, ligand/cofactor, ion and unsupported-chemistry handling in DynaMol. Software behavior and native numerical consistency only; no universal coverage, biological accuracy, state-population or convergence claims. Aggregate workspace/recovery/structural-analysis postflight remains separate.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13",
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1",
+      "gemmi": "0.7.5",
+      "dimorphite-dl": "2.0.2"
+    },
+    "planned_seed": 2026,
+    "hardware": "Local Apple Silicon CPU; native AmberTools and OpenMM Reference/CPU; no cloud or GPU compute",
+    "budget": "At most 12 unique ligand native parameterizations, 10-minute timeout per native command; <=20-step chemistry numerical-continuity simulations; recovery fixtures up to 400 OpenMM or 3,000 GROMACS steps to reach a checkpoint before interrupt/cancel/resume; existing curated PTM parity fixtures; no long production MD",
+    "inputs": {
+      "matrix": "Standard residue templates/protonation variants/termini/disulfide; SEP,TPO,PTR,HYP; neutral alcohol/aromatic, anionic carboxylate/phosphate, cationic amine, ATP/ADP/NAD/FAD; Na/Cl/K/Mg/Ca; expected rejection of unsupported elements, radicals, missing ligand atoms, covalent inhibitors/cofactors and unregistered amino acids. MSE/ALY only if compatible published parameters and native parity can be established."
+    },
+    "outputs_and_exclusions_recorded": true,
+    "evidence_sha256": {
+      "chemistry-matrix.json": "4fbcf91ef16caf6cc1d44a21313c3ceb59b0cbe486b960c215f33e44de182968",
+      "chemistry-matrix.initial.json": "3d10f8fa68b5f19cd492597c51ee059c758fdad9866546ca1a6fbc9e74d06688",
+      "chemistry-boundaries.json": "80e5ac6f8cb6423c3caf79ee7c74ea4ca65cc14fc552b82bf8b178f752117ddb",
+      "chemistry-tests.txt": "67ec4884bbe25f76e8ee56972b2942353d6559821feea7d4a6ee60032b491389",
+      "blog-search.json": "cf88b6454f94ba7991f93d4dcbf1b7496f334a7f58291a0c98006ddc86ced606",
+      "corpus-manifest.json": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d"
+    },
+    "postflight_source_sha256": {
+      "backend/ions.py": "b75a6c9a7b45d13067b0a2be4a7b64986086a8b7ebe609df706cf20c48955479",
+      "backend/ligands.py": "1917b3636c4e474421894c492b8ce546b0362b57aad09c1553b659579fd3eb2f",
+      "backend/preparation.py": "5cb8f7e98375ecc9005b11801a2b935a7894f2b853a2fc0183d70472c305663b",
+      "backend/preparation_worker.py": "ad9d898fdf02f03b35dbf3823f90e05ea90199e19483da18bf5b0564c30baece",
+      "backend/prepared_system.py": "b1771289a005dc2b846057aa7ba18ec3abe0b4853753fd793c58ef093df8e847",
+      "backend/tests/test_chemistry_support.py": "9274e6de34c2087c8250e0b2fbb8eda18413a85cebda12afae7c6b29d114e72f",
+      "backend/tests/test_residue_identity.py": "f4a2950a278c05139c96e3f63b62febcb7b419938da97cd219dc6905deaad94e",
+      "scripts/check_chemistry_matrix.py": "06f3341a36c772df156f978fdd342cc22985d635dd6d62b3a1770f17e34f2acb",
+      "scripts/check_chemistry_boundaries.py": "48d382a988c65132704dbc5910f2fd9dfc6caa6def598c5ad665e8f26dcebd41"
+    },
+    "source_hash_scope": "Current source snapshot; per-ligand native provenance retains the exact implementation hash present when that ligand was prepared. Not an immutable packaged release."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve identities, elements, all deposited heavy atoms and stereochemistry; no parent-residue mutation, arbitrary GAFF on covalent proteins, fabricated parameters or silent removal. Keep view/identity/preparation/native-check status separate. Explicitly disclose fixed protonation assumptions and nonbonded ion limitations. Resume must preserve topology/system/config/platform compatibility and retained coordinates. RMSD/RMSF use documented selections, alignment/reference, units and handling of periodic boundaries."
+  },
+  "validation": {
+    "status": "Passed bounded representative checks; broader scientific accuracy and convergence are unvalidated",
+    "positive_matrix": {
+      "cases": 43,
+      "passed": true,
+      "evidence": "docs/audit/release-readiness/chemistry-matrix.json"
+    },
+    "expected_boundaries_and_ion_pipeline": {
+      "checks": 6,
+      "passed": true,
+      "evidence": "docs/audit/release-readiness/chemistry-boundaries.json"
+    },
+    "regressions": {
+      "passed": 76,
+      "failed": 0,
+      "duration_seconds": 4.09,
+      "evidence": "docs/audit/release-readiness/chemistry-tests.txt"
+    },
+    "limitations": [
+      "Native positive fixtures are representative software checks, not an exhaustive applicability-domain validation.",
+      "Five 0.2-fs nonperiodic integration steps per chemistry fixture are numerical continuity only; no production dynamics or aqueous validation.",
+      "MSE/ALY and other unregistered unnatural residues still require dedicated compatible parameters.",
+      "NAD/FAD fixed states are model choices, not redox/protonation-population predictions.",
+      "Monatomic Mg/Ca parameters do not validate coordination energetics or bonded metal models.",
+      "Initial audit failures and test-fixture corrections are retained; final results are not a blind benchmark."
+    ]
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "notes": "No statistical efficacy/accuracy comparison. Meaningful uncertainty intervals cannot be inferred from deterministic implementation tests."
+  },
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not a domain-expert certification or Pat Walters endorsement.",
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "scope": "Numerical native compatibility and defined software behavior, not scientifically converged dynamics."
+  },
+  "blog_context": {
+    "corpus_records": 91,
+    "source_counts": {
+      "blogger": 74,
+      "github-pages": 17
+    },
+    "cache_sync_time": "2026-09-10T23:52:27.926966+00:00",
+    "search": "tautomer protonation molecular representation reproducibility uncertainty",
+    "evidence": "docs/audit/release-readiness/blog-search.json",
+    "source": "https://patwalters.github.io/The-Trouble-With-Tautomers/",
+    "application": "The distinction between molecular representation and experimentally populated states is relevant here; extension to these MD preparations is this model review\u2019s inference."
+  }
+}

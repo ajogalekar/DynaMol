@@ -244,7 +244,9 @@ def protonation_inventory(topology, selected_variants, charges=None):
         elif residue.name == "LYS":
             state = "LYN" if len(inventory.get("NZ", [])) == 2 else "LYS"
         elif residue.name == "CYS":
-            state = "CYS" if inventory.get("SG") else "CYX"
+            disulfide = any(a.name == "SG" and b.name == "SG" and a.residue != b.residue
+                            and residue in (a.residue, b.residue) for a, b in topology.bonds())
+            state = "CYX" if disulfide else "CYS" if inventory.get("SG") else "CYM"
         record = {"chain": residue.chain.id, "resid": residue.id, "residue": residue.name, "state": state, "openmm_returned_variant": returned, "bonded_hydrogens": inventory, "hydrogen_count": sum(atom.element == app.element.hydrogen for atom in members)}
         if charges is not None:
             record["forcefield_charge_e"] = float(sum(charges[atom.index] for atom in members))
@@ -266,7 +268,8 @@ class PreparationWorker(Worker):
         register_topology_definitions()
         fixer = PDBFixer(filename=str(self.folder / "input.pdb"), platform=platform)
         register_fixer_templates(fixer)
-        from .preparation import current_fixer
+        from .preparation import current_fixer, canonicalize_protonation_aliases
+        protonation_aliases = canonicalize_protonation_aliases(fixer.topology)
         from .complex_topology import metal_environment, residue_key, subset
         from .ligands import prepare_ligands, SUPPORTED_IONS
         from .residue_identity import protein_residue_keys
@@ -285,6 +288,8 @@ class PreparationWorker(Worker):
         input_keys = [atom_key(atom) for atom in input_atoms]
         original_backbone = {atom_key(atom) for atom in input_atoms if atom.name in {"N", "CA", "C", "O"} and residue_key(atom.residue) in protein_keys}
         summary, warnings = [], ["Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics."]
+        if protonation_aliases:
+            summary.append("Normalized LYN/CYM protonation aliases to LYS/CYS template names with unchanged heavy-atom identities; the selected pH determines newly assigned hydrogens.")
         warnings.extend(modification_inspection["warnings"])
         if modified:
             summary.append(f"Retained {len(modified)} modified protein residues with compatible named residue templates; covalent modifications are not removed as heterogens.")
@@ -479,6 +484,11 @@ class PreparationWorker(Worker):
         added = [{"output_index": atom.index, "identity": list(atom_key(atom))} for atom in output_atoms if atom_key(atom) not in old_keys]
         preparation = {"parent_dataset_id": options["dataset_id"], "ph": options["ph"], "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment", "summary": summary, "warnings": warnings, "seed": options["seed"], "forcefield_files": files, "simulation_ready": True, "exact_topology_file": "prepared.pdb", "protonation_states": states, "selected_variants": selected_variants, "removed_atom_counts": dict(counts), "rebuilt_segments": rebuilt, "repaired_atoms": missing_record, "sidechain_adjustment": rotamers, "relaxation": relaxation, "original_to_prepared_atom_map_file": "atom-map.json", "net_forcefield_charge_e": float(sum(charges)) if charges is not None else None, "stereochemistry": stereochemistry, "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."}
         preparation.update(job_id=self.job["id"], metal_environment=environment["report"] if ion_keys else None, preserved_bound_geometry=geometry)
+        if protonation_aliases:
+            preparation["input_protonation_aliases"] = protonation_aliases
+        if ion_keys:
+            from .ions import inspect_ions
+            preparation.update(ions=inspect_ions(modeller.topology), requires_explicit_solvent=True)
         if modified:
             preparation.update(modified_residues=modified, modified_residue_parameters=modified_forcefield_provenance(), requires_explicit_solvent=True)
         if ligand_parameters:

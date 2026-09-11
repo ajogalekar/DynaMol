@@ -21,6 +21,7 @@ from .modified_residues import register_topology_definitions, register_fixer_tem
 MAX_LOOP_LENGTH = 6
 MAX_REBUILT_RESIDUES = 12
 MAX_PROTEIN_ATOMS = 20_000
+SUPPORTED_CAPS = frozenset({"ACE", "NME"})
 PREPARATION_DEFAULTS = {"name": "Protein preparation", "ph": 7.0, "add_missing_atoms": True, "build_missing_residues": False, "optimize_sidechains": True, "remove_waters": True, "remove_heterogens": False, "ligand_overrides": {}, "seed": 2026}
 
 
@@ -92,6 +93,7 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
     from openmm import Platform
     register_topology_definitions()
     fixer = PDBFixer(filename=str(exact_input_path(dataset_id)), platform=Platform.getPlatformByName("CPU"))
+    fixer.protonation_aliases = canonicalize_protonation_aliases(fixer.topology)
     register_fixer_templates(fixer)
     source_path = sequence_source if sequence_source is not None else find_sequence_source(dataset_id)
     if source_path:
@@ -141,6 +143,29 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
                 mapped.append(sequence)
         fixer.sequences = mapped
     return fixer, source_path
+
+
+def canonicalize_protonation_aliases(topology):
+    """Use parent naming for two protonation aliases OpenMM does not normalize.
+
+    LYN/LYS and CYM/CYS have the same heavy-atom graph. Preparation explicitly
+    removes existing H and reassigns pH-dependent states; source files remain
+    intact and this naming normalization is recorded. No modified sidechain
+    chemistry (MSE, ALY, phosphorylated residues, etc.) is substituted.
+    """
+    records = []
+    for residue in topology.residues():
+        if residue.name not in {"LYN", "CYM"}:
+            continue
+        original = residue.name
+        parent = {"LYN": "LYS", "CYM": "CYS"}[original]
+        records.append({"chain": residue.chain.id, "resid": residue.id,
+                        "insertion_code": (residue.insertionCode or "").strip(),
+                        "input_alias": original, "template_name": parent})
+        residue.name = parent
+    if records:
+        topology.createStandardBonds()
+    return records
 
 
 def find_missing_residues_preserving_identity(fixer):
@@ -199,6 +224,8 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     atoms = metadata["atoms"]
     warnings, blockers = [], []
     fixer, sequence_source = current_fixer(dataset_id)
+    if fixer.protonation_aliases:
+        warnings.append("Input LYN/CYM names identify protonation states of lysine/cysteine. Their heavy-atom graphs are retained under LYS/CYS template names; pressing Prep explicitly reassigns hydrogens at the selected pH and records the resulting state.")
     protein_keys = protein_residue_keys(dataset_id, fixer.topology, fixer.positions)
     protein_atoms = sum(residue_key(atom.residue) in protein_keys for atom in fixer.topology.atoms())
     heterogens = sorted({f"{residue.name} {residue.chain.id}:{residue.id}" for residue in fixer.topology.residues() if residue_key(residue) not in protein_keys and residue.name not in storage.WATERS})
@@ -208,24 +235,35 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
         blockers.append(f"Preparation is capped at {MAX_PROTEIN_ATOMS:,} protein atoms on this local CPU workflow.")
     from .ligands import inspect_ligands, ligand_runtime_status
     from .complex_topology import metal_environment
+    from .ions import inspect_ions
     ligands = inspect_ligands(dataset_id, ph, ligand_overrides)
     ligand_errors = [f"{ligand['key']}: {ligand['error']}" for ligand in ligands if ligand.get("error")]
     coordination = metal_environment(fixer.topology, fixer.positions)["report"]
+    ions = inspect_ions(fixer.topology)
     if ligands:
         warnings.append("Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.")
     if coordination["contacts"]:
         warnings.append("Observed coordinating waters and protein donor sidechains are retained. Standard nonbonded ion parameters do not establish metal-coordination accuracy.")
+    if any(ion["supported"] for ion in ions):
+        warnings.append("Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.")
     modified = inspect_modified(fixer.topology, ph)
     warnings.extend(modified["warnings"])
     blockers.extend(modified["blockers"])
     modified_residues = list(modified["residues"])
     for residue in fixer.topology.residues():
-        if residue_key(residue) not in protein_keys or residue.name in STANDARD_PROTEINS or residue.name in SUPPORTED_MODIFIED:
+        if residue_key(residue) not in protein_keys or residue.name in STANDARD_PROTEINS | SUPPORTED_CAPS or residue.name in SUPPORTED_MODIFIED:
             continue
         insertion = (residue.insertionCode or '').strip()
         message = f"{residue.name} {residue.chain.id}:{residue.id}{insertion} is a modified or unnatural protein residue with no supported covalent amino-acid template. Its identity and atoms are preserved, including when ligand removal is selected. Supply a force-field template for this exact residue and state; automatic mutation or free-ligand GAFF treatment is not performed."
         blockers.append(message)
         modified_residues.append({"chain": residue.chain.id, "resid": residue.id, "insertion_code": insertion, "residue": residue.name, "supported": False, "error": message})
+    for first, second in fixer.topology.bonds():
+        if first.residue == second.residue or any(residue_key(atom.residue) not in protein_keys for atom in (first, second)):
+            continue
+        peptide = {first.name, second.name} == {"C", "N"}
+        disulfide = all(atom.name == "SG" and atom.residue.name == "CYS" for atom in (first, second))
+        if not peptide and not disulfide:
+            blockers.append(f"Unsupported covalent protein crosslink: {first.residue.name} {first.residue.chain.id}:{first.residue.id}/{first.name}–{second.residue.name} {second.residue.chain.id}:{second.residue.id}/{second.name}. Standard peptide and cysteine disulfide links are supported; this link needs a matching specialized template. No bond or atom was removed.")
     try:
         find_missing_residues_preserving_identity(fixer)
     except (ValueError, IndexError) as exc:
@@ -260,7 +298,7 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     if any(entry["terminal"] for entry in missing_residues):
         warnings.append("Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.")
     warnings.append("pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation.")
-    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "modified_residues": modified_residues, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
+    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "modified_residues": modified_residues, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "ions": ions, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
 
 
 def _validated(settings: dict) -> dict:
@@ -312,7 +350,13 @@ def _submit(settings: dict, operation: str) -> dict:
         return job
 
 
-def submit_preparation(settings: dict) -> dict:
+def validate_preparation(settings: dict) -> tuple[dict, dict]:
+    """Return normalized settings and inspection without creating a job.
+
+    The readiness pane and submission share this exact eligibility check.
+    Chemical-reference retrieval can populate its existing CCD cache, but this
+    function never creates or modifies a dataset or job.
+    """
     settings = _validated(settings)
     inspection = inspect_preparation(settings["dataset_id"], settings["ph"], settings["ligand_overrides"])
     if inspection["blockers"]:
@@ -340,6 +384,11 @@ def submit_preparation(settings: dict) -> dict:
         raise ValueError("An unresolved long backbone connection has no supported missing sequence. Supply the original PDB/mmCIF sequence records or repair the gap externally; residue identities will not be guessed.")
     if inspection["missing_atoms"] and not settings["add_missing_atoms"]:
         raise ValueError("Missing heavy/terminal atoms prevent force-field preparation. Enable missing-atom repair or supply a complete structure.")
+    return settings, inspection
+
+
+def submit_preparation(settings: dict) -> dict:
+    settings, _ = validate_preparation(settings)
     return _submit(settings, "prepare")
 
 
