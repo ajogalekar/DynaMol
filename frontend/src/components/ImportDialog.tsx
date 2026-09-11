@@ -99,7 +99,7 @@ export default function ImportDialog({
             >
               <FileVideo size={23} />
               <b>{trajectory?.name ?? 'Add trajectory'}</b>
-              <small>XTC, DCD, TRR, NetCDF, H5, PDB</small>
+              <small>XTC, DCD, TRR, NetCDF, H5, PDB, XYZ, MDCRD, LAMMPS</small>
               <FolderOpen size={14} />
             </button>
           </div>
@@ -114,7 +114,7 @@ export default function ImportDialog({
             hidden
             ref={trajInput}
             type="file"
-            accept=".xtc,.dcd,.trr,.nc,.netcdf,.h5,.pdb,.xyz,.mdcrd,.crd"
+            accept=".xtc,.dcd,.trr,.nc,.netcdf,.h5,.pdb,.xyz,.mdcrd,.crd,.lammpstrj"
             onChange={(e) => setTrajectory(e.target.files?.[0] ?? null)}
           />
           <div className="form-row">

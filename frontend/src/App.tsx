@@ -313,6 +313,13 @@ export default function App() {
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
+      if (e.key === 'Escape') {
+        setModal(null);
+        setPicking(false);
+        setSelectedAtoms([]);
+        setLibrary(false);
+        return;
+      }
       if (
         ['INPUT', 'SELECT', 'TEXTAREA', 'BUTTON'].includes(tag) ||
         e.metaKey ||
@@ -320,12 +327,6 @@ export default function App() {
         e.altKey
       )
         return;
-      if (e.key === 'Escape') {
-        setModal(null);
-        setPicking(false);
-        setSelectedAtoms([]);
-        setLibrary(false);
-      }
       if (modal && modal !== 'simulation') return;
       if (e.code === 'Space') {
         e.preventDefault();
@@ -340,12 +341,15 @@ export default function App() {
         seek(Math.round(frameRef.current) - 1);
       }
       if (e.key.toLowerCase() === 'f') viewer.current?.fit();
-      if (e.key.toLowerCase() === 'm') setPicking((p) => !p);
+      if (e.key.toLowerCase() === 'm') {
+        if (!picking) setPlaying(false);
+        setPicking(!picking);
+      }
       if (e.key === '?') setModal('help');
     };
     window.addEventListener('keydown', key);
     return () => window.removeEventListener('keydown', key);
-  }, [modal, seek, togglePlayback]);
+  }, [modal, seek, togglePlayback, picking]);
   useEffect(() => {
     if (!modal || modal === 'simulation') return;
     const previous = document.activeElement as HTMLElement | null;
@@ -1466,11 +1470,13 @@ export default function App() {
             <div className="help-limits">
               <b>Version 0.1 · an exploratory workbench</b>
               <p>
-                Automatic preparation currently supports standard proteins. Arbitrary ligands,
-                missing heavy atoms, membranes, and production equilibration protocols need
-                additional preparation. Imports are capped for memory; use a stride for larger
-                trajectories. Periodic datasets play saved frames to avoid smoothing across box
-                boundaries. Short trajectories do not establish convergence.
+                Prepare standard proteins and noncovalent ligands in Simulation Studio: repair
+                missing heavy atoms, review ligand charges, and optionally build supported short
+                loops. Prepared complexes use OpenMM with explicit water; membranes, covalent
+                ligands, unsupported chemistry and production equilibration need additional
+                modeling. Imports are capped for memory; use a stride for larger trajectories.
+                Periodic datasets play saved frames to avoid smoothing across box boundaries. Short
+                trajectories do not establish convergence.
               </p>
             </div>
             <div className="help-links">

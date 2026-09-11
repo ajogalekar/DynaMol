@@ -20,7 +20,7 @@ STANDARD_PROTEINS = {"ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HI
 MAX_LOOP_LENGTH = 6
 MAX_REBUILT_RESIDUES = 12
 MAX_PROTEIN_ATOMS = 20_000
-PREPARATION_DEFAULTS = {"name": "Protein preparation", "ph": 7.0, "add_missing_atoms": True, "build_missing_residues": False, "optimize_sidechains": True, "remove_waters": True, "remove_heterogens": False, "seed": 2026}
+PREPARATION_DEFAULTS = {"name": "Protein preparation", "ph": 7.0, "add_missing_atoms": True, "build_missing_residues": False, "optimize_sidechains": True, "remove_waters": True, "remove_heterogens": False, "ligand_overrides": {}, "seed": 2026}
 
 
 def _json(path: Path) -> dict:
@@ -163,7 +163,9 @@ def backbone_gaps(topology, positions) -> list[dict]:
     return result
 
 
-def inspect_preparation(dataset_id: str) -> dict:
+def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict | None = None) -> dict:
+    if not math.isfinite(ph) or not 0 <= ph <= 14:
+        raise ValueError("Choose a pH between 0 and 14.")
     metadata = storage.get_dataset(dataset_id)
     atoms = metadata["atoms"]
     warnings, blockers = [], []
@@ -173,9 +175,16 @@ def inspect_preparation(dataset_id: str) -> dict:
         blockers.append("Protein preparation requires a standard amino-acid protein. Small molecules and nucleic acids remain viewable but are not prepared by this workflow.")
     if protein_atoms > MAX_PROTEIN_ATOMS:
         blockers.append(f"Preparation is capped at {MAX_PROTEIN_ATOMS:,} protein atoms on this local CPU workflow.")
-    if heterogens:
-        warnings.append("Nonprotein molecules are present. This protein-only preparation cannot parameterize them; explicitly remove heterogens or prepare the complex externally.")
     fixer, sequence_source = current_fixer(dataset_id)
+    from .ligands import inspect_ligands, ligand_runtime_status
+    from .complex_topology import metal_environment
+    ligands = inspect_ligands(dataset_id, ph, ligand_overrides)
+    ligand_errors = [f"{ligand['key']}: {ligand['error']}" for ligand in ligands if ligand.get("error")]
+    coordination = metal_environment(fixer.topology, fixer.positions)["report"]
+    if ligands:
+        warnings.append("Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.")
+    if coordination["contacts"]:
+        warnings.append("Observed coordinating waters and protein donor sidechains are retained. Standard nonbonded ion parameters do not establish metal-coordination accuracy.")
     protein_residues = {(atom["chain"], str(atom["resid"])) for atom in atoms if atom["category"] == "protein"}
     unsupported = sorted({residue.name for residue in fixer.topology.residues() if residue.name not in STANDARD_PROTEINS and (residue.chain.id, residue.id) in protein_residues})
     if unsupported:
@@ -207,7 +216,7 @@ def inspect_preparation(dataset_id: str) -> dict:
     if any(entry["terminal"] for entry in missing_residues):
         warnings.append("Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.")
     warnings.append("pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation.")
-    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
+    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
 
 
 def _validated(settings: dict) -> dict:
@@ -222,6 +231,10 @@ def _validated(settings: dict) -> dict:
     if not 1 <= seed <= 2_147_483_646:
         raise ValueError("Seed must be an integer from 1 to 2,147,483,646.")
     settings["seed"] = seed
+    overrides = settings.get("ligand_overrides", {})
+    if not isinstance(overrides, dict) or len(overrides) > 100 or any(not isinstance(k, str) or len(k) > 100 or not isinstance(v, str) or not 1 <= len(v) <= 10000 for k, v in overrides.items()):
+        raise ValueError("Ligand overrides must map residue identifiers to explicit-state SMILES strings.")
+    settings["ligand_overrides"] = overrides
     for key in ("add_missing_atoms", "build_missing_residues", "optimize_sidechains", "remove_waters", "remove_heterogens"):
         if not isinstance(settings[key], bool):
             raise ValueError(f"{key} must be true or false.")
@@ -257,11 +270,15 @@ def _submit(settings: dict, operation: str) -> dict:
 
 def submit_preparation(settings: dict) -> dict:
     settings = _validated(settings)
-    inspection = inspect_preparation(settings["dataset_id"])
+    inspection = inspect_preparation(settings["dataset_id"], settings["ph"], settings["ligand_overrides"])
     if inspection["blockers"]:
         raise ValueError(" ".join(inspection["blockers"]))
-    if inspection["heterogen_residues"] and not settings["remove_heterogens"]:
-        raise ValueError("Nonprotein molecules are present. Select explicit heterogen removal to prepare the protein alone, or prepare the complex externally; no molecules were removed.")
+    if not settings["remove_heterogens"]:
+        if inspection["ligand_errors"]:
+            raise ValueError("Ligand chemistry needs attention: " + " ".join(inspection["ligand_errors"]))
+        if inspection["ligands"] and not inspection["ligand_runtime"]["available"]:
+            raise ValueError(inspection["ligand_runtime"]["message"])
+    settings["complex"] = bool(inspection["ligands"] and not settings["remove_heterogens"])
     internal = [entry for entry in inspection["missing_residues"] if not entry["terminal"]]
     if internal and not settings["build_missing_residues"]:
         raise ValueError("Unresolved internal sequence gaps would create artificial peptide connections. Enable short missing-loop building, or repair the structure externally before protein preparation.")

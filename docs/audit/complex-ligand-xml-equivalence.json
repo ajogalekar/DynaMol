@@ -1,0 +1,66 @@
+[
+  {
+    "folder": "data/integration-checks/ligand-smoke/9ax6/ligand-521bfd1ad4e6",
+    "validation": {
+      "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+      "energy_tolerance_kj_mol": 0.0001,
+      "force_tolerance_kj_mol_nm": 0.001,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": 1195.477886289613,
+          "xml_energy_kj_mol": 1195.4778863738802,
+          "energy_delta_kj_mol": 8.426718522969168e-08,
+          "maximum_force_delta_kj_mol_nm": 1.2394476698318613e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": 1203.055643912542,
+          "xml_energy_kj_mol": 1203.0556439957652,
+          "energy_delta_kj_mol": 8.322308531205636e-08,
+          "maximum_force_delta_kj_mol_nm": 1.206109118356835e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": 1200.4417484741634,
+          "xml_energy_kj_mol": 1200.4417485586716,
+          "energy_delta_kj_mol": 8.45082013256615e-08,
+          "maximum_force_delta_kj_mol_nm": 1.2501274113674299e-06
+        }
+      ],
+      "passed": true
+    }
+  },
+  {
+    "folder": "data/integration-checks/ligand-smoke/9ax6/ligand-7a2495383b1b",
+    "validation": {
+      "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+      "energy_tolerance_kj_mol": 0.0001,
+      "force_tolerance_kj_mol_nm": 0.001,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -971.4891298969904,
+          "xml_energy_kj_mol": -971.4891299144896,
+          "energy_delta_kj_mol": -1.7499132809462026e-08,
+          "maximum_force_delta_kj_mol_nm": 6.568411663465668e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -969.4065314743902,
+          "xml_energy_kj_mol": -969.4065314915383,
+          "energy_delta_kj_mol": -1.7148067854577675e-08,
+          "maximum_force_delta_kj_mol_nm": 6.38258882190712e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -969.3708448628461,
+          "xml_energy_kj_mol": -969.370844879871,
+          "energy_delta_kj_mol": -1.7024945009325165e-08,
+          "maximum_force_delta_kj_mol_nm": 6.529344318551011e-07
+        }
+      ],
+      "passed": true
+    }
+  }
+]

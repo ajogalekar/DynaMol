@@ -15,6 +15,7 @@ from pathlib import Path
 
 from . import config
 from .models import SimulationConfig
+from .prepared_system import copy_ligand_parameters, ligand_parameter_files, load_prepared_forcefield
 from .storage import atomic_json, dataset_dir, get_dataset, safe_id
 
 _lock = threading.Lock()
@@ -94,14 +95,18 @@ def submit_job(settings: SimulationConfig) -> dict:
         raise ValueError("This simulation preset supports standard proteins only. RNA/DNA can be viewed and analyzed, but nucleic-acid and protein–nucleic-acid simulations require a separately parameterized workflow. No atoms were removed.")
     preparation_state = metadata.get("preparation")
     solvation_state = metadata.get("solvation")
+    has_ligands = any(atom["category"] == "ligands" for atom in metadata["atoms"])
+    ligand_files = ligand_parameter_files(dataset_dir(settings.dataset_id), preparation_state, required=has_ligands)
     if (preparation_state or solvation_state) and settings.engine == "gromacs":
         raise ValueError("The current GROMACS adapter cannot yet preserve an explicitly prepared protonation state or solvent preview. Use OpenMM for this prepared dataset; GROMACS requires a separate validated state-conversion workflow.")
+    if ligand_files and settings.solvent != "explicit":
+        raise ValueError("Prepared protein–ligand complexes require explicit TIP3P water. GBn2 implicit parameters are not available for these ligands.")
     if preparation_state and settings.solvent == "explicit" and not solvation_state:
         raise ValueError("Create the explicit-water preview first so the simulation uses the periodic box you inspected. No hidden solvent box will be generated for a prepared protein.")
     if preparation_state and not preparation_state.get("simulation_ready", True):
         raise ValueError("This preparation is not marked simulation-ready; repair its unresolved structural issues first.")
     standard = {"ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL", "HID", "HIE", "HIP", "CYX", "ASH", "GLH", "LYN"}
-    unsupported = sorted({atom["residue"] for atom in metadata["atoms"] if atom["category"] == "ligands" or (atom["category"] == "protein" and atom["residue"] not in standard)})
+    unsupported = sorted({atom["residue"] for atom in metadata["atoms"] if atom["category"] == "protein" and atom["residue"] not in standard})
     if unsupported:
         raise ValueError("This protein simulation workflow does not parameterize ligands or nonstandard residues: " + ", ".join(unsupported) + ". Prepare a supported protein-only structure; no atoms were removed.")
     if not any(atom["category"] == "protein" for atom in metadata["atoms"]):
@@ -114,6 +119,11 @@ def submit_job(settings: SimulationConfig) -> dict:
     if (preparation_state or solvation_state) and input_path.name != "prepared.pdb":
         raise ValueError("The exact prepared topology is missing. Repeat preparation to preserve the requested protonation state.")
     input_structure = app.PDBFile(str(input_path))
+    if ligand_files:
+        forcefield, _ = load_prepared_forcefield(dataset_dir(settings.dataset_id), preparation_state)
+        unmatched = forcefield.getUnmatchedResidues(input_structure.topology)
+        if unmatched:
+            raise ValueError("The saved complex parameters do not cover these residues: " + ", ".join(sorted({residue.name for residue in unmatched})) + ". Prepare the complex again; no molecules were removed.")
     if any(gap["structural_break"] for gap in backbone_gaps(input_structure.topology, input_structure.positions)):
         raise ValueError("A long backbone C–N connection indicates an unresolved structural gap. Inspect and repair the protein before simulation; an artificial stretched peptide bond will not be simulated.")
     engine = next(engine for engine in health()["engines"] if engine["id"] == settings.engine)
@@ -130,6 +140,7 @@ def submit_job(settings: SimulationConfig) -> dict:
         job = {"id": job_id, "name": settings.name, "engine": settings.engine, "status": "queued", "stage": "Starting worker", "progress": 0, "completed_steps": 0, "total_steps": total, "elapsed_seconds": 0, "logs": [f"Queued {total:,} production steps on {config.CPU_THREADS} CPU threads."], "config": settings.model_dump(), "created_at": now}
         atomic_json(folder / "config.json", settings.model_dump())
         shutil.copy2(input_path, folder / "input.pdb")
+        copy_ligand_parameters(dataset_dir(settings.dataset_id), folder, preparation_state)
         atomic_json(folder / "input-state.json", {"preparation": preparation_state, "solvation": solvation_state})
         atomic_json(folder / "status.json", job)
         environment = os.environ.copy()

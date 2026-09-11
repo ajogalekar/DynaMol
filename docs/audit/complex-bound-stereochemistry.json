@@ -1,0 +1,218 @@
+[
+  {
+    "chain": "E",
+    "resid": "201",
+    "topology_name": "GNP",
+    "CCD": "GNP",
+    "charge": 0,
+    "heavy_atoms": 32,
+    "centers": [
+      {
+        "name": "PB",
+        "element": "P",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "PA",
+        "element": "P",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C4'",
+        "element": "C",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C3'",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C2'",
+        "element": "C",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C1'",
+        "element": "C",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      }
+    ],
+    "geometry_smiles": "Nc1nc2c(ncn2[C@@H]2O[C@H](CO[P@](=O)(O)O[P@](=O)(O)NP(=O)(O)O)[C@@H](O)[C@H]2O)c(=O)[nH]1",
+    "note": "Neutral CCD graph mapped by atom names onto imported bound heavy-atom coordinates; no parameterization, coordinate edits or protonation selection."
+  },
+  {
+    "chain": "G",
+    "resid": "201",
+    "topology_name": "GNP",
+    "CCD": "GNP",
+    "charge": 0,
+    "heavy_atoms": 32,
+    "centers": [
+      {
+        "name": "PB",
+        "element": "P",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "PA",
+        "element": "P",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C4'",
+        "element": "C",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C3'",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C2'",
+        "element": "C",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C1'",
+        "element": "C",
+        "CCD": "R",
+        "geometry_CIP": "R",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      }
+    ],
+    "geometry_smiles": "Nc1nc2c(ncn2[C@@H]2O[C@H](CO[P@](=O)(O)O[P@](=O)(O)NP(=O)(O)O)[C@@H](O)[C@H]2O)c(=O)[nH]1",
+    "note": "Neutral CCD graph mapped by atom names onto imported bound heavy-atom coordinates; no parameterization, coordinate edits or protonation selection."
+  },
+  {
+    "chain": "I",
+    "resid": "201",
+    "topology_name": "A1A",
+    "CCD": "A1AHB",
+    "charge": 0,
+    "heavy_atoms": 58,
+    "centers": [
+      {
+        "name": "C13",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "C15",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C17",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "C23",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "C42",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "N3",
+        "element": "N",
+        "CCD": "S",
+        "geometry_CIP": null,
+        "tag": "CHI_UNSPECIFIED"
+      }
+    ],
+    "geometry_smiles": "CCn1c(-c2cc(N3CCN(C)CC3)cnc2[C@H](C)OC)c2c3cc(ccc31)-c1csc(n1)C[C@H](NC(=O)[C@H]1C[C@@H]1C)C(=O)N1CCC[C@H](N1)C(=O)OCC(C)(C)C2",
+    "note": "Neutral CCD graph mapped by atom names onto imported bound heavy-atom coordinates; no parameterization, coordinate edits or protonation selection."
+  },
+  {
+    "chain": "J",
+    "resid": "201",
+    "topology_name": "A1A",
+    "CCD": "A1AHB",
+    "charge": 0,
+    "heavy_atoms": 58,
+    "centers": [
+      {
+        "name": "C13",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "C15",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CW"
+      },
+      {
+        "name": "C17",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "C23",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "C42",
+        "element": "C",
+        "CCD": "S",
+        "geometry_CIP": "S",
+        "tag": "CHI_TETRAHEDRAL_CCW"
+      },
+      {
+        "name": "N3",
+        "element": "N",
+        "CCD": "S",
+        "geometry_CIP": null,
+        "tag": "CHI_UNSPECIFIED"
+      }
+    ],
+    "geometry_smiles": "CCn1c(-c2cc(N3CCN(C)CC3)cnc2[C@H](C)OC)c2c3cc(ccc31)-c1csc(n1)C[C@H](NC(=O)[C@H]1C[C@@H]1C)C(=O)N1CCC[C@H](N1)C(=O)OCC(C)(C)C2",
+    "note": "Neutral CCD graph mapped by atom names onto imported bound heavy-atom coordinates; no parameterization, coordinate edits or protonation selection."
+  }
+]

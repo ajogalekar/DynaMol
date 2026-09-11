@@ -1,0 +1,326 @@
+data_A1AHB
+# 
+_chem_comp.id                                    A1AHB 
+_chem_comp.name                                  "(1R,2S)-N-[(1P,7S,9S,13R,20M)-21-ethyl-20-{2-[(1R)-1-methoxyethyl]-5-(4-methylpiperazin-1-yl)pyridin-3-yl}-17,17-dimethyl-8,14-dioxo-15-oxa-4-thia-9,21,27,28-tetraazapentacyclo[17.5.2.1~2,5~.1~9,13~.0~22,26~]octacosa-1(24),2,5(28),19,22,25-hexaen-7-yl]-2-methylcyclopropane-1-carboxamide" 
+_chem_comp.type                                  non-polymer 
+_chem_comp.pdbx_type                             HETAIN 
+_chem_comp.formula                               "C44 H58 N8 O5 S" 
+_chem_comp.mon_nstd_parent_comp_id               ? 
+_chem_comp.pdbx_synonyms                         ? 
+_chem_comp.pdbx_formal_charge                    0 
+_chem_comp.pdbx_initial_date                     2024-03-06 
+_chem_comp.pdbx_modified_date                    2024-04-12 
+_chem_comp.pdbx_ambiguous_flag                   N 
+_chem_comp.pdbx_release_status                   REL 
+_chem_comp.pdbx_replaced_by                      ? 
+_chem_comp.pdbx_replaces                         ? 
+_chem_comp.formula_weight                        811.047 
+_chem_comp.one_letter_code                       ? 
+_chem_comp.three_letter_code                     A1AHB 
+_chem_comp.pdbx_model_coordinates_details        ? 
+_chem_comp.pdbx_model_coordinates_missing_flag   N 
+_chem_comp.pdbx_ideal_coordinates_details        Corina 
+_chem_comp.pdbx_ideal_coordinates_missing_flag   N 
+_chem_comp.pdbx_model_coordinates_db_code        9AX6 
+_chem_comp.pdbx_subcomponent_list                ? 
+_chem_comp.pdbx_processing_site                  RCSB 
+# 
+loop_
+_chem_comp_atom.comp_id 
+_chem_comp_atom.atom_id 
+_chem_comp_atom.alt_atom_id 
+_chem_comp_atom.type_symbol 
+_chem_comp_atom.charge 
+_chem_comp_atom.pdbx_align 
+_chem_comp_atom.pdbx_aromatic_flag 
+_chem_comp_atom.pdbx_leaving_atom_flag 
+_chem_comp_atom.pdbx_stereo_config 
+_chem_comp_atom.pdbx_n_terminal_atom_flag 
+_chem_comp_atom.pdbx_backbone_atom_flag 
+_chem_comp_atom.pdbx_c_terminal_atom_flag 
+_chem_comp_atom.model_Cartn_x 
+_chem_comp_atom.model_Cartn_y 
+_chem_comp_atom.model_Cartn_z 
+_chem_comp_atom.pdbx_model_Cartn_x_ideal 
+_chem_comp_atom.pdbx_model_Cartn_y_ideal 
+_chem_comp_atom.pdbx_model_Cartn_z_ideal 
+_chem_comp_atom.pdbx_component_atom_id 
+_chem_comp_atom.pdbx_component_comp_id 
+_chem_comp_atom.pdbx_ordinal 
+A1AHB C1  C1  C 0 1 N N N N N N 9.483  -12.180 -34.235 -4.623 3.221  -2.343 C1  A1AHB 1   
+A1AHB C10 C2  C 0 1 Y N N N N N 3.597  -17.279 -34.991 3.272  4.130  -2.200 C10 A1AHB 2   
+A1AHB C11 C3  C 0 1 Y N N N N N 1.365  -16.318 -35.112 4.591  2.093  -1.779 C11 A1AHB 3   
+A1AHB C12 C4  C 0 1 N N N N N N -0.107 -16.078 -35.197 5.583  0.969  -1.620 C12 A1AHB 4   
+A1AHB C13 C5  C 0 1 N N S N N N -0.844 -16.967 -34.182 4.922  -0.175 -0.848 C13 A1AHB 5   
+A1AHB C14 C6  C 0 1 N N N N N N -1.485 -19.319 -34.046 6.389  -0.046 1.094  C14 A1AHB 6   
+A1AHB C15 C7  C 0 1 N N S N N N -2.241 -20.398 -34.716 6.603  0.039  2.583  C15 A1AHB 7   
+A1AHB C16 C8  C 0 1 N N N N N N -2.036 -21.809 -34.226 7.092  -1.222 3.299  C16 A1AHB 8   
+A1AHB C17 C9  C 0 1 N N S N N N -3.343 -21.155 -33.995 8.042  -0.040 3.095  C17 A1AHB 9   
+A1AHB C18 C10 C 0 1 N N N N N N -4.591 -21.569 -34.744 8.402  0.798  4.324  C18 A1AHB 10  
+A1AHB C19 C11 C 0 1 N N N N N N -2.021 -16.186 -33.621 5.511  -1.498 -1.270 C19 A1AHB 11  
+A1AHB C2  C12 C 0 1 N N N N N N 9.084  -12.751 -32.887 -4.068 3.668  -0.989 C2  A1AHB 12  
+A1AHB C20 C13 C 0 1 N N N N N N -2.799 -14.471 -31.918 5.459  -3.949 -1.249 C20 A1AHB 13  
+A1AHB C21 C14 C 0 1 N N N N N N -2.243 -13.063 -32.014 5.136  -4.942 -0.132 C21 A1AHB 14  
+A1AHB C22 C15 C 0 1 N N N N N N -0.833 -12.999 -31.433 3.635  -5.009 0.123  C22 A1AHB 15  
+A1AHB C23 C16 C 0 1 N N S N N N 0.095  -14.067 -32.039 2.921  -3.777 -0.417 C23 A1AHB 16  
+A1AHB C24 C17 C 0 1 N N N N N N 1.381  -14.103 -31.250 1.585  -3.607 0.264  C24 A1AHB 17  
+A1AHB C25 C18 C 0 1 N N N N N N 3.225  -12.853 -30.474 -0.462 -2.420 0.605  C25 A1AHB 18  
+A1AHB C26 C19 C 0 1 N N N N N N 3.749  -11.426 -30.511 -1.254 -1.277 -0.034 C26 A1AHB 19  
+A1AHB C27 C20 C 0 1 N N N N N N 4.784  -11.221 -29.385 -2.659 -1.766 -0.390 C27 A1AHB 20  
+A1AHB C28 C21 C 0 1 N N N N N N 2.584  -10.457 -30.292 -0.540 -0.810 -1.305 C28 A1AHB 21  
+A1AHB C29 C22 C 0 1 N N N N N N 4.413  -11.078 -31.864 -1.354 -0.111 0.950  C29 A1AHB 22  
+A1AHB C3  C23 C 0 1 Y N N N N N 6.761  -13.599 -33.325 -1.606 3.117  -0.965 C3  A1AHB 23  
+A1AHB C30 C24 C 0 1 Y N N N N N 5.543  -11.942 -32.337 -1.727 1.150  0.218  C30 A1AHB 24  
+A1AHB C31 C25 C 0 1 Y N N N N N 6.885  -11.678 -32.149 -2.976 1.661  0.076  C31 A1AHB 25  
+A1AHB C32 C26 C 0 1 Y N N N N N 7.428  -10.467 -31.521 -4.213 1.048  0.606  C32 A1AHB 26  
+A1AHB C33 C27 C 0 1 Y N N N N N 8.201  -10.483 -30.334 -4.608 1.276  1.925  C33 A1AHB 27  
+A1AHB C34 C28 C 0 1 Y N N N N N 8.398  -8.158  -30.364 -6.481 -0.041 1.664  C34 A1AHB 28  
+A1AHB C35 C29 C 0 1 Y N N N N N 7.620  -8.058  -31.519 -6.162 -0.315 0.338  C35 A1AHB 29  
+A1AHB C36 C30 C 0 1 Y N N N N N 7.146  -9.233  -32.098 -5.009 0.236  -0.208 C36 A1AHB 30  
+A1AHB C37 C31 C 0 1 N N N N N N 6.344  -6.656  -33.138 -8.144 -1.602 0.346  C37 A1AHB 31  
+A1AHB C38 C32 C 0 1 N N N N N N 5.700  -5.290  -33.174 -9.064 -2.428 -0.555 C38 A1AHB 32  
+A1AHB C39 C33 C 0 1 N N N N N N 6.081  -2.926  -33.310 -9.183 -4.424 -1.922 C39 A1AHB 33  
+A1AHB C4  C34 C 0 1 Y N N N N N 5.442  -13.166 -33.077 -0.816 2.058  -0.477 C4  A1AHB 34  
+A1AHB C40 C35 C 0 1 N N N N N N 7.413  -4.328  -31.898 -7.159 -3.095 -1.890 C40 A1AHB 35  
+A1AHB C41 C36 C 0 1 N N N N N N 8.164  -5.629  -31.774 -6.238 -2.268 -0.989 C41 A1AHB 36  
+A1AHB C42 C37 C 0 1 N N S N N N 8.521  -11.764 -29.589 -3.765 2.154  2.814  C42 A1AHB 37  
+A1AHB C43 C38 C 0 1 N N N N N N 8.198  -11.654 -28.104 -2.993 1.282  3.806  C43 A1AHB 38  
+A1AHB C44 C39 C 0 1 N N N N N N 10.244 -13.379 -29.498 -3.990 4.305  3.847  C44 A1AHB 39  
+A1AHB C5  C40 C 0 1 Y N N N N N 4.365  -13.941 -33.514 0.562  2.055  -0.707 C5  A1AHB 40  
+A1AHB C6  C41 C 0 1 Y N N N N N 4.619  -15.107 -34.233 1.139  3.108  -1.401 C6  A1AHB 41  
+A1AHB C7  C42 C 0 1 Y N N N N N 5.938  -15.498 -34.470 0.349  4.170  -1.850 C7  A1AHB 42  
+A1AHB C8  C43 C 0 1 Y N N N N N 7.022  -14.778 -34.013 -1.000 4.172  -1.641 C8  A1AHB 43  
+A1AHB C9  C44 C 0 1 Y N N N N N 3.517  -15.961 -34.695 2.596  3.085  -1.689 C9  A1AHB 44  
+A1AHB N1  N1  N 0 1 Y N N N N N 7.633  -12.682 -32.759 -2.915 2.837  -0.636 N1  A1AHB 45  
+A1AHB N2  N2  N 0 1 N N N N N N -1.250 -18.230 -34.784 5.141  0.019  0.587  N2  A1AHB 46  
+A1AHB N3  N3  N 0 1 N N S N N N -1.794 -15.374 -32.504 4.905  -2.639 -0.892 N3  A1AHB 47  
+A1AHB N4  N4  N 0 1 N N N N N N -0.519 -15.388 -31.897 3.740  -2.580 -0.166 N4  A1AHB 48  
+A1AHB N5  N5  N 0 1 Y N N N N N 8.682  -9.347  -29.802 -5.710 0.734  2.401  N5  A1AHB 49  
+A1AHB N6  N6  N 0 1 N N N N N N 7.356  -6.815  -32.079 -6.990 -1.134 -0.434 N6  A1AHB 50  
+A1AHB N7  N7  N 0 1 N N N N N N 6.706  -4.238  -33.169 -8.313 -3.562 -1.110 N7  A1AHB 51  
+A1AHB N8  N8  N 0 1 Y N N N N N 2.239  -15.405 -34.791 3.342  2.010  -1.473 N8  A1AHB 52  
+A1AHB O1  O1  O 0 1 N N N N N N -1.056 -19.435 -32.898 7.339  -0.173 0.350  O1  A1AHB 53  
+A1AHB O2  O2  O 0 1 N N N N N N -3.142 -16.239 -34.127 6.520  -1.533 -1.942 O2  A1AHB 54  
+A1AHB O3  O3  O 0 1 N N N N N N 1.672  -14.995 -30.524 1.213  -4.403 1.094  O3  A1AHB 55  
+A1AHB O4  O4  O 0 1 N N N N N N 2.098  -12.986 -31.386 0.816  -2.556 -0.067 O4  A1AHB 56  
+A1AHB O5  O5  O 0 1 N N N N N N 9.916  -12.017 -29.733 -4.610 3.057  3.531  O5  A1AHB 57  
+A1AHB S1  S1  S 0 1 Y N N N N N 2.047  -17.890 -35.349 4.957  3.649  -2.384 S1  A1AHB 58  
+A1AHB H2  H1  H 0 1 N N N N N N 10.577 -12.226 -34.344 -3.851 3.328  -3.105 H2  A1AHB 59  
+A1AHB H1  H2  H 0 1 N N N N N N 9.009  -12.766 -35.036 -4.932 2.178  -2.283 H1  A1AHB 60  
+A1AHB H3  H3  H 0 1 N N N N N N 9.152  -11.133 -34.302 -5.481 3.839  -2.606 H3  A1AHB 61  
+A1AHB H9  H4  H 0 1 N N N N N N 4.509  -17.858 -34.999 2.855  5.093  -2.457 H9  A1AHB 62  
+A1AHB H11 H5  H 0 1 N N N N N N -0.317 -15.021 -34.976 5.893  0.615  -2.602 H11 A1AHB 63  
+A1AHB H10 H6  H 0 1 N N N N N N -0.457 -16.317 -36.212 6.453  1.326  -1.068 H10 A1AHB 64  
+A1AHB H12 H7  H 0 1 N N N N N N -0.151 -17.176 -33.354 3.852  -0.177 -1.053 H12 A1AHB 65  
+A1AHB H14 H8  H 0 1 N N N N N N -2.378 -20.289 -35.802 5.912  0.688  3.121  H14 A1AHB 66  
+A1AHB H15 H9  H 0 1 N N N N N N -1.957 -22.633 -34.950 6.722  -1.402 4.309  H15 A1AHB 67  
+A1AHB H16 H10 H 0 1 N N N N N N -1.363 -22.001 -33.377 7.258  -2.112 2.694  H16 A1AHB 68  
+A1AHB H17 H11 H 0 1 N N N N N N -3.521 -20.822 -32.962 8.834  -0.154 2.355  H17 A1AHB 69  
+A1AHB H20 H12 H 0 1 N N N N N N -5.439 -20.951 -34.414 7.780  0.494  5.166  H20 A1AHB 70  
+A1AHB H18 H13 H 0 1 N N N N N N -4.434 -21.429 -35.824 9.452  0.644  4.574  H18 A1AHB 71  
+A1AHB H19 H14 H 0 1 N N N N N N -4.807 -22.628 -34.539 8.231  1.852  4.107  H19 A1AHB 72  
+A1AHB H4  H15 H 0 1 N N N N N N 9.412  -13.799 -32.817 -3.760 4.712  -1.050 H4  A1AHB 73  
+A1AHB H5  H16 H 0 1 N N N N N N 9.554  -12.165 -32.083 -4.840 3.562  -0.227 H5  A1AHB 74  
+A1AHB H21 H17 H 0 1 N N N N N N -3.743 -14.543 -32.478 6.540  -3.869 -1.365 H21 A1AHB 75  
+A1AHB H22 H18 H 0 1 N N N N N N -2.976 -14.736 -30.865 5.015  -4.292 -2.183 H22 A1AHB 76  
+A1AHB H23 H19 H 0 1 N N N N N N -2.212 -12.758 -33.070 5.495  -5.931 -0.417 H23 A1AHB 77  
+A1AHB H24 H20 H 0 1 N N N N N N -2.896 -12.378 -31.453 5.641  -4.629 0.782  H24 A1AHB 78  
+A1AHB H25 H21 H 0 1 N N N N N N -0.410 -12.005 -31.638 3.231  -5.897 -0.363 H25 A1AHB 79  
+A1AHB H26 H22 H 0 1 N N N N N N -0.891 -13.156 -30.346 3.460  -5.081 1.197  H26 A1AHB 80  
+A1AHB H27 H23 H 0 1 N N N N N N 0.298  -13.835 -33.095 2.761  -3.884 -1.492 H27 A1AHB 81  
+A1AHB H30 H24 H 0 1 N N N N N N 2.899  -13.096 -29.452 -0.296 -2.203 1.660  H30 A1AHB 82  
+A1AHB H29 H25 H 0 1 N N N N N N 4.025  -13.544 -30.778 -1.024 -3.350 0.509  H29 A1AHB 83  
+A1AHB H31 H26 H 0 1 N N N N N N 5.160  -10.188 -29.416 -3.206 -1.996 0.525  H31 A1AHB 84  
+A1AHB H32 H27 H 0 1 N N N N N N 4.308  -11.409 -28.411 -3.186 -0.988 -0.942 H32 A1AHB 85  
+A1AHB H33 H28 H 0 1 N N N N N N 5.621  -11.920 -29.525 -2.587 -2.663 -1.005 H33 A1AHB 86  
+A1AHB H34 H29 H 0 1 N N N N N N 2.957  -9.423  -30.318 -0.469 -1.640 -2.007 H34 A1AHB 87  
+A1AHB H36 H30 H 0 1 N N N N N N 1.836  -10.597 -31.087 -1.104 0.004  -1.760 H36 A1AHB 88  
+A1AHB H35 H31 H 0 1 N N N N N N 2.121  -10.655 -29.314 0.461  -0.462 -1.052 H35 A1AHB 89  
+A1AHB H37 H32 H 0 1 N N N N N N 3.628  -11.117 -32.633 -2.116 -0.334 1.698  H37 A1AHB 90  
+A1AHB H38 H33 H 0 1 N N N N N N 4.798  -10.051 -31.785 -0.393 0.028  1.445  H38 A1AHB 91  
+A1AHB H39 H34 H 0 1 N N N N N N 8.782  -7.257  -29.909 -7.376 -0.466 2.094  H39 A1AHB 92  
+A1AHB H40 H35 H 0 1 N N N N N N 6.556  -9.186  -33.001 -4.735 0.043  -1.235 H40 A1AHB 93  
+A1AHB H41 H36 H 0 1 N N N N N N 6.829  -6.835  -34.109 -8.691 -0.743 0.736  H41 A1AHB 94  
+A1AHB H42 H37 H 0 1 N N N N N N 5.555  -7.406  -32.978 -7.797 -2.219 1.175  H42 A1AHB 95  
+A1AHB H43 H38 H 0 1 N N N N N N 5.093  -5.203  -34.087 -9.906 -2.800 0.029  H43 A1AHB 96  
+A1AHB H44 H39 H 0 1 N N N N N N 5.054  -5.174  -32.291 -9.433 -1.803 -1.368 H44 A1AHB 97  
+A1AHB H47 H40 H 0 1 N N N N N N 6.857  -2.147  -33.304 -9.601 -3.845 -2.745 H47 A1AHB 98  
+A1AHB H46 H41 H 0 1 N N N N N N 5.527  -2.884  -34.259 -8.602 -5.255 -2.320 H46 A1AHB 99  
+A1AHB H45 H42 H 0 1 N N N N N N 5.387  -2.759  -32.473 -9.992 -4.810 -1.302 H45 A1AHB 100 
+A1AHB H48 H43 H 0 1 N N N N N N 8.128  -3.495  -31.827 -7.506 -2.478 -2.719 H48 A1AHB 101 
+A1AHB H49 H44 H 0 1 N N N N N N 6.684  -4.257  -31.078 -6.611 -3.953 -2.280 H49 A1AHB 102 
+A1AHB H50 H45 H 0 1 N N N N N N 9.017  -5.604  -32.468 -5.869 -2.893 -0.175 H50 A1AHB 103 
+A1AHB H51 H46 H 0 1 N N N N N N 8.534  -5.718  -30.742 -5.396 -1.896 -1.572 H51 A1AHB 104 
+A1AHB H52 H47 H 0 1 N N N N N N 7.936  -12.588 -30.023 -3.062 2.720  2.204  H52 A1AHB 105 
+A1AHB H53 H48 H 0 1 N N N N N N 8.444  -12.602 -27.603 -3.696 0.715  4.416  H53 A1AHB 106 
+A1AHB H55 H49 H 0 1 N N N N N N 8.790  -10.840 -27.660 -2.349 0.593  3.260  H55 A1AHB 107 
+A1AHB H54 H50 H 0 1 N N N N N N 7.127  -11.440 -27.977 -2.383 1.916  4.450  H54 A1AHB 108 
+A1AHB H57 H51 H 0 1 N N N N N N 11.328 -13.522 -29.621 -3.110 4.128  4.465  H57 A1AHB 109 
+A1AHB H58 H52 H 0 1 N N N N N N 9.952  -13.655 -28.474 -3.691 4.806  2.926  H58 A1AHB 110 
+A1AHB H56 H53 H 0 1 N N N N N N 9.706  -14.015 -30.217 -4.695 4.934  4.390  H56 A1AHB 111 
+A1AHB H6  H54 H 0 1 N N N N N N 3.350  -13.641 -33.298 1.172  1.240  -0.348 H6  A1AHB 112 
+A1AHB H7  H55 H 0 1 N N N N N N 6.117  -16.401 -35.034 0.811  4.998  -2.368 H7  A1AHB 113 
+A1AHB H8  H56 H 0 1 N N N N N N 8.033  -15.117 -34.183 -1.599 4.995  -2.001 H8  A1AHB 114 
+A1AHB H13 H57 H 0 1 N N N N N N -1.356 -18.284 -35.777 4.388  0.193  1.174  H13 A1AHB 115 
+A1AHB H28 H58 H 0 1 N N N N N N 0.056  -16.074 -32.343 3.224  -1.739 -0.377 H28 A1AHB 116 
+# 
+loop_
+_chem_comp_bond.comp_id 
+_chem_comp_bond.atom_id_1 
+_chem_comp_bond.atom_id_2 
+_chem_comp_bond.value_order 
+_chem_comp_bond.pdbx_aromatic_flag 
+_chem_comp_bond.pdbx_stereo_config 
+_chem_comp_bond.pdbx_ordinal 
+A1AHB C1  C2  SING N N 1   
+A1AHB C2  N1  SING N N 2   
+A1AHB N1  C3  SING Y N 3   
+A1AHB C3  C4  DOUB Y N 4   
+A1AHB C4  C5  SING Y N 5   
+A1AHB C5  C6  DOUB Y N 6   
+A1AHB C6  C7  SING Y N 7   
+A1AHB C7  C8  DOUB Y N 8   
+A1AHB C6  C9  SING N N 9   
+A1AHB C9  C10 DOUB Y N 10  
+A1AHB C10 S1  SING Y N 11  
+A1AHB S1  C11 SING Y N 12  
+A1AHB C11 C12 SING N N 13  
+A1AHB C12 C13 SING N N 14  
+A1AHB C13 N2  SING N N 15  
+A1AHB N2  C14 SING N N 16  
+A1AHB C14 O1  DOUB N N 17  
+A1AHB C14 C15 SING N N 18  
+A1AHB C15 C16 SING N N 19  
+A1AHB C16 C17 SING N N 20  
+A1AHB C17 C18 SING N N 21  
+A1AHB C13 C19 SING N N 22  
+A1AHB C19 O2  DOUB N N 23  
+A1AHB C19 N3  SING N N 24  
+A1AHB N3  C20 SING N N 25  
+A1AHB C20 C21 SING N N 26  
+A1AHB C21 C22 SING N N 27  
+A1AHB C22 C23 SING N N 28  
+A1AHB C23 N4  SING N N 29  
+A1AHB C23 C24 SING N N 30  
+A1AHB C24 O3  DOUB N N 31  
+A1AHB C24 O4  SING N N 32  
+A1AHB O4  C25 SING N N 33  
+A1AHB C25 C26 SING N N 34  
+A1AHB C26 C27 SING N N 35  
+A1AHB C26 C28 SING N N 36  
+A1AHB C26 C29 SING N N 37  
+A1AHB C29 C30 SING N N 38  
+A1AHB C30 C31 DOUB Y N 39  
+A1AHB C31 C32 SING N N 40  
+A1AHB C32 C33 DOUB Y N 41  
+A1AHB C33 N5  SING Y N 42  
+A1AHB N5  C34 DOUB Y N 43  
+A1AHB C34 C35 SING Y N 44  
+A1AHB C35 C36 DOUB Y N 45  
+A1AHB C35 N6  SING N N 46  
+A1AHB N6  C37 SING N N 47  
+A1AHB C37 C38 SING N N 48  
+A1AHB C38 N7  SING N N 49  
+A1AHB N7  C39 SING N N 50  
+A1AHB N7  C40 SING N N 51  
+A1AHB C40 C41 SING N N 52  
+A1AHB C33 C42 SING N N 53  
+A1AHB C42 C43 SING N N 54  
+A1AHB C42 O5  SING N N 55  
+A1AHB O5  C44 SING N N 56  
+A1AHB C11 N8  DOUB Y N 57  
+A1AHB N1  C31 SING Y N 58  
+A1AHB C32 C36 SING Y N 59  
+A1AHB N6  C41 SING N N 60  
+A1AHB C3  C8  SING Y N 61  
+A1AHB C9  N8  SING Y N 62  
+A1AHB C4  C30 SING Y N 63  
+A1AHB C15 C17 SING N N 64  
+A1AHB N3  N4  SING N N 65  
+A1AHB C1  H2  SING N N 66  
+A1AHB C1  H1  SING N N 67  
+A1AHB C1  H3  SING N N 68  
+A1AHB C10 H9  SING N N 69  
+A1AHB C12 H11 SING N N 70  
+A1AHB C12 H10 SING N N 71  
+A1AHB C13 H12 SING N N 72  
+A1AHB C15 H14 SING N N 73  
+A1AHB C16 H15 SING N N 74  
+A1AHB C16 H16 SING N N 75  
+A1AHB C17 H17 SING N N 76  
+A1AHB C18 H20 SING N N 77  
+A1AHB C18 H18 SING N N 78  
+A1AHB C18 H19 SING N N 79  
+A1AHB C2  H4  SING N N 80  
+A1AHB C2  H5  SING N N 81  
+A1AHB C20 H21 SING N N 82  
+A1AHB C20 H22 SING N N 83  
+A1AHB C21 H23 SING N N 84  
+A1AHB C21 H24 SING N N 85  
+A1AHB C22 H25 SING N N 86  
+A1AHB C22 H26 SING N N 87  
+A1AHB C23 H27 SING N N 88  
+A1AHB C25 H30 SING N N 89  
+A1AHB C25 H29 SING N N 90  
+A1AHB C27 H31 SING N N 91  
+A1AHB C27 H32 SING N N 92  
+A1AHB C27 H33 SING N N 93  
+A1AHB C28 H34 SING N N 94  
+A1AHB C28 H36 SING N N 95  
+A1AHB C28 H35 SING N N 96  
+A1AHB C29 H37 SING N N 97  
+A1AHB C29 H38 SING N N 98  
+A1AHB C34 H39 SING N N 99  
+A1AHB C36 H40 SING N N 100 
+A1AHB C37 H41 SING N N 101 
+A1AHB C37 H42 SING N N 102 
+A1AHB C38 H43 SING N N 103 
+A1AHB C38 H44 SING N N 104 
+A1AHB C39 H47 SING N N 105 
+A1AHB C39 H46 SING N N 106 
+A1AHB C39 H45 SING N N 107 
+A1AHB C40 H48 SING N N 108 
+A1AHB C40 H49 SING N N 109 
+A1AHB C41 H50 SING N N 110 
+A1AHB C41 H51 SING N N 111 
+A1AHB C42 H52 SING N N 112 
+A1AHB C43 H53 SING N N 113 
+A1AHB C43 H55 SING N N 114 
+A1AHB C43 H54 SING N N 115 
+A1AHB C44 H57 SING N N 116 
+A1AHB C44 H58 SING N N 117 
+A1AHB C44 H56 SING N N 118 
+A1AHB C5  H6  SING N N 119 
+A1AHB C7  H7  SING N N 120 
+A1AHB C8  H8  SING N N 121 
+A1AHB N2  H13 SING N N 122 
+A1AHB N4  H28 SING N N 123 
+# 
+loop_
+_pdbx_chem_comp_descriptor.comp_id 
+_pdbx_chem_comp_descriptor.type 
+_pdbx_chem_comp_descriptor.program 
+_pdbx_chem_comp_descriptor.program_version 
+_pdbx_chem_comp_descriptor.descriptor 
+A1AHB SMILES           ACDLabs              12.01 "CN1CCN(CC1)c1cc(c(nc1)C(C)OC)c1n(CC)c2ccc3cc2c1CC(C)(C)COC(=O)C1CCCN(N1)C(=O)C(Cc1nc3cs1)NC(=O)C1CC1C"                                                                                                                                                                                                                     
+A1AHB InChI            InChI                1.06  "InChI=1S/C44H58N8O5S/c1-8-51-37-12-11-28-19-31(37)33(40(51)32-20-29(23-45-39(32)27(3)56-7)50-16-14-49(6)15-17-50)22-44(4,5)25-57-43(55)34-10-9-13-52(48-34)42(54)35(21-38-46-36(28)24-58-38)47-41(53)30-18-26(30)2/h11-12,19-20,23-24,26-27,30,34-35,48H,8-10,13-18,21-22,25H2,1-7H3,(H,47,53)/t26-,27+,30+,34+,35-/m0/s1" 
+A1AHB InChIKey         InChI                1.06  FVICRBSEYSHKFY-MYQJQZSQSA-N                                                                                                                                                                                                                                                                                                 
+A1AHB SMILES_CANONICAL CACTVS               3.385 "CCn1c2ccc3cc2c(CC(C)(C)COC(=O)[C@@H]4CCC[N@](N4)C(=O)[C@H](Cc5scc3n5)NC(=O)[C@H]6C[C@@H]6C)c1c7cc(cnc7[C@H](C)OC)N8CCN(C)CC8"                                                                                                                                                                                              
+A1AHB SMILES           CACTVS               3.385 "CCn1c2ccc3cc2c(CC(C)(C)COC(=O)[CH]4CCC[N](N4)C(=O)[CH](Cc5scc3n5)NC(=O)[CH]6C[CH]6C)c1c7cc(cnc7[CH](C)OC)N8CCN(C)CC8"                                                                                                                                                                                                      
+A1AHB SMILES_CANONICAL "OpenEye OEToolkits" 2.0.7 "CCn1c2ccc-3cc2c(c1c4cc(cnc4[C@H](C)OC)N5CCN(CC5)C)CC(COC(=O)[C@@H]6CCCN(N6)C(=O)[C@H](Cc7nc3cs7)NC(=O)[C@H]8C[C@@H]8C)(C)C"                                                                                                                                                                                                
+A1AHB SMILES           "OpenEye OEToolkits" 2.0.7 "CCn1c2ccc-3cc2c(c1c4cc(cnc4C(C)OC)N5CCN(CC5)C)CC(COC(=O)C6CCCN(N6)C(=O)C(Cc7nc3cs7)NC(=O)C8CC8C)(C)C"                                                                                                                                                                                                                      
+# 
+_pdbx_chem_comp_identifier.comp_id           A1AHB 
+_pdbx_chem_comp_identifier.type              "SYSTEMATIC NAME" 
+_pdbx_chem_comp_identifier.program           ACDLabs 
+_pdbx_chem_comp_identifier.program_version   12.01 
+_pdbx_chem_comp_identifier.identifier        "(1R,2S)-N-[(1P,7S,9S,13R,20M)-21-ethyl-20-{2-[(1R)-1-methoxyethyl]-5-(4-methylpiperazin-1-yl)pyridin-3-yl}-17,17-dimethyl-8,14-dioxo-15-oxa-4-thia-9,21,27,28-tetraazapentacyclo[17.5.2.1~2,5~.1~9,13~.0~22,26~]octacosa-1(24),2,5(28),19,22,25-hexaen-7-yl]-2-methylcyclopropane-1-carboxamide (non-preferred name)" 
+# 
+loop_
+_pdbx_chem_comp_audit.comp_id 
+_pdbx_chem_comp_audit.action_type 
+_pdbx_chem_comp_audit.date 
+_pdbx_chem_comp_audit.processing_site 
+A1AHB "Create component" 2024-03-06 RCSB 
+A1AHB "Initial release"  2024-04-17 RCSB 
+# 

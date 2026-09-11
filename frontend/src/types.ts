@@ -30,6 +30,13 @@ export interface Dataset {
     method?: string;
     summary?: string[];
     warnings?: string[];
+    job_id?: string;
+    ligand_parameters?: {
+      forcefield: string;
+      charge_method: string;
+      requires_explicit_solvent: boolean;
+      ligands: LigandInspection[];
+    };
     [key: string]: unknown;
   };
   solvation?: {
@@ -64,6 +71,19 @@ export interface Measurement {
   angle_values?: number[];
 }
 
+export interface LigandInspection {
+  key: string;
+  component_id: string;
+  chain: string;
+  resid: string;
+  residue: string;
+  formal_charge?: number;
+  selected_smiles?: string;
+  protonation_method?: string;
+  warnings?: string[];
+  error?: string | null;
+}
+
 export interface Inspection {
   dataset_id: string;
   protein_atoms: number;
@@ -84,6 +104,10 @@ export interface Inspection {
   gaps: { chain: string; after: string; before: string; message: string }[];
   warnings: string[];
   blockers: string[];
+  ligands: LigandInspection[];
+  ligand_errors: string[];
+  ligand_runtime?: { available: boolean; message?: string } | null;
+  metal_environment?: { retained_coordinating_waters: string[][]; contacts: unknown[] };
 }
 
 export interface PreparationConfig {
@@ -95,6 +119,7 @@ export interface PreparationConfig {
   optimize_sidechains: boolean;
   remove_waters: boolean;
   remove_heterogens: boolean;
+  ligand_overrides?: Record<string, string>;
   seed: number;
 }
 export interface Job {

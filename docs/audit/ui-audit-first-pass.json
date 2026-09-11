@@ -1,0 +1,240 @@
+{
+  "recorded_at": "2026-09-11T04:02:51.567120+00:00",
+  "phase": "Initial audit before integrated complex release",
+  "jobs": [
+    {
+      "id": "f34cc7a568cd4df7",
+      "name": "e2e-ui-audit-gromacs-1789099313937",
+      "engine": "gromacs",
+      "status": "completed",
+      "progress": 100,
+      "dataset_id": "8261d7ce99164417",
+      "stage": "Complete",
+      "config": {
+        "dataset_id": "demo",
+        "engine": "gromacs",
+        "name": "e2e-ui-audit-gromacs-1789099313937",
+        "duration_ps": 0.004,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 1,
+        "friction_ps": 1.0,
+        "seed": 42,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 0,
+        "padding_nm": 1.0
+      },
+      "error": null
+    },
+    {
+      "id": "6e58b58bc36343a5",
+      "name": "e2e-ui-audit-gromacs-1789099266575",
+      "engine": "gromacs",
+      "status": "completed",
+      "progress": 100,
+      "dataset_id": "5c9623a85915439d",
+      "stage": "Complete",
+      "config": {
+        "dataset_id": "demo",
+        "engine": "gromacs",
+        "name": "e2e-ui-audit-gromacs-1789099266575",
+        "duration_ps": 0.004,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 1,
+        "friction_ps": 1.0,
+        "seed": 42,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 0,
+        "padding_nm": 1.0
+      },
+      "error": null
+    },
+    {
+      "id": "476cb29cd7be490c",
+      "name": "e2e-ui-audit-cancel-1789099252870",
+      "engine": "openmm",
+      "status": "cancelled",
+      "progress": 0,
+      "dataset_id": null,
+      "stage": "Cancelled",
+      "config": {
+        "dataset_id": "demo",
+        "engine": "openmm",
+        "name": "e2e-ui-audit-cancel-1789099252870",
+        "duration_ps": 10.0,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 50,
+        "friction_ps": 1.0,
+        "seed": 42,
+        "solvent": "implicit",
+        "minimize": false,
+        "equilibration_steps": 0,
+        "padding_nm": 1.0
+      },
+      "error": "Cancelled by user. Partial outputs are retained."
+    },
+    {
+      "id": "74e57c077e584a75",
+      "name": "e2e-ui-audit-gromacs-1789099101257",
+      "engine": "gromacs",
+      "status": "failed",
+      "progress": 0,
+      "dataset_id": null,
+      "stage": "Failed",
+      "config": {
+        "dataset_id": "demo",
+        "engine": "gromacs",
+        "name": "e2e-ui-audit-gromacs-1789099101257",
+        "duration_ps": 0.004,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 1,
+        "friction_ps": 1.0,
+        "seed": 42,
+        "solvent": "explicit",
+        "minimize": false,
+        "equilibration_steps": 0,
+        "padding_nm": 1.0
+      },
+      "error": "Running dynamics failed (exit 1). om 1 atom 2  angle  previous, current, constraint length\n    942    943   90.0    0.1080   0.2001      0.1080\n    151    152   32.9    0.1090   0.1090      0.1090\n    149    150   90.0    0.1090   0.2388      0.1090\n    646    648   61.3    0.1090   0.1091      0.1090\n    600    602   90.0    0.1090   0.3264      0.1090\n   1203   1205   48.1    0.1090   0.1088      0.1090\n    569    570   90.0    0.1090   0.1313      0.1090\n    558    559   90.0    0.1090   0.2035      0.1090\nWrote pdb files with previous and current coordinates\n\nStep 0, time 0 (ps)  LINCS WARNING\nrelative constraint deviation after LINCS:\nrms 0.104723, max 1.992798 (between atoms 600 and 602)\nbonds that rotated more than 30 degrees:\n atom 1 atom 2  angle  previous, current, constraint length\n    942    943   90.0    0.1080   0.1998      0.1080\n    151    152   32.8    0.1090   0.1090      0.1090\n    149    150   90.0    0.1090   0.2386      0.1090\n    646    648   61.2    0.1090   0.1091      0.1090\n    600    602   90.0    0.1090   0.3262      0.1090\n   1203   1205   48.2    0.1090   0.1088      0.1090\n    569    570   90.0    0.1090   0.1315      0.1090\n    558    559   90.0    0.1090   0.2032      0.1090\n\nBack Off! I just backed up step0b.pdb to ./#step0b.pdb.1#\n\nBack Off! I just backed up step0c.pdb to ./#step0c.pdb.1#\nWrote pdb files with previous and current coordinates\n\nStep 1, time 0.002 (ps)  LINCS WARNING\nrelative constraint deviation after LINCS:\nrms 75.594406, max 1893.940918 (between atoms 600 and 602)\nbonds that rotated more than 30 degrees:\n atom 1 atom 2  angle  previous, current, constraint length\n    942    943   82.3    0.1998   0.1080      0.1080\n    149    150   90.0    0.2386   0.1114      0.1090\n    600    601   90.0    0.1068   9.3365      0.1090\n    600    602   90.0    0.3262 206.5485      0.1090\n   1203   1205   37.3    0.1088   0.1090      0.1090\n    573    574   47.3    0.1090   0.1095      0.1090\n    573    575   90.0    0.1090   1.2961      0.1090\n    569    570   90.0    0.1315   1.3579      0.1090\n    569    571   90.0    0.1122   0.1803      0.1090\n    569    572   90.0    0.1089   0.1718      0.1090\n    558    559   63.1    0.2032   0.1089      0.1090\n\nstep 1: One or more water molecules can not be settled.\nCheck for bad contacts and/or reduce the timestep if appropriate.\nWrote pdb files with previous and current coordinates\n\nStep 1, time 0.002 (ps)  LINCS WARNING\nrelative constraint deviation after LINCS:\nrms 75.518875, max 1892.048584 (between atoms 600 and 602)\nbonds that rotated more than 30 degrees:\n atom 1 atom 2  angle  previous, current, constraint length\n    942    943   81.3    0.1998   0.1080      0.1080\n    149    150   90.0    0.2386   0.1113      0.1090\n    600    601   90.0    0.1068   9.3272      0.1090\n    600    602   90.0    0.3262 206.3423      0.1090\n   1203   1205   37.3    0.1088   0.1090      0.1090\n    573    574   47.1    0.1090   0.1095      0.1090\n    573    575   90.0    0.1090   1.2947      0.1090\n    569    570   90.0    0.1315   1.3565      0.1090\n    569    571   90.0    0.1122   0.1801      0.1090\n    569    572   90.0    0.1089   0.1717      0.1090\n    558    559   62.8    0.2032   0.1089      0.1090\n\nBack Off! I just backed up step1b.pdb to ./#step1b.pdb.1#\n\nBack Off! I just backed up step1c.pdb to ./#step1c.pdb.1#\nWrote pdb files with previous and current coordinates\n\nWARNING: Listed nonbonded interaction between particles 602 and 604\nat distance 195.920 which is larger than the table limit 2.109 nm.\n\nThis is likely either a 1,4 interaction, or a listed interaction inside\na smaller molecule you are decoupling during a free energy calculation.\nSince interactions at distances beyond the table cannot be computed,\nthey are skipped until they are inside the table limit again. You will\nonly see this message once, even if it occurs for several interactions.\n\nIMPORTANT: This should not happen in a stable simulation, so there is\nprobably something wrong with your system. Only change the table-extension\ndistance in the mdp file if you are really sure that is the reason.\n\n\n\n-------------------------------------------------------\nProgram:     gmx mdrun, version 2025.4-conda_forge\nSource file: src/gromacs/mdlib/sim_util.cpp (line 587)\nFunction:    void gmx::checkPotentialEnergyValidity(int64_t, const gmx_enerdata_t &, const t_inputrec &)\n\nInternal error (bug):\nStep 2: The total potential energy is nan, which is not finite. The LJ and\nelectrostatic contributions to the energy are 125784 and -417990,\nrespectively. A non-finite potential energy can be caused by overlapping\ninteractions in bonded interactions or very large or Nan coordinate values.\nUsually this is caused by a badly- or non-equilibrated initial configuration,\nincorrect interactions or parameters in the topology.\n\nFor more information and tips for troubleshooting, please check the GROMACS\nwebsite at https://manual.gromacs.org/current/user-guide/run-time-errors.html\n-------------------------------------------------------\n"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "8261d7ce99164417",
+      "name": "e2e-ui-audit-gromacs-1789099313937",
+      "n_atoms": 26818,
+      "n_frames": 3
+    },
+    {
+      "id": "5c9623a85915439d",
+      "name": "e2e-ui-audit-gromacs-1789099266575",
+      "n_atoms": 26818,
+      "n_frames": 3
+    },
+    {
+      "id": "9fb5cbe517564985",
+      "name": "e2e-ui-audit-mixed-1789098846914",
+      "n_atoms": 120,
+      "n_frames": 1
+    },
+    {
+      "id": "02ed69d46b054e2e",
+      "name": "e2e-ui-audit-mdcrd-1789098846055",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "de80445636094c4b",
+      "name": "e2e-ui-audit-xyz-1789098843980",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "e40a54d2f96b4c33",
+      "name": "e2e-ui-audit-nc-1789098840497",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "d7b2ac370dcc4e03",
+      "name": "e2e-ui-audit-trr-1789098837401",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "64ad3ec2245546bd",
+      "name": "e2e-ui-audit-dcd-1789098834071",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "44b870ccd5744658",
+      "name": "e2e-ui-audit-xtc-1789098830599",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "03188691ba43433d",
+      "name": "e2e-ui-audit-h5-1789098827278",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "e4642fbe2d554bca",
+      "name": "e2e-ui-audit-gro-1789098823896",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "9403b27653724795",
+      "name": "e2e-ui-audit-pdb-1789098816984",
+      "n_atoms": 113,
+      "n_frames": 3
+    },
+    {
+      "id": "ed4de003937740ce",
+      "name": "e2e-ui-audit-chooser-1789098637442",
+      "n_atoms": 51,
+      "n_frames": 1
+    },
+    {
+      "id": "163a9f35866a477a",
+      "name": "e2e-ui-audit-dropped-1789098635747",
+      "n_atoms": 1231,
+      "n_frames": 1
+    }
+  ],
+  "download": {
+    "name": "gromacs-output.zip",
+    "bytes": 4339148,
+    "sha256": "a69aa4e6475d9700a02044934c46301b2b801b8e3c616cf1fdb2c739af1d1a10",
+    "entries": [
+      "mdout.mdp",
+      "topol.top",
+      "production.gro",
+      "command-08.log",
+      "production.tpr",
+      "posre.itp",
+      "command-09.log",
+      "provenance.json",
+      "prepared.pdb",
+      "solvated.gro",
+      "minimize.mdp",
+      "config.json",
+      "input.pdb",
+      "minimize.edr",
+      "worker.log",
+      "production.log",
+      "ions.mdp",
+      "minimize.trr",
+      "production.xtc",
+      "processed.gro",
+      "#topol.top.1#",
+      "minimize.gro",
+      "minimize.tpr",
+      "ions.tpr",
+      "production.mdp",
+      "command-02.log",
+      "input-state.json",
+      "command-03.log",
+      "boxed.gro",
+      "command-01.log",
+      "production.edr",
+      "system.gro",
+      "command-04.log",
+      "status.json",
+      "command-10.log",
+      "command-05.log",
+      "minimize.log",
+      "added-solvent.ndx",
+      "command-07.log",
+      "command-06.log",
+      "production.cpt"
+    ]
+  }
+}

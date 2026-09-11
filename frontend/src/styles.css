@@ -3026,6 +3026,78 @@ kbd {
     transition: none !important;
   }
 }
+.ligand-preparation-list {
+  margin: 12px 0;
+}
+.ligand-preparation-intro {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.ligand-preparation-intro b,
+.ligand-preparation-intro span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.ligand-preparation-intro span {
+  color: var(--muted);
+  font-weight: 400;
+}
+.ligand-preparation-card {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  margin: 6px 0;
+  padding: 9px 10px;
+  background: rgba(255, 255, 255, 0.025);
+}
+.ligand-preparation-card summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+.ligand-preparation-card summary strong {
+  font-size: 10px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.ligand-preparation-card.has-issues summary strong {
+  color: #edbd73;
+}
+.ligand-preparation-card summary::before {
+  content: '›';
+  font-size: 16px;
+}
+.ligand-preparation-card[open] summary::before {
+  transform: rotate(90deg);
+}
+.ligand-preparation-card summary span {
+  flex: 1;
+}
+.ligand-preparation-card .full-label {
+  font-size: 10px;
+  margin-top: 8px;
+}
+.ligand-preparation-card textarea {
+  width: 100%;
+  resize: vertical;
+  font: 11px/1.5 monospace;
+  padding: 8px;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.14);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.ligand-smiles {
+  font: 10px/1.6 monospace;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+}
 
 /* Keep the scientific workspace in view on desktop; auxiliary panes scroll. */
 @media (min-width: 1041px) {

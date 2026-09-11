@@ -6,13 +6,14 @@ import mdtraj as md
 import numpy as np
 
 from . import config
+from .prepared_system import copy_ligand_parameters, ligand_parameter_files, load_prepared_forcefield
 from .storage import atomic_json, dataset_dir, get_dataset, save_dataset
 
 
 def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     """Executed in a dedicated preparation worker, never on the API event loop.
 
-    Only an explicitly prepared protein is accepted.  Existing DynaMol previews
+    Only an explicitly prepared protein or parameterized complex is accepted. Existing DynaMol previews
     are reused, or rebuilt from their parent when padding changes.  There is no
     second hydrogen/protonation pass and no automatic heterogen deletion.
     """
@@ -26,6 +27,7 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     if not isinstance(ph, (int, float)) or not math.isfinite(ph) or not 0 <= ph <= 14:
         raise ValueError("Choose a pH from 0 to 14.")
     parent = get_dataset(dataset_id)
+    ligand_parameter_files(dataset_dir(dataset_id), parent.get("preparation"))
     existing = parent.get("solvation")
     if existing:
         if existing.get("padding_nm") == padding_nm and existing.get("seed") == seed:
@@ -36,8 +38,10 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     source = dataset_dir(dataset_id) / "prepared.pdb"
     if not preparation or not source.is_file():
         raise ValueError("Prepare the protein first, then choose explicit water. This builds a real TIP3P box around the prepared hydrogen and ionization states.")
-    if any(atom["category"] in {"ligands", "nucleic"} for atom in parent["atoms"]):
-        raise ValueError("The explicit-water preset requires a prepared standard protein. Ligands and nucleic acids need their own force-field parameters; no atoms were removed.")
+    if any(atom["category"] == "nucleic" for atom in parent["atoms"]):
+        raise ValueError("Nucleic acids need a separately parameterized workflow; no atoms were removed.")
+    if any(atom["category"] == "ligands" for atom in parent["atoms"]):
+        ligand_parameter_files(dataset_dir(dataset_id), preparation, required=True)
     if not any(atom["category"] == "protein" for atom in parent["atoms"]):
         raise ValueError("Choose a prepared standard protein before adding explicit water.")
     pdb = app.PDBFile(str(source))
@@ -45,13 +49,14 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     if not len(coordinates) or not np.isfinite(coordinates).all():
         raise ValueError("Prepared coordinates are empty or non-finite.")
     # A deliberately conservative bound before allocating a water box. OpenMM
-    # uses a bounding-sphere diameter and cubic padding for this box shape.
+    # uses max(sphere diameter + padding, 2*padding), where padding is the
+    # minimum separation from a periodic copy, not padding on both box faces.
     radius = np.linalg.norm(coordinates - (coordinates.min(axis=0) + coordinates.max(axis=0)) / 2, axis=1).max()
-    side_upper = 2 * radius + 2 * padding_nm
+    side_upper = max(2 * radius + padding_nm, 2 * padding_nm)
     estimated_atoms = len(coordinates) + math.ceil(side_upper ** 3 * 110)
     if estimated_atoms > config.MAX_ATOMS:
         raise ValueError(f"The requested solvent box may exceed the {config.MAX_ATOMS:,}-atom local limit. Reduce padding or prepare a smaller structure.")
-    forcefield = app.ForceField("amber14/protein.ff14SB.xml", "amber14/tip3p.xml")
+    forcefield, forcefield_files = load_prepared_forcefield(dataset_dir(dataset_id), preparation)
     modeller = app.Modeller(pdb.topology, pdb.positions)
     try:
         unmatched = forcefield.getUnmatchedResidues(modeller.topology)
@@ -83,7 +88,7 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     details = {"parent_dataset_id": dataset_id, "padding_nm": padding_nm, "water_model": "tip3p", "seed": seed,
                "added_water_atoms": water_atoms - old_water_atoms, "water_atoms": water_atoms, "neutralizing_ions": ions,
                "ionic_strength_molar": 0, "box_shape": "cube", "box_vectors_nm": traj.unitcell_vectors[0].tolist(),
-               "openmm_version": version.version, "forcefield": ["amber14/protein.ff14SB.xml", "amber14/tip3p.xml"],
+               "openmm_version": version.version, "forcefield": forcefield_files,
                "prepared_pdb": "prepared.pdb", "input_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
                "equilibrated": False, "preserves_prepared_protonation": True}
     provenance = {"operation": "explicit_water_preview", "parent_dataset_id": dataset_id, "preparation": preparation, "solvation": details}
@@ -94,8 +99,9 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     if preparation.get("ph") is not None and preparation["ph"] != ph:
         warnings.append(f"The box retains the protein prepared at pH {preparation['ph']:g}. Change pH by preparing the protein again.")
     metadata = save_dataset(traj, parent["name"] + " · explicit water", "solvation",
-                            "Prepared protein in a real TIP3P water box, ready for OpenMM minimization/equilibration.", warnings=warnings, provenance=provenance)
+                            "Prepared molecular system in a real TIP3P water box, ready for OpenMM minimization/equilibration.", warnings=warnings, provenance=provenance)
     folder = dataset_dir(metadata["id"])
+    copy_ligand_parameters(dataset_dir(dataset_id), folder, preparation)
     with (folder / "prepared.pdb").open("w") as output:
         app.PDBFile.writeFile(modeller.topology, modeller.positions, output, keepIds=True)
     metadata.update(parent_dataset_id=dataset_id, preparation=preparation, solvation=details)

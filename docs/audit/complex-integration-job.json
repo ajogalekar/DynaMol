@@ -1,0 +1,30 @@
+{
+  "id": "57083a2415754858",
+  "name": "9AX6 \u00b7 prepared complex",
+  "engine": "preparation",
+  "status": "queued",
+  "stage": "Starting preparation worker",
+  "progress": 0,
+  "completed_steps": 0,
+  "total_steps": 7,
+  "elapsed_seconds": 0,
+  "logs": [
+    "Background preparation uses real completed stages for progress, with two CPU threads by default."
+  ],
+  "config": {
+    "name": "9AX6 \u00b7 prepared complex",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": false,
+    "optimize_sidechains": true,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "ligand_overrides": {},
+    "seed": 2026,
+    "dataset_id": "9fb26d98962c453b",
+    "complex": true,
+    "operation": "prepare"
+  },
+  "created_at": "2026-09-11T04:12:25.578903+00:00",
+  "worker_pid": 20279
+}

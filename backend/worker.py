@@ -20,6 +20,7 @@ from pathlib import Path
 
 from . import config
 from .jobs import gromacs_executable
+from .prepared_system import copy_ligand_parameters, load_prepared_forcefield
 from .storage import atomic_json, save_dataset, safe_id, dataset_dir
 
 
@@ -106,17 +107,20 @@ class Worker:
         pdb = app.PDBFile(str(self.folder / "input.pdb"))
         modeller = app.Modeller(pdb.topology, pdb.positions)
         implicit = settings["solvent"] == "implicit"
-        files = ["amber14/protein.ff14SB.xml", "implicit/gbn2.xml"] if implicit else ["amber14/protein.ff14SB.xml", "amber14/tip3p.xml"]
         prepared_state = self.input_state.get("preparation")
         solvent_state = self.input_state.get("solvation")
+        ff, files = load_prepared_forcefield(self.folder, prepared_state, solvent=settings["solvent"])
         self.provenance.update(forcefield_files=files, integrator="LangevinMiddleIntegrator", ensemble="NVT", solvent="GBn2 implicit" if implicit else "TIP3P explicit", ph=prepared_state.get("ph", 7.0) if prepared_state else 7.0, platform="CPU", input_preparation=prepared_state, input_solvation=solvent_state)
         random.seed(settings["seed"])
         np.random.seed(settings["seed"])
         self.provenance["preparation_random_seed"] = settings["seed"]
-        ff = app.ForceField(*files)
         before = modeller.topology.getNumAtoms()
         if prepared_state:
             self.record_preparation(f"Preserving exact prepared topology and hydrogens at recorded pH {prepared_state['ph']:g}; no automatic hydrogen reassignment.")
+            if prepared_state.get("ligand_parameters"):
+                if not solvent_state:
+                    raise ValueError("Create and inspect the explicit-water preview for this prepared complex before starting simulation.")
+                self.record_preparation("Reusing verified GAFF2 ligand templates and AM1-BCC charges; ligand molecular states and atom identities are retained.")
         else:
             modeller.addHydrogens(ff, pH=7.0)
             self.record_preparation(f"Added {modeller.topology.getNumAtoms() - before} hydrogens using OpenMM templates at pH 7; retained all input atoms. Protonation uses heuristic residue defaults and must be reviewed for scientific studies.")
@@ -292,7 +296,7 @@ pcoupl = no
         try:
             trajectory = self.run_openmm() if self.settings["engine"] == "openmm" else self.run_gromacs()
             self.update(stage="Preparing trajectory for viewer", completed=self.job["total_steps"])
-            self.provenance["outputs"] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in self.folder.iterdir() if p.is_file() and p.name not in {"status.json", "worker.log", "provenance.json"} and p.suffix not in {".tmp", ".zip"}}
+            self.provenance["outputs"] = {str(p.relative_to(self.folder)): hashlib.sha256(p.read_bytes()).hexdigest() for p in self.folder.rglob("*") if p.is_file() and p.name not in {"status.json", "worker.log", "provenance.json"} and p.suffix not in {".tmp", ".zip"}}
             atomic_json(self.folder / "provenance.json", self.provenance)
             warnings = ["Short exploratory simulation. This run does not establish equilibration, convergence, biological function, or binding stability.", "Protein force-field templates, terminal states and protonation require scientific review before a production study."]
             dataset = save_dataset(trajectory, self.settings["name"], f"{self.settings['engine']} simulation", f"{trajectory.time[-1]:g} ps of real {self.settings['engine']} dynamics at {self.settings['temperature_k']:g} K. Fixed-volume exploratory NVT trajectory; seed {self.settings['seed']}.", warnings=warnings, provenance=self.provenance)
@@ -304,6 +308,7 @@ pcoupl = no
             dataset["parent_dataset_id"] = self.settings["dataset_id"]
             if prepared_state:
                 dataset["preparation"] = prepared_state
+                copy_ligand_parameters(self.folder, dataset_dir(dataset["id"]), prepared_state)
             if solvent_state:
                 dataset["solvation"] = solvent_state
             if prepared_state or solvent_state:

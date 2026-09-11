@@ -1,0 +1,71 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 55,
+  "query": "tautomers protonation stereochemistry ligand preparation molecular dynamics",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-05-06",
+      "score": 34.0,
+      "snippet": "…ntroduction One factor often overlooked when applying machine learning (ML) in small-molecule drug discovery is the influence of tautomers on model predictions. Drug-like molecules, especially those containing heterocycles and conjugated pi systems, can exist in several different tautomeric forms. These forms feature varying bond orders between the atoms. Consequently, the molecular representation used in an ML model varies. This remains true regardless of whether we’re using molecular fingerprints, topological de…",
+      "tags": [
+        "Tautomers"
+      ],
+      "title": "The Trouble With Tautomers",
+      "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-01-03T11:55:00.002-08:00",
+      "score": 27.0,
+      "snippet": "…et a sequel. Contents 1. Are Deep Neural Networks Better for QSAR? 2. Deep Learning Methods Provide New Approaches to Protein-Ligand Docking 3. Protein Structure Prediction - Pushing AlphaFold2 in New Directions 4. Model Interpretability 5. QM Methods 6. Utralarge Chemical Libraries 7. Active Learning 8. Molecular Representation 1. Are Deep Neural Networks Better for QSAR? Based on papers I read and reviewed in 2022, there seems to be a perception that Deep Neural Networks have become ubiquitous in QSAR mo…",
+      "tags": [],
+      "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-11-03",
+      "score": 25.0,
+      "snippet": "…GPU Technology Conference (GTC) featured two announcements that highlighted both the potential and ongoing challenges of protein-ligand co-folding. The recently renamed Genesis Molecular AI announced PEARL, a proprietary co-folding method. Additionally, the OpenFold consortium released the code and model weights for a preview of OpenFold3 (OF3p). Both groups also provided technical reports with initial benchmarks. Besides co-folding, the OpenFold team also shared structure prediction results for protein monomers a…",
+      "tags": [
+        "Cofolding"
+      ],
+      "title": "We Still Haven’t Found What We’re Looking For - The Continuing Evolution of Protein-Ligand Co-Folding Methods",
+      "url": "https://patwalters.github.io/Cofolding-Evolution/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 24.0,
+      "snippet": "…cles 2023 was a bit of a mixed bag for AI in drug discovery. Several groups reported that the deep learning methods for protein-ligand docking weren’t quite what they were initially cracked up to be. AlphaFold2 became pervasive, and people started to investigate, with mixed success, the utility of predicted protein structures. There were reports of significant advances in protein-ligand docking, but no code or supporting methodology was provided. Finally, several benchmarking studies cast doubt on earlier clai…",
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2018-09-29T07:01:00.000-07:00",
+      "score": 24.0,
+      "snippet": "…is post, I'll walk through how we can combine a couple of Open Source software tools to easily and reliably assign bond orders to ligands from protein-ligand complexes from the PDB. As usual, the associated code is in GitHub. One of the many things that frustrate me about the PDB file format is the absence of bond order information (please don't talk to me about double CONECT records). Since the bond order information is missing, we typically have to assign the bond orders, either manually or algorithmically.…",
+      "tags": [],
+      "title": "Assigning Bond Orders to PDB Ligands - The Easy Way",
+      "url": "https://practicalcheminformatics.blogspot.com/2018/09/assigning-bond-orders-to-pdb-ligands.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-05-22T18:07:00.000-07:00",
+      "score": 23.0,
+      "snippet": "…erative AI can and can’t do. To understand exactly what’s involved, it might be instructive to walk through a typical generative molecular design workflow and point out a few things. First, these programs are far from autonomous. Even when presented with a well-defined problem, generative algorithms produce a tremendous amount of nonsense. Second, domain expertise is essential when sifting through the molecules produced by a generative algorithm. Without a significant medicinal chemistry background, one can’t…",
+      "tags": [],
+      "title": "Generative Molecular Design Isn't As Easy As People Make It Look",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/05/generative-molecular-design-isnt-as.html"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "purpose": "Software continuity and finite short CPU dynamics; no equilibrium, affinity, or metal-model accuracy claim.",
+  "checks": {
+    "solvation_solute_max_displacement_angstrom": 0.0,
+    "parameter_hashes_preserved": true,
+    "charges_preserved": true,
+    "trajectory_finite": true,
+    "energy_records_finite": true,
+    "saved_frames": 6,
+    "production_steps": 10,
+    "production_ps": 0.02
+  },
+  "fixture_dataset_id": "9ax6_cluster_native",
+  "parameter_hashes": [
+    "776f86dd0f7bf318a8e29f263377bcd00748d72f528195195cb67cb56e478c8e",
+    "77784e0ffc5cfe06433397d57803105261515510af040a4500fa1323895702bd"
+  ],
+  "prepared_charges": [
+    {
+      "key": "E:201::GNP",
+      "atoms": 45,
+      "charge_e": -4.000000010701173
+    },
+    {
+      "key": "I:201::A1A",
+      "atoms": 117,
+      "charge_e": 0.9999999867415199
+    }
+  ],
+  "solvation_job_id": "aa90242593014f1d",
+  "solvated_dataset_id": "865380bba4a54a53",
+  "solvated_charges": [
+    {
+      "key": "E:201::GNP",
+      "atoms": 45,
+      "charge_e": -4.000000010701173
+    },
+    {
+      "key": "I:201::A1A",
+      "atoms": 117,
+      "charge_e": 0.9999999867415199
+    }
+  ],
+  "solvated_atoms": 64494,
+  "simulation_job_id": "f66ad52d18834ec1",
+  "simulation_settings": {
+    "dataset_id": "865380bba4a54a53",
+    "name": "e2e-complex-validation \u00b7 native OpenMM",
+    "engine": "openmm",
+    "solvent": "explicit",
+    "duration_ps": 0.02,
+    "temperature_k": 300,
+    "timestep_fs": 2,
+    "report_interval": 2,
+    "seed": 2026,
+    "minimize": true,
+    "equilibration_steps": 10
+  },
+  "trajectory_dataset_id": "7549b750c03f4817",
+  "native_system_charges": [
+    {
+      "key": "E:201::GNP",
+      "atoms": 45,
+      "charge_e": -4.000000010701173
+    },
+    {
+      "key": "I:201::A1A",
+      "atoms": 117,
+      "charge_e": 0.9999999867415199
+    }
+  ],
+  "native_files_sha256": {
+    "system.xml": "24eb0c548feaaa876aa71095b3be49b0840fb3cd22e21bddb9f922b7cc37e8e6",
+    "prepared.pdb": "4b15c1a227ee5e56e37c6c8e83babb598cfb89f7cbc3c3f10ca6d4f03866ea52",
+    "energies.csv": "2fc2212497b40f977802c9c56f03ecbaf2a21ee2a42e953dca4f4289f455efef",
+    "config.json": "1bcafb19b82f08b20e59817b43a70247b1704a06a2fdb452b0f61e1c9ab82d0b"
+  },
+  "passed": true
+}

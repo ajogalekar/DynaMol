@@ -92,6 +92,7 @@ export default function SimulationPanel({
     );
   const anyActive = jobs.some(active);
   const resultSelected = !!monitoredJob?.dataset_id && dataset?.id === monitoredJob.dataset_id;
+  const complexPrepared = !!dataset?.preparation?.ligand_parameters;
   const resultViewerError =
     resultSelected && viewerError ? `Could not display the prepared structure: ${viewerError}` : '';
   useEffect(() => {
@@ -101,6 +102,8 @@ export default function SimulationPanel({
     if (dataset?.solvation) {
       setSolvent('explicit');
       setPadding(dataset.solvation.padding_nm);
+    } else if (dataset?.preparation?.ligand_parameters) {
+      setSolvent('explicit');
     }
   }, [dataset?.id]);
   // Reconnect to a background preparation when the studio is reopened.
@@ -139,7 +142,7 @@ export default function SimulationPanel({
           if (action.operation === 'solvation') {
             setSolvent('explicit');
             onWaterVisibility(true);
-          } else setSolvent('implicit');
+          } else setSolvent(next.preparation?.ligand_parameters ? 'explicit' : 'implicit');
         })
         .catch((e) =>
           setMonitorError(
@@ -187,7 +190,7 @@ export default function SimulationPanel({
     setError('');
     if (!dataset.preparation) {
       setError(
-        'Press Prep protein above first, then build the explicit-water box. The preview will retain the selected protonation state.',
+        'Prepare the structure above first, then build the explicit-water box. The preview will retain the selected protonation states.',
       );
       return;
     }
@@ -211,6 +214,7 @@ export default function SimulationPanel({
     }
   }
   async function changeSolvent(value: 'implicit' | 'explicit') {
+    if (value === 'implicit' && complexPrepared) return;
     if (value === 'explicit') {
       await previewWater();
       return;
@@ -282,6 +286,7 @@ export default function SimulationPanel({
           </button>
         </header>
         <StructureJobMonitor
+          complexPreparation={!!dataset?.atoms.some((atom) => atom.category === 'ligands')}
           job={submitting || (monitorError && !monitorId) ? undefined : monitoredJob}
           submitting={submitting}
           loadingResult={loadingResult || (resultSelected && !viewerReady && !viewerError)}
@@ -435,7 +440,9 @@ export default function SimulationPanel({
                 onChange={(e) => void changeSolvent(e.target.value as 'implicit' | 'explicit')}
                 disabled={engine === 'gromacs' || busy || !!pending}
               >
-                <option value="implicit">Implicit water · faster exploration</option>
+                <option value="implicit" disabled={complexPrepared}>
+                  Implicit water · faster exploration
+                </option>
                 <option value="explicit">Explicit water · periodic box</option>
               </select>
             </label>
@@ -453,7 +460,7 @@ export default function SimulationPanel({
                       ? `${dataset.atoms.filter((a) => a.category === 'water').length.toLocaleString()} water atoms · ${dataset.solvation.water_model ?? 'TIP3P'} · ${dataset.solvation.padding_nm} nm padding`
                       : dataset?.preparation
                         ? 'Build a real solvent box and inspect it before you run.'
-                        : 'Prepare the protein above to create a visible solvent box.'}
+                        : 'Prepare the structure above to create a visible solvent box.'}
                   </span>
                 </div>
                 <button
@@ -468,10 +475,12 @@ export default function SimulationPanel({
             )}
             <p className="form-note">
               {engine === 'openmm'
-                ? 'Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P.'
+                ? complexPrepared
+                  ? 'Amber ff14SB protein + GAFF2 / AM1-BCC ligands · TIP3P water · Langevin dynamics. Ligand states and parameters are retained in the saved box.'
+                  : 'Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P.'
                 : 'Amber99SB-ILDN · TIP3P water · stochastic dynamics.'}{' '}
-              NVT exploration with standard protein residues. Ligands and unsupported chemistry
-              require separate parameterization.
+              NVT exploration. Prepare protein–ligand complexes above, then build water and minimize
+              before dynamics.
             </p>
             <button
               type="button"
@@ -625,7 +634,7 @@ export default function SimulationPanel({
             </button>
             <p className="under-button">
               {engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation
-                ? 'Prepare the protein and build its water preview before starting.'
+                ? 'Prepare the structure and build its water preview before starting.'
                 : 'Keep exploring while your simulation runs in the background.'}
             </p>
           </form>

@@ -164,7 +164,13 @@ def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, 
         traj.unitcell_vectors = None
         warnings.append("No periodic box: measurements use ordinary Cartesian geometry.")
     np.savez_compressed(folder / "physical.npz", **physical)
-    traj[0].save_pdb(str(folder / "topology.pdb"))
+    pdb_frame = traj[0]
+    pdb_frame.topology = traj.topology.copy()
+    # mmCIF readers can retain string atom IDs. The canonical display PDB needs
+    # integer serials; renumber a copy without changing source order or bytes.
+    for atom in pdb_frame.topology.atoms:
+        atom.serial = atom.index + 1
+    pdb_frame.save_pdb(str(folder / "topology.pdb"))
     # PDB round trip avoids metadata and measurement connectivity disagreeing.
     canonical = md.load_topology(str(folder / "topology.pdb"))
     traj.topology = canonical

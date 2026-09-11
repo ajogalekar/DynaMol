@@ -1,6 +1,8 @@
 import math
-from typing import Literal
+from typing import Annotated, Literal
 from pydantic import BaseModel, Field, model_validator
+
+LigandOverrides = dict[Annotated[str, Field(min_length=1, max_length=100)], Annotated[str, Field(min_length=1, max_length=10000)]]
 
 
 class SimulationConfig(BaseModel):
@@ -57,6 +59,7 @@ class PreparationRequest(BaseModel):
     optimize_sidechains: bool = True
     remove_waters: bool = True
     remove_heterogens: bool = False
+    ligand_overrides: LigandOverrides = Field(default_factory=dict, max_length=100)
     seed: int = Field(default=2026, ge=1, le=2_147_483_646)
 
 
@@ -64,3 +67,8 @@ class SolvationRequest(BaseModel):
     padding_nm: float = Field(default=1, ge=1, le=3, allow_inf_nan=False)
     ph: float = Field(default=7, ge=0, le=14, allow_inf_nan=False)
     seed: int = Field(default=2026, ge=1, le=2_147_483_646)
+
+
+class InspectionRequest(BaseModel):
+    ph: float = Field(default=7, ge=0, le=14, allow_inf_nan=False)
+    ligand_overrides: LigandOverrides = Field(default_factory=dict, max_length=100)

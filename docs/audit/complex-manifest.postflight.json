@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T04:36:18.620503+00:00",
+  "purpose": "Verify implemented noncovalent protein-ligand preparation and exact parameter/state continuity in exploratory DynaMol software. Full 9AX6 preparation plus a documented single-complex short native smoke; no physical-state accuracy, binding affinity, uncertainty, convergence or portable-installer claims.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1",
+      "gemmi": "0.7.5",
+      "dimorphite-dl": "2.0.2"
+    },
+    "planned_seed": 2026,
+    "inputs": [
+      {
+        "id": "9fb26d98962c453b",
+        "n_atoms": 5936,
+        "n_residues": 1220,
+        "nonprotein": [
+          {
+            "name": "GNP",
+            "chain": 4,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 5,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "GNP",
+            "chain": 6,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 7,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "A1A",
+            "chain": 8,
+            "resSeq": 201,
+            "atoms": 58
+          },
+          {
+            "name": "A1A",
+            "chain": 9,
+            "resSeq": 201,
+            "atoms": 58
+          }
+        ],
+        "files": {
+          "source.cif": "631d0ce3ea45229f42f2b063adccdb1a76156a122056eb9dff496c0af17d7c34",
+          "topology.pdb": "7bdb1635e4ada93cda53c9b7b4566106c29ef0dc01a103c4ea046af2910f12dd",
+          "metadata.json": "a28b2560e1f2c600a00da27ebb275beba466bc8d3b002932523d824bd8964706",
+          "physical.npz": "f54c528d931fefd65fee5d77391c0b00565287bac2ef96e1d5a8af8957b2ddc3"
+        }
+      },
+      {
+        "id": "0bc7b7de87ec4e1d",
+        "n_atoms": 5936,
+        "n_residues": 1220,
+        "nonprotein": [
+          {
+            "name": "GNP",
+            "chain": 4,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 5,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "GNP",
+            "chain": 6,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 7,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "A1A",
+            "chain": 8,
+            "resSeq": 201,
+            "atoms": 58
+          },
+          {
+            "name": "A1A",
+            "chain": 9,
+            "resSeq": 201,
+            "atoms": 58
+          }
+        ],
+        "files": {
+          "source.cif": "631d0ce3ea45229f42f2b063adccdb1a76156a122056eb9dff496c0af17d7c34",
+          "topology.pdb": "7bdb1635e4ada93cda53c9b7b4566106c29ef0dc01a103c4ea046af2910f12dd",
+          "metadata.json": "c7521b80a9fb31c0b9aaa6a005d2443719138b4547276af721c3c5cb6715a865",
+          "physical.npz": "f54c528d931fefd65fee5d77391c0b00565287bac2ef96e1d5a8af8957b2ddc3"
+        }
+      }
+    ],
+    "outputs_and_exclusions_recorded": true,
+    "reviewed_current_source_sha256": {
+      "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backend/analysis.py": "87329dff012f23372c36262130549fb1023dee56c21f516feedbffbe9b27f521",
+      "backend/complex_topology.py": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542",
+      "backend/config.py": "5061c332a68d2c358e56c24fd8b04b5cde1c3146b0f3bf212dcced45d67b7055",
+      "backend/jobs.py": "5f03f5cbd2ead79bc38324d76a2e8653f2ce6d9748fb93b7935687b302bf16b3",
+      "backend/ligands.py": "a9b54a042660d4a9b4a4f292c939fa02d70be80a07dfceb9fa1aeb60744f80ff",
+      "backend/main.py": "2d41549b06ae0a3847a191ef68266195227fdf93becaaad2e7a01733f82892f1",
+      "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+      "backend/preparation.py": "1805132067f4e815cadb5a37da9b01b0f416ae187c7a53524f871eae3fe31036",
+      "backend/preparation_worker.py": "e69b015c397de1af0156efe6bf045db7632031f654fde71531e331c0de2d8edb",
+      "backend/prepared_system.py": "419e17f420740e10475daf5089214bc3fa52fbdcf2e13edc5cb4f280ad286562",
+      "backend/solvent.py": "3e57b1bc85c60f593a5cd0ea465e66112434bc19ff5aa87b1e4efa88d16933ad",
+      "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+      "backend/storage.py": "30f9c2759e371c0fa0b4e970e93cfd1771bdbbe3cd4aefd80ce8dbaf3dc24d8d",
+      "backend/tests/test_backend.py": "b969e827e3ff53aa6f4b0c20f6469681119585da8c324b79993beb8e9218c90d",
+      "backend/tests/test_complex_topology.py": "469ad96e32f8fd1ca32bcbc6233a1bf3cfa2998da6a5d8f4b9d0f09d672f4e0c",
+      "backend/tests/test_ligands.py": "55bb1b8f0ce8cdbcbf7c08f60b8194adb39cde308587b1c57ada0604bff879f2",
+      "backend/tests/test_preparation.py": "f443b3b376dc3556d2852877d5c2f926cb01c3f0c4fc20c0946f8dd3e6943dfc",
+      "backend/tests/test_prepared_system.py": "e72a8bbd9a241e0dddd7e701c6b4f34304649588d84098668c8d3ab4e397cfba",
+      "backend/tests/test_sources_solvent.py": "22436fdaf891a1166140e0ff9cf27d64860916c0e872844776e334973cc582be",
+      "backend/tests/test_ui_audit_formats.py": "5e9038ef9a903c93f76a123b3cc20545e6a86007e856553b82602f64e1536397",
+      "backend/worker.py": "67347ef45a8763c5b934c30665b7e7891ab4f70887383e0e32db75a27676788f",
+      "frontend/package-lock.json": "f961462bcfa8caada3ab9829414ed0fcd29be5938931f68e4817dbef81856e60",
+      "frontend/src/App.tsx": "1bc8e2ea144f6c7e86c5023356e6731330b2e6acc2c6fe67dc14f0670e9f8f5f",
+      "frontend/src/api.ts": "c938052f34a46017f4440b178ba27e49f1809e0b3e40a2316044eaf3a636122d",
+      "frontend/src/components/ImportDialog.tsx": "0a71def397e44889883d56b5c332392aa2676610ba191a3e0c7f9a0bc7ec8351",
+      "frontend/src/components/MolecularViewer.css": "b77dd9f31c47e45495244434110c1db8cbdc0bb22f4e1c57de19481f1a530de4",
+      "frontend/src/components/MolecularViewer.tsx": "9692c62235dd12d11c9393f201ca30d8b1c03bec69b97c6b04769bc2b447ef07",
+      "frontend/src/components/PlotPanel.tsx": "7c33a84e6df0126e114a1b47f9392af8d7826fca668d81b38695e3abb959dca1",
+      "frontend/src/components/SimulationPanel.tsx": "71f611fb8273a1bd8a985d6150ca351ad7efdb9cacad2191fa2ebce2c642deb8",
+      "frontend/src/components/StructureJobMonitor.tsx": "3970b4aca600d9237138ae5023302639c26fab6962fc038c9fd2d7034deb5e11",
+      "frontend/src/components/StructureWorkbench.tsx": "08b4dc6817736337f1757349ac4a62f29e759a95bfd078941680b44fec392fef",
+      "frontend/src/components/viewerGeometry.ts": "59a802c940664da4fedb90897a242a3c6418431bdab67897f5e832f4d45ab3c7",
+      "frontend/src/main.tsx": "e53a8b4c503129843e0bddf179689c21edfb7380a6da8a4a220f558cceb5ecec",
+      "frontend/src/styles.css": "81de673125cfa314d79e19193902b1ffbc85cbbc7bbb29b5b1a6e04e33e71ef3",
+      "frontend/src/types.ts": "974496276ad7499a2b2e4ad08379cbcb4700a09cdd2c724625f45508238e793b",
+      "scripts/install_ligand_tools.sh": "6bc67eccab2da3b07447f689f4dcc3c48af639f4f29dae207b54b25c11e3037d",
+      "uv.lock": "c91476022576db8033462a79e3410959b2a02d7d9c462de0c1e71b85486949b2"
+    },
+    "compiled_frontend_sha256": {
+      "frontend/dist/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+      "frontend/dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+      "frontend/dist/assets/index-C48wKSfx.js": "8eadb6f09b60011603bdffd7bfa769364028950f06e5ce998212b216b923deb6",
+      "frontend/dist/assets/index-CVWnfdy-.css": "9264cd50a450a7e4daf34118f233d17d4bc491cb8864efbab5c015d2566090b9",
+      "frontend/dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2": "c268b459a9329e59fecf39a17618efd44c71735532048d60b12aab76a8c14914",
+      "frontend/dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2": "2fb2e8cbfd52ae46179a8b6024eb162f1f9c6de3d22d6e3a30d8f395de7220be",
+      "frontend/dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+      "frontend/dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+      "frontend/dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+      "frontend/dist/favicon.svg": "77cdf8cbcd363097d422b5ed25fe11d59a6a12b24ce6363d6b8efee548ea3b4a",
+      "frontend/dist/index.html": "3ca1a168f367be2a875ad8fd6e7259de041d6803719782e74c69166e76574363"
+    },
+    "build_scope_note": "Hashes describe final on-disk reviewed source/build at postflight. Full prep 57083a2415754858 ran during edits and is not asserted to be an immutable loaded-code snapshot; actual molecular artifacts were independently rechecked, and final backend regressions pass.",
+    "native_version_note": "AmberTools 24.8 package/build, GAFF/BCC hashes and exact native commands are retained per ligand. GAFF2 data reports version 2.2.20. See ligand archive native_runtime, commands.json and full preflight/source references.",
+    "audit_files_sha256": {
+      "docs/audit/complex-preparation-checks.json": "8a9e5bfe0c05c05b6e5d664675ecde6dbf5e590366fbe0bed6b0d6d073acc462",
+      "docs/audit/complex-native-run.json": "5e93275015c58d7afa98520cbf217d087474def20b0f9d15ff58ff7b495ef2e9",
+      "docs/audit/check_complex_native.py": "f027afe96cbf31ce9c51e288ab848b97d8ee2a4652b93124ed8732ac50023fd2",
+      "docs/audit/complex-native-fixture.json": "1b0fbdf30c0fc3c6531e270ec8e65d27e1f6eceb71217b3a1d2c6e65e29c3b2b",
+      "docs/audit/complex-native-fixture.py": "c06de0adda55962800b6d3c00a3ac6265dcef30a22f09df6ecaaad5d54c9f118",
+      "docs/audit/complex-backend-tests.txt": "f2a4cef7981efa0cad358e756d0a3b0cf1732c7c162478e265c59160aa706268",
+      "docs/audit/complex-ligand-xml-equivalence.json": "5648f785d9f988e8cbc8ef40f59dc6b6b5c78af9696021ac5663fc56cb6c069f",
+      "docs/audit/complex-source-inventory.json": "3295e074a711a2addff46485780084d543e6611e9984eb1e876d52c2bfdbd3ae",
+      "docs/audit/complex-bound-stereochemistry.json": "d0063d3c17df5676036fec1fd4baa3499aae6b5edd53a8b24e89f83c54e65733",
+      "docs/audit/complex-ccd-summary.json": "79d33c491985514b156efa8612e7bb02bb0d88797fdbb0c328d48e1d83f03b7e",
+      "docs/audit/complex-blog-search.json": "d9188cbc0efb9a420a4e4015c8af6e6caf45830cfbd751e9eab956db7713bab0"
+    },
+    "verified_final_artifact_hashes": true
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Retain every molecule by default. Reconstruct ligand graph only from authoritative CCD matching residue atom names or explicit user chemistry. Preserve bound heavy-atom coordinates and atom identity; check valence, charge, aromaticity and defined stereochemistry. Do not treat CCD formal charge or canonical tautomer as physiological pH assignment. Protonation choice must be recorded, inspectable and carried into parameterization. Refuse unsupported covalent links, unknown graphs, or unsupported metal chemistry before modifying source; preserve original inputs. Native force-field and charge outputs remain attached through solvation and OpenMM simulation. GROMACS support requires proven parameter conversion or explicit unavailability."
+  },
+  "validation": {
+    "status": "Deterministic software checks and bounded native pipeline passed; biophysical uncertainty/convergence unvalidated.",
+    "backend_regression_tests_passed": 77,
+    "full_preparation": {
+      "job_id": "57083a2415754858",
+      "dataset_id": "4cf5bcedf38847c1",
+      "particles": 10654,
+      "ligand_heavy_atoms_retained": 180,
+      "magnesium_atoms_retained": 2,
+      "coordinating_water_oxygens_retained": 4,
+      "protected_ser17_thr35_heavy_atoms": 26,
+      "maximum_observed_displacement_angstrom": 0,
+      "maximum_metal_contact_distance_change_angstrom": 0,
+      "maximum_native_to_assembled_atom_charge_difference_e": 0.0
+    },
+    "native_conversion": {
+      "conformers_per_template": 3,
+      "templates": 2,
+      "max_energy_difference_kj_mol": 8.45082013256615e-08,
+      "max_force_component_difference_kj_mol_nm": 1.2501274113674299e-06
+    },
+    "bounded_native_pipeline": {
+      "purpose": "Software continuity and finite short CPU dynamics; no equilibrium, affinity, or metal-model accuracy claim.",
+      "checks": {
+        "solvation_solute_max_displacement_angstrom": 0.0,
+        "parameter_hashes_preserved": true,
+        "charges_preserved": true,
+        "trajectory_finite": true,
+        "energy_records_finite": true,
+        "saved_frames": 6,
+        "production_steps": 10,
+        "production_ps": 0.02
+      },
+      "fixture_dataset_id": "9ax6_cluster_native",
+      "parameter_hashes": [
+        "776f86dd0f7bf318a8e29f263377bcd00748d72f528195195cb67cb56e478c8e",
+        "77784e0ffc5cfe06433397d57803105261515510af040a4500fa1323895702bd"
+      ],
+      "prepared_charges": [
+        {
+          "key": "E:201::GNP",
+          "atoms": 45,
+          "charge_e": -4.000000010701173
+        },
+        {
+          "key": "I:201::A1A",
+          "atoms": 117,
+          "charge_e": 0.9999999867415199
+        }
+      ],
+      "solvation_job_id": "aa90242593014f1d",
+      "solvated_dataset_id": "865380bba4a54a53",
+      "solvated_charges": [
+        {
+          "key": "E:201::GNP",
+          "atoms": 45,
+          "charge_e": -4.000000010701173
+        },
+        {
+          "key": "I:201::A1A",
+          "atoms": 117,
+          "charge_e": 0.9999999867415199
+        }
+      ],
+      "solvated_atoms": 64494,
+      "simulation_job_id": "f66ad52d18834ec1",
+      "simulation_settings": {
+        "dataset_id": "865380bba4a54a53",
+        "name": "e2e-complex-validation \u00b7 native OpenMM",
+        "engine": "openmm",
+        "solvent": "explicit",
+        "duration_ps": 0.02,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 2,
+        "seed": 2026,
+        "minimize": true,
+        "equilibration_steps": 10
+      },
+      "trajectory_dataset_id": "7549b750c03f4817",
+      "native_system_charges": [
+        {
+          "key": "E:201::GNP",
+          "atoms": 45,
+          "charge_e": -4.000000010701173
+        },
+        {
+          "key": "I:201::A1A",
+          "atoms": 117,
+          "charge_e": 0.9999999867415199
+        }
+      ],
+      "native_files_sha256": {
+        "system.xml": "24eb0c548feaaa876aa71095b3be49b0840fb3cd22e21bddb9f922b7cc37e8e6",
+        "prepared.pdb": "4b15c1a227ee5e56e37c6c8e83babb598cfb89f7cbc3c3f10ca6d4f03866ea52",
+        "energies.csv": "2fc2212497b40f977802c9c56f03ecbaf2a21ee2a42e953dca4f4289f455efef",
+        "config.json": "1bcafb19b82f08b20e59817b43a70247b1704a06a2fdb452b0f61e1c9ab82d0b"
+      },
+      "passed": true
+    },
+    "source_version_limitation": "The application source was edited while this development job ran. Its recorded implementation hash identifies file bytes observed at completion, not a guaranteed immutable snapshot of loaded Python modules. This audit independently rechecks preserved molecular artifacts with the current audit script; it does not retroactively claim a frozen build.",
+    "annotation_corrections": "Original annotations preserved; corrected shared-folder source-copy labels and added per-residue records. 104 native/parameter files independently verified unchanged.",
+    "ui_validation": "Separate docs/UI_FUNCTIONAL_AUDIT.md; combined browser release run was still running when this scientific postflight was generated."
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "notes": "No physical-accuracy benchmark, stochastic performance distribution, confidence interval or convergence analysis. Single 0.02 ps production smoke and deterministic equality/tolerance contracts only. Do not interpret finite values or XML equivalence as validation of a biophysical model."
+  },
+  "review_identity": "Language-model evidence and code review with PatAgent checklist. Reviewer implemented the prepared-system continuity module, so that portion is self-review; separate agents performed artifact/native checks. No expert endorsement.",
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "pose_geometry_checked": true,
+    "notes": "Original bound ligand heavy positions and observed coordinating geometry preserved. Fixed protonation and nonbonded metal model are assumptions; no native rotamer, microscopic pKa, nitrogen inversion/atropisomer, affinity or convergence claims."
+  },
+  "exclusions": {
+    "full_structure_solvation": "Whole prepared 9AX6 box exceeds unchanged 100000-atom limit; full prepared dataset kept intact.",
+    "native_fixture": {
+      "id": "9ax6_cluster_native",
+      "selected_canonical_chains": [
+        "A",
+        "C",
+        "E",
+        "F",
+        "I",
+        "K"
+      ],
+      "particles": 5327,
+      "full_protein_chains": true,
+      "atom_map_preserved": true,
+      "source_cif_preserved": true,
+      "note": "One observed KRAS/PPIA complex with GNP, A1AHB, Mg and two coordinating waters; excludes contacts with other crystallographic copy. No new charge assignment."
+    },
+    "unsupported_modes": [
+      "implicit ligand GBn2",
+      "prepared complex GROMACS transfer",
+      "covalent ligands",
+      "unsupported metal-organic models",
+      "radicals",
+      "incomplete/ambiguous ligand graph",
+      "nucleic-acid complexes",
+      "portable standalone installer"
+    ]
+  }
+}

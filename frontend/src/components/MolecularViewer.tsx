@@ -721,11 +721,15 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       const groups = groupsRef.current;
       if (!groups || !dataset || activeDatasetId.current !== dataset.id) return;
       const valid = props.selectedAtoms.filter(
-        (index) => Number.isInteger(index) && index >= 0 && index < dataset.n_atoms,
+        (index) =>
+          Number.isInteger(index) &&
+          index >= 0 &&
+          index < dataset.n_atoms &&
+          atomIsVisible(dataset.atoms[index], props.visibility),
       );
       groups.selected.setSelection(atomSelection(valid));
       groups.selectedLabel.setSelection(atomSelection(valid));
-    }, [props.selectedAtoms, props.dataset?.id, componentVersion]);
+    }, [props.selectedAtoms, props.visibility, props.dataset?.id, componentVersion]);
 
     useEffect(() => {
       const component = componentRef.current;

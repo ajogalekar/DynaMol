@@ -1,0 +1,28 @@
+{
+  "source": "bundled examples/demo physical coordinates, first 5 frames and first 6 residues",
+  "source_sha256": "343776ba0baf21e9f56ca7d0ddc2161e410269e82a518f1e02ba0c7c8b25aaca",
+  "n_atoms": 113,
+  "n_frames": 5,
+  "time_ps": [
+    0.0,
+    0.2,
+    0.4,
+    0.6000000000000001,
+    0.8
+  ],
+  "first_pair_distance_angstrom": [
+    1.010000228881836,
+    1.0099998712539673,
+    1.009999394416809,
+    1.0100001096725464,
+    1.0100009441375732
+  ],
+  "mixed_fixture": "Visualization-only arbitrary placed ethanol, water and sodium; not an MD-ready complex.",
+  "lammps_fixture": "Original demo coordinates in an artificial 10 nm cubic cell, for file decoding only.",
+  "nucleic_fixture": "Schematic four-residue DNA backbone without bases or validated stereochemistry, for visibility only; not suitable for MD.",
+  "ethanol": {
+    "smiles": "CCO",
+    "generator": "RDKit EmbedMolecule + UFFOptimizeMolecule",
+    "seed": 2026
+  }
+}

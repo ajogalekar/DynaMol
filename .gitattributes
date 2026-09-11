@@ -8,3 +8,6 @@
 docs/audit/preparation-gromacs-probes/** -whitespace
 docs/audit/preparation-worker-evidence/** -whitespace
 docs/audit/preparation-fixtures/** -whitespace
+
+# Keep downloaded CCD reference records byte-identical to the audit sources.
+docs/audit/complex-ccd-*.cif -whitespace

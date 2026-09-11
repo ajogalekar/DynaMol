@@ -1,0 +1,1381 @@
+{
+  "created_at": "2026-09-11T04:36:24.774647+00:00",
+  "mode": "move",
+  "protected_ids": [
+    "0bc7b7de87ec4e1d",
+    "4cf5bcedf38847c1",
+    "57083a2415754858",
+    "7549b750c03f4817",
+    "865380bba4a54a53",
+    "9ax6_cluster_native",
+    "9fb26d98962c453b",
+    "aa90242593014f1d",
+    "demo",
+    "f66ad52d18834ec1",
+    "ubiquitin-start"
+  ],
+  "recognized_ui_test_name_prefixes": [
+    "e2e-ui-audit-",
+    "e2e-structure-",
+    "e2e-race-",
+    "e2e-protein-prep-",
+    "e2e-prep-monitor-",
+    "e2e-known-gap-",
+    "e2e-ethanol-mol2-",
+    "e2e-lactate-smiles-",
+    "E2E OpenMM "
+  ],
+  "counts": {
+    "datasets": 103,
+    "jobs": 21
+  },
+  "entries": [
+    {
+      "kind": "datasets",
+      "id": "0227379718554aea",
+      "name": "e2e-ui-audit-cif-1789099576325",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/0227379718554aea",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/0227379718554aea",
+      "record_sha256": "23c97dd5b861e8a1a09484112bf3540108a74112b47ba0ef25a688f1013572f3"
+    },
+    {
+      "kind": "datasets",
+      "id": "02ed69d46b054e2e",
+      "name": "e2e-ui-audit-mdcrd-1789098846055",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/02ed69d46b054e2e",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/02ed69d46b054e2e",
+      "record_sha256": "703404d7b97b2c17664f6f1bd03eb48eb57ad86dce794253d6db5032b0146676"
+    },
+    {
+      "kind": "datasets",
+      "id": "03188691ba43433d",
+      "name": "e2e-ui-audit-h5-1789098827278",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/03188691ba43433d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/03188691ba43433d",
+      "record_sha256": "49749583e5f81e61259bb62cd698766bdd74f134772b662a9163f955c9674993"
+    },
+    {
+      "kind": "datasets",
+      "id": "04f3aaa7b60d4034",
+      "name": "e2e-ui-audit-hidden-selection-1789100082116",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/04f3aaa7b60d4034",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/04f3aaa7b60d4034",
+      "record_sha256": "e726f12587742b11058d0c69e473abc4575e30e7c0ab0b7e6f004bbe4a897a19"
+    },
+    {
+      "kind": "datasets",
+      "id": "0911e815dd174ce0",
+      "name": "e2e-ui-audit-source-mol-1789101230372",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/0911e815dd174ce0",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/0911e815dd174ce0",
+      "record_sha256": "c09f0a2e46d9d8abbd8bd7745a3047c5aec6cd02274ca91a7f44a2857f9c7979"
+    },
+    {
+      "kind": "datasets",
+      "id": "0cedd674a94b4a84",
+      "name": "e2e-ui-audit-mdcrd-1789099583126",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/0cedd674a94b4a84",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/0cedd674a94b4a84",
+      "record_sha256": "73f0f96a6ea73f0113caad37d3bae0e9adc88f0f0b117fb5b5b6f3db5c5e61bc"
+    },
+    {
+      "kind": "datasets",
+      "id": "0ea27b2617fd426c",
+      "name": "e2e-ui-audit-override-1789101235577",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/0ea27b2617fd426c",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/0ea27b2617fd426c",
+      "record_sha256": "819e5d0dd76ddb7b6f5b29d786b7b5b389ef074564332bf8ade996e8939a1ff9"
+    },
+    {
+      "kind": "datasets",
+      "id": "0f5ab3b989f441ae",
+      "name": "e2e-prep-monitor-viewer-retry-1789099097913",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/0f5ab3b989f441ae",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/0f5ab3b989f441ae",
+      "record_sha256": "a51cea5b8b6ed449847240cd26817a14cc66f21149992105b45ac9e645302e09"
+    },
+    {
+      "kind": "datasets",
+      "id": "1168037807f04c1a",
+      "name": "e2e-protein-prep-1789099088081 \u00b7 prepared",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/1168037807f04c1a",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/1168037807f04c1a",
+      "record_sha256": "8a6cf215b9f9b72c75964edcc4e34ac266641dda0cc95c7bba2e33afaed13b15"
+    },
+    {
+      "kind": "datasets",
+      "id": "147a9a537ee74812",
+      "name": "e2e-prep-monitor-success-1789101118612",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/147a9a537ee74812",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/147a9a537ee74812",
+      "record_sha256": "8c1477681e0c3e302330fb2b0ab94d92fb3b5b5ddc40c09c3a01891f3572b438"
+    },
+    {
+      "kind": "datasets",
+      "id": "15aad69c9a4d49bb",
+      "name": "e2e-ui-audit-trr-1789100812644",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/15aad69c9a4d49bb",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/15aad69c9a4d49bb",
+      "record_sha256": "dcf220f2e4646e0f2e2c1b0be6f1f5ab31490d0c055cf963e3792a378d4ed50e"
+    },
+    {
+      "kind": "datasets",
+      "id": "163a9f35866a477a",
+      "name": "e2e-ui-audit-dropped-1789098635747",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/163a9f35866a477a",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/163a9f35866a477a",
+      "record_sha256": "c502cc798abcc7de3dd73911a90d0f9e27cd5212493ba644ee650f6cd09f1cf4"
+    },
+    {
+      "kind": "datasets",
+      "id": "1c138fc379824430",
+      "name": "1UBQ",
+      "status": null,
+      "reason": "Exact ID returned by the final real fetch browser test",
+      "original": "data/datasets/1c138fc379824430",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/1c138fc379824430",
+      "record_sha256": "6d4e5ee1c028f1b0dcfe2d473ee171b46e292882fcd9791ef237db30053e65e6"
+    },
+    {
+      "kind": "datasets",
+      "id": "20c54cdec1ae45d2",
+      "name": "e2e-ui-audit-dcd-1789099579741",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/20c54cdec1ae45d2",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/20c54cdec1ae45d2",
+      "record_sha256": "329e9b74f7c98625cfcfe7149b3ec7e6def635b24c98e6aae2ade3e16f376477"
+    },
+    {
+      "kind": "datasets",
+      "id": "2271758c9933434e",
+      "name": "e2e-prep-monitor-success-1789099094011",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/2271758c9933434e",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/2271758c9933434e",
+      "record_sha256": "4746097b239520c85d3bf97d5dad088ece866e540710189880399ad472851e6a"
+    },
+    {
+      "kind": "datasets",
+      "id": "2576c75ad1d9460d",
+      "name": "e2e-ui-audit-xyz-1789100814783",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/2576c75ad1d9460d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/2576c75ad1d9460d",
+      "record_sha256": "8c9b5c75a2a1d4f355ff6a8497444e4647b36feeadc6333fcea9c0bf83669e6c"
+    },
+    {
+      "kind": "datasets",
+      "id": "287b0e3dd2424927",
+      "name": "e2e-ui-audit-lammpstrj-1789101170716",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/287b0e3dd2424927",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/287b0e3dd2424927",
+      "record_sha256": "a6b90d4de73eaef5e8dd7b6fe2a55e2b0bc47fb7b6c8c78cde9381ef990aa7e7"
+    },
+    {
+      "kind": "datasets",
+      "id": "2a9c733d8c044e90",
+      "name": "e2e-ui-audit-mixed-1789101171703",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/2a9c733d8c044e90",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/2a9c733d8c044e90",
+      "record_sha256": "645ff08210a4b766c10fb27de604f19113f4672008125cce5fe8e412de01311f"
+    },
+    {
+      "kind": "datasets",
+      "id": "2b0aeb7368d04bfe",
+      "name": "e2e-ui-audit-cif-1789100807507",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/2b0aeb7368d04bfe",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/2b0aeb7368d04bfe",
+      "record_sha256": "fa4e5ce6a51e3d500a079d50a7ffa0d109e1ec80447986a7a4afbaf45a7a31e0"
+    },
+    {
+      "kind": "datasets",
+      "id": "2c37899878cc4a47",
+      "name": "e2e-ui-audit-xyz-1789099582254",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/2c37899878cc4a47",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/2c37899878cc4a47",
+      "record_sha256": "96161f9deec6354e373118639e06205dee4fa95474aad7c585d8f1665d767ad4"
+    },
+    {
+      "kind": "datasets",
+      "id": "303df8315d824345",
+      "name": "e2e-ui-audit-gro-1789099577176",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/303df8315d824345",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/303df8315d824345",
+      "record_sha256": "8a5ac56f0ef38fecc78d1f20781f0e085c4111a478ceb22d732cd6ef96eddd9d"
+    },
+    {
+      "kind": "datasets",
+      "id": "32a2e41d747b46c8",
+      "name": "e2e-ui-audit-pdb-1789100806509",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/32a2e41d747b46c8",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/32a2e41d747b46c8",
+      "record_sha256": "9a9ef61cd7e2277c1efded7882212702038ee24378153380e9a14f99503146b8"
+    },
+    {
+      "kind": "datasets",
+      "id": "3403a93c6fb14c2d",
+      "name": "e2e-prep-monitor-success-1789101118612 \u00b7 prepared",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/3403a93c6fb14c2d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/3403a93c6fb14c2d",
+      "record_sha256": "dac3510887753db0f809eb45a589176ac752b8fcea6b01309c7157b3ae3ed248"
+    },
+    {
+      "kind": "datasets",
+      "id": "3cbdb46667cd496f",
+      "name": "e2e-ui-audit-override-1789100466866",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/3cbdb46667cd496f",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/3cbdb46667cd496f",
+      "record_sha256": "cf72927e62829fdfbce7f61eda5625081629a3ed3c6f793850e9b3e36bb0760b"
+    },
+    {
+      "kind": "datasets",
+      "id": "3d8713d4f48b449d",
+      "name": "e2e-ui-audit-source-cif-1789099751533",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/3d8713d4f48b449d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/3d8713d4f48b449d",
+      "record_sha256": "b0adcdc01afd8fe3f20b0210ecf3826424fe34e5de722bf8a218ede41bdb4991"
+    },
+    {
+      "kind": "datasets",
+      "id": "3e9142c5c9da4d8c",
+      "name": "e2e-prep-monitor-validation-1789099097024",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/3e9142c5c9da4d8c",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/3e9142c5c9da4d8c",
+      "record_sha256": "f83cb2c6059240ff49aa5ec3c717bb8bcbc69cc509c61e6cd29b50c81a9d5fa1"
+    },
+    {
+      "kind": "datasets",
+      "id": "3f36300a16e543aa",
+      "name": "e2e-prep-monitor-viewer-retry-1789101123593",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/3f36300a16e543aa",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/3f36300a16e543aa",
+      "record_sha256": "99c88982894587954120a0cab165f0835519ccb635cc224ae14e2baf5ee7daa4"
+    },
+    {
+      "kind": "datasets",
+      "id": "40e3948c35694236",
+      "name": "e2e-protein-prep-1789101112669",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/40e3948c35694236",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/40e3948c35694236",
+      "record_sha256": "2b642401f82d2ab9b1bb67b9a7f8cecb1063dccee9bb2c19c7556d40dd3eeaac"
+    },
+    {
+      "kind": "datasets",
+      "id": "410b0847dde24075",
+      "name": "e2e-ui-audit-source-smiles-1789099754038",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/410b0847dde24075",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/410b0847dde24075",
+      "record_sha256": "bc9acdeb47e34ad05eaa78cdb36dca940bce27990d7598ed2d53c0a7d0d92f47"
+    },
+    {
+      "kind": "datasets",
+      "id": "41dae796ce5c4830",
+      "name": "e2e-ui-audit-mdcrd-1789101169762",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/41dae796ce5c4830",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/41dae796ce5c4830",
+      "record_sha256": "5d07f1fb03acf94b402d37b04f31bdb76b6d09292fd1d61c8686033388143c08"
+    },
+    {
+      "kind": "datasets",
+      "id": "42bfa59f41ee47d9",
+      "name": "e2e-structure-1789101099594",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/42bfa59f41ee47d9",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/42bfa59f41ee47d9",
+      "record_sha256": "dbdc33755a40277988a31bb5bbd919040560f06cad4724de2a576cce304d0f11"
+    },
+    {
+      "kind": "datasets",
+      "id": "44b870ccd5744658",
+      "name": "e2e-ui-audit-xtc-1789098830599",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/44b870ccd5744658",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/44b870ccd5744658",
+      "record_sha256": "fa9714e4e07d2a57123c5ec6b1a9b00954e16e9bfdb8fdcc602a17244dea996e"
+    },
+    {
+      "kind": "datasets",
+      "id": "454262fce5e24197",
+      "name": "e2e-protein-prep-1789099088081",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/454262fce5e24197",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/454262fce5e24197",
+      "record_sha256": "b871608727152e6f6c36171eb01dd6e25a4a54a202e22664910a157019d451a6"
+    },
+    {
+      "kind": "datasets",
+      "id": "478b004dd39e4707",
+      "name": "e2e-lactate-smiles-1789101131600",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/478b004dd39e4707",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/478b004dd39e4707",
+      "record_sha256": "12dfa489d9da3a6a37d495e99ca767fd1e60e21211d6f94cd7ef7689695a41da"
+    },
+    {
+      "kind": "datasets",
+      "id": "4909d09fa0174151",
+      "name": "e2e-ui-audit-source-smiles-1789101232522",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/4909d09fa0174151",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/4909d09fa0174151",
+      "record_sha256": "3bdb0bcaa4458adcd6b8f545587b987cde8a63254179a3e8a10a55bec9a297d0"
+    },
+    {
+      "kind": "datasets",
+      "id": "49b67207cf5e43c8",
+      "name": "e2e-ui-audit-xtc-1789100810688",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/49b67207cf5e43c8",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/49b67207cf5e43c8",
+      "record_sha256": "9358911bf7f5108109b350e6b27b868b16812091fe88f0a54b501ed34c5f54b1"
+    },
+    {
+      "kind": "datasets",
+      "id": "4a775ee119ef48c4",
+      "name": "e2e-protein-prep-1789099088081 \u00b7 prepared \u00b7 explicit water",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/4a775ee119ef48c4",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/4a775ee119ef48c4",
+      "record_sha256": "5bb162c9e48a113866bc844ce733bcff17617cf0ccaa040f61721dba476782d3"
+    },
+    {
+      "kind": "datasets",
+      "id": "4fad08d168b744ef",
+      "name": "e2e-ui-audit-nucleic-1789100653708",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/4fad08d168b744ef",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/4fad08d168b744ef",
+      "record_sha256": "97790cc7c3e9c4213658ad538980d003daadd082579148a6aa24820b2d3b9bd9"
+    },
+    {
+      "kind": "datasets",
+      "id": "5bc9993f11f24215",
+      "name": "e2e-ui-audit-source-smi-1789101231753",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/5bc9993f11f24215",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/5bc9993f11f24215",
+      "record_sha256": "8d88127eda8ec66e4bccdb1d1bee6dda0df0f404eb7c25aa0aa23e612590089e"
+    },
+    {
+      "kind": "datasets",
+      "id": "5c9623a85915439d",
+      "name": "e2e-ui-audit-gromacs-1789099266575",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/5c9623a85915439d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/5c9623a85915439d",
+      "record_sha256": "fcec55fa29ed9eb4b9008181efd42e71ff88d128aed1996675fd5234fb3b452b"
+    },
+    {
+      "kind": "datasets",
+      "id": "60aed4a9d33b4c1d",
+      "name": "e2e-ui-audit-h5-1789100809652",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/60aed4a9d33b4c1d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/60aed4a9d33b4c1d",
+      "record_sha256": "11dc8721607d9a7d66d4342d52cec984b28cac75ea6ca3f4308c555e29342a88"
+    },
+    {
+      "kind": "datasets",
+      "id": "63329a9a464e4681",
+      "name": "e2e-protein-prep-1789101112669 \u00b7 prepared \u00b7 explicit water",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/63329a9a464e4681",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/63329a9a464e4681",
+      "record_sha256": "e8262b3dd48244227e748d1490a4eacff0f3955da44bfe6932c6f9d4407d7bb2"
+    },
+    {
+      "kind": "datasets",
+      "id": "649e4244b4fd48f8",
+      "name": "e2e-ui-audit-pdb-1789099575517",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/649e4244b4fd48f8",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/649e4244b4fd48f8",
+      "record_sha256": "266749d724f7eaa8ffc66546bdb865ddc0e250c3a679bb876c6001542e1d5943"
+    },
+    {
+      "kind": "datasets",
+      "id": "64ad3ec2245546bd",
+      "name": "e2e-ui-audit-dcd-1789098834071",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/64ad3ec2245546bd",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/64ad3ec2245546bd",
+      "record_sha256": "99668a3fb636c74c08e62ac6d1e462ccf3ba1f50ed0b49af3c91c1e81f3c2036"
+    },
+    {
+      "kind": "datasets",
+      "id": "64cc4aaa618e4101",
+      "name": "e2e-ui-audit-mdcrd-1789100815821",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/64cc4aaa618e4101",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/64cc4aaa618e4101",
+      "record_sha256": "b999e0f4e981eeca3624c8424a0979c46e1cd20cdd91b4ae438f8db0bef052ea"
+    },
+    {
+      "kind": "datasets",
+      "id": "66139950d0a44273",
+      "name": "e2e-ui-audit-trr-1789101166796",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/66139950d0a44273",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/66139950d0a44273",
+      "record_sha256": "481de5116d3c3b8a54d9b83f4cde2a3cf17c7f3d9c538507f45ea2de9817950a"
+    },
+    {
+      "kind": "datasets",
+      "id": "6abe98e4deaf41ae",
+      "name": "caffeine \u00b7 PubChem 2519",
+      "status": null,
+      "reason": "Exact ID returned by the final real fetch browser test",
+      "original": "data/datasets/6abe98e4deaf41ae",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/6abe98e4deaf41ae",
+      "record_sha256": "06100664736dcd6481a47665aa1505dbdb7121b93ad0384bcc150e1f0f032868"
+    },
+    {
+      "kind": "datasets",
+      "id": "6cda5d965fcb4cf0",
+      "name": "e2e-ui-audit-nucleic-1789101194275",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/6cda5d965fcb4cf0",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/6cda5d965fcb4cf0",
+      "record_sha256": "26f852c901ba15fe27d82456196aa45b35bf5e5b65fed9e4cb36919682a613ae"
+    },
+    {
+      "kind": "datasets",
+      "id": "758d2fe341fe4eae",
+      "name": "e2e-ui-audit-nc-1789099581360",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/758d2fe341fe4eae",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/758d2fe341fe4eae",
+      "record_sha256": "24f30969375cfc2f166382c31c44d7b7afc3a756dbf17a95355e22657c7469de"
+    },
+    {
+      "kind": "datasets",
+      "id": "78b333609d134666",
+      "name": "e2e-ui-audit-gro-1789101162836",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/78b333609d134666",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/78b333609d134666",
+      "record_sha256": "7192dcc82b4d550ce68d7c8664c83de62fa9bf4f42961c6b3457bea03a126f9b"
+    },
+    {
+      "kind": "datasets",
+      "id": "7d683d8de72041d4",
+      "name": "e2e-ui-audit-hidden-selection-1789100129641",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/7d683d8de72041d4",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/7d683d8de72041d4",
+      "record_sha256": "48046d64049dea85ea889b0f8ad6d2fc65a697fc6d061dbb2583f705e7437ce4"
+    },
+    {
+      "kind": "datasets",
+      "id": "7dbccd2490334922",
+      "name": "e2e-ui-audit-pdb-1789101160879",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/7dbccd2490334922",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/7dbccd2490334922",
+      "record_sha256": "e21a3b46ef029b4640c094cba8d2fdf2ccaaf99d3dfb2a670235c10ae61f8e08"
+    },
+    {
+      "kind": "datasets",
+      "id": "8261d7ce99164417",
+      "name": "e2e-ui-audit-gromacs-1789099313937",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/8261d7ce99164417",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/8261d7ce99164417",
+      "record_sha256": "b66d4290fe32c6c4fc3a2b32889b6a781c5f1274f8219f55dae03290b97be737"
+    },
+    {
+      "kind": "datasets",
+      "id": "8568b965b54e41de",
+      "name": "e2e-ui-audit-gro-1789100808556",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/8568b965b54e41de",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/8568b965b54e41de",
+      "record_sha256": "e45aa6d991bb0593113e1543d9b02a23bfffcde6b0074a206b3ac94effd118e6"
+    },
+    {
+      "kind": "datasets",
+      "id": "85b45fad9f084cde",
+      "name": "e2e-ui-audit-dropped-1789101158404",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/85b45fad9f084cde",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/85b45fad9f084cde",
+      "record_sha256": "0ef0ec7e7451ab8b87b341aa802ac7a558b0780ee1ab6cdd596fab484cef3911"
+    },
+    {
+      "kind": "datasets",
+      "id": "876ef8bd1dbd4887",
+      "name": "e2e-ui-audit-water-controls-1789101218427",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/876ef8bd1dbd4887",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/876ef8bd1dbd4887",
+      "record_sha256": "33116c04471ee565c6d5d5397e2dbaed0331d88875d8be7d6dbfbbe73cc9cc83"
+    },
+    {
+      "kind": "datasets",
+      "id": "8e94e2a157594d34",
+      "name": "e2e-ui-audit-gromacs-1789101197540",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/8e94e2a157594d34",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/8e94e2a157594d34",
+      "record_sha256": "c7282b32f87f3a2528a5708bbbf3338e3acf8140699b413952a4c5b60638d10a"
+    },
+    {
+      "kind": "datasets",
+      "id": "9353532d7cce4887",
+      "name": "e2e-ui-audit-xtc-1789101164832",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/9353532d7cce4887",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/9353532d7cce4887",
+      "record_sha256": "29dbed7918e36a9050cc878b2392c05672f975ca8fc7d7c4524765805d8a6647"
+    },
+    {
+      "kind": "datasets",
+      "id": "9403b27653724795",
+      "name": "e2e-ui-audit-pdb-1789098816984",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/9403b27653724795",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/9403b27653724795",
+      "record_sha256": "cab3428fa9188a968f19b57fccff14a6db75cc4931e48ea90772493eef500288"
+    },
+    {
+      "kind": "datasets",
+      "id": "94bb74d9d8ef4dac",
+      "name": "E2E OpenMM 1789101103600",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/94bb74d9d8ef4dac",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/94bb74d9d8ef4dac",
+      "record_sha256": "023edb46e0e275015819cdeb16748245385130373fe50bea31801d0bc5d956b4"
+    },
+    {
+      "kind": "datasets",
+      "id": "94bff5ade4de4831",
+      "name": "e2e-ui-audit-source-cif-1789101229552",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/94bff5ade4de4831",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/94bff5ade4de4831",
+      "record_sha256": "406f43063b70dfb02ee8521f7c6ef1b988668970c19423533ea13200d4fb3039"
+    },
+    {
+      "kind": "datasets",
+      "id": "97e553e4f09e48b2",
+      "name": "e2e-ui-audit-source-sdf-1789099752776",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/97e553e4f09e48b2",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/97e553e4f09e48b2",
+      "record_sha256": "04401cb64428257995398acdd400ab8bb8be2a0aca79e014fb414e7e6446f470"
+    },
+    {
+      "kind": "datasets",
+      "id": "97eba09941b948d2",
+      "name": "e2e-prep-monitor-viewer-retry-1789101123593 \u00b7 prepared",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/97eba09941b948d2",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/97eba09941b948d2",
+      "record_sha256": "20c5f54454f0e8399617baa924285cec100694230209f05cf7225c9e77f23dde"
+    },
+    {
+      "kind": "datasets",
+      "id": "9fb5cbe517564985",
+      "name": "e2e-ui-audit-mixed-1789098846914",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/9fb5cbe517564985",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/9fb5cbe517564985",
+      "record_sha256": "9d814b33250218531086692c4be507f3ff6e0af9ba5fa61a13a7e50037df321e"
+    },
+    {
+      "kind": "datasets",
+      "id": "a24f4dd507a84795",
+      "name": "e2e-ui-audit-lammpstrj-1789100816898",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/a24f4dd507a84795",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/a24f4dd507a84795",
+      "record_sha256": "40eed20a08a25ec768296885b1c70c8d37b2907e346e92500d0f1e860c4906fe"
+    },
+    {
+      "kind": "datasets",
+      "id": "a6226fd6f4724c41",
+      "name": "e2e-race-1789101101934",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/a6226fd6f4724c41",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/a6226fd6f4724c41",
+      "record_sha256": "6a9cf1dcf7aa75789a1f67761f3581a7379b18169decb8a9047a0e923df4c7ac"
+    },
+    {
+      "kind": "datasets",
+      "id": "a786bb25d71a4f8e",
+      "name": "e2e-ui-audit-lammpstrj-1789100652827",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/a786bb25d71a4f8e",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/a786bb25d71a4f8e",
+      "record_sha256": "f5d326165c7c32b5cc6ebd1885106598607706e10f88e2d5f5823125bdb8b13a"
+    },
+    {
+      "kind": "datasets",
+      "id": "ac7141976a924d72",
+      "name": "e2e-ui-audit-mixed-1789099584007",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/ac7141976a924d72",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/ac7141976a924d72",
+      "record_sha256": "12caea2a1a5ab9bf9b1cb14d068b9e226810126ed1b0b6653820ddb969697fba"
+    },
+    {
+      "kind": "datasets",
+      "id": "b12521998a70436e",
+      "name": "e2e-prep-monitor-viewer-retry-1789099097913 \u00b7 prepared",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/b12521998a70436e",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/b12521998a70436e",
+      "record_sha256": "dc6011eef70ea26e44c59dbd0edd3f91a7e4c5f36b6904e6b0ee35ecd278d6f5"
+    },
+    {
+      "kind": "datasets",
+      "id": "b19bb6ace0d84c12",
+      "name": "e2e-ui-audit-override-1789100145244",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/b19bb6ace0d84c12",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/b19bb6ace0d84c12",
+      "record_sha256": "f69fee51e8f04fe1c1b2e0ec023d9f4e185ab2fa8572bd2b1a06545d20c1d084"
+    },
+    {
+      "kind": "datasets",
+      "id": "b2541b362c3447ba",
+      "name": "e2e-ui-audit-override-1789099771901",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/b2541b362c3447ba",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/b2541b362c3447ba",
+      "record_sha256": "d1d1e9d5f6cf3e43e42a4542b06b18aa024c9b7873b47650aaa0b049b6dba1d5"
+    },
+    {
+      "kind": "datasets",
+      "id": "bb650b0327994a4a",
+      "name": "e2e-ui-audit-chooser-1789099650423",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/bb650b0327994a4a",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/bb650b0327994a4a",
+      "record_sha256": "ad0b6084713e1f32f02a609338d7eb1152cd73d4d4d5e83a5aa4ac0f2d3e0c68"
+    },
+    {
+      "kind": "datasets",
+      "id": "bb66872728ae49bb",
+      "name": "e2e-ui-audit-trr-1789099580544",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/bb66872728ae49bb",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/bb66872728ae49bb",
+      "record_sha256": "4088d193cf23f3fdb696c4ff0cf90e9a0c8a308ab963f04012371f256ea8e543"
+    },
+    {
+      "kind": "datasets",
+      "id": "bea79ff7dc564cad",
+      "name": "e2e-ui-audit-water-controls-1789101218427 \u00b7 explicit water",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/bea79ff7dc564cad",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/bea79ff7dc564cad",
+      "record_sha256": "5cb9a8f885fc3f6d97f04991cbe6d812f03611fb1b8d41645c5286a317731699"
+    },
+    {
+      "kind": "datasets",
+      "id": "c524c5d0ce204f21",
+      "name": "e2e-ui-audit-hidden-selection-1789101178886",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/c524c5d0ce204f21",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/c524c5d0ce204f21",
+      "record_sha256": "aeca91df65ae34a2d4d776c2e02d8a0e7ec6d76eb6b212016fff1236db7c44ab"
+    },
+    {
+      "kind": "datasets",
+      "id": "c9010bdca0724ffb",
+      "name": "e2e-ui-audit-dcd-1789101165823",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/c9010bdca0724ffb",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/c9010bdca0724ffb",
+      "record_sha256": "21d581af97c3698e9bce329e80aebc446b1be3ab6cde0c50258c16f188692604"
+    },
+    {
+      "kind": "datasets",
+      "id": "c9871f43e66e413c",
+      "name": "e2e-ethanol-mol2-1789101129714",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/c9871f43e66e413c",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/c9871f43e66e413c",
+      "record_sha256": "5aba5a117a35a837abf84051c424dbcb1dfce646de40bb01c60f162660b6c565"
+    },
+    {
+      "kind": "datasets",
+      "id": "c99205f618344466",
+      "name": "e2e-ui-audit-water-controls-1789101218427 \u00b7 explicit water",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/c99205f618344466",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/c99205f618344466",
+      "record_sha256": "dadaa24566546d2b76f41392006a9d2514e8c207011b00cc8d030f40488d7913"
+    },
+    {
+      "kind": "datasets",
+      "id": "d0be68ff234b49e3",
+      "name": "e2e-ui-audit-xtc-1789099578873",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/d0be68ff234b49e3",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/d0be68ff234b49e3",
+      "record_sha256": "b591748be0243991b100387b8f64890c70a51869648a291707a63352198d31df"
+    },
+    {
+      "kind": "datasets",
+      "id": "d11b5301365a4343",
+      "name": "e2e-ui-audit-cif-1789101161851",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/d11b5301365a4343",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/d11b5301365a4343",
+      "record_sha256": "eb0b658b9756a665dacb7c548c3343fb708f4a9fc65af94fdbce0ebc191871c4"
+    },
+    {
+      "kind": "datasets",
+      "id": "d2e5e6a9eb0e40cd",
+      "name": "e2e-ui-audit-xyz-1789101168765",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/d2e5e6a9eb0e40cd",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/d2e5e6a9eb0e40cd",
+      "record_sha256": "aa3e0f9f59dfdef6a133bbbc2d344da7012d30a3729c7ebf6923ea69d238cd92"
+    },
+    {
+      "kind": "datasets",
+      "id": "d710255e8d2e4793",
+      "name": "E2E OpenMM 1789099263238",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/d710255e8d2e4793",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/d710255e8d2e4793",
+      "record_sha256": "383760bc0d1afd899f48e00d03aaf0cc2c89e72e9df91df41efa203c69ebba77"
+    },
+    {
+      "kind": "datasets",
+      "id": "d7b2ac370dcc4e03",
+      "name": "e2e-ui-audit-trr-1789098837401",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/d7b2ac370dcc4e03",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/d7b2ac370dcc4e03",
+      "record_sha256": "d0ee47eac7f679d067c0734536da6d387b4399faa31bb10ffb237c30a2b3afb5"
+    },
+    {
+      "kind": "datasets",
+      "id": "d804627000194848",
+      "name": "e2e-ui-audit-nc-1789100813645",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/d804627000194848",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/d804627000194848",
+      "record_sha256": "bee5a48d47002760bf92a8b78df034e1729b5866b26773b9eb14967bc5ef3f7b"
+    },
+    {
+      "kind": "datasets",
+      "id": "de3c01f46cab4e6b",
+      "name": "e2e-ui-audit-dropped-1789099483539",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/de3c01f46cab4e6b",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/de3c01f46cab4e6b",
+      "record_sha256": "54e91f2949de7335b632cd8dfd778a4ea61d82a7ed6f604bf71ac306093ef2ad"
+    },
+    {
+      "kind": "datasets",
+      "id": "de80445636094c4b",
+      "name": "e2e-ui-audit-xyz-1789098843980",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/de80445636094c4b",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/de80445636094c4b",
+      "record_sha256": "9e00605221922efcc226666b3a56a2d9aaca9ede79f5f6a6679a802cf5d9fec1"
+    },
+    {
+      "kind": "datasets",
+      "id": "e40a54d2f96b4c33",
+      "name": "e2e-ui-audit-nc-1789098840497",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/e40a54d2f96b4c33",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/e40a54d2f96b4c33",
+      "record_sha256": "02d46a9cab80851bb40840bc2c38884b6252267a58bce1b31e8b65d5a51afbd6"
+    },
+    {
+      "kind": "datasets",
+      "id": "e4642fbe2d554bca",
+      "name": "e2e-ui-audit-gro-1789098823896",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/e4642fbe2d554bca",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/e4642fbe2d554bca",
+      "record_sha256": "ba11d29ecee8593d3a6996e9113e4df459862a2e6c30b97bffeefc91838aa456"
+    },
+    {
+      "kind": "datasets",
+      "id": "e4eccf750df34e45",
+      "name": "e2e-protein-prep-1789101112669 \u00b7 prepared",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/e4eccf750df34e45",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/e4eccf750df34e45",
+      "record_sha256": "94e7d5913bdb7905adf5f1df0799de94be8f87f41e1adef4be1fb1bdcddd44e4"
+    },
+    {
+      "kind": "datasets",
+      "id": "e6f188397ea64b71",
+      "name": "e2e-ui-audit-source-smi-1789099753403",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/e6f188397ea64b71",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/e6f188397ea64b71",
+      "record_sha256": "ed4df9a7a260020ec13550876b9077800b8a18927d42f6b1974f14881493f1d8"
+    },
+    {
+      "kind": "datasets",
+      "id": "e9e7010ede024bdd",
+      "name": "e2e-ui-audit-h5-1789099577977",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/e9e7010ede024bdd",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/e9e7010ede024bdd",
+      "record_sha256": "c6adb78a4f6957fc83ca43077037d6e0ef6a07a6fa6e5e88f7deea50ca4fccb7"
+    },
+    {
+      "kind": "datasets",
+      "id": "eaa455c0426a4343",
+      "name": "e2e-prep-monitor-success-1789099094011 \u00b7 prepared",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/eaa455c0426a4343",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/eaa455c0426a4343",
+      "record_sha256": "d509fa56e5f555f219c465d8459b70f63d880cbdbfae8c85ae8fdcd2b37d88f1"
+    },
+    {
+      "kind": "datasets",
+      "id": "eb46eafbd60144b9",
+      "name": "e2e-ui-audit-chooser-1789101160262",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/eb46eafbd60144b9",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/eb46eafbd60144b9",
+      "record_sha256": "7bbedf6347e0b74a38b4f1ced34526555c2ed7df8a6f74f04d4863a25adaa4ff"
+    },
+    {
+      "kind": "datasets",
+      "id": "ec5b4c68c8f846f1",
+      "name": "e2e-ui-audit-h5-1789101163836",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/ec5b4c68c8f846f1",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/ec5b4c68c8f846f1",
+      "record_sha256": "e0de04abff40244c5b726d1406fd9418f5ada6e1c32564858bced9061887ff7a"
+    },
+    {
+      "kind": "datasets",
+      "id": "ed4de003937740ce",
+      "name": "e2e-ui-audit-chooser-1789098637442",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/ed4de003937740ce",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/ed4de003937740ce",
+      "record_sha256": "e1f3e9c56660ad34104083496aed3a14e24fc3ea79ec5dd3cd9ed1e41e576e69"
+    },
+    {
+      "kind": "datasets",
+      "id": "ef4c42e409664dc8",
+      "name": "e2e-ui-audit-source-sdf-1789101231122",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/ef4c42e409664dc8",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/ef4c42e409664dc8",
+      "record_sha256": "a2026a417f83e0513a2876bc2f4794ca1f353fa29c5acccd18646a78dbfe0ff5"
+    },
+    {
+      "kind": "datasets",
+      "id": "f0afd0580ac74e20",
+      "name": "e2e-ui-audit-water-controls-1789101218427-source",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/f0afd0580ac74e20",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/f0afd0580ac74e20",
+      "record_sha256": "696b91c96f15d2da2e6767425e404595ec94894201a1ed1dbbd034fe568729e8"
+    },
+    {
+      "kind": "datasets",
+      "id": "f7624fcf5d274f00",
+      "name": "e2e-ui-audit-nc-1789101167775",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/f7624fcf5d274f00",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/f7624fcf5d274f00",
+      "record_sha256": "16c7ed444d09dbf197f0328a51dd71df099834510273a10c27805b6a54045bce"
+    },
+    {
+      "kind": "datasets",
+      "id": "f9bf9fabb9a44e72",
+      "name": "e2e-prep-monitor-validation-1789101121816",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/f9bf9fabb9a44e72",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/f9bf9fabb9a44e72",
+      "record_sha256": "b0cace6b21245a2c91795f5e0ad4f04e0bfd1dcaa0d315f2020cb374026cc5a0"
+    },
+    {
+      "kind": "datasets",
+      "id": "fa3789d4d99b4fca",
+      "name": "e2e-known-gap-1789101128424",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/fa3789d4d99b4fca",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/fa3789d4d99b4fca",
+      "record_sha256": "ab78a1b005593886fd0e1a852b249aebfa78df5a0e18346c86d0164707092852"
+    },
+    {
+      "kind": "datasets",
+      "id": "fb5a1434c77046cd",
+      "name": "e2e-ui-audit-source-mol-1789099752142",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/fb5a1434c77046cd",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/fb5a1434c77046cd",
+      "record_sha256": "d5572e59a78e3817e027d8ea139f62d7c1c0dd86d597d1dfe0f2fb6c8c8a4759"
+    },
+    {
+      "kind": "datasets",
+      "id": "fc152b25d8a44c53",
+      "name": "e2e-ui-audit-dcd-1789100811659",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/fc152b25d8a44c53",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/fc152b25d8a44c53",
+      "record_sha256": "fcb0ddeab0e55b0a3a7d003ff0eb856fc8019964c47bc28980d7cd5076a7a3c1"
+    },
+    {
+      "kind": "datasets",
+      "id": "ffc8fe23af71473d",
+      "name": "e2e-ui-audit-prep-cancel-1789101216108",
+      "status": null,
+      "reason": "Explicit UI test name prefix",
+      "original": "data/datasets/ffc8fe23af71473d",
+      "archive": "data/integration-checks/ui-functional-audit/datasets/ffc8fe23af71473d",
+      "record_sha256": "94cdfa18323bdc41552b2ab563a994bbb8177b03246c627f76837881125e2c73"
+    },
+    {
+      "kind": "jobs",
+      "id": "2d3ecf4d3e884cb5",
+      "name": "e2e-prep-monitor-success-1789101118612 \u00b7 prepared",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/2d3ecf4d3e884cb5",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/2d3ecf4d3e884cb5",
+      "record_sha256": "72077e72db217ce414c9eaa9a1bb7691770451c3db906cc828dbf0fe4cb4ea29"
+    },
+    {
+      "kind": "jobs",
+      "id": "3e7ddddc221f4d23",
+      "name": "E2E OpenMM 1789101103600",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/3e7ddddc221f4d23",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/3e7ddddc221f4d23",
+      "record_sha256": "0c022f5e628a0abdf4b4cfb6fca315360b006b6f61e889ccda14cc2538a72956"
+    },
+    {
+      "kind": "jobs",
+      "id": "476cb29cd7be490c",
+      "name": "e2e-ui-audit-cancel-1789099252870",
+      "status": "cancelled",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/476cb29cd7be490c",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/476cb29cd7be490c",
+      "record_sha256": "73144224bc0762c5e375a98d47b3d64f1074eddd9ccdb237f24ca81cf7d8c32c"
+    },
+    {
+      "kind": "jobs",
+      "id": "4dea9b73a7ac4615",
+      "name": "e2e-ui-audit-water-controls-1789101218427",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/4dea9b73a7ac4615",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/4dea9b73a7ac4615",
+      "record_sha256": "72331fd9ff75dd6f0eca728a5562f3a6d119590836e5838e89d96bfee1216518"
+    },
+    {
+      "kind": "jobs",
+      "id": "6e560d0c9a984465",
+      "name": "e2e-prep-monitor-viewer-retry-1789101123593 \u00b7 prepared",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/6e560d0c9a984465",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/6e560d0c9a984465",
+      "record_sha256": "20dd170941d4cf6a40d4b6c14667132fcc2b52cacd330850d18646bc0a50b98d"
+    },
+    {
+      "kind": "jobs",
+      "id": "6e58b58bc36343a5",
+      "name": "e2e-ui-audit-gromacs-1789099266575",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/6e58b58bc36343a5",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/6e58b58bc36343a5",
+      "record_sha256": "e13ef395e56142014f3b11efc39a68b2d79c98c752ce38de96478bb27aee7348"
+    },
+    {
+      "kind": "jobs",
+      "id": "74bfc26b399e499a",
+      "name": "e2e-protein-prep-1789099088081 \u00b7 prepared",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/74bfc26b399e499a",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/74bfc26b399e499a",
+      "record_sha256": "735ad65cef386fa692fe412e057a9a8670a426e419f638852238b393746b729c"
+    },
+    {
+      "kind": "jobs",
+      "id": "74e57c077e584a75",
+      "name": "e2e-ui-audit-gromacs-1789099101257",
+      "status": "failed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/74e57c077e584a75",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/74e57c077e584a75",
+      "record_sha256": "9297589c2977efcfe5bde65bdf090d4758dd44f55fb9e438229f100e7de400d6"
+    },
+    {
+      "kind": "jobs",
+      "id": "7b2d7a4033ea4f32",
+      "name": "Explicit water preview",
+      "status": "completed",
+      "reason": "Job input is a proven UI test dataset",
+      "original": "data/jobs/7b2d7a4033ea4f32",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/7b2d7a4033ea4f32",
+      "record_sha256": "87651c24d0fe9e0e0bcdb2506b14c3bb9cb12b5d6c9fa93ed6f3cdcf160421ab"
+    },
+    {
+      "kind": "jobs",
+      "id": "8c265ff63a6e42e7",
+      "name": "e2e-ui-audit-cancel-1789101214850",
+      "status": "cancelled",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/8c265ff63a6e42e7",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/8c265ff63a6e42e7",
+      "record_sha256": "9d82fae55d3059ed9f79063a9f5938fd07dd5bf4115debf9070032d19aebd569"
+    },
+    {
+      "kind": "jobs",
+      "id": "8c6b07eb53f74efc",
+      "name": "Explicit water preview",
+      "status": "completed",
+      "reason": "Job input is a proven UI test dataset",
+      "original": "data/jobs/8c6b07eb53f74efc",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/8c6b07eb53f74efc",
+      "record_sha256": "75043b344fffb0947e023702dc75f7456d474a5555f557d47b2ceb6abbdaa88a"
+    },
+    {
+      "kind": "jobs",
+      "id": "8e9f984d3370448b",
+      "name": "Explicit water preview",
+      "status": "cancelled",
+      "reason": "Job input is a proven UI test dataset",
+      "original": "data/jobs/8e9f984d3370448b",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/8e9f984d3370448b",
+      "record_sha256": "b37f1b7599af88b8d5d97baf9e30f25e2be11a055b6310fab78a557234fc1ec9"
+    },
+    {
+      "kind": "jobs",
+      "id": "950f739dccbd4904",
+      "name": "e2e-protein-prep-1789101112669 \u00b7 prepared",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/950f739dccbd4904",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/950f739dccbd4904",
+      "record_sha256": "b9a63c685c89a5eb109b583bc980a8af412e5d27ead6089d00926200318e7edf"
+    },
+    {
+      "kind": "jobs",
+      "id": "a3fd359cd5cc4439",
+      "name": "Explicit water preview",
+      "status": "completed",
+      "reason": "Job input is a proven UI test dataset",
+      "original": "data/jobs/a3fd359cd5cc4439",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/a3fd359cd5cc4439",
+      "record_sha256": "1eb6ff0d9fb380ffb3ec3f0aa2d918f51331421bab75e0e6a7db1c972a949a2d"
+    },
+    {
+      "kind": "jobs",
+      "id": "bc5c5c97a8054fd4",
+      "name": "e2e-ui-audit-prep-cancel-1789101216108 \u00b7 prepared",
+      "status": "cancelled",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/bc5c5c97a8054fd4",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/bc5c5c97a8054fd4",
+      "record_sha256": "c4d719defaaacae096e7c585230864a8bae9c68d535500968061638623af453d"
+    },
+    {
+      "kind": "jobs",
+      "id": "c8a3ab4ed87a48da",
+      "name": "Explicit water preview",
+      "status": "completed",
+      "reason": "Job input is a proven UI test dataset",
+      "original": "data/jobs/c8a3ab4ed87a48da",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/c8a3ab4ed87a48da",
+      "record_sha256": "71723cb475dacf45f578a07062d3c70f3eeaeda0d1894f6497abfb27aea2c089"
+    },
+    {
+      "kind": "jobs",
+      "id": "ce0b9b4781f742b0",
+      "name": "e2e-prep-monitor-viewer-retry-1789099097913 \u00b7 prepared",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/ce0b9b4781f742b0",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/ce0b9b4781f742b0",
+      "record_sha256": "29dbbc3b57c0f1e99c1258d0e4e99d2c737890f732c7a5d40e915bfd93f240a2"
+    },
+    {
+      "kind": "jobs",
+      "id": "ce8a65f2302c41dc",
+      "name": "e2e-prep-monitor-success-1789099094011 \u00b7 prepared",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/ce8a65f2302c41dc",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/ce8a65f2302c41dc",
+      "record_sha256": "9c9f6355eb51a3fccf3e2c90907974f6d6596279ba026c549bf51a07e8bf67bd"
+    },
+    {
+      "kind": "jobs",
+      "id": "d011e2d3c9b54e5c",
+      "name": "e2e-ui-audit-gromacs-1789101197540",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/d011e2d3c9b54e5c",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/d011e2d3c9b54e5c",
+      "record_sha256": "2881acba74f6520bd848c4b162d378bf70da84ffad9e8e890d2e3755c4d07329"
+    },
+    {
+      "kind": "jobs",
+      "id": "e905d698d7f04fb8",
+      "name": "E2E OpenMM 1789099263238",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/e905d698d7f04fb8",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/e905d698d7f04fb8",
+      "record_sha256": "e4d85832f4e982eeb8cdcbb73cd90ab5cd4b88c082f5f97ee305d8b045f2ee14"
+    },
+    {
+      "kind": "jobs",
+      "id": "f34cc7a568cd4df7",
+      "name": "e2e-ui-audit-gromacs-1789099313937",
+      "status": "completed",
+      "reason": "Explicit UI test name prefix",
+      "original": "data/jobs/f34cc7a568cd4df7",
+      "archive": "data/integration-checks/ui-functional-audit/jobs/f34cc7a568cd4df7",
+      "record_sha256": "0dea41af43738485e680a60419832db18e352d47c222795652365a0fd746a733"
+    }
+  ],
+  "retained_other_records": {
+    "datasets": [
+      {
+        "id": "demo",
+        "name": "Ubiquitin \u00b7 in motion"
+      },
+      {
+        "id": "2c7aeeb77f4146fb",
+        "name": "GROMACS \u00b7 solvent preservation check"
+      },
+      {
+        "id": "9ax6_cluster_native",
+        "name": "9AX6 \u00b7 single-complex native validation"
+      },
+      {
+        "id": "0609f5051bdf4c0e",
+        "name": "Ubiquitin \u00b7 prepared \u00b7 explicit water"
+      },
+      {
+        "id": "9fb26d98962c453b",
+        "name": "9AX6"
+      },
+      {
+        "id": "4cf5bcedf38847c1",
+        "name": "9AX6 \u00b7 prepared complex"
+      },
+      {
+        "id": "e6b002d0067a46c4",
+        "name": "Ubiquitin \u00b7 prepared"
+      },
+      {
+        "id": "ubiquitin-start",
+        "name": "Ubiquitin \u00b7 starting structure"
+      },
+      {
+        "id": "1778e5c28a5e44a1",
+        "name": "Ubiquitin \u00b7 prepared pH 7"
+      },
+      {
+        "id": "865380bba4a54a53",
+        "name": "9AX6 \u00b7 single-complex native validation \u00b7 explicit water"
+      },
+      {
+        "id": "0bc7b7de87ec4e1d",
+        "name": "9AX6"
+      },
+      {
+        "id": "7549b750c03f4817",
+        "name": "e2e-complex-validation \u00b7 native OpenMM"
+      },
+      {
+        "id": "884812abf10049b9",
+        "name": "Ubiquitin \u00b7 in motion"
+      },
+      {
+        "id": "8d9a75b0a5b24458",
+        "name": "GROMACS \u00b7 first motion"
+      }
+    ],
+    "jobs": [
+      {
+        "id": "1e5a626039224d3c",
+        "name": "Ubiquitin \u00b7 in motion"
+      },
+      {
+        "id": "57083a2415754858",
+        "name": "9AX6 \u00b7 prepared complex"
+      },
+      {
+        "id": "9963ef95444b447e",
+        "name": "GROMACS \u00b7 solvent preservation check"
+      },
+      {
+        "id": "aa90242593014f1d",
+        "name": "Explicit water preview"
+      },
+      {
+        "id": "9193a9abf1254278",
+        "name": "Explicit water preview"
+      },
+      {
+        "id": "f66ad52d18834ec1",
+        "name": "e2e-complex-validation \u00b7 native OpenMM"
+      },
+      {
+        "id": "0a0bbed4d644416a",
+        "name": "Ubiquitin \u00b7 prepared pH 7"
+      },
+      {
+        "id": "b3898c9d78e94214",
+        "name": "GROMACS \u00b7 first motion"
+      },
+      {
+        "id": "7bcb80a477194831",
+        "name": "Ubiquitin \u00b7 prepared"
+      }
+    ]
+  },
+  "completed_at": "2026-09-11T04:36:24.800093+00:00",
+  "all_record_hashes_verified_after_move": true,
+  "post_archive_api_verification": {
+    "dataset_count": 14,
+    "job_count": 9,
+    "no_active_jobs": true,
+    "all_protected_scientific_ids_present": true,
+    "all_archived_ids_absent_from_active_library": true
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T03:44:25.182793+00:00",
+  "purpose": "Implement and verify noncovalent protein-ligand complex preparation in DynaMol with retained chemistry, parameters, and original ligand pose. Bounded native parameterization and short MD smoke checks only; no affinity, equilibration, pKa accuracy, or universal metal-modeling claims.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "versions": {
+      "rdkit": "2026.3.6",
+      "openmm": "8.6.0",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6"
+    },
+    "planned_seed": 2026,
+    "inputs": [
+      {
+        "id": "9fb26d98962c453b",
+        "n_atoms": 5936,
+        "n_residues": 1220,
+        "nonprotein": [
+          {
+            "name": "GNP",
+            "chain": 4,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 5,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "GNP",
+            "chain": 6,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 7,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "A1A",
+            "chain": 8,
+            "resSeq": 201,
+            "atoms": 58
+          },
+          {
+            "name": "A1A",
+            "chain": 9,
+            "resSeq": 201,
+            "atoms": 58
+          }
+        ],
+        "files": {
+          "source.cif": "631d0ce3ea45229f42f2b063adccdb1a76156a122056eb9dff496c0af17d7c34",
+          "topology.pdb": "7bdb1635e4ada93cda53c9b7b4566106c29ef0dc01a103c4ea046af2910f12dd",
+          "metadata.json": "a28b2560e1f2c600a00da27ebb275beba466bc8d3b002932523d824bd8964706",
+          "physical.npz": "f54c528d931fefd65fee5d77391c0b00565287bac2ef96e1d5a8af8957b2ddc3"
+        }
+      },
+      {
+        "id": "0bc7b7de87ec4e1d",
+        "n_atoms": 5936,
+        "n_residues": 1220,
+        "nonprotein": [
+          {
+            "name": "GNP",
+            "chain": 4,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 5,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "GNP",
+            "chain": 6,
+            "resSeq": 201,
+            "atoms": 32
+          },
+          {
+            "name": "MG",
+            "chain": 7,
+            "resSeq": 202,
+            "atoms": 1
+          },
+          {
+            "name": "A1A",
+            "chain": 8,
+            "resSeq": 201,
+            "atoms": 58
+          },
+          {
+            "name": "A1A",
+            "chain": 9,
+            "resSeq": 201,
+            "atoms": 58
+          }
+        ],
+        "files": {
+          "source.cif": "631d0ce3ea45229f42f2b063adccdb1a76156a122056eb9dff496c0af17d7c34",
+          "topology.pdb": "7bdb1635e4ada93cda53c9b7b4566106c29ef0dc01a103c4ea046af2910f12dd",
+          "metadata.json": "c7521b80a9fb31c0b9aaa6a005d2443719138b4547276af721c3c5cb6715a865",
+          "physical.npz": "f54c528d931fefd65fee5d77391c0b00565287bac2ef96e1d5a8af8957b2ddc3"
+        }
+      }
+    ]
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Retain every molecule by default. Reconstruct ligand graph only from authoritative CCD matching residue atom names or explicit user chemistry. Preserve bound heavy-atom coordinates and atom identity; check valence, charge, aromaticity and defined stereochemistry. Do not treat CCD formal charge or canonical tautomer as physiological pH assignment. Protonation choice must be recorded, inspectable and carried into parameterization. Refuse unsupported covalent links, unknown graphs, or unsupported metal chemistry before modifying source; preserve original inputs. Native force-field and charge outputs remain attached through solvation and OpenMM simulation. GROMACS support requires proven parameter conversion or explicit unavailability."
+  },
+  "validation": {
+    "status": "Preflight design, implementation pending",
+    "scope": "Coordinate and atom mapping conservation, chemical graph/state validation, charge consistency, parameter completeness, force/system finiteness, steric/stereochemistry checks, no silent ligand removal, no double solvation or reparameterization, UI progress/errors, optional short CPU smoke."
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No accuracy benchmark; no held-out test data or predicted scientific efficacy."
+  },
+  "review_identity": "Language-model evidence review with PatAgent automated checklist; not domain-expert certification or endorsement."
+}

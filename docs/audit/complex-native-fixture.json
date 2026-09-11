@@ -1,0 +1,321 @@
+{
+  "created_utc": "2026-09-11T04:25:43.667447+00:00",
+  "dataset_id": "9ax6_cluster_native",
+  "parent_dataset_id": "4cf5bcedf38847c1",
+  "source_dataset_id": "9fb26d98962c453b",
+  "builder_sha256": "c06de0adda55962800b6d3c00a3ac6265dcef30a22f09df6ecaaad5d54c9f118",
+  "selection": "Canonical chains A,C,E,F,I,K; whole proteins and all prepared waters belonging to the selected Mg environment.",
+  "contact_evidence": {
+    "source": "Original canonical physical coordinates, all heavy-atom pairs <4 \u00c5; contact counts do not imply bond order.",
+    "inhibitor_I_to_protein_A_pairs": 56,
+    "inhibitor_I_to_protein_C_pairs": 73,
+    "inhibitor_I_to_protein_B_pairs": 4,
+    "inhibitor_I_to_protein_D_pairs": 0,
+    "GNP_E_to_protein_A_pairs": 154,
+    "GNP_E_to_other_proteins_pairs": 0
+  },
+  "chain_mapping": [
+    {
+      "canonical_chain": "A",
+      "source_label_asym_id": "A",
+      "source_auth_asym_id": "A",
+      "role": "KRAS protein, all prepared residues"
+    },
+    {
+      "canonical_chain": "C",
+      "source_label_asym_id": "C",
+      "source_auth_asym_id": "D",
+      "role": "PPIA protein, all prepared residues"
+    },
+    {
+      "canonical_chain": "E",
+      "source_label_asym_id": "E",
+      "source_auth_asym_id": "A",
+      "resid": "201",
+      "component_id": "GNP",
+      "role": "bound GNP, fixed charge -4"
+    },
+    {
+      "canonical_chain": "F",
+      "source_label_asym_id": "F",
+      "source_auth_asym_id": "A",
+      "resid": "202",
+      "component_id": "MG",
+      "role": "bound magnesium, nonbonded +2"
+    },
+    {
+      "canonical_chain": "I",
+      "source_label_asym_id": "I",
+      "source_auth_asym_id": "D",
+      "resid": "201",
+      "canonical_residue_name": "A1A",
+      "component_id": "A1AHB",
+      "role": "bound RMC-6236, chosen nominal-pH state +1"
+    },
+    {
+      "canonical_chain": "K",
+      "source_label_asym_id": "K",
+      "source_auth_asym_id": "A",
+      "resids": [
+        "307",
+        "348"
+      ],
+      "component_id": "HOH",
+      "role": "both observed Mg-coordinating waters, including prepared hydrogens"
+    }
+  ],
+  "atoms": 5327,
+  "ligand_heavy_atoms": 90,
+  "magnesium_atoms": 1,
+  "coordinating_water_molecules": 2,
+  "residues": 337,
+  "coordinate_max_displacement_from_prepared_parent_angstrom": 0.0,
+  "solute_extent_nm": [
+    4.3298000000000005,
+    7.437,
+    4.4512
+  ],
+  "bounding_radius_nm": 3.8850103474765674,
+  "cube_padding_nm": 1.0,
+  "cube_width_nm": 8.770020694953136,
+  "estimate_formula": "solute_atoms + ceil(110 * max(2*radius+padding, 2*padding)^3)",
+  "estimated_atoms_upper_bound": 79526,
+  "atom_limit_unchanged": 100000,
+  "verified_system_particles": 5327,
+  "net_forcefield_charge_e": -7.000000023959639,
+  "ligand_charges": [
+    {
+      "key": "E:201::GNP",
+      "component_id": "GNP",
+      "charge_e": -4.000000010701173,
+      "atoms": 45
+    },
+    {
+      "key": "I:201::A1A",
+      "component_id": "A1AHB",
+      "charge_e": 0.9999999867415199,
+      "atoms": 117
+    }
+  ],
+  "metal_environment": {
+    "method": "Observed metal\u2013N/O/S contacts within 2.8 \u00c5 (3.2 \u00c5 for Ca); these distances do not establish bond order or validate a metal model.",
+    "retained_coordinating_waters": [
+      [
+        "K",
+        "307",
+        "",
+        "HOH"
+      ],
+      [
+        "K",
+        "348",
+        "",
+        "HOH"
+      ]
+    ],
+    "protected_sidechain_residues": [
+      [
+        "A",
+        "17",
+        "",
+        "SER"
+      ],
+      [
+        "A",
+        "35",
+        "",
+        "THR"
+      ],
+      [
+        "E",
+        "201",
+        "",
+        "GNP"
+      ]
+    ],
+    "contacts": [
+      {
+        "metal": [
+          "F",
+          "202",
+          "",
+          "MG"
+        ],
+        "donor": [
+          "A",
+          "17",
+          "",
+          "SER",
+          "OG"
+        ],
+        "distance_angstrom": 2.0964295838401066
+      },
+      {
+        "metal": [
+          "F",
+          "202",
+          "",
+          "MG"
+        ],
+        "donor": [
+          "A",
+          "35",
+          "",
+          "THR",
+          "OG1"
+        ],
+        "distance_angstrom": 2.1028975248451847
+      },
+      {
+        "metal": [
+          "F",
+          "202",
+          "",
+          "MG"
+        ],
+        "donor": [
+          "K",
+          "307",
+          "",
+          "HOH",
+          "O"
+        ],
+        "distance_angstrom": 2.1370245670089973
+      },
+      {
+        "metal": [
+          "F",
+          "202",
+          "",
+          "MG"
+        ],
+        "donor": [
+          "K",
+          "348",
+          "",
+          "HOH",
+          "O"
+        ],
+        "distance_angstrom": 2.0737285261094347
+      },
+      {
+        "metal": [
+          "F",
+          "202",
+          "",
+          "MG"
+        ],
+        "donor": [
+          "E",
+          "201",
+          "",
+          "GNP",
+          "O1G"
+        ],
+        "distance_angstrom": 1.960465760986406
+      },
+      {
+        "metal": [
+          "F",
+          "202",
+          "",
+          "MG"
+        ],
+        "donor": [
+          "E",
+          "201",
+          "",
+          "GNP",
+          "O2B"
+        ],
+        "distance_angstrom": 2.0697180967465094
+      }
+    ]
+  },
+  "source_cif_note": "The complete original mmCIF is preserved as sequence/CCD provenance. Its unselected coordinate records are not part of this fixture. Source label and author identifiers are listed explicitly; A1A is only the canonical PDB truncation of A1AHB.",
+  "limitations": [
+    "No MD or solvation was performed by this builder.",
+    "The complete user structure remains unchanged.",
+    "Subset omits crystal contacts with the other complex copy.",
+    "A short downstream native trajectory verifies software execution only; no convergence, binding affinity, metal energetics or protonation correctness claim."
+  ],
+  "files": {
+    "atom-map.json": "3fbe2dd6e88b449e39c908500c8ab0be50669b42b0dc928dbf7db8517aebe6ff",
+    "coordinates.bin": "d70fbfa8d1ee4317fcd4ba162ae31f2c4b17df8db3a9742439ba8f425d9d6132",
+    "fixture-atom-map.json": "e97ffc9935f50fa8ad6cdc5ac147d6582412b78d0e51814a262a0a1d18c57cee",
+    "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AC.AC": "a01e86383de7e8bc6fa6e8ebf67b17340adb8663afdf05aa666e5dbeed92e500",
+    "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AC.AC0": "60fb70c3ff591787d3966e7948095ad4bfb423e186164a4ffffe687f520b2bd7",
+    "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AM1BCC.AC": "7477ba6b87ab0de0edd938cf000d57b87149abf4d651e245293d3b0fea7a3af5",
+    "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AM1BCC_PRE.AC": "03885db358825cedbcb75f43b2cde4ae52f55560ec719ce216ce80acf0da242b",
+    "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_BOND_TYPE.AC": "60fb70c3ff591787d3966e7948095ad4bfb423e186164a4ffffe687f520b2bd7",
+    "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_BOND_TYPE.AC0": "03470573a8f518b17bc97f48b5246e39febbd0d03db0482784257ea16a0bccfb",
+    "ligands/ligand-521bfd1ad4e6/ATOMTYPE.INF": "1b283ea78e327e113cbe07476194b1b4945b691f2c826d25b9c2f5a3337dc82e",
+    "ligands/ligand-521bfd1ad4e6/antechamber.log": "e0cf676ae0430deac250f0523a11cdb0ef582f81eecb8181005719678aa09baa",
+    "ligands/ligand-521bfd1ad4e6/charge-rounding.json": "ea86ce01d45d00dcb62c36f798fc5af750babfe73420882711631a2d99291fb8",
+    "ligands/ligand-521bfd1ad4e6/charged-native.mol2": "e7df70dba44f57459db01f99f86df0c7e2dd5174fd3cab433ba5669baae8862f",
+    "ligands/ligand-521bfd1ad4e6/charged.mol2": "2684cb372d594a6eba04b7fc601d50e6154a0be595f0fbfe69bbdf5cddadf795",
+    "ligands/ligand-521bfd1ad4e6/commands.json": "03fe56d4b7be0719a5e8bfa3270671a72b9de1b6c96d675b1b27fa6c247c5bd8",
+    "ligands/ligand-521bfd1ad4e6/conversion-validation.json": "a1f74f612e8cb04573490ab44860ccaa5fa267f2248da17bff398405179b50bb",
+    "ligands/ligand-521bfd1ad4e6/identity.json": "46317e02ae69684954ae23119f6173be1082ef20713df11dc9f1b374ba853cc5",
+    "ligands/ligand-521bfd1ad4e6/input.sdf": "289b2722e574655f34ebdb7c41dadb82441e37085f5ea25758dac3d0a5d61604",
+    "ligands/ligand-521bfd1ad4e6/leap.in": "b299610c83eab71811faf2b7e6b939b022da4d43e11aee424c84df0305568287",
+    "ligands/ligand-521bfd1ad4e6/leap.log": "3a9e1aaff69af20ba5e1b73bbf10f58afbc7e484578925a919b41ae6c83db279",
+    "ligands/ligand-521bfd1ad4e6/ligand.frcmod": "2ec8d00eaec45be2b614a8e1f418a780f8289ea391e7e6c8726a04bcd7261b0e",
+    "ligands/ligand-521bfd1ad4e6/ligand.inpcrd": "781b5448b576908ec93007b085c6d451078aa4ada9ab48feb1d6c95318931187",
+    "ligands/ligand-521bfd1ad4e6/ligand.prmtop": "f9857d633e358dc93dfd32083d36ce8d0664c28d7bc922e3c490e3707519dc45",
+    "ligands/ligand-521bfd1ad4e6/ligand.xml": "77784e0ffc5cfe06433397d57803105261515510af040a4500fa1323895702bd",
+    "ligands/ligand-521bfd1ad4e6/parmchk2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ligands/ligand-521bfd1ad4e6/provenance-before-copy-fix.json": "b293132f5b2437a7fb59301dd969f5dce34c841a92bd39e0846c606bb771fb45",
+    "ligands/ligand-521bfd1ad4e6/provenance-copy-correction.json": "441797f781a5f64416b176c4b5572d7933c480e7fc20ebcfbdddbacd97e37a6d",
+    "ligands/ligand-521bfd1ad4e6/provenance.json": "47645d99756c0b394abf83e5dda9b9b033e2fc7ad417ab7c702c9fa83e0261b2",
+    "ligands/ligand-521bfd1ad4e6/residue-7b1f51135902.json": "47645d99756c0b394abf83e5dda9b9b033e2fc7ad417ab7c702c9fa83e0261b2",
+    "ligands/ligand-521bfd1ad4e6/residue-85c93c2243f1.json": "060564e6a0793ab4a15c38742764d23962f420d044879edc3b13d2c6aa0143de",
+    "ligands/ligand-521bfd1ad4e6/sqm.in": "65e9f49723a4fccc09ffefef206c44f8e3dc317199625d96e15a9ef0fbdfdad4",
+    "ligands/ligand-521bfd1ad4e6/sqm.out": "becfac36bb515df5993296dd6a4999611f9febdfc1763041dacc1bcc2bcaf97b",
+    "ligands/ligand-521bfd1ad4e6/sqm.pdb": "382d0a61ac1e71c2d4af86ef8f61b6b8d213e26a5857caedc73901aed7b0a408",
+    "ligands/ligand-521bfd1ad4e6/tleap.log": "cae59c536901c017f6b1fbb7569750ce89332eb41a5ca27cfdca3d1638a94eb9",
+    "ligands/ligand-7a2495383b1b/ANTECHAMBER_AC.AC": "1bb559517623ce730ffb06012305bf2fd6f79daecfee77cc15147f0eac6b2fa9",
+    "ligands/ligand-7a2495383b1b/ANTECHAMBER_AC.AC0": "9257fe21df2533cb310b02a5666a0f805c4e60f6e5f36a89dc7633512616c00f",
+    "ligands/ligand-7a2495383b1b/ANTECHAMBER_AM1BCC.AC": "da9904a6e478529a74f387393f1984923bb4545a035e7a8847a5c82f1f9f35b8",
+    "ligands/ligand-7a2495383b1b/ANTECHAMBER_AM1BCC_PRE.AC": "4fa82dffeb851e095113e8de4c911f1c044144794403e937b2582a880eff6d78",
+    "ligands/ligand-7a2495383b1b/ANTECHAMBER_BOND_TYPE.AC": "9257fe21df2533cb310b02a5666a0f805c4e60f6e5f36a89dc7633512616c00f",
+    "ligands/ligand-7a2495383b1b/ANTECHAMBER_BOND_TYPE.AC0": "5ec450dcda64361a7903e0361d12ff87dfb1dd5a3e1fd4c878a7c5506b64ec0f",
+    "ligands/ligand-7a2495383b1b/ATOMTYPE.INF": "d7d5111bcb60fd9c2b2bc688d77402dd22653760fe25a527f1e1bf821cc7ea41",
+    "ligands/ligand-7a2495383b1b/antechamber.log": "8cb1021804d3bd3a8af8e89c5e6bca0c971228c301925ccc268d7ed538a018c0",
+    "ligands/ligand-7a2495383b1b/charge-rounding.json": "c0f005dfe3e31fab4b389632f2d61ef5c455b7ca98c1d6731ade9b8ab748c13e",
+    "ligands/ligand-7a2495383b1b/charged-native.mol2": "95c82443a2aea13f4b810529d308c74af2f1c43a26a49a587ae96be540157ee0",
+    "ligands/ligand-7a2495383b1b/charged.mol2": "2ffed2560f98f1e3a085c4c9432a50e5aa26b34b334612ec73e493c61b866bf0",
+    "ligands/ligand-7a2495383b1b/commands.json": "5da534cd53c43aacf3344183fbb67a365ee4024c203c4ff9d709201a6bd6c3cc",
+    "ligands/ligand-7a2495383b1b/conversion-validation.json": "afe7dbc19473c3d6a0c57ea1bd6a08656f338a7b3d75e6e662553651e0dbf78c",
+    "ligands/ligand-7a2495383b1b/identity.json": "9104a0e3b5c475ca3bc2b4cccca84357e02b5f4430ab9652934a451bb6438d25",
+    "ligands/ligand-7a2495383b1b/input.sdf": "cf1243a925e115ba5d4eb025405126d9f156164bc4fa3b24db82313bc7f000e8",
+    "ligands/ligand-7a2495383b1b/leap.in": "b299610c83eab71811faf2b7e6b939b022da4d43e11aee424c84df0305568287",
+    "ligands/ligand-7a2495383b1b/leap.log": "7cdd0487f0e3e41851b809db669fb8eaee66753e1535568242d56cb5fa58cb85",
+    "ligands/ligand-7a2495383b1b/ligand.frcmod": "e7cadffab7a99da28b3ef4b90f62712bbc9232d8326034c5005ca7c18fc61669",
+    "ligands/ligand-7a2495383b1b/ligand.inpcrd": "d999a4948733832ee28a18e968372cd4e6f9fab55956abb1c35adbedcfcb614f",
+    "ligands/ligand-7a2495383b1b/ligand.prmtop": "f879d40ec3aff53229b7a97f39624b28e92dde81e4746810b8281fa2d1cb43f4",
+    "ligands/ligand-7a2495383b1b/ligand.xml": "776f86dd0f7bf318a8e29f263377bcd00748d72f528195195cb67cb56e478c8e",
+    "ligands/ligand-7a2495383b1b/parmchk2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ligands/ligand-7a2495383b1b/provenance-before-copy-fix.json": "9115779bbc6ffd6619c4292c4b878bbd49fa959f068d537c541b02a69e63ddc2",
+    "ligands/ligand-7a2495383b1b/provenance-copy-correction.json": "0b47ac76af7a66fecf1cd1d2abe162d0be20d164e33364483598c7214a7cd3e0",
+    "ligands/ligand-7a2495383b1b/provenance.json": "f359c8faed3202b9ea1a5083958b4bef240a3ea2defd5d77ba3aa915b508c1cc",
+    "ligands/ligand-7a2495383b1b/residue-3a3824d21e68.json": "f359c8faed3202b9ea1a5083958b4bef240a3ea2defd5d77ba3aa915b508c1cc",
+    "ligands/ligand-7a2495383b1b/residue-f4f0ee9d81b0.json": "fd9ee1634919300843bb22ac474fab10a66e30ca2b827c6d50f39b1d90eb9cc7",
+    "ligands/ligand-7a2495383b1b/sqm.in": "3f443db5560c953d71e664536fe53f084c49d194d442170b291c73dc1c773d06",
+    "ligands/ligand-7a2495383b1b/sqm.out": "ecde0694e7877bf4a2bb4a3de9a6c4d38cd8a3e3a7c04488228fdb959d25b267",
+    "ligands/ligand-7a2495383b1b/sqm.pdb": "0a70520b08254b83f697636dbc344c4f5047fefaa892a942a64609d290c3dcd3",
+    "ligands/ligand-7a2495383b1b/tleap.log": "ba193dba74e5bdc71f328ef71134711a62e384744a4266ac116c4dc19774d18a",
+    "metadata.json": "6a47cf6b807b818b083a783acaa712c2e41ac8351253b2483b74619f2e0e956b",
+    "parent-preparation.json": "2d6cf4ba8925685f296549ee0d5a943656cbf7e74b758a779eafc36948c1f884",
+    "physical.npz": "f9291e2092709ab6cdc25a688ccebe6c86096798f5e6922a9c25debcc74a3c38",
+    "preparation.json": "ff6ef59abbdb45c8d543d019d71087b1baa8a7f46bc3f399d85247acbeff0378",
+    "prepared.pdb": "7112135adacbfc7b846474f6e561f6599f52831036cddd550c77521795c27a67",
+    "sequence-source.cif": "631d0ce3ea45229f42f2b063adccdb1a76156a122056eb9dff496c0af17d7c34",
+    "topology.pdb": "99584b24b6f931177d8cb9daa449bd32f3f694dd96b951c0925cdf5fbab46921"
+  },
+  "parent_files": {
+    "prepared.pdb": "ecd00ec3f35599649163edd4c78bda2a580c9b7784d59283f8c4d3775ac77321",
+    "preparation.json": "2d6cf4ba8925685f296549ee0d5a943656cbf7e74b758a779eafc36948c1f884",
+    "sequence-source.cif": "631d0ce3ea45229f42f2b063adccdb1a76156a122056eb9dff496c0af17d7c34"
+  }
+}

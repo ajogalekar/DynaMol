@@ -1,0 +1,2638 @@
+{
+  "recorded_at": "2026-09-11T04:35:07.118075+00:00",
+  "command": "DYNAMOL_BASE_URL=http://127.0.0.1:8765 DYNAMOL_AUDIT_COMPLEX_DATASET=4cf5bcedf38847c1 npx playwright test",
+  "command_working_directory": "frontend",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "playwright_version": "1.63.0",
+  "browser_channel": "chrome",
+  "workers": 1,
+  "complex_dataset_id": "4cf5bcedf38847c1",
+  "stats": {
+    "startTime": "2026-09-11T04:31:34.463Z",
+    "duration": 145571.29799999998,
+    "expected": 59,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "test_file_count": 10,
+  "new_audit_test_count": 42,
+  "existing_regression_count": 17,
+  "report_sha256": "8ee39aeac268df510201053e3b049776afd9b14f62094f479abb5d9d06b98285",
+  "full_local_report": "frontend/test-results/e2e-results.json",
+  "git_base_commit": "02c631dc799275cd6800aeea1dd20133dd238e96",
+  "working_source_sha256": {
+    "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/analysis.py": "87329dff012f23372c36262130549fb1023dee56c21f516feedbffbe9b27f521",
+    "backend/complex_topology.py": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542",
+    "backend/config.py": "5061c332a68d2c358e56c24fd8b04b5cde1c3146b0f3bf212dcced45d67b7055",
+    "backend/jobs.py": "5f03f5cbd2ead79bc38324d76a2e8653f2ce6d9748fb93b7935687b302bf16b3",
+    "backend/ligands.py": "a9b54a042660d4a9b4a4f292c939fa02d70be80a07dfceb9fa1aeb60744f80ff",
+    "backend/main.py": "2d41549b06ae0a3847a191ef68266195227fdf93becaaad2e7a01733f82892f1",
+    "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+    "backend/preparation.py": "1805132067f4e815cadb5a37da9b01b0f416ae187c7a53524f871eae3fe31036",
+    "backend/preparation_worker.py": "e69b015c397de1af0156efe6bf045db7632031f654fde71531e331c0de2d8edb",
+    "backend/prepared_system.py": "419e17f420740e10475daf5089214bc3fa52fbdcf2e13edc5cb4f280ad286562",
+    "backend/solvent.py": "3e57b1bc85c60f593a5cd0ea465e66112434bc19ff5aa87b1e4efa88d16933ad",
+    "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+    "backend/storage.py": "30f9c2759e371c0fa0b4e970e93cfd1771bdbbe3cd4aefd80ce8dbaf3dc24d8d",
+    "backend/worker.py": "67347ef45a8763c5b934c30665b7e7891ab4f70887383e0e32db75a27676788f",
+    "frontend/src/App.tsx": "1bc8e2ea144f6c7e86c5023356e6731330b2e6acc2c6fe67dc14f0670e9f8f5f",
+    "frontend/src/api.ts": "c938052f34a46017f4440b178ba27e49f1809e0b3e40a2316044eaf3a636122d",
+    "frontend/src/components/ImportDialog.tsx": "0a71def397e44889883d56b5c332392aa2676610ba191a3e0c7f9a0bc7ec8351",
+    "frontend/src/components/MolecularViewer.css": "b77dd9f31c47e45495244434110c1db8cbdc0bb22f4e1c57de19481f1a530de4",
+    "frontend/src/components/MolecularViewer.tsx": "9692c62235dd12d11c9393f201ca30d8b1c03bec69b97c6b04769bc2b447ef07",
+    "frontend/src/components/PlotPanel.tsx": "7c33a84e6df0126e114a1b47f9392af8d7826fca668d81b38695e3abb959dca1",
+    "frontend/src/components/SimulationPanel.tsx": "71f611fb8273a1bd8a985d6150ca351ad7efdb9cacad2191fa2ebce2c642deb8",
+    "frontend/src/components/StructureJobMonitor.tsx": "3970b4aca600d9237138ae5023302639c26fab6962fc038c9fd2d7034deb5e11",
+    "frontend/src/components/StructureWorkbench.tsx": "08b4dc6817736337f1757349ac4a62f29e759a95bfd078941680b44fec392fef",
+    "frontend/src/components/viewerGeometry.ts": "59a802c940664da4fedb90897a242a3c6418431bdab67897f5e832f4d45ab3c7",
+    "frontend/src/main.tsx": "e53a8b4c503129843e0bddf179689c21edfb7380a6da8a4a220f558cceb5ecec",
+    "frontend/src/styles.css": "81de673125cfa314d79e19193902b1ffbc85cbbc7bbb29b5b1a6e04e33e71ef3",
+    "frontend/src/types.ts": "974496276ad7499a2b2e4ad08379cbcb4700a09cdd2c724625f45508238e793b",
+    "frontend/tests/e2e.spec.ts": "99de50934f3882a2115f5cc20367d2b2631103149899d693e15676ba74d72769",
+    "frontend/tests/hydrogen-context.spec.ts": "1bf43cbe1e00748740c87540d89e2c74c2a6055d7b9d60b977c58552cbfac7ef",
+    "frontend/tests/preparation-jobs.spec.ts": "d6de4c6cad33fd4888e73447eb7f2c7bb8920a14dbdbff0f1b9ad2043d434455",
+    "frontend/tests/preparation-progress.spec.ts": "8b57da93b84da0de15e969f08c01bf408f551f6d557cca187c29a3a41ea873a3",
+    "frontend/tests/preparation.e2e.spec.ts": "12fa2afb419131edabc41b8f63c2aa5ff76b36930473c507a5f43ac94f398014",
+    "frontend/tests/ui-audit-controls.spec.ts": "65c96c33f31fca60d76f1c9bccce35fa65a3bd5d03c05da115332bb4a63b8649",
+    "frontend/tests/ui-audit-imports.spec.ts": "71d0e09782fda537f585fb46204e6d94874d24acf091a3db2cd12a2b99f34455",
+    "frontend/tests/ui-audit-jobs.spec.ts": "a98a14a74411fe2d8dd7117c71d18f1b235cd53d3d1c22d454e078263f92b7dc",
+    "frontend/tests/ui-audit-recovery.spec.ts": "b3cfcdefe5b0660a9f7711d89dc52e0ee47364f6ea5e1c4fb76a0c99eedd35d7",
+    "frontend/tests/ui-audit-sources.spec.ts": "a23e3b1c3dc714ae16b9e3b506d524d0aed686b2c2ee8341db629d609317e45c"
+  },
+  "tests": [
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 87,
+      "title": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2449,
+          "startTime": "2026-09-11T04:31:34.773Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "desktop-ribbons",
+              "sha256": "e0f5d83538d0192d8aa701da85a4f69c5b9b833c212a2ad7244c9f8512ea1a36"
+            },
+            {
+              "name": "desktop-ball-stick",
+              "sha256": "57db5a6a71f62fc47fe20f29bf3bcf59fe2150e294a2239c6543c919980ac7da"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 139,
+      "title": "atom search produces real distance and hydrogen-bond plots with CSV export",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1415,
+          "startTime": "2026-09-11T04:31:37.629Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 198,
+      "title": "import reports invalid data, then loads a genuine topology with correct single-frame behavior",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 972,
+          "startTime": "2026-09-11T04:31:39.052Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 235,
+      "title": "a delayed real measurement cannot contaminate a newly selected dataset",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1589,
+          "startTime": "2026-09-11T04:31:40.031Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 274,
+      "title": "a slower earlier dataset lookup cannot overwrite the latest library selection",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1536,
+          "startTime": "2026-09-11T04:31:41.629Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 327,
+      "title": "simulation studio launches real OpenMM dynamics, reports 100%, and opens its output",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 3286,
+          "startTime": "2026-09-11T04:31:43.173Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/e2e.spec.ts",
+      "line": 370,
+      "title": "responsive workspace retains a usable scene, playback, imports and simulation controls",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1292,
+          "startTime": "2026-09-11T04:31:46.466Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "tablet-scene",
+              "sha256": "f6f167ed75aad49beb4fe21dba58f6c9fbb401432650ab14077ca3d3009df808"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/hydrogen-context.spec.ts",
+      "line": 33,
+      "title": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 4414,
+          "startTime": "2026-09-11T04:31:47.771Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "hydrogens-hidden",
+              "sha256": "b722bb24a91b333a19255943966f0445a7b9e32ab091699c2e573ba4c2f7e121"
+            },
+            {
+              "name": "polar-hydrogens-with-context",
+              "sha256": "f44046dd93eab00cc81bc6ef6e2c6133d96ea69aba08a8ee00012da2659215ba"
+            },
+            {
+              "name": "all-hydrogens-with-context",
+              "sha256": "9c624045a554d08af2d260b99082fd67304255b0359d449a47f107383329bb76"
+            },
+            {
+              "name": "polar-hydrogens-restored",
+              "sha256": "f44046dd93eab00cc81bc6ef6e2c6133d96ea69aba08a8ee00012da2659215ba"
+            },
+            {
+              "name": "protein-hidden",
+              "sha256": "227eeab98ec5b2f2549afd008c9eb748d167c0dd690325a4fc6611105c95d345"
+            },
+            {
+              "name": "protein-restored",
+              "sha256": "f44046dd93eab00cc81bc6ef6e2c6133d96ea69aba08a8ee00012da2659215ba"
+            },
+            {
+              "name": "hydrogens-hidden-restored",
+              "sha256": "fe66d0d0e2362ab0e357ad95ed4cd9ad4c4d3910e9082b1148e6687ac656beb5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation-jobs.spec.ts",
+      "line": 15,
+      "title": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 5825,
+          "startTime": "2026-09-11T04:31:52.196Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "real-explicit-water-visible",
+              "sha256": "73763fa78f13ad2c28473d97dbf1d567f71f9a24da2e63d16bfa364a09ff1b0f"
+            },
+            {
+              "name": "same-system-water-hidden",
+              "sha256": "62833af10badab0d3e0c901b7e471c1d3a8b462b88738bf235ae497e58fcf3ed"
+            },
+            {
+              "name": "real-preparation-solvation-lifecycle",
+              "sha256": "059201047a4e83f1edea545dae57a3ec507a3c669b621afdf264d77eae400eab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation-progress.spec.ts",
+      "line": 57,
+      "title": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 3318,
+          "startTime": "2026-09-11T04:31:58.036Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "preparation-starting-narrow-window",
+              "sha256": "7cff2b0444fa41e1bce4fddf4a7f503741beb40943200810cbe862fd6fc9a98e"
+            },
+            {
+              "name": "preparation-complete-narrow-window",
+              "sha256": "dcd24430b44170d36586ec882aa000b8617e4ea18b25a8f4c8be4b95c4ccff0b"
+            },
+            {
+              "name": "preparation-progress-real-job",
+              "sha256": "0b77a4c90d4703a99d6b949c39d6fff1b6d220282c60ef942169aeb793fe12ba"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation-progress.spec.ts",
+      "line": 195,
+      "title": "a rejected preparation exposes the real error beside the header and restores the prep button",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1763,
+          "startTime": "2026-09-11T04:32:01.361Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "preparation-validation-error-narrow-window",
+              "sha256": "bc5d166230c8f177f727f2665c38c7f821639082518312faa224f44de55f7ae8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation-progress.spec.ts",
+      "line": 233,
+      "title": "a prepared topology display failure stops the spinner and retries the same real result",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 3178,
+          "startTime": "2026-09-11T04:32:03.132Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "preparation-viewer-fetch-failure",
+              "sha256": "910463df7cca3b87956dad8f6707cce6eb21980c6798fbc9c683b0c6f03092bc"
+            },
+            {
+              "name": "preparation-viewer-retry-real-job",
+              "sha256": "fb24e8aafcae52dfa30e63b2825e39de554faf04675fa67f2ca4a799ba502c1d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation.e2e.spec.ts",
+      "line": 67,
+      "title": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1575,
+          "startTime": "2026-09-11T04:32:06.327Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "distance-hidden-default",
+              "sha256": "72233f96f760f07c92e057b3808fadde4935fdb35c4a3fed958034def0f7b667"
+            },
+            {
+              "name": "distance-visible",
+              "sha256": "dc6c63a3b9afd55b1163d752636f0d18f0e23fd26515ddd16122df04de676ed4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation.e2e.spec.ts",
+      "line": 106,
+      "title": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1388,
+          "startTime": "2026-09-11T04:32:07.908Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "studio-known-loop-pdb",
+              "sha256": "bdfa5b4f8e675c5041d2371aab26bf40d0709160cfd3ebe62398a06c62ba104b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation.e2e.spec.ts",
+      "line": 146,
+      "title": "Studio MOL2 upload preserves explicit atoms, bonds, and source charges in the viewed molecule",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1620,
+          "startTime": "2026-09-11T04:32:09.303Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "studio-ethanol-mol2",
+              "sha256": "9f553fab4df33e8f175c97ba117c0618f70c1afa9a2ac0072bcb10d547bfbeed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation.e2e.spec.ts",
+      "line": 179,
+      "title": "SMILES errors preserve the current scene, then a named 3D conformer loads without leaving Studio",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1044,
+          "startTime": "2026-09-11T04:32:10.930Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "studio-lactate-smiles",
+              "sha256": "fe217c87546636ffefc4c1e778d4c1ed9753a4aac03e02dca37c246c53103a44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/preparation.e2e.spec.ts",
+      "line": 212,
+      "title": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 3109,
+          "startTime": "2026-09-11T04:32:11.980Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "studio-rcsb-1ubq",
+              "sha256": "3a111cc1ec79942c5b7aede618a06acd9fe7a5e1618f8a1dda07dee54fd5d8e9"
+            },
+            {
+              "name": "studio-pubchem-caffeine",
+              "sha256": "53caa6ce215cbed9812b585d315d7e4454665435240fc49bd57d22b9f7f92388"
+            },
+            {
+              "name": "fetched-datasets-for-cleanup",
+              "sha256": "e3f9c1268253014ede05584b650240d4ac07a41836863ba19baad81806bd5d3a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 44,
+      "title": "audit: navigation, structure details, library, guide links and modal focus controls",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2901,
+          "startTime": "2026-09-11T04:32:15.105Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "guide-links.json",
+              "sha256": "044bcb87b47ca61bae100abac618713533a73e0b7c69daefa204b4ac42c951ca"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 105,
+      "title": "audit: every representation and color choice changes the actual rendered geometry",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 3863,
+          "startTime": "2026-09-11T04:32:18.011Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "Ribbons",
+              "sha256": "e0f5d83538d0192d8aa701da85a4f69c5b9b833c212a2ad7244c9f8512ea1a36"
+            },
+            {
+              "name": "Ball & stick",
+              "sha256": "f4dd17adb941b781f64c99010dd564b8fa97ed9a1e670ac3978c606648ef566d"
+            },
+            {
+              "name": "Sticks",
+              "sha256": "4c21e54979da7b750f672d249ac27af6b67324d5f68c2d1d9a90dc9b3d44b6dd"
+            },
+            {
+              "name": "Surface",
+              "sha256": "ae2bdbf5c2dbcec4f75f4021742c842e9a2c295d561138db181144615d01494b"
+            },
+            {
+              "name": "color-residue",
+              "sha256": "f4dd17adb941b781f64c99010dd564b8fa97ed9a1e670ac3978c606648ef566d"
+            },
+            {
+              "name": "color-chain",
+              "sha256": "c8576ea975d72c8ae9225654951937c41d2d49ed06b04e99df741438d6290c63"
+            },
+            {
+              "name": "color-element",
+              "sha256": "c19735971eb2a8a77d4cff339d6338e3af91292c916263fb762a54c007976a53"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 135,
+      "title": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 5872,
+          "startTime": "2026-09-11T04:32:21.882Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "camera-rotate",
+              "sha256": "b3443ce31703bd38f2f13ea471fbfe61a7d99cdecdca29ae9691eefd98e200ea"
+            },
+            {
+              "name": "camera-pan",
+              "sha256": "3e8981373ab412ec71eb7f4cf74d535179ae2e113255bb60bf8401d169d2fa8f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 213,
+      "title": "audit: timeline boundaries, every speed, loop behavior and keyboard shortcuts",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2294,
+          "startTime": "2026-09-11T04:32:27.761Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 279,
+      "title": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1752,
+          "startTime": "2026-09-11T04:32:30.062Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "angle.csv",
+              "sha256": "705bcd064f9ecb590bddb0c6a15c728ebbbdf27c8965be6ef10f9e0e5f083e4e"
+            },
+            {
+              "name": "dihedral.csv",
+              "sha256": "689c22a1719e7cb504b79fd98173683c29703fcfe80a87afaa21fdbcd647cb49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 362,
+      "title": "audit: Escape exits picking after the pick button receives focus",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 594,
+          "startTime": "2026-09-11T04:32:31.821Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 370,
+      "title": "audit: keyboard picking pauses a playing trajectory",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 720,
+          "startTime": "2026-09-11T04:32:32.424Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 379,
+      "title": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2667,
+          "startTime": "2026-09-11T04:32:33.151Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "double-click-focused-atom",
+              "sha256": "9c5dc43b14a3628a75bc3e26493c0cff113384246b657512670d768c3c59e74c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 437,
+      "title": "audit: invalid hydrogen-bond selection reports a dismissible error and keeps the workspace",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 983,
+          "startTime": "2026-09-11T04:32:35.826Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 459,
+      "title": "audit: import chooser actions, cancel, drag and drop, form bounds and timing override",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1947,
+          "startTime": "2026-09-11T04:32:36.815Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-controls.spec.ts",
+      "line": 521,
+      "title": "audit: Studio source chooser, invalid fetch, all default and advanced configuration controls",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1571,
+          "startTime": "2026-09-11T04:32:38.769Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: pdb loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 946,
+          "startTime": "2026-09-11T04:32:40.351Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "pdb-result.json",
+              "sha256": "0417c3e623506e62cbf7c3a24b1c8e63ea29eb3e31e01cf75b60f243fd30280e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: cif loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 997,
+          "startTime": "2026-09-11T04:32:41.303Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "cif-result.json",
+              "sha256": "07b6e087bdfb41d1e3682ec333eae8cb3b88d6fc5720b6f309ab549ce0cac0de"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: gro loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 961,
+          "startTime": "2026-09-11T04:32:42.308Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "gro-result.json",
+              "sha256": "4dcae952d2164146beab948d9f0fdf16ef4d410b3b42b97125862330539c0e93"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: h5 loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 979,
+          "startTime": "2026-09-11T04:32:43.275Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "h5-result.json",
+              "sha256": "789327bf3fd972dde70352bfb47baf324dbb1d4534a15a8a37e8043fb25144e4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: xtc loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1032,
+          "startTime": "2026-09-11T04:32:44.261Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "xtc-result.json",
+              "sha256": "b252a9b1b41666560ec3bb8e58603d4fbb19130a0857ebc014565dd5835380aa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: dcd loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 922,
+          "startTime": "2026-09-11T04:32:45.302Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "dcd-result.json",
+              "sha256": "9a41e3bd2f4901cc6a57ed07bffe2217deee7511240a556f4f3cbe046e9e4876"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: trr loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 965,
+          "startTime": "2026-09-11T04:32:46.231Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "trr-result.json",
+              "sha256": "517c0edea5e3f9612a34d8588a53323061ae6d53c85fa8eab4c49c95d1a74e57"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: nc loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 999,
+          "startTime": "2026-09-11T04:32:47.203Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "nc-result.json",
+              "sha256": "e6e54e1ab26316dee4234eb34e9489a1bf05035b84fce062769770d712131e1c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: xyz loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 974,
+          "startTime": "2026-09-11T04:32:48.210Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "xyz-result.json",
+              "sha256": "db304a87a96fd0c9eacf9a4094c3ebafe48b2a240cde243109f5f3b84ff072d0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: mdcrd loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 971,
+          "startTime": "2026-09-11T04:32:49.192Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "mdcrd-result.json",
+              "sha256": "9725ac52caf5b722a9569c0d0601a80d098d251097a97cb46348c9e6b358127b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 31,
+      "title": "audit import format: lammpstrj loads genuine coordinates, stride and explicit timing",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1010,
+          "startTime": "2026-09-11T04:32:50.168Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "lammpstrj-result.json",
+              "sha256": "fd58fb1747b85824800657d5c08a8e54c393808bff14f3485542982b7c36bf3f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 107,
+      "title": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 6322,
+          "startTime": "2026-09-11T04:32:51.187Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "all-before-protein & nucleic acids",
+              "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+            },
+            {
+              "name": "hidden-protein & nucleic acids",
+              "sha256": "b1143678377d0a5567dbe6310c5ff10c12a467e169f02acc744ce576b0b94438"
+            },
+            {
+              "name": "all-before-ligands",
+              "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+            },
+            {
+              "name": "hidden-ligands",
+              "sha256": "2cc58ce5bdf16a2b2a3010a5a44486c55af3c05cdbe9c5e0246837efecac1055"
+            },
+            {
+              "name": "all-before-water",
+              "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+            },
+            {
+              "name": "hidden-water",
+              "sha256": "f37026e3ac9a2974094cff62964419105af904e3c9abaec07f0a1bdd3f461293"
+            },
+            {
+              "name": "all-before-ions",
+              "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+            },
+            {
+              "name": "hidden-ions",
+              "sha256": "44231349d510d60573629b4650f0d415b9407c8eb9c782791e2f9d7bf2c526db"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 156,
+      "title": "audit: trajectory and topology mismatch is reported without replacing the current structure",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 913,
+          "startTime": "2026-09-11T04:32:57.515Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 176,
+      "title": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 15471,
+          "startTime": "2026-09-11T04:32:58.435Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "protein-selected-hidden",
+              "sha256": "0e78a22553fb84e3c21b11c7121dfcae4ec5eb3ca7b5fbf412f0227d6bf103a7"
+            },
+            {
+              "name": "protein-selection-cleared",
+              "sha256": "0e78a22553fb84e3c21b11c7121dfcae4ec5eb3ca7b5fbf412f0227d6bf103a7"
+            },
+            {
+              "name": "ligands-selected-hidden",
+              "sha256": "f2e73e1c7d8b8e0f6bf80c67bfd2bd2bd199f30ae5ad5f0626132f03a7880294"
+            },
+            {
+              "name": "ligands-selection-cleared",
+              "sha256": "f2e73e1c7d8b8e0f6bf80c67bfd2bd2bd199f30ae5ad5f0626132f03a7880294"
+            },
+            {
+              "name": "water-selected-hidden",
+              "sha256": "d63672a5f2ebdb72b94c970cf2e3b5e5c773ab3f9c4d06d7dc0e5e483dbfaf7c"
+            },
+            {
+              "name": "water-selection-cleared",
+              "sha256": "d63672a5f2ebdb72b94c970cf2e3b5e5c773ab3f9c4d06d7dc0e5e483dbfaf7c"
+            },
+            {
+              "name": "ions-selected-hidden",
+              "sha256": "a72ecccac6e56eaa209fc7e2f3df7c014a5ecb80b73db69a89965770415b8421"
+            },
+            {
+              "name": "ions-selection-cleared",
+              "sha256": "a72ecccac6e56eaa209fc7e2f3df7c014a5ecb80b73db69a89965770415b8421"
+            },
+            {
+              "name": "Polar only-selected-hidden",
+              "sha256": "bf7f91ef9c841188e9f9614ce3b0775ca107249dbe41b772f8296ff48fa83f13"
+            },
+            {
+              "name": "Polar only-selection-cleared",
+              "sha256": "bf7f91ef9c841188e9f9614ce3b0775ca107249dbe41b772f8296ff48fa83f13"
+            },
+            {
+              "name": "Hidden-selected-hidden",
+              "sha256": "b4ade1abbb9a0016c93f881fd23c90d6e2743db4e01a7dcb234ed215654d6394"
+            },
+            {
+              "name": "Hidden-selection-cleared",
+              "sha256": "b4ade1abbb9a0016c93f881fd23c90d6e2743db4e01a7dcb234ed215654d6394"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-imports.spec.ts",
+      "line": 247,
+      "title": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 3144,
+          "startTime": "2026-09-11T04:33:13.912Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "schematic-nucleic-visible",
+              "sha256": "a7c41ff8b3dd348bdf996f0f36702d1b4da51063af3c97b58614307b3b8ff608"
+            },
+            {
+              "name": "schematic-nucleic-hidden",
+              "sha256": "f104e8691f667d53ea6f9a830f9a19e43f6e7e7c2ac13dc2db68c824ab14d62c"
+            },
+            {
+              "name": "schematic-nucleic-restored",
+              "sha256": "a7c41ff8b3dd348bdf996f0f36702d1b4da51063af3c97b58614307b3b8ff608"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-jobs.spec.ts",
+      "line": 21,
+      "title": "audit native: short GROMACS run, log show/hide, output ZIP and completed trajectory",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 16621,
+          "startTime": "2026-09-11T04:33:17.074Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "gromacs-output-files.json",
+              "sha256": "d81e53ab8e9ebd423f4229fdb4ec248bc7c32c47aef4e9a47778d11d25040256"
+            },
+            {
+              "name": "gromacs-job.json",
+              "sha256": "af44b6201143e1083b98b5982dbc6f2bc73ab36979c5802b840daf7d1f704a19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-jobs.spec.ts",
+      "line": 98,
+      "title": "audit native: running OpenMM monitor reopens from footer and Stop cancels the worker",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1933,
+          "startTime": "2026-09-11T04:33:33.702Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "cancelled-job.json",
+              "sha256": "570760ecc8c2b310986ca669d12edeb746becd25055d4ae23576c6a8ae5e8ffc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-jobs.spec.ts",
+      "line": 145,
+      "title": "audit native: preparation monitor Cancel stops a real preparation job",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2309,
+          "startTime": "2026-09-11T04:33:35.641Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "cancelled-preparation.json",
+              "sha256": "864c707cff29e71e395dbb5ae21ff5ea0b7690c3c27b70bd60484c6679cd2745"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-jobs.spec.ts",
+      "line": 197,
+      "title": "audit native: prepared PDB download, water update, water log and setup cancellation",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 7807,
+          "startTime": "2026-09-11T04:33:37.957Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "prepared-download.pdb",
+              "sha256": "1e81e24279773941acc624eb9dcc2ff20ae602bd269b8c45f1c07ca93ccd4070"
+            },
+            {
+              "name": "water-controls.json",
+              "sha256": "096639a8ab242ea7bbdfc98a1e1a2f3ec28abcecdd0807a518fe5c221476c70e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-recovery.spec.ts",
+      "line": 3,
+      "title": "audit recovery: unavailable initial example exposes import and a working fallback example",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 690,
+          "startTime": "2026-09-11T04:33:45.777Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-recovery.spec.ts",
+      "line": 21,
+      "title": "audit recovery: unavailable fullscreen reports a dismissible notification",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 581,
+          "startTime": "2026-09-11T04:33:46.471Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-recovery.spec.ts",
+      "line": 39,
+      "title": "audit recovery: graphics context loss blocks snapshots and reload restores the scene",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 791,
+          "startTime": "2026-09-11T04:33:47.060Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-recovery.spec.ts",
+      "line": 55,
+      "title": "audit responsive: phone scene, inspector and Studio controls remain reachable",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1318,
+          "startTime": "2026-09-11T04:33:47.856Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "phone-studio.png",
+              "sha256": "0a5a66b1c109572d13a5f4f73520697c02b402782428d76b94c54ab3d5fb65b0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 10,
+      "title": "audit Studio upload format: cif displays the imported structure",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 639,
+          "startTime": "2026-09-11T04:33:49.187Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "cif-source-result.json",
+              "sha256": "2000d527711646ef62270c043d5c80762b1d36e8b01daffb834c1a7f83df6657"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 10,
+      "title": "audit Studio upload format: mol displays the imported structure",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 799,
+          "startTime": "2026-09-11T04:33:49.831Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "mol-source-result.json",
+              "sha256": "c328248dd6340e35d260e86a9cf37019ba4b512d640de9b305decadbb0a107e3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 10,
+      "title": "audit Studio upload format: sdf displays the imported structure",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 701,
+          "startTime": "2026-09-11T04:33:50.638Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "sdf-source-result.json",
+              "sha256": "b572f22bf02f81e6f26af2f15a1049d0feb719c9875000f0f3aef1198d9dfe72"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 10,
+      "title": "audit Studio upload format: smi displays the imported structure",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 711,
+          "startTime": "2026-09-11T04:33:51.346Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "smi-source-result.json",
+              "sha256": "bd73deebb1dff5d8b6abf1c6c9ee7e818d40fec5df2d52fa9138707996935100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 10,
+      "title": "audit Studio upload format: smiles displays the imported structure",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 716,
+          "startTime": "2026-09-11T04:33:52.064Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "smiles-source-result.json",
+              "sha256": "54ab68f6a8c84075b48d6d4a45de897354714ec40557b7eca1b7412f4c746f67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 45,
+      "title": "audit: failed inspection retries against the real service without reloading the molecule",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2431,
+          "startTime": "2026-09-11T04:33:52.786Z",
+          "retry": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 64,
+      "title": "audit: ligand details, explicit-state SMILES and pH trigger real inspection updates",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 2799,
+          "startTime": "2026-09-11T04:33:55.224Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "ligand-inspection.json",
+              "sha256": "4b9bf76fb690d398c63dcfc998f09321c7d8b343411ad7632946829f6dfa8aed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "frontend/tests/ui-audit-sources.spec.ts",
+      "line": 135,
+      "title": "audit: validated complex result exposes prepared coordinates and parameter downloads",
+      "outcome": "expected",
+      "expected_status": "passed",
+      "runs": [
+        {
+          "status": "passed",
+          "duration": 1592,
+          "startTime": "2026-09-11T04:33:58.028Z",
+          "retry": 0,
+          "attachments": [
+            {
+              "name": "complex-download-manifest.json",
+              "sha256": "2034b27cb7514395fed42436392500b23f62c9a049111590a5a186f27c293087"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "test": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+      "name": "desktop-ribbons",
+      "content_type": "image/png",
+      "bytes": 48408,
+      "sha256": "e0f5d83538d0192d8aa701da85a4f69c5b9b833c212a2ad7244c9f8512ea1a36",
+      "file": "docs/audit/ui-audit-desktop-ribbons.png"
+    },
+    {
+      "test": "desktop renders molecular geometry; playback, seeking, camera and visibility respond",
+      "name": "desktop-ball-stick",
+      "content_type": "image/png",
+      "bytes": 101824,
+      "sha256": "57db5a6a71f62fc47fe20f29bf3bcf59fe2150e294a2239c6543c919980ac7da"
+    },
+    {
+      "test": "responsive workspace retains a usable scene, playback, imports and simulation controls",
+      "name": "tablet-scene",
+      "content_type": "image/png",
+      "bytes": 52633,
+      "sha256": "f6f167ed75aad49beb4fe21dba58f6c9fbb401432650ab14077ca3d3009df808"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "hydrogens-hidden",
+      "content_type": "image/png",
+      "bytes": 47912,
+      "sha256": "b722bb24a91b333a19255943966f0445a7b9e32ab091699c2e573ba4c2f7e121"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "polar-hydrogens-with-context",
+      "content_type": "image/png",
+      "bytes": 68036,
+      "sha256": "f44046dd93eab00cc81bc6ef6e2c6133d96ea69aba08a8ee00012da2659215ba",
+      "file": "docs/audit/ui-audit-polar-hydrogens.png"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "all-hydrogens-with-context",
+      "content_type": "image/png",
+      "bytes": 78986,
+      "sha256": "9c624045a554d08af2d260b99082fd67304255b0359d449a47f107383329bb76"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "polar-hydrogens-restored",
+      "content_type": "image/png",
+      "bytes": 68036,
+      "sha256": "f44046dd93eab00cc81bc6ef6e2c6133d96ea69aba08a8ee00012da2659215ba"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "protein-hidden",
+      "content_type": "image/png",
+      "bytes": 13484,
+      "sha256": "227eeab98ec5b2f2549afd008c9eb748d167c0dd690325a4fc6611105c95d345"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "protein-restored",
+      "content_type": "image/png",
+      "bytes": 68036,
+      "sha256": "f44046dd93eab00cc81bc6ef6e2c6133d96ea69aba08a8ee00012da2659215ba"
+    },
+    {
+      "test": "polar hydrogen display keeps the carbon skeleton and ribbon through visibility changes",
+      "name": "hydrogens-hidden-restored",
+      "content_type": "image/png",
+      "bytes": 47919,
+      "sha256": "fe66d0d0e2362ab0e357ad95ed4cd9ad4c4d3910e9082b1148e6687ac656beb5"
+    },
+    {
+      "test": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+      "name": "real-explicit-water-visible",
+      "content_type": "image/png",
+      "bytes": 38964,
+      "sha256": "73763fa78f13ad2c28473d97dbf1d567f71f9a24da2e63d16bfa364a09ff1b0f",
+      "file": "docs/audit/ui-audit-explicit-water.png"
+    },
+    {
+      "test": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+      "name": "same-system-water-hidden",
+      "content_type": "image/png",
+      "bytes": 24026,
+      "sha256": "62833af10badab0d3e0c901b7e471c1d3a8b462b88738bf235ae497e58fcf3ed"
+    },
+    {
+      "test": "Prep protein completes real repair in the background; explicit water appears and implicit restores the dry parent",
+      "name": "real-preparation-solvation-lifecycle",
+      "content_type": "application/json",
+      "bytes": 303,
+      "sha256": "059201047a4e83f1edea545dae57a3ec507a3c669b621afdf264d77eae400eab",
+      "data": {
+        "source_dataset_id": "40e3948c35694236",
+        "prepared_dataset_id": "e4eccf750df34e45",
+        "solvated_dataset_id": "63329a9a464e4681",
+        "preparation_job_id": "950f739dccbd4904",
+        "solvation_job_id": "c8a3ab4ed87a48da",
+        "prepared_atoms": 114,
+        "water_atoms": 3675,
+        "differing_water_pixels": 2447
+      }
+    },
+    {
+      "test": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "name": "preparation-starting-narrow-window",
+      "content_type": "image/png",
+      "bytes": 60128,
+      "sha256": "7cff2b0444fa41e1bce4fddf4a7f503741beb40943200810cbe862fd6fc9a98e"
+    },
+    {
+      "test": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "name": "preparation-complete-narrow-window",
+      "content_type": "image/png",
+      "bytes": 72401,
+      "sha256": "dcd24430b44170d36586ec882aa000b8617e4ea18b25a8f4c8be4b95c4ccff0b",
+      "file": "docs/audit/ui-audit-preparation-complete.png"
+    },
+    {
+      "test": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "name": "preparation-progress-real-job",
+      "content_type": "application/json",
+      "bytes": 106,
+      "sha256": "0b77a4c90d4703a99d6b949c39d6fff1b6d220282c60ef942169aeb793fe12ba",
+      "data": {
+        "source_id": "147a9a537ee74812",
+        "job_id": "2d3ecf4d3e884cb5",
+        "prepared_id": "3403a93c6fb14c2d"
+      }
+    },
+    {
+      "test": "a rejected preparation exposes the real error beside the header and restores the prep button",
+      "name": "preparation-validation-error-narrow-window",
+      "content_type": "image/png",
+      "bytes": 64319,
+      "sha256": "bc5d166230c8f177f727f2665c38c7f821639082518312faa224f44de55f7ae8"
+    },
+    {
+      "test": "a prepared topology display failure stops the spinner and retries the same real result",
+      "name": "preparation-viewer-fetch-failure",
+      "content_type": "image/png",
+      "bytes": 214908,
+      "sha256": "910463df7cca3b87956dad8f6707cce6eb21980c6798fbc9c683b0c6f03092bc"
+    },
+    {
+      "test": "a prepared topology display failure stops the spinner and retries the same real result",
+      "name": "preparation-viewer-retry-real-job",
+      "content_type": "application/json",
+      "bytes": 191,
+      "sha256": "fb24e8aafcae52dfa30e63b2825e39de554faf04675fa67f2ca4a799ba502c1d",
+      "data": {
+        "source_id": "3f36300a16e543aa",
+        "job_id": "6e560d0c9a984465",
+        "prepared_id": "97eba09941b948d2",
+        "failed_topology": "http://127.0.0.1:8765/api/datasets/97eba09941b948d2/topology"
+      }
+    },
+    {
+      "test": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+      "name": "distance-hidden-default",
+      "content_type": "image/png",
+      "bytes": 49033,
+      "sha256": "72233f96f760f07c92e057b3808fadde4935fdb35c4a3fed958034def0f7b667"
+    },
+    {
+      "test": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+      "name": "distance-visible",
+      "content_type": "image/png",
+      "bytes": 49692,
+      "sha256": "dc6c63a3b9afd55b1163d752636f0d18f0e23fd26515ddd16122df04de676ed4"
+    },
+    {
+      "test": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+      "name": "studio-known-loop-pdb",
+      "content_type": "image/png",
+      "bytes": 29857,
+      "sha256": "bdfa5b4f8e675c5041d2371aab26bf40d0709160cfd3ebe62398a06c62ba104b"
+    },
+    {
+      "test": "Studio MOL2 upload preserves explicit atoms, bonds, and source charges in the viewed molecule",
+      "name": "studio-ethanol-mol2",
+      "content_type": "image/png",
+      "bytes": 20873,
+      "sha256": "9f553fab4df33e8f175c97ba117c0618f70c1afa9a2ac0072bcb10d547bfbeed"
+    },
+    {
+      "test": "SMILES errors preserve the current scene, then a named 3D conformer loads without leaving Studio",
+      "name": "studio-lactate-smiles",
+      "content_type": "image/png",
+      "bytes": 23020,
+      "sha256": "fe217c87546636ffefc4c1e778d4c1ed9753a4aac03e02dca37c246c53103a44"
+    },
+    {
+      "test": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+      "name": "studio-rcsb-1ubq",
+      "content_type": "image/png",
+      "bytes": 55429,
+      "sha256": "3a111cc1ec79942c5b7aede618a06acd9fe7a5e1618f8a1dda07dee54fd5d8e9"
+    },
+    {
+      "test": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+      "name": "studio-pubchem-caffeine",
+      "content_type": "image/png",
+      "bytes": 32766,
+      "sha256": "53caa6ce215cbed9812b585d315d7e4454665435240fc49bd57d22b9f7f92388"
+    },
+    {
+      "test": "Studio fetch retrieves actual RCSB and PubChem structures into the visible scene",
+      "name": "fetched-datasets-for-cleanup",
+      "content_type": "application/json",
+      "bytes": 189,
+      "sha256": "e3f9c1268253014ede05584b650240d4ac07a41836863ba19baad81806bd5d3a",
+      "data": [
+        {
+          "id": "1c138fc379824430",
+          "name": "1UBQ",
+          "source": "rcsb_pdb"
+        },
+        {
+          "id": "6abe98e4deaf41ae",
+          "name": "caffeine \u00b7 PubChem 2519",
+          "source": "pubchem"
+        }
+      ]
+    },
+    {
+      "test": "audit: navigation, structure details, library, guide links and modal focus controls",
+      "name": "guide-links.json",
+      "content_type": "application/json",
+      "bytes": 412,
+      "sha256": "044bcb87b47ca61bae100abac618713533a73e0b7c69daefa204b4ac42c951ca",
+      "data": [
+        {
+          "text": "NGL",
+          "href": "https://nglviewer.org/ngl/api/manual/",
+          "target": "_blank"
+        },
+        {
+          "text": "OpenMM",
+          "href": "https://docs.openmm.org/latest/userguide/",
+          "target": "_blank"
+        },
+        {
+          "text": "GROMACS",
+          "href": "https://manual.gromacs.org/current/",
+          "target": "_blank"
+        },
+        {
+          "text": "MDTraj",
+          "href": "https://mdtraj.org/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "Ribbons",
+      "content_type": "image/png",
+      "bytes": 48408,
+      "sha256": "e0f5d83538d0192d8aa701da85a4f69c5b9b833c212a2ad7244c9f8512ea1a36"
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "Ball & stick",
+      "content_type": "image/png",
+      "bytes": 62353,
+      "sha256": "f4dd17adb941b781f64c99010dd564b8fa97ed9a1e670ac3978c606648ef566d"
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "Sticks",
+      "content_type": "image/png",
+      "bytes": 57801,
+      "sha256": "4c21e54979da7b750f672d249ac27af6b67324d5f68c2d1d9a90dc9b3d44b6dd"
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "Surface",
+      "content_type": "image/png",
+      "bytes": 105989,
+      "sha256": "ae2bdbf5c2dbcec4f75f4021742c842e9a2c295d561138db181144615d01494b",
+      "file": "docs/audit/ui-audit-surface.png"
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "color-residue",
+      "content_type": "image/png",
+      "bytes": 62353,
+      "sha256": "f4dd17adb941b781f64c99010dd564b8fa97ed9a1e670ac3978c606648ef566d"
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "color-chain",
+      "content_type": "image/png",
+      "bytes": 60502,
+      "sha256": "c8576ea975d72c8ae9225654951937c41d2d49ed06b04e99df741438d6290c63"
+    },
+    {
+      "test": "audit: every representation and color choice changes the actual rendered geometry",
+      "name": "color-element",
+      "content_type": "image/png",
+      "bytes": 61532,
+      "sha256": "c19735971eb2a8a77d4cff339d6338e3af91292c916263fb762a54c007976a53"
+    },
+    {
+      "test": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+      "name": "camera-rotate",
+      "content_type": "image/png",
+      "bytes": 51977,
+      "sha256": "b3443ce31703bd38f2f13ea471fbfe61a7d99cdecdca29ae9691eefd98e200ea"
+    },
+    {
+      "test": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+      "name": "camera-pan",
+      "content_type": "image/png",
+      "bytes": 53081,
+      "sha256": "3e8981373ab412ec71eb7f4cf74d535179ae2e113255bb60bf8401d169d2fa8f"
+    },
+    {
+      "test": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+      "name": "angle.csv",
+      "content_type": "text/csv",
+      "bytes": 2385,
+      "sha256": "705bcd064f9ecb590bddb0c6a15c728ebbbdf27c8965be6ef10f9e0e5f083e4e"
+    },
+    {
+      "test": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+      "name": "dihedral.csv",
+      "content_type": "text/csv",
+      "bytes": 2369,
+      "sha256": "689c22a1719e7cb504b79fd98173683c29703fcfe80a87afaa21fdbcd647cb49"
+    },
+    {
+      "test": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+      "name": "double-click-focused-atom",
+      "content_type": "image/png",
+      "bytes": 230060,
+      "sha256": "9c5dc43b14a3628a75bc3e26493c0cff113384246b657512670d768c3c59e74c"
+    },
+    {
+      "test": "audit import format: pdb loads genuine coordinates, stride and explicit timing",
+      "name": "pdb-result.json",
+      "content_type": "application/json",
+      "bytes": 428,
+      "sha256": "0417c3e623506e62cbf7c3a24b1c8e63ea29eb3e31e01cf75b60f243fd30280e",
+      "data": {
+        "id": "7dbccd2490334922",
+        "name": "e2e-ui-audit-pdb-1789101160879",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: cif loads genuine coordinates, stride and explicit timing",
+      "name": "cif-result.json",
+      "content_type": "application/json",
+      "bytes": 412,
+      "sha256": "07b6e087bdfb41d1e3682ec333eae8cb3b88d6fc5720b6f309ab549ce0cac0de",
+      "data": {
+        "id": "d11b5301365a4343",
+        "name": "e2e-ui-audit-cif-1789101161851",
+        "n_atoms": 113,
+        "n_frames": 1,
+        "times_ps": [
+          0
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: gro loads genuine coordinates, stride and explicit timing",
+      "name": "gro-result.json",
+      "content_type": "application/json",
+      "bytes": 428,
+      "sha256": "4dcae952d2164146beab948d9f0fdf16ef4d410b3b42b97125862330539c0e93",
+      "data": {
+        "id": "78b333609d134666",
+        "name": "e2e-ui-audit-gro-1789101162836",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: h5 loads genuine coordinates, stride and explicit timing",
+      "name": "h5-result.json",
+      "content_type": "application/json",
+      "bytes": 427,
+      "sha256": "789327bf3fd972dde70352bfb47baf324dbb1d4534a15a8a37e8043fb25144e4",
+      "data": {
+        "id": "ec5b4c68c8f846f1",
+        "name": "e2e-ui-audit-h5-1789101163836",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: xtc loads genuine coordinates, stride and explicit timing",
+      "name": "xtc-result.json",
+      "content_type": "application/json",
+      "bytes": 553,
+      "sha256": "b252a9b1b41666560ec3bb8e58603d4fbb19130a0857ebc014565dd5835380aa",
+      "data": {
+        "id": "9353532d7cce4887",
+        "name": "e2e-ui-audit-xtc-1789101164832",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: dcd loads genuine coordinates, stride and explicit timing",
+      "name": "dcd-result.json",
+      "content_type": "application/json",
+      "bytes": 553,
+      "sha256": "9a41e3bd2f4901cc6a57ed07bffe2217deee7511240a556f4f3cbe046e9e4876",
+      "data": {
+        "id": "c9010bdca0724ffb",
+        "name": "e2e-ui-audit-dcd-1789101165823",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: trr loads genuine coordinates, stride and explicit timing",
+      "name": "trr-result.json",
+      "content_type": "application/json",
+      "bytes": 553,
+      "sha256": "517c0edea5e3f9612a34d8588a53323061ae6d53c85fa8eab4c49c95d1a74e57",
+      "data": {
+        "id": "66139950d0a44273",
+        "name": "e2e-ui-audit-trr-1789101166796",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: nc loads genuine coordinates, stride and explicit timing",
+      "name": "nc-result.json",
+      "content_type": "application/json",
+      "bytes": 552,
+      "sha256": "e6e54e1ab26316dee4234eb34e9489a1bf05035b84fce062769770d712131e1c",
+      "data": {
+        "id": "f7624fcf5d274f00",
+        "name": "e2e-ui-audit-nc-1789101167775",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: xyz loads genuine coordinates, stride and explicit timing",
+      "name": "xyz-result.json",
+      "content_type": "application/json",
+      "bytes": 553,
+      "sha256": "db304a87a96fd0c9eacf9a4094c3ebafe48b2a240cde243109f5f3b84ff072d0",
+      "data": {
+        "id": "d2e5e6a9eb0e40cd",
+        "name": "e2e-ui-audit-xyz-1789101168765",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: mdcrd loads genuine coordinates, stride and explicit timing",
+      "name": "mdcrd-result.json",
+      "content_type": "application/json",
+      "bytes": 555,
+      "sha256": "9725ac52caf5b722a9569c0d0601a80d098d251097a97cb46348c9e6b358127b",
+      "data": {
+        "id": "41dae796ce5c4830",
+        "name": "e2e-ui-audit-mdcrd-1789101169762",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "No periodic box: measurements use ordinary Cartesian geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit import format: lammpstrj loads genuine coordinates, stride and explicit timing",
+      "name": "lammpstrj-result.json",
+      "content_type": "application/json",
+      "bytes": 624,
+      "sha256": "fd58fb1747b85824800657d5c08a8e54c393808bff14f3485542982b7c36bf3f",
+      "data": {
+        "id": "287b0e3dd2424927",
+        "name": "e2e-ui-audit-lammpstrj-1789101170716",
+        "n_atoms": 113,
+        "n_frames": 3,
+        "times_ps": [
+          0,
+          0.5,
+          1
+        ],
+        "warnings": [
+          "Timestamps supplied by user: 0.25 ps per original frame (stride 2).",
+          "Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.",
+          "Viewer molecules are made whole across periodic boundaries; analysis uses the original coordinates with minimum-image geometry.",
+          "Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames."
+        ]
+      }
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "all-before-protein & nucleic acids",
+      "content_type": "image/png",
+      "bytes": 41219,
+      "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "hidden-protein & nucleic acids",
+      "content_type": "image/png",
+      "bytes": 20262,
+      "sha256": "b1143678377d0a5567dbe6310c5ff10c12a467e169f02acc744ce576b0b94438"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "all-before-ligands",
+      "content_type": "image/png",
+      "bytes": 41219,
+      "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "hidden-ligands",
+      "content_type": "image/png",
+      "bytes": 40254,
+      "sha256": "2cc58ce5bdf16a2b2a3010a5a44486c55af3c05cdbe9c5e0246837efecac1055"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "all-before-water",
+      "content_type": "image/png",
+      "bytes": 41219,
+      "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "hidden-water",
+      "content_type": "image/png",
+      "bytes": 41097,
+      "sha256": "f37026e3ac9a2974094cff62964419105af904e3c9abaec07f0a1bdd3f461293"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "all-before-ions",
+      "content_type": "image/png",
+      "bytes": 41219,
+      "sha256": "a73cb0d82c0c31cd6f654b306db638927964360ab074ccab310b73302c874a1b"
+    },
+    {
+      "test": "audit: protein, ligand, water and ion visibility each changes a mixed molecular scene",
+      "name": "hidden-ions",
+      "content_type": "image/png",
+      "bytes": 40022,
+      "sha256": "44231349d510d60573629b4650f0d415b9407c8eb9c782791e2f9d7bf2c526db"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "protein-selected-hidden",
+      "content_type": "image/png",
+      "bytes": 20910,
+      "sha256": "0e78a22553fb84e3c21b11c7121dfcae4ec5eb3ca7b5fbf412f0227d6bf103a7"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "protein-selection-cleared",
+      "content_type": "image/png",
+      "bytes": 20910,
+      "sha256": "0e78a22553fb84e3c21b11c7121dfcae4ec5eb3ca7b5fbf412f0227d6bf103a7"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "ligands-selected-hidden",
+      "content_type": "image/png",
+      "bytes": 52447,
+      "sha256": "f2e73e1c7d8b8e0f6bf80c67bfd2bd2bd199f30ae5ad5f0626132f03a7880294"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "ligands-selection-cleared",
+      "content_type": "image/png",
+      "bytes": 52447,
+      "sha256": "f2e73e1c7d8b8e0f6bf80c67bfd2bd2bd199f30ae5ad5f0626132f03a7880294"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "water-selected-hidden",
+      "content_type": "image/png",
+      "bytes": 49488,
+      "sha256": "d63672a5f2ebdb72b94c970cf2e3b5e5c773ab3f9c4d06d7dc0e5e483dbfaf7c"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "water-selection-cleared",
+      "content_type": "image/png",
+      "bytes": 49488,
+      "sha256": "d63672a5f2ebdb72b94c970cf2e3b5e5c773ab3f9c4d06d7dc0e5e483dbfaf7c"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "ions-selected-hidden",
+      "content_type": "image/png",
+      "bytes": 50961,
+      "sha256": "a72ecccac6e56eaa209fc7e2f3df7c014a5ecb80b73db69a89965770415b8421"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "ions-selection-cleared",
+      "content_type": "image/png",
+      "bytes": 50961,
+      "sha256": "a72ecccac6e56eaa209fc7e2f3df7c014a5ecb80b73db69a89965770415b8421"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "Polar only-selected-hidden",
+      "content_type": "image/png",
+      "bytes": 46770,
+      "sha256": "bf7f91ef9c841188e9f9614ce3b0775ca107249dbe41b772f8296ff48fa83f13"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "Polar only-selection-cleared",
+      "content_type": "image/png",
+      "bytes": 46770,
+      "sha256": "bf7f91ef9c841188e9f9614ce3b0775ca107249dbe41b772f8296ff48fa83f13"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "Hidden-selected-hidden",
+      "content_type": "image/png",
+      "bytes": 43766,
+      "sha256": "b4ade1abbb9a0016c93f881fd23c90d6e2743db4e01a7dcb234ed215654d6394"
+    },
+    {
+      "test": "audit: hidden atom groups and hydrogen modes also hide selection highlights",
+      "name": "Hidden-selection-cleared",
+      "content_type": "image/png",
+      "bytes": 43766,
+      "sha256": "b4ade1abbb9a0016c93f881fd23c90d6e2743db4e01a7dcb234ed215654d6394"
+    },
+    {
+      "test": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+      "name": "schematic-nucleic-visible",
+      "content_type": "image/png",
+      "bytes": 23612,
+      "sha256": "a7c41ff8b3dd348bdf996f0f36702d1b4da51063af3c97b58614307b3b8ff608"
+    },
+    {
+      "test": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+      "name": "schematic-nucleic-hidden",
+      "content_type": "image/png",
+      "bytes": 17439,
+      "sha256": "f104e8691f667d53ea6f9a830f9a19e43f6e7e7c2ac13dc2db68c824ab14d62c"
+    },
+    {
+      "test": "audit: polymer visibility includes a schematic nucleic-acid backbone",
+      "name": "schematic-nucleic-restored",
+      "content_type": "image/png",
+      "bytes": 23612,
+      "sha256": "a7c41ff8b3dd348bdf996f0f36702d1b4da51063af3c97b58614307b3b8ff608"
+    },
+    {
+      "test": "audit native: short GROMACS run, log show/hide, output ZIP and completed trajectory",
+      "name": "gromacs-output-files.json",
+      "content_type": "application/json",
+      "bytes": 759,
+      "sha256": "d81e53ab8e9ebd423f4229fdb4ec248bc7c32c47aef4e9a47778d11d25040256",
+      "data": [
+        "#topol.top.1#",
+        "added-solvent.ndx",
+        "boxed.gro",
+        "command-01.log",
+        "command-02.log",
+        "command-03.log",
+        "command-04.log",
+        "command-05.log",
+        "command-06.log",
+        "command-07.log",
+        "command-08.log",
+        "command-09.log",
+        "command-10.log",
+        "config.json",
+        "input-state.json",
+        "input.pdb",
+        "ions.mdp",
+        "ions.tpr",
+        "mdout.mdp",
+        "minimize.edr",
+        "minimize.gro",
+        "minimize.log",
+        "minimize.mdp",
+        "minimize.tpr",
+        "minimize.trr",
+        "posre.itp",
+        "prepared.pdb",
+        "processed.gro",
+        "production.cpt",
+        "production.edr",
+        "production.gro",
+        "production.log",
+        "production.mdp",
+        "production.tpr",
+        "production.xtc",
+        "provenance.json",
+        "solvated.gro",
+        "status.json",
+        "system.gro",
+        "topol.top",
+        "worker.log"
+      ]
+    },
+    {
+      "test": "audit native: short GROMACS run, log show/hide, output ZIP and completed trajectory",
+      "name": "gromacs-job.json",
+      "content_type": "application/json",
+      "bytes": 2749,
+      "sha256": "af44b6201143e1083b98b5982dbc6f2bc73ab36979c5802b840daf7d1f704a19",
+      "data": {
+        "id": "d011e2d3c9b54e5c",
+        "name": "e2e-ui-audit-gromacs-1789101197540",
+        "engine": "gromacs",
+        "status": "completed",
+        "stage": "Complete",
+        "progress": 100,
+        "completed_steps": 2,
+        "total_steps": 2,
+        "elapsed_seconds": 12.57,
+        "logs": [
+          "Queued 2 production steps on 2 CPU threads.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx --version",
+          "Engine probe finished.",
+          "pdb2gmx rebuilds hydrogen coordinates with Amber99SB-ILDN templates (-ignh); all input heavy atoms must be retained. Default termini and protonation require review. No ligand parameterization.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx pdb2gmx -f input.pdb -o processed.gro -p topol.top -ff amber99sb-ildn -water tip3p -ignh",
+          "Building topology finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx editconf -f processed.gro -o boxed.gro -c -d 1.0 -bt cubic",
+          "Creating periodic box finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx solvate -cp boxed.gro -cs spc216.gro -o solvated.gro -p topol.top",
+          "Adding TIP3P water finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx grompp -f ions.mdp -c solvated.gro -p topol.top -o ions.tpr",
+          "Preparing neutralization finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx genion -s ions.tpr -o system.gro -p topol.top -pname NA -nname CL -neutral -seed 42 -n added-solvent.ndx",
+          "Neutralizing system finished.",
+          "Added TIP3P solvent and neutralizing ions, replacing only newly added waters; retained input crystal waters. 1 nm cubic padding. NVT at fixed volume; no pressure equilibration or added salt.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx grompp -f minimize.mdp -c system.gro -p topol.top -o minimize.tpr",
+          "Preparing minimization finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx mdrun -deffnm minimize -ntmpi 1 -ntomp 2 -nb cpu -pme cpu -bonded cpu -update cpu -pin off",
+          "Energy minimization finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx grompp -f production.mdp -c minimize.gro -p topol.top -o production.tpr",
+          "Preparing production finished.",
+          "$ /Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx mdrun -deffnm production -ntmpi 1 -ntomp 2 -nb cpu -pme cpu -bonded cpu -update cpu -pin off",
+          "Running dynamics finished.",
+          "Complete: 3 frames, 26,818 atoms. Output files and reproducibility manifest saved."
+        ],
+        "config": {
+          "dataset_id": "demo",
+          "engine": "gromacs",
+          "name": "e2e-ui-audit-gromacs-1789101197540",
+          "duration_ps": 0.004,
+          "temperature_k": 300.0,
+          "timestep_fs": 2.0,
+          "report_interval": 1,
+          "friction_ps": 1.0,
+          "seed": 42,
+          "solvent": "explicit",
+          "minimize": true,
+          "equilibration_steps": 0,
+          "padding_nm": 1.0
+        },
+        "created_at": "2026-09-11T04:33:17.719349+00:00",
+        "worker_pid": 29431,
+        "dataset_id": "8e94e2a157594d34"
+      }
+    },
+    {
+      "test": "audit native: running OpenMM monitor reopens from footer and Stop cancels the worker",
+      "name": "cancelled-job.json",
+      "content_type": "application/json",
+      "bytes": 725,
+      "sha256": "570760ecc8c2b310986ca669d12edeb746becd25055d4ae23576c6a8ae5e8ffc",
+      "data": {
+        "id": "8c265ff63a6e42e7",
+        "name": "e2e-ui-audit-cancel-1789101214850",
+        "engine": "openmm",
+        "status": "cancelled",
+        "stage": "Cancelled",
+        "progress": 0,
+        "completed_steps": 0,
+        "total_steps": 5000,
+        "elapsed_seconds": 0.19,
+        "logs": [
+          "Queued 5,000 production steps on 2 CPU threads.",
+          "Cancellation requested; worker process group terminated."
+        ],
+        "config": {
+          "dataset_id": "demo",
+          "engine": "openmm",
+          "name": "e2e-ui-audit-cancel-1789101214850",
+          "duration_ps": 10.0,
+          "temperature_k": 300.0,
+          "timestep_fs": 2.0,
+          "report_interval": 50,
+          "friction_ps": 1.0,
+          "seed": 42,
+          "solvent": "implicit",
+          "minimize": false,
+          "equilibration_steps": 0,
+          "padding_nm": 1.0
+        },
+        "created_at": "2026-09-11T04:33:35.085914+00:00",
+        "worker_pid": 29562,
+        "error": "Cancelled by user. Partial outputs are retained."
+      }
+    },
+    {
+      "test": "audit native: preparation monitor Cancel stops a real preparation job",
+      "name": "cancelled-preparation.json",
+      "content_type": "application/json",
+      "bytes": 826,
+      "sha256": "864c707cff29e71e395dbb5ae21ff5ea0b7690c3c27b70bd60484c6679cd2745",
+      "data": {
+        "id": "bc5c5c97a8054fd4",
+        "name": "e2e-ui-audit-prep-cancel-1789101216108 \u00b7 prepared",
+        "engine": "preparation",
+        "status": "cancelled",
+        "stage": "Cancelled",
+        "progress": 0,
+        "completed_steps": 0,
+        "total_steps": 7,
+        "elapsed_seconds": 0.11,
+        "logs": [
+          "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+          "Cancellation requested; worker process group terminated."
+        ],
+        "config": {
+          "name": "e2e-ui-audit-prep-cancel-1789101216108 \u00b7 prepared",
+          "ph": 7.0,
+          "add_missing_atoms": true,
+          "build_missing_residues": false,
+          "optimize_sidechains": true,
+          "remove_waters": true,
+          "remove_heterogens": false,
+          "ligand_overrides": {},
+          "seed": 42,
+          "dataset_id": "ffc8fe23af71473d",
+          "complex": false,
+          "operation": "prepare"
+        },
+        "created_at": "2026-09-11T04:33:37.346761+00:00",
+        "worker_pid": 29594,
+        "error": "Cancelled by user. Partial outputs are retained."
+      }
+    },
+    {
+      "test": "audit native: prepared PDB download, water update, water log and setup cancellation",
+      "name": "prepared-download.pdb",
+      "content_type": "chemical/x-pdb",
+      "bytes": 9312,
+      "sha256": "1e81e24279773941acc624eb9dcc2ff20ae602bd269b8c45f1c07ca93ccd4070"
+    },
+    {
+      "test": "audit native: prepared PDB download, water update, water log and setup cancellation",
+      "name": "water-controls.json",
+      "content_type": "application/json",
+      "bytes": 226,
+      "sha256": "096639a8ab242ea7bbdfc98a1e1a2f3ec28abcecdd0807a518fe5c221476c70e",
+      "data": {
+        "source_dataset_id": "f0afd0580ac74e20",
+        "prepared_job_id": "4dea9b73a7ac4615",
+        "initial_water_job_id": "a3fd359cd5cc4439",
+        "updated_water_job_id": "8c6b07eb53f74efc",
+        "cancelled_water_job_id": "8e9f984d3370448b"
+      }
+    },
+    {
+      "test": "audit responsive: phone scene, inspector and Studio controls remain reachable",
+      "name": "phone-studio.png",
+      "content_type": "image/png",
+      "bytes": 70363,
+      "sha256": "0a5a66b1c109572d13a5f4f73520697c02b402782428d76b94c54ab3d5fb65b0",
+      "file": "docs/audit/ui-audit-phone-studio.png"
+    },
+    {
+      "test": "audit Studio upload format: cif displays the imported structure",
+      "name": "cif-source-result.json",
+      "content_type": "application/json",
+      "bytes": 119,
+      "sha256": "2000d527711646ef62270c043d5c80762b1d36e8b01daffb834c1a7f83df6657",
+      "data": {
+        "id": "94bff5ade4de4831",
+        "name": "e2e-ui-audit-source-cif-1789101229552",
+        "atoms": 113,
+        "source": "upload"
+      }
+    },
+    {
+      "test": "audit Studio upload format: mol displays the imported structure",
+      "name": "mol-source-result.json",
+      "content_type": "application/json",
+      "bytes": 117,
+      "sha256": "c328248dd6340e35d260e86a9cf37019ba4b512d640de9b305decadbb0a107e3",
+      "data": {
+        "id": "0911e815dd174ce0",
+        "name": "e2e-ui-audit-source-mol-1789101230372",
+        "atoms": 9,
+        "source": "upload"
+      }
+    },
+    {
+      "test": "audit Studio upload format: sdf displays the imported structure",
+      "name": "sdf-source-result.json",
+      "content_type": "application/json",
+      "bytes": 117,
+      "sha256": "b572f22bf02f81e6f26af2f15a1049d0feb719c9875000f0f3aef1198d9dfe72",
+      "data": {
+        "id": "ef4c42e409664dc8",
+        "name": "e2e-ui-audit-source-sdf-1789101231122",
+        "atoms": 9,
+        "source": "upload"
+      }
+    },
+    {
+      "test": "audit Studio upload format: smi displays the imported structure",
+      "name": "smi-source-result.json",
+      "content_type": "application/json",
+      "bytes": 117,
+      "sha256": "bd73deebb1dff5d8b6abf1c6c9ee7e818d40fec5df2d52fa9138707996935100",
+      "data": {
+        "id": "5bc9993f11f24215",
+        "name": "e2e-ui-audit-source-smi-1789101231753",
+        "atoms": 9,
+        "source": "smiles"
+      }
+    },
+    {
+      "test": "audit Studio upload format: smiles displays the imported structure",
+      "name": "smiles-source-result.json",
+      "content_type": "application/json",
+      "bytes": 120,
+      "sha256": "54ab68f6a8c84075b48d6d4a45de897354714ec40557b7eca1b7412f4c746f67",
+      "data": {
+        "id": "4909d09fa0174151",
+        "name": "e2e-ui-audit-source-smiles-1789101232522",
+        "atoms": 9,
+        "source": "smiles"
+      }
+    },
+    {
+      "test": "audit: ligand details, explicit-state SMILES and pH trigger real inspection updates",
+      "name": "ligand-inspection.json",
+      "content_type": "application/json",
+      "bytes": 2797,
+      "sha256": "4b9bf76fb690d398c63dcfc998f09321c7d8b343411ad7632946829f6dfa8aed",
+      "data": {
+        "dataset_id": "0ea27b2617fd426c",
+        "protein_atoms": 113,
+        "hydrogen_atoms": 63,
+        "water_atoms": 3,
+        "heterogen_residues": [
+          "LIG B:6",
+          "NA D:8"
+        ],
+        "can_prepare": true,
+        "has_sequence": false,
+        "missing_atoms": [
+          {
+            "chain": "A",
+            "resid": "6",
+            "residue": "LYS",
+            "atoms": [
+              "OXT"
+            ]
+          }
+        ],
+        "missing_residues": [],
+        "gaps": [],
+        "warnings": [
+          "Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.",
+          "No retained SEQRES/mmCIF polymer sequence is available. Residue numbering gaps cannot identify which amino acids are absent, so loop building is unavailable.",
+          "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+        ],
+        "blockers": [],
+        "ligands": [
+          {
+            "key": "B:6::LIG",
+            "chain": "B",
+            "resid": "6",
+            "insertion_code": " ",
+            "residue": "LIG",
+            "component_id": "LIG",
+            "error": null,
+            "atom_indices": [
+              113,
+              114,
+              115
+            ],
+            "original_smiles": null,
+            "original_formal_charge": null,
+            "selected_smiles": "CCO",
+            "formal_charge": 0,
+            "candidate_smiles": [
+              "CCO"
+            ],
+            "ph": 7,
+            "protonation_method": "Explicit user SMILES defines chemistry and fixed protonation state.",
+            "warnings": [
+              "Original input ligand chemistry was unavailable or did not match the bound pose; the explicit user chemical reference was used. It is not a binding-site pKa assignment."
+            ],
+            "heavy_atoms": 3,
+            "reference": {
+              "provider": "Explicit user SMILES",
+              "mapping_method": "Unique element/connectivity match between explicit SMILES and bound-distance connectivity; chemical bond orders/charge come exclusively from SMILES."
+            },
+            "stereo_checked": {},
+            "source_cif": null,
+            "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+          }
+        ],
+        "ligand_errors": [],
+        "ligand_runtime": {
+          "available": true,
+          "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools",
+          "method": "GAFF2 / AM1-BCC"
+        },
+        "metal_environment": {
+          "method": "Observed metal\u2013N/O/S contacts within 2.8 \u00c5 (3.2 \u00c5 for Ca); these distances do not establish bond order or validate a metal model.",
+          "retained_coordinating_waters": [],
+          "protected_sidechain_residues": [],
+          "contacts": []
+        },
+        "sequence_source": null,
+        "sequence_source_sha256": null
+      }
+    },
+    {
+      "test": "audit: validated complex result exposes prepared coordinates and parameter downloads",
+      "name": "complex-download-manifest.json",
+      "content_type": "application/json",
+      "bytes": 3564,
+      "sha256": "2034b27cb7514395fed42436392500b23f62c9a049111590a5a186f27c293087",
+      "data": {
+        "dataset_id": "4cf5bcedf38847c1",
+        "name": "9AX6 \u00b7 prepared complex",
+        "n_atoms": 10654,
+        "entries": [
+          "atom-map.json",
+          "config.json",
+          "input-metadata.json",
+          "input.pdb",
+          "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AC.AC",
+          "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AC.AC0",
+          "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AM1BCC.AC",
+          "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_AM1BCC_PRE.AC",
+          "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_BOND_TYPE.AC",
+          "ligands/ligand-521bfd1ad4e6/ANTECHAMBER_BOND_TYPE.AC0",
+          "ligands/ligand-521bfd1ad4e6/ATOMTYPE.INF",
+          "ligands/ligand-521bfd1ad4e6/antechamber.log",
+          "ligands/ligand-521bfd1ad4e6/charge-rounding.json",
+          "ligands/ligand-521bfd1ad4e6/charged-native.mol2",
+          "ligands/ligand-521bfd1ad4e6/charged.mol2",
+          "ligands/ligand-521bfd1ad4e6/commands.json",
+          "ligands/ligand-521bfd1ad4e6/conversion-validation.json",
+          "ligands/ligand-521bfd1ad4e6/identity.json",
+          "ligands/ligand-521bfd1ad4e6/input.sdf",
+          "ligands/ligand-521bfd1ad4e6/leap.in",
+          "ligands/ligand-521bfd1ad4e6/leap.log",
+          "ligands/ligand-521bfd1ad4e6/ligand.frcmod",
+          "ligands/ligand-521bfd1ad4e6/ligand.inpcrd",
+          "ligands/ligand-521bfd1ad4e6/ligand.prmtop",
+          "ligands/ligand-521bfd1ad4e6/ligand.xml",
+          "ligands/ligand-521bfd1ad4e6/parmchk2.log",
+          "ligands/ligand-521bfd1ad4e6/provenance-before-copy-fix.json",
+          "ligands/ligand-521bfd1ad4e6/provenance-copy-correction.json",
+          "ligands/ligand-521bfd1ad4e6/provenance.json",
+          "ligands/ligand-521bfd1ad4e6/residue-7b1f51135902.json",
+          "ligands/ligand-521bfd1ad4e6/residue-85c93c2243f1.json",
+          "ligands/ligand-521bfd1ad4e6/sqm.in",
+          "ligands/ligand-521bfd1ad4e6/sqm.out",
+          "ligands/ligand-521bfd1ad4e6/sqm.pdb",
+          "ligands/ligand-521bfd1ad4e6/tleap.log",
+          "ligands/ligand-7a2495383b1b/ANTECHAMBER_AC.AC",
+          "ligands/ligand-7a2495383b1b/ANTECHAMBER_AC.AC0",
+          "ligands/ligand-7a2495383b1b/ANTECHAMBER_AM1BCC.AC",
+          "ligands/ligand-7a2495383b1b/ANTECHAMBER_AM1BCC_PRE.AC",
+          "ligands/ligand-7a2495383b1b/ANTECHAMBER_BOND_TYPE.AC",
+          "ligands/ligand-7a2495383b1b/ANTECHAMBER_BOND_TYPE.AC0",
+          "ligands/ligand-7a2495383b1b/ATOMTYPE.INF",
+          "ligands/ligand-7a2495383b1b/antechamber.log",
+          "ligands/ligand-7a2495383b1b/charge-rounding.json",
+          "ligands/ligand-7a2495383b1b/charged-native.mol2",
+          "ligands/ligand-7a2495383b1b/charged.mol2",
+          "ligands/ligand-7a2495383b1b/commands.json",
+          "ligands/ligand-7a2495383b1b/conversion-validation.json",
+          "ligands/ligand-7a2495383b1b/identity.json",
+          "ligands/ligand-7a2495383b1b/input.sdf",
+          "ligands/ligand-7a2495383b1b/leap.in",
+          "ligands/ligand-7a2495383b1b/leap.log",
+          "ligands/ligand-7a2495383b1b/ligand.frcmod",
+          "ligands/ligand-7a2495383b1b/ligand.inpcrd",
+          "ligands/ligand-7a2495383b1b/ligand.prmtop",
+          "ligands/ligand-7a2495383b1b/ligand.xml",
+          "ligands/ligand-7a2495383b1b/parmchk2.log",
+          "ligands/ligand-7a2495383b1b/provenance-before-copy-fix.json",
+          "ligands/ligand-7a2495383b1b/provenance-copy-correction.json",
+          "ligands/ligand-7a2495383b1b/provenance.json",
+          "ligands/ligand-7a2495383b1b/residue-3a3824d21e68.json",
+          "ligands/ligand-7a2495383b1b/residue-f4f0ee9d81b0.json",
+          "ligands/ligand-7a2495383b1b/sqm.in",
+          "ligands/ligand-7a2495383b1b/sqm.out",
+          "ligands/ligand-7a2495383b1b/sqm.pdb",
+          "ligands/ligand-7a2495383b1b/tleap.log",
+          "preparation.json",
+          "prepared.pdb",
+          "provenance.json",
+          "sequence-source.cif",
+          "status.json",
+          "worker.log"
+        ]
+      }
+    }
+  ],
+  "post_test_formatting_changes": [
+    {
+      "path": "backend/ligands.py",
+      "before_sha256": "a9b54a042660d4a9b4a4f292c939fa02d70be80a07dfceb9fa1aeb60744f80ff",
+      "after_sha256": "45b5672854cb71489abbc49e6888317f4b2d0ac2609c3f40dc833d3404035ff3",
+      "change": "Trailing whitespace only; identical Python AST."
+    },
+    {
+      "path": "backend/tests/test_prepared_system.py",
+      "before_sha256": "e72a8bbd9a241e0dddd7e701c6b4f34304649588d84098668c8d3ab4e397cfba",
+      "after_sha256": "260fcad14c179c26a18621f52ae858b89e9a159ab4e391902e7da0fdd486cdc7",
+      "change": "Trailing whitespace only; identical Python AST."
+    }
+  ]
+}

@@ -1,0 +1,2775 @@
+{
+  "checked_at": "2026-09-11T04:26:48.451619+00:00",
+  "source_dataset": "9fb26d98962c453b",
+  "prepared_dataset": "4cf5bcedf38847c1",
+  "preparation_job": "57083a2415754858",
+  "script_sha256": "60c66d0065a66a73c10c73b6802999b066ec4162b274903587165635764ed04c",
+  "source_topology_sha256": "7bdb1635e4ada93cda53c9b7b4566106c29ef0dc01a103c4ea046af2910f12dd",
+  "prepared_pdb_sha256": "ecd00ec3f35599649163edd4c78bda2a580c9b7784d59283f8c4d3775ac77321",
+  "source_version_limitation": "The application source was edited while this development job ran. Its recorded implementation hash identifies file bytes observed at completion, not a guaranteed immutable snapshot of loaded Python modules. This audit independently rechecks preserved molecular artifacts with the current audit script; it does not retroactively claim a frozen build.",
+  "annotation_corrections": [
+    {
+      "corrected_at": "2026-09-11T04:25:07.342613+00:00",
+      "scope": "Annotation correction only; byte identity is asserted for parameters/native outputs, not the corrected provenance annotation.",
+      "artifact_directory": "data/jobs/57083a2415754858/ligands/ligand-521bfd1ad4e6",
+      "original_annotation_key": "J:201::A1A",
+      "correct_source_key": "I:201::A1A",
+      "preserved_original_path": "data/jobs/57083a2415754858/ligands/ligand-521bfd1ad4e6/provenance-before-copy-fix.json",
+      "preserved_original_sha256": "b293132f5b2437a7fb59301dd969f5dce34c841a92bd39e0846c606bb771fb45",
+      "corrected_provenance_sha256": "47645d99756c0b394abf83e5dda9b9b033e2fc7ad417ab7c702c9fa83e0261b2",
+      "per_residue_annotations": [
+        {
+          "key": "I:201::A1A",
+          "path": "data/jobs/57083a2415754858/ligands/ligand-521bfd1ad4e6/residue-7b1f51135902.json",
+          "sha256": "47645d99756c0b394abf83e5dda9b9b033e2fc7ad417ab7c702c9fa83e0261b2"
+        },
+        {
+          "key": "J:201::A1A",
+          "path": "data/jobs/57083a2415754858/ligands/ligand-521bfd1ad4e6/residue-85c93c2243f1.json",
+          "sha256": "060564e6a0793ab4a15c38742764d23962f420d044879edc3b13d2c6aa0143de"
+        }
+      ],
+      "unchanged_parameter_and_native_files": {
+        "ANTECHAMBER_AC.AC": "a01e86383de7e8bc6fa6e8ebf67b17340adb8663afdf05aa666e5dbeed92e500",
+        "ANTECHAMBER_AC.AC0": "60fb70c3ff591787d3966e7948095ad4bfb423e186164a4ffffe687f520b2bd7",
+        "ANTECHAMBER_AM1BCC.AC": "7477ba6b87ab0de0edd938cf000d57b87149abf4d651e245293d3b0fea7a3af5",
+        "ANTECHAMBER_AM1BCC_PRE.AC": "03885db358825cedbcb75f43b2cde4ae52f55560ec719ce216ce80acf0da242b",
+        "ANTECHAMBER_BOND_TYPE.AC": "60fb70c3ff591787d3966e7948095ad4bfb423e186164a4ffffe687f520b2bd7",
+        "ANTECHAMBER_BOND_TYPE.AC0": "03470573a8f518b17bc97f48b5246e39febbd0d03db0482784257ea16a0bccfb",
+        "ATOMTYPE.INF": "1b283ea78e327e113cbe07476194b1b4945b691f2c826d25b9c2f5a3337dc82e",
+        "antechamber.log": "e0cf676ae0430deac250f0523a11cdb0ef582f81eecb8181005719678aa09baa",
+        "charge-rounding.json": "ea86ce01d45d00dcb62c36f798fc5af750babfe73420882711631a2d99291fb8",
+        "charged-native.mol2": "e7df70dba44f57459db01f99f86df0c7e2dd5174fd3cab433ba5669baae8862f",
+        "charged.mol2": "2684cb372d594a6eba04b7fc601d50e6154a0be595f0fbfe69bbdf5cddadf795",
+        "commands.json": "03fe56d4b7be0719a5e8bfa3270671a72b9de1b6c96d675b1b27fa6c247c5bd8",
+        "conversion-validation.json": "a1f74f612e8cb04573490ab44860ccaa5fa267f2248da17bff398405179b50bb",
+        "identity.json": "46317e02ae69684954ae23119f6173be1082ef20713df11dc9f1b374ba853cc5",
+        "input.sdf": "289b2722e574655f34ebdb7c41dadb82441e37085f5ea25758dac3d0a5d61604",
+        "leap.in": "b299610c83eab71811faf2b7e6b939b022da4d43e11aee424c84df0305568287",
+        "leap.log": "3a9e1aaff69af20ba5e1b73bbf10f58afbc7e484578925a919b41ae6c83db279",
+        "ligand.frcmod": "2ec8d00eaec45be2b614a8e1f418a780f8289ea391e7e6c8726a04bcd7261b0e",
+        "ligand.inpcrd": "781b5448b576908ec93007b085c6d451078aa4ada9ab48feb1d6c95318931187",
+        "ligand.prmtop": "f9857d633e358dc93dfd32083d36ce8d0664c28d7bc922e3c490e3707519dc45",
+        "ligand.xml": "77784e0ffc5cfe06433397d57803105261515510af040a4500fa1323895702bd",
+        "parmchk2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sqm.in": "65e9f49723a4fccc09ffefef206c44f8e3dc317199625d96e15a9ef0fbdfdad4",
+        "sqm.out": "becfac36bb515df5993296dd6a4999611f9febdfc1763041dacc1bcc2bcaf97b",
+        "sqm.pdb": "382d0a61ac1e71c2d4af86ef8f61b6b8d213e26a5857caedc73901aed7b0a408",
+        "tleap.log": "cae59c536901c017f6b1fbb7569750ce89332eb41a5ca27cfdca3d1638a94eb9"
+      }
+    },
+    {
+      "corrected_at": "2026-09-11T04:25:07.348385+00:00",
+      "scope": "Annotation correction only; byte identity is asserted for parameters/native outputs, not the corrected provenance annotation.",
+      "artifact_directory": "data/jobs/57083a2415754858/ligands/ligand-7a2495383b1b",
+      "original_annotation_key": "G:201::GNP",
+      "correct_source_key": "E:201::GNP",
+      "preserved_original_path": "data/jobs/57083a2415754858/ligands/ligand-7a2495383b1b/provenance-before-copy-fix.json",
+      "preserved_original_sha256": "9115779bbc6ffd6619c4292c4b878bbd49fa959f068d537c541b02a69e63ddc2",
+      "corrected_provenance_sha256": "f359c8faed3202b9ea1a5083958b4bef240a3ea2defd5d77ba3aa915b508c1cc",
+      "per_residue_annotations": [
+        {
+          "key": "E:201::GNP",
+          "path": "data/jobs/57083a2415754858/ligands/ligand-7a2495383b1b/residue-3a3824d21e68.json",
+          "sha256": "f359c8faed3202b9ea1a5083958b4bef240a3ea2defd5d77ba3aa915b508c1cc"
+        },
+        {
+          "key": "G:201::GNP",
+          "path": "data/jobs/57083a2415754858/ligands/ligand-7a2495383b1b/residue-f4f0ee9d81b0.json",
+          "sha256": "fd9ee1634919300843bb22ac474fab10a66e30ca2b827c6d50f39b1d90eb9cc7"
+        }
+      ],
+      "unchanged_parameter_and_native_files": {
+        "ANTECHAMBER_AC.AC": "1bb559517623ce730ffb06012305bf2fd6f79daecfee77cc15147f0eac6b2fa9",
+        "ANTECHAMBER_AC.AC0": "9257fe21df2533cb310b02a5666a0f805c4e60f6e5f36a89dc7633512616c00f",
+        "ANTECHAMBER_AM1BCC.AC": "da9904a6e478529a74f387393f1984923bb4545a035e7a8847a5c82f1f9f35b8",
+        "ANTECHAMBER_AM1BCC_PRE.AC": "4fa82dffeb851e095113e8de4c911f1c044144794403e937b2582a880eff6d78",
+        "ANTECHAMBER_BOND_TYPE.AC": "9257fe21df2533cb310b02a5666a0f805c4e60f6e5f36a89dc7633512616c00f",
+        "ANTECHAMBER_BOND_TYPE.AC0": "5ec450dcda64361a7903e0361d12ff87dfb1dd5a3e1fd4c878a7c5506b64ec0f",
+        "ATOMTYPE.INF": "d7d5111bcb60fd9c2b2bc688d77402dd22653760fe25a527f1e1bf821cc7ea41",
+        "antechamber.log": "8cb1021804d3bd3a8af8e89c5e6bca0c971228c301925ccc268d7ed538a018c0",
+        "charge-rounding.json": "c0f005dfe3e31fab4b389632f2d61ef5c455b7ca98c1d6731ade9b8ab748c13e",
+        "charged-native.mol2": "95c82443a2aea13f4b810529d308c74af2f1c43a26a49a587ae96be540157ee0",
+        "charged.mol2": "2ffed2560f98f1e3a085c4c9432a50e5aa26b34b334612ec73e493c61b866bf0",
+        "commands.json": "5da534cd53c43aacf3344183fbb67a365ee4024c203c4ff9d709201a6bd6c3cc",
+        "conversion-validation.json": "afe7dbc19473c3d6a0c57ea1bd6a08656f338a7b3d75e6e662553651e0dbf78c",
+        "identity.json": "9104a0e3b5c475ca3bc2b4cccca84357e02b5f4430ab9652934a451bb6438d25",
+        "input.sdf": "cf1243a925e115ba5d4eb025405126d9f156164bc4fa3b24db82313bc7f000e8",
+        "leap.in": "b299610c83eab71811faf2b7e6b939b022da4d43e11aee424c84df0305568287",
+        "leap.log": "7cdd0487f0e3e41851b809db669fb8eaee66753e1535568242d56cb5fa58cb85",
+        "ligand.frcmod": "e7cadffab7a99da28b3ef4b90f62712bbc9232d8326034c5005ca7c18fc61669",
+        "ligand.inpcrd": "d999a4948733832ee28a18e968372cd4e6f9fab55956abb1c35adbedcfcb614f",
+        "ligand.prmtop": "f879d40ec3aff53229b7a97f39624b28e92dde81e4746810b8281fa2d1cb43f4",
+        "ligand.xml": "776f86dd0f7bf318a8e29f263377bcd00748d72f528195195cb67cb56e478c8e",
+        "parmchk2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sqm.in": "3f443db5560c953d71e664536fe53f084c49d194d442170b291c73dc1c773d06",
+        "sqm.out": "ecde0694e7877bf4a2bb4a3de9a6c4d38cd8a3e3a7c04488228fdb959d25b267",
+        "sqm.pdb": "0a70520b08254b83f697636dbc344c4f5047fefaa892a942a64609d290c3dcd3",
+        "tleap.log": "ba193dba74e5bdc71f328ef71134711a62e384744a4266ac116c4dc19774d18a"
+      }
+    },
+    {
+      "corrected_at": "2026-09-11T04:25:07.354567+00:00",
+      "scope": "Annotation correction only; byte identity is asserted for parameters/native outputs, not the corrected provenance annotation.",
+      "artifact_directory": "data/datasets/4cf5bcedf38847c1/ligands/ligand-521bfd1ad4e6",
+      "original_annotation_key": "J:201::A1A",
+      "correct_source_key": "I:201::A1A",
+      "preserved_original_path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-521bfd1ad4e6/provenance-before-copy-fix.json",
+      "preserved_original_sha256": "b293132f5b2437a7fb59301dd969f5dce34c841a92bd39e0846c606bb771fb45",
+      "corrected_provenance_sha256": "47645d99756c0b394abf83e5dda9b9b033e2fc7ad417ab7c702c9fa83e0261b2",
+      "per_residue_annotations": [
+        {
+          "key": "I:201::A1A",
+          "path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-521bfd1ad4e6/residue-7b1f51135902.json",
+          "sha256": "47645d99756c0b394abf83e5dda9b9b033e2fc7ad417ab7c702c9fa83e0261b2"
+        },
+        {
+          "key": "J:201::A1A",
+          "path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-521bfd1ad4e6/residue-85c93c2243f1.json",
+          "sha256": "060564e6a0793ab4a15c38742764d23962f420d044879edc3b13d2c6aa0143de"
+        }
+      ],
+      "unchanged_parameter_and_native_files": {
+        "ANTECHAMBER_AC.AC": "a01e86383de7e8bc6fa6e8ebf67b17340adb8663afdf05aa666e5dbeed92e500",
+        "ANTECHAMBER_AC.AC0": "60fb70c3ff591787d3966e7948095ad4bfb423e186164a4ffffe687f520b2bd7",
+        "ANTECHAMBER_AM1BCC.AC": "7477ba6b87ab0de0edd938cf000d57b87149abf4d651e245293d3b0fea7a3af5",
+        "ANTECHAMBER_AM1BCC_PRE.AC": "03885db358825cedbcb75f43b2cde4ae52f55560ec719ce216ce80acf0da242b",
+        "ANTECHAMBER_BOND_TYPE.AC": "60fb70c3ff591787d3966e7948095ad4bfb423e186164a4ffffe687f520b2bd7",
+        "ANTECHAMBER_BOND_TYPE.AC0": "03470573a8f518b17bc97f48b5246e39febbd0d03db0482784257ea16a0bccfb",
+        "ATOMTYPE.INF": "1b283ea78e327e113cbe07476194b1b4945b691f2c826d25b9c2f5a3337dc82e",
+        "antechamber.log": "e0cf676ae0430deac250f0523a11cdb0ef582f81eecb8181005719678aa09baa",
+        "charge-rounding.json": "ea86ce01d45d00dcb62c36f798fc5af750babfe73420882711631a2d99291fb8",
+        "charged-native.mol2": "e7df70dba44f57459db01f99f86df0c7e2dd5174fd3cab433ba5669baae8862f",
+        "charged.mol2": "2684cb372d594a6eba04b7fc601d50e6154a0be595f0fbfe69bbdf5cddadf795",
+        "commands.json": "03fe56d4b7be0719a5e8bfa3270671a72b9de1b6c96d675b1b27fa6c247c5bd8",
+        "conversion-validation.json": "a1f74f612e8cb04573490ab44860ccaa5fa267f2248da17bff398405179b50bb",
+        "identity.json": "46317e02ae69684954ae23119f6173be1082ef20713df11dc9f1b374ba853cc5",
+        "input.sdf": "289b2722e574655f34ebdb7c41dadb82441e37085f5ea25758dac3d0a5d61604",
+        "leap.in": "b299610c83eab71811faf2b7e6b939b022da4d43e11aee424c84df0305568287",
+        "leap.log": "3a9e1aaff69af20ba5e1b73bbf10f58afbc7e484578925a919b41ae6c83db279",
+        "ligand.frcmod": "2ec8d00eaec45be2b614a8e1f418a780f8289ea391e7e6c8726a04bcd7261b0e",
+        "ligand.inpcrd": "781b5448b576908ec93007b085c6d451078aa4ada9ab48feb1d6c95318931187",
+        "ligand.prmtop": "f9857d633e358dc93dfd32083d36ce8d0664c28d7bc922e3c490e3707519dc45",
+        "ligand.xml": "77784e0ffc5cfe06433397d57803105261515510af040a4500fa1323895702bd",
+        "parmchk2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sqm.in": "65e9f49723a4fccc09ffefef206c44f8e3dc317199625d96e15a9ef0fbdfdad4",
+        "sqm.out": "becfac36bb515df5993296dd6a4999611f9febdfc1763041dacc1bcc2bcaf97b",
+        "sqm.pdb": "382d0a61ac1e71c2d4af86ef8f61b6b8d213e26a5857caedc73901aed7b0a408",
+        "tleap.log": "cae59c536901c017f6b1fbb7569750ce89332eb41a5ca27cfdca3d1638a94eb9"
+      }
+    },
+    {
+      "corrected_at": "2026-09-11T04:25:07.360158+00:00",
+      "scope": "Annotation correction only; byte identity is asserted for parameters/native outputs, not the corrected provenance annotation.",
+      "artifact_directory": "data/datasets/4cf5bcedf38847c1/ligands/ligand-7a2495383b1b",
+      "original_annotation_key": "G:201::GNP",
+      "correct_source_key": "E:201::GNP",
+      "preserved_original_path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-7a2495383b1b/provenance-before-copy-fix.json",
+      "preserved_original_sha256": "9115779bbc6ffd6619c4292c4b878bbd49fa959f068d537c541b02a69e63ddc2",
+      "corrected_provenance_sha256": "f359c8faed3202b9ea1a5083958b4bef240a3ea2defd5d77ba3aa915b508c1cc",
+      "per_residue_annotations": [
+        {
+          "key": "E:201::GNP",
+          "path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-7a2495383b1b/residue-3a3824d21e68.json",
+          "sha256": "f359c8faed3202b9ea1a5083958b4bef240a3ea2defd5d77ba3aa915b508c1cc"
+        },
+        {
+          "key": "G:201::GNP",
+          "path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-7a2495383b1b/residue-f4f0ee9d81b0.json",
+          "sha256": "fd9ee1634919300843bb22ac474fab10a66e30ca2b827c6d50f39b1d90eb9cc7"
+        }
+      ],
+      "unchanged_parameter_and_native_files": {
+        "ANTECHAMBER_AC.AC": "1bb559517623ce730ffb06012305bf2fd6f79daecfee77cc15147f0eac6b2fa9",
+        "ANTECHAMBER_AC.AC0": "9257fe21df2533cb310b02a5666a0f805c4e60f6e5f36a89dc7633512616c00f",
+        "ANTECHAMBER_AM1BCC.AC": "da9904a6e478529a74f387393f1984923bb4545a035e7a8847a5c82f1f9f35b8",
+        "ANTECHAMBER_AM1BCC_PRE.AC": "4fa82dffeb851e095113e8de4c911f1c044144794403e937b2582a880eff6d78",
+        "ANTECHAMBER_BOND_TYPE.AC": "9257fe21df2533cb310b02a5666a0f805c4e60f6e5f36a89dc7633512616c00f",
+        "ANTECHAMBER_BOND_TYPE.AC0": "5ec450dcda64361a7903e0361d12ff87dfb1dd5a3e1fd4c878a7c5506b64ec0f",
+        "ATOMTYPE.INF": "d7d5111bcb60fd9c2b2bc688d77402dd22653760fe25a527f1e1bf821cc7ea41",
+        "antechamber.log": "8cb1021804d3bd3a8af8e89c5e6bca0c971228c301925ccc268d7ed538a018c0",
+        "charge-rounding.json": "c0f005dfe3e31fab4b389632f2d61ef5c455b7ca98c1d6731ade9b8ab748c13e",
+        "charged-native.mol2": "95c82443a2aea13f4b810529d308c74af2f1c43a26a49a587ae96be540157ee0",
+        "charged.mol2": "2ffed2560f98f1e3a085c4c9432a50e5aa26b34b334612ec73e493c61b866bf0",
+        "commands.json": "5da534cd53c43aacf3344183fbb67a365ee4024c203c4ff9d709201a6bd6c3cc",
+        "conversion-validation.json": "afe7dbc19473c3d6a0c57ea1bd6a08656f338a7b3d75e6e662553651e0dbf78c",
+        "identity.json": "9104a0e3b5c475ca3bc2b4cccca84357e02b5f4430ab9652934a451bb6438d25",
+        "input.sdf": "cf1243a925e115ba5d4eb025405126d9f156164bc4fa3b24db82313bc7f000e8",
+        "leap.in": "b299610c83eab71811faf2b7e6b939b022da4d43e11aee424c84df0305568287",
+        "leap.log": "7cdd0487f0e3e41851b809db669fb8eaee66753e1535568242d56cb5fa58cb85",
+        "ligand.frcmod": "e7cadffab7a99da28b3ef4b90f62712bbc9232d8326034c5005ca7c18fc61669",
+        "ligand.inpcrd": "d999a4948733832ee28a18e968372cd4e6f9fab55956abb1c35adbedcfcb614f",
+        "ligand.prmtop": "f879d40ec3aff53229b7a97f39624b28e92dde81e4746810b8281fa2d1cb43f4",
+        "ligand.xml": "776f86dd0f7bf318a8e29f263377bcd00748d72f528195195cb67cb56e478c8e",
+        "parmchk2.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sqm.in": "3f443db5560c953d71e664536fe53f084c49d194d442170b291c73dc1c773d06",
+        "sqm.out": "ecde0694e7877bf4a2bb4a3de9a6c4d38cd8a3e3a7c04488228fdb959d25b267",
+        "sqm.pdb": "0a70520b08254b83f697636dbc344c4f5047fefaa892a942a64609d290c3dcd3",
+        "tleap.log": "ba193dba74e5bdc71f328ef71134711a62e384744a4266ac116c4dc19774d18a"
+      }
+    }
+  ],
+  "ligand_heavy_atoms": {
+    "count": 180,
+    "maximum_displacement_angstrom": 0.0,
+    "displacements_angstrom": {
+      "E:201::GNP:PG": 0.0,
+      "E:201::GNP:O1G": 0.0,
+      "E:201::GNP:O2G": 0.0,
+      "E:201::GNP:O3G": 0.0,
+      "E:201::GNP:N3B": 0.0,
+      "E:201::GNP:PB": 0.0,
+      "E:201::GNP:O1B": 0.0,
+      "E:201::GNP:O2B": 0.0,
+      "E:201::GNP:O3A": 0.0,
+      "E:201::GNP:PA": 0.0,
+      "E:201::GNP:O1A": 0.0,
+      "E:201::GNP:O2A": 0.0,
+      "E:201::GNP:O5'": 0.0,
+      "E:201::GNP:C5'": 0.0,
+      "E:201::GNP:C4'": 0.0,
+      "E:201::GNP:O4'": 0.0,
+      "E:201::GNP:C3'": 0.0,
+      "E:201::GNP:O3'": 0.0,
+      "E:201::GNP:C2'": 0.0,
+      "E:201::GNP:O2'": 0.0,
+      "E:201::GNP:C1'": 0.0,
+      "E:201::GNP:N9": 0.0,
+      "E:201::GNP:C8": 0.0,
+      "E:201::GNP:N7": 0.0,
+      "E:201::GNP:C5": 0.0,
+      "E:201::GNP:C6": 0.0,
+      "E:201::GNP:O6": 0.0,
+      "E:201::GNP:N1": 0.0,
+      "E:201::GNP:C2": 0.0,
+      "E:201::GNP:N2": 0.0,
+      "E:201::GNP:N3": 0.0,
+      "E:201::GNP:C4": 0.0,
+      "G:201::GNP:PG": 0.0,
+      "G:201::GNP:O1G": 0.0,
+      "G:201::GNP:O2G": 0.0,
+      "G:201::GNP:O3G": 0.0,
+      "G:201::GNP:N3B": 0.0,
+      "G:201::GNP:PB": 0.0,
+      "G:201::GNP:O1B": 0.0,
+      "G:201::GNP:O2B": 0.0,
+      "G:201::GNP:O3A": 0.0,
+      "G:201::GNP:PA": 0.0,
+      "G:201::GNP:O1A": 0.0,
+      "G:201::GNP:O2A": 0.0,
+      "G:201::GNP:O5'": 0.0,
+      "G:201::GNP:C5'": 0.0,
+      "G:201::GNP:C4'": 0.0,
+      "G:201::GNP:O4'": 0.0,
+      "G:201::GNP:C3'": 0.0,
+      "G:201::GNP:O3'": 0.0,
+      "G:201::GNP:C2'": 0.0,
+      "G:201::GNP:O2'": 0.0,
+      "G:201::GNP:C1'": 0.0,
+      "G:201::GNP:N9": 0.0,
+      "G:201::GNP:C8": 0.0,
+      "G:201::GNP:N7": 0.0,
+      "G:201::GNP:C5": 0.0,
+      "G:201::GNP:C6": 0.0,
+      "G:201::GNP:O6": 0.0,
+      "G:201::GNP:N1": 0.0,
+      "G:201::GNP:C2": 0.0,
+      "G:201::GNP:N2": 0.0,
+      "G:201::GNP:N3": 0.0,
+      "G:201::GNP:C4": 0.0,
+      "I:201::A1A:C1": 0.0,
+      "I:201::A1A:C10": 0.0,
+      "I:201::A1A:C11": 0.0,
+      "I:201::A1A:C12": 0.0,
+      "I:201::A1A:C13": 0.0,
+      "I:201::A1A:C14": 0.0,
+      "I:201::A1A:C15": 0.0,
+      "I:201::A1A:C16": 0.0,
+      "I:201::A1A:C17": 0.0,
+      "I:201::A1A:C18": 0.0,
+      "I:201::A1A:C19": 0.0,
+      "I:201::A1A:C2": 0.0,
+      "I:201::A1A:C20": 0.0,
+      "I:201::A1A:C21": 0.0,
+      "I:201::A1A:C22": 0.0,
+      "I:201::A1A:C23": 0.0,
+      "I:201::A1A:C24": 0.0,
+      "I:201::A1A:C25": 0.0,
+      "I:201::A1A:C26": 0.0,
+      "I:201::A1A:C27": 0.0,
+      "I:201::A1A:C28": 0.0,
+      "I:201::A1A:C29": 0.0,
+      "I:201::A1A:C3": 0.0,
+      "I:201::A1A:C30": 0.0,
+      "I:201::A1A:C31": 0.0,
+      "I:201::A1A:C32": 0.0,
+      "I:201::A1A:C33": 0.0,
+      "I:201::A1A:C34": 0.0,
+      "I:201::A1A:C35": 0.0,
+      "I:201::A1A:C36": 0.0,
+      "I:201::A1A:C37": 0.0,
+      "I:201::A1A:C38": 0.0,
+      "I:201::A1A:C39": 0.0,
+      "I:201::A1A:C4": 0.0,
+      "I:201::A1A:C40": 0.0,
+      "I:201::A1A:C41": 0.0,
+      "I:201::A1A:C42": 0.0,
+      "I:201::A1A:C43": 0.0,
+      "I:201::A1A:C44": 0.0,
+      "I:201::A1A:C5": 0.0,
+      "I:201::A1A:C6": 0.0,
+      "I:201::A1A:C7": 0.0,
+      "I:201::A1A:C8": 0.0,
+      "I:201::A1A:C9": 0.0,
+      "I:201::A1A:N1": 0.0,
+      "I:201::A1A:N2": 0.0,
+      "I:201::A1A:N3": 0.0,
+      "I:201::A1A:N4": 0.0,
+      "I:201::A1A:N5": 0.0,
+      "I:201::A1A:N6": 0.0,
+      "I:201::A1A:N7": 0.0,
+      "I:201::A1A:N8": 0.0,
+      "I:201::A1A:O1": 0.0,
+      "I:201::A1A:O2": 0.0,
+      "I:201::A1A:O3": 0.0,
+      "I:201::A1A:O4": 0.0,
+      "I:201::A1A:O5": 0.0,
+      "I:201::A1A:S1": 0.0,
+      "J:201::A1A:C1": 0.0,
+      "J:201::A1A:C10": 0.0,
+      "J:201::A1A:C11": 0.0,
+      "J:201::A1A:C12": 0.0,
+      "J:201::A1A:C13": 0.0,
+      "J:201::A1A:C14": 0.0,
+      "J:201::A1A:C15": 0.0,
+      "J:201::A1A:C16": 0.0,
+      "J:201::A1A:C17": 0.0,
+      "J:201::A1A:C18": 0.0,
+      "J:201::A1A:C19": 0.0,
+      "J:201::A1A:C2": 0.0,
+      "J:201::A1A:C20": 0.0,
+      "J:201::A1A:C21": 0.0,
+      "J:201::A1A:C22": 0.0,
+      "J:201::A1A:C23": 0.0,
+      "J:201::A1A:C24": 0.0,
+      "J:201::A1A:C25": 0.0,
+      "J:201::A1A:C26": 0.0,
+      "J:201::A1A:C27": 0.0,
+      "J:201::A1A:C28": 0.0,
+      "J:201::A1A:C29": 0.0,
+      "J:201::A1A:C3": 0.0,
+      "J:201::A1A:C30": 0.0,
+      "J:201::A1A:C31": 0.0,
+      "J:201::A1A:C32": 0.0,
+      "J:201::A1A:C33": 0.0,
+      "J:201::A1A:C34": 0.0,
+      "J:201::A1A:C35": 0.0,
+      "J:201::A1A:C36": 0.0,
+      "J:201::A1A:C37": 0.0,
+      "J:201::A1A:C38": 0.0,
+      "J:201::A1A:C39": 0.0,
+      "J:201::A1A:C4": 0.0,
+      "J:201::A1A:C40": 0.0,
+      "J:201::A1A:C41": 0.0,
+      "J:201::A1A:C42": 0.0,
+      "J:201::A1A:C43": 0.0,
+      "J:201::A1A:C44": 0.0,
+      "J:201::A1A:C5": 0.0,
+      "J:201::A1A:C6": 0.0,
+      "J:201::A1A:C7": 0.0,
+      "J:201::A1A:C8": 0.0,
+      "J:201::A1A:C9": 0.0,
+      "J:201::A1A:N1": 0.0,
+      "J:201::A1A:N2": 0.0,
+      "J:201::A1A:N3": 0.0,
+      "J:201::A1A:N4": 0.0,
+      "J:201::A1A:N5": 0.0,
+      "J:201::A1A:N6": 0.0,
+      "J:201::A1A:N7": 0.0,
+      "J:201::A1A:N8": 0.0,
+      "J:201::A1A:O1": 0.0,
+      "J:201::A1A:O2": 0.0,
+      "J:201::A1A:O3": 0.0,
+      "J:201::A1A:O4": 0.0,
+      "J:201::A1A:O5": 0.0,
+      "J:201::A1A:S1": 0.0
+    }
+  },
+  "magnesium_atoms": {
+    "count": 2,
+    "maximum_displacement_angstrom": 0.0,
+    "displacements_angstrom": {
+      "F:202::MG:MG": 0.0,
+      "H:202::MG:MG": 0.0
+    }
+  },
+  "coordinating_water_oxygens": {
+    "count": 4,
+    "maximum_displacement_angstrom": 0.0,
+    "displacements_angstrom": {
+      "K:307::HOH:O": 0.0,
+      "K:348::HOH:O": 0.0,
+      "L:322::HOH:O": 0.0,
+      "L:323::HOH:O": 0.0
+    }
+  },
+  "protected_ser17_thr35_heavy_atoms": {
+    "count": 26,
+    "maximum_displacement_angstrom": 0.0,
+    "displacements_angstrom": {
+      "A:17::SER:N": 0.0,
+      "A:17::SER:CA": 0.0,
+      "A:17::SER:C": 0.0,
+      "A:17::SER:O": 0.0,
+      "A:17::SER:CB": 0.0,
+      "A:17::SER:OG": 0.0,
+      "A:35::THR:N": 0.0,
+      "A:35::THR:CA": 0.0,
+      "A:35::THR:C": 0.0,
+      "A:35::THR:O": 0.0,
+      "A:35::THR:CB": 0.0,
+      "A:35::THR:OG1": 0.0,
+      "A:35::THR:CG2": 0.0,
+      "B:17::SER:N": 0.0,
+      "B:17::SER:CA": 0.0,
+      "B:17::SER:C": 0.0,
+      "B:17::SER:O": 0.0,
+      "B:17::SER:CB": 0.0,
+      "B:17::SER:OG": 0.0,
+      "B:35::THR:N": 0.0,
+      "B:35::THR:CA": 0.0,
+      "B:35::THR:C": 0.0,
+      "B:35::THR:O": 0.0,
+      "B:35::THR:CB": 0.0,
+      "B:35::THR:OG1": 0.0,
+      "B:35::THR:CG2": 0.0
+    }
+  },
+  "metal_contacts": [
+    {
+      "metal": [
+        "F",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "A",
+        "17",
+        "",
+        "SER",
+        "OG"
+      ],
+      "original_distance_angstrom": 2.0964295838401084,
+      "prepared_distance_angstrom": 2.0964295838401084,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "F",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "A",
+        "35",
+        "",
+        "THR",
+        "OG1"
+      ],
+      "original_distance_angstrom": 2.102897524845184,
+      "prepared_distance_angstrom": 2.102897524845184,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "F",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "E",
+        "201",
+        "",
+        "GNP",
+        "O1G"
+      ],
+      "original_distance_angstrom": 1.9604657609864076,
+      "prepared_distance_angstrom": 1.9604657609864076,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "F",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "E",
+        "201",
+        "",
+        "GNP",
+        "O2B"
+      ],
+      "original_distance_angstrom": 2.0697180967465085,
+      "prepared_distance_angstrom": 2.0697180967465085,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "F",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "K",
+        "307",
+        "",
+        "HOH",
+        "O"
+      ],
+      "original_distance_angstrom": 2.1370245670089965,
+      "prepared_distance_angstrom": 2.1370245670089965,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "F",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "K",
+        "348",
+        "",
+        "HOH",
+        "O"
+      ],
+      "original_distance_angstrom": 2.0737285261094325,
+      "prepared_distance_angstrom": 2.0737285261094325,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "H",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "B",
+        "17",
+        "",
+        "SER",
+        "OG"
+      ],
+      "original_distance_angstrom": 2.1552635569693144,
+      "prepared_distance_angstrom": 2.1552635569693144,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "H",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "B",
+        "35",
+        "",
+        "THR",
+        "OG1"
+      ],
+      "original_distance_angstrom": 2.0674953446138686,
+      "prepared_distance_angstrom": 2.0674953446138686,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "H",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "G",
+        "201",
+        "",
+        "GNP",
+        "O1G"
+      ],
+      "original_distance_angstrom": 2.052741824974585,
+      "prepared_distance_angstrom": 2.052741824974585,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "H",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "G",
+        "201",
+        "",
+        "GNP",
+        "O2B"
+      ],
+      "original_distance_angstrom": 2.037285939675627,
+      "prepared_distance_angstrom": 2.037285939675627,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "H",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "L",
+        "322",
+        "",
+        "HOH",
+        "O"
+      ],
+      "original_distance_angstrom": 2.18148389863414,
+      "prepared_distance_angstrom": 2.18148389863414,
+      "absolute_delta_angstrom": 0.0
+    },
+    {
+      "metal": [
+        "H",
+        "202",
+        "",
+        "MG",
+        "MG"
+      ],
+      "donor": [
+        "L",
+        "323",
+        "",
+        "HOH",
+        "O"
+      ],
+      "original_distance_angstrom": 2.0346896569255946,
+      "prepared_distance_angstrom": 2.0346896569255946,
+      "absolute_delta_angstrom": 0.0
+    }
+  ],
+  "maximum_contact_distance_change_angstrom": 0.0,
+  "assembled_system_particles": 10654,
+  "assembled_forcefield_files": [
+    "amber14/protein.ff14SB.xml",
+    "amber14/tip3p.xml",
+    "ligands/ligand-521bfd1ad4e6/ligand.xml",
+    "ligands/ligand-7a2495383b1b/ligand.xml"
+  ],
+  "ligand_charge_checks": [
+    {
+      "key": "E:201::GNP",
+      "component_id": "GNP",
+      "formal_charge": -4,
+      "assembled_charge_sum_e": -4.000000010701173,
+      "native_charge_sum_e": -4.000000010701173,
+      "maximum_atom_charge_difference_e": 0.0,
+      "atoms": [
+        {
+          "name": "PG",
+          "assembled_index": 10328,
+          "assembled_charge_e": 1.3207777997289036,
+          "native_charge_e": 1.3207777997289036
+        },
+        {
+          "name": "O1G",
+          "assembled_index": 10329,
+          "assembled_charge_e": -0.9361892022412099,
+          "native_charge_e": -0.9361892022412099
+        },
+        {
+          "name": "O2G",
+          "assembled_index": 10330,
+          "assembled_charge_e": -0.9361892022412099,
+          "native_charge_e": -0.9361892022412099
+        },
+        {
+          "name": "O3G",
+          "assembled_index": 10331,
+          "assembled_charge_e": -0.9361892022412099,
+          "native_charge_e": -0.9361892022412099
+        },
+        {
+          "name": "N3B",
+          "assembled_index": 10332,
+          "assembled_charge_e": -0.9644222024662089,
+          "native_charge_e": -0.9644222024662089
+        },
+        {
+          "name": "PB",
+          "assembled_index": 10333,
+          "assembled_charge_e": 1.556677801375238,
+          "native_charge_e": 1.556677801375238
+        },
+        {
+          "name": "O1B",
+          "assembled_index": 10334,
+          "assembled_charge_e": -0.8850221980759838,
+          "native_charge_e": -0.8850221980759838
+        },
+        {
+          "name": "O2B",
+          "assembled_index": 10335,
+          "assembled_charge_e": -0.8850221980759838,
+          "native_charge_e": -0.8850221980759838
+        },
+        {
+          "name": "O3A",
+          "assembled_index": 10336,
+          "assembled_charge_e": -0.7458222013686527,
+          "native_charge_e": -0.7458222013686527
+        },
+        {
+          "name": "PA",
+          "assembled_index": 10337,
+          "assembled_charge_e": 1.6517777997289036,
+          "native_charge_e": 1.6517777997289036
+        },
+        {
+          "name": "O1A",
+          "assembled_index": 10338,
+          "assembled_charge_e": -0.6980221980759838,
+          "native_charge_e": -0.6980221980759838
+        },
+        {
+          "name": "O2A",
+          "assembled_index": 10339,
+          "assembled_charge_e": -0.6980221980759838,
+          "native_charge_e": -0.6980221980759838
+        },
+        {
+          "name": "O5'",
+          "assembled_index": 10340,
+          "assembled_charge_e": -0.5832222002710964,
+          "native_charge_e": -0.5832222002710964
+        },
+        {
+          "name": "C5'",
+          "assembled_index": 10341,
+          "assembled_charge_e": 0.23137779972890357,
+          "native_charge_e": 0.23137779972890357
+        },
+        {
+          "name": "C4'",
+          "assembled_index": 10342,
+          "assembled_charge_e": 0.0640777997289036,
+          "native_charge_e": 0.0640777997289036
+        },
+        {
+          "name": "O4'",
+          "assembled_index": 10343,
+          "assembled_charge_e": -0.4306222002710964,
+          "native_charge_e": -0.4306222002710964
+        },
+        {
+          "name": "C3'",
+          "assembled_index": 10344,
+          "assembled_charge_e": 0.1130777997289036,
+          "native_charge_e": 0.1130777997289036
+        },
+        {
+          "name": "O3'",
+          "assembled_index": 10345,
+          "assembled_charge_e": -0.6698222013686527,
+          "native_charge_e": -0.6698222013686527
+        },
+        {
+          "name": "C2'",
+          "assembled_index": 10346,
+          "assembled_charge_e": 0.11107779972890361,
+          "native_charge_e": 0.11107779972890361
+        },
+        {
+          "name": "O2'",
+          "assembled_index": 10347,
+          "assembled_charge_e": -0.6218222013686526,
+          "native_charge_e": -0.6218222013686526
+        },
+        {
+          "name": "C1'",
+          "assembled_index": 10348,
+          "assembled_charge_e": 0.23677779972890362,
+          "native_charge_e": 0.23677779972890362
+        },
+        {
+          "name": "N9",
+          "assembled_index": 10349,
+          "assembled_charge_e": -0.19092220027109638,
+          "native_charge_e": -0.19092220027109638
+        },
+        {
+          "name": "C8",
+          "assembled_index": 10350,
+          "assembled_charge_e": 0.32237779972890357,
+          "native_charge_e": 0.32237779972890357
+        },
+        {
+          "name": "N7",
+          "assembled_index": 10351,
+          "assembled_charge_e": -0.7960221980759837,
+          "native_charge_e": -0.7960221980759837
+        },
+        {
+          "name": "C5",
+          "assembled_index": 10352,
+          "assembled_charge_e": 0.2547777997289036,
+          "native_charge_e": 0.2547777997289036
+        },
+        {
+          "name": "C6",
+          "assembled_index": 10353,
+          "assembled_charge_e": 0.6129778019240162,
+          "native_charge_e": 0.6129778019240162
+        },
+        {
+          "name": "O6",
+          "assembled_index": 10354,
+          "assembled_charge_e": -0.7365222008198745,
+          "native_charge_e": -0.7365222008198745
+        },
+        {
+          "name": "N1",
+          "assembled_index": 10355,
+          "assembled_charge_e": -0.4734222002710964,
+          "native_charge_e": -0.4734222002710964
+        },
+        {
+          "name": "C2",
+          "assembled_index": 10356,
+          "assembled_charge_e": 0.45677779972890353,
+          "native_charge_e": 0.45677779972890353
+        },
+        {
+          "name": "N2",
+          "assembled_index": 10357,
+          "assembled_charge_e": -0.8558222013686527,
+          "native_charge_e": -0.8558222013686527
+        },
+        {
+          "name": "N3",
+          "assembled_index": 10358,
+          "assembled_charge_e": -0.5561222019174308,
+          "native_charge_e": -0.5561222019174308
+        },
+        {
+          "name": "C4",
+          "assembled_index": 10359,
+          "assembled_charge_e": -0.054222199996707326,
+          "native_charge_e": -0.054222199996707326
+        },
+        {
+          "name": "H1",
+          "assembled_index": 10360,
+          "assembled_charge_e": 0.3897777997289036,
+          "native_charge_e": 0.3897777997289036
+        },
+        {
+          "name": "H2",
+          "assembled_index": 10361,
+          "assembled_charge_e": 0.02517780000329267,
+          "native_charge_e": 0.02517780000329267
+        },
+        {
+          "name": "H3",
+          "assembled_index": 10362,
+          "assembled_charge_e": 0.02517780000329267,
+          "native_charge_e": 0.02517780000329267
+        },
+        {
+          "name": "H4",
+          "assembled_index": 10363,
+          "assembled_charge_e": 0.05467780000329266,
+          "native_charge_e": 0.05467780000329266
+        },
+        {
+          "name": "H5",
+          "assembled_index": 10364,
+          "assembled_charge_e": 0.0796777997289036,
+          "native_charge_e": 0.0796777997289036
+        },
+        {
+          "name": "H6",
+          "assembled_index": 10365,
+          "assembled_charge_e": 0.4929777997289036,
+          "native_charge_e": 0.4929777997289036
+        },
+        {
+          "name": "H7",
+          "assembled_index": 10366,
+          "assembled_charge_e": 0.10967779972890358,
+          "native_charge_e": 0.10967779972890358
+        },
+        {
+          "name": "H8",
+          "assembled_index": 10367,
+          "assembled_charge_e": 0.4119777997289036,
+          "native_charge_e": 0.4119777997289036
+        },
+        {
+          "name": "H9",
+          "assembled_index": 10368,
+          "assembled_charge_e": 0.03667780000329267,
+          "native_charge_e": 0.03667780000329267
+        },
+        {
+          "name": "H10",
+          "assembled_index": 10369,
+          "assembled_charge_e": 0.08607779972890359,
+          "native_charge_e": 0.08607779972890359
+        },
+        {
+          "name": "H11",
+          "assembled_index": 10370,
+          "assembled_charge_e": 0.2994777997289036,
+          "native_charge_e": 0.2994777997289036
+        },
+        {
+          "name": "H12",
+          "assembled_index": 10371,
+          "assembled_charge_e": 0.3547777997289036,
+          "native_charge_e": 0.3547777997289036
+        },
+        {
+          "name": "H13",
+          "assembled_index": 10372,
+          "assembled_charge_e": 0.3547777997289036,
+          "native_charge_e": 0.3547777997289036
+        }
+      ]
+    },
+    {
+      "key": "G:201::GNP",
+      "component_id": "GNP",
+      "formal_charge": -4,
+      "assembled_charge_sum_e": -4.000000010701173,
+      "native_charge_sum_e": -4.000000010701173,
+      "maximum_atom_charge_difference_e": 0.0,
+      "atoms": [
+        {
+          "name": "PG",
+          "assembled_index": 10373,
+          "assembled_charge_e": 1.3207777997289036,
+          "native_charge_e": 1.3207777997289036
+        },
+        {
+          "name": "O1G",
+          "assembled_index": 10374,
+          "assembled_charge_e": -0.9361892022412099,
+          "native_charge_e": -0.9361892022412099
+        },
+        {
+          "name": "O2G",
+          "assembled_index": 10375,
+          "assembled_charge_e": -0.9361892022412099,
+          "native_charge_e": -0.9361892022412099
+        },
+        {
+          "name": "O3G",
+          "assembled_index": 10376,
+          "assembled_charge_e": -0.9361892022412099,
+          "native_charge_e": -0.9361892022412099
+        },
+        {
+          "name": "N3B",
+          "assembled_index": 10377,
+          "assembled_charge_e": -0.9644222024662089,
+          "native_charge_e": -0.9644222024662089
+        },
+        {
+          "name": "PB",
+          "assembled_index": 10378,
+          "assembled_charge_e": 1.556677801375238,
+          "native_charge_e": 1.556677801375238
+        },
+        {
+          "name": "O1B",
+          "assembled_index": 10379,
+          "assembled_charge_e": -0.8850221980759838,
+          "native_charge_e": -0.8850221980759838
+        },
+        {
+          "name": "O2B",
+          "assembled_index": 10380,
+          "assembled_charge_e": -0.8850221980759838,
+          "native_charge_e": -0.8850221980759838
+        },
+        {
+          "name": "O3A",
+          "assembled_index": 10381,
+          "assembled_charge_e": -0.7458222013686527,
+          "native_charge_e": -0.7458222013686527
+        },
+        {
+          "name": "PA",
+          "assembled_index": 10382,
+          "assembled_charge_e": 1.6517777997289036,
+          "native_charge_e": 1.6517777997289036
+        },
+        {
+          "name": "O1A",
+          "assembled_index": 10383,
+          "assembled_charge_e": -0.6980221980759838,
+          "native_charge_e": -0.6980221980759838
+        },
+        {
+          "name": "O2A",
+          "assembled_index": 10384,
+          "assembled_charge_e": -0.6980221980759838,
+          "native_charge_e": -0.6980221980759838
+        },
+        {
+          "name": "O5'",
+          "assembled_index": 10385,
+          "assembled_charge_e": -0.5832222002710964,
+          "native_charge_e": -0.5832222002710964
+        },
+        {
+          "name": "C5'",
+          "assembled_index": 10386,
+          "assembled_charge_e": 0.23137779972890357,
+          "native_charge_e": 0.23137779972890357
+        },
+        {
+          "name": "C4'",
+          "assembled_index": 10387,
+          "assembled_charge_e": 0.0640777997289036,
+          "native_charge_e": 0.0640777997289036
+        },
+        {
+          "name": "O4'",
+          "assembled_index": 10388,
+          "assembled_charge_e": -0.4306222002710964,
+          "native_charge_e": -0.4306222002710964
+        },
+        {
+          "name": "C3'",
+          "assembled_index": 10389,
+          "assembled_charge_e": 0.1130777997289036,
+          "native_charge_e": 0.1130777997289036
+        },
+        {
+          "name": "O3'",
+          "assembled_index": 10390,
+          "assembled_charge_e": -0.6698222013686527,
+          "native_charge_e": -0.6698222013686527
+        },
+        {
+          "name": "C2'",
+          "assembled_index": 10391,
+          "assembled_charge_e": 0.11107779972890361,
+          "native_charge_e": 0.11107779972890361
+        },
+        {
+          "name": "O2'",
+          "assembled_index": 10392,
+          "assembled_charge_e": -0.6218222013686526,
+          "native_charge_e": -0.6218222013686526
+        },
+        {
+          "name": "C1'",
+          "assembled_index": 10393,
+          "assembled_charge_e": 0.23677779972890362,
+          "native_charge_e": 0.23677779972890362
+        },
+        {
+          "name": "N9",
+          "assembled_index": 10394,
+          "assembled_charge_e": -0.19092220027109638,
+          "native_charge_e": -0.19092220027109638
+        },
+        {
+          "name": "C8",
+          "assembled_index": 10395,
+          "assembled_charge_e": 0.32237779972890357,
+          "native_charge_e": 0.32237779972890357
+        },
+        {
+          "name": "N7",
+          "assembled_index": 10396,
+          "assembled_charge_e": -0.7960221980759837,
+          "native_charge_e": -0.7960221980759837
+        },
+        {
+          "name": "C5",
+          "assembled_index": 10397,
+          "assembled_charge_e": 0.2547777997289036,
+          "native_charge_e": 0.2547777997289036
+        },
+        {
+          "name": "C6",
+          "assembled_index": 10398,
+          "assembled_charge_e": 0.6129778019240162,
+          "native_charge_e": 0.6129778019240162
+        },
+        {
+          "name": "O6",
+          "assembled_index": 10399,
+          "assembled_charge_e": -0.7365222008198745,
+          "native_charge_e": -0.7365222008198745
+        },
+        {
+          "name": "N1",
+          "assembled_index": 10400,
+          "assembled_charge_e": -0.4734222002710964,
+          "native_charge_e": -0.4734222002710964
+        },
+        {
+          "name": "C2",
+          "assembled_index": 10401,
+          "assembled_charge_e": 0.45677779972890353,
+          "native_charge_e": 0.45677779972890353
+        },
+        {
+          "name": "N2",
+          "assembled_index": 10402,
+          "assembled_charge_e": -0.8558222013686527,
+          "native_charge_e": -0.8558222013686527
+        },
+        {
+          "name": "N3",
+          "assembled_index": 10403,
+          "assembled_charge_e": -0.5561222019174308,
+          "native_charge_e": -0.5561222019174308
+        },
+        {
+          "name": "C4",
+          "assembled_index": 10404,
+          "assembled_charge_e": -0.054222199996707326,
+          "native_charge_e": -0.054222199996707326
+        },
+        {
+          "name": "H1",
+          "assembled_index": 10405,
+          "assembled_charge_e": 0.3897777997289036,
+          "native_charge_e": 0.3897777997289036
+        },
+        {
+          "name": "H2",
+          "assembled_index": 10406,
+          "assembled_charge_e": 0.02517780000329267,
+          "native_charge_e": 0.02517780000329267
+        },
+        {
+          "name": "H3",
+          "assembled_index": 10407,
+          "assembled_charge_e": 0.02517780000329267,
+          "native_charge_e": 0.02517780000329267
+        },
+        {
+          "name": "H4",
+          "assembled_index": 10408,
+          "assembled_charge_e": 0.05467780000329266,
+          "native_charge_e": 0.05467780000329266
+        },
+        {
+          "name": "H5",
+          "assembled_index": 10409,
+          "assembled_charge_e": 0.0796777997289036,
+          "native_charge_e": 0.0796777997289036
+        },
+        {
+          "name": "H6",
+          "assembled_index": 10410,
+          "assembled_charge_e": 0.4929777997289036,
+          "native_charge_e": 0.4929777997289036
+        },
+        {
+          "name": "H7",
+          "assembled_index": 10411,
+          "assembled_charge_e": 0.10967779972890358,
+          "native_charge_e": 0.10967779972890358
+        },
+        {
+          "name": "H8",
+          "assembled_index": 10412,
+          "assembled_charge_e": 0.4119777997289036,
+          "native_charge_e": 0.4119777997289036
+        },
+        {
+          "name": "H9",
+          "assembled_index": 10413,
+          "assembled_charge_e": 0.03667780000329267,
+          "native_charge_e": 0.03667780000329267
+        },
+        {
+          "name": "H10",
+          "assembled_index": 10414,
+          "assembled_charge_e": 0.08607779972890359,
+          "native_charge_e": 0.08607779972890359
+        },
+        {
+          "name": "H11",
+          "assembled_index": 10415,
+          "assembled_charge_e": 0.2994777997289036,
+          "native_charge_e": 0.2994777997289036
+        },
+        {
+          "name": "H12",
+          "assembled_index": 10416,
+          "assembled_charge_e": 0.3547777997289036,
+          "native_charge_e": 0.3547777997289036
+        },
+        {
+          "name": "H13",
+          "assembled_index": 10417,
+          "assembled_charge_e": 0.3547777997289036,
+          "native_charge_e": 0.3547777997289036
+        }
+      ]
+    },
+    {
+      "key": "I:201::A1A",
+      "component_id": "A1AHB",
+      "formal_charge": 1,
+      "assembled_charge_sum_e": 0.9999999867415199,
+      "native_charge_sum_e": 0.9999999867415199,
+      "maximum_atom_charge_difference_e": 0.0,
+      "atoms": [
+        {
+          "name": "C1",
+          "assembled_index": 10418,
+          "assembled_charge_e": -0.11705728201160116,
+          "native_charge_e": -0.11705728201160116
+        },
+        {
+          "name": "C10",
+          "assembled_index": 10419,
+          "assembled_charge_e": -0.2583572820116012,
+          "native_charge_e": -0.2583572820116012
+        },
+        {
+          "name": "C11",
+          "assembled_index": 10420,
+          "assembled_charge_e": 0.3777427179883988,
+          "native_charge_e": 0.3777427179883988
+        },
+        {
+          "name": "C12",
+          "assembled_index": 10421,
+          "assembled_charge_e": -0.11165728201160117,
+          "native_charge_e": -0.11165728201160117
+        },
+        {
+          "name": "C13",
+          "assembled_index": 10422,
+          "assembled_charge_e": 0.0357427178786432,
+          "native_charge_e": 0.0357427178786432
+        },
+        {
+          "name": "C14",
+          "assembled_index": 10423,
+          "assembled_charge_e": 0.702142715244508,
+          "native_charge_e": 0.702142715244508
+        },
+        {
+          "name": "C15",
+          "assembled_index": 10424,
+          "assembled_charge_e": -0.22965728201160115,
+          "native_charge_e": -0.22965728201160115
+        },
+        {
+          "name": "C16",
+          "assembled_index": 10425,
+          "assembled_charge_e": -0.09535728201160117,
+          "native_charge_e": -0.09535728201160117
+        },
+        {
+          "name": "C17",
+          "assembled_index": 10426,
+          "assembled_charge_e": -0.08165728201160116,
+          "native_charge_e": -0.08165728201160116
+        },
+        {
+          "name": "C18",
+          "assembled_index": 10427,
+          "assembled_charge_e": -0.07705728201160117,
+          "native_charge_e": -0.07705728201160117
+        },
+        {
+          "name": "C19",
+          "assembled_index": 10428,
+          "assembled_charge_e": 0.5771427152445081,
+          "native_charge_e": 0.5771427152445081
+        },
+        {
+          "name": "C2",
+          "assembled_index": 10429,
+          "assembled_charge_e": 0.026342717878643198,
+          "native_charge_e": 0.026342717878643198
+        },
+        {
+          "name": "C20",
+          "assembled_index": 10430,
+          "assembled_charge_e": 0.06604271798839882,
+          "native_charge_e": 0.06604271798839882
+        },
+        {
+          "name": "C21",
+          "assembled_index": 10431,
+          "assembled_charge_e": -0.10635728201160116,
+          "native_charge_e": -0.10635728201160116
+        },
+        {
+          "name": "C22",
+          "assembled_index": 10432,
+          "assembled_charge_e": -0.07135728201160116,
+          "native_charge_e": -0.07135728201160116
+        },
+        {
+          "name": "C23",
+          "assembled_index": 10433,
+          "assembled_charge_e": 0.07654271798839883,
+          "native_charge_e": 0.07654271798839883
+        },
+        {
+          "name": "C24",
+          "assembled_index": 10434,
+          "assembled_charge_e": 0.639142715244508,
+          "native_charge_e": 0.639142715244508
+        },
+        {
+          "name": "C25",
+          "assembled_index": 10435,
+          "assembled_charge_e": 0.13744271798839883,
+          "native_charge_e": 0.13744271798839883
+        },
+        {
+          "name": "C26",
+          "assembled_index": 10436,
+          "assembled_charge_e": -0.06695728201160116,
+          "native_charge_e": -0.06695728201160116
+        },
+        {
+          "name": "C27",
+          "assembled_index": 10437,
+          "assembled_charge_e": -0.09105728201160117,
+          "native_charge_e": -0.09105728201160117
+        },
+        {
+          "name": "C28",
+          "assembled_index": 10438,
+          "assembled_charge_e": -0.09105728201160117,
+          "native_charge_e": -0.09105728201160117
+        },
+        {
+          "name": "C29",
+          "assembled_index": 10439,
+          "assembled_charge_e": -0.005157282099405674,
+          "native_charge_e": -0.005157282099405674
+        },
+        {
+          "name": "C3",
+          "assembled_index": 10440,
+          "assembled_charge_e": -0.0291572821213568,
+          "native_charge_e": -0.0291572821213568
+        },
+        {
+          "name": "C30",
+          "assembled_index": 10441,
+          "assembled_charge_e": -0.08935728201160116,
+          "native_charge_e": -0.08935728201160116
+        },
+        {
+          "name": "C31",
+          "assembled_index": 10442,
+          "assembled_charge_e": -0.0492572821213568,
+          "native_charge_e": -0.0492572821213568
+        },
+        {
+          "name": "C32",
+          "assembled_index": 10443,
+          "assembled_charge_e": -0.10005728201160118,
+          "native_charge_e": -0.10005728201160118
+        },
+        {
+          "name": "C33",
+          "assembled_index": 10444,
+          "assembled_charge_e": 0.44164271798839877,
+          "native_charge_e": 0.44164271798839877
+        },
+        {
+          "name": "C34",
+          "assembled_index": 10445,
+          "assembled_charge_e": 0.41124271798839884,
+          "native_charge_e": 0.41124271798839884
+        },
+        {
+          "name": "C35",
+          "assembled_index": 10446,
+          "assembled_charge_e": -0.047657282121356795,
+          "native_charge_e": -0.047657282121356795
+        },
+        {
+          "name": "C36",
+          "assembled_index": 10447,
+          "assembled_charge_e": -0.11195728201160117,
+          "native_charge_e": -0.11195728201160117
+        },
+        {
+          "name": "C37",
+          "assembled_index": 10448,
+          "assembled_charge_e": 0.15634271798839883,
+          "native_charge_e": 0.15634271798839883
+        },
+        {
+          "name": "C38",
+          "assembled_index": 10449,
+          "assembled_charge_e": 0.10484271798839882,
+          "native_charge_e": 0.10484271798839882
+        },
+        {
+          "name": "C39",
+          "assembled_index": 10450,
+          "assembled_charge_e": 0.08414271798839883,
+          "native_charge_e": 0.08414271798839883
+        },
+        {
+          "name": "C4",
+          "assembled_index": 10451,
+          "assembled_charge_e": -0.11275728201160116,
+          "native_charge_e": -0.11275728201160116
+        },
+        {
+          "name": "C40",
+          "assembled_index": 10452,
+          "assembled_charge_e": 0.10484271798839882,
+          "native_charge_e": 0.10484271798839882
+        },
+        {
+          "name": "C41",
+          "assembled_index": 10453,
+          "assembled_charge_e": 0.15634271798839883,
+          "native_charge_e": 0.15634271798839883
+        },
+        {
+          "name": "C42",
+          "assembled_index": 10454,
+          "assembled_charge_e": 0.08984271798839882,
+          "native_charge_e": 0.08984271798839882
+        },
+        {
+          "name": "C43",
+          "assembled_index": 10455,
+          "assembled_charge_e": -0.12405728201160117,
+          "native_charge_e": -0.12405728201160117
+        },
+        {
+          "name": "C44",
+          "assembled_index": 10456,
+          "assembled_charge_e": 0.11374271798839883,
+          "native_charge_e": 0.11374271798839883
+        },
+        {
+          "name": "C5",
+          "assembled_index": 10457,
+          "assembled_charge_e": -0.044957282121356794,
+          "native_charge_e": -0.044957282121356794
+        },
+        {
+          "name": "C6",
+          "assembled_index": 10458,
+          "assembled_charge_e": -0.14645728201160116,
+          "native_charge_e": -0.14645728201160116
+        },
+        {
+          "name": "C7",
+          "assembled_index": 10459,
+          "assembled_charge_e": -0.08695728201160116,
+          "native_charge_e": -0.08695728201160116
+        },
+        {
+          "name": "C8",
+          "assembled_index": 10460,
+          "assembled_charge_e": -0.15195728201160116,
+          "native_charge_e": -0.15195728201160116
+        },
+        {
+          "name": "C9",
+          "assembled_index": 10461,
+          "assembled_charge_e": 0.4068427179883988,
+          "native_charge_e": 0.4068427179883988
+        },
+        {
+          "name": "N1",
+          "assembled_index": 10462,
+          "assembled_charge_e": -0.056357282011601166,
+          "native_charge_e": -0.056357282011601166
+        },
+        {
+          "name": "N2",
+          "assembled_index": 10463,
+          "assembled_charge_e": -0.5648572847554919,
+          "native_charge_e": -0.5648572847554919
+        },
+        {
+          "name": "N3",
+          "assembled_index": 10464,
+          "assembled_charge_e": -0.27115728201160116,
+          "native_charge_e": -0.27115728201160116
+        },
+        {
+          "name": "N4",
+          "assembled_index": 10465,
+          "assembled_charge_e": -0.5481572820116012,
+          "native_charge_e": -0.5481572820116012
+        },
+        {
+          "name": "N5",
+          "assembled_index": 10466,
+          "assembled_charge_e": -0.6249572831091574,
+          "native_charge_e": -0.6249572831091574
+        },
+        {
+          "name": "N6",
+          "assembled_index": 10467,
+          "assembled_charge_e": -0.6279572831091574,
+          "native_charge_e": -0.6279572831091574
+        },
+        {
+          "name": "N7",
+          "assembled_index": 10468,
+          "assembled_charge_e": -0.6833572820116012,
+          "native_charge_e": -0.6833572820116012
+        },
+        {
+          "name": "N8",
+          "assembled_index": 10469,
+          "assembled_charge_e": -0.6389572831091574,
+          "native_charge_e": -0.6389572831091574
+        },
+        {
+          "name": "O1",
+          "assembled_index": 10470,
+          "assembled_charge_e": -0.627057281462823,
+          "native_charge_e": -0.627057281462823
+        },
+        {
+          "name": "O2",
+          "assembled_index": 10471,
+          "assembled_charge_e": -0.574057281462823,
+          "native_charge_e": -0.574057281462823
+        },
+        {
+          "name": "O3",
+          "assembled_index": 10472,
+          "assembled_charge_e": -0.5099572820116011,
+          "native_charge_e": -0.5099572820116011
+        },
+        {
+          "name": "O4",
+          "assembled_index": 10473,
+          "assembled_charge_e": -0.4478572820116012,
+          "native_charge_e": -0.4478572820116012
+        },
+        {
+          "name": "O5",
+          "assembled_index": 10474,
+          "assembled_charge_e": -0.42455728201160114,
+          "native_charge_e": -0.42455728201160114
+        },
+        {
+          "name": "S1",
+          "assembled_index": 10475,
+          "assembled_charge_e": -0.046257282121356796,
+          "native_charge_e": -0.046257282121356796
+        },
+        {
+          "name": "H1",
+          "assembled_index": 10476,
+          "assembled_charge_e": 0.04407571788413098,
+          "native_charge_e": 0.04407571788413098
+        },
+        {
+          "name": "H2",
+          "assembled_index": 10477,
+          "assembled_charge_e": 0.04407571788413098,
+          "native_charge_e": 0.04407571788413098
+        },
+        {
+          "name": "H3",
+          "assembled_index": 10478,
+          "assembled_charge_e": 0.04407571788413098,
+          "native_charge_e": 0.04407571788413098
+        },
+        {
+          "name": "H4",
+          "assembled_index": 10479,
+          "assembled_charge_e": 0.18404271798839883,
+          "native_charge_e": 0.18404271798839883
+        },
+        {
+          "name": "H5",
+          "assembled_index": 10480,
+          "assembled_charge_e": 0.08274271798839883,
+          "native_charge_e": 0.08274271798839883
+        },
+        {
+          "name": "H6",
+          "assembled_index": 10481,
+          "assembled_charge_e": 0.08274271798839883,
+          "native_charge_e": 0.08274271798839883
+        },
+        {
+          "name": "H7",
+          "assembled_index": 10482,
+          "assembled_charge_e": 0.10874271798839882,
+          "native_charge_e": 0.10874271798839882
+        },
+        {
+          "name": "H8",
+          "assembled_index": 10483,
+          "assembled_charge_e": 0.09374271798839882,
+          "native_charge_e": 0.09374271798839882
+        },
+        {
+          "name": "H9",
+          "assembled_index": 10484,
+          "assembled_charge_e": 0.08674271798839883,
+          "native_charge_e": 0.08674271798839883
+        },
+        {
+          "name": "H10",
+          "assembled_index": 10485,
+          "assembled_charge_e": 0.08674271798839883,
+          "native_charge_e": 0.08674271798839883
+        },
+        {
+          "name": "H11",
+          "assembled_index": 10486,
+          "assembled_charge_e": 0.10174271798839882,
+          "native_charge_e": 0.10174271798839882
+        },
+        {
+          "name": "H12",
+          "assembled_index": 10487,
+          "assembled_charge_e": 0.0447427178786432,
+          "native_charge_e": 0.0447427178786432
+        },
+        {
+          "name": "H13",
+          "assembled_index": 10488,
+          "assembled_charge_e": 0.0447427178786432,
+          "native_charge_e": 0.0447427178786432
+        },
+        {
+          "name": "H14",
+          "assembled_index": 10489,
+          "assembled_charge_e": 0.0447427178786432,
+          "native_charge_e": 0.0447427178786432
+        },
+        {
+          "name": "H15",
+          "assembled_index": 10490,
+          "assembled_charge_e": 0.07574271798839882,
+          "native_charge_e": 0.07574271798839882
+        },
+        {
+          "name": "H16",
+          "assembled_index": 10491,
+          "assembled_charge_e": 0.07574271798839882,
+          "native_charge_e": 0.07574271798839882
+        },
+        {
+          "name": "H17",
+          "assembled_index": 10492,
+          "assembled_charge_e": 0.08374271798839882,
+          "native_charge_e": 0.08374271798839882
+        },
+        {
+          "name": "H18",
+          "assembled_index": 10493,
+          "assembled_charge_e": 0.08374271798839882,
+          "native_charge_e": 0.08374271798839882
+        },
+        {
+          "name": "H19",
+          "assembled_index": 10494,
+          "assembled_charge_e": 0.0532427178786432,
+          "native_charge_e": 0.0532427178786432
+        },
+        {
+          "name": "H20",
+          "assembled_index": 10495,
+          "assembled_charge_e": 0.0532427178786432,
+          "native_charge_e": 0.0532427178786432
+        },
+        {
+          "name": "H21",
+          "assembled_index": 10496,
+          "assembled_charge_e": 0.05924271798839882,
+          "native_charge_e": 0.05924271798839882
+        },
+        {
+          "name": "H22",
+          "assembled_index": 10497,
+          "assembled_charge_e": 0.05924271798839882,
+          "native_charge_e": 0.05924271798839882
+        },
+        {
+          "name": "H23",
+          "assembled_index": 10498,
+          "assembled_charge_e": 0.06974271798839883,
+          "native_charge_e": 0.06974271798839883
+        },
+        {
+          "name": "H24",
+          "assembled_index": 10499,
+          "assembled_charge_e": 0.07674271798839884,
+          "native_charge_e": 0.07674271798839884
+        },
+        {
+          "name": "H25",
+          "assembled_index": 10500,
+          "assembled_charge_e": 0.07674271798839884,
+          "native_charge_e": 0.07674271798839884
+        },
+        {
+          "name": "H26",
+          "assembled_index": 10501,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H27",
+          "assembled_index": 10502,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H28",
+          "assembled_index": 10503,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H29",
+          "assembled_index": 10504,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H30",
+          "assembled_index": 10505,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H31",
+          "assembled_index": 10506,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H32",
+          "assembled_index": 10507,
+          "assembled_charge_e": 0.045242717878643195,
+          "native_charge_e": 0.045242717878643195
+        },
+        {
+          "name": "H33",
+          "assembled_index": 10508,
+          "assembled_charge_e": 0.045242717878643195,
+          "native_charge_e": 0.045242717878643195
+        },
+        {
+          "name": "H34",
+          "assembled_index": 10509,
+          "assembled_charge_e": 0.0301427178786432,
+          "native_charge_e": 0.0301427178786432
+        },
+        {
+          "name": "H35",
+          "assembled_index": 10510,
+          "assembled_charge_e": 0.14604271798839882,
+          "native_charge_e": 0.14604271798839882
+        },
+        {
+          "name": "H36",
+          "assembled_index": 10511,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H37",
+          "assembled_index": 10512,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H38",
+          "assembled_index": 10513,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H39",
+          "assembled_index": 10514,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H40",
+          "assembled_index": 10515,
+          "assembled_charge_e": 0.10607571766461972,
+          "native_charge_e": 0.10607571766461972
+        },
+        {
+          "name": "H41",
+          "assembled_index": 10516,
+          "assembled_charge_e": 0.10607571766461972,
+          "native_charge_e": 0.10607571766461972
+        },
+        {
+          "name": "H42",
+          "assembled_index": 10517,
+          "assembled_charge_e": 0.10607571766461972,
+          "native_charge_e": 0.10607571766461972
+        },
+        {
+          "name": "H43",
+          "assembled_index": 10518,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H44",
+          "assembled_index": 10519,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H45",
+          "assembled_index": 10520,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H46",
+          "assembled_index": 10521,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H47",
+          "assembled_index": 10522,
+          "assembled_charge_e": 0.06574271798839883,
+          "native_charge_e": 0.06574271798839883
+        },
+        {
+          "name": "H48",
+          "assembled_index": 10523,
+          "assembled_charge_e": 0.05540971776339979,
+          "native_charge_e": 0.05540971776339979
+        },
+        {
+          "name": "H49",
+          "assembled_index": 10524,
+          "assembled_charge_e": 0.05540971776339979,
+          "native_charge_e": 0.05540971776339979
+        },
+        {
+          "name": "H50",
+          "assembled_index": 10525,
+          "assembled_charge_e": 0.05540971776339979,
+          "native_charge_e": 0.05540971776339979
+        },
+        {
+          "name": "H51",
+          "assembled_index": 10526,
+          "assembled_charge_e": 0.04140971787315542,
+          "native_charge_e": 0.04140971787315542
+        },
+        {
+          "name": "H52",
+          "assembled_index": 10527,
+          "assembled_charge_e": 0.04140971787315542,
+          "native_charge_e": 0.04140971787315542
+        },
+        {
+          "name": "H53",
+          "assembled_index": 10528,
+          "assembled_charge_e": 0.04140971787315542,
+          "native_charge_e": 0.04140971787315542
+        },
+        {
+          "name": "H54",
+          "assembled_index": 10529,
+          "assembled_charge_e": 0.17104271798839885,
+          "native_charge_e": 0.17104271798839885
+        },
+        {
+          "name": "H55",
+          "assembled_index": 10530,
+          "assembled_charge_e": 0.13704271798839882,
+          "native_charge_e": 0.13704271798839882
+        },
+        {
+          "name": "H56",
+          "assembled_index": 10531,
+          "assembled_charge_e": 0.13804271798839884,
+          "native_charge_e": 0.13804271798839884
+        },
+        {
+          "name": "H57",
+          "assembled_index": 10532,
+          "assembled_charge_e": 0.3225427179883988,
+          "native_charge_e": 0.3225427179883988
+        },
+        {
+          "name": "H58",
+          "assembled_index": 10533,
+          "assembled_charge_e": 0.41284271798839883,
+          "native_charge_e": 0.41284271798839883
+        },
+        {
+          "name": "H59",
+          "assembled_index": 10534,
+          "assembled_charge_e": 0.4458427179883988,
+          "native_charge_e": 0.4458427179883988
+        }
+      ]
+    },
+    {
+      "key": "J:201::A1A",
+      "component_id": "A1AHB",
+      "formal_charge": 1,
+      "assembled_charge_sum_e": 0.9999999867415199,
+      "native_charge_sum_e": 0.9999999867415199,
+      "maximum_atom_charge_difference_e": 0.0,
+      "atoms": [
+        {
+          "name": "C1",
+          "assembled_index": 10535,
+          "assembled_charge_e": -0.11705728201160116,
+          "native_charge_e": -0.11705728201160116
+        },
+        {
+          "name": "C10",
+          "assembled_index": 10536,
+          "assembled_charge_e": -0.2583572820116012,
+          "native_charge_e": -0.2583572820116012
+        },
+        {
+          "name": "C11",
+          "assembled_index": 10537,
+          "assembled_charge_e": 0.3777427179883988,
+          "native_charge_e": 0.3777427179883988
+        },
+        {
+          "name": "C12",
+          "assembled_index": 10538,
+          "assembled_charge_e": -0.11165728201160117,
+          "native_charge_e": -0.11165728201160117
+        },
+        {
+          "name": "C13",
+          "assembled_index": 10539,
+          "assembled_charge_e": 0.0357427178786432,
+          "native_charge_e": 0.0357427178786432
+        },
+        {
+          "name": "C14",
+          "assembled_index": 10540,
+          "assembled_charge_e": 0.702142715244508,
+          "native_charge_e": 0.702142715244508
+        },
+        {
+          "name": "C15",
+          "assembled_index": 10541,
+          "assembled_charge_e": -0.22965728201160115,
+          "native_charge_e": -0.22965728201160115
+        },
+        {
+          "name": "C16",
+          "assembled_index": 10542,
+          "assembled_charge_e": -0.09535728201160117,
+          "native_charge_e": -0.09535728201160117
+        },
+        {
+          "name": "C17",
+          "assembled_index": 10543,
+          "assembled_charge_e": -0.08165728201160116,
+          "native_charge_e": -0.08165728201160116
+        },
+        {
+          "name": "C18",
+          "assembled_index": 10544,
+          "assembled_charge_e": -0.07705728201160117,
+          "native_charge_e": -0.07705728201160117
+        },
+        {
+          "name": "C19",
+          "assembled_index": 10545,
+          "assembled_charge_e": 0.5771427152445081,
+          "native_charge_e": 0.5771427152445081
+        },
+        {
+          "name": "C2",
+          "assembled_index": 10546,
+          "assembled_charge_e": 0.026342717878643198,
+          "native_charge_e": 0.026342717878643198
+        },
+        {
+          "name": "C20",
+          "assembled_index": 10547,
+          "assembled_charge_e": 0.06604271798839882,
+          "native_charge_e": 0.06604271798839882
+        },
+        {
+          "name": "C21",
+          "assembled_index": 10548,
+          "assembled_charge_e": -0.10635728201160116,
+          "native_charge_e": -0.10635728201160116
+        },
+        {
+          "name": "C22",
+          "assembled_index": 10549,
+          "assembled_charge_e": -0.07135728201160116,
+          "native_charge_e": -0.07135728201160116
+        },
+        {
+          "name": "C23",
+          "assembled_index": 10550,
+          "assembled_charge_e": 0.07654271798839883,
+          "native_charge_e": 0.07654271798839883
+        },
+        {
+          "name": "C24",
+          "assembled_index": 10551,
+          "assembled_charge_e": 0.639142715244508,
+          "native_charge_e": 0.639142715244508
+        },
+        {
+          "name": "C25",
+          "assembled_index": 10552,
+          "assembled_charge_e": 0.13744271798839883,
+          "native_charge_e": 0.13744271798839883
+        },
+        {
+          "name": "C26",
+          "assembled_index": 10553,
+          "assembled_charge_e": -0.06695728201160116,
+          "native_charge_e": -0.06695728201160116
+        },
+        {
+          "name": "C27",
+          "assembled_index": 10554,
+          "assembled_charge_e": -0.09105728201160117,
+          "native_charge_e": -0.09105728201160117
+        },
+        {
+          "name": "C28",
+          "assembled_index": 10555,
+          "assembled_charge_e": -0.09105728201160117,
+          "native_charge_e": -0.09105728201160117
+        },
+        {
+          "name": "C29",
+          "assembled_index": 10556,
+          "assembled_charge_e": -0.005157282099405674,
+          "native_charge_e": -0.005157282099405674
+        },
+        {
+          "name": "C3",
+          "assembled_index": 10557,
+          "assembled_charge_e": -0.0291572821213568,
+          "native_charge_e": -0.0291572821213568
+        },
+        {
+          "name": "C30",
+          "assembled_index": 10558,
+          "assembled_charge_e": -0.08935728201160116,
+          "native_charge_e": -0.08935728201160116
+        },
+        {
+          "name": "C31",
+          "assembled_index": 10559,
+          "assembled_charge_e": -0.0492572821213568,
+          "native_charge_e": -0.0492572821213568
+        },
+        {
+          "name": "C32",
+          "assembled_index": 10560,
+          "assembled_charge_e": -0.10005728201160118,
+          "native_charge_e": -0.10005728201160118
+        },
+        {
+          "name": "C33",
+          "assembled_index": 10561,
+          "assembled_charge_e": 0.44164271798839877,
+          "native_charge_e": 0.44164271798839877
+        },
+        {
+          "name": "C34",
+          "assembled_index": 10562,
+          "assembled_charge_e": 0.41124271798839884,
+          "native_charge_e": 0.41124271798839884
+        },
+        {
+          "name": "C35",
+          "assembled_index": 10563,
+          "assembled_charge_e": -0.047657282121356795,
+          "native_charge_e": -0.047657282121356795
+        },
+        {
+          "name": "C36",
+          "assembled_index": 10564,
+          "assembled_charge_e": -0.11195728201160117,
+          "native_charge_e": -0.11195728201160117
+        },
+        {
+          "name": "C37",
+          "assembled_index": 10565,
+          "assembled_charge_e": 0.15634271798839883,
+          "native_charge_e": 0.15634271798839883
+        },
+        {
+          "name": "C38",
+          "assembled_index": 10566,
+          "assembled_charge_e": 0.10484271798839882,
+          "native_charge_e": 0.10484271798839882
+        },
+        {
+          "name": "C39",
+          "assembled_index": 10567,
+          "assembled_charge_e": 0.08414271798839883,
+          "native_charge_e": 0.08414271798839883
+        },
+        {
+          "name": "C4",
+          "assembled_index": 10568,
+          "assembled_charge_e": -0.11275728201160116,
+          "native_charge_e": -0.11275728201160116
+        },
+        {
+          "name": "C40",
+          "assembled_index": 10569,
+          "assembled_charge_e": 0.10484271798839882,
+          "native_charge_e": 0.10484271798839882
+        },
+        {
+          "name": "C41",
+          "assembled_index": 10570,
+          "assembled_charge_e": 0.15634271798839883,
+          "native_charge_e": 0.15634271798839883
+        },
+        {
+          "name": "C42",
+          "assembled_index": 10571,
+          "assembled_charge_e": 0.08984271798839882,
+          "native_charge_e": 0.08984271798839882
+        },
+        {
+          "name": "C43",
+          "assembled_index": 10572,
+          "assembled_charge_e": -0.12405728201160117,
+          "native_charge_e": -0.12405728201160117
+        },
+        {
+          "name": "C44",
+          "assembled_index": 10573,
+          "assembled_charge_e": 0.11374271798839883,
+          "native_charge_e": 0.11374271798839883
+        },
+        {
+          "name": "C5",
+          "assembled_index": 10574,
+          "assembled_charge_e": -0.044957282121356794,
+          "native_charge_e": -0.044957282121356794
+        },
+        {
+          "name": "C6",
+          "assembled_index": 10575,
+          "assembled_charge_e": -0.14645728201160116,
+          "native_charge_e": -0.14645728201160116
+        },
+        {
+          "name": "C7",
+          "assembled_index": 10576,
+          "assembled_charge_e": -0.08695728201160116,
+          "native_charge_e": -0.08695728201160116
+        },
+        {
+          "name": "C8",
+          "assembled_index": 10577,
+          "assembled_charge_e": -0.15195728201160116,
+          "native_charge_e": -0.15195728201160116
+        },
+        {
+          "name": "C9",
+          "assembled_index": 10578,
+          "assembled_charge_e": 0.4068427179883988,
+          "native_charge_e": 0.4068427179883988
+        },
+        {
+          "name": "N1",
+          "assembled_index": 10579,
+          "assembled_charge_e": -0.056357282011601166,
+          "native_charge_e": -0.056357282011601166
+        },
+        {
+          "name": "N2",
+          "assembled_index": 10580,
+          "assembled_charge_e": -0.5648572847554919,
+          "native_charge_e": -0.5648572847554919
+        },
+        {
+          "name": "N3",
+          "assembled_index": 10581,
+          "assembled_charge_e": -0.27115728201160116,
+          "native_charge_e": -0.27115728201160116
+        },
+        {
+          "name": "N4",
+          "assembled_index": 10582,
+          "assembled_charge_e": -0.5481572820116012,
+          "native_charge_e": -0.5481572820116012
+        },
+        {
+          "name": "N5",
+          "assembled_index": 10583,
+          "assembled_charge_e": -0.6249572831091574,
+          "native_charge_e": -0.6249572831091574
+        },
+        {
+          "name": "N6",
+          "assembled_index": 10584,
+          "assembled_charge_e": -0.6279572831091574,
+          "native_charge_e": -0.6279572831091574
+        },
+        {
+          "name": "N7",
+          "assembled_index": 10585,
+          "assembled_charge_e": -0.6833572820116012,
+          "native_charge_e": -0.6833572820116012
+        },
+        {
+          "name": "N8",
+          "assembled_index": 10586,
+          "assembled_charge_e": -0.6389572831091574,
+          "native_charge_e": -0.6389572831091574
+        },
+        {
+          "name": "O1",
+          "assembled_index": 10587,
+          "assembled_charge_e": -0.627057281462823,
+          "native_charge_e": -0.627057281462823
+        },
+        {
+          "name": "O2",
+          "assembled_index": 10588,
+          "assembled_charge_e": -0.574057281462823,
+          "native_charge_e": -0.574057281462823
+        },
+        {
+          "name": "O3",
+          "assembled_index": 10589,
+          "assembled_charge_e": -0.5099572820116011,
+          "native_charge_e": -0.5099572820116011
+        },
+        {
+          "name": "O4",
+          "assembled_index": 10590,
+          "assembled_charge_e": -0.4478572820116012,
+          "native_charge_e": -0.4478572820116012
+        },
+        {
+          "name": "O5",
+          "assembled_index": 10591,
+          "assembled_charge_e": -0.42455728201160114,
+          "native_charge_e": -0.42455728201160114
+        },
+        {
+          "name": "S1",
+          "assembled_index": 10592,
+          "assembled_charge_e": -0.046257282121356796,
+          "native_charge_e": -0.046257282121356796
+        },
+        {
+          "name": "H1",
+          "assembled_index": 10593,
+          "assembled_charge_e": 0.04407571788413098,
+          "native_charge_e": 0.04407571788413098
+        },
+        {
+          "name": "H2",
+          "assembled_index": 10594,
+          "assembled_charge_e": 0.04407571788413098,
+          "native_charge_e": 0.04407571788413098
+        },
+        {
+          "name": "H3",
+          "assembled_index": 10595,
+          "assembled_charge_e": 0.04407571788413098,
+          "native_charge_e": 0.04407571788413098
+        },
+        {
+          "name": "H4",
+          "assembled_index": 10596,
+          "assembled_charge_e": 0.18404271798839883,
+          "native_charge_e": 0.18404271798839883
+        },
+        {
+          "name": "H5",
+          "assembled_index": 10597,
+          "assembled_charge_e": 0.08274271798839883,
+          "native_charge_e": 0.08274271798839883
+        },
+        {
+          "name": "H6",
+          "assembled_index": 10598,
+          "assembled_charge_e": 0.08274271798839883,
+          "native_charge_e": 0.08274271798839883
+        },
+        {
+          "name": "H7",
+          "assembled_index": 10599,
+          "assembled_charge_e": 0.10874271798839882,
+          "native_charge_e": 0.10874271798839882
+        },
+        {
+          "name": "H8",
+          "assembled_index": 10600,
+          "assembled_charge_e": 0.09374271798839882,
+          "native_charge_e": 0.09374271798839882
+        },
+        {
+          "name": "H9",
+          "assembled_index": 10601,
+          "assembled_charge_e": 0.08674271798839883,
+          "native_charge_e": 0.08674271798839883
+        },
+        {
+          "name": "H10",
+          "assembled_index": 10602,
+          "assembled_charge_e": 0.08674271798839883,
+          "native_charge_e": 0.08674271798839883
+        },
+        {
+          "name": "H11",
+          "assembled_index": 10603,
+          "assembled_charge_e": 0.10174271798839882,
+          "native_charge_e": 0.10174271798839882
+        },
+        {
+          "name": "H12",
+          "assembled_index": 10604,
+          "assembled_charge_e": 0.0447427178786432,
+          "native_charge_e": 0.0447427178786432
+        },
+        {
+          "name": "H13",
+          "assembled_index": 10605,
+          "assembled_charge_e": 0.0447427178786432,
+          "native_charge_e": 0.0447427178786432
+        },
+        {
+          "name": "H14",
+          "assembled_index": 10606,
+          "assembled_charge_e": 0.0447427178786432,
+          "native_charge_e": 0.0447427178786432
+        },
+        {
+          "name": "H15",
+          "assembled_index": 10607,
+          "assembled_charge_e": 0.07574271798839882,
+          "native_charge_e": 0.07574271798839882
+        },
+        {
+          "name": "H16",
+          "assembled_index": 10608,
+          "assembled_charge_e": 0.07574271798839882,
+          "native_charge_e": 0.07574271798839882
+        },
+        {
+          "name": "H17",
+          "assembled_index": 10609,
+          "assembled_charge_e": 0.08374271798839882,
+          "native_charge_e": 0.08374271798839882
+        },
+        {
+          "name": "H18",
+          "assembled_index": 10610,
+          "assembled_charge_e": 0.08374271798839882,
+          "native_charge_e": 0.08374271798839882
+        },
+        {
+          "name": "H19",
+          "assembled_index": 10611,
+          "assembled_charge_e": 0.0532427178786432,
+          "native_charge_e": 0.0532427178786432
+        },
+        {
+          "name": "H20",
+          "assembled_index": 10612,
+          "assembled_charge_e": 0.0532427178786432,
+          "native_charge_e": 0.0532427178786432
+        },
+        {
+          "name": "H21",
+          "assembled_index": 10613,
+          "assembled_charge_e": 0.05924271798839882,
+          "native_charge_e": 0.05924271798839882
+        },
+        {
+          "name": "H22",
+          "assembled_index": 10614,
+          "assembled_charge_e": 0.05924271798839882,
+          "native_charge_e": 0.05924271798839882
+        },
+        {
+          "name": "H23",
+          "assembled_index": 10615,
+          "assembled_charge_e": 0.06974271798839883,
+          "native_charge_e": 0.06974271798839883
+        },
+        {
+          "name": "H24",
+          "assembled_index": 10616,
+          "assembled_charge_e": 0.07674271798839884,
+          "native_charge_e": 0.07674271798839884
+        },
+        {
+          "name": "H25",
+          "assembled_index": 10617,
+          "assembled_charge_e": 0.07674271798839884,
+          "native_charge_e": 0.07674271798839884
+        },
+        {
+          "name": "H26",
+          "assembled_index": 10618,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H27",
+          "assembled_index": 10619,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H28",
+          "assembled_index": 10620,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H29",
+          "assembled_index": 10621,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H30",
+          "assembled_index": 10622,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H31",
+          "assembled_index": 10623,
+          "assembled_charge_e": 0.03990971787315542,
+          "native_charge_e": 0.03990971787315542
+        },
+        {
+          "name": "H32",
+          "assembled_index": 10624,
+          "assembled_charge_e": 0.045242717878643195,
+          "native_charge_e": 0.045242717878643195
+        },
+        {
+          "name": "H33",
+          "assembled_index": 10625,
+          "assembled_charge_e": 0.045242717878643195,
+          "native_charge_e": 0.045242717878643195
+        },
+        {
+          "name": "H34",
+          "assembled_index": 10626,
+          "assembled_charge_e": 0.0301427178786432,
+          "native_charge_e": 0.0301427178786432
+        },
+        {
+          "name": "H35",
+          "assembled_index": 10627,
+          "assembled_charge_e": 0.14604271798839882,
+          "native_charge_e": 0.14604271798839882
+        },
+        {
+          "name": "H36",
+          "assembled_index": 10628,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H37",
+          "assembled_index": 10629,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H38",
+          "assembled_index": 10630,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H39",
+          "assembled_index": 10631,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H40",
+          "assembled_index": 10632,
+          "assembled_charge_e": 0.10607571766461972,
+          "native_charge_e": 0.10607571766461972
+        },
+        {
+          "name": "H41",
+          "assembled_index": 10633,
+          "assembled_charge_e": 0.10607571766461972,
+          "native_charge_e": 0.10607571766461972
+        },
+        {
+          "name": "H42",
+          "assembled_index": 10634,
+          "assembled_charge_e": 0.10607571766461972,
+          "native_charge_e": 0.10607571766461972
+        },
+        {
+          "name": "H43",
+          "assembled_index": 10635,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H44",
+          "assembled_index": 10636,
+          "assembled_charge_e": 0.11024271798839884,
+          "native_charge_e": 0.11024271798839884
+        },
+        {
+          "name": "H45",
+          "assembled_index": 10637,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H46",
+          "assembled_index": 10638,
+          "assembled_charge_e": 0.08124271798839883,
+          "native_charge_e": 0.08124271798839883
+        },
+        {
+          "name": "H47",
+          "assembled_index": 10639,
+          "assembled_charge_e": 0.06574271798839883,
+          "native_charge_e": 0.06574271798839883
+        },
+        {
+          "name": "H48",
+          "assembled_index": 10640,
+          "assembled_charge_e": 0.05540971776339979,
+          "native_charge_e": 0.05540971776339979
+        },
+        {
+          "name": "H49",
+          "assembled_index": 10641,
+          "assembled_charge_e": 0.05540971776339979,
+          "native_charge_e": 0.05540971776339979
+        },
+        {
+          "name": "H50",
+          "assembled_index": 10642,
+          "assembled_charge_e": 0.05540971776339979,
+          "native_charge_e": 0.05540971776339979
+        },
+        {
+          "name": "H51",
+          "assembled_index": 10643,
+          "assembled_charge_e": 0.04140971787315542,
+          "native_charge_e": 0.04140971787315542
+        },
+        {
+          "name": "H52",
+          "assembled_index": 10644,
+          "assembled_charge_e": 0.04140971787315542,
+          "native_charge_e": 0.04140971787315542
+        },
+        {
+          "name": "H53",
+          "assembled_index": 10645,
+          "assembled_charge_e": 0.04140971787315542,
+          "native_charge_e": 0.04140971787315542
+        },
+        {
+          "name": "H54",
+          "assembled_index": 10646,
+          "assembled_charge_e": 0.17104271798839885,
+          "native_charge_e": 0.17104271798839885
+        },
+        {
+          "name": "H55",
+          "assembled_index": 10647,
+          "assembled_charge_e": 0.13704271798839882,
+          "native_charge_e": 0.13704271798839882
+        },
+        {
+          "name": "H56",
+          "assembled_index": 10648,
+          "assembled_charge_e": 0.13804271798839884,
+          "native_charge_e": 0.13804271798839884
+        },
+        {
+          "name": "H57",
+          "assembled_index": 10649,
+          "assembled_charge_e": 0.3225427179883988,
+          "native_charge_e": 0.3225427179883988
+        },
+        {
+          "name": "H58",
+          "assembled_index": 10650,
+          "assembled_charge_e": 0.41284271798839883,
+          "native_charge_e": 0.41284271798839883
+        },
+        {
+          "name": "H59",
+          "assembled_index": 10651,
+          "assembled_charge_e": 0.4458427179883988,
+          "native_charge_e": 0.4458427179883988
+        }
+      ]
+    }
+  ],
+  "conversion_validation_reports": [
+    {
+      "path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-521bfd1ad4e6/conversion-validation.json",
+      "sha256": "a1f74f612e8cb04573490ab44860ccaa5fa267f2248da17bff398405179b50bb",
+      "validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 1195.477886289613,
+            "xml_energy_kj_mol": 1195.4778863738802,
+            "energy_delta_kj_mol": 8.426718522969168e-08,
+            "maximum_force_delta_kj_mol_nm": 1.2394476698318613e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 1203.055643912542,
+            "xml_energy_kj_mol": 1203.0556439957652,
+            "energy_delta_kj_mol": 8.322308531205636e-08,
+            "maximum_force_delta_kj_mol_nm": 1.206109118356835e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 1200.4417484741634,
+            "xml_energy_kj_mol": 1200.4417485586716,
+            "energy_delta_kj_mol": 8.45082013256615e-08,
+            "maximum_force_delta_kj_mol_nm": 1.2501274113674299e-06
+          }
+        ],
+        "passed": true
+      },
+      "independent_recalculation": [
+        {
+          "pose": "bound",
+          "energy_difference_kj_mol": 8.426718522969168e-08,
+          "maximum_force_difference_kj_mol_nm": 1.2394476698318613e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "energy_difference_kj_mol": 8.322308531205636e-08,
+          "maximum_force_difference_kj_mol_nm": 1.206109118356835e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "energy_difference_kj_mol": 8.45082013256615e-08,
+          "maximum_force_difference_kj_mol_nm": 1.2501274113674299e-06
+        }
+      ]
+    },
+    {
+      "path": "data/datasets/4cf5bcedf38847c1/ligands/ligand-7a2495383b1b/conversion-validation.json",
+      "sha256": "afe7dbc19473c3d6a0c57ea1bd6a08656f338a7b3d75e6e662553651e0dbf78c",
+      "validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -971.4891298969904,
+            "xml_energy_kj_mol": -971.4891299144896,
+            "energy_delta_kj_mol": -1.7499132809462026e-08,
+            "maximum_force_delta_kj_mol_nm": 6.568411663465668e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -969.4065314743902,
+            "xml_energy_kj_mol": -969.4065314915383,
+            "energy_delta_kj_mol": -1.7148067854577675e-08,
+            "maximum_force_delta_kj_mol_nm": 6.38258882190712e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -969.3708448628461,
+            "xml_energy_kj_mol": -969.370844879871,
+            "energy_delta_kj_mol": -1.7024945009325165e-08,
+            "maximum_force_delta_kj_mol_nm": 6.529344318551011e-07
+          }
+        ],
+        "passed": true
+      },
+      "independent_recalculation": [
+        {
+          "pose": "bound",
+          "energy_difference_kj_mol": 1.7499132809462026e-08,
+          "maximum_force_difference_kj_mol_nm": 6.568411663465668e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "energy_difference_kj_mol": 1.7148067854577675e-08,
+          "maximum_force_difference_kj_mol_nm": 6.38258882190712e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "energy_difference_kj_mol": 1.7024945009325165e-08,
+          "maximum_force_difference_kj_mol_nm": 6.529344318551011e-07
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

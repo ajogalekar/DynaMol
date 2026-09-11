@@ -17,7 +17,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 from . import config, jobs, storage
 from .analysis import measure
-from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest
+from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest, InspectionRequest
 
 
 class LocalOriginMiddleware(BaseHTTPMiddleware):
@@ -167,9 +167,9 @@ def download(job_id: str):
     folder = config.JOBS_DIR / storage.safe_id(job_id)
     target = folder / "dynamol-output.zip"
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as archive:
-        for path in folder.iterdir():
-            if path.is_file() and path != target and path.suffix != ".tmp":
-                archive.write(path, arcname=path.name)
+        for path in sorted(folder.rglob("*")):
+            if path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(folder.resolve()) and path != target and path.suffix != ".tmp":
+                archive.write(path, arcname=str(path.relative_to(folder)))
     return FileResponse(target, media_type="application/zip", filename=f"DynaMol-{job_id}.zip")
 
 
@@ -194,15 +194,21 @@ async def smiles_structure(settings: SmilesRequest):
 
 
 @app.get("/api/datasets/{dataset_id}/inspection")
-async def inspect_protein(dataset_id: str):
+async def inspect_protein(dataset_id: str, ph: float = 7.0):
     from . import preparation
-    return await run_in_threadpool(preparation.inspect_preparation, dataset_id)
+    return await run_in_threadpool(preparation.inspect_preparation, dataset_id, ph)
 
 
 @app.post("/api/preparations", status_code=201)
 def prepare_protein(settings: PreparationRequest):
     from . import preparation
     return preparation.submit_preparation(settings.model_dump())
+
+
+@app.post("/api/datasets/{dataset_id}/inspection")
+async def inspect_complex(dataset_id: str, settings: InspectionRequest):
+    from . import preparation
+    return await run_in_threadpool(preparation.inspect_preparation, dataset_id, settings.ph, settings.ligand_overrides)
 
 
 @app.post("/api/datasets/{dataset_id}/solvate", status_code=201)

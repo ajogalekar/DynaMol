@@ -1,0 +1,183 @@
+{
+  "agent": "PatAgent",
+  "agent_version": "0.1.0",
+  "blocking_gates": [
+    "uncertainty"
+  ],
+  "counts": {
+    "fail": 1,
+    "pass": 7,
+    "unresolved": 0
+  },
+  "decision": "block",
+  "decision_context": "exploratory",
+  "disclaimer": "PatAgent is not Pat Walters and does not speak for him.",
+  "gates": [
+    {
+      "detail": "documented",
+      "evidence": [
+        {
+          "id": "evaluation-guidelines-2022",
+          "title": "Evaluation Guidelines for Machine Learning Tools in the Chemical Sciences",
+          "url": "https://www.nature.com/articles/s41570-022-00391-9"
+        }
+      ],
+      "field": "purpose",
+      "id": "purpose-defined",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Decision and use case are defined"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.inputs_versioned",
+      "id": "inputs-versioned",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Inputs are versioned and traceable"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.software_versions_recorded",
+      "id": "software-recorded",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Software versions and environment are recorded"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        },
+        {
+          "id": "method-comparison-2025",
+          "title": "Practically Significant Method Comparison Protocols for Machine Learning in Small Molecule Drug Discovery",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40932128/"
+        }
+      ],
+      "field": "reproducibility.random_seeds_recorded",
+      "id": "seeds-recorded",
+      "remediation": null,
+      "severity": "major",
+      "status": "pass",
+      "title": "Random seeds are recorded"
+    },
+    {
+      "detail": "count is zero",
+      "evidence": [
+        {
+          "id": "better-benchmarks-2023",
+          "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html"
+        }
+      ],
+      "field": "data.structure_parse_failures",
+      "id": "structure-parse",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "All molecular structures parse"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "better-benchmarks-2023",
+          "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html"
+        },
+        {
+          "id": "tautomers-2025",
+          "title": "The Trouble With Tautomers",
+          "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+        }
+      ],
+      "field": "data.representation_policy_documented",
+      "id": "representation-policy",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Representation and standardization policy is documented"
+    },
+    {
+      "detail": "explicitly false",
+      "evidence": [
+        {
+          "id": "classification-tutorial-2022",
+          "title": "Comparing Classification Models - A Practical Tutorial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34549368/"
+        },
+        {
+          "id": "getting-real-2023",
+          "title": "Getting Real with Molecular Property Prediction",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/06/getting-real-with-molecular-property.html"
+        },
+        {
+          "id": "method-comparison-2025",
+          "title": "Practically Significant Method Comparison Protocols for Machine Learning in Small Molecule Drug Discovery",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40932128/"
+        }
+      ],
+      "field": "comparison.uncertainty_intervals_reported",
+      "id": "uncertainty",
+      "remediation": "Report fold/run distributions and confidence intervals, not only mean metrics.",
+      "severity": "critical",
+      "status": "fail",
+      "title": "Metrics include uncertainty distributions"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.outputs_and_exclusions_recorded",
+      "id": "outputs-traceable",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Outputs and exclusions are traceable"
+    }
+  ],
+  "identity": "independent evidence-linked reviewer inspired by Pat Walters's public writings",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight"
+}

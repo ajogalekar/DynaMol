@@ -12,6 +12,7 @@ import {
 import type { Job } from '../types';
 
 interface StructureJobMonitorProps {
+  complexPreparation?: boolean;
   job?: Job;
   submitting?: 'preparation' | 'solvation' | null;
   loadingResult?: boolean;
@@ -33,6 +34,7 @@ function elapsedLabel(seconds: number) {
 }
 
 export default function StructureJobMonitor({
+  complexPreparation = false,
   job: previousJob,
   submitting,
   loadingResult = false,
@@ -70,6 +72,8 @@ export default function StructureJobMonitor({
 
   const operation = submitting ?? (job?.engine === 'solvation' ? 'solvation' : 'preparation');
   const water = operation === 'solvation';
+  const complex = job ? job.config.complex === true : complexPreparation;
+  const subject = complex ? 'Complex' : 'Protein';
   const complete = job?.status === 'completed';
   const failed = job?.status === 'failed';
   const stopped = job?.status === 'cancelled' || job?.status === 'interrupted';
@@ -78,21 +82,21 @@ export default function StructureJobMonitor({
   const title = submitting
     ? water
       ? 'Starting explicit-water setup…'
-      : 'Starting protein preparation…'
+      : `Starting ${complex ? 'complex' : 'protein'} preparation…`
     : complete
       ? water
         ? 'Explicit water ready'
-        : 'Protein preparation complete'
+        : `${subject} preparation complete`
       : failed
         ? water
           ? 'Explicit-water setup failed'
-          : 'Protein preparation failed'
+          : `${subject} preparation failed`
         : stopped
-          ? `${water ? 'Explicit-water setup' : 'Protein preparation'} ${job?.status}`
+          ? `${water ? 'Explicit-water setup' : `${subject} preparation`} ${job?.status}`
           : active
             ? water
               ? 'Building explicit water'
-              : 'Preparing your protein'
+              : `Preparing your ${complex ? 'complex' : 'protein'}`
             : 'Preparation needs attention';
   const stage = submitting
     ? 'Starting a background worker. You can keep exploring the viewer.'
@@ -125,7 +129,7 @@ export default function StructureJobMonitor({
   return (
     <section
       className={`structure-job-monitor${complete && !attention ? ' is-complete' : ''}${attention ? ' needs-attention' : ''}`}
-      aria-label={water ? 'Explicit-water setup monitor' : 'Protein preparation monitor'}
+      aria-label={water ? 'Explicit-water setup monitor' : `${subject} preparation monitor`}
     >
       <div className="structure-job-monitor-heading">
         <span className="structure-job-monitor-icon" aria-hidden="true">
@@ -157,7 +161,7 @@ export default function StructureJobMonitor({
           <div
             className="structure-job-monitor-track"
             role="progressbar"
-            aria-label={water ? 'Explicit-water setup progress' : 'Protein preparation progress'}
+            aria-label={water ? 'Explicit-water setup progress' : `${subject} preparation progress`}
             aria-valuemin={0}
             aria-valuemax={100}
             aria-valuenow={progress}
@@ -200,7 +204,11 @@ export default function StructureJobMonitor({
             <button
               type="button"
               onClick={onCancel}
-              aria-label={water ? 'Cancel explicit-water setup' : 'Cancel protein preparation'}
+              aria-label={
+                water
+                  ? 'Cancel explicit-water setup'
+                  : `Cancel ${complex ? 'complex' : 'protein'} preparation`
+              }
             >
               <Square size={10} aria-hidden="true" /> Cancel
             </button>
@@ -209,7 +217,11 @@ export default function StructureJobMonitor({
             <button
               type="button"
               onClick={onViewLog}
-              aria-label={water ? 'View explicit-water setup log' : 'View protein preparation log'}
+              aria-label={
+                water
+                  ? 'View explicit-water setup log'
+                  : `View ${complex ? 'complex' : 'protein'} preparation log`
+              }
             >
               <Terminal size={12} aria-hidden="true" /> View log
             </button>
