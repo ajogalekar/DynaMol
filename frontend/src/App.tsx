@@ -134,6 +134,12 @@ export default function App() {
   const currentMeasurementKey = useRef(measurementKey);
   currentMeasurementKey.current = measurementKey;
   const [simulationEngine, setSimulationEngine] = useState<'openmm' | 'gromacs'>('openmm');
+  const [studioSession, setStudioSession] = useState({
+    revision: 0,
+    startedAt: 0,
+    continuingJobs: [] as string[],
+  });
+  const studioRevision = useRef(0);
   const [modal, setModal] = useState<'import' | 'simulation' | 'help' | 'projects' | null>(null),
     [library, setLibrary] = useState(false),
     [details, setDetails] = useState(false),
@@ -244,6 +250,7 @@ export default function App() {
         showWater?: boolean;
         showHydrogens?: boolean;
         throwOnError?: boolean;
+        coordinates?: Float32Array;
         workspace?: WorkspaceState;
       } = {},
     ) => {
@@ -276,7 +283,7 @@ export default function App() {
       setFrame(0);
       frameRef.current = 0;
       try {
-        const coords = await api.coordinates(d);
+        const coords = options.coordinates ?? (await api.coordinates(d));
         if (token !== loadToken.current) return;
         setDataset(d);
         setCoordinates(coords);
@@ -751,6 +758,29 @@ export default function App() {
   function openStudio() {
     setModal('simulation');
   }
+  function newSimulation() {
+    const revision = ++studioRevision.current;
+    setStudioSession({
+      revision,
+      startedAt: Date.now(),
+      continuingJobs: jobs.filter(isActive).map((job) => job.id),
+    });
+    setModal('simulation');
+  }
+  async function loadStudioDataset(
+    d: Dataset,
+    options: { showWater?: boolean; showHydrogens?: boolean } | undefined,
+    revision: number,
+    requestToken?: number,
+  ) {
+    if (revision !== studioRevision.current) return;
+    const token = requestToken ?? ++loadToken.current;
+    if (token !== loadToken.current) return;
+    // Load before touching the scene so an earlier setup cannot replace it after New.
+    const coordinates = await api.coordinates(d);
+    if (revision !== studioRevision.current || token !== loadToken.current) return;
+    await loadDataset(d, { keepStudio: true, throwOnError: true, ...options, coordinates });
+  }
 
   return (
     <div
@@ -842,7 +872,7 @@ export default function App() {
           <button className="secondary-button" onClick={() => setModal('import')}>
             <FolderOpen size={15} /> Open files
           </button>
-          <button className="primary-button" onClick={openStudio}>
+          <button className="primary-button" onClick={newSimulation}>
             <Plus size={16} /> New simulation
           </button>
         </div>
@@ -1684,6 +1714,9 @@ export default function App() {
       )}{' '}
       {modal === 'simulation' && (
         <SimulationPanel
+          key={studioSession.revision}
+          newSetupAt={studioSession.startedAt}
+          continuingJobs={studioSession.continuingJobs}
           dataset={dataset}
           engine={simulationEngine}
           onEngineChange={setSimulationEngine}
@@ -1700,13 +1733,23 @@ export default function App() {
                 : 'Simulation started. You can keep exploring.',
             );
           }}
-          onLoad={(id, showWater) => void openById(id, { keepStudio: true, showWater })}
-          onDatasetLoaded={async (d, options) => {
-            await loadDataset(d, { keepStudio: true, throwOnError: true, ...options });
+          onLoad={(id, showWater) => {
+            const revision = studioSession.revision;
+            const token = ++loadToken.current;
+            setPlaying(false);
+            return api
+              .dataset(id)
+              .then((d) => loadStudioDataset(d, { showWater }, revision, token))
+              .catch((e) => {
+                if (revision === studioRevision.current && token === loadToken.current)
+                  setError((e as Error).message);
+              });
           }}
-          onWaterVisibility={(show) =>
-            setVisibility((v) => ({ ...v, water: show, ions: show || v.ions }))
-          }
+          onDatasetLoaded={(d, options) => loadStudioDataset(d, options, studioSession.revision)}
+          onWaterVisibility={(show) => {
+            if (studioSession.revision === studioRevision.current)
+              setVisibility((v) => ({ ...v, water: show, ions: show || v.ions }));
+          }}
           onRefresh={refreshJobs}
         />
       )}

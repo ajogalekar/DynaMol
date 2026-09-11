@@ -1,0 +1,185 @@
+{
+  "date": "2026-09-11",
+  "base_url": "http://127.0.0.1:8783",
+  "mode": "Production frontend; real local API and Chrome WebGL; isolated data directory",
+  "command": "DYNAMOL_TEST_ISOLATED=1 DYNAMOL_BASE_URL=http://127.0.0.1:8783 npx playwright test tests/new-simulation.spec.ts tests/preparation-progress.spec.ts tests/engine-preparation.spec.ts --output=test-results/new-simulation-final",
+  "stats": {
+    "startTime": "2026-09-11T16:00:47.660Z",
+    "duration": 39062.587,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": [
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "engine selection precedes structure preparation at 1440px",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 799,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "engine selection precedes structure preparation at 547px",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 640,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "GROMACS retains source loading and its engine choice across reopening and raw import",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2489,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "GROMACS submission sends native explicit settings and locks engine switching while pending",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1354,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "real prepared and solvated OpenMM states block GROMACS with a direct recovery, and jobs lock switching",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 5907,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "new-simulation.spec.ts",
+      "title": "New simulation clears a completed preparation panel and restores the entire setup without deleting provenance",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 4021,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "new-simulation.spec.ts",
+      "title": "a historical completed job arriving after New cannot restore the old preparation banner",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3597,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "new-simulation.spec.ts",
+      "title": "a late upload response from an earlier setup cannot replace the molecule after New",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2788,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "new-simulation.spec.ts",
+      "title": "a late coordinates response from an earlier setup cannot replace the molecule after New",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2789,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "new-simulation.spec.ts",
+      "title": "New ignores an older history load while keeping that result available for deliberate reopening",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3684,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation-progress.spec.ts",
+      "title": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3815,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation-progress.spec.ts",
+      "title": "preparation readiness blocks incomplete atoms before submission and clears when repair is restored",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3129,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation-progress.spec.ts",
+      "title": "a prepared topology display failure stops the spinner and retries the same real result",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3347,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "frontend/src/App.tsx": "d51c120f6ce0462d626f8213a8af85183de65dac793e9bceb1f3ef2c40059c64",
+    "frontend/src/components/SimulationPanel.tsx": "a8870dc4da8994b48c20fcc1336d8431f28bce1107b6377378319124ff53aa53",
+    "frontend/src/components/StructureWorkbench.tsx": "070f1e632ce50141f2ee2c120a7d91665be4028a76548eaa7b9b2d9f96ed9908",
+    "frontend/tests/new-simulation.spec.ts": "8aa5b3b8ff1cadafe040b62f20171213f6f04b586e48861e1aa2b24ef2958c9e",
+    "frontend/tests/preparation-progress.spec.ts": "5beec5f4090b2e32eb4709c8a7e5d44df8b48477149ab279a8d076c75c848da9",
+    "frontend/tests/engine-preparation.spec.ts": "45ef8b8e4f00b17ad4bcf953dcdb8c96b37b1d80d2fa8493fc865a296cc1f904"
+  },
+  "limits": [
+    "Focused UI lifecycle checks, including real small-system preparation and solvation. No MD, chemistry algorithms or backend implementation changed.",
+    "Delayed-response regressions intentionally hold actual API responses.",
+    "Initial test-writing runs failed on incorrect field selectors; selectors were corrected before this zero-retry final run."
+  ]
+}

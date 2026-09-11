@@ -34,6 +34,8 @@ const active = (j: Job) => !['completed', 'failed', 'cancelled', 'interrupted'].
 const structureJob = (j: Job) => ['preparation', 'solvation'].includes(j.engine);
 export default function SimulationPanel({
   dataset,
+  newSetupAt,
+  continuingJobs,
   engine,
   onEngineChange,
   health,
@@ -48,6 +50,8 @@ export default function SimulationPanel({
   onWaterVisibility,
 }: {
   dataset: Dataset | null;
+  newSetupAt: number;
+  continuingJobs: string[];
   engine: 'openmm' | 'gromacs';
   onEngineChange: (engine: 'openmm' | 'gromacs') => void;
   health: Health | null;
@@ -56,7 +60,7 @@ export default function SimulationPanel({
   viewerError: string;
   onClose: () => void;
   onStarted: (job: Job) => void;
-  onLoad: (id: string, showWater?: boolean) => void;
+  onLoad: (id: string, showWater?: boolean) => Promise<void>;
   onRefresh: () => void;
   onDatasetLoaded: (
     d: Dataset,
@@ -80,6 +84,7 @@ export default function SimulationPanel({
     [error, setError] = useState(''),
     [openLog, setOpenLog] = useState<string | null>(null);
   const [runReady, setRunReady] = useState(false);
+  const [openingHistory, setOpeningHistory] = useState<string | null>(null);
   const [resuming, setResuming] = useState<string | null>(null);
   const [recoveryDetails, setRecoveryDetails] = useState<Record<string, RecoveryInfo>>({});
   const checkedRecovery = useRef(new Set<string>());
@@ -100,6 +105,8 @@ export default function SimulationPanel({
   datasetRef.current = dataset;
   const loadingJob = useRef<string | null>(null);
   const jobCards = useRef(new Map<string, HTMLElement>());
+  const continuedJobs = useRef(new Set(continuingJobs));
+  for (const job of jobs) if (structureJob(job) && active(job)) continuedJobs.current.add(job.id);
   const pendingJob = jobs.find((j) => j.id === pending?.id);
   const monitoredJob =
     jobs.find((j) => j.id === monitorId) ??
@@ -107,6 +114,10 @@ export default function SimulationPanel({
       (j) =>
         structureJob(j) &&
         !dismissed.includes(j.id) &&
+        (active(j) ||
+          continuedJobs.current.has(j.id) ||
+          !newSetupAt ||
+          Date.parse(j.created_at) >= newSetupAt) &&
         (active(j) || j.config.dataset_id === dataset?.id || j.dataset_id === dataset?.id),
     );
   useEffect(() => {
@@ -860,17 +871,29 @@ export default function SimulationPanel({
                         <button
                           type="button"
                           className="text-button accent"
-                          onClick={() =>
-                            onLoad(
-                              job.dataset_id!,
-                              job.config.solvent === 'explicit' || job.engine === 'solvation',
-                            )
-                          }
+                          disabled={openingHistory !== null}
+                          onClick={async () => {
+                            setOpeningHistory(job.id);
+                            try {
+                              await onLoad(
+                                job.dataset_id!,
+                                job.config.solvent === 'explicit' || job.engine === 'solvation',
+                              );
+                            } finally {
+                              setOpeningHistory(null);
+                            }
+                          }}
                         >
-                          {job.engine === 'preparation' || job.engine === 'solvation'
-                            ? 'Open structure'
-                            : 'Open trajectory'}{' '}
-                          <ArrowRight size={13} />
+                          {openingHistory === job.id
+                            ? 'Opening…'
+                            : structureJob(job)
+                              ? 'Open structure'
+                              : 'Open trajectory'}{' '}
+                          {openingHistory === job.id ? (
+                            <LoaderCircle size={13} className="spin" />
+                          ) : (
+                            <ArrowRight size={13} />
+                          )}
                         </button>
                       </>
                     ) : null}
