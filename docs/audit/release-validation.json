@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-09-11T01:19:19.877038+00:00",
+  "application": "DynaMol 0.1.0 alpha",
+  "checks": {
+    "backend_tests_passed": 19,
+    "production_browser_tests_passed": 7,
+    "independent_numerical_groups_passed": 8,
+    "independent_plot_groups_passed": 6,
+    "typescript_production_build": "pass",
+    "launcher": "initial launch and already-running reuse verified",
+    "network": "all observed application asset requests use localhost"
+  },
+  "scientific_scope": "Exploratory software verification. No convergence or uncertainty claim. See scientific-review.md.",
+  "python_environment": {
+    "numpy": "2.4.6",
+    "mdtraj": "1.11.1.post2",
+    "openmm": "8.6.0",
+    "fastapi": "0.141.1"
+  }
+}
