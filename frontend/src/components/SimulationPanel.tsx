@@ -94,6 +94,7 @@ export default function SimulationPanel({
     [error, setError] = useState(''),
     [openLog, setOpenLog] = useState<string | null>(null);
   const [runReady, setRunReady] = useState(false);
+  const [sourceBusy, setSourceBusy] = useState(false);
   const [trackingOpen, setTrackingOpen] = useState(false);
   const trackedMeasurements = measurements.filter((measurement) => measurement.trackDuringRun);
   const trackingExpanded = trackingOpen;
@@ -159,7 +160,8 @@ export default function SimulationPanel({
     }
   }, [jobs]);
   const anyActive = jobs.some(active);
-  const engineLocked = busy || anyActive || !!pending || !!submitting || loadingResult;
+  const engineLocked =
+    busy || sourceBusy || anyActive || !!pending || !!submitting || loadingResult;
   const incompatibleGromacsInput =
     engine === 'gromacs' && !!(dataset?.preparation || dataset?.solvation);
   const resultSelected = !!monitoredJob?.dataset_id && dataset?.id === monitoredJob.dataset_id;
@@ -172,7 +174,11 @@ export default function SimulationPanel({
     setError('');
     setMonitorError('');
     setPh(dataset?.preparation?.ph ?? 7);
-    if (dataset?.solvation) {
+    if (dataset?.monomer_selection) {
+      setMonitorId(null);
+      setPending(null);
+      setSolvent('implicit');
+    } else if (dataset?.solvation) {
       setSolvent('explicit');
       setPadding(dataset.solvation.padding_nm);
     } else if (requiresExplicit) {
@@ -339,6 +345,9 @@ export default function SimulationPanel({
   } as SimulationConfig;
   const canStart =
     !busy &&
+    !sourceBusy &&
+    viewerReady &&
+    !viewerError &&
     runReady &&
     !submitting &&
     !pending &&
@@ -499,9 +508,10 @@ export default function SimulationPanel({
               ph={ph}
               onPh={setPh}
               seed={seed}
-              locked={busy || anyActive || !!pending || !!submitting || loadingResult}
+              locked={engineLocked}
               preparing={!!pending && pending.operation === 'preparation'}
               onDatasetLoaded={onDatasetLoaded}
+              onSourceRequest={setSourceBusy}
               onPreparationStarted={prepared}
               onPreparationRequest={(starting, requestError) => {
                 setSubmitting(starting ? 'preparation' : null);

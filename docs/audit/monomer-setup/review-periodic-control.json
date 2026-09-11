@@ -1,0 +1,66 @@
+{
+  "recorded_at": "2026-09-11T18:38:27.076856+00:00",
+  "scope": "Independent synthetic coordinate-retention control after reviewed fix; no MD or molecular-quality claim. The fixture is intentionally abstract geometry, not a valid parameterized molecule.",
+  "source_box_nm": [
+    1,
+    1,
+    1
+  ],
+  "selected_chain": "A",
+  "ligand_source_atom": 8,
+  "source_coordinates_nm": [
+    [
+      0.03,
+      0.1,
+      0.1
+    ],
+    [
+      0.03,
+      0.11,
+      0.1
+    ],
+    [
+      0.03,
+      0.12000000000000001,
+      0.1
+    ],
+    [
+      0.03,
+      0.13,
+      0.1
+    ],
+    [
+      0.6,
+      0.7,
+      0.7
+    ],
+    [
+      0.6,
+      0.71,
+      0.7
+    ],
+    [
+      0.6,
+      0.72,
+      0.7
+    ],
+    [
+      0.6,
+      0.73,
+      0.7
+    ],
+    [
+      0.97,
+      0.11,
+      0.1
+    ]
+  ],
+  "ordinary_distance_angstrom": 9.399999999999999,
+  "minimum_image_distance_angstrom": 0.6000000000000005,
+  "expected": "Decline extraction requiring periodic unwrapping, preserving source and creating no derived dataset.",
+  "actual_error": "An associated molecule contacts the selected chain across the periodic boundary. Load an unwrapped starting structure before selecting one chain; coordinates and associated molecules were not changed.",
+  "passed": true,
+  "source_unchanged": true,
+  "derived_dataset_count": 0,
+  "source_sha256": "db948ac9c26f53ad75700d515c84ff26927819946bd4a2e79316c9a3b0849160"
+}

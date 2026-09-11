@@ -1,0 +1,9 @@
+# Repair choices and single-chain setup
+
+The **Missing atoms & residues** card is visible before protein preparation. It exposes **Add missing heavy atoms** and **Build supported missing loops / residues**, with the detected gaps and availability explained before submission. The existing repair limits are unchanged: known internal gaps up to six standard residues each and twelve rebuilt residues total. Unknown sequence identities, long gaps and unsupported modified-residue gaps still need an appropriate supplied model; terminal missing regions are reported separately. Enabling a checkbox does not make an unsupported gap buildable.
+
+For a structure containing multiple protein chains, **Use one monomer** is a one-click shortcut using the suggested chain. A dropdown allows another chain. The exact selected chain is identified in the UI. A coordinate chain is not necessarily a complete biological monomer, and a multichain file is not automatically a biological assembly.
+
+Selection creates a new starting-structure dataset. The original dataset remains intact and can be reopened with **Restore full structure**. Retained atom coordinates and explicit atom-index correspondence are recorded, sequence evidence remains available for gap inspection, and excluded chains/molecules are documented. The viewer fits the smaller structure; measurements wholly within the retained atoms transfer and excluded selections receive a notice.
+
+Associated molecules are retained whole using a documented local proximity rule and covalent connectivity. Selection cannot silently sever an inter-chain covalent connection. A proximity rule identifies nearby molecules, not proven binding partners or a validated isolated biological state. Preparation, solvent-box and force-field state are reset: the selected structure needs fresh preparation and a new simulation setup. Start is disabled while source selection or restoration is loading.

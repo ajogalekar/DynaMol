@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-09-11T18:48:17.423596+00:00",
+  "scope": "Bounded deterministic dataset-selection and UI software review; no MD, parameterization, network retrieval or biological-assembly validation.",
+  "findings": [
+    {
+      "id": "excluded-source-links",
+      "status": "resolved; reviewed final code and focused regression passed",
+      "finding": "Archived covalent links on an excluded chain could block a retained unlinked ligand with the same component name.",
+      "evidence": "review-source-link-risk.json",
+      "resolution": "Retained residue connection scope is stored in monomer provenance and respected by subsequent source-link screening.",
+      "resolution_evidence": "backend/tests/test_monomers.py; review-focused-tests.txt; validation.json"
+    },
+    {
+      "id": "missing-link-atoms-and-excluded-endpoints",
+      "status": "resolved; reviewed final code and focused regression passed",
+      "finding": "Cross-chain SSBOND/LINK identity must survive missing atoms, while an unresolved connection on an entirely excluded chain should not block extraction.",
+      "resolution": "Source LINK/SSBOND records resolve residue identities; unresolved endpoints block only when a relevant residue is retained.",
+      "resolution_evidence": "backend/tests/test_monomers.py; review-focused-tests.txt; validation.json"
+    },
+    {
+      "id": "periodic-association",
+      "status": "resolved; independent boundary control and focused regression passed",
+      "finding": "Cartesian-only association can silently exclude a ligand within the periodic minimum-image cutoff, and dropping a box can split retained molecules.",
+      "evidence": "review-periodic-control.json",
+      "resolution": "Saved-box neighbor checks identify such contacts, and extraction refuses when unwrapping would be necessary. Source remains unchanged and no output is created.",
+      "resolution_evidence": "backend/tests/test_monomers.py; review-focused-tests.txt; validation.json"
+    },
+    {
+      "id": "dangling-conect",
+      "status": "resolved; reviewed final code and focused regression passed",
+      "finding": "A CONECT record touching a retained atom but referencing an absent partner serial is silently dropped.",
+      "evidence": "review-dangling-conect.json",
+      "required": "Carry the identifiable residue into the unresolved-endpoint set, then refuse extraction only if retained.",
+      "resolution": "One identifiable CONECT endpoint is retained as unresolved; selection refuses when that residue is retained and permits an unrelated excluded endpoint. Both focused regressions passed.",
+      "resolution_evidence": "backend/tests/test_monomers.py; review-focused-tests.txt; validation.json"
+    },
+    {
+      "id": "retained-bond-pass",
+      "status": "resolved; reviewed final code and focused regression passed",
+      "finding": "The periodic retained-bond comprehension recreates set(indices) at each endpoint, causing avoidable quadratic work.",
+      "required": "Create the retained atom set once.",
+      "resolution": "The retained atom set is built once before the bond pass.",
+      "resolution_evidence": "backend/tests/test_monomers.py; review-focused-tests.txt; validation.json"
+    }
+  ],
+  "remaining_findings": []
+}

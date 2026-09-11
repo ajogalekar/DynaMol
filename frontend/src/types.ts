@@ -25,6 +25,19 @@ export interface Dataset {
   has_unitcell: boolean;
   warnings: string[];
   parent_dataset_id?: string;
+  monomer_selection?: {
+    parent_dataset_id: string;
+    chain_index: number;
+    chain_id: string;
+    chain_label: string;
+    retained_atom_indices: number[];
+    excluded_protein_chains: unknown[];
+    retained_associated_molecules: unknown[];
+    excluded_molecules: unknown[];
+    association_cutoff_angstrom: number;
+    requires_preparation: boolean;
+    notes: string[];
+  };
   preparation?: {
     ph: number;
     method?: string;
@@ -55,6 +68,19 @@ export interface Visibility {
   ligands: boolean;
   ions: boolean;
   hydrogens: 'all' | 'polar' | 'none';
+}
+export interface MonomerOptions {
+  chains: {
+    index: number;
+    chain_id: string;
+    label: string;
+    n_residues: number;
+    n_atoms: number;
+    sequence_group?: string;
+    recommended?: boolean;
+  }[];
+  recommended_chain_index: number | null;
+  warnings: string[];
 }
 export type Representation = 'cartoon' | 'ball+stick' | 'licorice' | 'surface';
 export type MeasureKind = 'distance' | 'angle' | 'dihedral' | 'hbond';

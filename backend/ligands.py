@@ -516,6 +516,20 @@ def _original_connection_blocks(dataset_id, source_cif, component_ids):
     """Do not lose covalent ligand links during canonical PDB normalization."""
     blocked = set()
     excluded = set(STANDARD_RESIDUES) | storage.WATERS | SUPPORTED_IONS
+    # A derived one-chain structure retains original source records as evidence.
+    # Scope link screening to its retained residue connections: a covalent LIG
+    # on an excluded chain must not block an independent LIG of the same name.
+    from .monomers import _ancestry
+    for _, records in _ancestry(dataset_id):
+        scoped = next((record["monomer_selection"] for record in records if "monomer_selection" in record), None)
+        if scoped is not None:
+            for connection in scoped.get("retained_covalent_connections", []):
+                for residue in connection["residues"]:
+                    key = ":".join([residue["chain"], residue["resid"], residue.get("insertion_code", ""), residue["name"]])
+                    name = component_ids.get(key, residue["name"])
+                    if name not in excluded:
+                        blocked.add(name)
+            return blocked
     if source_cif:
         import gemmi
         table = gemmi.cif.read_file(str(source_cif)).sole_block().get_mmcif_category('_struct_conn.')

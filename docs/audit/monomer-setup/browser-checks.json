@@ -1,0 +1,49 @@
+{
+  "stats": {
+    "startTime": "2026-09-11T18:44:36.137Z",
+    "duration": 10706.495,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "missing-atom and known-loop choices are visible before Prep while detailed options stay closed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2513
+        }
+      ]
+    },
+    {
+      "title": "one-click suggested chain and alternate chain extraction are reversible and preserve the original structure",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 5036
+        }
+      ]
+    },
+    {
+      "title": "pending monomer extraction locks Start and cannot overwrite a new setup",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2330
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Final backend and UI were exercised on isolated test port8789.",
+    "Real local extraction/restoration API and viewer.",
+    "Completed prep history was seeded in one browser response to test stale-banner cleanup; no native preparation run.",
+    "Initial root rerun was refused before any browser interaction because the isolated-test environment flag was omitted. The corrected invocation passed.",
+    "No MD or network retrieval."
+  ]
+}

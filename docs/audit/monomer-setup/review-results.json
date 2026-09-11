@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-09-11T18:48:17.424222+00:00",
+  "review_type": "Scoped deterministic dataset-manipulation software review; no scientific model promotion.",
+  "decision": "No unresolved software finding within the reviewed scope.",
+  "preflight": "PatAgent preflight: proceed, 6 pass, 0 fail, 0 unresolved.",
+  "validation": {
+    "combined_backend_passed": 31,
+    "final_browser_passed": 3,
+    "final_browser_failed": 0,
+    "final_browser_skipped": 0,
+    "independent_review_backend_rerun": {
+      "passed": 9,
+      "elapsed_seconds": 0.63,
+      "command": ".venv/bin/python -m pytest backend/tests/test_monomers.py -q"
+    },
+    "independent_periodic_control": "A ligand 0.6 \u00c5 away by minimum image but 9.4 \u00c5 Cartesian triggers a safe refusal with unchanged source and no derived dataset.",
+    "real_6N7A": "Final isolated API extraction preserves mapped first-frame coordinates and original bytes, selects one chain, retains two associated residues, and keeps two five-residue internal sequence gaps; old preparation/solvation/periodic state is absent.",
+    "build": "Production build passed, as recorded in validation.json."
+  },
+  "limits": [
+    "A selected observed protein coordinate chain is not verified biological monomer/assembly.",
+    "A 5 \u00c5 proximity rule is an association heuristic, not evidence of binding.",
+    "Whole residue-connected components are retained; inventory entries describe retained/excluded residues and source links.",
+    "Periodic structures requiring unwrapping are refused; no coordinate imaging or model reconstruction is silently performed.",
+    "Existing missing-loop identity/length/template limits remain unchanged; controls do not establish modeled-loop quality."
+  ],
+  "compute": "No reviewer or task MD, new parameterization, network retrieval or predictions. Existing gap inspection, deterministic extraction and isolated software tests only.",
+  "source_sha256": {
+    "backend/monomers.py": "c0eaa63550a4d7aca2b27529419db0ac0e3e17dcfc8cc1a1fe70813db194dfc5",
+    "backend/preparation.py": "b13312c7d320d155a0176dc838defda490e6f2a78dffdf1ec734a41bc7fd562e",
+    "backend/ligands.py": "b376799839c2c744302463d35f013714f312280ede39bf71e663a30cdbecaba8",
+    "backend/main.py": "9c10307fe1592db312d0f9d3a0ba4b988bdbbb0c04a2565eca806bc059934cba",
+    "backend/tests/test_monomers.py": "3fa8482c2ead8975cff99b1c90242d2662e0d287e8245f3b36a8e08a6cb7117c",
+    "frontend/src/App.tsx": "6fdb52b981ea9a898d066b8731ab564c6a021f13d0687c6669e9ec1a86f59d92",
+    "frontend/src/components/StructureWorkbench.tsx": "346a01261ee78a86f1569b9b55a031871060de457290f77e49c51707ce2461bd",
+    "frontend/src/components/SimulationPanel.tsx": "86f70eb2a7ced9de4b2fb35389f1d252aded3e08582aca24cde8b5da8591c33f",
+    "frontend/tests/monomer-missing-regions.spec.ts": "f1c30ba8023b1c70da1c3476f46a02601f0002487d5b3aa16c2331bf6e8f09be"
+  },
+  "evidence_sha256": {
+    "docs/audit/monomer-setup/validation.json": "14ad5ebfacc05e7bded4f3697b2616c7a1590a8b4cf44421d31adf84caf4a4b7",
+    "docs/audit/monomer-setup/browser-checks.json": "0ea67da3bf94ca2da012200e945f2abd34dddfe3174d1613bb27fc1f544b384f",
+    "docs/audit/monomer-setup/current-structure-extraction.json": "59d15ba8a757b713d16d74920905450aa32a8ef7dfbb15841ae8c35ee8d68fce",
+    "docs/audit/monomer-setup/review-focused-tests.txt": "94bd26c46e85e429725fc7efc1791294001d9a3b90de501e5adaed013fad9709",
+    "docs/audit/monomer-setup/review-periodic-control.json": "d2dd683dc00fbcfbe08dd15798a38597c8fd58697490a7438a219d76a72f4060",
+    "docs/audit/monomer-setup/review-source-link-risk.json": "6d056802c02c7d4e870ddb4ea79ff5dd53fc441b51d616b4b315e257f8de0df8",
+    "docs/audit/monomer-setup/review-dangling-conect.json": "dd153dd132c8b72bcdce6ef7534732c7141e2cf6227f2c9e52bea37bcb3d85d3",
+    "docs/audit/monomer-setup/review-findings.json": "d7535b8e9d17265d78c152efdae98185f7c29f0b637b4817d9b2ea734218c17f"
+  }
+}

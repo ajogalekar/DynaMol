@@ -9,6 +9,8 @@ import {
   FlaskConical,
   Globe2,
   LoaderCircle,
+  Layers3,
+  Wrench,
   Search,
   Sparkles,
   Upload,
@@ -30,6 +32,7 @@ export default function StructureWorkbench({
   onDatasetLoaded,
   onPreparationStarted,
   onPreparationRequest,
+  onSourceRequest,
 }: {
   dataset: Dataset | null;
   engine: 'openmm' | 'gromacs';
@@ -44,6 +47,7 @@ export default function StructureWorkbench({
   ) => Promise<void>;
   onPreparationStarted: (job: Job) => void;
   onPreparationRequest: (busy: boolean, error?: string) => void;
+  onSourceRequest?: (busy: boolean) => void;
 }) {
   const [tab, setTab] = useState<'upload' | 'fetch' | 'smiles'>('upload');
   const [provider, setProvider] = useState<'pdb' | 'pubchem'>('pdb');
@@ -56,6 +60,26 @@ export default function StructureWorkbench({
     [inspecting, setInspecting] = useState(false),
     [inspectionError, setInspectionError] = useState('');
   const [submittingPreparation, setSubmittingPreparation] = useState(false);
+  const [monomers, setMonomers] = useState<Awaited<ReturnType<typeof api.monomers>> | null>(null);
+  const [monomerChain, setMonomerChain] = useState<number | null>(null);
+  const [monomerLoading, setMonomerLoading] = useState(false);
+  const [monomerError, setMonomerError] = useState('');
+  const [monomerRevision, setMonomerRevision] = useState(0);
+  const [selectingMonomer, setSelectingMonomer] = useState(false);
+  const datasetIdRef = useRef(dataset?.id);
+  datasetIdRef.current = dataset?.id;
+  const operationRevision = useRef(0);
+  const sourceRequest = useRef(onSourceRequest);
+  sourceRequest.current = onSourceRequest;
+  const mounted = useRef(false);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      operationRevision.current++;
+      sourceRequest.current?.(false);
+    };
+  }, []);
   const [prepReady, setPrepReady] = useState(false);
   const [options, setOptions] = useState(false),
     [buildMissing, setBuildMissing] = useState(false),
@@ -72,6 +96,9 @@ export default function StructureWorkbench({
     setRemoveHeterogens(false);
     setLigandOverrides({});
     setError('');
+    setBusy(false);
+    setSelectingMonomer(false);
+    sourceRequest.current?.(false);
   }, [dataset?.id]);
   useEffect(() => {
     let current = true;
@@ -104,16 +131,58 @@ export default function StructureWorkbench({
       window.clearTimeout(timer);
     };
   }, [dataset?.id, engine, ph, ligandOverrides, inspectionRevision]);
-  async function load(operation: () => Promise<Dataset>) {
+  useEffect(() => {
+    let current = true;
+    setMonomers(null);
+    setMonomerChain(null);
+    setMonomerError('');
+    if (!dataset || !dataset.atoms.some((atom) => atom.category === 'protein')) {
+      setMonomerLoading(false);
+      return;
+    }
+    setMonomerLoading(true);
+    api
+      .monomers(dataset.id)
+      .then(
+        (choices) => {
+          if (!current) return;
+          setMonomers(choices);
+          setMonomerChain(choices.recommended_chain_index ?? choices.chains[0]?.index ?? null);
+        },
+        (reason) => {
+          if (current) setMonomerError((reason as Error).message);
+        },
+      )
+      .finally(() => {
+        if (current) setMonomerLoading(false);
+      });
+    return () => {
+      current = false;
+    };
+  }, [dataset?.id, monomerRevision]);
+  async function load(operation: () => Promise<Dataset>, selectingChain = false) {
+    const revision = ++operationRevision.current;
+    const sourceId = datasetIdRef.current;
+    const current = () =>
+      mounted.current &&
+      operationRevision.current === revision &&
+      datasetIdRef.current === sourceId;
     setBusy(true);
+    setSelectingMonomer(selectingChain);
+    sourceRequest.current?.(true);
     setError('');
     try {
       const d = await operation();
+      if (!current()) return;
       await onDatasetLoaded(d, { showWater: false });
     } catch (e) {
-      setError((e as Error).message);
+      if (current()) setError((e as Error).message);
     } finally {
-      setBusy(false);
+      if (mounted.current && operationRevision.current === revision) {
+        setBusy(false);
+        setSelectingMonomer(false);
+        sourceRequest.current?.(false);
+      }
     }
   }
   async function upload(file: File) {
@@ -154,6 +223,10 @@ export default function StructureWorkbench({
   }
   const missingCount = inspection?.missing_residues.reduce((n, r) => n + r.count, 0) ?? 0;
   const canBuild = inspection?.missing_residues.some((r) => r.buildable) ?? false;
+  const internalMissingCount =
+    inspection?.missing_residues
+      .filter((region) => !region.terminal)
+      .reduce((count, region) => count + region.count, 0) ?? 0;
   const hasProtein =
     (inspection?.protein_atoms ??
       dataset?.atoms.filter((a) => a.category === 'protein').length ??
@@ -306,7 +379,10 @@ export default function StructureWorkbench({
       )}
       {busy && !submittingPreparation && (
         <div className="studio-working" role="status">
-          <LoaderCircle size={13} className="spin" /> Preparing your request…
+          <LoaderCircle size={13} className="spin" />{' '}
+          {selectingMonomer
+            ? 'Selecting one protein chain and associated molecules…'
+            : 'Preparing your request…'}
         </div>
       )}
       {error && (
@@ -332,6 +408,125 @@ export default function StructureWorkbench({
             </div>
             <Check size={15} />
           </div>
+          {monomerLoading ? (
+            <div className="monomer-checking" role="status">
+              <LoaderCircle size={12} className="spin" /> Checking protein chains…
+            </div>
+          ) : monomerError ? (
+            <div className="inline-warning monomer-error">
+              Could not check protein chains: {monomerError}{' '}
+              <button
+                type="button"
+                className="text-button"
+                disabled={disabled}
+                onClick={() => setMonomerRevision((revision) => revision + 1)}
+              >
+                Retry chain check
+              </button>
+            </div>
+          ) : (
+            !!monomers &&
+            monomers.chains.length > 1 && (
+              <section className="monomer-setup" aria-labelledby="monomer-setup-title">
+                <div className="monomer-heading">
+                  <Layers3 size={16} />
+                  <h4 id="monomer-setup-title">Choose one protein chain</h4>
+                  <span>{monomers.chains.length} chains</span>
+                </div>
+                <p>
+                  Use one chain as your starting structure, with its nearby ligands, cofactors and
+                  ions.
+                </p>
+                <div className="monomer-actions">
+                  <label>
+                    Protein chain
+                    <select
+                      aria-label="Protein chain for monomer"
+                      value={monomerChain ?? ''}
+                      disabled={disabled}
+                      onChange={(event) => setMonomerChain(Number(event.target.value))}
+                    >
+                      {monomers.chains.map((chain) => (
+                        <option key={chain.index} value={chain.index}>
+                          {chain.label} · {chain.n_residues} residues
+                          {chain.index === monomers.recommended_chain_index ? ' · suggested' : ''}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <button
+                    type="button"
+                    className="secondary-button"
+                    disabled={disabled || monomerChain === null}
+                    onClick={() => {
+                      if (monomerChain !== null)
+                        void load(() => api.useMonomer(dataset.id, monomerChain, true), true);
+                    }}
+                  >
+                    {selectingMonomer ? (
+                      <LoaderCircle size={14} className="spin" />
+                    ) : (
+                      <Layers3 size={14} />
+                    )}
+                    {selectingMonomer ? 'Selecting monomer…' : 'Use one monomer'}
+                  </button>
+                </div>
+                <p className="monomer-note">
+                  Selects one protein chain; chain count alone does not establish the biological
+                  assembly. Creates a new structure to prepare, with bulk solvent removed.
+                </p>
+                {!!monomers.warnings.length && (
+                  <details className="monomer-notes">
+                    <summary>Selection notes</summary>
+                    {monomers.warnings.map((warning, index) => (
+                      <p key={index}>{warning}</p>
+                    ))}
+                  </details>
+                )}
+              </section>
+            )
+          )}
+          {dataset.monomer_selection && (
+            <div className="monomer-result" role="status">
+              <Check size={14} />
+              <div>
+                <b>{dataset.monomer_selection.chain_label} selected</b>
+                <span>
+                  {dataset.preparation
+                    ? 'This selected chain is prepared for OpenMM.'
+                    : 'One protein chain is loaded. Review missing regions and prepare this structure.'}
+                </span>
+                {!!(
+                  dataset.monomer_selection.retained_associated_molecules.length ||
+                  dataset.monomer_selection.excluded_molecules.length
+                ) && (
+                  <span>
+                    {dataset.monomer_selection.retained_associated_molecules.length} associated
+                    molecules retained · {dataset.monomer_selection.excluded_molecules.length} other
+                    molecules omitted
+                  </span>
+                )}
+                {!!dataset.monomer_selection.notes.length && (
+                  <details className="monomer-notes">
+                    <summary>Selection details</summary>
+                    {dataset.monomer_selection.notes.map((note, index) => (
+                      <p key={index}>{note}</p>
+                    ))}
+                  </details>
+                )}
+                <button
+                  type="button"
+                  className="text-button"
+                  disabled={disabled}
+                  onClick={() =>
+                    void load(() => api.dataset(dataset.monomer_selection!.parent_dataset_id))
+                  }
+                >
+                  Restore full structure
+                </button>
+              </div>
+            </div>
+          )}
           {engine === 'gromacs' ? (
             <div className="prep-section engine-preparation" aria-label="GROMACS preparation">
               <div className="prep-heading">
@@ -363,77 +558,132 @@ export default function StructureWorkbench({
                   {dataset.preparation ? 'Prepared for OpenMM' : 'OpenMM · review & repair'}
                 </span>
               </div>
-              {inspecting ? (
-                <div className="studio-working">
-                  <LoaderCircle size={12} className="spin" /> Checking residues and ligand
-                  chemistry…
+              <section
+                className="missing-structure-setup"
+                aria-labelledby="missing-structure-title"
+              >
+                <div className="missing-structure-heading">
+                  <Wrench size={14} />
+                  <h4 id="missing-structure-title">Missing atoms &amp; residues</h4>
                 </div>
-              ) : inspectionError ? (
-                <div className="inline-warning">
-                  {inspectionError}{' '}
-                  <button
-                    type="button"
-                    className="text-button"
-                    onClick={() => setInspectionRevision((n) => n + 1)}
-                  >
-                    Retry inspection
-                  </button>
+                <div className="missing-structure-options">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={addAtoms}
+                      onChange={(event) => setAddAtoms(event.target.checked)}
+                      disabled={disabled || !hasProtein}
+                    />
+                    Add missing heavy atoms
+                  </label>
+                  <label className={`checkbox-label loop-option ${canBuild ? 'available' : ''}`}>
+                    <input
+                      type="checkbox"
+                      checked={buildMissing}
+                      onChange={(event) => setBuildMissing(event.target.checked)}
+                      disabled={disabled || inspecting || !canBuild}
+                    />
+                    Build supported missing loops / residues
+                  </label>
                 </div>
-              ) : (
-                inspection && (
-                  <>
-                    <div className={`inspection-summary ${warningCount ? 'has-issues' : ''}`}>
-                      {warningCount ? <AlertTriangle size={14} /> : <Check size={14} />}
-                      <span>
-                        {!hasProtein
-                          ? 'Small-molecule structure'
-                          : warningCount
-                            ? `${missingCount} missing residues · ${inspection.gaps.length} chain gaps`
-                            : `${inspection.missing_atoms.length} residues with missing atoms · ${inspection.hydrogen_atoms.toLocaleString()} hydrogens`}
-                      </span>
-                    </div>
-                    {!!inspection.missing_residues.length && (
-                      <div className="missing-residues">
-                        <b>Missing sequence regions</b>
-                        {inspection.missing_residues.map((r, i) => (
-                          <div key={i}>
-                            <span>
-                              Chain {r.chain || '—'} · {r.count} residues{' '}
-                              {r.terminal ? 'at terminus' : ''}
-                            </span>
-                            <small>
-                              {r.residues.join('–')} ·{' '}
-                              {r.buildable
-                                ? 'can build a starting model'
-                                : r.terminal
-                                  ? 'reported · prepare the observed terminus'
-                                  : 'requires additional modeling'}
-                            </small>
-                          </div>
-                        ))}
+                {inspecting ? (
+                  <div className="studio-working" role="status">
+                    <LoaderCircle size={12} className="spin" /> Checking residues and ligand
+                    chemistry…
+                  </div>
+                ) : inspectionError ? (
+                  <div className="inline-warning">
+                    {inspectionError}{' '}
+                    <button
+                      type="button"
+                      className="text-button"
+                      onClick={() => setInspectionRevision((n) => n + 1)}
+                    >
+                      Retry inspection
+                    </button>
+                  </div>
+                ) : (
+                  inspection && (
+                    <>
+                      <div className={`inspection-summary ${warningCount ? 'has-issues' : ''}`}>
+                        {warningCount ? <AlertTriangle size={14} /> : <Check size={14} />}
+                        <span>
+                          {!hasProtein
+                            ? 'Small-molecule structure'
+                            : warningCount
+                              ? `${missingCount} missing residues · ${inspection.gaps.length} chain gaps`
+                              : `${inspection.missing_atoms.length} residues with missing atoms · ${inspection.hydrogen_atoms.toLocaleString()} hydrogens`}
+                        </span>
                       </div>
-                    )}
-                    {!!inspection.gaps.length && (
-                      <div className="inline-warning">
-                        {inspection.gaps.map((g) => g.message).join(' ')}
-                      </div>
-                    )}
-                    {!inspection.has_sequence && hasProtein && (
-                      <p className="form-note prep-sequence-note">
-                        Full sequence records are absent. Unknown loop identities cannot be
-                        inferred; fetch the deposited PDB or upload a file with its sequence
-                        records.
-                      </p>
-                    )}
-                    {!hasProtein && (
-                      <p className="form-note">
-                        Protein preparation is for amino-acid polymers. This molecule is available
-                        in the viewer; ligand parameterization is a separate workflow.
-                      </p>
-                    )}
-                  </>
-                )
-              )}
+                      {!!inspection.missing_residues.length && (
+                        <div className="missing-residues">
+                          <b>Missing sequence regions</b>
+                          {inspection.missing_residues.map((r, i) => (
+                            <div key={i}>
+                              <span>
+                                Chain {r.chain || '—'} · {r.count} residues{' '}
+                                {r.terminal ? 'at terminus' : ''}
+                              </span>
+                              <small>
+                                {r.residues.join('–')} ·{' '}
+                                {r.buildable
+                                  ? 'can build a starting model'
+                                  : r.terminal
+                                    ? 'reported · prepare the observed terminus'
+                                    : 'requires additional modeling'}
+                              </small>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {!!inspection.gaps.length && (
+                        <div className="inline-warning">
+                          {inspection.gaps.map((g) => g.message).join(' ')}
+                        </div>
+                      )}
+                      {!inspection.has_sequence && hasProtein && (
+                        <p className="form-note prep-sequence-note">
+                          Full sequence records are absent. Unknown loop identities cannot be
+                          inferred; fetch the deposited PDB or upload a file with its sequence
+                          records.
+                        </p>
+                      )}
+                      {!hasProtein && (
+                        <p className="form-note">
+                          Protein preparation is for amino-acid polymers. This molecule is available
+                          in the viewer; ligand parameterization is a separate workflow.
+                        </p>
+                      )}
+                    </>
+                  )
+                )}
+                {!inspecting && internalMissingCount > 12 && (
+                  <div className="inline-warning missing-build-limit" role="status">
+                    This structure has {internalMissingCount} missing internal residues; the local
+                    builder supports 12 total.{' '}
+                    {monomers && monomers.chains.length > 1
+                      ? 'Select one chain or supply a complete model.'
+                      : 'Supply a complete model for the unsupported regions.'}
+                  </div>
+                )}
+                {!inspecting && internalMissingCount > 0 && (
+                  <p className="form-note">
+                    Local starting models support up to 6 residues per internal gap and 12 residues
+                    total.
+                  </p>
+                )}
+                {!inspecting && inspection && hasProtein && (
+                  <p className="form-note missing-build-note">
+                    {canBuild
+                      ? 'Build a starting model for supported short internal gaps during preparation. Inspect rebuilt loops afterward; their conformations are uncertain.'
+                      : missingCount
+                        ? 'Terminal regions remain omitted. Unsupported internal gaps require additional modeling before preparation.'
+                        : inspection.has_sequence
+                          ? 'No missing sequence regions were detected.'
+                          : 'Loop building needs known sequence records and a supported short internal gap.'}
+                  </p>
+                )}
+              </section>
               {!!inspection?.modified_residues?.length && (
                 <div className="modified-residue-list" aria-label="Modified protein residues">
                   <div className="modified-residue-intro">
@@ -641,17 +891,8 @@ export default function StructureWorkbench({
                 {options ? <ChevronDown size={13} /> : <ChevronRight size={13} />} Preparation
                 options
               </button>
-              {(options || canBuild) && (
+              {options && (
                 <div className="prep-options">
-                  <label className="checkbox-label">
-                    <input
-                      type="checkbox"
-                      checked={addAtoms}
-                      onChange={(e) => setAddAtoms(e.target.checked)}
-                      disabled={disabled}
-                    />{' '}
-                    Add missing heavy atoms
-                  </label>
                   <label className="checkbox-label">
                     <input
                       type="checkbox"
@@ -679,20 +920,6 @@ export default function StructureWorkbench({
                     />{' '}
                     Remove ligands and other non-protein residues
                   </label>
-                  <label className={`checkbox-label loop-option ${canBuild ? 'available' : ''}`}>
-                    <input
-                      type="checkbox"
-                      checked={buildMissing}
-                      onChange={(e) => setBuildMissing(e.target.checked)}
-                      disabled={disabled || !canBuild}
-                    />{' '}
-                    Build supported missing loops / residues
-                  </label>
-                  <p className="form-note">
-                    {canBuild
-                      ? 'Optional PDBFixer starting models for short internal gaps. Rebuilt loops are uncertain and need inspection; long gaps and terminal regions require additional modeling.'
-                      : 'Missing-region construction needs known sequence identities and a supported short internal gap.'}
-                  </p>
                 </div>
               )}
               {dataset.preparation && (

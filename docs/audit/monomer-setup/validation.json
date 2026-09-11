@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "tests": [
+      "backend/tests/test_monomers.py",
+      "backend/tests/test_preparation.py",
+      "backend/tests/test_missing_modified_sequence.py"
+    ],
+    "passed": 31,
+    "duration_seconds": 1.39
+  },
+  "browser": {
+    "passed": 3,
+    "duration_seconds": 10.7
+  },
+  "production_build": "passed; existing large JavaScript chunk advisory remains",
+  "live_app": "Serving verified UI and monomer routes on local8765. No active jobs before restart.",
+  "backend_sha256": "c0eaa63550a4d7aca2b27529419db0ac0e3e17dcfc8cc1a1fe70813db194dfc5",
+  "scope": "UI and deterministic structural extraction; no new native MD, force-field parameterization, loop modeling or network retrieval."
+}

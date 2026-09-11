@@ -262,8 +262,8 @@ def solvate_structure(dataset_id: str, settings: SolvationRequest):
     return preparation.submit_solvation(dataset_id, settings.model_dump())
 
 
-from . import workspaces, recovery, readiness, diagnostics, structural_analysis
-for router_module in (workspaces, recovery, readiness, diagnostics, structural_analysis):
+from . import workspaces, recovery, readiness, diagnostics, structural_analysis, monomers
+for router_module in (workspaces, recovery, readiness, diagnostics, structural_analysis, monomers):
     app.include_router(router_module.router)
 
 

@@ -9,6 +9,7 @@ import type {
   PreparationConfig,
   RunMeasurement,
   RunMeasurementSnapshot,
+  MonomerOptions,
 } from './types';
 import type { MeasurementPreview } from './components/LiveMeasurement';
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
@@ -30,6 +31,13 @@ export const api = {
   demo: () => request<Dataset>('/api/datasets/demo'),
   datasets: () => request<Dataset[]>('/api/datasets'),
   dataset: (id: string) => request<Dataset>(`/api/datasets/${id}`),
+  monomers: (id: string) => request<MonomerOptions>(`/api/datasets/${id}/monomers`),
+  useMonomer: (id: string, chain_index: number, keep_associated_molecules = true) =>
+    request<Dataset>(`/api/datasets/${id}/monomer`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chain_index, keep_associated_molecules }),
+    }),
   async coordinates(dataset: Dataset) {
     const r = await fetch(dataset.coordinates_url);
     if (!r.ok) throw new Error('Could not load trajectory coordinates.');

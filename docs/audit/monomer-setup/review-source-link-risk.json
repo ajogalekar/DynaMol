@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-09-11T18:28:18.709303+00:00",
+  "scope": "Original helper risk control on temporary files, before/while monomer extraction implementation is in progress. Not a claim about final implementation.",
+  "source_record": "LINK         SG  CYS B  10                 C1  LIG B 500                        ",
+  "current_retained_ligand": "A:LIG500",
+  "original_excluded_covalent_link": "B:CYS10/SG to B:LIG500/C1",
+  "blocked_component_ids": [
+    "LIG"
+  ],
+  "risk_reproduced": true,
+  "source_sha256": "d72aa10f75718c3f66eb33abdca823731680dd8481bc3271864f5da0bdbf37f9"
+}

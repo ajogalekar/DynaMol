@@ -1,0 +1,51 @@
+{
+  "purpose": "Read-only sequence-gap inspection; no preparation, simulation or user dataset changes",
+  "name": "6N7A",
+  "source_sha256": "ceb5009401e0fbe60a2c8f40ff56db41a07db0c9b56925a8aaf5ddb550eb8dc7",
+  "observations": [
+    {
+      "chain": "A",
+      "count": 14,
+      "terminal": true,
+      "all_standard": true,
+      "within_length_limit": false
+    },
+    {
+      "chain": "A",
+      "count": 5,
+      "terminal": false,
+      "all_standard": true,
+      "within_length_limit": true
+    },
+    {
+      "chain": "A",
+      "count": 5,
+      "terminal": false,
+      "all_standard": true,
+      "within_length_limit": true
+    },
+    {
+      "chain": "A",
+      "count": 2,
+      "terminal": false,
+      "all_standard": true,
+      "within_length_limit": true
+    },
+    {
+      "chain": "B",
+      "count": 5,
+      "terminal": false,
+      "all_standard": true,
+      "within_length_limit": true
+    },
+    {
+      "chain": "B",
+      "count": 5,
+      "terminal": false,
+      "all_standard": true,
+      "within_length_limit": true
+    }
+  ],
+  "total_internal_missing": 22,
+  "chain_b_internal_missing": 10
+}

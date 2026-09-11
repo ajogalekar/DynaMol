@@ -1,0 +1,60 @@
+{
+  "source_name": "6N7A",
+  "source_dataset_id": "f9d1cc5bf2664dbd",
+  "derived_dataset_id": "f4bff9aca3ab4add",
+  "source_checksums_unchanged": true,
+  "first_frame_coordinates_exactly_preserved": true,
+  "protein_chain_count": 1,
+  "selected_chain": "B",
+  "requires_fresh_preparation": true,
+  "has_periodic_box": false,
+  "missing_regions": [
+    {
+      "chain_index": 0,
+      "position": 62,
+      "count": 5,
+      "residues": [
+        "GLU",
+        "SER",
+        "GLY",
+        "GLY",
+        "ASN"
+      ]
+    },
+    {
+      "chain_index": 0,
+      "position": 90,
+      "count": 5,
+      "residues": [
+        "GLU",
+        "ASP",
+        "GLY",
+        "GLY",
+        "ASN"
+      ]
+    }
+  ],
+  "within_existing_internal_loop_length_limits": true,
+  "loop_limits": {
+    "each": 6,
+    "total": 12
+  },
+  "retained_associated_molecules": [
+    {
+      "chain": "F",
+      "resid": "1201",
+      "insertion_code": "",
+      "name": "GOL"
+    },
+    {
+      "chain": "G",
+      "resid": "1202",
+      "insertion_code": "",
+      "name": "KEV"
+    }
+  ],
+  "excluded_molecules_count": 591,
+  "checks": "Structure extraction and sequence inspection only; no preparation, MD, ligand parameterization or network retrieval.",
+  "backend_sha256": "c0eaa63550a4d7aca2b27529419db0ac0e3e17dcfc8cc1a1fe70813db194dfc5",
+  "final_api_recheck": true
+}

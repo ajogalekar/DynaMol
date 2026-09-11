@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "review_identity": "Language-model evidence synthesis plus automated PatAgent checklist; not expert certification or Pat Walters endorsement.",
+  "corpus": {
+    "manifest_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/manifest.json",
+    "sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+    "counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  },
+  "created_at": "2026-09-11T18:18:50.154349+00:00",
+  "purpose": "Scoped software review of non-destructive single-protein-chain extraction and visible missing-atom/residue options before preparation. Confirm atom/whole-molecule identity, original physical frame provenance, retained sequence records, stale preparation/solvation/parameter invalidation, and refusal to cut covalent cross-chain links. A selected coordinate chain is not a verified biological monomer. No MD, prediction, affinity, loop-model quality, or biological assembly claim.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "seed_policy": "Deterministic selection controls; no stochastic model or MD run planned.",
+    "versions": {
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "pdbfixer": "1.12.0",
+      "parmed": "4.3.1",
+      "gromacs": "GROMACS version:     2025.4-conda_forge"
+    },
+    "inputs": [
+      {
+        "path": "data/datasets/ubiquitin-start/topology.pdb",
+        "sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9"
+      },
+      {
+        "path": "docs/audit/preparation-fixtures/six_residues_missing_atom.pdb",
+        "sha256": "ae3bcb18009841e26412334baf8a7652b430e43d5e358f3a045f943ef7606a49"
+      }
+    ],
+    "budget": "Bundled/synthetic fixtures and existing isolated data only. Zero MD runs, network fetches, predictions, or new parameterization. Small API/unit/browser software controls permitted."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Extract a named/indexed protein chain with conservative whole-molecule association, preserve exact retained physical coordinates and sequence identity, retain source unchanged, record included/excluded groups and reasons, reject cross-chain covalent truncation, invalidate source preparation/solvation/parameters on derived subset. Periodic proximity is only an association heuristic, not biological assembly evidence."
+  },
+  "validation": {
+    "status": "Read-only design preflight; final implementation evidence pending",
+    "scope": "Fixture controls for multichain identity, heterogens spanning residues, linked molecules, sequence-retention/chain remapping, unavailable sequence, chosen physical frame, periodic coordinates, atomic output/provenance and source immutability. UI must distinguish observed missing atoms, known missing sequence and unbuildable/unknown gaps."
+  }
+}

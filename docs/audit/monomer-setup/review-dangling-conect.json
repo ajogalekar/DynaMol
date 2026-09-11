@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-09-11T18:40:23.596473+00:00",
+  "scope": "Independent selected-endpoint dangling CONECT control on synthetic temporary data, no native modeling.",
+  "record": "CONECT    1 9999",
+  "selected_chain": "A",
+  "known_endpoint_serial": 1,
+  "unknown_endpoint_serial": 9999,
+  "expected": "Decline retaining an unresolved explicit covalent endpoint; do not create derived dataset.",
+  "actual_error": null,
+  "derived_dataset_count": 1,
+  "source_unchanged": true,
+  "passed": false,
+  "source_sha256": "db948ac9c26f53ad75700d515c84ff26927819946bd4a2e79316c9a3b0849160",
+  "status": "Pre-fix risk reproduction; fixed afterward and both selected/excluded endpoint regressions passed in review-focused-tests.txt."
+}

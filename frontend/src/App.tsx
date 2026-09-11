@@ -812,7 +812,8 @@ export default function App() {
     const related =
       d.parent_dataset_id === dataset?.id ||
       d.solvation?.parent_dataset_id === dataset?.id ||
-      dataset?.solvation?.parent_dataset_id === d.id;
+      dataset?.solvation?.parent_dataset_id === d.id ||
+      dataset?.monomer_selection?.parent_dataset_id === d.id;
     const workspace =
       related || snapshot ? await transitionWorkspace(d, coordinates, snapshot) : undefined;
     if (workspace)
@@ -821,6 +822,14 @@ export default function App() {
         water: options?.showWater ?? !!d.solvation,
         hydrogens: options?.showHydrogens ? 'polar' : workspace.visibility.hydrogens,
       };
+    // A newly isolated chain should fill the canvas rather than inherit an
+    // assembly-wide zoom. Its surviving measurements are still transferred.
+    if (
+      workspace &&
+      (d.monomer_selection?.parent_dataset_id === dataset?.id ||
+        dataset?.monomer_selection?.parent_dataset_id === d.id)
+    )
+      workspace.camera = null;
     if (revision !== studioRevision.current || token !== loadToken.current) return;
     await loadDataset(d, {
       keepStudio: !completedRun,
@@ -865,8 +874,19 @@ export default function App() {
           color: m.color || palette[0],
         });
     }
+    const monomer =
+      d.monomer_selection?.parent_dataset_id === state.dataset_id ? d.monomer_selection : null;
+    if (monomer && monomer.retained_atom_indices.length === d.n_atoms) {
+      const mapping = new Map(
+        monomer.retained_atom_indices.map((index, output) => [index, output]),
+      );
+      for (const m of original) {
+        if (m.atoms.every((index) => mapping.has(index)))
+          byId.set(m.id, { ...m, atoms: m.atoms.map((index) => mapping.get(index)!) });
+      }
+    }
     const definitions = original
-      .filter((m) => !byId.has(m.id))
+      .filter((m) => !byId.has(m.id) && !monomer)
       .map(({ id, kind, atoms, label, color }) => ({ id, kind, atoms, label, color }));
     if (definitions.length) {
       const remapped = await api.remapMeasurements(
@@ -900,7 +920,9 @@ export default function App() {
     if (token === loadToken.current && revision === studioRevision.current) {
       if (errors.length)
         setTransitionWarning(
-          `Some atoms changed or could not be identified uniquely. Pick these measurements again: ${errors.join('; ')}.`,
+          monomer
+            ? `Measurements outside the retained monomer were removed: ${errors.join('; ')}.`
+            : `Some atoms changed or could not be identified uniquely. Pick these measurements again: ${errors.join('; ')}.`,
         );
       else setTransitionWarning('');
     }

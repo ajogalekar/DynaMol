@@ -99,7 +99,10 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
     if source_path:
         original = PDBFixer(filename=str(source_path))
         register_fixer_templates(original)
-        chain_ids = {chain.id for chain in fixer.topology.chains()}
+        # Retained ligands may use the ID of an excluded protein chain. Only
+        # protein-containing chains may inherit polymer sequence records.
+        protein_keys = protein_residue_keys(dataset_id, fixer.topology, fixer.positions)
+        chain_ids = {residue.chain.id for residue in fixer.topology.residues() if residue_key(residue) in protein_keys}
         label_to_author = {}
         if source_path.suffix.lower() in {".cif", ".mmcif", ".pdbx"}:
             try:
