@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
   ArrowDownToLine,
   ArrowRight,
@@ -6,18 +6,20 @@ import {
   ChevronDown,
   ChevronRight,
   Clock3,
+  ChartNoAxesCombined,
   Cpu,
   Droplets,
   FlaskConical,
   LoaderCircle,
   Play,
+  Plus,
   RotateCcw,
   Square,
   Terminal,
   X,
   Zap,
 } from 'lucide-react';
-import type { Dataset, Health, Job, SimulationConfig } from '../types';
+import type { Dataset, Health, Job, Measurement, SimulationConfig } from '../types';
 import { api } from '../api';
 import StructureWorkbench from './StructureWorkbench';
 import StructureJobMonitor from './StructureJobMonitor';
@@ -48,6 +50,10 @@ export default function SimulationPanel({
   onRefresh,
   onDatasetLoaded,
   onWaterVisibility,
+  measurements,
+  onToggleTracking,
+  onAddTrackedMeasurement,
+  measurementEditor,
 }: {
   dataset: Dataset | null;
   newSetupAt: number;
@@ -67,6 +73,10 @@ export default function SimulationPanel({
     options?: { showWater?: boolean; showHydrogens?: boolean },
   ) => Promise<void>;
   onWaterVisibility: (show: boolean) => void;
+  measurements: Measurement[];
+  onToggleTracking: (id: string, tracked: boolean) => void;
+  onAddTrackedMeasurement: () => void;
+  measurementEditor?: ReactNode;
 }) {
   const [name, setName] = useState('My molecular journey'),
     [duration, setDuration] = useState(10),
@@ -84,6 +94,13 @@ export default function SimulationPanel({
     [error, setError] = useState(''),
     [openLog, setOpenLog] = useState<string | null>(null);
   const [runReady, setRunReady] = useState(false);
+  const [trackingOpen, setTrackingOpen] = useState(false);
+  const trackedMeasurements = measurements.filter((measurement) => measurement.trackDuringRun);
+  const trackingExpanded = trackingOpen;
+  const hasMeasurementEditor = !!measurementEditor;
+  useEffect(() => {
+    if (hasMeasurementEditor) setTrackingOpen(true);
+  }, [hasMeasurementEditor]);
   const [openingHistory, setOpeningHistory] = useState<string | null>(null);
   const [resuming, setResuming] = useState<string | null>(null);
   const [recoveryDetails, setRecoveryDetails] = useState<Record<string, RecoveryInfo>>({});
@@ -312,10 +329,29 @@ export default function SimulationPanel({
     minimize,
     equilibration_steps: equil,
     padding_nm: dataset?.solvation?.padding_nm ?? padding,
+    measurements: trackedMeasurements.map(({ id, kind, atoms, label, color }) => ({
+      id,
+      kind,
+      atoms,
+      label,
+      color,
+    })),
   } as SimulationConfig;
+  const canStart =
+    !busy &&
+    runReady &&
+    !submitting &&
+    !pending &&
+    !anyActive &&
+    !hasMeasurementEditor &&
+    !incompatibleGromacsInput &&
+    !(engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation) &&
+    !!dataset &&
+    !!selected?.available &&
+    frames >= 1;
   async function start(e: React.FormEvent) {
     e.preventDefault();
-    if (!dataset) return;
+    if (!dataset || !canStart) return;
     setBusy(true);
     setError('');
     try {
@@ -473,8 +509,87 @@ export default function SimulationPanel({
                 if (starting) setMonitorId(null);
               }}
             />
+            <section className="water-environment" aria-labelledby="water-environment-title">
+              <div className="field-heading">
+                <span>03</span>
+                <h3 id="water-environment-title">Water &amp; environment</h3>
+                <Droplets size={16} className="water-heading-icon" />
+              </div>
+              <label className="full-label">
+                Solvent environment
+                <select
+                  value={engine === 'gromacs' ? 'explicit' : solvent}
+                  onChange={(e) => void changeSolvent(e.target.value as 'implicit' | 'explicit')}
+                  disabled={engine === 'gromacs' || engineLocked}
+                >
+                  <option value="implicit" disabled={requiresExplicit}>
+                    Implicit water · faster exploration
+                  </option>
+                  <option value="explicit">Explicit water · periodic box</option>
+                </select>
+              </label>
+              {engine === 'openmm' && (
+                <div className="solvent-preview-card">
+                  <Droplets size={17} />
+                  <div>
+                    <b>
+                      {dataset?.solvation ? 'Explicit water box is ready' : 'Build a water box'}
+                    </b>
+                    <span>
+                      {dataset?.solvation
+                        ? `${dataset.atoms.filter((a) => a.category === 'water').length.toLocaleString()} water atoms · ${dataset.solvation.water_model ?? 'TIP3P'} · ${dataset.solvation.padding_nm} nm padding`
+                        : dataset?.preparation
+                          ? 'Build a real solvent box and inspect it before you run.'
+                          : 'Prepare the structure above to create a visible solvent box.'}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    className="primary-button water-build-button"
+                    disabled={engineLocked || !dataset?.preparation}
+                    onClick={() => void previewWater(true)}
+                  >
+                    {submitting === 'solvation' || pending?.operation === 'solvation' ? (
+                      <LoaderCircle size={14} className="spin" />
+                    ) : (
+                      <Droplets size={14} />
+                    )}
+                    {dataset?.solvation ? 'Update box' : 'Build water'}
+                  </button>
+                </div>
+              )}
+              {engine === 'gromacs' && (
+                <div className="solvent-preview-card" aria-label="GROMACS solvent setup">
+                  <Droplets size={17} />
+                  <div>
+                    <b>TIP3P water · built during native setup</b>
+                    <span>
+                      GROMACS creates its periodic box and adds neutralizing ions after you start.
+                      Follow these stages in Background activity. A separate GROMACS water preview
+                      is not available.
+                    </span>
+                  </div>
+                </div>
+              )}
+              <label className="water-padding">
+                Box padding
+                <div className="input-unit">
+                  <input
+                    type="number"
+                    min="1"
+                    max="3"
+                    step="0.1"
+                    value={padding}
+                    onChange={(e) => setPadding(Number(e.target.value))}
+                    required
+                    disabled={engineLocked || (engine === 'openmm' && solvent === 'implicit')}
+                  />
+                  <span>nm</span>
+                </div>
+              </label>
+            </section>
             <div className="field-heading">
-              <span>03</span>
+              <span>04</span>
               <h3>Make it your simulation</h3>
             </div>
             <label className="full-label">
@@ -518,59 +633,6 @@ export default function SimulationPanel({
                 </div>
               </label>
             </div>
-            <label className="full-label">
-              Solvent environment
-              <select
-                value={engine === 'gromacs' ? 'explicit' : solvent}
-                onChange={(e) => void changeSolvent(e.target.value as 'implicit' | 'explicit')}
-                disabled={engine === 'gromacs' || busy || !!pending}
-              >
-                <option value="implicit" disabled={requiresExplicit}>
-                  Implicit water · faster exploration
-                </option>
-                <option value="explicit">Explicit water · periodic box</option>
-              </select>
-            </label>
-            {engine === 'openmm' && solvent === 'explicit' && (
-              <div className="solvent-preview-card">
-                <Droplets size={17} />
-                <div>
-                  <b>
-                    {dataset?.solvation
-                      ? 'Explicit water is in the view'
-                      : 'Explicit water preview'}
-                  </b>
-                  <span>
-                    {dataset?.solvation
-                      ? `${dataset.atoms.filter((a) => a.category === 'water').length.toLocaleString()} water atoms · ${dataset.solvation.water_model ?? 'TIP3P'} · ${dataset.solvation.padding_nm} nm padding`
-                      : dataset?.preparation
-                        ? 'Build a real solvent box and inspect it before you run.'
-                        : 'Prepare the structure above to create a visible solvent box.'}
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  className="text-button"
-                  disabled={busy || anyActive || !!pending || !dataset?.preparation}
-                  onClick={() => void previewWater(true)}
-                >
-                  {dataset?.solvation ? 'Update box' : 'Build water'}
-                </button>
-              </div>
-            )}
-            {engine === 'gromacs' && (
-              <div className="solvent-preview-card" aria-label="GROMACS solvent setup">
-                <Droplets size={17} />
-                <div>
-                  <b>TIP3P water · built during native setup</b>
-                  <span>
-                    GROMACS creates its periodic box and adds neutralizing ions after you start.
-                    Follow these stages in Background activity. A separate GROMACS water preview is
-                    not available.
-                  </span>
-                </div>
-              </div>
-            )}
             <p className="form-note">
               {engine === 'openmm'
                 ? modifiedPrepared
@@ -584,6 +646,77 @@ export default function SimulationPanel({
                 ? 'Prepare protein–ligand complexes above, then build water and minimize before dynamics.'
                 : 'Start with a complete standard protein. This preset does not support prepared ligand complexes or modified-residue parameter bundles.'}
             </p>
+            <section className="tracking-section" aria-label="Track during simulation">
+              <button
+                type="button"
+                className="tracking-disclosure"
+                aria-expanded={trackingExpanded}
+                aria-controls="simulation-tracking-content"
+                onClick={() => setTrackingOpen(!trackingOpen)}
+              >
+                <ChartNoAxesCombined size={17} />
+                <span>Track during simulation</span>
+                <small>
+                  {trackedMeasurements.length
+                    ? `${trackedMeasurements.length} selected`
+                    : 'Optional'}
+                </small>
+                {trackingExpanded ? <ChevronDown size={15} /> : <ChevronRight size={15} />}
+              </button>
+              {trackingExpanded && (
+                <div id="simulation-tracking-content" className="tracking-content">
+                  <p className="form-note">
+                    Choose a distance, angle, dihedral or hydrogen bond to watch as frames are
+                    saved.
+                    {engine === 'gromacs' &&
+                      ' Track heavy-atom geometry here. Hydrogen-bond tracking requires OpenMM’s retained hydrogen states.'}
+                  </p>
+                  {measurements.length > 0 && (
+                    <div
+                      className="tracking-measurements"
+                      role="group"
+                      aria-label="Measurements to track"
+                    >
+                      {measurements.map((measurement) => (
+                        <label className="tracking-measurement" key={measurement.id}>
+                          <input
+                            type="checkbox"
+                            checked={!!measurement.trackDuringRun}
+                            disabled={
+                              engineLocked ||
+                              (!measurement.trackDuringRun && trackedMeasurements.length >= 12)
+                            }
+                            onChange={(event) =>
+                              onToggleTracking(measurement.id, event.target.checked)
+                            }
+                            aria-label={`Track ${measurement.label}`}
+                          />
+                          <i style={{ background: measurement.color }} aria-hidden="true" />
+                          <span>{measurement.label}</span>
+                          <small>
+                            {measurement.kind === 'hbond' ? 'H-bond' : measurement.kind}
+                          </small>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                  <button
+                    type="button"
+                    className="secondary-button tracking-add"
+                    onClick={onAddTrackedMeasurement}
+                    disabled={
+                      !dataset || !viewerReady || engineLocked || trackedMeasurements.length >= 12
+                    }
+                  >
+                    <Plus size={14} /> Add measurement
+                  </button>
+                  {trackedMeasurements.length >= 12 && (
+                    <p className="form-note">Up to 12 measurements per simulation.</p>
+                  )}
+                  {measurementEditor && <div className="tracking-editor">{measurementEditor}</div>}
+                </div>
+              )}
+            </section>
             <button
               type="button"
               className="advanced-button"
@@ -668,22 +801,6 @@ export default function SimulationPanel({
                       <span>steps</span>
                     </div>
                   </label>
-                  <label>
-                    Box padding
-                    <div className="input-unit">
-                      <input
-                        type="number"
-                        min="1"
-                        max="3"
-                        step="0.1"
-                        value={padding}
-                        onChange={(e) => setPadding(Number(e.target.value))}
-                        required
-                        disabled={engine === 'openmm' && solvent === 'implicit'}
-                      />
-                      <span>nm</span>
-                    </div>
-                  </label>
                 </div>
                 <label className="checkbox-label">
                   <input
@@ -721,21 +838,7 @@ export default function SimulationPanel({
                 suspended={anyActive}
               />
             )}
-            <button
-              className="primary-button full-width run-button"
-              disabled={
-                busy ||
-                !runReady ||
-                !!submitting ||
-                !!pending ||
-                anyActive ||
-                incompatibleGromacsInput ||
-                (engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation) ||
-                !dataset ||
-                !selected?.available ||
-                frames < 1
-              }
-            >
+            <button className="primary-button full-width run-button" disabled={!canStart}>
               {busy ? (
                 <LoaderCircle size={17} className="spin" />
               ) : (
@@ -745,9 +848,11 @@ export default function SimulationPanel({
               <ArrowRight size={17} />
             </button>
             <p className="under-button">
-              {engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation
-                ? 'Prepare the structure and build its water preview before starting.'
-                : 'Keep exploring while your simulation runs in the background.'}
+              {hasMeasurementEditor
+                ? 'Finish or cancel the measurement selection before starting.'
+                : engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation
+                  ? 'Prepare the structure and build its water preview before starting.'
+                  : 'Keep exploring while your simulation runs in the background.'}
             </p>
           </form>
           <section className="jobs-section">

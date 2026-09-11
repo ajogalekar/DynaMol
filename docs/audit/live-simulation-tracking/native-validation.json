@@ -1,0 +1,1022 @@
+{
+  "purpose": "Software tracking consistency only; no equilibration or biological conclusion",
+  "source_sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9",
+  "cpu_threads": 2,
+  "seed": 2026,
+  "cases": [
+    {
+      "engine": "openmm",
+      "job_id": "7b91ef14bd5648e6",
+      "output_dataset_id": "e0c77008c92b48fc",
+      "config": {
+        "dataset_id": "live-tracking-source",
+        "engine": "openmm",
+        "name": "openmm live tracking validation",
+        "duration_ps": 0.8,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 25,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "implicit",
+        "minimize": true,
+        "equilibration_steps": 10,
+        "padding_nm": 1,
+        "measurements": [
+          {
+            "id": "ca-distance",
+            "kind": "distance",
+            "atoms": [
+              1,
+              9
+            ],
+            "label": "CA distance",
+            "color": "#74dfc5",
+            "trackDuringRun": null
+          },
+          {
+            "id": "ca-angle",
+            "kind": "angle",
+            "atoms": [
+              1,
+              9,
+              18
+            ],
+            "label": "CA angle",
+            "color": "#f5b66f",
+            "trackDuringRun": null
+          },
+          {
+            "id": "ca-dihedral",
+            "kind": "dihedral",
+            "atoms": [
+              1,
+              9,
+              18,
+              26
+            ],
+            "label": "CA torsion",
+            "color": "#8aa4ff",
+            "trackDuringRun": null
+          }
+        ]
+      },
+      "stop_requested": true,
+      "resumed": true,
+      "checks": [
+        {
+          "kind": "distance",
+          "frames": 17,
+          "max_absolute_difference": 0.0,
+          "source_atoms": [
+            1,
+            9
+          ],
+          "output_atoms": [
+            4,
+            21
+          ],
+          "times_unique": true
+        },
+        {
+          "kind": "angle",
+          "frames": 17,
+          "max_absolute_difference": 0.0,
+          "source_atoms": [
+            1,
+            9,
+            18
+          ],
+          "output_atoms": [
+            4,
+            21,
+            38
+          ],
+          "times_unique": true
+        },
+        {
+          "kind": "dihedral",
+          "frames": 17,
+          "max_absolute_difference": 0.0,
+          "source_atoms": [
+            1,
+            9,
+            18,
+            26
+          ],
+          "output_atoms": [
+            4,
+            21,
+            38,
+            57
+          ],
+          "times_unique": true
+        }
+      ],
+      "observations": [
+        {
+          "status": "queued",
+          "stage": "Starting worker",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing protein",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Energy minimization",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Initial relaxation",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 25,
+          "frames": 2,
+          "last_time_ps": 0.05,
+          "errors": []
+        },
+        {
+          "status": "cancelling",
+          "stage": "Stopping and saving progress",
+          "completed_steps": 25,
+          "frames": 2,
+          "last_time_ps": 0.05,
+          "errors": []
+        },
+        {
+          "status": "cancelled",
+          "stage": "Cancelled",
+          "completed_steps": 25,
+          "frames": 3,
+          "last_time_ps": 0.1,
+          "errors": []
+        },
+        {
+          "status": "queued",
+          "stage": "Resuming saved checkpoint",
+          "completed_steps": 25,
+          "frames": 3,
+          "last_time_ps": 0.1,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 50,
+          "frames": 3,
+          "last_time_ps": 0.1,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 50,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 75,
+          "frames": 4,
+          "last_time_ps": 0.15,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 75,
+          "frames": 5,
+          "last_time_ps": 0.2,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 100,
+          "frames": 5,
+          "last_time_ps": 0.2,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 100,
+          "frames": 6,
+          "last_time_ps": 0.25,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 125,
+          "frames": 6,
+          "last_time_ps": 0.25,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 150,
+          "frames": 7,
+          "last_time_ps": 0.3,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 175,
+          "frames": 8,
+          "last_time_ps": 0.35,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 200,
+          "frames": 9,
+          "last_time_ps": 0.4,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 225,
+          "frames": 10,
+          "last_time_ps": 0.45,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 250,
+          "frames": 11,
+          "last_time_ps": 0.5,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 275,
+          "frames": 12,
+          "last_time_ps": 0.55,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 275,
+          "frames": 13,
+          "last_time_ps": 0.6,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 300,
+          "frames": 13,
+          "last_time_ps": 0.6,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 325,
+          "frames": 14,
+          "last_time_ps": 0.65,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 350,
+          "frames": 15,
+          "last_time_ps": 0.7,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 375,
+          "frames": 16,
+          "last_time_ps": 0.75,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing trajectory for viewer",
+          "completed_steps": 400,
+          "frames": 17,
+          "last_time_ps": 0.8,
+          "errors": []
+        },
+        {
+          "status": "completed",
+          "stage": "Complete",
+          "completed_steps": 400,
+          "frames": 17,
+          "last_time_ps": 0.8,
+          "errors": []
+        }
+      ],
+      "artifact_directory": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/live-tracking-backend/jobs/7b91ef14bd5648e6"
+    },
+    {
+      "engine": "gromacs",
+      "job_id": "7f625a46fcdd49f3",
+      "output_dataset_id": "718d4adda03e440e",
+      "config": {
+        "dataset_id": "live-tracking-source",
+        "engine": "gromacs",
+        "name": "gromacs live tracking validation",
+        "duration_ps": 6.0,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 100,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 10,
+        "padding_nm": 1,
+        "measurements": [
+          {
+            "id": "ca-distance",
+            "kind": "distance",
+            "atoms": [
+              1,
+              9
+            ],
+            "label": "CA distance",
+            "color": "#74dfc5",
+            "trackDuringRun": null
+          },
+          {
+            "id": "ca-angle",
+            "kind": "angle",
+            "atoms": [
+              1,
+              9,
+              18
+            ],
+            "label": "CA angle",
+            "color": "#f5b66f",
+            "trackDuringRun": null
+          },
+          {
+            "id": "ca-dihedral",
+            "kind": "dihedral",
+            "atoms": [
+              1,
+              9,
+              18,
+              26
+            ],
+            "label": "CA torsion",
+            "color": "#8aa4ff",
+            "trackDuringRun": null
+          }
+        ]
+      },
+      "stop_requested": true,
+      "resumed": true,
+      "checks": [
+        {
+          "kind": "distance",
+          "frames": 31,
+          "max_absolute_difference": 0.0,
+          "source_atoms": [
+            1,
+            9
+          ],
+          "output_atoms": [
+            4,
+            21
+          ],
+          "times_unique": true
+        },
+        {
+          "kind": "angle",
+          "frames": 31,
+          "max_absolute_difference": 0.0,
+          "source_atoms": [
+            1,
+            9,
+            18
+          ],
+          "output_atoms": [
+            4,
+            21,
+            38
+          ],
+          "times_unique": true
+        },
+        {
+          "kind": "dihedral",
+          "frames": 31,
+          "max_absolute_difference": 0.0,
+          "source_atoms": [
+            1,
+            9,
+            18,
+            26
+          ],
+          "output_atoms": [
+            4,
+            21,
+            38,
+            57
+          ],
+          "times_unique": true
+        }
+      ],
+      "observations": [
+        {
+          "status": "queued",
+          "stage": "Starting worker",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Engine probe",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Building topology",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Creating periodic box",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Adding TIP3P water",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing neutralization",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Neutralizing system",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing minimization",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Energy minimization",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing initial relaxation",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Initial relaxation",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing production",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 0,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 100,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 200,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Running dynamics",
+          "completed_steps": 300,
+          "frames": 4,
+          "last_time_ps": 0.6000000238418579,
+          "errors": []
+        },
+        {
+          "status": "cancelling",
+          "stage": "Stopping and saving progress",
+          "completed_steps": 300,
+          "frames": 4,
+          "last_time_ps": 0.6000000238418579,
+          "errors": []
+        },
+        {
+          "status": "cancelled",
+          "stage": "Cancelled",
+          "completed_steps": 300,
+          "frames": 5,
+          "last_time_ps": 0.800000011920929,
+          "errors": []
+        },
+        {
+          "status": "queued",
+          "stage": "Resuming saved checkpoint",
+          "completed_steps": 300,
+          "frames": 5,
+          "last_time_ps": 0.800000011920929,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing protein",
+          "completed_steps": 300,
+          "frames": 5,
+          "last_time_ps": 0.800000011920929,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 450,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 500,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 600,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 700,
+          "frames": 0,
+          "last_time_ps": null,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 700,
+          "frames": 8,
+          "last_time_ps": 1.399999976158142,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 800,
+          "frames": 8,
+          "last_time_ps": 1.399999976158142,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 900,
+          "frames": 8,
+          "last_time_ps": 1.399999976158142,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1000,
+          "frames": 8,
+          "last_time_ps": 1.399999976158142,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1100,
+          "frames": 8,
+          "last_time_ps": 1.399999976158142,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1100,
+          "frames": 12,
+          "last_time_ps": 2.200000047683716,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1200,
+          "frames": 12,
+          "last_time_ps": 2.200000047683716,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1300,
+          "frames": 12,
+          "last_time_ps": 2.200000047683716,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1400,
+          "frames": 12,
+          "last_time_ps": 2.200000047683716,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1500,
+          "frames": 16,
+          "last_time_ps": 3.0,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1600,
+          "frames": 16,
+          "last_time_ps": 3.0,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1700,
+          "frames": 16,
+          "last_time_ps": 3.0,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1800,
+          "frames": 16,
+          "last_time_ps": 3.0,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 1900,
+          "frames": 20,
+          "last_time_ps": 3.799999952316284,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2000,
+          "frames": 20,
+          "last_time_ps": 3.799999952316284,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2100,
+          "frames": 20,
+          "last_time_ps": 3.799999952316284,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2200,
+          "frames": 20,
+          "last_time_ps": 3.799999952316284,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2300,
+          "frames": 24,
+          "last_time_ps": 4.599999904632568,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2400,
+          "frames": 24,
+          "last_time_ps": 4.599999904632568,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2500,
+          "frames": 24,
+          "last_time_ps": 4.599999904632568,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2600,
+          "frames": 24,
+          "last_time_ps": 4.599999904632568,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2700,
+          "frames": 24,
+          "last_time_ps": 4.599999904632568,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2700,
+          "frames": 28,
+          "last_time_ps": 5.400000095367432,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2800,
+          "frames": 28,
+          "last_time_ps": 5.400000095367432,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2900,
+          "frames": 28,
+          "last_time_ps": 5.400000095367432,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Resuming dynamics",
+          "completed_steps": 2900,
+          "frames": 31,
+          "last_time_ps": 6.0,
+          "errors": []
+        },
+        {
+          "status": "running",
+          "stage": "Preparing trajectory for viewer",
+          "completed_steps": 3000,
+          "frames": 31,
+          "last_time_ps": 6.0,
+          "errors": []
+        },
+        {
+          "status": "completed",
+          "stage": "Complete",
+          "completed_steps": 3000,
+          "frames": 31,
+          "last_time_ps": 6.0,
+          "errors": []
+        }
+      ],
+      "artifact_directory": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/live-tracking-backend/jobs/7f625a46fcdd49f3"
+    }
+  ],
+  "passed": true,
+  "source_hashes": {
+    "backend/live_measurements.py": "8c259cb84791a11e2abe6e828e77217890a76347c7d9962842e0130c10cfdfff",
+    "backend/models.py": "8be92c96ae0d098fd8f53cb23e4f1c5c5753aa7c7d945b42a8ee56471f8cd315",
+    "backend/worker.py": "766a62487c19d1d51aef55b5d8c02c24741f05715d27a57c16afe283b4120712",
+    "backend/jobs.py": "df2f1ccec11522e4648fe35c564d9a53c0f4808c979ad03aaceff1ad83417b03",
+    "backend/main.py": "81e81028ee7f8a28fbf7f4000806741f4f8b8bc4777dd37395a3952afc1f423b",
+    "backend/recovery.py": "e0b526ca34d2942991c47d2e1f5b4cc2592389a4b3b083c05babd12107f173e9",
+    "backend/workspaces.py": "ae15a63bcaf3fb3e38905a95eba69b0ce4375911c97484a7dadcd87d587adfba",
+    "backend/tests/test_live_measurements.py": "a9d38dec5fd7b5cfbf04890af23cd12ddf20e09c01515240544352ced2de7a61"
+  },
+  "regression_suite": {
+    "passed": 115,
+    "new_tests": 28,
+    "command": ".venv/bin/python -m pytest backend/tests/test_live_measurements.py backend/tests/test_measurement_preview.py backend/tests/test_backend.py backend/tests/test_resource_submission.py backend/tests/test_recovery.py backend/tests/test_workspaces.py -q",
+    "elapsed_seconds": 1.22
+  },
+  "native_script": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/live-tracking-backend-check.py",
+  "hbond_case": {
+    "engine": "openmm",
+    "job_id": "468f7ac749c84611",
+    "source_dataset_id": "e0c77008c92b48fc",
+    "output_dataset_id": "be43b2d16f984c9b",
+    "config": {
+      "dataset_id": "e0c77008c92b48fc",
+      "engine": "openmm",
+      "name": "OpenMM explicit hydrogen tracking validation",
+      "duration_ps": 0.1,
+      "temperature_k": 300,
+      "timestep_fs": 2,
+      "report_interval": 10,
+      "friction_ps": 1,
+      "seed": 2026,
+      "solvent": "implicit",
+      "minimize": false,
+      "equilibration_steps": 0,
+      "padding_nm": 1,
+      "measurements": [
+        {
+          "id": "native-hbond",
+          "kind": "hbond",
+          "atoms": [
+            0,
+            3,
+            275
+          ],
+          "label": "Explicit hydrogen bond",
+          "color": "#74dfc5",
+          "trackDuringRun": null
+        }
+      ]
+    },
+    "frames": 6,
+    "source_atoms": [
+      0,
+      3,
+      275
+    ],
+    "output_atoms": [
+      0,
+      3,
+      275
+    ],
+    "source_identities": [
+      "MET1-N",
+      "MET1-H3",
+      "VAL17-O"
+    ],
+    "donor_hydrogen_bond_verified": true,
+    "checks": {
+      "values": {
+        "max_absolute_difference": 0.0
+      },
+      "angle_values": {
+        "max_absolute_difference": 0.0
+      },
+      "times_ps": {
+        "max_absolute_difference": 0.0
+      }
+    },
+    "occupancy": 1.0,
+    "observations": [
+      {
+        "status": "queued",
+        "stage": "Starting worker",
+        "completed_steps": 0,
+        "frames": 0
+      },
+      {
+        "status": "running",
+        "stage": "Preparing protein",
+        "completed_steps": 0,
+        "frames": 0
+      },
+      {
+        "status": "running",
+        "stage": "Running dynamics",
+        "completed_steps": 0,
+        "frames": 0
+      },
+      {
+        "status": "running",
+        "stage": "Running dynamics",
+        "completed_steps": 10,
+        "frames": 0
+      },
+      {
+        "status": "running",
+        "stage": "Running dynamics",
+        "completed_steps": 20,
+        "frames": 3
+      },
+      {
+        "status": "running",
+        "stage": "Running dynamics",
+        "completed_steps": 30,
+        "frames": 3
+      },
+      {
+        "status": "running",
+        "stage": "Running dynamics",
+        "completed_steps": 40,
+        "frames": 5
+      },
+      {
+        "status": "running",
+        "stage": "Preparing trajectory for viewer",
+        "completed_steps": 50,
+        "frames": 6
+      },
+      {
+        "status": "completed",
+        "stage": "Complete",
+        "completed_steps": 50,
+        "frames": 6
+      }
+    ],
+    "artifact_directory": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/live-tracking-backend/jobs/468f7ac749c84611",
+    "passed": true
+  }
+}

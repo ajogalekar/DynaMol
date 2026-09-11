@@ -1,0 +1,125 @@
+{
+  "recorded_at": "2026-09-11T17:39:53.344675+00:00",
+  "manifest": {
+    "agent": "pat-agent",
+    "attribution_note": "Guest posts remain searchable but are marked guest and must not be represented as Pat Walters's own views.",
+    "authorship_counts": {
+      "guest": 1,
+      "pat-authored": 90
+    },
+    "corpus_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+    "coverage": "complete public Practical Cheminformatics archive at sync time",
+    "records": 91,
+    "schema_version": "1.0",
+    "sha256": "94c4e606024cb41e5cb89510ee8acdd7e932a6fa8eb14b67dcc16ab1d22a08f1",
+    "source_counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  },
+  "queries": [
+    {
+      "query": "molecular dynamics reproducibility validation representation",
+      "matches": 54,
+      "results": [
+        {
+          "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html",
+          "published": "2024-01-02T15:54:00.000-08:00",
+          "authorship": "pat-authored",
+          "score": 30.0
+        },
+        {
+          "title": " Generative Molecular Design - We Need to Raise the Bar",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/02/generative-molecular-design-we-need-to.html",
+          "published": "2023-02-01T06:23:00.000-08:00",
+          "authorship": "pat-authored",
+          "score": 26.0
+        },
+        {
+          "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html",
+          "published": "2023-01-03T11:55:00.002-08:00",
+          "authorship": "pat-authored",
+          "score": 26.0
+        },
+        {
+          "title": "Getting Real with Molecular Property Prediction",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/06/getting-real-with-molecular-property.html",
+          "published": "2023-06-12T15:42:00.008-07:00",
+          "authorship": "pat-authored",
+          "score": 25.0
+        }
+      ]
+    },
+    {
+      "query": "We Need Better Benchmarks structure validity",
+      "matches": 83,
+      "results": [
+        {
+          "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html",
+          "published": "2023-08-03T06:03:00.001-07:00",
+          "authorship": "pat-authored",
+          "score": 105.0
+        },
+        {
+          "title": "We Still Haven\u2019t Found What We\u2019re Looking For - The Continuing Evolution of Protein-Ligand Co-Folding Methods",
+          "url": "https://patwalters.github.io/Cofolding-Evolution/",
+          "published": "2025-11-03",
+          "authorship": "pat-authored",
+          "score": 51.0
+        },
+        {
+          "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html",
+          "published": "2024-01-02T15:54:00.000-08:00",
+          "authorship": "pat-authored",
+          "score": 46.0
+        },
+        {
+          "title": " Generative Molecular Design - We Need to Raise the Bar",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/02/generative-molecular-design-we-need-to.html",
+          "published": "2023-02-01T06:23:00.000-08:00",
+          "authorship": "pat-authored",
+          "score": 46.0
+        }
+      ]
+    },
+    {
+      "query": "The Trouble With Tautomers",
+      "matches": 90,
+      "results": [
+        {
+          "title": "The Trouble With Tautomers",
+          "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/",
+          "published": "2025-05-06",
+          "authorship": "pat-authored",
+          "score": 97.0
+        },
+        {
+          "title": "Getting Inside the Mind of the Medicinal Chemist with Machine Learning",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/04/getting-inside-mind-of-medicinal.html",
+          "published": "2023-04-03T16:36:00.000-07:00",
+          "authorship": "pat-authored",
+          "score": 53.0
+        },
+        {
+          "title": "Let the Agents Do the Benchmarking",
+          "url": "https://patwalters.github.io/Let-the-Agents-Do-the-Benchmarking/",
+          "published": "2026-08-29",
+          "authorship": "pat-authored",
+          "score": 48.0
+        },
+        {
+          "title": "Building on the Fragments From the Diamond/XChem SARS-CoV-2 Main Protease (MPro) Fragment Screen (Part II) Structure-Base Evaluation of Expanded Fragments",
+          "url": "https://practicalcheminformatics.blogspot.com/2020/03/building-on-fragments-from-diamondxchem_30.html",
+          "published": "2020-03-30T12:37:00.000-07:00",
+          "authorship": "pat-authored",
+          "score": 48.0
+        }
+      ]
+    }
+  ],
+  "note": "Canonical metadata retained rather than copied article passages. Broad modeling query returns adjacent drug-discovery validation discussions; these sources do not establish MD atom-mapping/PBC formulas."
+}

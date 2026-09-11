@@ -980,7 +980,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
               >
                 <span>{measurement.kind === 'hbond' ? 'H bond' : measurement.kind}</span>
                 <strong>
-                  {Number.isFinite(value)
+                  {value !== null && Number.isFinite(value)
                     ? value.toFixed(
                         measurement.unit === '°' || measurement.unit === 'degrees' ? 1 : 2,
                       )

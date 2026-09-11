@@ -1,0 +1,9 @@
+{
+  "fixture": "data/integration-checks/recovery/jobs/be90711eee84481d",
+  "case": "Existing real GROMACS processed.gro formatting precision",
+  "selected_CA_atoms": 76,
+  "max_component_difference_nm": 0.0004999935626983643,
+  "atoms_exceeding_current_0.0002_nm_tolerance": 70,
+  "verification_result": "Engine preparation changed the identity or order of a tracked heavy atom. Its live measurement was not accepted.",
+  "finding": "GRO positions have 0.001 nm formatting precision; a PDB coordinate can round by up to 0.0005 nm on each axis without changing identity. Current 0.0002 nm tolerance can reject retained atoms."
+}

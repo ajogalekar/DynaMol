@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T17:38:37.211378+00:00",
+  "purpose": "Validate optional live distance, angle, dihedral and geometric hydrogen-bond measurement monitors in DynaMol simulation jobs and completion handoff into Explore. This is bounded software correctness and presentation testing with saved physical frames; no accuracy, convergence, occupancy-equilibrium, affinity or biological-function claims.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13",
+    "versions": {
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "pdbfixer": "1.12.0",
+      "parmed": "4.3.1",
+      "gromacs": "GROMACS version:     2025.4-conda_forge"
+    },
+    "planned_seed": 2026,
+    "cpu_threads": 2,
+    "budget": "At most 400 OpenMM and 3000 GROMACS production steps per native continuation scenario; 2 CPU threads, local isolated data, explicit bounded setup timeout; at most two initial jobs per engine plus resumes. Existing checkpoint/prefix fixtures may be read without rerunning MD. No cloud/GPU or long production run.",
+    "inputs": [
+      {
+        "path": "data/datasets/ubiquitin-start/topology.pdb",
+        "sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9",
+        "atoms": 602,
+        "frames": 1,
+        "finite_coordinates": true
+      },
+      {
+        "path": "data/datasets/demo/topology.pdb",
+        "sha256": "098537c627a77eacf82ea61cc7f287e70980c02aca17ab58f98937ee49d06e74",
+        "atoms": 1231,
+        "frames": 1,
+        "finite_coordinates": true
+      },
+      {
+        "path": "docs/audit/preparation-fixtures/six_residues_missing_atom.pdb",
+        "sha256": "ae3bcb18009841e26412334baf8a7652b430e43d5e358f3a045f943ef7606a49",
+        "atoms": 51,
+        "frames": 1,
+        "finite_coordinates": true
+      }
+    ],
+    "synthetic_controls": "Versioned test-source code must define reordered/ambiguous/missing atom mappings; known distances, angles and torsions; periodic crossings; zero bond/collinear/undefined null cases; physical time prefix and saved-checkpoint restart. Test source and actual produced config/input/topology hashes are required in postflight."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Sample original physical coordinates, not interpolated viewer positions. Preserve atom identity across input/prepared/final topology with explicit validated mapping; missing/ambiguous identities block affected monitors instead of nearest-atom guessing. PBC uses saved box geometry; angle/torsion degeneracies are null with a reason. H-bond D,H,A requires explicit bonded hydrogen and is a geometric criterion, not chemical eligibility or binding evidence. Never fabricate hydrogens, infer periodic box or renumber selections silently. New monitoring must not change forces, protonation, ions, ligand parameters or engine trajectories."
+  },
+  "validation": {
+    "status": "Preflight design; feature execution and final review pending",
+    "scope": "Compare live samples with offline measurement of the same saved physical frames; assert units and times, finite-or-null values, prefix consistency after Stop/Resume, idempotent final plot promotion, and no selected-dataset/camera replacement while inspecting a different dataset."
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "Analytic and offline consistency baselines only. No trained predictive model, held-out experimental data, statistical ranking or native trajectory identity across engines is claimed."
+  },
+  "review_identity": "Language-model evidence synthesis plus automated PatAgent checklist; not expert certification or Pat Walters endorsement.",
+  "corpus": {
+    "manifest_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/manifest.json",
+    "sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+    "counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  }
+}

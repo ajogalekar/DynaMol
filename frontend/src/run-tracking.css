@@ -1,0 +1,29 @@
+.run-result-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border: 1px solid #34564f;
+  background: #112323;
+  border-radius: 10px;
+  color: #c4ddd6;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.run-result-notice > span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.run-result-notice button {
+  flex-shrink: 0;
+}
+.tracking-editor .measure-section {
+  padding: 8px 0;
+}
+.tracking-editor .measure-types {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.tracking-editor .atom-search-results {
+  max-height: 160px;
+  overflow-y: auto;
+}

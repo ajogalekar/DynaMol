@@ -76,6 +76,46 @@ class Worker:
         atomic_json(self.folder / "provenance.json", self.provenance)
         self.update(message=message)
 
+    def verify_measurement_identity(self, topology, *, coordinate_tolerance=2e-4):
+        from .live_measurements import verify_native_identity
+        if not self.settings.get("measurements"):
+            return
+        proof = {"input_sha256": hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest(), "verified": False}
+        try:
+            mapping = verify_native_identity(self.folder, self.input_state, topology, coordinate_tolerance=coordinate_tolerance)
+            proof.update(verified=True, input_to_native=mapping, coordinate_tolerance_nm=coordinate_tolerance)
+        except Exception as exc:
+            proof["error"] = str(exc)
+        atomic_json(self.folder / "measurement-identity.json", proof)
+
+    def start_measurements(self, topology):
+        from .live_measurements import LiveMeasurements, empty_snapshot
+        self.live_measurements = None
+        try:
+            state = dict(self.input_state)
+            if self.settings.get("measurements"):
+                proof = json.loads((self.folder / "measurement-identity.json").read_text())
+                if not proof.get("verified"):
+                    raise ValueError(proof.get("error", "Tracked native atom identities could not be verified."))
+                if proof["input_sha256"] != hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest():
+                    raise ValueError("The tracked atom identity proof belongs to a different input structure.")
+                state["measurement_verified_output_atoms"] = proof["input_to_native"]
+            self.live_measurements = LiveMeasurements(self.folder, self.job, state, topology)
+        except Exception as exc:
+            snapshot = empty_snapshot(self.job)
+            snapshot["errors"] = [f"Live measurements unavailable: {exc}"]
+            atomic_json(self.folder / "measurements.json", snapshot)
+            self.update(message=f"Live measurements unavailable: {exc}. Dynamics can continue.")
+
+    def report_measurements(self, method, *args, **kwargs):
+        monitor = getattr(self, "live_measurements", None)
+        if monitor is not None and monitor.active:
+            try:
+                getattr(monitor, method)(*args, **kwargs)
+            except Exception as exc:
+                monitor.stop(exc)
+                self.update(message=f"Live measurements stopped: {exc}. Dynamics can continue.")
+
     def run_command(self, arguments, stage, stdin=None, production=False, log_name=None):
         self.update(stage=stage, message="$ " + " ".join(arguments))
         self.provenance["commands"].append(arguments)
@@ -107,6 +147,11 @@ class Worker:
                             self.export_gromacs_energies(arguments[0])
                         except (OSError, subprocess.TimeoutExpired):
                             pass
+                        # This is the current command's log, not the appended
+                        # production log. Read only after native startup, when
+                        # checkpoint append has restored its retained prefix.
+                        if "starting mdrun" in output_path.read_text(errors="replace")[-20000:]:
+                            self.report_measurements("read_xtc")
                         last_diagnostics = time.monotonic()
                     if completed is not None and completed != previous:
                         self.update(completed=completed, message=f"Production step {completed:,}/{self.job['total_steps']:,}")
@@ -181,6 +226,9 @@ class Worker:
             else:
                 modeller.addHydrogens(ff, pH=7.0)
                 self.record_preparation(f"Added {modeller.topology.getNumAtoms() - before} hydrogens using OpenMM templates at pH 7; retained all input atoms. Protonation uses heuristic residue defaults and must be reviewed for scientific studies.")
+            self.verify_measurement_identity(md.Trajectory(
+                np.asarray(modeller.positions.value_in_unit(unit.nanometer))[None], md.Topology.from_openmm(modeller.topology)
+            ))
             if implicit:
                 modeller.topology.setPeriodicBoxVectors(None)
                 system = ff.createSystem(modeller.topology, nonbondedMethod=app.NoCutoff, constraints=app.HBonds)
@@ -226,6 +274,7 @@ class Worker:
             manifest["output_solvation"] = getattr(self, "output_solvation", None)
             frame_records = []
         self.update(stage="Running dynamics", message=f"Production started: {total:,} steps, {settings['timestep_fs']:g} fs, seed {settings['seed']}; OpenMM {mm.__version__} CPU.")
+        self.start_measurements(md.load_topology(str(self.folder / "prepared.pdb")))
         # Degrees of freedom follow OpenMM StateDataReporter: massive particles,
         # constraints between massive particles, and removed centre-of-mass motion.
         dof = sum(3 for i in range(system.getNumParticles()) if system.getParticleMass(i) > 0 * unit.dalton)
@@ -268,6 +317,7 @@ class Worker:
             # Roll back any uncommitted energy rows to the native checkpoint.
             for frame in read_frames():
                 write_energy(frame)
+                self.report_measurements("add_frame", frame["xyz"], float(frame["time"]), int(frame["step"]), frame.get("box"))
             while True:
                 step = simulation.currentStep
                 is_frame = step == 0 or step % settings["report_interval"] == 0 or step == total
@@ -290,7 +340,9 @@ class Worker:
                     from .recovery import digest
                     frame_records.append({"name": name, "step": step, "sha256": digest(frames_folder / name)})
                     write_energy(frame)
+                    self.report_measurements("add_frame", frame["xyz"], float(frame["time"]), int(frame["step"]), frame.get("box"))
                 checkpoint_now()
+                self.report_measurements("flush", force=step >= total)
                 self.update(completed=step, message=f"Step {step:,}/{total:,} · {step * settings['timestep_fs'] / 1000:g} ps · checkpoint saved")
                 if step >= total:
                     break
@@ -311,6 +363,7 @@ class Worker:
         traj.save_xtc(str(self.folder / "trajectory.xtc"))
         shutil.copy2(checkpoints / manifest["checkpoint"]["directory"] / "checkpoint.chk", self.folder / "checkpoint.chk")
         self.provenance["timestamp_note"] = "frame_times_ps.csv and XTC carry exact production times. DCD readers may discard timing; use the sidecar. Final frame can have a shorter interval."
+        self.report_measurements("finish", traj)
         return traj
 
     def export_gromacs_energies(self, gmx):
@@ -349,6 +402,9 @@ class Worker:
             validate_manifest(self.folder, "gromacs")
         else:
             create_manifest(self.folder, "gromacs")
+        # Resume reconstructs from the native append output after GROMACS has
+        # restored/truncated it, never from the previous worker's JSON series.
+        self.start_measurements(md.load_topology(str(self.folder / "system.gro")))
         arguments = [gmx, "mdrun", "-deffnm", str(self.folder / "production"), "-cpt", "0.1", *cpu]
         if resume:
             arguments += ["-cpi", "production.cpt", "-append"]
@@ -361,7 +417,11 @@ class Worker:
                 self.export_gromacs_energies(gmx)
             except (OSError, subprocess.TimeoutExpired):
                 pass
+            self.report_measurements("read_xtc")
+            self.report_measurements("flush", force=True)
         traj = md.load(str(self.folder / "production.xtc"), top=str(self.folder / "system.gro"))
+        self.report_measurements("read_xtc", final=True)
+        self.report_measurements("finish", traj)
         traj[0].save_pdb(str(self.folder / "prepared.pdb"))
         return traj
 
@@ -382,6 +442,8 @@ class Worker:
         self.run_command([gmx, "pdb2gmx", "-f", "input.pdb", "-o", "processed.gro", "-p", "topol.top", "-ff", "amber99sb-ildn", "-water", "tip3p", "-ignh"], "Building topology")
         initial = md.load(str(self.folder / "input.pdb"))
         processed = md.load(str(self.folder / "processed.gro"))
+        # GRO rounds Cartesian coordinates to 0.001 nm (PDB to 0.0001 nm).
+        self.verify_measurement_identity(processed, coordinate_tolerance=6e-4)
         # GROMACS may reorder atoms and add terminal atoms. Detect removal of heavy atoms by per-residue element counts.
         from collections import Counter
         def heavy_counts(top):
@@ -410,6 +472,14 @@ class Worker:
         self.run_command([gmx, "genion", "-s", "ions.tpr", "-o", "system.gro", "-p", "topol.top", "-pname", "NA", "-nname", "CL", "-neutral", "-seed", str(settings["seed"]), "-n", "added-solvent.ndx"], "Neutralizing system", stdin="SOL\n")
         self.record_preparation(f"Added TIP3P solvent and neutralizing ions, replacing only newly added waters; retained input crystal waters. {settings['padding_nm']:g} nm cubic padding. NVT at fixed volume; no pressure equilibration or added salt.")
         prepared = md.load(str(self.folder / "system.gro"))
+        if self.settings.get("measurements") and (
+            prepared.n_atoms < boxed.n_atoms or not np.allclose(prepared.xyz[0, :boxed.n_atoms], boxed.xyz[0], atol=1e-5)
+            or [(a.residue.index, a.name, a.element) for a in list(prepared.topology.atoms)[:boxed.n_atoms]] != [(a.residue.index, a.name, a.element) for a in boxed.topology.atoms]
+        ):
+            proof_path = self.folder / "measurement-identity.json"
+            proof = json.loads(proof_path.read_text())
+            proof.update(verified=False, error="Native solvation or ion addition changed the retained atom prefix; tracked atom identities could not be verified.")
+            atomic_json(proof_path, proof)
         if prepared.n_atoms > config.MAX_ATOMS or (math.ceil(self.job["total_steps"] / settings["report_interval"]) + 1) * prepared.n_atoms * 12 > config.MAX_COORD_BYTES:
             raise ValueError("Prepared solvated output exceeds viewer limits. Increase report interval or use a smaller input.")
         cpu = ["-ntmpi", "1", "-ntomp", str(config.CPU_THREADS), "-nb", "cpu", "-pme", "cpu", "-bonded", "cpu", "-update", "cpu", "-pin", "off"]

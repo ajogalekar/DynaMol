@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-09-11T17:43:12.931300+00:00",
+  "status": "review finding on work-in-progress implementation",
+  "case": "Two same-sequence chains reordered while retaining explicit chain IDs",
+  "source_selected_chain": "A",
+  "mapped_target_chain": "B",
+  "mapping": {
+    "0": 0
+  },
+  "expected": "Preserve A identity or reject, rather than map to B",
+  "risk": "Input-to-native stage currently relies on unverified residue-order assumption; source-to-input coordinate check is separate. No claim that actual engine test has reordered chains.",
+  "owner_notified": "live_measurement_backend",
+  "resolution": "pending"
+}

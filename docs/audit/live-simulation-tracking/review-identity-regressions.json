@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-09-11T17:51:37.812513+00:00",
+  "scope": "Independent read-only code review reproductions; existing native files and temporary synthetic altered coordinates; no new MD",
+  "passed": true,
+  "checks": [
+    {
+      "case": "same-sequence chain permutation",
+      "passed": true,
+      "result": "Tracked atom identities cannot be preserved: the engine changed the input chain order."
+    },
+    {
+      "case": "real GROMACS GRO rounding",
+      "passed": true,
+      "retained_CA_atoms": 76,
+      "coordinate_tolerance_nm": 0.0006
+    },
+    {
+      "case": "failed identity remains unavailable on new worker/resume",
+      "passed": true,
+      "status": "running",
+      "result": [
+        "Live measurements unavailable: Engine preparation changed the identity or order of a tracked heavy atom. Its live measurement was not accepted."
+      ]
+    }
+  ],
+  "reviewed_code_sha256": {
+    "backend/live_measurements.py": "8c259cb84791a11e2abe6e828e77217890a76347c7d9962842e0130c10cfdfff",
+    "backend/worker.py": "766a62487c19d1d51aef55b5d8c02c24741f05715d27a57c16afe283b4120712",
+    "backend/recovery.py": "e0b526ca34d2942991c47d2e1f5b4cc2592389a4b3b083c05babd12107f173e9"
+  }
+}

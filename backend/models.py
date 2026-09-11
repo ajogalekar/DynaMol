@@ -5,6 +5,27 @@ from pydantic import BaseModel, Field, model_validator
 LigandOverrides = dict[Annotated[str, Field(min_length=1, max_length=100)], Annotated[str, Field(min_length=1, max_length=10000)]]
 
 
+class LiveMeasurement(BaseModel):
+    id: str = Field(min_length=1, max_length=80, pattern=r"^[A-Za-z0-9_-]+$")
+    kind: Literal["distance", "angle", "dihedral", "hbond"]
+    atoms: list[Annotated[int, Field(strict=True, ge=0)]] = Field(min_length=2, max_length=4)
+    label: str = Field(min_length=1, max_length=160)
+    color: str | None = Field(default=None, pattern=r"^#[0-9a-fA-F]{6}$")
+    trackDuringRun: bool | None = None
+
+    @model_validator(mode="after")
+    def check_selection(self):
+        expected = {"distance": 2, "angle": 3, "dihedral": 4, "hbond": 3}[self.kind]
+        if len(self.atoms) != expected or len(set(self.atoms)) != expected:
+            raise ValueError(f"Select {expected} distinct atoms for a {self.kind} measurement.")
+        return self
+
+
+class RemapMeasurementsRequest(BaseModel):
+    source_dataset_id: str = Field(min_length=1, max_length=80, pattern=r"^[A-Za-z0-9_-]+$")
+    measurements: list[LiveMeasurement] = Field(default_factory=list, max_length=100)
+
+
 class SimulationConfig(BaseModel):
     dataset_id: str = Field(min_length=1, max_length=80, pattern=r"^[A-Za-z0-9_-]+$")
     engine: Literal["openmm", "gromacs"] = "openmm"
@@ -19,9 +40,12 @@ class SimulationConfig(BaseModel):
     minimize: bool = True
     equilibration_steps: int = Field(default=100, ge=0, le=100_000)
     padding_nm: float = Field(default=1, ge=1, le=3, allow_inf_nan=False)
+    measurements: list[LiveMeasurement] = Field(default_factory=list, max_length=12)
 
     @model_validator(mode="after")
     def check_limits(self):
+        if len({measurement.id for measurement in self.measurements}) != len(self.measurements):
+            raise ValueError("Live measurement IDs must be unique.")
         steps = round(self.duration_ps * 1000 / self.timestep_fs)
         if steps < 1 or steps > 2_000_000:
             raise ValueError("Choose a duration and timestep giving 1 to 2,000,000 production steps.")

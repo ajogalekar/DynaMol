@@ -1,0 +1,98 @@
+{
+  "recorded_at": "2026-09-11T18:13:52.363350+00:00",
+  "scope": "Completed independent code/evidence review of scoped live-monitor software correctness and UI handoff; scientific uncertainty/convergence remains unestablished.",
+  "preflight": "proceed; six passes; no blocking preflight gates",
+  "findings": [
+    {
+      "id": "chain-identity",
+      "status": "resolved and independently reproduced",
+      "evidence": "review-mapping-risk.json",
+      "finding": "Ordinal residue matching maps a selected atom to another same-sequence chain when explicit chain IDs were swapped.",
+      "certainty": "Reproduced helper behavior on synthetic topology; no native engine chain reorder observed.",
+      "required": "Reject explicit chain mismatch and verify retained coordinate correspondence before engine recentering when chain IDs disappear.",
+      "owner": "live_measurement_backend",
+      "resolution_evidence": "review-identity-regressions.json"
+    },
+    {
+      "id": "resume-xtc-tail",
+      "status": "resolved; synthetic truncate/regrow and native stop/resume passed",
+      "finding": "A hard-stopped engine may have full XTC samples after its checkpoint; append can truncate and regrow the same file.",
+      "certainty": "Risk addressed by synthetic file-regeneration controls and observed native stop/resume outputs.",
+      "required": "Test truncation/regrowth, reset or rebuild consumed cursor, and compare final prefix/time/values with offline native trajectory.",
+      "owner": "live_measurement_backend",
+      "resolution_evidence": "backend/tests/test_live_measurements.py plus data/integration-checks/live-tracking-backend/native-validation.json"
+    },
+    {
+      "id": "measurement-isolation",
+      "status": "resolved in code; injected monitor failure regression passes",
+      "finding": "Runtime identity/geometry/read errors must be reported by the optional monitor without failing MD.",
+      "certainty": "Safe worker wrappers inspected and injected monitor-failure regression passed.",
+      "required": "Injected monitor failures preserve simulation completion and outputs; invalid initial selections can reject submission.",
+      "owner": "live_measurement_backend",
+      "resolution_evidence": "test_measurement_failure_does_not_cancel_worker_dynamics; saved identity-failure restart review"
+    },
+    {
+      "id": "completion-state-transaction",
+      "status": "resolved; final browser regressions passed",
+      "finding": "Ordinary loadDataset clears plots/camera and may asynchronously inject a default measurement; stale water callback can mutate another dataset.",
+      "certainty": "Reviewed guarded final implementation and passed native-result event-delivery browser controls.",
+      "required": "Complete remapped workspace restoration under dataset/session/load generation guard; no late plot or visibility mutation on other views.",
+      "owner": "root",
+      "resolution_evidence": "browser-regression.json: automatic handoff, alternate-scene camera/measurements/visibility unchanged, in-flight completion cannot overwrite New, real preparation and solvation preserve the tracked selection; warning setter has load/session guard"
+    },
+    {
+      "id": "camera-coordinate-frame",
+      "status": "resolved for engine translation; analytic and browser checks passed",
+      "finding": "Each dataset is displayed relative to its own first-frame coordinates, while GROMACS recenters into a periodic box; copying camera numbers need not preserve molecular focus.",
+      "certainty": "Independent analytic control and installed NGL source confirm translation correction; browser validates restored camera. Arbitrary rigid reorientation or changed biological focus is outside this feature.",
+      "required": "Verify a translated source-to-output example and use mapped-atom display/camera correction or an explicit preserved focus strategy.",
+      "owner": "root",
+      "resolution_evidence": "review-camera-control.json verifies translated frames and installed NGL convention; browser-regression.json preserves final camera rotation/zoom and final-frame workspace"
+    },
+    {
+      "id": "tracking-persistence-and-water-label",
+      "status": "resolved; final browser regressions passed",
+      "finding": "Workspace measurement whitelist drops new tracking fields; a solvation record alone does not establish current water visibility.",
+      "certainty": "Validated workspace whitelist and current text inspected; real API browser persistence and water visibility controls passed.",
+      "required": "Persist validated tracking choices if intended across reload and describe saved water versus visible water accurately.",
+      "owner": "root and simulation_panel_ui",
+      "resolution_evidence": "browser-regression.json: tracking choices survive mode changes/reload, explicit water is an accessible setup stage, real water hide/show changes canvas; title accurately describes saved box readiness"
+    },
+    {
+      "id": "gro-format-tolerance",
+      "status": "resolved and independently reproduced",
+      "evidence": "review-gro-precision.json",
+      "finding": "Pre-integration identity tolerance rejects 70/76 retained CA coordinates in an existing real GROMACS setup because normal GRO rounding exceeds 0.0002 nm.",
+      "certainty": "Reproduced with previously completed isolated native job; no new MD.",
+      "required": "Use a format-aware finite per-axis tolerance and test normal rounding against actual coordinate/order changes.",
+      "owner": "live_measurement_backend",
+      "resolution_evidence": "review-identity-regressions.json"
+    },
+    {
+      "id": "resume-identity-verdict",
+      "status": "resolved and independently reproduced",
+      "finding": "An in-memory identity error is lost across worker restart. A disabled initial monitor could otherwise become active after resume without the original verification.",
+      "certainty": "Failed-proof preservation was independently reproduced on fresh and resumed Worker paths.",
+      "required": "Persist identity proof/failure with traceable native mapping/topology state and retain its verdict on Resume.",
+      "owner": "live_measurement_backend",
+      "resolution_evidence": "review-identity-regressions.json"
+    },
+    {
+      "id": "manual-completion-plots",
+      "status": "resolved; final browser regressions passed",
+      "finding": "Deferred completion and job-card Explore originally used a plain dataset open, dropping the run measurements when the source was no longer selected.",
+      "required": "Load the completed job snapshot and its verified output atom mappings; retain that run\u2019s plots without copying a different dataset\u2019s state.",
+      "owner": "root",
+      "certainty": "Read-only integration review; root now routes manual opening through completed-run workspace restoration.",
+      "resolution_evidence": "browser-regression.json and browser-validation.json: explicit Open trajectory after another scene was retained restores all three verified native plots"
+    },
+    {
+      "id": "bounded-handoff-analysis",
+      "status": "resolved in code review",
+      "finding": "Restoring up to 100 workspace plots concurrently can multiply the physical-trajectory memory budget.",
+      "required": "Bound restoration work per dataset/physical trajectory.",
+      "owner": "root",
+      "certainty": "Inspected the previous Promise.all restoration and current sequential preview loop."
+    }
+  ]
+}

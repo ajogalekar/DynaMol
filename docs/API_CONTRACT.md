@@ -19,3 +19,7 @@ All routes under `/api`; local FastAPI server on 8765. Vite frontend on 5173 pro
 Persist jobs/datasets locally in `data/` (gitignored). Errors structured `{detail: string}`. No fake progress or invented simulation/analysis. Bind localhost only, no arbitrary shell/path endpoints.
 
 Viewer component contract (frontend/src/components/MolecularViewer.tsx): forwardRef exposing `fit()`, `zoom(factor:number)`, `focus(indices:number[])`, `snapshot(): Promise<Blob | null>`. Props: `dataset: Dataset | null`, `coordinates: Float32Array | null`, `frame: number` (fractional), `visibility: Visibility`, `representation: Representation`, `colorScheme: 'chain'|'residue'|'element'`, `selectedAtoms: number[]`, `measurements: Measurement[]`, `picking: boolean`, `spin: boolean`, `onAtomPick(index:number)`, `onReady()`, `onError(message:string)`. Keep canvas initial/empty background #0b121b. CSS container fills parent. Agent owns component and molecular viewer helper files only.
+
+### Passive run measurements
+
+`SimulationConfig.measurements` optionally supplies up to 12 measurement definitions. `GET /api/jobs/{id}/measurements` returns the current atomic snapshot, including nullable geometry and verified output atom indices. `POST /api/datasets/{target}/remap-measurements` maps retained definitions across preparation/solvation, returning explicit errors for lost or ambiguous identities. See [the live tracking contract](LIVE_TRACKING.md).

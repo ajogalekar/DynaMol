@@ -1,0 +1,143 @@
+{
+  "recorded_at": "2026-09-11T18:09:55.463Z",
+  "scope": "Independent synthetic translation check of the camera helper and installed NGL orientation convention. This checks box translation, not arbitrary source-to-target rotation or biological focus across changed topology.",
+  "source": "frontend/src/transitionCamera.ts",
+  "source_sha256": "143de8e79743a644245b01545d87f9ec12fc9c098d379d10b0b65d6843bf83f2",
+  "installed_ngl_version": "2.5.0",
+  "installed_controls_source": "../src/controls/viewer-controls.ts",
+  "checks": {
+    "rotation_zoom_unchanged": true,
+    "expected_translation": true,
+    "same_pre_rotation_atom_location": true,
+    "input_camera_not_mutated": true,
+    "null_camera_preserved": true,
+    "installed_ngl_get_orientation_uses_unrotated_translation": true
+  },
+  "input_camera": [
+    0,
+    20,
+    0,
+    0,
+    -20,
+    0,
+    0,
+    0,
+    0,
+    0,
+    20,
+    0,
+    -5,
+    -8,
+    -9,
+    1
+  ],
+  "shift_angstrom": [
+    100,
+    -70,
+    25
+  ],
+  "output_camera": [
+    0,
+    20,
+    0,
+    0,
+    -20,
+    0,
+    0,
+    0,
+    0,
+    0,
+    20,
+    0,
+    -105,
+    62,
+    -34,
+    1
+  ],
+  "fixture": {
+    "dataset": {
+      "n_atoms": 4,
+      "n_frames": 2,
+      "atoms": [
+        {
+          "index": 0,
+          "category": "protein",
+          "name": "CA",
+          "element": "C"
+        },
+        {
+          "index": 1,
+          "category": "protein",
+          "name": "CA",
+          "element": "C"
+        },
+        {
+          "index": 2,
+          "category": "water",
+          "name": "O",
+          "element": "O"
+        },
+        {
+          "index": 3,
+          "category": "protein",
+          "name": "H",
+          "element": "H"
+        }
+      ]
+    },
+    "source_coordinates_angstrom": [
+      1,
+      2,
+      3,
+      3,
+      4,
+      5,
+      100,
+      100,
+      100,
+      2,
+      2,
+      2,
+      4,
+      7,
+      8,
+      6,
+      9,
+      10,
+      100,
+      100,
+      100,
+      2,
+      2,
+      2
+    ],
+    "target_coordinates_angstrom": [
+      101,
+      -68,
+      28,
+      103,
+      -66,
+      30,
+      200,
+      30,
+      125,
+      102,
+      -68,
+      27,
+      104,
+      -63,
+      33,
+      106,
+      -61,
+      35,
+      200,
+      30,
+      125,
+      102,
+      -68,
+      27
+    ],
+    "source_frame": 1,
+    "target_frame": 1
+  }
+}

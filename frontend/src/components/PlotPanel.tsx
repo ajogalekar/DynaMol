@@ -15,11 +15,15 @@ interface Props {
   draft?: { name: string; selected: number; required: number; busy: boolean; error: string } | null;
   onCancelDraft?: () => void;
   onRetryDraft?: () => void;
+  liveStatus?: string;
 }
+
+const finiteNumber = (value: number | null | undefined): value is number =>
+  typeof value === 'number' && Number.isFinite(value);
 
 /** Use physical timestamps for spacing; angular summaries respect the torsion branch cut. */
 export function createPlotData(current: Measurement, timeUnit = 'ps') {
-  const finite = current.values.filter(Number.isFinite);
+  const finite = current.values.filter(finiteNumber);
   if (!finite.length) return null;
   const lo = Math.min(...finite),
     hi = Math.max(...finite),
@@ -51,12 +55,15 @@ export function createPlotData(current: Measurement, timeUnit = 'ps') {
   let previous: number | undefined;
   current.values.forEach((value, i) => {
     const crossesWrap =
-      current.kind === 'dihedral' && previous !== undefined && Math.abs(value - previous) > 180;
-    if (!Number.isFinite(value) || crossesWrap) {
+      current.kind === 'dihedral' &&
+      finiteNumber(value) &&
+      previous !== undefined &&
+      Math.abs(value - previous) > 180;
+    if (!finiteNumber(value) || crossesWrap) {
       if (segment) segments.push(segment);
       segment = '';
     }
-    if (Number.isFinite(value)) {
+    if (finiteNumber(value)) {
       segment += `${x(i)},${y(value)} `;
       previous = value;
     } else previous = undefined;
@@ -129,23 +136,32 @@ export default function PlotPanel({
   draft,
   onCancelDraft,
   onRetryDraft,
+  liveStatus,
 }: Props) {
   const [hover, setHover] = useState<number | null>(null);
   const current = measurements.find((m) => m.id === activeId) ?? measurements[0];
   const plot = useMemo(
-    () => (current ? createPlotData(current, dataset?.time_unit) : null),
-    [current, dataset?.time_unit],
+    () => (current ? createPlotData(current, liveStatus ? 'ps' : dataset?.time_unit) : null),
+    [current, dataset?.time_unit, liveStatus],
   );
   const selectedIndex = current
-    ? Math.min(current.values.length - 1, Math.max(0, hover ?? Math.round(frame)))
+    ? Math.max(
+        0,
+        Math.min(
+          current.values.length - 1,
+          hover ?? (liveStatus ? current.values.length - 1 : Math.round(frame)),
+        ),
+      )
     : 0;
+  const selectedValue = current?.values[selectedIndex];
+  const selectedError = current?.frame_errors?.[selectedIndex];
   function download() {
     if (!current) return;
     const rows = [
-      `${dataset?.time_unit === 'frame' ? 'frame' : 'time_ps'},${current.kind}_${current.unit === 'Å' ? 'angstrom' : 'degrees'}${current.angle_values ? ',DHA_angle_degrees' : ''}`,
+      `${!liveStatus && dataset?.time_unit === 'frame' ? 'frame' : 'time_ps'},${current.kind}_${current.unit === 'Å' ? 'angstrom' : 'degrees'}${current.angle_values ? ',DHA_angle_degrees' : ''}`,
       ...current.values.map(
         (v, i) =>
-          `${current.times_ps[i]},${v}${current.angle_values ? ',' + current.angle_values[i] : ''}`,
+          `${finiteNumber(current.times_ps[i]) ? current.times_ps[i] : ''},${finiteNumber(v) ? v : ''}${current.angle_values ? ',' + (finiteNumber(current.angle_values[i]) ? current.angle_values[i] : '') : ''}`,
       ),
     ];
     const a = document.createElement('a');
@@ -161,22 +177,31 @@ export default function PlotPanel({
           <Activity size={14} /> MOTION, MEASURED
         </div>
         <div className="plot-heading-right">
-          <span className="muted desktop-label">Click the plot to jump to a frame</span>
+          <span className="muted desktop-label">
+            {liveStatus ? 'Plots update with saved frames' : 'Click the plot to jump to a frame'}
+          </span>
           <button
             className="icon-button compact"
             title="Export measurement CSV"
             aria-label="Export measurement CSV"
-            disabled={!current}
+            disabled={!current?.values.length}
             onClick={download}
           >
             <Download size={15} />
           </button>
-          <button className="text-button" onClick={onAdd}>
+          <button className="text-button" onClick={onAdd} disabled={!!liveStatus}>
             <Plus size={14} /> Measure
           </button>
         </div>
       </div>
-      {draft && (
+      {liveStatus && (
+        <div className="plot-live-status" role="status">
+          <Activity size={13} />
+          <strong>{liveStatus}</strong>
+          <span>Starting structure shown; plots update with saved frames.</span>
+        </div>
+      )}
+      {draft && !liveStatus && (
         <div className="measurement-draft" aria-label="New measurement">
           <div className="measurement-draft-heading" role="status">
             {draft.busy ? <LoaderCircle size={15} className="spin" /> : <Activity size={15} />}
@@ -209,53 +234,62 @@ export default function PlotPanel({
           )}
         </div>
       )}
+      {current && (
+        <div className="measurement-tabs">
+          {measurements.map((m) => (
+            <div
+              key={m.id}
+              className={`measurement-tab ${m.id === current.id ? 'active' : ''}`}
+              style={{ '--plot-color': m.color } as React.CSSProperties}
+            >
+              <button
+                onClick={() => {
+                  setHover(null);
+                  onActive(m.id);
+                }}
+              >
+                <i />
+                {m.label}
+              </button>
+              <button
+                title={
+                  m.visible === false
+                    ? 'Show this measurement in the 3D view'
+                    : 'Hide this measurement in the 3D view (keep plot)'
+                }
+                aria-label={`${m.visible === false ? 'Show' : 'Hide'} ${m.label} in view`}
+                aria-pressed={m.visible !== false}
+                className="measurement-eye"
+                onClick={() => onToggleVisibility(m.id)}
+              >
+                {m.visible === false ? <EyeOff size={12} /> : <Eye size={12} />}
+              </button>
+              <button
+                aria-label={`Remove ${m.label}`}
+                onClick={() => onRemove(m.id)}
+                disabled={!!liveStatus}
+              >
+                <X size={11} />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
       {current && plot ? (
         <>
-          <div className="measurement-tabs">
-            {measurements.map((m) => (
-              <div
-                key={m.id}
-                className={`measurement-tab ${m.id === current.id ? 'active' : ''}`}
-                style={{ '--plot-color': m.color } as React.CSSProperties}
-              >
-                <button
-                  onClick={() => {
-                    setHover(null);
-                    onActive(m.id);
-                  }}
-                >
-                  <i />
-                  {m.label}
-                </button>
-                <button
-                  title={
-                    m.visible === false
-                      ? 'Show this measurement in the 3D view'
-                      : 'Hide this measurement in the 3D view (keep plot)'
-                  }
-                  aria-label={`${m.visible === false ? 'Show' : 'Hide'} ${m.label} in view`}
-                  aria-pressed={m.visible !== false}
-                  className="measurement-eye"
-                  onClick={() => onToggleVisibility(m.id)}
-                >
-                  {m.visible === false ? <EyeOff size={12} /> : <Eye size={12} />}
-                </button>
-                <button aria-label={`Remove ${m.label}`} onClick={() => onRemove(m.id)}>
-                  <X size={11} />
-                </button>
-              </div>
-            ))}
-          </div>
           <div className="plot-content">
             <div className="plot-readout">
               <strong style={{ color: current.color }}>
-                {Number.isFinite(current.values[selectedIndex])
-                  ? current.values[selectedIndex].toFixed(2)
-                  : '—'}
+                {finiteNumber(selectedValue) ? selectedValue.toFixed(2) : '—'}
                 <small>{current.unit}</small>
               </strong>
-              <span>{hover !== null ? 'At cursor' : 'Current frame'}</span>
-              {current.occupancy !== undefined && (
+              <span>
+                {hover !== null ? 'At cursor' : liveStatus ? 'Latest saved frame' : 'Current frame'}
+              </span>
+              {!finiteNumber(selectedValue) && selectedError && (
+                <span className="plot-undefined-reason">{selectedError}</span>
+              )}
+              {finiteNumber(current.occupancy) && (
                 <span className="occupancy">
                   {(current.occupancy * 100).toFixed(1)}% geometric occupancy
                 </span>
@@ -266,6 +300,7 @@ export default function PlotPanel({
                 viewBox={`0 0 ${plot.w} ${plot.h}`}
                 preserveAspectRatio="none"
                 role="img"
+                style={{ cursor: liveStatus ? 'default' : 'crosshair' }}
                 aria-label={`${current.label}, plotted across ${current.values.length} saved frames`}
                 onMouseLeave={() => setHover(null)}
                 onMouseMove={(e) => {
@@ -278,6 +313,7 @@ export default function PlotPanel({
                   );
                 }}
                 onClick={(e) => {
+                  if (liveStatus) return;
                   const r = e.currentTarget.getBoundingClientRect();
                   onSeek(
                     plot.nearestIndex(
@@ -322,18 +358,18 @@ export default function PlotPanel({
                   />
                 ))}
                 <line
-                  x1={plot.x(Math.round(frame))}
-                  x2={plot.x(Math.round(frame))}
+                  x1={plot.x(liveStatus ? selectedIndex : Math.round(frame))}
+                  x2={plot.x(liveStatus ? selectedIndex : Math.round(frame))}
                   y1={plot.top - 2}
                   y2={plot.h - plot.bottom}
                   stroke="#d7e5ee"
                   strokeWidth="1"
                   strokeDasharray="3 3"
                 />
-                {Number.isFinite(current.values[selectedIndex]) && (
+                {finiteNumber(selectedValue) && (
                   <circle
                     cx={plot.x(selectedIndex)}
-                    cy={plot.y(current.values[selectedIndex])}
+                    cy={plot.y(selectedValue)}
                     r="3.5"
                     fill={current.color}
                     stroke="#0b121b"
@@ -367,27 +403,57 @@ export default function PlotPanel({
             </span>
             <span>Saved-frame analysis{dataset?.has_unitcell ? ' · periodic boundaries' : ''}</span>
           </div>
-          {!!current.warnings?.filter((w) => !w.startsWith('No periodic box')).length && (
-            <div className="inline-warning">
-              {current.warnings.filter((w) => !w.startsWith('No periodic box')).join(' ')}
-            </div>
-          )}
         </>
+      ) : current ? (
+        <div className="plot-empty plot-waiting" role="status">
+          {liveStatus && !current.values.length ? (
+            <LoaderCircle size={22} className="spin" />
+          ) : (
+            <Activity size={22} />
+          )}
+          <div>
+            <strong>
+              {current.values.length
+                ? 'Measurement is undefined for the saved frames.'
+                : liveStatus
+                  ? 'Waiting for the first saved frame.'
+                  : 'No saved values for this measurement.'}
+            </strong>
+            <p>
+              {current.frame_errors?.find((reason) => !!reason) ||
+                (liveStatus
+                  ? 'The selected measurement will appear here as the simulation saves frames.'
+                  : 'The measurement is kept so you can inspect its atom selection.')}
+            </p>
+          </div>
+        </div>
       ) : !draft ? (
         <div className="plot-empty">
           <Activity size={25} />
           <div>
-            <strong>Follow a molecular interaction.</strong>
+            <strong>
+              {liveStatus
+                ? 'No measurements selected for this run.'
+                : 'Follow a molecular interaction.'}
+            </strong>
             <p>
-              Pick atoms in the scene to plot a distance, angle, dihedral, or hydrogen bond over
-              time.
+              {liveStatus
+                ? 'Choose measurements during setup to watch them here as a simulation runs.'
+                : 'Pick atoms in the scene to plot a distance, angle, dihedral, or hydrogen bond over time.'}
             </p>
           </div>
-          <button className="secondary-button" onClick={onAdd}>
-            Add a measurement <Plus size={14} />
-          </button>
+          {!liveStatus && (
+            <button className="secondary-button" onClick={onAdd}>
+              Add a measurement <Plus size={14} />
+            </button>
+          )}
         </div>
       ) : null}
+      {!!current?.warnings?.filter((w) => !w.startsWith('No periodic box')).length && (
+        <div className="inline-warning">
+          {current.warnings.filter((w) => !w.startsWith('No periodic box')).join(' ')}
+        </div>
+      )}
     </section>
   );
 }

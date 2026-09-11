@@ -7,6 +7,8 @@ import type {
   SimulationConfig,
   Inspection,
   PreparationConfig,
+  RunMeasurement,
+  RunMeasurementSnapshot,
 } from './types';
 import type { MeasurementPreview } from './components/LiveMeasurement';
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
@@ -87,6 +89,17 @@ export const api = {
       signal,
     }),
   jobs: () => request<Job[]>('/api/jobs'),
+  jobMeasurements: (id: string, signal?: AbortSignal) =>
+    request<RunMeasurementSnapshot>(`/api/jobs/${id}/measurements`, { signal }),
+  remapMeasurements: (target: string, source: string, measurements: RunMeasurement[]) =>
+    request<{ measurements: RunMeasurement[]; warnings: string[]; errors: string[] }>(
+      `/api/datasets/${target}/remap-measurements`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ source_dataset_id: source, measurements }),
+      },
+    ),
   start: (config: SimulationConfig) =>
     request<Job>('/api/jobs', {
       method: 'POST',

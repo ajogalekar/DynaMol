@@ -47,6 +47,8 @@ def dependency_hashes(folder: Path, engine: str) -> dict[str, str]:
     names = ["config.json", "input.pdb", "input-state.json"]
     names += ["prepared.pdb", "system.xml", "integrator.xml"] if engine == "openmm" else ["production.tpr", "system.gro", "topol.top"]
     files = [folder / name for name in names]
+    if (folder / "measurement-identity.json").is_file():
+        files.append(folder / "measurement-identity.json")
     for directory in ("ligands", "residue-parameters"):
         root = folder / directory
         if root.exists():

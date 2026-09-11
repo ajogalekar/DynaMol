@@ -20,7 +20,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from . import config, jobs, storage
 from .analysis import measure, preview
 from .file_responses import TemporaryFileResponse
-from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest, InspectionRequest
+from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest, InspectionRequest, RemapMeasurementsRequest
 
 
 def local_browser_origins(packaged_origin: str | None = None) -> tuple[str, ...]:
@@ -162,6 +162,12 @@ def measurement_preview(dataset_id: str, request: MeasurementRequest):
     return preview(dataset_id, request)
 
 
+@app.post("/api/datasets/{dataset_id}/remap-measurements")
+def remap_measurements(dataset_id: str, request: RemapMeasurementsRequest):
+    from .live_measurements import remap_definitions
+    return remap_definitions(dataset_id, request)
+
+
 @app.get("/api/jobs")
 def list_jobs():
     return jobs.list_jobs()
@@ -175,6 +181,12 @@ def submit_job(settings: SimulationConfig):
 @app.get("/api/jobs/{job_id}")
 def job(job_id: str):
     return jobs.get_job(job_id)
+
+
+@app.get("/api/jobs/{job_id}/measurements")
+def job_measurements(job_id: str):
+    from .live_measurements import read_snapshot
+    return read_snapshot(config.JOBS_DIR / storage.safe_id(job_id), jobs.get_job(job_id))
 
 
 @app.post("/api/jobs/{job_id}/cancel")

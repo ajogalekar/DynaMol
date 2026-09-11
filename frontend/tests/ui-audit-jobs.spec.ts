@@ -263,7 +263,7 @@ test('audit native: prepared PDB download, water update, water log and setup can
     })
     .toBe('completed');
   await expect(dialog.locator('.solvent-preview-card')).toContainText(
-    'Explicit water is in the view',
+    'Explicit water box is ready',
   );
   let monitor = dialog.getByRole('region', { name: 'Explicit-water setup monitor', exact: true });
   await monitor.getByRole('button', { name: 'View explicit-water setup log', exact: true }).click();

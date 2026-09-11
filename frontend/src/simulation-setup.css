@@ -1,0 +1,173 @@
+.simulation-drawer .water-environment {
+  margin-top: 25px;
+  padding: 0 14px 14px;
+  border: 1px solid #406375;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #1c3440, #142831);
+}
+.simulation-drawer .water-environment > .field-heading {
+  margin: 16px 0;
+}
+.simulation-drawer .water-environment .field-heading > span:first-child {
+  border-color: #518098;
+  background: #254756;
+  color: #b2e0ed;
+}
+.simulation-drawer .water-heading-icon {
+  margin-left: auto;
+  color: #97d4e0;
+}
+.simulation-drawer .water-environment .solvent-preview-card {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: start;
+  padding: 12px 0 10px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+.simulation-drawer .water-build-button {
+  grid-column: 2;
+  justify-content: center;
+  width: 100%;
+  min-height: 34px;
+  margin-top: 3px;
+}
+.simulation-drawer .water-padding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 10px;
+  color: #a5c2ce;
+  margin-top: 8px;
+}
+.simulation-drawer .water-padding .input-unit {
+  width: 112px;
+  flex-shrink: 0;
+}
+.simulation-drawer .water-padding input {
+  min-width: 0;
+}
+.simulation-drawer .tracking-section {
+  border: 1px solid #3e555b;
+  border-radius: 7px;
+  background: #192d34;
+  margin: 19px 0;
+}
+.simulation-drawer .tracking-disclosure {
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  color: #bfdbd6;
+  font-size: 11px;
+}
+.simulation-drawer .tracking-disclosure > svg:first-child {
+  color: #95cbb4;
+  flex-shrink: 0;
+}
+.simulation-drawer .tracking-disclosure > small {
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 9px;
+  color: #92b3a8;
+}
+.simulation-drawer .tracking-disclosure > svg:last-child {
+  flex-shrink: 0;
+}
+.simulation-drawer .tracking-content {
+  padding: 0 12px 12px;
+}
+.simulation-drawer .tracking-content > .form-note:first-child {
+  margin-top: 0;
+}
+.simulation-drawer .tracking-measurements {
+  display: grid;
+  gap: 5px;
+  margin: 12px 0;
+}
+.simulation-drawer .tracking-measurement {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 33px;
+  padding: 7px;
+  border: 1px solid #344d55;
+  border-radius: 5px;
+  background: #13262f;
+  cursor: pointer;
+}
+.simulation-drawer .tracking-measurement input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: #9bddb8;
+  flex-shrink: 0;
+}
+.simulation-drawer .tracking-measurement > i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.simulation-drawer .tracking-measurement > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #bfd6d6;
+  font-size: 10px;
+}
+.simulation-drawer .tracking-measurement > small {
+  margin-left: auto;
+  font-size: 8px;
+  color: #8bafa7;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.simulation-drawer .tracking-add {
+  width: 100%;
+  min-height: 33px;
+  justify-content: center;
+  margin-top: 5px;
+}
+.simulation-drawer .tracking-editor {
+  margin-top: 13px;
+  padding-top: 13px;
+  border-top: 1px solid #3a565e;
+}
+@media (max-width: 550px) {
+  .simulation-drawer .water-environment {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+  .simulation-drawer .tracking-disclosure {
+    flex-wrap: wrap;
+  }
+}
+.plot-panel .plot-live-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 7px 0 9px;
+  color: #a8cfbd;
+  font-size: 10px;
+}
+.plot-panel .plot-live-status strong {
+  font-weight: 550;
+}
+.plot-panel .plot-live-status > span {
+  color: #83a29c;
+  font-size: 9px;
+}
+.plot-panel .plot-undefined-reason {
+  font-size: 9px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.plot-panel .plot-waiting {
+  min-height: 112px;
+}

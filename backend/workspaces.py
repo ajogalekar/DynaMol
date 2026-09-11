@@ -176,12 +176,21 @@ def _validate_state(state: dict, dataset: dict | None = None, physical_path: Pat
         if clean["unit"] not in {"Å", "°", "angstrom", "degrees"} or not isinstance(clean["color"], str) or not __import__("re").fullmatch(r"#[0-9a-fA-F]{6}", clean["color"]):
             raise ValueError("Invalid saved measurement appearance.")
         clean["visible"] = measurement.get("visible") is not False
+        if "trackDuringRun" in measurement:
+            if type(measurement["trackDuringRun"]) is not bool:
+                raise ValueError("Saved live measurement selection must be a boolean.")
+            clean["trackDuringRun"] = measurement["trackDuringRun"]
+        if "frame_errors" in measurement:
+            errors = measurement["frame_errors"]
+            if not isinstance(errors, list) or len(errors) != frames or any(value is not None and (not isinstance(value, str) or len(value) > 2000) for value in errors):
+                raise ValueError("Saved measurement frame errors do not match the trajectory.")
+            clean["frame_errors"] = errors
         if "angle_values" in measurement:
             if not isinstance(measurement["angle_values"], list) or len(measurement["angle_values"]) != frames:
                 raise ValueError("Saved hydrogen-bond angles have incorrect dimensions.")
             clean["angle_values"] = [_number(v, -360, 360, "angle") if v is not None else None for v in measurement["angle_values"]]
         if "occupancy" in measurement:
-            clean["occupancy"] = _number(measurement["occupancy"], 0, 1, "occupancy")
+            clean["occupancy"] = _number(measurement["occupancy"], 0, 1, "occupancy") if measurement["occupancy"] is not None else None
         clean["warnings"] = [str(v)[:2000] for v in measurement.get("warnings", [])[:100]]
         result["measurements"].append(clean)
     if len({m["id"] for m in result["measurements"]}) != len(measurements):

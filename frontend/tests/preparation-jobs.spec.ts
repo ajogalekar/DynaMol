@@ -43,6 +43,21 @@ test('Prep protein completes real repair in the background; explicit water appea
     });
   const source = await (await importedResponse).json();
   await sceneReady(page, name);
+  const tracking = studio.getByRole('region', { name: 'Track during simulation', exact: true });
+  await tracking.getByRole('button', { name: /^Track during simulation/ }).click();
+  await tracking.getByRole('button', { name: 'Add measurement', exact: true }).click();
+  for (const atom of source.atoms.filter((a: {name: string}) => a.name === 'CA').slice(0, 2)) {
+    await tracking.getByRole('textbox', { name: 'Find an atom', exact: true }).fill(`${atom.residue}${atom.resid} · ${atom.name}`);
+    await tracking.locator('.atom-search-results').getByRole('button', {name: new RegExp(`#${atom.index + 1} · ${atom.element}$`)}).click();
+  }
+  await expect(tracking.getByRole('checkbox')).toBeChecked();
+  const assertTrackingPreserved = async (expected: {id: string; atoms: {index: number;name: string}[]}) => {
+    await expect.poll(async () => (await (await request.get('/api/workspace')).json()).state.dataset_id).toBe(expected.id);
+    const state = (await (await request.get('/api/workspace')).json()).state;
+    expect(state.measurements).toHaveLength(1);
+    expect(state.measurements[0].trackDuringRun).toBe(true);
+    expect(state.measurements[0].atoms).toEqual(expected.atoms.filter((a) => a.name === 'CA').slice(0,2).map((a) => a.index));
+  };
   await expect(studio.getByRole('button', { name: 'Prep protein', exact: true })).toBeEnabled();
   const inspection = await (await request.get(`/api/datasets/${source.id}/inspection`)).json();
   expect(
@@ -83,6 +98,7 @@ test('Prep protein completes real repair in the background; explicit water appea
     await request.get(`/api/datasets/${completedPreparation.dataset_id}`)
   ).json();
   await sceneReady(page, prepared.name);
+  await assertTrackingPreserved(prepared);
   await expect(studio.locator('.preparation-result')).toContainText('Preparation recorded · pH 7');
   await expect(page.getByRole('button', { name: 'Polar only', exact: true })).toHaveClass(/active/);
   expect(prepared.preparation.parent_dataset_id).toBe(source.id);
@@ -124,6 +140,7 @@ test('Prep protein completes real repair in the background; explicit water appea
     await request.get(`/api/datasets/${completedSolvation.dataset_id}`)
   ).json();
   await sceneReady(page, solvated.name);
+  await assertTrackingPreserved(solvated);
   expect(solvated.solvation.parent_dataset_id).toBe(prepared.id);
   expect(solvated.solvation.water_model).toBe('tip3p');
   expect(solvated.solvation.equilibrated).toBe(false);
@@ -135,7 +152,7 @@ test('Prep protein completes real repair in the background; explicit water appea
   expect(waterAtoms).toBe(solvated.solvation.water_atoms);
   expect(solvated.n_atoms).toBeGreaterThan(prepared.n_atoms);
   await expect(studio.locator('.solvent-preview-card')).toContainText(
-    'Explicit water is in the view',
+    'Explicit water box is ready',
   );
   await expect(page.getByRole('button', { name: 'Hide water', exact: true })).toHaveAttribute(
     'aria-pressed',

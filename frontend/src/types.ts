@@ -64,13 +64,36 @@ export interface Measurement {
   atoms: number[];
   label: string;
   unit: string;
-  values: number[];
+  values: (number | null)[];
   times_ps: number[];
   color: string;
   visible?: boolean;
-  occupancy?: number;
+  occupancy?: number | null;
   warnings?: string[];
-  angle_values?: number[];
+  angle_values?: (number | null)[];
+  frame_errors?: (string | null)[];
+  trackDuringRun?: boolean;
+}
+
+export type RunMeasurement = Pick<Measurement, 'id' | 'kind' | 'atoms' | 'label' | 'color'>;
+export interface RunMeasurementSnapshot {
+  job_id: string;
+  status: string;
+  source_dataset_id: string;
+  output_dataset_id?: string | null;
+  measurements: (RunMeasurement & {
+    output_atoms?: number[] | null;
+    values: (number | null)[];
+    times_ps: number[];
+    unit: string;
+    frame_errors: (string | null)[];
+    warnings: string[];
+    angle_values?: (number | null)[];
+    occupancy?: number | null;
+  })[];
+  warnings: string[];
+  errors: string[];
+  last_time_ps: number | null;
 }
 
 export interface LigandInspection {
@@ -109,7 +132,15 @@ export interface Inspection {
   ligands: LigandInspection[];
   modified_residues?: ModifiedResidueInspection[];
   ligand_errors: string[];
-  ions?: {key: string; residue: string; element: string; formal_charge: number; supported: boolean; error?: string | null; model?: string}[];
+  ions?: {
+    key: string;
+    residue: string;
+    element: string;
+    formal_charge: number;
+    supported: boolean;
+    error?: string | null;
+    model?: string;
+  }[];
   ligand_runtime?: { available: boolean; message?: string } | null;
   metal_environment?: { retained_coordinating_waters: string[][]; contacts: unknown[] };
 }
@@ -169,6 +200,7 @@ export interface Health {
   engines: Engine[];
 }
 export interface SimulationConfig {
+  measurements?: RunMeasurement[];
   dataset_id: string;
   engine: 'openmm' | 'gromacs';
   name: string;

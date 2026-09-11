@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T18:13:52.364146+00:00",
+  "purpose": "Validate optional live distance, angle, dihedral and geometric hydrogen-bond measurement monitors in DynaMol simulation jobs and completion handoff into Explore. This is bounded software correctness and presentation testing with saved physical frames; no accuracy, convergence, occupancy-equilibrium, affinity or biological-function claims. Final postflight includes frozen backend/native software tests, independent analytic controls, and browser completion handoff evidence.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13",
+    "versions": {
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "pdbfixer": "1.12.0",
+      "parmed": "4.3.1",
+      "gromacs": "GROMACS version:     2025.4-conda_forge"
+    },
+    "planned_seed": 2026,
+    "cpu_threads": 2,
+    "budget": "At most 400 OpenMM and 3000 GROMACS production steps per native continuation scenario; 2 CPU threads, local isolated data, explicit bounded setup timeout; at most two initial jobs per engine plus resumes. Existing checkpoint/prefix fixtures may be read without rerunning MD. No cloud/GPU or long production run.",
+    "inputs": [
+      {
+        "path": "data/datasets/ubiquitin-start/topology.pdb",
+        "sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9",
+        "atoms": 602,
+        "frames": 1,
+        "finite_coordinates": true
+      },
+      {
+        "path": "data/datasets/demo/topology.pdb",
+        "sha256": "098537c627a77eacf82ea61cc7f287e70980c02aca17ab58f98937ee49d06e74",
+        "atoms": 1231,
+        "frames": 1,
+        "finite_coordinates": true
+      },
+      {
+        "path": "docs/audit/preparation-fixtures/six_residues_missing_atom.pdb",
+        "sha256": "ae3bcb18009841e26412334baf8a7652b430e43d5e358f3a045f943ef7606a49",
+        "atoms": 51,
+        "frames": 1,
+        "finite_coordinates": true
+      }
+    ],
+    "synthetic_controls": "Versioned test-source code must define reordered/ambiguous/missing atom mappings; known distances, angles and torsions; periodic crossings; zero bond/collinear/undefined null cases; physical time prefix and saved-checkpoint restart. Test source and actual produced config/input/topology hashes are required in postflight.",
+    "outputs_and_exclusions_recorded": true,
+    "evidence_sha256": {
+      "docs/audit/live-simulation-tracking/native-validation.json": "0f6d5e9c63124012a7a0d3fdad7727de00c4980e0dd9b8910304fbe8cda3e242",
+      "docs/audit/live-simulation-tracking/review-analytic-geometry.json": "1231f1eb18069261bcb403b0c1de0a3d0308323a926e3eb8c752180b47fba2db",
+      "docs/audit/live-simulation-tracking/review-identity-regressions.json": "5738c7140264d09bf1df59af42d41e674e1423d2d1b1dca1fe8f39734a886657",
+      "backend/tests/test_live_measurements.py": "a9d38dec5fd7b5cfbf04890af23cd12ddf20e09c01515240544352ced2de7a61",
+      "docs/audit/live-simulation-tracking/review-camera-control.json": "0e24da0682dc490eea24b41ef0ca15559cf650e7a0375fb55b3735d88e986c8a",
+      "docs/audit/live-simulation-tracking/review-findings.json": "ab01db5adb69153bbc479552a710b174d99e26d781ad52ec64469a7255af653a",
+      "docs/audit/live-simulation-tracking/browser-validation.json": "208df86b5f8c9cd17176b57ba9d2b1e92b694a2096fdc821cfc549d7cbc84100",
+      "docs/audit/live-simulation-tracking/browser-regression.json": "d5f7f80d8b9145011d415d93837b5e40bec5abcd9e12a16eb8ef55a0c96c45a6"
+    },
+    "actual_native_budget": {
+      "openmm_steps": [
+        400,
+        50
+      ],
+      "gromacs_steps": [
+        3000
+      ],
+      "cpu_threads": 2,
+      "seed": 2026,
+      "stop_resume_scenarios": 2
+    },
+    "final_reviewed_source_sha256": {
+      "frontend/src/App.tsx": "c2edca879ab8d78b91b27119cc2084d408ca6d8d0b5469727e2c0da69ee91c78",
+      "frontend/src/useSimulationTracking.ts": "07b699524835d0f22598ba2e41bcd47b075ed74a92c87365c49959f756b1c8c7",
+      "frontend/src/transitionCamera.ts": "143de8e79743a644245b01545d87f9ec12fc9c098d379d10b0b65d6843bf83f2",
+      "frontend/src/components/SimulationPanel.tsx": "d3453dc852e3722cb2cd360485c57970a67cf3452c839f85f6d6d7be64033ec6",
+      "frontend/src/components/PlotPanel.tsx": "ce34b309980676ce3a7703f182a7882d7f26ab3c45c6dc97a0d493e3dd8b06e7",
+      "frontend/tests/simulation-handoff.spec.ts": "5f4612cf9e3ec7165d911e1f2b290550d85c391e173487ffd56ba39151d3bd50",
+      "frontend/tests/preparation-jobs.spec.ts": "eb3e398aaa80f57a75173fae17faade4dc4caf940530a8e850ca1e5e0108face",
+      "backend/live_measurements.py": "8c259cb84791a11e2abe6e828e77217890a76347c7d9962842e0130c10cfdfff",
+      "backend/worker.py": "766a62487c19d1d51aef55b5d8c02c24741f05715d27a57c16afe283b4120712",
+      "backend/jobs.py": "df2f1ccec11522e4648fe35c564d9a53c0f4808c979ad03aaceff1ad83417b03",
+      "backend/recovery.py": "e0b526ca34d2942991c47d2e1f5b4cc2592389a4b3b083c05babd12107f173e9",
+      "backend/models.py": "8be92c96ae0d098fd8f53cb23e4f1c5c5753aa7c7d945b42a8ee56471f8cd315",
+      "backend/main.py": "81e81028ee7f8a28fbf7f4000806741f4f8b8bc4777dd37395a3952afc1f423b",
+      "backend/workspaces.py": "ae15a63bcaf3fb3e38905a95eba69b0ce4375911c97484a7dadcd87d587adfba",
+      "backend/tests/test_live_measurements.py": "a9d38dec5fd7b5cfbf04890af23cd12ddf20e09c01515240544352ced2de7a61"
+    }
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Sample original physical coordinates, not interpolated viewer positions. Preserve atom identity across input/prepared/final topology with explicit validated mapping; missing/ambiguous identities block affected monitors instead of nearest-atom guessing. PBC uses saved box geometry; angle/torsion degeneracies are null with a reason. H-bond D,H,A requires explicit bonded hydrogen and is a geometric criterion, not chemical eligibility or binding evidence. Never fabricate hydrogens, infer periodic box or renumber selections silently. New monitoring must not change forces, protonation, ions, ligand parameters or engine trajectories."
+  },
+  "validation": {
+    "status": "Scoped software consistency and UI handoff checks passed; no scientific convergence or uncertainty claim is supported.",
+    "scope": "Compare live samples with offline measurement of the same saved physical frames; assert units and times, finite-or-null values, prefix consistency after Stop/Resume, idempotent final plot promotion, and no selected-dataset/camera replacement while inspecting a different dataset.",
+    "results": {
+      "backend_regressions": {
+        "passed": 115,
+        "new_tests": 28,
+        "command": ".venv/bin/python -m pytest backend/tests/test_live_measurements.py backend/tests/test_measurement_preview.py backend/tests/test_backend.py backend/tests/test_resource_submission.py backend/tests/test_recovery.py backend/tests/test_workspaces.py -q",
+        "elapsed_seconds": 1.22
+      },
+      "independent_targeted_checks": "Seven focused pytest cases passed plus independent axis-geometry and original-identity reproductions",
+      "native": "OpenMM 17 frames and GROMACS 31 frames: three heavy-atom geometry types match offline values exactly after Stop/Resume; explicit-hydrogen OpenMM six frames match donor\u2013acceptor distance, donor\u2013hydrogen\u2013acceptor angle, time and geometric occupancy exactly.",
+      "browser_completion_handoff": {
+        "final_regression": {
+          "passed": 30,
+          "failed": 0,
+          "skipped": 0,
+          "elapsed_seconds": 60.5,
+          "report": "docs/audit/live-simulation-tracking/browser-regression.json"
+        },
+        "openmm_handoff_cases": 4,
+        "gromacs_handoff_cases": 4,
+        "gromacs_handoff_extra_to_final_regression": true,
+        "timing_replay_scope": "UI event delivery timing is controlled using actual native job/topology/trajectory/snapshot data and real API; separate native-validation.json verifies actual live dynamics and stop/resume.",
+        "real_setup": "Six-residue repair and explicit water build retained tracked heavy-atom selection; 3648 water atoms and canvas changes on hide/show.",
+        "scene_isolation": "Alternate-scene camera, plots and visibility unchanged; starting New during pending completion prevents replacement."
+      },
+      "camera_helper": "Independent translated two-frame fixture preserves rotation, zoom, and molecular center in the installed NGL 2.5.0 orientation convention; final UI handoff preserves camera state."
+    },
+    "blind_or_prospective_validation": false,
+    "remaining_software_findings": [],
+    "limitations": [
+      "No independent scientific confidence intervals, equilibrium replicas, convergence or accuracy validation.",
+      "Hydrogen-bond occupancy is geometric occupancy of defined saved frames, not equilibrium or chemical eligibility evidence.",
+      "GROMACS adapter rebuilds input hydrogens; tracked selections containing such hydrogens are explicitly refused.",
+      "Camera correction preserves translation/scale/rotation for current engine setup; arbitrary reorientation and correspondence after unvalidated topology changes are not claimed."
+    ]
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No scientific uncertainty interval is claimed: cases are deterministic software controls and short illustrative MD, not independent equilibrium replicas, an IID statistical benchmark, or biological validation.",
+    "uncertainty_intervals_reported": false
+  },
+  "review_identity": "Language-model evidence synthesis plus automated PatAgent checklist; not expert certification or Pat Walters endorsement.",
+  "corpus": {
+    "manifest_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/manifest.json",
+    "sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+    "counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  },
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "note": "No converged science claim is requested or supported."
+  }
+}

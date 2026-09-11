@@ -194,7 +194,9 @@ def validate_simulation(settings: SimulationConfig) -> dict:
         raise ValueError(engine["message"])
     from .resources import validate_resources
     resources = validate_resources(metadata, settings.model_dump(), input_path=input_path)
-    return {"metadata": metadata, "input_path": input_path, "preparation_state": preparation_state, "solvation_state": solvation_state, "engine": engine, "resources": resources}
+    from .live_measurements import validate_source
+    measurement_atoms = validate_source(settings, input_path)
+    return {"metadata": metadata, "input_path": input_path, "preparation_state": preparation_state, "solvation_state": solvation_state, "engine": engine, "resources": resources, "measurement_atoms": measurement_atoms}
 
 
 def submit_job(settings: SimulationConfig) -> dict:
@@ -214,7 +216,7 @@ def submit_job(settings: SimulationConfig) -> dict:
         atomic_json(folder / "config.json", settings.model_dump())
         shutil.copy2(input_path, folder / "input.pdb")
         copy_ligand_parameters(dataset_dir(settings.dataset_id), folder, preparation_state)
-        atomic_json(folder / "input-state.json", {"preparation": preparation_state, "solvation": solvation_state})
+        atomic_json(folder / "input-state.json", {"preparation": preparation_state, "solvation": solvation_state, "measurement_source_atoms": validated["measurement_atoms"]})
         atomic_json(folder / "status.json", job)
         return _launch_worker(folder, job)
 

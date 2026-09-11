@@ -1,0 +1,323 @@
+{
+  "recorded_at": "2026-09-11T17:52:58.192498+00:00",
+  "passed": true,
+  "scope": "Known Cartesian/periodic axis geometry, analytical expected values independent of the offline helper, no MD",
+  "expected_values": {
+    "distance": [
+      1.0,
+      1.0,
+      1.0,
+      null
+    ],
+    "angle": [
+      90.0,
+      180.0,
+      180.0,
+      null
+    ],
+    "dihedral": [
+      90.0,
+      null,
+      null,
+      null
+    ],
+    "hbond": [
+      1.4142135623730951,
+      3.0,
+      3.0,
+      null
+    ]
+  },
+  "actual": {
+    "distance": {
+      "id": "distance",
+      "kind": "distance",
+      "atoms": [
+        0,
+        1
+      ],
+      "label": "distance",
+      "output_atoms": [
+        0,
+        1
+      ],
+      "values": [
+        1.0,
+        1.0,
+        1.000000238418579,
+        null
+      ],
+      "times_ps": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "unit": "\u00c5",
+      "frame_errors": [
+        null,
+        null,
+        null,
+        "Selected atoms have coincident coordinates in this frame; geometry is undefined."
+      ],
+      "warnings": []
+    },
+    "angle": {
+      "id": "angle",
+      "kind": "angle",
+      "atoms": [
+        0,
+        1,
+        2
+      ],
+      "label": "angle",
+      "output_atoms": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        90.0,
+        179.99998474121094,
+        179.99998474121094,
+        null
+      ],
+      "times_ps": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "unit": "\u00b0",
+      "frame_errors": [
+        null,
+        null,
+        null,
+        "This selection produces undefined geometry in this frame."
+      ],
+      "warnings": []
+    },
+    "dihedral": {
+      "id": "dihedral",
+      "kind": "dihedral",
+      "atoms": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label": "dihedral",
+      "output_atoms": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "values": [
+        90.0,
+        null,
+        null,
+        null
+      ],
+      "times_ps": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "unit": "\u00b0",
+      "frame_errors": [
+        null,
+        "This frame contains collinear bonds; the dihedral is undefined.",
+        "This frame contains collinear bonds; the dihedral is undefined.",
+        "Selected atoms have coincident coordinates in this frame; geometry is undefined."
+      ],
+      "warnings": [
+        "Torsions are wrapped to \u2212180\u00b0\u2026180\u00b0; a jump across that boundary is a coordinate convention, not a sudden molecular motion."
+      ]
+    },
+    "hbond": {
+      "id": "hbond",
+      "kind": "hbond",
+      "atoms": [
+        0,
+        1,
+        2
+      ],
+      "label": "hbond",
+      "output_atoms": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        1.4142136573791504,
+        3.0,
+        3.0,
+        null
+      ],
+      "times_ps": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "unit": "\u00c5",
+      "frame_errors": [
+        null,
+        null,
+        null,
+        "This selection produces an undefined angle in this frame."
+      ],
+      "warnings": [
+        "Geometric H-bond occupancy: D\u2013A \u2264 3.5 \u00c5 and D\u2013H\u2013A \u2265 150\u00b0 at the hydrogen. Element/connectivity checks do not establish chemical donor/acceptor eligibility; protonation and electronic state need review."
+      ],
+      "angle_values": [
+        90.0,
+        179.99998474121094,
+        179.99998474121094,
+        null
+      ],
+      "geometry_passes": [
+        false,
+        true,
+        true,
+        null
+      ],
+      "occupancy": 0.6666666666666666
+    }
+  },
+  "hbond_occupancy_denominator": "3 geometrically defined frames; one null frame excluded",
+  "input": {
+    "atom_order": [
+      "GLY1.N nitrogen",
+      "GLY1.H hydrogen",
+      "GLY1.O oxygen",
+      "GLY1.C carbon"
+    ],
+    "bonds": [
+      [
+        0,
+        1
+      ]
+    ],
+    "xyz_nm": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.1,
+          0,
+          0
+        ],
+        [
+          0.1,
+          0.1,
+          0
+        ],
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.1,
+          0,
+          0
+        ],
+        [
+          0.3,
+          0,
+          0
+        ],
+        [
+          0.3,
+          0.1,
+          0
+        ]
+      ],
+      [
+        [
+          0.95,
+          0,
+          0
+        ],
+        [
+          0.05,
+          0,
+          0
+        ],
+        [
+          0.25,
+          0,
+          0
+        ],
+        [
+          0.25,
+          0.1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.3,
+          0,
+          0
+        ],
+        [
+          0.3,
+          0.1,
+          0
+        ]
+      ]
+    ],
+    "times_ps": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "box_nm": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "representation": "Coordinates cast float32 into one frame at a time; all measurements constructed directly through LiveMeasurements.add_frame with original box and time."
+  },
+  "reviewed_code_sha256": {
+    "backend/live_measurements.py": "8c259cb84791a11e2abe6e828e77217890a76347c7d9962842e0130c10cfdfff",
+    "backend/analysis.py": "01236ff60cb4addefc1606ac88bbee4399eff6df548e24447b7771fafc723c6e"
+  }
+}

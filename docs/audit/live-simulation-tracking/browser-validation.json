@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "browser_regression": {
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "report": "browser-regression.json"
+  },
+  "handoff_openmm": {
+    "passed": 4,
+    "coverage": "included in final 30-test regression"
+  },
+  "handoff_gromacs": {
+    "passed": 4,
+    "elapsed_seconds": 16.8,
+    "result_directory": "frontend/test-results/simulation-handoff-gromacs",
+    "delivery": "controlled delivery timing of actual native result data through real API; separate actual live MD validated in native-validation.json"
+  },
+  "preparation_and_water": "Real 6-residue repair and explicit solvation; tracked heavy-atom selection retained through both, 3648 water atoms, canvas differs on hide/show",
+  "source_hashes": {
+    "frontend/src/App.tsx": "c2edca879ab8d78b91b27119cc2084d408ca6d8d0b5469727e2c0da69ee91c78",
+    "frontend/src/useSimulationTracking.ts": "07b699524835d0f22598ba2e41bcd47b075ed74a92c87365c49959f756b1c8c7",
+    "frontend/src/transitionCamera.ts": "143de8e79743a644245b01545d87f9ec12fc9c098d379d10b0b65d6843bf83f2",
+    "frontend/src/components/SimulationPanel.tsx": "d3453dc852e3722cb2cd360485c57970a67cf3452c839f85f6d6d7be64033ec6",
+    "frontend/src/components/PlotPanel.tsx": "ce34b309980676ce3a7703f182a7882d7f26ab3c45c6dc97a0d493e3dd8b06e7",
+    "frontend/tests/simulation-handoff.spec.ts": "5f4612cf9e3ec7165d911e1f2b290550d85c391e173487ffd56ba39151d3bd50",
+    "frontend/tests/preparation-jobs.spec.ts": "eb3e398aaa80f57a75173fae17faade4dc4caf940530a8e850ca1e5e0108face"
+  }
+}

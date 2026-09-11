@@ -120,7 +120,7 @@ export default function LiveMeasurement({ preview }: { preview: LiveMeasurementS
       ) : preview.status === 'error' ? (
         <>
           <p className="live-measurement__error">{preview.error}</p>
-          <button className="text-button" onClick={preview.retry}>
+          <button type="button" className="text-button" onClick={preview.retry}>
             Retry measurement
           </button>
         </>

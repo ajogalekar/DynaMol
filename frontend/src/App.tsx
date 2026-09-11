@@ -51,6 +51,8 @@ import TrajectoryAnalysis from './components/TrajectoryAnalysis';
 import type { AnalysisSettings } from './components/TrajectoryAnalysis';
 import { workspaceApi, type NamedSelection, type WorkspaceState } from './workspace';
 import { api } from './api';
+import { useSimulationTracking } from './useSimulationTracking';
+import { transitionCamera } from './transitionCamera';
 import type {
   AtomInfo,
   Dataset,
@@ -58,6 +60,7 @@ import type {
   Job,
   MeasureKind,
   Measurement,
+  RunMeasurementSnapshot,
   Representation,
   Visibility,
 } from './types';
@@ -129,6 +132,7 @@ export default function App() {
     [atomSearch, setAtomSearch] = useState('');
   const [addingMeasurement, setAddingMeasurement] = useState(false);
   const [measurementError, setMeasurementError] = useState('');
+  const [transitionWarning, setTransitionWarning] = useState('');
   const measurementRequest = useRef<AbortController | null>(null);
   const measurementKey = JSON.stringify([dataset?.id, kind, selectedAtoms]);
   const currentMeasurementKey = useRef(measurementKey);
@@ -528,6 +532,10 @@ export default function App() {
     setPicking(false);
   }
   function beginMeasurement() {
+    if (modal === 'simulation' && measurements.filter((m) => m.trackDuringRun).length >= 12) {
+      setToast('A run can track up to 12 measurements. Uncheck one to add another.');
+      return;
+    }
     cancelMeasurementDraft();
     setError('');
     setAddingMeasurement(true);
@@ -540,6 +548,10 @@ export default function App() {
     const key = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
       if (e.key === 'Escape') {
+        if (addingMeasurement) {
+          cancelMeasurementDraft();
+          return;
+        }
         if (modal) {
           setModal(null);
           setLibrary(false);
@@ -573,6 +585,7 @@ export default function App() {
       if (e.key.toLowerCase() === 'f') viewer.current?.fit();
       if (e.key.toLowerCase() === 'm') {
         if (picking) cancelMeasurementDraft(false);
+        else if (modal === 'simulation') beginMeasurement();
         else {
           setPlaying(false);
           setPicking(true);
@@ -582,7 +595,7 @@ export default function App() {
     };
     window.addEventListener('keydown', key);
     return () => window.removeEventListener('keydown', key);
-  }, [modal, seek, togglePlayback, picking]);
+  }, [modal, seek, togglePlayback, picking, addingMeasurement]);
   useEffect(() => {
     if (!modal || modal === 'simulation') return;
     const previous = document.activeElement as HTMLElement | null;
@@ -655,13 +668,23 @@ export default function App() {
         .join(kind === 'distance' ? ' ↔ ' : ' · ');
       setMeasurements((prev) => [
         ...prev,
-        { ...m, id, label, color: palette[prev.length % palette.length] },
+        {
+          ...m,
+          id,
+          label,
+          color: palette[prev.length % palette.length],
+          trackDuringRun: modal === 'simulation',
+        },
       ]);
       setActiveMeasurement(id);
       setAddingMeasurement(false);
       setPicking(false);
       setSelectedAtoms([]);
-      setToast('Measurement added. Click the plot to explore it.');
+      setToast(
+        modal === 'simulation'
+          ? 'Measurement selected for this run. It will update as frames are saved.'
+          : 'Measurement added. Click the plot to explore it.',
+      );
     } catch (e) {
       if (
         !controller.signal.aborted &&
@@ -759,6 +782,8 @@ export default function App() {
     setModal('simulation');
   }
   function newSimulation() {
+    tracking.keepCurrentScene();
+    cancelMeasurementDraft();
     const revision = ++studioRevision.current;
     setStudioSession({
       revision,
@@ -779,8 +804,335 @@ export default function App() {
     // Load before touching the scene so an earlier setup cannot replace it after New.
     const coordinates = await api.coordinates(d);
     if (revision !== studioRevision.current || token !== loadToken.current) return;
-    await loadDataset(d, { keepStudio: true, throwOnError: true, ...options, coordinates });
+    const completedRun = jobs.find(
+      (job) => ['openmm', 'gromacs'].includes(job.engine) && job.dataset_id === d.id,
+    );
+    const snapshot = completedRun ? await api.jobMeasurements(completedRun.id) : undefined;
+    if (revision !== studioRevision.current || token !== loadToken.current) return;
+    const related =
+      d.parent_dataset_id === dataset?.id ||
+      d.solvation?.parent_dataset_id === dataset?.id ||
+      dataset?.solvation?.parent_dataset_id === d.id;
+    const workspace =
+      related || snapshot ? await transitionWorkspace(d, coordinates, snapshot) : undefined;
+    if (workspace)
+      workspace.visibility = {
+        ...workspace.visibility,
+        water: options?.showWater ?? !!d.solvation,
+        hydrogens: options?.showHydrogens ? 'polar' : workspace.visibility.hydrogens,
+      };
+    if (revision !== studioRevision.current || token !== loadToken.current) return;
+    await loadDataset(d, {
+      keepStudio: !completedRun,
+      throwOnError: true,
+      ...options,
+      coordinates,
+      workspace,
+    });
   }
+
+  async function transitionWorkspace(
+    d: Dataset,
+    nextCoordinates: Float32Array,
+    snapshot?: RunMeasurementSnapshot,
+  ) {
+    const state = currentState.current;
+    if (!state || !dataset) return undefined;
+    const token = loadToken.current;
+    const revision = studioRevision.current;
+    const sameSource = !snapshot || snapshot.source_dataset_id === state.dataset_id;
+    const original = sameSource ? [...state.measurements] : [];
+    for (const m of snapshot?.measurements ?? []) {
+      if (!original.some((old) => old.id === m.id))
+        original.push({
+          ...m,
+          color: m.color || palette[original.length % palette.length],
+          trackDuringRun: true,
+        });
+    }
+    const byId = new Map<
+      string,
+      { id: string; kind: MeasureKind; atoms: number[]; label: string; color: string }
+    >();
+    // Engine-verified atom mappings take precedence over preparation/name matching.
+    for (const m of snapshot?.measurements ?? []) {
+      if (m.output_atoms?.length === measureConfig[m.kind].count)
+        byId.set(m.id, {
+          id: m.id,
+          kind: m.kind,
+          atoms: m.output_atoms,
+          label: m.label,
+          color: m.color || palette[0],
+        });
+    }
+    const definitions = original
+      .filter((m) => !byId.has(m.id))
+      .map(({ id, kind, atoms, label, color }) => ({ id, kind, atoms, label, color }));
+    if (definitions.length) {
+      const remapped = await api.remapMeasurements(
+        d.id,
+        snapshot?.source_dataset_id ?? state.dataset_id,
+        definitions,
+      );
+      for (const m of remapped.measurements) byId.set(m.id, m);
+    }
+    const errors: string[] = [];
+    const restored: Measurement[] = [];
+    // Bound physical-trajectory loads even for a workspace with many saved plots.
+    for (const old of original) {
+      const definition = byId.get(old.id);
+      if (!definition) {
+        errors.push(old.label);
+        continue;
+      }
+      try {
+        const geometry = await api.previewMeasurement(
+          d.id,
+          definition.kind,
+          definition.atoms,
+          new AbortController().signal,
+        );
+        restored.push({ ...old, ...definition, ...geometry } as Measurement);
+      } catch {
+        errors.push(old.label);
+      }
+    }
+    if (token === loadToken.current && revision === studioRevision.current) {
+      if (errors.length)
+        setTransitionWarning(
+          `Some atoms changed or could not be identified uniquely. Pick these measurements again: ${errors.join('; ')}.`,
+        );
+      else setTransitionWarning('');
+    }
+    const nextFrame = snapshot ? d.n_frames - 1 : 0;
+    const nextCamera = sameSource
+      ? transitionCamera(
+          viewer.current?.getCamera() ?? state.camera,
+          dataset,
+          coordinates,
+          Math.round(frameRef.current),
+          d,
+          nextCoordinates,
+          nextFrame,
+        )
+      : null;
+    return {
+      ...state,
+      dataset_id: d.id,
+      atom_signature: undefined,
+      trajectory_signature: undefined,
+      frame: nextFrame,
+      camera: nextCamera,
+      measurements: restored,
+      active_measurement: restored.some((m) => m.id === state.active_measurement)
+        ? state.active_measurement
+        : (restored[0]?.id ?? null),
+      selected_atoms: [],
+      named_selections: [],
+      analysis_settings: null,
+      ...(!sameSource
+        ? {
+            representation: 'cartoon' as const,
+            color_scheme: 'residue' as const,
+            visibility: {
+              protein: true,
+              water: !!d.solvation,
+              ligands: true,
+              ions: true,
+              hydrogens: 'none' as const,
+            },
+          }
+        : {}),
+    } as WorkspaceState;
+  }
+  const tracking = useSimulationTracking({
+    jobs,
+    datasetId: dataset?.id,
+    ready: ready && !loading,
+    onNotice: setToast,
+    onComplete: async (job: Job, snapshot: RunMeasurementSnapshot) => {
+      const source = dataset?.id;
+      const token = loadToken.current;
+      const revision = studioRevision.current;
+      const d = await api.dataset(job.dataset_id!);
+      const coords = await api.coordinates(d);
+      if (
+        loadToken.current !== token ||
+        studioRevision.current !== revision ||
+        currentState.current?.dataset_id !== source
+      )
+        return false;
+      const workspace = await transitionWorkspace(d, coords, snapshot);
+      if (
+        loadToken.current !== token ||
+        studioRevision.current !== revision ||
+        currentState.current?.dataset_id !== source
+      )
+        return false;
+      await loadDataset(d, { coordinates: coords, workspace, throwOnError: true });
+      setToast(`${job.name} is ready in Explore. Your view and tracked plots are preserved.`);
+      return true;
+    },
+  });
+  const liveRun = tracking.showing ? tracking.snapshot : null;
+  const livePlots = liveRun?.measurements.map(
+    (m) =>
+      ({
+        ...m,
+        color: m.color || palette[0],
+        visible: measurements.find((old) => old.id === m.id)?.visible,
+      }) as Measurement,
+  );
+  const measurementEditor = (
+    <>
+      <div className="measure-section">
+        <h3>What would you like to follow?</h3>
+        <div className="measure-types">
+          {(Object.keys(measureConfig) as MeasureKind[]).map((k) => (
+            <button
+              type="button"
+              key={k}
+              className={kind === k ? 'selected' : ''}
+              onClick={() => {
+                setKind(k);
+                setSelectedAtoms([]);
+                if (k === 'hbond') setVisibility((v) => ({ ...v, hydrogens: 'polar' }));
+              }}
+            >
+              <span>{measureConfig[k].short}</span>
+              {measureConfig[k].name}
+            </button>
+          ))}
+        </div>
+        <p className="measurement-hint">{currentConfig.hint}</p>
+        <button
+          type="button"
+          className={`pick-button ${picking ? 'picking' : ''}`}
+          onClick={() => {
+            if (picking) cancelMeasurementDraft(false);
+            else setPicking(true);
+            setPlaying(false);
+            if (kind === 'hbond') setVisibility((v) => ({ ...v, hydrogens: 'polar' }));
+          }}
+          disabled={!dataset || !ready}
+        >
+          <MousePointer2 size={16} />
+          {picking ? 'Picking atoms in the scene…' : 'Pick atoms in the scene'}
+          {picking && <span className="pulse-dot" />}
+        </button>
+        <div className="selected-atoms">
+          {Array.from({ length: currentConfig.count }, (_, i) => {
+            const idx = selectedAtoms[i],
+              a = idx === undefined ? null : dataset?.atoms[idx];
+            return (
+              <div key={i} className={`atom-slot ${a ? 'filled' : ''}`}>
+                <span>{kind === 'hbond' ? ['D', 'H', 'A'][i] : String.fromCharCode(65 + i)}</span>
+                {a ? (
+                  <>
+                    <div>
+                      <b>
+                        {a.residue} {a.resid}
+                        <small>{a.name}</small>
+                      </b>
+                      <span>
+                        Chain {a.chain || '—'} · atom {a.index + 1}
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      className="icon-button compact"
+                      onClick={() => setSelectedAtoms((prev) => prev.filter((x) => x !== idx))}
+                      aria-label={`Remove atom ${a.index + 1}`}
+                    >
+                      <X size={12} />
+                    </button>
+                  </>
+                ) : (
+                  <p>
+                    {kind === 'hbond'
+                      ? ['Select donor atom', 'Select bonded hydrogen', 'Select acceptor atom'][i]
+                      : `Select atom ${i + 1}`}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        <LiveMeasurement preview={liveMeasurement} />
+        <div className="search-input atom-search">
+          <Search size={13} />
+          <input
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') e.preventDefault();
+            }}
+            value={atomSearch}
+            onChange={(e) => setAtomSearch(e.target.value)}
+            placeholder="Or find an atom by name…"
+            aria-label="Find an atom"
+          />
+          {atomSearch && (
+            <button type="button" aria-label="Clear atom search" onClick={() => setAtomSearch('')}>
+              <X size={12} />
+            </button>
+          )}
+        </div>
+        {atomSearch && (
+          <div className="atom-search-results">
+            {searchResults.length ? (
+              searchResults.map((a) => (
+                <button
+                  type="button"
+                  key={a.index}
+                  onClick={() => {
+                    setSelectedAtoms((prev) =>
+                      prev.includes(a.index)
+                        ? prev
+                        : prev.length >= currentConfig.count
+                          ? [a.index]
+                          : [...prev, a.index],
+                    );
+                    setAtomSearch('');
+                    viewer.current?.focus([a.index]);
+                  }}
+                >
+                  <b>{atomLabel(a)}</b>
+                  <span>
+                    #{a.index + 1} · {a.element}
+                  </span>
+                </button>
+              ))
+            ) : (
+              <span>No atoms found.</span>
+            )}
+          </div>
+        )}
+        <button
+          type="button"
+          className="primary-button full-width plot-action"
+          disabled={selectedAtoms.length !== currentConfig.count || measureBusy}
+          onClick={() => void measure()}
+        >
+          {measureBusy ? <LoaderCircle size={15} className="spin" /> : <Activity size={15} />}{' '}
+          {modal === 'simulation' ? 'Track this measurement' : 'Plot over time'}{' '}
+          <ArrowRight size={14} />
+        </button>
+        {selectedAtoms.length > 0 && (
+          <button
+            type="button"
+            className="text-button center"
+            onClick={() => cancelMeasurementDraft()}
+          >
+            Clear selection
+          </button>
+        )}
+      </div>
+      {modal === 'simulation' && (
+        <button type="button" className="text-button" onClick={() => cancelMeasurementDraft()}>
+          Cancel measurement
+        </button>
+      )}
+    </>
+  );
 
   return (
     <div
@@ -1399,9 +1751,76 @@ export default function App() {
               </span>
             </div>
           </div>
+          {transitionWarning && (
+            <div className="run-result-notice" role="status">
+              <span>{transitionWarning}</span>
+              <button
+                type="button"
+                className="icon-button compact"
+                aria-label="Dismiss selection warning"
+                onClick={() => setTransitionWarning('')}
+              >
+                <X size={14} />
+              </button>
+            </div>
+          )}
+          {tracking.showing && tracking.job && (
+            <div className="run-result-notice">
+              <span>
+                {tracking.job.name} · {tracking.job.stage}
+              </span>
+              <button type="button" className="text-button" onClick={tracking.keepCurrentScene}>
+                Run in background
+              </button>
+            </div>
+          )}
+          {tracking.result && (
+            <div className="run-result-notice" role="status">
+              <span>{tracking.result.name} is ready to explore.</span>
+              <button
+                type="button"
+                className="text-button"
+                onClick={() => {
+                  const job = tracking.result!;
+                  const revision = studioRevision.current;
+                  const token = ++loadToken.current;
+                  void api
+                    .dataset(job.dataset_id!)
+                    .then((d) => loadStudioDataset(d, undefined, revision, token))
+                    .then(() => tracking.dismissResult())
+                    .catch((e) => setError((e as Error).message));
+                }}
+              >
+                Open trajectory
+              </button>
+              <button
+                type="button"
+                className="icon-button compact"
+                aria-label="Dismiss completed run"
+                onClick={tracking.dismissResult}
+              >
+                <X size={14} />
+              </button>
+            </div>
+          )}
+          {tracking.showing && tracking.pollError && (
+            <div className="inline-warning" role="status">
+              {tracking.pollError}
+            </div>
+          )}
+          {!!liveRun?.errors.length && (
+            <div className="inline-warning" role="status">
+              Tracking unavailable: {liveRun.errors.join(' ')}
+            </div>
+          )}
           <PlotPanel
             dataset={dataset}
-            measurements={measurements}
+            measurements={livePlots ?? measurements}
+            liveStatus={
+              tracking.showing && tracking.job
+                ? `${tracking.job.name} · ${tracking.job.status}`
+                : undefined
+            }
             frame={frame}
             activeId={activeMeasurement}
             onActive={setActiveMeasurement}
@@ -1486,142 +1905,7 @@ export default function App() {
               <h2>A closer look.</h2>
               <p>Turn a moment of molecular motion into a measurable insight.</p>
             </div>
-            <div className="measure-section">
-              <h3>What would you like to follow?</h3>
-              <div className="measure-types">
-                {(Object.keys(measureConfig) as MeasureKind[]).map((k) => (
-                  <button
-                    key={k}
-                    className={kind === k ? 'selected' : ''}
-                    onClick={() => {
-                      setKind(k);
-                      setSelectedAtoms([]);
-                      if (k === 'hbond') setVisibility((v) => ({ ...v, hydrogens: 'polar' }));
-                    }}
-                  >
-                    <span>{measureConfig[k].short}</span>
-                    {measureConfig[k].name}
-                  </button>
-                ))}
-              </div>
-              <p className="measurement-hint">{currentConfig.hint}</p>
-              <button
-                className={`pick-button ${picking ? 'picking' : ''}`}
-                onClick={() => {
-                  if (picking) cancelMeasurementDraft(false);
-                  else setPicking(true);
-                  setPlaying(false);
-                  if (kind === 'hbond') setVisibility((v) => ({ ...v, hydrogens: 'polar' }));
-                }}
-                disabled={!dataset || !ready}
-              >
-                <MousePointer2 size={16} />
-                {picking ? 'Picking atoms in the scene…' : 'Pick atoms in the scene'}
-                {picking && <span className="pulse-dot" />}
-              </button>
-              <div className="selected-atoms">
-                {Array.from({ length: currentConfig.count }, (_, i) => {
-                  const idx = selectedAtoms[i],
-                    a = idx === undefined ? null : dataset?.atoms[idx];
-                  return (
-                    <div key={i} className={`atom-slot ${a ? 'filled' : ''}`}>
-                      <span>
-                        {kind === 'hbond' ? ['D', 'H', 'A'][i] : String.fromCharCode(65 + i)}
-                      </span>
-                      {a ? (
-                        <>
-                          <div>
-                            <b>
-                              {a.residue} {a.resid}
-                              <small>{a.name}</small>
-                            </b>
-                            <span>
-                              Chain {a.chain || '—'} · atom {a.index + 1}
-                            </span>
-                          </div>
-                          <button
-                            className="icon-button compact"
-                            onClick={() =>
-                              setSelectedAtoms((prev) => prev.filter((x) => x !== idx))
-                            }
-                            aria-label={`Remove atom ${a.index + 1}`}
-                          >
-                            <X size={12} />
-                          </button>
-                        </>
-                      ) : (
-                        <p>
-                          {kind === 'hbond'
-                            ? [
-                                'Select donor atom',
-                                'Select bonded hydrogen',
-                                'Select acceptor atom',
-                              ][i]
-                            : `Select atom ${i + 1}`}
-                        </p>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-              <LiveMeasurement preview={liveMeasurement} />
-              <div className="search-input atom-search">
-                <Search size={13} />
-                <input
-                  value={atomSearch}
-                  onChange={(e) => setAtomSearch(e.target.value)}
-                  placeholder="Or find an atom by name…"
-                  aria-label="Find an atom"
-                />
-                {atomSearch && (
-                  <button aria-label="Clear atom search" onClick={() => setAtomSearch('')}>
-                    <X size={12} />
-                  </button>
-                )}
-              </div>
-              {atomSearch && (
-                <div className="atom-search-results">
-                  {searchResults.length ? (
-                    searchResults.map((a) => (
-                      <button
-                        key={a.index}
-                        onClick={() => {
-                          setSelectedAtoms((prev) =>
-                            prev.includes(a.index)
-                              ? prev
-                              : prev.length >= currentConfig.count
-                                ? [a.index]
-                                : [...prev, a.index],
-                          );
-                          setAtomSearch('');
-                          viewer.current?.focus([a.index]);
-                        }}
-                      >
-                        <b>{atomLabel(a)}</b>
-                        <span>
-                          #{a.index + 1} · {a.element}
-                        </span>
-                      </button>
-                    ))
-                  ) : (
-                    <span>No atoms found.</span>
-                  )}
-                </div>
-              )}
-              <button
-                className="primary-button full-width plot-action"
-                disabled={selectedAtoms.length !== currentConfig.count || measureBusy}
-                onClick={() => void measure()}
-              >
-                {measureBusy ? <LoaderCircle size={15} className="spin" /> : <Activity size={15} />}{' '}
-                Plot over time <ArrowRight size={14} />
-              </button>
-              {selectedAtoms.length > 0 && (
-                <button className="text-button center" onClick={() => cancelMeasurementDraft()}>
-                  Clear selection
-                </button>
-              )}
-            </div>
+            {measurementEditor}
             <div className="inspector-tip">
               <Sparkles size={16} />
               <div>
@@ -1720,12 +2004,21 @@ export default function App() {
           dataset={dataset}
           engine={simulationEngine}
           onEngineChange={setSimulationEngine}
+          measurements={measurements}
+          onToggleTracking={(id, tracked) =>
+            setMeasurements((items) =>
+              items.map((m) => (m.id === id ? { ...m, trackDuringRun: tracked } : m)),
+            )
+          }
+          onAddTrackedMeasurement={beginMeasurement}
+          measurementEditor={addingMeasurement ? measurementEditor : undefined}
           health={health}
           jobs={jobs}
           viewerReady={ready && !loading}
           viewerError={viewerError}
           onClose={() => setModal(null)}
           onStarted={(j) => {
+            tracking.follow(j);
             setJobs((prev) => [j, ...prev.filter((existing) => existing.id !== j.id)]);
             setToast(
               ['preparation', 'solvation'].includes(j.engine)
@@ -1747,7 +2040,10 @@ export default function App() {
           }}
           onDatasetLoaded={(d, options) => loadStudioDataset(d, options, studioSession.revision)}
           onWaterVisibility={(show) => {
-            if (studioSession.revision === studioRevision.current)
+            if (
+              studioSession.revision === studioRevision.current &&
+              currentState.current?.dataset_id === dataset?.id
+            )
               setVisibility((v) => ({ ...v, water: show, ions: show || v.ions }));
           }}
           onRefresh={refreshJobs}
