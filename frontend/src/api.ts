@@ -62,12 +62,17 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ smiles, name }),
     }),
-  inspect: (id: string, ph = 7, overrides: Record<string, string> = {}) =>
-    Object.keys(overrides).length
+  inspect: (
+    id: string,
+    ph = 7,
+    overrides: Record<string, string> = {},
+    actions: Record<string, 'repair' | 'remove'> = {},
+  ) =>
+    Object.keys(overrides).length || Object.keys(actions).length
       ? request<Inspection>(`/api/datasets/${id}/inspection`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ ph, ligand_overrides: overrides }),
+          body: JSON.stringify({ ph, ligand_overrides: overrides, ligand_actions: actions }),
         })
       : request<Inspection>(`/api/datasets/${id}/inspection?ph=${ph}`),
   prepare: (config: PreparationConfig) =>

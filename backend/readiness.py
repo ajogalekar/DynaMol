@@ -56,7 +56,7 @@ def readiness(dataset_id, request: ReadinessRequest):
     ligand_state = prepared.get("ligand_parameters") or {}
     chemical_state = {"ph": settings.get("ph", prepared.get("ph", 7)),
                       "modifications": prepared.get("modified_residues", []) if inspection is None else inspection.get("modified_residues", []),
-                      "ligands": ligand_state.get("ligands", []) if inspection is None else inspection.get("ligands", []),
+                      "ligands": ligand_state.get("ligands", []) if inspection is None else [ligand for ligand in inspection.get("ligands", []) if not ligand.get("removed")],
                       "ions": prepared.get("ions", []) if inspection is None else inspection.get("ions", [])}
     return {"ready": not blockers, "mode": request.mode, "dataset_id": dataset_id,
             "blockers": list(dict.fromkeys(blockers)), "warnings": list(dict.fromkeys(warnings)),

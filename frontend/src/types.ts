@@ -133,6 +133,13 @@ export interface LigandInspection {
   protonation_method?: string;
   warnings?: string[];
   error?: string | null;
+  missing_heavy_atoms?: string[];
+  extra_heavy_atoms?: string[];
+  can_repair?: boolean;
+  can_remove?: boolean;
+  repair_reason?: string;
+  selected_action?: 'repair' | 'remove' | 'keep';
+  removed?: boolean;
 }
 
 export interface Inspection {
@@ -152,7 +159,13 @@ export interface Inspection {
     terminal: boolean;
     buildable: boolean;
   }[];
-  gaps: { chain: string; after: string; before: string; message: string }[];
+  gaps: {
+    chain: string;
+    after: string;
+    before: string;
+    message: string;
+    structural_break?: boolean;
+  }[];
   warnings: string[];
   blockers: string[];
   ligands: LigandInspection[];
@@ -196,6 +209,7 @@ export interface PreparationConfig {
   remove_waters: boolean;
   remove_heterogens: boolean;
   ligand_overrides?: Record<string, string>;
+  ligand_actions?: Record<string, 'repair' | 'remove'>;
   seed: number;
 }
 export interface Job {

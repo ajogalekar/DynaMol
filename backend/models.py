@@ -84,6 +84,7 @@ class PreparationRequest(BaseModel):
     remove_waters: bool = True
     remove_heterogens: bool = False
     ligand_overrides: LigandOverrides = Field(default_factory=dict, max_length=100)
+    ligand_actions: dict[str, Literal["repair", "remove"]] = Field(default_factory=dict, max_length=100)
     seed: int = Field(default=2026, ge=1, le=2_147_483_646)
 
 
@@ -96,3 +97,4 @@ class SolvationRequest(BaseModel):
 class InspectionRequest(BaseModel):
     ph: float = Field(default=7, ge=0, le=14, allow_inf_nan=False)
     ligand_overrides: LigandOverrides = Field(default_factory=dict, max_length=100)
+    ligand_actions: dict[str, Literal["repair", "remove"]] = Field(default_factory=dict, max_length=100)

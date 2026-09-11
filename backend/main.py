@@ -253,7 +253,7 @@ def prepare_protein(settings: PreparationRequest):
 @app.post("/api/datasets/{dataset_id}/inspection")
 async def inspect_complex(dataset_id: str, settings: InspectionRequest):
     from . import preparation
-    return await run_in_threadpool(preparation.inspect_preparation, dataset_id, settings.ph, settings.ligand_overrides)
+    return await run_in_threadpool(preparation.inspect_preparation, dataset_id, settings.ph, settings.ligand_overrides, settings.ligand_actions)
 
 
 @app.post("/api/datasets/{dataset_id}/solvate", status_code=201)

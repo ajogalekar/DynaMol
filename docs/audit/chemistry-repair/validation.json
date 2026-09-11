@@ -1,0 +1,35 @@
+{
+  "scope": "General ligand repair and ion handling, selectable missing-loop preference, vertically resizable molecular view",
+  "backend_regression": {
+    "passed": 81,
+    "command": ".venv/bin/python -m pytest -q backend/tests/test_preparation.py backend/tests/test_missing_modified_sequence.py backend/tests/test_readiness_diagnostics.py backend/tests/test_ligands.py backend/tests/test_ligand_identity.py backend/tests/test_complex_topology.py backend/tests/test_monomers.py"
+  },
+  "residue_identity": {
+    "passed": 15,
+    "command": ".venv/bin/python -m pytest -q backend/tests/test_residue_identity.py"
+  },
+  "other_scoped_checks": "See review-manifest.postflight.json; test counts overlap.",
+  "chrome": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "report": "review-browser-results.json"
+  },
+  "production_build": {
+    "passed": true,
+    "command": "npm run build -- --outDir /Users/ashujo/Documents/Science/DynaMol/data/integration-checks/chemistry-repair-ui/release-frontend --emptyOutDir",
+    "advisory": "Existing large JavaScript bundle warning"
+  },
+  "local_app": {
+    "url": "http://127.0.0.1:8765/",
+    "asset": "index-Do8ec_Kk.js",
+    "repair_readiness": true,
+    "blockers": [],
+    "evidence": "live-app-verification.json"
+  },
+  "native_preparation": "native-preparation.json",
+  "limitations": [
+    "Native check used optional side-chain refinement disabled; no dynamics integration.",
+    "Rebuilt coordinates are model hypotheses; experimental pose and metal coordination accuracy were not established."
+  ]
+}

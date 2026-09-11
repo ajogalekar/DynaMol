@@ -120,4 +120,12 @@ def protein_residue_keys(dataset_id, topology, positions=None):
             if first in known or second in known:
                 known.update((first, second))
         changed = len(known) != previous
+    # Some input aliases (notably CAL) also occur in amino-acid name lists.
+    # An exact monatomic ion identity takes precedence over that name heuristic.
+    from .ions import ION_STATES
+    for residue in residues:
+        atoms = members(residue, 'atoms')
+        ion = ION_STATES.get(residue.name.upper())
+        if ion and len(atoms) == 1 and atoms[0].element and atoms[0].element.symbol == ion[0]:
+            known.discard(residue_key(residue))
     return known

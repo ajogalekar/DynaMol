@@ -7,6 +7,7 @@ import './styles.css';
 import './simulation-setup.css';
 import './run-tracking.css';
 import './monomer-setup.css';
+import './chemistry-repair.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />

@@ -297,11 +297,15 @@ class PreparationWorker(Worker):
         self.update(stage="Applying explicit preparation choices")
         retained_keys = set()
         counts = Counter()
+        removed_ligand_keys = {key for key, action in options.get("ligand_actions", {}).items() if action == "remove"}
+        removed_ligands = [{"key": ":".join(residue_key(residue)), "atom_indices": [atom.index for atom in residue.atoms()],
+                            "reason": "Explicit per-residue removal selected by user"}
+                           for residue in input_topology.residues() if ":".join(residue_key(residue)) in removed_ligand_keys]
         for atom in input_atoms:
             water = atom.residue.name.upper() in storage.WATERS
             protein = residue_key(atom.residue) in protein_keys
             keep_water = water and (not options["remove_waters"] or residue_key(atom.residue) in preserve_waters)
-            reason = "hydrogens" if atom.element == app.element.hydrogen else "water_atoms" if water and not keep_water else "heterogen_atoms" if not protein and not water and options["remove_heterogens"] else None
+            reason = "hydrogens" if atom.element == app.element.hydrogen else "water_atoms" if water and not keep_water else "heterogen_atoms" if not protein and not water and (options["remove_heterogens"] or ":".join(residue_key(atom.residue)) in removed_ligand_keys) else None
             if reason:
                 counts[reason] += 1
             if protein or keep_water:
@@ -350,7 +354,13 @@ class PreparationWorker(Worker):
             self.update(stage="Preparing ligand states and force-field parameters", message="Resolving ligand chemistry while preserving bound heavy-atom coordinates.")
             prepared_ligands = prepare_ligands(options["dataset_id"], options["ph"], options["seed"], self.folder / "ligands",
                                                overrides=options.get("ligand_overrides"),
-                                               on_progress=lambda message: self.update(message=message), check_cancel=self.check_cancel)
+                                               on_progress=lambda message: self.update(message=message), check_cancel=self.check_cancel,
+                                               actions=options.get("ligand_actions"),
+                                               environment_indices=[atom.index for atom in input_atoms if atom.element != app.element.hydrogen
+                                                                    and ":".join(residue_key(atom.residue)) not in removed_ligand_keys
+                                                                    and (atom.residue.name.upper() not in storage.WATERS or not options["remove_waters"] or residue_key(atom.residue) in preserve_waters)])
+        if removed_ligands:
+            summary.append("Explicitly removed selected noncovalent ligand residues: " + ", ".join(record["key"] for record in removed_ligands) + ". Other molecules were retained.")
         if prepared_ligands:
             parameter_files = sorted({ligand.ffxml for ligand in prepared_ligands})
             ligand_parameters = {"forcefield": "GAFF2", "charge_method": "AM1-BCC", "requires_explicit_solvent": True,
@@ -387,6 +397,11 @@ class PreparationWorker(Worker):
         # Existing hydrogens were explicitly removed above. Auto variants alone never remove stale H.
         selected_variants = modeller.addHydrogens(ff, pH=options["ph"], platform=platform)
         system = ff.createSystem(modeller.topology, nonbondedMethod=app.NoCutoff, constraints=app.HBonds)
+        verified_ions = []
+        if ion_keys:
+            from .ions import inspect_ions, validate_ion_system
+            expected_ions = [record for record in inspect_ions(input_topology) if record["key"] in {":".join(key) for key in ion_keys}]
+            verified_ions = validate_ion_system(modeller.topology, system, expected_ions=expected_ions)
         charges = None
         for force in system.getForces():
             if isinstance(force, mm.NonbondedForce):
@@ -487,12 +502,13 @@ class PreparationWorker(Worker):
         if protonation_aliases:
             preparation["input_protonation_aliases"] = protonation_aliases
         if ion_keys:
-            from .ions import inspect_ions
-            preparation.update(ions=inspect_ions(modeller.topology), requires_explicit_solvent=True)
+            preparation.update(ions=verified_ions, requires_explicit_solvent=True)
         if modified:
             preparation.update(modified_residues=modified, modified_residue_parameters=modified_forcefield_provenance(), requires_explicit_solvent=True)
         if ligand_parameters:
             preparation["ligand_parameters"] = ligand_parameters
+        preparation["ligand_actions"] = options.get("ligand_actions", {})
+        preparation["removed_ligand_residues"] = removed_ligands
         storage.atomic_json(self.folder / "preparation.json", preparation)
         storage.atomic_json(self.folder / "atom-map.json", {"input_to_output": mapping, "added_atoms": added, "note": "Original hydrogens were removed and regenerated; matching H names do not imply retained hydrogen coordinates."})
         self.provenance.update(purpose="Exploratory protein–ligand preparation with recorded state assumptions; no claim of native rotamers, loops, binding affinity or convergence", operation="prepare", versions={**self.provenance["versions"], "pdbfixer": importlib.metadata.version("pdbfixer")}, preparation_state=preparation, source_sequence_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest() if source_path else None, preparation_worker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), parent_dataset_id=options["dataset_id"])

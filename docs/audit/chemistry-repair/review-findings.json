@@ -1,0 +1,19 @@
+{
+  "remaining_software_findings": 0,
+  "findings": [
+    {
+      "id": "repair-retained-environment",
+      "status": "resolved",
+      "finding": "Atoms explicitly selected for removal and stale hydrogens could incorrectly reject a retained ligand repair as clashing.",
+      "resolution": "Worker supplies retained heavy-atom environment indices; removed residues, removed waters and old hydrogens are omitted while coordinating waters are retained.",
+      "evidence": "backend/tests/test_ligand_repair.py::test_repair_environment_ignores_explicitly_removed_residue_and_old_hydrogens and reviewed worker filter."
+    },
+    {
+      "id": "shared-ion-classification",
+      "status": "resolved",
+      "finding": "Newly supported named ions were absent from viewer category recognition; MDTraj also recognizes CAL as protein-like.",
+      "resolution": "Storage shares the verified ion registry and gives matching one-atom elemental identity precedence, while multiatom compounds, wrong elements and unsupported states remain ligands.",
+      "evidence": "All 30 backend/tests/test_storage_ions.py cases passed independently."
+    }
+  ]
+}

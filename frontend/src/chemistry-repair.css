@@ -1,0 +1,72 @@
+.viewer-resize-handle {
+  flex: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  z-index: 7;
+  border-block: 1px solid #233c47;
+  background: #101e28;
+  color: #8ba7b6;
+  cursor: row-resize;
+  touch-action: none;
+  user-select: none;
+  font-size: 9px;
+}
+.viewer-resize-handle:hover,
+.viewer-resize-handle:focus-visible,
+.viewer-resize-handle.dragging {
+  color: #b1f3dd;
+  background: #1c353b;
+  outline: 1px solid #74dfc5;
+  outline-offset: -1px;
+}
+.molecule-viewport .canvas-tools {
+  transform: translateY(-50%);
+  max-height: calc(100% - 20px);
+  overflow-y: auto;
+}
+.molecule-viewport .canvas-tools > .icon-button {
+  flex-shrink: 0;
+}
+.repair-ligands-button {
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0;
+}
+.ligand-missing-atoms {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #e9c68b;
+  margin: 8px 0;
+}
+.ligand-action-label select {
+  margin-top: 6px;
+  width: 100%;
+  min-width: 0;
+  padding: 8px;
+  background: #152833;
+  color: #daebe8;
+  border: 1px solid #41606b;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 10px;
+}
+.ion-preparation-summary {
+  margin: 13px 0;
+  padding: 10px 12px;
+  border: 1px solid #34504f;
+  border-radius: 7px;
+  background: #142b2a;
+}
+.ion-preparation-summary summary {
+  cursor: pointer;
+  font-size: 11px;
+  color: #a7dec9;
+}
+@media (max-width: 900px) {
+  .studio-open .viewer-column {
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "review_identity": "Language-model evidence synthesis plus automated PatAgent checklist; not expert certification or Pat Walters endorsement.",
+  "corpus": {
+    "manifest_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/manifest.json",
+    "sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+    "counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  },
+  "created_at": "2026-09-11T22:18:34.334874+00:00",
+  "purpose": "Optional constrained reconstruction of missing CCD ligand heavy atoms and explicit named Zn2+ Amber/TIP3P model support in DynaMol. Validate structure identity, unchanged observed coordinates, atom correspondence, opt-in intent, uncertainty labels, and finite compatible native force-field setup; no biological pose, metal coordination accuracy, affinity or converged dynamics claim.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "seed": 2026,
+    "cpu_threads": 2,
+    "versions": {
+      "rdkit": "2025.9.6",
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "pdbfixer": "1.12.0",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1"
+    },
+    "inputs": [
+      {
+        "dataset_id": "63837c81bba04bcf",
+        "name": "6A93",
+        "coordinates_shape": [
+          1,
+          5889,
+          3
+        ],
+        "finite_coordinates": true,
+        "files": {
+          "data/datasets/63837c81bba04bcf/physical.npz": "de2d69d9e2f6ebf1fb2d49e02843b2755cd7448e0bc7c5882e19a8848224dab1",
+          "data/datasets/63837c81bba04bcf/coordinates.bin": "50e98b69a14c7d5b305b34d0abc4c9ada86a3757fa97ec9598a2030d3d9bcafe",
+          "data/datasets/63837c81bba04bcf/provenance.json": "0c8093cdaeff434c424771d7a8be2bc9fd094499a8b0a7c181baed73258aa345",
+          "data/datasets/63837c81bba04bcf/source.cif": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+          "data/datasets/63837c81bba04bcf/metadata.json": "bfa063e99a0df5fb34c9a61fbf79244f938d80fc99a85d4c18b299fcf1446467",
+          "data/datasets/63837c81bba04bcf/topology.pdb": "02e4dad6935e822c0fd51bba5f663c6f28df2dde8bb344542e916e3310fccb22"
+        }
+      },
+      {
+        "dataset_id": "6ede70d3302d4645",
+        "name": "6A93 \u00b7 chain A",
+        "coordinates_shape": [
+          1,
+          3003,
+          3
+        ],
+        "finite_coordinates": true,
+        "files": {
+          "data/datasets/6ede70d3302d4645/physical.npz": "f45f3bd7967c2eaa6831b6858b6d717df4a7bd0416e02d99eec33736199e1c21",
+          "data/datasets/6ede70d3302d4645/coordinates.bin": "e38b92a7222ecd1d921f0a18092c02f5a05954c74d367ed84656b8ee68ddd851",
+          "data/datasets/6ede70d3302d4645/atom-map.json": "1af8cb425ae65bc28ff6514b329a170dc1fa1cf1f5f2946b55294c471309bafa",
+          "data/datasets/6ede70d3302d4645/provenance.json": "13951d219b41b6c59349323ec56ae02792795810ffc2e943a7847c86ae41992f",
+          "data/datasets/6ede70d3302d4645/metadata.json": "436028f85794f5d4ebb154007f7e4a6bb42938cb10cad10f58598f6419f7dc66",
+          "data/datasets/6ede70d3302d4645/topology.pdb": "1c85cdf86275db7d3bdc4bb0203c027a44ba3e7dca5441b006c8f29cbe405d3a",
+          "data/datasets/6ede70d3302d4645/sequence-source.cif": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410"
+        }
+      }
+    ],
+    "budget": "Isolated data/integration-checks/chemistry-repair only; user datasets read or copied, never edited. Up to four small organic component cases (\u226480 heavy atoms), \u226432 deterministic conformer attempts each, \u2264200 local MMFF/UFF iterations per attempt. At most 2 CPU threads, 300 seconds per native parameterization/test process. OpenMM finite-energy/force-field smoke systems \u226450000 atoms, \u2264100 bounded minimization iterations if needed, zero dynamics integration/production MD. No GPU, cloud, broad molecule generation or long jobs.",
+    "outputs_and_exclusions_recorded": true,
+    "actual_isolated_outputs": [
+      "data/integration-checks/chemistry-repair-ligands",
+      "data/integration-checks/chemistry-repair-native",
+      "data/integration-checks/chemistry-repair-ui"
+    ],
+    "budget_note": "Actual outputs use task-specific sibling directories under the predeclared integration-checks root. Two incomplete 1PE copies received eight conformer attempts each; one native ligand smoke and one complete complex preparation used at most two CPU threads and zero dynamics. Whole-complex setup retained five organic residues spanning three CCD identities; existing validated parameter caches were available.",
+    "additional_recorded_test_seeds": [
+      42
+    ],
+    "reviewed_source_sha256": {
+      "backend/ions.py": "9b6980e506e6229a3f8cec5d5402e17243b4e7cf1fb420c5f957a5c9d9452d68",
+      "backend/ligand_repair.py": "d6f1b19a7b04121829e4af6bf6eedae0a7d73ccdcb8dc11cf6286e6d315ff914",
+      "backend/ligands.py": "c471b6c2b7b015fe407a8a5d90d8f7805c66fc9a3151143a1faeab134e5fb892",
+      "backend/preparation.py": "a3b19e021e1d85b200a8704586108f8178f03de439b3c699b9f220a3b65a1f9f",
+      "backend/preparation_worker.py": "1a3a00159ea38280760fc03e344d6400eebcc0bcb107fe0e683f638968232261",
+      "backend/storage.py": "fbd9b6d49a9b0e35e942ca2f75fbc12380167bf87b5edd2e65f37962f8f6c901",
+      "backend/readiness.py": "5d30a225be9b5b0d01e3e3b14f00896d8cd2aa2bc5e171a6aa17f98bf80570c5",
+      "backend/models.py": "afeff67365e4e1cc03530fffc3ac38ba6744d206f89a28abccf801b67c6a3d7f",
+      "backend/tests/test_ions.py": "8ec45150b6842b51db48157df4af7d771f27ce89f7acb8fbd82b0054032a05db",
+      "backend/tests/test_storage_ions.py": "c45aa22b82d1c763f121b3e7562972e41be9da5a97bc18e332006dfbd60cc708",
+      "backend/tests/test_ligand_repair.py": "b29b0ad6772ce8f458868aeeabaac2d5a36bff90f763206ff1660660d0648aa2",
+      "frontend/src/components/StructureWorkbench.tsx": "faa5de78fbf4152a88313d24422b612e44651b0c9e00543b67cc6b9222107a6e",
+      "frontend/src/types.ts": "1612e2a6370adc9c589a54012d00c403ea40b542590ad16d92752c9e27e2602d",
+      "frontend/src/api.ts": "8979a8bdc9af82d156619c67b064285d28a90f6df86ec52bc4dfb7285e1844c3"
+    },
+    "evidence_sha256": {
+      "docs/audit/chemistry-repair/review-input-evidence.json": "6b056f5a86192272a8962bf734bb6a29d341ec159fb66b410bd812676ceba5c3",
+      "docs/audit/chemistry-repair/review-sequence-gaps.json": "38de2ab73e832dea457dddee0b99a2cee977339b4ca6e877d2d9ccc2501b8d2d",
+      "docs/audit/chemistry-repair/review-ion-reference.json": "9e75c384516f17fb7fed036fe2244abb043be8c11722af960d34e3a68b2bc31a",
+      "docs/audit/chemistry-repair/review-independent-native.json": "3b9984724d76a585fbb506f28ecc45c1fef275270f2bc04ecd53ba0279365601",
+      "docs/audit/chemistry-repair/native-preparation.json": "c07f429fa7afa772637bd15557e3dea8f501b509f5880f671a4a9cb6688e8078",
+      "docs/audit/chemistry-repair/review-reference-1PE.cif": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+      "docs/audit/chemistry-repair/review-corpus-search.json": "b0c365dab04ab2f8b21ab76e682067e8c230cac7455d4f1ad6cec690cf020981",
+      "data/integration-checks/chemistry-repair-ligands/conformer-validation.json": "d2220e32a33f0b233cadc2df669c183f762002c017ab9f932e990a890c74592a",
+      "data/integration-checks/chemistry-repair-ligands/native/native-validation.json": "ae0f99c90448a019bdb225c9056fce2143323ba8cc404e972d97679ef47f4864",
+      "docs/audit/chemistry-repair/review-browser-results.json": "ea9dde9be578c4f0084eea4cfe587764daf3c8bcb7f74aa40f959428447f86f0"
+    }
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Full CCD identity/bond order/stereochemistry must be unambiguous and observed atom names/elements a compatible subset. Preserve observed heavy-atom coordinates exactly; label new coordinates as modeled with seed, atom map, missing-atom inventory and low-confidence provenance. Only explicit per-residue opt-in may reconstruct or exclude. Reject unsupported graph/stereo/covalent identity, too-few/degenerate anchors or gross clashes. Named monatomic Zn2+ requires matching element/declared-charge consistency; model uses installed Amber TIP3P nonbonded parameters, not a bonded/polarizable coordination or oxidation-state model."
+  },
+  "validation": {
+    "status": "Scoped chemical identity, coordinate preservation, parameter translation and review controls passed. No scientific validation of missing coordinates or metal coordination is claimed.",
+    "scope": "Read-only independent review of final chemistry paths, bounded synthetic regressions, actual constrained ligand completion and native Amber/OpenMM setup. Five actual browser cases verify missing-loop controls, per-residue repair/remove intent, resize/persistence/reset and canvas/fullscreen/header bounds.",
+    "results": {
+      "ligand_compatibility": {
+        "passed": 61,
+        "deselected": 4,
+        "elapsed_seconds": 1.04,
+        "command": ".venv/bin/python -m pytest backend/tests/test_ligand_repair.py backend/tests/test_ligands.py backend/tests/test_ligand_identity.py backend/tests/test_prepared_system.py -q -k 'not native_gaff2_xml_equivalence_and_combined_templates and not native_prepared_atoms_survive_openmm_hydrogen_assignment and not identical_copies_keep_parameter_source_and_individual_provenance and not real_solvation_job_and_output_preserve_parameter_bundle'",
+        "reported_by": "implementation owner"
+      },
+      "ion_parameters": {
+        "passed": 73,
+        "deselected": 6,
+        "elapsed_seconds": 2.08,
+        "command": "OPENMM_CPU_THREADS=2 OMP_NUM_THREADS=2 .venv/bin/python -m pytest backend/tests/test_ions.py backend/tests/test_chemistry_support.py -k 'ion or zinc or named_states or selected_forcefield or final_system' -q",
+        "reported_by": "ion implementation owner"
+      },
+      "independent_ligand_repair": {
+        "passed": 11,
+        "elapsed_seconds": 0.78,
+        "command": ".venv/bin/python -m pytest backend/tests/test_ligand_repair.py -q"
+      },
+      "independent_ion_storage": {
+        "passed": 30,
+        "elapsed_seconds": 0.29,
+        "command": ".venv/bin/python -m pytest backend/tests/test_storage_ions.py -q"
+      },
+      "native_parameter_translation": {
+        "passed": true,
+        "observed_heavy_atoms_preserved": 13,
+        "generated_heavy_atoms": 3,
+        "poses_checked": 3,
+        "max_energy_difference_kj_mol": 1.124e-08,
+        "max_force_difference_kj_mol_nm": 1.922e-07,
+        "note": "Native Amber versus converted OpenMM XML consistency at the bound pose and two deterministic small perturbations; not experimental validation."
+      },
+      "whole_complex": {
+        "passed": true,
+        "prepared_atoms": 6142,
+        "retained_ligand_and_ion_heavy_atoms": 98,
+        "maximum_retained_coordinate_displacement_angstrom": 0.0,
+        "onePE_heavy_atoms_per_copy": [
+          16,
+          16,
+          16
+        ],
+        "modeled_heavy_atoms_per_copy": [
+          3,
+          0,
+          6
+        ],
+        "Zn_charge_e": 2,
+        "source_files_unchanged": true,
+        "recorded_rebuilt_protein_segments": 0
+      },
+      "ui_static_review": "Loop option remains selectable before Prep with no-gap explanation; ligand default retains observed molecules and requires explicit repair/remove, submission and readiness share ligand_actions; modeled-coordinate and ion-model limits visible. Browser behavior is not inferred from this code review.",
+      "browser": {
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "elapsed_seconds": 18.3,
+        "source_report": "frontend/test-results/chemistry-repair-results.json",
+        "preserved_report": "docs/audit/chemistry-repair/review-browser-results.json",
+        "port": 8791,
+        "scope": "Chrome tests with actual isolated source datasets and real dry inspection/readiness; final Prep request intercepted to inspect choices. Native preparation covered separately by recorded real worker result. No user-library writes.",
+        "command": "DYNAMOL_TEST_ISOLATED=1 DYNAMOL_BASE_URL=http://127.0.0.1:8791 PLAYWRIGHT_JSON_OUTPUT_NAME=test-results/chemistry-repair-results.json npx playwright test tests/chemistry-repair.spec.ts --reporter=list,json --output=test-results/chemistry-repair",
+        "cwd": "/Users/ashujo/Documents/Science/DynaMol/frontend"
+      }
+    },
+    "remaining_software_findings": [],
+    "blind_or_prospective_validation": false,
+    "limitations": [
+      "No known experimental reference positions for the omitted ligand atoms; no pose accuracy, statistical uncertainty intervals, affinity, convergence or production-MD claim.",
+      "Repair is bounded to at least three noncollinear observed anchors, one connected observed core, at most eight missing atoms and half of the ligand; missing ring atoms and ambiguous identity remain unsupported.",
+      "The 1.6 angstrom gross overlap screen is not a binding-site energy or plausibility validation. Local MMFF/UFF energy ranks candidates only within this bounded procedure.",
+      "Named monatomic ions use installed water-compatible fixed-charge 12-6 nonbonded parameters. Unknown/mismatched oxidation states and unsupported models remain errors; catalytic coordination chemistry is not validated.",
+      "Original ligand heavy atoms are preserved exactly in stored physical frames in the exercised case; newly generated coordinate records roundtrip to within 5.4e-6 angstrom because canonical physical coordinates use finite precision."
+    ]
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "notes": "Deterministic implementation controls and bounded parameter consistency are not independent scientific replicas or a statistical validation of unobserved coordinates. No uncertainty interval is fabricated."
+  },
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "note": "No dynamics integration or scientific convergence claim."
+  }
+}

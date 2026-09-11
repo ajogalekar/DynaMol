@@ -8,9 +8,10 @@ import mdtraj as md
 import numpy as np
 
 from . import config
+from .ions import ION_STATES, SUPPORTED_IONS
 
 WATERS = {"HOH", "WAT", "SOL", "TIP3", "TIP3P"}
-IONS = {"NA", "CL", "K", "CA", "MG", "ZN", "SOD", "CLA", "POT", "CAL"}
+IONS = SUPPORTED_IONS
 TOPOLOGY_EXTENSIONS = {".pdb", ".pdbx", ".cif", ".mmcif", ".gro", ".h5", ".hdf5"}
 TRAJECTORY_EXTENSIONS = {".dcd", ".xtc", ".trr", ".nc", ".netcdf", ".pdb", ".h5", ".hdf5", ".mdcrd", ".crd", ".lammpstrj", ".xyz"}
 
@@ -202,7 +203,11 @@ def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, 
     for atom in atom_list:
         element = atom.element.symbol if atom.element else "X"
         residue = atom.residue
-        category = "protein" if residue_key(residue) in protein_keys else "nucleic" if residue.is_nucleic else "water" if residue.name.upper() in WATERS else "ions" if residue.name.upper() in IONS and residue.n_atoms == 1 else "ligands"
+        ion_state = ION_STATES.get(residue.name.upper())
+        is_ion = residue.n_atoms == 1 and ion_state is not None and element == ion_state[0]
+        # Some aliases (CAL) also appear in amino-acid name inventories. Exact
+        # monatomic identity wins; a multiatom molecule never takes this path.
+        category = "ions" if is_ion else "protein" if residue_key(residue) in protein_keys else "nucleic" if residue.is_nucleic else "water" if residue.name.upper() in WATERS else "ligands"
         atoms.append({"index": atom.index, "name": atom.name, "element": element, "residue": residue.name, "resid": residue.resSeq, "chain": residue.chain.chain_id or str(residue.chain.index + 1), "category": category,
                       "nonpolar_hydrogen": element == "H" and any(atom_list[b].element and atom_list[b].element.symbol == "C" for b in adjacency.get(atom.index, []))})
     metadata = {"id": dataset_id, "name": name, "n_atoms": traj.n_atoms, "n_residues": traj.n_residues, "n_frames": traj.n_frames, "times_ps": traj.time.tolist(), "time_unit": "frame" if any("Physical timestamps are unavailable" in w for w in warnings) else "ps", "source": source, "description": description,

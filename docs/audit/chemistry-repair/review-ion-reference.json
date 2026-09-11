@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-09-11T22:01:20.267969+00:00",
+  "source_path": "/Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/data/amber14/tip3p.xml",
+  "sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+  "installed_template": "ZN",
+  "atom": "ZN",
+  "type": "tip3p_standard-Zn2+",
+  "charge_e": 2,
+  "sigma_nm": 0.22646645415127425,
+  "epsilon_kj_mol": 0.01381916624,
+  "upstream_parameters": "AmberTools17 parm/frcmod.ions234lm_126_tip3p",
+  "primary_reference": "https://pubmed.ncbi.nlm.nih.gov/23914143/",
+  "primary_ccd": "https://www.rcsb.org/ligand/ZN",
+  "scope": "Installed additive nonbonded charge/Lennard-Jones parameters compatible with TIP3P; no claim of oxidation-state inference, directional coordination, charge transfer, covalent metal binding or predictive metal-site accuracy."
+}

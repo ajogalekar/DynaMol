@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-09-11T22:01:52.640602+00:00",
+  "scope": "Read-only sequence mapping; no atom addition, relaxation or simulation.",
+  "cases": [
+    {
+      "dataset_id": "63837c81bba04bcf",
+      "sequence_source": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/63837c81bba04bcf/source.cif",
+      "sequence_records": 2,
+      "missing_regions": [],
+      "maximum_per_loop": 6,
+      "maximum_total_internal": 12
+    },
+    {
+      "dataset_id": "6ede70d3302d4645",
+      "sequence_source": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+      "sequence_records": 1,
+      "missing_regions": [],
+      "maximum_per_loop": 6,
+      "maximum_total_internal": 12
+    }
+  ]
+}

@@ -41,6 +41,7 @@ import {
   Zap,
 } from 'lucide-react';
 import MolecularViewer from './components/MolecularViewer';
+import ResizableViewport from './components/ResizableViewport';
 import type { ViewerHandle } from './components/MolecularViewer';
 import PlotPanel from './components/PlotPanel';
 import LiveMeasurement, { useLiveMeasurement } from './components/LiveMeasurement';
@@ -1484,7 +1485,7 @@ export default function App() {
           </div>
         </aside>
         <section className="viewer-column">
-          <div className="molecule-viewport">
+          <ResizableViewport>
             <div className="viewport-top">
               <div>
                 <span className="eyebrow">THE MOLECULAR CANVAS</span>
@@ -1657,7 +1658,7 @@ export default function App() {
                 <em>Z</em>
               </span>
             </div>
-          </div>
+          </ResizableViewport>
           <div className="timeline">
             <div className="timeline-top">
               <div className="playback-buttons">

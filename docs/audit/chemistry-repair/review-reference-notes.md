@@ -1,0 +1,21 @@
+# Chemistry repair: source and claim review
+
+This language-model review uses direct structure records, installed software and bounded controls. It is not scientific expert certification or an endorsement by Pat Walters. Preflight passed six gates. Completed software and native-parameter checks are recorded in review.md; postflight has seven passes and one failed uncertainty gate, preserving the limit on scientific pose and coordination claims.
+
+## Confirmed input identity
+
+The [RCSB 1PE record](https://www.rcsb.org/ligand/1PE) identifies neutral pentaethylene glycol, C10H22O6, with 16 heavy atoms. The freshly retrieved [CCD file](https://files.rcsb.org/ligands/view/1PE.cif) has the same SHA-256 as DynaMol's cache. In both the original 6A93 dataset and its selected chain, F:3004 lacks three CCD heavy atoms, G:3005 is complete, and H:3006 lacks six. Observed atom names/elements agree with the CCD subset. `review-input-evidence.json` preserves the exact inventories and user-file hashes; original data has only been read.
+
+The [RCSB ZN component](https://www.rcsb.org/ligand/ZN) is a single zinc atom with formal charge +2. The installed OpenMM 8.6 `amber14/tip3p.xml` supplies the corresponding ZN template and nonbonded parameters; the file hash and numeric values are recorded in `review-ion-reference.json`. The [OpenMM force-field documentation](https://docs.openmm.org/latest/userguide/application/02_running_sims.html#amber14) explicitly pairs Amber14 solvent files with compatible ion parameters. A matching named monatomic Zn2+ model is therefore available locally. This does not validate arbitrary oxidation states or a protein metal-binding site's behavior.
+
+## Reconstruction and model limits
+
+[RDKit's constrained-embedding documentation](https://www.rdkit.org/docs/source/rdkit.Chem.AllChem.html#rdkit.Chem.AllChem.ConstrainedEmbed) describes restraints/tethers and shows approximately matching core coordinates. It does not establish exact observed-coordinate preservation. The implementation must explicitly retain/fix observed atoms and verify equality after modeling and parameterization. [RDKit's force-field API](https://www.rdkit.org/docs/source/rdkit.ForceField.rdForceField.html#rdkit.ForceField.rdForceField.ForceField.AddFixedPoint) exposes fixed points. The installed RDKit is 2025.09.6 while current web documentation is 2026.03.6; installed docstrings agree on these semantics. Completed fixed-coordinate tests and independent saved-output replay verify the exercised implementation behavior.
+
+Conformer generation, local force-field relaxation, geometric checks and a finite OpenMM energy can show that a proposed completion is usable as a starting model. They cannot establish that unobserved atoms occupy those positions experimentally. Explicit opt-in, exact observed-heavy-atom retention, unambiguous full CCD graph/stereochemistry, reproducible seeds, recorded added-atom identities and visible model uncertainty are required. Any post-parameterization geometry or severe environment clash failure must remain actionable rather than be hidden by a success label.
+
+The installed ion file cites [Li, Roberts, Chakravorty and Merz (2013)](https://pubmed.ncbi.nlm.nih.gov/23914143/), which describes additive nonbonded +2 metal parameters and their water-model/method dependence. Using those parameters does not introduce directional metal–ligand bonds, explicit polarization, charge transfer, or a validated catalytic-site model. Declared element/name/charge inconsistencies must remain errors.
+
+## Evidence-linked review principles
+
+The cached Practical Cheminformatics corpus and task queries are recorded in `review-corpus-search.json`. Pat Walters's [benchmark-quality discussion](https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html) motivates inspecting identity, missingness and representation before interpreting results. [The Trouble With Tautomers](https://patwalters.github.io/The-Trouble-With-Tautomers/) distinguishes convenient algorithmic representations from physical molecular states. Applying those principles to preserving the measured fragment and labeling its completion as uncertain is this reviewer's inference; neither source is a ligand-reconstruction validation protocol.

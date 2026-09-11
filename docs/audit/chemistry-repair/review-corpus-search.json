@@ -1,0 +1,133 @@
+{
+  "recorded_at": "2026-09-11T22:01:20.267068+00:00",
+  "corpus_manifest": {
+    "agent": "pat-agent",
+    "attribution_note": "Guest posts remain searchable but are marked guest and must not be represented as Pat Walters's own views.",
+    "authorship_counts": {
+      "guest": 1,
+      "pat-authored": 90
+    },
+    "corpus_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+    "coverage": "complete public Practical Cheminformatics archive at sync time",
+    "records": 91,
+    "schema_version": "1.0",
+    "sha256": "94c4e606024cb41e5cb89510ee8acdd7e932a6fa8eb14b67dcc16ab1d22a08f1",
+    "source_counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  },
+  "corpus_manifest_sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+  "scope": "Task-specific cached-corpus search; coverage reflects sync metadata, not an exhaustive current-date claim. No article passages reproduced.",
+  "queries": [
+    {
+      "query": "conformer structure validity coordinates ligand missing atoms",
+      "matches": 67,
+      "results": [
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2020-03-30T12:37:00.000-07:00",
+          "score": 51.0,
+          "tags": [],
+          "title": "Building on the Fragments From the Diamond/XChem SARS-CoV-2 Main Protease (MPro) Fragment Screen (Part II) Structure-Base Evaluation of Expanded Fragments",
+          "url": "https://practicalcheminformatics.blogspot.com/2020/03/building-on-fragments-from-diamondxchem_30.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2025-11-03",
+          "score": 36.0,
+          "tags": [
+            "Cofolding"
+          ],
+          "title": "We Still Haven\u2019t Found What We\u2019re Looking For - The Continuing Evolution of Protein-Ligand Co-Folding Methods",
+          "url": "https://patwalters.github.io/Cofolding-Evolution/"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2020-05-04T10:50:00.000-07:00",
+          "score": 29.0,
+          "tags": [],
+          "title": "Exploring the SARS-CoV-2 Main Protease (MPro) Structures",
+          "url": "https://practicalcheminformatics.blogspot.com/2020/05/analyzing-sars-cov-2-main-protease-mpro.html"
+        }
+      ]
+    },
+    {
+      "query": "We Need Better Benchmarks structure validity",
+      "matches": 83,
+      "results": [
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2023-08-03T06:03:00.001-07:00",
+          "score": 105.0,
+          "tags": [],
+          "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2025-11-03",
+          "score": 51.0,
+          "tags": [
+            "Cofolding"
+          ],
+          "title": "We Still Haven\u2019t Found What We\u2019re Looking For - The Continuing Evolution of Protein-Ligand Co-Folding Methods",
+          "url": "https://patwalters.github.io/Cofolding-Evolution/"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2024-01-02T15:54:00.000-08:00",
+          "score": 46.0,
+          "tags": [],
+          "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+        }
+      ]
+    },
+    {
+      "query": "The Trouble With Tautomers",
+      "matches": 90,
+      "results": [
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2025-05-06",
+          "score": 97.0,
+          "tags": [
+            "Tautomers"
+          ],
+          "title": "The Trouble With Tautomers",
+          "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2023-04-03T16:36:00.000-07:00",
+          "score": 53.0,
+          "tags": [],
+          "title": "Getting Inside the Mind of the Medicinal Chemist with Machine Learning",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/04/getting-inside-mind-of-medicinal.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2026-08-29",
+          "score": 48.0,
+          "tags": [
+            "ADMET",
+            "Machine Learning",
+            "LLM"
+          ],
+          "title": "Let the Agents Do the Benchmarking",
+          "url": "https://patwalters.github.io/Let-the-Agents-Do-the-Benchmarking/"
+        }
+      ]
+    }
+  ]
+}

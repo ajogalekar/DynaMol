@@ -1,0 +1,892 @@
+{
+  "frontend_asset": "index-Do8ec_Kk.js",
+  "inspection": {
+    "dataset_id": "6ede70d3302d4645",
+    "protein_atoms": 2905,
+    "hydrogen_atoms": 0,
+    "water_atoms": 0,
+    "heterogen_residues": [
+      "1PE F:3004",
+      "1PE G:3005",
+      "1PE H:3006",
+      "8NU C:3001",
+      "CLR D:3002",
+      "ZN E:3003"
+    ],
+    "can_prepare": true,
+    "has_sequence": true,
+    "missing_atoms": [
+      {
+        "chain": "A",
+        "resid": "399",
+        "residue": "TYR",
+        "atoms": [
+          "OXT"
+        ]
+      }
+    ],
+    "missing_residues": [],
+    "gaps": [
+      {
+        "chain": "A",
+        "after": "265",
+        "before": "1001",
+        "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+        "backbone_distance_angstrom": 1.3357889054787078,
+        "structural_break": false
+      },
+      {
+        "chain": "A",
+        "after": "1045",
+        "before": "1066",
+        "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+        "backbone_distance_angstrom": 1.329117752495993,
+        "structural_break": false
+      }
+    ],
+    "warnings": [
+      "Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.",
+      "Observed coordinating waters and protein donor sidechains are retained. Standard nonbonded ion parameters do not establish metal-coordination accuracy.",
+      "Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.",
+      "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+    ],
+    "blockers": [],
+    "ligands": [
+      {
+        "key": "C:3001::8NU",
+        "chain": "C",
+        "resid": "3001",
+        "insertion_code": " ",
+        "residue": "8NU",
+        "component_id": "8NU",
+        "error": null,
+        "atom_indices": [
+          2905,
+          2906,
+          2907,
+          2908,
+          2909,
+          2910,
+          2911,
+          2912,
+          2913,
+          2914,
+          2915,
+          2916,
+          2917,
+          2918,
+          2919,
+          2920,
+          2921,
+          2922,
+          2923,
+          2924,
+          2925,
+          2926,
+          2927,
+          2928,
+          2929,
+          2930,
+          2931,
+          2932,
+          2933,
+          2934
+        ],
+        "selected_action": null,
+        "can_remove": true,
+        "can_repair": false,
+        "removed": false,
+        "missing_heavy_atoms": [],
+        "extra_heavy_atoms": [],
+        "repair_reason": null,
+        "original_smiles": "Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2",
+        "original_formal_charge": 0,
+        "selected_smiles": "Cc1nc2n(c(=O)c1CC[NH+]1CCC(c3noc4cc(F)ccc34)CC1)CCCC2",
+        "formal_charge": 1,
+        "candidate_smiles": [
+          "Cc1nc2n(c(=O)c1CC[NH+]1CCC(c3noc4cc(F)ccc34)CC1)CCCC2"
+        ],
+        "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+        "ph": 7.0,
+        "warnings": [
+          "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+        ],
+        "heavy_atoms": 30,
+        "reference": {
+          "provider": "wwPDB CCD via RCSB",
+          "component_id": "8NU",
+          "url": "https://files.rcsb.org/ligands/download/8NU.cif",
+          "sha256": "0ac293757af68fa83e1e24a751324875419aa572a474e72a15fdc18351508ec0",
+          "retrieved_at": "2026-09-11T21:52:32.490679+00:00",
+          "retrieval_note": null
+        },
+        "stereo_checked": {},
+        "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+        "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+      },
+      {
+        "key": "D:3002::CLR",
+        "chain": "D",
+        "resid": "3002",
+        "insertion_code": " ",
+        "residue": "CLR",
+        "component_id": "CLR",
+        "error": null,
+        "atom_indices": [
+          2935,
+          2936,
+          2937,
+          2938,
+          2939,
+          2940,
+          2941,
+          2942,
+          2943,
+          2944,
+          2945,
+          2946,
+          2947,
+          2948,
+          2949,
+          2950,
+          2951,
+          2952,
+          2953,
+          2954,
+          2955,
+          2956,
+          2957,
+          2958,
+          2959,
+          2960,
+          2961,
+          2962
+        ],
+        "selected_action": null,
+        "can_remove": true,
+        "can_repair": false,
+        "removed": false,
+        "missing_heavy_atoms": [],
+        "extra_heavy_atoms": [],
+        "repair_reason": null,
+        "original_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+        "original_formal_charge": 0,
+        "selected_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+        "formal_charge": 0,
+        "candidate_smiles": [
+          "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C"
+        ],
+        "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+        "ph": 7.0,
+        "warnings": [
+          "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+        ],
+        "heavy_atoms": 28,
+        "reference": {
+          "provider": "wwPDB CCD via RCSB",
+          "component_id": "CLR",
+          "url": "https://files.rcsb.org/ligands/download/CLR.cif",
+          "sha256": "0ee512527d26bd087cb19ffe657dada7aae0e35af4595249d126f4b928e6a811",
+          "retrieved_at": "2026-09-11T21:52:32.648969+00:00",
+          "retrieval_note": null
+        },
+        "stereo_checked": {
+          "C3": "S",
+          "C8": "S",
+          "C9": "S",
+          "C10": "R",
+          "C13": "R",
+          "C14": "S",
+          "C17": "R",
+          "C20": "R"
+        },
+        "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+        "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+      },
+      {
+        "key": "F:3004::1PE",
+        "chain": "F",
+        "resid": "3004",
+        "insertion_code": " ",
+        "residue": "1PE",
+        "component_id": "1PE",
+        "error": null,
+        "atom_indices": [
+          2964,
+          2965,
+          2966,
+          2967,
+          2968,
+          2969,
+          2970,
+          2971,
+          2972,
+          2973,
+          2974,
+          2975,
+          2976
+        ],
+        "selected_action": "repair",
+        "can_remove": true,
+        "can_repair": true,
+        "removed": false,
+        "missing_heavy_atoms": [
+          "C12",
+          "C22",
+          "OH2"
+        ],
+        "extra_heavy_atoms": [],
+        "repair_reason": "A small acyclic fragment can be modeled from the full CCD graph while fixing every observed heavy atom. Newly modeled positions are low confidence and must be reviewed.",
+        "reference": {
+          "provider": "wwPDB CCD via RCSB",
+          "component_id": "1PE",
+          "url": "https://files.rcsb.org/ligands/download/1PE.cif",
+          "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+          "retrieved_at": "2026-09-11T21:52:32.823277+00:00",
+          "retrieval_note": null
+        },
+        "heavy_atoms": 16,
+        "repair_pending": true,
+        "warnings": [
+          "Missing ligand atoms will be modeled only when preparation runs; observed heavy atoms remain fixed. Modeled positions require review."
+        ]
+      },
+      {
+        "key": "G:3005::1PE",
+        "chain": "G",
+        "resid": "3005",
+        "insertion_code": " ",
+        "residue": "1PE",
+        "component_id": "1PE",
+        "error": null,
+        "atom_indices": [
+          2977,
+          2978,
+          2979,
+          2980,
+          2981,
+          2982,
+          2983,
+          2984,
+          2985,
+          2986,
+          2987,
+          2988,
+          2989,
+          2990,
+          2991,
+          2992
+        ],
+        "selected_action": null,
+        "can_remove": true,
+        "can_repair": false,
+        "removed": false,
+        "missing_heavy_atoms": [],
+        "extra_heavy_atoms": [],
+        "repair_reason": null,
+        "original_smiles": "OCCOCCOCCOCCOCCO",
+        "original_formal_charge": 0,
+        "selected_smiles": "OCCOCCOCCOCCOCCO",
+        "formal_charge": 0,
+        "candidate_smiles": [
+          "OCCOCCOCCOCCOCCO"
+        ],
+        "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+        "ph": 7.0,
+        "warnings": [
+          "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+        ],
+        "heavy_atoms": 16,
+        "reference": {
+          "provider": "wwPDB CCD via RCSB",
+          "component_id": "1PE",
+          "url": "https://files.rcsb.org/ligands/download/1PE.cif",
+          "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+          "retrieved_at": "2026-09-11T21:52:32.823277+00:00",
+          "retrieval_note": null
+        },
+        "stereo_checked": {},
+        "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+        "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+      },
+      {
+        "key": "H:3006::1PE",
+        "chain": "H",
+        "resid": "3006",
+        "insertion_code": " ",
+        "residue": "1PE",
+        "component_id": "1PE",
+        "error": null,
+        "atom_indices": [
+          2993,
+          2994,
+          2995,
+          2996,
+          2997,
+          2998,
+          2999,
+          3000,
+          3001,
+          3002
+        ],
+        "selected_action": "repair",
+        "can_remove": true,
+        "can_repair": true,
+        "removed": false,
+        "missing_heavy_atoms": [
+          "C15",
+          "C16",
+          "C25",
+          "C26",
+          "OH6",
+          "OH7"
+        ],
+        "extra_heavy_atoms": [],
+        "repair_reason": "A small acyclic fragment can be modeled from the full CCD graph while fixing every observed heavy atom. Newly modeled positions are low confidence and must be reviewed.",
+        "reference": {
+          "provider": "wwPDB CCD via RCSB",
+          "component_id": "1PE",
+          "url": "https://files.rcsb.org/ligands/download/1PE.cif",
+          "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+          "retrieved_at": "2026-09-11T21:52:32.823277+00:00",
+          "retrieval_note": null
+        },
+        "heavy_atoms": 16,
+        "repair_pending": true,
+        "warnings": [
+          "Missing ligand atoms will be modeled only when preparation runs; observed heavy atoms remain fixed. Modeled positions require review."
+        ]
+      }
+    ],
+    "modified_residues": [],
+    "ligand_errors": [],
+    "ligand_runtime": {
+      "available": true,
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools",
+      "method": "GAFF2 / AM1-BCC"
+    },
+    "metal_environment": {
+      "method": "Observed metal\u2013N/O/S contacts within 2.8 \u00c5 (3.2 \u00c5 for Ca); these distances do not establish bond order or validate a metal model.",
+      "retained_coordinating_waters": [],
+      "protected_sidechain_residues": [
+        [
+          "A",
+          "182",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "183",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "264",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "318",
+          "",
+          "GLU"
+        ]
+      ],
+      "contacts": [
+        {
+          "metal": [
+            "E",
+            "3003",
+            "",
+            "ZN"
+          ],
+          "donor": [
+            "A",
+            "182",
+            "",
+            "HIS",
+            "NE2"
+          ],
+          "distance_angstrom": 2.0993937220064303
+        },
+        {
+          "metal": [
+            "E",
+            "3003",
+            "",
+            "ZN"
+          ],
+          "donor": [
+            "A",
+            "183",
+            "",
+            "HIS",
+            "NE2"
+          ],
+          "distance_angstrom": 2.1640450549838404
+        },
+        {
+          "metal": [
+            "E",
+            "3003",
+            "",
+            "ZN"
+          ],
+          "donor": [
+            "A",
+            "264",
+            "",
+            "GLU",
+            "OE2"
+          ],
+          "distance_angstrom": 1.9675682961462904
+        },
+        {
+          "metal": [
+            "E",
+            "3003",
+            "",
+            "ZN"
+          ],
+          "donor": [
+            "A",
+            "318",
+            "",
+            "GLU",
+            "OE1"
+          ],
+          "distance_angstrom": 1.973099085195671
+        },
+        {
+          "metal": [
+            "E",
+            "3003",
+            "",
+            "ZN"
+          ],
+          "donor": [
+            "A",
+            "318",
+            "",
+            "GLU",
+            "OE2"
+          ],
+          "distance_angstrom": 2.532200821419976
+        }
+      ]
+    },
+    "ions": [
+      {
+        "key": "E:3003::ZN",
+        "residue": "ZN",
+        "element": "Zn",
+        "deposited_formal_charge": null,
+        "formal_charge": 2,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "ZN",
+          "atom_type": "tip3p_standard-Zn2+",
+          "element": "Zn",
+          "charge_e": 2.0,
+          "sigma_nm": 0.22646645415127425,
+          "epsilon_kj_mol": 0.01381916624,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/ZN",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      }
+    ],
+    "sequence_source": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+    "sequence_source_sha256": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410"
+  },
+  "readiness": {
+    "ready": true,
+    "mode": "preparation",
+    "dataset_id": "6ede70d3302d4645",
+    "blockers": [],
+    "warnings": [
+      "Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.",
+      "Observed coordinating waters and protein donor sidechains are retained. Standard nonbonded ion parameters do not establish metal-coordination accuracy.",
+      "Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.",
+      "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+    ],
+    "resources": {
+      "input_atoms": 3003,
+      "estimated_atoms": 3003,
+      "estimate_kind": "saved topology",
+      "saved_frames": 1,
+      "coordinate_bytes": 36036,
+      "working_memory_estimate_bytes": 144144,
+      "disk_estimate_bytes": 73475224,
+      "free_disk_bytes": 171031060480,
+      "atom_limit": 100000,
+      "coordinate_limit_bytes": 268435456,
+      "note": "Planning estimates include retained coordinates and working copies; native engines can use additional memory. Runtime is measured after dynamics starts."
+    },
+    "chemical_state": {
+      "ph": 7.0,
+      "modifications": [],
+      "ligands": [
+        {
+          "key": "C:3001::8NU",
+          "chain": "C",
+          "resid": "3001",
+          "insertion_code": " ",
+          "residue": "8NU",
+          "component_id": "8NU",
+          "error": null,
+          "atom_indices": [
+            2905,
+            2906,
+            2907,
+            2908,
+            2909,
+            2910,
+            2911,
+            2912,
+            2913,
+            2914,
+            2915,
+            2916,
+            2917,
+            2918,
+            2919,
+            2920,
+            2921,
+            2922,
+            2923,
+            2924,
+            2925,
+            2926,
+            2927,
+            2928,
+            2929,
+            2930,
+            2931,
+            2932,
+            2933,
+            2934
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2",
+          "original_formal_charge": 0,
+          "selected_smiles": "Cc1nc2n(c(=O)c1CC[NH+]1CCC(c3noc4cc(F)ccc34)CC1)CCCC2",
+          "formal_charge": 1,
+          "candidate_smiles": [
+            "Cc1nc2n(c(=O)c1CC[NH+]1CCC(c3noc4cc(F)ccc34)CC1)CCCC2"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 30,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "8NU",
+            "url": "https://files.rcsb.org/ligands/download/8NU.cif",
+            "sha256": "0ac293757af68fa83e1e24a751324875419aa572a474e72a15fdc18351508ec0",
+            "retrieved_at": "2026-09-11T21:52:32.490679+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {},
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+        },
+        {
+          "key": "D:3002::CLR",
+          "chain": "D",
+          "resid": "3002",
+          "insertion_code": " ",
+          "residue": "CLR",
+          "component_id": "CLR",
+          "error": null,
+          "atom_indices": [
+            2935,
+            2936,
+            2937,
+            2938,
+            2939,
+            2940,
+            2941,
+            2942,
+            2943,
+            2944,
+            2945,
+            2946,
+            2947,
+            2948,
+            2949,
+            2950,
+            2951,
+            2952,
+            2953,
+            2954,
+            2955,
+            2956,
+            2957,
+            2958,
+            2959,
+            2960,
+            2961,
+            2962
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+          "original_formal_charge": 0,
+          "selected_smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+          "formal_charge": 0,
+          "candidate_smiles": [
+            "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 28,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "CLR",
+            "url": "https://files.rcsb.org/ligands/download/CLR.cif",
+            "sha256": "0ee512527d26bd087cb19ffe657dada7aae0e35af4595249d126f4b928e6a811",
+            "retrieved_at": "2026-09-11T21:52:32.648969+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {
+            "C3": "S",
+            "C8": "S",
+            "C9": "S",
+            "C10": "R",
+            "C13": "R",
+            "C14": "S",
+            "C17": "R",
+            "C20": "R"
+          },
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+        },
+        {
+          "key": "F:3004::1PE",
+          "chain": "F",
+          "resid": "3004",
+          "insertion_code": " ",
+          "residue": "1PE",
+          "component_id": "1PE",
+          "error": null,
+          "atom_indices": [
+            2964,
+            2965,
+            2966,
+            2967,
+            2968,
+            2969,
+            2970,
+            2971,
+            2972,
+            2973,
+            2974,
+            2975,
+            2976
+          ],
+          "selected_action": "repair",
+          "can_remove": true,
+          "can_repair": true,
+          "removed": false,
+          "missing_heavy_atoms": [
+            "C12",
+            "C22",
+            "OH2"
+          ],
+          "extra_heavy_atoms": [],
+          "repair_reason": "A small acyclic fragment can be modeled from the full CCD graph while fixing every observed heavy atom. Newly modeled positions are low confidence and must be reviewed.",
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "1PE",
+            "url": "https://files.rcsb.org/ligands/download/1PE.cif",
+            "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+            "retrieved_at": "2026-09-11T21:52:32.823277+00:00",
+            "retrieval_note": null
+          },
+          "heavy_atoms": 16,
+          "repair_pending": true,
+          "warnings": [
+            "Missing ligand atoms will be modeled only when preparation runs; observed heavy atoms remain fixed. Modeled positions require review."
+          ]
+        },
+        {
+          "key": "G:3005::1PE",
+          "chain": "G",
+          "resid": "3005",
+          "insertion_code": " ",
+          "residue": "1PE",
+          "component_id": "1PE",
+          "error": null,
+          "atom_indices": [
+            2977,
+            2978,
+            2979,
+            2980,
+            2981,
+            2982,
+            2983,
+            2984,
+            2985,
+            2986,
+            2987,
+            2988,
+            2989,
+            2990,
+            2991,
+            2992
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "OCCOCCOCCOCCOCCO",
+          "original_formal_charge": 0,
+          "selected_smiles": "OCCOCCOCCOCCOCCO",
+          "formal_charge": 0,
+          "candidate_smiles": [
+            "OCCOCCOCCOCCOCCO"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 16,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "1PE",
+            "url": "https://files.rcsb.org/ligands/download/1PE.cif",
+            "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+            "retrieved_at": "2026-09-11T21:52:32.823277+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {},
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/6ede70d3302d4645/sequence-source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+        },
+        {
+          "key": "H:3006::1PE",
+          "chain": "H",
+          "resid": "3006",
+          "insertion_code": " ",
+          "residue": "1PE",
+          "component_id": "1PE",
+          "error": null,
+          "atom_indices": [
+            2993,
+            2994,
+            2995,
+            2996,
+            2997,
+            2998,
+            2999,
+            3000,
+            3001,
+            3002
+          ],
+          "selected_action": "repair",
+          "can_remove": true,
+          "can_repair": true,
+          "removed": false,
+          "missing_heavy_atoms": [
+            "C15",
+            "C16",
+            "C25",
+            "C26",
+            "OH6",
+            "OH7"
+          ],
+          "extra_heavy_atoms": [],
+          "repair_reason": "A small acyclic fragment can be modeled from the full CCD graph while fixing every observed heavy atom. Newly modeled positions are low confidence and must be reviewed.",
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "1PE",
+            "url": "https://files.rcsb.org/ligands/download/1PE.cif",
+            "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+            "retrieved_at": "2026-09-11T21:52:32.823277+00:00",
+            "retrieval_note": null
+          },
+          "heavy_atoms": 16,
+          "repair_pending": true,
+          "warnings": [
+            "Missing ligand atoms will be modeled only when preparation runs; observed heavy atoms remain fixed. Modeled positions require review."
+          ]
+        }
+      ],
+      "ions": [
+        {
+          "key": "E:3003::ZN",
+          "residue": "ZN",
+          "element": "Zn",
+          "deposited_formal_charge": null,
+          "formal_charge": 2,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "ZN",
+            "atom_type": "tip3p_standard-Zn2+",
+            "element": "Zn",
+            "charge_e": 2.0,
+            "sigma_nm": 0.22646645415127425,
+            "epsilon_kj_mol": 0.01381916624,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/ZN",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+          }
+        }
+      ]
+    },
+    "model": "Fixed-state preparation with recorded protonation assumptions"
+  }
+}

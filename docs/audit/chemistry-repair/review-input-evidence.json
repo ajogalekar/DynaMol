@@ -1,0 +1,143 @@
+{
+  "inputs": [
+    {
+      "dataset_id": "63837c81bba04bcf",
+      "name": "6A93",
+      "coordinates_shape": [
+        1,
+        5889,
+        3
+      ],
+      "finite_coordinates": true,
+      "files": {
+        "data/datasets/63837c81bba04bcf/physical.npz": "de2d69d9e2f6ebf1fb2d49e02843b2755cd7448e0bc7c5882e19a8848224dab1",
+        "data/datasets/63837c81bba04bcf/coordinates.bin": "50e98b69a14c7d5b305b34d0abc4c9ada86a3757fa97ec9598a2030d3d9bcafe",
+        "data/datasets/63837c81bba04bcf/provenance.json": "0c8093cdaeff434c424771d7a8be2bc9fd094499a8b0a7c181baed73258aa345",
+        "data/datasets/63837c81bba04bcf/source.cif": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+        "data/datasets/63837c81bba04bcf/metadata.json": "bfa063e99a0df5fb34c9a61fbf79244f938d80fc99a85d4c18b299fcf1446467",
+        "data/datasets/63837c81bba04bcf/topology.pdb": "02e4dad6935e822c0fd51bba5f663c6f28df2dde8bb344542e916e3310fccb22"
+      }
+    },
+    {
+      "dataset_id": "6ede70d3302d4645",
+      "name": "6A93 \u00b7 chain A",
+      "coordinates_shape": [
+        1,
+        3003,
+        3
+      ],
+      "finite_coordinates": true,
+      "files": {
+        "data/datasets/6ede70d3302d4645/physical.npz": "f45f3bd7967c2eaa6831b6858b6d717df4a7bd0416e02d99eec33736199e1c21",
+        "data/datasets/6ede70d3302d4645/coordinates.bin": "e38b92a7222ecd1d921f0a18092c02f5a05954c74d367ed84656b8ee68ddd851",
+        "data/datasets/6ede70d3302d4645/atom-map.json": "1af8cb425ae65bc28ff6514b329a170dc1fa1cf1f5f2946b55294c471309bafa",
+        "data/datasets/6ede70d3302d4645/provenance.json": "13951d219b41b6c59349323ec56ae02792795810ffc2e943a7847c86ae41992f",
+        "data/datasets/6ede70d3302d4645/metadata.json": "436028f85794f5d4ebb154007f7e4a6bb42938cb10cad10f58598f6419f7dc66",
+        "data/datasets/6ede70d3302d4645/topology.pdb": "1c85cdf86275db7d3bdc4bb0203c027a44ba3e7dca5441b006c8f29cbe405d3a",
+        "data/datasets/6ede70d3302d4645/sequence-source.cif": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410"
+      }
+    }
+  ],
+  "reference": {
+    "retrieved_at": "2026-09-11T21:58:19.257915+00:00",
+    "url": "https://files.rcsb.org/ligands/view/1PE.cif",
+    "sha256": "d11e31798035f2068b59e60cdf349d666d11f2dd2b5a0aee787599453e732ef4",
+    "matches_cached_ccd": true,
+    "identity": {
+      "name": "PENTAETHYLENE GLYCOL",
+      "formula": "C10 H22 O6",
+      "formal_charge": "0",
+      "heavy_atom_count": 16
+    },
+    "observed_cases": [
+      {
+        "dataset_id": "63837c81bba04bcf",
+        "chain": "F",
+        "resid": 3004,
+        "component_id": "1PE",
+        "observed_heavy_atoms": 13,
+        "expected_heavy_atoms": 16,
+        "missing_heavy_atom_names": [
+          "C12",
+          "C22",
+          "OH2"
+        ],
+        "extra_heavy_atom_names": [],
+        "element_mismatches": []
+      },
+      {
+        "dataset_id": "63837c81bba04bcf",
+        "chain": "G",
+        "resid": 3005,
+        "component_id": "1PE",
+        "observed_heavy_atoms": 16,
+        "expected_heavy_atoms": 16,
+        "missing_heavy_atom_names": [],
+        "extra_heavy_atom_names": [],
+        "element_mismatches": []
+      },
+      {
+        "dataset_id": "63837c81bba04bcf",
+        "chain": "H",
+        "resid": 3006,
+        "component_id": "1PE",
+        "observed_heavy_atoms": 10,
+        "expected_heavy_atoms": 16,
+        "missing_heavy_atom_names": [
+          "C15",
+          "C16",
+          "C25",
+          "C26",
+          "OH6",
+          "OH7"
+        ],
+        "extra_heavy_atom_names": [],
+        "element_mismatches": []
+      },
+      {
+        "dataset_id": "6ede70d3302d4645",
+        "chain": "F",
+        "resid": 3004,
+        "component_id": "1PE",
+        "observed_heavy_atoms": 13,
+        "expected_heavy_atoms": 16,
+        "missing_heavy_atom_names": [
+          "C12",
+          "C22",
+          "OH2"
+        ],
+        "extra_heavy_atom_names": [],
+        "element_mismatches": []
+      },
+      {
+        "dataset_id": "6ede70d3302d4645",
+        "chain": "G",
+        "resid": 3005,
+        "component_id": "1PE",
+        "observed_heavy_atoms": 16,
+        "expected_heavy_atoms": 16,
+        "missing_heavy_atom_names": [],
+        "extra_heavy_atom_names": [],
+        "element_mismatches": []
+      },
+      {
+        "dataset_id": "6ede70d3302d4645",
+        "chain": "H",
+        "resid": 3006,
+        "component_id": "1PE",
+        "observed_heavy_atoms": 10,
+        "expected_heavy_atoms": 16,
+        "missing_heavy_atom_names": [
+          "C15",
+          "C16",
+          "C25",
+          "C26",
+          "OH6",
+          "OH7"
+        ],
+        "extra_heavy_atom_names": [],
+        "element_mismatches": []
+      }
+    ]
+  }
+}

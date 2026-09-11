@@ -38,7 +38,7 @@ def test_declared_ions_match_actual_explicit_forcefield_charge(name):
     assert force.getParticleParameters(0)[0].value_in_unit(unit.elementary_charge)==charge
 
 
-@pytest.mark.parametrize('name,elements', [('NA',['Mg']),('MG',['C','O']),('FE',['Fe']),('ZN',['Zn'])])
+@pytest.mark.parametrize('name,elements', [('NA',['Mg']),('MG',['C','O']),('FE',['Fe']),('AG',['Ag'])])
 def test_ion_identity_or_unregistered_oxidation_state_is_rejected(name,elements):
     top=app.Topology(); r=top.addResidue(name,top.addChain('I'),'1')
     for i,e in enumerate(elements): top.addAtom(e+str(i),app.element.Element.getBySymbol(e),r)

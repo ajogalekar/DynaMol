@@ -1,0 +1,156 @@
+{
+  "scope": "Read-only independent replay of saved physical coordinates, atom identity, source immutability and provenance; no force calculation or dynamics.",
+  "unchanged_original_files": [
+    {
+      "path": "data/datasets/63837c81bba04bcf/physical.npz",
+      "sha256": "de2d69d9e2f6ebf1fb2d49e02843b2755cd7448e0bc7c5882e19a8848224dab1",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/63837c81bba04bcf/coordinates.bin",
+      "sha256": "50e98b69a14c7d5b305b34d0abc4c9ada86a3757fa97ec9598a2030d3d9bcafe",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/63837c81bba04bcf/provenance.json",
+      "sha256": "0c8093cdaeff434c424771d7a8be2bc9fd094499a8b0a7c181baed73258aa345",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/63837c81bba04bcf/source.cif",
+      "sha256": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/63837c81bba04bcf/metadata.json",
+      "sha256": "bfa063e99a0df5fb34c9a61fbf79244f938d80fc99a85d4c18b299fcf1446467",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/63837c81bba04bcf/topology.pdb",
+      "sha256": "02e4dad6935e822c0fd51bba5f663c6f28df2dde8bb344542e916e3310fccb22",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/physical.npz",
+      "sha256": "f45f3bd7967c2eaa6831b6858b6d717df4a7bd0416e02d99eec33736199e1c21",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/coordinates.bin",
+      "sha256": "e38b92a7222ecd1d921f0a18092c02f5a05954c74d367ed84656b8ee68ddd851",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/atom-map.json",
+      "sha256": "1af8cb425ae65bc28ff6514b329a170dc1fa1cf1f5f2946b55294c471309bafa",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/provenance.json",
+      "sha256": "13951d219b41b6c59349323ec56ae02792795810ffc2e943a7847c86ae41992f",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/metadata.json",
+      "sha256": "436028f85794f5d4ebb154007f7e4a6bb42938cb10cad10f58598f6419f7dc66",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/topology.pdb",
+      "sha256": "1c85cdf86275db7d3bdc4bb0203c027a44ba3e7dca5441b006c8f29cbe405d3a",
+      "unchanged": true
+    },
+    {
+      "path": "data/datasets/6ede70d3302d4645/sequence-source.cif",
+      "sha256": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+      "unchanged": true
+    }
+  ],
+  "prepared_atoms": 6142,
+  "retained_ligand_and_ion_heavy_atoms": 98,
+  "maximum_retained_coordinate_displacement_angstrom": 0.0,
+  "completed_1PE": [
+    {
+      "key": "F:3004::1PE",
+      "heavy_atoms": 16,
+      "formal_charge": 0,
+      "assembled_forcefield_charge_e": -2.8536462082229264e-09,
+      "observed_heavy_atoms": 13,
+      "modeled_atoms": [
+        "C12",
+        "C22",
+        "OH2"
+      ],
+      "model_coordinate_record_max_delta_angstrom": 2.767619140288697e-06
+    },
+    {
+      "key": "G:3005::1PE",
+      "heavy_atoms": 16,
+      "formal_charge": 0,
+      "assembled_forcefield_charge_e": -2.8536462082229264e-09,
+      "observed_heavy_atoms": 16,
+      "modeled_atoms": []
+    },
+    {
+      "key": "H:3006::1PE",
+      "heavy_atoms": 16,
+      "formal_charge": 0,
+      "assembled_forcefield_charge_e": -2.8536462082229264e-09,
+      "observed_heavy_atoms": 10,
+      "modeled_atoms": [
+        "C15",
+        "C16",
+        "C25",
+        "C26",
+        "OH6",
+        "OH7"
+      ],
+      "model_coordinate_record_max_delta_angstrom": 5.384455781718016e-06
+    }
+  ],
+  "ions_verified": [
+    {
+      "key": "E:3003::ZN",
+      "residue": "ZN",
+      "element": "Zn",
+      "deposited_formal_charge": null,
+      "formal_charge": 2,
+      "supported": true,
+      "error": null,
+      "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+      "parameters": {
+        "template": "ZN",
+        "atom_type": "tip3p_standard-Zn2+",
+        "element": "Zn",
+        "charge_e": 2.0,
+        "sigma_nm": 0.22646645415127425,
+        "epsilon_kj_mol": 0.01381916624,
+        "forcefield_file": "amber14/tip3p.xml",
+        "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+        "parameter_sources": [
+          "parm/frcmod.ionsjc_tip3p",
+          "parm/frcmod.ions234lm_126_tip3p",
+          "lib/atomic_ions.lib",
+          "tip3p.xml"
+        ],
+        "references": [
+          "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+          "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+          "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+          "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+        ],
+        "identity_source": "https://www.rcsb.org/ligand/ZN",
+        "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree.",
+        "prepared_particle_index": 6141,
+        "prepared_system_verified": true
+      }
+    }
+  ],
+  "rebuilt_protein_segments": [],
+  "independent_pytest": {
+    "command": ".venv/bin/python -m pytest backend/tests/test_ligand_repair.py -q",
+    "passed": 11,
+    "elapsed_seconds": 0.78
+  }
+}

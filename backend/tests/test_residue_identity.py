@@ -54,6 +54,22 @@ def test_isolated_unknown_amino_acid_shaped_ligand_is_not_swept_into_protein():
     assert protein_residue_keys(None, top, positions) == set()
 
 
+@pytest.mark.parametrize('as_mdtraj', [False, True])
+def test_monatomic_calcium_alias_is_not_a_protein_residue(as_mdtraj):
+    top = app.Topology()
+    residue = top.addResidue('CAL', top.addChain('I'), '1')
+    top.addAtom('CA', app.element.calcium, residue)
+    if as_mdtraj:
+        top = md.Topology.from_openmm(top)
+    assert protein_residue_keys(None, top) == set()
+
+
+def test_multiatom_cal_amino_acid_identity_is_not_removed_as_an_ion():
+    top, positions = peptide(('ALA', 'CAL', 'GLY'))
+    residue = list(top.residues())[1]
+    assert residue_key(residue) in protein_residue_keys(None, top, positions)
+
+
 def test_backbone_inspection_does_not_skip_phosphorylated_residue():
     top, positions = peptide(('ALA', 'TPO', 'GLY'))
     assert preparation.backbone_gaps(top, positions) == []

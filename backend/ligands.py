@@ -48,7 +48,7 @@ class PreparedLigand:
 class LigandModel:
     mol: object
     residue: object
-    atom_indices: list[int]
+    atom_indices: list[int | None]
     names: list[str]
     description: dict
 
@@ -570,7 +570,7 @@ def _original_connection_blocks(dataset_id, source_cif, component_ids):
     return blocked
 
 
-def _models(dataset_id, ph=7.0, overrides=None):
+def _models(dataset_id, ph=7.0, overrides=None, actions=None, *, execute_repair=False, seed=2026, on_progress=None, check_cancel=None, environment_indices=None):
     from .preparation import exact_input_path
     from .modified_residues import register_topology_definitions
     from .residue_identity import protein_residue_keys
@@ -587,6 +587,12 @@ def _models(dataset_id, ph=7.0, overrides=None):
     if chemistry and (not chemistry.get("authoritative_bonds") or len(chemistry["atoms"]) != loaded.topology.getNumAtoms()):
         chemistry = None
     models = []
+    actions = actions or {}
+    if not isinstance(actions, dict) or any(value not in {"repair", "remove"} for value in actions.values()):
+        raise ValueError("Ligand actions must explicitly select repair or remove for a residue key.")
+    visited_actions = set()
+    if environment_indices is None:
+        environment_indices = [atom.index for atom in loaded.topology.atoms() if atom.element != app.element.hydrogen and actions.get(_key(atom.residue)) != "remove"]
     ion_records = {record["key"]: record for record in inspect_ions(loaded.topology)}
     for residue in loaded.topology.residues():
         if residue_key(residue) in protein_keys or residue.name in STANDARD_RESIDUES or residue.name.upper() in storage.WATERS:
@@ -595,9 +601,13 @@ def _models(dataset_id, ph=7.0, overrides=None):
             if not ion_records[_key(residue)]["error"]:
                 continue
         key = _key(residue)
+        action = actions.get(key)
+        if action:
+            visited_actions.add(key)
         description = {"key": key, "chain": residue.chain.id, "resid": residue.id, "insertion_code": residue.insertionCode,
                        "residue": residue.name, "component_id": components.get(key, residue.name), "error": None,
-                       "atom_indices": [atom.index for atom in residue.atoms()]}
+                       "atom_indices": [atom.index for atom in residue.atoms()], "selected_action": action,
+                       "can_remove": False, "can_repair": False, "removed": False}
         try:
             if key in ion_records and ion_records[key]["error"]:
                 raise ValueError(ion_records[key]["error"])
@@ -610,15 +620,39 @@ def _models(dataset_id, ph=7.0, overrides=None):
             component_id = components.get(key, residue.name)
             if component_id in blocked_components or residue.name in blocked_components:
                 raise ValueError('Original structure records a covalent ligand/polymer link. This ligand requires a specialized covalent force-field model; no molecule was removed.')
+            description["can_remove"] = True
+            if action == "remove":
+                description.update(removed=True, removal_reason="Explicit per-residue user choice; the complete noncovalent residue is excluded.")
+                models.append(LigandModel(None, residue, [], [], description))
+                continue
             override = (overrides or {}).get(key) or (overrides or {}).get(component_id)
             if isinstance(override, dict):
                 override = override.get("smiles")
             explicit_model = False
+            atom_indices = None
+            incomplete = False
             try:
                 block, reference = (None, {"provider": "Retained authoritative source chemical graph"}) if chemistry else _ccd(component_id)
-                mol, atoms, names, stereocenters = _graph(residue, coordinates, chemistry, block)
+                if block is not None:
+                    from .ligand_repair import inspect_repair, repair_ligand
+                    repair = inspect_repair(residue, coordinates, block)
+                    description.update(repair)
+                    incomplete = bool(repair["missing_heavy_atoms"] or repair["extra_heavy_atoms"])
+                    if incomplete:
+                        if action != "repair" or not repair["can_repair"]:
+                            raise ValueError(f"CCD heavy-atom identity mismatch (missing {repair['missing_heavy_atoms']}, extra {repair['extra_heavy_atoms']}). " + (repair["repair_reason"] or "Review ligand identity.") + (" Select modeled repair or explicit removal for this residue." if repair["can_repair"] else ""))
+                        if not execute_repair:
+                            description.update(reference=reference, heavy_atoms=len(repair["missing_heavy_atoms"]) + len([atom for atom in residue.atoms() if atom.element != app.element.hydrogen]),
+                                               repair_pending=True, warnings=["Missing ligand atoms will be modeled only when preparation runs; observed heavy atoms remain fixed. Modeled positions require review."])
+                            models.append(LigandModel(None, residue, [], [], description))
+                            continue
+                        mol, names, atom_indices, stereocenters, repair_report = repair_ligand(residue, coordinates, block, seed=seed, on_progress=on_progress, check_cancel=check_cancel, environment_indices=environment_indices)
+                        atoms = list(mol.GetAtoms())
+                        description.update(repair=repair_report, repair_pending=False)
+                if not incomplete:
+                    mol, atoms, names, stereocenters = _graph(residue, coordinates, chemistry, block)
             except ValueError:
-                if not override:
+                if not override or incomplete:
                     raise
                 mol, atoms, names, stereocenters, mapping_method = _graph_from_override(residue, coordinates, override)
                 reference = {'provider': 'Explicit user SMILES', 'mapping_method': mapping_method}
@@ -636,15 +670,19 @@ def _models(dataset_id, ph=7.0, overrides=None):
             description.update(**protonation, heavy_atoms=len(atoms), reference=reference,
                                stereo_checked=stereocenters, source_cif=str(source_cif) if source_cif else None,
                                stereo_limitations='Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained.')
-            models.append(LigandModel(selected, residue, [atom.index for atom in atoms], names, description))
+            if description.get("repair"):
+                description["warnings"] = description.get("warnings", []) + description["repair"]["warnings"]
+            models.append(LigandModel(selected, residue, atom_indices if atom_indices is not None else [atom.index for atom in atoms], names, description))
         except Exception as exc:
             description["error"] = str(exc)
             models.append(LigandModel(None, residue, [], [], description))
+    if set(actions) != visited_actions:
+        raise ValueError("A selected ligand action does not match a current nonprotein ligand residue: " + ", ".join(sorted(set(actions) - visited_actions)))
     return models
 
 
-def inspect_ligands(dataset_id, ph=7.0, overrides=None):
-    return [model.description for model in _models(dataset_id, ph, overrides)]
+def inspect_ligands(dataset_id, ph=7.0, overrides=None, actions=None):
+    return [model.description for model in _models(dataset_id, ph, overrides, actions)]
 
 
 def _add_hydrogens(model):
@@ -888,18 +926,23 @@ def _topology(model, mol, names):
     return top, np.asarray(mol.GetConformer().GetPositions()) * unit.angstrom
 
 
-def prepare_ligands(dataset_id, ph, seed, folder, overrides=None, on_progress=None, check_cancel=None):
+def prepare_ligands(dataset_id, ph, seed, folder, overrides=None, on_progress=None, check_cancel=None, actions=None, environment_indices=None):
     """Prepare all noncovalent organic residues or fail without dropping any."""
-    models = _models(dataset_id, ph, overrides)
+    models = _models(dataset_id, ph, overrides, actions, execute_repair=True, seed=seed, on_progress=on_progress, check_cancel=check_cancel, environment_indices=environment_indices)
     errors = [f"{model.description['key']}: {model.description['error']}" for model in models if model.description['error']]
     if errors:
         raise ValueError(' '.join(errors))
     cache, cache_sources, results = {}, {}, []
     for model in models:
+        if model.description.get("removed"):
+            continue
         if check_cancel:
             check_cancel()
         mol, hydrogen_method = _add_hydrogens(model)
-        fingerprint = hashlib.sha256(model.description['selected_smiles'].encode()).hexdigest()[:12]
+        ordered_graph = {"smiles": model.description['selected_smiles'],
+                         "atoms": [(a.GetSymbol(), a.GetFormalCharge(), int(a.GetChiralTag())) for a in mol.GetAtoms()],
+                         "bonds": [(b.GetBeginAtomIdx(), b.GetEndAtomIdx(), b.GetBondTypeAsDouble(), int(b.GetStereo())) for b in mol.GetBonds()]}
+        fingerprint = hashlib.sha256(json.dumps(ordered_graph, sort_keys=True).encode()).hexdigest()[:12]
         namespace = 'DML_' + fingerprint
         parameter_folder = Path(folder) / ('ligand-' + fingerprint)
         if fingerprint not in cache:
@@ -924,7 +967,7 @@ def prepare_ligands(dataset_id, ph, seed, folder, overrides=None, on_progress=No
         for atom, name in zip(top.atoms(), output_names):
             atom.name = name
         atom_map = [{'original_index': index, 'original_name': name, 'ligand_index': i, 'prepared_name': name}
-                    for i, (index, name) in enumerate(zip(model.atom_indices, model.names))]
+                    for i, (index, name) in enumerate(zip(model.atom_indices, model.names)) if index is not None]
         parameter_atom_map = [{'native_index': i, 'prepared_name': name, 'template_atom_name': template_name}
                               for i, (name, template_name) in enumerate(zip(output_names, generated_names))]
         provenance = {**model.description, 'hydrogen_placement': hydrogen_method,

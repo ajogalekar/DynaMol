@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "dataset_id": "6ede70d3302d4645",
+    "name": "6A93 generalized chemistry repair validation",
+    "ph": 7,
+    "build_missing_residues": true,
+    "optimize_sidechains": false,
+    "ligand_actions": {
+      "F:3004::1PE": "repair",
+      "H:3006::1PE": "repair"
+    },
+    "seed": 2026
+  },
+  "job_id": "cc50daf5ec994e6e",
+  "status": "completed",
+  "stage": "Prepared complex ready",
+  "error": null,
+  "elapsed_seconds": 66.56,
+  "dataset_id": "78528a826c084f60",
+  "scope": "Isolated copy, two CPU threads, no dynamics integration; sidechain refinement disabled."
+}

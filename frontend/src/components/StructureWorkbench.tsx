@@ -89,12 +89,14 @@ export default function StructureWorkbench({
     [removeHeterogens, setRemoveHeterogens] = useState(false);
   const input = useRef<HTMLInputElement>(null);
   const [ligandOverrides, setLigandOverrides] = useState<Record<string, string>>({});
+  const [ligandActions, setLigandActions] = useState<Record<string, 'repair' | 'remove'>>({});
   const [inspectionRevision, setInspectionRevision] = useState(0);
   useEffect(() => {
     setInspection(null);
     setBuildMissing(false);
     setRemoveHeterogens(false);
     setLigandOverrides({});
+    setLigandActions({});
     setError('');
     setBusy(false);
     setSelectingMonomer(false);
@@ -115,6 +117,7 @@ export default function StructureWorkbench({
           dataset.id,
           ph,
           Object.fromEntries(Object.entries(ligandOverrides).filter(([, value]) => value.trim())),
+          ligandActions,
         )
         .then((r) => {
           if (current) setInspection(r);
@@ -130,7 +133,7 @@ export default function StructureWorkbench({
       current = false;
       window.clearTimeout(timer);
     };
-  }, [dataset?.id, engine, ph, ligandOverrides, inspectionRevision]);
+  }, [dataset?.id, engine, ph, ligandOverrides, ligandActions, inspectionRevision]);
   useEffect(() => {
     let current = true;
     setMonomers(null);
@@ -210,6 +213,7 @@ export default function StructureWorkbench({
         ligand_overrides: Object.fromEntries(
           Object.entries(ligandOverrides).filter(([, value]) => value.trim()),
         ),
+        ligand_actions: ligandActions,
         seed,
       });
       onPreparationStarted(job);
@@ -231,9 +235,19 @@ export default function StructureWorkbench({
     (inspection?.protein_atoms ??
       dataset?.atoms.filter((a) => a.category === 'protein').length ??
       0) > 0;
-  const warningCount = missingCount + (inspection?.gaps.length ?? 0);
+  const structuralGaps = inspection?.gaps.filter((gap) => gap.structural_break !== false) ?? [];
+  const numberingGaps = inspection?.gaps.filter((gap) => gap.structural_break === false) ?? [];
+  const warningCount = missingCount + structuralGaps.length;
   const disabled = locked || busy;
-  const complex = hasProtein && !!inspection?.ligands?.length && !removeHeterogens;
+  const retainedLigands = inspection?.ligands?.filter((ligand) => !ligand.removed) ?? [];
+  const repairableLigands =
+    inspection?.ligands?.filter(
+      (ligand) =>
+        ligand.can_repair &&
+        ligand.missing_heavy_atoms?.length &&
+        ligandActions[ligand.key] !== 'remove',
+    ) ?? [];
+  const complex = hasProtein && !!retainedLigands.length && !removeHeterogens;
   return (
     <section className="structure-workbench" aria-label="Structure loading and protein preparation">
       <div className="field-heading source-heading">
@@ -581,7 +595,8 @@ export default function StructureWorkbench({
                       type="checkbox"
                       checked={buildMissing}
                       onChange={(event) => setBuildMissing(event.target.checked)}
-                      disabled={disabled || inspecting || !canBuild}
+                      disabled={disabled || !hasProtein}
+                      aria-describedby="missing-loop-help"
                     />
                     Build supported missing loops / residues
                   </label>
@@ -611,7 +626,7 @@ export default function StructureWorkbench({
                           {!hasProtein
                             ? 'Small-molecule structure'
                             : warningCount
-                              ? `${missingCount} missing residues · ${inspection.gaps.length} chain gaps`
+                              ? `${missingCount} missing residues · ${structuralGaps.length} backbone breaks`
                               : `${inspection.missing_atoms.length} residues with missing atoms · ${inspection.hydrogen_atoms.toLocaleString()} hydrogens`}
                         </span>
                       </div>
@@ -636,10 +651,16 @@ export default function StructureWorkbench({
                           ))}
                         </div>
                       )}
-                      {!!inspection.gaps.length && (
+                      {!!structuralGaps.length && (
                         <div className="inline-warning">
-                          {inspection.gaps.map((g) => g.message).join(' ')}
+                          {structuralGaps.map((g) => g.message).join(' ')}
                         </div>
+                      )}
+                      {!!numberingGaps.length && (
+                        <p className="form-note">
+                          Residue numbering skips were found. Numbering skips alone are not missing
+                          loops.
+                        </p>
                       )}
                       {!inspection.has_sequence && hasProtein && (
                         <p className="form-note prep-sequence-note">
@@ -673,13 +694,13 @@ export default function StructureWorkbench({
                   </p>
                 )}
                 {!inspecting && inspection && hasProtein && (
-                  <p className="form-note missing-build-note">
+                  <p className="form-note missing-build-note" id="missing-loop-help">
                     {canBuild
                       ? 'Build a starting model for supported short internal gaps during preparation. Inspect rebuilt loops afterward; their conformations are uncertain.'
                       : missingCount
                         ? 'Terminal regions remain omitted. Unsupported internal gaps require additional modeling before preparation.'
                         : inspection.has_sequence
-                          ? 'No missing sequence regions were detected.'
+                          ? 'No missing protein sequence regions were detected. This option has nothing to add for the current structure; ligand atom repair is separate below.'
                           : 'Loop building needs known sequence records and a supported short internal gap.'}
                   </p>
                 )}
@@ -747,29 +768,100 @@ export default function StructureWorkbench({
                     <FlaskConical size={15} />
                     <div>
                       <b>
-                        {inspection.ligands.length} ligands ·{' '}
-                        {removeHeterogens ? 'removal selected' : 'kept in the complex'}
+                        {inspection.ligands.length} molecules ·{' '}
+                        {removeHeterogens
+                          ? 'removal selected'
+                          : `${retainedLigands.length} retained`}
                       </b>
                       <span>
-                        Bound poses stay in place. Review the fixed charge states before preparing.
+                        Observed atoms stay in place. Choose how to handle incomplete molecules
+                        before preparing.
                       </span>
                     </div>
                   </div>
+                  {!!repairableLigands.some((ligand) => ligandActions[ligand.key] !== 'repair') && (
+                    <button
+                      type="button"
+                      className="secondary-button repair-ligands-button"
+                      disabled={disabled || removeHeterogens || inspecting}
+                      onClick={() =>
+                        setLigandActions((actions) => ({
+                          ...actions,
+                          ...Object.fromEntries(
+                            repairableLigands.map((ligand) => [ligand.key, 'repair' as const]),
+                          ),
+                        }))
+                      }
+                    >
+                      <Wrench size={14} /> Repair missing ligand atoms
+                    </button>
+                  )}
                   {inspection.ligands.map((ligand) => (
                     <details
                       className={`ligand-preparation-card${ligand.error ? ' has-issues' : ''}`}
                       key={ligand.key}
+                      open={!!ligand.error || !!ligandActions[ligand.key]}
                     >
                       <summary>
                         <span>
                           <b>{ligand.component_id}</b> · {ligand.chain}:{ligand.resid}
                         </span>
                         <strong>
-                          {ligand.error
-                            ? 'Needs chemistry'
-                            : `${(ligand.formal_charge ?? 0) > 0 ? '+' : ''}${ligand.formal_charge ?? 0} charge`}
+                          {ligand.removed
+                            ? 'Removal selected'
+                            : ligandActions[ligand.key] === 'repair' && !ligand.error
+                              ? 'Repair selected'
+                              : ligand.error
+                                ? 'Needs chemistry'
+                                : `${(ligand.formal_charge ?? 0) > 0 ? '+' : ''}${ligand.formal_charge ?? 0} charge`}
                         </strong>
                       </summary>
+                      {!!ligand.missing_heavy_atoms?.length && (
+                        <p className="ligand-missing-atoms">
+                          <b>{ligand.missing_heavy_atoms.length} missing heavy atoms</b> ·{' '}
+                          {ligand.missing_heavy_atoms.join(', ')}
+                        </p>
+                      )}
+                      <label className="full-label ligand-action-label">
+                        Preparation choice
+                        <select
+                          aria-label={`Preparation choice ${ligand.key}`}
+                          value={ligandActions[ligand.key] ?? ''}
+                          disabled={disabled || removeHeterogens}
+                          onChange={(event) =>
+                            setLigandActions((actions) => {
+                              const next = { ...actions };
+                              if (event.target.value)
+                                next[ligand.key] = event.target.value as 'repair' | 'remove';
+                              else delete next[ligand.key];
+                              return next;
+                            })
+                          }
+                        >
+                          <option value="">Keep observed molecule</option>
+                          <option value="repair" disabled={!ligand.can_repair}>
+                            Build missing atoms from chemical reference
+                          </option>
+                          <option value="remove" disabled={ligand.can_remove === false}>
+                            Remove this molecule from prepared structure
+                          </option>
+                        </select>
+                      </label>
+                      {ligandActions[ligand.key] === 'repair' && (
+                        <p className="form-note">
+                          Missing coordinates will be modeled during Prep while observed atoms stay
+                          fixed. Inspect the rebuilt part afterward; its conformation is uncertain.
+                        </p>
+                      )}
+                      {ligandActions[ligand.key] === 'remove' && (
+                        <p className="form-note">
+                          Only this molecule will be omitted from the prepared structure. The
+                          original dataset remains available.
+                        </p>
+                      )}
+                      {!ligand.can_repair && ligand.repair_reason && (
+                        <p className="form-note">{ligand.repair_reason}</p>
+                      )}
                       {ligand.error && <p className="inline-warning">{ligand.error}</p>}
                       <p className="form-note">{ligand.protonation_method}</p>
                       {ligand.warnings?.map((warning, i) => (
@@ -794,7 +886,9 @@ export default function StructureWorkbench({
                             }))
                           }
                           placeholder="Provide the same molecule with your chosen charge and stereochemistry"
-                          disabled={disabled || removeHeterogens}
+                          disabled={
+                            disabled || removeHeterogens || ligandActions[ligand.key] === 'remove'
+                          }
                           rows={3}
                           maxLength={10000}
                         />
@@ -808,13 +902,35 @@ export default function StructureWorkbench({
                       sidechains are protected.
                     </p>
                   )}
-                  {!inspection.ligand_runtime?.available && (
+                  {!!retainedLigands.length && !inspection.ligand_runtime?.available && (
                     <div className="inline-warning">
                       {inspection.ligand_runtime?.message ??
                         'Ligand preparation tools are unavailable.'}
                     </div>
                   )}
                 </div>
+              )}
+              {!!inspection?.ions?.some((ion) => ion.supported) && (
+                <details className="ion-preparation-summary">
+                  <summary>
+                    Ions ·{' '}
+                    {inspection.ions
+                      .filter((ion) => ion.supported)
+                      .map(
+                        (ion) =>
+                          `${ion.element}${ion.formal_charge > 0 ? '+' : ''}${ion.formal_charge}`,
+                      )
+                      .join(', ')}
+                    {removeHeterogens ? ' · removal selected' : ' · retained'}
+                  </summary>
+                  {inspection.ions
+                    .filter((ion) => ion.supported)
+                    .map((ion) => (
+                      <p className="form-note" key={ion.key}>
+                        {ion.key} · {ion.model}
+                      </p>
+                    ))}
+                </details>
               )}
               {!!inspection?.blockers.length && (
                 <div className="inline-warning">{inspection.blockers.join(' ')}</div>
@@ -832,6 +948,7 @@ export default function StructureWorkbench({
                   ligand_overrides: Object.fromEntries(
                     Object.entries(ligandOverrides).filter(([, value]) => value.trim()),
                   ),
+                  ligand_actions: ligandActions,
                   seed,
                 }}
                 onReadyChange={setPrepReady}

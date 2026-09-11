@@ -220,7 +220,7 @@ def backbone_gaps(topology, positions) -> list[dict]:
     return result
 
 
-def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict | None = None) -> dict:
+def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict | None = None, ligand_actions: dict | None = None) -> dict:
     if not math.isfinite(ph) or not 0 <= ph <= 14:
         raise ValueError("Choose a pH between 0 and 14.")
     metadata = storage.get_dataset(dataset_id)
@@ -239,8 +239,8 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     from .ligands import inspect_ligands, ligand_runtime_status
     from .complex_topology import metal_environment
     from .ions import inspect_ions
-    ligands = inspect_ligands(dataset_id, ph, ligand_overrides)
-    ligand_errors = [f"{ligand['key']}: {ligand['error']}" for ligand in ligands if ligand.get("error")]
+    ligands = inspect_ligands(dataset_id, ph, ligand_overrides, actions=ligand_actions)
+    ligand_errors = [ligand["error"] if ligand["error"].startswith(ligand["key"] + ":") else f"{ligand['key']}: {ligand['error']}" for ligand in ligands if ligand.get("error")]
     coordination = metal_environment(fixer.topology, fixer.positions)["report"]
     ions = inspect_ions(fixer.topology)
     if ligands:
@@ -320,6 +320,10 @@ def _validated(settings: dict) -> dict:
     if not isinstance(overrides, dict) or len(overrides) > 100 or any(not isinstance(k, str) or len(k) > 100 or not isinstance(v, str) or not 1 <= len(v) <= 10000 for k, v in overrides.items()):
         raise ValueError("Ligand overrides must map residue identifiers to explicit-state SMILES strings.")
     settings["ligand_overrides"] = overrides
+    actions = settings.get("ligand_actions", {})
+    if not isinstance(actions, dict) or len(actions) > 100 or any(not isinstance(k, str) or not 1 <= len(k) <= 100 or v not in ("repair", "remove") for k, v in actions.items()):
+        raise ValueError("Choose repair or remove for each exact ligand residue identifier.")
+    settings["ligand_actions"] = actions
     for key in ("add_missing_atoms", "build_missing_residues", "optimize_sidechains", "remove_waters", "remove_heterogens"):
         if not isinstance(settings[key], bool):
             raise ValueError(f"{key} must be true or false.")
@@ -361,15 +365,15 @@ def validate_preparation(settings: dict) -> tuple[dict, dict]:
     function never creates or modifies a dataset or job.
     """
     settings = _validated(settings)
-    inspection = inspect_preparation(settings["dataset_id"], settings["ph"], settings["ligand_overrides"])
+    inspection = inspect_preparation(settings["dataset_id"], settings["ph"], settings["ligand_overrides"], settings["ligand_actions"])
     if inspection["blockers"]:
         raise ValueError(" ".join(inspection["blockers"]))
     if not settings["remove_heterogens"]:
         if inspection["ligand_errors"]:
             raise ValueError("Ligand chemistry needs attention: " + " ".join(inspection["ligand_errors"]))
-        if inspection["ligands"] and not inspection["ligand_runtime"]["available"]:
+        if any(not ligand.get("removed") for ligand in inspection["ligands"]) and not inspection["ligand_runtime"]["available"]:
             raise ValueError(inspection["ligand_runtime"]["message"])
-    settings["complex"] = bool(inspection["ligands"] and not settings["remove_heterogens"])
+    settings["complex"] = bool(any(not ligand.get("removed") for ligand in inspection["ligands"]) and not settings["remove_heterogens"])
     settings["modified_residues"] = inspection["modified_residues"]
     internal = [entry for entry in inspection["missing_residues"] if not entry["terminal"]]
     if internal and not settings["build_missing_residues"]:
