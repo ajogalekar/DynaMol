@@ -7,7 +7,15 @@ from .storage import load_physical
 
 
 def measure(dataset_id: str, request: MeasurementRequest) -> dict:
-    traj = load_physical(dataset_id)
+    return _measure(load_physical(dataset_id), request, strict=True)
+
+
+def preview(dataset_id: str, request: MeasurementRequest) -> dict:
+    """Transient saved-frame readout; undefined frames do not hide valid moments."""
+    return _measure(load_physical(dataset_id), request, strict=False)
+
+
+def _measure(traj: md.Trajectory, request: MeasurementRequest, *, strict: bool) -> dict:
     indices = request.atoms
     expected = {"distance": 2, "angle": 3, "dihedral": 4, "hbond": 3}[request.kind]
     if len(indices) != expected or len(set(indices)) != expected:
@@ -20,8 +28,11 @@ def measure(dataset_id: str, request: MeasurementRequest) -> dict:
     pairs = [[indices[i], indices[i + 1]] for i in range(len(indices) - 1)]
     vectors = md.compute_displacements(traj, pairs, periodic=periodic, opt=True)
     lengths = np.linalg.norm(vectors, axis=-1)
-    if np.any(lengths < 1e-7):
+    errors = np.full(traj.n_frames, None, dtype=object)
+    coincident = np.any(lengths < 1e-7, axis=1)
+    if strict and np.any(coincident):
         raise ValueError("Selected atoms have coincident coordinates in at least one frame; geometry is undefined.")
+    errors[coincident] = "Selected atoms have coincident coordinates in this frame; geometry is undefined."
     result = {"kind": request.kind, "atoms": indices, "times_ps": traj.time.tolist(), "warnings": warnings}
     if request.kind == "distance":
         values = md.compute_distances(traj, [indices], periodic=periodic)[:, 0] * 10
@@ -30,8 +41,10 @@ def measure(dataset_id: str, request: MeasurementRequest) -> dict:
         values = np.rad2deg(md.compute_angles(traj, [indices], periodic=periodic)[:, 0])
         unit = "°"
     elif request.kind == "dihedral":
-        if np.any(np.linalg.norm(np.cross(vectors[:, 0], vectors[:, 1]), axis=-1) < 1e-9) or np.any(np.linalg.norm(np.cross(vectors[:, 1], vectors[:, 2]), axis=-1) < 1e-9):
+        collinear = (np.linalg.norm(np.cross(vectors[:, 0], vectors[:, 1]), axis=-1) < 1e-9) | (np.linalg.norm(np.cross(vectors[:, 1], vectors[:, 2]), axis=-1) < 1e-9)
+        if strict and np.any(collinear):
             raise ValueError("A selected dihedral contains collinear bonds in at least one frame; its torsion is undefined.")
+        errors[collinear & ~coincident] = "This frame contains collinear bonds; the dihedral is undefined."
         values = np.rad2deg(md.compute_dihedrals(traj, [indices], periodic=periodic)[:, 0])
         unit = "°"
         warnings.append("Torsions are wrapped to −180°…180°; a jump across that boundary is a coordinate convention, not a sudden molecular motion.")
@@ -49,9 +62,21 @@ def measure(dataset_id: str, request: MeasurementRequest) -> dict:
         values = md.compute_distances(traj, [[indices[0], indices[2]]], periodic=periodic)[:, 0] * 10
         angles = np.rad2deg(md.compute_angles(traj, [indices], periodic=periodic)[:, 0])
         occupied = (values <= 3.5 + 1e-6) & (angles >= 150.0 - 1e-5)
-        result.update(occupancy=float(occupied.mean()), angle_values=angles.tolist())
+        if strict:
+            result.update(occupancy=float(occupied.mean()), angle_values=angles.tolist())
+        else:
+            errors[~np.isfinite(angles)] = "This selection produces an undefined angle in this frame."
+            result.update(angle_values=angles.tolist(), geometry_passes=occupied.tolist())
         warnings.append("Geometric H-bond occupancy: D–A ≤ 3.5 Å and D–H–A ≥ 150° at the hydrogen. Element/connectivity checks do not establish chemical donor/acceptor eligibility; protonation and electronic state need review.")
         unit = "Å"
-    if not np.isfinite(values).all():
-        raise ValueError("This selection produces undefined geometry in one or more frames.")
-    return {**result, "values": values.tolist(), "unit": unit}
+    if strict:
+        if not np.isfinite(values).all():
+            raise ValueError("This selection produces undefined geometry in one or more frames.")
+        return {**result, "values": values.tolist(), "unit": unit}
+    errors[~np.isfinite(values)] = "This selection produces undefined geometry in this frame."
+    valid = errors == None  # noqa: E711 — elementwise comparison for the object array
+    # JSON must contain null, never NaN/Infinity or a plausible number for an undefined frame.
+    if "angle_values" in result:
+        result["angle_values"] = [angle if ok else None for angle, ok in zip(result["angle_values"], valid)]
+        result["geometry_passes"] = [occupied if ok else None for occupied, ok in zip(result["geometry_passes"], valid)]
+    return {**result, "values": [float(value) if ok else None for value, ok in zip(values, valid)], "unit": unit, "frame_errors": errors.tolist()}

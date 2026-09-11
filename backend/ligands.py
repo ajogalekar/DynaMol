@@ -507,7 +507,11 @@ def _original_connection_blocks(dataset_id, source_cif, component_ids):
 
 def _models(dataset_id, ph=7.0, overrides=None):
     from .preparation import exact_input_path
+    from .modified_residues import register_topology_definitions
+    from .residue_identity import protein_residue_keys
+    register_topology_definitions()
     loaded = app.PDBFile(str(exact_input_path(dataset_id)))
+    protein_keys = protein_residue_keys(dataset_id, loaded.topology, loaded.positions)
     coordinates = np.asarray(loaded.positions.value_in_unit(unit.angstrom))
     components, source_cif = _component_ids(dataset_id, loaded.topology)
     blocked_components = _original_connection_blocks(dataset_id, source_cif, components)
@@ -517,7 +521,7 @@ def _models(dataset_id, ph=7.0, overrides=None):
         chemistry = None
     models = []
     for residue in loaded.topology.residues():
-        if residue.name in STANDARD_RESIDUES or residue.name.upper() in storage.WATERS:
+        if residue_key(residue) in protein_keys or residue.name in STANDARD_RESIDUES or residue.name.upper() in storage.WATERS:
             continue
         if residue.name.upper() in SUPPORTED_IONS:
             if len(list(residue.atoms())) != 1:

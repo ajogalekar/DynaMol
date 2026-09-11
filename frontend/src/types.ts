@@ -105,9 +105,25 @@ export interface Inspection {
   warnings: string[];
   blockers: string[];
   ligands: LigandInspection[];
+  modified_residues?: ModifiedResidueInspection[];
   ligand_errors: string[];
   ligand_runtime?: { available: boolean; message?: string } | null;
   metal_environment?: { retained_coordinating_waters: string[][]; contacts: unknown[] };
+}
+
+export interface ModifiedResidueInspection {
+  name?: string;
+  chain: string;
+  resid: string;
+  insertion_code?: string;
+  residue: string;
+  supported: boolean;
+  parent_residue?: string;
+  template?: string;
+  formal_charge?: number;
+  forcefield?: string;
+  protonation_note?: string;
+  error?: string;
 }
 
 export interface PreparationConfig {

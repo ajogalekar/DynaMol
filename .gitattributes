@@ -11,3 +11,5 @@ docs/audit/preparation-fixtures/** -whitespace
 
 # Keep downloaded CCD reference records byte-identical to the audit sources.
 docs/audit/complex-ccd-*.cif -whitespace
+backend/data/modified_residues/*.cif -whitespace
+docs/audit/modified-residues/native/** -whitespace

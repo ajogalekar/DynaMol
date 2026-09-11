@@ -8,6 +8,10 @@ DynaMol is a working **v0.1 alpha**, built with React, NGL, FastAPI, MDTraj, Ope
 
 ## Start exploring
 
+For the local **Apple Silicon/macOS 14+ prototype**, open the self-contained `DynaMol.app` from `build/releases/DynaMol-0.1.0-macos-arm64.zip`. It includes Python, OpenMM, GROMACS and AmberTools; first launch unpacks the included engines with a progress display. No separate engine installation is needed. This local build is not Apple Developer signed or notarized; clean-machine testing and public redistribution materials remain release work. See [package instructions](packaging/README.md).
+
+To run or develop from source:
+
 Install [Node.js 22+](https://nodejs.org/) and [uv](https://docs.astral.sh/uv/getting-started/installation/), then run:
 
 ```bash
@@ -39,17 +43,17 @@ uv sync --frozen
 
 The script creates a private **AmberTools 24.8** environment under `.tools/ambertools` and records the resolved packages in `.tools/ambertools-explicit.txt`. It supplies Antechamber/SQM, GAFF2, `parmchk2`, and LEaP; DynaMol's Python environment supplies ParmEd, Gemmi, and Dimorphite-DL. Alternatively, set `DYNAMOL_AMBERTOOLS` to an existing complete AmberTools installation. Protein-only preparation remains available without AmberTools.
 
-The first inspection of an unfamiliar PDB ligand may need internet to retrieve its CCD definition. Records are cached in `data/chemistry/ccd` (under `DYNAMOL_DATA_DIR` when configured). Previously prepared complexes retain their parameter files and do not need a fresh charge calculation to run OpenMM. See the [packaging proposal](docs/PACKAGING.md) for an eventual installer containing these dependencies; no standalone DMG has been built yet.
+The first inspection of an unfamiliar PDB ligand may need internet to retrieve its CCD definition. Records are cached in `data/chemistry/ccd` (under `DYNAMOL_DATA_DIR` when configured). Previously prepared complexes retain their parameter files and do not need a fresh charge calculation to run OpenMM. The [standalone prototype](docs/PACKAGING.md) includes the native runtimes; the installation commands above apply to the source checkout.
 
 ## Inside the workbench
 
-**Explore.** Ribbons by default, with ball-and-stick, sticks, and molecular surface views. Rotate by dragging, zoom with the wheel or explicit buttons, pan with right-drag, and focus on a residue by name or number. Show or hide proteins/nucleic acids, ligands, waters, ions, all hydrogens, or only polar hydrogens. Save the scene as a PNG. Short or interrupted protein fragments are shown as atoms when a ribbon cannot be drawn.
+**Explore.** Ribbons by default, with ball-and-stick, sticks, and molecular surface views. Rotate by dragging, zoom with a pinch, wheel or explicit buttons, pan with right-drag, and focus on a residue by name or number. Show or hide proteins/nucleic acids, ligands, waters, ions, all hydrogens, or only polar hydrogens. Save the scene as a PNG. Fullscreen includes the top toolbar and dialogs. Short or interrupted protein fragments are shown as atoms when a ribbon cannot be drawn.
 
 In ribbon view, **Polar only** retains a light trace of the full heavy-atom structure with attached polar hydrogens; non-polar hydrogens are hidden. **All** adds the remaining hydrogens, and **Hidden** returns to the ribbon view.
 
 **Play.** Frame stepping, scrubbing, looped playback, variable speed, and a linked timeline. Nonperiodic trajectories use interpolated visual transitions without changing saved coordinates. Periodic trajectories currently play saved frames, avoiding interpolation across box discontinuities. The camera is preserved throughout playback.
 
-**Measure.** Pick two atoms for distance, three for an angle, or four for a signed dihedral. Pick donor–hydrogen–acceptor for a geometric hydrogen-bond trace and occupancy. Atom search supplements direct 3D picking. Plots use actual timestamps, support click-to-seek, and export CSV; torsion summaries use circular statistics. Measurements come from original saved coordinates with minimum-image periodic geometry when valid box data exists. Interpolation and display alignment do not affect the calculated values.
+**Measure.** Pick two atoms for distance, three for an angle, or four for a signed dihedral. The current value appears in the scene and inspector as soon as the selection is complete, without creating a plot. Pick donor–hydrogen–acceptor for a geometric hydrogen-bond trace and occupancy. Atom search supplements direct 3D picking. Plots use actual timestamps, support click-to-seek, and export CSV; torsion summaries use circular statistics. Measurements come from original saved coordinates with minimum-image periodic geometry when valid box data exists. Interpolation and display alignment do not affect the calculated values.
 
 **Prepare.** Open Simulate to upload a PDB, mmCIF, MOL2, SDF or SMILES file, fetch a PDB accession or PubChem molecule, or paste SMILES to generate a local 3D conformer. Each result loads immediately beside the controls. **Prep protein** repairs missing protein atoms, rebuilds hydrogens for the selected pH, and samples side-chain clashes. With ligands present, the action becomes **Prep complex**: it retains their bound poses, assigns documented molecular states and actual GAFF2/AM1-BCC parameters, and keeps supported ions and observed metal-coordinating waters. Inspect each ligand's selected SMILES and charge; an explicit-state SMILES override is available when a different state is needed.
 
@@ -89,10 +93,11 @@ The Simulate structure loader accepts one molecule per SDF/SMILES file and one M
 
 ## Simulation scope
 
-Automatic preparation supports **standard amino-acid proteins and supported noncovalent protein–ligand complexes**. Ligands are retained by default. An unknown chemical graph, missing ligand heavy atoms, unsupported element, covalent ligand linkage, or unassigned force-field term produces a component-specific error; source molecules are not silently removed. Nucleic acids and nonstandard protein residue templates still require another workflow.
+Automatic preparation supports **standard amino-acid proteins, SEP/TPO/PTR/HYP modifications, and supported noncovalent protein–ligand complexes**. Ligands are retained by default. An unknown chemical graph, missing ligand heavy atoms, unsupported element, covalent ligand linkage, or unassigned force-field term produces a component-specific error; source molecules are not silently removed. Other unnatural residues are recognized and retained, with a specific template blocker; this does not provide parameters for every unnatural amino acid. Nucleic acids require another preparation workflow.
 
 - **OpenMM:** ff14SB with GBn2 implicit solvent, or TIP3P explicit solvent with PME. Langevin-middle, hydrogen-bond constraints, up to 2 fs integration steps. Implicit mode requires a protein-only input.
 - **Protein–ligand OpenMM:** ff14SB protein + GAFF2/AM1-BCC organic ligands + TIP3P-compatible Amber ions/water. Each ligand is limited to 200 heavy atoms and supported closed-shell organic chemistry. Bound heavy-atom coordinates are preserved during preparation. XML templates, atom mappings, native charge/parameter files and logs remain attached through solvation and dynamics.
+- **Modified residues:** SEP, TPO and PTR use fixed −2 phosaa14SB states; HYP uses neutral internal ff14SB HYP or −1 C-terminal CHYP. Compatible terminal forms and covalent connectivity are checked. Their peptide links, heavy-atom chemistry, stereochemistry and parameter hashes are preserved; OpenMM explicit water is required. See [supported states and native validation](docs/MODIFIED_RESIDUES.md). MSE, ALY and other unregistered modifications currently require additional validated templates.
 - **GROMACS:** Amber99SB-ILDN/TIP3P, PME, stochastic dynamics, hydrogen-bond constraints, explicit solvent. Hydrogen reconstruction is recorded; existing heavy atoms are retained. Neutralizing ions replace only newly added solvent.
 - Both engine presets use **fixed-volume NVT**, optional minimization, and a short initial relaxation. They do not include pressure equilibration, site-specific pKₐ prediction, production convergence assessment, or GPU selection. Different engine defaults are not equivalent physical protocols.
 - Prepared structures and solvent previews currently run with **OpenMM**. GROMACS transfer is explicitly blocked because its preset rebuilds hydrogen states and uses a different force field; unprepared standard-protein inputs retain the original GROMACS workflow.

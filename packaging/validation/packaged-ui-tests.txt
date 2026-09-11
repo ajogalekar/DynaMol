@@ -1,0 +1,15 @@
+
+> dynamol@0.1.0 test:e2e
+> playwright test tests/pinch-zoom.spec.ts --reporter=list --output=/Users/ashujo/Documents/Science/DynaMol/build/packaging/playwright-package
+
+
+Running 4 tests using 1 worker
+
+(node:54593) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/pinch-zoom.spec.ts:86:1 › trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page (2.3s)
+  ✓  2 tests/pinch-zoom.spec.ts:108:1 › WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive (2.0s)
+  ✓  3 tests/pinch-zoom.spec.ts:151:1 › slow touchscreen pinch continues zooming while its center drifts and pans (3.8s)
+  ✓  4 tests/pinch-zoom.spec.ts:198:1 › ordinary unmodified wheel still zooms both ways (2.2s)
+
+  4 passed (11.1s)

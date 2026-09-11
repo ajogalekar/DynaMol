@@ -93,6 +93,8 @@ export default function SimulationPanel({
   const anyActive = jobs.some(active);
   const resultSelected = !!monitoredJob?.dataset_id && dataset?.id === monitoredJob.dataset_id;
   const complexPrepared = !!dataset?.preparation?.ligand_parameters;
+  const modifiedPrepared = !!dataset?.preparation?.requires_explicit_solvent;
+  const requiresExplicit = complexPrepared || modifiedPrepared;
   const resultViewerError =
     resultSelected && viewerError ? `Could not display the prepared structure: ${viewerError}` : '';
   useEffect(() => {
@@ -102,7 +104,7 @@ export default function SimulationPanel({
     if (dataset?.solvation) {
       setSolvent('explicit');
       setPadding(dataset.solvation.padding_nm);
-    } else if (dataset?.preparation?.ligand_parameters) {
+    } else if (requiresExplicit) {
       setSolvent('explicit');
     }
   }, [dataset?.id]);
@@ -142,7 +144,12 @@ export default function SimulationPanel({
           if (action.operation === 'solvation') {
             setSolvent('explicit');
             onWaterVisibility(true);
-          } else setSolvent(next.preparation?.ligand_parameters ? 'explicit' : 'implicit');
+          } else
+            setSolvent(
+              next.preparation?.ligand_parameters || next.preparation?.requires_explicit_solvent
+                ? 'explicit'
+                : 'implicit',
+            );
         })
         .catch((e) =>
           setMonitorError(
@@ -214,7 +221,7 @@ export default function SimulationPanel({
     }
   }
   async function changeSolvent(value: 'implicit' | 'explicit') {
-    if (value === 'implicit' && complexPrepared) return;
+    if (value === 'implicit' && requiresExplicit) return;
     if (value === 'explicit') {
       await previewWater();
       return;
@@ -440,7 +447,7 @@ export default function SimulationPanel({
                 onChange={(e) => void changeSolvent(e.target.value as 'implicit' | 'explicit')}
                 disabled={engine === 'gromacs' || busy || !!pending}
               >
-                <option value="implicit" disabled={complexPrepared}>
+                <option value="implicit" disabled={requiresExplicit}>
                   Implicit water · faster exploration
                 </option>
                 <option value="explicit">Explicit water · periodic box</option>
@@ -475,9 +482,11 @@ export default function SimulationPanel({
             )}
             <p className="form-note">
               {engine === 'openmm'
-                ? complexPrepared
-                  ? 'Amber ff14SB protein + GAFF2 / AM1-BCC ligands · TIP3P water · Langevin dynamics. Ligand states and parameters are retained in the saved box.'
-                  : 'Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P.'
+                ? modifiedPrepared
+                  ? `Amber ff14SB with recorded modified-residue templates${complexPrepared ? ' + GAFF2 / AM1-BCC ligands' : ''} · TIP3P water · Langevin dynamics.`
+                  : complexPrepared
+                    ? 'Amber ff14SB protein + GAFF2 / AM1-BCC ligands · TIP3P water · Langevin dynamics. Ligand states and parameters are retained in the saved box.'
+                    : 'Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P.'
                 : 'Amber99SB-ILDN · TIP3P water · stochastic dynamics.'}{' '}
               NVT exploration. Prepare protein–ligand complexes above, then build water and minimize
               before dynamics.

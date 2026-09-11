@@ -8,6 +8,7 @@ import type {
   Inspection,
   PreparationConfig,
 } from './types';
+import type { MeasurementPreview } from './components/LiveMeasurement';
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
   const response = await fetch(url, options);
   if (!response.ok) {
@@ -76,6 +77,13 @@ export const api = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ kind, atoms }),
+    }),
+  previewMeasurement: (id: string, kind: MeasureKind, atoms: number[], signal: AbortSignal) =>
+    request<MeasurementPreview>(`/api/datasets/${id}/measurement-preview`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kind, atoms }),
+      signal,
     }),
   jobs: () => request<Job[]>('/api/jobs'),
   start: (config: SimulationConfig) =>

@@ -1,5 +1,7 @@
 """DynaMol's localhost-only API. Run: uvicorn backend.main:app --host 127.0.0.1 --port 8765."""
 import math
+import os
+import re
 import hashlib
 import shutil
 import tempfile
@@ -16,15 +18,29 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from . import config, jobs, storage
-from .analysis import measure
+from .analysis import measure, preview
 from .models import MeasurementRequest, SimulationConfig, StructureFetchRequest, SmilesRequest, PreparationRequest, SolvationRequest, InspectionRequest
 
 
+def local_browser_origins(packaged_origin: str | None = None) -> tuple[str, ...]:
+    origins = [f"http://{host}:{port}" for host in ("localhost", "127.0.0.1") for port in (5173, 8765, 4173)]
+    if packaged_origin:
+        match = re.fullmatch(r"http://127\.0\.0\.1:([1-9][0-9]{0,4})", packaged_origin)
+        if not match or int(match.group(1)) > 65535:
+            raise ValueError("DYNAMOL_ORIGIN must be an exact http://127.0.0.1:<port> origin.")
+        if packaged_origin not in origins:
+            origins.append(packaged_origin)
+    return tuple(origins)
+
+
 class LocalOriginMiddleware(BaseHTTPMiddleware):
+    def __init__(self, app, allowed_origins: tuple[str, ...]):
+        super().__init__(app)
+        self.allowed_origins = frozenset(allowed_origins)
+
     async def dispatch(self, request: Request, call_next):
         origin = request.headers.get("origin")
-        allowed = {"http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:8765", "http://127.0.0.1:8765", "http://localhost:4173", "http://127.0.0.1:4173"}
-        if origin and origin not in allowed:
+        if origin and origin not in self.allowed_origins:
             return JSONResponse({"detail": "This local API accepts only DynaMol's local browser origin."}, status_code=403)
         if request.method in {"POST", "PUT", "DELETE", "PATCH"}:
             length = request.headers.get("content-length")
@@ -34,8 +50,9 @@ class LocalOriginMiddleware(BaseHTTPMiddleware):
 
 
 app = FastAPI(title="DynaMol", version="0.1.0", description="Local molecular dynamics studio — real trajectories, explicit provenance.")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:4173", "http://127.0.0.1:4173"], allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
-app.add_middleware(LocalOriginMiddleware)
+browser_origins = local_browser_origins(os.environ.get("DYNAMOL_ORIGIN"))
+app.add_middleware(CORSMiddleware, allow_origins=browser_origins, allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
+app.add_middleware(LocalOriginMiddleware, allowed_origins=browser_origins)
 
 
 @app.exception_handler(RequestValidationError)
@@ -137,6 +154,11 @@ async def upload(topology: UploadFile = File(...), trajectory: UploadFile | None
 @app.post("/api/datasets/{dataset_id}/measurements")
 def measurement(dataset_id: str, request: MeasurementRequest):
     return measure(dataset_id, request)
+
+
+@app.post("/api/datasets/{dataset_id}/measurement-preview")
+def measurement_preview(dataset_id: str, request: MeasurementRequest):
+    return preview(dataset_id, request)
 
 
 @app.get("/api/jobs")

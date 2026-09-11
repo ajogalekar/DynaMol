@@ -1,42 +1,119 @@
 # Self-contained DynaMol distribution
 
-This is a packaging proposal. The current source launcher is not a portable installer: it requires uv and Node, builds the frontend, and creates a local Python environment. OpenMM is installed with the Python dependencies; GROMACS is discovered separately. Native ligand preparation additionally uses the private AmberTools environment installed by `scripts/install_ligand_tools.sh`. No standalone release or DMG has been built or validated yet.
+A local Apple Silicon macOS prototype has been built as `DynaMol.app` and
+`DynaMol-0.1.0-macos-arm64.zip` under `build/releases/`. It bundles the engines
+and application runtime: recipients do not need Python, Node, uv, Conda,
+OpenMM, GROMACS or AmberTools installed. This is a local prototype, not a public
+release. It has no Apple Developer signature or notarization, and clean-Mac
+compatibility and the full redistribution audit remain unverified.
 
-## Recommended first release
+## What the package contains
 
-Build an offline Apple Silicon macOS application, distributed in a signed and notarized DMG. Opening DynaMol would start its local service and open the existing browser interface. A native window can be added later without changing the engine distribution.
+The app includes a standalone Python 3.12 interpreter, the installed Python
+scientific dependencies including OpenMM, the built frontend and fonts,
+GROMACS 2025.4, and AmberTools 24.8 with the native programs, libraries and data
+needed by the implemented preparation pipeline. Only the public Ubiquitin
+examples are seeded; developer uploads and jobs are excluded.
 
-Include inside the application:
+The supported target is **Apple Silicon with macOS 14 or newer**. The minimum
+OS version follows the bundled NumPy and SciPy wheels. Intel macOS, Windows and
+Linux require separately built and tested distributions. CPU execution has been
+checked; bundling the app does not establish additional GPU compatibility.
 
-- The prebuilt frontend, fonts and example data. Node is a build dependency only.
-- A private Python interpreter and pinned production dependencies, including OpenMM, PDBFixer, RDKit, MDTraj, ParmEd, Gemmi and Dimorphite-DL.
-- A private, pinned AmberTools 24.8 runtime for Antechamber/SQM AM1-BCC, Parmchk2 and LEaP, including GAFF2, BCC and LEaP data and required libraries. The development installer writes a native package export; packaging still needs relocation and clean-machine validation.
-- A private CPU GROMACS installation, including dependent libraries and force-field data, with paths that remain valid after relocation.
-- A curated CCD cache for bundled examples and an application-data cache for later components, preserving reference bytes, source URLs, hashes and retrieval metadata.
-- Dependency license notices and required redistribution materials, including the actual AmberTools environment's component and transitive licenses.
+Unzip the archive, place `DynaMol.app` in a writable location such as Applications,
+and open it. The launcher opens the local interface in the default browser and
+provides a DynaMol menu in the macOS menu bar. First launch shows progress while
+unpacking the included engine archives. It does not download engines, invoke a
+package manager, or install global software. Engine prefixes are versioned by
+archive hashes, and SHA-256 verification precedes extraction.
 
-Recipients would not need to install Python, Node, uv, Conda, AmberTools, OpenMM or GROMACS. Local viewing, protein preparation and simulations with available models would work offline. New CCD-based ligand preparation requires a cached component or sufficient supplied graph; an unknown, uncached component cannot be promised offline support. Database fetching still requires a connection. Prepared complex archives contain their parameters and do not need another charge calculation or CCD fetch to simulate.
+Uploads, jobs, engine prefixes and logs live in
+`~/Library/Application Support/DynaMol`, outside the app bundle. Replacing the
+app does not remove that directory. The service selects an available localhost
+port and can coexist with the source-development server. Reopening the app
+reuses its service; closing the browser leaves background work running.
 
-Use the bundled engines by default. Keep external engine paths as an advanced override. Write uploads, jobs and logs to the user's application-data directory, such as `~/Library/Application Support/DynaMol`, outside the application bundle.
+Database fetching still needs internet. Ligand preparation needs cached CCD
+chemistry or a sufficient supplied graph; arbitrary uncached ligands are not
+promised to work offline. Prepared complexes and supported modified residues
+currently require OpenMM with explicit TIP3P water. Packaging does not add
+GROMACS complex parameter export or change the 100,000-atom alpha limit.
 
-The source override for ligand tools is `DYNAMOL_AMBERTOOLS`. A packaged launcher must resolve its private prefix and data paths from the installed application location. Users should not need to activate Conda. The implemented complex path uses GAFF2/AM1-BCC with explicit-water OpenMM; bundling GROMACS does not add GROMACS complex parameter export.
+## Build and runtime design
 
-## Implementation constraints
+See [the package build instructions](../packaging/README.md) and
+[`scripts/package_macos.py`](../scripts/package_macos.py) for the current
+commands. Builds require the prepared source checkout and its scientific and
+native runtimes, frontend build tools, the macOS build toolchain, and the
+build-only `conda-pack` environment. These requirements belong to the builder,
+not the recipient.
 
-Do not copy the current `.venv` and `.gromacs` directories into a ZIP: their Python symlink and GROMACS wrapper contain paths specific to the development machine. GROMACS supports relocatable installation trees, but libraries and data paths must be packaged together. [GROMACS relocation documentation](https://manual.gromacs.org/current/dev-manual/relocatable-binaries.html)
+The builder copies the real interpreter distribution underlying the development
+venv and overlays its installed site packages. It does not ship an external
+venv Python symlink or `pyvenv.cfg`. The interpreter comes from
+[python-build-standalone](https://github.com/astral-sh/python-build-standalone).
+Native engines are packed with [conda-pack](https://conda.github.io/conda-pack/)
+and relocated into a user prefix once at launch. This preserves a real private
+`sys.executable` for the existing background worker processes. GROMACS libraries
+and data must travel with its executable; see the
+[GROMACS relocation documentation](https://manual.gromacs.org/current/dev-manual/relocatable-binaries.html).
 
-Apply the same rule to `.tools/ambertools`: use a supported relocatable package strategy and test Antechamber, SQM, Parmchk2 and LEaP from a path containing spaces. Include the GAFF2 and BCC data actually used. An OpenMM import or a native tool's help output does not establish that parameterization can find its data.
+The ZIP has a neighboring SHA-256 file. `Contents/Resources/manifest.json`
+records application source and engine archive hashes. Application source,
+Python metadata/licenses, native package notices and available package recipes
+and source URLs accompany the prototype. `Notices/DEPENDENCY_INVENTORY.json`
+records the collected versions, licenses and materials.
 
-Collect notices and applicable source/redistribution materials for every binary and dependency shipped. AmberTools has several component licenses: its default is GPLv3, with exceptions and separately licensed third-party components, while force-field files under `dat/leap` are public-domain data. Do not include proprietary Amber/pmemd under an assumption that all Amber software is freely redistributable. This proposal is not a completed license audit. [AmberTools distribution](https://ambermd.org/AmberTools.php), [Amber project and force-field information](https://ambermd.org/index.php)
+The source checkout remains a separate way to run DynaMol. Its `start.sh`
+requires uv and Node/npm (Node 22 or newer is documented), creates the Python
+environment, builds the frontend and starts the local service. OpenMM comes
+from its Python dependencies; the source workflow discovers GROMACS separately
+and uses `scripts/install_ligand_tools.sh` for the private AmberTools runtime.
+Those source prerequisites do not apply to the built app.
 
-Preserve a real private Python executable initially: background workers currently launch with `sys.executable -m backend.worker` or `backend.preparation_worker`. A frozen executable requires a worker dispatcher and explicit inclusion of native libraries, package metadata and scientific resources. PyInstaller can bundle Python, but builds are specific to their operating system. [PyInstaller operating mode](https://www.pyinstaller.org/en/stable/operating-mode.html)
+## Validation and remaining release work
 
-Ship CPU support first. Optional GPU support requires compatible platform libraries and vendor drivers; drivers cannot be assumed on a recipient's machine. [OpenMM installation documentation](https://docs.openmm.org/latest/userguide/application/01_getting_started.html)
+The [relocated runtime check](../packaging/validation/relocated-runtime.json)
+passed using the copied interpreter and unpacked engine archives in paths
+containing spaces, with a system-only PATH. It loaded OpenMM force-field data,
+ran CPU minimization and integration, generated native GAFF2/AM1-BCC ethanol
+parameters, and ran GROMACS Ubiquitin topology generation and five minimization
+steps. Dynamic-loader traces for Python, SQM and GROMACS used the relocated
+libraries and macOS system libraries. No network operations were used, and
+proxy endpoints were disabled; this was not an OS-level network sandbox.
 
-Build and test other OS/architecture packages separately. Windows also needs replacement of the current Unix process-control code and a validated GROMACS distribution strategy.
+The [application-launch check](../packaging/validation/packaged-app.json) passed:
+setup progress, both bundled engine availability probes, service reuse,
+authenticated shutdown and restart with datasets and jobs retained. Real
+background workers launched with the private interpreter completed a 1,231-atom
+OpenMM Ubiquitin run and a 26,842-atom explicit-water GROMACS run, each producing
+six frames. Four browser pinch/zoom regression tests also passed against the
+packaged service on its dynamically assigned port; the exact local origin is
+configured without accepting arbitrary foreign origins. These are short
+functional checks, not convergence or accuracy validation. The entry points are
+[`validate_runtime.py`](../packaging/macos/validate_runtime.py) and
+[`validate_app.py`](../packaging/macos/validate_app.py). The checks used relocated
+paths containing spaces on the development Mac, not a separate clean computer.
 
-## Release validation
+The [native LaunchServices check](../packaging/validation/native-launch.json)
+started the relocated `.app` and verified the Swift launcher → private Python →
+API process chain, both engines and frontend asset access. Native menu clicks
+remain untested because the Mac was locked; automatic browser opening was
+disabled in this isolated check. No lock or OS file-access protection was
+bypassed. These native interactions remain release validation items.
 
-Test the relocated application on a clean machine with no development tools or MD engines. Exercise structure loading, protein preparation, native complex preparation with a cached CCD ligand and a supplied graph, supported paths in both engines, cancellation and reopening a running job. Verify native-to-XML energy/force checks, parameter archive reuse through explicit-water OpenMM, resource discovery, writable storage, cache behavior with networking disabled, license materials and the signed installer. The 100,000-atom alpha limit remains independent of packaging.
+The launcher has an ad-hoc signature only. A quarantined downloaded copy may be
+blocked by Gatekeeper; Apple Developer signing, notarization and a separate
+clean-Mac test are still required before a supported public release.
 
-A smaller bootstrap installer could download verified engine bundles on first use, with installation progress and integrity checks. That is an alternative distribution mode, not a fully offline package.
+Corresponding source archives required for redistribution of all copyleft
+binaries have not yet been fully assembled or legally reviewed. Included license
+texts, recipes and source URLs preserve provenance but do not establish that
+all public binary redistribution requirements are complete. AmberTools has
+component-specific licenses; its installed license identifies public-domain
+force-field data under `dat/leap`, separately from program licenses. This is not
+a blanket redistribution license for proprietary Amber/pmemd. See
+[AmberTools](https://ambermd.org/AmberTools.php) and
+[DynaMol's third-party notices](../THIRD_PARTY.md).
+
+No artifact has been publicly published or uploaded by this packaging workflow.

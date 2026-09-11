@@ -1,0 +1,243 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/ashujo/Documents/Science/DynaMol/frontend/node_modules/.bin/playwright",
+      "test",
+      "tests/pinch-zoom.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/ashujo/Documents/Science/DynaMol/frontend/playwright.config.ts",
+    "rootDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pinch-zoom.spec.ts",
+      "file": "pinch-zoom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-11T05:07:29.122Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "rendered-geometry.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgIndpZHRoIjogMjI4LAogICAgImhlaWdodCI6IDI1NCwKICAgICJjeCI6IDQ2MC4zOTE5MDczMjU4MjgsCiAgICAiY3kiOiAyMzAuNDA2OTE3OTMxMTQ3LAogICAgImNvdW50IjogMTIyNTgKICB9LAogICJleHBhbmRlZCI6IHsKICAgICJ3aWR0aCI6IDI5MiwKICAgICJoZWlnaHQiOiAzMjcsCiAgICAiY3giOiA0NTkuOTI1MTE4OTE5NzQ4MzQsCiAgICAiY3kiOiAyMjkuMzk2MTQzNDE5NzczOTIsCiAgICAiY291bnQiOiAxOTU1MQogIH0sCiAgInJlc3RvcmVkIjogewogICAgIndpZHRoIjogMjI4LAogICAgImhlaWdodCI6IDI1NCwKICAgICJjeCI6IDQ2MC4xMDY1NzgwNjE5MTEyLAogICAgImN5IjogMjMwLjEzODM3NDgzMTc2MzEyLAogICAgImNvdW50IjogMTE4ODgKICB9LAogICJvcmlnaW5hbFZpZXdwb3J0IjogewogICAgInNjYWxlIjogMSwKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMCwKICAgICJkZXZpY2VQaXhlbFJhdGlvIjogMSwKICAgICJzY3JvbGxYIjogMCwKICAgICJzY3JvbGxZIjogMAogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4c03eb0325dfbfd378aa-5a49bd4a676160ac2da6",
+          "file": "pinch-zoom.spec.ts",
+          "line": 86,
+          "column": 1
+        },
+        {
+          "title": "WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2217,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-11T05:07:31.800Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "rendered-geometry.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgIndpZHRoIjogMjI4LAogICAgImhlaWdodCI6IDI1NCwKICAgICJjeCI6IDQ2MC4zOTE5MDczMjU4MjgsCiAgICAiY3kiOiAyMzAuNDA2OTE3OTMxMTQ3LAogICAgImNvdW50IjogMTIyNTgKICB9LAogICJleHBhbmRlZCI6IHsKICAgICJ3aWR0aCI6IDI5NiwKICAgICJoZWlnaHQiOiAzMzAsCiAgICAiY3giOiA0NTkuODMxNjE5NDA4OTQ1NywKICAgICJjeSI6IDIyOS4yODQzNDUwNDc5MjMzMiwKICAgICJjb3VudCI6IDIwMDMyCiAgfSwKICAicmVzdG9yZWQiOiB7CiAgICAid2lkdGgiOiAyMjgsCiAgICAiaGVpZ2h0IjogMjU0LAogICAgImN4IjogNDYwLjEwNjU3ODA2MTkxMTIsCiAgICAiY3kiOiAyMzAuMTM4Mzc0ODMxNzYzMTIsCiAgICAiY291bnQiOiAxMTg4OAogIH0sCiAgIm9yaWdpbmFsVmlld3BvcnQiOiB7CiAgICAic2NhbGUiOiAxLAogICAgIndpZHRoIjogMTQ0MCwKICAgICJoZWlnaHQiOiAxMDAwLAogICAgImRldmljZVBpeGVsUmF0aW8iOiAxLAogICAgInNjcm9sbFgiOiAwLAogICAgInNjcm9sbFkiOiAwCiAgfQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4c03eb0325dfbfd378aa-2912b7eb54550bdbe5e6",
+          "file": "pinch-zoom.spec.ts",
+          "line": 108,
+          "column": 1
+        },
+        {
+          "title": "slow touchscreen pinch continues zooming while its center drifts and pans",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3900,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-11T05:07:34.024Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "rendered-geometry.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgIndpZHRoIjogMjI4LAogICAgImhlaWdodCI6IDI1NCwKICAgICJjeCI6IDQ2MC4zOTE5MDczMjU4MjgsCiAgICAiY3kiOiAyMzAuNDA2OTE3OTMxMTQ3LAogICAgImNvdW50IjogMTIyNTgKICB9LAogICJleHBhbmRlZCI6IHsKICAgICJ3aWR0aCI6IDMzMCwKICAgICJoZWlnaHQiOiAzNjksCiAgICAiY3giOiA0ODguMjczMzQwMjkwNTk5NjYsCiAgICAiY3kiOiAyNDMuMzg0MjQxNzkxNzYzNjYsCiAgICAiY291bnQiOiAyNDkxNAogIH0sCiAgInJlc3RvcmVkIjogewogICAgIndpZHRoIjogMjI4LAogICAgImhlaWdodCI6IDI1NCwKICAgICJjeCI6IDQ1OS43NzQ2MjA3MzU4OTgwNSwKICAgICJjeSI6IDIzMC4wMDY3MDUyMjE2OTE0LAogICAgImNvdW50IjogMTE5MzEKICB9LAogICJvcmlnaW5hbFZpZXdwb3J0IjogewogICAgInNjYWxlIjogMSwKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMCwKICAgICJkZXZpY2VQaXhlbFJhdGlvIjogMSwKICAgICJzY3JvbGxYIjogMCwKICAgICJzY3JvbGxZIjogMAogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4c03eb0325dfbfd378aa-6a324d039c3906bab549",
+          "file": "pinch-zoom.spec.ts",
+          "line": 151,
+          "column": 1
+        },
+        {
+          "title": "ordinary unmodified wheel still zooms both ways",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2433,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-11T05:07:37.931Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "rendered-geometry.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgIndpZHRoIjogMjI4LAogICAgImhlaWdodCI6IDI1NCwKICAgICJjeCI6IDQ2MC4zOTE5MDczMjU4MjgsCiAgICAiY3kiOiAyMzAuNDA2OTE3OTMxMTQ3LAogICAgImNvdW50IjogMTIyNTgKICB9LAogICJleHBhbmRlZCI6IHsKICAgICJ3aWR0aCI6IDI0NSwKICAgICJoZWlnaHQiOiAyNzQsCiAgICAiY3giOiA0NTkuOTEzNjUzNDU2NzU0NCwKICAgICJjeSI6IDIyOS45NTQzNjc5NDkwODg4LAogICAgImNvdW50IjogMTM4MjgKICB9LAogICJjb250cmFjdGVkIjogewogICAgIndpZHRoIjogMjI5LAogICAgImhlaWdodCI6IDI1NiwKICAgICJjeCI6IDQ2MC4wNzA5MDcyODE0NzI5LAogICAgImN5IjogMjMwLjI5NzIzMDA1NDczNTQ1LAogICAgImNvdW50IjogMTIwNTgKICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4c03eb0325dfbfd378aa-662071d2d7d866495fe4",
+          "file": "pinch-zoom.spec.ts",
+          "line": 198,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-11T05:07:28.860Z",
+    "duration": 11630.418000000001,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

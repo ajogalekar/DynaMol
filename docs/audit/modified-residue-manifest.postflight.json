@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T05:45:35.131634+00:00",
+  "purpose": "Verify DynaMol modified-amino-acid identity, fixed-state parameterization, force-field translation and preservation through real preparation, explicit solvation and a bounded 2-step OpenMM run. Validate the associated UI corrections. Software behavior and numerical consistency only; no pKa, biological accuracy, full-1UA2 preparation, equilibrium, convergence or predictive benchmark claims.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "versions": {
+      "rdkit": "2025.9.6",
+      "openmm": "8.6.0",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1",
+      "gemmi": "0.7.5",
+      "dimorphite-dl": "2.0.2"
+    },
+    "planned_seed": 2026,
+    "inputs": [
+      {
+        "id": "f491cb784d7f4fbf",
+        "name": "1UA2",
+        "files": {
+          "physical.npz": "03be2ab648c218070f1002c2fc02485b837d93294b0b41982cda80bb945c91e8",
+          "source.cif": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+          "metadata.json": "0d9b31e54d3c55739aa9f15886be533ebf1e44851eef1760f02b41329253c9d0",
+          "topology.pdb": "84f9de8cbd7e57f00dd545f60ef5ff9975584207e20378a6f5297bcc6808bc89"
+        }
+      }
+    ],
+    "outputs_and_exclusions_recorded": true,
+    "seed": 2026,
+    "evidence_files": {
+      "docs/audit/ui-interaction-fixes.json": "863ae34f206ce9682d64bc23e2d5ed1f062f8506ebac6909f1df1937ef05d79a",
+      "docs/audit/modified-residue-1UA2-inspection.json": "f4ed2491af9e2ef875b960fbbcc5f43a5fd975968ab90edcebf8ea1d048cd6f8",
+      "docs/audit/modified-residues/native-parity.json": "0a757c618e3ddf5954fd97ec67c5ae43165c190bf97c20a7455fa91b19d1e208",
+      "docs/audit/modified-residues/native-source.json": "6042cbdcd07c13277bc4ec4a4fa041ca0d638c2e67a3679bf2912271cc4b143f",
+      "docs/audit/modified-residue-native-run.json": "9b35501d29d5600c0bd7a84d36338247c41dc1b8ecaef7f722f8ab1b255125dc",
+      "scripts/check_modified_residue.py": "bc4c87e5fa1beb967556f906d7387da0b86e0cbb37e6eab806e1e98dfcf9a490",
+      "docs/audit/modified-residues/verify_native.py": "cd0d8633c1e3e3dbb1d367c0ceb764bbd0de650a1601ea30679ff3849b0b886b",
+      "frontend/tests/modified-residue-inspection.spec.ts": "5cfb431159de6559442639a342b9c96922e1ba5abb109ea93449052669dbe010",
+      "backend/tests/test_modified_bundle.py": "04a398304cc82f58fbb5313623578d52f2e8d9cc9b21683cdc93dd9579856587",
+      "docs/audit/final-backend-tests.txt": "20b6cf2b126efab6c811a0dec8f9b719ec008450c1f24c6266299cff42c15ddd",
+      "backend/tests/test_missing_modified_sequence.py": "faed8fc8b62f254ba4feb7c9021da1495f6a3ee658e120258d7f7a879203f16b"
+    },
+    "postflight_source_sha256": {
+      "backend/modified_residues.py": "89d7c817bdbd13a0c91837b69a2ffcc6fddf2a56f00cba07130e750d5e84a0ec",
+      "backend/residue_identity.py": "0ef884673e39ca010ba0abf512f4652c036f836b98240b8e698d494e5a51baf3",
+      "backend/preparation.py": "a5c3d5df2349e166d2eeee21c6e09b36d8903756e113f60e04a526d8d677b8a8",
+      "backend/preparation_worker.py": "9e5293e30ca17a7a6bb8ae27dba6ff169a378f8c5b6169a66315dfdb3a9946cd",
+      "backend/prepared_system.py": "4229c3bea40610031169e9acbd04a0d41adb50ade1793a5ac4715e67db6335ae",
+      "backend/solvent.py": "269c4e4d858c560d1361b68d1a05fceb4f0d542f54666b855c851b08bf5d76f8",
+      "backend/worker.py": "4da8f75332e4893be4597f58d8dcead7febc06d344cbc99e078522cdfaed07e9",
+      "backend/storage.py": "295e50c209ee35152a7702ca7f2e27ca8c47a74481c23992fb801e932df1903c",
+      "backend/ligands.py": "73288a8cee3bb3a0f0c6b4cf1b494a581bd5673d60a0edf5c6d4adc7bb9d6f2a",
+      "frontend/src/components/StructureWorkbench.tsx": "34fc16b7a38663dad038393f1d710c4966f87f5e612dd4ea1628f3cb36f87ec0",
+      "frontend/src/components/LiveMeasurement.tsx": "80645b685646abf70078c1a949fc60d7f6815d4daec72bb49c3abc48f78e327f",
+      "backend/main.py": "77dd4fd167c508f5143bcc2b88eee3fc53e5bbbe806cab4d9ad5530ab3e93be9",
+      "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+      "frontend/src/types.ts": "a0577c0272c78ae5fb4c9e0358107f27283d690a1f3f191ad57b4be9a5c3aa5a"
+    },
+    "source_hash_scope": "Current postflight source snapshot. The real preparation provenance additionally records preparation_worker.py and the modified-residue implementation/parameter manifest. No claim that this working tree is an immutable release commit."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve deposited modification identity, bound heavy-atom coordinates and L/D stereochemistry. Match only documented compatible residue templates; do not remove phosphate or replace unnatural residues with standard amino acids. Reconstruct peptide connectivity including modifications, verify external bonds and charges. Report genuine missing loops separately, with no stretched artificial peptide bonds. Unsupported residues remain viewable with actionable preparation blockers. No arbitrary GAFF treatment of covalently linked amino acids. Missing sequence residues retain exact modified identities rather than PDBFixer parent substitutions; internal gaps containing modified or unknown identities cannot be constructed by this workflow."
+  },
+  "validation": {
+    "status": "Software and scoped numerical continuity checks passed; scientific accuracy and convergence unvalidated",
+    "backend_tests": {
+      "passed": 131,
+      "failed": 0,
+      "warnings": 2,
+      "duration_seconds": 12.28,
+      "evidence": "docs/audit/final-backend-tests.txt"
+    },
+    "ui_tests": {
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "12 focused Chrome tests for fullscreen/pinch/live-measurement behavior plus one separate real 1UA2 inspection UI test; browser event simulation is not physical-device or Safari certification.",
+      "combined_12_evidence": "docs/audit/ui-interaction-fixes.json",
+      "modified_inspection_report_sha256": "13633b326440b716a554b36510e41715f5f3ef88854869d007a290431bd9bedb",
+      "modified_inspection_stats": {
+        "startTime": "2026-09-11T05:15:41.852Z",
+        "duration": 4071.399,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "modified_inspection_suites": [
+        {
+          "title": "modified-residue-inspection.spec.ts",
+          "file": "modified-residue-inspection.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [
+            {
+              "title": "1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuine gap warnings",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3260,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T05:15:42.107Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e94e31c6ad327c43b05b-250c4692974120ca2c68",
+              "file": "modified-residue-inspection.spec.ts",
+              "line": 3,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    "native_parameter_parity": {
+      "passed": true,
+      "residues": [
+        "HYP",
+        "PTR",
+        "SEP",
+        "TPO"
+      ],
+      "poses_per_residue": 3,
+      "reference": "Native AmberTools24.8 TLEAP ACE-residue-NME systems, generated from leaprc.protein.ff14SB and leaprc.phosaa14SB",
+      "thresholds": {
+        "energy_kj_mol": 0.002,
+        "max_force_component_kj_mol_nm": 0.02
+      },
+      "maximum_energy_difference_kj_mol": 0.0006722753449253105,
+      "maximum_force_component_difference_kj_mol_nm": 0.007627714007298891,
+      "note": "Native TLEAP prmtop serializes angular constants with finite-precision pi; published XML uses mathematical pi. Differences are serialization-level numerical behavior, not uncertainty estimates or scientific accuracy validation."
+    },
+    "real_worker_continuity": {
+      "passed": true,
+      "fixture": {
+        "dataset_id": "ab1f83563b7547b0",
+        "residues": 13,
+        "atoms": 111,
+        "pdb_sha256": "1fc87b74e6c031906e187bb6a12033673560c20eea914610a03d0df69ac8096f",
+        "tpo_heavy_atoms": 11
+      },
+      "solvated_atoms": 5687,
+      "frames": 3,
+      "times_ps": [
+        0.0,
+        0.002,
+        0.004
+      ],
+      "checks": {
+        "isolated_fragment_has_no_inherited_full_sequence": true,
+        "retained_all_TPO_heavy_atoms_despite_remove_heterogens": true,
+        "TPO_heavy_coordinate_max_displacement_angstrom": 0.0,
+        "TPO_peptide_links_and_four_phosphate_bonds_retained": true,
+        "TPO_total_charge_e": -1.9999999999999998,
+        "solvation_preserves_all_prepared_solute_coordinates": true,
+        "exact_per_atom_charges_and_parameter_snapshot_across_all_stages": true,
+        "finite_native_coordinates_and_energies": true,
+        "original_full_source_unchanged": true
+      },
+      "jobs": {
+        "preparation": {
+          "id": "d69717d9fd0a4b81",
+          "status": "completed",
+          "elapsed_seconds": 0.47,
+          "dataset_id": "82796c28848d4eb1",
+          "error": null
+        },
+        "solvation": {
+          "id": "b0f976c89b08456b",
+          "status": "completed",
+          "elapsed_seconds": 0.49,
+          "dataset_id": "8663db8efe24454e",
+          "error": null
+        },
+        "dynamics": {
+          "id": "8c0ff40992c94210",
+          "status": "completed",
+          "elapsed_seconds": 15.4,
+          "dataset_id": "a0f08725428e47db",
+          "error": null
+        }
+      },
+      "finished_at": "2026-09-11T05:43:08.476737+00:00",
+      "data_dir": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/modified-residue-final",
+      "note": "Rerun on the frozen final production code after missing-modified-sequence preservation and parameter snapshot validation changes."
+    },
+    "full_1UA2_status": "Inspection identifies four supported TPO residues and four ATP ligands. Four genuine 12-residue internal gaps remain; full-source preparation is blocked. Missing terminal sequence is also reported. The isolated A164\u2013176 fragment is explicitly truncated and does not inherit full-source SEQRES.",
+    "missing_modified_sequence_regressions": {
+      "passed": 10,
+      "evidence": "backend/tests/test_missing_modified_sequence.py",
+      "scope": "Seven missing identities (SEP,TPO,PTR,HYP,MSE,ALY,ZZZ) are preserved in sequence-supported gaps and blocked from construction regardless of ligand-removal choice; one worker-bypass rejection; one unchanged standard-ILE short-loop case; one proof that the scoped PDBFixer finder preserves TPO while leaving upstream global substitutions unchanged.",
+      "scientific_boundary": "No missing modified residue is replaced with its parent amino acid. Building an internal gap containing an absent modified or unknown amino acid remains unsupported; known ordinary short loops retain their previous bounded opt-in behavior."
+    }
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "notes": "Deterministic native/XML agreement at four capped residue fixtures and three predefined coordinate variants each, and one 0.004 ps continuity trajectory. These are implementation checks, not statistically independent replicates or an accuracy benchmark. No scientifically meaningful confidence interval, convergence result, blind experiment, or superiority claim is invented."
+  },
+  "review_identity": "Language-model evidence synthesis with an independent PatAgent automated checklist; not Pat Walters, endorsed by him, or professional/domain-expert certification.",
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "scope": "Identity, connectivity, stereochemistry sign, fixed template charge, finite short-run energy/coordinates and parameter-file continuity only.",
+    "limitations": [
+      "SEP/TPO/PTR use fixed dianionic phosphate states; requested pH does not compute their pKa or bound-state populations.",
+      "HYP is an explicit supported stereochemical/template state; arbitrary unnatural residues and unsupported termini/crosslinks remain blocked.",
+      "Prepared modifications require explicit TIP3P/OpenMM; GROMACS state transfer and implicit-solvent modified-residue treatment are not validated.",
+      "Native conversion parity does not validate experimental conformations, rotamers, binding thermodynamics, metal coordination, or long-time behavior.",
+      "The 13-residue TPO fragment is a software fixture, not a substitute full-1UA2 model."
+    ]
+  },
+  "blog_context": {
+    "retrieval_query": "tautomer molecular representation reproducibility",
+    "saved_preflight_search": "docs/audit/modified-residue-blog-search.json",
+    "corpus_records_at_read": 91,
+    "source_counts": {
+      "blogger": 74,
+      "github-pages": 17
+    },
+    "authorship": "Cited post is Pat-authored; application of its representation caution to PTM preparation is this review\u2019s inference.",
+    "source": {
+      "title": "The Trouble With Tautomers",
+      "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/",
+      "principle": "Algorithmic molecular representation choices do not establish physically populated molecular states."
+    }
+  }
+}

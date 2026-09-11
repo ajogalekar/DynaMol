@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 tests/modified-residue-inspection.spec.ts:3:1 › 1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuine gap warnings (3.2s)
+
+  1 passed (4.0s)

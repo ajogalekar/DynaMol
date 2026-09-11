@@ -1,7 +1,7 @@
 .venv/
 .gromacs/
 .tools/
-data/
+/data/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -15,3 +15,4 @@ frontend/playwright-report/
 .env.*
 !.env.example
 *.log
+build/

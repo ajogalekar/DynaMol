@@ -1,0 +1,114 @@
+-I: Adding /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/prep to search path.
+-I: Adding /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib to search path.
+-I: Adding /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm to search path.
+-I: Adding /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd to search path.
+-I: Adding ../../../../.tools/ambertools/dat/leap/prep to search path.
+-I: Adding ../../../../.tools/ambertools/dat/leap/lib to search path.
+-I: Adding ../../../../.tools/ambertools/dat/leap/parm to search path.
+-I: Adding ../../../../.tools/ambertools/dat/leap/cmd to search path.
+-f: Source leap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./leap.in
+----- Source: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/amino12.lib
+Loading library: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/aminoct12.lib
+Loading library: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/aminont12.lib
+----- Source: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/leaprc.phosaa14SB
+----- Source of /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/leaprc.phosaa14SB done
+Log file: ./leap.log
+Loading parameters: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.phosaa14SB
+Reading force field modification type file (frcmod)
+Reading title:
+Updated dihedral parameters for phosphorylated amino acids for use with ff14SB
+Loading library: /Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/phosaa14SB.lib
+Checking Unit.
+
+/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Writing pdb file: SEP.pdb
+Checking Unit.
+
+/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Writing pdb file: TPO.pdb
+Checking Unit.
+
+/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.000000) is not zero.
+
+/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 8 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Writing pdb file: PTR.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Writing pdb file: HYP.pdb
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 3; Notes = 3.

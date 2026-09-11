@@ -1,0 +1,16 @@
+{
+  "source": "Installed conda-forge AmberTools24.8, private DynaMol runtime",
+  "reference_input": "native/leap.in",
+  "files": {
+    "cmd/leaprc.protein.ff14SB": "e96bd5b9d5fba9c027050e33efd3414e4d26ff616566b08730abedc554fac98c",
+    "cmd/leaprc.phosaa14SB": "6dbe710abf3303a91e2000e18e19f612c6b710a52061cccaaa53ecd9f730c6e4",
+    "lib/phosaa14SB.lib": "a56cf4d152f27b44afa8356bcc32f39e6ce1357754b674de08ac21d070755654",
+    "lib/amino12.lib": "dcd92afbb7ee4c8a737f1ad47eb714618b6c186759c902cd5c06c22a5378df77",
+    "lib/aminont12.lib": "a7a267adbe63c3559283204ffd135b37e14dac0f33a7eae76f94cba80a56b58c",
+    "lib/aminoct12.lib": "4f45d160211ae20450ee59632012cba3ada60a5129de410da1bfbfd7f9a9a5f7",
+    "parm/parm10.dat": "dc0c02d28fb7ee4f04d0a5edee3cd62968ba5e9bdb69e0f728bf01d242d7d062",
+    "parm/frcmod.ff14SB": "d7240947ca454e49fa2419343cff0090c1e9c02f39618e826d99fc5f1b29dc73",
+    "parm/frcmod.phosaa14SB": "5374d5febafda4b95b51bdfcde726a759c7bb78692601fc850bad1bbee33e8d2"
+  },
+  "limitations": "Capped residue energy/force and parameter conversion checks only; not protein conformational, protonation-pKa, metal coordination, or trajectory convergence validation."
+}

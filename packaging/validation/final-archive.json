@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "archive": "/Users/ashujo/Documents/Science/DynaMol/build/releases/DynaMol-0.1.0-macos-arm64.zip",
+  "bytes": 529521574,
+  "sha256": "b64f67f11e8dde1e51815d5733642fdfae7a27286836b84b71f07d94113d8317",
+  "build_id": "687c1a2470b7feec",
+  "minimum_macos": "14.0",
+  "architecture": "arm64",
+  "source_parity_files_checked": 118,
+  "internal_files_verified": 118,
+  "zip_crc_verified": true,
+  "private_user_datasets_or_jobs_included": false,
+  "examples": [
+    "demo",
+    "ubiquitin-start"
+  ],
+  "native_menu_limit": "Native menu clicks remain untested because the Mac was locked. LaunchServices process startup, bundled Python/service startup and resource serving were verified separately.",
+  "signing": "ad-hoc launcher only; not Apple Developer signed or notarized"
+}

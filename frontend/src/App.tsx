@@ -23,6 +23,7 @@ import {
   Layers3,
   LoaderCircle,
   Minus,
+  Minimize,
   MousePointer2,
   MoveUpRight,
   Pause,
@@ -42,6 +43,7 @@ import {
 import MolecularViewer from './components/MolecularViewer';
 import type { ViewerHandle } from './components/MolecularViewer';
 import PlotPanel from './components/PlotPanel';
+import LiveMeasurement, { useLiveMeasurement } from './components/LiveMeasurement';
 import ImportDialog from './components/ImportDialog';
 import SimulationPanel from './components/SimulationPanel';
 import { api } from './api';
@@ -128,15 +130,31 @@ export default function App() {
     [inspector, setInspector] = useState(true),
     [focusQuery, setFocusQuery] = useState('');
   const [viewerError, setViewerError] = useState('');
+  const [fullscreen, setFullscreen] = useState(false);
   const [viewerLoadRevision, setViewerLoadRevision] = useState(0);
   const viewer = useRef<ViewerHandle>(null),
     frameRef = useRef(0),
     loadToken = useRef(0),
-    workspace = useRef<HTMLDivElement>(null);
+    appShell = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const syncFullscreen = () => setFullscreen(document.fullscreenElement === appShell.current);
+    document.addEventListener('fullscreenchange', syncFullscreen);
+    return () => document.removeEventListener('fullscreenchange', syncFullscreen);
+  }, []);
+  const toggleFullscreen = async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else if (appShell.current?.requestFullscreen) await appShell.current.requestFullscreen();
+      else setToast('Fullscreen is unavailable in this browser.');
+    } catch {
+      setToast('Fullscreen is unavailable in this browser.');
+    }
+  };
   const visibleMeasurements = useMemo(
     () => measurements.filter((m) => m.visible !== false),
     [measurements],
   );
+  const liveMeasurement = useLiveMeasurement(dataset, kind, selectedAtoms, frame);
   const time = dataset?.times_ps[Math.min((dataset?.n_frames ?? 1) - 1, Math.round(frame))] ?? 0;
   const refreshJobs = useCallback(() => {
     api
@@ -494,7 +512,10 @@ export default function App() {
   }
 
   return (
-    <div className={`app-shell ${modal === 'simulation' ? 'studio-open' : ''}`}>
+    <div
+      ref={appShell}
+      className={`app-shell ${modal === 'simulation' ? 'studio-open' : ''} ${fullscreen ? 'app-fullscreen' : ''}`}
+    >
       <header className="app-header">
         <a
           className="brand"
@@ -596,7 +617,6 @@ export default function App() {
       )}
       <main
         className={`workspace-grid ${inspector && modal !== 'simulation' ? '' : 'inspector-hidden'}`}
-        ref={workspace}
       >
         <aside className="scene-panel">
           <div className="panel-heading">
@@ -831,6 +851,7 @@ export default function App() {
                 colorScheme={colorScheme}
                 selectedAtoms={selectedAtoms}
                 measurements={visibleMeasurements}
+                liveMeasurement={liveMeasurement}
                 picking={picking}
                 spin={spin}
                 onAtomPick={onAtomPick}
@@ -938,17 +959,12 @@ export default function App() {
               </button>
               <button
                 className="icon-button"
-                title="Full screen"
-                aria-label="Full screen"
-                onClick={() => {
-                  if (document.fullscreenElement) void document.exitFullscreen();
-                  else
-                    void workspace.current
-                      ?.requestFullscreen()
-                      .catch(() => setToast('Fullscreen is unavailable in this browser.'));
-                }}
+                title={fullscreen ? 'Exit full screen' : 'Full screen'}
+                aria-label={fullscreen ? 'Exit full screen' : 'Full screen'}
+                aria-pressed={fullscreen}
+                onClick={() => void toggleFullscreen()}
               >
-                <Expand size={16} />
+                {fullscreen ? <Minimize size={16} /> : <Expand size={16} />}
               </button>
             </div>
             {picking && (
@@ -965,7 +981,7 @@ export default function App() {
             <div className="canvas-footer">
               <span>
                 <MousePointer2 size={12} /> Drag to rotate <i />
-                Scroll to zoom <i />
+                Scroll or pinch to zoom <i />
                 Right drag to pan
               </span>
               <span className="orientation">
@@ -1228,6 +1244,7 @@ export default function App() {
                   );
                 })}
               </div>
+              <LiveMeasurement preview={liveMeasurement} />
               <div className="search-input atom-search">
                 <Search size={13} />
                 <input
@@ -1419,8 +1436,9 @@ export default function App() {
                 <section>
                   <h3>Explore the motion</h3>
                   <p>
-                    Drag to rotate, scroll to zoom, and right-drag to pan. Change the representation
-                    or hide solvent in the Scene pane. The timeline and plots stay linked.
+                    Drag to rotate, scroll or pinch to zoom, and right-drag to pan. Change the
+                    representation or hide solvent in the Scene pane. The timeline and plots stay
+                    linked.
                   </p>
                 </section>
               </div>

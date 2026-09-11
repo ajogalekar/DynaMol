@@ -104,6 +104,8 @@ class Worker:
 
         settings = self.settings
         self.update(stage="Preparing protein", status="running")
+        from .modified_residues import register_topology_definitions
+        register_topology_definitions()
         pdb = app.PDBFile(str(self.folder / "input.pdb"))
         modeller = app.Modeller(pdb.topology, pdb.positions)
         implicit = settings["solvent"] == "implicit"
@@ -121,6 +123,10 @@ class Worker:
                 if not solvent_state:
                     raise ValueError("Create and inspect the explicit-water preview for this prepared complex before starting simulation.")
                 self.record_preparation("Reusing verified GAFF2 ligand templates and AM1-BCC charges; ligand molecular states and atom identities are retained.")
+            if prepared_state.get("modified_residues"):
+                if not solvent_state:
+                    raise ValueError("Create and inspect explicit water for the prepared modified protein before starting simulation.")
+                self.record_preparation("Reusing recorded compatible modified-residue templates, with the covalent modifications and peptide bonds retained.")
         else:
             modeller.addHydrogens(ff, pH=7.0)
             self.record_preparation(f"Added {modeller.topology.getNumAtoms() - before} hydrogens using OpenMM templates at pH 7; retained all input atoms. Protonation uses heuristic residue defaults and must be reviewed for scientific studies.")

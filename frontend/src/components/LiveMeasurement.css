@@ -1,0 +1,49 @@
+.live-measurement {
+  margin: 12px 0;
+  padding: 13px 14px;
+  border: 1px solid #74dfc53d;
+  border-radius: 10px;
+  background: #74dfc508;
+}
+.live-measurement__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #a8b9b8;
+  font-size: 11px;
+}
+.live-measurement__heading small {
+  color: #819190;
+  white-space: nowrap;
+}
+.live-measurement__value {
+  display: block;
+  margin: 8px 0 6px;
+  color: #91ebd3;
+  font-size: 23px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.live-measurement p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+  color: #a8b9b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.live-measurement p.live-measurement__error {
+  color: #e9b970;
+}
+.live-measurement__note {
+  display: block;
+  color: #819190;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.live-measurement--error {
+  border-color: #e9b97055;
+}

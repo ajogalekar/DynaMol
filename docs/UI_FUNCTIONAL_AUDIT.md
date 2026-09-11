@@ -71,3 +71,23 @@ Afterward, 103 identified UI test datasets and 21 test jobs were moved into the 
 Representative captured views: [desktop ribbons](audit/ui-audit-desktop-ribbons.png), [surface](audit/ui-audit-surface.png), [polar hydrogens with protein context](audit/ui-audit-polar-hydrogens.png), [real explicit water](audit/ui-audit-explicit-water.png), [preparation completed](audit/ui-audit-preparation-complete.png), and [phone Studio](audit/ui-audit-phone-studio.png).
 
 This is functional coverage of the implemented local interface on macOS Chrome. It is not exhaustive browser/device certification, formal WCAG conformance, a GPU benchmark, or validation of every chemical species, force-field choice, protein conformation, and simulation duration. Native full-screen behavior inside an embedded app browser can differ from Chrome; the app's rejection fallback is checked separately. Long trajectories, production convergence, alternate operating systems, and hardware-specific GPU paths need their own validation.
+
+
+## Follow-up: pinch, fullscreen, live values and modified residues
+
+The earlier 59-test audit missed the user-reported trackpad pinch, clipped fullscreen toolbar and delayed measurement-value behaviors. Those defects are now corrected and covered by focused regressions:
+
+| Behavior | Fix and evidence |
+| --- | --- |
+| Trackpad/touch pinch | Captured Ctrl-wheel and WebKit gesture scaling zoom the molecular camera; continuous two-finger touch ratios also preserve center panning. Four canvas-geometry tests cover zoom in/out, slow touch motion, duplicate-event suppression and ordinary wheel behavior. See [pinch results](audit/pinch-zoom-results.json). WebKit gesture dispatch is synthetic; physical Safari/trackpad certification remains outstanding. |
+| Fullscreen toolbar | Fullscreen contains the entire app shell, toolbar and dialogs, with reachable actions at desktop and narrow/short viewports. Five tests include entering/exiting fullscreen, Open files, New simulation and missing fullscreen API recovery. |
+| Immediate measurements | Complete distance, angle, dihedral and donor–H–acceptor selections show the current original-frame value in the inspector and scene before plotting. Three browser tests exercise values, playback, selection changes, invalid geometry and plot creation; backend tests verify geometry and periodic behavior. |
+| Modified-residue inspection | A real 1UA2 browser test checks four TPO records, separate ATP ligand cards, fixed-state disclosures, genuine gaps and modification retention when free heterogen removal is selected. Unsupported-residue blockers have separate backend coverage. Native preparation and parameter validation are recorded separately in the [modified-residue review](modified-residue-review.md). |
+
+The combined first three files passed **12/12 browser tests in 22.9 seconds**, followed by **1/1 modified-residue UI test**. [The combined record](audit/ui-interaction-fixes.json) retains actual test results. The backend suite passed **110/110** after the molecular changes; [its output](audit/ui-modified-backend-tests.txt) is retained. These are follow-up checks, not a claim that the original 59-test run was repeated against every subsequent change.
+
+After the package-origin correction and missing-modified-sequence guard, the complete backend suite passed **131/131** in 12.28 seconds; [final output](audit/final-backend-tests.txt) is retained.
+
+Package launch testing subsequently exposed an origin allowlist tied to fixed development ports. The launcher now supplies one exact, validated localhost origin for its allocated port; middleware and CORS use the same list. Foreign origins and other unconfigured ports remain rejected. `backend/tests/test_packaged_origin.py` covers dynamic-port requests, CORS preflight and invalid configuration. Packaged browser and job-lifecycle validation is recorded under `packaging/validation/`.
+
+Final preparation review also found that PDBFixer substituted ordinary parent amino acids for missing modified sequence residues. The corrected alignment retains exact residue identities; ten regression cases cover SEP/TPO/PTR/HYP/MSE/ALY/unknown identities, submission and worker guards, and unchanged ordinary short-loop support. The real TPO preparation → solvation → MD continuity check was repeated successfully on the final worker.

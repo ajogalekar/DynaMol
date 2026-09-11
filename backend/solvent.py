@@ -44,6 +44,8 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
         ligand_parameter_files(dataset_dir(dataset_id), preparation, required=True)
     if not any(atom["category"] == "protein" for atom in parent["atoms"]):
         raise ValueError("Choose a prepared standard protein before adding explicit water.")
+    from .modified_residues import register_topology_definitions
+    register_topology_definitions()
     pdb = app.PDBFile(str(source))
     coordinates = np.asarray(pdb.positions.value_in_unit(unit.nanometer))
     if not len(coordinates) or not np.isfinite(coordinates).all():

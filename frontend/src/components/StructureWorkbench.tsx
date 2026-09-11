@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import type { Dataset, Inspection, Job } from '../types';
 import { api } from '../api';
+import './ModifiedResidues.css';
 
 export default function StructureWorkbench({
   dataset,
@@ -378,7 +379,9 @@ export default function StructureWorkbench({
                             {r.residues.join('–')} ·{' '}
                             {r.buildable
                               ? 'can build a starting model'
-                              : r.terminal ? 'reported · prepare the observed terminus' : 'requires additional modeling'}
+                              : r.terminal
+                                ? 'reported · prepare the observed terminus'
+                                : 'requires additional modeling'}
                           </small>
                         </div>
                       ))}
@@ -397,12 +400,67 @@ export default function StructureWorkbench({
                   )}
                   {!hasProtein && (
                     <p className="form-note">
-                      Protein preparation is for standard amino-acid proteins. This molecule is
-                      available in the viewer; ligand parameterization is a separate workflow.
+                      Protein preparation is for amino-acid polymers. This molecule is available in
+                      the viewer; ligand parameterization is a separate workflow.
                     </p>
                   )}
                 </>
               )
+            )}
+            {!!inspection?.modified_residues?.length && (
+              <div className="modified-residue-list" aria-label="Modified protein residues">
+                <div className="modified-residue-intro">
+                  <WandSparkles size={15} />
+                  <div>
+                    <b>{inspection.modified_residues.length} modified protein residues</b>
+                    <span>Kept in the protein with their chemical identity.</span>
+                  </div>
+                </div>
+                {inspection.modified_residues.map((residue, index) => (
+                  <details
+                    className={`modified-residue-card${residue.supported ? '' : ' has-issues'}`}
+                    key={`${residue.chain}:${residue.resid}:${residue.insertion_code ?? ''}:${residue.residue}:${index}`}
+                  >
+                    <summary>
+                      <span>
+                        <b>{residue.residue}</b> · {residue.chain}:{residue.resid}
+                        {residue.insertion_code ?? ''}
+                      </span>
+                      <strong>{residue.supported ? 'Protein template' : 'Needs a template'}</strong>
+                    </summary>
+                    {residue.parent_residue && (
+                      <p>
+                        {residue.name ? `${residue.name} · ` : ''}
+                        Modified {residue.parent_residue} · original {residue.residue} identity
+                        retained.
+                      </p>
+                    )}
+                    {residue.forcefield && (
+                      <p>
+                        {residue.forcefield} · template {residue.template}
+                      </p>
+                    )}
+                    {residue.formal_charge !== undefined && (
+                      <p>
+                        Fixed residue charge: {residue.formal_charge > 0 ? '+' : ''}
+                        {residue.formal_charge}.
+                      </p>
+                    )}
+                    {residue.protonation_note && <p>{residue.protonation_note}</p>}
+                    {residue.error && <p className="inline-warning">{residue.error}</p>}
+                    {!residue.supported && (
+                      <p>
+                        Provide parameters for this covalently connected amino acid and its chosen
+                        chemical state to enable preparation.
+                      </p>
+                    )}
+                  </details>
+                ))}
+                <p className="form-note">
+                  Ligand removal preserves modified protein residues. Unsupported residues require
+                  an exact amino-acid template.
+                </p>
+              </div>
             )}
             {!!inspection?.ligands?.length && (
               <div className="ligand-preparation-list" aria-label="Ligand preparation choices">
@@ -609,14 +667,16 @@ export default function StructureWorkbench({
                 >
                   <ArrowDownToLine size={12} /> Prepared PDB
                 </a>
-                {dataset.preparation.job_id && dataset.preparation.ligand_parameters && (
-                  <a
-                    className="text-button"
-                    href={`/api/jobs/${dataset.preparation.job_id}/download`}
-                  >
-                    <ArrowDownToLine size={12} /> Parameters & preparation files
-                  </a>
-                )}
+                {dataset.preparation.job_id &&
+                  (dataset.preparation.ligand_parameters ||
+                    !!dataset.preparation.modified_residues) && (
+                    <a
+                      className="text-button"
+                      href={`/api/jobs/${dataset.preparation.job_id}/download`}
+                    >
+                      <ArrowDownToLine size={12} /> Parameters & preparation files
+                    </a>
+                  )}
               </div>
             )}
           </div>

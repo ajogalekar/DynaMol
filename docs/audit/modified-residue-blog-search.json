@@ -1,0 +1,39 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 43,
+  "query": "protein preparation stereochemistry force field modified residues",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-11-03",
+      "score": 28.0,
+      "snippet": "…s NVIDIA GPU Technology Conference (GTC) featured two announcements that highlighted both the potential and ongoing challenges of protein-ligand co-folding. The recently renamed Genesis Molecular AI announced PEARL, a proprietary co-folding method. Additionally, the OpenFold consortium released the code and model weights for a preview of OpenFold3 (OF3p). Both groups also provided technical reports with initial benchmarks. Besides co-folding, the OpenFold team also shared structure prediction results for protein mo…",
+      "tags": [
+        "Cofolding"
+      ],
+      "title": "We Still Haven’t Found What We’re Looking For - The Continuing Evolution of Protein-Ligand Co-Folding Methods",
+      "url": "https://patwalters.github.io/Cofolding-Evolution/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-01-03T11:55:00.002-08:00",
+      "score": 22.0,
+      "snippet": "…st may get a sequel. Contents 1. Are Deep Neural Networks Better for QSAR? 2. Deep Learning Methods Provide New Approaches to Protein-Ligand Docking 3. Protein Structure Prediction - Pushing AlphaFold2 in New Directions 4. Model Interpretability 5. QM Methods 6. Utralarge Chemical Libraries 7. Active Learning 8. Molecular Representation 1. Are Deep Neural Networks Better for QSAR? Based on papers I read and reviewed in 2022, there seems to be a perception that Deep Neural Networks have become ubiquitous in…",
+      "tags": [],
+      "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 19.0,
+      "snippet": "…s pretty long, so I've split it into three parts, with parts II and III to be posted in the next couple of weeks. I. Docking, protein structure prediction, and benchmarking II. Large Language Models, active learning, federated learning, generative models, and explainable AI III. Review articles 2023 was a bit of a mixed bag for AI in drug discovery. Several groups reported that the deep learning methods for protein-ligand docking weren’t quite what they were initially cracked up to be. AlphaFold2 became perv…",
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    }
+  ]
+}

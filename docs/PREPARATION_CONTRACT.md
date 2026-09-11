@@ -34,7 +34,17 @@ Optional `name` labels the result. The interface displays an active spinner, cur
 
 PDBFixer repairs supported heavy atoms; OpenMM assigns protein hydrogen states at the requested pH. A bounded steric chi-angle search records its accepted changes and stereochemistry checks. These are not residue pKa calculations or exhaustive rotamer packing.
 
-Noncovalent complexes retain supported ligands and ions by default. Observed metal-coordinating waters survive removal of other water, and coordinating protein donors are protected during chi sampling. Explicit heterogen removal prepares the protein alone. Unsupported chemistry produces a specific failure without silently deleting molecules.
+Noncovalent complexes retain supported ligands and ions by default. Observed metal-coordinating waters survive removal of other water, and coordinating protein donors are protected during chi sampling. Explicit heterogen removal prepares the protein alone while retaining modified amino acids in its polymer chains. Unsupported chemistry produces a specific failure without silently deleting molecules.
+
+## Modified and unnatural amino acids
+
+Inspection identifies modified protein residues from retained polymer metadata, known amino-acid identities and peptide connectivity. Identity includes chain, residue number, insertion code and residue name. These residues appear in dedicated cards with the compatible template, fixed charge, missing atoms and specific blockers. They are not sent through the disconnected small-molecule parameterization path.
+
+Supported internal SEP/TPO/PTR use fixed −2 phosaa14SB states; HYP uses neutral internal ff14SB HYP or −1 C-terminal CHYP. Selecting pH does not change phosphate states automatically. Supported heavy atoms can be repaired from curated CCD templates; stereochemistry checks include TPO CB and HYP CG. Unknown templates, unsupported terminal variants and extra covalent crosslinks block preparation without mutation or deletion. Missing modified or unknown residues in sequence-supported gaps retain their original identities and require external modeling; the local loop builder does not substitute standard parent residues. MSE and ALY are not yet parameterized by this implementation. See [the registry and native comparisons](MODIFIED_RESIDUES.md).
+
+Prepared metadata records `modified_residues`, `modified_residue_parameters` and `requires_explicit_solvent`. The `residue-parameters/` snapshot contains the pinned manifest and reference/parameter files, checked against their hashes before use and carried into solvation and trajectory outputs. The registry implementation hash is recorded because PTR requires a native-improper ordering correction during system assembly. The prepared dataset's `modified-residue-system.xml` preserves the assembled unsolvated terms; a completed MD job's `system.xml` describes the actual simulation system. Bare XML templates alone do not include the Python correction.
+
+All supported modifications currently require OpenMM and explicit TIP3P water. Genuine sequence gaps remain separate modeling requirements. In 1UA2, TPO170 is recognized in each of the four protein chains; each chain also has a 12-residue internal gap that exceeds the local six-residue loop builder. The bounded native worker test around TPO170 does not establish full-1UA2 preparation.
 
 ## Ligand identity and parameter bundle
 

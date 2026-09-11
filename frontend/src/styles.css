@@ -3968,3 +3968,30 @@ kbd {
     transition: none;
   }
 }
+
+/* Fullscreen includes the app toolbar, dialogs, and Studio as one workspace. */
+.app-shell.app-fullscreen {
+  height: 100dvh;
+  min-height: 0;
+  overflow: auto;
+  background: var(--bg);
+}
+.app-fullscreen > .app-header {
+  position: sticky;
+  top: 0;
+}
+.app-fullscreen > .workspace-bar {
+  position: sticky;
+  top: 78px;
+  flex-shrink: 0;
+}
+@media (max-width: 1040px) {
+  .app-fullscreen:not(.studio-open) > .workspace-grid {
+    flex: none;
+  }
+}
+@media (max-width: 700px) {
+  .app-fullscreen > .workspace-bar {
+    top: 67px;
+  }
+}

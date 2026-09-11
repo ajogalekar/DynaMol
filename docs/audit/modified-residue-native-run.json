@@ -1,0 +1,441 @@
+{
+  "passed": true,
+  "started_at": "2026-09-11T05:42:50.638208+00:00",
+  "scope": "Real preparation, solvation and 2-step OpenMM software continuity check on an explicitly truncated 13-residue TPO-containing 1UA2 fragment. This is not full 1UA2 preparation or scientific convergence validation.",
+  "source": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/data/datasets/f491cb784d7f4fbf/topology.pdb",
+    "sha256": "84f9de8cbd7e57f00dd545f60ef5ff9975584207e20378a6f5297bcc6808bc89",
+    "selection": "chain A, residues 164\u2013176 inclusive; full-source sequence deliberately not inherited"
+  },
+  "data_dir": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/modified-residue-final",
+  "jobs": {
+    "preparation": {
+      "id": "d69717d9fd0a4b81",
+      "status": "completed",
+      "elapsed_seconds": 0.47,
+      "dataset_id": "82796c28848d4eb1",
+      "error": null
+    },
+    "solvation": {
+      "id": "b0f976c89b08456b",
+      "status": "completed",
+      "elapsed_seconds": 0.49,
+      "dataset_id": "8663db8efe24454e",
+      "error": null
+    },
+    "dynamics": {
+      "id": "8c0ff40992c94210",
+      "status": "completed",
+      "elapsed_seconds": 15.4,
+      "dataset_id": "a0f08725428e47db",
+      "error": null
+    }
+  },
+  "checks": {
+    "isolated_fragment_has_no_inherited_full_sequence": true,
+    "retained_all_TPO_heavy_atoms_despite_remove_heterogens": true,
+    "TPO_heavy_coordinate_max_displacement_angstrom": 0.0,
+    "TPO_peptide_links_and_four_phosphate_bonds_retained": true,
+    "TPO_total_charge_e": -1.9999999999999998,
+    "solvation_preserves_all_prepared_solute_coordinates": true,
+    "exact_per_atom_charges_and_parameter_snapshot_across_all_stages": true,
+    "finite_native_coordinates_and_energies": true,
+    "original_full_source_unchanged": true
+  },
+  "versions": {
+    "openmm": "8.6",
+    "mdtraj": "1.11.1.post2"
+  },
+  "fixture": {
+    "dataset_id": "ab1f83563b7547b0",
+    "residues": 13,
+    "atoms": 111,
+    "pdb_sha256": "1fc87b74e6c031906e187bb6a12033673560c20eea914610a03d0df69ac8096f",
+    "tpo_heavy_atoms": 11
+  },
+  "TPO_bonds_after_preparation": [
+    [
+      [
+        "A",
+        "169",
+        "",
+        "TYR",
+        "C"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "N"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "N"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "H"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "N"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CA"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CA"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "HA"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CA"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "C"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CA"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CB"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CB"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "HB"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CB"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "OG1"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CB"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CG2"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CG2"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "HG22"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CG2"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "HG21"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "CG2"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "HG23"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "OG1"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "P"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "P"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "O2P"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "P"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "O1P"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "P"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "O3P"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "C"
+      ],
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "O"
+      ]
+    ],
+    [
+      [
+        "A",
+        "170",
+        "",
+        "TPO",
+        "C"
+      ],
+      [
+        "A",
+        "171",
+        "",
+        "HIS",
+        "N"
+      ]
+    ]
+  ],
+  "modified_stereochemistry": {
+    "method": "Signed stereocenter volume versus vendored CCD ideal geometry; checks phosphate residue CA, TPO CB, and HYP CG without replacing the modification.",
+    "checked_centers": 2,
+    "centers": [
+      {
+        "chain": "A",
+        "resid": "170",
+        "insertion_code": "",
+        "residue": "TPO",
+        "center": "CA",
+        "signed_volume_nm3": 0.0028445171180000108,
+        "template_signed_volume_nm3": 0.0026023879230000005
+      },
+      {
+        "chain": "A",
+        "resid": "170",
+        "insertion_code": "",
+        "residue": "TPO",
+        "center": "CB",
+        "signed_volume_nm3": 0.0024292154420000214,
+        "template_signed_volume_nm3": 0.0025714449120000015
+      }
+    ],
+    "violations": []
+  },
+  "TPO_added_hydrogens": [
+    "H",
+    "HA",
+    "HB",
+    "HG22",
+    "HG21",
+    "HG23"
+  ],
+  "TPO_per_atom_charges_e": {
+    "N": -0.5163,
+    "H": 0.2936,
+    "CA": -0.31351,
+    "HA": 0.215772,
+    "CB": 0.623861,
+    "HB": 0.009989,
+    "CG2": -0.406805,
+    "HG22": 0.071662,
+    "HG21": 0.071662,
+    "HG23": 0.071662,
+    "OG1": -0.54523,
+    "P": 1.366055,
+    "O1P": -0.965706,
+    "O2P": -0.965706,
+    "O3P": -0.965706,
+    "C": 0.5366,
+    "O": -0.5819
+  },
+  "residue_parameter_snapshot_sha256": {
+    "HYP.cif": "4150e8042bfe6d386eec2ca80ff0dfbeea3c67284d84b84c19c2aa90257d912d",
+    "OPENMMFORCEFIELDS_LICENSE.txt": "16e575d857a05fa5be1bc71f240cb3641c2ec654de1ee97ff8ea9dacef78a26f",
+    "PTR.cif": "b78f4345d0daeea714cd3af836934b5aec24e5cad8f4d5a5ecbaa4a99722ad6d",
+    "SEP.cif": "8a64575a99938ed0960684067183d8b7a85daabb204fda3c13c24fa9353e86a9",
+    "TPO.cif": "d642585cb6396dd78eccb0240a3ed654a27b772881e719b8d3d298cd57d57b1b",
+    "ff14SB.source.xml": "f61e180832a8c6c587b797281ad0b43945962358707ebc0a4b1ce411fb3826c4",
+    "manifest.json": "afc0c92956a47a1d751f2980740b19b9fe237e2c4a84ef58af415d015924cb93",
+    "phosaa14SB.source.xml": "991d13246deebe35e362ad8d99c589a4a2fcf7322c97a408578f7c8c874ae08b",
+    "phosaa14SB.xml": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc"
+  },
+  "solvated_atoms": 5687,
+  "trajectory": {
+    "dataset_id": "a0f08725428e47db",
+    "atoms": 5687,
+    "frames": 3,
+    "times_ps": [
+      0.0,
+      0.002,
+      0.004
+    ],
+    "energies": [
+      {
+        "step": 0.0,
+        "time_ps": 0.0,
+        "potential_kj_mol": -90913.54089882,
+        "kinetic_kj_mol": 13295.59062995
+      },
+      {
+        "step": 1.0,
+        "time_ps": 0.002,
+        "potential_kj_mol": -89308.34358893,
+        "kinetic_kj_mol": 11799.19526854
+      },
+      {
+        "step": 2.0,
+        "time_ps": 0.004,
+        "potential_kj_mol": -87807.21222418,
+        "kinetic_kj_mol": 10186.79526971
+      }
+    ]
+  },
+  "finished_at": "2026-09-11T05:43:08.476737+00:00"
+}

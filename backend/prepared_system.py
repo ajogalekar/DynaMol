@@ -108,17 +108,112 @@ def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent:
     only with explicit TIP3P; each declared XML is verified before parsing.
     """
     from openmm import app
+    from .modified_residues import modified_forcefield_files, modified_forcefield_provenance, register_modified_forcefield
 
     if solvent not in {"implicit", "explicit"}:
         raise ValueError("Choose implicit or explicit solvent.")
     bundle = _bundle(preparation)
+    modified = (preparation or {}).get("modified_residues", [])
+    if modified and solvent != "explicit":
+        raise ValueError("Prepared modified amino acids require explicit TIP3P water in this workflow.")
+    if modified and (preparation or {}).get("modified_residue_parameters") != modified_forcefield_provenance():
+        raise ValueError("The saved modified-residue parameters do not match the installed version. Prepare the structure again to record its residue parameters.")
+    if modified:
+        _validate_modified_snapshot(Path(folder), preparation)
     if bundle is not None and solvent != "explicit":
         raise ValueError("Prepared protein–ligand complexes require explicit TIP3P water. GBn2 implicit parameters are not available for these ligands.")
     base = ["amber14/protein.ff14SB.xml", "implicit/gbn2.xml" if solvent == "implicit" else "amber14/tip3p.xml"]
     verified = _validated_xml(Path(folder), preparation)
     # Feed the verified bytes to OpenMM, not an unchecked second path read.
-    forcefield = app.ForceField(*base, *(io.StringIO(data.decode("utf-8")) for _, data in verified))
-    return forcefield, base + [str(path.relative_to(Path(folder).resolve())) for path, _ in verified]
+    supplemental = modified_forcefield_files(preparation or {})
+    if modified:
+        supplemental = [str(Path(folder) / "residue-parameters" / Path(path).name) for path in supplemental]
+    forcefield = app.ForceField(*base, *supplemental, *(io.StringIO(data.decode("utf-8")) for _, data in verified))
+    if modified:
+        register_modified_forcefield(forcefield)
+    return forcefield, base + ["residue-parameters/" + Path(path).name for path in supplemental] + [str(path.relative_to(Path(folder).resolve())) for path, _ in verified]
+
+
+def _modified_manifest(preparation):
+    if not isinstance(preparation, dict) or not preparation.get("modified_residues"):
+        return None
+    record = preparation.get("modified_residue_parameters")
+    if not isinstance(record, dict) or not isinstance(record.get("files"), dict):
+        raise ValueError("Modified residues lack a parameter-file manifest. Prepare the protein again.")
+    for name, digest in record["files"].items():
+        if not isinstance(name, str) or Path(name).name != name or name in {".", ".."} or not re.fullmatch(r"[0-9a-f]{64}", str(digest)):
+            raise ValueError("The modified-residue parameter manifest contains an invalid file or checksum.")
+    return record
+
+
+def _validate_modified_snapshot(folder, preparation):
+    import json
+    record = _modified_manifest(preparation)
+    if record is None:
+        return
+    root = Path(folder) / "residue-parameters"
+    if root.is_symlink() or not root.is_dir():
+        raise ValueError("The modified-residue parameter snapshot is missing or is a symlink.")
+    total = 0
+    for path in root.iterdir():
+        if path.is_symlink() or not path.is_file():
+            raise ValueError("Modified-residue parameter snapshots cannot contain symlinks or special files.")
+        total += path.stat().st_size
+    if total > MAX_BUNDLE_BYTES:
+        raise ValueError("The modified-residue parameter snapshot exceeds the size limit.")
+    for name, digest in record["files"].items():
+        path = root / name
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            raise ValueError(f"Modified-residue parameter checksum mismatch: {name}.")
+    try:
+        manifest = json.loads((root / "manifest.json").read_text())
+        if {name: entry["sha256"] for name, entry in manifest["files"].items()} != record["files"]:
+            raise ValueError("The modified-residue source manifest does not match its preparation record.")
+    except (OSError, KeyError, TypeError, ValueError) as exc:
+        raise ValueError("The modified-residue source manifest is missing or invalid.") from exc
+
+
+def snapshot_modified_parameters(folder: Path, preparation: dict) -> None:
+    """Freeze the exact curated residue data in a newly prepared job archive."""
+    from .modified_residues import DATA, modified_forcefield_provenance
+    record = _modified_manifest(preparation)
+    if record is None:
+        return
+    if record != modified_forcefield_provenance():
+        raise ValueError("Modified-residue source versions changed before preparation could be saved.")
+    folder = Path(folder)
+    destination = folder / "residue-parameters"
+    if destination.exists() or destination.is_symlink():
+        raise ValueError("The preparation already contains modified-residue parameters; refusing to replace them.")
+    folder.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".residue-copy-", dir=folder) as temporary:
+        staged = Path(temporary) / "residue-parameters"
+        staged.mkdir()
+        for name in ["manifest.json", *record["files"]]:
+            source = DATA / name
+            if source.is_symlink() or not source.is_file():
+                raise ValueError("Bundled modified-residue data must be regular files.")
+            shutil.copy2(source, staged / name)
+        _validate_modified_snapshot(Path(temporary), preparation)
+        staged.rename(destination)
+
+
+def copy_modified_parameters(source_folder: Path, destination_folder: Path, preparation: dict | None) -> None:
+    if _modified_manifest(preparation) is None:
+        return
+    source_folder, destination_folder = Path(source_folder).resolve(), Path(destination_folder).resolve()
+    _validate_modified_snapshot(source_folder, preparation)
+    if source_folder == destination_folder:
+        return
+    destination_folder.mkdir(parents=True, exist_ok=True)
+    target = destination_folder / "residue-parameters"
+    if target.exists() or target.is_symlink():
+        raise ValueError("The destination already contains modified-residue parameters; refusing to replace them.")
+    with tempfile.TemporaryDirectory(prefix=".residue-copy-", dir=destination_folder) as temporary:
+        staged = Path(temporary)
+        shutil.copytree(source_folder / "residue-parameters", staged / "residue-parameters")
+        _validate_modified_snapshot(staged, preparation)
+        (staged / "residue-parameters").rename(target)
 
 
 def copy_ligand_parameters(source_folder: Path, destination_folder: Path, preparation: dict | None) -> None:
@@ -128,6 +223,7 @@ def copy_ligand_parameters(source_folder: Path, destination_folder: Path, prepar
     No symlinks or special files are copied, and existing bundles are not
     overwritten. Dataset/job folders should be new when this helper is used.
     """
+    copy_modified_parameters(source_folder, destination_folder, preparation)
     if not ligand_parameter_files(source_folder, preparation):
         return
     source_folder = Path(source_folder).resolve()

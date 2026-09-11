@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "resources": "/Users/ashujo/Documents/Science/DynaMol/build/Package Relocation With Spaces/DynaMol.app/Contents/Resources",
+  "home": "/Users/ashujo/Documents/Science/DynaMol/build/Package User Home With Spaces",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "initial_datasets": [
+    "365ddc311f0542e9",
+    "989d1678dd204f86",
+    "demo",
+    "ubiquitin-start"
+  ],
+  "startup_progress_page": true,
+  "same_service_reused": true,
+  "shutdown_and_restart_preserved_data": true,
+  "sanitized_path": "/usr/bin:/bin",
+  "jobs": [
+    {
+      "engine": "openmm",
+      "job_id": "61ec6693265a47fb",
+      "status": "completed",
+      "dataset_id": "989d1678dd204f86",
+      "atoms": 1231,
+      "frames": 6,
+      "worker_source_sha256": "4da8f75332e4893be4597f58d8dcead7febc06d344cbc99e078522cdfaed07e9"
+    },
+    {
+      "engine": "gromacs",
+      "job_id": "734ceb545a8d4b96",
+      "status": "completed",
+      "dataset_id": "365ddc311f0542e9",
+      "atoms": 26842,
+      "frames": 6,
+      "worker_source_sha256": "4da8f75332e4893be4597f58d8dcead7febc06d344cbc99e078522cdfaed07e9"
+    }
+  ],
+  "limitations": "Local relocated app with paths containing spaces on the development Mac; no separate clean-machine, notarization, or Gatekeeper validation.",
+  "draft_manifest_build_id": "045d8b31f0590b00",
+  "bundled_examples": [
+    "demo",
+    "ubiquitin-start"
+  ],
+  "test_resumption": "The final lifecycle check reused the two completed native worker jobs from the first pass; a test harness initially waited for an unreaped child PID instead of polling its owned process. The corrected harness verified shutdown/restart without rerunning those completed simulations.",
+  "integration_changes": "The draft bundle received the exact validated origin configuration fix in backend/main.py and the corresponding bootstrap origin setting before its final lifecycle and browser checks. Final release source hashes are checked separately.",
+  "tested_core_hashes": {
+    "backend/README.md": "f70f6341f33ae526bfd4c0e27d32c94b39d0273ccfee9772dbfb367634d66003",
+    "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/analysis.py": "01236ff60cb4addefc1606ac88bbee4399eff6df548e24447b7771fafc723c6e",
+    "backend/complex_topology.py": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542",
+    "backend/config.py": "5061c332a68d2c358e56c24fd8b04b5cde1c3146b0f3bf212dcced45d67b7055",
+    "backend/data/modified_residues/HYP.cif": "4150e8042bfe6d386eec2ca80ff0dfbeea3c67284d84b84c19c2aa90257d912d",
+    "backend/data/modified_residues/OPENMMFORCEFIELDS_LICENSE.txt": "16e575d857a05fa5be1bc71f240cb3641c2ec654de1ee97ff8ea9dacef78a26f",
+    "backend/data/modified_residues/PTR.cif": "b78f4345d0daeea714cd3af836934b5aec24e5cad8f4d5a5ecbaa4a99722ad6d",
+    "backend/data/modified_residues/SEP.cif": "8a64575a99938ed0960684067183d8b7a85daabb204fda3c13c24fa9353e86a9",
+    "backend/data/modified_residues/TPO.cif": "d642585cb6396dd78eccb0240a3ed654a27b772881e719b8d3d298cd57d57b1b",
+    "backend/data/modified_residues/ff14SB.source.xml": "f61e180832a8c6c587b797281ad0b43945962358707ebc0a4b1ce411fb3826c4",
+    "backend/data/modified_residues/manifest.json": "afc0c92956a47a1d751f2980740b19b9fe237e2c4a84ef58af415d015924cb93",
+    "backend/data/modified_residues/phosaa14SB.source.xml": "991d13246deebe35e362ad8d99c589a4a2fcf7322c97a408578f7c8c874ae08b",
+    "backend/data/modified_residues/phosaa14SB.xml": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc",
+    "backend/jobs.py": "9acc5080f3071e1cb3ee77d59565414749ca1c3e1f16af736feb65eb36f21193",
+    "backend/ligands.py": "73288a8cee3bb3a0f0c6b4cf1b494a581bd5673d60a0edf5c6d4adc7bb9d6f2a",
+    "backend/main.py": "77dd4fd167c508f5143bcc2b88eee3fc53e5bbbe806cab4d9ad5530ab3e93be9",
+    "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+    "backend/modified_residues.py": "89d7c817bdbd13a0c91837b69a2ffcc6fddf2a56f00cba07130e750d5e84a0ec",
+    "backend/preparation.py": "ae10682d84319747c1aecf20cd0e9d0d5230b592202106bc3d1589da842a79d8",
+    "backend/preparation_worker.py": "eeeb761d15b9ae7742e011f71b8a9125afbbb0d342432e99dd8a453c8b01b66e",
+    "backend/prepared_system.py": "4229c3bea40610031169e9acbd04a0d41adb50ade1793a5ac4715e67db6335ae",
+    "backend/residue_identity.py": "0ef884673e39ca010ba0abf512f4652c036f836b98240b8e698d494e5a51baf3",
+    "backend/solvent.py": "269c4e4d858c560d1361b68d1a05fceb4f0d542f54666b855c851b08bf5d76f8",
+    "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+    "backend/storage.py": "295e50c209ee35152a7702ca7f2e27ca8c47a74481c23992fb801e932df1903c",
+    "backend/tests/test_backend.py": "b969e827e3ff53aa6f4b0c20f6469681119585da8c324b79993beb8e9218c90d",
+    "backend/tests/test_complex_topology.py": "469ad96e32f8fd1ca32bcbc6233a1bf3cfa2998da6a5d8f4b9d0f09d672f4e0c",
+    "backend/tests/test_ligands.py": "55bb1b8f0ce8cdbcbf7c08f60b8194adb39cde308587b1c57ada0604bff879f2",
+    "backend/tests/test_measurement_preview.py": "f7850edca8435f4302744975dc3112923ab58e75bdeb1ccb7612826d6d9c619b",
+    "backend/tests/test_modified_bundle.py": "04a398304cc82f58fbb5313623578d52f2e8d9cc9b21683cdc93dd9579856587",
+    "backend/tests/test_modified_residues.py": "335236a830b1998b6a3d143ccdcf575b1f13550a942b8afcb1615fd7d76b6f13",
+    "backend/tests/test_preparation.py": "f443b3b376dc3556d2852877d5c2f926cb01c3f0c4fc20c0946f8dd3e6943dfc",
+    "backend/tests/test_prepared_system.py": "260fcad14c179c26a18621f52ae858b89e9a159ab4e391902e7da0fdd486cdc7",
+    "backend/tests/test_residue_identity.py": "be1bcf881ba09c5d5c6b931c4a1eaf84d755c804d26297bff6dc5e2d0afe2b57",
+    "backend/tests/test_sources_solvent.py": "22436fdaf891a1166140e0ff9cf27d64860916c0e872844776e334973cc582be",
+    "backend/tests/test_ui_audit_formats.py": "5e9038ef9a903c93f76a123b3cc20545e6a86007e856553b82602f64e1536397",
+    "backend/worker.py": "4da8f75332e4893be4597f58d8dcead7febc06d344cbc99e078522cdfaed07e9",
+    "frontend/dist/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49",
+    "frontend/dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+    "frontend/dist/assets/index-B4Sv72K5.css": "4712511d6c12beceb23db4c0ecd30fbd54dfff305d6a5d098e5bf3176dfd0b19",
+    "frontend/dist/assets/index-DhX0T9OK.js": "411494c7c249e9477a0f480d2d96e606d922e7d3f7e5807b51b352ce9b0fb609",
+    "frontend/dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2": "c268b459a9329e59fecf39a17618efd44c71735532048d60b12aab76a8c14914",
+    "frontend/dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2": "2fb2e8cbfd52ae46179a8b6024eb162f1f9c6de3d22d6e3a30d8f395de7220be",
+    "frontend/dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+    "frontend/dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+    "frontend/dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+    "frontend/dist/favicon.svg": "77cdf8cbcd363097d422b5ed25fe11d59a6a12b24ce6363d6b8efee548ea3b4a",
+    "frontend/dist/index.html": "9e9753736e87a269e56486f0ade2bebd61e8296ceeede2c81fbc38812fd461a7"
+  }
+}

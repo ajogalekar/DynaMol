@@ -94,6 +94,8 @@ def submit_job(settings: SimulationConfig) -> dict:
     if any(atom["category"] == "nucleic" for atom in metadata["atoms"]):
         raise ValueError("This simulation preset supports standard proteins only. RNA/DNA can be viewed and analyzed, but nucleic-acid and protein–nucleic-acid simulations require a separately parameterized workflow. No atoms were removed.")
     preparation_state = metadata.get("preparation")
+    from .modified_residues import SUPPORTED_MODIFIED, register_topology_definitions
+    modified = (preparation_state or {}).get("modified_residues", [])
     solvation_state = metadata.get("solvation")
     has_ligands = any(atom["category"] == "ligands" for atom in metadata["atoms"])
     ligand_files = ligand_parameter_files(dataset_dir(settings.dataset_id), preparation_state, required=has_ligands)
@@ -101,14 +103,18 @@ def submit_job(settings: SimulationConfig) -> dict:
         raise ValueError("The current GROMACS adapter cannot yet preserve an explicitly prepared protonation state or solvent preview. Use OpenMM for this prepared dataset; GROMACS requires a separate validated state-conversion workflow.")
     if ligand_files and settings.solvent != "explicit":
         raise ValueError("Prepared protein–ligand complexes require explicit TIP3P water. GBn2 implicit parameters are not available for these ligands.")
+    if modified and settings.solvent != "explicit":
+        raise ValueError("Prepared modified amino acids require explicit TIP3P water in this workflow.")
     if preparation_state and settings.solvent == "explicit" and not solvation_state:
         raise ValueError("Create the explicit-water preview first so the simulation uses the periodic box you inspected. No hidden solvent box will be generated for a prepared protein.")
     if preparation_state and not preparation_state.get("simulation_ready", True):
         raise ValueError("This preparation is not marked simulation-ready; repair its unresolved structural issues first.")
     standard = {"ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL", "HID", "HIE", "HIP", "CYX", "ASH", "GLH", "LYN"}
+    if modified:
+        standard |= SUPPORTED_MODIFIED
     unsupported = sorted({atom["residue"] for atom in metadata["atoms"] if atom["category"] == "protein" and atom["residue"] not in standard})
     if unsupported:
-        raise ValueError("This protein simulation workflow does not parameterize ligands or nonstandard residues: " + ", ".join(unsupported) + ". Prepare a supported protein-only structure; no atoms were removed.")
+        raise ValueError("Protein residues need preparation or compatible residue parameters: " + ", ".join(unsupported) + ". Open protein preparation to review supported modifications and any missing templates; no atoms were removed.")
     if not any(atom["category"] == "protein" for atom in metadata["atoms"]):
         raise ValueError("Choose a structure containing a standard amino-acid protein.")
     if settings.solvent == "implicit" and any(atom["category"] in {"water", "ions"} for atom in metadata["atoms"]):
@@ -118,8 +124,9 @@ def submit_job(settings: SimulationConfig) -> dict:
     input_path = exact_input_path(settings.dataset_id)
     if (preparation_state or solvation_state) and input_path.name != "prepared.pdb":
         raise ValueError("The exact prepared topology is missing. Repeat preparation to preserve the requested protonation state.")
+    register_topology_definitions()
     input_structure = app.PDBFile(str(input_path))
-    if ligand_files:
+    if ligand_files or modified:
         forcefield, _ = load_prepared_forcefield(dataset_dir(settings.dataset_id), preparation_state)
         unmatched = forcefield.getUnmatchedResidues(input_structure.topology)
         if unmatched:

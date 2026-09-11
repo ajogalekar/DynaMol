@@ -1,0 +1,147 @@
+{
+  "recorded_at": "2026-09-11T05:09:43.968810+00:00",
+  "command": "DYNAMOL_BASE_URL=http://127.0.0.1:8765 npx playwright test pinch-zoom.spec.ts fullscreen-header.spec.ts live-measurements.spec.ts",
+  "stats": {
+    "startTime": "2026-09-11T05:07:53.579Z",
+    "duration": 22870.285,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "report_sha256": "6bccd966ef36c5a6a6089ed1c2235e9a06772e055b8464de3044dbeff5df3daf",
+  "tests": [
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1284
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1189
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1165
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1165
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen state follows browser exits and handles an absent API",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 714
+        }
+      ]
+    },
+    {
+      "file": "live-measurements.spec.ts",
+      "title": "live measurements appear before Plot, update with frames, and reset with selection",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2883
+        }
+      ]
+    },
+    {
+      "file": "live-measurements.spec.ts",
+      "title": "live readout rejects invalid hydrogen-bond selection immediately and handles a new selection",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1923
+        }
+      ]
+    },
+    {
+      "file": "live-measurements.spec.ts",
+      "title": "live scene labels follow molecular visibility while inspector retains selected geometry",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 857
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "trackpad Ctrl+wheel zooms molecular geometry both ways without scaling the page",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2379
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "WebKit cumulative gesture scales zoom once when duplicate Ctrl+wheel events arrive",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2210
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "slow touchscreen pinch continues zooming while its center drifts and pans",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3966
+        }
+      ]
+    },
+    {
+      "file": "pinch-zoom.spec.ts",
+      "title": "ordinary unmodified wheel still zooms both ways",
+      "ok": true,
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2364
+        }
+      ]
+    }
+  ]
+}

@@ -205,7 +205,7 @@ test('audit: mouse camera controls, auto rotation, focus validation and full scr
   }
   await page.getByRole('button', { name: 'Full screen', exact: true }).click();
   await expect.poll(() => page.evaluate(() => !!document.fullscreenElement)).toBe(true);
-  await page.getByRole('button', { name: 'Full screen', exact: true }).click();
+  await page.getByRole('button', { name: 'Exit full screen', exact: true }).click();
   await expect.poll(() => page.evaluate(() => !!document.fullscreenElement)).toBe(false);
   expect(errors).toEqual([]);
 });

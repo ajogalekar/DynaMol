@@ -1,0 +1,73 @@
+{
+  "upstream_repository": "https://github.com/openmm/openmmforcefields",
+  "upstream_commit": "3f73b6ff9730e4e356fc6a0dbde6039517d59412",
+  "upstream_path": "openmmforcefields/ffxml/amber/phosaa14SB.xml",
+  "ambertools_source_version": "24.8",
+  "retrieved": "2026-09-10",
+  "reference": "Raguette et al. (2024), phosaa14SB and phosaa19SB: Updated Amber Force Field Parameters for Phosphorylated Amino Acids. JCTC 20, 7199\u20137209.",
+  "normalization": "Only atom type identifiers are namespaced for OpenMM amber14/protein.ff14SB.xml. Exact phosphorus type/LJ entries are copied from the same upstream amber/ff14SB.xml. Only SEP/TPO/PTR residue templates are exposed. Charges, numeric parameters, classes, and retained residue graphs are unchanged. PTR improper atom ordering is corrected separately by register_modified_forcefield(); use the assembled System.xml for portable exact terms.",
+  "files": {
+    "HYP.cif": {
+      "sha256": "4150e8042bfe6d386eec2ca80ff0dfbeea3c67284d84b84c19c2aa90257d912d",
+      "source": "https://files.rcsb.org/ligands/download/HYP.cif"
+    },
+    "OPENMMFORCEFIELDS_LICENSE.txt": {
+      "sha256": "16e575d857a05fa5be1bc71f240cb3641c2ec654de1ee97ff8ea9dacef78a26f",
+      "source": "upstream LICENSE or derived as described"
+    },
+    "PTR.cif": {
+      "sha256": "b78f4345d0daeea714cd3af836934b5aec24e5cad8f4d5a5ecbaa4a99722ad6d",
+      "source": "https://files.rcsb.org/ligands/download/PTR.cif"
+    },
+    "SEP.cif": {
+      "sha256": "8a64575a99938ed0960684067183d8b7a85daabb204fda3c13c24fa9353e86a9",
+      "source": "https://files.rcsb.org/ligands/download/SEP.cif"
+    },
+    "TPO.cif": {
+      "sha256": "d642585cb6396dd78eccb0240a3ed654a27b772881e719b8d3d298cd57d57b1b",
+      "source": "https://files.rcsb.org/ligands/download/TPO.cif"
+    },
+    "ff14SB.source.xml": {
+      "sha256": "f61e180832a8c6c587b797281ad0b43945962358707ebc0a4b1ce411fb3826c4",
+      "source": "https://raw.githubusercontent.com/openmm/openmmforcefields/3f73b6ff9730e4e356fc6a0dbde6039517d59412/openmmforcefields/ffxml/amber/ff14SB.xml"
+    },
+    "phosaa14SB.source.xml": {
+      "sha256": "991d13246deebe35e362ad8d99c589a4a2fcf7322c97a408578f7c8c874ae08b",
+      "source": "https://raw.githubusercontent.com/openmm/openmmforcefields/3f73b6ff9730e4e356fc6a0dbde6039517d59412/openmmforcefields/ffxml/amber/phosaa14SB.xml"
+    },
+    "phosaa14SB.xml": {
+      "sha256": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc",
+      "source": "upstream LICENSE or derived as described"
+    }
+  },
+  "ptr_improper_quartets": [
+    [
+      "CE2",
+      "CG",
+      "CD2",
+      "HD2"
+    ],
+    [
+      "CZ",
+      "CD2",
+      "CE2",
+      "HE2"
+    ],
+    [
+      "CD1",
+      "CZ",
+      "CE1",
+      "HE1"
+    ],
+    [
+      "CE1",
+      "CG",
+      "CD1",
+      "HD1"
+    ]
+  ],
+  "load_order": [
+    "amber14/protein.ff14SB.xml",
+    "phosaa14SB.xml"
+  ]
+}

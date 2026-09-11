@@ -12,7 +12,7 @@ Run `uv sync --frozen` for the Python dependencies, then:
 
 The script uses an available Miniforge/Conda installation and installs AmberTools 24.8 in DynaMol's private `.tools/ambertools` directory. It saves an exact platform-specific Conda package list in `.tools/ambertools-explicit.txt`. It does not modify `.gromacs` or global MD environments. An existing complete installation can be selected with `DYNAMOL_AMBERTOOLS=/absolute/path/to/environment`.
 
-The intended standalone desktop package must bundle this private runtime, including native libraries, `sqm`, `antechamber`, `parmchk2`, `tleap`, GAFF2/BCC data, and appropriate third-party licensing materials. Installing the source checkout is not itself an offline, self-contained application.
+The [local standalone macOS prototype](../packaging/README.md) bundles this private runtime, including native libraries, `sqm`, `antechamber`, `parmchk2`, `tleap`, and GAFF2/BCC data. The commands above apply to the source checkout. Package signing, clean-machine validation and complete public redistribution materials remain release work.
 
 ## Chemical identity and protonation
 

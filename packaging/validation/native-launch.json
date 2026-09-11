@@ -1,0 +1,36 @@
+{
+  "launchservices_command": "open -g -n /tmp/DynaMol Native Launch Check/DynaMol.app --args --no-browser --home ~/Library/Application Support/DynaMol Prototype Check",
+  "launchservices_returncode": 0,
+  "native_launcher_pid": 56907,
+  "process_chain": [
+    "56907     1 /private/tmp/DynaMol Native Launch Check/DynaMol.app/Contents/MacOS/DynaMol --no-browser --home /Users/ashujo/Library/Application Support/DynaMol Prototype Check",
+    "56908 56907 /tmp/DynaMol Native Launch Check/DynaMol.app/Contents/Resources/python/bin/python3.12 -I -B /private/tmp/DynaMol Native Launch Check/DynaMol.app/Contents/Resources/bootstrap.py --no-browser --home /Users/ashujo/Library/Application Support/DynaMol Prototype Check",
+    "57441 56908 /private/tmp/DynaMol Native Launch Check/DynaMol.app/Contents/Resources/python/bin/python3.12 -B -m uvicorn backend.main:app --fd 7 --log-level info"
+  ],
+  "desktop_log": "{\"phase\": \"starting\", \"progress_url\": \"http://127.0.0.1:65135/\"}\nhttp://127.0.0.1:65139/\n",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "same_origin_asset_http_status": 200,
+  "isolated_workspace": "/Users/ashujo/Library/Application Support/DynaMol Prototype Check",
+  "native_startup_verified": true,
+  "native_menu_clicks": "Untested: computer-use tool reported the Mac locked and automatic unlock failed. No lock or OS permissions were bypassed. Open workspace, Show workspace files, and Quit menu clicks require an unlocked Mac.",
+  "browser_auto_open": "Disabled for the isolated native launch check; startup URL and HTTP service verified.",
+  "initial_documents_location": "A native child waited in file-open when test data lived under Documents; no permission prompt was acted on. Moving only generated app/test data to temporary/ApplicationSupport paths allowed normal startup."
+}

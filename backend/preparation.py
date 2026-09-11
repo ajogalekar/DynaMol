@@ -15,8 +15,9 @@ import uuid
 from pathlib import Path
 
 from . import config, jobs, storage
+from .residue_identity import STANDARD_PROTEINS, protein_residue_keys, residue_key
+from .modified_residues import register_topology_definitions, register_fixer_templates, inspect_modified, SUPPORTED_MODIFIED
 
-STANDARD_PROTEINS = {"ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER", "THR", "TRP", "TYR", "VAL"}
 MAX_LOOP_LENGTH = 6
 MAX_REBUILT_RESIDUES = 12
 MAX_PROTEIN_ATOMS = 20_000
@@ -77,6 +78,7 @@ def find_sequence_source(dataset_id: str) -> Path | None:
                 # Keep scanning ancestors if a canonical file happens to lack sequence evidence.
                 try:
                     from pdbfixer import PDBFixer
+                    register_topology_definitions()
                     source = PDBFixer(filename=str(path))
                     if source.sequences:
                         return path
@@ -88,10 +90,13 @@ def find_sequence_source(dataset_id: str) -> Path | None:
 def current_fixer(dataset_id: str, sequence_source: Path | None = None):
     from pdbfixer import PDBFixer
     from openmm import Platform
+    register_topology_definitions()
     fixer = PDBFixer(filename=str(exact_input_path(dataset_id)), platform=Platform.getPlatformByName("CPU"))
+    register_fixer_templates(fixer)
     source_path = sequence_source if sequence_source is not None else find_sequence_source(dataset_id)
     if source_path:
         original = PDBFixer(filename=str(source_path))
+        register_fixer_templates(original)
         chain_ids = {chain.id for chain in fixer.topology.chains()}
         label_to_author = {}
         if source_path.suffix.lower() in {".cif", ".mmcif", ".pdbx"}:
@@ -138,14 +143,38 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
     return fixer, source_path
 
 
+def find_missing_residues_preserving_identity(fixer):
+    """Use pinned PDBFixer's sequence alignment without parent substitutions.
+
+    PDBFixer 1.12 normally rewrites missing TPO to THR (and other modifications
+    to parents). A private copy of the function's global namespace suppresses
+    only that dictionary lookup, without mutating library globals shared by
+    concurrent inspection requests. Existing atom/residue names are untouched.
+    """
+    from types import FunctionType
+    original = type(fixer).findMissingResidues
+    preserving = FunctionType(original.__code__, {**original.__globals__, "substitutions": {}},
+                              original.__name__, original.__defaults__, original.__closure__)
+    preserving(fixer)
+
+
+def unsupported_missing_residue_message(chain, names):
+    unsupported = sorted({name for name in names if name not in STANDARD_PROTEINS})
+    return (f"Missing sequence-supported residues in chain {chain} include modified or unnatural amino acids: "
+            + ", ".join(unsupported)
+            + ". Their original identities are retained; the local loop builder cannot reconstruct these residues. "
+              "Supply coordinates for the exact modified residues or a validated complete model; no parent-residue substitution is performed.")
+
+
 def backbone_gaps(topology, positions) -> list[dict]:
     """Numbering anomalies are observations; only geometry identifies broken links."""
     from openmm import unit
     import numpy as np
     xyz = np.asarray(positions.value_in_unit(unit.nanometer))
     result = []
+    protein_keys = protein_residue_keys(None, topology, positions)
     for chain in topology.chains():
-        residues = [residue for residue in chain.residues() if residue.name in STANDARD_PROTEINS]
+        residues = [residue for residue in chain.residues() if residue_key(residue) in protein_keys]
         for previous, following in zip(residues, residues[1:]):
             atoms_before = {atom.name: atom for atom in previous.atoms()}
             atoms_after = {atom.name: atom for atom in following.atoms()}
@@ -169,13 +198,14 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     metadata = storage.get_dataset(dataset_id)
     atoms = metadata["atoms"]
     warnings, blockers = [], []
-    protein_atoms = sum(atom["category"] == "protein" for atom in atoms)
-    heterogens = sorted({f"{atom['residue']} {atom['chain']}:{atom['resid']}" for atom in atoms if atom["category"] not in {"protein", "water"}})
+    fixer, sequence_source = current_fixer(dataset_id)
+    protein_keys = protein_residue_keys(dataset_id, fixer.topology, fixer.positions)
+    protein_atoms = sum(residue_key(atom.residue) in protein_keys for atom in fixer.topology.atoms())
+    heterogens = sorted({f"{residue.name} {residue.chain.id}:{residue.id}" for residue in fixer.topology.residues() if residue_key(residue) not in protein_keys and residue.name not in storage.WATERS})
     if not protein_atoms:
-        blockers.append("Protein preparation requires a standard amino-acid protein. Small molecules and nucleic acids remain viewable but are not prepared by this workflow.")
+        blockers.append("Protein preparation requires an amino-acid polymer. Small molecules and nucleic acids remain viewable but are not prepared by this workflow.")
     if protein_atoms > MAX_PROTEIN_ATOMS:
         blockers.append(f"Preparation is capped at {MAX_PROTEIN_ATOMS:,} protein atoms on this local CPU workflow.")
-    fixer, sequence_source = current_fixer(dataset_id)
     from .ligands import inspect_ligands, ligand_runtime_status
     from .complex_topology import metal_environment
     ligands = inspect_ligands(dataset_id, ph, ligand_overrides)
@@ -185,12 +215,19 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
         warnings.append("Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.")
     if coordination["contacts"]:
         warnings.append("Observed coordinating waters and protein donor sidechains are retained. Standard nonbonded ion parameters do not establish metal-coordination accuracy.")
-    protein_residues = {(atom["chain"], str(atom["resid"])) for atom in atoms if atom["category"] == "protein"}
-    unsupported = sorted({residue.name for residue in fixer.topology.residues() if residue.name not in STANDARD_PROTEINS and (residue.chain.id, residue.id) in protein_residues})
-    if unsupported:
-        blockers.append("Unsupported protein residue templates: " + ", ".join(unsupported) + ". Residue mutation is not performed automatically.")
+    modified = inspect_modified(fixer.topology, ph)
+    warnings.extend(modified["warnings"])
+    blockers.extend(modified["blockers"])
+    modified_residues = list(modified["residues"])
+    for residue in fixer.topology.residues():
+        if residue_key(residue) not in protein_keys or residue.name in STANDARD_PROTEINS or residue.name in SUPPORTED_MODIFIED:
+            continue
+        insertion = (residue.insertionCode or '').strip()
+        message = f"{residue.name} {residue.chain.id}:{residue.id}{insertion} is a modified or unnatural protein residue with no supported covalent amino-acid template. Its identity and atoms are preserved, including when ligand removal is selected. Supply a force-field template for this exact residue and state; automatic mutation or free-ligand GAFF treatment is not performed."
+        blockers.append(message)
+        modified_residues.append({"chain": residue.chain.id, "resid": residue.id, "insertion_code": insertion, "residue": residue.name, "supported": False, "error": message})
     try:
-        fixer.findMissingResidues()
+        find_missing_residues_preserving_identity(fixer)
     except (ValueError, IndexError) as exc:
         fixer.missingResidues = {}
         warnings.append(f"Sequence mapping could not be established ({exc}); missing residue identities will not be inferred.")
@@ -199,7 +236,14 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     for (chain_index, position), names in fixer.missingResidues.items():
         terminal = position in {0, len(list(chains[chain_index].residues()))}
         buildable = not terminal and len(names) <= MAX_LOOP_LENGTH and all(name in STANDARD_PROTEINS for name in names)
-        missing_residues.append({"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "terminal": terminal, "buildable": buildable, "chain_index": chain_index})
+        entry = {"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "terminal": terminal, "buildable": buildable, "chain_index": chain_index}
+        if any(name not in STANDARD_PROTEINS for name in names):
+            entry["reason"] = unsupported_missing_residue_message(chains[chain_index].id, names)
+            if terminal:
+                warnings.append(entry["reason"] + " This terminal sequence remains omitted from the prepared truncated chain.")
+            else:
+                blockers.append(entry["reason"])
+        missing_residues.append(entry)
     fixer.findMissingAtoms()
     missing_atoms = []
     affected = set(fixer.missingAtoms) | set(fixer.missingTerminals)
@@ -216,7 +260,7 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     if any(entry["terminal"] for entry in missing_residues):
         warnings.append("Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.")
     warnings.append("pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation.")
-    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
+    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "modified_residues": modified_residues, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
 
 
 def _validated(settings: dict) -> dict:
@@ -279,6 +323,7 @@ def submit_preparation(settings: dict) -> dict:
         if inspection["ligands"] and not inspection["ligand_runtime"]["available"]:
             raise ValueError(inspection["ligand_runtime"]["message"])
     settings["complex"] = bool(inspection["ligands"] and not settings["remove_heterogens"])
+    settings["modified_residues"] = inspection["modified_residues"]
     internal = [entry for entry in inspection["missing_residues"] if not entry["terminal"]]
     if internal and not settings["build_missing_residues"]:
         raise ValueError("Unresolved internal sequence gaps would create artificial peptide connections. Enable short missing-loop building, or repair the structure externally before protein preparation.")

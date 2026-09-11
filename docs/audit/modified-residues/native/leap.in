@@ -1,0 +1,15 @@
+source leaprc.protein.ff14SB
+source leaprc.phosaa14SB
+sep = sequence { ACE SEP NME }
+saveamberparm sep SEP.prmtop SEP.inpcrd
+savepdb sep SEP.pdb
+tpo = sequence { ACE TPO NME }
+saveamberparm tpo TPO.prmtop TPO.inpcrd
+savepdb tpo TPO.pdb
+ptr = sequence { ACE PTR NME }
+saveamberparm ptr PTR.prmtop PTR.inpcrd
+savepdb ptr PTR.pdb
+hyp = sequence { ACE HYP NME }
+saveamberparm hyp HYP.prmtop HYP.inpcrd
+savepdb hyp HYP.pdb
+quit

@@ -19,6 +19,8 @@ import {
   shortProteinFragments,
 } from './viewerGeometry';
 import './MolecularViewer.css';
+import { bindViewerGestures } from './viewerGestures';
+import { liveMeasurementLabel, type LiveMeasurementState } from './LiveMeasurement';
 
 export interface ViewerHandle {
   fit(): void;
@@ -37,6 +39,7 @@ export interface MolecularViewerProps {
   colorScheme: 'chain' | 'residue' | 'element';
   selectedAtoms: number[];
   measurements: Measurement[];
+  liveMeasurement?: LiveMeasurementState;
   picking: boolean;
   spin: boolean;
   onAtomPick(index: number): void;
@@ -112,9 +115,11 @@ interface Stage {
   };
   viewerControls: {
     getCameraDistance(): number;
+    distance(distance: number): void;
     getPositionOnCanvas(position: Vector): { x: number; y: number };
     signals: { changed: Signal };
   };
+  trackballControls: { pan(dx: number, dy: number): void };
   animationControls: {
     zoom(distance: number, duration?: number): void;
     zoomMove(center: Vector, distance: number, duration?: number): void;
@@ -199,11 +204,18 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
     const updateLabels = useCallback(() => {
       const stage = stageRef.current;
       const component = componentRef.current;
-      const { measurements, dataset } = latest.current;
+      const { measurements, dataset, liveMeasurement, visibility } = latest.current;
       if (!stage || !component || !dataset || activeDatasetId.current !== dataset.id) return;
       const width = stage.viewer.width;
       const height = stage.viewer.height;
-      for (const measurement of measurements) {
+      const live =
+        liveMeasurement?.status === 'ready' &&
+        liveMeasurement.atoms.every(
+          (index) => dataset.atoms[index] && atomIsVisible(dataset.atoms[index], visibility),
+        )
+          ? [{ id: 'current-selection', atoms: liveMeasurement.atoms }]
+          : [];
+      for (const measurement of [...measurements, ...live]) {
         const element = labelElements.current.get(measurement.id);
         if (!element || !measurement.atoms.length) continue;
         const center = { x: 0, y: 0, z: 0 };
@@ -378,6 +390,18 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
         return;
       }
 
+      const releaseGestures = bindViewerGestures(host, {
+        zoom(factor) {
+          if (!componentRef.current) return;
+          stage.viewerControls.distance(
+            Math.max(3, Math.min(100_000, stage.viewerControls.getCameraDistance() / factor)),
+          );
+        },
+        pan(dx, dy) {
+          if (componentRef.current && (dx || dy)) stage.trackballControls.pan(dx, dy);
+        },
+      });
+
       const atomFromPick = (proxy?: PickProxy): number | null => {
         const atom = proxy?.atom || proxy?.closestBondAtom;
         if (atom) return atom.index;
@@ -451,6 +475,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       resize.observe(host);
       setStageVersion((version) => version + 1);
       return () => {
+        releaseGestures();
         resize.disconnect();
         stage.signals.clicked.remove(onClick);
         stage.signals.hovered.remove(onHover);
@@ -775,6 +800,48 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
       updateLabels();
     }, [props.measurements, props.dataset?.id, componentVersion, updateLabels]);
 
+    const livePreview =
+      props.liveMeasurement?.status === 'ready' &&
+      props.dataset &&
+      props.liveMeasurement.atoms.every(
+        (index) =>
+          props.dataset!.atoms[index] &&
+          atomIsVisible(props.dataset!.atoms[index], props.visibility),
+      )
+        ? props.liveMeasurement
+        : null;
+    const liveSelection = livePreview ? JSON.stringify([livePreview.kind, livePreview.atoms]) : '';
+    useEffect(() => {
+      const component = componentRef.current;
+      if (!component || !liveSelection) return;
+      const [kind, atoms] = JSON.parse(liveSelection) as [Measurement['kind'], number[]];
+      const representation = component.addRepresentation(kind === 'hbond' ? 'distance' : kind, {
+        color: '#efc775',
+        labelVisible: false,
+        linewidth: 2,
+        lineOpacity: 0.85,
+        lineVisible: true,
+        vectorVisible: true,
+        sectorVisible: true,
+        sectorOpacity: 0.14,
+        planeVisible: false,
+        useCylinder: false,
+        disablePicking: true,
+        ...(kind === 'angle'
+          ? { atomTriple: [atoms] }
+          : kind === 'dihedral'
+            ? { atomQuad: [atoms] }
+            : { atomPair: [kind === 'hbond' ? [atoms[0], atoms[2]] : atoms] }),
+      });
+      updateLabels();
+      return () => {
+        component.removeRepresentation(representation);
+      };
+    }, [liveSelection, props.dataset?.id, componentVersion, updateLabels]);
+    useLayoutEffect(() => {
+      updateLabels();
+    }, [liveSelection, livePreview?.frame, updateLabels]);
+
     useEffect(() => {
       stageRef.current?.setSpin(props.spin);
     }, [props.spin, stageVersion]);
@@ -791,7 +858,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           role="img"
           aria-label={
             props.dataset
-              ? `Interactive 3D molecular structure of ${props.dataset.name}. Drag to rotate, scroll to zoom, right-drag to pan, double-click an atom to focus.`
+              ? `Interactive 3D molecular structure of ${props.dataset.name}. Drag to rotate, scroll or pinch to zoom, right-drag to pan, double-click an atom to focus.`
               : 'Molecular structure viewer'
           }
         />
@@ -846,6 +913,21 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
               </div>
             );
           })}
+        {status === 'ready' && livePreview && (
+          <div
+            ref={(element) => {
+              if (element) labelElements.current.set('current-selection', element);
+              else labelElements.current.delete('current-selection');
+            }}
+            className="molecular-viewer__measurement molecular-viewer__measurement--preview"
+            aria-label="Selected measurement in scene"
+            style={{ borderColor: '#efc77570', color: '#efc775' }}
+            title={`Current selection · saved frame ${livePreview.frame + 1}. Plot over time saves the analysis separately.`}
+          >
+            <span>{livePreview.kind === 'hbond' ? 'H-bond geometry' : livePreview.kind}</span>
+            <strong>{liveMeasurementLabel(livePreview)}</strong>
+          </div>
+        )}
         {status === 'ready' && props.dataset?.has_unitcell && props.dataset.n_frames > 1 && (
           <div
             className="molecular-viewer__periodic-note"

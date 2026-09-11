@@ -1,0 +1,536 @@
+{
+  "dataset_id": "f491cb784d7f4fbf",
+  "protein_atoms": 9164,
+  "modified_residues": [
+    {
+      "chain": "A",
+      "resid": "170",
+      "residue": "TPO",
+      "name": "Phosphothreonine",
+      "parent_residue": "THR",
+      "template": "TPO",
+      "formal_charge": -2,
+      "forcefield": "phosaa14SB",
+      "ph": 7.0,
+      "protonation_note": "Fixed dianionic phosphate (-2 e) from the published phosaa14SB TPO template. Requested pH 7 does not calculate or change its protonation state; review bound-state chemistry.",
+      "missing_heavy_atoms": [],
+      "external_bonds": [
+        [
+          "N",
+          "C"
+        ],
+        [
+          "C",
+          "N"
+        ]
+      ],
+      "supported": true
+    },
+    {
+      "chain": "B",
+      "resid": "170",
+      "residue": "TPO",
+      "name": "Phosphothreonine",
+      "parent_residue": "THR",
+      "template": "TPO",
+      "formal_charge": -2,
+      "forcefield": "phosaa14SB",
+      "ph": 7.0,
+      "protonation_note": "Fixed dianionic phosphate (-2 e) from the published phosaa14SB TPO template. Requested pH 7 does not calculate or change its protonation state; review bound-state chemistry.",
+      "missing_heavy_atoms": [],
+      "external_bonds": [
+        [
+          "N",
+          "C"
+        ],
+        [
+          "C",
+          "N"
+        ]
+      ],
+      "supported": true
+    },
+    {
+      "chain": "C",
+      "resid": "170",
+      "residue": "TPO",
+      "name": "Phosphothreonine",
+      "parent_residue": "THR",
+      "template": "TPO",
+      "formal_charge": -2,
+      "forcefield": "phosaa14SB",
+      "ph": 7.0,
+      "protonation_note": "Fixed dianionic phosphate (-2 e) from the published phosaa14SB TPO template. Requested pH 7 does not calculate or change its protonation state; review bound-state chemistry.",
+      "missing_heavy_atoms": [],
+      "external_bonds": [
+        [
+          "N",
+          "C"
+        ],
+        [
+          "C",
+          "N"
+        ]
+      ],
+      "supported": true
+    },
+    {
+      "chain": "D",
+      "resid": "170",
+      "residue": "TPO",
+      "name": "Phosphothreonine",
+      "parent_residue": "THR",
+      "template": "TPO",
+      "formal_charge": -2,
+      "forcefield": "phosaa14SB",
+      "ph": 7.0,
+      "protonation_note": "Fixed dianionic phosphate (-2 e) from the published phosaa14SB TPO template. Requested pH 7 does not calculate or change its protonation state; review bound-state chemistry.",
+      "missing_heavy_atoms": [],
+      "external_bonds": [
+        [
+          "N",
+          "C"
+        ],
+        [
+          "C",
+          "N"
+        ]
+      ],
+      "supported": true
+    }
+  ],
+  "missing_atoms": [],
+  "missing_residues": [
+    {
+      "chain": "A",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "LEU",
+        "ASP",
+        "VAL",
+        "LYS",
+        "SER",
+        "ARG",
+        "ALA",
+        "LYS",
+        "ARG",
+        "TYR"
+      ],
+      "count": 12,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 0
+    },
+    {
+      "chain": "A",
+      "position": 31,
+      "residues": [
+        "LYS",
+        "LEU",
+        "GLY",
+        "HIS",
+        "ARG",
+        "SER",
+        "GLU",
+        "ALA",
+        "LYS",
+        "ASP",
+        "GLY",
+        "ILE"
+      ],
+      "count": 12,
+      "terminal": false,
+      "buildable": false,
+      "chain_index": 0
+    },
+    {
+      "chain": "A",
+      "position": 287,
+      "residues": [
+        "CYS",
+        "PRO",
+        "VAL",
+        "GLU",
+        "THR",
+        "LEU",
+        "LYS",
+        "GLU",
+        "GLN",
+        "SER",
+        "ASN",
+        "PRO",
+        "ALA",
+        "LEU",
+        "ALA",
+        "ILE",
+        "LYS",
+        "ARG",
+        "LYS",
+        "ARG",
+        "THR",
+        "GLU",
+        "ALA",
+        "LEU",
+        "GLU",
+        "GLN",
+        "GLY",
+        "GLY",
+        "LEU",
+        "PRO",
+        "LYS",
+        "LYS",
+        "LEU",
+        "ILE",
+        "PHE"
+      ],
+      "count": 35,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 0
+    },
+    {
+      "chain": "B",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "LEU",
+        "ASP",
+        "VAL",
+        "LYS",
+        "SER",
+        "ARG",
+        "ALA",
+        "LYS",
+        "ARG",
+        "TYR"
+      ],
+      "count": 12,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 1
+    },
+    {
+      "chain": "B",
+      "position": 31,
+      "residues": [
+        "LYS",
+        "LEU",
+        "GLY",
+        "HIS",
+        "ARG",
+        "SER",
+        "GLU",
+        "ALA",
+        "LYS",
+        "ASP",
+        "GLY",
+        "ILE"
+      ],
+      "count": 12,
+      "terminal": false,
+      "buildable": false,
+      "chain_index": 1
+    },
+    {
+      "chain": "B",
+      "position": 287,
+      "residues": [
+        "CYS",
+        "PRO",
+        "VAL",
+        "GLU",
+        "THR",
+        "LEU",
+        "LYS",
+        "GLU",
+        "GLN",
+        "SER",
+        "ASN",
+        "PRO",
+        "ALA",
+        "LEU",
+        "ALA",
+        "ILE",
+        "LYS",
+        "ARG",
+        "LYS",
+        "ARG",
+        "THR",
+        "GLU",
+        "ALA",
+        "LEU",
+        "GLU",
+        "GLN",
+        "GLY",
+        "GLY",
+        "LEU",
+        "PRO",
+        "LYS",
+        "LYS",
+        "LEU",
+        "ILE",
+        "PHE"
+      ],
+      "count": 35,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 1
+    },
+    {
+      "chain": "C",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "LEU",
+        "ASP",
+        "VAL",
+        "LYS",
+        "SER",
+        "ARG",
+        "ALA",
+        "LYS",
+        "ARG",
+        "TYR"
+      ],
+      "count": 12,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 2
+    },
+    {
+      "chain": "C",
+      "position": 31,
+      "residues": [
+        "LYS",
+        "LEU",
+        "GLY",
+        "HIS",
+        "ARG",
+        "SER",
+        "GLU",
+        "ALA",
+        "LYS",
+        "ASP",
+        "GLY",
+        "ILE"
+      ],
+      "count": 12,
+      "terminal": false,
+      "buildable": false,
+      "chain_index": 2
+    },
+    {
+      "chain": "C",
+      "position": 287,
+      "residues": [
+        "CYS",
+        "PRO",
+        "VAL",
+        "GLU",
+        "THR",
+        "LEU",
+        "LYS",
+        "GLU",
+        "GLN",
+        "SER",
+        "ASN",
+        "PRO",
+        "ALA",
+        "LEU",
+        "ALA",
+        "ILE",
+        "LYS",
+        "ARG",
+        "LYS",
+        "ARG",
+        "THR",
+        "GLU",
+        "ALA",
+        "LEU",
+        "GLU",
+        "GLN",
+        "GLY",
+        "GLY",
+        "LEU",
+        "PRO",
+        "LYS",
+        "LYS",
+        "LEU",
+        "ILE",
+        "PHE"
+      ],
+      "count": 35,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 2
+    },
+    {
+      "chain": "D",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "LEU",
+        "ASP",
+        "VAL",
+        "LYS",
+        "SER",
+        "ARG",
+        "ALA",
+        "LYS",
+        "ARG",
+        "TYR"
+      ],
+      "count": 12,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 3
+    },
+    {
+      "chain": "D",
+      "position": 31,
+      "residues": [
+        "LYS",
+        "LEU",
+        "GLY",
+        "HIS",
+        "ARG",
+        "SER",
+        "GLU",
+        "ALA",
+        "LYS",
+        "ASP",
+        "GLY",
+        "ILE"
+      ],
+      "count": 12,
+      "terminal": false,
+      "buildable": false,
+      "chain_index": 3
+    },
+    {
+      "chain": "D",
+      "position": 287,
+      "residues": [
+        "CYS",
+        "PRO",
+        "VAL",
+        "GLU",
+        "THR",
+        "LEU",
+        "LYS",
+        "GLU",
+        "GLN",
+        "SER",
+        "ASN",
+        "PRO",
+        "ALA",
+        "LEU",
+        "ALA",
+        "ILE",
+        "LYS",
+        "ARG",
+        "LYS",
+        "ARG",
+        "THR",
+        "GLU",
+        "ALA",
+        "LEU",
+        "GLU",
+        "GLN",
+        "GLY",
+        "GLY",
+        "LEU",
+        "PRO",
+        "LYS",
+        "LYS",
+        "LEU",
+        "ILE",
+        "PHE"
+      ],
+      "count": 35,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 3
+    }
+  ],
+  "gaps": [
+    {
+      "chain": "A",
+      "after": "43",
+      "before": "56",
+      "message": "Backbone C\u2013N separation is 11.40 \u00c5; this connection requires repair before force-field preparation.",
+      "backbone_distance_angstrom": 11.39650534155098,
+      "structural_break": true
+    },
+    {
+      "chain": "B",
+      "after": "43",
+      "before": "56",
+      "message": "Backbone C\u2013N separation is 13.00 \u00c5; this connection requires repair before force-field preparation.",
+      "backbone_distance_angstrom": 13.003332611296221,
+      "structural_break": true
+    },
+    {
+      "chain": "C",
+      "after": "43",
+      "before": "56",
+      "message": "Backbone C\u2013N separation is 13.75 \u00c5; this connection requires repair before force-field preparation.",
+      "backbone_distance_angstrom": 13.753318072378026,
+      "structural_break": true
+    },
+    {
+      "chain": "D",
+      "after": "43",
+      "before": "56",
+      "message": "Backbone C\u2013N separation is 12.74 \u00c5; this connection requires repair before force-field preparation.",
+      "backbone_distance_angstrom": 12.739986891673,
+      "structural_break": true
+    }
+  ],
+  "blockers": [],
+  "ligand_errors": [],
+  "ligands": [
+    {
+      "key": "E:381::ATP",
+      "residue": "ATP",
+      "component_id": "ATP",
+      "formal_charge": -4,
+      "error": null
+    },
+    {
+      "key": "F:382::ATP",
+      "residue": "ATP",
+      "component_id": "ATP",
+      "formal_charge": -4,
+      "error": null
+    },
+    {
+      "key": "G:383::ATP",
+      "residue": "ATP",
+      "component_id": "ATP",
+      "formal_charge": -4,
+      "error": null
+    },
+    {
+      "key": "H:384::ATP",
+      "residue": "ATP",
+      "component_id": "ATP",
+      "formal_charge": -4,
+      "error": null
+    }
+  ],
+  "source_sha256": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+  "checks": {
+    "4_supported_TPO": true,
+    "4_ATP_only_ligands": true,
+    "4_real_gaps_only": true,
+    "no_missing_TPO_heavy_atoms": true,
+    "source_preserved": true
+  },
+  "preparation_blocked_reason": "Unresolved internal sequence gaps would create artificial peptide connections. Enable short missing-loop building, or repair the structure externally before protein preparation."
+}

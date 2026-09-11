@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T05:01:29.863916+00:00",
+  "purpose": "Implement and verify DynaMol handling of supported modified amino acids (phosphorylated residues, hydroxyproline), preserving chemistry and peptide connectivity. Correct protein versus ligand classification and detect unsupported unnatural residues precisely. Bounded real preparation and native parameter consistency checks only, not pKa or conformational accuracy or production MD.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "versions": {
+      "rdkit": "2025.9.6",
+      "openmm": "8.6.0",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6"
+    },
+    "planned_seed": 2026,
+    "inputs": [
+      {
+        "id": "f491cb784d7f4fbf",
+        "name": "1UA2",
+        "files": {
+          "physical.npz": "03be2ab648c218070f1002c2fc02485b837d93294b0b41982cda80bb945c91e8",
+          "source.cif": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+          "metadata.json": "0d9b31e54d3c55739aa9f15886be533ebf1e44851eef1760f02b41329253c9d0",
+          "topology.pdb": "84f9de8cbd7e57f00dd545f60ef5ff9975584207e20378a6f5297bcc6808bc89"
+        }
+      }
+    ]
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve deposited modification identity, bound heavy-atom coordinates and L/D stereochemistry. Match only documented compatible residue templates; do not remove phosphate or replace unnatural residues with standard amino acids. Reconstruct peptide connectivity including modifications, verify external bonds and charges. Report genuine missing loops separately, with no stretched artificial peptide bonds. Unsupported residues remain viewable with actionable preparation blockers. No arbitrary GAFF treatment of covalently linked amino acids."
+  },
+  "validation": {
+    "status": "Preflight design, implementation pending",
+    "scope": "Known modified residue fixtures and actual 1UA2 topology/inspection, exact retained PTM chemistry, internal peptide bond graph, native force-field charge/energy consistency, hydrogen addition/repair, curated parameter hash, carry-through into explicit solvent and simulation; negative unknown and unsupported terminal stereoisomer fixtures."
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No accuracy benchmark; no held-out test data or predicted scientific efficacy."
+  },
+  "review_identity": "Language-model evidence review with PatAgent automated checklist; not domain-expert certification or endorsement."
+}

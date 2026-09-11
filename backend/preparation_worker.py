@@ -23,7 +23,11 @@ import numpy as np
 from openmm import app, unit
 
 from . import config, storage
-from .preparation import STANDARD_PROTEINS, backbone_gaps
+from .preparation import (STANDARD_PROTEINS, backbone_gaps, find_missing_residues_preserving_identity,
+                          unsupported_missing_residue_message)
+from .modified_residues import (SUPPORTED_MODIFIED, PARENT_RESIDUES, register_topology_definitions,
+                                register_fixer_templates, inspect_modified, modified_forcefield_provenance,
+                                modified_stereochemistry_report)
 from .worker import Cancelled, Worker
 
 # Standard chi definitions. Proline is deliberately excluded: ring closure is not sampled.
@@ -182,15 +186,18 @@ def stereochemistry_report(topology, positions, templates):
     xyz = np.asarray(positions.value_in_unit(unit.nanometer), dtype=float)
     centers, violations = [], []
     for residue in topology.residues():
-        if residue.name not in STANDARD_PROTEINS or residue.name == "GLY":
+        if residue.name in SUPPORTED_MODIFIED:
+            continue
+        parent = PARENT_RESIDUES.get(residue.name, residue.name)
+        if parent not in STANDARD_PROTEINS or parent == "GLY":
             continue
         definitions = [("CA", ("N", "C", "CB"))]
-        if residue.name == "ILE":
+        if parent == "ILE":
             definitions.append(("CB", ("CA", "CG1", "CG2")))
-        elif residue.name == "THR":
+        elif parent == "THR":
             definitions.append(("CB", ("CA", "OG1", "CG2")))
         named = {atom.name: atom.index for atom in residue.atoms()}
-        template = templates[residue.name]
+        template = templates[parent]
         template_names = {atom.name: atom.index for atom in template.topology.atoms()}
         template_xyz = np.asarray(template.positions.value_in_unit(unit.nanometer))
         for center, neighbors in definitions:
@@ -202,7 +209,10 @@ def stereochemistry_report(topology, positions, templates):
             centers.append(record)
             if abs(volume) < 1e-4 or volume * expected <= 0:
                 violations.append(record)
-    return {"method": "Signed N/C/CB volume at nonglycine CA and CA/branch1/branch2 volume at ILE/THR CB versus PDBFixer standard templates; absolute volume must exceed 0.0001 nm³.", "checked_centers": len(centers), "violations": violations, "centers": centers}
+    modifications = modified_stereochemistry_report(topology, positions)
+    centers.extend(modifications["centers"])
+    violations.extend(modifications["violations"])
+    return {"method": "Signed N/C/CB volume at nonglycine CA and CA/branch1/branch2 volume at ILE/THR CB versus PDBFixer standard templates; supported modified-residue centers (including TPO CB and HYP CG) versus their CCD ideal geometry. Absolute volume must exceed 0.0001 nm³.", "checked_centers": len(centers), "violations": violations, "centers": centers}
 
 
 def require_valid_stereochemistry(report, stage):
@@ -218,7 +228,7 @@ def protonation_inventory(topology, selected_variants, charges=None):
         adjacency[a.index].add(b.index); adjacency[b.index].add(a.index)
     output = []
     for residue in topology.residues():
-        if residue.name not in STANDARD_PROTEINS:
+        if residue.name not in STANDARD_PROTEINS | SUPPORTED_MODIFIED:
             continue
         members = list(residue.atoms())
         inventory = {atom.name: sorted(atoms[j].name for j in adjacency[atom.index] if atoms[j].element == app.element.hydrogen) for atom in members if atom.element in {app.element.nitrogen, app.element.oxygen, app.element.sulfur}}
@@ -253,27 +263,38 @@ class PreparationWorker(Worker):
         platform = mm.Platform.getPlatformByName("CPU")
         platform.setPropertyDefaultValue("Threads", str(config.CPU_THREADS))
         self.update(status="running", stage="Inspecting current structure", message="Inspecting original sequence evidence and current first-frame coordinates.")
+        register_topology_definitions()
         fixer = PDBFixer(filename=str(self.folder / "input.pdb"), platform=platform)
+        register_fixer_templates(fixer)
         from .preparation import current_fixer
         from .complex_topology import metal_environment, residue_key, subset
         from .ligands import prepare_ligands, SUPPORTED_IONS
+        from .residue_identity import protein_residue_keys
         matching, source_path = current_fixer(options["dataset_id"])
         fixer.sequences = matching.sequences
         input_atoms = list(fixer.topology.atoms())
         input_topology, input_positions = fixer.topology, fixer.positions
+        protein_keys = protein_residue_keys(options["dataset_id"], input_topology, input_positions)
+        modification_inspection = inspect_modified(input_topology, options["ph"])
+        if modification_inspection["blockers"]:
+            raise ValueError(" ".join(modification_inspection["blockers"]))
+        modified = modification_inspection["residues"]
         environment = metal_environment(input_topology, input_positions)
         preserve_waters = environment["water_keys"] if not options["remove_heterogens"] else set()
         ion_keys = {residue_key(r) for r in input_topology.residues() if r.name.upper() in SUPPORTED_IONS and len(list(r.atoms())) == 1} if not options["remove_heterogens"] else set()
         input_keys = [atom_key(atom) for atom in input_atoms]
-        original_backbone = {atom_key(atom) for atom in input_atoms if atom.name in {"N", "CA", "C", "O"} and atom.residue.name in STANDARD_PROTEINS}
+        original_backbone = {atom_key(atom) for atom in input_atoms if atom.name in {"N", "CA", "C", "O"} and residue_key(atom.residue) in protein_keys}
         summary, warnings = [], ["Protonation uses OpenMM template/heuristic pH rules, not computed residue pKa values or constant-pH dynamics."]
+        warnings.extend(modification_inspection["warnings"])
+        if modified:
+            summary.append(f"Retained {len(modified)} modified protein residues with compatible named residue templates; covalent modifications are not removed as heterogens.")
         self.update(completed=1)
         self.update(stage="Applying explicit preparation choices")
         retained_keys = set()
         counts = Counter()
         for atom in input_atoms:
             water = atom.residue.name.upper() in storage.WATERS
-            protein = atom.residue.name in STANDARD_PROTEINS
+            protein = residue_key(atom.residue) in protein_keys
             keep_water = water and (not options["remove_waters"] or residue_key(atom.residue) in preserve_waters)
             reason = "hydrogens" if atom.element == app.element.hydrogen else "water_atoms" if water and not keep_water else "heterogen_atoms" if not protein and not water and options["remove_heterogens"] else None
             if reason:
@@ -287,12 +308,14 @@ class PreparationWorker(Worker):
         summary.append(f"Explicitly removed {counts['hydrogens']} existing hydrogens before pH reassignment, {counts['water_atoms']} water heavy atoms, and {counts['heterogen_atoms']} other heavy atoms.")
         self.update(completed=2, message=summary[-1])
         self.update(stage="Repairing missing heavy atoms and selected loops")
-        fixer.findMissingResidues()
+        find_missing_residues_preserving_identity(fixer)
         selected_loops = {}
         rebuilt = []
         chains = list(fixer.topology.chains())
         for (chain_index, position), names in fixer.missingResidues.items():
             terminal = position in {0, len(list(chains[chain_index].residues()))}
+            if not terminal and any(name not in STANDARD_PROTEINS for name in names):
+                raise ValueError(unsupported_missing_residue_message(chains[chain_index].id, names))
             if options["build_missing_residues"] and not terminal:
                 selected_loops[(chain_index, position)] = names
                 rebuilt.append({"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "confidence": "low", "method": "PDBFixer template placement and local optimization; no independent structure prediction or validation"})
@@ -350,9 +373,12 @@ class PreparationWorker(Worker):
         self.update(stage="Assigning pH-dependent hydrogens")
         modeller = app.Modeller(fixer.topology, fixer.positions)
         has_water = any(residue.name.upper() in storage.WATERS for residue in modeller.topology.residues())
-        from .prepared_system import load_prepared_forcefield, copy_ligand_parameters
+        from .prepared_system import load_prepared_forcefield, copy_ligand_parameters, snapshot_modified_parameters
         parameter_state = {"ligand_parameters": ligand_parameters} if ligand_parameters else {}
-        ff, files = load_prepared_forcefield(self.folder, parameter_state, solvent="explicit" if has_water or ion_keys or prepared_ligands else "implicit")
+        if modified:
+            parameter_state.update(modified_residues=modified, modified_residue_parameters=modified_forcefield_provenance())
+            snapshot_modified_parameters(self.folder, parameter_state)
+        ff, files = load_prepared_forcefield(self.folder, parameter_state, solvent="explicit" if has_water or ion_keys or prepared_ligands or modified else "implicit")
         # Existing hydrogens were explicitly removed above. Auto variants alone never remove stale H.
         selected_variants = modeller.addHydrogens(ff, pH=options["ph"], platform=platform)
         system = ff.createSystem(modeller.topology, nonbondedMethod=app.NoCutoff, constraints=app.HBonds)
@@ -362,12 +388,24 @@ class PreparationWorker(Worker):
                 charges = [force.getParticleParameters(i)[0].value_in_unit(unit.elementary_charge) for i in range(system.getNumParticles())]
                 break
         states = protonation_inventory(modeller.topology, selected_variants, charges)
+        if modified:
+            by_key = {(r.chain.id, r.id, (r.insertionCode or "").strip(), r.name): r for r in modeller.topology.residues()}
+            for record in modified:
+                residue = by_key.get((record["chain"], record["resid"], record.get("insertion_code", ""), record["residue"]))
+                if residue is None or charges is None:
+                    raise ValueError("A modified residue lost its identity or charge parameters during preparation.")
+                actual_charge = sum(charges[a.index] for a in residue.atoms())
+                terminal_charge = -1 if any(a.name == "OXT" for a in residue.atoms()) else 0
+                if abs(actual_charge - record["formal_charge"]) > 1e-5:
+                    raise ValueError(f"Modified residue {record['residue']} {record['chain']}:{record['resid']} does not retain its expected template charge.")
+                record.update(assembled_charge_e=float(actual_charge), terminal_charge_e=terminal_charge)
+            (self.folder / "modified-residue-system.xml").write_text(mm.XmlSerializer.serialize(system))
         added_hydrogens = sum(atom.element == app.element.hydrogen for atom in modeller.topology.atoms())
         summary.append(f"Added {added_hydrogens} hydrogens at requested pH {options['ph']:g}; actual residue states and bonded-H inventories are recorded.")
         self.update(completed=5, message=summary[-1])
         self.update(stage="Locally relaxing sidechains with backbone restraints")
         relaxation = {"performed": False, "reason": "Sidechain adjustment not requested"}
-        if options["optimize_sidechains"] and not has_water and not prepared_ligands and not ion_keys:
+        if options["optimize_sidechains"] and not has_water and not prepared_ligands and not ion_keys and not modified:
             restraint = mm.CustomExternalForce("0.5*k*((x-x0)^2+(y-y0)^2+(z-z0)^2)")
             restraint.addGlobalParameter("k", 1000 * unit.kilojoule_per_mole / unit.nanometer**2)
             for parameter in ("x0", "y0", "z0"):
@@ -397,11 +435,12 @@ class PreparationWorker(Worker):
         self.update(completed=6, message="Local relaxation stage complete.")
         self.update(stage="Saving prepared structure and provenance")
         geometry = None
-        if prepared_ligands or ion_keys:
+        if prepared_ligands or ion_keys or modified:
             output_named = {atom_key(atom): atom for atom in modeller.topology.atoms()}
             input_xyz = np.asarray(input_positions.value_in_unit(unit.angstrom))
             output_xyz = np.asarray(modeller.positions.value_in_unit(unit.angstrom))
-            retained = {tuple(ligand.original_residue_key) for ligand in prepared_ligands} | ion_keys | preserve_waters
+            modified_keys = {residue_key(r) for r in input_topology.residues() if r.name in SUPPORTED_MODIFIED}
+            retained = {tuple(ligand.original_residue_key) for ligand in prepared_ligands} | ion_keys | preserve_waters | modified_keys
             donor_keys = {tuple(contact["donor"]) for contact in environment["report"]["contacts"]} if ion_keys else set()
             checked, displacements = [], []
             for atom in input_atoms:
@@ -440,19 +479,23 @@ class PreparationWorker(Worker):
         added = [{"output_index": atom.index, "identity": list(atom_key(atom))} for atom in output_atoms if atom_key(atom) not in old_keys]
         preparation = {"parent_dataset_id": options["dataset_id"], "ph": options["ph"], "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment", "summary": summary, "warnings": warnings, "seed": options["seed"], "forcefield_files": files, "simulation_ready": True, "exact_topology_file": "prepared.pdb", "protonation_states": states, "selected_variants": selected_variants, "removed_atom_counts": dict(counts), "rebuilt_segments": rebuilt, "repaired_atoms": missing_record, "sidechain_adjustment": rotamers, "relaxation": relaxation, "original_to_prepared_atom_map_file": "atom-map.json", "net_forcefield_charge_e": float(sum(charges)) if charges is not None else None, "stereochemistry": stereochemistry, "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."}
         preparation.update(job_id=self.job["id"], metal_environment=environment["report"] if ion_keys else None, preserved_bound_geometry=geometry)
+        if modified:
+            preparation.update(modified_residues=modified, modified_residue_parameters=modified_forcefield_provenance(), requires_explicit_solvent=True)
         if ligand_parameters:
             preparation["ligand_parameters"] = ligand_parameters
         storage.atomic_json(self.folder / "preparation.json", preparation)
         storage.atomic_json(self.folder / "atom-map.json", {"input_to_output": mapping, "added_atoms": added, "note": "Original hydrogens were removed and regenerated; matching H names do not imply retained hydrogen coordinates."})
         self.provenance.update(purpose="Exploratory protein–ligand preparation with recorded state assumptions; no claim of native rotamers, loops, binding affinity or convergence", operation="prepare", versions={**self.provenance["versions"], "pdbfixer": importlib.metadata.version("pdbfixer")}, preparation_state=preparation, source_sequence_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest() if source_path else None, preparation_worker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), parent_dataset_id=options["dataset_id"])
-        self.provenance["outputs"] = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in self.folder.iterdir() if path.is_file() and path.name in {"input.pdb", "prepared.pdb", "preparation.json", "atom-map.json", "config.json"}}
+        self.provenance["outputs"] = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in self.folder.iterdir() if path.is_file() and path.name in {"input.pdb", "prepared.pdb", "preparation.json", "atom-map.json", "config.json", "modified-residue-system.xml"}}
         storage.atomic_json(self.folder / "provenance.json", self.provenance)
         traj = md.Trajectory(np.array([modeller.positions.value_in_unit(unit.nanometer)], dtype=np.float32), md.Topology.from_openmm(modeller.topology), time=[0])
         # Crystal lattice records are not advertised as a prepared periodic solvent box.
-        metadata = storage.save_dataset(traj, options["name"], "PDBFixer + OpenMM + GAFF2 preparation" if prepared_ligands else "PDBFixer + OpenMM preparation", f"Prepared {'protein–ligand complex' if prepared_ligands else 'standard protein'} at requested pH {options['ph']:g} using recorded fixed states. " + " ".join(summary), warnings=warnings, provenance=self.provenance)
+        metadata = storage.save_dataset(traj, options["name"], "PDBFixer + OpenMM + GAFF2 preparation" if prepared_ligands else "PDBFixer + OpenMM preparation", f"Prepared {'protein–ligand complex' if prepared_ligands else 'protein with modified residues' if modified else 'standard protein'} at requested pH {options['ph']:g} using recorded fixed states. " + " ".join(summary), warnings=warnings, provenance=self.provenance)
         folder = storage.dataset_dir(metadata["id"])
         for name in ("prepared.pdb", "preparation.json", "atom-map.json"):
             shutil.copy2(self.folder / name, folder / name)
+        if modified:
+            shutil.copy2(self.folder / "modified-residue-system.xml", folder / "modified-residue-system.xml")
         copy_ligand_parameters(self.folder, folder, preparation)
         if source_path:
             shutil.copy2(source_path, folder / ("sequence-source" + source_path.suffix.lower()))

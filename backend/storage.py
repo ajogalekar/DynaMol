@@ -183,7 +183,9 @@ def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, 
             warnings.append("Viewer molecules are made whole across periodic boundaries; analysis uses the original coordinates with minimum-image geometry.")
         except Exception:
             warnings.append("Periodic imaging unavailable for this topology; molecules may cross display box edges.")
-    protein_ca = np.array([a.index for a in canonical.atoms if a.residue.is_protein and a.name == "CA"], dtype=int)
+    from .residue_identity import protein_residue_keys, residue_key
+    protein_keys = protein_residue_keys(dataset_id, canonical, traj.xyz[0])
+    protein_ca = np.array([a.index for a in canonical.atoms if residue_key(a.residue) in protein_keys and a.name == "CA"], dtype=int)
     if len(protein_ca) >= 3:
         display.superpose(display, 0, atom_indices=protein_ca, parallel=False)
         warnings.append("Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames.")
@@ -200,7 +202,7 @@ def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, 
     for atom in atom_list:
         element = atom.element.symbol if atom.element else "X"
         residue = atom.residue
-        category = "protein" if residue.is_protein else "nucleic" if residue.is_nucleic else "water" if residue.name.upper() in WATERS else "ions" if residue.name.upper() in IONS and residue.n_atoms == 1 else "ligands"
+        category = "protein" if residue_key(residue) in protein_keys else "nucleic" if residue.is_nucleic else "water" if residue.name.upper() in WATERS else "ions" if residue.name.upper() in IONS and residue.n_atoms == 1 else "ligands"
         atoms.append({"index": atom.index, "name": atom.name, "element": element, "residue": residue.name, "resid": residue.resSeq, "chain": residue.chain.chain_id or str(residue.chain.index + 1), "category": category,
                       "nonpolar_hydrogen": element == "H" and any(atom_list[b].element and atom_list[b].element.symbol == "C" for b in adjacency.get(atom.index, []))})
     metadata = {"id": dataset_id, "name": name, "n_atoms": traj.n_atoms, "n_residues": traj.n_residues, "n_frames": traj.n_frames, "times_ps": traj.time.tolist(), "time_unit": "frame" if any("Physical timestamps are unavailable" in w for w in warnings) else "ps", "source": source, "description": description,

@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "reference": "Native AmberTools24.8 TLEAP ACE-residue-NME systems, generated from leaprc.protein.ff14SB and leaprc.phosaa14SB",
+  "platform": "OpenMM Reference",
+  "registry": {
+    "registry_version": 1,
+    "implementation_sha256": "89d7c817bdbd13a0c91837b69a2ffcc6fddf2a56f00cba07130e750d5e84a0ec",
+    "ptr_improper_correction": "Restore the four native Amber PTR ring improper quartets by atom name after generic template matching; numeric terms unchanged. Fully assembled System.xml records the portable result.",
+    "forcefield": "ff14SB + phosaa14SB",
+    "source_repository": "https://github.com/openmm/openmmforcefields",
+    "source_commit": "3f73b6ff9730e4e356fc6a0dbde6039517d59412",
+    "reference": "Raguette et al. (2024), phosaa14SB and phosaa19SB: Updated Amber Force Field Parameters for Phosphorylated Amino Acids. JCTC 20, 7199\u20137209.",
+    "normalization": "Only atom type identifiers are namespaced for OpenMM amber14/protein.ff14SB.xml. Exact phosphorus type/LJ entries are copied from the same upstream amber/ff14SB.xml. Only SEP/TPO/PTR residue templates are exposed. Charges, numeric parameters, classes, and retained residue graphs are unchanged. PTR improper atom ordering is corrected separately by register_modified_forcefield(); use the assembled System.xml for portable exact terms.",
+    "files": {
+      "HYP.cif": "4150e8042bfe6d386eec2ca80ff0dfbeea3c67284d84b84c19c2aa90257d912d",
+      "OPENMMFORCEFIELDS_LICENSE.txt": "16e575d857a05fa5be1bc71f240cb3641c2ec654de1ee97ff8ea9dacef78a26f",
+      "PTR.cif": "b78f4345d0daeea714cd3af836934b5aec24e5cad8f4d5a5ecbaa4a99722ad6d",
+      "SEP.cif": "8a64575a99938ed0960684067183d8b7a85daabb204fda3c13c24fa9353e86a9",
+      "TPO.cif": "d642585cb6396dd78eccb0240a3ed654a27b772881e719b8d3d298cd57d57b1b",
+      "ff14SB.source.xml": "f61e180832a8c6c587b797281ad0b43945962358707ebc0a4b1ce411fb3826c4",
+      "phosaa14SB.source.xml": "991d13246deebe35e362ad8d99c589a4a2fcf7322c97a408578f7c8c874ae08b",
+      "phosaa14SB.xml": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc"
+    },
+    "protonation": "SEP/TPO/PTR use fixed -2 phosphate states; HYP is neutral. No residue pKa calculation or automatic phosphate titration."
+  },
+  "thresholds": {
+    "energy_kj_mol": 0.002,
+    "max_force_component_kj_mol_nm": 0.02
+  },
+  "threshold_explanation": "Native TLEAP prmtop serializes angular constants with finite-precision pi; published XML uses mathematical pi. Differences are serialization-level numerical behavior, not uncertainty estimates or scientific accuracy validation.",
+  "fixtures": {
+    "HYP.inpcrd": "a1232dec10cbbe021138650bf540f296dacd65112b7288f337901d533297a7cd",
+    "HYP.pdb": "439f5a0e25764fc5ce39298c93c96581653e600235ad544360927c9f11958583",
+    "HYP.prmtop": "07c651b8004e06a1c19013ce8881c5c41dd34d495715e5ab7a483feef637392c",
+    "PTR.inpcrd": "c44b4683908095a7f79c9bed8659c373de27bc7625a00fce4bfe072b160c4459",
+    "PTR.pdb": "3333208a52586c4995ccca20583adc90b58f36f6aae6098bbfc4a505160a8196",
+    "PTR.prmtop": "070c579c543430e73fe89d058649847fb02301372ec046b06698d6aedc54efeb",
+    "SEP.inpcrd": "31190baec4020ef64720251009945cab414c3aa7025ab6f47659fca79f98e2eb",
+    "SEP.pdb": "1dd7112d972e236b98610a99676254e309324baf791e455442547a0616aee19b",
+    "SEP.prmtop": "4145974f36c0b0e70cc9f1f79b706f33957bf1daf76cba4fc369e8c1ed703357",
+    "TPO.inpcrd": "fa04c5346421bca71d3ac4a87bcf3c2950e5d4c3bed9698dac1dbf0903666eea",
+    "TPO.pdb": "355477e472af7169f50a27ed8f63f7400196b80c24c0fc25b446d68aa524388d",
+    "TPO.prmtop": "d38f2d77249cd2cca8844e79791cdf4426b3ea28b01d0e80cf375068189ab3f2",
+    "leap.in": "8fd3322c1819007c90340f20af330633b9a7175e92fdac2b61a530eaa73a215b",
+    "leap.log": "1f16821011f44337a65aa32fe49607e9a5d9001cc0a9688dd807e64195ff2e3b",
+    "native-tleap.txt": "6044e5261f6fba298fa7e7d499430a4bc6484d57e87fefe3915857b1bf72e394"
+  },
+  "rows": [
+    {
+      "residue": "HYP",
+      "atoms": 27,
+      "poses": [
+        {
+          "pose": 0,
+          "native_energy_kj_mol": 75.2617689675564,
+          "generated_energy_kj_mol": 75.26170784264923,
+          "energy_difference_kj_mol": 6.112490717669061e-05,
+          "max_force_component_difference_kj_mol_nm": 0.0045821981321978456
+        },
+        {
+          "pose": 1,
+          "native_energy_kj_mol": 119.62791366282889,
+          "generated_energy_kj_mol": 119.6278724449013,
+          "energy_difference_kj_mol": 4.121792758837728e-05,
+          "max_force_component_difference_kj_mol_nm": 0.004288238898084273
+        },
+        {
+          "pose": 2,
+          "native_energy_kj_mol": 112.14756634747485,
+          "generated_energy_kj_mol": 112.1475065997077,
+          "energy_difference_kj_mol": 5.974776715333974e-05,
+          "max_force_component_difference_kj_mol_nm": 0.00493759680250605
+        }
+      ],
+      "passed": true
+    },
+    {
+      "residue": "PTR",
+      "atoms": 36,
+      "poses": [
+        {
+          "pose": 0,
+          "native_energy_kj_mol": -279.3464560041365,
+          "generated_energy_kj_mol": -279.3469214719884,
+          "energy_difference_kj_mol": 0.00046546785193868345,
+          "max_force_component_difference_kj_mol_nm": 0.007627714007298891
+        },
+        {
+          "pose": 1,
+          "native_energy_kj_mol": -198.2278909546813,
+          "generated_energy_kj_mol": -198.228355557777,
+          "energy_difference_kj_mol": 0.0004646030957076164,
+          "max_force_component_difference_kj_mol_nm": 0.00745411657746331
+        },
+        {
+          "pose": 2,
+          "native_energy_kj_mol": -198.14077970381766,
+          "generated_energy_kj_mol": -198.14124735850547,
+          "energy_difference_kj_mol": 0.0004676546878101817,
+          "max_force_component_difference_kj_mol_nm": 0.007380641258805554
+        }
+      ],
+      "passed": true
+    },
+    {
+      "residue": "SEP",
+      "atoms": 26,
+      "poses": [
+        {
+          "pose": 0,
+          "native_energy_kj_mol": -124.19835953626759,
+          "generated_energy_kj_mol": -124.19889096319828,
+          "energy_difference_kj_mol": 0.0005314269306921915,
+          "max_force_component_difference_kj_mol_nm": 0.005652084768399845
+        },
+        {
+          "pose": 1,
+          "native_energy_kj_mol": -80.92265173460876,
+          "generated_energy_kj_mol": -80.92318427580298,
+          "energy_difference_kj_mol": 0.0005325411942180835,
+          "max_force_component_difference_kj_mol_nm": 0.0060550939588210895
+        },
+        {
+          "pose": 2,
+          "native_energy_kj_mol": -81.33540668250322,
+          "generated_energy_kj_mol": -81.33593585807292,
+          "energy_difference_kj_mol": 0.0005291755696958944,
+          "max_force_component_difference_kj_mol_nm": 0.005589957648794552
+        }
+      ],
+      "passed": true
+    },
+    {
+      "residue": "TPO",
+      "atoms": 29,
+      "poses": [
+        {
+          "pose": 0,
+          "native_energy_kj_mol": -303.36391715515174,
+          "generated_energy_kj_mol": -303.36450078208435,
+          "energy_difference_kj_mol": 0.0005836269326096044,
+          "max_force_component_difference_kj_mol_nm": 0.006988480831751076
+        },
+        {
+          "pose": 1,
+          "native_energy_kj_mol": -237.4807614381117,
+          "generated_energy_kj_mol": -237.48139382841032,
+          "energy_difference_kj_mol": 0.0006323902986196117,
+          "max_force_component_difference_kj_mol_nm": 0.006735934707194247
+        },
+        {
+          "pose": 2,
+          "native_energy_kj_mol": -230.9434610180191,
+          "generated_energy_kj_mol": -230.94413329336402,
+          "energy_difference_kj_mol": 0.0006722753449253105,
+          "max_force_component_difference_kj_mol_nm": 0.0069969876458344515
+        }
+      ],
+      "passed": true
+    }
+  ]
+}
