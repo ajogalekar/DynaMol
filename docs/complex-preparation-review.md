@@ -75,6 +75,12 @@ The fixture has 5,327 prepared atoms and an estimated 79,526-atom upper bound at
 
 The UI audit separately covers state overrides, progress, actual canvas visibility, preparation/water completion and downloads. Its own report carries the current test totals and device/browser limits. [UI functional audit](UI_FUNCTIONAL_AUDIT.md)
 
+## Follow-up: symmetric ligand atom identity (6DBK)
+
+The 6DBK failure exposed a separate graph-matching issue: eight equivalent atoms were remapped, changing four native improper torsions even though the XML's atom-specific parameters were correct. The shared force-field factory now enforces recorded identities for all ligand atoms, with element, connectivity, external-bond and native-index checks. It is used by preparation, solvent setup, reload and simulation. The conversion validator uses the same identity enforcement; its existing energy/force tolerances remain unchanged.
+
+The complete 6DBK complex prepared successfully (4,713 atoms) and produced a 50,015-atom TIP3P preview. Fresh PDB/factory reloads of both systems preserve every native ligand parameter term, and the bound ligand and PTR heavy-atom coordinates were retained. All 94 focused backend tests and 12 retained ligand/cofactor cases passed. This is exact software parameter-transfer evidence; no new dynamics, convergence or general chemical-accuracy claim is made. [Full preparation results](audit/ligand-conversion-fix/full-prep-results.json), [matrix results](audit/ligand-conversion-fix/matrix-results.json), [tests](audit/ligand-conversion-fix/backend-tests.txt), and [independent review](audit/ligand-conversion-fix/scientific-review.md) document the checks and remaining scope.
+
 ## Postflight decision and unresolved scientific scope
 
 The postflight manifest records current source/build hashes, exact artifact hashes, native versions, seeds, exclusions and results. The automated PatAgent checklist reports **seven passes and one failed gate: uncertainty**, with decision **block**. No replicate distributions or confidence intervals were generated, and the manifest explicitly sets `uncertainty_intervals_reported` to false. [Manifest](audit/complex-manifest.postflight.json), [checklist output](audit/complex-postflight.json)

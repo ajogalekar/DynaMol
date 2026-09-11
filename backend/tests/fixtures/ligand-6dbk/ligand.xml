@@ -1,0 +1,570 @@
+<?xml version="1.0" ?>
+<ForceField>
+  <Info>
+    <DateGenerated>2026-09-11</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type name="DML_1f22f93cdebf-N1" class="DML_1f22f93cdebf_0" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-C2" class="DML_1f22f93cdebf_1" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-N3" class="DML_1f22f93cdebf_2" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-C4" class="DML_1f22f93cdebf_3" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C5" class="DML_1f22f93cdebf_4" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C6" class="DML_1f22f93cdebf_5" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C7" class="DML_1f22f93cdebf_6" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C8" class="DML_1f22f93cdebf_7" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C9" class="DML_1f22f93cdebf_8" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C10" class="DML_1f22f93cdebf_9" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-N11" class="DML_1f22f93cdebf_10" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-C12" class="DML_1f22f93cdebf_11" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C13" class="DML_1f22f93cdebf_12" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C14" class="DML_1f22f93cdebf_13" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C15" class="DML_1f22f93cdebf_14" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-N16" class="DML_1f22f93cdebf_15" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-C17" class="DML_1f22f93cdebf_16" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C18" class="DML_1f22f93cdebf_17" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C19" class="DML_1f22f93cdebf_18" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-N20" class="DML_1f22f93cdebf_19" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-C21" class="DML_1f22f93cdebf_20" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C22" class="DML_1f22f93cdebf_21" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C23" class="DML_1f22f93cdebf_22" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C24" class="DML_1f22f93cdebf_23" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-C25" class="DML_1f22f93cdebf_24" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-O26" class="DML_1f22f93cdebf_25" mass="16.0" element="O"/>
+    <Type name="DML_1f22f93cdebf-N27" class="DML_1f22f93cdebf_26" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-C28" class="DML_1f22f93cdebf_27" mass="12.01" element="C"/>
+    <Type name="DML_1f22f93cdebf-O29" class="DML_1f22f93cdebf_28" mass="16.0" element="O"/>
+    <Type name="DML_1f22f93cdebf-N30" class="DML_1f22f93cdebf_29" mass="14.01" element="N"/>
+    <Type name="DML_1f22f93cdebf-H31" class="DML_1f22f93cdebf_30" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H32" class="DML_1f22f93cdebf_31" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H33" class="DML_1f22f93cdebf_32" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H34" class="DML_1f22f93cdebf_33" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H35" class="DML_1f22f93cdebf_34" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H36" class="DML_1f22f93cdebf_35" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H37" class="DML_1f22f93cdebf_36" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H38" class="DML_1f22f93cdebf_37" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H39" class="DML_1f22f93cdebf_38" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H40" class="DML_1f22f93cdebf_39" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H41" class="DML_1f22f93cdebf_40" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H42" class="DML_1f22f93cdebf_41" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H43" class="DML_1f22f93cdebf_42" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H44" class="DML_1f22f93cdebf_43" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H45" class="DML_1f22f93cdebf_44" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H46" class="DML_1f22f93cdebf_45" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H47" class="DML_1f22f93cdebf_46" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H48" class="DML_1f22f93cdebf_47" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H49" class="DML_1f22f93cdebf_48" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H50" class="DML_1f22f93cdebf_49" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H51" class="DML_1f22f93cdebf_50" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H52" class="DML_1f22f93cdebf_51" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H53" class="DML_1f22f93cdebf_52" mass="1.008" element="H"/>
+    <Type name="DML_1f22f93cdebf-H54" class="DML_1f22f93cdebf_53" mass="1.008" element="H"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="DML_1f22f93cdebf">
+      <Atom name="N1" type="DML_1f22f93cdebf-N1" charge="-0.6971555566531118"/>
+      <Atom name="C2" type="DML_1f22f93cdebf-C2" charge="0.5051444444444444"/>
+      <Atom name="N3" type="DML_1f22f93cdebf-N3" charge="-0.6990555582994462"/>
+      <Atom name="C4" type="DML_1f22f93cdebf-C4" charge="0.03894444438956663"/>
+      <Atom name="C5" type="DML_1f22f93cdebf-C5" charge="0.07164444444444444"/>
+      <Atom name="C6" type="DML_1f22f93cdebf-C6" charge="0.12754444444444443"/>
+      <Atom name="C7" type="DML_1f22f93cdebf-C7" charge="-0.08455555555555555"/>
+      <Atom name="C8" type="DML_1f22f93cdebf-C8" charge="0.08394444444444443"/>
+      <Atom name="C9" type="DML_1f22f93cdebf-C9" charge="-0.11815555555555556"/>
+      <Atom name="C10" type="DML_1f22f93cdebf-C10" charge="0.13444444444444445"/>
+      <Atom name="N11" type="DML_1f22f93cdebf-N11" charge="-0.7073555533604429"/>
+      <Atom name="C12" type="DML_1f22f93cdebf-C12" charge="-0.09235555555555555"/>
+      <Atom name="C13" type="DML_1f22f93cdebf-C13" charge="-0.12245555555555555"/>
+      <Atom name="C14" type="DML_1f22f93cdebf-C14" charge="0.19864444444444443"/>
+      <Atom name="C15" type="DML_1f22f93cdebf-C15" charge="0.9318444433468881"/>
+      <Atom name="N16" type="DML_1f22f93cdebf-N16" charge="-0.7700555582994462"/>
+      <Atom name="C17" type="DML_1f22f93cdebf-C17" charge="0.5631444438956663"/>
+      <Atom name="C18" type="DML_1f22f93cdebf-C18" charge="-0.41265555555555555"/>
+      <Atom name="C19" type="DML_1f22f93cdebf-C19" charge="0.11974444444444445"/>
+      <Atom name="N20" type="DML_1f22f93cdebf-N20" charge="-0.47185555555555553"/>
+      <Atom name="C21" type="DML_1f22f93cdebf-C21" charge="-0.13605555555555557"/>
+      <Atom name="C22" type="DML_1f22f93cdebf-C22" charge="-0.08455555555555555"/>
+      <Atom name="C23" type="DML_1f22f93cdebf-C23" charge="-0.12665555555555555"/>
+      <Atom name="C24" type="DML_1f22f93cdebf-C24" charge="-0.13605555555555557"/>
+      <Atom name="C25" type="DML_1f22f93cdebf-C25" charge="0.667644446639557"/>
+      <Atom name="O26" type="DML_1f22f93cdebf-O26" charge="-0.6081555566531118"/>
+      <Atom name="N27" type="DML_1f22f93cdebf-N27" charge="-0.5579555544579993"/>
+      <Atom name="C28" type="DML_1f22f93cdebf-C28" charge="0.6600444455420008"/>
+      <Atom name="O29" type="DML_1f22f93cdebf-O29" charge="-0.5281555555555556"/>
+      <Atom name="N30" type="DML_1f22f93cdebf-N30" charge="-0.3368555555555556"/>
+      <Atom name="H31" type="DML_1f22f93cdebf-H31" charge="0.45874444444444445"/>
+      <Atom name="H32" type="DML_1f22f93cdebf-H32" charge="0.06704444444444445"/>
+      <Atom name="H33" type="DML_1f22f93cdebf-H33" charge="0.10014444444444444"/>
+      <Atom name="H34" type="DML_1f22f93cdebf-H34" charge="0.10014444444444444"/>
+      <Atom name="H35" type="DML_1f22f93cdebf-H35" charge="0.13364444444444445"/>
+      <Atom name="H36" type="DML_1f22f93cdebf-H36" charge="0.15844444444444444"/>
+      <Atom name="H37" type="DML_1f22f93cdebf-H37" charge="0.06614444444444445"/>
+      <Atom name="H38" type="DML_1f22f93cdebf-H38" charge="0.06614444444444445"/>
+      <Atom name="H39" type="DML_1f22f93cdebf-H39" charge="0.04664444438956663"/>
+      <Atom name="H40" type="DML_1f22f93cdebf-H40" charge="0.04664444438956663"/>
+      <Atom name="H41" type="DML_1f22f93cdebf-H41" charge="0.04664444438956663"/>
+      <Atom name="H42" type="DML_1f22f93cdebf-H42" charge="0.14364444444444444"/>
+      <Atom name="H43" type="DML_1f22f93cdebf-H43" charge="0.4837444444444444"/>
+      <Atom name="H44" type="DML_1f22f93cdebf-H44" charge="0.12464444444444445"/>
+      <Atom name="H45" type="DML_1f22f93cdebf-H45" charge="0.12464444444444445"/>
+      <Atom name="H46" type="DML_1f22f93cdebf-H46" charge="0.11664444444444444"/>
+      <Atom name="H47" type="DML_1f22f93cdebf-H47" charge="0.11664444444444444"/>
+      <Atom name="H48" type="DML_1f22f93cdebf-H48" charge="0.17694444444444446"/>
+      <Atom name="H49" type="DML_1f22f93cdebf-H49" charge="0.12114444444444444"/>
+      <Atom name="H50" type="DML_1f22f93cdebf-H50" charge="0.12114444444444444"/>
+      <Atom name="H51" type="DML_1f22f93cdebf-H51" charge="0.14744444444444443"/>
+      <Atom name="H52" type="DML_1f22f93cdebf-H52" charge="0.15844444444444444"/>
+      <Atom name="H53" type="DML_1f22f93cdebf-H53" charge="0.14744444444444443"/>
+      <Atom name="H54" type="DML_1f22f93cdebf-H54" charge="0.3144444444444444"/>
+      <Bond atomName1="N1" atomName2="C19"/>
+      <Bond atomName1="N1" atomName2="C17"/>
+      <Bond atomName1="N1" atomName2="C10"/>
+      <Bond atomName1="N1" atomName2="H31"/>
+      <Bond atomName1="C2" atomName2="C18"/>
+      <Bond atomName1="C2" atomName2="N3"/>
+      <Bond atomName1="C2" atomName2="H32"/>
+      <Bond atomName1="N3" atomName2="C15"/>
+      <Bond atomName1="C4" atomName2="N20"/>
+      <Bond atomName1="C4" atomName2="C10"/>
+      <Bond atomName1="C4" atomName2="H33"/>
+      <Bond atomName1="C4" atomName2="H34"/>
+      <Bond atomName1="C5" atomName2="C19"/>
+      <Bond atomName1="C5" atomName2="N20"/>
+      <Bond atomName1="C5" atomName2="C13"/>
+      <Bond atomName1="C5" atomName2="H35"/>
+      <Bond atomName1="C6" atomName2="N11"/>
+      <Bond atomName1="C6" atomName2="C24"/>
+      <Bond atomName1="C6" atomName2="C21"/>
+      <Bond atomName1="C7" atomName2="C24"/>
+      <Bond atomName1="C7" atomName2="C23"/>
+      <Bond atomName1="C7" atomName2="H36"/>
+      <Bond atomName1="C8" atomName2="N27"/>
+      <Bond atomName1="C8" atomName2="C9"/>
+      <Bond atomName1="C8" atomName2="H37"/>
+      <Bond atomName1="C8" atomName2="H38"/>
+      <Bond atomName1="C9" atomName2="H39"/>
+      <Bond atomName1="C9" atomName2="H40"/>
+      <Bond atomName1="C9" atomName2="H41"/>
+      <Bond atomName1="C10" atomName2="C13"/>
+      <Bond atomName1="C10" atomName2="H42"/>
+      <Bond atomName1="N11" atomName2="C15"/>
+      <Bond atomName1="N11" atomName2="H43"/>
+      <Bond atomName1="C12" atomName2="C14"/>
+      <Bond atomName1="C12" atomName2="C28"/>
+      <Bond atomName1="C12" atomName2="H44"/>
+      <Bond atomName1="C12" atomName2="H45"/>
+      <Bond atomName1="C13" atomName2="H46"/>
+      <Bond atomName1="C13" atomName2="H47"/>
+      <Bond atomName1="C14" atomName2="N30"/>
+      <Bond atomName1="C15" atomName2="N16"/>
+      <Bond atomName1="N16" atomName2="C17"/>
+      <Bond atomName1="C17" atomName2="C18"/>
+      <Bond atomName1="C18" atomName2="H48"/>
+      <Bond atomName1="C19" atomName2="H49"/>
+      <Bond atomName1="C19" atomName2="H50"/>
+      <Bond atomName1="N20" atomName2="C28"/>
+      <Bond atomName1="C21" atomName2="C22"/>
+      <Bond atomName1="C21" atomName2="H51"/>
+      <Bond atomName1="C22" atomName2="C23"/>
+      <Bond atomName1="C22" atomName2="H52"/>
+      <Bond atomName1="C23" atomName2="C25"/>
+      <Bond atomName1="C24" atomName2="H53"/>
+      <Bond atomName1="C25" atomName2="N27"/>
+      <Bond atomName1="C25" atomName2="O26"/>
+      <Bond atomName1="N27" atomName2="H54"/>
+      <Bond atomName1="C28" atomName2="O29"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" length="0.15203" k="178631.69599999997"/>
+    <Bond class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_16" length="0.14893" k="196714.94399999996"/>
+    <Bond class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" length="0.15203" k="178631.69599999997"/>
+    <Bond class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_17" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_2" length="0.13392" k="323414.83199999994"/>
+    <Bond class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_14" length="0.13392" k="323414.83199999994"/>
+    <Bond class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" length="0.14685" k="210095.37599999996"/>
+    <Bond class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_9" length="0.15483000000000002" k="184179.67999999996"/>
+    <Bond class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_18" length="0.15483000000000002" k="184179.67999999996"/>
+    <Bond class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" length="0.14685" k="210095.37599999996"/>
+    <Bond class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_12" length="0.15483000000000002" k="184179.67999999996"/>
+    <Bond class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_10" length="0.13944" k="267709.056"/>
+    <Bond class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_23" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_20" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_23" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_26" length="0.14556" k="218957.088"/>
+    <Bond class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_8" length="0.15354" k="191535.15199999994"/>
+    <Bond class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_12" length="0.15483000000000002" k="184179.67999999996"/>
+    <Bond class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_14" length="0.13944" k="267709.056"/>
+    <Bond class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_13" length="0.14656" k="238136.54399999994"/>
+    <Bond class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_27" length="0.1527" k="196522.47999999995"/>
+    <Bond class1="DML_1f22f93cdebf_13" class2="DML_1f22f93cdebf_29" length="0.11619" k="628645.9999999999"/>
+    <Bond class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_15" length="0.13392" k="323414.83199999994"/>
+    <Bond class1="DML_1f22f93cdebf_15" class2="DML_1f22f93cdebf_16" length="0.13392" k="323414.83199999994"/>
+    <Bond class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_17" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_27" length="0.13967000000000002" k="265650.52799999993"/>
+    <Bond class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_21" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_22" length="0.13986" k="296436.39999999997"/>
+    <Bond class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_24" length="0.14907" k="219944.51199999993"/>
+    <Bond class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_26" length="0.13798" k="281223.37599999993"/>
+    <Bond class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_25" length="0.12190000000000001" k="494214.0799999999"/>
+    <Bond class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_28" length="0.12190000000000001" k="494214.0799999999"/>
+    <Bond class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_30" length="0.10338000000000001" k="360669.16799999995"/>
+    <Bond class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_31" length="0.10885" k="298586.97599999997"/>
+    <Bond class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_32" length="0.10972" k="287675.10399999993"/>
+    <Bond class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_33" length="0.10972" k="287675.10399999993"/>
+    <Bond class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_34" length="0.10972" k="287675.10399999993"/>
+    <Bond class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_35" length="0.10860000000000002" k="301825.39199999993"/>
+    <Bond class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_36" length="0.10969000000000001" k="288043.296"/>
+    <Bond class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_37" length="0.10969000000000001" k="288043.296"/>
+    <Bond class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_38" length="0.10962000000000001" k="288905.19999999995"/>
+    <Bond class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_39" length="0.10962000000000001" k="288905.19999999995"/>
+    <Bond class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_40" length="0.10962000000000001" k="288905.19999999995"/>
+    <Bond class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_41" length="0.10916999999999999" k="294520.1279999999"/>
+    <Bond class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_42" length="0.10137000000000002" k="395379.6319999999"/>
+    <Bond class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_43" length="0.10962000000000001" k="288905.19999999995"/>
+    <Bond class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_44" length="0.10962000000000001" k="288905.19999999995"/>
+    <Bond class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_45" length="0.10954" k="289892.62399999995"/>
+    <Bond class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_46" length="0.10954" k="289892.62399999995"/>
+    <Bond class1="DML_1f22f93cdebf_17" class2="DML_1f22f93cdebf_47" length="0.10860000000000002" k="301825.39199999993"/>
+    <Bond class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_48" length="0.10916999999999999" k="294520.1279999999"/>
+    <Bond class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_49" length="0.10916999999999999" k="294520.1279999999"/>
+    <Bond class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_50" length="0.10860000000000002" k="301825.39199999993"/>
+    <Bond class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_51" length="0.10860000000000002" k="301825.39199999993"/>
+    <Bond class1="DML_1f22f93cdebf_23" class2="DML_1f22f93cdebf_52" length="0.10860000000000002" k="301825.39199999993"/>
+    <Bond class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_53" length="0.10132000000000002" k="396300.1119999999"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_4" angle="1.82683691" k="552.03696"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_17" angle="2.07223031" k="549.69392"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_15" angle="2.01917228" k="597.4752000000001"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" angle="1.82683691" k="552.03696"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" angle="1.82683691" k="552.03696"/>
+    <Angle class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_16" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_2" class3="DML_1f22f93cdebf_14" angle="2.04622489" k="695.7992"/>
+    <Angle class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_17" angle="2.1457087" k="570.4465600000001"/>
+    <Angle class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_15" angle="2.22180509" k="608.8556800000001"/>
+    <Angle class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_10" angle="2.04500316" k="621.3240000000001"/>
+    <Angle class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_27" angle="2.06821605" k="646.17696"/>
+    <Angle class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_4" angle="1.95494413" k="649.18944"/>
+    <Angle class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" angle="1.81217614" k="517.47712"/>
+    <Angle class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_27" angle="2.06821605" k="646.17696"/>
+    <Angle class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_9" angle="1.81217614" k="517.47712"/>
+    <Angle class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_10" class3="DML_1f22f93cdebf_14" angle="2.27381592" k="633.95968"/>
+    <Angle class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_6" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_21" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_21" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_24" angle="2.10015559" k="514.12992"/>
+    <Angle class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_24" angle="2.12860447" k="643.4992000000001"/>
+    <Angle class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_26" angle="1.94935908" k="547.5182400000001"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" angle="1.87081923" k="640.9888"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" angle="1.97257197" k="632.6208"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_19" angle="1.80920908" k="563.50112"/>
+    <Angle class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_15" angle="2.04500316" k="621.3240000000001"/>
+    <Angle class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_23" angle="2.10731144" k="564.75632"/>
+    <Angle class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_20" angle="2.10731144" k="564.75632"/>
+    <Angle class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_13" class3="DML_1f22f93cdebf_29" angle="3.11820658" k="480.49056"/>
+    <Angle class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_28" angle="2.14501057" k="639.7336"/>
+    <Angle class1="DML_1f22f93cdebf_11" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_19" angle="2.04482863" k="545.50992"/>
+    <Angle class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" angle="1.81217614" k="517.47712"/>
+    <Angle class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_19" angle="1.80920908" k="563.50112"/>
+    <Angle class1="DML_1f22f93cdebf_13" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_27" angle="1.96855771" k="513.29312"/>
+    <Angle class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_15" class3="DML_1f22f93cdebf_16" angle="2.04622489" k="695.7992"/>
+    <Angle class1="DML_1f22f93cdebf_15" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_17" angle="2.1457087" k="570.4465600000001"/>
+    <Angle class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" angle="1.97257197" k="632.6208"/>
+    <Angle class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_19" angle="1.80920908" k="563.50112"/>
+    <Angle class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_28" angle="2.13925098" k="725.33824"/>
+    <Angle class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_23" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_21" class3="DML_1f22f93cdebf_22" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_24" angle="2.10015559" k="514.12992"/>
+    <Angle class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_6" class3="DML_1f22f93cdebf_23" angle="2.09474507" k="532.79056"/>
+    <Angle class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_26" angle="2.0087003" k="561.15808"/>
+    <Angle class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_25" angle="2.13977458" k="652.36928"/>
+    <Angle class1="DML_1f22f93cdebf_25" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_26" angle="2.14762857" k="729.77328"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_48" angle="1.89874451" k="389.5304"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_49" angle="1.89874451" k="389.5304"/>
+    <Angle class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_41" angle="1.89874451" k="389.5304"/>
+    <Angle class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_47" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_31" angle="2.02493187" k="419.2368"/>
+    <Angle class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_41" angle="1.97466636" k="353.88272"/>
+    <Angle class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_48" angle="1.97466636" k="353.88272"/>
+    <Angle class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_49" angle="1.97466636" k="353.88272"/>
+    <Angle class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_45" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_46" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_10" class3="DML_1f22f93cdebf_42" angle="2.00241711" k="480.82528"/>
+    <Angle class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_52" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_50" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_52" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_53" angle="2.04936649" k="457.06016"/>
+    <Angle class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_8" class3="DML_1f22f93cdebf_38" angle="1.91427794" k="362.08336"/>
+    <Angle class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_8" class3="DML_1f22f93cdebf_39" angle="1.91427794" k="362.08336"/>
+    <Angle class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_8" class3="DML_1f22f93cdebf_40" angle="1.91427794" k="362.08336"/>
+    <Angle class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_36" angle="1.9127071500000001" k="362.16704000000004"/>
+    <Angle class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_37" angle="1.9127071500000001" k="362.16704000000004"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_30" angle="1.85039887" k="461.07680000000005"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_32" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_33" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_45" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_46" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_34" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_41" angle="1.97466636" k="353.88272"/>
+    <Angle class1="DML_1f22f93cdebf_13" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_43" angle="1.91026369" k="377.64784000000003"/>
+    <Angle class1="DML_1f22f93cdebf_13" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_44" angle="1.91026369" k="377.64784000000003"/>
+    <Angle class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_10" class3="DML_1f22f93cdebf_42" angle="2.00241711" k="480.82528"/>
+    <Angle class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_47" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_30" angle="1.80955814" k="475.46976"/>
+    <Angle class1="DML_1f22f93cdebf_17" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_31" angle="2.09998106" k="374.8864"/>
+    <Angle class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_34" angle="1.94028336" k="356.8952"/>
+    <Angle class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_30" angle="1.85039887" k="461.07680000000005"/>
+    <Angle class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_34" angle="1.92893872" k="398.14944"/>
+    <Angle class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_32" angle="1.92893872" k="398.14944"/>
+    <Angle class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_33" angle="1.92893872" k="398.14944"/>
+    <Angle class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_21" class3="DML_1f22f93cdebf_51" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_50" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_6" class3="DML_1f22f93cdebf_35" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_21" class3="DML_1f22f93cdebf_51" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_23" class2="DML_1f22f93cdebf_6" class3="DML_1f22f93cdebf_35" angle="2.0923016" k="375.7232"/>
+    <Angle class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_53" angle="2.04657396" k="480.07216"/>
+    <Angle class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_36" angle="1.8935085200000001" k="404.92752"/>
+    <Angle class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_37" angle="1.8935085200000001" k="404.92752"/>
+    <Angle class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_43" angle="1.90153704" k="365.09584"/>
+    <Angle class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_44" angle="1.90153704" k="365.09584"/>
+    <Angle class1="DML_1f22f93cdebf_32" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_33" angle="1.88722533" k="298.73760000000004"/>
+    <Angle class1="DML_1f22f93cdebf_36" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_37" angle="1.89455572" k="298.23552"/>
+    <Angle class1="DML_1f22f93cdebf_38" class2="DML_1f22f93cdebf_8" class3="DML_1f22f93cdebf_39" angle="1.88024401" k="299.57439999999997"/>
+    <Angle class1="DML_1f22f93cdebf_38" class2="DML_1f22f93cdebf_8" class3="DML_1f22f93cdebf_40" angle="1.88024401" k="299.57439999999997"/>
+    <Angle class1="DML_1f22f93cdebf_39" class2="DML_1f22f93cdebf_8" class3="DML_1f22f93cdebf_40" angle="1.88024401" k="299.57439999999997"/>
+    <Angle class1="DML_1f22f93cdebf_43" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_44" angle="1.88024401" k="299.57439999999997"/>
+    <Angle class1="DML_1f22f93cdebf_45" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_46" angle="1.87134283" k="300.49487999999997"/>
+    <Angle class1="DML_1f22f93cdebf_48" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_49" angle="1.9025842300000002" k="299.07232000000005"/>
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce ordering="amber">
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_19" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_12" periodicity1="3" phase1="0.0" k1="0.87864"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_17" class4="DML_1f22f93cdebf_1" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_15" class4="DML_1f22f93cdebf_14" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_19" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_4" periodicity1="3" phase1="0.0" k1="0.87864"/>
+    <Proper class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_15" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_2" class3="DML_1f22f93cdebf_14" class4="DML_1f22f93cdebf_15" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_2" class3="DML_1f22f93cdebf_14" class4="DML_1f22f93cdebf_10" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_17" class4="DML_1f22f93cdebf_16" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_15" class4="DML_1f22f93cdebf_16" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_10" class4="DML_1f22f93cdebf_5" periodicity1="2" phase1="3.141594" k1="4.3932"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_27" class4="DML_1f22f93cdebf_11" periodicity1="1" phase1="0.0" k1="12.259120000000001" periodicity2="2" phase2="3.141594" k2="5.89944" periodicity3="3" phase3="0.0" k3="2.092"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_27" class4="DML_1f22f93cdebf_28" periodicity1="2" phase1="3.141594" k1="10.46"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_18" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_12" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_3" periodicity1="3" phase1="0.0" k1="0.6527040000000001"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_3" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_4" periodicity1="3" phase1="0.0" k1="2.1756800000000003"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_4" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_4" periodicity1="3" phase1="0.0" k1="0.6527040000000001"/>
+    <Proper class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_27" class4="DML_1f22f93cdebf_11" periodicity1="1" phase1="0.0" k1="12.259120000000001" periodicity2="2" phase2="3.141594" k2="5.89944" periodicity3="3" phase3="0.0" k3="2.092"/>
+    <Proper class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_27" class4="DML_1f22f93cdebf_28" periodicity1="2" phase1="3.141594" k1="10.46"/>
+    <Proper class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_9" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_10" class3="DML_1f22f93cdebf_14" class4="DML_1f22f93cdebf_15" periodicity1="2" phase1="3.141594" k1="4.3932"/>
+    <Proper class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_22" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_22" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_5" class4="DML_1f22f93cdebf_10" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_5" class4="DML_1f22f93cdebf_20" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_20" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_24" class4="DML_1f22f93cdebf_26" periodicity1="2" phase1="3.141594" k1="8.88054"/>
+    <Proper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_24" class4="DML_1f22f93cdebf_25" periodicity1="2" phase1="3.141594" k1="2.42672"/>
+    <Proper class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_24" class4="DML_1f22f93cdebf_22" periodicity1="1" phase1="3.141594" k1="12.552" periodicity2="2" phase2="3.141594" k2="8.368" periodicity3="3" phase3="0.0" k3="2.092"/>
+    <Proper class1="DML_1f22f93cdebf_7" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_24" class4="DML_1f22f93cdebf_25" periodicity1="2" phase1="3.141594" k1="10.46"/>
+    <Proper class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_24" periodicity1="1" phase1="3.141594" k1="4.811599999999999"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_17" periodicity1="2" phase1="0.0" k1="6.213240000000001"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_15" periodicity1="2" phase1="0.0" k1="7.322"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_19" class4="DML_1f22f93cdebf_27" periodicity1="1" phase1="0.0" k1="9.45584" periodicity2="3" phase2="3.141594" k2="0.12552" periodicity3="4" phase3="3.141594" k3="2.7196000000000002"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_18" periodicity1="3" phase1="0.0" k1="2.1756800000000003"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_19" periodicity1="3" phase1="0.0" k1="0.41840000000000005"/>
+    <Proper class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_15" class4="DML_1f22f93cdebf_16" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_20" class4="DML_1f22f93cdebf_21" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_19" class4="DML_1f22f93cdebf_27" periodicity1="1" phase1="0.0" k1="9.45584" periodicity2="3" phase2="3.141594" k2="0.12552" periodicity3="4" phase3="3.141594" k3="2.7196000000000002"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_12" periodicity1="3" phase1="0.0" k1="0.6527040000000001"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_12" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_19" periodicity1="3" phase1="0.0" k1="0.41840000000000005"/>
+    <Proper class1="DML_1f22f93cdebf_13" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_27" class4="DML_1f22f93cdebf_28" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_13" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_27" class4="DML_1f22f93cdebf_19" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_2" class3="DML_1f22f93cdebf_1" class4="DML_1f22f93cdebf_17" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_15" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_17" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_10" class3="DML_1f22f93cdebf_5" class4="DML_1f22f93cdebf_23" periodicity1="2" phase1="3.141594" k1="3.3472000000000004"/>
+    <Proper class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_10" class3="DML_1f22f93cdebf_5" class4="DML_1f22f93cdebf_20" periodicity1="2" phase1="3.141594" k1="3.3472000000000004"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_15" periodicity1="2" phase1="0.0" k1="7.322"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_17" periodicity1="2" phase1="0.0" k1="6.213240000000001"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_19" class4="DML_1f22f93cdebf_27" periodicity1="1" phase1="0.0" k1="9.45584" periodicity2="3" phase2="3.141594" k2="0.12552" periodicity3="4" phase3="3.141594" k3="2.7196000000000002"/>
+    <Proper class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_21" class3="DML_1f22f93cdebf_22" class4="DML_1f22f93cdebf_24" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_5" class4="DML_1f22f93cdebf_23" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_23" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_24" class4="DML_1f22f93cdebf_26" periodicity1="2" phase1="3.141594" k1="8.88054"/>
+    <Proper class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_24" class4="DML_1f22f93cdebf_25" periodicity1="2" phase1="3.141594" k1="2.42672"/>
+    <Proper class1="DML_1f22f93cdebf_23" class2="DML_1f22f93cdebf_6" class3="DML_1f22f93cdebf_22" class4="DML_1f22f93cdebf_24" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_13" class4="DML_1f22f93cdebf_29" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_18" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_34" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_17" class4="DML_1f22f93cdebf_47" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_32" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_33" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_45" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_0" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_46" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_17" class4="DML_1f22f93cdebf_47" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_2" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_10" class4="DML_1f22f93cdebf_42" periodicity1="2" phase1="3.141594" k1="4.3932"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_34" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_3" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_45" periodicity1="3" phase1="0.0" k1="0.5439200000000001"/>
+    <Proper class1="DML_1f22f93cdebf_3" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_46" periodicity1="3" phase1="0.0" k1="0.5439200000000001"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_4" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_32" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_33" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_4" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_23" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_35" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_51" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_51" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_8" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_53" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_48" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_49" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_9" class2="DML_1f22f93cdebf_12" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_34" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_23" class4="DML_1f22f93cdebf_52" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_20" class4="DML_1f22f93cdebf_50" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_48" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_49" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_12" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_32" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_12" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_33" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_2" class3="DML_1f22f93cdebf_1" class4="DML_1f22f93cdebf_31" periodicity1="2" phase1="3.141594" k1="20.0832"/>
+    <Proper class1="DML_1f22f93cdebf_15" class2="DML_1f22f93cdebf_16" class3="DML_1f22f93cdebf_17" class4="DML_1f22f93cdebf_47" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_15" periodicity1="2" phase1="0.0" k1="7.322"/>
+    <Proper class1="DML_1f22f93cdebf_15" class2="DML_1f22f93cdebf_14" class3="DML_1f22f93cdebf_10" class4="DML_1f22f93cdebf_42" periodicity1="2" phase1="3.141594" k1="4.3932"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_1" class4="DML_1f22f93cdebf_31" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_48" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_49" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_17" periodicity1="2" phase1="0.0" k1="7.322"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_45" periodicity1="3" phase1="0.0" k1="0.5439200000000001"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_46" periodicity1="3" phase1="0.0" k1="0.5439200000000001"/>
+    <Proper class1="DML_1f22f93cdebf_18" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_11" class4="DML_1f22f93cdebf_43" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_11" class4="DML_1f22f93cdebf_44" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_48" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_49" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_45" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_46" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_10" class4="DML_1f22f93cdebf_42" periodicity1="2" phase1="3.141594" k1="4.3932"/>
+    <Proper class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_23" class4="DML_1f22f93cdebf_52" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_35" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_6" class3="DML_1f22f93cdebf_23" class4="DML_1f22f93cdebf_52" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_21" class3="DML_1f22f93cdebf_20" class4="DML_1f22f93cdebf_50" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_53" periodicity1="2" phase1="3.141594" k1="10.46"/>
+    <Proper class1="DML_1f22f93cdebf_23" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_10" class4="DML_1f22f93cdebf_42" periodicity1="2" phase1="3.141594" k1="4.3932"/>
+    <Proper class1="DML_1f22f93cdebf_23" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_20" class4="DML_1f22f93cdebf_50" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_35" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_51" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_7" class4="DML_1f22f93cdebf_36" periodicity1="1" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_26" class3="DML_1f22f93cdebf_7" class4="DML_1f22f93cdebf_37" periodicity1="1" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_25" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_53" periodicity1="1" phase1="0.0" k1="8.368" periodicity2="2" phase2="3.141594" k2="10.46"/>
+    <Proper class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_38" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_39" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_40" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_4" class4="DML_1f22f93cdebf_34" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_32" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_19" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_33" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_28" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_11" class4="DML_1f22f93cdebf_43" periodicity1="1" phase1="0.0" k1="16.861520000000002" periodicity2="2" phase2="3.141594" k2="15.313440000000002"/>
+    <Proper class1="DML_1f22f93cdebf_28" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_11" class4="DML_1f22f93cdebf_44" periodicity1="1" phase1="0.0" k1="16.861520000000002" periodicity2="2" phase2="3.141594" k2="15.313440000000002"/>
+    <Proper class1="DML_1f22f93cdebf_29" class2="DML_1f22f93cdebf_13" class3="DML_1f22f93cdebf_11" class4="DML_1f22f93cdebf_43" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_29" class2="DML_1f22f93cdebf_13" class3="DML_1f22f93cdebf_11" class4="DML_1f22f93cdebf_44" periodicity1="2" phase1="3.141594" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_48" periodicity1="3" phase1="0.0" k1="0.456056"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_49" periodicity1="3" phase1="0.0" k1="0.456056"/>
+    <Proper class1="DML_1f22f93cdebf_30" class2="DML_1f22f93cdebf_0" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.456056"/>
+    <Proper class1="DML_1f22f93cdebf_31" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_17" class4="DML_1f22f93cdebf_47" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_32" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_33" class2="DML_1f22f93cdebf_3" class3="DML_1f22f93cdebf_9" class4="DML_1f22f93cdebf_41" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_34" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_48" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_34" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_18" class4="DML_1f22f93cdebf_49" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_34" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_45" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_34" class2="DML_1f22f93cdebf_4" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_46" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_35" class2="DML_1f22f93cdebf_6" class3="DML_1f22f93cdebf_23" class4="DML_1f22f93cdebf_52" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Proper class1="DML_1f22f93cdebf_36" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_53" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_36" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_38" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_36" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_39" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_36" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_40" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_37" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_53" periodicity1="2" phase1="0.0" k1="0.0"/>
+    <Proper class1="DML_1f22f93cdebf_37" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_38" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_37" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_39" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_37" class2="DML_1f22f93cdebf_7" class3="DML_1f22f93cdebf_8" class4="DML_1f22f93cdebf_40" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_41" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_45" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_41" class2="DML_1f22f93cdebf_9" class3="DML_1f22f93cdebf_12" class4="DML_1f22f93cdebf_46" periodicity1="3" phase1="0.0" k1="0.6508444463040001"/>
+    <Proper class1="DML_1f22f93cdebf_50" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_51" periodicity1="2" phase1="3.141594" k1="15.167"/>
+    <Improper class1="DML_1f22f93cdebf_5" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_23" class4="DML_1f22f93cdebf_10" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_14" class2="DML_1f22f93cdebf_2" class3="DML_1f22f93cdebf_15" class4="DML_1f22f93cdebf_10" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_16" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_15" class4="DML_1f22f93cdebf_0" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_19" class2="DML_1f22f93cdebf_27" class3="DML_1f22f93cdebf_3" class4="DML_1f22f93cdebf_4" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_22" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_21" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_24" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_26" class4="DML_1f22f93cdebf_25" periodicity1="2" phase1="3.141594" k1="43.932"/>
+    <Improper class1="DML_1f22f93cdebf_27" class2="DML_1f22f93cdebf_11" class3="DML_1f22f93cdebf_19" class4="DML_1f22f93cdebf_28" periodicity1="2" phase1="3.141594" k1="43.932"/>
+    <Improper class1="DML_1f22f93cdebf_1" class2="DML_1f22f93cdebf_17" class3="DML_1f22f93cdebf_31" class4="DML_1f22f93cdebf_2" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_6" class2="DML_1f22f93cdebf_22" class3="DML_1f22f93cdebf_23" class4="DML_1f22f93cdebf_35" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_10" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_14" class4="DML_1f22f93cdebf_42" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_17" class2="DML_1f22f93cdebf_1" class3="DML_1f22f93cdebf_16" class4="DML_1f22f93cdebf_47" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_20" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_21" class4="DML_1f22f93cdebf_50" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_21" class2="DML_1f22f93cdebf_20" class3="DML_1f22f93cdebf_22" class4="DML_1f22f93cdebf_51" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_23" class2="DML_1f22f93cdebf_5" class3="DML_1f22f93cdebf_6" class4="DML_1f22f93cdebf_52" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+    <Improper class1="DML_1f22f93cdebf_26" class2="DML_1f22f93cdebf_24" class3="DML_1f22f93cdebf_7" class4="DML_1f22f93cdebf_53" periodicity1="2" phase1="3.141594" k1="4.6024"/>
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom class="DML_1f22f93cdebf_0" sigma="0.25885953158462816" epsilon="10.649535176140338"/>
+    <Atom class="DML_1f22f93cdebf_1" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_2" sigma="0.33841678702229117" epsilon="0.3937144005608645"/>
+    <Atom class="DML_1f22f93cdebf_3" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_4" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_5" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_6" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_7" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_8" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_9" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_10" sigma="0.32790418219740114" epsilon="0.6464280002813068"/>
+    <Atom class="DML_1f22f93cdebf_11" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_12" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_13" sigma="0.34789594939327306" epsilon="0.6677664021904942"/>
+    <Atom class="DML_1f22f93cdebf_14" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_15" sigma="0.33841678702229117" epsilon="0.3937144005608645"/>
+    <Atom class="DML_1f22f93cdebf_16" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_17" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_18" sigma="0.33977095312572575" epsilon="0.4510352003144314"/>
+    <Atom class="DML_1f22f93cdebf_19" sigma="0.3180864782832791" epsilon="0.6845024006060481"/>
+    <Atom class="DML_1f22f93cdebf_20" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_21" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_22" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_23" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_24" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_25" sigma="0.3048120873800651" epsilon="0.6121192008473053"/>
+    <Atom class="DML_1f22f93cdebf_26" sigma="0.3269954655337278" epsilon="0.4912015996175275"/>
+    <Atom class="DML_1f22f93cdebf_27" sigma="0.33152123100281" epsilon="0.4133791999977277"/>
+    <Atom class="DML_1f22f93cdebf_28" sigma="0.3048120873800651" epsilon="0.6121192008473053"/>
+    <Atom class="DML_1f22f93cdebf_29" sigma="0.3273518249462967" epsilon="0.45940320046893224"/>
+    <Atom class="DML_1f22f93cdebf_30" sigma="0.11064962075463812" epsilon="0.0418400000713784"/>
+    <Atom class="DML_1f22f93cdebf_31" sigma="0.2536388651896133" epsilon="0.06736239962967548"/>
+    <Atom class="DML_1f22f93cdebf_32" sigma="0.2421997255202334" epsilon="0.08702720008258066"/>
+    <Atom class="DML_1f22f93cdebf_33" sigma="0.2421997255202334" epsilon="0.08702720008258066"/>
+    <Atom class="DML_1f22f93cdebf_34" sigma="0.2421997255202334" epsilon="0.08702720008258066"/>
+    <Atom class="DML_1f22f93cdebf_35" sigma="0.26254785220391275" epsilon="0.06736240007496809"/>
+    <Atom class="DML_1f22f93cdebf_36" sigma="0.2421997255202334" epsilon="0.08702720008258066"/>
+    <Atom class="DML_1f22f93cdebf_37" sigma="0.2421997255202334" epsilon="0.08702720008258066"/>
+    <Atom class="DML_1f22f93cdebf_38" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_39" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_40" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_41" sigma="0.1887458023514046" epsilon="0.08702720015285823"/>
+    <Atom class="DML_1f22f93cdebf_42" sigma="0.11064962075463812" epsilon="0.0418400000713784"/>
+    <Atom class="DML_1f22f93cdebf_43" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_44" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_45" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_46" sigma="0.2600176998083396" epsilon="0.08702720023662243"/>
+    <Atom class="DML_1f22f93cdebf_47" sigma="0.26254785220391275" epsilon="0.06736240007496809"/>
+    <Atom class="DML_1f22f93cdebf_48" sigma="0.1887458023514046" epsilon="0.08702720015285823"/>
+    <Atom class="DML_1f22f93cdebf_49" sigma="0.1887458023514046" epsilon="0.08702720015285823"/>
+    <Atom class="DML_1f22f93cdebf_50" sigma="0.26254785220391275" epsilon="0.06736240007496809"/>
+    <Atom class="DML_1f22f93cdebf_51" sigma="0.26254785220391275" epsilon="0.06736240007496809"/>
+    <Atom class="DML_1f22f93cdebf_52" sigma="0.26254785220391275" epsilon="0.06736240007496809"/>
+    <Atom class="DML_1f22f93cdebf_53" sigma="0.11064962075463812" epsilon="0.0418400000713784"/>
+  </NonbondedForce>
+</ForceField>

@@ -107,7 +107,7 @@ def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent:
     Protein-only implicit GBn2 remains available. Ligand bundles are accepted
     only with explicit TIP3P; each declared XML is verified before parsing.
     """
-    from openmm import app
+    from .forcefield_identity import IdentityForceField
     from .modified_residues import modified_forcefield_files, modified_forcefield_provenance, register_modified_forcefield
 
     if solvent not in {"implicit", "explicit"}:
@@ -130,10 +130,63 @@ def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent:
     supplemental = modified_forcefield_files(preparation or {})
     if modified:
         supplemental = [str(Path(folder) / "residue-parameters" / Path(path).name) for path in supplemental]
-    forcefield = app.ForceField(*base, *supplemental, *(io.StringIO(data.decode("utf-8")) for _, data in verified))
+    identities = _ligand_atom_maps(bundle, verified)
+    forcefield = IdentityForceField(*base, *supplemental, *(io.StringIO(data.decode("utf-8")) for _, data in verified),
+                                   ligand_atom_maps=identities)
     if modified:
         register_modified_forcefield(forcefield)
     return forcefield, base + ["residue-parameters/" + Path(path).name for path in supplemental] + [str(path.relative_to(Path(folder).resolve())) for path, _ in verified]
+
+
+def _ligand_atom_maps(bundle, verified):
+    """Recover only declared atom identities from the verified parameter bundle."""
+    if bundle is None:
+        return []
+    templates = {}
+    for _, data in verified:
+        for residue in ElementTree.fromstring(data).findall('Residues/Residue'):
+            name = residue.get('name')
+            if name in templates:
+                raise ValueError('A ligand template is duplicated in the parameter bundle.')
+            templates[name] = residue
+    identities = []
+    for ligand in bundle['ligands']:
+        template_name = ligand.get('template_name')
+        # Non-DynaMol synthetic fixtures and legacy external parameter bundles
+        # keep normal matching. Generated DML templates always require a map.
+        if template_name is None:
+            continue
+        if not isinstance(template_name, str) or not isinstance(ligand.get('key'), str):
+            raise ValueError('The prepared ligand template or residue identity is malformed.')
+        template = templates.get(template_name)
+        key = ligand['key'].split(':')
+        if template is None or len(key) != 4:
+            raise ValueError('The prepared ligand is missing its template or residue identity. Prepare the complex again.')
+        atoms = ligand.get('parameter_atom_map')
+        if atoms is None:
+            # Earlier DynaMol bundles recorded every heavy atom and used H1,
+            # H2,... for added hydrogens. Recover that exact documented naming
+            # convention, never a new graph-isomorphism assignment.
+            heavy = ligand.get('atom_map', [])
+            xml_atoms = template.findall('Atom')
+            types = {}
+            for _, data in verified:
+                for atom_type in ElementTree.fromstring(data).findall('AtomTypes/Type'):
+                    types[atom_type.get('name')] = atom_type.get('element')
+            if (not isinstance(heavy, list) or not heavy or not all(isinstance(atom, dict) for atom in heavy)
+                    or type(ligand.get('hydrogens_added')) is not int
+                    or [atom.get('ligand_index') for atom in heavy] != list(range(len(heavy)))
+                    or len(heavy) + ligand.get('hydrogens_added', -1) != len(xml_atoms)
+                    or any(types.get(atom.get('type')) == 'H' for atom in xml_atoms[:len(heavy)])
+                    or any(types.get(atom.get('type')) != 'H' for atom in xml_atoms[len(heavy):])):
+                raise ValueError('The legacy ligand atom identity cannot be recovered. Prepare the complex again.')
+            names = [atom['prepared_name'] for atom in heavy] + [f'H{i + 1}' for i in range(len(xml_atoms) - len(heavy))]
+            atoms = [{'native_index': i, 'prepared_name': name, 'template_atom_name': atom.get('name')}
+                     for i, (name, atom) in enumerate(zip(names, xml_atoms))]
+        if not isinstance(atoms, list) or not all(isinstance(atom, dict) for atom in atoms):
+            raise ValueError('The prepared ligand atom identity map is malformed. Prepare the complex again.')
+        identities.append({'residue_key': key, 'template_name': template_name, 'atoms': atoms})
+    return identities
 
 
 def _modified_manifest(preparation):

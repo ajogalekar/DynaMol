@@ -1,0 +1,56 @@
+{
+  "scope": "Independent cheap mapping-only reproduction with original preserved XML; no native artifacts changed.",
+  "template": "DML_1f22f93cdebf",
+  "atom_count": 54,
+  "nonidentity_assignments": [
+    {
+      "native_index": 6,
+      "native_name": "C5",
+      "matched_template_index": 21,
+      "matched_template_name": "C22"
+    },
+    {
+      "native_index": 20,
+      "native_name": "C16",
+      "matched_template_index": 23,
+      "matched_template_name": "C24"
+    },
+    {
+      "native_index": 21,
+      "native_name": "C17",
+      "matched_template_index": 6,
+      "matched_template_name": "C7"
+    },
+    {
+      "native_index": 23,
+      "native_name": "C19",
+      "matched_template_index": 20,
+      "matched_template_name": "C21"
+    },
+    {
+      "native_index": 35,
+      "native_name": "H6",
+      "matched_template_index": 51,
+      "matched_template_name": "H52"
+    },
+    {
+      "native_index": 50,
+      "native_name": "H21",
+      "matched_template_index": 52,
+      "matched_template_name": "H53"
+    },
+    {
+      "native_index": 51,
+      "native_name": "H22",
+      "matched_template_index": 35,
+      "matched_template_name": "H36"
+    },
+    {
+      "native_index": 52,
+      "native_name": "H23",
+      "matched_template_index": 50,
+      "matched_template_name": "H51"
+    }
+  ],
+  "nonidentity_count": 8
+}

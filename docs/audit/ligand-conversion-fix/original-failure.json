@@ -1,0 +1,15 @@
+{
+  "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+  "energy_tolerance_kj_mol": 0.0001,
+  "force_tolerance_kj_mol_nm": 0.001,
+  "conformations": [
+    {
+      "pose": "bound",
+      "native_energy_kj_mol": -773.0878419707076,
+      "xml_energy_kj_mol": -773.0913055161259,
+      "energy_delta_kj_mol": -0.0034635454182989633,
+      "maximum_force_delta_kj_mol_nm": 2.8057523302014147
+    }
+  ],
+  "passed": false
+}

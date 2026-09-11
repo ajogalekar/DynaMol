@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T17:22:14.747714+00:00",
+  "purpose": "Repair native Amber-to-OpenMM atom-identity mapping causing 6DBK ligand preparation failure, preserving the forcefield and validation limits. Validate software equivalence and downstream state continuity only; no physical-state accuracy, general forcefield accuracy, binding, uncertainty or MD convergence claim.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "code_revision": "9496f9fc79937a7eb75faccd2d7e5a9a5c96210b",
+    "versions": {
+      "openmm": "8.6.0",
+      "parmed": "4.3.1",
+      "numpy": "2.4.6",
+      "rdkit": "2025.9.6"
+    },
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "inputs_sha256": {
+      "backend/ligands.py": "1917b3636c4e474421894c492b8ce546b0362b57aad09c1553b659579fd3eb2f",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/input.sdf": "fbb02708f8fd07b8f905013dd747aecf0bb39fce9aa8bec419b18be501552558",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/charged.mol2": "cf2f1947bb4160bfea13d927e32b38b30e2ee10795b8001014d0ca5464b14052",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/ligand.prmtop": "bfd989ed5ba8b163e3224ac076f817ccf0822fdb82bf3d1cd0086a69577d4b5a",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/ligand.inpcrd": "a403fb62d7731a82e64527d1c541c9823aaa5f7dafba4ede11aed5e59f97dbfa",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/ligand.xml": "a44cae05ebf310d4bd2c9e1b0eb61f5cc1114eb515b4e93dff7a32505f15a83b",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/conversion-validation.json": "1e398f9d81d76110c408a56ac5cac4b777407a6909f6ba525c45482a6e2df403",
+      "data/jobs/96b4ab9d156a4961/input.pdb": "4846dd0633c799ff27a4072fcf0391061eb8a4ce94707e4f027f97daaa4eeb8a",
+      "data/jobs/96b4ab9d156a4961/config.json": "8ac0936665e6a1f84eb3cc9e65871591ba9f559a9b4c46cb809f15bf219ce73c"
+    },
+    "seeds": {
+      "existing_preparation": 42,
+      "validation_perturbations": [
+        2027,
+        2028
+      ]
+    },
+    "original_failure_preserved": "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf",
+    "outputs_and_exclusions_recorded": true,
+    "source_sha256": {
+      "backend/ligands.py": "d72aa10f75718c3f66eb33abdca823731680dd8481bc3271864f5da0bdbf37f9",
+      "backend/forcefield_identity.py": "a0faccc47b8573d9e7011a6b8e49b5469997eaefaf287630d045547e24ca0979",
+      "backend/prepared_system.py": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca"
+    },
+    "original_failure_inputs_unchanged": true,
+    "artifacts_sha256": {
+      "docs/audit/ligand-conversion-fix/backend-results.xml": "9dbc9bee4e7fddc7dc00e66b60594dcd4792d3541f8470c02b7bcc2131c128db",
+      "docs/audit/ligand-conversion-fix/backend-tests.txt": "f4e569aae39e04f563acba2b8cedfd8745aab308a6d81b51668c0d6bc9a0b6c4",
+      "docs/audit/ligand-conversion-fix/check_full_prep.py": "bcde3ea4b4ad4c369e1c589cff5c9af1aca4c89ade9c7fbbdc6c283cb647b824",
+      "docs/audit/ligand-conversion-fix/full-prep-results.json": "8113e93bb414c4ca608f45386d3b8987273b363c6c2a68015ab0c8f486af1069",
+      "docs/audit/ligand-conversion-fix/matrix-results.json": "1007b85f78db442a8cf5bf5a0a2bf6c744136d142f8948201ff0e25acf480322",
+      "docs/audit/ligand-conversion-fix/original-failure.json": "1e398f9d81d76110c408a56ac5cac4b777407a6909f6ba525c45482a6e2df403",
+      "docs/audit/ligand-conversion-fix/review-corpus-search.json": "d8b6540f41210fd1e695b9b1d3b4a20df66daf84d4e0c15a704a4eb1bfa5a11f",
+      "docs/audit/ligand-conversion-fix/review-existing-fixtures.json": "5d57e856c26b5e7ee7b9d5bd0aa5a2a3fbf7299f34ec4eb26bb83210bdac2685",
+      "docs/audit/ligand-conversion-fix/review-findings.json": "41d9cec48536277574e3d809153d73d25275bdcc2139471678720398f7e08691",
+      "docs/audit/ligand-conversion-fix/review-manifest.preflight.json": "849c436bd01ab73d3f40783db1195107f5f1a8dd17b22a43b66c93821587d5a7",
+      "docs/audit/ligand-conversion-fix/review-matrix-check.py": "4c31ac9c24c4ebe1dd98ecc1dc8ea0139edc0ec242216e1a0c97f06849b0b477",
+      "docs/audit/ligand-conversion-fix/review-original-mapping.json": "3232d2ccf1b846d4eb31aeef1e654ee0b3f9486cf16e9c92cb4ec0fc1d0887ca",
+      "docs/audit/ligand-conversion-fix/review-preflight.json": "40f3b4d7a141f48c808eee0d5821d7c899b9a1288a48f1090ec9f9ed0a1040c5",
+      "docs/audit/ligand-conversion-fix/review-upstream-source.json": "2a0fee0c19bfb3e3a6d5beacfb29b1db5d281df0c13ee132d90349ef243288c6"
+    },
+    "loaded_source_scope": "The full preparation worker began before the final constructor-consistency guard was added. Final tests, retained matrix, and both prepared/solvated PDB reloads exercised current source. Source hashes recorded by the reload check do not certify which module bytes were loaded by the earlier worker; numerical mapping logic was unchanged by that guard."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "atom_count": 54,
+    "representation_policy": "Preserve native Amber atom ordering, connectivity, charges, bond/angle/dihedral parameters, exclusions and 1-4 scaling. Do not mutate ligand/protein chemistry, change protonation, replace torsions approximately, loosen tolerances, or discard molecules to pass conversion. Retain original failed artifacts. Bound heavy coordinates are evidence of source pose, not energetic relaxation."
+  },
+  "validation": {
+    "status": "Scoped software checks passed; physical accuracy and convergence remain unvalidated.",
+    "baseline": "Graph-only XML matching permuted eight symmetric atoms and changed four improper terms; the adapter preserves the explicit native mapping.",
+    "backend_tests": {
+      "tests": 94,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "new_identity_regressions": 27,
+    "backend_test_seconds": 11.05,
+    "retained_matrix": {
+      "fixtures": 12,
+      "poses": 36,
+      "passed": true,
+      "maximum_energy_error_kj_mol": 1.3222256711742375e-07,
+      "maximum_force_error_kj_mol_nm": 2.639477315824479e-06,
+      "formal_charge_range_e": [
+        -4,
+        1
+      ]
+    },
+    "fixed_6dbk": {
+      "poses": 3,
+      "maximum_energy_error_kj_mol": 1.3712678992305882e-08,
+      "maximum_force_error_kj_mol_nm": 1.4099487088969909e-07
+    },
+    "full_6dbk": [
+      {
+        "stage": "prepared",
+        "job_id": "68a668338c884df8",
+        "dataset_id": "6f8e8253acec4c57",
+        "elapsed_seconds": 64.86,
+        "atoms": 4713,
+        "retained_geometry_max_displacement_angstrom": 3.552713678800501e-15
+      },
+      {
+        "stage": "solvated",
+        "job_id": "f1ebb1b0b3c94a46",
+        "dataset_id": "5fc64346650e40cb",
+        "elapsed_seconds": 3.52,
+        "atoms": 50015,
+        "retained_geometry_max_displacement_angstrom": 3.552713678800501e-15
+      }
+    ],
+    "thresholds": {
+      "energy_abs_kj_mol": 0.0001,
+      "maximum_force_component_abs_kj_mol_nm": 0.001
+    },
+    "production_continuity": "Prepared and explicitly solvated 6DBK datasets reloaded from PDB and saved bundle factory; all 729 native ligand parameter terms match in each assembled system at six-decimal canonicalization. Separate energy/force checks retain production limits.",
+    "negative_controls": "Tests reject changed torsion strength, renamed/duplicated/missing atoms, wrong elements, changed connectivity/external bonds, absent identity bindings, inconsistent indices and malformed provenance; explicit template selection cannot bypass identity.",
+    "scope_refinement": "Diagnosis showed graph-template automorphism, not native-to-XML torsion conversion, was defective. No torsion converter was rewritten. Real ligand/cofactor fixtures, exact native term comparison and 27 identity-specific regressions replaced speculative synthetic converter expansion; unequal duplicate native improper support is unchanged.",
+    "limits": [
+      "No new trajectory or MD convergence assessment.",
+      "Representative finite coverage does not imply exhaustive chemistry support.",
+      "No new covalent-ligand, unsupported metal or unnatural-residue models.",
+      "Private OpenMM matching hooks require these integration regressions after version changes."
+    ]
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "Deterministic software equivalence check with predefined absolute error limits; no hypothesis testing, predictive ML benchmark, independent replica convergence claim or chemical accuracy comparison.",
+    "uncertainty_intervals_reported": false,
+    "uncertainty_note": "Statistical and biophysical uncertainty intervals are not supplied. Fixed-pose numerical errors are fully reported and are not relabeled as uncertainty intervals. The generic PatAgent uncertainty gate remains failed, limiting scientific accuracy/prediction claims; this change is a tested atom-mapping software correction."
+  },
+  "review_identity": "Independent language-model evidence/code review. This reviewer wrote the audit and matrix runner; separate agents implemented production code, regression tests and full-complex checks. PatAgent is an automated public-writing-inspired checklist, not expert endorsement."
+}

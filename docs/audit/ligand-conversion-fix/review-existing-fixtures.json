@@ -1,0 +1,95 @@
+{
+  "note": "Prior-run evidence only; new converter must be exercised again. No prior result is counted as a current pass.",
+  "fixtures": [
+    {
+      "fixture": "ADP",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/ADP/ligand-f245fc15ccf1",
+      "atoms": 39,
+      "charge": -3,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 5.536571734410245e-08,
+      "force_max_kj_mol_nm": 1.800947757146787e-06
+    },
+    {
+      "fixture": "ATP",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/ATP/ligand-986b707ed3d4",
+      "atoms": 43,
+      "charge": -4,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 1.3222256711742375e-07,
+      "force_max_kj_mol_nm": 1.8440196072333492e-06
+    },
+    {
+      "fixture": "FAD",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/FAD/ligand-be2f484fd8ce",
+      "atoms": 84,
+      "charge": -2,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 5.372749001253396e-08,
+      "force_max_kj_mol_nm": 1.9296089703857433e-06
+    },
+    {
+      "fixture": "NAD",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/NAD/ligand-719251ab1bf8",
+      "atoms": 70,
+      "charge": -1,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 4.4346506911097094e-08,
+      "force_max_kj_mol_nm": 2.639477315824479e-06
+    },
+    {
+      "fixture": "acetate",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/acetate/ligand-5549c0cf909d",
+      "atoms": 7,
+      "charge": -1,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 1.2962317441633786e-08,
+      "force_max_kj_mol_nm": 1.4319311958388425e-07
+    },
+    {
+      "fixture": "chiral-amide",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/chiral-amide/ligand-06c59d7849bf",
+      "atoms": 27,
+      "charge": 1,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 8.203642209991813e-09,
+      "force_max_kj_mol_nm": 4.976520813215757e-07
+    },
+    {
+      "fixture": "ethanol",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/ethanol/ligand-ab1de819ede9",
+      "atoms": 9,
+      "charge": 0,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 3.6833380789857983e-09,
+      "force_max_kj_mol_nm": 2.591193037915218e-08
+    },
+    {
+      "fixture": "halogen-aromatic",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/halogen-aromatic/ligand-ef6ffb35bca5",
+      "atoms": 12,
+      "charge": 0,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 7.3991870408463e-09,
+      "force_max_kj_mol_nm": 1.2979396046830516e-07
+    },
+    {
+      "fixture": "methylammonium",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/methylammonium/ligand-6da39e332aa7",
+      "atoms": 8,
+      "charge": 1,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 7.531752999057062e-12,
+      "force_max_kj_mol_nm": 1.9133494788547978e-10
+    },
+    {
+      "fixture": "phosphate",
+      "folder": "data/integration-checks/release-chemistry/chemistry-matrix/phosphate/ligand-a90414c3737c",
+      "atoms": 9,
+      "charge": -2,
+      "native_validated_previously": true,
+      "energy_max_kj_mol": 3.736772669071797e-09,
+      "force_max_kj_mol_nm": 2.2998028725851327e-07
+    }
+  ]
+}

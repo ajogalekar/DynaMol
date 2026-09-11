@@ -1,0 +1,40 @@
+{
+  "purpose": "Installed upstream implementation fingerprints supporting review of residue graph mapping and improper ordering; no copied upstream source text.",
+  "versions": {
+    "openmm": "8.6.0",
+    "parmed": "4.3.1"
+  },
+  "functions": [
+    {
+      "name": "openmm.app.forcefield.ForceField._getResidueTemplateMatches",
+      "signature": "(self, res, bondedToAtom, templateSignatures=None, ignoreExternalBonds=False, ignoreExtraParticles=False)",
+      "source_sha256": "2e29dc9dea42a4dfa76a6290d1f7302fa6fccc8dd23964467494c934b5bd01be"
+    },
+    {
+      "name": "openmm.app.forcefield.ForceField._matchAllResiduesToTemplates",
+      "signature": "(self, data, topology, residueTemplates, ignoreExternalBonds, ignoreExtraParticles=False, recordParameters=True)",
+      "source_sha256": "588d955ee01291a17f182c764b69b4bb10c4505f263499662e348332f18a5191"
+    },
+    {
+      "name": "openmm.app.forcefield._matchImproper",
+      "signature": "(data, torsion, generator)",
+      "source_sha256": "48ca29b2584da3a9678a9d0ca11e0d197a4789bc15a3a2eb5c132c55ac5d6ef7"
+    },
+    {
+      "name": "openmm.app.forcefield.PeriodicTorsionGenerator.createForce",
+      "signature": "(self, sys, data, nonbondedMethod, nonbondedCutoff, args)",
+      "source_sha256": "dce32f272bbfba6c1f357d37a1495ed89e6ced4e5cf5bc162fab4a11564fbf3b"
+    },
+    {
+      "name": "parmed.openmm.parameters.OpenMMParameterSet._write_omm_dihedrals",
+      "signature": "(self, xml_root, skip_types, improper_dihedrals_ordering)",
+      "source_sha256": "c1d12f906d4ac43ba3eea3d09f54428dac84bc61317649d773ef6885b4a4e1ea"
+    }
+  ],
+  "primary_references": [
+    "https://docs.openmm.org/latest/userguide/application/06_creating_ffs.html",
+    "https://docs.openmm.org/latest/api-python/generated/openmm.openmm.PeriodicTorsionForce.html",
+    "https://parmed.github.io/ParmEd/html/topobj/parmed.topologyobjects.Dihedral.html",
+    "https://parmed.github.io/ParmEd/html/_modules/parmed/openmm/parameters.html"
+  ]
+}

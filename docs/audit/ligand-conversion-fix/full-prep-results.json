@@ -1,0 +1,676 @@
+{
+  "date": "2026-09-11",
+  "input": "6DBK, retained source dataset ece1af90b70c42c5",
+  "method": "Real background preparation and explicit TIP3P preview, then fresh PDB/factory reload and full ligand parameter comparison to native Amber in both assembled systems.",
+  "limits": "No dynamics or convergence claim. Parameter comparison uses six-decimal canonical terms; separate three-pose native energy/force tests retain the unchanged production tolerances.",
+  "results": [
+    {
+      "stage": "prepared",
+      "job_id": "68a668338c884df8",
+      "dataset_id": "6f8e8253acec4c57",
+      "elapsed_seconds": 64.86,
+      "atoms": 4713,
+      "prepared_pdb_sha256": "1e519091f8ab89aea2b53a0ece89a4b469c22938858d1bc7502a787824b5fae4",
+      "ligands": [
+        {
+          "key": "B:4000::G5D",
+          "atom_count": 54,
+          "native_parameter_terms": 729,
+          "parameter_terms_match": true,
+          "native_prmtop_sha256": "7419ff0563060273f027595375ee4ee722136795f8ffae7d4b2dd53c7683b7d4",
+          "conversion_validation": {
+            "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+            "energy_tolerance_kj_mol": 0.0001,
+            "force_tolerance_kj_mol_nm": 0.001,
+            "atom_mapping": {
+              "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+              "atoms": [
+                {
+                  "prepared_name": "N1",
+                  "template_atom_name": "N1",
+                  "native_index": 0
+                },
+                {
+                  "prepared_name": "C1",
+                  "template_atom_name": "C2",
+                  "native_index": 1
+                },
+                {
+                  "prepared_name": "N2",
+                  "template_atom_name": "N3",
+                  "native_index": 2
+                },
+                {
+                  "prepared_name": "C2",
+                  "template_atom_name": "C4",
+                  "native_index": 3
+                },
+                {
+                  "prepared_name": "C3",
+                  "template_atom_name": "C5",
+                  "native_index": 4
+                },
+                {
+                  "prepared_name": "C4",
+                  "template_atom_name": "C6",
+                  "native_index": 5
+                },
+                {
+                  "prepared_name": "C5",
+                  "template_atom_name": "C7",
+                  "native_index": 6
+                },
+                {
+                  "prepared_name": "C6",
+                  "template_atom_name": "C8",
+                  "native_index": 7
+                },
+                {
+                  "prepared_name": "C7",
+                  "template_atom_name": "C9",
+                  "native_index": 8
+                },
+                {
+                  "prepared_name": "C8",
+                  "template_atom_name": "C10",
+                  "native_index": 9
+                },
+                {
+                  "prepared_name": "N3",
+                  "template_atom_name": "N11",
+                  "native_index": 10
+                },
+                {
+                  "prepared_name": "C9",
+                  "template_atom_name": "C12",
+                  "native_index": 11
+                },
+                {
+                  "prepared_name": "C10",
+                  "template_atom_name": "C13",
+                  "native_index": 12
+                },
+                {
+                  "prepared_name": "C11",
+                  "template_atom_name": "C14",
+                  "native_index": 13
+                },
+                {
+                  "prepared_name": "C12",
+                  "template_atom_name": "C15",
+                  "native_index": 14
+                },
+                {
+                  "prepared_name": "N4",
+                  "template_atom_name": "N16",
+                  "native_index": 15
+                },
+                {
+                  "prepared_name": "C13",
+                  "template_atom_name": "C17",
+                  "native_index": 16
+                },
+                {
+                  "prepared_name": "C14",
+                  "template_atom_name": "C18",
+                  "native_index": 17
+                },
+                {
+                  "prepared_name": "C15",
+                  "template_atom_name": "C19",
+                  "native_index": 18
+                },
+                {
+                  "prepared_name": "N5",
+                  "template_atom_name": "N20",
+                  "native_index": 19
+                },
+                {
+                  "prepared_name": "C16",
+                  "template_atom_name": "C21",
+                  "native_index": 20
+                },
+                {
+                  "prepared_name": "C17",
+                  "template_atom_name": "C22",
+                  "native_index": 21
+                },
+                {
+                  "prepared_name": "C18",
+                  "template_atom_name": "C23",
+                  "native_index": 22
+                },
+                {
+                  "prepared_name": "C19",
+                  "template_atom_name": "C24",
+                  "native_index": 23
+                },
+                {
+                  "prepared_name": "C20",
+                  "template_atom_name": "C25",
+                  "native_index": 24
+                },
+                {
+                  "prepared_name": "O1",
+                  "template_atom_name": "O26",
+                  "native_index": 25
+                },
+                {
+                  "prepared_name": "N6",
+                  "template_atom_name": "N27",
+                  "native_index": 26
+                },
+                {
+                  "prepared_name": "C21",
+                  "template_atom_name": "C28",
+                  "native_index": 27
+                },
+                {
+                  "prepared_name": "O2",
+                  "template_atom_name": "O29",
+                  "native_index": 28
+                },
+                {
+                  "prepared_name": "N7",
+                  "template_atom_name": "N30",
+                  "native_index": 29
+                },
+                {
+                  "prepared_name": "H1",
+                  "template_atom_name": "H31",
+                  "native_index": 30
+                },
+                {
+                  "prepared_name": "H2",
+                  "template_atom_name": "H32",
+                  "native_index": 31
+                },
+                {
+                  "prepared_name": "H3",
+                  "template_atom_name": "H33",
+                  "native_index": 32
+                },
+                {
+                  "prepared_name": "H4",
+                  "template_atom_name": "H34",
+                  "native_index": 33
+                },
+                {
+                  "prepared_name": "H5",
+                  "template_atom_name": "H35",
+                  "native_index": 34
+                },
+                {
+                  "prepared_name": "H6",
+                  "template_atom_name": "H36",
+                  "native_index": 35
+                },
+                {
+                  "prepared_name": "H7",
+                  "template_atom_name": "H37",
+                  "native_index": 36
+                },
+                {
+                  "prepared_name": "H8",
+                  "template_atom_name": "H38",
+                  "native_index": 37
+                },
+                {
+                  "prepared_name": "H9",
+                  "template_atom_name": "H39",
+                  "native_index": 38
+                },
+                {
+                  "prepared_name": "H10",
+                  "template_atom_name": "H40",
+                  "native_index": 39
+                },
+                {
+                  "prepared_name": "H11",
+                  "template_atom_name": "H41",
+                  "native_index": 40
+                },
+                {
+                  "prepared_name": "H12",
+                  "template_atom_name": "H42",
+                  "native_index": 41
+                },
+                {
+                  "prepared_name": "H13",
+                  "template_atom_name": "H43",
+                  "native_index": 42
+                },
+                {
+                  "prepared_name": "H14",
+                  "template_atom_name": "H44",
+                  "native_index": 43
+                },
+                {
+                  "prepared_name": "H15",
+                  "template_atom_name": "H45",
+                  "native_index": 44
+                },
+                {
+                  "prepared_name": "H16",
+                  "template_atom_name": "H46",
+                  "native_index": 45
+                },
+                {
+                  "prepared_name": "H17",
+                  "template_atom_name": "H47",
+                  "native_index": 46
+                },
+                {
+                  "prepared_name": "H18",
+                  "template_atom_name": "H48",
+                  "native_index": 47
+                },
+                {
+                  "prepared_name": "H19",
+                  "template_atom_name": "H49",
+                  "native_index": 48
+                },
+                {
+                  "prepared_name": "H20",
+                  "template_atom_name": "H50",
+                  "native_index": 49
+                },
+                {
+                  "prepared_name": "H21",
+                  "template_atom_name": "H51",
+                  "native_index": 50
+                },
+                {
+                  "prepared_name": "H22",
+                  "template_atom_name": "H52",
+                  "native_index": 51
+                },
+                {
+                  "prepared_name": "H23",
+                  "template_atom_name": "H53",
+                  "native_index": 52
+                },
+                {
+                  "prepared_name": "H24",
+                  "template_atom_name": "H54",
+                  "native_index": 53
+                }
+              ]
+            },
+            "conformations": [
+              {
+                "pose": "bound",
+                "native_energy_kj_mol": -773.0878419707076,
+                "xml_energy_kj_mol": -773.0878419844203,
+                "energy_delta_kj_mol": -1.3712678992305882e-08,
+                "maximum_force_delta_kj_mol_nm": 1.3884982763556764e-07
+              },
+              {
+                "pose": "perturbed-1",
+                "native_energy_kj_mol": -771.691495257839,
+                "xml_energy_kj_mol": -771.6914952714916,
+                "energy_delta_kj_mol": -1.3652538655151147e-08,
+                "maximum_force_delta_kj_mol_nm": 1.3731641956837848e-07
+              },
+              {
+                "pose": "perturbed-2",
+                "native_energy_kj_mol": -774.8809318933324,
+                "xml_energy_kj_mol": -774.8809319068912,
+                "energy_delta_kj_mol": -1.3558747014030814e-08,
+                "maximum_force_delta_kj_mol_nm": 1.4099487088969909e-07
+              }
+            ],
+            "passed": true
+          }
+        }
+      ],
+      "modified_residues": [
+        {
+          "residue": "PTR",
+          "resid": "1054",
+          "template": "PTR",
+          "assembled_charge_e": -2.0
+        }
+      ],
+      "retained_geometry_max_displacement_angstrom": 3.552713678800501e-15
+    },
+    {
+      "stage": "solvated",
+      "job_id": "f1ebb1b0b3c94a46",
+      "dataset_id": "5fc64346650e40cb",
+      "elapsed_seconds": 3.52,
+      "atoms": 50015,
+      "prepared_pdb_sha256": "cba956322a0b24f8fc23ef50e95c8132e3e720cb7cb20803d5b26e397965c304",
+      "ligands": [
+        {
+          "key": "B:4000::G5D",
+          "atom_count": 54,
+          "native_parameter_terms": 729,
+          "parameter_terms_match": true,
+          "native_prmtop_sha256": "7419ff0563060273f027595375ee4ee722136795f8ffae7d4b2dd53c7683b7d4",
+          "conversion_validation": {
+            "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+            "energy_tolerance_kj_mol": 0.0001,
+            "force_tolerance_kj_mol_nm": 0.001,
+            "atom_mapping": {
+              "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+              "atoms": [
+                {
+                  "prepared_name": "N1",
+                  "template_atom_name": "N1",
+                  "native_index": 0
+                },
+                {
+                  "prepared_name": "C1",
+                  "template_atom_name": "C2",
+                  "native_index": 1
+                },
+                {
+                  "prepared_name": "N2",
+                  "template_atom_name": "N3",
+                  "native_index": 2
+                },
+                {
+                  "prepared_name": "C2",
+                  "template_atom_name": "C4",
+                  "native_index": 3
+                },
+                {
+                  "prepared_name": "C3",
+                  "template_atom_name": "C5",
+                  "native_index": 4
+                },
+                {
+                  "prepared_name": "C4",
+                  "template_atom_name": "C6",
+                  "native_index": 5
+                },
+                {
+                  "prepared_name": "C5",
+                  "template_atom_name": "C7",
+                  "native_index": 6
+                },
+                {
+                  "prepared_name": "C6",
+                  "template_atom_name": "C8",
+                  "native_index": 7
+                },
+                {
+                  "prepared_name": "C7",
+                  "template_atom_name": "C9",
+                  "native_index": 8
+                },
+                {
+                  "prepared_name": "C8",
+                  "template_atom_name": "C10",
+                  "native_index": 9
+                },
+                {
+                  "prepared_name": "N3",
+                  "template_atom_name": "N11",
+                  "native_index": 10
+                },
+                {
+                  "prepared_name": "C9",
+                  "template_atom_name": "C12",
+                  "native_index": 11
+                },
+                {
+                  "prepared_name": "C10",
+                  "template_atom_name": "C13",
+                  "native_index": 12
+                },
+                {
+                  "prepared_name": "C11",
+                  "template_atom_name": "C14",
+                  "native_index": 13
+                },
+                {
+                  "prepared_name": "C12",
+                  "template_atom_name": "C15",
+                  "native_index": 14
+                },
+                {
+                  "prepared_name": "N4",
+                  "template_atom_name": "N16",
+                  "native_index": 15
+                },
+                {
+                  "prepared_name": "C13",
+                  "template_atom_name": "C17",
+                  "native_index": 16
+                },
+                {
+                  "prepared_name": "C14",
+                  "template_atom_name": "C18",
+                  "native_index": 17
+                },
+                {
+                  "prepared_name": "C15",
+                  "template_atom_name": "C19",
+                  "native_index": 18
+                },
+                {
+                  "prepared_name": "N5",
+                  "template_atom_name": "N20",
+                  "native_index": 19
+                },
+                {
+                  "prepared_name": "C16",
+                  "template_atom_name": "C21",
+                  "native_index": 20
+                },
+                {
+                  "prepared_name": "C17",
+                  "template_atom_name": "C22",
+                  "native_index": 21
+                },
+                {
+                  "prepared_name": "C18",
+                  "template_atom_name": "C23",
+                  "native_index": 22
+                },
+                {
+                  "prepared_name": "C19",
+                  "template_atom_name": "C24",
+                  "native_index": 23
+                },
+                {
+                  "prepared_name": "C20",
+                  "template_atom_name": "C25",
+                  "native_index": 24
+                },
+                {
+                  "prepared_name": "O1",
+                  "template_atom_name": "O26",
+                  "native_index": 25
+                },
+                {
+                  "prepared_name": "N6",
+                  "template_atom_name": "N27",
+                  "native_index": 26
+                },
+                {
+                  "prepared_name": "C21",
+                  "template_atom_name": "C28",
+                  "native_index": 27
+                },
+                {
+                  "prepared_name": "O2",
+                  "template_atom_name": "O29",
+                  "native_index": 28
+                },
+                {
+                  "prepared_name": "N7",
+                  "template_atom_name": "N30",
+                  "native_index": 29
+                },
+                {
+                  "prepared_name": "H1",
+                  "template_atom_name": "H31",
+                  "native_index": 30
+                },
+                {
+                  "prepared_name": "H2",
+                  "template_atom_name": "H32",
+                  "native_index": 31
+                },
+                {
+                  "prepared_name": "H3",
+                  "template_atom_name": "H33",
+                  "native_index": 32
+                },
+                {
+                  "prepared_name": "H4",
+                  "template_atom_name": "H34",
+                  "native_index": 33
+                },
+                {
+                  "prepared_name": "H5",
+                  "template_atom_name": "H35",
+                  "native_index": 34
+                },
+                {
+                  "prepared_name": "H6",
+                  "template_atom_name": "H36",
+                  "native_index": 35
+                },
+                {
+                  "prepared_name": "H7",
+                  "template_atom_name": "H37",
+                  "native_index": 36
+                },
+                {
+                  "prepared_name": "H8",
+                  "template_atom_name": "H38",
+                  "native_index": 37
+                },
+                {
+                  "prepared_name": "H9",
+                  "template_atom_name": "H39",
+                  "native_index": 38
+                },
+                {
+                  "prepared_name": "H10",
+                  "template_atom_name": "H40",
+                  "native_index": 39
+                },
+                {
+                  "prepared_name": "H11",
+                  "template_atom_name": "H41",
+                  "native_index": 40
+                },
+                {
+                  "prepared_name": "H12",
+                  "template_atom_name": "H42",
+                  "native_index": 41
+                },
+                {
+                  "prepared_name": "H13",
+                  "template_atom_name": "H43",
+                  "native_index": 42
+                },
+                {
+                  "prepared_name": "H14",
+                  "template_atom_name": "H44",
+                  "native_index": 43
+                },
+                {
+                  "prepared_name": "H15",
+                  "template_atom_name": "H45",
+                  "native_index": 44
+                },
+                {
+                  "prepared_name": "H16",
+                  "template_atom_name": "H46",
+                  "native_index": 45
+                },
+                {
+                  "prepared_name": "H17",
+                  "template_atom_name": "H47",
+                  "native_index": 46
+                },
+                {
+                  "prepared_name": "H18",
+                  "template_atom_name": "H48",
+                  "native_index": 47
+                },
+                {
+                  "prepared_name": "H19",
+                  "template_atom_name": "H49",
+                  "native_index": 48
+                },
+                {
+                  "prepared_name": "H20",
+                  "template_atom_name": "H50",
+                  "native_index": 49
+                },
+                {
+                  "prepared_name": "H21",
+                  "template_atom_name": "H51",
+                  "native_index": 50
+                },
+                {
+                  "prepared_name": "H22",
+                  "template_atom_name": "H52",
+                  "native_index": 51
+                },
+                {
+                  "prepared_name": "H23",
+                  "template_atom_name": "H53",
+                  "native_index": 52
+                },
+                {
+                  "prepared_name": "H24",
+                  "template_atom_name": "H54",
+                  "native_index": 53
+                }
+              ]
+            },
+            "conformations": [
+              {
+                "pose": "bound",
+                "native_energy_kj_mol": -773.0878419707076,
+                "xml_energy_kj_mol": -773.0878419844203,
+                "energy_delta_kj_mol": -1.3712678992305882e-08,
+                "maximum_force_delta_kj_mol_nm": 1.3884982763556764e-07
+              },
+              {
+                "pose": "perturbed-1",
+                "native_energy_kj_mol": -771.691495257839,
+                "xml_energy_kj_mol": -771.6914952714916,
+                "energy_delta_kj_mol": -1.3652538655151147e-08,
+                "maximum_force_delta_kj_mol_nm": 1.3731641956837848e-07
+              },
+              {
+                "pose": "perturbed-2",
+                "native_energy_kj_mol": -774.8809318933324,
+                "xml_energy_kj_mol": -774.8809319068912,
+                "energy_delta_kj_mol": -1.3558747014030814e-08,
+                "maximum_force_delta_kj_mol_nm": 1.4099487088969909e-07
+              }
+            ],
+            "passed": true
+          }
+        }
+      ],
+      "modified_residues": [
+        {
+          "residue": "PTR",
+          "resid": "1054",
+          "template": "PTR",
+          "assembled_charge_e": -2.0
+        }
+      ],
+      "retained_geometry_max_displacement_angstrom": 3.552713678800501e-15
+    }
+  ],
+  "passed": true,
+  "source_sha256": {
+    "backend/forcefield_identity.py": "a0faccc47b8573d9e7011a6b8e49b5469997eaefaf287630d045547e24ca0979",
+    "backend/ligands.py": "d72aa10f75718c3f66eb33abdca823731680dd8481bc3271864f5da0bdbf37f9",
+    "backend/prepared_system.py": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca",
+    "backend/tests/test_ligand_identity.py": "9b85b67a9ade54c706340c7eb748d524baf210fcbc890116d637816c4b35b548",
+    "docs/audit/ligand-conversion-fix/check_full_prep.py": "bcde3ea4b4ad4c369e1c589cff5c9af1aca4c89ade9c7fbbdc6c283cb647b824"
+  }
+}

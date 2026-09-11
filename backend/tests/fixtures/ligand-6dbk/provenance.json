@@ -1,0 +1,51 @@
+{
+  "fixture": "6DBK retained ligand parameter conversion regression",
+  "source_pdb": "6DBK",
+  "source_url": "https://www.rcsb.org/structure/6DBK",
+  "source_job": "96b4ab9d156a4961",
+  "source_dataset": "ece1af90b70c42c5",
+  "source_directory": "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf",
+  "generation": "Native AmberTools GAFF2/AM1-BCC outputs and unmodified ParmEd XML retained from the reported failed preparation; no fresh charge calculation is required by these tests.",
+  "template_name": "DML_1f22f93cdebf",
+  "n_atoms": 54,
+  "native_input_sha256": "4846dd0633c799ff27a4072fcf0391061eb8a4ce94707e4f027f97daaa4eeb8a",
+  "recorded_openmm_version": "8.6.0",
+  "comparison_tolerances": {
+    "energy_kj_mol": 0.0001,
+    "maximum_force_kj_mol_nm": 0.001
+  },
+  "perturbation_seeds": [
+    2027,
+    2028
+  ],
+  "perturbation_standard_deviation_nm": 0.0003,
+  "baseline_conversion_failure": {
+    "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+    "energy_tolerance_kj_mol": 0.0001,
+    "force_tolerance_kj_mol_nm": 0.001,
+    "conformations": [
+      {
+        "pose": "bound",
+        "native_energy_kj_mol": -773.0878419707076,
+        "xml_energy_kj_mol": -773.0913055161259,
+        "energy_delta_kj_mol": -0.0034635454182989633,
+        "maximum_force_delta_kj_mol_nm": 2.8057523302014147
+      }
+    ],
+    "passed": false
+  },
+  "files": {
+    "ligand.prmtop": {
+      "sha256": "bfd989ed5ba8b163e3224ac076f817ccf0822fdb82bf3d1cd0086a69577d4b5a",
+      "bytes": 40128
+    },
+    "ligand.inpcrd": {
+      "sha256": "a403fb62d7731a82e64527d1c541c9823aaa5f7dafba4ede11aed5e59f97dbfa",
+      "bytes": 1982
+    },
+    "ligand.xml": {
+      "sha256": "a44cae05ebf310d4bd2c9e1b0eb61f5cc1114eb515b4e93dff7a32505f15a83b",
+      "bytes": 68980
+    }
+  }
+}

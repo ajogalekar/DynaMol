@@ -1,0 +1,538 @@
+{
+  "created_at": "2026-09-11T17:13:51.703328+00:00",
+  "scope": "Twelve retained native Amber ligand bundles evaluated with the current production conversion validator and explicit identity adapter. No parameter regeneration, new chemistry, or trajectory convergence claim.",
+  "versions": {
+    "openmm": "8.6.0",
+    "parmed": "4.3.1",
+    "numpy": "2.4.6",
+    "rdkit": "2025.9.6"
+  },
+  "source_sha256": {
+    "backend/ligands.py": "d72aa10f75718c3f66eb33abdca823731680dd8481bc3271864f5da0bdbf37f9",
+    "backend/forcefield_identity.py": "a0faccc47b8573d9e7011a6b8e49b5469997eaefaf287630d045547e24ca0979",
+    "backend/prepared_system.py": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca"
+  },
+  "source_unchanged_during_check": true,
+  "script_sha256": "4c31ac9c24c4ebe1dd98ecc1dc8ea0139edc0ec242216e1a0c97f06849b0b477",
+  "platform": "OpenMM Reference",
+  "nonbonded_method": "NoCutoff",
+  "constraints": null,
+  "pose_perturbation_seeds": [
+    2027,
+    2028
+  ],
+  "pose_perturbation_sigma_angstrom": 0.003,
+  "energy_tolerance_kj_mol": 0.0001,
+  "force_tolerance_kj_mol_nm": 0.001,
+  "fixture_count": 12,
+  "passed_count": 12,
+  "original_inputs_unchanged": true,
+  "results": [
+    {
+      "fixture": "ADP",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/ADP/ligand-f245fc15ccf1",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/ADP",
+      "input_sha256": {
+        "ligand.prmtop": "70b1d05c42d59fc11f913a9475c999332393c8d205176edb89c7c248199aff72",
+        "ligand.inpcrd": "c996d52ac6534a110c756a240350e3f05a1bf854cf1d12259fe277dc9e6ca2bc",
+        "ligand.xml": "7752b0151087783aea1c9a0da566e96345734fbb1c40c130f5f1e2dcec0b3815",
+        "input.sdf": "f1c0db1c9ba64285260ce161e4432a3881513ec4acc42ae2bed597683292e254"
+      },
+      "passed": true,
+      "atoms": 39,
+      "formal_charge_e": -3,
+      "native_mapping_atoms": 39,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -306.9099449502272,
+          "xml_energy_kj_mol": -306.90994500504166,
+          "energy_delta_kj_mol": -5.4814449867990334e-08,
+          "maximum_force_delta_kj_mol_nm": 1.7772363207768649e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -302.89955243086,
+          "xml_energy_kj_mol": -302.89955248622573,
+          "energy_delta_kj_mol": -5.536571734410245e-08,
+          "maximum_force_delta_kj_mol_nm": 1.800947757146787e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -309.663858664396,
+          "xml_energy_kj_mol": -309.6638587190637,
+          "energy_delta_kj_mol": -5.466768016049173e-08,
+          "maximum_force_delta_kj_mol_nm": 1.7858465071185492e-06
+        }
+      ],
+      "energy_max_abs_kj_mol": 5.536571734410245e-08,
+      "force_max_abs_kj_mol_nm": 1.800947757146787e-06,
+      "validation_sha256": "f4941279ebec930ab7e8b32b64cf954d59f23490251ea06b8c9af2fd8fc996d0",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "ATP",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/ATP/ligand-986b707ed3d4",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/ATP",
+      "input_sha256": {
+        "ligand.prmtop": "c29b730b250e127be7bbbbe56ef0ab881e14b5084075e4652a11b047a9682a70",
+        "ligand.inpcrd": "cdbc474687b04ac75b7dcbcd32f04afea1765df0cc621777617ce90c1908db6c",
+        "ligand.xml": "262b288f8d58afc6886ebb98f250ef5492810b152577a94ef362ef920d587b7c",
+        "input.sdf": "c638408f85eea80fc2d4e82b65e32252ede462d8a159e9b844163015228368ea"
+      },
+      "passed": true,
+      "atoms": 43,
+      "formal_charge_e": -4,
+      "native_mapping_atoms": 43,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -546.5784340802898,
+          "xml_energy_kj_mol": -546.5784342125123,
+          "energy_delta_kj_mol": -1.3222256711742375e-07,
+          "maximum_force_delta_kj_mol_nm": 1.8440014173393138e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -539.2845649635681,
+          "xml_energy_kj_mol": -539.2845650952052,
+          "energy_delta_kj_mol": -1.3163707990315743e-07,
+          "maximum_force_delta_kj_mol_nm": 1.8284267753188033e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -542.6761272865185,
+          "xml_energy_kj_mol": -542.676127417316,
+          "energy_delta_kj_mol": -1.307975026065833e-07,
+          "maximum_force_delta_kj_mol_nm": 1.8440196072333492e-06
+        }
+      ],
+      "energy_max_abs_kj_mol": 1.3222256711742375e-07,
+      "force_max_abs_kj_mol_nm": 1.8440196072333492e-06,
+      "validation_sha256": "fc0156af3e71eb17f3d3845576bb35cbe492587a29e0607679a4d30ea55e2b8b",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "FAD",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/FAD/ligand-be2f484fd8ce",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/FAD",
+      "input_sha256": {
+        "ligand.prmtop": "33940a2fc94f1db759b0c09fdde3f76f7beffa7037b38add964ca2f362849311",
+        "ligand.inpcrd": "3d90b68e92fdc66ea73e2436e451605f252f2ecf6b35b7ed9379f87a15d49ffe",
+        "ligand.xml": "9de858fb8fac4e65d9c7df0ab4a3ac0d6096e9c2c711697e3abe624956d39d38",
+        "input.sdf": "c09807ed14770f4c346cb276262719611a51de23317098e5ae921bdb3f7bda4b"
+      },
+      "passed": true,
+      "atoms": 84,
+      "formal_charge_e": -2,
+      "native_mapping_atoms": 84,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -990.5667861215946,
+          "xml_energy_kj_mol": -990.5667861741958,
+          "energy_delta_kj_mol": -5.260119451122591e-08,
+          "maximum_force_delta_kj_mol_nm": 1.922275714605348e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -989.4426288089385,
+          "xml_energy_kj_mol": -989.4426288609068,
+          "energy_delta_kj_mol": -5.1968299885629676e-08,
+          "maximum_force_delta_kj_mol_nm": 1.9075428099313285e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -986.4109243830942,
+          "xml_energy_kj_mol": -986.4109244368217,
+          "energy_delta_kj_mol": -5.372749001253396e-08,
+          "maximum_force_delta_kj_mol_nm": 1.9296089703857433e-06
+        }
+      ],
+      "energy_max_abs_kj_mol": 5.372749001253396e-08,
+      "force_max_abs_kj_mol_nm": 1.9296089703857433e-06,
+      "validation_sha256": "19e5e237d28f81f1fc7343c0ecc273f858c53feb4c4a3c408f075490d2844006",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "NAD",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/NAD/ligand-719251ab1bf8",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/NAD",
+      "input_sha256": {
+        "ligand.prmtop": "3d809c7f812903390f913371c7cef67e24d17cfb19dac51bf62388abc10d228b",
+        "ligand.inpcrd": "915ef7e9833a0b85eacd7549287655b9320949d26bbfade91a6922eee0c2d9fd",
+        "ligand.xml": "0878d746330e5df6aa5566558466b9afed499d27037aa8fb6e7c053922a2b95c",
+        "input.sdf": "be4677fe70339b264ecc986a4aca625c388b8075f895aa162ce6370d3e4a0b52"
+      },
+      "passed": true,
+      "atoms": 70,
+      "formal_charge_e": -1,
+      "native_mapping_atoms": 70,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -1201.9308490942701,
+          "xml_energy_kj_mol": -1201.9308491386166,
+          "energy_delta_kj_mol": -4.4346506911097094e-08,
+          "maximum_force_delta_kj_mol_nm": 2.639477315824479e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -1197.401612695083,
+          "xml_energy_kj_mol": -1197.4016127385498,
+          "energy_delta_kj_mol": -4.346679816080723e-08,
+          "maximum_force_delta_kj_mol_nm": 2.594449597381754e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -1199.8396970000572,
+          "xml_energy_kj_mol": -1199.8396970421154,
+          "energy_delta_kj_mol": -4.205821824143641e-08,
+          "maximum_force_delta_kj_mol_nm": 2.5519470909785014e-06
+        }
+      ],
+      "energy_max_abs_kj_mol": 4.4346506911097094e-08,
+      "force_max_abs_kj_mol_nm": 2.639477315824479e-06,
+      "validation_sha256": "58ba5db7a5dcabbc52c781aefecb3e46ad63bbdb5ec00cf78ed2630db996477c",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "acetate",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/acetate/ligand-5549c0cf909d",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/acetate",
+      "input_sha256": {
+        "ligand.prmtop": "b8d1eeb483a366fdb564de0d1363f41c39f49af11160ece44fa98395641ba7b9",
+        "ligand.inpcrd": "fba53d0547945fab01a2163f78227d4161fc7d5b1d2cbc82179769af7bb1fb14",
+        "ligand.xml": "e903e384d5dff6a7255ae22cd4a3bd6a90b0cc1ac2819408a681d8dc96d745a5",
+        "input.sdf": "80997c60d67e436400d7928d9004a738ae8efa0dd41bff0500ea641593e4203a"
+      },
+      "passed": true,
+      "atoms": 7,
+      "formal_charge_e": -1,
+      "native_mapping_atoms": 7,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": 244.0771238799871,
+          "xml_energy_kj_mol": 244.0771238670857,
+          "energy_delta_kj_mol": -1.290140971832443e-08,
+          "maximum_force_delta_kj_mol_nm": 1.4252873370423913e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": 249.90533712901046,
+          "xml_energy_kj_mol": 249.90533711604814,
+          "energy_delta_kj_mol": -1.2962317441633786e-08,
+          "maximum_force_delta_kj_mol_nm": 1.4319311958388425e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": 244.39423421994962,
+          "xml_energy_kj_mol": 244.39423420706106,
+          "energy_delta_kj_mol": -1.2888563105661888e-08,
+          "maximum_force_delta_kj_mol_nm": 1.4217857824405655e-07
+        }
+      ],
+      "energy_max_abs_kj_mol": 1.2962317441633786e-08,
+      "force_max_abs_kj_mol_nm": 1.4319311958388425e-07,
+      "validation_sha256": "4996ff50974667ec31c4c6870f907129cf2d1779475e6c9d552585f7e24e8c18",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "chiral-amide",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/chiral-amide/ligand-06c59d7849bf",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/chiral-amide",
+      "input_sha256": {
+        "ligand.prmtop": "077b24d6f63c8a70346fff1b5f0947c1ef503ff3f8489bbf316aedfc35ae2ffb",
+        "ligand.inpcrd": "b58409daaf09d2f205e533934701a22998a6e29636bf386b7e57f6d4bc033c4a",
+        "ligand.xml": "4d7dee35e0936aec9d4a7f8b7542f1e729721a284b7c559ac616927f2c67f557",
+        "input.sdf": "06bb51210aa0f976a418dc8704169e35a38b71b7fe7867c26ddde6cf30340428"
+      },
+      "passed": true,
+      "atoms": 27,
+      "formal_charge_e": 1,
+      "native_mapping_atoms": 27,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": 320.76970512080254,
+          "xml_energy_kj_mol": 320.7697051128406,
+          "energy_delta_kj_mol": -7.961943992995657e-09,
+          "maximum_force_delta_kj_mol_nm": 4.947927436660393e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": 323.09155218246786,
+          "xml_energy_kj_mol": 323.0915521750406,
+          "energy_delta_kj_mol": -7.427274795190897e-09,
+          "maximum_force_delta_kj_mol_nm": 4.976520813215757e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": 322.8173908985855,
+          "xml_energy_kj_mol": 322.81739089038183,
+          "energy_delta_kj_mol": -8.203642209991813e-09,
+          "maximum_force_delta_kj_mol_nm": 4.889349725090142e-07
+        }
+      ],
+      "energy_max_abs_kj_mol": 8.203642209991813e-09,
+      "force_max_abs_kj_mol_nm": 4.976520813215757e-07,
+      "validation_sha256": "d8958368ab6c28d491945c75fd9b65c46c48799a947cb55b10583cfd355b72cf",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "ethanol",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/ethanol/ligand-ab1de819ede9",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/ethanol",
+      "input_sha256": {
+        "ligand.prmtop": "75039609a758088652ee91577482059f0525845813f297b4bbfb8594b8777c6d",
+        "ligand.inpcrd": "3cf99554d98134af542211bc0ee175a0f3382be62ee09a852bb06c79adecd581",
+        "ligand.xml": "d1555e32a2351bb912b7754061f5b0df774f44502b4971a4b0f4b440280ee01d",
+        "input.sdf": "ccc3f9ef0479dc0c2eaa8c47fbe2406d60813c501f78bcedec7c859497d8cb63"
+      },
+      "passed": true,
+      "atoms": 9,
+      "formal_charge_e": 0,
+      "native_mapping_atoms": 9,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -8.407278485774983,
+          "xml_energy_kj_mol": -8.407278482101097,
+          "energy_delta_kj_mol": 3.6738860842433496e-09,
+          "maximum_force_delta_kj_mol_nm": 2.5742622256075265e-08
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -8.419469221994005,
+          "xml_energy_kj_mol": -8.419469218310667,
+          "energy_delta_kj_mol": 3.6833380789857983e-09,
+          "maximum_force_delta_kj_mol_nm": 2.591193037915218e-08
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -8.35768600799415,
+          "xml_energy_kj_mol": -8.357686004341396,
+          "energy_delta_kj_mol": 3.6527545432818442e-09,
+          "maximum_force_delta_kj_mol_nm": 2.5653832835814683e-08
+        }
+      ],
+      "energy_max_abs_kj_mol": 3.6833380789857983e-09,
+      "force_max_abs_kj_mol_nm": 2.591193037915218e-08,
+      "validation_sha256": "852e54ed9fba09baf2e7e64960fc2ba11a4ba3cad842939bff2bf6bc86ac3cc4",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "halogen-aromatic",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/halogen-aromatic/ligand-ef6ffb35bca5",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/halogen-aromatic",
+      "input_sha256": {
+        "ligand.prmtop": "5262450c8df75500de257a77ac339fe999c25855d0c0c68f7da7e82f1878c3e0",
+        "ligand.inpcrd": "b3a8b09fe4249b02a6c709ca287a9aa1a54e34ed345f343d9b6b1596e762a44f",
+        "ligand.xml": "debce0c4bedc932ce4356079e1aa9d72693248cc591f5c65978ec125e88fe3e2",
+        "input.sdf": "107ee7b79f203620286136308d7a0ada58f3cf0f1b9589b745bf28f38eead411"
+      },
+      "passed": true,
+      "atoms": 12,
+      "formal_charge_e": 0,
+      "native_mapping_atoms": 12,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -44.841838879891704,
+          "xml_energy_kj_mol": -44.84183888719803,
+          "energy_delta_kj_mol": -7.3063262107098126e-09,
+          "maximum_force_delta_kj_mol_nm": 1.286235260522517e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -44.3552035016127,
+          "xml_energy_kj_mol": -44.35520350895542,
+          "energy_delta_kj_mol": -7.342720209635445e-09,
+          "maximum_force_delta_kj_mol_nm": 1.2979396046830516e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -43.798085277504136,
+          "xml_energy_kj_mol": -43.79808528490332,
+          "energy_delta_kj_mol": -7.3991870408463e-09,
+          "maximum_force_delta_kj_mol_nm": 1.2899585044578998e-07
+        }
+      ],
+      "energy_max_abs_kj_mol": 7.3991870408463e-09,
+      "force_max_abs_kj_mol_nm": 1.2979396046830516e-07,
+      "validation_sha256": "72fe006928dd72deb63d3743cd8184b9f691503027874e7498374c3dc4b7e32e",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "methylammonium",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/methylammonium/ligand-6da39e332aa7",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/methylammonium",
+      "input_sha256": {
+        "ligand.prmtop": "cc00368d3d6273e0c249282f5c9a455d81cd06d01f6dc6d091837c16853be565",
+        "ligand.inpcrd": "623cf4c3c55a424880a2c63e28b9028bda756edc52e4f6d88f5d2fbaec1298ce",
+        "ligand.xml": "36ad0124ee78bac0158edd72bf5f3b63ced211fc28b84c4acfed28749b4221bc",
+        "input.sdf": "7ad27055b564c9da86c44a7166b4555ed3d26ec120611e203c86c3c5373210f8"
+      },
+      "passed": true,
+      "atoms": 8,
+      "formal_charge_e": 1,
+      "native_mapping_atoms": 8,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": 238.55438522475595,
+          "xml_energy_kj_mol": 238.55438522474856,
+          "energy_delta_kj_mol": -7.389644451905042e-12,
+          "maximum_force_delta_kj_mol_nm": 1.8320633898838423e-10
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": 239.35860338647828,
+          "xml_energy_kj_mol": 239.35860338647097,
+          "energy_delta_kj_mol": -7.30437932361383e-12,
+          "maximum_force_delta_kj_mol_nm": 1.8553691916167736e-10
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": 239.61154573744102,
+          "xml_energy_kj_mol": 239.6115457374335,
+          "energy_delta_kj_mol": -7.531752999057062e-12,
+          "maximum_force_delta_kj_mol_nm": 1.9133494788547978e-10
+        }
+      ],
+      "energy_max_abs_kj_mol": 7.531752999057062e-12,
+      "force_max_abs_kj_mol_nm": 1.9133494788547978e-10,
+      "validation_sha256": "d801a130f1ea7287de980bc3c1d351a84e377dd209051710a526b0cecc895bf3",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "phosphate",
+      "original": "data/integration-checks/release-chemistry/chemistry-matrix/phosphate/ligand-a90414c3737c",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/phosphate",
+      "input_sha256": {
+        "ligand.prmtop": "2a02dc52f102d86bb261a201448f84790ca426086bc33f8648adcd7fadab0feb",
+        "ligand.inpcrd": "9055730606bd16947bbb596babd38932e095ff6e51d6d385eabcae497ef9821b",
+        "ligand.xml": "0969c6babb2f69b44bcac3a499bef43a4134ef74a57b86d0ada54a77370ccba1",
+        "input.sdf": "90a0dec9b4bf5ba2dfac16904cb8bfe5f98a4aa430eeeb8768c1bd8bc25815cf"
+      },
+      "passed": true,
+      "atoms": 9,
+      "formal_charge_e": -2,
+      "native_mapping_atoms": 9,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -1.1230520589975015,
+          "xml_energy_kj_mol": -1.1230520552863368,
+          "energy_delta_kj_mol": 3.7111647088750033e-09,
+          "maximum_force_delta_kj_mol_nm": 2.2855692805023864e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -2.3693210391594732,
+          "xml_energy_kj_mol": -2.3693210354227006,
+          "energy_delta_kj_mol": 3.736772669071797e-09,
+          "maximum_force_delta_kj_mol_nm": 2.2998028725851327e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": 2.6367953936439505,
+          "xml_energy_kj_mol": 2.6367953972504807,
+          "energy_delta_kj_mol": 3.606530185606971e-09,
+          "maximum_force_delta_kj_mol_nm": 2.2379026631824672e-07
+        }
+      ],
+      "energy_max_abs_kj_mol": 3.736772669071797e-09,
+      "force_max_abs_kj_mol_nm": 2.2998028725851327e-07,
+      "validation_sha256": "3747d4dbbb8e26cbb01ad704c5bc41cf8185648c63cf2609607a526385ce64a3",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "9AX6-A1AHB",
+      "original": "data/integration-checks/ligand-smoke/9ax6/ligand-521bfd1ad4e6",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/9AX6-A1AHB",
+      "input_sha256": {
+        "ligand.prmtop": "83ce63b5e729a3014185690002c3e26bb5633bc1156c5f2bbb89000a875ab41c",
+        "ligand.inpcrd": "781b5448b576908ec93007b085c6d451078aa4ada9ab48feb1d6c95318931187",
+        "ligand.xml": "77784e0ffc5cfe06433397d57803105261515510af040a4500fa1323895702bd",
+        "input.sdf": "289b2722e574655f34ebdb7c41dadb82441e37085f5ea25758dac3d0a5d61604"
+      },
+      "passed": true,
+      "atoms": 117,
+      "formal_charge_e": 1,
+      "native_mapping_atoms": 117,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": 1195.477886289613,
+          "xml_energy_kj_mol": 1195.4778863738802,
+          "energy_delta_kj_mol": 8.426718522969168e-08,
+          "maximum_force_delta_kj_mol_nm": 1.2394476698318613e-06
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": 1203.055643912542,
+          "xml_energy_kj_mol": 1203.0556439957652,
+          "energy_delta_kj_mol": 8.322308531205636e-08,
+          "maximum_force_delta_kj_mol_nm": 1.206109118356835e-06
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": 1200.4417484741634,
+          "xml_energy_kj_mol": 1200.4417485586716,
+          "energy_delta_kj_mol": 8.45082013256615e-08,
+          "maximum_force_delta_kj_mol_nm": 1.2501274113674299e-06
+        }
+      ],
+      "energy_max_abs_kj_mol": 8.45082013256615e-08,
+      "force_max_abs_kj_mol_nm": 1.2501274113674299e-06,
+      "validation_sha256": "96b78880dba0e0c053cb34a19c2e7f3a1e155d08b1ff00464c1dd23604cd1c49",
+      "original_inputs_unchanged": true
+    },
+    {
+      "fixture": "9AX6-GNP",
+      "original": "data/integration-checks/ligand-smoke/9ax6/ligand-7a2495383b1b",
+      "copied_folder": "data/integration-checks/ligand-conversion-fix/retained-matrix-sjq6yhy6/9AX6-GNP",
+      "input_sha256": {
+        "ligand.prmtop": "48b3f1729ba5339be9b7292ff51e6b0ab6d828f483e7f6fefef5b2725257f51f",
+        "ligand.inpcrd": "d999a4948733832ee28a18e968372cd4e6f9fab55956abb1c35adbedcfcb614f",
+        "ligand.xml": "776f86dd0f7bf318a8e29f263377bcd00748d72f528195195cb67cb56e478c8e",
+        "input.sdf": "cf1243a925e115ba5d4eb025405126d9f156164bc4fa3b24db82313bc7f000e8"
+      },
+      "passed": true,
+      "atoms": 45,
+      "formal_charge_e": -4,
+      "native_mapping_atoms": 45,
+      "conformations": [
+        {
+          "pose": "bound",
+          "native_energy_kj_mol": -971.4891298969904,
+          "xml_energy_kj_mol": -971.4891299144896,
+          "energy_delta_kj_mol": -1.7499132809462026e-08,
+          "maximum_force_delta_kj_mol_nm": 6.568411663465668e-07
+        },
+        {
+          "pose": "perturbed-1",
+          "native_energy_kj_mol": -969.4065314743902,
+          "xml_energy_kj_mol": -969.4065314915383,
+          "energy_delta_kj_mol": -1.7148067854577675e-08,
+          "maximum_force_delta_kj_mol_nm": 6.38258882190712e-07
+        },
+        {
+          "pose": "perturbed-2",
+          "native_energy_kj_mol": -969.3708448628461,
+          "xml_energy_kj_mol": -969.370844879871,
+          "energy_delta_kj_mol": -1.7024945009325165e-08,
+          "maximum_force_delta_kj_mol_nm": 6.529344318551011e-07
+        }
+      ],
+      "energy_max_abs_kj_mol": 1.7499132809462026e-08,
+      "force_max_abs_kj_mol_nm": 6.568411663465668e-07,
+      "validation_sha256": "51a9b7b87754d34eece50114532989ec0151244a5dfc09eb2dc6b8d9427932a6",
+      "original_inputs_unchanged": true
+    }
+  ],
+  "maximum_energy_error_kj_mol": 1.3222256711742375e-07,
+  "maximum_force_error_kj_mol_nm": 2.639477315824479e-06
+}

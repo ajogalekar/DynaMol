@@ -1,0 +1,230 @@
+{
+  "manifest": {
+    "agent": "pat-agent",
+    "attribution_note": "Guest posts remain searchable but are marked guest and must not be represented as Pat Walters's own views.",
+    "authorship_counts": {
+      "guest": 1,
+      "pat-authored": 90
+    },
+    "corpus_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+    "coverage": "complete public Practical Cheminformatics archive at sync time",
+    "records": 91,
+    "schema_version": "1.0",
+    "sha256": "94c4e606024cb41e5cb89510ee8acdd7e932a6fa8eb14b67dcc16ab1d22a08f1",
+    "source_counts": {
+      "blogger": 74,
+      "github-pages": 17
+    }
+  },
+  "searches": [
+    {
+      "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+      "matches": 34,
+      "query": "representation stereochemistry validation",
+      "results": [
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2023-08-03T06:03:00.001-07:00",
+          "score": 20.0,
+          "snippet": "\u2026new methods for machine learning (ML) in drug discovery report some sort of benchmark comparing their algorithm and/or molecular representation with the current state of the art. In the past, I\u2019ve written extensively about statistics and how methods should be compared. In this post, I\u2019d like to focus instead on the datasets we use to benchmark and compare methods. Many papers I\u2019ve read recently use the MoleculeNet dataset, released by the Pande group at Stanford in 2017, as the \u201cstandard\u201d benchmark. This is a\u2026",
+          "tags": [],
+          "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2025-05-06",
+          "score": 19.0,
+          "snippet": "\u2026ist in several different tautomeric forms. These forms feature varying bond orders between the atoms. Consequently, the molecular representation used in an ML model varies. This remains true regardless of whether we\u2019re using molecular fingerprints, topological descriptors, or message passing neural networks (MPNN). I won\u2019t go into a detailed explanation of tautomers here. Those interested in the topic are urged to read the excellent reviews on the subject by Roger Sayle and Yvonne Martin. This post from Jeremy Mo\u2026",
+          "tags": [
+            "Tautomers"
+          ],
+          "title": "The Trouble With Tautomers",
+          "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2024-01-02T15:54:00.000-08:00",
+          "score": 18.0,
+          "snippet": "\u2026PDBBind and KIBA, and found that typical splitting methods overestimate model performance. The authors propose a clustered cross-validation strategy that provides more realistic estimates of model performance. Latent Biases in Machine Learning Models for Predicting Binding Affinities Using Popular Data Sets https://pubs.acs.org/doi/10.1021/acsomega.2c06781 A preprint by Li and coworkers from UC Berkeley described a similar effort. The authors cleaned the PDBBind dataset and divided it into segments that minimi\u2026",
+          "tags": [],
+          "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2024-11-16T06:15:00.000-08:00",
+          "score": 15.0,
+          "snippet": "\u2026he model is trained on the training set, and its performance is assessed on the test set. If hyperparameter tuning is required, a validation set is also included. Teams often opt for a simple random split, arbitrarily assigning a portion of the dataset (usually 70-80%) as the training set and the rest (20-30%) as the test set. As many have pointed out, this basic splitting strategy often leads to an overly optimistic evaluation of the model's performance. With random splitting, it's common for the test set to conta\u2026",
+          "tags": [],
+          "title": "Some Thoughts on Splitting Chemical Datasets",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/11/some-thoughts-on-splitting-chemical.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2023-11-27T06:35:00.000-08:00",
+          "score": 13.0,
+          "snippet": "\u2026focus on how methods are compared. Every year, dozens, if not hundreds, of papers present comparisons of ML methods or molecular representations. These papers typically conclude that one approach is superior to several others for a specific task. Unfortunately, in most cases, the conclusions presented in these papers are not supported by any statistical analysis. I thought providing an example demonstrating some common mistakes and recommending a few best practices would be helpful. In this post, I\u2019ll focus on\u2026",
+          "tags": [],
+          "title": "Comparing Classification Models - You\u2019re Probably Doing It Wrong",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/11/comparing-classification-models-youre.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2021-01-18T15:43:00.003-08:00",
+          "score": 13.0,
+          "snippet": "\u2026Efforts to address model uncertainty, as well as the admission that it's a very difficult problem The (re)emergence of molecular representations that incorporate 3D structure Several interesting strategies for data augmentation Additional efforts toward model interpretability, coupled with the acknowledgment that this is also a difficult problem The application of generative models to more practical objectives (e.g. not LogP and QED) Reviews, Overviews, and Retrospectives This category is a catch-all collecti\u2026",
+          "tags": [],
+          "title": "AI in Drug Discovery 2020 - A Highly Opinionated Literature Review",
+          "url": "https://practicalcheminformatics.blogspot.com/2021/01/ai-in-drug-discovery-2020-highly.html"
+        }
+      ]
+    },
+    {
+      "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+      "matches": 70,
+      "query": "reproducibility code sharing",
+      "results": [
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2019-05-03T04:44:00.004-07:00",
+          "score": 37.0,
+          "snippet": "\u2026machine learning in drug discovery) are a few of the only remaining fields where publishing computational methods without source code is still deemed acceptable. I spend a lot of time reading the literature and am constantly frustrated by how difficult it is to reproduce published work. Given the ready availability of repositories for code and data, as well as tools like Jupyter notebooks that make it easy to share computational workflows, this shouldn\u2019t be the case. I really liked this tweet from Egon Willingh\u2026",
+          "tags": [],
+          "title": "Where's the code? ",
+          "url": "https://practicalcheminformatics.blogspot.com/2019/05/wheres-code.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2026-04-12",
+          "score": 14.0,
+          "snippet": "\u2026ruggles with novel ligands and binding pockets. | | 2025-09-20 | Just Because You Published It Doesn\u2019t Mean It\u2019s Right | GitHub | Reproducibility, Publication, Benchmarking | Critiques aqueous solubility modeling papers that use misleadingly \"easy\" benchmarks and advocates for higher quality, certified datasets. | | 2025-09-15 | Time For a New Adventure | GitHub | Career | Announces the author's new role as Chief Scientist at OpenADMET and outlines the initiative's mission to improve drug metabolism and toxicity pr\u2026",
+          "tags": [
+            "Index"
+          ],
+          "title": "Practical Cheminformatics Index",
+          "url": "https://patwalters.github.io/Practical-Cheminformatics-Index/"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2026-08-29",
+          "score": 13.0,
+          "snippet": "\u2026it repository. A Whole New World Few things in computational work are as satisfying as reading a compelling paper, grabbing the code off GitHub, and testing it on a trusted dataset. Yet all too often, that initial enthusiasm gets derailed by practical headaches. Hours disappear into debugging version conflicts across CUDA, PyTorch, PyTorch Lightning, and an endless web of dependencies. Even when the code runs, the paper's value is often undermined by reliance on flawed datasets such as TDC or MoleculeNet, as well\u2026",
+          "tags": [
+            "ADMET",
+            "Machine Learning",
+            "LLM"
+          ],
+          "title": "Let the Agents Do the Benchmarking",
+          "url": "https://patwalters.github.io/Let-the-Agents-Do-the-Benchmarking/"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2019-11-13T17:56:00.001-08:00",
+          "score": 12.0,
+          "snippet": "\u2026nto a Python script. In this post, I\u2019ll cover how I was able to generate an interactive scatter plot with about a page of Python code, most of which was boilerplate. I was able to pull this off by integrating Dash, a Python library for interactive dashboards from the nice folks who brought you the Plotly plotting library, with the RDKit. For a quick view of what the application does, check out the movie below. For a higher quality version, try this YouTube link. Actually, just grab the code from GitHub and ru\u2026",
+          "tags": [],
+          "title": "Interactive Plots with Chemical Structures",
+          "url": "https://practicalcheminformatics.blogspot.com/2019/11/interactive-plots-with-chemical.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2018-10-30T04:47:00.000-07:00",
+          "score": 12.0,
+          "snippet": "In this post, we will look at examples of how two different open source Python libraries can be used to generate self-organizing maps. The MiniSom library is great for building SOMs for smaller sets with fewer than 10K molecules. The Somoclu library can use either a GPU or multiple CPU cores to generate a SOM, so it's well suited to larger libraries. While Somoclu is a lot faster than MiniSom, installation on non-Linux platforms can require a bit of extra work. I've provided example use cases for both librarie\u2026",
+          "tags": [],
+          "title": "Self-Organizing Maps - The Code (Part 2)",
+          "url": "https://practicalcheminformatics.blogspot.com/2018/10/self-organizing-maps-code-part-2.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2018-10-06T18:48:00.001-07:00",
+          "score": 12.0,
+          "snippet": "\u2026re. A guy named Glen Ouchi started a group called the Turbo User Group (TUG). For a small fee, he would send a disc with source code for some cool utilities in Turbo Pascal. A the time I didn't know what Unix was, but I learned a lot of the utilities like awk and sed from the versions distributed on the TUG discs. Over the next couple of years, I hired people to work in the lab and spent more and more time programming. During this period, I spent a lot of time hanging out in the computer section in the back of\u2026",
+          "tags": [],
+          "title": "My Science/Programming Journey",
+          "url": "https://practicalcheminformatics.blogspot.com/2018/10/my-scienceprogramming-journey.html"
+        }
+      ]
+    },
+    {
+      "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+      "matches": 31,
+      "query": "force field improper torsion",
+      "results": [
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2023-01-03T11:55:00.002-08:00",
+          "score": 11.0,
+          "snippet": "\u2026o solve the docking problem. Their method, DiffDock, uses diffusion to iteratively search a space of translations, rotations, and torsional variations. The search process in DiffDock is guided by a novel confidence score that enables a choice between multiple poses. DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking https://arxiv.org/abs/2210.01776 Graph Neural Networks (GNNs) have gained widespread use in various subfields of drug discovery. One example is the MedusaGraph method, which uses GNNs\u2026",
+          "tags": [],
+          "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2023-08-03T06:03:00.001-07:00",
+          "score": 10.0,
+          "snippet": "\u2026arks. Beyond this, I\u2019d like to propose some alternate strategies that could be used to improve benchmarking efforts and help the field to move forward. To begin, let\u2019s examine the MoleculeNet benchmark, which to date, has been cited more than 1,800 times. The MoleculeNet collection consists of 16 datasets divided into 4 categories. Quantum Mechanics \u2013 The datasets in this category contain 3D structures of molecules from the Generated Database (GDB) and associated properties that were calculated using quant\u2026",
+          "tags": [],
+          "title": "We Need Better Benchmarks for Machine Learning in Drug Discovery",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2024-01-08T06:48:00.000-08:00",
+          "score": 8.0,
+          "snippet": "\u2026d carry out multi-step procedures given only a set of initial conditions and a final objective. While the amount of progress the field has made in a short time is impressive, I don\u2019t see LLMs replacing scientists any time soon. 5. Active Learning Active learning (AL) provides a means of prioritizing computationally expensive calculations and enabling the processing of large datasets. In a typical AL workflow, a machine learning model is used as a surrogate for a more expensive calculation. For example, consi\u2026",
+          "tags": [],
+          "title": "AI in Drug Discovery - A Highly Opinionated Literature Review (Part II) ",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-highly-opinionated.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2024-01-02T15:54:00.000-08:00",
+          "score": 7.0,
+          "snippet": "\u2026k the CASP14 competition by storm in 2020, AlphaFold2 has greatly interested people involved in drug discovery and numerous other fields. In addition to benchmark comparisons with the PDB, there have been several other efforts to evaluate the structural models generated by AF2 experimentally. Rather than simply comparing the atomic coordinates of AF2 structures with corresponding PDB structures, a paper by Terwilliger and colleagues from Lawrence Livermore National Labs compares AF2 structures with reported cryst\u2026",
+          "tags": [],
+          "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+          "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2019-11-13T17:56:00.001-08:00",
+          "score": 6.0,
+          "snippet": "\u2026t are the ids of the components that provide the input and accept the output. The second argument in the input and output is the field in the component that will provide the input and accept the output. In other words, we will take the input from the \"selectedData\" field in \"tsne\", process this, and put the output into a field called \"src\" in \"structure-image\". @app.callback( Output('structure-image', 'src'), [Input('tsne', 'selectedData')]) Finally, we define the function that creates the plot. We start by def\u2026",
+          "tags": [],
+          "title": "Interactive Plots with Chemical Structures",
+          "url": "https://practicalcheminformatics.blogspot.com/2019/11/interactive-plots-with-chemical.html"
+        },
+        {
+          "authorship": "pat-authored",
+          "byline": "Pat Walters",
+          "published": "2019-05-03T04:44:00.004-07:00",
+          "score": 6.0,
+          "snippet": "\u2026onal Chemistry and Cheminformatics (including applications of machine learning in drug discovery) are a few of the only remaining fields where publishing computational methods without source code is still deemed acceptable. I spend a lot of time reading the literature and am constantly frustrated by how difficult it is to reproduce published work. Given the ready availability of repositories for code and data, as well as tools like Jupyter notebooks that make it easy to share computational workflows, this shouldn\u2026",
+          "tags": [],
+          "title": "Where's the code? ",
+          "url": "https://practicalcheminformatics.blogspot.com/2019/05/wheres-code.html"
+        }
+      ]
+    }
+  ]
+}

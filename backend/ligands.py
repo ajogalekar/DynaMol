@@ -807,13 +807,29 @@ def _parameterize(mol, folder, namespace, on_progress, check_cancel):
 def _validate_parameter_conversion(folder, xml_path):
     """Validate each new ligand against its native Amber system before reuse."""
     import openmm as mm
+    from xml.etree import ElementTree
+    from .forcefield_identity import IdentityForceField
     native = app.AmberPrmtopFile(str(folder / 'ligand.prmtop'))
     positions = app.AmberInpcrdFile(str(folder / 'ligand.inpcrd')).positions
+    templates = ElementTree.parse(xml_path).findall('Residues/Residue')
+    residues = list(native.topology.residues())
+    if len(templates) != 1 or len(residues) != 1:
+        raise ValueError('Ligand conversion validation requires one native residue and one XML template.')
+    # These names are assigned from the checked native atom order above. Graph
+    # matching alone can exchange symmetric atoms and their improper terms.
+    atom_map = [{'prepared_name': atom.name,
+                 'template_atom_name': f'{atom.element.symbol}{atom.index + 1}',
+                 'native_index': atom.index} for atom in native.topology.atoms()]
+    converted = IdentityForceField(str(xml_path), ligand_atom_maps=[{
+        'residue_key': residue_key(residues[0]), 'template_name': templates[0].get('name'),
+        'atoms': atom_map}])
     systems = [native.createSystem(nonbondedMethod=app.NoCutoff, constraints=None),
-               app.ForceField(str(xml_path)).createSystem(native.topology, nonbondedMethod=app.NoCutoff, constraints=None)]
+               converted.createSystem(native.topology, nonbondedMethod=app.NoCutoff, constraints=None)]
     xyz = np.asarray(positions.value_in_unit(unit.nanometer))
     report = {'method': 'Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 Å perturbations.',
-              'energy_tolerance_kj_mol': 1e-4, 'force_tolerance_kj_mol_nm': 1e-3, 'conformations': []}
+              'energy_tolerance_kj_mol': 1e-4, 'force_tolerance_kj_mol_nm': 1e-3,
+              'atom_mapping': {'method': 'Verified native atom names, elements and bonds; symmetric graph permutations are not used.',
+                               'atoms': atom_map}, 'conformations': []}
     for index in range(3):
         displacement = 0 if index == 0 else np.random.default_rng(2026 + index).normal(0, .0003, xyz.shape)
         values = []
@@ -886,13 +902,17 @@ def prepare_ligands(dataset_id, ph, seed, folder, overrides=None, on_progress=No
             raise ValueError("Copies of one ligand use different atom orderings. Reimport with consistent ligand atom names/order before preparing this complex.")
         storage.atomic_json(identity_file, identity)
         top, positions = _topology(model, mol, generated_names)
-        # Atom names in XML are synthetic but topology need not be: graph-based
-        # template matching maps them. Restore original heavy names for viewer.
+        # Restore heavy names for the viewer and retain an explicit complete
+        # map to the native parameter atoms, including the added hydrogens.
         output_names = model.names + [f"H{i + 1}" for i in range(mol.GetNumAtoms() - len(model.names))]
+        if len(set(output_names)) != len(output_names):
+            raise ValueError('Prepared ligand atom names are not unique; an exact parameter mapping cannot be retained.')
         for atom, name in zip(top.atoms(), output_names):
             atom.name = name
         atom_map = [{'original_index': index, 'original_name': name, 'ligand_index': i, 'prepared_name': name}
                     for i, (index, name) in enumerate(zip(model.atom_indices, model.names))]
+        parameter_atom_map = [{'native_index': i, 'prepared_name': name, 'template_atom_name': template_name}
+                              for i, (name, template_name) in enumerate(zip(output_names, generated_names))]
         provenance = {**model.description, 'hydrogen_placement': hydrogen_method,
                       'hydrogens_added': mol.GetNumAtoms() - len(model.names), 'forcefield': 'GAFF2',
                       'charge_method': 'AmberTools antechamber AM1-BCC', 'charge_sum_e': sum(charges),
@@ -900,6 +920,7 @@ def prepare_ligands(dataset_id, ph, seed, folder, overrides=None, on_progress=No
                       'heavy_coordinate_max_displacement_angstrom': 0.0, 'seed': seed,
                       'versions': {key: importlib.metadata.version(key) for key in ('rdkit', 'parmed', 'dimorphite-dl', 'gemmi')},
                       'artifacts_directory': parameter_folder.name, 'atom_map': atom_map,
+                      'parameter_atom_map': parameter_atom_map,
                       'parameterization_source_residue_key': list(cache_sources[fingerprint]),
                       'parameter_reuse_note': 'Identical ordered chemical states share parameters from the first bound copy; each copy retains its own heavy-atom coordinates.',
                       'native_runtime': _amber_versions(), 'implementation_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

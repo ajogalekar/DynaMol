@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-09-11T17:16:45.929212+00:00",
+  "reviewer_scope": "Independent code/representation review; this agent authored audit documents and retained-ligand matrix runner, not production code or regression tests.",
+  "source_sha256": {
+    "backend/forcefield_identity.py": "a0faccc47b8573d9e7011a6b8e49b5469997eaefaf287630d045547e24ca0979",
+    "backend/ligands.py": "d72aa10f75718c3f66eb33abdca823731680dd8481bc3271864f5da0bdbf37f9",
+    "backend/prepared_system.py": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca"
+  },
+  "conclusion": "No unresolved blocking defect found in the reviewed atom-identity mapping change. Results remain software equivalence evidence, not scientific force-field accuracy validation.",
+  "findings": [
+    {
+      "status": "resolved",
+      "issue": "An atom map could cover all native indices while pairing one index with a different symmetric template atom name.",
+      "resolution": "Constructor now requires each template atom position to equal its recorded native index and rejects malformed fields and boolean/noninteger indices."
+    }
+  ],
+  "reviewed_invariants": [
+    "Identity is selected by recorded chain, residue id, insertion code and residue name.",
+    "Atom names, counts, elements, native/template indices, internal connectivity and absence of external ligand bonds are validated.",
+    "Generated DML templates cannot silently fall back to graph-only matching when no declared binding exists.",
+    "An explicit template selection cannot bypass the identity map.",
+    "Ligand parameterization writes a complete heavy+hydrogen mapping; prepared bundle loading uses it at downstream assembly.",
+    "Legacy atom mappings are reconstructed only when saved heavy-atom indices, hydrogen count and XML element ordering support the prior documented naming convention.",
+    "Existing native energy and force thresholds are unchanged."
+  ],
+  "limitations": [
+    "The adapter overrides two private OpenMM hooks; version changes require these integration regressions. Upstream signatures and implementation fingerprints are recorded in review-upstream-source.json.",
+    "The supplied mapping is provenance, not an external chemical identity oracle; valid mapping/force agreement does not validate protonation, tautomer choice or physical force-field accuracy.",
+    "Retained fixture coverage is representative and finite. This change does not add support for arbitrary covalent ligands, unsupported metals, or arbitrary unusual residue templates."
+  ]
+}

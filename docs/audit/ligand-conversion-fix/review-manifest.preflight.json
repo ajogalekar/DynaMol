@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T17:03:16.611989+00:00",
+  "purpose": "Repair exact Amber-to-OpenMM ligand parameter translation causing reproducible preparation failure for PDB 6DBK and add representative regression coverage. Equivalence is only to the retained Amber prmtop force field, not evidence of chemical-state correctness, physical binding accuracy, MD convergence, or universal ligand support.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "code_revision": "9496f9fc79937a7eb75faccd2d7e5a9a5c96210b",
+    "versions": {
+      "openmm": "8.6.0",
+      "parmed": "4.3.1",
+      "numpy": "2.4.6",
+      "rdkit": "2025.9.6"
+    },
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "inputs_sha256": {
+      "backend/ligands.py": "1917b3636c4e474421894c492b8ce546b0362b57aad09c1553b659579fd3eb2f",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/input.sdf": "fbb02708f8fd07b8f905013dd747aecf0bb39fce9aa8bec419b18be501552558",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/charged.mol2": "cf2f1947bb4160bfea13d927e32b38b30e2ee10795b8001014d0ca5464b14052",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/ligand.prmtop": "bfd989ed5ba8b163e3224ac076f817ccf0822fdb82bf3d1cd0086a69577d4b5a",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/ligand.inpcrd": "a403fb62d7731a82e64527d1c541c9823aaa5f7dafba4ede11aed5e59f97dbfa",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/ligand.xml": "a44cae05ebf310d4bd2c9e1b0eb61f5cc1114eb515b4e93dff7a32505f15a83b",
+      "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf/conversion-validation.json": "1e398f9d81d76110c408a56ac5cac4b777407a6909f6ba525c45482a6e2df403",
+      "data/jobs/96b4ab9d156a4961/input.pdb": "4846dd0633c799ff27a4072fcf0391061eb8a4ce94707e4f027f97daaa4eeb8a",
+      "data/jobs/96b4ab9d156a4961/config.json": "8ac0936665e6a1f84eb3cc9e65871591ba9f559a9b4c46cb809f15bf219ce73c"
+    },
+    "seeds": {
+      "existing_preparation": 42,
+      "validation_perturbations": [
+        2027,
+        2028
+      ]
+    },
+    "original_failure_preserved": "data/jobs/96b4ab9d156a4961/ligands/ligand-1f22f93cdebf"
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "atom_count": 54,
+    "representation_policy": "Preserve native Amber atom ordering, connectivity, charges, bond/angle/dihedral parameters, exclusions and 1-4 scaling. Do not mutate ligand/protein chemistry, change protonation, replace torsions approximately, loosen tolerances, or discard molecules to pass conversion. Retain original failed artifacts. Bound heavy coordinates are evidence of source pose, not energetic relaxation."
+  },
+  "validation": {
+    "status": "Implementation pending; root may now run focused diagnostics and fixed-converter checks.",
+    "baseline": "Retained ligand.prmtop loaded with OpenMM AmberPrmtopFile on Reference platform using NoCutoff and no constraints, compared to converted XML at identical coordinates.",
+    "thresholds": {
+      "energy_abs_kj_mol": 0.0001,
+      "maximum_force_component_abs_kj_mol_nm": 0.001
+    },
+    "predeclared_matrix": [
+      "Reproduce retained 6DBK native-versus-existing XML failure, decompose by force category, inspect exact term assignments.",
+      "Fixed 6DBK conversion at bound pose and two deterministic 0.003 Å Cartesian perturbations; compare finite energies/forces at unchanged thresholds.",
+      "Check native and converted atom count/masses/charges, bonds/angles, torsion multiplicities and reversals, exclusions and 1-4 scales; target existing failure mechanism.",
+      "Broaden across retained independent real ligands and compact synthetic topologies: aromatic/heteroaromatic, amide, symmetric outer atoms, unequal improper terms, multi-term torsions, reversed Amber index encoding, charged ligand.",
+      "Negative control: a deliberately changed force constant/charge must still fail validation; unsupported terms remain explicit failures.",
+      "Run full complex 6DBK prep from preserved input through public worker/API, retaining all organic ligand copies and modified residue evidence. Confirm output parameterizes; do not claim simulation convergence.",
+      "Run pertinent backend tests and validate packaging/runtime source parity if distribution is rebuilt."
+    ]
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "Deterministic software equivalence check with predefined absolute error limits; no hypothesis testing, predictive ML benchmark, independent replica convergence claim or chemical accuracy comparison."
+  },
+  "review_identity": "Independent automated evidence-linked checklist informed by public writing. PatAgent is not Pat Walters, endorsed by him, or expert certification."
+}
