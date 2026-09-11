@@ -49,6 +49,8 @@ The first inspection of an unfamiliar PDB ligand may need internet to retrieve i
 
 **Keep your workspace.** DynaMol automatically restores your molecule, camera, frame, display settings, measurements and named selections. **Projects** saves named snapshots and exports portable backups with the required molecular files and parameter records. The molecule library supports search, rename, archive and recoverable trash. See [workspaces and backups](docs/WORKSPACES.md).
 
+**Choose an engine first.** Simulation Studio starts with OpenMM and GROMACS. OpenMM offers the protein/complex repair and parameterization controls below, with a reusable explicit-water preview. GROMACS uses its own native preparation at simulation start for compatible complete standard proteins. DynaMol does not currently transfer its OpenMM-prepared state or solvent box into GROMACS; switching shows the limitation before preparation. Your engine choice survives closing and reopening Studio.
+
 **Explore.** Ribbons by default, with ball-and-stick, sticks, and molecular surface views. Rotate by dragging, zoom with a pinch, wheel or explicit buttons, pan with right-drag, and focus on a residue by name or number. Show or hide proteins/nucleic acids, ligands, waters, ions, all hydrogens, or only polar hydrogens. Save the scene as a PNG. Fullscreen includes the top toolbar and dialogs. Short or interrupted protein fragments are shown as atoms when a ribbon cannot be drawn.
 
 In ribbon view, **Polar only** retains a light trace of the full heavy-atom structure with attached polar hydrogens; non-polar hydrogens are hidden. **All** adds the remaining hydrogens, and **Hidden** returns to the ribbon view.

@@ -1,0 +1,90 @@
+[
+  {
+    "query": "molecular dynamics preparation protonation reproducibility",
+    "matches": 49,
+    "results": [
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2023-02-01T06:23:00.000-08:00",
+        "score": 23.0,
+        "tags": [],
+        "title": " Generative Molecular Design - We Need to Raise the Bar",
+        "url": "https://practicalcheminformatics.blogspot.com/2023/02/generative-molecular-design-we-need-to.html"
+      },
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2024-05-22T18:07:00.000-07:00",
+        "score": 20.0,
+        "tags": [],
+        "title": "Generative Molecular Design Isn't As Easy As People Make It Look",
+        "url": "https://practicalcheminformatics.blogspot.com/2024/05/generative-molecular-design-isnt-as.html"
+      },
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2023-06-12T15:42:00.008-07:00",
+        "score": 17.0,
+        "tags": [],
+        "title": "Getting Real with Molecular Property Prediction",
+        "url": "https://practicalcheminformatics.blogspot.com/2023/06/getting-real-with-molecular-property.html"
+      },
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2023-01-03T11:55:00.002-08:00",
+        "score": 14.0,
+        "tags": [],
+        "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+        "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+      }
+    ]
+  },
+  {
+    "query": "tautomers",
+    "matches": 4,
+    "results": [
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2025-05-06",
+        "score": 37.0,
+        "tags": [
+          "Tautomers"
+        ],
+        "title": "The Trouble With Tautomers",
+        "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+      },
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2026-04-12",
+        "score": 11.0,
+        "tags": [
+          "Index"
+        ],
+        "title": "Practical Cheminformatics Index",
+        "url": "https://patwalters.github.io/Practical-Cheminformatics-Index/"
+      },
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2024-05-22T18:07:00.000-07:00",
+        "score": 9.0,
+        "tags": [],
+        "title": "Generative Molecular Design Isn't As Easy As People Make It Look",
+        "url": "https://practicalcheminformatics.blogspot.com/2024/05/generative-molecular-design-isnt-as.html"
+      },
+      {
+        "authorship": "pat-authored",
+        "byline": "Pat Walters",
+        "published": "2023-01-03T11:55:00.002-08:00",
+        "score": 9.0,
+        "tags": [],
+        "title": "AI in Drug Discovery 2022 - A Highly Opinionated Literature Review",
+        "url": "https://practicalcheminformatics.blogspot.com/2023/01/ai-in-drug-discovery-2022-highly.html"
+      }
+    ]
+  }
+]

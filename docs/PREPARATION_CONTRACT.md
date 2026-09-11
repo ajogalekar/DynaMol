@@ -88,6 +88,16 @@ Inspection returns `ions` with exact names/elements, declared charges, support a
 
 Dataset `preparation` and `solvation` metadata record summaries, warnings, state choices, parent IDs, atom maps and parameter provenance. `prepared.pdb` is the exact downstream input. Successful preparation establishes parameterization support; water construction and a short MD smoke establish software continuity. Neither demonstrates equilibration, convergence, native protonation or binding affinity. See [the complex review](complex-preparation-review.md) for validation evidence.
 
+## Engine selection in Studio
+
+The engine selector is the first numbered step, before source loading and preparation. OpenMM is selected initially. The choice survives closing/reopening Studio during the current app session; it is not a cross-browser preference or a new project-schema field.
+
+OpenMM exposes the existing pH, repair, ligand-state, preparation-progress and solvent-preview controls. GROMACS keeps Upload/Fetch/SMILES available and instead explains native setup at Start: Amber99SB-ILDN topology, hydrogen regeneration with `pdb2gmx -ignh`, template-default protonation/terminal states, TIP3P solvent and neutralizing ions. It has no separate DynaMol pH, loop-repair, complex-parameterization or water-preview controls. Simulation readiness details do not label this native GROMACS preset as a requested-pH preparation.
+
+Changing engines preserves the loaded molecular dataset and its metadata. A GROMACS selection with either preparation or solvation metadata shows an early incompatibility message and an explicit return-to-OpenMM action. Submission remains blocked by the shared backend validator. Engine cards are locked during pending/active preparation or simulation operations; selecting the already-active card does not invalidate readiness.
+
+Coordinate files and repaired geometry can be reusable across engines. Complete prepared systems additionally need compatible topology, force-field parameters and retained chemical state. OpenMM supports GROMACS input files in general; DynaMol's current adapters do not implement a validated conversion. See [the compatibility review](audit/engine-preparation-order/scientific-review.md) for source evidence and official documentation.
+
 ## Viewer behavior
 
 Simulate remains beside the live canvas. Imports and completed prep/water results load into view; solvation makes water and ions visible. Global and per-measurement visibility controls hide both lines and labels while retaining plots. Polar-hydrogen mode preserves heavy atoms and hides nonpolar hydrogens.

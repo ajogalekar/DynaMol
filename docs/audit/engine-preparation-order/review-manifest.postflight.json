@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T15:29:13.420510+00:00",
+  "purpose": "Limited engine/preparation compatibility source review for engine-first UI routing. No new molecular inputs, MD runs, parameterization or scientific algorithm changes. No transfer-equivalence or chemical-performance claim.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "outputs_and_exclusions_recorded": true,
+    "git_revision": "e24fa4602464fd7abdab247e325eef18d680cd15",
+    "python": "3.12.13",
+    "versions": {
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "pdbfixer": "1.12.0"
+    },
+    "seeds": "Not applicable: deterministic source/documentation review; no simulation or stochastic structure preparation performed.",
+    "source_sha256": {
+      "backend/jobs.py": "a728e33341e7d71119b5a591217136b9a0b4da24e9228bd11d6977bb9835967a",
+      "backend/preparation.py": "5cb8f7e98375ecc9005b11801a2b935a7894f2b853a2fc0183d70472c305663b",
+      "backend/prepared_system.py": "b1771289a005dc2b846057aa7ba18ec3abe0b4853753fd793c58ef093df8e847",
+      "backend/worker.py": "9e4e004cf26ec655b0316a7910df3765ff94eec19d78b4fd85df31db5359611e",
+      "backend/readiness.py": "0d2007932f3e221a1487e9c54cdbc8a8240f3da042d5bd96e750c7943c787715",
+      "backend/models.py": "4b3ec995a3fc1fd169b3ecae0f1b2c86e80d292283d9da276407b94bda760aa0",
+      "backend/tests/test_preparation.py": "f443b3b376dc3556d2852877d5c2f926cb01c3f0c4fc20c0946f8dd3e6943dfc",
+      "docs/preparation-review.md": "88c9b969e7a75485c934bc70ba14811a8df0034871ab79807116ae50d2d3208c",
+      "frontend/src/components/SimulationPanel.tsx": "d3d91852b722c45b9645529f5a56b73b80ad7a8fec93456bfc8ecdb079d64a40",
+      "frontend/src/components/StructureWorkbench.tsx": "070f1e632ce50141f2ee2c120a7d91665be4028a76548eaa7b9b2d9f96ed9908",
+      "frontend/src/components/ReadinessPanel.tsx": "c011c66463dd37c8451b2a439c04eac9931054ae7eb407d2b3e46fe52ce06520",
+      "frontend/src/App.tsx": "c6ff105dd99063bb504bda0cfa63ad000f5445066a33ffea1f460600c9ee5e7d"
+    },
+    "review_sha256": "27ff50e3ecf32abac0d80ae6b2879175d8daf61b4b3204c51913f7e454253dd7"
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "scope": "No new molecular inputs were parsed or prepared. Existing backend state-preservation guards and representation policy reviewed; do not erase preparation state on engine change."
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No scientific metric comparison; uncertainty intervals are not applicable and are intentionally not asserted as passed."
+  },
+  "validation": {
+    "scope": "Read-only backend flow and authoritative documentation review. Frontend/browser validation belongs to the root implementation audit.",
+    "frontend_review": {
+      "findings": 0,
+      "resolved": [
+        "Current-engine clicks return before clearing readiness."
+      ],
+      "scope": "Engine-first ordering; prepared/solvated GROMACS guard; OpenMM-only preparation and preview; pH/defaults wording; non-destructive engine switching; Studio-reopen persistence. Read-only code review, no independent browser run."
+    }
+  },
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not an independent domain authority or endorsement.",
+  "updated_at": "2026-09-11T15:34:24.876906+00:00"
+}

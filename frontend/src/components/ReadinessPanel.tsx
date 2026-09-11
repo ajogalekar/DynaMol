@@ -140,7 +140,11 @@ export default function ReadinessPanel({
         <details>
           <summary>Model and preparation details</summary>
           <p>{data.model}</p>
-          <p>Requested/prepared pH {data.chemical_state.ph}; fixed-state assumptions apply.</p>
+          <p>
+            {mode === 'simulation' && 'engine' in settings && settings.engine === 'gromacs'
+              ? 'GROMACS uses template-default protonation and terminal states; a target pH is not applied by this preset.'
+              : `Requested/prepared pH ${data.chemical_state.ph}; fixed-state assumptions apply.`}
+          </p>
           {data.chemical_state.modifications.length > 0 && (
             <p>
               Modified residues:{' '}

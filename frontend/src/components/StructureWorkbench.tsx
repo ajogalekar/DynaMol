@@ -21,6 +21,7 @@ import ReadinessPanel from './ReadinessPanel';
 
 export default function StructureWorkbench({
   dataset,
+  engine,
   ph,
   onPh,
   seed,
@@ -31,6 +32,7 @@ export default function StructureWorkbench({
   onPreparationRequest,
 }: {
   dataset: Dataset | null;
+  engine: 'openmm' | 'gromacs';
   ph: number;
   onPh: (ph: number) => void;
   seed: number;
@@ -74,7 +76,7 @@ export default function StructureWorkbench({
   useEffect(() => {
     let current = true;
     setInspectionError('');
-    if (!dataset) {
+    if (!dataset || engine !== 'openmm') {
       setInspection(null);
       setInspecting(false);
       return;
@@ -101,7 +103,7 @@ export default function StructureWorkbench({
       current = false;
       window.clearTimeout(timer);
     };
-  }, [dataset?.id, ph, ligandOverrides, inspectionRevision]);
+  }, [dataset?.id, engine, ph, ligandOverrides, inspectionRevision]);
   async function load(operation: () => Promise<Dataset>) {
     setBusy(true);
     setError('');
@@ -120,7 +122,7 @@ export default function StructureWorkbench({
     await load(() => api.importStructure(form));
   }
   async function prepare() {
-    if (!dataset || locked || busy || !prepReady) return;
+    if (!dataset || engine !== 'openmm' || locked || busy || !prepReady) return;
     setBusy(true);
     setSubmittingPreparation(true);
     onPreparationRequest(true);
@@ -162,9 +164,7 @@ export default function StructureWorkbench({
   return (
     <section className="structure-workbench" aria-label="Structure loading and protein preparation">
       <div className="field-heading source-heading">
-        <span>
-          <Upload size={13} />
-        </span>
+        <span>02</span>
         <h3>Start with a structure</h3>
         <small>Loads in the live view</small>
       </div>
@@ -332,366 +332,403 @@ export default function StructureWorkbench({
             </div>
             <Check size={15} />
           </div>
-          <div className="prep-section">
-            <div className="prep-heading">
-              <div>
-                <WandSparkles size={15} />
-                <h3>{complex ? 'Protein + ligand preparation' : 'Protein preparation'}</h3>
+          {engine === 'gromacs' ? (
+            <div className="prep-section engine-preparation" aria-label="GROMACS preparation">
+              <div className="prep-heading">
+                <div>
+                  <WandSparkles size={15} />
+                  <h3>GROMACS preparation</h3>
+                </div>
+                <span>Native setup at Start</span>
               </div>
-              <span>{dataset.preparation ? 'Prepared structure' : 'Review & repair'}</span>
+              <p className="form-note">
+                Load a complete standard protein, review the simulation settings, then start.
+                GROMACS generates its topology and rebuilds hydrogens using its default protonation
+                and terminal states. Existing hydrogen choices are not retained.
+              </p>
+              <p className="form-note">
+                This path does not offer pH selection, missing-loop repair or
+                ligand/modified-residue parameterization. Choose OpenMM above for DynaMol’s
+                supported protein and complex preparation tools.
+              </p>
             </div>
-            {inspecting ? (
-              <div className="studio-working">
-                <LoaderCircle size={12} className="spin" /> Checking residues and ligand chemistry…
+          ) : (
+            <div className="prep-section">
+              <div className="prep-heading">
+                <div>
+                  <WandSparkles size={15} />
+                  <h3>{complex ? 'Protein + ligand preparation' : 'Protein preparation'}</h3>
+                </div>
+                <span>
+                  {dataset.preparation ? 'Prepared for OpenMM' : 'OpenMM · review & repair'}
+                </span>
               </div>
-            ) : inspectionError ? (
-              <div className="inline-warning">
-                {inspectionError}{' '}
+              {inspecting ? (
+                <div className="studio-working">
+                  <LoaderCircle size={12} className="spin" /> Checking residues and ligand
+                  chemistry…
+                </div>
+              ) : inspectionError ? (
+                <div className="inline-warning">
+                  {inspectionError}{' '}
+                  <button
+                    type="button"
+                    className="text-button"
+                    onClick={() => setInspectionRevision((n) => n + 1)}
+                  >
+                    Retry inspection
+                  </button>
+                </div>
+              ) : (
+                inspection && (
+                  <>
+                    <div className={`inspection-summary ${warningCount ? 'has-issues' : ''}`}>
+                      {warningCount ? <AlertTriangle size={14} /> : <Check size={14} />}
+                      <span>
+                        {!hasProtein
+                          ? 'Small-molecule structure'
+                          : warningCount
+                            ? `${missingCount} missing residues · ${inspection.gaps.length} chain gaps`
+                            : `${inspection.missing_atoms.length} residues with missing atoms · ${inspection.hydrogen_atoms.toLocaleString()} hydrogens`}
+                      </span>
+                    </div>
+                    {!!inspection.missing_residues.length && (
+                      <div className="missing-residues">
+                        <b>Missing sequence regions</b>
+                        {inspection.missing_residues.map((r, i) => (
+                          <div key={i}>
+                            <span>
+                              Chain {r.chain || '—'} · {r.count} residues{' '}
+                              {r.terminal ? 'at terminus' : ''}
+                            </span>
+                            <small>
+                              {r.residues.join('–')} ·{' '}
+                              {r.buildable
+                                ? 'can build a starting model'
+                                : r.terminal
+                                  ? 'reported · prepare the observed terminus'
+                                  : 'requires additional modeling'}
+                            </small>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {!!inspection.gaps.length && (
+                      <div className="inline-warning">
+                        {inspection.gaps.map((g) => g.message).join(' ')}
+                      </div>
+                    )}
+                    {!inspection.has_sequence && hasProtein && (
+                      <p className="form-note prep-sequence-note">
+                        Full sequence records are absent. Unknown loop identities cannot be
+                        inferred; fetch the deposited PDB or upload a file with its sequence
+                        records.
+                      </p>
+                    )}
+                    {!hasProtein && (
+                      <p className="form-note">
+                        Protein preparation is for amino-acid polymers. This molecule is available
+                        in the viewer; ligand parameterization is a separate workflow.
+                      </p>
+                    )}
+                  </>
+                )
+              )}
+              {!!inspection?.modified_residues?.length && (
+                <div className="modified-residue-list" aria-label="Modified protein residues">
+                  <div className="modified-residue-intro">
+                    <WandSparkles size={15} />
+                    <div>
+                      <b>{inspection.modified_residues.length} modified protein residues</b>
+                      <span>Kept in the protein with their chemical identity.</span>
+                    </div>
+                  </div>
+                  {inspection.modified_residues.map((residue, index) => (
+                    <details
+                      className={`modified-residue-card${residue.supported ? '' : ' has-issues'}`}
+                      key={`${residue.chain}:${residue.resid}:${residue.insertion_code ?? ''}:${residue.residue}:${index}`}
+                    >
+                      <summary>
+                        <span>
+                          <b>{residue.residue}</b> · {residue.chain}:{residue.resid}
+                          {residue.insertion_code ?? ''}
+                        </span>
+                        <strong>
+                          {residue.supported ? 'Protein template' : 'Needs a template'}
+                        </strong>
+                      </summary>
+                      {residue.parent_residue && (
+                        <p>
+                          {residue.name ? `${residue.name} · ` : ''}
+                          Modified {residue.parent_residue} · original {residue.residue} identity
+                          retained.
+                        </p>
+                      )}
+                      {residue.forcefield && (
+                        <p>
+                          {residue.forcefield} · template {residue.template}
+                        </p>
+                      )}
+                      {residue.formal_charge !== undefined && (
+                        <p>
+                          Fixed residue charge: {residue.formal_charge > 0 ? '+' : ''}
+                          {residue.formal_charge}.
+                        </p>
+                      )}
+                      {residue.protonation_note && <p>{residue.protonation_note}</p>}
+                      {residue.error && <p className="inline-warning">{residue.error}</p>}
+                      {!residue.supported && (
+                        <p>
+                          Provide parameters for this covalently connected amino acid and its chosen
+                          chemical state to enable preparation.
+                        </p>
+                      )}
+                    </details>
+                  ))}
+                  <p className="form-note">
+                    Ligand removal preserves modified protein residues. Unsupported residues require
+                    an exact amino-acid template.
+                  </p>
+                </div>
+              )}
+              {!!inspection?.ligands?.length && (
+                <div className="ligand-preparation-list" aria-label="Ligand preparation choices">
+                  <div className="ligand-preparation-intro">
+                    <FlaskConical size={15} />
+                    <div>
+                      <b>
+                        {inspection.ligands.length} ligands ·{' '}
+                        {removeHeterogens ? 'removal selected' : 'kept in the complex'}
+                      </b>
+                      <span>
+                        Bound poses stay in place. Review the fixed charge states before preparing.
+                      </span>
+                    </div>
+                  </div>
+                  {inspection.ligands.map((ligand) => (
+                    <details
+                      className={`ligand-preparation-card${ligand.error ? ' has-issues' : ''}`}
+                      key={ligand.key}
+                    >
+                      <summary>
+                        <span>
+                          <b>{ligand.component_id}</b> · {ligand.chain}:{ligand.resid}
+                        </span>
+                        <strong>
+                          {ligand.error
+                            ? 'Needs chemistry'
+                            : `${(ligand.formal_charge ?? 0) > 0 ? '+' : ''}${ligand.formal_charge ?? 0} charge`}
+                        </strong>
+                      </summary>
+                      {ligand.error && <p className="inline-warning">{ligand.error}</p>}
+                      <p className="form-note">{ligand.protonation_method}</p>
+                      {ligand.warnings?.map((warning, i) => (
+                        <p className="form-note" key={i}>
+                          {warning}
+                        </p>
+                      ))}
+                      {ligand.selected_smiles && (
+                        <p className="ligand-smiles" aria-label={`Selected SMILES ${ligand.key}`}>
+                          {ligand.selected_smiles}
+                        </p>
+                      )}
+                      <label className="full-label">
+                        Explicit-state SMILES · optional
+                        <textarea
+                          aria-label={`Ligand state override ${ligand.key}`}
+                          value={ligandOverrides[ligand.key] ?? ''}
+                          onChange={(e) =>
+                            setLigandOverrides((values) => ({
+                              ...values,
+                              [ligand.key]: e.target.value,
+                            }))
+                          }
+                          placeholder="Provide the same molecule with your chosen charge and stereochemistry"
+                          disabled={disabled || removeHeterogens}
+                          rows={3}
+                          maxLength={10000}
+                        />
+                      </label>
+                    </details>
+                  ))}
+                  {!!inspection.metal_environment?.retained_coordinating_waters.length && (
+                    <p className="form-note">
+                      {inspection.metal_environment.retained_coordinating_waters.length}{' '}
+                      metal-coordinating waters will be retained with the ions. Nearby protein donor
+                      sidechains are protected.
+                    </p>
+                  )}
+                  {!inspection.ligand_runtime?.available && (
+                    <div className="inline-warning">
+                      {inspection.ligand_runtime?.message ??
+                        'Ligand preparation tools are unavailable.'}
+                    </div>
+                  )}
+                </div>
+              )}
+              {!!inspection?.blockers.length && (
+                <div className="inline-warning">{inspection.blockers.join(' ')}</div>
+              )}
+              <ReadinessPanel
+                mode="preparation"
+                datasetId={dataset.id}
+                settings={{
+                  ph,
+                  add_missing_atoms: addAtoms,
+                  build_missing_residues: buildMissing,
+                  optimize_sidechains: optimize,
+                  remove_waters: removeWaters,
+                  remove_heterogens: removeHeterogens,
+                  ligand_overrides: Object.fromEntries(
+                    Object.entries(ligandOverrides).filter(([, value]) => value.trim()),
+                  ),
+                  seed,
+                }}
+                onReadyChange={setPrepReady}
+                suspended={locked || preparing}
+              />
+              <div className="prep-action-row">
+                <label className="prep-ph">
+                  Target pH
+                  <input
+                    aria-label="Preparation pH"
+                    type="number"
+                    min="0"
+                    max="14"
+                    step="0.1"
+                    value={ph}
+                    onChange={(e) => onPh(Number(e.target.value))}
+                    disabled={disabled}
+                  />
+                </label>
                 <button
                   type="button"
-                  className="text-button"
-                  onClick={() => setInspectionRevision((n) => n + 1)}
+                  className="primary-button"
+                  disabled={disabled || !hasProtein || inspecting || !prepReady}
+                  aria-busy={submittingPreparation || preparing}
+                  onClick={() => void prepare()}
                 >
-                  Retry inspection
+                  {submittingPreparation || preparing ? (
+                    <LoaderCircle size={14} className="spin" />
+                  ) : (
+                    <WandSparkles size={14} />
+                  )}
+                  {submittingPreparation
+                    ? 'Starting preparation…'
+                    : preparing
+                      ? complex
+                        ? 'Preparing complex…'
+                        : 'Preparing protein…'
+                      : complex
+                        ? 'Prep complex'
+                        : 'Prep protein'}
                 </button>
               </div>
-            ) : (
-              inspection && (
-                <>
-                  <div className={`inspection-summary ${warningCount ? 'has-issues' : ''}`}>
-                    {warningCount ? <AlertTriangle size={14} /> : <Check size={14} />}
-                    <span>
-                      {!hasProtein
-                        ? 'Small-molecule structure'
-                        : warningCount
-                          ? `${missingCount} missing residues · ${inspection.gaps.length} chain gaps`
-                          : `${inspection.missing_atoms.length} residues with missing atoms · ${inspection.hydrogen_atoms.toLocaleString()} hydrogens`}
-                    </span>
-                  </div>
-                  {!!inspection.missing_residues.length && (
-                    <div className="missing-residues">
-                      <b>Missing sequence regions</b>
-                      {inspection.missing_residues.map((r, i) => (
-                        <div key={i}>
-                          <span>
-                            Chain {r.chain || '—'} · {r.count} residues{' '}
-                            {r.terminal ? 'at terminus' : ''}
-                          </span>
-                          <small>
-                            {r.residues.join('–')} ·{' '}
-                            {r.buildable
-                              ? 'can build a starting model'
-                              : r.terminal
-                                ? 'reported · prepare the observed terminus'
-                                : 'requires additional modeling'}
-                          </small>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  {!!inspection.gaps.length && (
-                    <div className="inline-warning">
-                      {inspection.gaps.map((g) => g.message).join(' ')}
-                    </div>
-                  )}
-                  {!inspection.has_sequence && hasProtein && (
-                    <p className="form-note prep-sequence-note">
-                      Full sequence records are absent. Unknown loop identities cannot be inferred;
-                      fetch the deposited PDB or upload a file with its sequence records.
-                    </p>
-                  )}
-                  {!hasProtein && (
-                    <p className="form-note">
-                      Protein preparation is for amino-acid polymers. This molecule is available in
-                      the viewer; ligand parameterization is a separate workflow.
-                    </p>
-                  )}
-                </>
-              )
-            )}
-            {!!inspection?.modified_residues?.length && (
-              <div className="modified-residue-list" aria-label="Modified protein residues">
-                <div className="modified-residue-intro">
-                  <WandSparkles size={15} />
-                  <div>
-                    <b>{inspection.modified_residues.length} modified protein residues</b>
-                    <span>Kept in the protein with their chemical identity.</span>
-                  </div>
-                </div>
-                {inspection.modified_residues.map((residue, index) => (
-                  <details
-                    className={`modified-residue-card${residue.supported ? '' : ' has-issues'}`}
-                    key={`${residue.chain}:${residue.resid}:${residue.insertion_code ?? ''}:${residue.residue}:${index}`}
-                  >
-                    <summary>
-                      <span>
-                        <b>{residue.residue}</b> · {residue.chain}:{residue.resid}
-                        {residue.insertion_code ?? ''}
-                      </span>
-                      <strong>{residue.supported ? 'Protein template' : 'Needs a template'}</strong>
-                    </summary>
-                    {residue.parent_residue && (
-                      <p>
-                        {residue.name ? `${residue.name} · ` : ''}
-                        Modified {residue.parent_residue} · original {residue.residue} identity
-                        retained.
-                      </p>
-                    )}
-                    {residue.forcefield && (
-                      <p>
-                        {residue.forcefield} · template {residue.template}
-                      </p>
-                    )}
-                    {residue.formal_charge !== undefined && (
-                      <p>
-                        Fixed residue charge: {residue.formal_charge > 0 ? '+' : ''}
-                        {residue.formal_charge}.
-                      </p>
-                    )}
-                    {residue.protonation_note && <p>{residue.protonation_note}</p>}
-                    {residue.error && <p className="inline-warning">{residue.error}</p>}
-                    {!residue.supported && (
-                      <p>
-                        Provide parameters for this covalently connected amino acid and its chosen
-                        chemical state to enable preparation.
-                      </p>
-                    )}
-                  </details>
-                ))}
-                <p className="form-note">
-                  Ligand removal preserves modified protein residues. Unsupported residues require
-                  an exact amino-acid template.
-                </p>
-              </div>
-            )}
-            {!!inspection?.ligands?.length && (
-              <div className="ligand-preparation-list" aria-label="Ligand preparation choices">
-                <div className="ligand-preparation-intro">
-                  <FlaskConical size={15} />
-                  <div>
-                    <b>
-                      {inspection.ligands.length} ligands ·{' '}
-                      {removeHeterogens ? 'removal selected' : 'kept in the complex'}
-                    </b>
-                    <span>
-                      Bound poses stay in place. Review the fixed charge states before preparing.
-                    </span>
-                  </div>
-                </div>
-                {inspection.ligands.map((ligand) => (
-                  <details
-                    className={`ligand-preparation-card${ligand.error ? ' has-issues' : ''}`}
-                    key={ligand.key}
-                  >
-                    <summary>
-                      <span>
-                        <b>{ligand.component_id}</b> · {ligand.chain}:{ligand.resid}
-                      </span>
-                      <strong>
-                        {ligand.error
-                          ? 'Needs chemistry'
-                          : `${(ligand.formal_charge ?? 0) > 0 ? '+' : ''}${ligand.formal_charge ?? 0} charge`}
-                      </strong>
-                    </summary>
-                    {ligand.error && <p className="inline-warning">{ligand.error}</p>}
-                    <p className="form-note">{ligand.protonation_method}</p>
-                    {ligand.warnings?.map((warning, i) => (
-                      <p className="form-note" key={i}>
-                        {warning}
-                      </p>
-                    ))}
-                    {ligand.selected_smiles && (
-                      <p className="ligand-smiles" aria-label={`Selected SMILES ${ligand.key}`}>
-                        {ligand.selected_smiles}
-                      </p>
-                    )}
-                    <label className="full-label">
-                      Explicit-state SMILES · optional
-                      <textarea
-                        aria-label={`Ligand state override ${ligand.key}`}
-                        value={ligandOverrides[ligand.key] ?? ''}
-                        onChange={(e) =>
-                          setLigandOverrides((values) => ({
-                            ...values,
-                            [ligand.key]: e.target.value,
-                          }))
-                        }
-                        placeholder="Provide the same molecule with your chosen charge and stereochemistry"
-                        disabled={disabled || removeHeterogens}
-                        rows={3}
-                        maxLength={10000}
-                      />
-                    </label>
-                  </details>
-                ))}
-                {!!inspection.metal_environment?.retained_coordinating_waters.length && (
-                  <p className="form-note">
-                    {inspection.metal_environment.retained_coordinating_waters.length}{' '}
-                    metal-coordinating waters will be retained with the ions. Nearby protein donor
-                    sidechains are protected.
-                  </p>
-                )}
-                {!inspection.ligand_runtime?.available && (
-                  <div className="inline-warning">
-                    {inspection.ligand_runtime?.message ??
-                      'Ligand preparation tools are unavailable.'}
-                  </div>
-                )}
-              </div>
-            )}
-            {!!inspection?.blockers.length && (
-              <div className="inline-warning">{inspection.blockers.join(' ')}</div>
-            )}
-            <ReadinessPanel
-              mode="preparation"
-              datasetId={dataset.id}
-              settings={{ph, add_missing_atoms: addAtoms, build_missing_residues: buildMissing,
-                optimize_sidechains: optimize, remove_waters: removeWaters,
-                remove_heterogens: removeHeterogens, ligand_overrides: Object.fromEntries(
-                  Object.entries(ligandOverrides).filter(([, value]) => value.trim())), seed}}
-              onReadyChange={setPrepReady}
-              suspended={locked || preparing}
-            />
-            <div className="prep-action-row">
-              <label className="prep-ph">
-                Target pH
-                <input
-                  aria-label="Preparation pH"
-                  type="number"
-                  min="0"
-                  max="14"
-                  step="0.1"
-                  value={ph}
-                  onChange={(e) => onPh(Number(e.target.value))}
-                  disabled={disabled}
-                />
-              </label>
+              <p className="form-note">
+                Rebuild protein hydrogens for the selected pH, repair missing heavy atoms, and
+                sample side-chain clashes.
+                {complex
+                  ? ' Ligands receive GAFF2 / AM1-BCC parameters for explicit-water OpenMM runs.'
+                  : ' Protein relaxation uses backbone restraints.'}{' '}
+                Ionization uses recorded defaults, not a site-specific pKₐ calculation.
+              </p>
               <button
                 type="button"
-                className="primary-button"
-                disabled={disabled || !hasProtein || inspecting || !prepReady}
-                aria-busy={submittingPreparation || preparing}
-                onClick={() => void prepare()}
+                className="prep-options-toggle"
+                aria-expanded={options}
+                onClick={() => setOptions(!options)}
               >
-                {submittingPreparation || preparing ? (
-                  <LoaderCircle size={14} className="spin" />
-                ) : (
-                  <WandSparkles size={14} />
-                )}
-                {submittingPreparation
-                  ? 'Starting preparation…'
-                  : preparing
-                    ? complex
-                      ? 'Preparing complex…'
-                      : 'Preparing protein…'
-                    : complex
-                      ? 'Prep complex'
-                      : 'Prep protein'}
+                {options ? <ChevronDown size={13} /> : <ChevronRight size={13} />} Preparation
+                options
               </button>
-            </div>
-            <p className="form-note">
-              Rebuild protein hydrogens for the selected pH, repair missing heavy atoms, and sample
-              side-chain clashes.
-              {complex
-                ? ' Ligands receive GAFF2 / AM1-BCC parameters for explicit-water OpenMM runs.'
-                : ' Protein relaxation uses backbone restraints.'}{' '}
-              Ionization uses recorded defaults, not a site-specific pKₐ calculation.
-            </p>
-            <button
-              type="button"
-              className="prep-options-toggle"
-              aria-expanded={options}
-              onClick={() => setOptions(!options)}
-            >
-              {options ? <ChevronDown size={13} /> : <ChevronRight size={13} />} Preparation options
-            </button>
-            {(options || canBuild) && (
-              <div className="prep-options">
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={addAtoms}
-                    onChange={(e) => setAddAtoms(e.target.checked)}
-                    disabled={disabled}
-                  />{' '}
-                  Add missing heavy atoms
-                </label>
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={optimize}
-                    onChange={(e) => setOptimize(e.target.checked)}
-                    disabled={disabled}
-                  />{' '}
-                  Refine side-chain rotamers and clashes
-                </label>
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={removeWaters}
-                    onChange={(e) => setRemoveWaters(e.target.checked)}
-                    disabled={disabled}
-                  />{' '}
-                  Remove existing waters before preparation (keep metal-coordinating waters)
-                </label>
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={removeHeterogens}
-                    onChange={(e) => setRemoveHeterogens(e.target.checked)}
-                    disabled={disabled}
-                  />{' '}
-                  Remove ligands and other non-protein residues
-                </label>
-                <label className={`checkbox-label loop-option ${canBuild ? 'available' : ''}`}>
-                  <input
-                    type="checkbox"
-                    checked={buildMissing}
-                    onChange={(e) => setBuildMissing(e.target.checked)}
-                    disabled={disabled || !canBuild}
-                  />{' '}
-                  Build supported missing loops / residues
-                </label>
-                <p className="form-note">
-                  {canBuild
-                    ? 'Optional PDBFixer starting models for short internal gaps. Rebuilt loops are uncertain and need inspection; long gaps and terminal regions require additional modeling.'
-                    : 'Missing-region construction needs known sequence identities and a supported short internal gap.'}
-                </p>
-              </div>
-            )}
-            {dataset.preparation && (
-              <div className="preparation-result">
-                <b>
-                  <Check size={13} /> Preparation recorded · pH {dataset.preparation.ph}
-                </b>
-                {dataset.preparation.summary?.map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-                {dataset.preparation.warnings?.map((line, i) => (
-                  <p className="prep-result-warning" key={i}>
-                    {line}
+              {(options || canBuild) && (
+                <div className="prep-options">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={addAtoms}
+                      onChange={(e) => setAddAtoms(e.target.checked)}
+                      disabled={disabled}
+                    />{' '}
+                    Add missing heavy atoms
+                  </label>
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={optimize}
+                      onChange={(e) => setOptimize(e.target.checked)}
+                      disabled={disabled}
+                    />{' '}
+                    Refine side-chain rotamers and clashes
+                  </label>
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={removeWaters}
+                      onChange={(e) => setRemoveWaters(e.target.checked)}
+                      disabled={disabled}
+                    />{' '}
+                    Remove existing waters before preparation (keep metal-coordinating waters)
+                  </label>
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={removeHeterogens}
+                      onChange={(e) => setRemoveHeterogens(e.target.checked)}
+                      disabled={disabled}
+                    />{' '}
+                    Remove ligands and other non-protein residues
+                  </label>
+                  <label className={`checkbox-label loop-option ${canBuild ? 'available' : ''}`}>
+                    <input
+                      type="checkbox"
+                      checked={buildMissing}
+                      onChange={(e) => setBuildMissing(e.target.checked)}
+                      disabled={disabled || !canBuild}
+                    />{' '}
+                    Build supported missing loops / residues
+                  </label>
+                  <p className="form-note">
+                    {canBuild
+                      ? 'Optional PDBFixer starting models for short internal gaps. Rebuilt loops are uncertain and need inspection; long gaps and terminal regions require additional modeling.'
+                      : 'Missing-region construction needs known sequence identities and a supported short internal gap.'}
                   </p>
-                ))}
-                <a
-                  href={`/api/datasets/${dataset.id}/prepared`}
-                  download={`${dataset.name}.pdb`}
-                  className="text-button"
-                >
-                  <ArrowDownToLine size={12} /> Prepared PDB
-                </a>
-                {dataset.preparation.job_id &&
-                  (dataset.preparation.ligand_parameters ||
-                    !!dataset.preparation.modified_residues) && (
-                    <a
-                      className="text-button"
-                      href={`/api/jobs/${dataset.preparation.job_id}/download`}
-                    >
-                      <ArrowDownToLine size={12} /> Parameters & preparation files
-                    </a>
-                  )}
-              </div>
-            )}
-          </div>
+                </div>
+              )}
+              {dataset.preparation && (
+                <div className="preparation-result">
+                  <b>
+                    <Check size={13} /> Preparation recorded · pH {dataset.preparation.ph}
+                  </b>
+                  {dataset.preparation.summary?.map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                  {dataset.preparation.warnings?.map((line, i) => (
+                    <p className="prep-result-warning" key={i}>
+                      {line}
+                    </p>
+                  ))}
+                  <a
+                    href={`/api/datasets/${dataset.id}/prepared`}
+                    download={`${dataset.name}.pdb`}
+                    className="text-button"
+                  >
+                    <ArrowDownToLine size={12} /> Prepared PDB
+                  </a>
+                  {dataset.preparation.job_id &&
+                    (dataset.preparation.ligand_parameters ||
+                      !!dataset.preparation.modified_residues) && (
+                      <a
+                        className="text-button"
+                        href={`/api/jobs/${dataset.preparation.job_id}/download`}
+                      >
+                        <ArrowDownToLine size={12} /> Parameters & preparation files
+                      </a>
+                    )}
+                </div>
+              )}
+            </div>
+          )}
         </>
       )}
     </section>

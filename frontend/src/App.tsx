@@ -133,6 +133,7 @@ export default function App() {
   const measurementKey = JSON.stringify([dataset?.id, kind, selectedAtoms]);
   const currentMeasurementKey = useRef(measurementKey);
   currentMeasurementKey.current = measurementKey;
+  const [simulationEngine, setSimulationEngine] = useState<'openmm' | 'gromacs'>('openmm');
   const [modal, setModal] = useState<'import' | 'simulation' | 'help' | 'projects' | null>(null),
     [library, setLibrary] = useState(false),
     [details, setDetails] = useState(false),
@@ -1684,6 +1685,8 @@ export default function App() {
       {modal === 'simulation' && (
         <SimulationPanel
           dataset={dataset}
+          engine={simulationEngine}
+          onEngineChange={setSimulationEngine}
           health={health}
           jobs={jobs}
           viewerReady={ready && !loading}

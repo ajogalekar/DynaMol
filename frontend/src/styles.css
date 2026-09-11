@@ -4020,3 +4020,14 @@ kbd {
     top: 67px;
   }
 }
+
+.engine-compatibility .text-button {
+  display: flex;
+  margin-top: 9px;
+}
+.engine-preparation .form-note {
+  margin: 10px 0 0;
+}
+.engine-preparation-note {
+  margin-bottom: 22px;
+}

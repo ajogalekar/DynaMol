@@ -201,9 +201,11 @@ test('audit: validated complex result exposes prepared coordinates and parameter
     contentType: 'application/json',
   });
   await dialog.getByRole('button', { name: /GROMACS/ }).click();
-  await expect(dialog).toContainText('Use OpenMM for this prepared structure.');
+  await expect(dialog.locator('.engine-compatibility')).toContainText(
+    'DynaMol cannot yet transfer that state to GROMACS.',
+  );
   await expect(
     dialog.getByRole('button', { name: 'Start simulation', exact: true }),
   ).toBeDisabled();
-  await dialog.getByRole('button', { name: /OpenMM/ }).click();
+  await dialog.getByRole('button', { name: 'OpenMM', exact: true }).click();
 });

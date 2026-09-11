@@ -1,0 +1,365 @@
+{
+  "date": "2026-09-11",
+  "base_url": "http://127.0.0.1:8779",
+  "mode": "Production frontend, real local API/Chrome WebGL, separate data directory",
+  "stats": {
+    "startTime": "2026-09-11T15:37:38.622Z",
+    "duration": 56233.662,
+    "expected": 28,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": [
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "engine selection precedes structure preparation at 1440px",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 816,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "engine selection precedes structure preparation at 547px",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 641,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "GROMACS retains source loading and its engine choice across reopening and raw import",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2455,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "GROMACS submission sends native explicit settings and locks engine switching while pending",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1378,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "engine-preparation.spec.ts",
+      "title": "real prepared and solvated OpenMM states block GROMACS with a direct recovery, and jobs lock switching",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 5833,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 1440\u00d71000",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1429,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 1280\u00d7600",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1311,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 547\u00d7638",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1306,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen keeps the toolbar and its actions usable at 390\u00d7844",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1235,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "fullscreen-header.spec.ts",
+      "title": "fullscreen state follows browser exits and handles an absent API",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 467,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation-progress.spec.ts",
+      "title": "preparation has immediate feedback, survives reopening Studio, and announces the real viewed result",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3765,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation-progress.spec.ts",
+      "title": "preparation readiness blocks incomplete atoms before submission and clears when repair is restored",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3036,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation-progress.spec.ts",
+      "title": "a prepared topology display failure stops the spinner and retries the same real result",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3291,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation.e2e.spec.ts",
+      "title": "sample distance starts hidden; scene and individual controls hide labels while retaining the plot",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 752,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation.e2e.spec.ts",
+      "title": "Studio PDB upload stays beside the live view and exposes known missing loops as an explicit option",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3152,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation.e2e.spec.ts",
+      "title": "Studio MOL2 upload preserves explicit atoms, bonds, and source charges in the viewed molecule",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1402,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "preparation.e2e.spec.ts",
+      "title": "SMILES errors preserve the current scene, then a named 3D conformer loads without leaving Studio",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 753,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: navigation, structure details, library, guide links and modal focus controls",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2273,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: every representation and color choice changes the actual rendered geometry",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 3633,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: mouse camera controls, auto rotation, focus validation and full screen",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 5844,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: timeline boundaries, every speed, loop behavior and keyboard shortcuts",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2150,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: angle and dihedral, atom removal, plot hover and seeking, tab selection and deletion",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1611,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: Escape exits picking after the pick button receives focus",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 418,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: keyboard picking pauses a playing trajectory",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 453,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: real canvas atom hover, click selection, deselection and double-click focus",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 2477,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: invalid hydrogen-bond selection reports a dismissible error and keeps the workspace",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 739,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: import chooser actions, cancel, drag and drop, form bounds and timing override",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1518,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "ui-audit-controls.spec.ts",
+      "title": "audit: Studio source chooser, invalid fetch, all default and advanced configuration controls",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "duration_ms": 1273,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "frontend/src/App.tsx": "c6ff105dd99063bb504bda0cfa63ad000f5445066a33ffea1f460600c9ee5e7d",
+    "frontend/src/components/SimulationPanel.tsx": "d3d91852b722c45b9645529f5a56b73b80ad7a8fec93456bfc8ecdb079d64a40",
+    "frontend/src/components/StructureWorkbench.tsx": "070f1e632ce50141f2ee2c120a7d91665be4028a76548eaa7b9b2d9f96ed9908",
+    "frontend/src/components/ReadinessPanel.tsx": "c011c66463dd37c8451b2a439c04eac9931054ae7eb407d2b3e46fe52ce06520",
+    "frontend/src/styles.css": "b27a65344cace479bae75ea88cd06c7549e42008d4ec9e246fc3043e8b7ef5ef",
+    "frontend/tests/engine-preparation.spec.ts": "45ef8b8e4f00b17ad4bcf953dcdb8c96b37b1d80d2fa8493fc865a296cc1f904"
+  },
+  "backend_guard": "backend/tests/test_preparation.py::test_prepared_gromacs_requires_validated_state_conversion passed; 1 passed, 11 deselected in 0.31s",
+  "limits": [
+    "No MD run or cross-engine conversion/equivalence validation was performed.",
+    "Browser suite uses real small protein preparation/solvation plus clearly identified fault injection for submission locks.",
+    "547px short viewport shows complete engine labels and at least95% of the cards; the panel remains scrollable."
+  ]
+}

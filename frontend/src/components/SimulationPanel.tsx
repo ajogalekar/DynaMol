@@ -34,6 +34,8 @@ const active = (j: Job) => !['completed', 'failed', 'cancelled', 'interrupted'].
 const structureJob = (j: Job) => ['preparation', 'solvation'].includes(j.engine);
 export default function SimulationPanel({
   dataset,
+  engine,
+  onEngineChange,
   health,
   jobs,
   viewerReady,
@@ -46,6 +48,8 @@ export default function SimulationPanel({
   onWaterVisibility,
 }: {
   dataset: Dataset | null;
+  engine: 'openmm' | 'gromacs';
+  onEngineChange: (engine: 'openmm' | 'gromacs') => void;
   health: Health | null;
   jobs: Job[];
   viewerReady: boolean;
@@ -60,8 +64,7 @@ export default function SimulationPanel({
   ) => Promise<void>;
   onWaterVisibility: (show: boolean) => void;
 }) {
-  const [engine, setEngine] = useState<'openmm' | 'gromacs'>('openmm'),
-    [name, setName] = useState('My molecular journey'),
+  const [name, setName] = useState('My molecular journey'),
     [duration, setDuration] = useState(10),
     [temp, setTemp] = useState(300),
     [solvent, setSolvent] = useState<'implicit' | 'explicit'>('implicit'),
@@ -128,6 +131,9 @@ export default function SimulationPanel({
     }
   }, [jobs]);
   const anyActive = jobs.some(active);
+  const engineLocked = busy || anyActive || !!pending || !!submitting || loadingResult;
+  const incompatibleGromacsInput =
+    engine === 'gromacs' && !!(dataset?.preparation || dataset?.solvation);
   const resultSelected = !!monitoredJob?.dataset_id && dataset?.id === monitoredJob.dataset_id;
   const complexPrepared = !!dataset?.preparation?.ligand_parameters;
   const modifiedPrepared = !!dataset?.preparation?.modified_residues?.length;
@@ -228,7 +234,7 @@ export default function SimulationPanel({
     }
   }
   async function previewWater(force = false) {
-    if (!dataset || busy) return;
+    if (!dataset || busy || engine !== 'openmm') return;
     setSolvent('explicit');
     onWaterVisibility(true);
     setError('');
@@ -365,21 +371,6 @@ export default function SimulationPanel({
             <p className="modal-subtitle">
               A few good defaults. All the controls when you need them.
             </p>
-            <StructureWorkbench
-              dataset={dataset}
-              ph={ph}
-              onPh={setPh}
-              seed={seed}
-              locked={busy || anyActive || !!pending || !!submitting || loadingResult}
-              preparing={!!pending && pending.operation === 'preparation'}
-              onDatasetLoaded={onDatasetLoaded}
-              onPreparationStarted={prepared}
-              onPreparationRequest={(starting, requestError) => {
-                setSubmitting(starting ? 'preparation' : null);
-                setMonitorError(requestError ?? '');
-                if (starting) setMonitorId(null);
-              }}
-            />
             <div className="field-heading">
               <span>01</span>
               <h3>Choose your engine</h3>
@@ -395,14 +386,19 @@ export default function SimulationPanel({
                     type="button"
                     key={id}
                     className={`engine-card ${engine === id ? 'selected' : ''}`}
+                    aria-label={id === 'openmm' ? 'OpenMM' : 'GROMACS'}
+                    aria-pressed={engine === id}
                     onClick={() => {
-                      setEngine(id);
+                      if (id === engine) return;
+                      onEngineChange(id);
+                      setError('');
+                      setRunReady(false);
                       if (id === 'gromacs') {
                         setSolvent('explicit');
                         onWaterVisibility(true);
                       }
                     }}
-                    disabled={busy || !!pending}
+                    disabled={engineLocked}
                   >
                     <div className="engine-title">
                       {id === 'openmm' ? <Zap size={18} /> : <Cpu size={18} />}
@@ -411,8 +407,8 @@ export default function SimulationPanel({
                     </div>
                     <span>
                       {id === 'openmm'
-                        ? 'Flexible. Fast to get started.'
-                        : 'The established MD workhorse.'}
+                        ? 'Protein & complex preparation'
+                        : 'Native setup for standard proteins'}
                     </span>
                     <small className={info?.available ? 'available' : ''}>
                       <b />
@@ -427,14 +423,47 @@ export default function SimulationPanel({
                 {selected?.message ?? 'Checking the local engine…'}
               </div>
             )}
-            {engine === 'gromacs' && dataset?.preparation && (
-              <div className="inline-warning">
-                Use OpenMM for this prepared structure. Transferring its protonation states and
-                saved solvent box to the GROMACS preset is not yet supported.
+            <p className="form-note engine-preparation-note">
+              {engine === 'openmm'
+                ? 'Prepare with Amber ff14SB below. Recorded protonation states, supported ligand parameters and the water preview are retained by OpenMM.'
+                : 'GROMACS builds its own Amber99SB-ILDN topology and TIP3P solvent when you start. Its defaults differ from the OpenMM preparation.'}
+            </p>
+            {incompatibleGromacsInput && (
+              <div className="inline-warning engine-compatibility" role="status">
+                This structure has OpenMM preparation or a saved solvent box. DynaMol cannot yet
+                transfer that state to GROMACS. Use OpenMM, or load the original structure for a
+                separate GROMACS setup.
+                <button
+                  type="button"
+                  className="text-button"
+                  disabled={engineLocked}
+                  onClick={() => {
+                    onEngineChange('openmm');
+                    setRunReady(false);
+                  }}
+                >
+                  Use OpenMM for this structure
+                </button>
               </div>
             )}
+            <StructureWorkbench
+              dataset={dataset}
+              engine={engine}
+              ph={ph}
+              onPh={setPh}
+              seed={seed}
+              locked={busy || anyActive || !!pending || !!submitting || loadingResult}
+              preparing={!!pending && pending.operation === 'preparation'}
+              onDatasetLoaded={onDatasetLoaded}
+              onPreparationStarted={prepared}
+              onPreparationRequest={(starting, requestError) => {
+                setSubmitting(starting ? 'preparation' : null);
+                setMonitorError(requestError ?? '');
+                if (starting) setMonitorId(null);
+              }}
+            />
             <div className="field-heading">
-              <span>02</span>
+              <span>03</span>
               <h3>Make it your simulation</h3>
             </div>
             <label className="full-label">
@@ -491,7 +520,7 @@ export default function SimulationPanel({
                 <option value="explicit">Explicit water · periodic box</option>
               </select>
             </label>
-            {(solvent === 'explicit' || engine === 'gromacs') && (
+            {engine === 'openmm' && solvent === 'explicit' && (
               <div className="solvent-preview-card">
                 <Droplets size={17} />
                 <div>
@@ -518,6 +547,19 @@ export default function SimulationPanel({
                 </button>
               </div>
             )}
+            {engine === 'gromacs' && (
+              <div className="solvent-preview-card" aria-label="GROMACS solvent setup">
+                <Droplets size={17} />
+                <div>
+                  <b>TIP3P water · built during native setup</b>
+                  <span>
+                    GROMACS creates its periodic box and adds neutralizing ions after you start.
+                    Follow these stages in Background activity. A separate GROMACS water preview is
+                    not available.
+                  </span>
+                </div>
+              </div>
+            )}
             <p className="form-note">
               {engine === 'openmm'
                 ? modifiedPrepared
@@ -526,8 +568,10 @@ export default function SimulationPanel({
                     ? 'Amber ff14SB protein + GAFF2 / AM1-BCC ligands · TIP3P water · Langevin dynamics. Ligand states and parameters are retained in the saved box.'
                     : 'Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P.'
                 : 'Amber99SB-ILDN · TIP3P water · stochastic dynamics.'}{' '}
-              NVT exploration. Prepare protein–ligand complexes above, then build water and minimize
-              before dynamics.
+              NVT exploration.{' '}
+              {engine === 'openmm'
+                ? 'Prepare protein–ligand complexes above, then build water and minimize before dynamics.'
+                : 'Start with a complete standard protein. This preset does not support prepared ligand complexes or modified-residue parameter bundles.'}
             </p>
             <button
               type="button"
@@ -674,7 +718,7 @@ export default function SimulationPanel({
                 !!submitting ||
                 !!pending ||
                 anyActive ||
-                (engine === 'gromacs' && !!dataset?.preparation) ||
+                incompatibleGromacsInput ||
                 (engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation) ||
                 !dataset ||
                 !selected?.available ||
