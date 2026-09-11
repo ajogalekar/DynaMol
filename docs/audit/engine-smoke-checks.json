@@ -1,0 +1,237 @@
+{
+  "recorded_at": "2026-09-11T00:25:49.352760+00:00",
+  "scope": "Engine execution and artifact consistency checks only; no scientific convergence or engine comparison claim.",
+  "python": "3.12.13",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "software": {
+    "numpy": "2.5.3",
+    "mdtraj": "1.11.1.post1",
+    "openmm": "8.6.0",
+    "fastapi": "0.141.1",
+    "pydantic": "2.13.5",
+    "uvicorn": "0.52.4",
+    "tables": "3.11.1",
+    "pytest": "9.1.1"
+  },
+  "runs": [
+    {
+      "job_id": "1e5a626039224d3c",
+      "dataset_id": "884812abf10049b9",
+      "engine": "openmm",
+      "status": "completed",
+      "frames": 101,
+      "atoms": 1231,
+      "time_range_ps": [
+        0.0,
+        2.0
+      ],
+      "finite_coordinates": true,
+      "strictly_increasing_times": true,
+      "coordinates_change_between_frames": true,
+      "has_unitcell": false,
+      "elapsed_seconds": 162.67,
+      "recorded_output_hashes_verified": 9,
+      "config": {
+        "dataset_id": "ubiquitin-start",
+        "engine": "openmm",
+        "name": "Ubiquitin \u00b7 in motion",
+        "duration_ps": 2.0,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 10,
+        "friction_ps": 1.0,
+        "seed": 2026,
+        "solvent": "implicit",
+        "minimize": true,
+        "equilibration_steps": 100,
+        "padding_nm": 1
+      },
+      "versions": {
+        "openmm": "8.6.0",
+        "mdtraj": "1.11.1.post1",
+        "numpy": "2.5.3"
+      },
+      "provenance_path": "data/jobs/1e5a626039224d3c/provenance.json",
+      "provenance_sha256": "5232a81240ac8c4db097acddcffe23b277b12f30b0d1cb1563fab9bdcc8e9a2c",
+      "worker_log_sha256_at_review": "38f8df26ee6396dfb8b191b120a30b8ffd2b411b9b63137c1ba4594e907a1b6b",
+      "finite_reported_energies": true,
+      "system_particles": 1231,
+      "constraints": 629,
+      "integrator_timestep_fs": 2.0,
+      "integrator_temperature_k": 300.0,
+      "integrator_friction_per_ps": 1.0,
+      "integrator_seed": 2026,
+      "preparation_randomness_note": "Initial bundled demo was generated before preparation RNG seeding was added. Integrator and velocities used seed 2026; hydrogen-preparation randomness was uncontrolled. Prepared coordinates and outputs are retained, but exact rerun equivalence is not claimed."
+    },
+    {
+      "job_id": "b3898c9d78e94214",
+      "dataset_id": "8d9a75b0a5b24458",
+      "engine": "gromacs",
+      "status": "completed",
+      "frames": 6,
+      "atoms": 26842,
+      "time_range_ps": [
+        0.0,
+        0.10000000149011612
+      ],
+      "finite_coordinates": true,
+      "strictly_increasing_times": true,
+      "coordinates_change_between_frames": true,
+      "has_unitcell": true,
+      "elapsed_seconds": 11.94,
+      "recorded_output_hashes_verified": 45,
+      "config": {
+        "dataset_id": "ubiquitin-start",
+        "engine": "gromacs",
+        "name": "GROMACS \u00b7 first motion",
+        "duration_ps": 0.1,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 10,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 50,
+        "padding_nm": 1
+      },
+      "versions": {
+        "openmm": "8.6.0",
+        "mdtraj": "1.11.1.post1",
+        "numpy": "2.5.3"
+      },
+      "provenance_path": "data/jobs/b3898c9d78e94214/provenance.json",
+      "provenance_sha256": "511cf3f7cff57f00a7b6f9b7b5a9af390640f8d2ae92fbb7a79af89bb542551a",
+      "worker_log_sha256_at_review": "f118cd87e6b9dadde3600dceaf50544d68863fca5affbe8b286dad564bea73c2",
+      "engine_version": "2025.4-conda_forge",
+      "subprocess_count": 12,
+      "grompp_warning_override_used": false
+    },
+    {
+      "job_id": "9963ef95444b447e",
+      "dataset_id": "2c7aeeb77f4146fb",
+      "engine": "gromacs",
+      "status": "completed",
+      "frames": 6,
+      "atoms": 26842,
+      "time_range_ps": [
+        0.0,
+        0.10000000149011612
+      ],
+      "finite_coordinates": true,
+      "strictly_increasing_times": true,
+      "has_unitcell": true,
+      "elapsed_seconds": 12.09,
+      "recorded_output_hashes_verified": 46,
+      "config": {
+        "dataset_id": "ubiquitin-start",
+        "engine": "gromacs",
+        "name": "GROMACS \u00b7 solvent preservation check",
+        "duration_ps": 0.1,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 10,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 10,
+        "padding_nm": 1
+      },
+      "versions": {
+        "openmm": "8.6.0",
+        "mdtraj": "1.11.1.post1",
+        "numpy": "2.5.3"
+      },
+      "provenance_path": "data/jobs/9963ef95444b447e/provenance.json",
+      "provenance_sha256": "070c525f57904c714eff481b8b12ec7a49f00ca75ba5691a48744d362222d0fb",
+      "preparation_random_seed": null,
+      "worker_source_sha256": "5e90f0859bd59aafc7eaa2c972152a13eef131b692cb82fb781a941cbcbaafcc"
+    },
+    {
+      "job_id": "a6d4e0ed2f124807",
+      "dataset_id": "8f8dc34d8c314e24",
+      "engine": "openmm",
+      "status": "completed",
+      "frames": 3,
+      "atoms": 18556,
+      "time_range_ps": [
+        0.0,
+        0.02
+      ],
+      "finite_coordinates": true,
+      "strictly_increasing_times": true,
+      "has_unitcell": true,
+      "elapsed_seconds": 51.51,
+      "recorded_output_hashes_verified": 11,
+      "config": {
+        "dataset_id": "4891116c1e3d4c32",
+        "engine": "openmm",
+        "name": "OpenMM explicit-water integration check",
+        "duration_ps": 0.02,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 5,
+        "friction_ps": 1,
+        "seed": 2026,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 10,
+        "padding_nm": 1
+      },
+      "versions": {
+        "openmm": "8.6.0",
+        "mdtraj": "1.11.1.post1",
+        "numpy": "2.5.3"
+      },
+      "provenance_path": "data/integration-checks/jobs/a6d4e0ed2f124807/provenance.json",
+      "provenance_sha256": "080a40727d3cd57624614899da746adfb49718bfcd486e14291bf9f4a327fcbc",
+      "preparation_random_seed": 2026,
+      "worker_source_sha256": "4a14ab76769c9025fc4fedbb73a2e3d35b69460247888db2c846c6461c43cf57",
+      "finite_reported_energies": true
+    }
+  ],
+  "additional_integration_checks": [
+    {
+      "artifact": "data/integration-checks/cancellation-result.json",
+      "sha256": "a514fdb931da13c4a852fa51fa0ee7509a578f6dc245032e38d83c3849a3c422",
+      "reported_result": {
+        "test": "real OpenMM subprocess cancellation",
+        "passed": true,
+        "job_id": "41349098cf9944aa",
+        "worker_pid": 64105,
+        "status": "cancelled"
+      }
+    },
+    {
+      "artifact": "data/integration-checks/explicit-water-result.json",
+      "sha256": "97690a411682b857cdf7288868a44f23a8b30b797ef23aed73ef13651d907e1d",
+      "reported_result": {
+        "test": "real OpenMM explicit-water branch",
+        "passed": true,
+        "id": "a6d4e0ed2f124807",
+        "status": "completed",
+        "dataset_id": "8f8dc34d8c314e24",
+        "elapsed_seconds": 51.51,
+        "n_atoms": 18556,
+        "n_frames": 3,
+        "has_unitcell": true,
+        "times_ps": [
+          0.0,
+          0.01,
+          0.02
+        ]
+      }
+    },
+    {
+      "artifact": "data/integration-checks/gromacs-ion-selection/result.json",
+      "sha256": "0c6573b958677826e363330a71d82dfda8ba983c2346946187520140717e85f3",
+      "reported_result": {
+        "test": "GROMACS new-solvent-only group with actual replacement",
+        "passed": true,
+        "original_atoms_preserved": 1231,
+        "added_ions": 2
+      }
+    }
+  ]
+}

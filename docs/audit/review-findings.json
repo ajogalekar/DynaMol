@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-09-11T00:26:42.107030+00:00",
+  "scope": "Implementation review, not scientific-result validation",
+  "findings": [
+    {
+      "id": "dcd-time",
+      "severity": "high",
+      "finding": "MDTraj DCD reader substitutes frame indices for physical time; imports initially labelled these as ps without warning.",
+      "evidence": "A two/three-frame DCD fixture loaded as 0,1,... regardless of intended .1/.25 ps interval.",
+      "status": "fixed-and-verified",
+      "resolution": "Reader-unavailable timestamp warning and explicit user interval; metadata/UI frame-axis support under implementation."
+    },
+    {
+      "id": "hdf5-dependency",
+      "severity": "medium",
+      "finding": "Advertised HDF5 import unavailable without PyTables.",
+      "evidence": "mdtraj HDF5 writer/import raises missing PyTables exception.",
+      "status": "fixed-and-verified",
+      "resolution": "PyTables installed; HDF5 roundtrip passed."
+    },
+    {
+      "id": "self-describing-identity",
+      "severity": "high",
+      "finding": "PDB trajectory with same atom count but changed atom order could inherit mismatched supplied topology.",
+      "status": "fixed-and-verified",
+      "resolution": "Compare self-describing trajectory atom signatures before replacing topology."
+    },
+    {
+      "id": "mmcif-import",
+      "severity": "medium",
+      "finding": "MDTraj iterload lacks PDBxTrajectoryFile.read_as_traj, breaking advertised mmCIF topology imports.",
+      "evidence": "Four-atom OpenMM PDBxFile-written .cif rejected.",
+      "status": "fixed-and-verified",
+      "resolution": "Use supported format-specific eager loading for mmCIF with caps."
+    },
+    {
+      "id": "torsion-mean",
+      "severity": "medium",
+      "finding": "Ordinary arithmetic mean is misleading across torsion \u00b1180-degree branch cut; plotted connecting segment also implies a long angular change.",
+      "status": "fixed-and-verified",
+      "resolution": "Hide torsion mean or use circular mean; split plot at wraps."
+    },
+    {
+      "id": "nonuniform-time-axis",
+      "severity": "medium",
+      "finding": "Equal frame spacing with physical time labels distorts nonuniform timestamps.",
+      "status": "fixed-and-verified",
+      "resolution": "Plot against actual times with nearest-time seek, or explicitly use frame index axis."
+    },
+    {
+      "id": "periodic-interpolation",
+      "severity": "medium",
+      "finding": "Cartesian interpolation of wrapped coordinates can create artificial periodic crossing paths.",
+      "status": "fixed-by-conservative-scope",
+      "resolution": "Periodic trajectories use saved-frame playback; numeric analysis always uses saved physical frames."
+    },
+    {
+      "id": "initial-preparation-rng",
+      "severity": "medium",
+      "finding": "The initial bundled OpenMM demo preceded Python/NumPy preparation RNG controls.",
+      "status": "documented-limitation-for-initial-demo; fixed-for-new-runs",
+      "resolution": "Provenance explicitly records uncontrolled preparation randomness; prepared coordinates and engine artifacts retained. New jobs seed preparation RNGs; exact replay of old demo not claimed."
+    },
+    {
+      "id": "gromacs-new-water-selection",
+      "severity": "medium",
+      "finding": "Unrestricted solvent neutralization could select input crystal waters; a restricted selection initially used a group name incompatible with nonzero genion replacement.",
+      "status": "fixed-and-verified",
+      "resolution": "Only newly added water atoms are eligible. Full workflow and a separate one-Na/one-Cl replacement check passed, preserving all 1,231 input atoms. See engine-smoke-checks.json."
+    }
+  ],
+  "validation_evidence": [
+    "numerical-checks.json",
+    "plot-checks.json",
+    "engine-smoke-checks.json"
+  ]
+}

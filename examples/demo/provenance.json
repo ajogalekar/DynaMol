@@ -1,0 +1,61 @@
+{
+  "application": "DynaMol 0.1.0",
+  "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.",
+  "config": {
+    "dataset_id": "ubiquitin-start",
+    "engine": "openmm",
+    "name": "Ubiquitin \u00b7 in motion",
+    "duration_ps": 2.0,
+    "temperature_k": 300.0,
+    "timestep_fs": 2.0,
+    "report_interval": 10,
+    "friction_ps": 1.0,
+    "seed": 2026,
+    "solvent": "implicit",
+    "minimize": true,
+    "equilibration_steps": 100,
+    "padding_nm": 1
+  },
+  "input_sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9",
+  "cpu_threads": 2,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post1",
+    "numpy": "2.5.3"
+  },
+  "commands": [],
+  "preparation": [
+    "Added 629 hydrogens using OpenMM templates at pH 7; retained all input atoms. Protonation uses heuristic residue defaults and must be reviewed for scientific studies."
+  ],
+  "forcefield_files": [
+    "amber14/protein.ff14SB.xml",
+    "implicit/gbn2.xml"
+  ],
+  "integrator": "LangevinMiddleIntegrator",
+  "ensemble": "NVT",
+  "solvent": "GBn2 implicit",
+  "ph": 7.0,
+  "platform": "CPU",
+  "timestamp_note": "frame_times_ps.csv and XTC carry exact production times. DCD readers may discard timing; use the sidecar. Final frame can have a shorter interval.",
+  "outputs": {
+    "prepared.pdb": "78e1de33d54e1f4c3bf0122c6c9a4094cd1cdde0d027f692a2cd1ae7bb1e1d0d",
+    "energies.csv": "7e234ff90f6c933c2651ff7e75fa6e7b02a0c0186bb5a4e525ff3083fe6b706e",
+    "trajectory.dcd": "d51aa079c2b1d33e688e9c5f7a09a54b53d5dec0cf4f713d7fd90134e7106635",
+    "input.pdb": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9",
+    "integrator.xml": "168236c63862f5668bd70543f344ace33aec2f23a72a3ba03ea5c5ee2ad3b6e9",
+    "system.xml": "858dea3a601a1c90f7dcb88216bd4beb60adbb2a15285ed5313cd5dc407970ce",
+    "final.pdb": "b30c4d52667c9326d9dee66f89d5467ed769bddf17fd1952b090bd6c68e79e30",
+    "frame_times_ps.csv": "f667b70220845a21e1ec088f8003364049fdeecd2b69ae68ef127a44bcb82a85",
+    "trajectory.xtc": "ed35849df2a39b95b2a1f350da706e6741e3a1be4dce8af2c6949b7cced218c2"
+  },
+  "starting_structure": {
+    "pdb_id": "1UBQ",
+    "source_url": "https://files.rcsb.org/download/1UBQ.pdb",
+    "input_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+    "selection": "protein",
+    "excluded_nonprotein_atoms": 58,
+    "purpose": "Software demonstration only; not a converged MD study."
+  },
+  "job_id": "1e5a626039224d3c",
+  "preparation_randomness_note": "Initial bundled demo was generated before preparation RNG seeding was added. Integrator and velocities used seed 2026; hydrogen-preparation randomness was uncontrolled. Prepared coordinates and outputs are retained, but exact rerun equivalence is not claimed."
+}

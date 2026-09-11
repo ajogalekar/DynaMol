@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-11T01:18:01.944Z",
+  "environment": "Headless Chrome on local Mac, SwiftShader permitted; requestAnimationFrame scheduling while playing bundled nonperiodic demo. Not a cross-device smoothness guarantee.",
+  "requestAnimationFrame_callbacks": 181,
+  "median_ms": 16.699999999999818,
+  "p95_ms": 16.799999999999955,
+  "elapsed_ms": 3016.4999999999995
+}

@@ -1,0 +1,68 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 79,
+  "query": "Where code reproducibility",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2019-05-03T04:44:00.004-07:00",
+      "score": 52.0,
+      "tags": [],
+      "title": "Where's the code? ",
+      "url": "https://practicalcheminformatics.blogspot.com/2019/05/wheres-code.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2026-08-29",
+      "score": 15.0,
+      "tags": [
+        "ADMET",
+        "Machine Learning",
+        "LLM"
+      ],
+      "title": "Let the Agents Do the Benchmarking",
+      "url": "https://patwalters.github.io/Let-the-Agents-Do-the-Benchmarking/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-08T06:48:00.000-08:00",
+      "score": 15.0,
+      "tags": [],
+      "title": "AI in Drug Discovery - A Highly Opinionated Literature Review (Part II) ",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-highly-opinionated.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2018-10-06T18:48:00.001-07:00",
+      "score": 15.0,
+      "tags": [],
+      "title": "My Science/Programming Journey",
+      "url": "https://practicalcheminformatics.blogspot.com/2018/10/my-scienceprogramming-journey.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2026-04-12",
+      "score": 14.0,
+      "tags": [
+        "Index"
+      ],
+      "title": "Practical Cheminformatics Index",
+      "url": "https://patwalters.github.io/Practical-Cheminformatics-Index/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-11-27T06:35:00.000-08:00",
+      "score": 13.0,
+      "tags": [],
+      "title": "Comparing Classification Models - You\u2019re Probably Doing It Wrong",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/11/comparing-classification-models-youre.html"
+    }
+  ],
+  "excerpt_policy": "Metadata only; source text is not reproduced in this project."
+}

@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-09-11T00:25:49.353747+00:00",
+  "note": "Reviewed source snapshot, not a claim these files generated the earlier demo exactly. The first demo predates preparation RNG controls.",
+  "sha256": {
+    "backend/worker.py": "d086c90dfcf69af2ec4a7ca47526a3e1c8ab7b219b5af4ac1ed846185d792bd3",
+    "backend/config.py": "5061c332a68d2c358e56c24fd8b04b5cde1c3146b0f3bf212dcced45d67b7055",
+    "backend/analysis.py": "87329dff012f23372c36262130549fb1023dee56c21f516feedbffbe9b27f521",
+    "backend/models.py": "8bd463827fd970763dcdc3bdbc8d905891e8b27c4c70d8425473ff13ad5c8fd3",
+    "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/jobs.py": "d3b9a314ff80991d5ca75cba9921000f234f210dfb7f8ab98946931e9e24c9d7",
+    "backend/storage.py": "bc88307e04301473ebf3ce4487f773fc8cec3e4f8fc2d660b2ae54dd92c1309f",
+    "backend/main.py": "27e0badcb09f1e536a2ac1fcceaf52d521e1b79dc67afdae24bc54def293cb41",
+    "frontend/src/components/PlotPanel.tsx": "51bec10a0172ec38f4ce6faacf42ec92985c4d259b5181cf6103bb12234c1a79",
+    "frontend/src/components/SimulationPanel.tsx": "c22a5344ef455568ec80eb4db2fb2d3bb0b6f2f3b89c15ec23fcda0eb1853b4c",
+    "frontend/src/components/MolecularViewer.tsx": "34776e7267a4a086da49ce3f9d246e4891ccf8121fdf168e934e949d2504d0f3",
+    "frontend/src/components/viewerGeometry.ts": "c354b5ce60f3774ad1d27e7fe7efc4552966ffcfcb11f5f76e2d6c515d3d47b9",
+    "frontend/src/types.ts": "aaba89dc1eb478ede86847e79f98b3630c37168be44767ff42290dbe7025adee",
+    "pyproject.toml": "a2c483b52da3a220a123572c9cce6763f1283761ecb6d8792a13562b7d0bf548",
+    "frontend/package-lock.json": "f768fee6efb66ba12327ed2bf378e0a3cbef22a2dc3ad2c6fe7c32dd9e2929e7",
+    "scripts/generate_demo.py": "c83a75b945eff93a597ef125455a76988cee0ba6762d1c71d25a341eba4be927"
+  }
+}

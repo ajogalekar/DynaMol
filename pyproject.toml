@@ -1,0 +1,16 @@
+[project]
+name = "dynamol"
+version = "0.1.0"
+description = "A local molecular dynamics studio for OpenMM and GROMACS"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn[standard]>=0.34,<1", "python-multipart>=0.0.20",
+  "numpy>=2,<3", "mdtraj>=1.10,<2", "tables>=3.10,<4", "openmm>=8.2,<9"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.28"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["."]

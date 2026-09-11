@@ -1,0 +1,162 @@
+{
+  "recorded_at": "2026-09-11T01:16:40.846887+00:00",
+  "scope": "Analytic software fixtures only; these do not establish scientific validity or simulation convergence.",
+  "packages": {
+    "numpy": "2.4.6",
+    "mdtraj": "1.11.1.post2",
+    "openmm": "8.6.0"
+  },
+  "checks": [
+    {
+      "name": "nm to Angstrom boundary and canonical atom order",
+      "status": "pass",
+      "evidence": {
+        "stored_distance_nm": 0.1,
+        "display_distance_angstrom": 1,
+        "atom_order": "preserved"
+      }
+    },
+    {
+      "name": "analytic Cartesian distance, angle and signed dihedral",
+      "status": "pass",
+      "evidence": {
+        "distance_angstrom": [
+          1.0
+        ],
+        "angle_degrees": [
+          90.0
+        ],
+        "dihedral_degrees": [
+          90.0
+        ]
+      }
+    },
+    {
+      "name": "periodic minimum-image distance and angle",
+      "status": "pass",
+      "evidence": {
+        "raw_separation_angstrom": 9,
+        "minimum_image_angstrom": [
+          1.000000238418579
+        ],
+        "angle_degrees": [
+          90.0
+        ],
+        "triclinic_minimum_image_angstrom": [
+          1.1180342435836792
+        ]
+      }
+    },
+    {
+      "name": "explicit donor-H connectivity and geometric occupancy",
+      "status": "pass",
+      "evidence": {
+        "distances_angstrom": [
+          3.0,
+          4.0
+        ],
+        "occupancy": 0.5,
+        "unbonded_donor_rejected": "The selected hydrogen is not bonded to the donor in the topology."
+      }
+    },
+    {
+      "name": "undefined geometry and invalid indices rejected",
+      "status": "pass",
+      "evidence": {
+        "dihedral": "A selected dihedral contains collinear bonds in at least one frame; its torsion is undefined.",
+        "duplicate_indices": "Select 3 distinct atoms for a angle measurement.",
+        "outside_topology": "An atom index is outside the selected topology."
+      }
+    },
+    {
+      "name": "supported format round trips and DCD timestamp override",
+      "status": "pass",
+      "evidence": {
+        "pdb": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            1.0
+          ]
+        },
+        "gro": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            1.0
+          ]
+        },
+        "xtc": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            0.25
+          ]
+        },
+        "trr": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            0.25
+          ]
+        },
+        "nc": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            0.25
+          ]
+        },
+        "h5": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            0.25
+          ]
+        },
+        "xyz": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            1.0
+          ]
+        },
+        "dcd": {
+          "frames": 2,
+          "coordinate_roundtrip": "pass",
+          "times": [
+            0.0,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "self-describing trajectory identity mismatch rejected",
+      "status": "pass",
+      "evidence": {
+        "same_count_reordered_names": "Could not read the molecular files: Atom identities or ordering differ between the supplied topology and the self-describing trajectory."
+      }
+    },
+    {
+      "name": "OpenMM-written mmCIF import",
+      "status": "pass",
+      "evidence": {
+        "atoms": 4,
+        "coordinate_roundtrip": "pass",
+        "warnings": [
+          "Physical timestamps are unavailable from this file/reader; values are original frame indices, not measured picoseconds. Supply a frame interval for time-based interpretation."
+        ]
+      }
+    }
+  ],
+  "passed": 8,
+  "failed": 0
+}

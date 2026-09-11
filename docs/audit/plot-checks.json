@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-09-11T01:16:40.941Z",
+  "scope": "Analytic chart calculations only; these tests do not assess MD convergence.",
+  "node_version": "v22.17.0",
+  "source_sha256": "2cd9eae6ccb228d091c27568053e27ac52b3afd886100ec46bd8b7e4252f5213",
+  "checks": [
+    {
+      "name": "Nonuniform timestamps determine x positions and nearest-time seek",
+      "status": "pass",
+      "evidence": {
+        "middleFrameFraction": 0.1,
+        "seekAt50Percent": 1,
+        "seekAt70Percent": 2
+      }
+    },
+    {
+      "name": "Torsion mean and segments respect the branch cut",
+      "status": "pass",
+      "evidence": {
+        "circularMeanDegrees": 180,
+        "segments": 2
+      }
+    },
+    {
+      "name": "A zero circular resultant has no reported mean",
+      "status": "pass",
+      "evidence": {
+        "circularMean": null
+      }
+    },
+    {
+      "name": "Nonmonotonic times explicitly fall back to frame index",
+      "status": "pass",
+      "evidence": {
+        "caption": "Frame index (timestamps are not ordered)"
+      }
+    },
+    {
+      "name": "Unknown physical time uses a frame label",
+      "status": "pass",
+      "evidence": {
+        "caption": "Original frame index (time not supplied)"
+      }
+    },
+    {
+      "name": "Single-frame plot remains finite and seekable",
+      "status": "pass",
+      "evidence": {
+        "ticks": 1
+      }
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

@@ -1,0 +1,167 @@
+.molecular-viewer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  background: #0b121b;
+  isolation: isolate;
+}
+.molecular-viewer__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  outline: none;
+}
+.molecular-viewer__canvas:active {
+  cursor: grabbing;
+}
+.molecular-viewer--picking .molecular-viewer__canvas {
+  cursor: crosshair;
+}
+.molecular-viewer__canvas canvas {
+  display: block;
+  outline: none;
+}
+.molecular-viewer__tooltip {
+  display: none;
+  position: absolute;
+  z-index: 8;
+  pointer-events: none;
+  padding: 8px 11px;
+  border: 1px solid #304658;
+  border-radius: 7px;
+  background: #142333ed;
+  color: #dce9f4;
+  font-size: 11px;
+  line-height: 1.5;
+  box-shadow: 0 8px 24px #0004;
+  white-space: nowrap;
+}
+.molecular-viewer__status {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px;
+  color: #8192a6;
+  text-align: center;
+  background: #0b121b;
+  font-size: 12px;
+}
+.molecular-viewer__status strong {
+  color: #dce5ed;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+.molecular-viewer__status > span:last-child {
+  max-width: 350px;
+  line-height: 1.7;
+}
+.molecular-viewer__status--empty {
+  background: radial-gradient(ellipse at 50% 40%, #132d344d, transparent 50%);
+}
+.molecular-viewer__status--empty strong {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -0.7px;
+}
+.molecular-viewer__status--error strong {
+  color: #f3b998;
+}
+.molecular-viewer__spinner {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #21343e;
+  border-top-color: #64ceba;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  animation: molecular-viewer-spin 1s linear infinite;
+}
+.molecular-viewer__orbit {
+  position: relative;
+  width: 105px;
+  height: 105px;
+  margin-bottom: 14px;
+}
+.molecular-viewer__orbit i {
+  position: absolute;
+  inset: 20px 0;
+  border: 1px solid #65ccba75;
+  border-radius: 50%;
+  transform: rotate(-25deg);
+}
+.molecular-viewer__orbit i:nth-child(2) {
+  transform: rotate(35deg);
+  border-color: #78a6d775;
+}
+.molecular-viewer__orbit i:nth-child(3) {
+  transform: rotate(95deg);
+  border-color: #9892d075;
+}
+.molecular-viewer__orbit:after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 48px;
+  top: 47px;
+  background: #79d6c4;
+  border-radius: 50%;
+  box-shadow: 0 0 24px #64ceba80;
+}
+.molecular-viewer__measurement {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  visibility: hidden;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 5px 8px;
+  border: 1px solid;
+  border-radius: 6px;
+  background: #0d1a28e8;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  pointer-events: auto;
+  box-shadow: 0 3px 12px #0003;
+}
+.molecular-viewer__measurement > span {
+  color: #adbecb;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+}
+.molecular-viewer__measurement > strong {
+  font-weight: 600;
+}
+.molecular-viewer__periodic-note {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  z-index: 3;
+  font-size: 10px;
+  letter-spacing: 0.15px;
+  color: #74879b;
+  pointer-events: auto;
+}
+@keyframes molecular-viewer-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .molecular-viewer__spinner {
+    animation: none;
+  }
+}

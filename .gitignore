@@ -1,0 +1,17 @@
+.venv/
+.gromacs/
+.tools/
+data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log

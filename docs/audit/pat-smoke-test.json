@@ -1,0 +1,19 @@
+{
+  "agent_version": "0.1.0",
+  "ok": true,
+  "tests": {
+    "deliberately_flawed_pipeline_fixture": "blocked",
+    "embedded_image_payload_stripping": "pass",
+    "evidence_catalog": 17,
+    "guest_post_attribution": "pass",
+    "passing_pipeline_fixture": "pass",
+    "required_blockers_detected": [
+      "baseline",
+      "duplicate-conflicts",
+      "provenance",
+      "split-overlap",
+      "structure-parse",
+      "test-untouched"
+    ]
+  }
+}

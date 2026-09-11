@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-dynamics",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "purpose": "Build and smoke-test a local open-source MD creation, trajectory display, and geometric analysis app. A short OpenMM ubiquitin demo demonstrates integration only; no equilibrium, affinity, stability, mechanistic, or comparative engine claims are proposed.",
+  "created_at": "2026-09-10T23:52:18.362536+00:00",
+  "scope": {
+    "scientific_claims": false,
+    "expensive_compute": false,
+    "engines": [
+      "OpenMM",
+      "GROMACS"
+    ],
+    "intended_compute": "Short single-replica real protein trajectory plus deterministic software fixtures",
+    "review_identity": "Language-model code/evidence review; PatAgent is an automated checklist inspired by public writings, not Pat Walters or domain-expert validation."
+  },
+  "reproducibility": {
+    "inputs_versioned": true,
+    "evidence": {
+      "api_contract_sha256": "31785469424ec1a59cb5b31ddb07814c3e6722877c87736f53b0bc76f900f704",
+      "runtime_at_preflight": "3.14.6"
+    },
+    "pending": [
+      "Record engine/library versions, actual preparation, seeds, input/output checksums, configuration, logs, runtime, platform and exclusions for any run."
+    ]
+  },
+  "scientific_review_plan": [
+    "Check Angstrom/nanometer and ps/fs conversions at every API boundary.",
+    "Check trajectory/topology ordering, zero-based atom picks, caps, finite coordinates, time metadata, trajectory mismatches.",
+    "Use raw saved coordinates for geometric measurements, periodic minimum-image geometry when box metadata are valid.",
+    "Keep display interpolation separate from physical measurements; prevent interpolation across periodic wraps.",
+    "Document hydrogen bond as D-A <= 3.5 Angstrom and D-H-A >= 150 degrees, explicit bonded hydrogen and donor/acceptor element screening; occupancy is geometric only.",
+    "Report fixed engine force fields, solvent method, constraints, thermostat, integration step and initialization; do not silently remove unsupported ligands.",
+    "Document short-demo absence of convergence and independent replicas."
+  ],
+  "validation": {
+    "status": "preflight; code and executable run artifacts pending"
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No scientific engine-performance comparison or statistical inference proposed."
+  }
+}

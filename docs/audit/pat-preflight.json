@@ -1,0 +1,97 @@
+{
+  "agent": "PatAgent",
+  "agent_version": "0.1.0",
+  "blocking_gates": [],
+  "counts": {
+    "fail": 0,
+    "pass": 2,
+    "unresolved": 2
+  },
+  "decision": "proceed_with_warnings",
+  "decision_context": "exploratory",
+  "disclaimer": "PatAgent is not Pat Walters and does not speak for him.",
+  "gates": [
+    {
+      "detail": "documented",
+      "evidence": [
+        {
+          "id": "evaluation-guidelines-2022",
+          "title": "Evaluation Guidelines for Machine Learning Tools in the Chemical Sciences",
+          "url": "https://www.nature.com/articles/s41570-022-00391-9"
+        }
+      ],
+      "field": "purpose",
+      "id": "purpose-defined",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Decision and use case are defined"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.inputs_versioned",
+      "id": "inputs-versioned",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Inputs are versioned and traceable"
+    },
+    {
+      "detail": "required field was not supplied",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.software_versions_recorded",
+      "id": "software-recorded",
+      "remediation": "Capture package, model, database, and environment versions.",
+      "severity": "critical",
+      "status": "unresolved",
+      "title": "Software versions and environment are recorded"
+    },
+    {
+      "detail": "required field was not supplied",
+      "evidence": [
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        },
+        {
+          "id": "method-comparison-2025",
+          "title": "Practically Significant Method Comparison Protocols for Machine Learning in Small Molecule Drug Discovery",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40932128/"
+        }
+      ],
+      "field": "reproducibility.random_seeds_recorded",
+      "id": "seeds-recorded",
+      "remediation": "Record every seed and nondeterministic backend setting.",
+      "severity": "major",
+      "status": "unresolved",
+      "title": "Random seeds are recorded"
+    }
+  ],
+  "identity": "independent evidence-linked reviewer inspired by Pat Walters's public writings",
+  "pipeline_type": "molecular-dynamics",
+  "stage": "preflight"
+}

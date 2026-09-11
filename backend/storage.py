@@ -1,0 +1,179 @@
+"""Canonical MDTraj storage; analysis always uses original physical coordinates."""
+import json
+import re
+import uuid
+from pathlib import Path
+
+import mdtraj as md
+import numpy as np
+
+from . import config
+
+WATERS = {"HOH", "WAT", "SOL", "TIP3", "TIP3P"}
+IONS = {"NA", "CL", "K", "CA", "MG", "ZN", "SOD", "CLA", "POT", "CAL"}
+TOPOLOGY_EXTENSIONS = {".pdb", ".pdbx", ".cif", ".mmcif", ".gro", ".h5", ".hdf5"}
+TRAJECTORY_EXTENSIONS = {".dcd", ".xtc", ".trr", ".nc", ".netcdf", ".pdb", ".h5", ".hdf5", ".mdcrd", ".crd", ".lammpstrj", ".xyz"}
+
+
+def safe_id(value: str) -> str:
+    if not re.fullmatch(r"[A-Za-z0-9_-]{1,80}", value):
+        raise ValueError("Invalid identifier.")
+    return value
+
+
+def atomic_json(path: Path, payload):
+    temporary = path.with_suffix(path.suffix + "." + uuid.uuid4().hex + ".tmp")
+    temporary.write_text(json.dumps(payload, indent=2, allow_nan=False))
+    temporary.replace(path)
+
+
+def dataset_dir(dataset_id: str) -> Path:
+    return config.DATASETS_DIR / safe_id(dataset_id)
+
+
+def get_dataset(dataset_id: str) -> dict:
+    path = dataset_dir(dataset_id) / "metadata.json"
+    if not path.exists():
+        raise FileNotFoundError(f"Dataset '{dataset_id}' was not found.")
+    return json.loads(path.read_text())
+
+
+def list_datasets() -> list[dict]:
+    results = []
+    for path in sorted(config.DATASETS_DIR.glob("*/metadata.json"), key=lambda p: p.stat().st_mtime, reverse=True):
+        try:
+            meta = json.loads(path.read_text())
+            results.append({**meta, "atoms": [], "bonds": []})
+        except (ValueError, OSError):
+            continue
+    return results
+
+
+def load_physical(dataset_id: str) -> md.Trajectory:
+    folder = dataset_dir(dataset_id)
+    get_dataset(dataset_id)
+    with np.load(folder / "physical.npz", allow_pickle=False) as data:
+        top = md.load_topology(str(folder / "topology.pdb"))
+        traj = md.Trajectory(data["xyz"], top, time=data["time"])
+        if "lengths" in data:
+            traj.unitcell_lengths = data["lengths"]
+            traj.unitcell_angles = data["angles"]
+    return traj
+
+
+def check_size(traj: md.Trajectory):
+    if traj.n_atoms == 0 or traj.n_frames == 0:
+        raise ValueError("The file contains no atoms or frames.")
+    if traj.n_atoms > config.MAX_ATOMS:
+        raise ValueError(f"Too many atoms: the local viewer supports at most {config.MAX_ATOMS:,} atoms.")
+    if traj.n_frames > config.MAX_FRAMES or traj.xyz.nbytes > config.MAX_COORD_BYTES:
+        raise ValueError("Trajectory is too large for this local viewer. Increase stride or trim the trajectory (10,000 frames and 256 MiB of coordinates maximum).")
+    if not np.isfinite(traj.xyz).all():
+        raise ValueError("The trajectory contains non-finite coordinates.")
+    if not np.isfinite(traj.time).all():
+        raise ValueError("The trajectory contains non-finite timestamps.")
+
+
+def load_uploaded(topology: Path, trajectory: Path | None, stride: int, frame_interval_ps: float | None) -> tuple[md.Trajectory, list[str]]:
+    if topology.suffix.lower() not in TOPOLOGY_EXTENSIONS:
+        raise ValueError("Supported topology formats: PDB, mmCIF, GRO, and MDTraj HDF5.")
+    if trajectory and trajectory.suffix.lower() not in TRAJECTORY_EXTENSIONS:
+        raise ValueError("Supported trajectory formats: DCD, XTC, TRR, NetCDF, PDB, HDF5, MDCRD, LAMMPS, and XYZ.")
+    warnings = []
+    source = trajectory or topology
+    kwargs = {} if source.suffix.lower() in {".pdb", ".cif", ".mmcif", ".pdbx", ".h5", ".hdf5"} else {"top": str(topology)}
+    # Chunked decoding enforces caps before retaining the whole trajectory in memory.
+    try:
+        chunks = []
+        frames = 0
+        size = 0
+        reader = [md.load(str(source))[::stride]] if source.suffix.lower() in {".cif", ".mmcif", ".pdbx"} else md.iterload(str(source), chunk=100, stride=stride, **kwargs)
+        for chunk in reader:
+            check_size(chunk)
+            frames += chunk.n_frames
+            size += chunk.xyz.nbytes
+            if frames > config.MAX_FRAMES or size > config.MAX_COORD_BYTES:
+                raise ValueError("Trajectory exceeds the local memory cap. Increase stride or trim the file (10,000 frames / 256 MiB coordinates).")
+            chunks.append(chunk)
+        if not chunks:
+            raise ValueError("The selected file has no readable frames.")
+        traj = md.join(chunks, check_topology=True)
+        if trajectory:
+            provided_topology = md.load_topology(str(topology))
+            if provided_topology.n_atoms != traj.n_atoms:
+                raise ValueError("Topology and trajectory have different atom counts; use matching files in the same atom order.")
+            if source.suffix.lower() in {".pdb", ".cif", ".mmcif", ".pdbx", ".h5", ".hdf5"}:
+                def signature(top):
+                    return [(a.name, a.residue.name, a.residue.resSeq, a.residue.chain.chain_id or a.residue.chain.index) for a in top.atoms]
+                if signature(provided_topology) != signature(traj.topology):
+                    raise ValueError("Atom identities or ordering differ between the supplied topology and the self-describing trajectory.")
+            traj.topology = provided_topology
+    except Exception as exc:
+        raise ValueError(f"Could not read the molecular files: {exc}") from exc
+    if frame_interval_ps is not None:
+        if not np.isfinite(frame_interval_ps) or frame_interval_ps <= 0:
+            raise ValueError("Frame interval must be a positive number of picoseconds.")
+        traj.time = np.arange(traj.n_frames, dtype=float) * frame_interval_ps * stride
+        warnings.append(f"Timestamps supplied by user: {frame_interval_ps:g} ps per original frame (stride {stride}).")
+    elif source.suffix.lower() in {".pdb", ".gro", ".cif", ".mmcif", ".pdbx", ".dcd", ".xyz", ".mdcrd", ".crd", ".lammpstrj"}:
+        traj.time = np.arange(traj.n_frames, dtype=float) * stride
+        warnings.append("Physical timestamps are unavailable from this file/reader; values are original frame indices, not measured picoseconds. Supply a frame interval for time-based interpretation.")
+    if trajectory:
+        warnings.append("Atom counts checked. Binary trajectories cannot verify atom identities: the topology must use the same atom ordering.")
+    check_size(traj)
+    return traj, warnings
+
+
+def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, warnings: list[str] | None = None, dataset_id: str | None = None, provenance: dict | None = None) -> dict:
+    check_size(traj)
+    dataset_id = safe_id(dataset_id or uuid.uuid4().hex[:16])
+    folder = dataset_dir(dataset_id)
+    folder.mkdir(parents=True, exist_ok=True)
+    warnings = list(warnings or [])
+    physical = {"xyz": traj.xyz.astype(np.float32), "time": np.asarray(traj.time, dtype=np.float64)}
+    has_cell = traj.unitcell_vectors is not None and bool(np.all(np.isfinite(traj.unitcell_vectors))) and bool(np.all(traj.unitcell_volumes > 0))
+    if has_cell:
+        physical.update(lengths=traj.unitcell_lengths, angles=traj.unitcell_angles)
+    else:
+        traj.unitcell_vectors = None
+        warnings.append("No periodic box: measurements use ordinary Cartesian geometry.")
+    np.savez_compressed(folder / "physical.npz", **physical)
+    traj[0].save_pdb(str(folder / "topology.pdb"))
+    # PDB round trip avoids metadata and measurement connectivity disagreeing.
+    canonical = md.load_topology(str(folder / "topology.pdb"))
+    traj.topology = canonical
+    display = traj.slice(slice(None), copy=True)
+    if has_cell:
+        try:
+            molecules = display.topology.find_molecules()
+            largest = max(molecules, key=len)
+            display.image_molecules(anchor_molecules=[largest], inplace=True)
+            warnings.append("Viewer molecules are made whole across periodic boundaries; analysis uses the original coordinates with minimum-image geometry.")
+        except Exception:
+            warnings.append("Periodic imaging unavailable for this topology; molecules may cross display box edges.")
+    protein_ca = np.array([a.index for a in canonical.atoms if a.residue.is_protein and a.name == "CA"], dtype=int)
+    if len(protein_ca) >= 3:
+        display.superpose(display, 0, atom_indices=protein_ca, parallel=False)
+        warnings.append("Display frames are aligned on protein alpha carbons; plotted geometry uses unaligned simulation frames.")
+    else:
+        display.xyz -= display.xyz[0].mean(axis=0)[None, None, :]
+    (display.xyz * 10).astype("<f4").tofile(folder / "coordinates.bin")
+    bonds = [[a.index, b.index] for a, b in canonical.bonds]
+    adjacency: dict[int, list[int]] = {}
+    for a, b in bonds:
+        adjacency.setdefault(a, []).append(b)
+        adjacency.setdefault(b, []).append(a)
+    atom_list = list(canonical.atoms)
+    atoms = []
+    for atom in atom_list:
+        element = atom.element.symbol if atom.element else "X"
+        residue = atom.residue
+        category = "protein" if residue.is_protein else "nucleic" if residue.is_nucleic else "water" if residue.name.upper() in WATERS else "ions" if residue.name.upper() in IONS and residue.n_atoms == 1 else "ligands"
+        atoms.append({"index": atom.index, "name": atom.name, "element": element, "residue": residue.name, "resid": residue.resSeq, "chain": residue.chain.chain_id or str(residue.chain.index + 1), "category": category,
+                      "nonpolar_hydrogen": element == "H" and any(atom_list[b].element and atom_list[b].element.symbol == "C" for b in adjacency.get(atom.index, []))})
+    metadata = {"id": dataset_id, "name": name, "n_atoms": traj.n_atoms, "n_residues": traj.n_residues, "n_frames": traj.n_frames, "times_ps": traj.time.tolist(), "time_unit": "frame" if any("Physical timestamps are unavailable" in w for w in warnings) else "ps", "source": source, "description": description,
+                "topology_url": f"/api/datasets/{dataset_id}/topology", "coordinates_url": f"/api/datasets/{dataset_id}/coordinates", "atoms": atoms, "bonds": bonds, "has_unitcell": has_cell, "warnings": warnings}
+    atomic_json(folder / "metadata.json", metadata)
+    if provenance:
+        atomic_json(folder / "provenance.json", provenance)
+    return metadata

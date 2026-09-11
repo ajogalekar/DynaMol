@@ -1,0 +1,163 @@
+{
+  "agent": "PatAgent",
+  "agent_version": "0.1.0",
+  "blocking_gates": [
+    "uncertainty",
+    "md-convergence"
+  ],
+  "counts": {
+    "fail": 3,
+    "pass": 4,
+    "unresolved": 0
+  },
+  "decision": "block",
+  "decision_context": "exploratory",
+  "disclaimer": "PatAgent is not Pat Walters and does not speak for him.",
+  "gates": [
+    {
+      "detail": "documented",
+      "evidence": [
+        {
+          "id": "evaluation-guidelines-2022",
+          "title": "Evaluation Guidelines for Machine Learning Tools in the Chemical Sciences",
+          "url": "https://www.nature.com/articles/s41570-022-00391-9"
+        }
+      ],
+      "field": "purpose",
+      "id": "purpose-defined",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Decision and use case are defined"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.inputs_versioned",
+      "id": "inputs-versioned",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Inputs are versioned and traceable"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.software_versions_recorded",
+      "id": "software-recorded",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Software versions and environment are recorded"
+    },
+    {
+      "detail": "explicitly false",
+      "evidence": [
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        },
+        {
+          "id": "method-comparison-2025",
+          "title": "Practically Significant Method Comparison Protocols for Machine Learning in Small Molecule Drug Discovery",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40932128/"
+        }
+      ],
+      "field": "reproducibility.random_seeds_recorded",
+      "id": "seeds-recorded",
+      "remediation": "Record every seed and nondeterministic backend setting.",
+      "severity": "major",
+      "status": "fail",
+      "title": "Random seeds are recorded"
+    },
+    {
+      "detail": "explicitly false",
+      "evidence": [
+        {
+          "id": "classification-tutorial-2022",
+          "title": "Comparing Classification Models - A Practical Tutorial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34549368/"
+        },
+        {
+          "id": "getting-real-2023",
+          "title": "Getting Real with Molecular Property Prediction",
+          "url": "https://practicalcheminformatics.blogspot.com/2023/06/getting-real-with-molecular-property.html"
+        },
+        {
+          "id": "method-comparison-2025",
+          "title": "Practically Significant Method Comparison Protocols for Machine Learning in Small Molecule Drug Discovery",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40932128/"
+        }
+      ],
+      "field": "comparison.uncertainty_intervals_reported",
+      "id": "uncertainty",
+      "remediation": "Report fold/run distributions and confidence intervals, not only mean metrics.",
+      "severity": "critical",
+      "status": "fail",
+      "title": "Metrics include uncertainty distributions"
+    },
+    {
+      "detail": "explicitly false",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        }
+      ],
+      "field": "modeling.replicates_and_convergence_reported",
+      "id": "md-convergence",
+      "remediation": "Run independent replicas and report equilibration, convergence, uncertainty, and sensitivity.",
+      "severity": "critical",
+      "status": "fail",
+      "title": "Replicates and convergence are reported"
+    },
+    {
+      "detail": "confirmed",
+      "evidence": [
+        {
+          "id": "reproducibility-2013",
+          "title": "Modeling, Informatics, and the Quest for Reproducibility",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23758509/"
+        },
+        {
+          "id": "code-sharing-2020",
+          "title": "Code Sharing in the Open Science Era",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32937075/"
+        }
+      ],
+      "field": "reproducibility.outputs_and_exclusions_recorded",
+      "id": "outputs-traceable",
+      "remediation": null,
+      "severity": "critical",
+      "status": "pass",
+      "title": "Outputs and exclusions are traceable"
+    }
+  ],
+  "identity": "independent evidence-linked reviewer inspired by Pat Walters's public writings",
+  "pipeline_type": "molecular-dynamics",
+  "stage": "postflight"
+}

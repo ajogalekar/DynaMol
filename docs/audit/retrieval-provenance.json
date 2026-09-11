@@ -1,0 +1,10 @@
+{
+  "retrieved_utc": "2026-09-10T23:53:23.730922+00:00",
+  "method": "server.py sync-corpus then search on complete indexed public corpus",
+  "queries": [
+    "molecular dynamics reproducibility simulation trajectories",
+    "software testing validation code sharing molecular modeling",
+    "Where code reproducibility"
+  ],
+  "notes": "Relevance search is not an MD-specific validation source; use primary package docs for numerical and engine details."
+}

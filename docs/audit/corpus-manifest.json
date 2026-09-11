@@ -1,0 +1,17 @@
+{
+  "agent": "pat-agent",
+  "attribution_note": "Guest posts remain searchable but are marked guest and must not be represented as Pat Walters's own views.",
+  "authorship_counts": {
+    "guest": 1,
+    "pat-authored": 90
+  },
+  "corpus_path": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "coverage": "complete public Practical Cheminformatics archive at sync time",
+  "records": 91,
+  "schema_version": "1.0",
+  "sha256": "94c4e606024cb41e5cb89510ee8acdd7e932a6fa8eb14b67dcc16ab1d22a08f1",
+  "source_counts": {
+    "blogger": 74,
+    "github-pages": 17
+  }
+}

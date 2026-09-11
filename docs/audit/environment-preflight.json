@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-09-10T23:57:16.939475+00:00",
+  "python": "3.12.13",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "mdtraj": "1.11.1.post1",
+    "openmm": "8.6.0",
+    "fastapi": "0.141.1",
+    "uvicorn": "0.52.4",
+    "tables": "3.11.1",
+    "pydantic": "2.13.5",
+    "pytest": "9.1.1",
+    "httpx": "0.28.1"
+  },
+  "note": "Preflight runtime snapshot; refresh after install and executable tests."
+}
