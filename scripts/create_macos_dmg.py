@@ -182,7 +182,7 @@ def create(args: argparse.Namespace) -> dict:
               'script_sha256': sha(Path(__file__)), 'app_inventory': str(app_inventory),
               'app_inventory_sha256': sha(app_inventory), 'app_entries_checked': len(expected),
               'app_tree_sha256': inventory_hash(expected), 'volume_name': args.volume_name,
-              'finder_layout': False, 'unsigned': True,
+              'finder_layout': False, 'unsigned': True, 'filesystem': 'APFS',
               'checks': {'input_app_signature_integrity': True}}
     # Keep app copies away from document-sync/Finder surfaces that can attach
     # presentation metadata during signing or copying. Only the finished disk
@@ -202,7 +202,7 @@ def create(args: argparse.Namespace) -> dict:
         compressed = temp / 'installer.dmg'
         print('Creating the compressed read-only disk image...', flush=True)
         run(HDIUTIL, 'create', '-srcfolder', staging, '-volname', args.volume_name,
-            '-fs', 'HFS+', '-format', 'UDZO', '-imagekey', 'zlib-level=9', '-nospotlight', compressed)
+            '-fs', 'APFS', '-format', 'UDZO', '-imagekey', 'zlib-level=9', '-nospotlight', compressed)
         run(HDIUTIL, 'verify', compressed, capture_output=True)
         image_info = plistlib.loads(run(HDIUTIL, 'imageinfo', '-plist', compressed, capture_output=True).stdout)
         if image_info.get('Format') != 'UDZO':
