@@ -8,7 +8,9 @@ DynaMol is a free **v0.1 early release**, built with React, NGL, FastAPI, MDTraj
 
 ## Start exploring
 
-**[Download DynaMol for Mac](https://github.com/ajogalekar/DynaMol/releases/download/v0.1.0/DynaMol-0.1.0-macos-arm64.dmg)** — Apple Silicon, macOS 14 or newer.
+**Mac installer temporarily unavailable.** The v0.1.0 download has been withdrawn because a packaging signature error can cause macOS to report “DynaMol is damaged.” Source code and documentation remain available; you can [run from source](#run-from-source).
+
+The installation steps below are retained as a guide for Apple Silicon on macOS 14 or newer. The installer download is currently unavailable.
 
 1. Download and open `DynaMol-0.1.0-macos-arm64.dmg`.
 2. Drag **DynaMol** into **Applications**.
