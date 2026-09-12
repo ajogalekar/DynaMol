@@ -264,7 +264,7 @@ def test_poll_endpoint_only_reads_snapshot_and_overlays_current_status(tmp_path,
     storage.atomic_json(folder / "status.json", job)
     monkeypatch.setattr(live, "load_physical", lambda *args: pytest.fail("Polling cannot read trajectories"))
     monkeypatch.setattr(live, "_measure", lambda *args: pytest.fail("Polling cannot calculate geometry"))
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.get(f"/api/jobs/{job['id']}/measurements")
     assert response.status_code == 200
     result = response.json()

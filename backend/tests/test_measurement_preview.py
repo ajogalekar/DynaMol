@@ -61,7 +61,7 @@ def test_preview_preserves_valid_frames_when_other_frames_degenerate(monkeypatch
     assert 'collinear' in result['frame_errors'][2]
     with pytest.raises(ValueError, match='coincident'):
         analysis.measure('fixture', request)
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.post('/api/datasets/fixture/measurement-preview', json=request.model_dump())
     assert response.status_code == 200
     assert response.json()['values'][1:] == [None, None]
@@ -86,7 +86,7 @@ def test_hbond_preview_includes_current_geometry_without_claiming_chemistry(monk
 @pytest.mark.parametrize('atoms', [[0, 0], [-1, 1], [0, 5], [0, 1, 2]])
 def test_preview_rejects_invalid_selection(atoms, monkeypatch):
     monkeypatch.setattr(analysis, 'load_physical', lambda _: trajectory([[[0, 0, 0], [.1, 0, 0], [.1, .1, 0], [.1, .1, .1]]]))
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.post('/api/datasets/fixture/measurement-preview', json={'kind': 'distance', 'atoms': atoms})
     assert response.status_code == 422
 

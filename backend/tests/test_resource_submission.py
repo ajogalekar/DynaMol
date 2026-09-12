@@ -40,7 +40,7 @@ def test_resource_blockers_match_readiness_and_actual_http_submission(input_syst
     assert not displayed['ready']
     assert displayed['blockers'] == rejected.value.blockers
     assert displayed['resources'] == rejected.value.resources
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.post('/api/jobs', json=settings.model_dump())
     assert response.status_code == 422 and expected in response.json()['detail']
     assert list(config.JOBS_DIR.iterdir()) == []
@@ -62,7 +62,7 @@ def test_unavailable_storage_check_does_not_silently_start(input_system, monkeyp
     def unavailable(_):
         raise OSError('Injected unavailable volume')
     monkeypatch.setattr(resources.shutil, 'disk_usage', unavailable)
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.post('/api/jobs', json={'dataset_id': input_system['id']})
     assert response.status_code == 422 and 'Resource availability could not be checked' in response.json()['detail']
     assert list(config.JOBS_DIR.iterdir()) == []

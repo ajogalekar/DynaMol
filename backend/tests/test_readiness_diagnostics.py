@@ -40,7 +40,7 @@ def test_diagnostics_reject_nonfinite_fractional_or_negative_steps(monkeypatch):
     monkeypatch.setattr(jobs,'get_job',lambda _:job_record())
     folder=config.JOBS_DIR/'diag';folder.mkdir()
     (folder/'energies.csv').write_text('step,time_ps,potential_kj_mol\ninf,0,-5\n1e999,0,-5\n-1,0,-5\n.5,0,-5\n1,-.2,-5\n2,0.004,-4\n')
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response=client.get('/api/jobs/diag/diagnostics')
     assert response.status_code==200
     result=response.json()
@@ -75,7 +75,7 @@ def test_job_download_is_private_snapshot_and_cleans_tempfile(monkeypatch,tmp_pa
     folder=config.JOBS_DIR/'diag';folder.mkdir();(folder/'energies.csv').write_text('original')
     (folder/'dynamol-output.zip').write_text('stale archive')
     monkeypatch.setattr(jobs,'get_job',lambda _:job_record())
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         first=client.get('/api/jobs/diag/download');second=client.get('/api/jobs/diag/download')
     for response in (first,second):
         assert response.status_code==200

@@ -21,7 +21,7 @@ def test_mmcif_upload_canonicalizes_serials_without_changing_atoms_or_source(tmp
     original = fixture.read_bytes()
     expected = md.load(str(fixture))
     assert isinstance(expected.topology.atom(0).serial, str)
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.post(
             "/api/datasets/upload",
             files={"topology": ("audit.cif", original, "chemical/x-mmcif")},

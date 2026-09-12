@@ -1,0 +1,12 @@
+{
+  "name": "signals",
+  "version": "1.0.0",
+  "license": "MIT",
+  "source_url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/MIT.txt",
+  "source_note": "The exact 1.0.0 package declares MIT and contains an attributed header and README but no standalone license file. These are the canonical SPDX MIT terms, retained alongside the original package declaration/header; no new author or copyright ownership is asserted.",
+  "files_sha256": {
+    "LICENSE": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5",
+    "README.markdown": "3eaf9ede7a3ac8c1fe95aeb0016140d46ee06da3a22096f5fb963bfada3d4b50",
+    "upstream-header.txt": "48389d6c089efbd075fb5ae0f049bd3f6e2d7f34aeaa62d09b8e8f7711615055"
+  }
+}

@@ -1,4 +1,4 @@
-"""The packaged app has one dynamically allocated, explicitly trusted local origin."""
+"""Local browser origins and Host headers are independently checked."""
 import pytest
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,7 +28,7 @@ def test_packaged_origin_serves_browser_and_preflight_without_trusting_other_por
     def probe():
         return {"ok": True}
 
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         for method in ("GET", "POST"):
             response = client.request(method, "/probe", headers={"Origin": origin})
             assert response.status_code == 200
@@ -44,3 +44,49 @@ def test_packaged_origin_serves_browser_and_preflight_without_trusting_other_por
 def test_packaged_origin_preserves_source_defaults():
     assert len(local_browser_origins()) == 6
     assert local_browser_origins("http://127.0.0.1:8765") == local_browser_origins()
+
+
+@pytest.mark.parametrize("host", [
+    "127.0.0.1", "localhost", "127.0.0.1:8765", "localhost:5173",
+    "127.0.0.1:64059", "localhost:64059",
+])
+def test_real_app_accepts_local_hosts_without_origin(monkeypatch, host):
+    from backend.main import app, jobs
+
+    monkeypatch.setattr(jobs, "health", lambda: {"local_probe": True})
+    with TestClient(app, base_url=f"http://{host}") as client:
+        response = client.get("/api/health")
+    assert response.status_code == 200
+    assert response.json() == {"local_probe": True}
+
+
+@pytest.mark.parametrize("host", [
+    "untrusted.example", "untrusted.example:8765", "127.0.0.1.evil.example",
+    "localhost.evil.example", "www.localhost", "127.0.0.1@evil.example", "",
+])
+@pytest.mark.parametrize("method,path", [("GET", "/api/health"), ("POST", "/api/jobs")])
+def test_real_app_rejects_foreign_or_missing_host_before_dispatch(monkeypatch, host, method, path):
+    from backend.main import app, jobs
+
+    def unexpected_dispatch(*args, **kwargs):
+        pytest.fail("Untrusted Host reached the application")
+
+    monkeypatch.setattr(jobs, "health", unexpected_dispatch)
+    monkeypatch.setattr(jobs, "submit_job", unexpected_dispatch)
+    with TestClient(app, base_url="http://127.0.0.1") as client:
+        # A trusted or absent Origin and forwarding headers must not exempt Host.
+        for origin in (None, "http://127.0.0.1:8765"):
+            headers = {"Host": host, "X-Forwarded-Host": "localhost"}
+            if origin:
+                headers["Origin"] = origin
+            response = client.request(method, path, headers=headers)
+            assert response.status_code == 400
+            assert "location" not in response.headers
+
+
+def test_real_app_still_rejects_foreign_origin_on_local_host():
+    from backend.main import app
+
+    with TestClient(app, base_url="http://127.0.0.1:8765") as client:
+        response = client.get("/api/health", headers={"Origin": "http://untrusted.example"})
+    assert response.status_code == 403

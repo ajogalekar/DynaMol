@@ -1,0 +1,10 @@
+{
+  "name": "undici-types",
+  "version": "5.26.5",
+  "license": "MIT",
+  "source_url": "https://raw.githubusercontent.com/nodejs/undici/9197790ae0d015b40b75fd0c5cdb7420704b5272/LICENSE",
+  "source_note": "Exact upstream v5.26.5 tag; undici-types is the type-only package published from this project.",
+  "files_sha256": {
+    "LICENSE": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27"
+  }
+}

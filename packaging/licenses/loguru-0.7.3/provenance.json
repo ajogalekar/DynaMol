@@ -1,0 +1,10 @@
+{
+  "name": "loguru",
+  "version": "0.7.3",
+  "license": "MIT",
+  "source_url": "https://raw.githubusercontent.com/Delgan/loguru/ae3bfd1b85b6b4a3db535f69b975687c79498be4/LICENSE",
+  "source_note": "Exact upstream 0.7.3 tag (dereferenced commit); wheel lacks standalone license text.",
+  "files_sha256": {
+    "LICENSE": "b35d026cc7aca9d5859a02eb87ddf7a386a24c986838651bd1f283f94e003327"
+  }
+}

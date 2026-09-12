@@ -9,6 +9,7 @@ from pathlib import Path
 import subprocess
 import time
 import urllib.request
+import urllib.error
 
 
 def fetch(url, payload=None, headers=None):
@@ -67,6 +68,18 @@ def main():
         url = state['url']
         health = fetch(url+'api/health')
         assert {item['id'] for item in health['engines'] if item['available']} == {'openmm','gromacs'}
+        for headers, expected in (
+            ({'Host': 'untrusted.example'}, 400),
+            ({'Host': 'untrusted.example', 'Origin': url.rstrip('/')}, 400),
+            ({'Origin': 'http://untrusted.example'}, 403),
+        ):
+            try:
+                fetch(url+'api/health', headers=headers)
+            except urllib.error.HTTPError as error:
+                assert error.code == expected, (headers, error.code)
+            else:
+                raise AssertionError(f'Untrusted request was accepted: {headers}')
+        assert fetch(url+'api/health', headers={'Origin': url.rstrip('/')})['engines'] == health['engines']
         library = fetch(url+'api/datasets')
         existing_jobs = fetch(url+'api/jobs')
         generated = {item.get('dataset_id') for item in existing_jobs if item.get('name', '').startswith('Packaged ')}
@@ -128,7 +141,7 @@ def main():
         report = {'passed': True, 'resources': str(resources), 'home': str(home), 'build_id': state['build_id'], 'health': health, 'initial_datasets': sorted(item['id'] for item in library), 'startup_progress_page': True, 'same_service_reused': True, 'shutdown_and_restart_preserved_data': True, 'sanitized_path': env['PATH'], 'jobs': jobs, 'limitations': 'Local relocated app with paths containing spaces on the development Mac; no separate clean-machine, notarization, or Gatekeeper validation.'}
         report.update(workspace_and_named_project_preserved_on_new_port=True, named_selection_and_analysis_settings_preserved=True,
                       readiness_checked=True, structural_rmsd_frames=len(analysis['values']), both_engines_record_native_temperature=True,
-                      restart_ports=[url, new_state['url']])
+                      restart_ports=[url, new_state['url']], local_host_and_origin_validation=True)
         (home/'app-validation.json').write_text(json.dumps(report, indent=2)+'\n')
         print(json.dumps({'passed': True, 'report': str(home/'app-validation.json')},indent=2))
     finally:

@@ -1,0 +1,10 @@
+{
+  "name": "tr46",
+  "version": "0.0.3",
+  "license": "MIT",
+  "source_url": "https://api.github.com/repos/jsdom/tr46/git/blobs/62c0de28a830d3ae3a006c9e1e7df19067e409a7",
+  "source_note": "The 0.0.3 package and release declare MIT but omit its text. This is the official project LICENSE.md pinned by its Git blob; it is a later upstream notice, not a file claimed to exist in that release.",
+  "files_sha256": {
+    "LICENSE": "499d6d466d064e0460427967a344e2a32fcb86ea8c6cd1a285ec4f1fa03fba67"
+  }
+}

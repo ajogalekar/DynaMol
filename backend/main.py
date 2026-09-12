@@ -16,6 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from . import config, jobs, storage
 from .analysis import measure, preview
@@ -54,6 +55,9 @@ app = FastAPI(title="DynaMol", version="0.1.0", description="Local molecular dyn
 browser_origins = local_browser_origins(os.environ.get("DYNAMOL_ORIGIN"))
 app.add_middleware(CORSMiddleware, allow_origins=browser_origins, allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 app.add_middleware(LocalOriginMiddleware, allowed_origins=browser_origins)
+# Validate the requested host even when a browser omits Origin (for example on
+# a same-origin GET). Loopback binding alone does not validate this header.
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost"], www_redirect=False)
 
 
 @app.exception_handler(RequestValidationError)

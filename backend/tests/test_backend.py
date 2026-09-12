@@ -113,7 +113,7 @@ def test_api_upload_persists_originals_and_binary_matches_metadata(tmp_path):
     traj = molecule([[[0, 0, 0], [0.1, 0, 0], [0.2, 0, 0], [0.3, 0, 0]]])
     source = tmp_path / "original.pdb"
     traj.save_pdb(str(source))
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         response = client.post("/api/datasets/upload", files={"topology": ("original.pdb", source.read_bytes(), "chemical/x-pdb")})
         assert response.status_code == 200, response.text
         meta = response.json()
@@ -126,7 +126,7 @@ def test_api_upload_persists_originals_and_binary_matches_metadata(tmp_path):
 
 
 def test_local_origin_and_errors():
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         assert client.post("/api/jobs", headers={"Origin": "https://untrusted.example"}, json={}).status_code == 403
         result = client.post("/api/jobs", json={"duration_ps": -1})
         assert result.status_code == 422
@@ -147,7 +147,7 @@ def test_simulation_caps_and_supported_modes():
 
 def test_unsupported_chemistry_is_explicit():
     meta = save(molecule([[[0, 0, 0], [0.1, 0, 0], [0.2, 0, 0], [0.3, 0, 0]]]))
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         result = client.post("/api/jobs", json={"dataset_id": meta["id"], "engine": "openmm"})
         assert result.status_code == 422
         assert "no atoms were removed" in result.json()["detail"].lower()
@@ -169,7 +169,7 @@ def test_nucleic_acids_are_viewable_but_rejected_by_protein_simulation(residue_n
     assert meta["atoms"][0]["category"] == "nucleic"
     if include_protein:
         assert meta["atoms"][1]["category"] == "protein"
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         # The same imported coordinates remain available to the real viewer API.
         assert client.get(meta["topology_url"]).status_code == 200
         assert len(client.get(meta["coordinates_url"]).content) == top.n_atoms * 12

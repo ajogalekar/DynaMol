@@ -80,7 +80,25 @@ def prepare_runtime() -> dict:
 
 def notices(destination: Path):
     destination.mkdir(parents=True, exist_ok=True)
-    inventory = {'native': [], 'python': [], 'coverage': 'Bundled package license texts and recipes/source URLs are included. Corresponding source archives for all copyleft binaries have not been assembled or legally reviewed; this is a local prototype, not a public release compliance certification.'}
+    inventory = {'native': [], 'python': [], 'frontend': [], 'coverage': 'Bundled package license texts and recipes/source URLs are included. Corresponding source archives for all copyleft binaries have not been assembled or legally reviewed; this is a local prototype, not a public release compliance certification.'}
+
+    def supplement(name: str, version: str, target: Path) -> dict:
+        source = ROOT / 'packaging' / 'licenses' / f'{name}-{version}'
+        provenance_path = source / 'provenance.json'
+        if not provenance_path.is_file():
+            raise ValueError(f'Missing full redistribution notice for {name} {version}; collect a verified upstream notice before packaging.')
+        provenance = json.loads(provenance_path.read_text())
+        if provenance.get('name') != name or provenance.get('version') != version:
+            raise ValueError(f'Notice identity mismatch for {name} {version}')
+        files = provenance.get('files_sha256', {})
+        if 'LICENSE' not in files:
+            raise ValueError(f'Full license text missing for {name} {version}')
+        for relative, expected in files.items():
+            path = source / relative
+            if Path(relative).name != relative or not path.is_file() or sha(path) != expected:
+                raise ValueError(f'Notice integrity failed for {name} {version}: {relative}')
+        shutil.copytree(source, target / 'upstream-notice', dirs_exist_ok=True)
+        return provenance
     for family, (prefix, _, _) in ENGINES.items():
         for metadata in sorted((prefix / 'conda-meta').glob('*.json')):
             package = json.loads(metadata.read_text())
@@ -111,7 +129,77 @@ def notices(destination: Path):
     packages = STAGE / 'python' / 'lib' / 'python3.12' / 'site-packages'
     for distribution in sorted(importlib.metadata.distributions(path=[str(packages)]), key=lambda dist: dist.metadata.get('Name', '')):
         meta = distribution.metadata
-        inventory['python'].append({'name': meta.get('Name'), 'version': distribution.version, 'license_expression': meta.get('License-Expression'), 'license': meta.get('License'), 'home_page': meta.get('Home-page'), 'project_urls': meta.get_all('Project-URL'), 'license_files': meta.get_all('License-File')})
+        record = {'name': meta.get('Name'), 'version': distribution.version, 'license_expression': meta.get('License-Expression'), 'license': meta.get('License'), 'home_page': meta.get('Home-page'), 'project_urls': meta.get_all('Project-URL'), 'license_files': meta.get_all('License-File')}
+        if (meta.get('Name') or '').lower() == 'loguru':
+            target = destination / 'python' / f'loguru-{distribution.version}'
+            record['supplemental_notice'] = supplement('loguru', distribution.version, target)
+            record['materials'] = [str((target / 'upstream-notice').relative_to(destination))]
+        inventory['python'].append(record)
+
+    # Collect the installed production dependency closure, including transitive
+    # notices and fonts. This is conservative: it may include dependencies not
+    # retained by the frontend bundler. No node_modules code is copied.
+    frontend = (ROOT / 'frontend').resolve()
+    app_package = json.loads((frontend / 'package.json').read_text())
+    pending = [(frontend, name, False) for name in app_package.get('dependencies', {})]
+    visited = set()
+    while pending:
+        parent, install_name, optional = pending.pop()
+        folder = None
+        for ancestor in (parent, *parent.parents):
+            if ancestor != frontend and frontend not in ancestor.parents:
+                break
+            candidate = ancestor / 'node_modules' / install_name
+            if (candidate / 'package.json').is_file():
+                folder = candidate.resolve()
+                if not folder.is_relative_to(frontend):
+                    raise ValueError(f'Frontend package resolves outside build checkout: {install_name}')
+                break
+        if folder is None:
+            if optional:
+                continue
+            raise ValueError(f'Missing installed frontend dependency: {install_name}')
+        if folder in visited:
+            continue
+        visited.add(folder)
+        package = json.loads((folder / 'package.json').read_text())
+        name, version = package['name'], package['version']
+        relative = str(folder.relative_to(frontend))
+        key = f"{name.replace('/', '__')}-{version}-{hashlib.sha256(relative.encode()).hexdigest()[:8]}"
+        target = destination / 'frontend' / key
+        target.mkdir(parents=True, exist_ok=True)
+        materials = []
+        for path in sorted(folder.iterdir()):
+            if not path.name.lower().startswith(('license', 'licence', 'copying', 'copyright', 'notice', 'unlicense')):
+                continue
+            if path.is_file():
+                shutil.copy2(path, target / path.name)
+                materials.append(path.name)
+            elif path.is_dir():
+                shutil.copytree(path, target / path.name, dirs_exist_ok=True, ignore=ignore_copy)
+                if any(p.is_file() for p in (target / path.name).rglob('*')):
+                    materials.append(path.name)
+        record = {'name': name, 'version': version, 'installed_path': relative,
+                  'license': package.get('license', package.get('licenses')),
+                  'repository': package.get('repository'),
+                  'package_json_sha256': sha(folder / 'package.json'), 'materials': materials}
+        if not materials:
+            record['supplemental_notice'] = supplement(name, version, target)
+            materials.append('upstream-notice')
+        # Preserve attribution and the exact license declaration even when an
+        # old npm release omitted a standalone license file.
+        shutil.copy2(folder / 'package.json', target / 'package.json')
+        record['notice_directory'] = str(target.relative_to(destination))
+        inventory['frontend'].append(record)
+        optional_dependencies = package.get('optionalDependencies', {})
+        for child in package.get('dependencies', {}):
+            pending.append((folder, child, child in optional_dependencies))
+        for child in optional_dependencies:
+            pending.append((folder, child, True))
+        peer_meta = package.get('peerDependenciesMeta', {})
+        for child in package.get('peerDependencies', {}):
+            pending.append((folder, child, bool(peer_meta.get(child, {}).get('optional'))))
+    inventory['frontend'].sort(key=lambda record: (record['name'], record['version'], record['installed_path']))
     (destination / 'DEPENDENCY_INVENTORY.json').write_text(json.dumps(inventory, indent=2) + '\n')
     shutil.copy2(ROOT / 'THIRD_PARTY.md', destination / 'THIRD_PARTY.md')
     shutil.copy2(ROOT / 'LICENSE', destination / 'DynaMol-LICENSE')

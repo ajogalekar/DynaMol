@@ -378,7 +378,7 @@ def test_router_json_download_and_multipart_import_roundtrip(workspace):
     @app.exception_handler(ValueError)
     async def invalid(request, exc):
         return JSONResponse({"detail": str(exc)}, status_code=422)
-    with TestClient(app) as client:
+    with TestClient(app, base_url="http://127.0.0.1") as client:
         saved = client.post("/api/workspace", json={"state": state})
         assert saved.status_code == 200 and len(saved.json()["trajectory_signature"]) == 64
         assert client.get("/api/workspace").json()["state"]["frame"] == 2

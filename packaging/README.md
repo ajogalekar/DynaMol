@@ -1,39 +1,82 @@
-# DynaMol macOS prototype package
+# Build the DynaMol 0.1 Mac archive
 
-The local Apple Silicon application bundles its own Python 3.12 interpreter, Python dependencies (including OpenMM), prebuilt web interface, GROMACS 2025.4, and AmberTools 24.8. The recipient does not need Python, Node, uv, Conda, OpenMM, GROMACS, or AmberTools installed. Opening the app launches DynaMol in the default browser and adds a DynaMol menu in the macOS menu bar. This is a local prototype; it is not Apple Developer signed or notarized.
+The first-release target is a GitHub source repository and an unsigned,
+self-contained **Apple Silicon / macOS 14+** archive for individual scientists.
+The app bundles Python 3.12, scientific dependencies including OpenMM, the built
+interface, GROMACS 2025.4 and AmberTools 24.8. Recipients do not install those tools.
+See [opening the app, data locations and limits](../docs/PACKAGING.md).
 
-Unzip `DynaMol-0.1.0-macos-arm64.zip`, put `DynaMol.app` in a writable folder such as Applications, and open it. First launch shows setup progress while unpacking the included engines. It does not install global software or download engines. Data, jobs, engine prefixes and logs live in `~/Library/Application Support/DynaMol`; deleting or replacing the app does not delete that directory. The server binds an available localhost port, so it can coexist with the source-development server. Reopening the app reuses its running service. Closing the browser leaves simulations running; use the menu-bar item to reopen the workspace.
-
-The runtime requires Apple Silicon and macOS 14 or newer (the bundled NumPy and SciPy wheels require macOS 14); platform-specific wheels and native engines cannot be reused for Windows or Linux. The app includes only the public Ubiquitin examples, not the developer's uploaded structures or jobs. Fetching new database structures still needs internet. Native ligand preparation needs either cached CCD chemistry or an explicit supplied graph; arbitrary uncached ligands are not promised to work offline. Prepared complex simulation remains OpenMM with explicit TIP3P.
-
-The updated workbench includes durable scene restoration, Projects and portable backups, named selections, readiness estimates, live native diagnostics and RMSD/RMSF. Quit offers a choice to leave active jobs running or stop them first; compatible dynamics can resume from a saved production checkpoint. Preparation and solvent construction must be restarted if stopped. See the [release additions](../docs/RELEASE_READINESS.md) for current functional and chemistry coverage. Guides, cited audit evidence and frontend/backend test sources are included with this prototype.
+Use the matching acceptance record beside the archive; prior checks apply only
+to their recorded build IDs and source hashes. No artifact is uploaded by the
+builder.
 
 ## Build
 
-On the prepared source checkout, install the build-only packing tool:
+These are requirements for the prepared developer checkout, not for recipients:
+scientific/native runtimes, frontend build tools, the macOS build toolchain and
+the build-only packing environment.
 
 ```sh
 uv venv --python .venv/bin/python .tools/packaging
 uv pip install --python .tools/packaging/bin/python conda-pack==0.8.1 setuptools==80.9.0
 .venv/bin/python scripts/package_macos.py --prepare-runtimes
-cd frontend && npm run build && cd ..
+cd frontend
+npm run build
+cd ..
 .venv/bin/python scripts/package_macos.py
 ```
 
-The builder copies the real standalone Python distribution underlying the venv and overlays installed site packages. It does not copy a venv's external Python symlink or `pyvenv.cfg`. [python-build-standalone](https://github.com/astral-sh/python-build-standalone) supplies the interpreter distribution. Native engines are archived using [conda-pack](https://conda.github.io/conda-pack/) and relocated once into a versioned user prefix on first launch. No package manager is called at runtime. Prefixes are keyed by archive hashes; incomplete extraction is retried, and changed engine versions receive separate prefixes. Runtime archives are verified with SHA-256 before extraction.
+Outputs are `build/releases/DynaMol.app`,
+`build/releases/DynaMol-0.1.0-macos-arm64.zip` and its SHA-256 file.
+`Contents/Resources/manifest.json` records included source and engine hashes.
+Only the public examples are seeded; user uploads, jobs and projects are excluded.
 
-Build outputs are under `build/releases`, with the ZIP SHA-256 next to the archive. `Contents/Resources/manifest.json` records included application source and engine archive hashes. The bundled app source, Python distribution metadata/licenses, native package license files, and available native build recipes/source URLs are included under Resources. This preserves evidence of what was shipped.
+The builder copies the real [standalone Python distribution](https://github.com/astral-sh/python-build-standalone)
+underlying the venv and overlays site packages, rather than shipping an external
+Python symlink. [conda-pack](https://conda.github.io/conda-pack/) archives native
+engines and relocates them once into hash-versioned private prefixes. SHA-256
+verification precedes extraction. No package manager runs at recipient launch.
 
-## Release limits
+The service uses an allocated localhost port and stores data under
+`~/Library/Application Support/DynaMol`. It reuses a running service. Its private
+environment defaults to 100,000 atoms: the source backend's opt-in 200,000 limit
+is currently not forwarded by the packaged launcher and has no packaged UI toggle.
 
-The launcher receives an ad-hoc signature; there is no Apple Developer certificate or notarization. A downloaded, quarantined copy may be blocked by Gatekeeper. This local prototype does not establish clean-machine compatibility or permission to bypass that protection. A public release needs signing/notarization and testing on a separate clean Mac.
+## Validate the exact archive
 
-`Notices/DEPENDENCY_INVENTORY.json` records the actual dependency versions, licenses and collected materials. All corresponding source archives required for redistribution of every copyleft binary have not yet been assembled or legally reviewed. Package recipes/source URLs and license texts are included, but this is not a claim that public binary redistribution requirements are complete. No package is published or uploaded by the builder.
+Use `packaging/macos/validate_runtime.py` and `validate_app.py` with the bundled
+interpreter, Resources directory and a fresh isolated data location. Match the
+result's build ID and source hashes to the archive being offered. Keep the
+acceptance record alongside the release; a record generated after packing is
+not automatically inside that same archive.
 
-## Validation performed
+Existing [runtime checks](validation/relocated-runtime.json) exercised native
+OpenMM, GROMACS and ligand parameterization from relocated paths. The earlier
+[workbench package](validation/workbench-app.json) ran both MD workers and
+verified readiness, RMSD, and scene/named-project persistence on a new port;
+[archive checks](validation/workbench-archive.json) verified its recorded files.
+These passed on the developer's Mac with separate data and a restricted PATH,
+not on an independent clean Mac. [Native launch](validation/native-launch.json)
+was checked, but menu clicks and automatic browser opening were not verified on
+the locked desktop. Those gaps are stated limits of the evidence.
 
-The [relocated runtime check](validation/relocated-runtime.json) passed using the copied Python distribution and separately unpacked engine archives from paths containing spaces. With a sanitized system-only PATH, it loaded OpenMM's force-field data and ran CPU minimization/integration, generated ethanol GAFF2/AM1-BCC parameters with the native AmberTools pipeline, and ran GROMACS Ubiquitin topology generation plus five minimization steps. Dynamic-loader traces for Python, SQM, and GROMACS showed only the relocated bundled libraries and macOS system libraries. Database/network functions were not used; proxy endpoints were disabled for native subprocesses. This is stronger than import/help probes, but remains a test on the development Mac rather than a fresh computer.
+The [five-system audit](../docs/audit/five-system-pressure-test/REPORT.md) records
+five completed 100 ps source-app runs and passing real-browser checks. It also
+preserves a failed modeled loop, water-only membrane-protein tests, and the
+larger GPCR resource profile. It does not certify the rebuilt archive or physical
+accuracy. Current feature/evidence scope is in [release readiness](../docs/RELEASE_READINESS.md).
 
-The standalone validation entry point is `packaging/macos/validate_runtime.py`. Run it with the bundled interpreter and Resources directory after building; it creates a separate validation workspace. The [application check](validation/packaged-app.json) also passed: startup progress, both engines, service reuse, authenticated shutdown/restart and data retention. Actual background workers completed OpenMM Ubiquitin (1,231 atoms) and explicit-water GROMACS (26,842 atoms), with six trajectory frames each. The [four browser zoom tests](validation/packaged-ui-tests.txt) passed against the packaged service on its assigned port. No convergence claim follows from these short functional runs.
+## Distribution status
 
-A [native LaunchServices check](validation/native-launch.json) also started the relocated `.app` through macOS, confirmed the Swift launcher → bundled Python → local API process chain, and verified both engines plus same-origin frontend asset access. The generated app/test data were placed outside protected Documents folders, with data under a dedicated Application Support directory. Native menu clicks and automatic browser opening were not verified: the Mac was locked, so computer-use inspection could not proceed; browser opening was disabled in that isolated check. No lock or OS permission protection was bypassed. Those native interactions remain release-check items.
+The launcher currently receives an ad-hoc signature, without Developer ID or
+notarization. An unsigned GitHub beta is a possible distribution choice;
+downloaded copies may encounter Gatekeeper warnings or blocking. Signing and
+notarization can reduce that friction, and are not an absolute prerequisite for
+a GitHub release. [Apple explains these checks](https://support.apple.com/en-us/102445).
+
+`Notices/DEPENDENCY_INVENTORY.json` records collected versions, licenses and
+materials. Full corresponding-source materials for bundled copyleft binaries
+have not yet been assembled or reviewed. Recipes, URLs and license texts do not
+by themselves establish that public binary redistribution requirements are
+complete. Preserve this unresolved status separately from signing; see
+[THIRD_PARTY.md](../THIRD_PARTY.md). No public-ready claim or upload is made here.
