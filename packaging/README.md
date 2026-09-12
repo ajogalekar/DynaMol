@@ -1,4 +1,8 @@
-# Build the DynaMol 0.1 Mac download
+# Build the DynaMol 0.1.1 Mac replacement
+
+The 0.1.0 installer was withdrawn for a packaging signature error. These are
+the replacement build instructions; downloaded-app opening validation is still
+pending, and no replacement download is announced here.
 
 The release format is an unsigned, self-contained **Apple Silicon / macOS 14+**
 DMG: open it, drag DynaMol to Applications, then open the app. Python 3.12,
@@ -19,12 +23,17 @@ uv pip install --python .tools/packaging/bin/python conda-pack==0.8.1 setuptools
 cd frontend
 npm run build
 cd ..
-.venv/bin/python scripts/package_macos.py
-.tools/packaging/bin/python scripts/create_macos_dmg.py
+.venv/bin/python scripts/package_macos.py --output-dir build/releases
+DYNAMOL_BUILT_APP=$(.venv/bin/python -c 'import json; print(json.load(open("build/releases/DynaMol.app.signature.json"))["bundle"])')
+.tools/packaging/bin/python scripts/create_macos_dmg.py \
+  --app "$DYNAMOL_BUILT_APP" --output build/releases/DynaMol-0.1.1-macos-arm64.dmg
 ```
 
-Outputs under `build/releases` include `DynaMol.app`, the ZIP used for payload
-acceptance, `DynaMol-0.1.0-macos-arm64.dmg`, checksums and DMG validation records.
+The sealed `DynaMol.app` remains in a private system temporary directory recorded
+in `DynaMol.app.signature.json`; do not assume it is under `build/releases`.
+The requested output directory receives the ZIP, signature report and checksum.
+The DMG command writes its finished DMG, checksum and validation report beside
+the explicit `--output` path. Retain the staged app until acceptance is complete.
 The DMG builder preserves its input app, uses built-in `hdiutil`/`ditto`, creates
 an Applications shortcut, and checks a read-only mount and an isolated copy.
 It refuses to overwrite an existing DMG; retain earlier evidence or choose a
@@ -44,6 +53,13 @@ is 100,000; the source backend's optional larger profile is not forwarded by
 the launcher and has no packaged UI toggle.
 
 ## Validate the payload and final container
+
+The builder preserves valid inner signatures, repairs invalid inner signatures
+when necessary, then seals the completed outer app last. A strict recursive
+signature check must pass before packing. Verify the extracted ZIP, staged and
+mounted DMG, and installed copy as well; the DMG builder enforces its copy checks.
+Runtime bytecode writes into the sealed app are disabled. The signature report
+records any repaired native files and their before/after hashes.
 
 Use `packaging/macos/validate_app.py` and `validate_runtime.py` with the extracted
 app's private interpreter, Resources directory and a fresh isolated home. For
@@ -73,10 +89,13 @@ while jobs ran and checked terminal results through the API. The original
 failure and exact diff are saved. Neither app code nor file-denial rules changed.
 This is test isolation, not a shipping App Sandbox or clean-Mac claim.
 
-For a final DMG made from unchanged native payload, keep the `.dmg.validation.json`,
-app/native-payload byte-parity inventory and copied-app launch record with its
-checksum. Link these to the earlier exact-ZIP acceptance instead of claiming
-that native simulations were repeated for container or documentation changes.
+For the replacement DMG, keep the `.dmg.validation.json`, signature report,
+code/data comparison and copied-app launch record with its checksum. If native
+signatures were repaired, full binary hashes change: verify their code/data
+identity and record signature differences separately. Link unchanged scientific
+payload to the earlier exact-ZIP acceptance without claiming simulations were
+repeated. Historical runtime checks did not validate the withdrawn outer seal;
+the replacement also requires its own downloaded/quarantined opening check.
 A rebuild that changes executable payload needs relevant new acceptance.
 Acceptance files generated after packing live beside the release, not
 necessarily inside the app being tested.
@@ -88,19 +107,21 @@ explicit. See [release scope](../docs/RELEASE_READINESS.md).
 
 ## Unsigned release and source materials
 
-No Apple Developer enrollment, signing or notarization step is required by this
-release workflow. The launcher has an ad-hoc signature, not Developer ID
-notarization. Downloaded copies may be blocked by Gatekeeper; link recipients
+The workflow ad-hoc signs the complete app; it requires no paid Apple Developer
+enrollment and performs no Developer ID signing or notarization. Signature
+integrity and Gatekeeper trust are separate, as described in
+[Apple TN2206](https://developer.apple.com/library/archive/technotes/tn2206/_index.html).
+Downloaded copies may be blocked by Gatekeeper; link recipients
 to [Apple's per-app opening instructions](https://support.apple.com/en-us/102445).
 Do not ask them to disable system-wide protections.
 
 `Notices/DEPENDENCY_INVENTORY.json` records bundled package versions and license
 materials. The [source-materials companion](source-materials/README.md) adds
 upstream archives, shipped recipes/patches and per-package provenance mappings.
-Collect and verify it against the app's native components, and provide it beside
-the binary release with its index and checksum. A documentation/container-only
-rebuild can retain the collection when its native files and engine archives are
-verified unchanged and the release acceptance record links both build IDs.
+The 0.1.1 candidate reuses the 0.1.0 collection because upstream component
+versions are unchanged. Provide it beside the binary release with its index
+and checksum. Acceptance must link both build IDs, unchanged engine archives
+and native code/data; signature-only byte changes are recorded separately.
 It is not required for app use.
 See [THIRD_PARTY.md](../THIRD_PARTY.md) for the supplied scope and remaining
 compiler-runtime provenance limitations; the collection makes no legal

@@ -1,5 +1,9 @@
 # DynaMol 0.1 early-release scope
 
+**The 0.1.0 installer was withdrawn for a packaging signature error.** The 0.1.1
+replacement remains pending its downloaded-app opening check. The scope and
+historical software evidence below do not announce a replacement download.
+
 DynaMol 0.1 serves individual scientists using a local Mac: load supported
 molecules, review preparation, run a bounded simulation and explore its
 trajectory. The unsigned Apple Silicon/macOS 14+ DMG contains the app and both
@@ -8,8 +12,9 @@ source and source-materials companion are separate downloads for inspection or
 rebuilding. See [installation, data and packaging details](PACKAGING.md).
 
 Use the checksum and acceptance records supplied with each release asset.
-Documentation and container changes are linked to prior native tests by byte
-parity; they are not described as fresh simulation runs.
+Documentation and container changes are linked to prior native tests by payload
+identity; necessary signature repairs require code/data comparison with the
+changed signature bytes recorded separately. These are not fresh simulation runs.
 
 | Feature | Where to use it | Evidence |
 | --- | --- | --- |
@@ -64,15 +69,22 @@ macOS `sandbox-exec` prohibits the system's setuid `ps`, then checked completed
 jobs through the API. The original failure and harness diff are retained; the
 application and filesystem-denial rules were unchanged.
 
-The final DMG's mounted-copy validation, native-payload byte parity and
-copied-app launch record supplement that exact-ZIP acceptance. These local
+The replacement requires strict signature-integrity checks before packaging,
+after archive extraction and through the mounted/copied DMG, plus its own
+downloaded/quarantined opening check. Earlier runtime acceptance did not detect
+the withdrawn installer's invalid outer signature. Its replacement records must
+bind the corrected package to the tested scientific code/data. These local
 checks do not establish an independent clean-Mac, minimum-OS or Gatekeeper
 result. Native Quit-menu clicking and physical Safari trackpad testing remain
 unverified. A completed short installation check does not validate every
 supported molecule or simulation setup.
 
-This release has an ad-hoc launcher signature and is not Developer ID signed
-or notarized. It has no Apple enrollment step. Downloaded copies may require
+The replacement seals the completed app last, preserving valid inner signatures
+and repairing them only when necessary; bytecode writes into the bundle are
+disabled. Its ad-hoc signature establishes integrity, not Apple developer trust
+([TN2206](https://developer.apple.com/library/archive/technotes/tn2206/_index.html)).
+It has no Developer ID signature, notarization or paid Apple enrollment step.
+Downloaded copies may require
 [Apple's per-app opening procedure](https://support.apple.com/en-us/102445).
 
 The [source-materials companion](../packaging/source-materials/README.md) records
@@ -81,3 +93,5 @@ recipe/patch mappings. It preserves conditional compiler-runtime provenance
 and exception questions rather than presenting the collection as legal
 certification. See [third-party notices](../THIRD_PARTY.md) and the release's
 matching materials index.
+The 0.1.0 source collection is reused for 0.1.1's unchanged upstream components;
+the release binding must distinguish signature repairs from code/data changes.

@@ -68,7 +68,9 @@ def ensure_engines(home: Path, manifest: dict, log) -> dict[str, Path]:
         with tarfile.open(archive, 'r:gz') as packed:
             packed.extractall(target, filter='data')
         unpack = target / 'bin' / 'conda-unpack'
-        subprocess.run([str(PYTHON), '-I', str(unpack)], check=True, stdout=log, stderr=log, env={**os.environ, 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, timeout=300)
+        # -I ignores PYTHONDONTWRITEBYTECODE. Explicit -B keeps first-run
+        # engine relocation from adding caches inside the sealed app bundle.
+        subprocess.run([str(PYTHON), '-I', '-B', str(unpack)], check=True, stdout=log, stderr=log, env={**os.environ, 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, timeout=300)
         atomic_json(marker, {'sha256': record['sha256'], 'prefix': str(target)})
         roots[name] = target
     return roots

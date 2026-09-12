@@ -1,5 +1,10 @@
 # DynaMol 0.1 for macOS
 
+**The 0.1.0 installer was withdrawn because of a packaging signature error.**
+The 0.1.1 replacement is awaiting its downloaded-app opening check. The
+installation steps below describe the intended workflow, not an available
+replacement download.
+
 DynaMol is a free early release for individual scientists to prepare supported
 molecules, run local simulations and inspect trajectories. The Mac download is
 an unsigned, self-contained DMG for **Apple Silicon with macOS 14 or newer**.
@@ -8,7 +13,7 @@ the app download; neither is needed to use it.
 
 ## Install and open
 
-1. Download `DynaMol-0.1.0-macos-arm64.dmg` and open it.
+1. When available, download `DynaMol-0.1.1-macos-arm64.dmg` and open it.
 2. Drag **DynaMol** onto the **Applications** shortcut in the disk-image window.
 3. Eject the disk image and open DynaMol from Applications.
 4. First launch shows progress while unpacking the included engines into your
@@ -26,6 +31,12 @@ first opening because the developer cannot be verified, follow
 trying to open it, use System Settings → Privacy & Security → Open Anyway if
 you trust the download. Managed Macs may restrict this option. No Apple
 Developer enrollment is part of the installation or release path.
+
+The replacement packaging seals the complete app last, preserves valid inner
+signatures and repairs inner signatures only when necessary. Python bytecode
+writes inside the bundle are disabled. Strict signature checks verify package
+integrity; they do not establish Apple-trusted developer identity or permission
+to open a quarantined download. See [Apple TN2206](https://developer.apple.com/library/archive/technotes/tn2206/_index.html).
 
 Load a structure, review preparation and readiness, then start a simulation.
 Progress and diagnostics appear on its card. A completed trajectory opens in
@@ -66,6 +77,10 @@ See [checkpoint recovery](CHECKPOINT_RECOVERY.md).
 
 ## Installation evidence
 
+The runtime results below are historical evidence for their recorded payloads.
+They did not detect the withdrawn installer's invalid outer signature and do
+not establish that the 0.1.1 replacement opens through Gatekeeper.
+
 The release-side `first-release-acceptance.json` identifies the exact ZIP, build
 ID and checksums used for full bundled-app acceptance. Both native MD workers
 completed six-frame installation checks; native AmberTools parameterization,
@@ -88,10 +103,12 @@ verified completed jobs through the normal API. The original failure and exact
 harness diff are retained; app code and filesystem-denial rules were unchanged.
 Normal API progress had already passed outside this test sandbox.
 
-The final DMG's checksum and `.dmg.validation.json` identify its mounted/copy
-checks. Release acceptance must link its native-payload byte parity to the
-validated ZIP and record the copied app's launch check. A documentation/notices
-or container-only update does not mean the full native simulations were rerun.
+The replacement requires strict signature checks on the completed app, its
+archive extraction, the mounted DMG and the installed copy. Its checksum and
+`.dmg.validation.json` identify the container/copy checks; downloaded-app
+opening requires a separate recorded check. Signature-only repairs are linked
+to prior native tests by verified code/data identity, with signature bytes
+recorded separately. Packaging changes do not mean native simulations were rerun.
 These are tests on the development Mac, not an independent clean-Mac,
 minimum-OS, physical Safari-trackpad or Gatekeeper certification.
 
@@ -113,3 +130,7 @@ adds verified upstream archives, recipe/patch mappings and explicitly recorded
 provenance limitations. It is available for inspection and rebuilding and is
 not needed to run DynaMol. See [third-party notices](../THIRD_PARTY.md) for its
 scope, compiler-runtime exceptions and AmberTools component-specific terms.
+The 0.1.1 candidate reuses the upstream source collection from 0.1.0. Its release
+record must link unchanged engine archives and code/data to that collection;
+repaired native signatures can change binary hashes without changing upstream
+source or executable code/data.

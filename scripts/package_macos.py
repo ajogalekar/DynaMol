@@ -12,13 +12,16 @@ from pathlib import Path
 import platform
 import plistlib
 import shutil
+import struct
 import subprocess
 import sys
+import tempfile
+import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGE = ROOT / 'build' / 'packaging'
 RELEASES = ROOT / 'build' / 'releases'
-VERSION = '0.1.0'
+VERSION = tomllib.loads((ROOT / 'pyproject.toml').read_text())['project']['version']
 ENGINES = {'ambertools': (ROOT / '.tools' / 'ambertools', '24.8', 'AmberTools'), 'gromacs': (ROOT / '.gromacs', '2025.4', 'GROMACS')}
 
 
@@ -29,6 +32,106 @@ def sha(path: Path) -> str:
 
 def command(*args: str | Path, **kwargs):
     return subprocess.run([str(value) for value in args], check=True, **kwargs)
+
+
+def is_native_code(path: Path) -> bool:
+    """Identify linked Mach-O code, excluding universal static archives."""
+    with path.open('rb') as stream:
+        magic = stream.read(4)
+        fat = {bytes.fromhex('cafebabe'): ('>', False), bytes.fromhex('bebafeca'): ('<', False),
+               bytes.fromhex('cafebabf'): ('>', True), bytes.fromhex('bfbafeca'): ('<', True)}
+        if magic in fat:
+            endian, wide = fat[magic]
+            header = stream.read(4)
+            if len(header) != 4 or not 1 <= struct.unpack(endian+'I', header)[0] <= 64:
+                return False
+            record = stream.read(32 if wide else 20)
+            if len(record) != (32 if wide else 20):
+                return False
+            offset = struct.unpack_from(endian+('Q' if wide else 'I'), record, 8)[0]
+            stream.seek(offset)
+            magic = stream.read(4)
+        endian = {bytes.fromhex('feedface'): '>', bytes.fromhex('cefaedfe'): '<',
+                  bytes.fromhex('feedfacf'): '>', bytes.fromhex('cffaedfe'): '<'}.get(magic)
+        if endian is None:
+            return False
+        header = stream.read(12)
+        # MH_EXECUTE, MH_DYLIB and MH_BUNDLE, not MH_OBJECT archive members.
+        return len(header) == 12 and struct.unpack_from(endian+'I', header, 8)[0] in {2, 6, 8}
+
+
+def seal_application(bundle: Path) -> dict:
+    """Verify nested native code inside-out, then seal the completed app last.
+
+    Preserve valid third-party signatures and bytes. A standalone launcher
+    signature cannot substitute for the outer bundle's resource envelope.
+    See Apple TN2206; --deep is used for verification, never for signing.
+    """
+    # Finder may attach presentation metadata to a newly created .app. Those
+    # two attributes invalidate a resource seal; never clear quarantine or
+    # other security attributes. -s prevents following an external symlink.
+    attributes = command('/usr/bin/xattr', '-r', '-s', bundle, capture_output=True, text=True).stdout.splitlines()
+    removed_attributes = []
+    for attribute in ('com.apple.FinderInfo', 'com.apple.ResourceFork'):
+        suffix = ': ' + attribute
+        for line in attributes:
+            if not line.endswith(suffix):
+                continue
+            owner = Path(line[:-len(suffix)])
+            if owner != bundle and not owner.is_relative_to(bundle):
+                raise ValueError('Presentation metadata path escaped the new application')
+            command('/usr/bin/xattr', '-d', '-s', attribute, owner, capture_output=True)
+            removed_attributes.append({'path': str(owner.relative_to(bundle)), 'attribute': attribute})
+    native = []
+    for path in bundle.rglob('*'):
+        if path.is_symlink() or not path.is_file():
+            continue
+        if is_native_code(path):
+            native.append(path)
+    native.sort(key=lambda path: (-len(path.parts), str(path)))
+    if not native:
+        raise ValueError('Cannot seal an application without native executable code')
+    info = plistlib.loads((bundle / 'Contents/Info.plist').read_bytes())
+    main_executable = bundle / 'Contents/MacOS' / info['CFBundleExecutable']
+    if main_executable not in native:
+        raise ValueError('Application launcher is not a regular Mach-O executable')
+    repaired = []
+    signature_changes = []
+    for path in native:
+        # Signing the outer app seals this executable and all resources in one
+        # operation. Do not mistake its unfinished outer seal for nested code.
+        if path == main_executable:
+            continue
+        checked = subprocess.run(['/usr/bin/codesign', '--verify', '--strict', str(path)], capture_output=True, text=True)
+        if checked.returncode:
+            before = sha(path)
+            command('/usr/bin/codesign', '--force', '--sign', '-', '--timestamp=none', path, capture_output=True)
+            repaired.append(str(path.relative_to(bundle)))
+            signature_changes.append({'path': str(path.relative_to(bundle)), 'before_sha256': before, 'after_sha256': sha(path), 'prior_verification_error': checked.stderr.strip()})
+        command('/usr/bin/codesign', '--verify', '--strict', path, capture_output=True)
+    nested = [path for path in bundle.rglob('*')
+              if path.is_dir() and not path.is_symlink()
+              and path.suffix in {'.app', '.framework', '.xpc', '.appex', '.plugin', '.bundle'}
+              and ((path / 'Contents/Info.plist').is_file() or (path / 'Info.plist').is_file())]
+    for path in sorted(nested, key=lambda path: (-len(path.parts), str(path))):
+        checked = subprocess.run(['/usr/bin/codesign', '--verify', '--deep', '--strict', str(path)], capture_output=True, text=True)
+        if checked.returncode:
+            command('/usr/bin/codesign', '--force', '--sign', '-', '--timestamp=none', path, capture_output=True)
+            repaired.append(str(path.relative_to(bundle)))
+        command('/usr/bin/codesign', '--verify', '--deep', '--strict', path, capture_output=True)
+    command('/usr/bin/codesign', '--force', '--sign', '-', '--timestamp=none', bundle, capture_output=True)
+    verified = command('/usr/bin/codesign', '--verify', '--deep', '--strict', '--verbose=4', bundle, capture_output=True, text=True)
+    seal = bundle / 'Contents/_CodeSignature/CodeResources'
+    if not seal.is_file():
+        raise ValueError('Completed app has no sealed resource envelope')
+    return {'mode': 'ad-hoc complete bundle; no Developer ID or notarization',
+            'native_objects_verified': len(native), 'nested_bundles_verified': len(nested),
+            'inner_signatures_repaired': repaired, 'outer_bundle_signed_last': True,
+            'inner_signature_changes': signature_changes,
+            'presentation_attributes_removed': removed_attributes,
+            'resource_seal_sha256': sha(seal), 'strict_deep_verification_passed': True,
+            'verification_output': verified.stderr.strip(),
+            'reference': 'https://developer.apple.com/library/archive/technotes/tn2206/'}
 
 
 def ignore_copy(directory, names):
@@ -215,14 +318,17 @@ def notices(destination: Path):
     shutil.copy2(ROOT / 'packaging' / 'README.md', destination / 'PACKAGING-README.md')
 
 
-def build() -> Path:
+def build(releases: Path = RELEASES, app_only: bool = False) -> Path:
     runtime = prepare_runtime()
     if not (ROOT / 'frontend' / 'dist' / 'index.html').exists():
         raise SystemExit('Build the frontend before packaging.')
-    RELEASES.mkdir(parents=True, exist_ok=True)
-    bundle = RELEASES / 'DynaMol.app'
-    if bundle.exists():
-        shutil.rmtree(bundle)
+    releases = releases.resolve()
+    releases.mkdir(parents=True, exist_ok=True)
+    # Finder/File Provider can reattach forbidden presentation metadata while
+    # an app is assembled in Documents. Keep the sealed app in a private local
+    # build directory; only completed archive/report files go to releases.
+    # Retain this directory so DMG creation and acceptance use this exact app.
+    bundle = Path(tempfile.mkdtemp(prefix='DynaMol application build ')).resolve() / 'DynaMol.app'
     resources = bundle / 'Contents' / 'Resources'
     macos = bundle / 'Contents' / 'MacOS'
     resources.mkdir(parents=True)
@@ -253,7 +359,7 @@ def build() -> Path:
     notices(resources / 'Notices')
     source_hashes = {str(path.relative_to(app)): sha(path) for path in sorted(app.rglob('*')) if path.is_file()}
     build_id = hashlib.sha256(json.dumps(source_hashes, sort_keys=True).encode()).hexdigest()[:16]
-    manifest = {'application': 'DynaMol', 'version': VERSION, 'target': 'macos-arm64', 'built_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'build_id': build_id, **runtime, 'source_hashes': source_hashes, 'signing': 'ad-hoc launcher only; not Apple Developer signed or notarized'}
+    manifest = {'application': 'DynaMol', 'version': VERSION, 'target': 'macos-arm64', 'built_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'build_id': build_id, **runtime, 'source_hashes': source_hashes, 'signing': 'ad-hoc complete bundle with sealed resources; not Apple Developer signed or notarized'}
     (resources / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
     info = {'CFBundleIdentifier': 'org.dynamol.desktop', 'CFBundleName': 'DynaMol', 'CFBundleDisplayName': 'DynaMol', 'CFBundleExecutable': 'DynaMol', 'CFBundlePackageType': 'APPL', 'CFBundleShortVersionString': VERSION, 'CFBundleVersion': '1', 'LSMinimumSystemVersion': '14.0', 'LSUIElement': True, 'NSHighResolutionCapable': True, 'CFBundleIconFile': 'DynaMol.icns'}
     (bundle / 'Contents' / 'Info.plist').write_bytes(plistlib.dumps(info))
@@ -261,10 +367,14 @@ def build() -> Path:
     command('/usr/bin/xcrun', 'swift', ROOT / 'packaging' / 'macos' / 'DrawIcon.swift', iconset)
     command('/usr/bin/iconutil', '-c', 'icns', iconset, '-o', resources / 'DynaMol.icns')
     command('/usr/bin/xcrun', 'swiftc', ROOT / 'packaging' / 'macos' / 'Launcher.swift', '-o', STAGE / 'DynaMolLauncher', '-framework', 'AppKit', '-target', 'arm64-apple-macosx14.0')
-    command('/usr/bin/codesign', '--force', '--sign', '-', STAGE / 'DynaMolLauncher')
     shutil.copyfile(STAGE / 'DynaMolLauncher', macos / 'DynaMol')
     (macos / 'DynaMol').chmod(0o755)
-    archive = RELEASES / f'DynaMol-{VERSION}-macos-arm64.zip'
+    signing = seal_application(bundle)
+    (releases / 'DynaMol.app.signature.json').write_text(json.dumps({'build_id': build_id, 'bundle': str(bundle), **signing}, indent=2) + '\n')
+    if app_only:
+        print(json.dumps({'bundle': str(bundle), 'build_id': build_id, 'signature_verified': True}, indent=2))
+        return bundle
+    archive = releases / f'DynaMol-{VERSION}-macos-arm64.zip'
     archive.unlink(missing_ok=True)
     command('/usr/bin/ditto', '-c', '-k', '--sequesterRsrc', '--keepParent', bundle, archive)
     checksum = sha(archive)
@@ -276,8 +386,10 @@ def build() -> Path:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--prepare-runtimes', action='store_true')
+    parser.add_argument('--output-dir', type=Path, default=RELEASES, help='Archive/report destination; the sealed .app stays in a private system temporary directory recorded in the report.')
+    parser.add_argument('--app-only', action='store_true', help='Build and verify the app without creating a ZIP.')
     args = parser.parse_args()
     if args.prepare_runtimes:
         print(json.dumps(prepare_runtime(), indent=2))
     else:
-        build()
+        build(args.output_dir, args.app_only)

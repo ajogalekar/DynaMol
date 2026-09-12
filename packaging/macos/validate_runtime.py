@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import time
 
 
@@ -20,7 +21,10 @@ def main():
     parser.add_argument('--protein', type=Path)
     args = parser.parse_args()
     resources = args.resources.resolve()
-    home = (args.home or resources / 'Validation Home With Spaces').resolve()
+    home = (args.home or Path(tempfile.mkdtemp(prefix='DynaMol Runtime Validation '))).resolve()
+    bundle = resources.parent.parent
+    if home.is_relative_to(bundle):
+        raise SystemExit('Validation home must be outside the sealed application bundle.')
     home.mkdir(parents=True, exist_ok=True)
     spec = importlib.util.spec_from_file_location('dynamol_bootstrap', resources / 'bootstrap.py')
     bootstrap = importlib.util.module_from_spec(spec)
@@ -96,7 +100,7 @@ def main():
     run('grompp', [gmx,'grompp','-f','minimize.mdp','-c','boxed.gro','-p','topol.top','-o','minimize.tpr'], gmx_folder)
     run('mdrun', [engines['gromacs']/'bin.ARM_NEON_ASIMD/gmx','mdrun','-deffnm','minimize','-ntmpi','1','-ntomp','1','-nb','cpu','-pme','cpu','-bonded','cpu','-update','cpu'], gmx_folder)
     assert (gmx_folder/'minimize.gro').stat().st_size > 1000
-    run('python-library-check', [sys.executable, '-I', '-c', 'import openmm,rdkit,mdtraj; print(openmm.Platform.getNumPlatforms())'], home)
+    run('python-library-check', [sys.executable, '-I', '-B', '-c', 'import openmm,rdkit,mdtraj; print(openmm.Platform.getNumPlatforms())'], home)
     for operation in operations:
         if operation['name'] in {'sqm-library-check', 'mdrun', 'python-library-check'}:
             assert operation['native_library_paths'], f"No loaded-library evidence for {operation['name']}"
