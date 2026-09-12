@@ -4,23 +4,21 @@
 
 ![DynaMol molecular workspace](docs/dynamol-desktop.png)
 
-DynaMol is a free **v0.1 early release**, built with React, NGL, FastAPI, MDTraj, OpenMM, GROMACS, PDBFixer, RDKit, and AmberTools. It runs on your own computer. Uploaded coordinates and simulations stay local. Optional Fetch contacts RCSB or PubChem; ligand inspection can also retrieve public Chemical Component Dictionary (CCD) records from RCSB using component identifiers. The application needs no cloud account or API key. The Mac download includes the engines, fonts and starter trajectory.
+DynaMol is a free **v0.1 early release**, built with React, NGL, FastAPI, MDTraj, OpenMM, GROMACS, PDBFixer, ProMod3, RDKit, and AmberTools. It runs on your own computer. Uploaded coordinates and simulations stay local. Optional Fetch contacts RCSB or PubChem; ligand inspection can also retrieve public Chemical Component Dictionary (CCD) records from RCSB using component identifiers. The application needs no cloud account or API key. The Mac download includes the engines, fonts and starter trajectory.
 
 ## Start exploring
 
-**Mac installer temporarily unavailable.** The v0.1.0 download has been withdrawn because a packaging signature error can cause macOS to report “DynaMol is damaged.” Source code and documentation remain available; you can [run from source](#run-from-source).
+The **0.1.1 Mac replacement** fixes the withdrawn 0.1.0 installer's packaging signature and includes local loop modeling. Use the latest published installer from [GitHub Releases](https://github.com/ajogalekar/DynaMol/releases) on Apple Silicon with macOS 14 or newer. Source users can [run from source](#run-from-source).
 
-The installation steps below are retained as a guide for Apple Silicon on macOS 14 or newer. The installer download is currently unavailable.
-
-1. Download and open `DynaMol-0.1.0-macos-arm64.dmg`.
+1. Download and open `DynaMol-0.1.1-macos-arm64.dmg`.
 2. Drag **DynaMol** into **Applications**.
 3. Open **DynaMol** from Applications. First launch shows progress while unpacking the included engines, then opens the interface in your default browser.
 
 **OpenMM, GROMACS, Python and the preparation tools are included.** No Terminal commands, separate MD installation or package manager is needed. New structure fetches still require internet.
 
-This release is **unsigned and not notarized**. If macOS blocks it after the first opening attempt, Apple's [per-app opening instructions](https://support.apple.com/en-us/102445) describe **System Settings → Privacy & Security → Open Anyway**. Institutional device policies may prevent this. Signing has been deliberately left out of this free first release.
+This release has an **ad-hoc integrity signature, without Developer ID signing or notarization**. If macOS blocks it after the first opening attempt, Apple's [per-app opening instructions](https://support.apple.com/en-us/102445) describe **System Settings → Privacy & Security → Open Anyway**. Institutional device policies may prevent this. No paid Apple Developer enrollment is needed.
 
-Your work is saved in `~/Library/Application Support/DynaMol`; replacing the app keeps that data. See [installation details and limits](docs/PACKAGING.md) and [release notes](docs/releases/v0.1.0.md). Intel Mac, Windows and Linux do not yet have tested application downloads.
+Your work is saved in `~/Library/Application Support/DynaMol`; replacing the app keeps that data. See [installation details and limits](docs/PACKAGING.md) and [release notes](docs/releases/v0.1.1.md). Intel Mac, Windows and Linux do not yet have tested application downloads.
 
 ### Run from source
 
@@ -59,6 +57,8 @@ The script creates a private **AmberTools 24.8** environment under `.tools/amber
 
 The first inspection of an unfamiliar PDB ligand may need internet to retrieve its CCD definition. Records are cached in `data/chemistry/ccd` (under `DYNAMOL_DATA_DIR` when configured). Previously prepared complexes retain their parameter files and do not need a fresh charge calculation to run OpenMM. The [Mac download](docs/PACKAGING.md) includes the native runtimes; the installation commands above apply to the source checkout.
 
+For missing-loop modeling from source, run `bash scripts/install_loop_tools.sh` to install the tested private ProMod3 runtime. The Mac app includes it. See [loop repair and its limits](docs/LOOP_REPAIR.md).
+
 ## Inside the workbench
 
 **Keep your workspace.** DynaMol automatically restores your molecule, camera, frame, display settings, measurements and named selections. **Projects** saves named snapshots and exports portable backups with the required molecular files and parameter records. The molecule library supports search, rename, archive and recoverable trash. See [workspaces and backups](docs/WORKSPACES.md).
@@ -79,7 +79,7 @@ In ribbon view, **Polar only** retains a light trace of the full heavy-atom stru
 
 Open Simulate to upload a PDB, mmCIF, MOL2, SDF or SMILES file, fetch a PDB accession or PubChem molecule, or paste SMILES to generate a local 3D conformer. Each result loads immediately beside the controls. **Prep protein** repairs missing protein atoms, rebuilds hydrogens for the selected pH, and samples side-chain clashes. With ligands present, the action becomes **Prep complex**: it retains their bound poses, assigns documented molecular states and actual GAFF2/AM1-BCC parameters, and keeps supported ions and observed metal-coordinating waters. Inspect each ligand's selected SMILES and charge; an explicit-state SMILES override is available when a different state is needed.
 
-Inspection warns about missing sequence and backbone gaps; known short internal loops can be built with an explicit checkbox. Incomplete ligands offer explicit modeled repair from their chemical reference or per-molecule removal, and named ions are checked against the installed force field. See [chemistry repair and viewer sizing](docs/CHEMISTRY_REPAIR.md) for the choices and current limits. Protein-only preparation can perform backbone-restrained local relaxation. Complexes are minimized after explicit solvation, avoiding an unsupported implicit ligand model. The resulting structure, settings, ligand files and warnings are saved as a separate dataset.
+Inspection warns about missing sequence and backbone gaps; known internal gaps up to 12 residues can be modeled with an explicit checkbox. Incomplete ligands offer explicit modeled repair from their chemical reference or per-molecule removal, and named ions are checked against the installed force field. See [chemistry repair and viewer sizing](docs/CHEMISTRY_REPAIR.md) for the choices and current limits. Modeled loops receive bounded refinement with the complete prepared force field and the remaining heavy atoms fixed. Systems with rebuilt loops must also be minimized before dynamics. Other protein-only preparation can perform backbone-restrained local relaxation; retained complexes require explicit solvent for simulation. The resulting structure, settings, ligand files and warnings are saved as a separate dataset.
 
 The Prep button spins immediately. A monitor above the scrolling controls shows the current stage, completed-stage percentage, elapsed time, cancellation and logs. It reconnects when the studio is reopened and distinguishes a completed preparation from a structure still loading in the viewer. Errors stay visible, with an Open result action to retry a failed display load.
 
@@ -129,7 +129,7 @@ The [chemistry support matrix](docs/CHEMISTRY_SUPPORT.md) records checks across 
 - **GROMACS:** Amber99SB-ILDN/TIP3P, PME, stochastic dynamics, hydrogen-bond constraints, explicit solvent. Hydrogen reconstruction is recorded; existing heavy atoms are retained. Neutralizing ions replace only newly added solvent.
 - Both engine presets use **fixed-volume NVT**, optional minimization, and a short initial relaxation. They do not include pressure equilibration, site-specific pKₐ prediction, production convergence assessment, or GPU selection. Different engine defaults are not equivalent physical protocols.
 - Prepared structures and solvent previews currently run with **OpenMM**. GROMACS transfer is explicitly blocked because its preset rebuilds hydrogen states and uses a different force field; unprepared standard-protein inputs retain the original GROMACS workflow.
-- Missing-loop building is limited to sequence-supported internal gaps of at most 6 residues each and 12 residues total. Terminal extensions and larger gaps require external modeling. PDBFixer loop coordinates and bounded side-chain sampling are starting models, not validated native conformations. Ionization uses pH/template heuristics; existing hydrogens are removed before rebuilding at a new pH. Rebuilt/relaxed structures undergo template-based stereochemistry checks; invalid models are rejected.
+- Missing-loop building supports sequence-supported internal gaps of at most 12 standard residues each and 96 modeled residues across all chains. Terminal extensions and larger gaps require a supplied model. ProMod3 fragments and bounded OpenMM refinement generate provisional starting coordinates; failed geometry or chirality checks reject the candidate. See [loop repair](docs/LOOP_REPAIR.md). Ionization uses pH/template heuristics; existing hydrogens are removed before rebuilding at a new pH. Rebuilt/relaxed structures undergo template-based stereochemistry checks; invalid models are rejected.
 - Ligand protonation uses documented empirical rules and an editable fixed state, not a binding-site pKₐ or tautomer-population prediction. Unsupported amide/N–N protonation proposals retain the source state with a warning. A reference GNP −4 state is used at pH 6–8 unless overridden. Metal ions use a nonbonded approximation; retaining their coordinating waters and donor geometry does not validate coordination energetics.
 - One simulation, preparation or solvation job runs at a time, using two CPU threads by default. Set `DYNAMOL_CPU_THREADS` to 1–4. Progress reflects completed production steps; preparation stages do not have a fabricated percentage.
 

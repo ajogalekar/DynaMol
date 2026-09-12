@@ -1,9 +1,9 @@
 # DynaMol 0.1 for macOS
 
 **The 0.1.0 installer was withdrawn because of a packaging signature error.**
-The 0.1.1 replacement is awaiting its downloaded-app opening check. The
-installation steps below describe the intended workflow, not an available
-replacement download.
+The 0.1.1 replacement repairs the complete app seal and includes a private
+ProMod3 loop-building runtime. Use the matching acceptance record beside the
+download: earlier checks apply only to their recorded payloads.
 
 DynaMol is a free early release for individual scientists to prepare supported
 molecules, run local simulations and inspect trajectories. The Mac download is
@@ -13,14 +13,14 @@ the app download; neither is needed to use it.
 
 ## Install and open
 
-1. When available, download `DynaMol-0.1.1-macos-arm64.dmg` and open it.
+1. Download the DMG from the matching GitHub release and open it.
 2. Drag **DynaMol** onto the **Applications** shortcut in the disk-image window.
 3. Eject the disk image and open DynaMol from Applications.
 4. First launch shows progress while unpacking the included engines into your
    private application data directory. The interface then opens in your default
    browser, using an available localhost port.
 
-Python, OpenMM, GROMACS, AmberTools and the interface are included. You do not
+Python, OpenMM, GROMACS, AmberTools, ProMod3 and the interface are included. You do not
 need a separate Python, Node, uv, Conda or MD-engine installation. First-run
 engine setup uses the files already in the download; it does not download them
 or install global software.
@@ -68,6 +68,11 @@ See [checkpoint recovery](CHECKPOINT_RECOVERY.md).
 - Supported prepared complexes and modified residues use OpenMM with explicit
   TIP3P. The GROMACS workflow currently handles compatible standard-protein
   inputs; packaging does not add complex parameter export or membrane setup.
+- Optional loop building supports **12 sequence-supported standard residues per
+  internal gap, 96 total**. ProMod3 fragments receive bounded refinement and
+  complete-complex geometry/chirality checks; failed models remain blocked.
+  Native missing-loop accuracy is not established, and simulation minimization
+  is required before dynamics. See [loop validation](audit/loop-repair/REVIEW.md).
 - The packaged limit is **100,000 atoms**, with no UI toggle. The source service
   permits an explicit `DYNAMOL_MAX_ATOMS=200000 ./start.sh` profile; the packaged
   launcher does not forward that override. The 145,913-atom GPCR benchmark used
@@ -78,8 +83,9 @@ See [checkpoint recovery](CHECKPOINT_RECOVERY.md).
 ## Installation evidence
 
 The runtime results below are historical evidence for their recorded payloads.
-They did not detect the withdrawn installer's invalid outer signature and do
-not establish that the 0.1.1 replacement opens through Gatekeeper.
+They did not detect the withdrawn installer's invalid outer signature. A later
+repaired installer passed a manual download and normal per-app opening check;
+the expanded ProMod3 package requires its own matching validation record.
 
 The release-side `first-release-acceptance.json` identifies the exact ZIP, build
 ID and checksums used for full bundled-app acceptance. Both native MD workers
@@ -130,7 +136,8 @@ adds verified upstream archives, recipe/patch mappings and explicitly recorded
 provenance limitations. It is available for inspection and rebuilding and is
 not needed to run DynaMol. See [third-party notices](../THIRD_PARTY.md) for its
 scope, compiler-runtime exceptions and AmberTools component-specific terms.
-The 0.1.1 candidate reuses the upstream source collection from 0.1.0. Its release
-record must link unchanged engine archives and code/data to that collection;
-repaired native signatures can change binary hashes without changing upstream
-source or executable code/data.
+Unchanged upstream components reuse the earlier source collection; the expanded
+runtime has a ProMod3/OpenStructure dependency supplement. The matching release
+index identifies both and their actual shipped contents. Signature repairs are
+recorded separately because they can change binary hashes without changing
+upstream source or executable code/data.

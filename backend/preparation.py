@@ -18,11 +18,34 @@ from . import config, jobs, storage
 from .residue_identity import STANDARD_PROTEINS, protein_residue_keys, residue_key
 from .modified_residues import register_topology_definitions, register_fixer_templates, inspect_modified, SUPPORTED_MODIFIED
 
-MAX_LOOP_LENGTH = 6
-MAX_REBUILT_RESIDUES = 12
+MAX_LOOP_LENGTH = 12
+# Resource budget across independent loops, including repeated crystal monomers.
+# These limits bound local work; they do not establish conformational accuracy.
+MAX_REBUILT_RESIDUES = 96
+SHORT_LOOP_LENGTH = 6
 MAX_PROTEIN_ATOMS = 20_000
 SUPPORTED_CAPS = frozenset({"ACE", "NME"})
 PREPARATION_DEFAULTS = {"name": "Protein preparation", "ph": 7.0, "add_missing_atoms": True, "build_missing_residues": False, "optimize_sidechains": True, "remove_waters": True, "remove_heterogens": False, "ligand_overrides": {}, "seed": 2026}
+
+
+def loop_policy() -> dict:
+    return {"max_gap_residues": MAX_LOOP_LENGTH, "max_total_residues": MAX_REBUILT_RESIDUES,
+            "short_gap_residues": SHORT_LOOP_LENGTH}
+
+
+def validate_loop_selection(internal: list[dict], enabled: bool) -> None:
+    """Shared submission/worker limit; only explicit, sequence-supported repair."""
+    if internal and not enabled:
+        raise ValueError("Unresolved internal sequence gaps would create artificial peptide connections. Enable missing-loop building before protein preparation.")
+    for entry in internal:
+        names = entry["residues"]
+        if any(name not in STANDARD_PROTEINS for name in names):
+            raise ValueError(unsupported_missing_residue_message(entry["chain"], names))
+        if len(names) > MAX_LOOP_LENGTH:
+            raise ValueError(f"Chain {entry['chain']} has an internal gap of {len(names)} residues. Local loop building supports up to {MAX_LOOP_LENGTH} per gap; supply a complete model for this longer region.")
+    total = sum(len(entry["residues"]) for entry in internal)
+    if total > MAX_REBUILT_RESIDUES:
+        raise ValueError(f"This structure needs {total} modeled internal residues, exceeding the local work budget of {MAX_REBUILT_RESIDUES}. Select fewer chains or supply a complete model.")
 
 
 def _json(path: Path) -> dict:
@@ -229,7 +252,7 @@ def backbone_gaps(topology, positions) -> list[dict]:
             if numbering_gap or (distance is not None and distance > 2.2):
                 broken = distance is not None and distance > 2.2
                 message = f"Backbone C–N separation is {distance:.2f} Å; this connection requires repair before force-field preparation." if broken else "Residue numbering skips values. This alone does not establish missing sequence or missing structure."
-                result.append({"chain": chain.id, "after": previous.id, "before": following.id, "message": message, "backbone_distance_angstrom": distance, "structural_break": broken})
+                result.append({"chain": chain.id, "after": previous.id, "before": following.id, "after_insertion_code": (previous.insertionCode or "").strip(), "before_insertion_code": (following.insertionCode or "").strip(), "after_index": previous.index, "before_index": following.index, "message": message, "backbone_distance_angstrom": distance, "structural_break": broken})
     return result
 
 
@@ -293,7 +316,8 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     for (chain_index, position), names in fixer.missingResidues.items():
         terminal = position in {0, len(list(chains[chain_index].residues()))}
         buildable = not terminal and len(names) <= MAX_LOOP_LENGTH and all(name in STANDARD_PROTEINS for name in names)
-        entry = {"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "terminal": terminal, "buildable": buildable, "chain_index": chain_index}
+        modeling = "terminal" if terminal else "unsupported" if not buildable else "extended" if len(names) > SHORT_LOOP_LENGTH else "short"
+        entry = {"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "terminal": terminal, "buildable": buildable, "chain_index": chain_index, "modeling": modeling}
         if (chain_index, position) in getattr(fixer, "missingResidueIdentities", {}):
             entry["source_identities"] = fixer.missingResidueIdentities[(chain_index, position)]
         if any(name not in STANDARD_PROTEINS for name in names):
@@ -313,13 +337,13 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     if not fixer.sequences:
         warnings.append("No retained SEQRES/mmCIF polymer sequence is available. Residue numbering gaps cannot identify which amino acids are absent, so loop building is unavailable.")
     if missing_residues:
-        warnings.append("Missing sequence-supported residues are listed. Rebuilding internal short gaps is opt-in and produces low-confidence coordinates, not an experimentally established loop.")
+        warnings.append("Missing sequence-supported residues are listed. Rebuilding internal gaps is opt-in and produces provisional coordinates; longer loops have greater conformational uncertainty. Geometry checks do not establish the native loop conformation.")
     if any(gap["structural_break"] for gap in gaps):
         warnings.append("A long backbone connection is present. Unresolved internal gaps must be repaired before force-field preparation or simulation; a stretched inferred peptide bond is not accepted.")
     if any(entry["terminal"] for entry in missing_residues):
         warnings.append("Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.")
     warnings.append("pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation.")
-    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "modified_residues": modified_residues, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "ions": ions, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
+    return {"dataset_id": dataset_id, "protein_atoms": protein_atoms, "hydrogen_atoms": sum(atom["element"] == "H" for atom in atoms), "water_atoms": sum(atom["category"] == "water" for atom in atoms), "heterogen_residues": heterogens, "can_prepare": not blockers, "has_sequence": bool(fixer.sequences), "loop_policy": loop_policy(), "missing_atoms": missing_atoms, "missing_residues": missing_residues, "gaps": gaps, "warnings": warnings, "blockers": blockers, "ligands": ligands, "modified_residues": modified_residues, "ligand_errors": ligand_errors, "ligand_runtime": ligand_runtime_status() if ligands else None, "metal_environment": coordination, "ions": ions, "sequence_source": str(sequence_source) if sequence_source else None, "sequence_source_sha256": hashlib.sha256(sequence_source.read_bytes()).hexdigest() if sequence_source else None}
 
 
 def _validated(settings: dict) -> dict:
@@ -394,18 +418,20 @@ def validate_preparation(settings: dict) -> tuple[dict, dict]:
     settings["complex"] = bool(any(not ligand.get("removed") for ligand in inspection["ligands"]) and not settings["remove_heterogens"])
     settings["modified_residues"] = inspection["modified_residues"]
     internal = [entry for entry in inspection["missing_residues"] if not entry["terminal"]]
-    if internal and not settings["build_missing_residues"]:
-        raise ValueError("Unresolved internal sequence gaps would create artificial peptide connections. Enable short missing-loop building, or repair the structure externally before protein preparation.")
-    if settings["build_missing_residues"] and (any(not entry["buildable"] for entry in internal) or sum(entry["count"] for entry in internal) > MAX_REBUILT_RESIDUES):
-        raise ValueError(f"Only internal sequence-supported loops of up to {MAX_LOOP_LENGTH} residues each and {MAX_REBUILT_RESIDUES} total can be built in this local workflow. Repair larger gaps externally.")
+    validate_loop_selection(internal, settings["build_missing_residues"])
+    if internal:
+        from .loop_modeling import loop_runtime_status
+        runtime = loop_runtime_status()
+        if not runtime["available"]:
+            raise ValueError(runtime.get("error", "Loop modeling is unavailable.") + " Install the current complete DynaMol bundle, or configure its private ProMod3 runtime for a source checkout.")
     # Numbering alone is not missing-sequence evidence; long links with no mapped gap cannot be invented.
     mapped_pairs = set()
     fixer, _ = current_fixer(settings["dataset_id"])
     chains = list(fixer.topology.chains())
     for entry in internal:
         residues = list(chains[entry["chain_index"]].residues())
-        mapped_pairs.add((entry["chain"], residues[entry["position"] - 1].id, residues[entry["position"]].id))
-    if any(gap["structural_break"] and (gap["chain"], gap["after"], gap["before"]) not in mapped_pairs for gap in inspection["gaps"]):
+        mapped_pairs.add((residues[entry["position"] - 1].index, residues[entry["position"]].index))
+    if any(gap["structural_break"] and (gap["after_index"], gap["before_index"]) not in mapped_pairs for gap in inspection["gaps"]):
         raise ValueError("An unresolved long backbone connection has no supported missing sequence. Supply the original PDB/mmCIF sequence records or repair the gap externally; residue identities will not be guessed.")
     if inspection["missing_atoms"] and not settings["add_missing_atoms"]:
         raise ValueError("Missing heavy/terminal atoms prevent force-field preparation. Enable missing-atom repair or supply a complete structure.")

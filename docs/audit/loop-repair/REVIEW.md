@@ -1,0 +1,25 @@
+# Optional internal-loop preparation
+
+DynaMol’s new loop path passed actual 1UA2 monomer and four-chain preparations with retained ATP and TPO, and a separate 12-residue deletion control in ubiquitin. These checks support screened, approximate starting geometry; they do not establish the native conformations of missing residues. The machine-readable record is [validation.json](validation.json).
+
+| Completed check | Actual result |
+| --- | --- |
+| 1UA2 chain A, missing residues 44–55 | Complete native preparation in 39.49 s; 4,825 atoms; 14/14 saved-output checks passed |
+| 1UA2 chains A–D, four missing 44–55 segments | Complete native preparation in 116.29 s; 48 rebuilt residues, 19,300 atoms; 14/14 saved-output checks passed |
+| 1UBQ chain A, deliberately deleted residues 23–34 | One fragment/refinement attempt; 1.72 s native, 2.21 s overall; 504 observed heavy atoms exact, 98 modeled atoms; geometry and chirality passed |
+| Focused orchestration, adapter, geometry and refinement controls | 67 passed in 0.39 s |
+| Full backend regression suite | 599 passed, nine warnings, in 17.57 s; durable output hash recorded |
+
+The four-chain check retained all nonwater input heavy-atom identities, exact backbone coordinates, all 168 ATP/TPO heavy coordinates and four copies each of the ATP −4/TPO −2 parameter states. Its normal requested water-removal option removed 48 deposited water atoms. The source dataset remained unchanged, and no additional attempt or production MD was run.
+
+The policy permits **up to 12 sequence-supported standard residues per internal gap and 96 rebuilt residues total**. Terminal omissions and missing modified residues are not automatically invented. Each fragment subprocess uses two CPU threads and a 180-second limit. The private runtime is ProMod3 3.6.0 / OpenStructure 2.11.1 / OpenMM 8.5.1; preparation uses the application’s OpenMM 8.6.0. Runtime/database hashes, input identities, exclusions, requested seed and actual native versions are recorded. The fragment path does not apply the requested random seed.
+
+ProMod3 receives observed residues and missing-atom repairs, excluding absent-loop scaffold coordinates. Only the exact new heavy-atom inventory is transplanted. Its temporary context can standardize modified residues and omit detached ligand/water chains; it is not full-complex scoring. Subsequent refinement uses the complete prepared force field, with non-loop heavy atoms fixed and at most 1,000 minimization iterations. Temporary peptide construction torsions initialize new non-Pro links trans and retain proline’s candidate cis/trans basin. These assumptions are recorded, and neither the torsions nor zero-mass particles appear in the exported production System. [ProMod3 pipeline](https://openstructure.org/promod3/3.5/modelling/pipeline/), [OpenMM minimizer](https://docs.openmm.org/latest/api-python/generated/openmm.openmm.LocalEnergyMinimizer.html).
+
+The saved 1UA2 output retained every input heavy-atom identity, exact original backbone coordinates, and exact ATP/TPO heavy coordinates; assembled charges were ATP −4 and TPO −2 under the chosen parameter states. Requested chi adjustment explains 39 changed observed sidechain atoms across 18 recorded adjustments. Thus exact preservation during loop construction/refinement must not be described as an unchanged final protein sidechain structure. All saved geometry/stereo checks passed, native ligand conversion passed, and simulation minimization remains mandatory before dynamics.
+
+Earlier PDBFixer-only construction, raw ProMod3 transplantation and unbiased refinement failed the unchanged geometry criteria. Their inputs/results remain under `build/loop-repair-review/probe-1ua2/` and `probe-promod3-1ua2/`; they were not silently accepted. Adding temporary construction torsions addressed the initialization failure without weakening the screening thresholds.
+
+Geometry screening covers all modeled residues, including closure, covalent lengths, broad backbone angles, peptide planarity, severe/soft contacts and independent chirality checks. It does not validate rotamers, Ramachandran populations, binding-state pKa, loop accuracy or equilibrium behavior. A minimizer returning within its iteration cap is not convergence evidence. Ubiquitin may occur in the fragment database, so its deletion test is not a held-out accuracy benchmark. No production MD was performed for these checks. [1UA2 source](https://www.rcsb.org/structure/1UA2), [1UBQ source](https://www.rcsb.org/structure/1UBQ), [ProMod3 paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC7872268/).
+
+The evidence-linked PatAgent postflight returned seven passes and one generic uncertainty-distribution failure. That raw result is preserved: replicas, confidence intervals and native-accuracy estimates were not measured and must not be implied. This limits scientific claims; it does not negate the recorded deterministic software and geometry checks. This language-model review is not an independent human expert certification or packaged-distribution acceptance.

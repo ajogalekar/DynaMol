@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "scope": "Bounded software and starting-geometry validation; no production MD or native-loop accuracy claim.",
+  "decision": {
+    "tested_software_and_geometry": "passed",
+    "native_loop_accuracy": "not established",
+    "statistical_performance": "not measured",
+    "packaged_runtime_acceptance": "separate distribution checks required"
+  },
+  "policy": {
+    "max_internal_residues_per_gap": 12,
+    "max_total_modeled_residues": 96,
+    "standard_amino_acids_only_in_new_residues": true,
+    "sequence_evidence_required": true,
+    "terminal_completion": false,
+    "automatic_simulation_minimization_required": true,
+    "runtime_threads": 2,
+    "fragment_timeout_seconds": 180,
+    "temporary_refinement_max_iterations": 1000,
+    "budget_note": "Full isolated monomer/tetramer preparation watchdog600s includes native ligand parameters; fragment timeout180s remains separate."
+  },
+  "method": {
+    "fragment_runtime": {
+      "promod3": "3.6.0",
+      "openstructure": "2.11.1",
+      "openmm": "8.5.1"
+    },
+    "preparation_runtime": {
+      "openmm": "8.6.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "pdbfixer": "1.12.0"
+    },
+    "fragment_database_hashes": [
+      {
+        "path": "share/promod3/loop_data/ff_lookup_charmm.dat",
+        "bytes": 1605024,
+        "sha256": "ffb4de8396451f2429eb24b704fbd8187ce4cc1c49b4437af6c2f455c1819355"
+      },
+      {
+        "path": "share/promod3/loop_data/frag_db.dat",
+        "bytes": 305574667,
+        "sha256": "c8edc3828d7e3faaa0e1f2b7fc5ed2d5ebeb9482fe2b0e417e98c0d235f5b5f8"
+      },
+      {
+        "path": "share/promod3/loop_data/structure_db.dat",
+        "bytes": 520676726,
+        "sha256": "e741ffc2310110841766f17bdb49ea6130a01542a9c322768a051b26083896e9"
+      },
+      {
+        "path": "share/promod3/loop_data/torsion_sampler.dat",
+        "bytes": 8741153,
+        "sha256": "c7ce1e80566db030c2f5abb2aa8df9dba0886c46c0adabf324967f25fe2fc5d7"
+      },
+      {
+        "path": "share/promod3/loop_data/torsion_sampler_coil.dat",
+        "bytes": 8741153,
+        "sha256": "5a472e6d6e4480519fdb3bdae0d228c6471e4d48c94c48baa6612617c12bdb26"
+      },
+      {
+        "path": "share/promod3/loop_data/torsion_sampler_extended.dat",
+        "bytes": 8741153,
+        "sha256": "4d4e8760e1fda84753ea1b3200460361b989fa033c2e1f050c7e845f30ab96f2"
+      },
+      {
+        "path": "share/promod3/loop_data/torsion_sampler_helical.dat",
+        "bytes": 8741153,
+        "sha256": "52ce853b6daf6b36f34f02a285095de95aae821e332f9df410a870d9a9559049"
+      },
+      {
+        "path": "share/promod3/scoring_data/aa_packing_scorer.dat",
+        "bytes": 22076,
+        "sha256": "c097be664fabf1b4e21f634633a94aad44ec8b00ed170bae293423f6d2c39d59"
+      },
+      {
+        "path": "share/promod3/scoring_data/aa_scorer.dat",
+        "bytes": 2231156,
+        "sha256": "53f56f35b7b9ea83ecc05baa4e1df6b26523d04ed02eea30ff8d6390c0949331"
+      },
+      {
+        "path": "share/promod3/scoring_data/cb_packing_scorer.dat",
+        "bytes": 1713,
+        "sha256": "2435128c5d9e7008c53e72167ba64389854659a5d3d4fd747cac9f2f09a5f433"
+      },
+      {
+        "path": "share/promod3/scoring_data/cbeta_scorer.dat",
+        "bytes": 64036,
+        "sha256": "02f34f107995ee037c7e84f38d19b787dea5ba2197c5ffe604c156fe2f6acb6e"
+      },
+      {
+        "path": "share/promod3/scoring_data/hbond_scorer.dat",
+        "bytes": 313721,
+        "sha256": "ae8e0583b2f69efd658ce652278fa098aca828868cb3e7252a17258a0abefc99"
+      },
+      {
+        "path": "share/promod3/scoring_data/reduced_scorer.dat",
+        "bytes": 8192044,
+        "sha256": "e61126ff3bebe321ffd351ad7ca79454ec9e5e9b0e105cb8d0f23e0b9349a14f"
+      },
+      {
+        "path": "share/promod3/scoring_data/ss_agreement_scorer.dat",
+        "bytes": 985,
+        "sha256": "0060da74354db28b255c1a5dbe42efd82ca00d61155720cd40abfe098d1afde1"
+      },
+      {
+        "path": "share/promod3/scoring_data/torsion_scorer.dat",
+        "bytes": 576361,
+        "sha256": "a985b4d4e091ee6bd8b3bf0f12bcbb053919d1066a61246fe6cfa4c97a7ea8a2"
+      },
+      {
+        "path": "share/promod3/sidechain_data/bb_dep_lib.dat",
+        "bytes": 25754538,
+        "sha256": "066d146a96f394bfe758dae05bb86f02c729e3779ccea4ea60b0344aa32bc7c6"
+      },
+      {
+        "path": "share/promod3/sidechain_data/lib.dat",
+        "bytes": 20284,
+        "sha256": "87cda0e0ce3111e1190fd7e5c277a99a735f44e6927c84c2c08ebddee96dfa79"
+      }
+    ],
+    "requested_seed": 2026,
+    "fragment_seed_applied": false,
+    "construction": "One fragment-database invocation, no gap extension/Monte Carlo; only wholly new residue heavy coordinates transplanted. Temporary context may standardize supported modifications and may omit detached ligands/waters; original identities and positions are restored/preserved.",
+    "refinement": "Complete prepared force field; all non-loop heavy atoms fixed, new loop atoms and regenerated H mobile. New non-Pro peptide links temporarily biased trans; proline retains candidate cis/trans basin. These torsions and fixed masses are absent from exported System.",
+    "quality_gates": "Exact atom/residue mapping, finite coordinates, peptide closure, heavy covalent bonds, broad backbone angles, omega planarity, full-complex gross/soft contacts and unchanged chirality checks. Every modeled residue is screened even when stereo correction is not needed.",
+    "energy_limit": "Construction energies include temporary torsions; iteration cap and successful geometry do not establish convergence or native conformation."
+  },
+  "completed_cases": [
+    {
+      "case": "1UA2 monomerA, exact missing44\u201355",
+      "source_sha256": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+      "input_pdb_sha256": "c4189383149fd25e7338e9f4b0a9c8e31a18ee0f8c32c3c27465fbfd1634d404",
+      "elapsed_seconds": 39.49061145901214,
+      "job_id": "d919768380024643",
+      "output_dataset_id": "2d457e0a20484107",
+      "prepared_atoms": 4825,
+      "checks_passed": 14,
+      "checks_total": 14,
+      "checks": {
+        "completed": true,
+        "all_input_heavy_identities_retained": true,
+        "exact_12_loop_residue_identities": true,
+        "original_backbone_coordinates_exact": true,
+        "ATP_TPO_heavy_coordinates_exact": true,
+        "sidechain_changes_explained_by_requested_chi_adjustment": true,
+        "saved_geometry_recheck": true,
+        "saved_stereochemistry_recheck": true,
+        "system_particle_count_matches": true,
+        "no_fixed_masses_in_exported_system": true,
+        "no_construction_torsions_in_exported_system": true,
+        "ATP_TPO_declared_charges_preserved": true,
+        "requires_simulation_minimization": true,
+        "source_dataset_bytes_unchanged": true
+      },
+      "charges_e": {
+        "A:170::TPO": -1.9999999999999998,
+        "E:381::ATP": -3.9999999953683125
+      },
+      "coordinate_scope": "All observed atoms preserved exactly during loop construction. Fixed-heavy loop refinement preserves its input. Full prep also applies requested bounded chi adjustment:39 observed sidechain atoms changed across18 recorded adjustments; original backbone/ATP/TPO heavy coordinates remain exact, no unexplained changes.",
+      "recorded_chi_adjustments": 18,
+      "changed_observed_sidechain_atoms": 39,
+      "actual_exported_force_classes": [
+        "HarmonicBondForce",
+        "PeriodicTorsionForce",
+        "NonbondedForce",
+        "CMMotionRemover",
+        "HarmonicAngleForce"
+      ],
+      "native_ligand_conversion_passed": true,
+      "loop_final_geometry_accepted": true,
+      "executed_worker_sha256": {
+        "worker.py": "fa527f785fc2eed185392649e1fc595343c6861d0546c13e84f77f261aab5d2a",
+        "preparation_worker.py": "c5aa1c7773cf7fca2a9cc2402bcd035ab8feaa0530befef12bcbfe521501b146",
+        "promod_loop_worker.py": "a99a10958b0b2b44096599cecb24226a68f3268f3409e215cd47251a73d51001"
+      }
+    },
+    {
+      "case": "1UBQ chainA, prespecified deletion23\u201334",
+      "source_sha256": "d4a6812d8951cf6594e6a0763f089e35f5a80b62acb3c117b2c5565228a7b161",
+      "masked_fixture_sha256": "6574c56a7edd80c9bcc1c1d25c340c746b1e8d9c6639b53c4b3823b51b0cb33b",
+      "native_seconds": 1.7180268749943934,
+      "wall_seconds": 2.2109975420171395,
+      "observed_heavy_atoms": 504,
+      "modeled_heavy_atoms": 98,
+      "observed_coordinates_exact": true,
+      "geometry_accepted": true,
+      "stereo_violations": 0,
+      "gross_contacts": 0,
+      "soft_contacts": 0,
+      "attempts": {
+        "fragment": 1,
+        "refinement": 1,
+        "retries": 0
+      },
+      "limitation": "Fragment database may contain1UBQ; this is not a held-out prediction-accuracy benchmark."
+    },
+    {
+      "case": "1UA2 four-chain structure, exact missing44\u201355 in A\u2013D",
+      "source_sha256": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+      "input_pdb_sha256": "dab64f4cd3be7b468b940454c8d6bc14b4413edacb7f70d2d7ad49b66d88d4f6",
+      "elapsed_seconds": 116.2903247079812,
+      "job_id": "98d62b9d719f476a",
+      "output_dataset_id": "9ff1ad7e2ee0426b",
+      "prepared_atoms": 19300,
+      "modeled_residues": 48,
+      "internal_gaps": 4,
+      "checks_passed": 14,
+      "checks_total": 14,
+      "checks": {
+        "completed": true,
+        "all_nonwater_input_heavy_identities_retained": true,
+        "exact_48_loop_residue_identities": true,
+        "original_backbone_coordinates_exact": true,
+        "ATP_TPO_heavy_coordinates_exact": true,
+        "sidechain_changes_explained_by_requested_chi_adjustment": true,
+        "saved_geometry_recheck": true,
+        "saved_stereochemistry_recheck": true,
+        "system_particle_count_matches": true,
+        "no_fixed_masses_in_exported_system": true,
+        "no_construction_torsions_in_exported_system": true,
+        "ATP_TPO_declared_charges_preserved": true,
+        "requires_simulation_minimization": true,
+        "source_dataset_bytes_unchanged": true
+      },
+      "charges_e": {
+        "A:170::TPO": -1.9999999999999998,
+        "B:170::TPO": -1.9999999999999998,
+        "C:170::TPO": -1.9999999999999998,
+        "D:170::TPO": -1.9999999999999998,
+        "E:381::ATP": -3.9999999953683125,
+        "F:382::ATP": -3.9999999953683125,
+        "G:383::ATP": -3.9999999953683125,
+        "H:384::ATP": -3.9999999953683125
+      },
+      "recorded_chi_adjustments": 18,
+      "changed_observed_sidechain_atoms": 39,
+      "actual_exported_force_classes": [
+        "HarmonicBondForce",
+        "PeriodicTorsionForce",
+        "NonbondedForce",
+        "CMMotionRemover",
+        "HarmonicAngleForce"
+      ],
+      "native_ligand_conversion_passed": true,
+      "water_policy": {
+        "remove_waters": true,
+        "removed_water_atoms": 48,
+        "note": "Normal requested preparation removes deposited waters; nonwater heavy identity/backbone and ATP/TPO preservation checks must not be described as retaining all original waters."
+      },
+      "coordinate_scope": "All nonwater source heavy identities retained; original backbone and all168 ATP/TPO heavy coordinates exact.39 observed sidechain atoms changed through18 recorded requested chi adjustments only; no unexplained changes.",
+      "executed_worker_sha256": {
+        "worker.py": "fa527f785fc2eed185392649e1fc595343c6861d0546c13e84f77f261aab5d2a",
+        "preparation_worker.py": "c5aa1c7773cf7fca2a9cc2402bcd035ab8feaa0530befef12bcbfe521501b146",
+        "promod_loop_worker.py": "a99a10958b0b2b44096599cecb24226a68f3268f3409e215cd47251a73d51001"
+      },
+      "no_production_md": true
+    }
+  ],
+  "tetramer_followup": {
+    "status": "completed and independently rechecked",
+    "checks_passed": 14,
+    "checks_total": 14,
+    "no_production_md": true
+  },
+  "regressions": {
+    "focused": {
+      "passed": 67,
+      "seconds": 0.39,
+      "record": "build/loop-repair-review/loop-modeling-tests.json"
+    },
+    "full_backend": {
+      "passed": 599,
+      "warnings": 9,
+      "seconds": 17.57,
+      "record": "build/loop-repair-review/backend-tests-final.txt",
+      "sha256": "5fee5f0fb483b740a067e169fb342aa2546b243f1bd0d6f7cde57ec30d8fe5e5"
+    }
+  },
+  "rejected_attempts": [
+    {
+      "method": "PDBFixer-only12-residue construction",
+      "reason": "Severe contacts, distorted backbone angles and chirality failures; not accepted.",
+      "artifacts": "build/loop-repair-review/probe-1ua2/"
+    },
+    {
+      "method": "Raw ProMod3 candidate after exact-only new-coordinate transplantation",
+      "reason": "Moving temporary stem coordinates is not permitted in the real structure; fixed original stems exposed a26.656degree anchor angle and severe contacts.",
+      "artifacts": "build/loop-repair-review/probe-promod3-1ua2/"
+    },
+    {
+      "method": "Unbiased fixed-heavy refinement",
+      "reason": "Contacts/bonds/angles improved but three peptide omega values failed unchanged planarity bounds.",
+      "artifacts": "build/loop-repair-review/probe-promod3-1ua2/refinement-*"
+    }
+  ],
+  "scientific_review": {
+    "reviewer": "Evidence-linked language-model software review using the PatAgent checklist; not an independent human domain expert or representation of Pat Walters.",
+    "raw_postflight_decision": "block",
+    "raw_counts": {
+      "fail": 1,
+      "pass": 7,
+      "unresolved": 0
+    },
+    "raw_blocking_gates": [
+      "uncertainty"
+    ],
+    "adjudication": "The generic uncertainty-distribution gate flags absent replicate/confidence-interval evidence. Preserve that failure as a limit on statistical/native-accuracy claims; such estimates were not part of deterministic software checks. No fabricated intervals or additional model trials.",
+    "inapplicable": "ML splits, assay metrics, prospective prediction accuracy and MD convergence are not evaluated in these preparation-only software checks.",
+    "tetramer_addendum": "Same predeclared method and unchanged quality gates; one four-chain prep, no retries.14/14 saved checks passed. Existing statistical/native-accuracy limitations unchanged; no new efficacy or loop-accuracy claim."
+  },
+  "references": [
+    {
+      "title": "PDBFixer manual: selecting missing residues",
+      "url": "https://raw.githubusercontent.com/openmm/pdbfixer/master/Manual.html"
+    },
+    {
+      "title": "ProMod3 fragment pipeline",
+      "url": "https://openstructure.org/promod3/3.5/modelling/pipeline/"
+    },
+    {
+      "title": "ProMod3 paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7872268/"
+    },
+    {
+      "title": "OpenMM LocalEnergyMinimizer",
+      "url": "https://docs.openmm.org/latest/api-python/generated/openmm.openmm.LocalEnergyMinimizer.html"
+    },
+    {
+      "title": "OpenMM System (zero-mass particles)",
+      "url": "https://docs.openmm.org/latest/api-python/generated/openmm.openmm.System.html"
+    },
+    {
+      "title": "RCSB 1UA2",
+      "url": "https://www.rcsb.org/structure/1UA2"
+    },
+    {
+      "title": "RCSB 1UBQ",
+      "url": "https://www.rcsb.org/structure/1UBQ"
+    }
+  ],
+  "evidence_files": {
+    "build/loop-repair-review/general-probes/full-prep-saved-validation.json": {
+      "sha256": "2f66acfa7a9a4afe056c94273f73158a5facf8a7e9588111732d80df77f59f4a",
+      "bytes": 1863
+    },
+    "build/loop-repair-review/general-probes/full-prep-workflow.json": {
+      "sha256": "89c4a5e40385f9b9a7d1092d0ee0876c7c049b7cd0bcdc1954874963b5d3c01e",
+      "bytes": 8165
+    },
+    "build/loop-repair-review/general-probes/general-probe-summary.json": {
+      "sha256": "942ec66f2be922e437c9ea61899719eff302c1b26af4ea001c5a0b226e214ba5",
+      "bytes": 2041
+    },
+    "build/loop-repair-review/general-probes/1ubq-result.json": {
+      "sha256": "eeb6ffabd787f127f3ca3d7632338c00907218f857011fe798fc3007f1d1f554",
+      "bytes": 82387
+    },
+    "build/loop-repair-review/general-probes/1ubq-started.json": {
+      "sha256": "d4f107be91c1698154f1ec9c9bf4a5fc7e40620a2ff357c88dba78ccdd52b644",
+      "bytes": 1396
+    },
+    "build/loop-repair-review/general-probes/prep-1ua2-inputs.json": {
+      "sha256": "6fc6419c6f9fd88828b2d077ee521f8b20faec9f9c824bee4299b9b81e78fe31",
+      "bytes": 1989
+    },
+    "build/loop-repair-review/loop-modeling-tests.json": {
+      "sha256": "b685a8a6ee5374b99a5c24b560bdb046d60d2687045e932a539cdfd7bd229bf0",
+      "bytes": 2412
+    },
+    "build/loop-repair-review/postflight-manifest.json": {
+      "sha256": "9567b8573bf8d69bcc2ba0fd446b7bc7e83581140cecf9e830063eaaa6bdf573",
+      "bytes": 16081
+    },
+    "build/loop-repair-review/postflight-audit.json": {
+      "sha256": "f4ba15666788a7707735ff4ab0a26080ca5bb8d235af0bebc42ed35a52964479",
+      "bytes": 6111
+    },
+    "build/loop-repair-review/preflight-tetramer-amendment.json": {
+      "sha256": "1cd2cb09ea41f41d6e5dee88cef032c0fc1ec733a4a6239edc24faee8428310a",
+      "bytes": 14685
+    },
+    "build/loop-repair-review/preflight-tetramer-audit.json": {
+      "sha256": "1d0a9801a5cecd0c969cd21d4fd000784bf9ebc8906b71759bffa06a12164d61",
+      "bytes": 4332
+    },
+    "build/loop-repair-review/general-probes/tetramer-prep-saved-validation.json": {
+      "sha256": "09943c08238084f91fbce3500bebd970174c4131930a3f3a1c4f31d9a5d98d81",
+      "bytes": 2107
+    },
+    "build/loop-repair-review/general-probes/tetramer-prep-workflow.json": {
+      "sha256": "dd716d119df1ae9c6474f7e1138b970b5d3794156cd7b962dda1d3818685c426",
+      "bytes": 8721
+    },
+    "build/loop-repair-review/backend-tests-final.txt": {
+      "sha256": "5fee5f0fb483b740a067e169fb342aa2546b243f1bd0d6f7cde57ec30d8fe5e5",
+      "bytes": 4000
+    }
+  },
+  "source_files": {
+    "backend/loop_modeling.py": {
+      "sha256": "507660a4ff80d91cfd96f7930c55ca2c67a02d76ad16309091d6b8ca44494356"
+    },
+    "backend/promod_loop_worker.py": {
+      "sha256": "a99a10958b0b2b44096599cecb24226a68f3268f3409e215cd47251a73d51001"
+    },
+    "backend/loop_geometry.py": {
+      "sha256": "aaf36c0c4fd3f699e074e13f2770fe24a02eccdbf7266aba6a136da25f073973"
+    },
+    "backend/loop_refinement.py": {
+      "sha256": "27e81f379d8bf9f69388685cf51b20c51435bb2fc0524fdef2517fb9e01759be"
+    },
+    "backend/preparation.py": {
+      "sha256": "bad14d01a3f239ee0cd4a99f96031536892bf918083c422cb6e4c739097f02af"
+    },
+    "backend/preparation_worker.py": {
+      "sha256": "c5aa1c7773cf7fca2a9cc2402bcd035ab8feaa0530befef12bcbfe521501b146"
+    },
+    "backend/jobs.py": {
+      "sha256": "8f5abe1a5e54e6d750c3e531a4ad967a9e32ca5394dc38da62e939a9bb79a85d"
+    }
+  },
+  "source_files_scope": "Current reviewed source snapshot; do not substitute these hashes for the recorded executed worker hashes below."
+}

@@ -20,6 +20,8 @@ FIXTURES = config.ROOT / "docs" / "audit" / "preparation-fixtures"
 
 @pytest.fixture(autouse=True)
 def preparation_data(tmp_path, monkeypatch):
+    # Eligibility controls isolate installation; native runtime has separate checks.
+    monkeypatch.setattr("backend.loop_modeling.loop_runtime_status", lambda: {"available": True})
     monkeypatch.setattr(config, "DATA_ROOT", tmp_path)
     monkeypatch.setattr(config, "DATASETS_DIR", tmp_path / "datasets")
     monkeypatch.setattr(config, "JOBS_DIR", tmp_path / "jobs")

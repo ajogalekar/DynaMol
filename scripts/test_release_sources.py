@@ -1,11 +1,13 @@
 """Small offline integrity controls for the source-material collector."""
 import copy
 import hashlib
+import io
 from pathlib import Path
+import tarfile
 import tempfile
 import unittest
 
-from collect_release_sources import download, sources_in, verify
+from collect_release_sources import download, pinned_native_git_source, sources_in, verify
 
 
 class IntegrityControls(unittest.TestCase):
@@ -51,6 +53,36 @@ class IntegrityControls(unittest.TestCase):
     def test_rattler_nested_sources_preserved(self):
         source = {'url': 'https://example.test/source', 'sha256': '1' * 64}
         self.assertEqual(sources_in({'cache': [{'source': [source]}]}), [source])
+
+    def test_git_source_preserves_full_revision_and_rejects_mutable_refs(self):
+        source = {'git_url': 'https://github.com/example/library.git', 'git_rev': 'a' * 40}
+        self.assertEqual(sources_in({'source': source}), [source])
+        mapped, _ = pinned_native_git_source(source, 'library', 'runtime', {}, self.output, self.output)
+        self.assertEqual(mapped['url'], 'https://codeload.github.com/example/library/tar.gz/' + 'a' * 40)
+        with self.assertRaisesRegex(ValueError, 'full recorded commit'):
+            pinned_native_git_source({**source, 'git_rev': 'main'}, 'library', 'runtime', {}, self.output, self.output)
+
+    def test_native_openmm_source_binds_embedded_commit_to_archive_and_recipe(self):
+        revision = 'c' * 40
+        engines = self.output / 'engines'
+        engines.mkdir()
+        archive = engines / 'native.tar.gz'
+        content = f"git_revision = '{revision}'\n".encode()
+        with tarfile.open(archive, 'w:gz') as packed:
+            member = tarfile.TarInfo('lib/python3.12/site-packages/openmm/version.py')
+            member.size = len(content)
+            packed.addfile(member, io.BytesIO(content))
+        record = {'archive': archive.name, 'sha256': hashlib.sha256(archive.read_bytes()).hexdigest()}
+        manifest = {'engines': {'promod3': record}}
+        source = {'git_url': 'https://github.com/openmm/openmm.git', 'git_rev': revision[:7]}
+        mapped, _ = pinned_native_git_source(source, 'openmm', 'promod3', manifest, self.output, self.output)
+        self.assertEqual(mapped['git_revision'], revision)
+        self.assertEqual((self.output / 'shipped-version.py').read_bytes(), content)
+        with self.assertRaisesRegex(ValueError, 'conflicts with its recipe'):
+            pinned_native_git_source({**source, 'git_rev': 'a' * 7}, 'openmm', 'promod3', manifest, self.output, self.output)
+        record['sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'does not match its manifest'):
+            pinned_native_git_source(source, 'openmm', 'promod3', manifest, self.output, self.output)
 
 
 if __name__ == '__main__':

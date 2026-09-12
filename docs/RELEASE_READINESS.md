@@ -1,8 +1,9 @@
 # DynaMol 0.1 early-release scope
 
 **The 0.1.0 installer was withdrawn for a packaging signature error.** The 0.1.1
-replacement remains pending its downloaded-app opening check. The scope and
-historical software evidence below do not announce a replacement download.
+replacement repairs the bundle seal and adds a private ProMod3 runtime. The
+earlier repaired installer passed a manual download/per-app opening check;
+the expanded package requires its own matching acceptance record.
 
 DynaMol 0.1 serves individual scientists using a local Mac: load supported
 molecules, review preparation, run a bounded simulation and explore its
@@ -24,6 +25,7 @@ changed signature bytes recorded separately. These are not fresh simulation runs
 | Managed molecule library | Dataset name or Projects | Rename, trash, restore and source/dependency preservation tests |
 | Measurements, RMSD/RMSF and selections | Explore | [Analysis contract](ANALYSIS.md), numerical controls and actual browser plot/export checks |
 | Supported complex/modified-residue preparation | Preparation inspection | [Chemistry coverage](CHEMISTRY_SUPPORT.md), identity/parameter continuity and explicit unsupported-case blockers |
+| Optional internal loops | Missing-loop controls before Prep | [Loop validation](audit/loop-repair/REVIEW.md): actual 1UA2 monomer/four-chain preparation and 1UBQ deletion control; unchanged geometry/chirality gates |
 
 ## Evidence and its limits
 
@@ -52,12 +54,28 @@ uncertainty evidence. They restrict scientific claims, not the stated smoke-test
 results. Native runs retain their launch-time worker hashes; subsequent recovery
 and diagnostic-history changes were tested separately.
 
+The subsequent loop work has [67 recorded focused controls](audit/loop-repair/validation.json)
+and a recorded full backend run of 599 passing tests with nine warnings. Actual complete
+1UA2 preparations rebuilt 12 monomer residues and 48 residues across four chains
+while retaining ATP/TPO parameters; each saved output passed 14 checks. The
+separate 1UBQ 12-residue deletion control also passed. These counts and native
+results are separate from the earlier pressure-test evidence. They validate
+screened starting geometry, not native loop accuracy or production dynamics.
+
 ## First-release boundaries
 
 The default atom limit is 100,000. The source service supports an explicit
 200,000 opt-in; the packaged launcher currently retains the default and offers
 no toggle. The 145,913-atom GPCR pressure test therefore exceeds the packaged
 profile. Large-trajectory streaming and membrane construction are outside 0.1.
+
+The included ProMod3 path supports at most 12 sequence-supported standard
+residues per internal gap and 96 modeled residues total. Terminal omissions and
+missing modified residues are not automatically built. Refinement uses temporary
+construction restraints that are absent from the exported simulation System;
+complete-complex geometry/chirality checks and subsequent MD minimization remain
+mandatory. Fragment lookup may omit detached ligand context; the full prepared
+force field and final environment screen cover the retained complex afterward.
 
 The exact-ZIP acceptance record covers both bundled native workers, private
 runtime and AmberTools checks, restart/workspace persistence, seven Chrome
@@ -93,5 +111,7 @@ recipe/patch mappings. It preserves conditional compiler-runtime provenance
 and exception questions rather than presenting the collection as legal
 certification. See [third-party notices](../THIRD_PARTY.md) and the release's
 matching materials index.
-The 0.1.0 source collection is reused for 0.1.1's unchanged upstream components;
-the release binding must distinguish signature repairs from code/data changes.
+The earlier source collection is reused for unchanged upstream components,
+with a ProMod3/OpenStructure dependency supplement for the expanded runtime.
+The matching release binding distinguishes signature repairs from code/data
+changes and identifies the actual source-material archives.

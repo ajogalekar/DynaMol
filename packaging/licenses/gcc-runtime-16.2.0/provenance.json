@@ -1,0 +1,27 @@
+{
+  "name": "gcc-runtime",
+  "version": "16.2.0",
+  "sources": [
+    {
+      "url": "https://mirrors.ocf.berkeley.edu/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.gz",
+      "sha256": "071d00a097579e5ef7ce97fc4a9e58e73fd3503c0a013c765c970370a5a53b9b",
+      "member": "gcc-16.2.0/COPYING3"
+    },
+    {
+      "package": {
+        "name": "libgfortran5",
+        "version": "16.2.0",
+        "build": "hdb7a957_4",
+        "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libgfortran5-16.2.0-hdb7a957_4.conda",
+        "sha256": "902719c38c7a390d305435a362dc83893754c3f933569a38347c434cd1c12540"
+      },
+      "member": "share/licenses/libgfortran/RUNTIME.LIBRARY.EXCEPTION",
+      "member_sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    }
+  ],
+  "files_sha256": {
+    "LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "RUNTIME.LIBRARY.EXCEPTION": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+  },
+  "note": "GPLv3 text from the already verified GCC source archive and the exact installed runtime exception. Applies to the matching libgcc/libgfortran/libgfortran5 package family; libgfortran itself is an empty dependency metapackage."
+}

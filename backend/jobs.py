@@ -191,6 +191,15 @@ def validate_simulation(settings: SimulationConfig) -> dict:
             raise ValueError("The saved complex parameters do not cover these residues: " + ", ".join(sorted({residue.name for residue in unmatched})) + ". Prepare the complex again; no molecules were removed.")
     if any(gap["structural_break"] for gap in backbone_gaps(input_structure.topology, input_structure.positions)):
         raise ValueError("A long backbone C–N connection indicates an unresolved structural gap. Inspect and repair the protein before simulation; an artificial stretched peptide bond will not be simulated.")
+    if not preparation_state and not solvation_state:
+        # Close spatial endpoints do not erase residues declared by the source.
+        from .preparation import current_fixer, find_missing_residues_preserving_identity
+        source_fixer, _ = current_fixer(settings.dataset_id)
+        find_missing_residues_preserving_identity(source_fixer)
+        chains = list(source_fixer.topology.chains())
+        if any(position not in {0, len(list(chains[index].residues()))}
+               for index, position in source_fixer.missingResidues):
+            raise ValueError("The source sequence contains unresolved internal residues. Prepare the protein with missing-loop building before starting a simulation.")
     engine = next(engine for engine in health()["engines"] if engine["id"] == settings.engine)
     if not engine["available"]:
         raise ValueError(engine["message"])

@@ -16,6 +16,7 @@ from pathlib import Path
 import re
 import shutil
 import sys
+import tarfile
 import time
 import tomllib
 import urllib.parse
@@ -50,7 +51,7 @@ def sources_in(value):
         for key, child in value.items():
             if key == 'source':
                 for item in child if isinstance(child, list) else [child]:
-                    if isinstance(item, dict) and 'url' in item:
+                    if isinstance(item, dict) and ('url' in item or 'git_url' in item):
                         found.append(item)
             elif isinstance(child, (dict, list)):
                 found.extend(sources_in(child))
@@ -58,6 +59,42 @@ def sources_in(value):
         for child in value:
             found.extend(sources_in(child))
     return found
+
+
+def pinned_native_git_source(source, name, engine, manifest, resources, target):
+    """Resolve a recipe Git source without substituting a mutable release tag."""
+    revision = str(source.get('git_rev') or '')
+    authority = 'full Git commit in shipped rendered Conda recipe'
+    if name == 'openmm':
+        runtime = manifest['engines'][engine]
+        archive = resources / 'engines' / runtime['archive']
+        if sha(archive) != runtime['sha256']:
+            raise ValueError('Native OpenMM runtime archive does not match its manifest')
+        version_bytes = None
+        # Read the exact bundled archive, not a development prefix. Stream to
+        # the small version record without extracting or modifying the runtime.
+        with tarfile.open(archive, 'r|gz') as packed:
+            for member in packed:
+                if re.fullmatch(r'lib/python[0-9.]+/site-packages/openmm/version\.py', member.name):
+                    if not member.isfile() or member.size > 64 * 1024:
+                        raise ValueError('Invalid bundled OpenMM version record')
+                    version_bytes = packed.extractfile(member).read()
+                    break
+        if version_bytes is None:
+            raise ValueError('Bundled native OpenMM version record is missing')
+        match = re.search(r"git_revision = ['\"]([0-9a-f]{40})", version_bytes.decode())
+        if not match or not re.fullmatch(r'[0-9a-f]{7,40}', revision) or not match.group(1).startswith(revision):
+            raise ValueError('Native OpenMM embedded source revision conflicts with its recipe')
+        revision = match.group(1)
+        (target / 'shipped-version.py').write_bytes(version_bytes)
+        authority = 'full Git revision embedded in manifest-verified native runtime archive; matches shipped recipe'
+    if not re.fullmatch(r'[0-9a-f]{40}', revision):
+        raise ValueError('Git source requires a full recorded commit, not a branch or tag')
+    repository = re.fullmatch(r'https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+?)(?:\.git)?', source['git_url'])
+    if not repository:
+        raise ValueError('Git source host requires an explicit pinned archive mapping')
+    return ({**source, 'url': f'https://codeload.github.com/{repository.group(1)}/tar.gz/{revision}',
+             'git_revision': revision, 'filename': f'{name}-{revision}.tar.gz'}, authority)
 
 
 def plan(bundle, output):
@@ -134,7 +171,11 @@ def plan(bundle, output):
             record['source_recipe'] = str(recipe_path.relative_to(output))
             record['source_specs'] = specs
             for spec in specs:
-                record['source_artifacts'].append(artifact(spec, owner, 'shipped rendered Conda recipe'))
+                authority = 'shipped rendered Conda recipe'
+                if 'git_url' in spec:
+                    spec, authority = pinned_native_git_source(spec, name, package['engine'], manifest, resources, target)
+                    record['source_revision'] = spec['git_revision']
+                record['source_artifacts'].append(artifact(spec, owner, authority))
                 for patch in spec.get('patches', []):
                     if not isinstance(patch, str):
                         raise ValueError('Unrendered conditional patch')
@@ -314,7 +355,7 @@ def collect_supporting_materials(output):
     shutil.copy2(Path(__file__), target / 'collect_release_sources.py')
     shutil.copy2(ROOT / 'scripts/test_release_sources.py', target / 'test_release_sources.py')
     for path in metadata.iterdir():
-        if path.is_file() and path.name != 'INDEX.json':
+        if path.is_file() and path.name not in {'INDEX.json', 'VERIFICATION.json'}:
             shutil.copy2(path, target / path.name)
 
 

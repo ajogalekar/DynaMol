@@ -1,16 +1,10 @@
 {
-  "build_id": "52849f24834243e2",
-  "checks": 656,
+  "application_build_binding": "pending separate final application acceptance receipt",
+  "checks": 3171,
+  "collection_id": "dynamol-three-runtime-sources-20260912",
   "failures": [],
-  "index_sha256": "a2b3c0406cf899040254d453b321c3a884e3158e38fd0d183bc4f1fdbe076dcc",
-  "offline_integrity_controls": {
-    "command": ".venv/bin/python scripts/test_release_sources.py",
-    "passed": 7
-  },
+  "index_sha256": "de7db9a3518757da251793c1f984428138da91eede747b719a31858850f0eae7",
   "passed": true,
-  "scope": "Checks source/material hashes and selection mapping; does not certify legal completeness or bit-identical rebuilds.",
-  "selected_package_builds": 24,
-  "source_bytes": 1279365002,
-  "source_files": 28,
-  "verified_utc": "2026-09-12T03:29:40.473283+00:00"
+  "selected_package_records": 51,
+  "source_archives_verified": 44
 }

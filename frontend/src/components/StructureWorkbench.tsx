@@ -227,10 +227,21 @@ export default function StructureWorkbench({
   }
   const missingCount = inspection?.missing_residues.reduce((n, r) => n + r.count, 0) ?? 0;
   const canBuild = inspection?.missing_residues.some((r) => r.buildable) ?? false;
-  const internalMissingCount =
-    inspection?.missing_residues
-      .filter((region) => !region.terminal)
-      .reduce((count, region) => count + region.count, 0) ?? 0;
+  const loopPolicy = inspection?.loop_policy;
+  const internalMissing = inspection?.missing_residues.filter((region) => !region.terminal) ?? [];
+  const internalMissingCount = internalMissing.reduce((count, region) => count + region.count, 0);
+  const longestMissingGap = internalMissing.reduce(
+    (longest, region) => Math.max(longest, region.count),
+    0,
+  );
+  const gapLimitExceeded = !!loopPolicy && longestMissingGap > loopPolicy.max_gap_residues;
+  const totalLimitExceeded = !!loopPolicy && internalMissingCount > loopPolicy.max_total_residues;
+  const isExtendedLoop = (region: Inspection['missing_residues'][number]) =>
+    region.modeling === 'extended' ||
+    (!region.modeling && !!loopPolicy && region.count > loopPolicy.short_gap_residues);
+  const hasExtendedBuildableLoop = internalMissing.some(
+    (region) => region.buildable && isExtendedLoop(region),
+  );
   const hasProtein =
     (inspection?.protein_atoms ??
       dataset?.atoms.filter((a) => a.category === 'protein').length ??
@@ -642,10 +653,14 @@ export default function StructureWorkbench({
                               <small>
                                 {r.residues.join('–')} ·{' '}
                                 {r.buildable
-                                  ? 'can build a starting model'
+                                  ? isExtendedLoop(r)
+                                    ? 'longer loop · provisional starting model'
+                                    : 'can build a starting model'
                                   : r.terminal
                                     ? 'reported · prepare the observed terminus'
-                                    : 'requires additional modeling'}
+                                    : loopPolicy && r.count > loopPolicy.max_gap_residues
+                                      ? `exceeds ${loopPolicy.max_gap_residues}-residue gap limit`
+                                      : 'requires additional modeling'}
                               </small>
                             </div>
                           ))}
@@ -678,30 +693,32 @@ export default function StructureWorkbench({
                     </>
                   )
                 )}
-                {!inspecting && internalMissingCount > 12 && (
+                {!inspecting && loopPolicy && (gapLimitExceeded || totalLimitExceeded) && (
                   <div className="inline-warning missing-build-limit" role="status">
-                    This structure has {internalMissingCount} missing internal residues; the local
-                    builder supports 12 total.{' '}
-                    {monomers && monomers.chains.length > 1
-                      ? 'Select one chain or supply a complete model.'
-                      : 'Supply a complete model for the unsupported regions.'}
+                    {gapLimitExceeded &&
+                      `The longest missing internal region has ${longestMissingGap} residues; the computational limit is ${loopPolicy.max_gap_residues} per gap. `}
+                    {totalLimitExceeded &&
+                      `This structure has ${internalMissingCount} missing internal residues; the computational limit is ${loopPolicy.max_total_residues} total. `}
+                    Supply a more complete model for regions beyond these limits.
                   </div>
                 )}
-                {!inspecting && internalMissingCount > 0 && (
+                {!inspecting && loopPolicy && internalMissingCount > 0 && (
                   <p className="form-note">
-                    Local starting models support up to 6 residues per internal gap and 12 residues
-                    total.
+                    Current computational limits: {loopPolicy.max_gap_residues} residues per
+                    internal gap and {loopPolicy.max_total_residues} residues total.
                   </p>
                 )}
                 {!inspecting && inspection && hasProtein && (
                   <p className="form-note missing-build-note" id="missing-loop-help">
                     {canBuild
-                      ? 'Build a starting model for supported short internal gaps during preparation. Inspect rebuilt loops afterward; their conformations are uncertain.'
+                      ? `Use the original sequence to build a provisional starting model. ${hasExtendedBuildableLoop ? 'Longer loops take more work. ' : ''}Geometry is checked; loop conformations remain uncertain.`
                       : missingCount
-                        ? 'Terminal regions remain omitted. Unsupported internal gaps require additional modeling before preparation.'
+                        ? internalMissingCount
+                          ? 'Unsupported internal gaps require additional modeling before preparation.'
+                          : 'Terminal regions remain omitted; the observed termini are prepared.'
                         : inspection.has_sequence
                           ? 'No missing protein sequence regions were detected. This option has nothing to add for the current structure; ligand atom repair is separate below.'
-                          : 'Loop building needs known sequence records and a supported short internal gap.'}
+                          : 'Loop building needs known sequence records and a supported internal gap.'}
                   </p>
                 )}
               </section>

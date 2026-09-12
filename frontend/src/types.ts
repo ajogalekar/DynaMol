@@ -150,6 +150,11 @@ export interface Inspection {
   heterogen_residues: string[];
   can_prepare: boolean;
   has_sequence: boolean;
+  loop_policy?: {
+    max_gap_residues: number;
+    max_total_residues: number;
+    short_gap_residues: number;
+  };
   missing_atoms: { chain: string; resid: string; residue: string; atoms: string[] }[];
   missing_residues: {
     chain: string;
@@ -158,6 +163,7 @@ export interface Inspection {
     count: number;
     terminal: boolean;
     buildable: boolean;
+    modeling?: 'short' | 'extended' | 'unsupported' | 'terminal';
   }[];
   gaps: {
     chain: string;

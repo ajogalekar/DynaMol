@@ -24,7 +24,7 @@ from openmm import app, unit
 
 from . import config, storage
 from .preparation import (STANDARD_PROTEINS, backbone_gaps, find_missing_residues_preserving_identity,
-                          unsupported_missing_residue_message)
+                          unsupported_missing_residue_message, validate_loop_selection, loop_policy)
 from .modified_residues import (SUPPORTED_MODIFIED, PARENT_RESIDUES, register_topology_definitions,
                                 register_fixer_templates, inspect_modified, modified_forcefield_provenance,
                                 modified_stereochemistry_report)
@@ -448,14 +448,18 @@ class PreparationWorker(Worker):
         find_missing_residues_preserving_identity(fixer)
         selected_loops = {}
         rebuilt = []
+        internal_loops = []
         chains = list(fixer.topology.chains())
         for (chain_index, position), names in fixer.missingResidues.items():
             terminal = position in {0, len(list(chains[chain_index].residues()))}
             if not terminal and any(name not in STANDARD_PROTEINS for name in names):
                 raise ValueError(unsupported_missing_residue_message(chains[chain_index].id, names))
+            if not terminal:
+                internal_loops.append({"chain": chains[chain_index].id, "residues": names})
             if options["build_missing_residues"] and not terminal:
                 selected_loops[(chain_index, position)] = names
-                rebuilt.append({"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "confidence": "low", "method": "PDBFixer template placement and local optimization; no independent structure prediction or validation"})
+                rebuilt.append({"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "confidence": "low", "method": "ProMod3 fragment-database model plus bounded OpenMM refinement with observed heavy atoms fixed; no claim of native loop accuracy"})
+        validate_loop_selection(internal_loops, options["build_missing_residues"])
         fixer.missingResidues = selected_loops
         from .sequence_evidence import restoration_plan, restore_residue_identities
         source_identity_plan = restoration_plan(fixer, selected_loops)
@@ -467,6 +471,8 @@ class PreparationWorker(Worker):
         fixer.findMissingAtoms()
         missing_record = [{"chain": residue.chain.id, "resid": residue.id, "residue": residue.name, "atoms": [atom.name for atom in missing]} for residue, missing in fixer.missingAtoms.items()]
         if options["add_missing_atoms"] or selected_loops:
+            if selected_loops:
+                self.update(message=f"Building {len(selected_loops)} sequence-supported loop(s), {sum(map(len, selected_loops.values()))} residues. One local construction attempt; modeled geometry will be checked before saving.")
             import pdbfixer.pdbfixer as fixer_implementation
             original_overlay = fixer_implementation._overlayPoints
             fixer_implementation._overlayPoints = proper_overlay_points
@@ -475,6 +481,24 @@ class PreparationWorker(Worker):
             finally:
                 fixer_implementation._overlayPoints = original_overlay
         restored_identities = restore_residue_identities(fixer.topology, source_identity_plan)
+        modeled_keys, loop_modeler = set(), None
+        if selected_loops:
+            from .loop_modeling import generate_loop_model
+            modeled_keys = {residue_key(residue) for residue in fixer.topology.residues()
+                            if not any(atom_key(atom) in observed_coordinates for atom in residue.atoms())}
+            if len(modeled_keys) != sum(map(len, selected_loops.values())):
+                raise ValueError("Constructed loop identities do not match the requested missing sequence.")
+            context_keys = {residue_key(residue) for residue in input_topology.residues()
+                            if residue_key(residue) not in retained_keys
+                            and residue.name.upper() not in storage.WATERS
+                            and not options["remove_heterogens"]
+                            and ":".join(residue_key(residue)) not in removed_ligand_keys}
+            loop_environment = subset(input_topology, input_positions, context_keys, remove_hydrogens=True) if context_keys else None
+            self.update(stage="Building missing loops from structural fragments")
+            fixer.positions, loop_modeler = generate_loop_model(
+                fixer.topology, fixer.positions, set(observed_coordinates), self.folder,
+                options["seed"], environment=loop_environment, check_cancel=self.check_cancel,
+                on_progress=lambda message: self.update(message=message))
         loop_construction = None
         if selected_loops:
             built_xyz = np.asarray(fixer.positions.value_in_unit(unit.nanometer))
@@ -484,6 +508,7 @@ class PreparationWorker(Worker):
             loop_construction = {"native_build_attempts": 1, "seed": options['seed'], "confidence": "low",
                                  "observed_coordinates_preserved_exactly": unchanged,
                                  "initial_stereochemistry": initial_stereo, "accepted": False,
+                                 "loop_policy": loop_policy(), "modeler": loop_modeler,
                                  "coordinate_artifacts": {"before": "loop-construction-before.npz", "after": "loop-construction-after.npz", "topology": "loop-construction.pdb"}}
             np.savez_compressed(self.folder / 'loop-construction-before.npz', xyz_nm=built_xyz)
             with (self.folder / 'loop-construction.pdb').open('w') as handle:
@@ -491,34 +516,18 @@ class PreparationWorker(Worker):
             storage.atomic_json(self.folder / 'loop-construction.json', loop_construction)
             if not unchanged:
                 raise ValueError("Loop construction changed or lost an observed atom; the model is rejected.")
-            if initial_stereo['violations']:
-                self.update(message="Checking one template sidechain correction for newly modeled loop stereocenters; observed atoms and backbone stay fixed.")
-                external = [(np.asarray(input_positions[a.index].value_in_unit(unit.nanometer)),
-                             {'C': .170, 'N': .155, 'O': .152, 'S': .180, 'P': .180}.get(a.element.symbol if a.element else 'C', .170))
-                            for a in input_atoms if a.element != app.element.hydrogen and residue_key(a.residue) not in retained_keys
-                            and not options['remove_heterogens'] and ':'.join(residue_key(a.residue)) not in removed_ligand_keys
-                            and a.residue.name.upper() not in storage.WATERS]
-                candidate, correction = restore_modeled_loop_sidechains(fixer.topology, fixer.positions, fixer.templates, set(observed_coordinates), external)
-                loop_construction['sidechain_correction'] = correction
-                np.savez_compressed(self.folder / 'loop-construction-after.npz', xyz_nm=np.asarray(candidate.value_in_unit(unit.nanometer)))
-                storage.atomic_json(self.folder / 'loop-construction.json', loop_construction)
-                if not correction['accepted']:
-                    raise ValueError("The bounded modeled-loop sidechain correction was rejected: " + ' '.join(correction['errors']))
-                fixer.positions = candidate
-                warnings.append("Newly modeled loop sidechains required one proper-frame template correction after coarse construction inverted stereocenters. Observed atoms and modeled backbone were preserved exactly. This remains a low-confidence model, not validated loop or rotamer geometry.")
-            else:
-                np.savez_compressed(self.folder / 'loop-construction-after.npz', xyz_nm=built_xyz)
+            np.savez_compressed(self.folder / 'loop-construction-after.npz', xyz_nm=built_xyz)
         require_valid_stereochemistry(stereochemistry_report(fixer.topology, fixer.positions, fixer.templates), "Repaired structure")
         remaining_gaps = [gap for gap in backbone_gaps(fixer.topology, fixer.positions) if gap["structural_break"]]
         if remaining_gaps:
             raise ValueError("A long backbone connection remains after optional repair. The local model is not suitable for force-field preparation; repair this gap externally. " + remaining_gaps[0]["message"])
         if loop_construction is not None:
-            loop_construction['accepted'] = True
+            loop_construction['construction_checks_passed'] = True
             loop_construction['artifacts_sha256'] = {name: hashlib.sha256((self.folder / name).read_bytes()).hexdigest() for name in loop_construction['coordinate_artifacts'].values()}
             storage.atomic_json(self.folder / 'loop-construction.json', loop_construction)
         summary.append(f"Added {fixer.topology.getNumAtoms() - before_heavy} heavy/terminal atoms across existing residues and {len(rebuilt)} rebuilt internal segment(s).")
         if rebuilt:
-            warnings.append("LOW-CONFIDENCE REBUILT SEGMENTS: " + "; ".join(f"chain {r['chain']}, insertion position {r['position']}, {'-'.join(r['residues'])}" for r in rebuilt) + ". These coordinates are template-derived models, not experimentally resolved loops; validate them before scientific use.")
+            warnings.append("LOW-CONFIDENCE REBUILT SEGMENTS: " + "; ".join(f"chain {r['chain']}, insertion position {r['position']}, {'-'.join(r['residues'])}" for r in rebuilt) + ". These are fragment-derived starting models, not experimentally resolved loops.")
         self.update(completed=3, message=summary[-1])
         prepared_ligands, ligand_parameters = [], None
         if not options["remove_heterogens"]:
@@ -596,7 +605,7 @@ class PreparationWorker(Worker):
         self.update(completed=5, message=summary[-1])
         self.update(stage="Locally relaxing sidechains with backbone restraints")
         relaxation = {"performed": False, "reason": "Sidechain adjustment not requested"}
-        if options["optimize_sidechains"] and not has_water and not prepared_ligands and not ion_keys and not modified:
+        if options["optimize_sidechains"] and not rebuilt and not has_water and not prepared_ligands and not ion_keys and not modified:
             restraint = mm.CustomExternalForce("0.5*k*((x-x0)^2+(y-y0)^2+(z-z0)^2)")
             restraint.addGlobalParameter("k", 1000 * unit.kilojoule_per_mole / unit.nanometer**2)
             for parameter in ("x0", "y0", "z0"):
@@ -620,10 +629,31 @@ class PreparationWorker(Worker):
             relaxation = {"performed": True, "max_iterations": 150, "tolerance_kj_mol_nm": 10, "backbone_restraint_k_kj_mol_nm2": 1000, "restrained_original_backbone_atoms": len(restrained), "energy_with_restraints_before_kj_mol": energy_before, "energy_with_restraints_after_kj_mol": energy_after, "forcefield_files": files}
             del context, integrator
             summary.append("Performed at most 150 local minimization iterations with restraints on retained original backbone atoms; restraint energy is not an affinity or quality score.")
+        elif rebuilt:
+            relaxation = {"performed": False, "reason": "Modeled loops receive dedicated refinement with the remaining heavy atoms fixed."}
         elif options["optimize_sidechains"]:
             relaxation = {"performed": False, "reason": "Retained ligands, ions or crystallographic waters require a complete explicit solvent box. Minimize the solvated complex before dynamics."}
             warnings.append("Protein chi sampling included the retained complex. Local implicit-solvent relaxation was skipped; use energy minimization after building explicit water.")
         self.update(completed=6, message="Local relaxation stage complete.")
+        if loop_construction is not None:
+            from .loop_refinement import minimize_modeled_loops
+            from .loop_geometry import loop_geometry_report
+            self.check_cancel()
+            self.update(stage="Refining modeled loops", message="Relaxing modeled atoms against the complete prepared complex with the remaining heavy atoms fixed; at most 1,000 iterations.")
+            modeller.positions, refinement = minimize_modeled_loops(modeller.topology, modeller.positions, ff, modeled_keys)
+            loop_construction["refinement"] = refinement
+            final_loop_geometry = loop_geometry_report(modeller.topology, modeller.positions, modeled_keys)
+            loop_construction["final_geometry"] = final_loop_geometry
+            loop_construction["final_geometry_coordinates"] = "prepared.pdb"
+            storage.atomic_json(self.folder / "loop-construction.json", loop_construction)
+            require_valid_stereochemistry(stereochemistry_report(modeller.topology, modeller.positions, fixer.templates), "Refined loop structure")
+            if not final_loop_geometry["accepted"]:
+                raise ValueError("The modeled loop did not pass geometry checks after bounded refinement: " + " ".join(final_loop_geometry["errors"][:4]) + " No prepared model was accepted.")
+            loop_construction["accepted"] = True
+            storage.atomic_json(self.folder / "loop-construction.json", loop_construction)
+            warnings.extend(final_loop_geometry["warnings"])
+            warnings.append("New loop peptide bonds are initialized trans (proline preserves the candidate cis/trans basin) with temporary construction restraints. These restraints are not included in the simulation; missing-region isomer states remain modeling assumptions.")
+            summary.append(f"Built {sum(r['count'] for r in rebuilt)} missing internal residues with ProMod3 fragments and bounded OpenMM refinement; complete-complex loop geometry and chirality checks passed.")
         self.update(stage="Saving prepared structure and provenance")
         geometry = None
         if prepared_ligands or ion_keys or modified:
@@ -668,14 +698,12 @@ class PreparationWorker(Worker):
         mapping = [{"input_index": i, "output_index": output_keys.get(key), "identity": list(key)} for i, key in enumerate(input_keys)]
         old_keys = set(input_keys)
         added = [{"output_index": atom.index, "identity": list(atom_key(atom))} for atom in output_atoms if atom_key(atom) not in old_keys]
-        preparation = {"parent_dataset_id": options["dataset_id"], "ph": options["ph"], "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment", "summary": summary, "warnings": warnings, "seed": options["seed"], "forcefield_files": files, "simulation_ready": True, "exact_topology_file": "prepared.pdb", "protonation_states": states, "selected_variants": selected_variants, "removed_atom_counts": dict(counts), "rebuilt_segments": rebuilt, "repaired_atoms": missing_record, "sidechain_adjustment": rotamers, "relaxation": relaxation, "original_to_prepared_atom_map_file": "atom-map.json", "net_forcefield_charge_e": float(sum(charges)) if charges is not None else None, "stereochemistry": stereochemistry, "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."}
+        preparation = {"parent_dataset_id": options["dataset_id"], "ph": options["ph"], "method": "PDBFixer heavy-atom repair + optional ProMod3 sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment", "summary": summary, "warnings": warnings, "seed": options["seed"], "forcefield_files": files, "simulation_ready": True, "exact_topology_file": "prepared.pdb", "protonation_states": states, "selected_variants": selected_variants, "removed_atom_counts": dict(counts), "rebuilt_segments": rebuilt, "repaired_atoms": missing_record, "sidechain_adjustment": rotamers, "relaxation": relaxation, "original_to_prepared_atom_map_file": "atom-map.json", "net_forcefield_charge_e": float(sum(charges)) if charges is not None else None, "stereochemistry": stereochemistry, "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."}
         preparation.update(job_id=self.job["id"], metal_environment=environment["report"] if ion_keys else None, preserved_bound_geometry=geometry)
         if loop_construction is not None:
             preparation['loop_construction'] = loop_construction
-            needs_minimization = loop_construction.get('sidechain_correction', {}).get('steric_screen', {}).get('requires_forcefield_minimization', False)
-            preparation['requires_minimization'] = bool(needs_minimization and not relaxation.get('performed'))
-            if preparation['requires_minimization']:
-                warnings.append("Modeled loop sidechains retain soft steric overlaps and local complex relaxation was skipped. Force-field minimization is required before dynamics; steric packing and the loop pose are not validated.")
+            preparation['requires_minimization'] = True
+            warnings.append("Energy minimization with the simulation force field is required before dynamics of a rebuilt loop. Construction restraints were temporary; geometry checks do not establish the native loop conformation.")
         if protonation_aliases:
             preparation["input_protonation_aliases"] = protonation_aliases
         if ion_keys:
@@ -691,7 +719,7 @@ class PreparationWorker(Worker):
         storage.atomic_json(self.folder / "preparation.json", preparation)
         storage.atomic_json(self.folder / "atom-map.json", {"input_to_output": mapping, "added_atoms": added, "note": "Original hydrogens were removed and regenerated; matching H names do not imply retained hydrogen coordinates."})
         self.provenance.update(purpose="Exploratory protein–ligand preparation with recorded state assumptions; no claim of native rotamers, loops, binding affinity or convergence", operation="prepare", versions={**self.provenance["versions"], "pdbfixer": importlib.metadata.version("pdbfixer")}, preparation_state=preparation, source_sequence_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest() if source_path else None, preparation_worker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), parent_dataset_id=options["dataset_id"])
-        self.provenance["outputs"] = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in self.folder.iterdir() if path.is_file() and (path.name in {"input.pdb", "prepared.pdb", "preparation.json", "atom-map.json", "config.json", "modified-residue-system.xml"} or path.name.startswith('loop-construction'))}
+        self.provenance["outputs"] = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in self.folder.iterdir() if path.is_file() and (path.name in {"input.pdb", "prepared.pdb", "preparation.json", "atom-map.json", "config.json", "modified-residue-system.xml"} or path.name.startswith(('loop-construction', 'loop-model-')))}
         storage.atomic_json(self.folder / "provenance.json", self.provenance)
         traj = md.Trajectory(np.array([modeller.positions.value_in_unit(unit.nanometer)], dtype=np.float32), md.Topology.from_openmm(modeller.topology), time=[0])
         # Crystal lattice records are not advertised as a prepared periodic solvent box.
@@ -702,6 +730,9 @@ class PreparationWorker(Worker):
         if loop_construction is not None:
             for name in ('loop-construction.json', *loop_construction['coordinate_artifacts'].values()):
                 shutil.copy2(self.folder / name, folder / name)
+            for path in self.folder.glob('loop-model-*'):
+                if path.is_file():
+                    shutil.copy2(path, folder / path.name)
         if modified:
             shutil.copy2(self.folder / "modified-residue-system.xml", folder / "modified-residue-system.xml")
         copy_ligand_parameters(self.folder, folder, preparation)

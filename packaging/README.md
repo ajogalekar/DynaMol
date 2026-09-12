@@ -1,12 +1,12 @@
 # Build the DynaMol 0.1.1 Mac replacement
 
 The 0.1.0 installer was withdrawn for a packaging signature error. These are
-the replacement build instructions; downloaded-app opening validation is still
-pending, and no replacement download is announced here.
+the replacement build instructions, including the local missing-loop builder.
+See the matching release's validation record for checks on the exact download.
 
 The release format is an unsigned, self-contained **Apple Silicon / macOS 14+**
 DMG: open it, drag DynaMol to Applications, then open the app. Python 3.12,
-OpenMM, GROMACS 2025.4, AmberTools 24.8 and the interface are included.
+OpenMM, GROMACS 2025.4, AmberTools 24.8, ProMod3 3.6.0 and the interface are included.
 Recipients do not install development tools or either MD engine separately.
 See [installation, data locations and limits](../docs/PACKAGING.md).
 
@@ -19,6 +19,7 @@ build-only packing environment:
 ```sh
 uv venv --python .venv/bin/python .tools/packaging
 uv pip install --python .tools/packaging/bin/python conda-pack==0.8.1 setuptools==80.9.0 ds_store==1.3.3 mac_alias==2.2.3
+bash scripts/install_loop_tools.sh
 .venv/bin/python scripts/package_macos.py --prepare-runtimes
 cd frontend
 npm run build
@@ -39,6 +40,12 @@ an Applications shortcut, and checks a read-only mount and an isolated copy.
 It refuses to overwrite an existing DMG; retain earlier evidence or choose a
 new `--output` path. It does not install into the real `/Applications` directory
 or launch simulations. No builder uploads release assets.
+
+To package a separately built frontend without touching a running development
+server's `frontend/dist`, pass `--frontend-dir /absolute/path/to/build` to the
+app builder. The loop runtime pins OpenStructure 2.11.1 and its private OpenMM
+8.5.1 because that native ABI pairing is tested; it does not replace the main
+MD engine. The builder checks those pins before archiving.
 
 The app builder copies the real [standalone Python distribution](https://github.com/astral-sh/python-build-standalone)
 underlying the venv and overlays site packages, avoiding an external interpreter
@@ -118,10 +125,11 @@ Do not ask them to disable system-wide protections.
 `Notices/DEPENDENCY_INVENTORY.json` records bundled package versions and license
 materials. The [source-materials companion](source-materials/README.md) adds
 upstream archives, shipped recipes/patches and per-package provenance mappings.
-The 0.1.1 candidate reuses the 0.1.0 collection because upstream component
-versions are unchanged. Provide it beside the binary release with its index
-and checksum. Acceptance must link both build IDs, unchanged engine archives
-and native code/data; signature-only byte changes are recorded separately.
+The 0.1.1 collection reuses the verified 0.1.0 source archive for unchanged
+components and adds a separate loop-runtime source supplement. Provide both
+archives beside the binary release with their combined index and checksums.
+Acceptance binds the frozen collection to the final app's engine archives and
+native code/data; signature-only byte changes are recorded separately.
 It is not required for app use.
 See [THIRD_PARTY.md](../THIRD_PARTY.md) for the supplied scope and remaining
 compiler-runtime provenance limitations; the collection makes no legal

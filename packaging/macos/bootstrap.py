@@ -43,6 +43,10 @@ def digest(path: Path) -> str:
 def private_environment(data: Path, engines: dict[str, Path]) -> dict[str, str]:
     env = {key: value for key, value in os.environ.items() if key in {'HOME', 'USER', 'LOGNAME', 'TMPDIR', 'LANG', 'LC_ALL', 'SHELL'}}
     env.update(PATH='/usr/bin:/bin:/usr/sbin:/sbin', PYTHONNOUSERSITE='1', PYTHONDONTWRITEBYTECODE='1', PYTHONUNBUFFERED='1', DYNAMOL_DATA_DIR=str(data), DYNAMOL_GMX=str(engines['gromacs'] / 'bin' / 'gmx'), DYNAMOL_AMBERTOOLS=str(engines['ambertools']), OPENMM_CPU_THREADS='2', OMP_NUM_THREADS='2', OPENBLAS_NUM_THREADS='2', MKL_NUM_THREADS='2')
+    # Older manifests have only the simulation runtimes. Never inherit a host
+    # installation for loop modeling when this bundle did not include one.
+    if 'promod3' in engines:
+        env['DYNAMOL_PROMOD3'] = str(engines['promod3'])
     return env
 
 

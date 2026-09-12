@@ -1,0 +1,23 @@
+{
+  "name": "libsqlite",
+  "version": "3.53.4",
+  "sources": [
+    {
+      "package": {
+        "name": "libsqlite",
+        "version": "3.53.4",
+        "build": "hca69786_1",
+        "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libsqlite-3.53.4-hca69786_1.conda",
+        "sha256": "839b31d4830e896b4d315b551d27f2bb08026bc946df04bcc360d8627c3ba2cd"
+      },
+      "member": "include/sqlite3.h",
+      "member_sha256": "919e7f2e8ed1d8f56ac17b412b8971c76aa5d1a879752cc6058f75e7d5910e1d",
+      "extraction": "Complete opening author copyright-disclaimer and blessing comment, before the API documentation.",
+      "upstream_license_reference": "https://www.sqlite.org/copyright.html"
+    }
+  ],
+  "files_sha256": {
+    "LICENSE": "7b8578a074f9ddd01b7554b58b4db2793943a1f8cba2caa29f87a636868ec755"
+  },
+  "note": "Preserves the exact notice embedded in the installed SQLite source header; no additional license terms were invented."
+}

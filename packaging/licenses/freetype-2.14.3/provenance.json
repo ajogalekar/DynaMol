@@ -1,0 +1,42 @@
+{
+  "name": "freetype",
+  "version": "2.14.3",
+  "sources": [
+    {
+      "package": {
+        "name": "freetype",
+        "version": "2.14.3",
+        "build": "hce30654_2",
+        "url": "https://conda.anaconda.org/conda-forge/osx-arm64/freetype-2.14.3-hce30654_2.conda",
+        "sha256": "90681f1d0658cb2fd49a074f644eb4774272499290487a4bebb1c4df01d6997b"
+      },
+      "members": [
+        "info/licenses/docs/FTL.TXT",
+        "info/licenses/docs/GPLv2.TXT"
+      ],
+      "matching_runtime_packages": [
+        {
+          "name": "libfreetype",
+          "version": "2.14.3",
+          "build": "hce30654_2",
+          "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libfreetype-2.14.3-hce30654_2.conda",
+          "sha256": "19ce8bd320414cb6b9889ecbf48a3ded848b0d1068b76ff6bea099bd7387d6f3"
+        },
+        {
+          "name": "libfreetype6",
+          "version": "2.14.3",
+          "build": "h2ed5691_2",
+          "url": "https://conda.anaconda.org/conda-forge/osx-arm64/libfreetype6-2.14.3-h2ed5691_2.conda",
+          "sha256": "d9b203d6484ad491b5b5f33d49a9d7a91189d776a9adae53d2b63af18ec11e6a"
+        }
+      ],
+      "shared_upstream_source_url": "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.3.tar.gz",
+      "shared_upstream_source_sha256": "e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1"
+    }
+  ],
+  "files_sha256": {
+    "LICENSE": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f",
+    "GPLv2.TXT": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+  },
+  "note": "Full notice texts from the same-version sibling FreeType development package; the split runtime recipes name the same upstream source and checksum."
+}

@@ -22,7 +22,16 @@ ROOT = Path(__file__).resolve().parents[1]
 STAGE = ROOT / 'build' / 'packaging'
 RELEASES = ROOT / 'build' / 'releases'
 VERSION = tomllib.loads((ROOT / 'pyproject.toml').read_text())['project']['version']
-ENGINES = {'ambertools': (ROOT / '.tools' / 'ambertools', '24.8', 'AmberTools'), 'gromacs': (ROOT / '.gromacs', '2025.4', 'GROMACS')}
+ENGINES = {
+    'ambertools': (ROOT / '.tools' / 'ambertools', '24.8', 'AmberTools'),
+    'gromacs': (ROOT / '.gromacs', '2025.4', 'GROMACS'),
+    'promod3': (ROOT / '.tools' / 'promod3', '3.6.0', 'Loop modeling'),
+}
+PROMOD3_NOTICE_FAMILIES = {
+    'libfreetype': 'freetype', 'libfreetype6': 'freetype',
+    'libgcc': 'gcc-runtime', 'libgfortran': 'gcc-runtime', 'libgfortran5': 'gcc-runtime',
+    'libsqlite': 'libsqlite',
+}
 
 
 def sha(path: Path) -> str:
@@ -138,6 +147,15 @@ def ignore_copy(directory, names):
     return [name for name in names if name in {'__pycache__', '.DS_Store', '_virtualenv.pth', '_virtualenv.py'} or name.endswith(('.pyc', '.pyo'))]
 
 
+def validate_loop_runtime_metadata(prefix: Path, version: str):
+    """Keep the tested OpenStructure/OpenMM ABI pairing in the loop runtime."""
+    installed = {record['name']: record['version'] for path in (prefix / 'conda-meta').glob('*.json')
+                 for record in [json.loads(path.read_text())]}
+    for name, expected in {'promod3': version, 'openstructure': '2.11.1', 'openmm': '8.5.1'}.items():
+        if installed.get(name) != expected:
+            raise SystemExit(f'Loop runtime requires {name}=={expected}; found {installed.get(name, "missing")} in {prefix}. Use the tested private runtime before packaging.')
+
+
 def prepare_runtime() -> dict:
     if platform.system() != 'Darwin' or platform.machine() != 'arm64':
         raise SystemExit('Build this target on Apple Silicon macOS.')
@@ -172,6 +190,8 @@ def prepare_runtime() -> dict:
     engines = {}
     packer = ROOT / '.tools' / 'packaging' / 'bin' / 'conda-pack'
     for key, (prefix, version, label) in ENGINES.items():
+        if key == 'promod3':
+            validate_loop_runtime_metadata(prefix, version)
         archive = STAGE / f'{key}-{version}-macos-arm64.tar.gz'
         if not archive.exists():
             if not packer.exists():
@@ -236,6 +256,10 @@ def notices(destination: Path):
             if installed_licenses:
                 found.append('installed-license-files')
             record = {'name': package['name'], 'version': package['version'], 'build': package['build'], 'license': package.get('license'), 'url': package.get('url'), 'sha256': package.get('sha256'), 'materials': found, 'installed_license_files': installed_licenses}
+            notice_family = PROMOD3_NOTICE_FAMILIES.get(package['name']) if family == 'promod3' else None
+            if notice_family:
+                record['supplemental_notice'] = supplement(notice_family, package['version'], target)
+                found.append('upstream-notice')
             (target / 'package.json').write_text(json.dumps(record, indent=2) + '\n')
             inventory['native'].append(record | {'engine': family})
     packages = STAGE / 'python' / 'lib' / 'python3.12' / 'site-packages'
@@ -318,10 +342,11 @@ def notices(destination: Path):
     shutil.copy2(ROOT / 'packaging' / 'README.md', destination / 'PACKAGING-README.md')
 
 
-def build(releases: Path = RELEASES, app_only: bool = False) -> Path:
+def build(releases: Path = RELEASES, app_only: bool = False, frontend_dir: Path | None = None) -> Path:
+    frontend = (frontend_dir or ROOT / 'frontend' / 'dist').expanduser().resolve()
+    if not (frontend / 'index.html').is_file():
+        raise SystemExit(f'Build the frontend before packaging; index.html is missing from {frontend}.')
     runtime = prepare_runtime()
-    if not (ROOT / 'frontend' / 'dist' / 'index.html').exists():
-        raise SystemExit('Build the frontend before packaging.')
     releases = releases.resolve()
     releases.mkdir(parents=True, exist_ok=True)
     # Finder/File Provider can reattach forbidden presentation metadata while
@@ -341,7 +366,7 @@ def build(releases: Path = RELEASES, app_only: bool = False) -> Path:
     app.mkdir()
     for folder in ('backend', 'examples'):
         shutil.copytree(ROOT / folder, app / folder, symlinks=False, ignore=ignore_copy)
-    shutil.copytree(ROOT / 'frontend' / 'dist', app / 'frontend' / 'dist')
+    shutil.copytree(frontend, app / 'frontend' / 'dist')
     # Include the cited audit evidence and screenshots alongside the guides.
     shutil.copytree(ROOT / 'docs', app / 'docs', ignore=ignore_copy)
     for name in ('pyproject.toml', 'uv.lock', 'LICENSE', 'README.md', 'THIRD_PARTY.md'):
@@ -388,8 +413,9 @@ if __name__ == '__main__':
     parser.add_argument('--prepare-runtimes', action='store_true')
     parser.add_argument('--output-dir', type=Path, default=RELEASES, help='Archive/report destination; the sealed .app stays in a private system temporary directory recorded in the report.')
     parser.add_argument('--app-only', action='store_true', help='Build and verify the app without creating a ZIP.')
+    parser.add_argument('--frontend-dir', type=Path, help='Prebuilt frontend directory; defaults to frontend/dist. The input directory is only read.')
     args = parser.parse_args()
     if args.prepare_runtimes:
         print(json.dumps(prepare_runtime(), indent=2))
     else:
-        build(args.output_dir, args.app_only)
+        build(args.output_dir, args.app_only, args.frontend_dir)

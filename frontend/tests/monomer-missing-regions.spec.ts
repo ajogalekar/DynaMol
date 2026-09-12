@@ -53,6 +53,43 @@ async function twoChains() {
   );
 }
 
+// Sequence-only gaps exercise inspection/presentation; these fixtures are never prepared or simulated.
+async function missingRegion(size: number, chains = 1) {
+  const text = await readFile(`${fixtures}/six_residues_intact.pdb`, 'utf8');
+  const atoms = text.split('\n').filter((line) => line.startsWith('ATOM  '));
+  const sequence = ['MET', ...Array<string>(size).fill('ALA'), 'GLN', 'ILE', 'PHE', 'VAL', 'LYS'];
+  const lines: string[] = [];
+  for (let index = 0; index < chains; index++) {
+    const chain = String.fromCharCode(65 + index);
+    for (let offset = 0; offset < sequence.length; offset += 13) {
+      lines.push(
+        `SEQRES ${String(offset / 13 + 1).padStart(3)} ${chain} ${String(sequence.length).padStart(4)}  ${sequence.slice(offset, offset + 13).join(' ')}`,
+      );
+    }
+  }
+  for (let index = 0; index < chains; index++) {
+    const chain = String.fromCharCode(65 + index);
+    for (const [atomIndex, line] of atoms.entries()) {
+      const residue = Number(line.slice(22, 26));
+      const resid = String(residue > 1 ? residue + size : residue).padStart(4);
+      const serial = String(index * atoms.length + atomIndex + 1).padStart(5);
+      const x = (Number(line.slice(30, 38)) + 35 * index).toFixed(3).padStart(8);
+      lines.push(
+        line.slice(0, 6) +
+          serial +
+          line.slice(11, 21) +
+          chain +
+          resid +
+          line.slice(26, 30) +
+          x +
+          line.slice(38),
+      );
+    }
+    lines.push('TER');
+  }
+  return Buffer.from([...lines, 'END', ''].join('\n'));
+}
+
 function gate() {
   let release!: () => void;
   const promise = new Promise<void>((resolve) => {
@@ -63,9 +100,10 @@ function gate() {
 
 test('missing-atom and known-loop choices are visible before Prep while detailed options stay closed', async ({
   page,
+  request,
 }, info) => {
   const studio = await openStudio(page);
-  await upload(
+  const source = await upload(
     page,
     studio,
     await readFile(`${fixtures}/six_residues_known_gap.pdb`),
@@ -87,7 +125,13 @@ test('missing-atom and known-loop choices are visible before Prep while detailed
   await expect(studio.locator('.prep-options')).toHaveCount(0);
   await expect(repairs.locator('.missing-residues')).toContainText('ILE');
   await expect(repairs).toContainText('can build a starting model');
-  await expect(repairs).toContainText('6 residues per internal gap and 12 residues total');
+  const response = await request.get(`/api/datasets/${source.id}/inspection?ph=7`);
+  expect(response.ok(), await response.text()).toBe(true);
+  const { loop_policy: policy } = await response.json();
+  expect(policy).toBeDefined();
+  await expect(repairs).toContainText(
+    `${policy.max_gap_residues} residues per internal gap and ${policy.max_total_residues} residues total`,
+  );
   const beforePrep = await studio.evaluate(
     (element) =>
       !!(
@@ -109,6 +153,56 @@ test('missing-atom and known-loop choices are visible before Prep while detailed
   ).toHaveCount(1);
   await repairs.scrollIntoViewIfNeeded();
   await page.screenshot({ path: info.outputPath('missing-regions-before-prep.png') });
+});
+
+test('loop guidance follows backend policy for extended, per-gap and total limits', async ({
+  page,
+  request,
+}) => {
+  const studio = await openStudio(page);
+  const response = await request.get('/api/datasets/demo/inspection?ph=7');
+  expect(response.ok(), await response.text()).toBe(true);
+  const { loop_policy: policy } = await response.json();
+  expect(policy).toBeDefined();
+  expect(policy.short_gap_residues).toBeLessThan(policy.max_gap_residues);
+  const repairs = studio.getByRole('region', { name: 'Missing atoms & residues' });
+  const checkbox = repairs.getByRole('checkbox', {
+    name: 'Build supported missing loops / residues',
+  });
+
+  await upload(page, studio, await missingRegion(policy.short_gap_residues + 1), 'extended-loop');
+  await expect(repairs).toContainText('longer loop · provisional starting model');
+  await expect(repairs).toContainText('Longer loops take more work.');
+  await expect(repairs).toContainText('Geometry is checked; loop conformations remain uncertain.');
+  await expect(checkbox).not.toBeChecked();
+  await checkbox.check();
+  await expect(checkbox).toBeChecked();
+
+  await upload(page, studio, await missingRegion(policy.max_gap_residues + 1, 2), 'oversized-loop');
+  await expect(repairs).toContainText(`exceeds ${policy.max_gap_residues}-residue gap limit`);
+  await expect(repairs).toContainText(
+    `The longest missing internal region has ${policy.max_gap_residues + 1} residues`,
+  );
+  await expect(repairs.locator('.missing-build-limit')).not.toContainText('Select one chain');
+  await expect(checkbox).not.toBeChecked();
+
+  const chains = Math.floor(policy.max_total_residues / policy.max_gap_residues) + 1;
+  expect(chains).toBeLessThanOrEqual(26);
+  await upload(
+    page,
+    studio,
+    await missingRegion(policy.max_gap_residues, chains),
+    'total-loop-limit',
+  );
+  await expect(repairs).toContainText(
+    `This structure has ${policy.max_gap_residues * chains} missing internal residues`,
+  );
+  await expect(repairs).toContainText(
+    `the computational limit is ${policy.max_total_residues} total`,
+  );
+  await expect(repairs.locator('.missing-build-limit')).not.toContainText(
+    'The longest missing internal region',
+  );
 });
 
 test('one-click suggested chain and alternate chain extraction are reversible and preserve the original structure', async ({
