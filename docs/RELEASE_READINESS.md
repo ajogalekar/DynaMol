@@ -1,11 +1,15 @@
 # DynaMol 0.1 early-release scope
 
-The intended first release serves individual scientists using a local Mac:
-load supported molecules, review preparation, run a bounded simulation and
-explore its trajectory. GitHub source plus an unsigned self-contained Apple
-Silicon archive is the proposed distribution. Use the matching acceptance record beside the archive; prior checks apply only
-to their recorded builds. This page does not declare a particular archive
-publicly ready. See [launch, data and packaging details](PACKAGING.md).
+DynaMol 0.1 serves individual scientists using a local Mac: load supported
+molecules, review preparation, run a bounded simulation and explore its
+trajectory. The unsigned Apple Silicon/macOS 14+ DMG contains the app and both
+MD engines. Open the DMG, drag DynaMol to Applications and open it. The GitHub
+source and source-materials companion are separate downloads for inspection or
+rebuilding. See [installation, data and packaging details](PACKAGING.md).
+
+Use the checksum and acceptance records supplied with each release asset.
+Documentation and container changes are linked to prior native tests by byte
+parity; they are not described as fresh simulation runs.
 
 | Feature | Where to use it | Evidence |
 | --- | --- | --- |
@@ -50,13 +54,30 @@ The default atom limit is 100,000. The source service supports an explicit
 no toggle. The 145,913-atom GPCR pressure test therefore exceeds the packaged
 profile. Large-trajectory streaming and membrane construction are outside 0.1.
 
-Previous relocated package tests passed on the development Mac with fresh
-private data; they do not establish an independent clean-Mac launch or validate
-newly rebuilt bits. The candidate presently has an ad-hoc signature only.
-Developer ID signing/notarization is an optional way to reduce download/install
-friction, not a condition for placing an unsigned beta on GitHub.
+The exact-ZIP acceptance record covers both bundled native workers, private
+runtime and AmberTools checks, restart/workspace persistence, seven Chrome
+pinch/zoom cases, and native launch with automatic default-browser opening.
+The stronger installation-isolation record denies reads from developer
+installations and common package prefixes; both engines and AmberTools still
+passed. Its external harness waited on saved status while workers ran because
+macOS `sandbox-exec` prohibits the system's setuid `ps`, then checked completed
+jobs through the API. The original failure and harness diff are retained; the
+application and filesystem-denial rules were unchanged.
 
-Public binary redistribution materials for all bundled components remain
-incomplete. That unresolved work is separate from signing and must remain
-visible before binary publication. See [packaging status](PACKAGING.md) and
-[third-party notices](../THIRD_PARTY.md). No binary has been uploaded by this step.
+The final DMG's mounted-copy validation, native-payload byte parity and
+copied-app launch record supplement that exact-ZIP acceptance. These local
+checks do not establish an independent clean-Mac, minimum-OS or Gatekeeper
+result. Native Quit-menu clicking and physical Safari trackpad testing remain
+unverified. A completed short installation check does not validate every
+supported molecule or simulation setup.
+
+This release has an ad-hoc launcher signature and is not Developer ID signed
+or notarized. It has no Apple enrollment step. Downloaded copies may require
+[Apple's per-app opening procedure](https://support.apple.com/en-us/102445).
+
+The [source-materials companion](../packaging/source-materials/README.md) records
+selected upstream archives, numbered AmberTools updates and exact shipped
+recipe/patch mappings. It preserves conditional compiler-runtime provenance
+and exception questions rather than presenting the collection as legal
+certification. See [third-party notices](../THIRD_PARTY.md) and the release's
+matching materials index.

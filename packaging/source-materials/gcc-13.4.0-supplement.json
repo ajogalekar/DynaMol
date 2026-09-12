@@ -1,0 +1,8 @@
+{
+  "source": {
+    "url": "https://gcc.gnu.org/pub/gcc/releases/gcc-13.4.0/gcc-13.4.0.tar.xz",
+    "sha512": "9b4b83ecf51ef355b868608b8d257b2fa435c06d2719cb86657a7c2c2a0828ff4ce04e9bac1055bbcad8ed5b4da524cafaef654785e23a50233d95d89201e35f"
+  },
+  "authority": "Official GCC release checksum list: https://gcc.gnu.org/pub/gcc/releases/gcc-13.4.0/sha512.sum",
+  "limit": "Conservative source supplement matching the compiler version recorded by the shipped SciPy build configuration. This does not independently establish the exact provenance of SciPy vendored libgfortran, libquadmath, and libgcc binaries or adjudicate their exceptions."
+}

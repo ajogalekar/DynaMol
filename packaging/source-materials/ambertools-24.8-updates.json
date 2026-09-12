@@ -1,0 +1,86 @@
+{
+  "base_version": "AmberTools24",
+  "target_level": 8,
+  "updates": [
+    {
+      "number": 1,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.1",
+      "path": "amber-updates/update.1",
+      "sha256": "caa2c42c02bfee37e4e9c5c2bf4715928b3865ebabf07868b0303a1f56a4c9bc",
+      "bytes": 3130,
+      "header_update_number": 1,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 2,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.2",
+      "path": "amber-updates/update.2",
+      "sha256": "1ffdf217c9b3c66cd3a1cae5a402c5765876c150d7d8ce706a47762409f120dd",
+      "bytes": 887,
+      "header_update_number": 2,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 3,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.3",
+      "path": "amber-updates/update.3",
+      "sha256": "1a22b44a73f250714406142253d66a9f1d8aba1a75af7f676f94dd6034dc4578",
+      "bytes": 13276658,
+      "header_update_number": 3,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 4,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.4",
+      "path": "amber-updates/update.4",
+      "sha256": "e3b30f4d723fb395e70a943314b1f43cf92c4135392319992ad276c55461692a",
+      "bytes": 1026,
+      "header_update_number": 4,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 5,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.5",
+      "path": "amber-updates/update.5",
+      "sha256": "d93f1e135304aae15df7a24f348cc75cf37b42210d049ecd830023f292f0a286",
+      "bytes": 5452,
+      "header_update_number": 1,
+      "header_note": "Official update.5 carries an update.1 heading; exact original bytes retained, filename sequence matches the upstream updater.",
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 6,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.6",
+      "path": "amber-updates/update.6",
+      "sha256": "37398e3e056d51514e6a715b336cc9436181568ea284114fec4e5ffffd979ef0",
+      "bytes": 136546,
+      "header_update_number": 6,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 7,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.7",
+      "path": "amber-updates/update.7",
+      "sha256": "c2f03657e125043342ec0b8fda0e25d8aec611312938e03e1d656679b66d8e57",
+      "bytes": 2254,
+      "header_update_number": 7,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    },
+    {
+      "number": 8,
+      "url": "https://ambermd.org/bugfixes/AmberTools/24.0/update.8",
+      "path": "amber-updates/update.8",
+      "sha256": "59f6cb4f1e26d2f3c6cddbfdeed887af8890b9499e8654c428e88a8f4e2df959",
+      "bytes": 1391,
+      "header_update_number": 8,
+      "header_note": null,
+      "hash_basis": "Recorded on retrieval from the official numbered series confirmed by the base updater and the shipped recipe."
+    }
+  ]
+}

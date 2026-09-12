@@ -80,7 +80,16 @@ def prepare_runtime() -> dict:
 
 def notices(destination: Path):
     destination.mkdir(parents=True, exist_ok=True)
-    inventory = {'native': [], 'python': [], 'frontend': [], 'coverage': 'Bundled package license texts and recipes/source URLs are included. Corresponding source archives for all copyleft binaries have not been assembled or legally reviewed; this is a local prototype, not a public release compliance certification.'}
+    inventory = {'native': [], 'python': [], 'frontend': [], 'coverage': 'Bundled package notices and available recipes are included. The separate source-materials companion records selected upstream sources, patches, component mappings and provenance qualifications; this inventory is not a legal certification.'}
+    source_index = ROOT / 'packaging' / 'source-materials' / 'INDEX.json'
+    if source_index.is_file():
+        source_record = json.loads(source_index.read_text())
+        shutil.copy2(source_index, destination / 'SOURCE_MATERIALS.json')
+        inventory['source_materials'] = {
+            'index': 'SOURCE_MATERIALS.json', 'index_sha256': sha(source_index),
+            'collected_build_id': source_record['build_id'],
+            'guide': 'app/packaging/source-materials/README.md',
+            'note': 'Release acceptance must bind this collection to the shipped native files and engine archives; the index records the original collection build.'}
 
     def supplement(name: str, version: str, target: Path) -> dict:
         source = ROOT / 'packaging' / 'licenses' / f'{name}-{version}'

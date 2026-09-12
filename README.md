@@ -4,11 +4,23 @@
 
 ![DynaMol molecular workspace](docs/dynamol-desktop.png)
 
-DynaMol is a working **v0.1 alpha**, built with React, NGL, FastAPI, MDTraj, OpenMM, GROMACS, PDBFixer, RDKit, and AmberTools. It runs on your own computer. Uploaded coordinates and simulations stay local. Optional Fetch contacts RCSB or PubChem; ligand inspection can also retrieve public Chemical Component Dictionary (CCD) records from RCSB using component identifiers. The application needs no cloud account or API key. Fonts and the starter trajectory are bundled for offline use after dependencies are installed.
+DynaMol is a free **v0.1 early release**, built with React, NGL, FastAPI, MDTraj, OpenMM, GROMACS, PDBFixer, RDKit, and AmberTools. It runs on your own computer. Uploaded coordinates and simulations stay local. Optional Fetch contacts RCSB or PubChem; ligand inspection can also retrieve public Chemical Component Dictionary (CCD) records from RCSB using component identifiers. The application needs no cloud account or API key. The Mac download includes the engines, fonts and starter trajectory.
 
 ## Start exploring
 
-For the local **Apple Silicon/macOS 14+ prototype**, open the self-contained `DynaMol.app` from `build/releases/DynaMol-0.1.0-macos-arm64.zip`. It includes Python, OpenMM, GROMACS and AmberTools; first launch unpacks the included engines with a progress display. No separate engine installation is needed. This local build is not Apple Developer signed or notarized; clean-machine testing and public redistribution materials remain release work. See [package instructions](packaging/README.md).
+**[Download DynaMol for Mac](https://github.com/ajogalekar/DynaMol/releases/download/v0.1.0/DynaMol-0.1.0-macos-arm64.dmg)** — Apple Silicon, macOS 14 or newer.
+
+1. Download and open `DynaMol-0.1.0-macos-arm64.dmg`.
+2. Drag **DynaMol** into **Applications**.
+3. Open **DynaMol** from Applications. First launch shows progress while unpacking the included engines, then opens the interface in your default browser.
+
+**OpenMM, GROMACS, Python and the preparation tools are included.** No Terminal commands, separate MD installation or package manager is needed. New structure fetches still require internet.
+
+This release is **unsigned and not notarized**. If macOS blocks it after the first opening attempt, Apple's [per-app opening instructions](https://support.apple.com/en-us/102445) describe **System Settings → Privacy & Security → Open Anyway**. Institutional device policies may prevent this. Signing has been deliberately left out of this free first release.
+
+Your work is saved in `~/Library/Application Support/DynaMol`; replacing the app keeps that data. See [installation details and limits](docs/PACKAGING.md) and [release notes](docs/releases/v0.1.0.md). Intel Mac, Windows and Linux do not yet have tested application downloads.
+
+### Run from source
 
 To run or develop from source:
 
@@ -22,7 +34,7 @@ Open **http://127.0.0.1:8765**. The launcher installs locked Python dependencies
 
 The initial scene contains a **real 2 ps OpenMM trajectory of ubiquitin**: 101 saved frames, 1,231 atoms, Amber ff14SB/GBn2, 300 K. Press Play or Space. A real Cα distance trace is ready to explore below the timeline. Its 3D annotation starts hidden: click the eye on its plot tab or the viewer toolbar to show it. The eye preserves the plot; × removes the measurement. This short run demonstrates the software; it does not establish equilibration, convergence, or a biological conclusion.
 
-### Enable GROMACS
+### Enable GROMACS when running from source
 
 OpenMM installs with the Python dependencies. GROMACS is a separate optional native dependency. Install a compatible `gmx` executable and put it on PATH, or use a project-local Conda environment:
 
@@ -30,9 +42,9 @@ OpenMM installs with the Python dependencies. GROMACS is a separate optional nat
 conda create -p .gromacs -c conda-forge gromacs=2025.4 -y
 ```
 
-DynaMol also accepts `DYNAMOL_GMX=/absolute/path/to/gmx`. The current workspace already has **OpenMM 8.6 and GROMACS 2025.4** installed and tested. Availability and engine versions appear in Simulation Studio.
+DynaMol also accepts `DYNAMOL_GMX=/absolute/path/to/gmx`. This release has been tested with **OpenMM 8.6 and GROMACS 2025.4**. Availability and engine versions appear in Simulation Studio.
 
-### Enable protein–ligand preparation
+### Enable protein–ligand preparation when running from source
 
 Install [Miniforge](https://github.com/conda-forge/miniforge), or use an existing `conda`/`mamba` installation, then run:
 
@@ -43,7 +55,7 @@ uv sync --frozen
 
 The script creates a private **AmberTools 24.8** environment under `.tools/ambertools` and records the resolved packages in `.tools/ambertools-explicit.txt`. It supplies Antechamber/SQM, GAFF2, `parmchk2`, and LEaP; DynaMol's Python environment supplies ParmEd, Gemmi, and Dimorphite-DL. Alternatively, set `DYNAMOL_AMBERTOOLS` to an existing complete AmberTools installation. Protein-only preparation remains available without AmberTools.
 
-The first inspection of an unfamiliar PDB ligand may need internet to retrieve its CCD definition. Records are cached in `data/chemistry/ccd` (under `DYNAMOL_DATA_DIR` when configured). Previously prepared complexes retain their parameter files and do not need a fresh charge calculation to run OpenMM. The [standalone prototype](docs/PACKAGING.md) includes the native runtimes; the installation commands above apply to the source checkout.
+The first inspection of an unfamiliar PDB ligand may need internet to retrieve its CCD definition. Records are cached in `data/chemistry/ccd` (under `DYNAMOL_DATA_DIR` when configured). Previously prepared complexes retain their parameter files and do not need a fresh charge calculation to run OpenMM. The [Mac download](docs/PACKAGING.md) includes the native runtimes; the installation commands above apply to the source checkout.
 
 ## Inside the workbench
 
