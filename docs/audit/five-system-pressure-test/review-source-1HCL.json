@@ -1,0 +1,183 @@
+{
+  "id": "1HCL",
+  "source": "https://files.rcsb.org/download/1HCL.cif",
+  "sha256": "2e8ceff86b7bb61f3c3a78742cf80e37df419ffd0f0974f0c88ae1d3e93fb153",
+  "resolution": [
+    "1.8"
+  ],
+  "entity": {
+    "id": [
+      "1",
+      "2"
+    ],
+    "type": [
+      "polymer",
+      "water"
+    ],
+    "src_method": [
+      "man",
+      "nat"
+    ],
+    "pdbx_description": [
+      "HUMAN CYCLIN-DEPENDENT KINASE 2",
+      "water"
+    ],
+    "formula_weight": [
+      "33976.488",
+      "18.015"
+    ],
+    "pdbx_number_of_molecules": [
+      "1",
+      "180"
+    ],
+    "pdbx_ec": [
+      "2.7.1.37",
+      null
+    ],
+    "pdbx_mutation": [
+      null,
+      null
+    ],
+    "pdbx_fragment": [
+      null,
+      null
+    ],
+    "details": [
+      null,
+      null
+    ]
+  },
+  "polymer": {
+    "entity_id": [
+      "1"
+    ],
+    "type": [
+      "polypeptide(L)"
+    ],
+    "nstd_linkage": [
+      "no"
+    ],
+    "nstd_monomer": [
+      "no"
+    ],
+    "pdbx_seq_one_letter_code": [
+      "MENFQKVEKIGEGTYGVVYKARNKLTGEVVALKKIRLDTETEGVPSTAIREISLLKELNHPNIVKLLDVIHTENKLYLVF\nEFLHQDLKKFMDASALTGIPLPLIKSYLFQLLQGLAFCHSHRVLHRDLKPQNLLINTEGAIKLADFGLARAFGVPVRTYT\nHEVVTLWYRAPEILLGCKYYSTAVDIWSLGCIFAEMVTRRALFPGDSEIDQLFRIFRTLGTPDEVVWPGVTSMPDYKPSF\nPKWARQDFSKVVPPLDEDGRSLLSQMLHYDPNKRISAKAALAHPFFQDVTKPVPHLRL"
+    ],
+    "pdbx_seq_one_letter_code_can": [
+      "MENFQKVEKIGEGTYGVVYKARNKLTGEVVALKKIRLDTETEGVPSTAIREISLLKELNHPNIVKLLDVIHTENKLYLVF\nEFLHQDLKKFMDASALTGIPLPLIKSYLFQLLQGLAFCHSHRVLHRDLKPQNLLINTEGAIKLADFGLARAFGVPVRTYT\nHEVVTLWYRAPEILLGCKYYSTAVDIWSLGCIFAEMVTRRALFPGDSEIDQLFRIFRTLGTPDEVVWPGVTSMPDYKPSF\nPKWARQDFSKVVPPLDEDGRSLLSQMLHYDPNKRISAKAALAHPFFQDVTKPVPHLRL"
+    ],
+    "pdbx_strand_id": [
+      "A"
+    ],
+    "pdbx_target_identifier": [
+      null
+    ]
+  },
+  "unobserved": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "PDB_model_num": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "polymer_flag": [
+      "Y",
+      "Y",
+      "Y",
+      "Y"
+    ],
+    "occupancy_flag": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "auth_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "auth_comp_id": [
+      "LEU",
+      "ASP",
+      "THR",
+      "GLU"
+    ],
+    "auth_seq_id": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "PDB_ins_code": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "label_comp_id": [
+      "LEU",
+      "ASP",
+      "THR",
+      "GLU"
+    ],
+    "label_seq_id": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ]
+  },
+  "assembly": {
+    "id": [
+      "1"
+    ],
+    "details": [
+      "author_defined_assembly"
+    ],
+    "method_details": [
+      null
+    ],
+    "oligomeric_details": [
+      "monomeric"
+    ],
+    "oligomeric_count": [
+      "1"
+    ]
+  },
+  "assembly_gen": {
+    "assembly_id": [
+      "1"
+    ],
+    "oper_expression": [
+      "1"
+    ],
+    "asym_id_list": [
+      "A,B"
+    ]
+  },
+  "nonpoly": {
+    "entity_id": [
+      "2"
+    ],
+    "name": [
+      "water"
+    ],
+    "comp_id": [
+      "HOH"
+    ]
+  }
+}

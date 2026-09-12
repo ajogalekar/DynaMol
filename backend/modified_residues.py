@@ -200,6 +200,7 @@ def modified_stereochemistry_report(topology, positions):
             observed = float(np.linalg.det([xyz[names[n]] - xyz[names[center]] for n in neighbors]))
             expected = float(np.linalg.det([np.array(ideal[n][1]) - ideal[center][1] for n in neighbors]))
             record = {"chain": residue.chain.id, "resid": residue.id, "insertion_code": (residue.insertionCode or "").strip(), "residue": residue.name, "center": center, "signed_volume_nm3": observed, "template_signed_volume_nm3": expected}
+            record["atom_indices"] = [names[name] for name in (center, *neighbors)]
             centers.append(record)
             if abs(observed) < 1e-4 or observed * expected <= 0:
                 violations.append(record)

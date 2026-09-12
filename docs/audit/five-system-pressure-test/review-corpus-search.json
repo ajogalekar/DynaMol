@@ -1,0 +1,34 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 73,
+  "query": "molecular dynamics reproducibility structure validation uncertainty",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 34.0,
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-05-22T18:07:00.000-07:00",
+      "score": 32.0,
+      "tags": [],
+      "title": "Generative Molecular Design Isn't As Easy As People Make It Look",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/05/generative-molecular-design-isnt-as.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2021-01-18T15:43:00.003-08:00",
+      "score": 31.0,
+      "tags": [],
+      "title": "AI in Drug Discovery 2020 - A Highly Opinionated Literature Review",
+      "url": "https://practicalcheminformatics.blogspot.com/2021/01/ai-in-drug-discovery-2020-highly.html"
+    }
+  ]
+}

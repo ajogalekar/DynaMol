@@ -1,0 +1,163 @@
+{
+  "id": "1H8F",
+  "source": "https://files.rcsb.org/download/1H8F.cif",
+  "sha256": "d914a47026dcee5b3c769dc7ac5f5db64411fc99c7b0e6531562e245be4e89a3",
+  "resolution": [
+    "2.80"
+  ],
+  "unobserved": {
+    "id": [
+      "1",
+      "2"
+    ],
+    "PDB_model_num": [
+      "1",
+      "1"
+    ],
+    "polymer_flag": [
+      "Y",
+      "Y"
+    ],
+    "occupancy_flag": [
+      "1",
+      "1"
+    ],
+    "auth_asym_id": [
+      "B",
+      "B"
+    ],
+    "auth_comp_id": [
+      "GLN",
+      "ALA"
+    ],
+    "auth_seq_id": [
+      "385",
+      "386"
+    ],
+    "PDB_ins_code": [
+      null,
+      null
+    ],
+    "label_asym_id": [
+      "B",
+      "B"
+    ],
+    "label_comp_id": [
+      "GLN",
+      "ALA"
+    ],
+    "label_seq_id": [
+      "351",
+      "352"
+    ]
+  },
+  "assembly": {
+    "id": [
+      "1"
+    ],
+    "details": [
+      "software_defined_assembly"
+    ],
+    "method_details": [
+      "PQS"
+    ],
+    "oligomeric_details": [
+      "dimeric"
+    ],
+    "oligomeric_count": [
+      "2"
+    ]
+  },
+  "nonpoly": {
+    "entity_id": [
+      "2",
+      "3"
+    ],
+    "name": [
+      "4-(2-HYDROXYETHYL)-1-PIPERAZINE ETHANESULFONIC ACID",
+      "water"
+    ],
+    "comp_id": [
+      "EPE",
+      "HOH"
+    ]
+  },
+  "entity": {
+    "id": [
+      "1",
+      "2",
+      "3"
+    ],
+    "type": [
+      "polymer",
+      "non-polymer",
+      "water"
+    ],
+    "src_method": [
+      "man",
+      "syn",
+      "nat"
+    ],
+    "pdbx_description": [
+      "GLYCOGEN SYNTHASE KINASE-3 BETA",
+      "4-(2-HYDROXYETHYL)-1-PIPERAZINE ETHANESULFONIC ACID",
+      "water"
+    ],
+    "formula_weight": [
+      "39799.746",
+      "238.305",
+      "18.015"
+    ],
+    "pdbx_number_of_molecules": [
+      "2",
+      "2",
+      "161"
+    ],
+    "pdbx_ec": [
+      "2.7.1.37",
+      null,
+      null
+    ],
+    "pdbx_mutation": [
+      null,
+      null,
+      null
+    ],
+    "pdbx_fragment": [
+      null,
+      null,
+      null
+    ],
+    "details": [
+      null,
+      null,
+      null
+    ]
+  },
+  "polymer": {
+    "entity_id": [
+      "1"
+    ],
+    "type": [
+      "polypeptide(L)"
+    ],
+    "nstd_linkage": [
+      "no"
+    ],
+    "nstd_monomer": [
+      "no"
+    ],
+    "pdbx_seq_one_letter_code": [
+      "SKVTTVVATPGQGPDRPQEVSYTDTKVIGNGSFGVVYQAKLCDSGELVAIKKVLQGKAFKNRELQIMRKLDHCNIVRLRY\nFFYSSGEKKDEVYLNLVLDYVPETVYRVARHYSRAKQTLPVIYVKLYMYQLFRSLAYIHSFGICHRDIKPQNLLLDPDTA\nVLKLCDFGSAKQLVRGEPNVSYICSRYYRAPELIFGATDYTSSIDVWSAGCVLAELLLGQPIFPGDSGVDQLVEIIKVLG\nTPTREQIREMNPNYTEFAFPQIKAHPWTKVFRPRTPPEAIALCSRLLEYTPTARLTPLEACAHSFFDELRDPNVKLPNGR\nDTPALFNFTTQELSSNPPLATILIPPHARIQA"
+    ],
+    "pdbx_seq_one_letter_code_can": [
+      "SKVTTVVATPGQGPDRPQEVSYTDTKVIGNGSFGVVYQAKLCDSGELVAIKKVLQGKAFKNRELQIMRKLDHCNIVRLRY\nFFYSSGEKKDEVYLNLVLDYVPETVYRVARHYSRAKQTLPVIYVKLYMYQLFRSLAYIHSFGICHRDIKPQNLLLDPDTA\nVLKLCDFGSAKQLVRGEPNVSYICSRYYRAPELIFGATDYTSSIDVWSAGCVLAELLLGQPIFPGDSGVDQLVEIIKVLG\nTPTREQIREMNPNYTEFAFPQIKAHPWTKVFRPRTPPEAIALCSRLLEYTPTARLTPLEACAHSFFDELRDPNVKLPNGR\nDTPALFNFTTQELSSNPPLATILIPPHARIQA"
+    ],
+    "pdbx_strand_id": [
+      "A,B"
+    ],
+    "pdbx_target_identifier": [
+      null
+    ]
+  }
+}

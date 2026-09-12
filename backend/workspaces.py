@@ -90,7 +90,8 @@ def _number(value, low, high, label):
     return value
 
 
-def _indices(values, count, *, maximum=100_000):
+def _indices(values, count, *, maximum=None):
+    maximum = config.MAX_ATOMS if maximum is None else maximum
     if not isinstance(values, list) or len(values) > maximum or any(type(a) is not int or not 0 <= a < count for a in values) or len(set(values)) != len(values):
         raise ValueError("Saved atom selections do not match the dataset atom order.")
     return values

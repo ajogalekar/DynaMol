@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-09-12T00:08:47.225382+00:00",
+  "stage": "preflight_actual_launch_addendum",
+  "purpose": "Record the realized replacement GPCR preparation and explicit resource profile without changing the original preflight or claiming a completed trajectory.",
+  "pdb_id": "4N6H",
+  "job_id": "0b89d27dadc34148",
+  "base_url": "http://127.0.0.1:8794",
+  "data_root": "data/integration-checks/five-system-gpcr-large",
+  "dataset_ids": {
+    "source": "5e4d0673f8ac4358",
+    "prepared": "753ba327007a441b",
+    "solvated": "343ace4483604405"
+  },
+  "review_decision": "Input and allocation evidence supports the already-authorized bounded native run; runtime and completed-output acceptance remain pending.",
+  "completion": {
+    "completed_cases": 4,
+    "requested_cases": 5,
+    "replacement_case": "running",
+    "completed_browser_audits": 4
+  },
+  "actual_resource_profile": {
+    "profile_max_atoms": 200000,
+    "default_profile_max_atoms": 100000,
+    "native_atoms": 145913,
+    "prepared_allocation_bound_atoms": 155995,
+    "estimated_coordinate_bytes_101_frames": 176846556,
+    "coordinate_cap_bytes": 268435456,
+    "cpu_threads": 4,
+    "wall_budget_seconds": 7200,
+    "case_disk_budget_gb": 5,
+    "explicit_override_authorized_by_parent": true
+  },
+  "input_checks": {
+    "passed": 10,
+    "total": 10,
+    "observed_protein_residues_retained": 408,
+    "selected_unique_observed_protein_heavy_atoms_retained": 3089,
+    "alternate_conformer_duplicate_rows": 51,
+    "primary_ligand": "complete naltrindole EJ4, 31 heavy atoms",
+    "retained_source_ions": {
+      "Na": 1
+    },
+    "rebuilt_internal_residues": 0,
+    "prepared_stereocenters_passed": 439,
+    "prepared_atoms_preserved_during_solvation": 6544,
+    "prepared_coordinate_max_difference_nm": 0.0,
+    "omitted_additives": {
+      "OLA": 12,
+      "OLC": 5,
+      "PGE": 3,
+      "TLA": 1
+    },
+    "crystallographic_water_oxygens_removed_before_fresh_solvation": 101
+  },
+  "protocol": {
+    "duration_ps": 100,
+    "initial_relaxation_ps": 10,
+    "temperature_k": 300,
+    "timestep_fs": 2,
+    "report_interval_steps": 500,
+    "seed": 20260915,
+    "water_padding_nm": 1,
+    "box_side_nm": 11.459641910696561,
+    "membrane": false
+  },
+  "guard_evidence": {
+    "four_completed_cases_all_101_saved_frames_pass_stereochemistry": true,
+    "4BVN_regression": {
+      "job_id": "79b13f4ea8d1490c",
+      "expected_failure_observed": true,
+      "failed_stage": "After minimization",
+      "production_steps": 0,
+      "elapsed_seconds": 150.49
+    }
+  },
+  "claim_limits": [
+    "Solvent-only software pressure test of an engineered receptor-BRIL construct; no membrane, affinity, signaling or physiological claim.",
+    "No internal loop reconstruction for the replacement; ordinary absent sidechains and hydrogens are prepared and guarded.",
+    "All-frame signed-volume checks support detected residue stereochemistry only, not general physical accuracy or convergence.",
+    "The original invalid 4BVN run remains a documented failure and is excluded from completed-run comparisons."
+  ],
+  "evidence": [
+    {
+      "path": "docs/audit/five-system-pressure-test/review-4N6H-manifest.preflight.json",
+      "sha256": "7922f79de883e66597cc976893e55e2faff63d59e75b7d1d3a3a19bfc42ce6fa"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/review-4N6H-preflight.json",
+      "sha256": "e03e546f8e31a53b49239339df9a82718b5c6c716065a515782db340079d26f1"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-input-validation.json",
+      "sha256": "6c121945e8f27aebfa79e410f4de379f5524aeac08af2774676ad8db5676f1b9"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/4N6H-launch.json",
+      "sha256": "9786f0af096ca914a85c6fa0f79a7928453e4bb135ebcd8356b378a81ae85b3d"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/jobs/0b89d27dadc34148/config.json",
+      "sha256": "13660663ee632a0b9a643f0e6407a5699f6248b01306d9a449aef3947edf4f20"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/completed-stereochemistry-validation.json",
+      "sha256": "b66a7d806c6aaae95b195b4592917b5ae4094d9cd9e6c360f0eee6badb090e29"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-stereo-guard-regression.json",
+      "sha256": "67b1030d87cb7fb1d6db0671989dbe070cb538134e08ddcbb789542762400d81"
+    }
+  ]
+}

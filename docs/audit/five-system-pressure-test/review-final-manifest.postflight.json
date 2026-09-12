@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-dynamics",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-12T01:22:12.975803+00:00",
+  "purpose": "Evaluate software functionality and saved-artifact consistency for five completed 100 ps explicit-water MD cases: kinase 1XQZ, protease 3PTB, phosphatase 1SUG, channel 1K4C and replacement GPCR 4N6H; three OpenMM and two GROMACS. Preserve all failed 4BVN attempts, declared environment/resource deviations and code-at-launch provenance. No inference of scientific convergence, binding, physiology or model accuracy.",
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not professional certification or Pat Walters endorsement.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "outputs_and_exclusions_recorded": true,
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "mdtraj": "1.11.1.post2",
+      "pdbfixer": "1.12.0",
+      "numpy": "2.4.6"
+    },
+    "gromacs_version": "2025.4 (workspace runtime; per-job native version retained)",
+    "inputs": [
+      {
+        "pdb_id": "1XQZ",
+        "source_url": "https://files.rcsb.org/download/1XQZ.cif",
+        "source_sha256": "ef05e790a09e91d0382bbb79e3d0942daba531f2a954d64ddc01cb59d296fc98",
+        "resolution_angstrom": 2.1
+      },
+      {
+        "pdb_id": "1SUG",
+        "source_url": "https://files.rcsb.org/download/1SUG.cif",
+        "source_sha256": "6ddbfa83d228c383e6481bc5e7a7a9fce53ab66fd10707a36dd283e988e9b1b2",
+        "resolution_angstrom": 1.95
+      },
+      {
+        "pdb_id": "3PTB",
+        "source_url": "https://files.rcsb.org/download/3PTB.cif",
+        "source_sha256": "d2744dbacfb97ec9b4ff7f5cf4b204418bccf92e46b63130bfebb3916260232f",
+        "resolution_angstrom": 1.7
+      },
+      {
+        "pdb_id": "1K4C",
+        "source_url": "https://files.rcsb.org/download/1K4C.cif",
+        "source_sha256": "da8a06fa1d2a514b106fbbf43ec63c88450027a427ba751b2a61da0f02a38763",
+        "resolution_angstrom": 2.0
+      },
+      {
+        "pdb_id": "4N6H",
+        "source_url": "https://files.rcsb.org/download/4N6H.cif",
+        "source_sha256": "a3b3030bc746372875dacaa5a69ccdac27abce88662ed1f2052c68c3d6f22c6b",
+        "resolution_angstrom": 1.8
+      }
+    ],
+    "validated_soluble_inputs": {
+      "1XQZ": {
+        "path": "data/integration-checks/five-system-gromacs/1XQZ-preflight.json",
+        "sha256": "57cf869b9b424a5de713faa16ecbfad9683e26c2bf21b30544c77c445d9188a1",
+        "dataset_id": "1c22ae03cd2d439e"
+      },
+      "1SUG": {
+        "path": "data/integration-checks/five-system-gromacs/1SUG-preflight.json",
+        "sha256": "548f3cd2d55b00456c46494b90d788b3a59e105a0685a5064ee35366a3fea236",
+        "dataset_id": "eb4e9d2461e2432d"
+      }
+    },
+    "corpus_manifest_sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d",
+    "code_scope": "Native worker hashes are recorded at launch; later frozen recovery/history/failure-CIF changes are covered by the265-test suite but are not claimed to have executed in earlier native workers.",
+    "initial_planned_budget": "4 CPU threads per job; at most 2 concurrent native jobs on the 10-CPU laptop. Five 100 ps trajectories, plus 10 ps relaxation per case, 2 fs step, reporting every500steps (1ps), temperature300K; minimization max1000iterations. At most2hours and5GB percase before recording a runtime/resource issue. Each ligand preparation native subprocess remains bounded300seconds. NoGPU/cloud/membrane construction; production sourceapp/user-library untouched by fixtures. Use isolated data/integration-checks/five-system-* and docs/audit/five-system-pressure-test; hash exact selected/prepared/solvated inputs and record complete settings before each production launch.",
+    "budget": "Four CPU threads per simulation, at most two simultaneous jobs; 100 ps production plus 10 ps initial relaxation, 2 fs step, 1 ps output, 300 K. Default 100,000-atom profile for the first four cases; explicit 200,000 profile for replacement 4N6H (145,913 native atoms). Actual GROMACS minimization cap 2,000 steps, 908/1,143 taken, distinct 5,000 relaxation steps; OpenMM cap 1,000 iterations. Per-case two-hour/five-GB limit; all five completed within these actual limits.",
+    "actual_seeds": {
+      "1XQZ": 20260912,
+      "3PTB": 20260914,
+      "1SUG": 20260913,
+      "1K4C": 20260916,
+      "4N6H": 20260915
+    }
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Official deposited coordinate/sequence/assembly records are preserved. Derivatives retain exact observed heavy coordinates and document chain, assembly, solvent/additive removal and terminal omissions. GROMACS uses complete unprepared standard protein inputs; no missing internal residues or ligand deletion to force compatibility. OpenMM retains primary ligands and validated ions. Modeled protein/ligand atoms require explicit recorded choice and uncertainty. GPCR uses the complete observed transmembrane construct rather than an unlabeled soluble fragment. Channel requires tetramer assembly and explicit nonoverlapping ion-occupancy interpretation; symmetry-axis ions cannot be multiplied silently.",
+    "historical_failures_preserved": "Earlier optional mmCIF parse and stereo/sequence/resource failures are retained in issues.json and per-attempt records; zero parse failures refers only to the final selected completed inputs, not the entire campaign."
+  },
+  "validation": {
+    "scope": "Five real completed trajectories, saved-artifact numerical/identity/geometry consistency, isolated real browser functionality, and final scoped code regressions.",
+    "output_range_checked": true,
+    "completed_systems": 5,
+    "requested_systems": 5,
+    "total_production_ps": 500,
+    "native_check_counts": {
+      "1XQZ": 15,
+      "3PTB": 20,
+      "1SUG": 15,
+      "1K4C": 20,
+      "4N6H": 21
+    },
+    "native_outputs_all_passed": true,
+    "browser_cases_passed": 5,
+    "browser_cases_total": 5,
+    "browser_requests_launching_or_changing_simulations": 0,
+    "final_backend_passed": 265,
+    "final_backend_warnings": 9,
+    "final_backend_seconds": 17.33,
+    "stereochemistry": "All 101 saved frames of all five cases pass residue-center signs; 4N6H has 439 protein centers plus four defined EJ4 carbon centers passing independent checks. Signed-volume checks do not establish broader conformational quality.",
+    "gpcr_specific": "408-residue observed receptor\u2013BRIL fusion, no internally rebuilt loop, primary EJ4 and source Na retained, declared whole additives and source water removed, fresh water only. 21 native, eight continuity and three independent geometry checks pass. 145,913 atoms; 4,434.85 seconds; 101 frames at 0\u2013100 ps; browser test 31.0 seconds.",
+    "delivered_main_app": "All five named Projects have three saved plots and 101 frames; readback and range-download passed, current workspace unchanged, no active jobs."
+  },
+  "comparison": {
+    "method_count": 0,
+    "uncertainty_intervals_reported": false,
+    "practical_significance_discussed": true,
+    "claim_limit": "Descriptive single-run diagnostics only. No replicate or independent scientific truth comparison, no statistical uncertainty/convergence analysis, no engine ranking. PatAgent uncertainty gate is intentionally unsatisfied; do not promote software checks to scientific accuracy.",
+    "water_only_limit": "Both membrane-protein cases are expressly water-only software tests; no lipid membrane, gating, signaling, ion-residence or biological interpretation."
+  },
+  "failed_attempts": {
+    "4BVN_initial_production": {
+      "job_id": "e1205ca152194276",
+      "cancelled_at_ps": 11.5,
+      "failure": "Modeled ASP242 and ALA272 centers were inverted by the first production frame; the original evidence does not localize when each inversion occurred.",
+      "included_in_success_count": false
+    },
+    "4BVN_runtime_guard_regression": {
+      "job_id": "79b13f4ea8d1490c",
+      "expected_failure": true,
+      "production_steps": 0,
+      "stage": "After minimization",
+      "elapsed_seconds": 150.49
+    },
+    "loop_probes": "All four original PDBFixer seeds failed initial stereochemistry; a later fixed-template model still failed native preparation/minimization acceptance. Withdrawn as unsuitable, not forced through quality gates."
+  },
+  "evidence": [
+    {
+      "path": "docs/audit/five-system-pressure-test/review-manifest.preflight.json",
+      "sha256": "8512f8af6f5b3c15f63a20b6191e9acecab3bca6077d388423b1bb579b02708d"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/review-4N6H-manifest.preflight.json",
+      "sha256": "7922f79de883e66597cc976893e55e2faff63d59e75b7d1d3a3a19bfc42ce6fa"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/review-4N6H-launch-validation.json",
+      "sha256": "9d51810db23c74b5c8cf60eda954a70f1a17ca03cd1eb19256b521e6e29cfa68"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gromacs-1XQZ-validation.json",
+      "sha256": "0de3565fb51b50bb19640d6fc8e1d908cf7de193bc0a6d69558e5e1dacd44591"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/openmm-3PTB-validation.json",
+      "sha256": "31e9707b993cd81c03702c69dd2c96523549bb139034c5ff49a301726c002f25"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gromacs-1SUG-validation.json",
+      "sha256": "7bb95c7606942040f4b1c221a6f442aa85750882f251cf53f54c10399367014b"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/openmm-1K4C-validation.json",
+      "sha256": "bf369908a7ecae4a5fda1c07b2c44fdc233db20389eedfc195fe5bd2a2c5a072"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-validation.json",
+      "sha256": "164679070ada8f679c1e7be3a50004231bb3fd2bb58128645d3a3a9ea0f866da"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gromacs-execution-summary.json",
+      "sha256": "94763c248e02c6f230c53ffa8c287640deb46ae5d1242bf116a9eecdae3289c0"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-execution-summary.json",
+      "sha256": "1c7c847d446542c57f3cca37bb0710acc26e561b59ab40c5288b95c3b19697e3"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/completed-stereochemistry-validation.json",
+      "sha256": "b66a7d806c6aaae95b195b4592917b5ae4094d9cd9e6c360f0eee6badb090e29"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-stereo-frames-validation.json",
+      "sha256": "a5963f7f7c3ada99d42859be58f1e9b93c68e44d246e6ede1c53313af3c0cbf8"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-EJ4-stereo-validation.json",
+      "sha256": "c1a208670d29d15bafa8ce6cddb0e12ad9c4319c2db34392f37998200c923d7a"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-output-continuity.json",
+      "sha256": "cabfd85f538a5d9edece0600d9f6be1243f4dae3c4928c0e265acc2bcad9ac29"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-numpy-geometry.json",
+      "sha256": "f3015c5d196c7df91ae6e134c460bf7a02111f48c819fa87db1a0a7d3e8239e2"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-4N6H-executed-code.json",
+      "sha256": "433f07753785f36b559728d162a4c2b54afc7b4504793ac69e07ce561df0eac1"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-loop-initial-dynamics-validation.json",
+      "sha256": "f103fe687f5f6bf6c9138da6984c82eefc77142edcae1f73b5fc6f2e74f80dc4"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-stereo-guard-regression.json",
+      "sha256": "67b1030d87cb7fb1d6db0671989dbe070cb538134e08ddcbb789542762400d81"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/browser-summary.json",
+      "sha256": "604a1597e3653720197526ad927e5a0597a2621d0d60606c99121d4516541640"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/browser-gpcr-final.json",
+      "sha256": "5cf154be10a48d183b53bd0b149fb667c2e205acdce38cdb050999cf477030c3"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/backend-regressions-final.json",
+      "sha256": "0eceec9e22e0cc4bd5c9b40415c1a396dc317ac546067702dfba6b4fccfeb04d"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/issues.json",
+      "sha256": "a0678e0e4000af86ef0f4ce2eba28a68fea6b7a703e9d603b110ab845ea24521"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/pressure-test-summary.json",
+      "sha256": "4c9ae6d46a3ba7f5e9a50bb609a3f42fbaf9503485ada2cff3034f5a009f54db"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/pressure-test-summary.png",
+      "sha256": "98fb8e69c30f55e1383097d78825bb4dee4acbb40a33d15bf4b8052df010870d"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/main-app-five-results.json",
+      "sha256": "9d9c99476f97d4da1910543a26dc5668afd25b2161db22aaa1b8ad0ca56ea279"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/delivery-gpcr.json",
+      "sha256": "52a28355590491673656afcba29710d9829f4cdcc296deae477b57d207490252"
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/cleanup.json",
+      "sha256": "080db1a5d8d0154ac5adb727e80a5eb4324ed0abd13cae8a636743035db41a7a"
+    }
+  ],
+  "modeling": {
+    "replicates_and_convergence_reported": false,
+    "reason": "One short production trajectory per selected structure tests software behavior. Independent replicas, physical equilibration and statistical convergence were not measured; this absence blocks scientific promotion, not the stated software-only use."
+  }
+}

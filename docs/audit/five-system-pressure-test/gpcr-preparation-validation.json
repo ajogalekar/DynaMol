@@ -1,0 +1,461 @@
+{
+  "source_dataset_id": "2d151914298241d9",
+  "preparation_job_id": "b23acf37fd3340aa",
+  "prepared_dataset_id": "421948174fed4441",
+  "scope": "Bounded identity, coordinate, stereochemical-sign, and provenance checks for a low-confidence six-residue loop model. These do not validate loop pose, packing, binding, or biological behavior.",
+  "checks": [
+    {
+      "name": "six_source_supported_ids",
+      "passed": true,
+      "restored": [
+        {
+          "chain": "A",
+          "seq_id": 211,
+          "resid": "241",
+          "insertion_code": "",
+          "residue": "ILE",
+          "label_asym_id": "A"
+        },
+        {
+          "chain": "A",
+          "seq_id": 212,
+          "resid": "242",
+          "insertion_code": "",
+          "residue": "ASP",
+          "label_asym_id": "A"
+        },
+        {
+          "chain": "A",
+          "seq_id": 213,
+          "resid": "243",
+          "insertion_code": "",
+          "residue": "ARG",
+          "label_asym_id": "A"
+        },
+        {
+          "chain": "A",
+          "seq_id": 214,
+          "resid": "272",
+          "insertion_code": "",
+          "residue": "ALA",
+          "label_asym_id": "A"
+        },
+        {
+          "chain": "A",
+          "seq_id": 215,
+          "resid": "273",
+          "insertion_code": "",
+          "residue": "SER",
+          "label_asym_id": "A"
+        },
+        {
+          "chain": "A",
+          "seq_id": 216,
+          "resid": "274",
+          "insertion_code": "",
+          "residue": "LYS",
+          "label_asym_id": "A"
+        }
+      ]
+    },
+    {
+      "name": "correction_only_wholly_new_sidechains",
+      "passed": true,
+      "changed_atoms": 11,
+      "corrected_residues": [
+        "241",
+        "243"
+      ]
+    },
+    {
+      "name": "observed_input_coords_preserved",
+      "passed": true,
+      "atoms": 2298,
+      "max_component_difference_nm": 0.0
+    },
+    {
+      "name": "modeled_and_observed_backbone_fixed_during_correction",
+      "passed": true,
+      "backbone_atoms": 1180
+    },
+    {
+      "name": "independent_after_correction_stereo_signs",
+      "passed": true,
+      "checked_centers": 324,
+      "violations": [],
+      "method": "NumPy scalar triple products on saved post-correction coordinates against recorded standard-template reference signs; no backend stereochemistry helper called."
+    },
+    {
+      "name": "final_prepared_stereochemistry",
+      "passed": true,
+      "centers": 324,
+      "violations": []
+    },
+    {
+      "name": "P32_and_two_sodium_bound_coordinates_retained",
+      "passed": true,
+      "atoms": 23,
+      "max_component_difference_nm": 0,
+      "identities": [
+        {
+          "identity": [
+            "B",
+            "1359",
+            "",
+            "NA",
+            "NA"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "C",
+            "1360",
+            "",
+            "NA",
+            "NA"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "O2"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C10"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "N3"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C11"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "N2"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C12"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C15"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C13"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C9"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "O1"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C4"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C5"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C6"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C7"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C8"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C3"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "N1"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C1"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C2"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C16"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "D",
+            "1361",
+            "",
+            "P32",
+            "C14"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        }
+      ]
+    },
+    {
+      "name": "soft_overlaps_require_minimization",
+      "passed": true,
+      "soft_overlaps": [
+        {
+          "atoms": [
+            1598,
+            1606
+          ],
+          "distance_nm": 0.18168726327207554,
+          "vdw_distance_ratio": 0.5642461592300483
+        },
+        {
+          "atoms": [
+            1607,
+            1612
+          ],
+          "distance_nm": 0.21348683904681298,
+          "vdw_distance_ratio": 0.6568825816825015
+        },
+        {
+          "atoms": [
+            1598,
+            1608
+          ],
+          "distance_nm": 0.19748747559335925,
+          "vdw_distance_ratio": 0.6133151415942834
+        }
+      ],
+      "gross_collisions": [],
+      "requires_minimization": true
+    },
+    {
+      "name": "single_build_and_fixed_seed",
+      "passed": true,
+      "attempts": 1,
+      "seed": 20260915,
+      "confidence": "low"
+    },
+    {
+      "name": "loop_artifact_hashes",
+      "passed": true,
+      "artifacts": [
+        {
+          "file": "loop-construction-before.npz",
+          "sha256": "0d465235716881e4a0c101a3bf46ddca787fece0aec4de76f23aca8304c7c59d",
+          "matches": true
+        },
+        {
+          "file": "loop-construction-after.npz",
+          "sha256": "b4a09a1a5f34f385da703022eed59a69439bc3532c3da805528aeac7d3484762",
+          "matches": true
+        },
+        {
+          "file": "loop-construction.pdb",
+          "sha256": "b88315a3d661d65d9b3091aeee3d1da6327e2e01b17ee875f9326473cb7998e4",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "name": "retained_ion_system_validation_recorded",
+      "passed": true,
+      "ions": [
+        {
+          "key": "B:1359::NA",
+          "formal_charge": 1,
+          "prepared_particle_index": 4850,
+          "prepared_system_verified": true
+        },
+        {
+          "key": "C:1360::NA",
+          "formal_charge": 1,
+          "prepared_particle_index": 4851,
+          "prepared_system_verified": true
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "evidence": [
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/b23acf37fd3340aa/config.json",
+      "sha256": "e5e5e2aa4ab5f4d0385dafb3601863befad3187bfe7df7dd30e74643c000be61"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/b23acf37fd3340aa/status.json",
+      "sha256": "a69ce962686114c984cec4602d5d002ea7b1c70c9b4fd584c19d99b215fcbbda"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/prepared.pdb",
+      "sha256": "cfd1fad8d52f07bf4cd2d1c9714b19db1e999ca9cfd23a167ea9167f9411dcbb"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/preparation.json",
+      "sha256": "135d34e3e2e86d4d0e1da22ddf0a475139e67cba9a3f184fed7f9c2d991cbaa3"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/sequence-source.cif",
+      "sha256": "13a39e5046074a4f38e7fd18c029c14a934cb5fe201733f731ef363d3c890438"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/loop-construction.json",
+      "sha256": "009caa03696dc1d5d5ad67101eda64082f8ae5f8e0ae0329d8653cde0770331f"
+    }
+  ]
+}

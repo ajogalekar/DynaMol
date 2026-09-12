@@ -1,0 +1,196 @@
+{
+  "scope": "Ten source-only alternate GPCR screens: initial3, separately approved fourth, then approved six-entry expansion. No MD or modeling.",
+  "candidates": [
+    {
+      "pdb_id": "2RH1",
+      "resolution_angstrom": "2.400",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 442,
+          "internal_missing_count": 0,
+          "terminal_missing_count": 58
+        }
+      ],
+      "covalent_connections": 3,
+      "source_sha256": "d6ea480f35d461bccda41a1410b9bc0718444e6de5af58405a580071b606b171",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-2RH1.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-2RH1.json"
+    },
+    {
+      "pdb_id": "3EML",
+      "resolution_angstrom": "2.60",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 448,
+          "internal_missing_count": 7,
+          "terminal_missing_count": 33
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "fc5e7cadd3951548025a382db1cd5e0b64aadfa2f160fe3436bf1f4ed840a888",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-3EML.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-3EML.json"
+    },
+    {
+      "pdb_id": "3PWH",
+      "resolution_angstrom": "3.296",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 291,
+          "internal_missing_count": 8,
+          "terminal_missing_count": 30
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "ae6fc2369e80715cfd94c6d5c28731b5d2c1f47bbe50c42ac32d45d3a8af4d7f",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-3PWH.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-3PWH.json"
+    },
+    {
+      "pdb_id": "3RZE",
+      "resolution_angstrom": "3.10",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 428,
+          "internal_missing_count": 7,
+          "terminal_missing_count": 17
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "9b7010f70a36ddc1c407739fa4a9bbc8320c0d4e0bc9cd6eeac295e838135d62",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-3RZE.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-3RZE.json"
+    },
+    {
+      "pdb_id": "4EIY",
+      "resolution_angstrom": "1.80",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 390,
+          "internal_missing_count": 15,
+          "terminal_missing_count": 42
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "4c791ee7d1efb6ae0004f36b453f9653b5e61ba294a403f77672ca97fef011fb",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-4EIY.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-4EIY.json"
+    },
+    {
+      "pdb_id": "4N6H",
+      "resolution_angstrom": "1.80",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 408,
+          "internal_missing_count": 0,
+          "terminal_missing_count": 6
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "a3b3030bc746372875dacaa5a69ccdac27abce88662ed1f2052c68c3d6f22c6b",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-4N6H.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-4N6H.json"
+    },
+    {
+      "pdb_id": "4XEE",
+      "resolution_angstrom": "2.90",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 464,
+          "internal_missing_count": 60,
+          "terminal_missing_count": 17
+        },
+        {
+          "chain": "B",
+          "observed_residues": 6,
+          "internal_missing_count": 0,
+          "terminal_missing_count": 0
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "55b3c747bca6d6395b4e9b63f8ecb94d0badeb0844976b8003335fbdf25fcfc9",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-4XEE.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-4XEE.json"
+    },
+    {
+      "pdb_id": "5C1M",
+      "resolution_angstrom": "2.07",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 296,
+          "internal_missing_count": 0,
+          "terminal_missing_count": 0
+        },
+        {
+          "chain": "B",
+          "observed_residues": 118,
+          "internal_missing_count": 7,
+          "terminal_missing_count": 0
+        }
+      ],
+      "covalent_connections": 2,
+      "source_sha256": "e561b0670e874a32fc07620e6fb44444d7b0102aff84b9826882eaa69c787096",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-5C1M.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-5C1M.json"
+    },
+    {
+      "pdb_id": "5IU4",
+      "resolution_angstrom": "1.720",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 388,
+          "internal_missing_count": 15,
+          "terminal_missing_count": 30
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "db3f808cc91a43d61eaca691669ee574ebd3fdd0ce7beddc3270678e7c9ca2d1",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-5IU4.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-5IU4.json"
+    },
+    {
+      "pdb_id": "6B73",
+      "resolution_angstrom": "3.10",
+      "chains": [
+        {
+          "chain": "A",
+          "observed_residues": 281,
+          "internal_missing_count": 8,
+          "terminal_missing_count": 129
+        },
+        {
+          "chain": "B",
+          "observed_residues": 269,
+          "internal_missing_count": 12,
+          "terminal_missing_count": 137
+        },
+        {
+          "chain": "C",
+          "observed_residues": 126,
+          "internal_missing_count": 0,
+          "terminal_missing_count": 8
+        },
+        {
+          "chain": "D",
+          "observed_residues": 122,
+          "internal_missing_count": 4,
+          "terminal_missing_count": 8
+        }
+      ],
+      "covalent_connections": 0,
+      "source_sha256": "91067fbc73dad614d074b4a399be8ff4e633775b9115e0c3631e1462b9574727",
+      "source_path": "docs/audit/five-system-pressure-test/review-source-6B73.cif",
+      "detail_path": "docs/audit/five-system-pressure-test/review-alternate-6B73.json"
+    }
+  ],
+  "result": "4N6H is selected for guarded preparation: complete observed408-residue receptor-BRIL construct and31-heavy-atom EJ4 ligand, no internal missing sequence or covalent adduct. Its full-source cubic TIP3P bound151195 exceeds the default100000profile; root explicitly authorized a separate isolated200000atom profile. Exact prepared/native allocation and chirality validation remain mandatory. The rejected4BVN case remains part of benchmark results."
+}

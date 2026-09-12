@@ -1,0 +1,288 @@
+{
+  "dataset_id": "59ff9ca69b454df1",
+  "protein_atoms": 1629,
+  "hydrogen_atoms": 0,
+  "water_atoms": 62,
+  "heterogen_residues": [
+    "BEN C:1",
+    "CA B:480"
+  ],
+  "can_prepare": true,
+  "has_sequence": true,
+  "missing_atoms": [],
+  "missing_residues": [],
+  "gaps": [
+    {
+      "chain": "A",
+      "after": "34",
+      "before": "37",
+      "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+      "backbone_distance_angstrom": 1.3494276564529124,
+      "structural_break": false
+    },
+    {
+      "chain": "A",
+      "after": "67",
+      "before": "69",
+      "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+      "backbone_distance_angstrom": 1.3218343315257008,
+      "structural_break": false
+    },
+    {
+      "chain": "A",
+      "after": "125",
+      "before": "127",
+      "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+      "backbone_distance_angstrom": 1.2873573707405417,
+      "structural_break": false
+    },
+    {
+      "chain": "A",
+      "after": "130",
+      "before": "132",
+      "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+      "backbone_distance_angstrom": 1.3577113095205475,
+      "structural_break": false
+    },
+    {
+      "chain": "A",
+      "after": "204",
+      "before": "209",
+      "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+      "backbone_distance_angstrom": 1.3217303053195097,
+      "structural_break": false
+    },
+    {
+      "chain": "A",
+      "after": "217",
+      "before": "219",
+      "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+      "backbone_distance_angstrom": 1.3161622240438284,
+      "structural_break": false
+    }
+  ],
+  "warnings": [
+    "Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.",
+    "Observed coordinating waters and protein donor sidechains are retained. Standard nonbonded ion parameters do not establish metal-coordination accuracy.",
+    "Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.",
+    "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+  ],
+  "blockers": [],
+  "ligands": [
+    {
+      "key": "C:1::BEN",
+      "chain": "C",
+      "resid": "1",
+      "insertion_code": " ",
+      "residue": "BEN",
+      "component_id": "BEN",
+      "error": "Bound ligand E/Z stereochemistry disagrees with CCD at C\u2013N1.",
+      "atom_indices": [
+        1630,
+        1631,
+        1632,
+        1633,
+        1634,
+        1635,
+        1636,
+        1637,
+        1638
+      ],
+      "selected_action": null,
+      "can_remove": true,
+      "can_repair": false,
+      "removed": false,
+      "missing_heavy_atoms": [],
+      "extra_heavy_atoms": [],
+      "repair_reason": null
+    }
+  ],
+  "modified_residues": [],
+  "ligand_errors": [
+    "C:1::BEN: Bound ligand E/Z stereochemistry disagrees with CCD at C\u2013N1."
+  ],
+  "ligand_runtime": {
+    "available": true,
+    "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools",
+    "method": "GAFF2 / AM1-BCC"
+  },
+  "metal_environment": {
+    "method": "Observed metal\u2013N/O/S contacts within 2.8 \u00c5 (3.2 \u00c5 for Ca); these distances do not establish bond order or validate a metal model.",
+    "retained_coordinating_waters": [
+      [
+        "D",
+        "711",
+        "",
+        "HOH"
+      ],
+      [
+        "D",
+        "714",
+        "",
+        "HOH"
+      ]
+    ],
+    "protected_sidechain_residues": [
+      [
+        "A",
+        "70",
+        "",
+        "GLU"
+      ],
+      [
+        "A",
+        "72",
+        "",
+        "ASN"
+      ],
+      [
+        "A",
+        "75",
+        "",
+        "VAL"
+      ],
+      [
+        "A",
+        "80",
+        "",
+        "GLU"
+      ]
+    ],
+    "contacts": [
+      {
+        "metal": [
+          "B",
+          "480",
+          "",
+          "CA"
+        ],
+        "donor": [
+          "A",
+          "70",
+          "",
+          "GLU",
+          "OE1"
+        ],
+        "distance_angstrom": 2.3670363326320127
+      },
+      {
+        "metal": [
+          "B",
+          "480",
+          "",
+          "CA"
+        ],
+        "donor": [
+          "A",
+          "72",
+          "",
+          "ASN",
+          "O"
+        ],
+        "distance_angstrom": 2.2887177632901814
+      },
+      {
+        "metal": [
+          "B",
+          "480",
+          "",
+          "CA"
+        ],
+        "donor": [
+          "A",
+          "75",
+          "",
+          "VAL",
+          "O"
+        ],
+        "distance_angstrom": 2.281174039831241
+      },
+      {
+        "metal": [
+          "B",
+          "480",
+          "",
+          "CA"
+        ],
+        "donor": [
+          "A",
+          "80",
+          "",
+          "GLU",
+          "OE2"
+        ],
+        "distance_angstrom": 2.3961241620583804
+      },
+      {
+        "metal": [
+          "B",
+          "480",
+          "",
+          "CA"
+        ],
+        "donor": [
+          "D",
+          "711",
+          "",
+          "HOH",
+          "O"
+        ],
+        "distance_angstrom": 2.485675964400828
+      },
+      {
+        "metal": [
+          "B",
+          "480",
+          "",
+          "CA"
+        ],
+        "donor": [
+          "D",
+          "714",
+          "",
+          "HOH",
+          "O"
+        ],
+        "distance_angstrom": 2.3717708573974883
+      }
+    ]
+  },
+  "ions": [
+    {
+      "key": "B:480::CA",
+      "residue": "CA",
+      "element": "Ca",
+      "deposited_formal_charge": null,
+      "formal_charge": 2,
+      "supported": true,
+      "error": null,
+      "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+      "parameters": {
+        "template": "CA",
+        "atom_type": "tip3p_standard-Ca2+",
+        "element": "Ca",
+        "charge_e": 2.0,
+        "sigma_nm": 0.29381839724268394,
+        "epsilon_kj_mol": 0.4432056808,
+        "forcefield_file": "amber14/tip3p.xml",
+        "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+        "parameter_sources": [
+          "parm/frcmod.ionsjc_tip3p",
+          "parm/frcmod.ions234lm_126_tip3p",
+          "lib/atomic_ions.lib",
+          "tip3p.xml"
+        ],
+        "references": [
+          "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+          "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+          "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+          "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+        ],
+        "identity_source": "https://www.rcsb.org/ligand/CA",
+        "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+      }
+    }
+  ],
+  "sequence_source": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm/datasets/59ff9ca69b454df1/source.cif",
+  "sequence_source_sha256": "d2744dbacfb97ec9b4ff7f5cf4b204418bccf92e46b63130bfebb3916260232f"
+}

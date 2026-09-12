@@ -1,0 +1,12 @@
+{
+  "scope": "Allocation-bound software review only; no added MD.",
+  "code_sha256": {
+    "backend/solvent.py": "183921659c2d7977f339aa30a9ebcb1557b40fcc3068bb54faefc9405ae5aee1",
+    "backend/tests/test_solvent_allocation.py": "232c5c89d1794e8e8b4ef77a9d2dbc87b7a95df4c664b94f2ea3f882954697ff"
+  },
+  "focused_tests": {
+    "reported_passed": 15,
+    "reported_seconds": 0.27
+  },
+  "decision": "No critical finding in direct native-source comparison and focused boundary test review. Native output must remain below both its computed bound and the existing100000-atom cap."
+}

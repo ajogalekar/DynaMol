@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-11T23:37:17.065906+00:00",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "backend/tests/test_preparation.py",
+    "backend/tests/test_missing_modified_sequence.py",
+    "backend/tests/test_sequence_scheme.py",
+    "backend/tests/test_monomers.py",
+    "backend/tests/test_sources_solvent.py",
+    "backend/tests/test_ligand_terminal_imine_stereo.py",
+    "backend/tests/test_optional_cif_identity.py",
+    "backend/tests/test_residue_identity.py",
+    "backend/tests/test_pressure_test_validator.py",
+    "backend/tests/test_loop_sidechain_correction.py",
+    "backend/tests/test_readiness_diagnostics.py",
+    "backend/tests/test_resource_submission.py",
+    "backend/tests/test_prepared_system.py",
+    "backend/tests/test_solvent_allocation.py"
+  ],
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 46%]\n........................................................................ [ 92%]\n...........                                                              [100%]\n=============================== warnings summary ===============================\n.venv/lib/python3.12/site-packages/fastapi/testclient.py:1\n  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n.venv/lib/python3.12/site-packages/starlette/testclient.py:53\n  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\nbackend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes\nbackend/tests/test_ligand_terminal_imine_stereo.py::test_cached_benzamidine_preserves_pose_and_selects_protonated_ph7_state\n  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:444: UserWarning: WARNING: two consecutive residues with same number (ATOM   1200  N   TYR A 184      -3.354   6.845   8.125  1.00  0.00           N  , ATOM   1199  O   GLY A 184      -1.990   5.032   7.802  1.00  0.00           O  )\n    warnings.warn(\"WARNING: two consecutive residues with same number (%s, %s)\" % (atom, self._current_residue.atoms[-1]))\n\nbackend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes\nbackend/tests/test_ligand_terminal_imine_stereo.py::test_cached_benzamidine_preserves_pose_and_selects_protonated_ph7_state\n  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:444: UserWarning: WARNING: two consecutive residues with same number (ATOM   1237  N   LYS A 188      -8.945   8.456  10.550  1.00  0.00           N  , ATOM   1236  O   GLY A 188     -11.047   8.523  11.393  1.00  0.00           O  )\n    warnings.warn(\"WARNING: two consecutive residues with same number (%s, %s)\" % (atom, self._current_residue.atoms[-1]))\n\nbackend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes\nbackend/tests/test_ligand_terminal_imine_stereo.py::test_cached_benzamidine_preserves_pose_and_selects_protonated_ph7_state\n  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:444: UserWarning: WARNING: two consecutive residues with same number (ATOM   1428  N   GLN A 221      -7.100  14.390   9.469  1.00  0.00           N  , ATOM   1427  CB  ALA A 221      -8.798  12.053  11.750  1.00  0.00           C  )\n    warnings.warn(\"WARNING: two consecutive residues with same number (%s, %s)\" % (atom, self._current_residue.atoms[-1]))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n155 passed, 8 warnings in 14.96s\n",
+  "stderr": "",
+  "source_sha256": {
+    "jobs.py": "706ae328c5cb3f2d3c133f63dca9871f3fd1989a522c7efdcf6193a666a52a6d",
+    "ligands.py": "b4b38ec8b599200df5af7eaba3cfe079a7ea78c84f4619758e4dd1cfae85c61f",
+    "preparation.py": "defd490fc8533b311c610b5762861cd1807e001486014f6ba75b94083de25b47",
+    "preparation_worker.py": "3fee9767bca59c7bb955e2b09343bd95db5070461006746d367d5121a1138c15",
+    "residue_identity.py": "1178b03115d88957e73e8c67f4a2f0e92b98557d8f68760e2d5a8f24e70ea363",
+    "sequence_evidence.py": "fdc25e36cfd458281a75feae4f541b5b9d74c5f31d8a041157f2b3b20a05ed21",
+    "resources.py": "984720fd66d8adfbf1b959ec91001d7a51d63af5b1678d70c13b83e27d3a4535",
+    "solvent.py": "183921659c2d7977f339aa30a9ebcb1557b40fcc3068bb54faefc9405ae5aee1"
+  }
+}

@@ -14,3 +14,9 @@ docs/audit/complex-ccd-*.cif -whitespace
 backend/data/modified_residues/*.cif -whitespace
 docs/audit/modified-residues/native/** -whitespace
 docs/audit/release-readiness/chemistry-inputs/*.cif -whitespace
+
+# Keep pressure-test source structures byte-identical to their recorded hashes.
+docs/audit/five-system-pressure-test/*.cif -text -whitespace
+docs/audit/five-system-pressure-test/*.pdb -text -whitespace
+# Matplotlib SVG paths contain intentional trailing spaces.
+docs/audit/five-system-pressure-test/*.svg -text -whitespace

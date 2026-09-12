@@ -1,0 +1,397 @@
+{
+  "dataset_id": "e59d6d0bed574ad5",
+  "protein_atoms": 3060,
+  "hydrogen_atoms": 0,
+  "water_atoms": 8,
+  "heterogen_residues": [
+    "K I:3002",
+    "K I:3004",
+    "K I:3005"
+  ],
+  "can_prepare": true,
+  "has_sequence": true,
+  "missing_atoms": [
+    {
+      "chain": "A",
+      "resid": "22",
+      "residue": "SER",
+      "atoms": [
+        "OG"
+      ]
+    },
+    {
+      "chain": "A",
+      "resid": "117",
+      "residue": "ARG",
+      "atoms": [
+        "CD",
+        "CG",
+        "CZ",
+        "NE",
+        "NH1",
+        "NH2"
+      ]
+    },
+    {
+      "chain": "A",
+      "resid": "124",
+      "residue": "HIS",
+      "atoms": [
+        "CD2",
+        "CE1",
+        "CG",
+        "ND1",
+        "NE2"
+      ]
+    },
+    {
+      "chain": "B",
+      "resid": "22",
+      "residue": "SER",
+      "atoms": [
+        "OG"
+      ]
+    },
+    {
+      "chain": "B",
+      "resid": "117",
+      "residue": "ARG",
+      "atoms": [
+        "CD",
+        "CG",
+        "CZ",
+        "NE",
+        "NH1",
+        "NH2"
+      ]
+    },
+    {
+      "chain": "B",
+      "resid": "124",
+      "residue": "HIS",
+      "atoms": [
+        "CD2",
+        "CE1",
+        "CG",
+        "ND1",
+        "NE2"
+      ]
+    },
+    {
+      "chain": "C",
+      "resid": "22",
+      "residue": "SER",
+      "atoms": [
+        "OG"
+      ]
+    },
+    {
+      "chain": "C",
+      "resid": "117",
+      "residue": "ARG",
+      "atoms": [
+        "CD",
+        "CG",
+        "CZ",
+        "NE",
+        "NH1",
+        "NH2"
+      ]
+    },
+    {
+      "chain": "C",
+      "resid": "124",
+      "residue": "HIS",
+      "atoms": [
+        "CD2",
+        "CE1",
+        "CG",
+        "ND1",
+        "NE2"
+      ]
+    },
+    {
+      "chain": "D",
+      "resid": "22",
+      "residue": "SER",
+      "atoms": [
+        "OG"
+      ]
+    },
+    {
+      "chain": "D",
+      "resid": "117",
+      "residue": "ARG",
+      "atoms": [
+        "CD",
+        "CG",
+        "CZ",
+        "NE",
+        "NH1",
+        "NH2"
+      ]
+    },
+    {
+      "chain": "D",
+      "resid": "124",
+      "residue": "HIS",
+      "atoms": [
+        "CD2",
+        "CE1",
+        "CG",
+        "ND1",
+        "NE2"
+      ]
+    }
+  ],
+  "missing_residues": [
+    {
+      "chain": "A",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "PRO",
+        "MET",
+        "LEU",
+        "SER",
+        "GLY",
+        "LEU",
+        "LEU",
+        "ALA",
+        "ARG",
+        "LEU",
+        "VAL",
+        "LYS",
+        "LEU",
+        "LEU",
+        "LEU",
+        "GLY",
+        "ARG",
+        "HIS",
+        "GLY"
+      ],
+      "count": 21,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 0
+    },
+    {
+      "chain": "B",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "PRO",
+        "MET",
+        "LEU",
+        "SER",
+        "GLY",
+        "LEU",
+        "LEU",
+        "ALA",
+        "ARG",
+        "LEU",
+        "VAL",
+        "LYS",
+        "LEU",
+        "LEU",
+        "LEU",
+        "GLY",
+        "ARG",
+        "HIS",
+        "GLY"
+      ],
+      "count": 21,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 1
+    },
+    {
+      "chain": "C",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "PRO",
+        "MET",
+        "LEU",
+        "SER",
+        "GLY",
+        "LEU",
+        "LEU",
+        "ALA",
+        "ARG",
+        "LEU",
+        "VAL",
+        "LYS",
+        "LEU",
+        "LEU",
+        "LEU",
+        "GLY",
+        "ARG",
+        "HIS",
+        "GLY"
+      ],
+      "count": 21,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 2
+    },
+    {
+      "chain": "D",
+      "position": 0,
+      "residues": [
+        "MET",
+        "ALA",
+        "PRO",
+        "MET",
+        "LEU",
+        "SER",
+        "GLY",
+        "LEU",
+        "LEU",
+        "ALA",
+        "ARG",
+        "LEU",
+        "VAL",
+        "LYS",
+        "LEU",
+        "LEU",
+        "LEU",
+        "GLY",
+        "ARG",
+        "HIS",
+        "GLY"
+      ],
+      "count": 21,
+      "terminal": true,
+      "buildable": false,
+      "chain_index": 3
+    }
+  ],
+  "gaps": [],
+  "warnings": [
+    "Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.",
+    "Missing sequence-supported residues are listed. Rebuilding internal short gaps is opt-in and produces low-confidence coordinates, not an experimentally established loop.",
+    "Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.",
+    "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+  ],
+  "blockers": [],
+  "ligands": [],
+  "modified_residues": [],
+  "ligand_errors": [],
+  "ligand_runtime": null,
+  "metal_environment": {
+    "method": "Observed metal\u2013N/O/S contacts within 2.8 \u00c5 (3.2 \u00c5 for Ca); these distances do not establish bond order or validate a metal model.",
+    "retained_coordinating_waters": [],
+    "protected_sidechain_residues": [],
+    "contacts": []
+  },
+  "ions": [
+    {
+      "key": "I:3002::K",
+      "residue": "K",
+      "element": "K",
+      "deposited_formal_charge": null,
+      "formal_charge": 1,
+      "supported": true,
+      "error": null,
+      "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+      "parameters": {
+        "template": "K",
+        "atom_type": "tip3p_standard-K+",
+        "element": "K",
+        "charge_e": 1.0,
+        "sigma_nm": 0.3037964628858557,
+        "epsilon_kj_mol": 0.8103692536,
+        "forcefield_file": "amber14/tip3p.xml",
+        "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+        "parameter_sources": [
+          "parm/frcmod.ionsjc_tip3p",
+          "parm/frcmod.ions234lm_126_tip3p",
+          "lib/atomic_ions.lib",
+          "tip3p.xml"
+        ],
+        "references": [
+          "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+          "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+          "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+          "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+        ],
+        "identity_source": "https://www.rcsb.org/ligand/K",
+        "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+      }
+    },
+    {
+      "key": "I:3004::K",
+      "residue": "K",
+      "element": "K",
+      "deposited_formal_charge": null,
+      "formal_charge": 1,
+      "supported": true,
+      "error": null,
+      "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+      "parameters": {
+        "template": "K",
+        "atom_type": "tip3p_standard-K+",
+        "element": "K",
+        "charge_e": 1.0,
+        "sigma_nm": 0.3037964628858557,
+        "epsilon_kj_mol": 0.8103692536,
+        "forcefield_file": "amber14/tip3p.xml",
+        "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+        "parameter_sources": [
+          "parm/frcmod.ionsjc_tip3p",
+          "parm/frcmod.ions234lm_126_tip3p",
+          "lib/atomic_ions.lib",
+          "tip3p.xml"
+        ],
+        "references": [
+          "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+          "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+          "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+          "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+        ],
+        "identity_source": "https://www.rcsb.org/ligand/K",
+        "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+      }
+    },
+    {
+      "key": "I:3005::K",
+      "residue": "K",
+      "element": "K",
+      "deposited_formal_charge": null,
+      "formal_charge": 1,
+      "supported": true,
+      "error": null,
+      "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+      "parameters": {
+        "template": "K",
+        "atom_type": "tip3p_standard-K+",
+        "element": "K",
+        "charge_e": 1.0,
+        "sigma_nm": 0.3037964628858557,
+        "epsilon_kj_mol": 0.8103692536,
+        "forcefield_file": "amber14/tip3p.xml",
+        "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+        "parameter_sources": [
+          "parm/frcmod.ionsjc_tip3p",
+          "parm/frcmod.ions234lm_126_tip3p",
+          "lib/atomic_ions.lib",
+          "tip3p.xml"
+        ],
+        "references": [
+          "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+          "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+          "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+          "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+        ],
+        "identity_source": "https://www.rcsb.org/ligand/K",
+        "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+      }
+    }
+  ],
+  "sequence_source": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm/datasets/e59d6d0bed574ad5/source.cif",
+  "sequence_source_sha256": "9479885d4056883f453a83949930cd9656e49a17524152bc270aba28db8373bc"
+}

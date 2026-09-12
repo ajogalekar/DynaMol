@@ -107,6 +107,38 @@ _atom_site.label_seq_id
     assert (residue_key(residue) in protein_residue_keys('fixture', top)) is expected
 
 
+@pytest.mark.parametrize('missing', ['.', '?'])
+@pytest.mark.parametrize('polymer_type,expected', [("'polypeptide(L)'", True), ('.', False), ('?', False)])
+def test_nullable_cif_types_preserve_available_polymer_evidence(tmp_path, monkeypatch, missing, polymer_type, expected):
+    top = app.Topology()
+    residue = top.addResidue('ZZZ', top.addChain('A'), '1')
+    top.addAtom('CA', app.element.carbon, residue)
+    source = tmp_path / 'source.cif'
+    source.write_text(f'''data_nullable
+loop_
+_chem_comp.id
+_chem_comp.type
+ZZZ {missing}
+loop_
+_entity_poly.entity_id
+_entity_poly.type
+1 {polymer_type}
+loop_
+_atom_site.id
+_atom_site.type_symbol
+_atom_site.auth_atom_id
+_atom_site.label_comp_id
+_atom_site.label_asym_id
+_atom_site.auth_asym_id
+_atom_site.auth_seq_id
+_atom_site.label_seq_id
+_atom_site.label_entity_id
+1 C CA ZZZ A A 1 1 1
+''')
+    monkeypatch.setattr(ligands, '_source_cif', lambda _: source)
+    assert (residue_key(residue) in protein_residue_keys('fixture', top)) is expected
+
+
 @pytest.mark.parametrize('name', ['ZZZ', 'MSE', 'ALY', 'CSO', 'FME', 'DLY'])
 def test_unsupported_uaa_is_reported_per_residue_and_never_sent_to_ligand_params(name):
     top, positions = peptide(('ALA', name, 'GLY'))

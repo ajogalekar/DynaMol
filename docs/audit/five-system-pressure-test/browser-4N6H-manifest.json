@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "name": "GPCR 4N6H \u00b7 100 ps",
+      "pdbId": "4N6H",
+      "jobId": "0b89d27dadc34148",
+      "datasetId": "ab629697dd2449c7",
+      "baseURL": "http://127.0.0.1:8794"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "case": {
+    "name": "KcsA ion channel",
+    "pdbId": "1K4C",
+    "jobId": "491f0e8e7dc04c6c",
+    "datasetId": "6dc9ed17492b49a8",
+    "baseURL": "http://127.0.0.1:8792"
+  },
+  "startedAt": "2026-09-11T23:36:51.702Z",
+  "checks": [
+    "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+    "real native job Files archive downloaded",
+    "Open trajectory enters Explore and restores all three visible saved plots",
+    "movie advances and pauses; slider and endpoint buttons reach both ends",
+    "water toggles both ways and both zoom buttons change the molecular canvas",
+    "three real UI posthoc plots agree with the saved native tracking samples"
+  ],
+  "posthoc": [
+    {
+      "kind": "distance",
+      "atoms": [
+        1574,
+        3144
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00c5"
+    },
+    {
+      "kind": "angle",
+      "atoms": [
+        2074,
+        2076,
+        2079
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00b0"
+    },
+    {
+      "kind": "dihedral",
+      "atoms": [
+        2074,
+        2076,
+        2079,
+        2081
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00b0"
+    }
+  ],
+  "browserErrors": [],
+  "consoleErrors": [],
+  "forbiddenRequests": [],
+  "nativeOutput": {
+    "engine": "openmm",
+    "jobName": "Pressure test \u00b7 channel \u00b7 100 ps",
+    "atoms": 56502,
+    "frames": 101,
+    "firstTimePs": 0,
+    "lastTimePs": 100,
+    "waterAtoms": 50208
+  },
+  "download": {
+    "filename": "DynaMol-491f0e8e7dc04c6c.zip",
+    "bytes": 150241380
+  },
+  "playback": {
+    "pausedFrame": 5,
+    "first": 0,
+    "last": 100
+  },
+  "passed": true,
+  "finishedAt": "2026-09-11T23:37:09.879Z"
+}

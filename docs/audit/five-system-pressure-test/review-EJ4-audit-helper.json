@@ -1,0 +1,41 @@
+{
+  "scope": "Bounded read-only review of the actual 4N6H EJ4 saved-frame audit helper; no dynamics, coordinate generation, or full trajectory reread performed.",
+  "helper": "data/integration-checks/five-system-gpcr-large/validate-EJ4-stereo-frames.py",
+  "helper_sha256": "302047cc74b2940c371bd1eb416d96d0c00a9b47aab7e492c0d064bb11674370",
+  "critical_findings": [],
+  "actual_input_checks": {
+    "defined_CCD_carbon_centers": {
+      "CAE": "R",
+      "CAP": "S",
+      "CAR": "R",
+      "CAV": "S"
+    },
+    "CCD_hash_matches_recorded_reference": true,
+    "parameter_prepared_names_unique": 58,
+    "actual_topology_maps": [
+      {
+        "file": "data/integration-checks/five-system-gpcr-large/datasets/753ba327007a441b/prepared.pdb",
+        "unique_atom_names": 58,
+        "sha256": "fc928164120f00feacdacbae2dfb5bd768f492242cc2528dd75920124210b31a"
+      },
+      {
+        "file": "data/integration-checks/five-system-gpcr-large/jobs/0b89d27dadc34148/prepared.pdb",
+        "unique_atom_names": 58,
+        "sha256": "8e43c0fd6c915fc6c28d254bf1772cb93c1a7fc8f6c483aa0ab1be0e9bcceda1"
+      }
+    ]
+  },
+  "method_review": [
+    "Native and prepared residue identity includes chain, residue number, insertion code and residue name; actual selected atom names are unique and complete.",
+    "Full 58-atom SDF graph, element and charge inventory is matched to parameter identity; explicit bonded hydrogens are included.",
+    "RDKit rebuilds reference chirality tags from prepared 3D coordinates and confirms all four expected CCD carbon CIP descriptors.",
+    "Fixed-order four-neighbor scalar triple products preserve the relation to that validated reference; testing sign avoids dependence on center atom index or arbitrary global orientation.",
+    "Independent minimum-image vectors are appropriate for the asserted orthorhombic box and covalent-neighbor distances of this actual run; nonfinite or near-planar determinants fail.",
+    "Completed mode requires 101 saved samples at 0\u2013100 ps; prefix mode is explicitly identified."
+  ],
+  "limits": [
+    "This is a saved-frame tetrahedral-handedness check for four defined carbon centers, not proof of continuous-time stereochemical preservation, ligand pose accuracy, protonation correctness or dynamical convergence.",
+    "The helper is specialized to this known orthorhombic run and recorded parameter graph; it is not a generic arbitrary-ligand or triclinic-box validator.",
+    "No further scientific model acceptance follows from these checks."
+  ]
+}

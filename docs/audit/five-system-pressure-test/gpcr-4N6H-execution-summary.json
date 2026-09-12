@@ -1,0 +1,210 @@
+{
+  "case": "GPCR software pressure test, replacement 4N6H",
+  "completed": true,
+  "passed_all_saved_artifact_checks": true,
+  "source_dataset_id": "5e4d0673f8ac4358",
+  "prepared_dataset_id": "753ba327007a441b",
+  "solvated_dataset_id": "343ace4483604405",
+  "job_id": "0b89d27dadc34148",
+  "output_dataset_id": "ab629697dd2449c7",
+  "engine": "openmm",
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6"
+  },
+  "configuration": {
+    "dataset_id": "343ace4483604405",
+    "engine": "openmm",
+    "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 100 ps",
+    "duration_ps": 100.0,
+    "temperature_k": 300.0,
+    "timestep_fs": 2.0,
+    "report_interval": 500,
+    "friction_ps": 1,
+    "seed": 20260915,
+    "solvent": "explicit",
+    "minimize": true,
+    "equilibration_steps": 5000,
+    "padding_nm": 1.0,
+    "measurements": [
+      {
+        "id": "backbone-distance",
+        "kind": "distance",
+        "atoms": [
+          1585,
+          3159
+        ],
+        "label": "Backbone separation",
+        "color": null,
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-angle",
+        "kind": "angle",
+        "atoms": [
+          2057,
+          2059,
+          2061
+        ],
+        "label": "Backbone N\u2013CA\u2013C",
+        "color": null,
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-dihedral",
+        "kind": "dihedral",
+        "atoms": [
+          2057,
+          2059,
+          2061,
+          2071
+        ],
+        "label": "Backbone psi",
+        "color": null,
+        "trackDuringRun": true
+      }
+    ]
+  },
+  "whole_pipeline_elapsed_seconds": 4484.59,
+  "pipeline_generated_bytes": 978376795,
+  "resource_profile": {
+    "max_atoms": 200000,
+    "coordinate_bytes": 268435456,
+    "cpu_threads": 4
+  },
+  "system": {
+    "atoms": 145913,
+    "frames": 101,
+    "first_time_ps": 0,
+    "last_time_ps": 100,
+    "full_protein_residues": 408,
+    "internal_residues_built": 0,
+    "EJ4_heavy_atoms": 31,
+    "EJ4_total_atoms": 58,
+    "preserved_source_sodium_ions": 1,
+    "explicitly_removed_whole_additives": 21,
+    "removed_additive_heavy_atoms": 309,
+    "removed_source_waters": 101,
+    "unique_source_protein_heavy_atoms_retained": 3089,
+    "source_alternate_conformer_duplicate_heavy_rows": 51
+  },
+  "results": {
+    "shared_native_checks": {
+      "passed": true,
+      "checks": 21
+    },
+    "independent_live_geometry": {
+      "passed": true,
+      "checks": 3,
+      "maximum_difference": 1.4986726526444727e-05
+    },
+    "independent_protein_stereochemistry": {
+      "passed": true,
+      "centers": 439,
+      "frames": 101
+    },
+    "independent_EJ4_stereochemistry": {
+      "passed": true,
+      "centers": 4,
+      "frames": 101
+    },
+    "solute_and_native_parameter_continuity": {
+      "passed": true,
+      "checks": 8
+    },
+    "runtime_stereochemistry": {
+      "checks": 153,
+      "all_passed": true,
+      "first_stage": "Before minimization",
+      "last_stage": "Production step 50000"
+    },
+    "temperature": {
+      "passed": true,
+      "target_k": 300.0,
+      "mean_k": 300.3350087414852,
+      "min_k": 298.84393094,
+      "max_k": 301.630384,
+      "note": "Broad numerical alarm only; no claim of equilibration or expected distribution."
+    },
+    "protein_heavy_bond_screen": {
+      "passed": true,
+      "bonds": 3246,
+      "frames": 101,
+      "maximum_angstrom": 1.9439719915390015,
+      "maximum_frame": 77,
+      "maximum_pair": [
+        4781,
+        4784
+      ],
+      "minimum_angstrom": 1.1314297914505005,
+      "threshold_angstrom": 3.0,
+      "note": "Gross bond-length screen with minimum-image distances; not a force-field or structural-quality validation."
+    }
+  },
+  "executed_code": {
+    "job_id": "0b89d27dadc34148",
+    "runtime_recorded_worker_sha256": "bede15620ac7f4924770824357780d953fa8b820ffb9cde9baa51002aacef688",
+    "launch_monitor_worker_sha256": "bede15620ac7f4924770824357780d953fa8b820ffb9cde9baa51002aacef688",
+    "runtime_matches_launch": true,
+    "current_worker_sha256_when_audited": "fa527f785fc2eed185392649e1fc595343c6861d0546c13e84f77f261aab5d2a",
+    "current_matches_run": false,
+    "interpretation": "This trajectory validates the worker recorded by its own provenance and launch monitor. Later worker/history/source-CIF changes are not claimed to have executed in this run."
+  },
+  "warnings": [
+    {
+      "source": "MDTraj 1.11.1.post2 legacy PDB reader during final native audit",
+      "message": "Need to guess residue number string    0 starting from residue34996, atom 203753."
+    },
+    {
+      "source": "MDTraj 1.11.1.post2 legacy PDB reader during final native audit",
+      "message": "Need to guess atom number  2941 starting from atom 617298."
+    }
+  ],
+  "warning_assessment": "Legacy PDB numbering inference was reported for this large system. Complete atom counts, native/physical coordinate parity, all 6,544 prepared solute atom identities, and the full ligand/native sodium parameter checks passed. These checks do not certify globally unique solvent residue or PDB serial numbering.",
+  "scope": "Full-length engineered delta-opioid-receptor/BRIL fusion, naltrindole, and sodium in water only. This is a 100 ps NVT software/artifact pressure test; no membrane, equilibration, convergence, ligand-pose, ion-residence, or biological-stability claim. The failed modeled-loop 4BVN case remains separate and is not counted as completed.",
+  "evidence": {
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-validation.json": {
+      "sha256": "164679070ada8f679c1e7be3a50004231bb3fd2bb58128645d3a3a9ea0f866da",
+      "bytes": 7895
+    },
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-stereo-frames-validation.json": {
+      "sha256": "a5963f7f7c3ada99d42859be58f1e9b93c68e44d246e6ede1c53313af3c0cbf8",
+      "bytes": 97976
+    },
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-EJ4-stereo-validation.json": {
+      "sha256": "c1a208670d29d15bafa8ce6cddb0e12ad9c4319c2db34392f37998200c923d7a",
+      "bytes": 17109
+    },
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-output-continuity.json": {
+      "sha256": "cabfd85f538a5d9edece0600d9f6be1243f4dae3c4928c0e265acc2bcad9ac29",
+      "bytes": 2372
+    },
+    "data/integration-checks/five-system-gpcr-large/4N6H-numpy-geometry.json": {
+      "sha256": "f3015c5d196c7df91ae6e134c460bf7a02111f48c819fa87db1a0a7d3e8239e2",
+      "bytes": 1345
+    },
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-input-validation.json": {
+      "sha256": "6c121945e8f27aebfa79e410f4de379f5524aeac08af2774676ad8db5676f1b9",
+      "bytes": 11135
+    },
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-executed-code.json": {
+      "sha256": "433f07753785f36b559728d162a4c2b54afc7b4504793ac69e07ce561df0eac1",
+      "bytes": 612
+    },
+    "docs/audit/five-system-pressure-test/gpcr-4N6H-budget-20260911-170149.json": {
+      "sha256": "beab01f2bf0bad92d26e6ba453f7a716a48947d251be00ea12423910a49a9fc1",
+      "bytes": 2019
+    },
+    "docs/audit/five-system-pressure-test/browser-4N6H-checks.json": {
+      "sha256": "d4c4e7885df63a21e72d5e4d85f4a2c3e094e2e15ea53871a7ca6b058bfd5ffc",
+      "bytes": 1756
+    },
+    "docs/audit/five-system-pressure-test/browser-4N6H-manifest.json": {
+      "sha256": "0b8450410aaa65ec7534b1a08f72294ba725e781dbc9b76e77bda67cd031a5cb",
+      "bytes": 212
+    }
+  },
+  "simulation_job_elapsed_seconds": 4434.85,
+  "source_cif_sha256": "a3b3030bc746372875dacaa5a69ccdac27abce88662ed1f2052c68c3d6f22c6b"
+}

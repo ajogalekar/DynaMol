@@ -1,0 +1,1612 @@
+{
+  "case": "gpcr-4N6H",
+  "source_dataset_id": "5e4d0673f8ac4358",
+  "seed": 20260915,
+  "purpose": "Short explicit-water software stability test; no equilibration or biological claim",
+  "jobs": [
+    {
+      "id": "0d54260298784349",
+      "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 prepared",
+      "engine": "preparation",
+      "status": "completed",
+      "stage": "Prepared complex ready",
+      "progress": 100,
+      "completed_steps": 7,
+      "total_steps": 7,
+      "elapsed_seconds": 9.97,
+      "logs": [
+        "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+        "Inspecting original sequence evidence and current first-frame coordinates.",
+        "Explicitly removed 0 existing hydrogens before pH reassignment, 101 water heavy atoms, and 309 other heavy atoms.",
+        "Added 91 heavy/terminal atoms across existing residues and 0 rebuilt internal segment(s).",
+        "Resolving ligand chemistry while preserving bound heavy-atom coordinates.",
+        "antechamber: ligand-c5ffa50beccf",
+        "parmchk2: ligand-c5ffa50beccf",
+        "tleap: ligand-c5ffa50beccf",
+        "Bounded steric chi sampling accepted 8 lower-overlap angle changes across 200 examined residues.",
+        "Added 3332 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded.",
+        "Local relaxation stage complete.",
+        "Saved prepared dataset 753ba327007a441b: 6,544 atoms. Protonation and modeling caveats retained."
+      ],
+      "config": {
+        "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 prepared",
+        "ph": 7.0,
+        "add_missing_atoms": true,
+        "build_missing_residues": false,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_overrides": {},
+        "seed": 20260915,
+        "dataset_id": "5e4d0673f8ac4358",
+        "ligand_actions": {
+          "B:1201::OLA": "remove",
+          "C:1202::OLA": "remove",
+          "D:1203::OLA": "remove",
+          "E:1204::OLA": "remove",
+          "F:1205::OLA": "remove",
+          "G:1206::OLA": "remove",
+          "H:1207::OLC": "remove",
+          "I:1208::OLC": "remove",
+          "J:1209::OLA": "remove",
+          "K:1210::OLA": "remove",
+          "L:1211::OLA": "remove",
+          "M:1212::OLC": "remove",
+          "N:1213::PGE": "remove",
+          "O:1214::PGE": "remove",
+          "P:1215::OLA": "remove",
+          "Q:1216::OLA": "remove",
+          "R:1217::OLA": "remove",
+          "S:1218::TLA": "remove",
+          "V:1221::PGE": "remove",
+          "W:1222::OLC": "remove",
+          "X:1223::OLC": "remove"
+        },
+        "complex": true,
+        "modified_residues": [],
+        "operation": "prepare"
+      },
+      "created_at": "2026-09-12T00:01:50.665161+00:00",
+      "worker_pid": 14765,
+      "dataset_id": "753ba327007a441b"
+    },
+    {
+      "id": "fd5556d87c454d7c",
+      "name": "Explicit water preview",
+      "engine": "solvation",
+      "status": "completed",
+      "stage": "Explicit solvent ready",
+      "progress": 100,
+      "completed_steps": 2,
+      "total_steps": 2,
+      "elapsed_seconds": 8.99,
+      "logs": [
+        "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+        "Solvating the exact prepared topology; preserving its hydrogens and chosen protonation.",
+        "Real solvent preview ready: 145,913 atoms. The prepared periodic box will be reused by OpenMM."
+      ],
+      "config": {
+        "padding_nm": 1.0,
+        "ph": 7.0,
+        "seed": 20260915,
+        "dataset_id": "753ba327007a441b",
+        "name": "Explicit water preview",
+        "operation": "solvate"
+      },
+      "created_at": "2026-09-12T00:02:05.822906+00:00",
+      "worker_pid": 14886,
+      "dataset_id": "343ace4483604405"
+    },
+    {
+      "id": "0b89d27dadc34148",
+      "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 100 ps",
+      "engine": "openmm",
+      "status": "completed",
+      "stage": "Complete",
+      "progress": 100,
+      "completed_steps": 50000,
+      "total_steps": 50000,
+      "elapsed_seconds": 4434.85,
+      "logs": [
+        "Step 13,000/50,000 \u00b7 26 ps \u00b7 checkpoint saved",
+        "Step 13,250/50,000 \u00b7 26.5 ps \u00b7 checkpoint saved",
+        "Step 13,500/50,000 \u00b7 27 ps \u00b7 checkpoint saved",
+        "Step 13,750/50,000 \u00b7 27.5 ps \u00b7 checkpoint saved",
+        "Step 14,000/50,000 \u00b7 28 ps \u00b7 checkpoint saved",
+        "Step 14,250/50,000 \u00b7 28.5 ps \u00b7 checkpoint saved",
+        "Step 14,500/50,000 \u00b7 29 ps \u00b7 checkpoint saved",
+        "Step 14,750/50,000 \u00b7 29.5 ps \u00b7 checkpoint saved",
+        "Step 15,000/50,000 \u00b7 30 ps \u00b7 checkpoint saved",
+        "Step 15,250/50,000 \u00b7 30.5 ps \u00b7 checkpoint saved",
+        "Step 15,500/50,000 \u00b7 31 ps \u00b7 checkpoint saved",
+        "Step 15,750/50,000 \u00b7 31.5 ps \u00b7 checkpoint saved",
+        "Step 16,000/50,000 \u00b7 32 ps \u00b7 checkpoint saved",
+        "Step 16,250/50,000 \u00b7 32.5 ps \u00b7 checkpoint saved",
+        "Step 16,500/50,000 \u00b7 33 ps \u00b7 checkpoint saved",
+        "Step 16,750/50,000 \u00b7 33.5 ps \u00b7 checkpoint saved",
+        "Step 17,000/50,000 \u00b7 34 ps \u00b7 checkpoint saved",
+        "Step 17,250/50,000 \u00b7 34.5 ps \u00b7 checkpoint saved",
+        "Step 17,500/50,000 \u00b7 35 ps \u00b7 checkpoint saved",
+        "Step 17,750/50,000 \u00b7 35.5 ps \u00b7 checkpoint saved",
+        "Step 18,000/50,000 \u00b7 36 ps \u00b7 checkpoint saved",
+        "Step 18,250/50,000 \u00b7 36.5 ps \u00b7 checkpoint saved",
+        "Step 18,500/50,000 \u00b7 37 ps \u00b7 checkpoint saved",
+        "Step 18,750/50,000 \u00b7 37.5 ps \u00b7 checkpoint saved",
+        "Step 19,000/50,000 \u00b7 38 ps \u00b7 checkpoint saved",
+        "Step 19,250/50,000 \u00b7 38.5 ps \u00b7 checkpoint saved",
+        "Step 19,500/50,000 \u00b7 39 ps \u00b7 checkpoint saved",
+        "Step 19,750/50,000 \u00b7 39.5 ps \u00b7 checkpoint saved",
+        "Step 20,000/50,000 \u00b7 40 ps \u00b7 checkpoint saved",
+        "Step 20,250/50,000 \u00b7 40.5 ps \u00b7 checkpoint saved",
+        "Step 20,500/50,000 \u00b7 41 ps \u00b7 checkpoint saved",
+        "Step 20,750/50,000 \u00b7 41.5 ps \u00b7 checkpoint saved",
+        "Step 21,000/50,000 \u00b7 42 ps \u00b7 checkpoint saved",
+        "Step 21,250/50,000 \u00b7 42.5 ps \u00b7 checkpoint saved",
+        "Step 21,500/50,000 \u00b7 43 ps \u00b7 checkpoint saved",
+        "Step 21,750/50,000 \u00b7 43.5 ps \u00b7 checkpoint saved",
+        "Step 22,000/50,000 \u00b7 44 ps \u00b7 checkpoint saved",
+        "Step 22,250/50,000 \u00b7 44.5 ps \u00b7 checkpoint saved",
+        "Step 22,500/50,000 \u00b7 45 ps \u00b7 checkpoint saved",
+        "Step 22,750/50,000 \u00b7 45.5 ps \u00b7 checkpoint saved",
+        "Step 23,000/50,000 \u00b7 46 ps \u00b7 checkpoint saved",
+        "Step 23,250/50,000 \u00b7 46.5 ps \u00b7 checkpoint saved",
+        "Step 23,500/50,000 \u00b7 47 ps \u00b7 checkpoint saved",
+        "Step 23,750/50,000 \u00b7 47.5 ps \u00b7 checkpoint saved",
+        "Step 24,000/50,000 \u00b7 48 ps \u00b7 checkpoint saved",
+        "Step 24,250/50,000 \u00b7 48.5 ps \u00b7 checkpoint saved",
+        "Step 24,500/50,000 \u00b7 49 ps \u00b7 checkpoint saved",
+        "Step 24,750/50,000 \u00b7 49.5 ps \u00b7 checkpoint saved",
+        "Step 25,000/50,000 \u00b7 50 ps \u00b7 checkpoint saved",
+        "Step 25,250/50,000 \u00b7 50.5 ps \u00b7 checkpoint saved",
+        "Step 25,500/50,000 \u00b7 51 ps \u00b7 checkpoint saved",
+        "Step 25,750/50,000 \u00b7 51.5 ps \u00b7 checkpoint saved",
+        "Step 26,000/50,000 \u00b7 52 ps \u00b7 checkpoint saved",
+        "Step 26,250/50,000 \u00b7 52.5 ps \u00b7 checkpoint saved",
+        "Step 26,500/50,000 \u00b7 53 ps \u00b7 checkpoint saved",
+        "Step 26,750/50,000 \u00b7 53.5 ps \u00b7 checkpoint saved",
+        "Step 27,000/50,000 \u00b7 54 ps \u00b7 checkpoint saved",
+        "Step 27,250/50,000 \u00b7 54.5 ps \u00b7 checkpoint saved",
+        "Step 27,500/50,000 \u00b7 55 ps \u00b7 checkpoint saved",
+        "Step 27,750/50,000 \u00b7 55.5 ps \u00b7 checkpoint saved",
+        "Step 28,000/50,000 \u00b7 56 ps \u00b7 checkpoint saved",
+        "Step 28,250/50,000 \u00b7 56.5 ps \u00b7 checkpoint saved",
+        "Step 28,500/50,000 \u00b7 57 ps \u00b7 checkpoint saved",
+        "Step 28,750/50,000 \u00b7 57.5 ps \u00b7 checkpoint saved",
+        "Step 29,000/50,000 \u00b7 58 ps \u00b7 checkpoint saved",
+        "Step 29,250/50,000 \u00b7 58.5 ps \u00b7 checkpoint saved",
+        "Step 29,500/50,000 \u00b7 59 ps \u00b7 checkpoint saved",
+        "Step 29,750/50,000 \u00b7 59.5 ps \u00b7 checkpoint saved",
+        "Step 30,000/50,000 \u00b7 60 ps \u00b7 checkpoint saved",
+        "Step 30,250/50,000 \u00b7 60.5 ps \u00b7 checkpoint saved",
+        "Step 30,500/50,000 \u00b7 61 ps \u00b7 checkpoint saved",
+        "Step 30,750/50,000 \u00b7 61.5 ps \u00b7 checkpoint saved",
+        "Step 31,000/50,000 \u00b7 62 ps \u00b7 checkpoint saved",
+        "Step 31,250/50,000 \u00b7 62.5 ps \u00b7 checkpoint saved",
+        "Step 31,500/50,000 \u00b7 63 ps \u00b7 checkpoint saved",
+        "Step 31,750/50,000 \u00b7 63.5 ps \u00b7 checkpoint saved",
+        "Step 32,000/50,000 \u00b7 64 ps \u00b7 checkpoint saved",
+        "Step 32,250/50,000 \u00b7 64.5 ps \u00b7 checkpoint saved",
+        "Step 32,500/50,000 \u00b7 65 ps \u00b7 checkpoint saved",
+        "Step 32,750/50,000 \u00b7 65.5 ps \u00b7 checkpoint saved",
+        "Step 33,000/50,000 \u00b7 66 ps \u00b7 checkpoint saved",
+        "Step 33,250/50,000 \u00b7 66.5 ps \u00b7 checkpoint saved",
+        "Step 33,500/50,000 \u00b7 67 ps \u00b7 checkpoint saved",
+        "Step 33,750/50,000 \u00b7 67.5 ps \u00b7 checkpoint saved",
+        "Step 34,000/50,000 \u00b7 68 ps \u00b7 checkpoint saved",
+        "Step 34,250/50,000 \u00b7 68.5 ps \u00b7 checkpoint saved",
+        "Step 34,500/50,000 \u00b7 69 ps \u00b7 checkpoint saved",
+        "Step 34,750/50,000 \u00b7 69.5 ps \u00b7 checkpoint saved",
+        "Step 35,000/50,000 \u00b7 70 ps \u00b7 checkpoint saved",
+        "Step 35,250/50,000 \u00b7 70.5 ps \u00b7 checkpoint saved",
+        "Step 35,500/50,000 \u00b7 71 ps \u00b7 checkpoint saved",
+        "Step 35,750/50,000 \u00b7 71.5 ps \u00b7 checkpoint saved",
+        "Step 36,000/50,000 \u00b7 72 ps \u00b7 checkpoint saved",
+        "Step 36,250/50,000 \u00b7 72.5 ps \u00b7 checkpoint saved",
+        "Step 36,500/50,000 \u00b7 73 ps \u00b7 checkpoint saved",
+        "Step 36,750/50,000 \u00b7 73.5 ps \u00b7 checkpoint saved",
+        "Step 37,000/50,000 \u00b7 74 ps \u00b7 checkpoint saved",
+        "Step 37,250/50,000 \u00b7 74.5 ps \u00b7 checkpoint saved",
+        "Step 37,500/50,000 \u00b7 75 ps \u00b7 checkpoint saved",
+        "Step 37,750/50,000 \u00b7 75.5 ps \u00b7 checkpoint saved",
+        "Step 38,000/50,000 \u00b7 76 ps \u00b7 checkpoint saved",
+        "Step 38,250/50,000 \u00b7 76.5 ps \u00b7 checkpoint saved",
+        "Step 38,500/50,000 \u00b7 77 ps \u00b7 checkpoint saved",
+        "Step 38,750/50,000 \u00b7 77.5 ps \u00b7 checkpoint saved",
+        "Step 39,000/50,000 \u00b7 78 ps \u00b7 checkpoint saved",
+        "Step 39,250/50,000 \u00b7 78.5 ps \u00b7 checkpoint saved",
+        "Step 39,500/50,000 \u00b7 79 ps \u00b7 checkpoint saved",
+        "Step 39,750/50,000 \u00b7 79.5 ps \u00b7 checkpoint saved",
+        "Step 40,000/50,000 \u00b7 80 ps \u00b7 checkpoint saved",
+        "Step 40,250/50,000 \u00b7 80.5 ps \u00b7 checkpoint saved",
+        "Step 40,500/50,000 \u00b7 81 ps \u00b7 checkpoint saved",
+        "Step 40,750/50,000 \u00b7 81.5 ps \u00b7 checkpoint saved",
+        "Step 41,000/50,000 \u00b7 82 ps \u00b7 checkpoint saved",
+        "Step 41,250/50,000 \u00b7 82.5 ps \u00b7 checkpoint saved",
+        "Step 41,500/50,000 \u00b7 83 ps \u00b7 checkpoint saved",
+        "Step 41,750/50,000 \u00b7 83.5 ps \u00b7 checkpoint saved",
+        "Step 42,000/50,000 \u00b7 84 ps \u00b7 checkpoint saved",
+        "Step 42,250/50,000 \u00b7 84.5 ps \u00b7 checkpoint saved",
+        "Step 42,500/50,000 \u00b7 85 ps \u00b7 checkpoint saved",
+        "Step 42,750/50,000 \u00b7 85.5 ps \u00b7 checkpoint saved",
+        "Step 43,000/50,000 \u00b7 86 ps \u00b7 checkpoint saved",
+        "Step 43,250/50,000 \u00b7 86.5 ps \u00b7 checkpoint saved",
+        "Step 43,500/50,000 \u00b7 87 ps \u00b7 checkpoint saved",
+        "Step 43,750/50,000 \u00b7 87.5 ps \u00b7 checkpoint saved",
+        "Step 44,000/50,000 \u00b7 88 ps \u00b7 checkpoint saved",
+        "Step 44,250/50,000 \u00b7 88.5 ps \u00b7 checkpoint saved",
+        "Step 44,500/50,000 \u00b7 89 ps \u00b7 checkpoint saved",
+        "Step 44,750/50,000 \u00b7 89.5 ps \u00b7 checkpoint saved",
+        "Step 45,000/50,000 \u00b7 90 ps \u00b7 checkpoint saved",
+        "Step 45,250/50,000 \u00b7 90.5 ps \u00b7 checkpoint saved",
+        "Step 45,500/50,000 \u00b7 91 ps \u00b7 checkpoint saved",
+        "Step 45,750/50,000 \u00b7 91.5 ps \u00b7 checkpoint saved",
+        "Step 46,000/50,000 \u00b7 92 ps \u00b7 checkpoint saved",
+        "Step 46,250/50,000 \u00b7 92.5 ps \u00b7 checkpoint saved",
+        "Step 46,500/50,000 \u00b7 93 ps \u00b7 checkpoint saved",
+        "Step 46,750/50,000 \u00b7 93.5 ps \u00b7 checkpoint saved",
+        "Step 47,000/50,000 \u00b7 94 ps \u00b7 checkpoint saved",
+        "Step 47,250/50,000 \u00b7 94.5 ps \u00b7 checkpoint saved",
+        "Step 47,500/50,000 \u00b7 95 ps \u00b7 checkpoint saved",
+        "Step 47,750/50,000 \u00b7 95.5 ps \u00b7 checkpoint saved",
+        "Step 48,000/50,000 \u00b7 96 ps \u00b7 checkpoint saved",
+        "Step 48,250/50,000 \u00b7 96.5 ps \u00b7 checkpoint saved",
+        "Step 48,500/50,000 \u00b7 97 ps \u00b7 checkpoint saved",
+        "Step 48,750/50,000 \u00b7 97.5 ps \u00b7 checkpoint saved",
+        "Step 49,000/50,000 \u00b7 98 ps \u00b7 checkpoint saved",
+        "Step 49,250/50,000 \u00b7 98.5 ps \u00b7 checkpoint saved",
+        "Step 49,500/50,000 \u00b7 99 ps \u00b7 checkpoint saved",
+        "Step 49,750/50,000 \u00b7 99.5 ps \u00b7 checkpoint saved",
+        "Step 50,000/50,000 \u00b7 100 ps \u00b7 checkpoint saved",
+        "Complete: 101 frames, 145,913 atoms. Output files and reproducibility manifest saved."
+      ],
+      "config": {
+        "dataset_id": "343ace4483604405",
+        "engine": "openmm",
+        "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 100 ps",
+        "duration_ps": 100.0,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 500,
+        "friction_ps": 1,
+        "seed": 20260915,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 5000,
+        "padding_nm": 1.0,
+        "measurements": [
+          {
+            "id": "backbone-distance",
+            "kind": "distance",
+            "atoms": [
+              1585,
+              3159
+            ],
+            "label": "Backbone separation",
+            "color": null,
+            "trackDuringRun": true
+          },
+          {
+            "id": "backbone-angle",
+            "kind": "angle",
+            "atoms": [
+              2057,
+              2059,
+              2061
+            ],
+            "label": "Backbone N\u2013CA\u2013C",
+            "color": null,
+            "trackDuringRun": true
+          },
+          {
+            "id": "backbone-dihedral",
+            "kind": "dihedral",
+            "atoms": [
+              2057,
+              2059,
+              2061,
+              2071
+            ],
+            "label": "Backbone psi",
+            "color": null,
+            "trackDuringRun": true
+          }
+        ]
+      },
+      "created_at": "2026-09-12T00:02:25.658928+00:00",
+      "worker_pid": 14952,
+      "output_dataset_id": "ab629697dd2449c7",
+      "dataset_id": "ab629697dd2449c7",
+      "recovery": {
+        "available": false,
+        "checkpoint_saved": true,
+        "step": 50000,
+        "reason": "Production checkpoints are being saved automatically.",
+        "attempts": 0
+      }
+    }
+  ],
+  "preparation_settings": {
+    "dataset_id": "5e4d0673f8ac4358",
+    "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 prepared",
+    "ph": 7,
+    "build_missing_residues": false,
+    "optimize_sidechains": true,
+    "ligand_actions": {
+      "B:1201::OLA": "remove",
+      "C:1202::OLA": "remove",
+      "D:1203::OLA": "remove",
+      "E:1204::OLA": "remove",
+      "F:1205::OLA": "remove",
+      "G:1206::OLA": "remove",
+      "H:1207::OLC": "remove",
+      "I:1208::OLC": "remove",
+      "J:1209::OLA": "remove",
+      "K:1210::OLA": "remove",
+      "L:1211::OLA": "remove",
+      "M:1212::OLC": "remove",
+      "N:1213::PGE": "remove",
+      "O:1214::PGE": "remove",
+      "P:1215::OLA": "remove",
+      "Q:1216::OLA": "remove",
+      "R:1217::OLA": "remove",
+      "S:1218::TLA": "remove",
+      "V:1221::PGE": "remove",
+      "W:1222::OLC": "remove",
+      "X:1223::OLC": "remove"
+    },
+    "seed": 20260915
+  },
+  "preparation_readiness": {
+    "ready": true,
+    "mode": "preparation",
+    "dataset_id": "5e4d0673f8ac4358",
+    "blockers": [],
+    "warnings": [
+      "Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.",
+      "Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.",
+      "Missing sequence-supported residues are listed. Rebuilding internal short gaps is opt-in and produces low-confidence coordinates, not an experimentally established loop.",
+      "Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.",
+      "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+    ],
+    "resources": {
+      "input_atoms": 3531,
+      "estimated_atoms": 3531,
+      "estimate_kind": "saved topology",
+      "solvent_allocation_bound": null,
+      "saved_frames": 1,
+      "coordinate_bytes": 42372,
+      "working_memory_estimate_bytes": 169488,
+      "disk_estimate_bytes": 74594584,
+      "free_disk_bytes": 162639933440,
+      "atom_limit": 200000,
+      "coordinate_limit_bytes": 268435456,
+      "note": "Planning estimates include retained coordinates and working copies; native engines can use additional memory. Runtime is measured after dynamics starts."
+    },
+    "chemical_state": {
+      "ph": 7.0,
+      "modifications": [],
+      "ligands": [
+        {
+          "key": "T:1219::EJ4",
+          "chain": "T",
+          "resid": "1219",
+          "insertion_code": " ",
+          "residue": "EJ4",
+          "component_id": "EJ4",
+          "error": null,
+          "atom_indices": [
+            3341,
+            3342,
+            3343,
+            3344,
+            3345,
+            3346,
+            3347,
+            3348,
+            3349,
+            3350,
+            3351,
+            3352,
+            3353,
+            3354,
+            3355,
+            3356,
+            3357,
+            3358,
+            3359,
+            3360,
+            3361,
+            3362,
+            3363,
+            3364,
+            3365,
+            3366,
+            3367,
+            3368,
+            3369,
+            3370,
+            3371
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "Oc1ccc2c3c1O[C@H]1c4[nH]c5ccccc5c4C[C@@]4(O)[C@@H](C2)N(CC2CC2)CC[C@]314",
+          "original_formal_charge": 0,
+          "selected_smiles": "Oc1ccc2c3c1O[C@H]1c4[nH]c5ccccc5c4C[C@@]4(O)[C@@H](C2)[NH+](CC2CC2)CC[C@]314",
+          "formal_charge": 1,
+          "candidate_smiles": [
+            "Oc1ccc2c3c1O[C@H]1c4[nH]c5ccccc5c4C[C@@]4(O)[C@@H](C2)[NH+](CC2CC2)CC[C@]314"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 31,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "EJ4",
+            "url": "https://files.rcsb.org/ligands/download/EJ4.cif",
+            "sha256": "c4c44ea90fc5c0f5783972f790da451775000123987294961a2cfa14bee0b4e1",
+            "retrieved_at": "2026-09-11T23:59:19.042610+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {
+            "CAE": "R",
+            "CAP": "S",
+            "CAR": "R",
+            "CAV": "S"
+          },
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gpcr-large/datasets/5e4d0673f8ac4358/source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+        }
+      ],
+      "ions": [
+        {
+          "key": "U:1220::NA",
+          "residue": "NA",
+          "element": "Na",
+          "deposited_formal_charge": null,
+          "formal_charge": 1,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "NA",
+            "atom_type": "tip3p_standard-Na+",
+            "element": "Na",
+            "charge_e": 1.0,
+            "sigma_nm": 0.2439280690268249,
+            "epsilon_kj_mol": 0.3658460312,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/NA",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+          }
+        }
+      ]
+    },
+    "model": "Fixed-state preparation with recorded protonation assumptions"
+  },
+  "prepared_dataset_id": "753ba327007a441b",
+  "solvated_dataset_id": "343ace4483604405",
+  "simulation_settings": {
+    "dataset_id": "343ace4483604405",
+    "name": "Pressure test \u00b7 gpcr-4N6H \u00b7 100 ps",
+    "engine": "openmm",
+    "duration_ps": 100,
+    "timestep_fs": 2,
+    "report_interval": 500,
+    "temperature_k": 300,
+    "seed": 20260915,
+    "solvent": "explicit",
+    "padding_nm": 1,
+    "minimize": true,
+    "equilibration_steps": 5000,
+    "measurements": [
+      {
+        "id": "backbone-distance",
+        "kind": "distance",
+        "atoms": [
+          1585,
+          3159
+        ],
+        "label": "Backbone separation",
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-angle",
+        "kind": "angle",
+        "atoms": [
+          2057,
+          2059,
+          2061
+        ],
+        "label": "Backbone N\u2013CA\u2013C",
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-dihedral",
+        "kind": "dihedral",
+        "atoms": [
+          2057,
+          2059,
+          2061,
+          2071
+        ],
+        "label": "Backbone psi",
+        "trackDuringRun": true
+      }
+    ]
+  },
+  "simulation_readiness": {
+    "ready": true,
+    "mode": "simulation",
+    "dataset_id": "343ace4483604405",
+    "blockers": [],
+    "warnings": [],
+    "resources": {
+      "input_atoms": 145913,
+      "estimated_atoms": 145913,
+      "estimate_kind": "saved topology",
+      "solvent_allocation_bound": null,
+      "saved_frames": 101,
+      "coordinate_bytes": 176846556,
+      "working_memory_estimate_bytes": 707386224,
+      "disk_estimate_bytes": 1427018024,
+      "free_disk_bytes": 162480451584,
+      "atom_limit": 200000,
+      "coordinate_limit_bytes": 268435456,
+      "note": "Planning estimates include retained coordinates and working copies; native engines can use additional memory. Runtime is measured after dynamics starts."
+    },
+    "chemical_state": {
+      "ph": 7.0,
+      "modifications": [],
+      "ligands": [
+        {
+          "key": "T:1219::EJ4",
+          "chain": "T",
+          "resid": "1219",
+          "insertion_code": " ",
+          "residue": "EJ4",
+          "component_id": "EJ4",
+          "error": null,
+          "atom_indices": [
+            3341,
+            3342,
+            3343,
+            3344,
+            3345,
+            3346,
+            3347,
+            3348,
+            3349,
+            3350,
+            3351,
+            3352,
+            3353,
+            3354,
+            3355,
+            3356,
+            3357,
+            3358,
+            3359,
+            3360,
+            3361,
+            3362,
+            3363,
+            3364,
+            3365,
+            3366,
+            3367,
+            3368,
+            3369,
+            3370,
+            3371
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "Oc1ccc2c3c1O[C@H]1c4[nH]c5ccccc5c4C[C@@]4(O)[C@@H](C2)N(CC2CC2)CC[C@]314",
+          "original_formal_charge": 0,
+          "selected_smiles": "Oc1ccc2c3c1O[C@H]1c4[nH]c5ccccc5c4C[C@@]4(O)[C@@H](C2)[NH+](CC2CC2)CC[C@]314",
+          "formal_charge": 1,
+          "candidate_smiles": [
+            "Oc1ccc2c3c1O[C@H]1c4[nH]c5ccccc5c4C[C@@]4(O)[C@@H](C2)[NH+](CC2CC2)CC[C@]314"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 31,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "EJ4",
+            "url": "https://files.rcsb.org/ligands/download/EJ4.cif",
+            "sha256": "c4c44ea90fc5c0f5783972f790da451775000123987294961a2cfa14bee0b4e1",
+            "retrieved_at": "2026-09-11T23:59:19.042610+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {
+            "CAE": "R",
+            "CAP": "S",
+            "CAR": "R",
+            "CAV": "S"
+          },
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gpcr-large/datasets/5e4d0673f8ac4358/source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained.",
+          "hydrogen_placement": "MMFF94s hydrogen-only relaxation",
+          "hydrogens_added": 27,
+          "forcefield": "GAFF2",
+          "charge_method": "AmberTools antechamber AM1-BCC",
+          "charge_sum_e": 1.000000003292669,
+          "charges_e": [
+            0.1431,
+            0.10809999999999999,
+            0.2133,
+            -0.10329999999999999,
+            -0.1464,
+            -0.0888,
+            -0.088,
+            -0.139,
+            -0.097,
+            -0.13399999999999998,
+            -0.036199999999999996,
+            -0.0222,
+            0.1698,
+            0.1455,
+            0.1168,
+            -0.0894,
+            -0.0447,
+            -0.1533,
+            -0.10429999999999999,
+            -0.099,
+            -0.16899999999999998,
+            -0.1504,
+            -0.6833999989024436,
+            -0.46309999999999996,
+            -0.2859,
+            -0.6347999978048874,
+            -0.0361,
+            0.14579999999999999,
+            -0.2007,
+            -0.10439999999999999,
+            -0.10439999999999999,
+            0.10369999999999999,
+            0.13299999999999998,
+            0.143,
+            0.145,
+            0.146,
+            0.07769999999999999,
+            0.07769999999999999,
+            0.11269999999999998,
+            0.1032,
+            0.1032,
+            0.0932,
+            0.0932,
+            0.148,
+            0.156,
+            0.31370000000000003,
+            0.4638,
+            0.435,
+            0.458,
+            0.0802,
+            0.0802,
+            0.0992,
+            0.0992,
+            0.10569999999999999,
+            0.09119999999999999,
+            0.09119999999999999,
+            0.09119999999999999,
+            0.09119999999999999
+          ],
+          "charge_rounding": {
+            "native_charge_sum_e": 0.9999999999999999,
+            "sqm_declared_charge_e": 1.0,
+            "sqm_printed_atom_charge_sum_e": 1.0,
+            "target_charge_e": 1,
+            "correction_per_atom_e": 1.914177628664063e-18,
+            "max_total_correction_e": 0.005,
+            "method": "Uniform numerical correction of demonstrated three-decimal SQM Mulliken-output rounding; native AM1-BCC charge differences retained.",
+            "native_file": "charged-native.mol2",
+            "normalized_file": "charged.mol2"
+          },
+          "template_name": "DML_c5ffa50beccf",
+          "ffxml_sha256": "740e478781963adc1a0978fa52e4af7578b62113cdfe8fdadebf9c4b36ec48bb",
+          "heavy_coordinate_max_displacement_angstrom": 8.881784197001252e-16,
+          "seed": 20260915,
+          "versions": {
+            "rdkit": "2025.9.6",
+            "parmed": "4.3.1",
+            "dimorphite-dl": "2.0.2",
+            "gemmi": "0.7.5"
+          },
+          "artifacts_directory": "ligand-c5ffa50beccf",
+          "atom_map": [
+            {
+              "original_index": 3341,
+              "original_name": "CAB",
+              "ligand_index": 0,
+              "prepared_name": "CAB"
+            },
+            {
+              "original_index": 3342,
+              "original_name": "CAC",
+              "ligand_index": 1,
+              "prepared_name": "CAC"
+            },
+            {
+              "original_index": 3343,
+              "original_name": "CAE",
+              "ligand_index": 2,
+              "prepared_name": "CAE"
+            },
+            {
+              "original_index": 3344,
+              "original_name": "CAF",
+              "ligand_index": 3,
+              "prepared_name": "CAF"
+            },
+            {
+              "original_index": 3345,
+              "original_name": "CAG",
+              "ligand_index": 4,
+              "prepared_name": "CAG"
+            },
+            {
+              "original_index": 3346,
+              "original_name": "CAH",
+              "ligand_index": 5,
+              "prepared_name": "CAH"
+            },
+            {
+              "original_index": 3347,
+              "original_name": "CAI",
+              "ligand_index": 6,
+              "prepared_name": "CAI"
+            },
+            {
+              "original_index": 3348,
+              "original_name": "CAJ",
+              "ligand_index": 7,
+              "prepared_name": "CAJ"
+            },
+            {
+              "original_index": 3349,
+              "original_name": "CAK",
+              "ligand_index": 8,
+              "prepared_name": "CAK"
+            },
+            {
+              "original_index": 3350,
+              "original_name": "CAL",
+              "ligand_index": 9,
+              "prepared_name": "CAL"
+            },
+            {
+              "original_index": 3351,
+              "original_name": "CAM",
+              "ligand_index": 10,
+              "prepared_name": "CAM"
+            },
+            {
+              "original_index": 3352,
+              "original_name": "CAO",
+              "ligand_index": 11,
+              "prepared_name": "CAO"
+            },
+            {
+              "original_index": 3353,
+              "original_name": "CAP",
+              "ligand_index": 12,
+              "prepared_name": "CAP"
+            },
+            {
+              "original_index": 3354,
+              "original_name": "CAR",
+              "ligand_index": 13,
+              "prepared_name": "CAR"
+            },
+            {
+              "original_index": 3355,
+              "original_name": "CAT",
+              "ligand_index": 14,
+              "prepared_name": "CAT"
+            },
+            {
+              "original_index": 3356,
+              "original_name": "CAU",
+              "ligand_index": 15,
+              "prepared_name": "CAU"
+            },
+            {
+              "original_index": 3357,
+              "original_name": "CAV",
+              "ligand_index": 16,
+              "prepared_name": "CAV"
+            },
+            {
+              "original_index": 3358,
+              "original_name": "CAW",
+              "ligand_index": 17,
+              "prepared_name": "CAW"
+            },
+            {
+              "original_index": 3359,
+              "original_name": "CAX",
+              "ligand_index": 18,
+              "prepared_name": "CAX"
+            },
+            {
+              "original_index": 3360,
+              "original_name": "CAY",
+              "ligand_index": 19,
+              "prepared_name": "CAY"
+            },
+            {
+              "original_index": 3361,
+              "original_name": "CAZ",
+              "ligand_index": 20,
+              "prepared_name": "CAZ"
+            },
+            {
+              "original_index": 3362,
+              "original_name": "NAN",
+              "ligand_index": 21,
+              "prepared_name": "NAN"
+            },
+            {
+              "original_index": 3363,
+              "original_name": "NAS",
+              "ligand_index": 22,
+              "prepared_name": "NAS"
+            },
+            {
+              "original_index": 3364,
+              "original_name": "OAA",
+              "ligand_index": 23,
+              "prepared_name": "OAA"
+            },
+            {
+              "original_index": 3365,
+              "original_name": "OAD",
+              "ligand_index": 24,
+              "prepared_name": "OAD"
+            },
+            {
+              "original_index": 3366,
+              "original_name": "OAQ",
+              "ligand_index": 25,
+              "prepared_name": "OAQ"
+            },
+            {
+              "original_index": 3367,
+              "original_name": "CBA",
+              "ligand_index": 26,
+              "prepared_name": "CBA"
+            },
+            {
+              "original_index": 3368,
+              "original_name": "CBB",
+              "ligand_index": 27,
+              "prepared_name": "CBB"
+            },
+            {
+              "original_index": 3369,
+              "original_name": "CBC",
+              "ligand_index": 28,
+              "prepared_name": "CBC"
+            },
+            {
+              "original_index": 3370,
+              "original_name": "CBD",
+              "ligand_index": 29,
+              "prepared_name": "CBD"
+            },
+            {
+              "original_index": 3371,
+              "original_name": "CBE",
+              "ligand_index": 30,
+              "prepared_name": "CBE"
+            }
+          ],
+          "parameter_atom_map": [
+            {
+              "native_index": 0,
+              "prepared_name": "CAB",
+              "template_atom_name": "C1"
+            },
+            {
+              "native_index": 1,
+              "prepared_name": "CAC",
+              "template_atom_name": "C2"
+            },
+            {
+              "native_index": 2,
+              "prepared_name": "CAE",
+              "template_atom_name": "C3"
+            },
+            {
+              "native_index": 3,
+              "prepared_name": "CAF",
+              "template_atom_name": "C4"
+            },
+            {
+              "native_index": 4,
+              "prepared_name": "CAG",
+              "template_atom_name": "C5"
+            },
+            {
+              "native_index": 5,
+              "prepared_name": "CAH",
+              "template_atom_name": "C6"
+            },
+            {
+              "native_index": 6,
+              "prepared_name": "CAI",
+              "template_atom_name": "C7"
+            },
+            {
+              "native_index": 7,
+              "prepared_name": "CAJ",
+              "template_atom_name": "C8"
+            },
+            {
+              "native_index": 8,
+              "prepared_name": "CAK",
+              "template_atom_name": "C9"
+            },
+            {
+              "native_index": 9,
+              "prepared_name": "CAL",
+              "template_atom_name": "C10"
+            },
+            {
+              "native_index": 10,
+              "prepared_name": "CAM",
+              "template_atom_name": "C11"
+            },
+            {
+              "native_index": 11,
+              "prepared_name": "CAO",
+              "template_atom_name": "C12"
+            },
+            {
+              "native_index": 12,
+              "prepared_name": "CAP",
+              "template_atom_name": "C13"
+            },
+            {
+              "native_index": 13,
+              "prepared_name": "CAR",
+              "template_atom_name": "C14"
+            },
+            {
+              "native_index": 14,
+              "prepared_name": "CAT",
+              "template_atom_name": "C15"
+            },
+            {
+              "native_index": 15,
+              "prepared_name": "CAU",
+              "template_atom_name": "C16"
+            },
+            {
+              "native_index": 16,
+              "prepared_name": "CAV",
+              "template_atom_name": "C17"
+            },
+            {
+              "native_index": 17,
+              "prepared_name": "CAW",
+              "template_atom_name": "C18"
+            },
+            {
+              "native_index": 18,
+              "prepared_name": "CAX",
+              "template_atom_name": "C19"
+            },
+            {
+              "native_index": 19,
+              "prepared_name": "CAY",
+              "template_atom_name": "C20"
+            },
+            {
+              "native_index": 20,
+              "prepared_name": "CAZ",
+              "template_atom_name": "C21"
+            },
+            {
+              "native_index": 21,
+              "prepared_name": "NAN",
+              "template_atom_name": "N22"
+            },
+            {
+              "native_index": 22,
+              "prepared_name": "NAS",
+              "template_atom_name": "N23"
+            },
+            {
+              "native_index": 23,
+              "prepared_name": "OAA",
+              "template_atom_name": "O24"
+            },
+            {
+              "native_index": 24,
+              "prepared_name": "OAD",
+              "template_atom_name": "O25"
+            },
+            {
+              "native_index": 25,
+              "prepared_name": "OAQ",
+              "template_atom_name": "O26"
+            },
+            {
+              "native_index": 26,
+              "prepared_name": "CBA",
+              "template_atom_name": "C27"
+            },
+            {
+              "native_index": 27,
+              "prepared_name": "CBB",
+              "template_atom_name": "C28"
+            },
+            {
+              "native_index": 28,
+              "prepared_name": "CBC",
+              "template_atom_name": "C29"
+            },
+            {
+              "native_index": 29,
+              "prepared_name": "CBD",
+              "template_atom_name": "C30"
+            },
+            {
+              "native_index": 30,
+              "prepared_name": "CBE",
+              "template_atom_name": "C31"
+            },
+            {
+              "native_index": 31,
+              "prepared_name": "H1",
+              "template_atom_name": "H32"
+            },
+            {
+              "native_index": 32,
+              "prepared_name": "H2",
+              "template_atom_name": "H33"
+            },
+            {
+              "native_index": 33,
+              "prepared_name": "H3",
+              "template_atom_name": "H34"
+            },
+            {
+              "native_index": 34,
+              "prepared_name": "H4",
+              "template_atom_name": "H35"
+            },
+            {
+              "native_index": 35,
+              "prepared_name": "H5",
+              "template_atom_name": "H36"
+            },
+            {
+              "native_index": 36,
+              "prepared_name": "H6",
+              "template_atom_name": "H37"
+            },
+            {
+              "native_index": 37,
+              "prepared_name": "H7",
+              "template_atom_name": "H38"
+            },
+            {
+              "native_index": 38,
+              "prepared_name": "H8",
+              "template_atom_name": "H39"
+            },
+            {
+              "native_index": 39,
+              "prepared_name": "H9",
+              "template_atom_name": "H40"
+            },
+            {
+              "native_index": 40,
+              "prepared_name": "H10",
+              "template_atom_name": "H41"
+            },
+            {
+              "native_index": 41,
+              "prepared_name": "H11",
+              "template_atom_name": "H42"
+            },
+            {
+              "native_index": 42,
+              "prepared_name": "H12",
+              "template_atom_name": "H43"
+            },
+            {
+              "native_index": 43,
+              "prepared_name": "H13",
+              "template_atom_name": "H44"
+            },
+            {
+              "native_index": 44,
+              "prepared_name": "H14",
+              "template_atom_name": "H45"
+            },
+            {
+              "native_index": 45,
+              "prepared_name": "H15",
+              "template_atom_name": "H46"
+            },
+            {
+              "native_index": 46,
+              "prepared_name": "H16",
+              "template_atom_name": "H47"
+            },
+            {
+              "native_index": 47,
+              "prepared_name": "H17",
+              "template_atom_name": "H48"
+            },
+            {
+              "native_index": 48,
+              "prepared_name": "H18",
+              "template_atom_name": "H49"
+            },
+            {
+              "native_index": 49,
+              "prepared_name": "H19",
+              "template_atom_name": "H50"
+            },
+            {
+              "native_index": 50,
+              "prepared_name": "H20",
+              "template_atom_name": "H51"
+            },
+            {
+              "native_index": 51,
+              "prepared_name": "H21",
+              "template_atom_name": "H52"
+            },
+            {
+              "native_index": 52,
+              "prepared_name": "H22",
+              "template_atom_name": "H53"
+            },
+            {
+              "native_index": 53,
+              "prepared_name": "H23",
+              "template_atom_name": "H54"
+            },
+            {
+              "native_index": 54,
+              "prepared_name": "H24",
+              "template_atom_name": "H55"
+            },
+            {
+              "native_index": 55,
+              "prepared_name": "H25",
+              "template_atom_name": "H56"
+            },
+            {
+              "native_index": 56,
+              "prepared_name": "H26",
+              "template_atom_name": "H57"
+            },
+            {
+              "native_index": 57,
+              "prepared_name": "H27",
+              "template_atom_name": "H58"
+            }
+          ],
+          "parameterization_source_residue_key": [
+            "T",
+            "1219",
+            "",
+            "EJ4"
+          ],
+          "parameter_reuse_note": "Identical ordered chemical states share parameters from the first bound copy; each copy retains its own heavy-atom coordinates.",
+          "native_runtime": {
+            "ambertools_version": "24.8",
+            "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+            "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+            "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+            "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+          },
+          "implementation_sha256": "b4b38ec8b599200df5af7eaba3cfe079a7ea78c84f4619758e4dd1cfae85c61f",
+          "conversion_validation": {
+            "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+            "energy_tolerance_kj_mol": 0.0001,
+            "force_tolerance_kj_mol_nm": 0.001,
+            "atom_mapping": {
+              "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+              "atoms": [
+                {
+                  "prepared_name": "C1",
+                  "template_atom_name": "C1",
+                  "native_index": 0
+                },
+                {
+                  "prepared_name": "C2",
+                  "template_atom_name": "C2",
+                  "native_index": 1
+                },
+                {
+                  "prepared_name": "C3",
+                  "template_atom_name": "C3",
+                  "native_index": 2
+                },
+                {
+                  "prepared_name": "C4",
+                  "template_atom_name": "C4",
+                  "native_index": 3
+                },
+                {
+                  "prepared_name": "C5",
+                  "template_atom_name": "C5",
+                  "native_index": 4
+                },
+                {
+                  "prepared_name": "C6",
+                  "template_atom_name": "C6",
+                  "native_index": 5
+                },
+                {
+                  "prepared_name": "C7",
+                  "template_atom_name": "C7",
+                  "native_index": 6
+                },
+                {
+                  "prepared_name": "C8",
+                  "template_atom_name": "C8",
+                  "native_index": 7
+                },
+                {
+                  "prepared_name": "C9",
+                  "template_atom_name": "C9",
+                  "native_index": 8
+                },
+                {
+                  "prepared_name": "C10",
+                  "template_atom_name": "C10",
+                  "native_index": 9
+                },
+                {
+                  "prepared_name": "C11",
+                  "template_atom_name": "C11",
+                  "native_index": 10
+                },
+                {
+                  "prepared_name": "C12",
+                  "template_atom_name": "C12",
+                  "native_index": 11
+                },
+                {
+                  "prepared_name": "C13",
+                  "template_atom_name": "C13",
+                  "native_index": 12
+                },
+                {
+                  "prepared_name": "C14",
+                  "template_atom_name": "C14",
+                  "native_index": 13
+                },
+                {
+                  "prepared_name": "C15",
+                  "template_atom_name": "C15",
+                  "native_index": 14
+                },
+                {
+                  "prepared_name": "C16",
+                  "template_atom_name": "C16",
+                  "native_index": 15
+                },
+                {
+                  "prepared_name": "C17",
+                  "template_atom_name": "C17",
+                  "native_index": 16
+                },
+                {
+                  "prepared_name": "C18",
+                  "template_atom_name": "C18",
+                  "native_index": 17
+                },
+                {
+                  "prepared_name": "C19",
+                  "template_atom_name": "C19",
+                  "native_index": 18
+                },
+                {
+                  "prepared_name": "C20",
+                  "template_atom_name": "C20",
+                  "native_index": 19
+                },
+                {
+                  "prepared_name": "C21",
+                  "template_atom_name": "C21",
+                  "native_index": 20
+                },
+                {
+                  "prepared_name": "N1",
+                  "template_atom_name": "N22",
+                  "native_index": 21
+                },
+                {
+                  "prepared_name": "N2",
+                  "template_atom_name": "N23",
+                  "native_index": 22
+                },
+                {
+                  "prepared_name": "O1",
+                  "template_atom_name": "O24",
+                  "native_index": 23
+                },
+                {
+                  "prepared_name": "O2",
+                  "template_atom_name": "O25",
+                  "native_index": 24
+                },
+                {
+                  "prepared_name": "O3",
+                  "template_atom_name": "O26",
+                  "native_index": 25
+                },
+                {
+                  "prepared_name": "C22",
+                  "template_atom_name": "C27",
+                  "native_index": 26
+                },
+                {
+                  "prepared_name": "C23",
+                  "template_atom_name": "C28",
+                  "native_index": 27
+                },
+                {
+                  "prepared_name": "C24",
+                  "template_atom_name": "C29",
+                  "native_index": 28
+                },
+                {
+                  "prepared_name": "C25",
+                  "template_atom_name": "C30",
+                  "native_index": 29
+                },
+                {
+                  "prepared_name": "C26",
+                  "template_atom_name": "C31",
+                  "native_index": 30
+                },
+                {
+                  "prepared_name": "H1",
+                  "template_atom_name": "H32",
+                  "native_index": 31
+                },
+                {
+                  "prepared_name": "H2",
+                  "template_atom_name": "H33",
+                  "native_index": 32
+                },
+                {
+                  "prepared_name": "H3",
+                  "template_atom_name": "H34",
+                  "native_index": 33
+                },
+                {
+                  "prepared_name": "H4",
+                  "template_atom_name": "H35",
+                  "native_index": 34
+                },
+                {
+                  "prepared_name": "H5",
+                  "template_atom_name": "H36",
+                  "native_index": 35
+                },
+                {
+                  "prepared_name": "H6",
+                  "template_atom_name": "H37",
+                  "native_index": 36
+                },
+                {
+                  "prepared_name": "H7",
+                  "template_atom_name": "H38",
+                  "native_index": 37
+                },
+                {
+                  "prepared_name": "H8",
+                  "template_atom_name": "H39",
+                  "native_index": 38
+                },
+                {
+                  "prepared_name": "H9",
+                  "template_atom_name": "H40",
+                  "native_index": 39
+                },
+                {
+                  "prepared_name": "H10",
+                  "template_atom_name": "H41",
+                  "native_index": 40
+                },
+                {
+                  "prepared_name": "H11",
+                  "template_atom_name": "H42",
+                  "native_index": 41
+                },
+                {
+                  "prepared_name": "H12",
+                  "template_atom_name": "H43",
+                  "native_index": 42
+                },
+                {
+                  "prepared_name": "H13",
+                  "template_atom_name": "H44",
+                  "native_index": 43
+                },
+                {
+                  "prepared_name": "H14",
+                  "template_atom_name": "H45",
+                  "native_index": 44
+                },
+                {
+                  "prepared_name": "H15",
+                  "template_atom_name": "H46",
+                  "native_index": 45
+                },
+                {
+                  "prepared_name": "H16",
+                  "template_atom_name": "H47",
+                  "native_index": 46
+                },
+                {
+                  "prepared_name": "H17",
+                  "template_atom_name": "H48",
+                  "native_index": 47
+                },
+                {
+                  "prepared_name": "H18",
+                  "template_atom_name": "H49",
+                  "native_index": 48
+                },
+                {
+                  "prepared_name": "H19",
+                  "template_atom_name": "H50",
+                  "native_index": 49
+                },
+                {
+                  "prepared_name": "H20",
+                  "template_atom_name": "H51",
+                  "native_index": 50
+                },
+                {
+                  "prepared_name": "H21",
+                  "template_atom_name": "H52",
+                  "native_index": 51
+                },
+                {
+                  "prepared_name": "H22",
+                  "template_atom_name": "H53",
+                  "native_index": 52
+                },
+                {
+                  "prepared_name": "H23",
+                  "template_atom_name": "H54",
+                  "native_index": 53
+                },
+                {
+                  "prepared_name": "H24",
+                  "template_atom_name": "H55",
+                  "native_index": 54
+                },
+                {
+                  "prepared_name": "H25",
+                  "template_atom_name": "H56",
+                  "native_index": 55
+                },
+                {
+                  "prepared_name": "H26",
+                  "template_atom_name": "H57",
+                  "native_index": 56
+                },
+                {
+                  "prepared_name": "H27",
+                  "template_atom_name": "H58",
+                  "native_index": 57
+                }
+              ]
+            },
+            "conformations": [
+              {
+                "pose": "bound",
+                "native_energy_kj_mol": 589.954528566629,
+                "xml_energy_kj_mol": 589.954528546876,
+                "energy_delta_kj_mol": -1.9753088054130785e-08,
+                "maximum_force_delta_kj_mol_nm": 7.588000698888209e-07
+              },
+              {
+                "pose": "perturbed-1",
+                "native_energy_kj_mol": 595.0569109852248,
+                "xml_energy_kj_mol": 595.056910965641,
+                "energy_delta_kj_mol": -1.95838083527633e-08,
+                "maximum_force_delta_kj_mol_nm": 7.534172254963778e-07
+              },
+              {
+                "pose": "perturbed-2",
+                "native_energy_kj_mol": 584.7724734401307,
+                "xml_energy_kj_mol": 584.7724734200658,
+                "energy_delta_kj_mol": -2.0064931050001178e-08,
+                "maximum_force_delta_kj_mol_nm": 7.597730586894613e-07
+              }
+            ],
+            "passed": true
+          },
+          "assembled_forcefield_charge_e": 1.000000003292669,
+          "assembled_atoms": 58
+        }
+      ],
+      "ions": [
+        {
+          "key": "U:1220::NA",
+          "residue": "NA",
+          "element": "Na",
+          "deposited_formal_charge": null,
+          "formal_charge": 1,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "NA",
+            "atom_type": "tip3p_standard-Na+",
+            "element": "Na",
+            "charge_e": 1.0,
+            "sigma_nm": 0.2439280690268249,
+            "epsilon_kj_mol": 0.3658460312,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/NA",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree.",
+            "prepared_particle_index": 6543,
+            "prepared_system_verified": true
+          }
+        }
+      ]
+    },
+    "model": "OPENMM \u00b7 CPU \u00b7 fixed-volume NVT \u00b7 explicit solvent"
+  },
+  "output_dataset_id": "ab629697dd2449c7",
+  "status": "completed"
+}

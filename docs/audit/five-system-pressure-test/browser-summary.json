@@ -1,0 +1,136 @@
+{
+  "scope": "Actual completed native trajectories in isolated data roots. No mocking, native run launch, cancel or resume in browser audit. Each output checked once after completion.",
+  "passed": 5,
+  "total_completed_audited": 5,
+  "remaining": [],
+  "spec": "frontend/tests/pressure-test-trajectories.spec.ts",
+  "spec_sha256": "7c08955f779cb065c4e25912726d77213473c0dea5095736061cace2e2465de3",
+  "cases": [
+    {
+      "pdb_id": "1K4C",
+      "job_id": "491f0e8e7dc04c6c",
+      "dataset_id": "6dc9ed17492b49a8",
+      "passed": true,
+      "checks": [
+        "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+        "real native job Files archive downloaded",
+        "Open trajectory enters Explore and restores all three visible saved plots",
+        "movie advances and pauses; slider and endpoint buttons reach both ends",
+        "water toggles both ways and both zoom buttons change the molecular canvas",
+        "three real UI posthoc plots agree with the saved native tracking samples"
+      ],
+      "maximum_posthoc_difference": 0,
+      "browser_errors": [],
+      "console_errors": [],
+      "simulation_control_requests": [],
+      "download_bytes": 150241380,
+      "report": "docs/audit/five-system-pressure-test/browser-1K4C-checks.json",
+      "report_sha256": "81db1ba026f27b40d1549de676ea20ec8432a370a86d5245b1588f51077ad433",
+      "screenshot": "docs/audit/five-system-pressure-test/browser-1K4C.png",
+      "screenshot_sha256": "9d78161e8ac1bd89d6e24ad029dba49fcfb78e267a222b5af24b3203b08b5378"
+    },
+    {
+      "pdb_id": "1SUG",
+      "job_id": "4ee199dd7b4e4c1b",
+      "dataset_id": "e2dad7ca2c7f46a6",
+      "passed": true,
+      "checks": [
+        "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+        "real native job Files archive downloaded",
+        "Open trajectory enters Explore and restores all three visible saved plots",
+        "movie advances and pauses; slider and endpoint buttons reach both ends",
+        "water toggles both ways and both zoom buttons change the molecular canvas",
+        "three real UI posthoc plots agree with the saved native tracking samples"
+      ],
+      "maximum_posthoc_difference": 0,
+      "browser_errors": [],
+      "console_errors": [],
+      "simulation_control_requests": [],
+      "download_bytes": 43064377,
+      "report": "docs/audit/five-system-pressure-test/browser-1SUG-checks.json",
+      "report_sha256": "742b8d8c41b9c3b974d308a73f0d9bd7d631d5e333237f81404fb459693c2270",
+      "screenshot": "docs/audit/five-system-pressure-test/browser-1SUG.png",
+      "screenshot_sha256": "99ec9080bc585ef2f29acf794e401caf6dbeb7822a0b5bfc86cc20cba1dd51e4"
+    },
+    {
+      "pdb_id": "1XQZ",
+      "job_id": "1f0e521a1f4d4f85",
+      "dataset_id": "7909ef07cc224ad7",
+      "passed": true,
+      "checks": [
+        "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+        "real native job Files archive downloaded",
+        "Open trajectory enters Explore and restores all three visible saved plots",
+        "movie advances and pauses; slider and endpoint buttons reach both ends",
+        "water toggles both ways and both zoom buttons change the molecular canvas",
+        "three real UI posthoc plots agree with the saved native tracking samples"
+      ],
+      "maximum_posthoc_difference": 0,
+      "browser_errors": [],
+      "console_errors": [],
+      "simulation_control_requests": [],
+      "download_bytes": 35991312,
+      "report": "docs/audit/five-system-pressure-test/browser-1XQZ-checks.json",
+      "report_sha256": "46abda1aaa1ca914c210720cf35e7b8876e14803bc6e1a2d2e600913fc1dffc7",
+      "screenshot": "docs/audit/five-system-pressure-test/browser-1XQZ.png",
+      "screenshot_sha256": "3ebb9cc540bf6a28fee33acc7abfbef1ffdae88a6f7210a4c8b943ecc24118b4"
+    },
+    {
+      "pdb_id": "3PTB",
+      "job_id": "21bf66d8a51744da",
+      "dataset_id": "b0d233348dcf4344",
+      "passed": true,
+      "checks": [
+        "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+        "real native job Files archive downloaded",
+        "Open trajectory enters Explore and restores all three visible saved plots",
+        "movie advances and pauses; slider and endpoint buttons reach both ends",
+        "water toggles both ways and both zoom buttons change the molecular canvas",
+        "three real UI posthoc plots agree with the saved native tracking samples"
+      ],
+      "maximum_posthoc_difference": 0,
+      "browser_errors": [],
+      "console_errors": [],
+      "simulation_control_requests": [],
+      "download_bytes": 75656846,
+      "report": "docs/audit/five-system-pressure-test/browser-3PTB-checks.json",
+      "report_sha256": "5e590a28d158147eefb3c293a3774f0621be48a550c5873904805ffbfc5552bb",
+      "screenshot": "docs/audit/five-system-pressure-test/browser-3PTB.png",
+      "screenshot_sha256": "bc38b25521ad851ec7f6e7ea24fd59b13274a9783cd419e5a5d10ba72cde0caa"
+    },
+    {
+      "pdb_id": "4N6H",
+      "job_id": "0b89d27dadc34148",
+      "dataset_id": "ab629697dd2449c7",
+      "passed": true,
+      "checks": [
+        "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+        "real native job Files archive downloaded",
+        "Open trajectory enters Explore and restores all three visible saved plots",
+        "movie advances and pauses; slider and endpoint buttons reach both ends",
+        "water toggles both ways and both zoom buttons change the molecular canvas",
+        "three real UI posthoc plots agree with the saved native tracking samples"
+      ],
+      "maximum_posthoc_difference": 0,
+      "browser_errors": [],
+      "console_errors": [],
+      "simulation_control_requests": [],
+      "download_bytes": 398046622,
+      "report": "docs/audit/five-system-pressure-test/browser-4N6H-checks.json",
+      "report_sha256": "d4c4e7885df63a21e72d5e4d85f4a2c3e094e2e15ea53871a7ca6b058bfd5ffc",
+      "screenshot": "docs/audit/five-system-pressure-test/browser-4N6H.png",
+      "screenshot_sha256": "a0bf32c86f6639bdee21e31fe37d9300ae83c7b8e06d1388daaa81559ee717a7"
+    }
+  ],
+  "failed_before_completed_browser_audit": [
+    {
+      "pdb_id": "4BVN",
+      "job_id": "e1205ca152194276",
+      "reason": "Cancelled after modeled-residue stereochemistry failed; not a completed passing trajectory."
+    }
+  ],
+  "final_case_command": "DYNAMOL_TEST_ISOLATED=1 DYNAMOL_PRESSURE_TEST_MANIFEST=/Users/ashujo/Documents/Science/DynaMol/docs/audit/five-system-pressure-test/browser-4N6H-manifest.json PLAYWRIGHT_JSON_OUTPUT_NAME=/Users/ashujo/Documents/Science/DynaMol/docs/audit/five-system-pressure-test/browser-gpcr-final.json npx playwright test tests/pressure-test-trajectories.spec.ts --grep 4N6H --reporter=list,json --output=test-results/pressure-test-gpcr-final",
+  "final_case_cwd": "frontend",
+  "final_case_runner_seconds": 32.0,
+  "final_case_test_seconds": 31.0
+}

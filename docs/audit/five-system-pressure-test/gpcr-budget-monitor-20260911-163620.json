@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/five-system-pressure-test/run_openmm_case.py",
+    "--case",
+    "gpcr",
+    "--dataset",
+    "421948174fed4441",
+    "--seed",
+    "20260915",
+    "--base-url",
+    "http://127.0.0.1:8793",
+    "--build-loops",
+    "--actions",
+    "{\"E:1362::MHA\": \"remove\", \"F:2001::OLC\": \"remove\", \"G:2002::OLC\": \"remove\", \"H:2003::OLC\": \"remove\", \"I:2004::OLC\": \"remove\", \"J:2005::OLC\": \"remove\", \"K:2006::OLC\": \"remove\", \"L:2007::OLC\": \"remove\"}",
+    "--prepared"
+  ],
+  "started_utc": "2026-09-11T23:36:20Z",
+  "budget_seconds": 7200,
+  "budget_bytes": 5368709120,
+  "source_dataset": "2d151914298241d9",
+  "prepared_dataset": "421948174fed4441",
+  "seed": 20260915,
+  "settings_source": "docs/audit/five-system-pressure-test/gpcr-ready-settings.json",
+  "prior_failed_job_id": "7438dad9ca5d4476",
+  "status": "failed",
+  "source_code_hashes": {
+    "backend/preparation_worker.py": "3fee9767bca59c7bb955e2b09343bd95db5070461006746d367d5121a1138c15",
+    "backend/jobs.py": "706ae328c5cb3f2d3c133f63dca9871f3fd1989a522c7efdcf6193a666a52a6d",
+    "backend/sequence_evidence.py": "fdc25e36cfd458281a75feae4f541b5b9d74c5f31d8a041157f2b3b20a05ed21",
+    "backend/solvent.py": "183921659c2d7977f339aa30a9ebcb1557b40fcc3068bb54faefc9405ae5aee1",
+    "backend/resources.py": "984720fd66d8adfbf1b959ec91001d7a51d63af5b1678d70c13b83e27d3a4535"
+  },
+  "elapsed_seconds": 670.43,
+  "generated_bytes": 102367142,
+  "pipeline_pid": 9687,
+  "exit_code": 1
+}

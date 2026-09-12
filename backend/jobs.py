@@ -150,6 +150,8 @@ def validate_simulation(settings: SimulationConfig) -> dict:
     if any(atom["category"] == "nucleic" for atom in metadata["atoms"]):
         raise ValueError("This simulation preset supports standard proteins only. RNA/DNA can be viewed and analyzed, but nucleic-acid and protein–nucleic-acid simulations require a separately parameterized workflow. No atoms were removed.")
     preparation_state = metadata.get("preparation")
+    if (preparation_state or {}).get("requires_minimization") and not settings.minimize:
+        raise ValueError("The rebuilt loop has recorded steric overlaps. Enable energy minimization before dynamics to relax the modeled atoms.")
     from .modified_residues import SUPPORTED_MODIFIED, register_topology_definitions
     modified = (preparation_state or {}).get("modified_residues", [])
     solvation_state = metadata.get("solvation")

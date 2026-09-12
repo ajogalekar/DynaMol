@@ -1,0 +1,14 @@
+{
+  "protease": {
+    "pdb": "3PTB",
+    "source_dataset_id": "59ff9ca69b454df1"
+  },
+  "gpcr": {
+    "pdb": "4BVN",
+    "source_dataset_id": "2d151914298241d9"
+  },
+  "channel": {
+    "pdb": "1K4C",
+    "source_dataset_id": "e59d6d0bed574ad5"
+  }
+}

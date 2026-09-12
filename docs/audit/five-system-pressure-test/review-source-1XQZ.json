@@ -1,0 +1,381 @@
+{
+  "id": "1XQZ",
+  "source": "https://files.rcsb.org/download/1XQZ.cif",
+  "sha256": "ef05e790a09e91d0382bbb79e3d0942daba531f2a954d64ddc01cb59d296fc98",
+  "resolution": [
+    "2.10"
+  ],
+  "unobserved": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "PDB_model_num": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "polymer_flag": [
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y"
+    ],
+    "occupancy_flag": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "auth_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "auth_comp_id": [
+      "ALA",
+      "ALA",
+      "PRO",
+      "CYS",
+      "ASN",
+      "ASP",
+      "LEU",
+      "HIS",
+      "ALA",
+      "THR",
+      "LYS",
+      "LEU",
+      "ALA",
+      "PRO",
+      "GLY",
+      "LYS",
+      "GLU",
+      "LYS",
+      "PRO",
+      "GLY",
+      "PRO",
+      "SER",
+      "LYS"
+    ],
+    "auth_seq_id": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313"
+    ],
+    "PDB_ins_code": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "label_comp_id": [
+      "ALA",
+      "ALA",
+      "PRO",
+      "CYS",
+      "ASN",
+      "ASP",
+      "LEU",
+      "HIS",
+      "ALA",
+      "THR",
+      "LYS",
+      "LEU",
+      "ALA",
+      "PRO",
+      "GLY",
+      "LYS",
+      "GLU",
+      "LYS",
+      "PRO",
+      "GLY",
+      "PRO",
+      "SER",
+      "LYS"
+    ],
+    "label_seq_id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "296",
+      "297",
+      "298",
+      "299",
+      "300"
+    ]
+  },
+  "assembly": {
+    "id": [
+      "1"
+    ],
+    "details": [
+      "author_defined_assembly"
+    ],
+    "method_details": [
+      null
+    ],
+    "oligomeric_details": [
+      "monomeric"
+    ],
+    "oligomeric_count": [
+      "1"
+    ]
+  },
+  "nonpoly": {
+    "entity_id": [
+      "2"
+    ],
+    "name": [
+      "water"
+    ],
+    "comp_id": [
+      "HOH"
+    ]
+  },
+  "entity": {
+    "id": [
+      "1",
+      "2"
+    ],
+    "type": [
+      "polymer",
+      "water"
+    ],
+    "src_method": [
+      "man",
+      "nat"
+    ],
+    "pdbx_description": [
+      "Proto-oncogene serine/threonine-protein kinase Pim-1",
+      "water"
+    ],
+    "formula_weight": [
+      "34251.906",
+      "18.015"
+    ],
+    "pdbx_number_of_molecules": [
+      "1",
+      "64"
+    ],
+    "pdbx_ec": [
+      "2.7.1.37",
+      null
+    ],
+    "pdbx_mutation": [
+      null,
+      null
+    ],
+    "pdbx_fragment": [
+      null,
+      null
+    ],
+    "details": [
+      null,
+      null
+    ]
+  },
+  "polymer": {
+    "entity_id": [
+      "1"
+    ],
+    "type": [
+      "polypeptide(L)"
+    ],
+    "nstd_linkage": [
+      "no"
+    ],
+    "nstd_monomer": [
+      "no"
+    ],
+    "pdbx_seq_one_letter_code": [
+      "AAPCNDLHATKLAPGKEKEPLESQYQVGPLLGSGGFGSVYSGIRVSDNLPVAIKHVEKDRISDWGELPNGTRVPMEVVLL\nKKVSSGFSGVIRLLDWFERPDSFVLILERPEPVQDLFDFITERGALQEELARSFFWQVLEAVRHCHNCGVLHRDIKDENI\nLIDLNRGELKLIDFGSGALLKDTVYTDFDGTRVYSPPEWIRYHRYHGRSAAVWSLGILLYDMVCGDIPFEHDEEIIRGQV\nFFRQRVSSECQHLIRWCLALRPSDRPTFEEIQNHPWMQDVLLPQETAEIHLHSLSPGPSK"
+    ],
+    "pdbx_seq_one_letter_code_can": [
+      "AAPCNDLHATKLAPGKEKEPLESQYQVGPLLGSGGFGSVYSGIRVSDNLPVAIKHVEKDRISDWGELPNGTRVPMEVVLL\nKKVSSGFSGVIRLLDWFERPDSFVLILERPEPVQDLFDFITERGALQEELARSFFWQVLEAVRHCHNCGVLHRDIKDENI\nLIDLNRGELKLIDFGSGALLKDTVYTDFDGTRVYSPPEWIRYHRYHGRSAAVWSLGILLYDMVCGDIPFEHDEEIIRGQV\nFFRQRVSSECQHLIRWCLALRPSDRPTFEEIQNHPWMQDVLLPQETAEIHLHSLSPGPSK"
+    ],
+    "pdbx_strand_id": [
+      "A"
+    ],
+    "pdbx_target_identifier": [
+      null
+    ]
+  }
+}

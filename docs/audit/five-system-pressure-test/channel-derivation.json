@@ -1,0 +1,95 @@
+{
+  "source_url": "https://files.rcsb.org/download/1K4C.cif",
+  "source_sha256": "da8a06fa1d2a514b106fbbf43ec63c88450027a427ba751b2a61da0f02a38763",
+  "derived_sha256": "9479885d4056883f453a83949930cd9656e49a17524152bc270aba28db8373bc",
+  "assembly": "1",
+  "operators": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "source_protein_entity": "3",
+  "source_chain": "C",
+  "output_chains": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "protein_residues_per_chain": [
+    103,
+    103,
+    103,
+    103
+  ],
+  "selected_ion_author_ids": [
+    3002,
+    3004,
+    3005
+  ],
+  "ions_copied_once": true,
+  "ion_coordinates_angstrom": [
+    [
+      155.331,
+      155.331,
+      -33.953
+    ],
+    [
+      155.33,
+      155.324,
+      -40.505
+    ],
+    [
+      155.327,
+      155.335,
+      -47.577
+    ]
+  ],
+  "retained_observed_water_count": 8,
+  "retained_observed_water_coordinates_angstrom": [
+    [
+      153.5,
+      157.213,
+      -45.543
+    ],
+    [
+      155.57,
+      158.27,
+      -49.274
+    ],
+    [
+      157.16000000000003,
+      153.44700000000003,
+      -45.543
+    ],
+    [
+      155.09000000000003,
+      152.39000000000001,
+      -49.274
+    ],
+    [
+      153.44700000000003,
+      153.5,
+      -45.543
+    ],
+    [
+      152.39000000000001,
+      155.57,
+      -49.274
+    ],
+    [
+      157.213,
+      157.16000000000003,
+      -45.543
+    ],
+    [
+      158.27,
+      155.09000000000003,
+      -49.274
+    ]
+  ],
+  "excluded": "Fab entities 1/2; crystallization lipids; K3001/3003/3006/3007; bulk waters not within 4 \u00c5 of selected K; near-coincident symmetry duplicates",
+  "interpretation": "Explicit discrete ion occupancy and water-only software-test scenario, not inferred experimental simultaneous occupancy or a realistic membrane model",
+  "terminal_omissions": "Deposited channel construct has no observed residues 1\u201321; they remain omitted"
+}

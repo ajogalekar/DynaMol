@@ -1,0 +1,32 @@
+{
+  "scope": "Actual execution differences from initial benchmark plan. No source output is rewritten and no biological interpretation is supported.",
+  "channel_crystallographic_waters": {
+    "pdb_id": "1K4C",
+    "preparation_job": "8def140b2cff4afa",
+    "initial_derivation": "Eight nearby crystallographic water heavy atoms included in derived channel input.",
+    "actual_preparation": "remove_waters=true removed all eight original water heavy atoms. Subsequent solvation supplies new TIP3P waters. The three selected potassium ions were retained.",
+    "claim_limit": "Do not claim crystallographic or coordinating-water retention through preparation. This is a solvent-only software test, without a membrane or validated channel hydration/occupancy model.",
+    "evidence": [
+      {
+        "path": "data/integration-checks/five-system-openmm/jobs/8def140b2cff4afa/config.json",
+        "sha256": "3a599963e2cebeb56b9277e5c540fdac57bc7eb272aa0d6fe9746ad56810e2c7"
+      },
+      {
+        "path": "data/integration-checks/five-system-openmm/jobs/8def140b2cff4afa/status.json",
+        "sha256": "1b072bc20d67ef3b9781b548630b7fec70037fa07a1e28b9d856810648bdaa99"
+      }
+    ]
+  },
+  "minimization_caps": {
+    "initial_plan_text": "A generic max1000iterations was written for all cases.",
+    "actual": "Existing GROMACS minimization uses steepest descent max2000 steps; OpenMM uses max1000 iterations. The 5000-step setting is the separate 10-ps relaxation trajectory, not minimization.",
+    "phosphatase_actual_steps": 1143,
+    "source_of_actual_steps": "data/integration-checks/five-system-gromacs/1SUG-native-checks.json minimize_log performance line, independently read. Worker minimization definition and actual minimize.mdp both specify2000.",
+    "claim_limit": "Engine stopping criteria differ. Reaching native minimizer tolerance does not establish ensemble equilibration or MD convergence.",
+    "evidence": {
+      "path": "data/integration-checks/five-system-gromacs/jobs/4ee199dd7b4e4c1b/minimize.mdp",
+      "sha256": "74f3af13ec35c6ef91a008e3287a6d1bb45435d4140fc1236cb86970288c0ef5"
+    }
+  },
+  "authorization": "Autonomous bounded software tests remain within the approved two-hour/five-GB case limits; these details are disclosed rather than used to cancel valid running tests."
+}

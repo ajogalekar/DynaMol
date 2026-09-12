@@ -1,0 +1,142 @@
+{
+  "id": "3PTB",
+  "source": "https://files.rcsb.org/download/3PTB.cif",
+  "sha256": "d2744dbacfb97ec9b4ff7f5cf4b204418bccf92e46b63130bfebb3916260232f",
+  "resolution": [
+    "1.7"
+  ],
+  "entity": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "type": [
+      "polymer",
+      "non-polymer",
+      "non-polymer",
+      "water"
+    ],
+    "src_method": [
+      "man",
+      "syn",
+      "syn",
+      "nat"
+    ],
+    "pdbx_description": [
+      "BETA-TRYPSIN",
+      "CALCIUM ION",
+      "BENZAMIDINE",
+      "water"
+    ],
+    "formula_weight": [
+      "23324.287",
+      "40.078",
+      "120.152",
+      "18.015"
+    ],
+    "pdbx_number_of_molecules": [
+      "1",
+      "1",
+      "1",
+      "62"
+    ],
+    "pdbx_ec": [
+      "3.4.21.4",
+      null,
+      null,
+      null
+    ],
+    "pdbx_mutation": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_fragment": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "details": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "polymer": {
+    "entity_id": [
+      "1"
+    ],
+    "type": [
+      "polypeptide(L)"
+    ],
+    "nstd_linkage": [
+      "no"
+    ],
+    "nstd_monomer": [
+      "no"
+    ],
+    "pdbx_seq_one_letter_code": [
+      "IVGGYTCGANTVPYQVSLNSGYHFCGGSLINSQWVVSAAHCYKSGIQVRLGEDNINVVEGNEQFISASKSIVHPSYNSNT\nLNNDIMLIKLKSAASLNSRVASISLPTSCASAGTQCLISGWGNTKSSGTSYPDVLKCLKAPILSDSSCKSAYPGQITSNM\nFCAGYLEGGKDSCQGDSGGPVVCSGKLQGIVSWGSGCAQKNKPGVYTKVCNYVSWIKQTIASN"
+    ],
+    "pdbx_seq_one_letter_code_can": [
+      "IVGGYTCGANTVPYQVSLNSGYHFCGGSLINSQWVVSAAHCYKSGIQVRLGEDNINVVEGNEQFISASKSIVHPSYNSNT\nLNNDIMLIKLKSAASLNSRVASISLPTSCASAGTQCLISGWGNTKSSGTSYPDVLKCLKAPILSDSSCKSAYPGQITSNM\nFCAGYLEGGKDSCQGDSGGPVVCSGKLQGIVSWGSGCAQKNKPGVYTKVCNYVSWIKQTIASN"
+    ],
+    "pdbx_strand_id": [
+      "A"
+    ],
+    "pdbx_target_identifier": [
+      null
+    ]
+  },
+  "unobserved": {},
+  "assembly": {
+    "id": [
+      "1"
+    ],
+    "details": [
+      "author_defined_assembly"
+    ],
+    "method_details": [
+      null
+    ],
+    "oligomeric_details": [
+      "monomeric"
+    ],
+    "oligomeric_count": [
+      "1"
+    ]
+  },
+  "assembly_gen": {
+    "assembly_id": [
+      "1"
+    ],
+    "oper_expression": [
+      "1"
+    ],
+    "asym_id_list": [
+      "A,B,C,D"
+    ]
+  },
+  "nonpoly": {
+    "entity_id": [
+      "2",
+      "3",
+      "4"
+    ],
+    "name": [
+      "CALCIUM ION",
+      "BENZAMIDINE",
+      "water"
+    ],
+    "comp_id": [
+      "CA",
+      "BEN",
+      "HOH"
+    ]
+  }
+}

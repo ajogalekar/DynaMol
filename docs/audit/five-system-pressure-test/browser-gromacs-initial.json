@@ -1,0 +1,183 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/ashujo/Documents/Science/DynaMol/frontend/node_modules/.bin/playwright",
+      "test",
+      "tests/pressure-test-trajectories.spec.ts",
+      "--grep",
+      "1XQZ|1SUG",
+      "--reporter=list,json",
+      "--output=test-results/pressure-test-gromacs"
+    ],
+    "configFile": "/Users/ashujo/Documents/Science/DynaMol/frontend/playwright.config.ts",
+    "rootDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/test-results/pressure-test-gromacs",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pressure-test-trajectories.spec.ts",
+      "file": "pressure-test-trajectories.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "1XQZ: Pim-1 kinase",
+          "file": "pressure-test-trajectories.spec.ts",
+          "line": 64,
+          "column": 8,
+          "specs": [
+            {
+              "title": "completed native trajectory opens, plots, plays, scrubs and downloads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14805,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T23:09:25.904Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trajectory-audit",
+                          "contentType": "application/json",
+                          "body": "ewogICJjYXNlIjogewogICAgIm5hbWUiOiAiUGltLTEga2luYXNlIiwKICAgICJwZGJJZCI6ICIxWFFaIiwKICAgICJqb2JJZCI6ICIxZjBlNTIxYTFmNGQ0Zjg1IiwKICAgICJkYXRhc2V0SWQiOiAiNzkwOWVmMDdjYzIyNGFkNyIsCiAgICAiYmFzZVVSTCI6ICJodHRwOi8vMTI3LjAuMC4xOjg3OTMiCiAgfSwKICAic3RhcnRlZEF0IjogIjIwMjYtMDktMTFUMjM6MDk6MjYuNTMxWiIsCiAgImNoZWNrcyI6IFsKICAgICJjb21wbGV0ZWQgb3V0cHV0OiAxMDEgZmluaXRlIHNhdmVkIHNhbXBsZXMsIDDigJMxMDAgcHMgYW5kIHRocmVlIG1hcHBlZCBtZWFzdXJlbWVudHMiLAogICAgInJlYWwgbmF0aXZlIGpvYiBGaWxlcyBhcmNoaXZlIGRvd25sb2FkZWQiLAogICAgIk9wZW4gdHJhamVjdG9yeSBlbnRlcnMgRXhwbG9yZSBhbmQgcmVzdG9yZXMgYWxsIHRocmVlIHZpc2libGUgc2F2ZWQgcGxvdHMiLAogICAgIm1vdmllIGFkdmFuY2VzIGFuZCBwYXVzZXM7IHNsaWRlciBhbmQgZW5kcG9pbnQgYnV0dG9ucyByZWFjaCBib3RoIGVuZHMiLAogICAgIndhdGVyIHRvZ2dsZXMgYm90aCB3YXlzIGFuZCBib3RoIHpvb20gYnV0dG9ucyBjaGFuZ2UgdGhlIG1vbGVjdWxhciBjYW52YXMiLAogICAgInRocmVlIHJlYWwgVUkgcG9zdGhvYyBwbG90cyBhZ3JlZSB3aXRoIHRoZSBzYXZlZCBuYXRpdmUgdHJhY2tpbmcgc2FtcGxlcyIKICBdLAogICJwb3N0aG9jIjogWwogICAgewogICAgICAia2luZCI6ICJkaXN0YW5jZSIsCiAgICAgICJhdG9tcyI6IFsKICAgICAgICAxMDU2LAogICAgICAgIDMyOTkKICAgICAgXSwKICAgICAgInNhbXBsZXMiOiAxMDEsCiAgICAgICJtYXhEaWZmZXJlbmNlIjogMCwKICAgICAgInVuaXQiOiAiw4UiCiAgICB9LAogICAgewogICAgICAia2luZCI6ICJhbmdsZSIsCiAgICAgICJhdG9tcyI6IFsKICAgICAgICAyMTU5LAogICAgICAgIDIxNzgsCiAgICAgICAgMjIwMAogICAgICBdLAogICAgICAic2FtcGxlcyI6IDEwMSwKICAgICAgIm1heERpZmZlcmVuY2UiOiAwLAogICAgICAidW5pdCI6ICLCsCIKICAgIH0sCiAgICB7CiAgICAgICJraW5kIjogImRpaGVkcmFsIiwKICAgICAgImF0b21zIjogWwogICAgICAgIDIxNTksCiAgICAgICAgMjE3OCwKICAgICAgICAyMjAwLAogICAgICAgIDIyMTIKICAgICAgXSwKICAgICAgInNhbXBsZXMiOiAxMDEsCiAgICAgICJtYXhEaWZmZXJlbmNlIjogMCwKICAgICAgInVuaXQiOiAiwrAiCiAgICB9CiAgXSwKICAiYnJvd3NlckVycm9ycyI6IFtdLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgImZvcmJpZGRlblJlcXVlc3RzIjogW10sCiAgIm5hdGl2ZU91dHB1dCI6IHsKICAgICJlbmdpbmUiOiAiZ3JvbWFjcyIsCiAgICAiam9iTmFtZSI6ICIxWFFaIMK3IDEwMCBwcyBHUk9NQUNTIHByZXNzdXJlIHRlc3QiLAogICAgImF0b21zIjogNTQ1MzcsCiAgICAiZnJhbWVzIjogMTAxLAogICAgImZpcnN0VGltZVBzIjogMCwKICAgICJsYXN0VGltZVBzIjogMTAwLAogICAgIndhdGVyQXRvbXMiOiA1MDA3MAogIH0sCiAgImRvd25sb2FkIjogewogICAgImZpbGVuYW1lIjogIkR5bmFNb2wtMWYwZTUyMWExZjRkNGY4NS56aXAiLAogICAgImJ5dGVzIjogMzU5OTEzMTIKICB9LAogICJwbGF5YmFjayI6IHsKICAgICJwYXVzZWRGcmFtZSI6IDUsCiAgICAiZmlyc3QiOiAwLAogICAgImxhc3QiOiAxMDAKICB9LAogICJwYXNzZWQiOiB0cnVlLAogICJmaW5pc2hlZEF0IjogIjIwMjYtMDktMTFUMjM6MDk6NDAuOTQ5WiIKfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d070a4d4317c8b5fca63-d4eeef5ef4f57a1b2a3c",
+              "file": "pressure-test-trajectories.spec.ts",
+              "line": 66,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "1SUG: PTP1B phosphatase",
+          "file": "pressure-test-trajectories.spec.ts",
+          "line": 64,
+          "column": 8,
+          "specs": [
+            {
+              "title": "completed native trajectory opens, plots, plays, scrubs and downloads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 17626,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T23:09:41.087Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trajectory-audit",
+                          "contentType": "application/json",
+                          "body": "ewogICJjYXNlIjogewogICAgIm5hbWUiOiAiUFRQMUIgcGhvc3BoYXRhc2UiLAogICAgInBkYklkIjogIjFTVUciLAogICAgImpvYklkIjogIjRlZTE5OWRkN2I0ZTRjMWIiLAogICAgImRhdGFzZXRJZCI6ICJlMmRhZDdjYTJjN2Y0NmE2IiwKICAgICJiYXNlVVJMIjogImh0dHA6Ly8xMjcuMC4wLjE6ODc5MyIKICB9LAogICJzdGFydGVkQXQiOiAiMjAyNi0wOS0xMVQyMzowOTo0MS4zOTRaIiwKICAiY2hlY2tzIjogWwogICAgImNvbXBsZXRlZCBvdXRwdXQ6IDEwMSBmaW5pdGUgc2F2ZWQgc2FtcGxlcywgMOKAkzEwMCBwcyBhbmQgdGhyZWUgbWFwcGVkIG1lYXN1cmVtZW50cyIsCiAgICAicmVhbCBuYXRpdmUgam9iIEZpbGVzIGFyY2hpdmUgZG93bmxvYWRlZCIsCiAgICAiT3BlbiB0cmFqZWN0b3J5IGVudGVycyBFeHBsb3JlIGFuZCByZXN0b3JlcyBhbGwgdGhyZWUgdmlzaWJsZSBzYXZlZCBwbG90cyIsCiAgICAibW92aWUgYWR2YW5jZXMgYW5kIHBhdXNlczsgc2xpZGVyIGFuZCBlbmRwb2ludCBidXR0b25zIHJlYWNoIGJvdGggZW5kcyIsCiAgICAid2F0ZXIgdG9nZ2xlcyBib3RoIHdheXMgYW5kIGJvdGggem9vbSBidXR0b25zIGNoYW5nZSB0aGUgbW9sZWN1bGFyIGNhbnZhcyIsCiAgICAidGhyZWUgcmVhbCBVSSBwb3N0aG9jIHBsb3RzIGFncmVlIHdpdGggdGhlIHNhdmVkIG5hdGl2ZSB0cmFja2luZyBzYW1wbGVzIgogIF0sCiAgInBvc3Rob2MiOiBbCiAgICB7CiAgICAgICJraW5kIjogImRpc3RhbmNlIiwKICAgICAgImF0b21zIjogWwogICAgICAgIDEyMjMsCiAgICAgICAgMzYwNwogICAgICBdLAogICAgICAic2FtcGxlcyI6IDEwMSwKICAgICAgIm1heERpZmZlcmVuY2UiOiAwLAogICAgICAidW5pdCI6ICLDhSIKICAgIH0sCiAgICB7CiAgICAgICJraW5kIjogImFuZ2xlIiwKICAgICAgImF0b21zIjogWwogICAgICAgIDI0MTgsCiAgICAgICAgMjQzNywKICAgICAgICAyNDU5CiAgICAgIF0sCiAgICAgICJzYW1wbGVzIjogMTAxLAogICAgICAibWF4RGlmZmVyZW5jZSI6IDAsCiAgICAgICJ1bml0IjogIsKwIgogICAgfSwKICAgIHsKICAgICAgImtpbmQiOiAiZGloZWRyYWwiLAogICAgICAiYXRvbXMiOiBbCiAgICAgICAgMjQxOCwKICAgICAgICAyNDM3LAogICAgICAgIDI0NTksCiAgICAgICAgMjQ3MAogICAgICBdLAogICAgICAic2FtcGxlcyI6IDEwMSwKICAgICAgIm1heERpZmZlcmVuY2UiOiAwLAogICAgICAidW5pdCI6ICLCsCIKICAgIH0KICBdLAogICJicm93c2VyRXJyb3JzIjogW10sCiAgImNvbnNvbGVFcnJvcnMiOiBbXSwKICAiZm9yYmlkZGVuUmVxdWVzdHMiOiBbXSwKICAibmF0aXZlT3V0cHV0IjogewogICAgImVuZ2luZSI6ICJncm9tYWNzIiwKICAgICJqb2JOYW1lIjogIjFTVUcgwrcgMTAwIHBzIEdST01BQ1MgcHJlc3N1cmUgdGVzdCIsCiAgICAiYXRvbXMiOiA2NTU1NiwKICAgICJmcmFtZXMiOiAxMDEsCiAgICAiZmlyc3RUaW1lUHMiOiAwLAogICAgImxhc3RUaW1lUHMiOiAxMDAsCiAgICAid2F0ZXJBdG9tcyI6IDYwNzIwCiAgfSwKICAiZG93bmxvYWQiOiB7CiAgICAiZmlsZW5hbWUiOiAiRHluYU1vbC00ZWUxOTlkZDdiNGU0YzFiLnppcCIsCiAgICAiYnl0ZXMiOiA0MzA2NDM3NwogIH0sCiAgInBsYXliYWNrIjogewogICAgInBhdXNlZEZyYW1lIjogNSwKICAgICJmaXJzdCI6IDAsCiAgICAibGFzdCI6IDEwMAogIH0sCiAgInBhc3NlZCI6IHRydWUsCiAgImZpbmlzaGVkQXQiOiAiMjAyNi0wOS0xMVQyMzowOTo1OC41NzRaIgp9"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d070a4d4317c8b5fca63-dd23bf8e478a875c974d",
+              "file": "pressure-test-trajectories.spec.ts",
+              "line": 66,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-11T23:09:25.496Z",
+    "duration": 33431.993,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

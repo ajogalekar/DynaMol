@@ -129,13 +129,14 @@ def _component_ids(dataset_id, topology):
             continue
         if table["type_symbol"][i].upper() in {"H", "D"}:
             continue
-        label, author = table["label_asym_id"][i], table["auth_asym_id"][i]
-        resid = table["auth_seq_id"][i]
+        label = table["label_asym_id"][i]
+        author = (table.get("auth_asym_id") or table["label_asym_id"])[i]
+        resid = (table.get("auth_seq_id") or table["label_seq_id"])[i]
         insertion = table.get("pdbx_PDB_ins_code", [None] * count)[i] or ""
         if insertion in {".", "?"}:
             insertion = ""
         group = groups.setdefault((label, author, resid, insertion), {"id": table["label_comp_id"][i], "names": set()})
-        group["names"].add(table["auth_atom_id"][i])
+        group["names"].add((table.get("auth_atom_id") or table["label_atom_id"])[i])
     mapping = {}
     for residue in topology.residues():
         if residue.name in STANDARD_RESIDUES or residue.name in storage.WATERS or residue.name in SUPPORTED_IONS:
@@ -286,10 +287,30 @@ def _graph(residue, coordinates, chemistry=None, block=None):
         actual = atom.GetProp("_CIPCode") if atom.HasProp("_CIPCode") else None
         if actual != expected:
             raise ValueError(f"Bound ligand stereochemistry disagrees with CCD at {name}: expected {expected}, found {actual or 'unresolved'}. No coordinates were changed.")
+    unverified_bond_stereo = []
     for (a, b), expected in expected_bonds.items():
-        actual = mol.GetBondBetweenAtoms(a, b).GetStereo()
+        bond = mol.GetBondBetweenAtoms(a, b)
+        actual = bond.GetStereo()
         if actual != {'E': Chem.BondStereo.STEREOE, 'Z': Chem.BondStereo.STEREOZ}[expected]:
+            # CCD can describe C=NH orientation using a hydrogen/lone-pair
+            # convention absent from this heavy-atom graph. RDKit requires
+            # two heavy neighbors at each end for double-bond stereo:
+            # https://www.rdkit.org/docs/RDKit_Book.html#stereogenic-bonds
+            # This narrowly records an unverified descriptor; it does not
+            # forgive an opposite or unresolved observable stereobond.
+            ends = [mol.GetAtomWithIdx(a), mol.GetAtomWithIdx(b)]
+            terminal_imine = (bond.GetBondType() == Chem.BondType.DOUBLE and not bond.IsInRing()
+                              and sorted(atom.GetSymbol() for atom in ends) == ['C', 'N']
+                              and any(atom.GetSymbol() == 'N' and atom.GetDegree() == 1
+                                      and atom.GetFormalCharge() == 0 and atom.GetTotalNumHs() == 1 for atom in ends))
+            if actual == Chem.BondStereo.STEREONONE and terminal_imine:
+                unverified_bond_stereo.append({'atoms': [names[a], names[b]], 'ccd_descriptor': expected,
+                                              'status': 'unverified',
+                                              'reason': 'Terminal C=NH has only one heavy-atom neighbor at nitrogen; its CCD E/Z descriptor cannot be verified from the retained heavy-atom geometry.'})
+                continue
             raise ValueError(f'Bound ligand E/Z stereochemistry disagrees with CCD at {names[a]}–{names[b]}.')
+    if unverified_bond_stereo:
+        mol.SetProp('_DynaMolUnverifiedCCDBondStereo', json.dumps(unverified_bond_stereo))
     if chemistry and chemistry.get('canonical_isomeric_smiles'):
         reference = Chem.MolFromSmiles(chemistry['canonical_isomeric_smiles'])
         if reference is not None and reference.GetNumAtoms() == mol.GetNumAtoms() and not mol.HasSubstructMatch(reference, useChirality=True):
@@ -670,6 +691,10 @@ def _models(dataset_id, ph=7.0, overrides=None, actions=None, *, execute_repair=
             description.update(**protonation, heavy_atoms=len(atoms), reference=reference,
                                stereo_checked=stereocenters, source_cif=str(source_cif) if source_cif else None,
                                stereo_limitations='Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained.')
+            if mol.HasProp('_DynaMolUnverifiedCCDBondStereo'):
+                description['stereo_unverified'] = json.loads(mol.GetProp('_DynaMolUnverifiedCCDBondStereo'))
+                for item in description['stereo_unverified']:
+                    description['warnings'].append('Unverified CCD ' + item['ccd_descriptor'] + ' descriptor at ' + '–'.join(item['atoms']) + ': ' + item['reason'] + ' No E/Z assignment or heavy-atom coordinate change was made; review the selected ligand state.')
             if description.get("repair"):
                 description["warnings"] = description.get("warnings", []) + description["repair"]["warnings"]
             models.append(LigandModel(selected, residue, atom_indices if atom_indices is not None else [atom.index for atom in atoms], names, description))

@@ -205,7 +205,8 @@ def stereochemistry_report(topology, positions, templates):
                 continue
             volume = float(np.linalg.det(np.stack([xyz[named[name]] - xyz[named[center]] for name in neighbors])))
             expected = float(np.linalg.det(np.stack([template_xyz[template_names[name]] - template_xyz[template_names[center]] for name in neighbors])))
-            record = {"chain": residue.chain.id, "resid": residue.id, "residue": residue.name, "center": center, "signed_volume_nm3": volume, "template_signed_volume_nm3": expected}
+            record = {"chain": residue.chain.id, "resid": residue.id, "insertion_code": (residue.insertionCode or '').strip(), "residue": residue.name, "center": center, "signed_volume_nm3": volume, "template_signed_volume_nm3": expected}
+            record["atom_indices"] = [named[name] for name in (center, *neighbors)]
             centers.append(record)
             if abs(volume) < 1e-4 or volume * expected <= 0:
                 violations.append(record)
@@ -219,6 +220,127 @@ def require_valid_stereochemistry(report, stage):
     if report["violations"]:
         first = report["violations"][0]
         raise ValueError(f"{stage} has inverted or near-planar standard residue stereochemistry at {first['chain']}:{first['resid']} {first['residue']} {first['center']}. The model is rejected; use an externally validated repair instead.")
+
+
+def restore_modeled_loop_sidechains(topology, positions, templates, observed_keys, environment_positions=()):
+    """Correct only wholly new non-Pro loop sidechains in proper local frames.
+
+    PDBFixer's coarse construction potential can invert newly placed centers.
+    This single template placement preserves every backbone/observed coordinate;
+    it is not loop prediction, packing, or force-field relaxation.
+    """
+    from scipy.spatial import cKDTree
+    xyz = np.asarray(positions.value_in_unit(unit.nanometer), dtype=float).copy()
+    original = xyz.copy()
+    atoms = list(topology.atoms())
+    before = stereochemistry_report(topology, positions, templates)
+    affected = {(v['chain'], v['resid'], v.get('insertion_code', ''), v['residue']) for v in before['violations']}
+    report = {"method": "Single rigid proper-rotation placement of complete template sidechains in the modeled N–CA–C frame, anchored at CA; only wholly new standard non-Pro residues with failed stereochemistry are eligible.",
+              "confidence": "low", "stereochemistry_before": before, "corrections": [], "errors": [], "accepted": False}
+
+    def reject(message):
+        report["errors"].append(message)
+        return xyz * unit.nanometer, report
+
+    def frame(points, named):
+        n = points[named['N']] - points[named['CA']]
+        c = points[named['C']] - points[named['CA']]
+        if min(np.linalg.norm(n), np.linalg.norm(c)) < 1e-8:
+            raise ValueError("A zero-length modeled N–CA–C frame cannot orient a sidechain.")
+        axis = n / np.linalg.norm(n)
+        plane = c - axis * np.dot(axis, c)
+        if np.linalg.norm(plane) / np.linalg.norm(c) < .1:
+            raise ValueError("A near-collinear modeled N–CA–C frame cannot orient a sidechain.")
+        plane /= np.linalg.norm(plane)
+        return np.column_stack((axis, plane, np.cross(axis, plane)))
+
+    moved = set()
+    for residue in topology.residues():
+        if (residue.chain.id, residue.id, (residue.insertionCode or '').strip(), residue.name) not in affected:
+            continue
+        members = list(residue.atoms())
+        if any(atom_key(atom) in observed_keys for atom in members):
+            return reject("A failed stereocenter belongs to an observed residue; its atoms cannot be repositioned by loop correction.")
+        if residue.name not in STANDARD_PROTEINS or residue.name == 'PRO':
+            return reject("Loop sidechain correction requires a standard non-Pro template; ring closure or modified stereochemistry will not be guessed.")
+        template = templates[residue.name]
+        reference = np.asarray(template.positions.value_in_unit(unit.nanometer))
+        named = {a.name: a.index for a in members}
+        reference_names = {a.name: a.index for a in template.topology.atoms()}
+        template_heavy = {a.name for a in template.topology.atoms() if a.element != app.element.hydrogen and a.name != 'OXT'}
+        if not template_heavy.issubset(named) or any(a.name not in reference_names for a in members if a.name not in {'OXT'}):
+            return reject("A modeled residue does not match the complete standard sidechain template.")
+        try:
+            rotation = frame(xyz, named) @ frame(reference, reference_names).T
+        except ValueError as exc:
+            return reject(str(exc))
+        selected = [a for a in members if a.name not in {'N', 'CA', 'C', 'O', 'OXT'}]
+        for atom in selected:
+            xyz[atom.index] = rotation @ (reference[reference_names[atom.name]] - reference[reference_names['CA']]) + xyz[named['CA']]
+            moved.add(atom.index)
+        report['corrections'].append({"chain": residue.chain.id, "resid": residue.id, "insertion_code": (residue.insertionCode or '').strip(),
+                                      "residue": residue.name, "rotation_determinant": float(np.linalg.det(rotation)),
+                                      "modeled_atoms": [{"index": a.index, "identity": list(atom_key(a))} for a in selected]})
+    if not np.isfinite(xyz).all():
+        return reject("Loop correction produced non-finite coordinates.")
+    fixed = [a.index for a in atoms if a.index not in moved]
+    report['unchanged_atoms_preserved_exactly'] = bool(np.array_equal(xyz[fixed], original[fixed]))
+    adjacency = [set() for _ in atoms]
+    bond_checks, peptide_checks = [], []
+    for a, b in topology.bonds():
+        adjacency[a.index].add(b.index); adjacency[b.index].add(a.index)
+        length = float(np.linalg.norm(xyz[a.index] - xyz[b.index]))
+        if a.residue != b.residue and {a.name, b.name} == {'N', 'C'} and all(x.residue.name in STANDARD_PROTEINS for x in (a, b)):
+            peptide_checks.append({"atoms": [list(atom_key(a)), list(atom_key(b))], "distance_nm": length})
+            if not .10 <= length <= .22:
+                report['errors'].append("A peptide C–N distance falls outside the gross 1.0–2.2 Å construction bounds.")
+        if a.index in moved or b.index in moved:
+            if a.residue != b.residue:
+                return reject("A corrected sidechain has an external covalent connection; template repositioning is unsupported.")
+            template = templates[a.residue.name]
+            ref = np.asarray(template.positions.value_in_unit(unit.nanometer))
+            names = {x.name: x.index for x in template.topology.atoms()}
+            expected = float(np.linalg.norm(ref[names[a.name]] - ref[names[b.name]]))
+            bond_checks.append({"atoms": [a.index, b.index], "distance_nm": length, "template_distance_nm": expected})
+            if abs(length - expected) > 1e-6:
+                report['errors'].append("A corrected attachment/internal sidechain bond differs from its rigid template length.")
+    report.update(bond_checks=bond_checks, peptide_bond_checks=peptide_checks)
+    radii = np.array([{'C': .170, 'N': .155, 'O': .152, 'S': .180, 'P': .180}.get(a.element.symbol if a.element else 'C', .170) for a in atoms])
+    # External retained molecules are supplied as (xyz_nm, elemental vdW radius_nm).
+    external = list(environment_positions)
+    combined = np.concatenate((xyz, np.asarray([x[0] for x in external]).reshape(-1, 3)))
+    all_radii = np.concatenate((radii, np.asarray([x[1] for x in external])))
+    tree = cKDTree(combined)
+    overlaps, seen, gross = [], set(), []
+    for index in sorted(moved):
+        excluded = {index} | adjacency[index]
+        for neighbor in adjacency[index]:
+            excluded |= adjacency[neighbor]
+        for other in tree.query_ball_point(xyz[index], .5):
+            pair = tuple(sorted((index, other)))
+            if other in excluded or pair in seen:
+                continue
+            seen.add(pair)
+            distance = float(np.linalg.norm(xyz[index] - combined[other]))
+            ratio = distance / float(all_radii[index] + all_radii[other])
+            if ratio < .78:
+                overlaps.append({"atoms": list(pair), "distance_nm": distance, "vdw_distance_ratio": ratio})
+            if distance < .13:
+                gross.append(list(pair))
+    report['steric_screen'] = {"method": "Gross collisions below 1.3 Å reject; additionally report overlaps below 0.78 times summed elemental van der Waals radii, excluding bonded and 1–3 pairs. This is a geometric screen, not validated packing or an energy.",
+                               "external_environment_atoms": len(external), "soft_overlaps": overlaps, "gross_collisions": gross,
+                               "soft_overlap_score": float(sum((1-r['vdw_distance_ratio']/.78)**2 for r in overlaps)),
+                               "requires_forcefield_minimization": bool(overlaps)}
+    if gross:
+        report['errors'].append("Corrected modeled sidechains retain a gross nonbonded collision below 1.3 Å.")
+    report['stereochemistry_after'] = stereochemistry_report(topology, xyz * unit.nanometer, templates)
+    if report['stereochemistry_after']['violations']:
+        report['errors'].append("Corrected coordinates still fail the unchanged stereochemistry guard.")
+    report['backbone_gaps'] = backbone_gaps(topology, xyz * unit.nanometer)
+    if any(gap['structural_break'] for gap in report['backbone_gaps']):
+        report['errors'].append("A long backbone connection remains after loop correction.")
+    report['accepted'] = not report['errors'] and report['unchanged_atoms_preserved_exactly']
+    return xyz * unit.nanometer, report
 
 
 def protonation_inventory(topology, selected_variants, charges=None):
@@ -275,6 +397,12 @@ class PreparationWorker(Worker):
         from .residue_identity import protein_residue_keys
         matching, source_path = current_fixer(options["dataset_id"])
         fixer.sequences = matching.sequences
+        fixer.sequence_scheme = getattr(matching, "sequence_scheme", {})
+        fixer.sequence_scheme_error = getattr(matching, "sequence_scheme_error", None)
+        if fixer.sequence_scheme_error:
+            raise ValueError(fixer.sequence_scheme_error)
+        from .sequence_evidence import recover_observed_insertion_codes
+        fixer.recovered_insertion_codes = recover_observed_insertion_codes(fixer)
         input_atoms = list(fixer.topology.atoms())
         input_topology, input_positions = fixer.topology, fixer.positions
         protein_keys = protein_residue_keys(options["dataset_id"], input_topology, input_positions)
@@ -329,8 +457,13 @@ class PreparationWorker(Worker):
                 selected_loops[(chain_index, position)] = names
                 rebuilt.append({"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "confidence": "low", "method": "PDBFixer template placement and local optimization; no independent structure prediction or validation"})
         fixer.missingResidues = selected_loops
+        from .sequence_evidence import restoration_plan, restore_residue_identities
+        source_identity_plan = restoration_plan(fixer, selected_loops)
         require_valid_stereochemistry(stereochemistry_report(fixer.topology, fixer.positions, fixer.templates), "Input structure")
         before_heavy = fixer.topology.getNumAtoms()
+        observed_coordinates = {atom_key(atom): np.array(fixer.positions[atom.index].value_in_unit(unit.nanometer)) for atom in fixer.topology.atoms()}
+        if len(observed_coordinates) != before_heavy:
+            raise ValueError("Duplicate observed atom identities prevent unambiguous loop-construction validation.")
         fixer.findMissingAtoms()
         missing_record = [{"chain": residue.chain.id, "resid": residue.id, "residue": residue.name, "atoms": [atom.name for atom in missing]} for residue, missing in fixer.missingAtoms.items()]
         if options["add_missing_atoms"] or selected_loops:
@@ -341,10 +474,48 @@ class PreparationWorker(Worker):
                 fixer.addMissingAtoms(seed=options["seed"])
             finally:
                 fixer_implementation._overlayPoints = original_overlay
+        restored_identities = restore_residue_identities(fixer.topology, source_identity_plan)
+        loop_construction = None
+        if selected_loops:
+            built_xyz = np.asarray(fixer.positions.value_in_unit(unit.nanometer))
+            current = {atom_key(a): a.index for a in fixer.topology.atoms()}
+            unchanged = all(key in current and np.array_equal(built_xyz[current[key]], position) for key, position in observed_coordinates.items())
+            initial_stereo = stereochemistry_report(fixer.topology, fixer.positions, fixer.templates)
+            loop_construction = {"native_build_attempts": 1, "seed": options['seed'], "confidence": "low",
+                                 "observed_coordinates_preserved_exactly": unchanged,
+                                 "initial_stereochemistry": initial_stereo, "accepted": False,
+                                 "coordinate_artifacts": {"before": "loop-construction-before.npz", "after": "loop-construction-after.npz", "topology": "loop-construction.pdb"}}
+            np.savez_compressed(self.folder / 'loop-construction-before.npz', xyz_nm=built_xyz)
+            with (self.folder / 'loop-construction.pdb').open('w') as handle:
+                app.PDBFile.writeFile(fixer.topology, fixer.positions, handle, keepIds=True)
+            storage.atomic_json(self.folder / 'loop-construction.json', loop_construction)
+            if not unchanged:
+                raise ValueError("Loop construction changed or lost an observed atom; the model is rejected.")
+            if initial_stereo['violations']:
+                self.update(message="Checking one template sidechain correction for newly modeled loop stereocenters; observed atoms and backbone stay fixed.")
+                external = [(np.asarray(input_positions[a.index].value_in_unit(unit.nanometer)),
+                             {'C': .170, 'N': .155, 'O': .152, 'S': .180, 'P': .180}.get(a.element.symbol if a.element else 'C', .170))
+                            for a in input_atoms if a.element != app.element.hydrogen and residue_key(a.residue) not in retained_keys
+                            and not options['remove_heterogens'] and ':'.join(residue_key(a.residue)) not in removed_ligand_keys
+                            and a.residue.name.upper() not in storage.WATERS]
+                candidate, correction = restore_modeled_loop_sidechains(fixer.topology, fixer.positions, fixer.templates, set(observed_coordinates), external)
+                loop_construction['sidechain_correction'] = correction
+                np.savez_compressed(self.folder / 'loop-construction-after.npz', xyz_nm=np.asarray(candidate.value_in_unit(unit.nanometer)))
+                storage.atomic_json(self.folder / 'loop-construction.json', loop_construction)
+                if not correction['accepted']:
+                    raise ValueError("The bounded modeled-loop sidechain correction was rejected: " + ' '.join(correction['errors']))
+                fixer.positions = candidate
+                warnings.append("Newly modeled loop sidechains required one proper-frame template correction after coarse construction inverted stereocenters. Observed atoms and modeled backbone were preserved exactly. This remains a low-confidence model, not validated loop or rotamer geometry.")
+            else:
+                np.savez_compressed(self.folder / 'loop-construction-after.npz', xyz_nm=built_xyz)
         require_valid_stereochemistry(stereochemistry_report(fixer.topology, fixer.positions, fixer.templates), "Repaired structure")
         remaining_gaps = [gap for gap in backbone_gaps(fixer.topology, fixer.positions) if gap["structural_break"]]
         if remaining_gaps:
             raise ValueError("A long backbone connection remains after optional repair. The local model is not suitable for force-field preparation; repair this gap externally. " + remaining_gaps[0]["message"])
+        if loop_construction is not None:
+            loop_construction['accepted'] = True
+            loop_construction['artifacts_sha256'] = {name: hashlib.sha256((self.folder / name).read_bytes()).hexdigest() for name in loop_construction['coordinate_artifacts'].values()}
+            storage.atomic_json(self.folder / 'loop-construction.json', loop_construction)
         summary.append(f"Added {fixer.topology.getNumAtoms() - before_heavy} heavy/terminal atoms across existing residues and {len(rebuilt)} rebuilt internal segment(s).")
         if rebuilt:
             warnings.append("LOW-CONFIDENCE REBUILT SEGMENTS: " + "; ".join(f"chain {r['chain']}, insertion position {r['position']}, {'-'.join(r['residues'])}" for r in rebuilt) + ". These coordinates are template-derived models, not experimentally resolved loops; validate them before scientific use.")
@@ -499,6 +670,12 @@ class PreparationWorker(Worker):
         added = [{"output_index": atom.index, "identity": list(atom_key(atom))} for atom in output_atoms if atom_key(atom) not in old_keys]
         preparation = {"parent_dataset_id": options["dataset_id"], "ph": options["ph"], "method": "PDBFixer heavy-atom repair + optional short sequence-supported loops + bounded chi search + OpenMM hydrogen/template assignment", "summary": summary, "warnings": warnings, "seed": options["seed"], "forcefield_files": files, "simulation_ready": True, "exact_topology_file": "prepared.pdb", "protonation_states": states, "selected_variants": selected_variants, "removed_atom_counts": dict(counts), "rebuilt_segments": rebuilt, "repaired_atoms": missing_record, "sidechain_adjustment": rotamers, "relaxation": relaxation, "original_to_prepared_atom_map_file": "atom-map.json", "net_forcefield_charge_e": float(sum(charges)) if charges is not None else None, "stereochemistry": stereochemistry, "template_placement": "Scoped proper-rotation Kabsch alignment (det R=+1) replaces PDBFixer 1.12 reflection-capable _overlayPoints during heavy-atom/loop placement."}
         preparation.update(job_id=self.job["id"], metal_environment=environment["report"] if ion_keys else None, preserved_bound_geometry=geometry)
+        if loop_construction is not None:
+            preparation['loop_construction'] = loop_construction
+            needs_minimization = loop_construction.get('sidechain_correction', {}).get('steric_screen', {}).get('requires_forcefield_minimization', False)
+            preparation['requires_minimization'] = bool(needs_minimization and not relaxation.get('performed'))
+            if preparation['requires_minimization']:
+                warnings.append("Modeled loop sidechains retain soft steric overlaps and local complex relaxation was skipped. Force-field minimization is required before dynamics; steric packing and the loop pose are not validated.")
         if protonation_aliases:
             preparation["input_protonation_aliases"] = protonation_aliases
         if ion_keys:
@@ -508,11 +685,13 @@ class PreparationWorker(Worker):
         if ligand_parameters:
             preparation["ligand_parameters"] = ligand_parameters
         preparation["ligand_actions"] = options.get("ligand_actions", {})
+        if source_identity_plan is not None:
+            preparation["sequence_mapping"] = {"method": "Exact mmCIF _pdbx_poly_seq_scheme positions; author numbering gaps are not interpreted as missing sequence", "restored_inserted_residues": restored_identities, "recovered_observed_insertion_codes": fixer.recovered_insertion_codes, "observed_residue_identities_preserved": True}
         preparation["removed_ligand_residues"] = removed_ligands
         storage.atomic_json(self.folder / "preparation.json", preparation)
         storage.atomic_json(self.folder / "atom-map.json", {"input_to_output": mapping, "added_atoms": added, "note": "Original hydrogens were removed and regenerated; matching H names do not imply retained hydrogen coordinates."})
         self.provenance.update(purpose="Exploratory protein–ligand preparation with recorded state assumptions; no claim of native rotamers, loops, binding affinity or convergence", operation="prepare", versions={**self.provenance["versions"], "pdbfixer": importlib.metadata.version("pdbfixer")}, preparation_state=preparation, source_sequence_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest() if source_path else None, preparation_worker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), parent_dataset_id=options["dataset_id"])
-        self.provenance["outputs"] = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in self.folder.iterdir() if path.is_file() and path.name in {"input.pdb", "prepared.pdb", "preparation.json", "atom-map.json", "config.json", "modified-residue-system.xml"}}
+        self.provenance["outputs"] = {path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in self.folder.iterdir() if path.is_file() and (path.name in {"input.pdb", "prepared.pdb", "preparation.json", "atom-map.json", "config.json", "modified-residue-system.xml"} or path.name.startswith('loop-construction'))}
         storage.atomic_json(self.folder / "provenance.json", self.provenance)
         traj = md.Trajectory(np.array([modeller.positions.value_in_unit(unit.nanometer)], dtype=np.float32), md.Topology.from_openmm(modeller.topology), time=[0])
         # Crystal lattice records are not advertised as a prepared periodic solvent box.
@@ -520,6 +699,9 @@ class PreparationWorker(Worker):
         folder = storage.dataset_dir(metadata["id"])
         for name in ("prepared.pdb", "preparation.json", "atom-map.json"):
             shutil.copy2(self.folder / name, folder / name)
+        if loop_construction is not None:
+            for name in ('loop-construction.json', *loop_construction['coordinate_artifacts'].values()):
+                shutil.copy2(self.folder / name, folder / name)
         if modified:
             shutil.copy2(self.folder / "modified-residue-system.xml", folder / "modified-residue-system.xml")
         copy_ligand_parameters(self.folder, folder, preparation)

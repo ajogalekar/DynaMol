@@ -1,0 +1,145 @@
+{
+  "pdb_id": "3PWH",
+  "source_url": "https://files.rcsb.org/download/3PWH.cif",
+  "sha256": "ae6fc2369e80715cfd94c6d5c28731b5d2c1f47bbe50c42ac32d45d3a8af4d7f",
+  "resolution": "3.296",
+  "title": "'Thermostabilised Adenosine A2A Receptor'",
+  "chains": [
+    {
+      "label_asym_id": "A",
+      "entity_id": "1",
+      "description": "'Adenosine receptor A2a'",
+      "observed_residues": 291,
+      "sequence_length": 329,
+      "observed_label_range": [
+        7,
+        305
+      ],
+      "internal_missing": [
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "150",
+          "mon_id": "LYS",
+          "ndb_seq_num": "150",
+          "pdb_seq_num": "150",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "151",
+          "mon_id": "GLU",
+          "ndb_seq_num": "151",
+          "pdb_seq_num": "151",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "152",
+          "mon_id": "GLY",
+          "ndb_seq_num": "152",
+          "pdb_seq_num": "152",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "153",
+          "mon_id": "LYS",
+          "ndb_seq_num": "153",
+          "pdb_seq_num": "153",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "154",
+          "mon_id": "ASN",
+          "ndb_seq_num": "154",
+          "pdb_seq_num": "154",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "155",
+          "mon_id": "HIS",
+          "ndb_seq_num": "155",
+          "pdb_seq_num": "155",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "156",
+          "mon_id": "SER",
+          "ndb_seq_num": "156",
+          "pdb_seq_num": "156",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "157",
+          "mon_id": "GLN",
+          "ndb_seq_num": "157",
+          "pdb_seq_num": "157",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        }
+      ],
+      "terminal_missing_count": 30,
+      "protein_atom_count": 2250
+    }
+  ],
+  "nonpolymer_instances": [
+    {
+      "name": "ZMA",
+      "label_asym": "B",
+      "atom_rows": 25
+    }
+  ],
+  "covalent_connections": [],
+  "unobserved_atoms": []
+}

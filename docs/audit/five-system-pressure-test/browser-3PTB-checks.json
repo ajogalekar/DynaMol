@@ -1,0 +1,76 @@
+{
+  "case": {
+    "name": "Trypsin protease",
+    "pdbId": "3PTB",
+    "jobId": "21bf66d8a51744da",
+    "datasetId": "b0d233348dcf4344",
+    "baseURL": "http://127.0.0.1:8792"
+  },
+  "startedAt": "2026-09-11T23:08:12.966Z",
+  "checks": [
+    "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+    "real native job Files archive downloaded",
+    "Open trajectory enters Explore and restores all three visible saved plots",
+    "movie advances and pauses; slider and endpoint buttons reach both ends",
+    "water toggles both ways and both zoom buttons change the molecular canvas",
+    "three real UI posthoc plots agree with the saved native tracking samples"
+  ],
+  "posthoc": [
+    {
+      "kind": "distance",
+      "atoms": [
+        799,
+        1630
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00c5"
+    },
+    {
+      "kind": "angle",
+      "atoms": [
+        1081,
+        1083,
+        1085
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00b0"
+    },
+    {
+      "kind": "dihedral",
+      "atoms": [
+        1081,
+        1083,
+        1085,
+        1092
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00b0"
+    }
+  ],
+  "browserErrors": [],
+  "consoleErrors": [],
+  "forbiddenRequests": [],
+  "nativeOutput": {
+    "engine": "openmm",
+    "jobName": "Pressure test \u00b7 protease \u00b7 100 ps",
+    "atoms": 27365,
+    "frames": 101,
+    "firstTimePs": 0,
+    "lastTimePs": 100,
+    "waterAtoms": 24117
+  },
+  "download": {
+    "filename": "DynaMol-21bf66d8a51744da.zip",
+    "bytes": 75656846
+  },
+  "playback": {
+    "pausedFrame": 5,
+    "first": 0,
+    "last": 100
+  },
+  "passed": true,
+  "finishedAt": "2026-09-11T23:08:24.440Z"
+}

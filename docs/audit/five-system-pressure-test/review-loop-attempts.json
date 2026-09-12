@@ -1,0 +1,641 @@
+{
+  "scope": "Four PDBFixer construction probes; all rejected for new-loop stereochemistry. No production dynamics.",
+  "attempts": [
+    {
+      "source_report": "/tmp/dynamol-loop-probe/report-20260915.json",
+      "source_report_sha256": "751ffa7f4976a5ed2c8cb2dc8f96faeefaaa1ebd2a482e2fcf61b754b5792c8f",
+      "report": {
+        "seed": 20260915,
+        "elapsed_seconds": 2.5046191249857657,
+        "violations": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0023909293491034115,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": -0.002303798992620656,
+            "template_signed_volume_nm3": 0.002706884199999999
+          },
+          {
+            "chain": "A",
+            "resid": "243",
+            "residue": "ARG",
+            "center": "CA",
+            "signed_volume_nm3": -0.0006700834451432913,
+            "template_signed_volume_nm3": 0.002475992999999999
+          }
+        ],
+        "loop_centers": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0023909293491034115,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": -0.002303798992620656,
+            "template_signed_volume_nm3": 0.002706884199999999
+          },
+          {
+            "chain": "A",
+            "resid": "242",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": 0.0022820311498196293,
+            "template_signed_volume_nm3": 0.0023918106000000014
+          },
+          {
+            "chain": "A",
+            "resid": "243",
+            "residue": "ARG",
+            "center": "CA",
+            "signed_volume_nm3": -0.0006700834451432913,
+            "template_signed_volume_nm3": 0.002475992999999999
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": 0.0016401564177488568,
+            "template_signed_volume_nm3": 0.0024989330000000014
+          },
+          {
+            "chain": "A",
+            "resid": "273",
+            "residue": "SER",
+            "center": "CA",
+            "signed_volume_nm3": 0.001328387773661653,
+            "template_signed_volume_nm3": 0.0024808679999999994
+          },
+          {
+            "chain": "A",
+            "resid": "274",
+            "residue": "LYS",
+            "center": "CA",
+            "signed_volume_nm3": 0.0002047432754062313,
+            "template_signed_volume_nm3": 0.0026400489999999993
+          }
+        ],
+        "backbone_gaps": [
+          {
+            "chain": "A",
+            "after": "243",
+            "before": "272",
+            "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+            "backbone_distance_angstrom": 1.3407350174619603,
+            "structural_break": false
+          }
+        ],
+        "max_observed_displacement_nm": 0.0,
+        "restored": [
+          {
+            "chain": "A",
+            "seq_id": 211,
+            "resid": "241",
+            "insertion_code": "",
+            "residue": "ILE",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 212,
+            "resid": "242",
+            "insertion_code": "",
+            "residue": "ASP",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 213,
+            "resid": "243",
+            "insertion_code": "",
+            "residue": "ARG",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 214,
+            "resid": "272",
+            "insertion_code": "",
+            "residue": "ALA",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 215,
+            "resid": "273",
+            "insertion_code": "",
+            "residue": "SER",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 216,
+            "resid": "274",
+            "insertion_code": "",
+            "residue": "LYS",
+            "label_asym_id": "A"
+          }
+        ],
+        "coordinates_sha256": "9f1b9fa58d324e057746fdb37d85ed7da35c59a99abea95cc401468e35aa7b39"
+      }
+    },
+    {
+      "source_report": "/tmp/dynamol-loop-probe/report-20260916.json",
+      "source_report_sha256": "c00708e01716e5f682877633f25140e7dc9d9d54829b5b604dd4fb3e9a4853c6",
+      "report": {
+        "seed": 20260916,
+        "elapsed_seconds": 2.456246250018012,
+        "violations": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0028782133772302034,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "242",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": 6.207454883294929e-05,
+            "template_signed_volume_nm3": 0.0023918106000000014
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": 3.306411114644113e-06,
+            "template_signed_volume_nm3": 0.0024989330000000014
+          },
+          {
+            "chain": "A",
+            "resid": "273",
+            "residue": "SER",
+            "center": "CA",
+            "signed_volume_nm3": -0.0017198120919077813,
+            "template_signed_volume_nm3": 0.0024808679999999994
+          }
+        ],
+        "loop_centers": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0028782133772302034,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": 0.0024524872245630896,
+            "template_signed_volume_nm3": 0.002706884199999999
+          },
+          {
+            "chain": "A",
+            "resid": "242",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": 6.207454883294929e-05,
+            "template_signed_volume_nm3": 0.0023918106000000014
+          },
+          {
+            "chain": "A",
+            "resid": "243",
+            "residue": "ARG",
+            "center": "CA",
+            "signed_volume_nm3": 0.00067258755552244,
+            "template_signed_volume_nm3": 0.002475992999999999
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": 3.306411114644113e-06,
+            "template_signed_volume_nm3": 0.0024989330000000014
+          },
+          {
+            "chain": "A",
+            "resid": "273",
+            "residue": "SER",
+            "center": "CA",
+            "signed_volume_nm3": -0.0017198120919077813,
+            "template_signed_volume_nm3": 0.0024808679999999994
+          },
+          {
+            "chain": "A",
+            "resid": "274",
+            "residue": "LYS",
+            "center": "CA",
+            "signed_volume_nm3": 0.0007122236349734635,
+            "template_signed_volume_nm3": 0.0026400489999999993
+          }
+        ],
+        "backbone_gaps": [
+          {
+            "chain": "A",
+            "after": "243",
+            "before": "272",
+            "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+            "backbone_distance_angstrom": 1.2856071235827506,
+            "structural_break": false
+          }
+        ],
+        "max_observed_displacement_nm": 0.0,
+        "restored": [
+          {
+            "chain": "A",
+            "seq_id": 211,
+            "resid": "241",
+            "insertion_code": "",
+            "residue": "ILE",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 212,
+            "resid": "242",
+            "insertion_code": "",
+            "residue": "ASP",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 213,
+            "resid": "243",
+            "insertion_code": "",
+            "residue": "ARG",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 214,
+            "resid": "272",
+            "insertion_code": "",
+            "residue": "ALA",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 215,
+            "resid": "273",
+            "insertion_code": "",
+            "residue": "SER",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 216,
+            "resid": "274",
+            "insertion_code": "",
+            "residue": "LYS",
+            "label_asym_id": "A"
+          }
+        ],
+        "coordinates_sha256": "fe308d2adc1b07861f8cc324da7f946f46bb5ebe3a9b60fe10c7955a8a6c8a30"
+      }
+    },
+    {
+      "source_report": "/tmp/dynamol-loop-probe/report-20260917.json",
+      "source_report_sha256": "99caa5c0aebd5509ac48413ac47e7c7cfb66d8d166c5b34aac21750c580d03e1",
+      "report": {
+        "seed": 20260917,
+        "elapsed_seconds": 2.2888480839901604,
+        "violations": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.002418035698321411,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": -0.0024884865024820133,
+            "template_signed_volume_nm3": 0.002706884199999999
+          }
+        ],
+        "loop_centers": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.002418035698321411,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": -0.0024884865024820133,
+            "template_signed_volume_nm3": 0.002706884199999999
+          },
+          {
+            "chain": "A",
+            "resid": "242",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": 0.00010752640906561127,
+            "template_signed_volume_nm3": 0.0023918106000000014
+          },
+          {
+            "chain": "A",
+            "resid": "243",
+            "residue": "ARG",
+            "center": "CA",
+            "signed_volume_nm3": 0.000829098957942446,
+            "template_signed_volume_nm3": 0.002475992999999999
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": 0.0030358806816288843,
+            "template_signed_volume_nm3": 0.0024989330000000014
+          },
+          {
+            "chain": "A",
+            "resid": "273",
+            "residue": "SER",
+            "center": "CA",
+            "signed_volume_nm3": 0.00038131934484287206,
+            "template_signed_volume_nm3": 0.0024808679999999994
+          },
+          {
+            "chain": "A",
+            "resid": "274",
+            "residue": "LYS",
+            "center": "CA",
+            "signed_volume_nm3": 0.0010779982971910148,
+            "template_signed_volume_nm3": 0.0026400489999999993
+          }
+        ],
+        "backbone_gaps": [
+          {
+            "chain": "A",
+            "after": "243",
+            "before": "272",
+            "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+            "backbone_distance_angstrom": 1.3677735385117953,
+            "structural_break": false
+          }
+        ],
+        "max_observed_displacement_nm": 0.0,
+        "restored": [
+          {
+            "chain": "A",
+            "seq_id": 211,
+            "resid": "241",
+            "insertion_code": "",
+            "residue": "ILE",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 212,
+            "resid": "242",
+            "insertion_code": "",
+            "residue": "ASP",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 213,
+            "resid": "243",
+            "insertion_code": "",
+            "residue": "ARG",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 214,
+            "resid": "272",
+            "insertion_code": "",
+            "residue": "ALA",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 215,
+            "resid": "273",
+            "insertion_code": "",
+            "residue": "SER",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 216,
+            "resid": "274",
+            "insertion_code": "",
+            "residue": "LYS",
+            "label_asym_id": "A"
+          }
+        ],
+        "coordinates_sha256": "0c656ecbdfd6b062623945ba114904f84fab360628f96862d58c83c3792eb2d9"
+      }
+    },
+    {
+      "source_report": "/tmp/dynamol-loop-probe/report-20260918.json",
+      "source_report_sha256": "7f103d7d3a9b0509de53ab911aa48a345cc9c27505bbce8e77d4da520e2ed22e",
+      "report": {
+        "seed": 20260918,
+        "elapsed_seconds": 2.3044344590161927,
+        "violations": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0022086997069244462,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "242",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": -0.002456376192910454,
+            "template_signed_volume_nm3": 0.0023918106000000014
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": 2.7892899145589506e-05,
+            "template_signed_volume_nm3": 0.0024989330000000014
+          },
+          {
+            "chain": "A",
+            "resid": "273",
+            "residue": "SER",
+            "center": "CA",
+            "signed_volume_nm3": -0.0005535354201771679,
+            "template_signed_volume_nm3": 0.0024808679999999994
+          },
+          {
+            "chain": "A",
+            "resid": "274",
+            "residue": "LYS",
+            "center": "CA",
+            "signed_volume_nm3": -0.0004869047873527466,
+            "template_signed_volume_nm3": 0.0026400489999999993
+          }
+        ],
+        "loop_centers": [
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CA",
+            "signed_volume_nm3": -0.0022086997069244462,
+            "template_signed_volume_nm3": 0.0024868904000000004
+          },
+          {
+            "chain": "A",
+            "resid": "241",
+            "residue": "ILE",
+            "center": "CB",
+            "signed_volume_nm3": 0.0022643167031154814,
+            "template_signed_volume_nm3": 0.002706884199999999
+          },
+          {
+            "chain": "A",
+            "resid": "242",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": -0.002456376192910454,
+            "template_signed_volume_nm3": 0.0023918106000000014
+          },
+          {
+            "chain": "A",
+            "resid": "243",
+            "residue": "ARG",
+            "center": "CA",
+            "signed_volume_nm3": 0.002683727434902457,
+            "template_signed_volume_nm3": 0.002475992999999999
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": 2.7892899145589506e-05,
+            "template_signed_volume_nm3": 0.0024989330000000014
+          },
+          {
+            "chain": "A",
+            "resid": "273",
+            "residue": "SER",
+            "center": "CA",
+            "signed_volume_nm3": -0.0005535354201771679,
+            "template_signed_volume_nm3": 0.0024808679999999994
+          },
+          {
+            "chain": "A",
+            "resid": "274",
+            "residue": "LYS",
+            "center": "CA",
+            "signed_volume_nm3": -0.0004869047873527466,
+            "template_signed_volume_nm3": 0.0026400489999999993
+          }
+        ],
+        "backbone_gaps": [
+          {
+            "chain": "A",
+            "after": "243",
+            "before": "272",
+            "message": "Residue numbering skips values. This alone does not establish missing sequence or missing structure.",
+            "backbone_distance_angstrom": 1.414057846813678,
+            "structural_break": false
+          }
+        ],
+        "max_observed_displacement_nm": 0.0,
+        "restored": [
+          {
+            "chain": "A",
+            "seq_id": 211,
+            "resid": "241",
+            "insertion_code": "",
+            "residue": "ILE",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 212,
+            "resid": "242",
+            "insertion_code": "",
+            "residue": "ASP",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 213,
+            "resid": "243",
+            "insertion_code": "",
+            "residue": "ARG",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 214,
+            "resid": "272",
+            "insertion_code": "",
+            "residue": "ALA",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 215,
+            "resid": "273",
+            "insertion_code": "",
+            "residue": "SER",
+            "label_asym_id": "A"
+          },
+          {
+            "chain": "A",
+            "seq_id": 216,
+            "resid": "274",
+            "insertion_code": "",
+            "residue": "LYS",
+            "label_asym_id": "A"
+          }
+        ],
+        "coordinates_sha256": "f1c81e0480ea8bc5f48ae0cad644cae4bf5d25413c57f7359e0a4860073285e6"
+      }
+    }
+  ],
+  "total_native_seconds": 9.55414791801013,
+  "all_observed_displacements_zero": true,
+  "all_backbones_closed": true,
+  "all_attempts_failed_chirality": true
+}

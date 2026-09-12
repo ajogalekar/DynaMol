@@ -1,0 +1,9 @@
+{
+  "job_id": "0b89d27dadc34148",
+  "runtime_recorded_worker_sha256": "bede15620ac7f4924770824357780d953fa8b820ffb9cde9baa51002aacef688",
+  "launch_monitor_worker_sha256": "bede15620ac7f4924770824357780d953fa8b820ffb9cde9baa51002aacef688",
+  "runtime_matches_launch": true,
+  "current_worker_sha256_when_audited": "fa527f785fc2eed185392649e1fc595343c6861d0546c13e84f77f261aab5d2a",
+  "current_matches_run": false,
+  "interpretation": "This trajectory validates the worker recorded by its own provenance and launch monitor. Later worker/history/source-CIF changes are not claimed to have executed in this run."
+}

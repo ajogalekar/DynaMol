@@ -7,7 +7,7 @@ import numpy as np
 from fastapi import APIRouter
 from pydantic import BaseModel, Field
 
-from . import storage
+from . import config, storage
 
 router = APIRouter(prefix="/api")
 
@@ -15,7 +15,7 @@ router = APIRouter(prefix="/api")
 class StructuralAnalysisRequest(BaseModel):
     kind: Literal["rmsd", "rmsf"] = "rmsd"
     selection: Literal["ca", "backbone", "protein-heavy", "solute-heavy", "custom"] = "ca"
-    atoms: list[int] = Field(default_factory=list, max_length=100000)
+    atoms: list[int] = Field(default_factory=list, max_length=config.MAX_ATOMS)
     alignment: Literal["ca", "backbone", "selection", "none"] = "ca"
     reference_frame: int = Field(default=0, ge=0)
     start_frame: int = Field(default=0, ge=0)

@@ -1,0 +1,418 @@
+{
+  "id": "1SUG",
+  "source": "https://files.rcsb.org/download/1SUG.cif",
+  "sha256": "6ddbfa83d228c383e6481bc5e7a7a9fce53ab66fd10707a36dd283e988e9b1b2",
+  "resolution": [
+    "1.95"
+  ],
+  "entity": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "type": [
+      "polymer",
+      "non-polymer",
+      "non-polymer",
+      "water"
+    ],
+    "src_method": [
+      "man",
+      "syn",
+      "syn",
+      "nat"
+    ],
+    "pdbx_description": [
+      "Protein-tyrosine phosphatase, non-receptor type 1",
+      "2-AMINO-2-HYDROXYMETHYL-PROPANE-1,3-DIOL",
+      "GLYCEROL",
+      "water"
+    ],
+    "formula_weight": [
+      "37365.637",
+      "122.143",
+      "92.094",
+      "18.015"
+    ],
+    "pdbx_number_of_molecules": [
+      "1",
+      "1",
+      "4",
+      "251"
+    ],
+    "pdbx_ec": [
+      "3.1.3.48",
+      null,
+      null,
+      null
+    ],
+    "pdbx_mutation": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_fragment": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "details": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "polymer": {
+    "entity_id": [
+      "1"
+    ],
+    "type": [
+      "polypeptide(L)"
+    ],
+    "nstd_linkage": [
+      "no"
+    ],
+    "nstd_monomer": [
+      "no"
+    ],
+    "pdbx_seq_one_letter_code": [
+      "MEMEKEFEQIDKSGSWAAIYQDIRHEASDFPCRVAKLPKNKNRNRYRDVSPFDHSRIKLHQEDNDYINASLIKMEEAQRS\nYILTQGPLPNTCGHFWEMVWEQKSRGVVMLNRVMEKGSLKCAQYWPQKEEKEMIFEDTNLKLTLISEDIKSYYTVRQLEL\nENLTTQETREILHFHYTTWPDFGVPESPASFLNFLFKVRESGSLSPEHGPVVVHCSAGIGRSGTFCLADTCLLLMDKRKD\nPSSVDIKKVLLEMRKFRMGLIQTADQLRFSYLAVIEGAKFIMGDSSVQDQWKELSHEDLEPPPEHIPPPPRPPKRILEPH\nN"
+    ],
+    "pdbx_seq_one_letter_code_can": [
+      "MEMEKEFEQIDKSGSWAAIYQDIRHEASDFPCRVAKLPKNKNRNRYRDVSPFDHSRIKLHQEDNDYINASLIKMEEAQRS\nYILTQGPLPNTCGHFWEMVWEQKSRGVVMLNRVMEKGSLKCAQYWPQKEEKEMIFEDTNLKLTLISEDIKSYYTVRQLEL\nENLTTQETREILHFHYTTWPDFGVPESPASFLNFLFKVRESGSLSPEHGPVVVHCSAGIGRSGTFCLADTCLLLMDKRKD\nPSSVDIKKVLLEMRKFRMGLIQTADQLRFSYLAVIEGAKFIMGDSSVQDQWKELSHEDLEPPPEHIPPPPRPPKRILEPH\nN"
+    ],
+    "pdbx_strand_id": [
+      "A"
+    ],
+    "pdbx_target_identifier": [
+      null
+    ]
+  },
+  "unobserved": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "PDB_model_num": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "polymer_flag": [
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y"
+    ],
+    "occupancy_flag": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "auth_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "auth_comp_id": [
+      "MET",
+      "GLU",
+      "PRO",
+      "PRO",
+      "PRO",
+      "GLU",
+      "HIS",
+      "ILE",
+      "PRO",
+      "PRO",
+      "PRO",
+      "PRO",
+      "ARG",
+      "PRO",
+      "PRO",
+      "LYS",
+      "ARG",
+      "ILE",
+      "LEU",
+      "GLU",
+      "PRO",
+      "HIS",
+      "ASN"
+    ],
+    "auth_seq_id": [
+      "1",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320",
+      "321"
+    ],
+    "PDB_ins_code": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "label_comp_id": [
+      "MET",
+      "GLU",
+      "PRO",
+      "PRO",
+      "PRO",
+      "GLU",
+      "HIS",
+      "ILE",
+      "PRO",
+      "PRO",
+      "PRO",
+      "PRO",
+      "ARG",
+      "PRO",
+      "PRO",
+      "LYS",
+      "ARG",
+      "ILE",
+      "LEU",
+      "GLU",
+      "PRO",
+      "HIS",
+      "ASN"
+    ],
+    "label_seq_id": [
+      "1",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320",
+      "321"
+    ]
+  },
+  "assembly": {
+    "id": [
+      "1"
+    ],
+    "details": [
+      "author_defined_assembly"
+    ],
+    "method_details": [
+      null
+    ],
+    "oligomeric_details": [
+      "monomeric"
+    ],
+    "oligomeric_count": [
+      "1"
+    ]
+  },
+  "assembly_gen": {
+    "assembly_id": [
+      "1"
+    ],
+    "oper_expression": [
+      "1"
+    ],
+    "asym_id_list": [
+      "A,B,C,D,E,F,G"
+    ]
+  },
+  "nonpoly": {
+    "entity_id": [
+      "2",
+      "3",
+      "4"
+    ],
+    "name": [
+      "2-AMINO-2-HYDROXYMETHYL-PROPANE-1,3-DIOL",
+      "GLYCEROL",
+      "water"
+    ],
+    "comp_id": [
+      "TRS",
+      "GOL",
+      "HOH"
+    ]
+  }
+}

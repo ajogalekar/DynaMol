@@ -1,0 +1,198 @@
+{
+  "scope": "100-ps explicit-water exploratory NVT software pressure tests; no claim of equilibration, convergence, biological stability, or pose accuracy.",
+  "engine": "GROMACS 2025.4-conda_forge",
+  "data_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs",
+  "cpu_threads": 4,
+  "forcefield": "Amber99SB-ILDN / TIP3P",
+  "source_exclusions": {
+    "1XQZ": "64 crystallographic waters; retained all 277 observed protein residues and 2253 protein heavy atoms.",
+    "1SUG": "251 crystallographic waters, four GOL and one TRS crystallization additives; retained all 298 observed protein residues and 2434 protein heavy atoms."
+  },
+  "cases": [
+    {
+      "pdb_id": "1XQZ",
+      "job_id": "1f0e521a1f4d4f85",
+      "input_dataset_id": "1c22ae03cd2d439e",
+      "output_dataset_id": "7909ef07cc224ad7",
+      "status": "completed",
+      "production_ps": 100,
+      "production_steps": 50000,
+      "initial_relaxation_steps": 5000,
+      "timestep_fs": 2,
+      "saved_frames": 101,
+      "seed": 20260912,
+      "atoms": 54537,
+      "elapsed_seconds": 516.88,
+      "job_bytes": 60003834,
+      "checks": {
+        "app": {
+          "passed": true,
+          "count": 15
+        },
+        "native": {
+          "passed": true,
+          "count": 8
+        },
+        "independent_geometry": {
+          "passed": true,
+          "count": 3
+        }
+      },
+      "temperature_k": {
+        "passed": true,
+        "target_k": 300.0,
+        "mean_k": 300.3691735544555,
+        "min_k": 297.150787,
+        "max_k": 304.270935,
+        "note": "Broad numerical alarm only; no claim of equilibration or expected distribution."
+      },
+      "source_heavy_atom_continuity": {
+        "passed": true,
+        "input_heavy_atoms": 2253,
+        "mapped_heavy_atoms": 2253,
+        "max_coordinate_component_difference_nm": 0.0005002021789550781,
+        "tolerance_nm": 0.0006,
+        "strict_name_mapping_passed": false,
+        "explicit_terminal_oxygen_renamings": [
+          {
+            "source_index": 2250,
+            "residue": "SER",
+            "resid": 308,
+            "source_atom": "O",
+            "native_atom": "OXT",
+            "native_index": 4452,
+            "reason": "Native pdb2gmx charged-terminal construction retained the observed carbonyl oxygen at OXT and labeled the added terminal oxygen O. Same terminal carbon connectivity verified."
+          }
+        ],
+        "input_sha256": "80c52a11a2d81fbcc4f00dea57b326faeaa88560dc526bb418c9122ba6cdd03f",
+        "processed_sha256": "1aa9902a9019fc6a1c56443b39fb6953a0a1737eab0beb306b98b8de3cb9d151"
+      },
+      "evidence": [
+        {
+          "path": "docs/audit/five-system-pressure-test/gromacs-1XQZ-validation.json",
+          "sha256": "0de3565fb51b50bb19640d6fc8e1d908cf7de193bc0a6d69558e5e1dacd44591"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1XQZ-native-checks.json",
+          "sha256": "c15163e084d7fdbf8374db09f3f3dcd62514a473740edce07b3009aebbfc565f"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1XQZ-numpy-geometry.json",
+          "sha256": "20b30e43a8001e45f039a661061e1e1e4dcd13f0aa43b7183c2602e14183c366"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1XQZ-preflight.json",
+          "sha256": "57cf869b9b424a5de713faa16ecbfad9683e26c2bf21b30544c77c445d9188a1"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1XQZ-launch.json",
+          "sha256": "3fb21e2add530c28421fedf1d123b70aaa3fcd45dc9a7a49efba5250d14f1e63"
+        }
+      ],
+      "minimization": {
+        "integrator": "steep",
+        "maximum_steps": 2000,
+        "actual_steps_to_fmax_below_1000": 908,
+        "force_tolerance_kj_mol_nm": 1000.0,
+        "native_tpr_sha256": "2fa9393a831e9400108e62f0dfb80ceea0a77fc39fea15a20385448220c92f44",
+        "dump_evidence": "data/integration-checks/five-system-gromacs/1XQZ-minimize-tpr-dump.txt",
+        "note": "This minimization cap is distinct from the 5000-step, 10-ps initial relaxation."
+      }
+    },
+    {
+      "pdb_id": "1SUG",
+      "job_id": "4ee199dd7b4e4c1b",
+      "input_dataset_id": "eb4e9d2461e2432d",
+      "output_dataset_id": "e2dad7ca2c7f46a6",
+      "status": "completed",
+      "production_ps": 100,
+      "production_steps": 50000,
+      "initial_relaxation_steps": 5000,
+      "timestep_fs": 2,
+      "saved_frames": 101,
+      "seed": 20260913,
+      "atoms": 65556,
+      "elapsed_seconds": 943.65,
+      "job_bytes": 71001407,
+      "checks": {
+        "app": {
+          "passed": true,
+          "count": 15
+        },
+        "native": {
+          "passed": true,
+          "count": 8
+        },
+        "independent_geometry": {
+          "passed": true,
+          "count": 3
+        }
+      },
+      "temperature_k": {
+        "passed": true,
+        "target_k": 300.0,
+        "mean_k": 299.9797592673267,
+        "min_k": 297.492401,
+        "max_k": 302.707581,
+        "note": "Broad numerical alarm only; no claim of equilibration or expected distribution."
+      },
+      "source_heavy_atom_continuity": {
+        "passed": true,
+        "input_heavy_atoms": 2434,
+        "mapped_heavy_atoms": 2434,
+        "max_coordinate_component_difference_nm": 0.0005002021789550781,
+        "tolerance_nm": 0.0006,
+        "strict_name_mapping_passed": false,
+        "explicit_terminal_oxygen_renamings": [
+          {
+            "source_index": 2429,
+            "residue": "LEU",
+            "resid": 299,
+            "source_atom": "O",
+            "native_atom": "OXT",
+            "native_index": 4829,
+            "reason": "Native pdb2gmx charged-terminal construction retained the observed carbonyl oxygen at OXT and labeled the added terminal oxygen O. Same terminal carbon connectivity verified."
+          }
+        ],
+        "input_sha256": "94b9d8baa7b0cd1f6745f8c04280221343394176d778c89260c57ada821c9588",
+        "processed_sha256": "ff51bf9b941ee4e5f652d392763ec52713c807530fcf5f3751a82914d9fdabac"
+      },
+      "evidence": [
+        {
+          "path": "docs/audit/five-system-pressure-test/gromacs-1SUG-validation.json",
+          "sha256": "7bb95c7606942040f4b1c221a6f442aa85750882f251cf53f54c10399367014b"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1SUG-native-checks.json",
+          "sha256": "424ecf8271b71937a04b99ea458ea388b41b11579a7d3e888b817eba41b788e0"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1SUG-numpy-geometry.json",
+          "sha256": "bc36f34fabec71143f0a4e7f51573e8ef4a6aaf58284c7c0461a0ee1ca6a94e1"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1SUG-preflight.json",
+          "sha256": "548f3cd2d55b00456c46494b90d788b3a59e105a0685a5064ee35366a3fea236"
+        },
+        {
+          "path": "data/integration-checks/five-system-gromacs/1SUG-launch.json",
+          "sha256": "dfbbda6a1ab219a4d1fa81adefef5910ab89a186bc60552289182a684a6a9283"
+        }
+      ],
+      "minimization": {
+        "integrator": "steep",
+        "maximum_steps": 2000,
+        "actual_steps_to_fmax_below_1000": 1143,
+        "force_tolerance_kj_mol_nm": 1000.0,
+        "native_tpr_sha256": "98936640c79e6d79145a5f472dec1e81174b44e424ad4807eae5437d69af4110",
+        "dump_evidence": "data/integration-checks/five-system-gromacs/1SUG-minimize-tpr-dump.txt",
+        "note": "This minimization cap is distinct from the 5000-step, 10-ps initial relaxation."
+      }
+    }
+  ],
+  "passed": true,
+  "notes": [
+    "Native charged-terminal construction renamed the observed terminal O to OXT and assigned O to the newly added oxygen. Coordinate and connectivity evidence verifies original heavy atoms were preserved; exact atom names were not all unchanged.",
+    "Neither run required a source-code change or a rerun."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "prepared_dataset_id": "421948174fed4441",
+  "solvated_dataset_id": "795381c62f624134",
+  "checks": {
+    "prepared_atom_identity_prefix": {
+      "passed": true,
+      "atoms": 4852
+    },
+    "prepared_coordinate_prefix": {
+      "passed": true,
+      "max_component_difference_nm": 0.0
+    },
+    "bounded_native_allocation": {
+      "passed": true,
+      "actual_atoms": 87479,
+      "bound": 95161,
+      "cap": 100000
+    },
+    "unchanged_protocol": {
+      "passed": true,
+      "seed": 20260915,
+      "padding_nm": 1.0,
+      "box_vectors_nm": [
+        [
+          9.693596255865577,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          9.693596255865577,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.693596255865577
+        ]
+      ]
+    },
+    "required_minimization_retained": {
+      "passed": true
+    }
+  },
+  "passed": true,
+  "actual_monatomic_ion_counts": {
+    "NA": 2,
+    "CL": 16
+  },
+  "retained_source_sodium_ions": 2,
+  "added_counterions": 16,
+  "metadata_note": "solvation.neutralizing_ions counts all final NA/CL residues, including the two source sodium ions; actual newly added counterions are reported separately here.",
+  "evidence": [
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/prepared.pdb",
+      "sha256": "cfd1fad8d52f07bf4cd2d1c9714b19db1e999ca9cfd23a167ea9167f9411dcbb"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/795381c62f624134/prepared.pdb",
+      "sha256": "69166206090d19004d149cad85275dcf74804605a488a57b78c08a73b8bc6aa3"
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/795381c62f624134/metadata.json",
+      "sha256": "fcd6b7b4e472254619cdc3214d271dd84f20f12727253a6fd1c7215901ace954"
+    }
+  ]
+}

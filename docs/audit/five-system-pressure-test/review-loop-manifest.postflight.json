@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T23:12:31.778776+00:00",
+  "purpose": "Bounded software diagnosis of 4BVN missing-loop preparation rejected for inverted ILE241 CA. At most four deterministic native PDBFixer attempts on the six already identified missing residues; no production MD, new predictions, source mutation, or native loop-pose accuracy claim. Existing chirality, backbone continuity, observed-coordinate and force-field quality gates remain mandatory.",
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not professional certification or Pat Walters endorsement.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "outputs_and_exclusions_recorded": true,
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "mdtraj": "1.11.1.post2",
+      "pdbfixer": "1.12.0",
+      "numpy": "2.4.6"
+    },
+    "gromacs_version": "2025.4 (workspace runtime; per-job native version retained)",
+    "inputs": [
+      {
+        "pdb_id": "1XQZ",
+        "source_url": "https://files.rcsb.org/download/1XQZ.cif",
+        "source_sha256": "ef05e790a09e91d0382bbb79e3d0942daba531f2a954d64ddc01cb59d296fc98",
+        "resolution_angstrom": 2.1
+      },
+      {
+        "pdb_id": "1SUG",
+        "source_url": "https://files.rcsb.org/download/1SUG.cif",
+        "source_sha256": "6ddbfa83d228c383e6481bc5e7a7a9fce53ab66fd10707a36dd283e988e9b1b2",
+        "resolution_angstrom": 1.95
+      },
+      {
+        "pdb_id": "3PTB",
+        "source_url": "https://files.rcsb.org/download/3PTB.cif",
+        "source_sha256": "d2744dbacfb97ec9b4ff7f5cf4b204418bccf92e46b63130bfebb3916260232f",
+        "resolution_angstrom": 1.7
+      },
+      {
+        "pdb_id": "4BVN",
+        "source_url": "https://files.rcsb.org/download/4BVN.cif",
+        "source_sha256": "13a39e5046074a4f38e7fd18c029c14a934cb5fe201733f731ef363d3c890438",
+        "resolution_angstrom": 2.1
+      },
+      {
+        "pdb_id": "1K4C",
+        "source_url": "https://files.rcsb.org/download/1K4C.cif",
+        "source_sha256": "da8a06fa1d2a514b106fbbf43ec63c88450027a427ba751b2a61da0f02a38763",
+        "resolution_angstrom": 2.0
+      }
+    ],
+    "validated_soluble_inputs": {
+      "1XQZ": {
+        "path": "data/integration-checks/five-system-gromacs/1XQZ-preflight.json",
+        "sha256": "57cf869b9b424a5de713faa16ecbfad9683e26c2bf21b30544c77c445d9188a1",
+        "dataset_id": "1c22ae03cd2d439e"
+      },
+      "1SUG": {
+        "path": "data/integration-checks/five-system-gromacs/1SUG-preflight.json",
+        "sha256": "548f3cd2d55b00456c46494b90d788b3a59e105a0685a5064ee35366a3fea236",
+        "dataset_id": "eb4e9d2461e2432d"
+      }
+    },
+    "planned_seeds": [
+      20260915,
+      20260916,
+      20260917,
+      20260918
+    ],
+    "budget": "At most four PDBFixer loop build attempts total, four CPU threads, five minutes total. No production MD trajectory. PDBFixer addMissingAtoms may internally perform initial minimization and up to ten 200-step, 5-fs Langevin clash-relief segments followed by minimization; this local construction relaxation is within the preparation probe budget. Explicit seeds and settings recorded per attempt; original source and failed job remain unchanged.",
+    "corpus_manifest_sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d"
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Official deposited coordinate/sequence/assembly records are preserved. Derivatives retain exact observed heavy coordinates and document chain, assembly, solvent/additive removal and terminal omissions. GROMACS uses complete unprepared standard protein inputs; no missing internal residues or ligand deletion to force compatibility. OpenMM retains primary ligands and validated ions. Modeled protein/ligand atoms require explicit recorded choice and uncertainty. GPCR uses the complete observed transmembrane construct rather than an unlabeled soluble fragment. Channel requires tetramer assembly and explicit nonoverlapping ion-occupancy interpretation; symmetry-axis ions cannot be multiplied silently."
+  },
+  "validation": {
+    "output_checks": [
+      "Strict original signed-volume guard at all standard/modified centers; reject planar/inverted centers",
+      "Observed atom identity and coordinates unchanged; only originally missing positions may be rebuilt",
+      "Finite coordinates, bonded backbone lengths and no structural gaps",
+      "Attempts and any selection rule recorded; first valid attempt, not claim of best native loop",
+      "Complete actual prep still required before MD; no guard bypass"
+    ],
+    "ready_for_bounded_production": [],
+    "scope": "Only bounded preparation diagnostics cleared; no final output is yet validated.",
+    "review_of_installed_pdbfixer": "1.12 addMissingAtoms random seed is used by optional clash-relief Langevin relaxation, not initial deterministic minimization; observed atoms are massless and only new-atom minimized positions copied back. Changing seeds may reproduce identical failures when optional relaxation is not entered.",
+    "output_range_checked": true,
+    "outputs": "docs/audit/five-system-pressure-test/review-loop-final-helper.json"
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No engine ranking or physical equivalence claim; OpenMM and GROMACS presets use different force fields. No holdout scientific dataset or uncertainty estimate is asserted.",
+    "uncertainty_intervals_reported": false,
+    "practical_significance_discussed": true,
+    "claim_limit": "No scientific accuracy estimates, native loop inference or sampling uncertainty is available. Software controls pass; loop conformation remains uncertain."
+  },
+  "amendment": {
+    "parent_manifest": "docs/audit/five-system-pressure-test/review-manifest.preflight.json",
+    "parent_sha256": "8512f8af6f5b3c15f63a20b6191e9acecab3bca6077d388423b1bb579b02708d",
+    "failed_job": "7438dad9ca5d4476",
+    "failure": "Repaired A:241 ILE CA stereochemistry rejected before dynamics",
+    "authorization": "Parent task: bounded investigation, at most 4 attempts / 4 CPU threads / 5 minutes; preserve original source, strict chirality, and every failed attempt. Stop and report blocker if none passes.",
+    "scope": "Independent review of retries or proper new-sidechain placement on modeled atoms; software geometry validation only."
+  }
+}

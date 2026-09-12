@@ -1,0 +1,119 @@
+{
+  "job_id": "e1205ca152194276",
+  "scope": "Early saved-frame check after minimization and initial relaxation; full trajectory check follows completion. No pose or packing validation.",
+  "checks": [
+    {
+      "time_ps": 0.0,
+      "resid": "241",
+      "residue": "ILE",
+      "center": "CA",
+      "volume_nm3": 0.002417980280087227,
+      "passed": true
+    },
+    {
+      "time_ps": 0.0,
+      "resid": "241",
+      "residue": "ILE",
+      "center": "CB",
+      "volume_nm3": 0.00231465709045641,
+      "passed": true
+    },
+    {
+      "time_ps": 0.0,
+      "resid": "242",
+      "residue": "ASP",
+      "center": "CA",
+      "volume_nm3": -0.0022570960327969666,
+      "passed": false
+    },
+    {
+      "time_ps": 0.0,
+      "resid": "243",
+      "residue": "ARG",
+      "center": "CA",
+      "volume_nm3": 0.002210610663591143,
+      "passed": true
+    },
+    {
+      "time_ps": 0.0,
+      "resid": "272",
+      "residue": "ALA",
+      "center": "CA",
+      "volume_nm3": -0.0022083275026547277,
+      "passed": false
+    },
+    {
+      "time_ps": 0.0,
+      "resid": "273",
+      "residue": "SER",
+      "center": "CA",
+      "volume_nm3": 0.001850032024437784,
+      "passed": true
+    },
+    {
+      "time_ps": 0.0,
+      "resid": "274",
+      "residue": "LYS",
+      "center": "CA",
+      "volume_nm3": 0.0026321039895218904,
+      "passed": true
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "241",
+      "residue": "ILE",
+      "center": "CA",
+      "volume_nm3": 0.0026069738660570137,
+      "passed": true
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "241",
+      "residue": "ILE",
+      "center": "CB",
+      "volume_nm3": 0.0024211324767205605,
+      "passed": true
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "242",
+      "residue": "ASP",
+      "center": "CA",
+      "volume_nm3": -0.0020281593689964886,
+      "passed": false
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "243",
+      "residue": "ARG",
+      "center": "CA",
+      "volume_nm3": 0.0021296904265802165,
+      "passed": true
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "272",
+      "residue": "ALA",
+      "center": "CA",
+      "volume_nm3": -0.0026973799721959806,
+      "passed": false
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "273",
+      "residue": "SER",
+      "center": "CA",
+      "volume_nm3": 0.001998173014772397,
+      "passed": true
+    },
+    {
+      "time_ps": 1.0,
+      "resid": "274",
+      "residue": "LYS",
+      "center": "CA",
+      "volume_nm3": 0.002553553352363538,
+      "passed": true
+    }
+  ],
+  "passed": false
+}

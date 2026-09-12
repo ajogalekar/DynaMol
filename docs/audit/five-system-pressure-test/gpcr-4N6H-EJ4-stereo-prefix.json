@@ -1,0 +1,159 @@
+{
+  "pdb_id": "4N6H",
+  "component_id": "EJ4",
+  "ligand_key": "T:1219::EJ4",
+  "job_id": "0b89d27dadc34148",
+  "mode": "saved prefix",
+  "frames": 9,
+  "first_time_ps": 0.0,
+  "last_time_ps": 8.0,
+  "checks": [
+    {
+      "name": "CAE",
+      "expected_CIP": "R",
+      "prepared_reference_CIP": "R",
+      "center_index": 2,
+      "neighbors": [
+        3,
+        16,
+        24,
+        31
+      ],
+      "neighbor_prepared_names": [
+        "CAF",
+        "CAV",
+        "OAD",
+        "H1"
+      ],
+      "reference_volume_nm3": -0.008606621309999988,
+      "frames": 9,
+      "min_abs_volume_nm3": 0.007790799458326215,
+      "invalid_frames": [],
+      "passed": true
+    },
+    {
+      "name": "CAP",
+      "expected_CIP": "S",
+      "prepared_reference_CIP": "S",
+      "center_index": 12,
+      "neighbors": [
+        11,
+        13,
+        16,
+        25
+      ],
+      "neighbor_prepared_names": [
+        "CAO",
+        "CAR",
+        "CAV",
+        "OAQ"
+      ],
+      "reference_volume_nm3": -0.01115775604900001,
+      "frames": 9,
+      "min_abs_volume_nm3": 0.010957251150514626,
+      "invalid_frames": [],
+      "passed": true
+    },
+    {
+      "name": "CAR",
+      "expected_CIP": "R",
+      "prepared_reference_CIP": "R",
+      "center_index": 13,
+      "neighbors": [
+        12,
+        22,
+        26,
+        38
+      ],
+      "neighbor_prepared_names": [
+        "CAP",
+        "NAS",
+        "CBA",
+        "H8"
+      ],
+      "reference_volume_nm3": 0.008215545714000082,
+      "frames": 9,
+      "min_abs_volume_nm3": 0.008877341988329358,
+      "invalid_frames": [],
+      "passed": true
+    },
+    {
+      "name": "CAV",
+      "expected_CIP": "S",
+      "prepared_reference_CIP": "S",
+      "center_index": 16,
+      "neighbors": [
+        2,
+        12,
+        15,
+        17
+      ],
+      "neighbor_prepared_names": [
+        "CAE",
+        "CAP",
+        "CAU",
+        "CAW"
+      ],
+      "reference_volume_nm3": 0.01081946055300001,
+      "frames": 9,
+      "min_abs_volume_nm3": 0.010667145803693722,
+      "invalid_frames": [],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "method": "The recorded heavy/native/prepared atom-name maps identify all58 ligand atoms, including attached hydrogens. RDKit confirms the prepared reference coordinates reproduce the four CCD-validated carbon CIP descriptors. Independent NumPy oriented volumes of the four bonded-neighbor tetrahedra, with fixed neighbor order and local minimum-image vectors, then test handedness on each saved native frame against that prepared reference. No new ligand geometry, parameters, or dynamics are generated.",
+  "limits": [
+    "Only the four specified carbon tetrahedral centers are checked. Unspecified nitrogen stereochemistry, inversion barriers, E/Z states, atropisomerism, binding pose and conformational quality are not inferred.",
+    "A minimum absolute tetrahedral volume of0.0001nm^3 screens near-planarity; this is a geometric quality alarm, not an energy or convergence test."
+  ],
+  "reference": {
+    "provider": "wwPDB CCD via RCSB",
+    "component_id": "EJ4",
+    "url": "https://files.rcsb.org/ligands/download/EJ4.cif",
+    "sha256": "c4c44ea90fc5c0f5783972f790da451775000123987294961a2cfa14bee0b4e1",
+    "retrieved_at": "2026-09-11T23:59:19.042610+00:00",
+    "retrieval_note": null
+  },
+  "input_sdf_sha256": "48d07afcb71e86516503733c3a57aac191b3feadb332d919d976838d9487541b",
+  "prepared_pdb_sha256": "fc928164120f00feacdacbae2dfb5bd768f492242cc2528dd75920124210b31a",
+  "atom_identity_sha256": "062149eec1372829b5c6f1e5dd8a6d2a2af876a63ef4e6060ed1fdd44a2a69a5",
+  "native_frames": [
+    {
+      "file": "frame-000000000.npz",
+      "sha256": "e46af499ae99ba1fa9864acdda2429348842f363a6437c20369730966478dd9b"
+    },
+    {
+      "file": "frame-000000500.npz",
+      "sha256": "e43d01df5eabf7fa317f4bed91a604839f8f14e7f56a059c19496c20a2639f59"
+    },
+    {
+      "file": "frame-000001000.npz",
+      "sha256": "3bdc1d051a75b5bdaab0dbfb1a10378f48452911181fb2e7424344759c242333"
+    },
+    {
+      "file": "frame-000001500.npz",
+      "sha256": "5470458fd452609b6c45f7357c08ec8ff5263c5002c153d70070de3a679918b2"
+    },
+    {
+      "file": "frame-000002000.npz",
+      "sha256": "951b56445152f9db79e09544829287a45a0e432641b20f8dedd3b8b0c5993416"
+    },
+    {
+      "file": "frame-000002500.npz",
+      "sha256": "760a4672a129720c830db8d7ee9919c57dabe2e0f005cfde562ab1ee6be86658"
+    },
+    {
+      "file": "frame-000003000.npz",
+      "sha256": "c16d568f8a8e6bf609f0cf3dbc42b312e6bcea77f33e1c1b1e76fd8032e2ddd1"
+    },
+    {
+      "file": "frame-000003500.npz",
+      "sha256": "940b520bbbac457f14e6e1152177aae97640cb184c4a49e54a9d0447191457d2"
+    },
+    {
+      "file": "frame-000004000.npz",
+      "sha256": "b47b32638e2f59d788d466cbeabae56646545b73060540e67cafbe93f3605cf5"
+    }
+  ]
+}

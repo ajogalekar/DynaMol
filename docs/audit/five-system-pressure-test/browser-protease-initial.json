@@ -1,0 +1,135 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/ashujo/Documents/Science/DynaMol/frontend/node_modules/.bin/playwright",
+      "test",
+      "tests/pressure-test-trajectories.spec.ts",
+      "--grep",
+      "3PTB",
+      "--reporter=list,json",
+      "--output=test-results/pressure-test-protease"
+    ],
+    "configFile": "/Users/ashujo/Documents/Science/DynaMol/frontend/playwright.config.ts",
+    "rootDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/test-results/pressure-test-protease",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pressure-test-trajectories.spec.ts",
+      "file": "pressure-test-trajectories.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "3PTB: Trypsin protease",
+          "file": "pressure-test-trajectories.spec.ts",
+          "line": 37,
+          "column": 33,
+          "specs": [
+            {
+              "title": "completed native trajectory opens, plots, plays, scrubs and downloads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-11T23:08:12.063Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trajectory-audit",
+                          "contentType": "application/json",
+                          "body": "ewogICJjYXNlIjogewogICAgIm5hbWUiOiAiVHJ5cHNpbiBwcm90ZWFzZSIsCiAgICAicGRiSWQiOiAiM1BUQiIsCiAgICAiam9iSWQiOiAiMjFiZjY2ZDhhNTE3NDRkYSIsCiAgICAiZGF0YXNldElkIjogImIwZDIzMzM0OGRjZjQzNDQiLAogICAgImJhc2VVUkwiOiAiaHR0cDovLzEyNy4wLjAuMTo4NzkyIgogIH0sCiAgInN0YXJ0ZWRBdCI6ICIyMDI2LTA5LTExVDIzOjA4OjEyLjk2NloiLAogICJjaGVja3MiOiBbCiAgICAiY29tcGxldGVkIG91dHB1dDogMTAxIGZpbml0ZSBzYXZlZCBzYW1wbGVzLCAw4oCTMTAwIHBzIGFuZCB0aHJlZSBtYXBwZWQgbWVhc3VyZW1lbnRzIiwKICAgICJyZWFsIG5hdGl2ZSBqb2IgRmlsZXMgYXJjaGl2ZSBkb3dubG9hZGVkIiwKICAgICJPcGVuIHRyYWplY3RvcnkgZW50ZXJzIEV4cGxvcmUgYW5kIHJlc3RvcmVzIGFsbCB0aHJlZSB2aXNpYmxlIHNhdmVkIHBsb3RzIiwKICAgICJtb3ZpZSBhZHZhbmNlcyBhbmQgcGF1c2VzOyBzbGlkZXIgYW5kIGVuZHBvaW50IGJ1dHRvbnMgcmVhY2ggYm90aCBlbmRzIiwKICAgICJ3YXRlciB0b2dnbGVzIGJvdGggd2F5cyBhbmQgYm90aCB6b29tIGJ1dHRvbnMgY2hhbmdlIHRoZSBtb2xlY3VsYXIgY2FudmFzIiwKICAgICJ0aHJlZSByZWFsIFVJIHBvc3Rob2MgcGxvdHMgYWdyZWUgd2l0aCB0aGUgc2F2ZWQgbmF0aXZlIHRyYWNraW5nIHNhbXBsZXMiCiAgXSwKICAicG9zdGhvYyI6IFsKICAgIHsKICAgICAgImtpbmQiOiAiZGlzdGFuY2UiLAogICAgICAiYXRvbXMiOiBbCiAgICAgICAgNzk5LAogICAgICAgIDE2MzAKICAgICAgXSwKICAgICAgInNhbXBsZXMiOiAxMDEsCiAgICAgICJtYXhEaWZmZXJlbmNlIjogMCwKICAgICAgInVuaXQiOiAiw4UiCiAgICB9LAogICAgewogICAgICAia2luZCI6ICJhbmdsZSIsCiAgICAgICJhdG9tcyI6IFsKICAgICAgICAxMDgxLAogICAgICAgIDEwODMsCiAgICAgICAgMTA4NQogICAgICBdLAogICAgICAic2FtcGxlcyI6IDEwMSwKICAgICAgIm1heERpZmZlcmVuY2UiOiAwLAogICAgICAidW5pdCI6ICLCsCIKICAgIH0sCiAgICB7CiAgICAgICJraW5kIjogImRpaGVkcmFsIiwKICAgICAgImF0b21zIjogWwogICAgICAgIDEwODEsCiAgICAgICAgMTA4MywKICAgICAgICAxMDg1LAogICAgICAgIDEwOTIKICAgICAgXSwKICAgICAgInNhbXBsZXMiOiAxMDEsCiAgICAgICJtYXhEaWZmZXJlbmNlIjogMCwKICAgICAgInVuaXQiOiAiwrAiCiAgICB9CiAgXSwKICAiYnJvd3NlckVycm9ycyI6IFtdLAogICJjb25zb2xlRXJyb3JzIjogW10sCiAgImZvcmJpZGRlblJlcXVlc3RzIjogW10sCiAgIm5hdGl2ZU91dHB1dCI6IHsKICAgICJlbmdpbmUiOiAib3Blbm1tIiwKICAgICJqb2JOYW1lIjogIlByZXNzdXJlIHRlc3QgwrcgcHJvdGVhc2UgwrcgMTAwIHBzIiwKICAgICJhdG9tcyI6IDI3MzY1LAogICAgImZyYW1lcyI6IDEwMSwKICAgICJmaXJzdFRpbWVQcyI6IDAsCiAgICAibGFzdFRpbWVQcyI6IDEwMCwKICAgICJ3YXRlckF0b21zIjogMjQxMTcKICB9LAogICJkb3dubG9hZCI6IHsKICAgICJmaWxlbmFtZSI6ICJEeW5hTW9sLTIxYmY2NmQ4YTUxNzQ0ZGEuemlwIiwKICAgICJieXRlcyI6IDc1NjU2ODQ2CiAgfSwKICAicGxheWJhY2siOiB7CiAgICAicGF1c2VkRnJhbWUiOiA1LAogICAgImZpcnN0IjogMCwKICAgICJsYXN0IjogMTAwCiAgfSwKICAicGFzc2VkIjogdHJ1ZSwKICAiZmluaXNoZWRBdCI6ICIyMDI2LTA5LTExVDIzOjA4OjI0LjQ0MFoiCn0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d070a4d4317c8b5fca63-2356dac609dda56aa8e0",
+              "file": "pressure-test-trajectories.spec.ts",
+              "line": 39,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-11T23:08:11.745Z",
+    "duration": 13006.974,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

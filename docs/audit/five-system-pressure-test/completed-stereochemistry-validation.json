@@ -1,0 +1,34 @@
+[
+  {
+    "pdb_id": "1XQZ",
+    "job_id": "1f0e521a1f4d4f85",
+    "frames": 101,
+    "centers_per_frame": 282,
+    "passed": true,
+    "failures": []
+  },
+  {
+    "pdb_id": "3PTB",
+    "job_id": "21bf66d8a51744da",
+    "frames": 101,
+    "centers_per_frame": 223,
+    "passed": true,
+    "failures": []
+  },
+  {
+    "pdb_id": "1SUG",
+    "job_id": "4ee199dd7b4e4c1b",
+    "frames": 101,
+    "centers_per_frame": 313,
+    "passed": true,
+    "failures": []
+  },
+  {
+    "pdb_id": "1K4C",
+    "job_id": "491f0e8e7dc04c6c",
+    "frames": 101,
+    "centers_per_frame": 416,
+    "passed": true,
+    "failures": []
+  }
+]

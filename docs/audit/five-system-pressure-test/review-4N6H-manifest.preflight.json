@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-dynamics",
+  "stage": "preflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-11T23:59:34.796830+00:00",
+  "purpose": "Replacement GPCR software pressure test after4BVN failed actual relaxed-state chirality. Preserve full observed4N6H receptor-BRIL construct and primary naltrindole/Na, no internal loop reconstruction; water-only100ps OpenMM with recorded limits, no receptor biology or ligand affinity claims.",
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not professional certification or Pat Walters endorsement.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "outputs_and_exclusions_recorded": true,
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "mdtraj": "1.11.1.post2",
+      "pdbfixer": "1.12.0",
+      "numpy": "2.4.6"
+    },
+    "gromacs_version": "2025.4 (workspace runtime; per-job native version retained)",
+    "inputs": [
+      {
+        "pdb_id": "4N6H",
+        "source_url": "https://files.rcsb.org/download/4N6H.cif",
+        "source_sha256": "a3b3030bc746372875dacaa5a69ccdac27abce88662ed1f2052c68c3d6f22c6b",
+        "resolution_angstrom": 1.8
+      }
+    ],
+    "validated_soluble_inputs": {
+      "1XQZ": {
+        "path": "data/integration-checks/five-system-gromacs/1XQZ-preflight.json",
+        "sha256": "57cf869b9b424a5de713faa16ecbfad9683e26c2bf21b30544c77c445d9188a1",
+        "dataset_id": "1c22ae03cd2d439e"
+      },
+      "1SUG": {
+        "path": "data/integration-checks/five-system-gromacs/1SUG-preflight.json",
+        "sha256": "548f3cd2d55b00456c46494b90d788b3a59e105a0685a5064ee35366a3fea236",
+        "dataset_id": "eb4e9d2461e2432d"
+      }
+    },
+    "planned_seeds": {
+      "4N6H": 20260915
+    },
+    "budget": "One replacement100ps OpenMM run plus10ps relaxation;2fs step;1ps saved interval;300K;4CPUthreads;2h/5GB case budget. Explicit isolated200000atom profile. Source-heavy lattice upper bound151195 is preliminary: recompute on actual prepared coordinates and enforce actual native topology cap. No extra loop-model probes.",
+    "corpus_manifest_sha256": "40dee00deaeb876907d02d6998efdeac6a6739282c52b6d45e99e38af8007e2d"
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Official deposited coordinate/sequence/assembly records are preserved. Derivatives retain exact observed heavy coordinates and document chain, assembly, solvent/additive removal and terminal omissions. GROMACS uses complete unprepared standard protein inputs; no missing internal residues or ligand deletion to force compatibility. OpenMM retains primary ligands and validated ions. Modeled protein/ligand atoms require explicit recorded choice and uncertainty. GPCR uses the complete observed transmembrane construct rather than an unlabeled soluble fragment. Channel requires tetramer assembly and explicit nonoverlapping ion-occupancy interpretation; symmetry-axis ions cannot be multiplied silently."
+  },
+  "validation": {
+    "scope": "Source-selection/preflight cleared; app inspection, exact parameterized preparation, saved explicit-water preview and current runtime chirality checks remain launch gates.",
+    "output_checks": [
+      "Exact observed protein/backbone inventory and full408-residue construct retained",
+      "No internal residues modeled; absent sidechains/hydrogens carry provenance",
+      "Primary EJ4 and Na retained, explicit additive exclusions",
+      "Postminimization/relaxation/saved-frame chirality gate must pass; no invalid frame published",
+      "Native actual count <= recorded allocation bound <= explicit200000atom profile",
+      "Finite100ps,101frames and existing real-browser audit"
+    ],
+    "ready_for_bounded_production": []
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No engine ranking or physical equivalence claim; OpenMM and GROMACS presets use different force fields. No holdout scientific dataset or uncertainty estimate is asserted."
+  },
+  "amendment": {
+    "parent_manifest": "docs/audit/five-system-pressure-test/review-manifest.preflight.json",
+    "parent_sha256": "8512f8af6f5b3c15f63a20b6191e9acecab3bca6077d388423b1bb579b02708d",
+    "failed_gpcr_job": "e1205ca152194276",
+    "failure": "4BVN modeled ASP242/ALA272 inversions after minimization/relaxation; cancelled11.5ps and never a completed passing case.",
+    "selected_pdb": "4N6H",
+    "source_sha256": "a3b3030bc746372875dacaa5a69ccdac27abce88662ed1f2052c68c3d6f22c6b",
+    "source_url": "https://files.rcsb.org/download/4N6H.cif",
+    "resolution_angstrom": 1.8,
+    "selection": "Full408-residue receptor-BRIL chainA, no internal missing sequence, all backbone atoms positive occupancy. Retain complete31-heavy-atom EJ4 and oneNa; explicitly omit12OLA,5OLC,3PGE,1TLA additives. Six absent terminal residues remain unbuilt. Ninety absent sidechain-heavy atoms require ordinary guarded preparation.",
+    "resource_authorization": "Root authorized an explicit isolated200000-atom profile on five-system-gpcr-large/8794; default100000-atom profile would reject full construct and is not silently bypassed. FourCPUthreads, two-hour/five-GB case limits remain.",
+    "review_identity": "Language-model software/source review, not independent scientific certification."
+  }
+}

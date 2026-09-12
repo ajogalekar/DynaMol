@@ -1,0 +1,445 @@
+{
+  "id": "1K4C",
+  "source": "https://files.rcsb.org/download/1K4C.cif",
+  "sha256": "da8a06fa1d2a514b106fbbf43ec63c88450027a427ba751b2a61da0f02a38763",
+  "resolution": [
+    "2.00"
+  ],
+  "entity": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "type": [
+      "polymer",
+      "polymer",
+      "polymer",
+      "non-polymer",
+      "non-polymer",
+      "non-polymer",
+      "water"
+    ],
+    "src_method": [
+      "nat",
+      "nat",
+      "man",
+      "syn",
+      "syn",
+      "syn",
+      "nat"
+    ],
+    "pdbx_description": [
+      "antibody Fab fragment heavy chain",
+      "antibody Fab fragment light chain",
+      "potassium channel KcsA",
+      "NONAN-1-OL",
+      "POTASSIUM ION",
+      "DIACYL GLYCEROL",
+      "water"
+    ],
+    "formula_weight": [
+      "23411.242",
+      "23435.738",
+      "13211.582",
+      "144.254",
+      "39.098",
+      "625.018",
+      "18.015"
+    ],
+    "pdbx_number_of_molecules": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "7",
+      "1",
+      "469"
+    ],
+    "pdbx_ec": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_mutation": [
+      null,
+      null,
+      "P2A, L90C",
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_fragment": [
+      null,
+      null,
+      "potassium channel KcsA",
+      null,
+      "fragment of lipid",
+      "fragment of lipid or detergent",
+      null
+    ],
+    "details": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "polymer": {
+    "entity_id": [
+      "1",
+      "2",
+      "3"
+    ],
+    "type": [
+      "polypeptide(L)",
+      "polypeptide(L)",
+      "polypeptide(L)"
+    ],
+    "nstd_linkage": [
+      "no",
+      "no",
+      "no"
+    ],
+    "nstd_monomer": [
+      "no",
+      "no",
+      "no"
+    ],
+    "pdbx_seq_one_letter_code": [
+      "QVQLQQPGAELVKPGASVKLSCKASGYTFTSDWIHWVKQRPGHGLEWIGEIIPSYGRANYNEKIQKKATLTADKSSSTAF\nMQLSSLTSEDSAVYYCARERGDGYFAVWGAGTTVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWN\nSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSSWPSETVTCNVAHPASSTKVDKKIVPRD",
+      "DILLTQSPAILSVSPGERVSFSCRASQSIGTDIHWYQQRTNGSPRLLIKYASESISGIPSRFSGSGSGTDFTLSINSVES\nEDIANYYCQQSNRWPFTFGSGTKLEIKRADAAPTVSIFPPSSEQLTSGGASVVCFLNNFYPKDINVKWKIDGSERQNGVL\nNSWTDQDSKDSTYSMSSTLTLTKDEYERHNSYTCEATHKTSTSPIVKSFNRN",
+      "MAPMLSGLLARLVKLLLGRHGSALHWRAAGAATVLLVIVLLAGSYLAVLAERGAPGAQLITYPRALWWSVETATTVGYGD\nLYPVTLWGRCVAVVVMVAGITSFGLVTAALATWFVGREQERRGH"
+    ],
+    "pdbx_seq_one_letter_code_can": [
+      "QVQLQQPGAELVKPGASVKLSCKASGYTFTSDWIHWVKQRPGHGLEWIGEIIPSYGRANYNEKIQKKATLTADKSSSTAF\nMQLSSLTSEDSAVYYCARERGDGYFAVWGAGTTVTVSSAKTTPPSVYPLAPGSAAQTNSMVTLGCLVKGYFPEPVTVTWN\nSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSSWPSETVTCNVAHPASSTKVDKKIVPRD",
+      "DILLTQSPAILSVSPGERVSFSCRASQSIGTDIHWYQQRTNGSPRLLIKYASESISGIPSRFSGSGSGTDFTLSINSVES\nEDIANYYCQQSNRWPFTFGSGTKLEIKRADAAPTVSIFPPSSEQLTSGGASVVCFLNNFYPKDINVKWKIDGSERQNGVL\nNSWTDQDSKDSTYSMSSTLTLTKDEYERHNSYTCEATHKTSTSPIVKSFNRN",
+      "MAPMLSGLLARLVKLLLGRHGSALHWRAAGAATVLLVIVLLAGSYLAVLAERGAPGAQLITYPRALWWSVETATTVGYGD\nLYPVTLWGRCVAVVVMVAGITSFGLVTAALATWFVGREQERRGH"
+    ],
+    "pdbx_strand_id": [
+      "A",
+      "B",
+      "C"
+    ],
+    "pdbx_target_identifier": [
+      null,
+      null,
+      null
+    ]
+  },
+  "unobserved": {
+    "id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "PDB_model_num": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "polymer_flag": [
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y",
+      "Y"
+    ],
+    "occupancy_flag": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "auth_asym_id": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "auth_comp_id": [
+      "MET",
+      "ALA",
+      "PRO",
+      "MET",
+      "LEU",
+      "SER",
+      "GLY",
+      "LEU",
+      "LEU",
+      "ALA",
+      "ARG",
+      "LEU",
+      "VAL",
+      "LYS",
+      "LEU",
+      "LEU",
+      "LEU",
+      "GLY",
+      "ARG",
+      "HIS",
+      "GLY"
+    ],
+    "auth_seq_id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "PDB_ins_code": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label_asym_id": [
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C"
+    ],
+    "label_comp_id": [
+      "MET",
+      "ALA",
+      "PRO",
+      "MET",
+      "LEU",
+      "SER",
+      "GLY",
+      "LEU",
+      "LEU",
+      "ALA",
+      "ARG",
+      "LEU",
+      "VAL",
+      "LYS",
+      "LEU",
+      "LEU",
+      "LEU",
+      "GLY",
+      "ARG",
+      "HIS",
+      "GLY"
+    ],
+    "label_seq_id": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+    ]
+  },
+  "assembly": {
+    "id": [
+      "1"
+    ],
+    "details": [
+      "author_defined_assembly"
+    ],
+    "method_details": [
+      null
+    ],
+    "oligomeric_details": [
+      "dodecameric"
+    ],
+    "oligomeric_count": [
+      "12"
+    ]
+  },
+  "assembly_gen": {
+    "assembly_id": [
+      "1"
+    ],
+    "oper_expression": [
+      "1,2,3,4"
+    ],
+    "asym_id_list": [
+      "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O"
+    ]
+  },
+  "nonpoly": {
+    "entity_id": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "name": [
+      "NONAN-1-OL",
+      "POTASSIUM ION",
+      "DIACYL GLYCEROL",
+      "water"
+    ],
+    "comp_id": [
+      "F09",
+      "K",
+      "DGA",
+      "HOH"
+    ]
+  }
+}

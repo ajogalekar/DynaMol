@@ -1,0 +1,65 @@
+[
+  {
+    "key": "C:1::BEN",
+    "chain": "C",
+    "resid": "1",
+    "insertion_code": " ",
+    "residue": "BEN",
+    "component_id": "BEN",
+    "error": null,
+    "atom_indices": [
+      1630,
+      1631,
+      1632,
+      1633,
+      1634,
+      1635,
+      1636,
+      1637,
+      1638
+    ],
+    "selected_action": null,
+    "can_remove": true,
+    "can_repair": false,
+    "removed": false,
+    "missing_heavy_atoms": [],
+    "extra_heavy_atoms": [],
+    "repair_reason": null,
+    "original_smiles": "N=C(N)c1ccccc1",
+    "original_formal_charge": 0,
+    "selected_smiles": "NC(=[NH2+])c1ccccc1",
+    "formal_charge": 1,
+    "candidate_smiles": [
+      "NC(=[NH2+])c1ccccc1"
+    ],
+    "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+    "ph": 7,
+    "warnings": [
+      "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking.",
+      "Unverified CCD E descriptor at C\u2013N1: Terminal C=NH has only one heavy-atom neighbor at nitrogen; its CCD E/Z descriptor cannot be verified from the retained heavy-atom geometry. No E/Z assignment or heavy-atom coordinate change was made; review the selected ligand state."
+    ],
+    "heavy_atoms": 9,
+    "reference": {
+      "provider": "wwPDB CCD via RCSB",
+      "component_id": "BEN",
+      "url": "https://files.rcsb.org/ligands/download/BEN.cif",
+      "sha256": "a7ce813cbbac599168d4772f635ae23d7c6edb4d83a9891ebabcbe9e8bb66849",
+      "retrieved_at": "2026-09-11T22:36:13.386720+00:00",
+      "retrieval_note": null
+    },
+    "stereo_checked": {},
+    "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm/datasets/59ff9ca69b454df1/source.cif",
+    "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained.",
+    "stereo_unverified": [
+      {
+        "atoms": [
+          "C",
+          "N1"
+        ],
+        "ccd_descriptor": "E",
+        "status": "unverified",
+        "reason": "Terminal C=NH has only one heavy-atom neighbor at nitrogen; its CCD E/Z descriptor cannot be verified from the retained heavy-atom geometry."
+      }
+    ]
+  }
+]

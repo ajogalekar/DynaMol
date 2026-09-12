@@ -1,0 +1,40 @@
+{
+  "case": "GPCR replacement 4N6H",
+  "source_dataset_id": "5e4d0673f8ac4358",
+  "seed": 20260915,
+  "command": [
+    "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/five-system-pressure-test/run_openmm_case.py",
+    "--case",
+    "gpcr-4N6H",
+    "--dataset",
+    "5e4d0673f8ac4358",
+    "--seed",
+    "20260915",
+    "--base-url",
+    "http://127.0.0.1:8794",
+    "--actions",
+    "{\"B:1201::OLA\": \"remove\", \"C:1202::OLA\": \"remove\", \"D:1203::OLA\": \"remove\", \"E:1204::OLA\": \"remove\", \"F:1205::OLA\": \"remove\", \"G:1206::OLA\": \"remove\", \"H:1207::OLC\": \"remove\", \"I:1208::OLC\": \"remove\", \"J:1209::OLA\": \"remove\", \"K:1210::OLA\": \"remove\", \"L:1211::OLA\": \"remove\", \"M:1212::OLC\": \"remove\", \"N:1213::PGE\": \"remove\", \"O:1214::PGE\": \"remove\", \"P:1215::OLA\": \"remove\", \"Q:1216::OLA\": \"remove\", \"R:1217::OLA\": \"remove\", \"S:1218::TLA\": \"remove\", \"V:1221::PGE\": \"remove\", \"W:1222::OLC\": \"remove\", \"X:1223::OLC\": \"remove\"}"
+  ],
+  "started_utc": "2026-09-12T00:01:49Z",
+  "status": "completed",
+  "case_budget_seconds": 7200,
+  "case_budget_bytes": 5368709120,
+  "resource_profile": {
+    "max_atoms": 200000,
+    "coordinate_bytes": 268435456,
+    "cpu_threads": 4
+  },
+  "source_code_hashes": {
+    "backend/config.py": "8de98f77f10359bc4795b4152f4701eac416dca00d49800be7a3279f8306cbe2",
+    "backend/jobs.py": "706ae328c5cb3f2d3c133f63dca9871f3fd1989a522c7efdcf6193a666a52a6d",
+    "backend/worker.py": "bede15620ac7f4924770824357780d953fa8b820ffb9cde9baa51002aacef688",
+    "backend/preparation_worker.py": "925acb54e3b23d77866b5896f44521c96bec5f3263bc27785b011319806c1c02",
+    "backend/solvent.py": "183921659c2d7977f339aa30a9ebcb1557b40fcc3068bb54faefc9405ae5aee1",
+    "backend/resources.py": "984720fd66d8adfbf1b959ec91001d7a51d63af5b1678d70c13b83e27d3a4535"
+  },
+  "pipeline_pid": 14761,
+  "elapsed_seconds": 4484.59,
+  "generated_bytes": 978376795,
+  "exit_code": 0
+}

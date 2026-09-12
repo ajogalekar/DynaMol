@@ -1,0 +1,72 @@
+{
+  "source_dataset_id": "2d151914298241d9",
+  "prepared_dataset_id": "421948174fed4441",
+  "successful_preparation_job_id": "b23acf37fd3340aa",
+  "failed_solvation_job_id": "000362279993450f",
+  "status": "failed",
+  "error": "The requested solvent box may exceed the 100,000-atom local limit. Reduce padding or prepare a smaller structure.",
+  "elapsed_seconds": 0.06,
+  "old_estimate": {
+    "input_atoms": 4852,
+    "radius_nm": 4.3467981279327885,
+    "cubic_side_upper_nm": 9.693596255865577,
+    "atoms_per_nm3": 110,
+    "estimated_atoms": 105048,
+    "actual_atom_limit": 100000
+  },
+  "native_solvent_atoms_constructed": false,
+  "simulation_launched": false,
+  "settings_changed": false,
+  "evidence": [
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/config.json",
+      "sha256": "d0a337daef11e76cd52f31a651adca6330d74cb7d0da215ea3a3f6c8ee091c18",
+      "bytes": 154
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/input-metadata.json",
+      "sha256": "3c76d5ba7b9944333637412e4de3f562ac6af2d817435ccb358873a351fd2b30",
+      "bytes": 1821989
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/input.pdb",
+      "sha256": "cfd1fad8d52f07bf4cd2d1c9714b19db1e999ca9cfd23a167ea9167f9411dcbb",
+      "bytes": 394195
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/provenance.json",
+      "sha256": "4de41587372281f1dd491277b8e67bb4766cf4c970e851bc08ea2de0e7337893",
+      "bytes": 857
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/sequence-source.cif",
+      "sha256": "13a39e5046074a4f38e7fd18c029c14a934cb5fe201733f731ef363d3c890438",
+      "bytes": 322614
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/status.json",
+      "sha256": "99f9a9c202f3634a7dc257ca3d79b31e9a68c52530025097139d70f656cd3fa2",
+      "bytes": 963
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/000362279993450f/worker.log",
+      "sha256": "3d769a4185cbffd2e8b18127165bfecc1199f9daaa6435c797080084c65f39fc",
+      "bytes": 895
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/prepared.pdb",
+      "sha256": "cfd1fad8d52f07bf4cd2d1c9714b19db1e999ca9cfd23a167ea9167f9411dcbb",
+      "bytes": 394195
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/datasets/421948174fed4441/preparation.json",
+      "sha256": "135d34e3e2e86d4d0e1da22ddf0a475139e67cba9a3f184fed7f9c2d991cbaa3",
+      "bytes": 617743
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-run-20260911-162654.json",
+      "sha256": "34895c5bb3af8a2e6dedae1c107c28d53932bb7beaec25389b4b04c48523e845",
+      "bytes": 12961
+    }
+  ]
+}

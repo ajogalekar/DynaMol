@@ -1,0 +1,21 @@
+{
+  "scope": "Read-only countercheck against saved native topology. No simulation or application data changed.",
+  "checks": [
+    {
+      "pdb_id": "1XQZ",
+      "job_id": "1f0e521a1f4d4f85",
+      "source_index": 2250,
+      "guard_rejected_renamed_terminal_oxygen": true,
+      "error": "Engine preparation changed the identity or order of a tracked heavy atom. Its live measurement was not accepted."
+    },
+    {
+      "pdb_id": "1SUG",
+      "job_id": "4ee199dd7b4e4c1b",
+      "source_index": 2429,
+      "guard_rejected_renamed_terminal_oxygen": true,
+      "error": "Engine preparation changed the identity or order of a tracked heavy atom. Its live measurement was not accepted."
+    }
+  ],
+  "passed": true,
+  "finding": "The selected-heavy-atom coordinate proof correctly refuses terminal O identity changes; it cannot silently track the newly added O. A run selecting this atom would display live-measurement unavailability while dynamics continues. CA-based pressure-test measurements are unaffected."
+}

@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-09-12T01:22:17.047032+00:00",
+  "stopped_isolated_servers": [
+    {
+      "port": 8792,
+      "pid": 99757,
+      "command": ".venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8792",
+      "active_jobs": [],
+      "stopped": true
+    },
+    {
+      "port": 8793,
+      "pid": 9615,
+      "command": ".venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8793 --no-access-log",
+      "active_jobs": [],
+      "stopped": true
+    },
+    {
+      "port": 8794,
+      "pid": 14096,
+      "command": ".venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8794 --no-access-log",
+      "active_jobs": [],
+      "stopped": true
+    }
+  ],
+  "main_app_preserved": true,
+  "datasets_and_outputs_retained": true
+}

@@ -10,6 +10,7 @@ def resource_estimate(metadata, settings, mode, *, input_path=None):
     atoms = metadata["n_atoms"]
     estimated_atoms = atoms
     estimate_kind = "saved topology"
+    solvent_allocation_bound = None
     explicit = mode == "simulation" and settings.get("solvent") == "explicit"
     if explicit and not metadata.get("solvation"):
         from openmm import app, unit
@@ -21,15 +22,21 @@ def resource_estimate(metadata, settings, mode, *, input_path=None):
         xyz = np.asarray(pdb.positions.value_in_unit(unit.nanometer))
         padding = float(settings.get("padding_nm", 1))
         if len(xyz):
-            if settings.get("engine") == "gromacs":
-                side = float(np.ptp(xyz, axis=0).max()) + 2 * padding
+            if settings.get("engine", "openmm") == "openmm" and metadata.get("preparation"):
+                from .solvent import tip3p_allocation_bound
+                solvent_allocation_bound = tip3p_allocation_bound(xyz, padding)
+                estimated_atoms = solvent_allocation_bound["maximum_total_atoms"]
+                estimate_kind = "TIP3P template allocation upper bound; actual count follows solvent exclusion and ion replacement"
             else:
-                radius = np.linalg.norm(xyz - (xyz.min(axis=0) + xyz.max(axis=0)) / 2, axis=1).max()
-                side = max(2 * radius + padding, 2 * padding)
-            estimated_atoms = atoms + math.ceil(side ** 3 * 110)
-            if not metadata.get("preparation"):
-                estimated_atoms += sum(a["element"] not in {"H", "D"} and a["category"] == "protein" for a in metadata["atoms"])
-            estimate_kind = "conservative solvent/solute estimate; actual count follows preparation and box construction"
+                if settings.get("engine") == "gromacs":
+                    side = float(np.ptp(xyz, axis=0).max()) + 2 * padding
+                else:
+                    radius = np.linalg.norm(xyz - (xyz.min(axis=0) + xyz.max(axis=0)) / 2, axis=1).max()
+                    side = max(2 * radius + padding, 2 * padding)
+                estimated_atoms = atoms + math.ceil(side ** 3 * 110)
+                if not metadata.get("preparation"):
+                    estimated_atoms += sum(a["element"] not in {"H", "D"} and a["category"] == "protein" for a in metadata["atoms"])
+                estimate_kind = "conservative solvent/solute estimate; actual count follows preparation and box construction"
     frames = 1
     if mode == "simulation":
         steps = round(float(settings.get("duration_ps", 10)) * 1000 / float(settings.get("timestep_fs", 2)))
@@ -39,6 +46,7 @@ def resource_estimate(metadata, settings, mode, *, input_path=None):
     disk_estimate = coordinate_bytes * 6 + estimated_atoms * 2048 + 64 * 1024 ** 2
     free = shutil.disk_usage(config.DATA_ROOT).free
     return {"input_atoms": atoms, "estimated_atoms": estimated_atoms, "estimate_kind": estimate_kind,
+            "solvent_allocation_bound": solvent_allocation_bound,
             "saved_frames": frames, "coordinate_bytes": coordinate_bytes,
             "working_memory_estimate_bytes": coordinate_bytes * 4,
             "disk_estimate_bytes": disk_estimate, "free_disk_bytes": free,

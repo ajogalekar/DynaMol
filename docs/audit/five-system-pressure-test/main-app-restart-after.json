@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-09-12T00:21:24.224227+00:00",
+  "server_pid": 20135,
+  "base_url": "http://127.0.0.1:8765",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "maximum_atoms_schema": 200000,
+  "current_workspace_unchanged": true,
+  "projects_unchanged": true,
+  "backend_source_sha256": {
+    "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/analysis.py": "01236ff60cb4addefc1606ac88bbee4399eff6df548e24447b7771fafc723c6e",
+    "backend/complex_topology.py": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542",
+    "backend/config.py": "8de98f77f10359bc4795b4152f4701eac416dca00d49800be7a3279f8306cbe2",
+    "backend/diagnostics.py": "952e2b8a420840ce1cf0fd846fbd91901ceb54cfc7c207000d6731f2ad370397",
+    "backend/file_responses.py": "d90f8579a39298c07ead27cc01995d59d48b305349e1886cb880d5b80ace5626",
+    "backend/forcefield_identity.py": "a0faccc47b8573d9e7011a6b8e49b5469997eaefaf287630d045547e24ca0979",
+    "backend/ions.py": "9b6980e506e6229a3f8cec5d5402e17243b4e7cf1fb420c5f957a5c9d9452d68",
+    "backend/jobs.py": "706ae328c5cb3f2d3c133f63dca9871f3fd1989a522c7efdcf6193a666a52a6d",
+    "backend/ligand_repair.py": "d6f1b19a7b04121829e4af6bf6eedae0a7d73ccdcb8dc11cf6286e6d315ff914",
+    "backend/ligands.py": "b4b38ec8b599200df5af7eaba3cfe079a7ea78c84f4619758e4dd1cfae85c61f",
+    "backend/live_measurements.py": "8c259cb84791a11e2abe6e828e77217890a76347c7d9962842e0130c10cfdfff",
+    "backend/main.py": "11cea3b682f9e72b6d41b2abe5cb86e8c72ec7832089be267f24b530c385d932",
+    "backend/models.py": "afeff67365e4e1cc03530fffc3ac38ba6744d206f89a28abccf801b67c6a3d7f",
+    "backend/modified_residues.py": "1b8cac6ee1f7ef6fd07be1ad04f04ac79782885339ceed6a845b4dbb85da0320",
+    "backend/monomers.py": "c0eaa63550a4d7aca2b27529419db0ac0e3e17dcfc8cc1a1fe70813db194dfc5",
+    "backend/preparation.py": "defd490fc8533b311c610b5762861cd1807e001486014f6ba75b94083de25b47",
+    "backend/preparation_worker.py": "925acb54e3b23d77866b5896f44521c96bec5f3263bc27785b011319806c1c02",
+    "backend/prepared_system.py": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca",
+    "backend/readiness.py": "5d30a225be9b5b0d01e3e3b14f00896d8cd2aa2bc5e171a6aa17f98bf80570c5",
+    "backend/recovery.py": "5ed37bc6f9bf427887e4a0a8be673dab0218ca8fca676ab79e57e2a5cf8a81ad",
+    "backend/residue_identity.py": "1178b03115d88957e73e8c67f4a2f0e92b98557d8f68760e2d5a8f24e70ea363",
+    "backend/resources.py": "984720fd66d8adfbf1b959ec91001d7a51d63af5b1678d70c13b83e27d3a4535",
+    "backend/sequence_evidence.py": "fdc25e36cfd458281a75feae4f541b5b9d74c5f31d8a041157f2b3b20a05ed21",
+    "backend/solvent.py": "183921659c2d7977f339aa30a9ebcb1557b40fcc3068bb54faefc9405ae5aee1",
+    "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+    "backend/stereo_monitor.py": "d53c5d506a472f40baf540c324e49f7bc09d74f2babc3b41a03189d3bf953181",
+    "backend/storage.py": "fbd9b6d49a9b0e35e942ca2f75fbc12380167bf87b5edd2e65f37962f8f6c901",
+    "backend/structural_analysis.py": "002b597031fc922e6cef0fdb5edb052e06679a9742b614ddf058df8defd751cd",
+    "backend/worker.py": "fa527f785fc2eed185392649e1fc595343c6861d0546c13e84f77f261aab5d2a",
+    "backend/workspaces.py": "33ca59ce0b469202468e65a1fd1ff6cfe5e9ce73fa20f4788adfd2ab7e059a09"
+  },
+  "verified_projects_sha256": "cf0a2faeb543380120ba570d356057a6bb525534cb60ddbb0a8de73287ed5436"
+}

@@ -1,0 +1,195 @@
+{
+  "pdb_id": "3EML",
+  "source_url": "https://files.rcsb.org/download/3EML.cif",
+  "sha256": "fc5e7cadd3951548025a382db1cd5e0b64aadfa2f160fe3436bf1f4ed840a888",
+  "resolution": "2.60",
+  "title": "'The 2.6 A Crystal Structure of a Human A2A Adenosine Receptor bound to ZM241385.'",
+  "chains": [
+    {
+      "label_asym_id": "A",
+      "entity_id": "1",
+      "observed_residues": 448,
+      "sequence_length": 488,
+      "observed_label_range": [
+        18,
+        472
+      ],
+      "internal_missing": [
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "164",
+          "mon_id": "PRO",
+          "ndb_seq_num": "164",
+          "pdb_seq_num": "149",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "165",
+          "mon_id": "LYS",
+          "ndb_seq_num": "165",
+          "pdb_seq_num": "150",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "166",
+          "mon_id": "GLU",
+          "ndb_seq_num": "166",
+          "pdb_seq_num": "151",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "167",
+          "mon_id": "GLY",
+          "ndb_seq_num": "167",
+          "pdb_seq_num": "152",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "168",
+          "mon_id": "LYS",
+          "ndb_seq_num": "168",
+          "pdb_seq_num": "153",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "169",
+          "mon_id": "ASN",
+          "ndb_seq_num": "169",
+          "pdb_seq_num": "154",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        },
+        {
+          "asym_id": "A",
+          "entity_id": "1",
+          "seq_id": "170",
+          "mon_id": "HIS",
+          "ndb_seq_num": "170",
+          "pdb_seq_num": "155",
+          "auth_seq_num": "?",
+          "pdb_mon_id": "?",
+          "auth_mon_id": "?",
+          "pdb_strand_id": "A",
+          "pdb_ins_code": ".",
+          "hetero": "n"
+        }
+      ],
+      "terminal_missing_count": 33,
+      "protein_atom_count": 3521
+    }
+  ],
+  "nonpolymer_instances": [
+    {
+      "name": "ZMA",
+      "label_asym": "B",
+      "atom_rows": 25
+    },
+    {
+      "name": "STE",
+      "label_asym": "C",
+      "atom_rows": 20
+    },
+    {
+      "name": "STE",
+      "label_asym": "D",
+      "atom_rows": 20
+    },
+    {
+      "name": "STE",
+      "label_asym": "E",
+      "atom_rows": 20
+    },
+    {
+      "name": "STE",
+      "label_asym": "F",
+      "atom_rows": 20
+    },
+    {
+      "name": "STE",
+      "label_asym": "G",
+      "atom_rows": 20
+    },
+    {
+      "name": "SO4",
+      "label_asym": "H",
+      "atom_rows": 5
+    },
+    {
+      "name": "SO4",
+      "label_asym": "I",
+      "atom_rows": 5
+    },
+    {
+      "name": "SO4",
+      "label_asym": "J",
+      "atom_rows": 5
+    },
+    {
+      "name": "SO4",
+      "label_asym": "K",
+      "atom_rows": 5
+    },
+    {
+      "name": "SO4",
+      "label_asym": "L",
+      "atom_rows": 5
+    },
+    {
+      "name": "SO4",
+      "label_asym": "M",
+      "atom_rows": 5
+    },
+    {
+      "name": "SO4",
+      "label_asym": "N",
+      "atom_rows": 5
+    },
+    {
+      "name": "HOH",
+      "label_asym": "O",
+      "atom_rows": 76
+    }
+  ],
+  "covalent_connections": [],
+  "unobserved_atoms": []
+}

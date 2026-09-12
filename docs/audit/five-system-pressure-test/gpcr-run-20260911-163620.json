@@ -1,0 +1,1045 @@
+{
+  "case": "gpcr",
+  "source_dataset_id": "421948174fed4441",
+  "seed": 20260915,
+  "purpose": "Short explicit-water software stability test; no equilibration or biological claim",
+  "jobs": [
+    {
+      "id": "c54b82e6cf434362",
+      "name": "Explicit water preview",
+      "engine": "solvation",
+      "status": "completed",
+      "stage": "Explicit solvent ready",
+      "progress": 100,
+      "completed_steps": 2,
+      "total_steps": 2,
+      "elapsed_seconds": 5.53,
+      "logs": [
+        "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+        "Solvating the exact prepared topology; preserving its hydrogens and chosen protonation.",
+        "Real solvent preview ready: 87,479 atoms. The prepared periodic box will be reused by OpenMM."
+      ],
+      "config": {
+        "padding_nm": 1.0,
+        "ph": 7.0,
+        "seed": 20260915,
+        "dataset_id": "421948174fed4441",
+        "name": "Explicit water preview",
+        "operation": "solvate"
+      },
+      "created_at": "2026-09-11T23:36:20.783147+00:00",
+      "worker_pid": 9688,
+      "dataset_id": "795381c62f624134"
+    },
+    {
+      "id": "e1205ca152194276",
+      "name": "Pressure test \u00b7 gpcr \u00b7 100 ps",
+      "engine": "openmm",
+      "status": "cancelled",
+      "stage": "Cancelled",
+      "progress": 11.5,
+      "completed_steps": 5750,
+      "total_steps": 50000,
+      "elapsed_seconds": 646.67,
+      "logs": [
+        "Queued 50,000 production steps on 4 CPU threads.",
+        "Preserving exact prepared topology and hydrogens at recorded pH 7; no automatic hydrogen reassignment.",
+        "Reusing verified GAFF2 ligand templates and AM1-BCC charges; ligand molecular states and atom identities are retained.",
+        "Reusing the exact prepared TIP3P solvent preview (87,479 atoms); no water or ions added and no new box generated.",
+        "Minimizing up to 1,000 iterations (tolerance 10 kJ/mol/nm).",
+        "Running 5,000 initial relaxation steps; this does not establish equilibration.",
+        "Production started: 50,000 steps, 2 fs, seed 20260915; OpenMM 8.6 CPU.",
+        "Step 0/50,000 \u00b7 0 ps \u00b7 checkpoint saved",
+        "Step 250/50,000 \u00b7 0.5 ps \u00b7 checkpoint saved",
+        "Step 500/50,000 \u00b7 1 ps \u00b7 checkpoint saved",
+        "Step 750/50,000 \u00b7 1.5 ps \u00b7 checkpoint saved",
+        "Step 1,000/50,000 \u00b7 2 ps \u00b7 checkpoint saved",
+        "Step 1,250/50,000 \u00b7 2.5 ps \u00b7 checkpoint saved",
+        "Step 1,500/50,000 \u00b7 3 ps \u00b7 checkpoint saved",
+        "Step 1,750/50,000 \u00b7 3.5 ps \u00b7 checkpoint saved",
+        "Step 2,000/50,000 \u00b7 4 ps \u00b7 checkpoint saved",
+        "Step 2,250/50,000 \u00b7 4.5 ps \u00b7 checkpoint saved",
+        "Step 2,500/50,000 \u00b7 5 ps \u00b7 checkpoint saved",
+        "Step 2,750/50,000 \u00b7 5.5 ps \u00b7 checkpoint saved",
+        "Step 3,000/50,000 \u00b7 6 ps \u00b7 checkpoint saved",
+        "Step 3,250/50,000 \u00b7 6.5 ps \u00b7 checkpoint saved",
+        "Step 3,500/50,000 \u00b7 7 ps \u00b7 checkpoint saved",
+        "Step 3,750/50,000 \u00b7 7.5 ps \u00b7 checkpoint saved",
+        "Step 4,000/50,000 \u00b7 8 ps \u00b7 checkpoint saved",
+        "Step 4,250/50,000 \u00b7 8.5 ps \u00b7 checkpoint saved",
+        "Step 4,500/50,000 \u00b7 9 ps \u00b7 checkpoint saved",
+        "Step 4,750/50,000 \u00b7 9.5 ps \u00b7 checkpoint saved",
+        "Step 5,000/50,000 \u00b7 10 ps \u00b7 checkpoint saved",
+        "Step 5,250/50,000 \u00b7 10.5 ps \u00b7 checkpoint saved",
+        "Step 5,500/50,000 \u00b7 11 ps \u00b7 checkpoint saved",
+        "Step 5,750/50,000 \u00b7 11.5 ps \u00b7 checkpoint saved"
+      ],
+      "config": {
+        "dataset_id": "795381c62f624134",
+        "engine": "openmm",
+        "name": "Pressure test \u00b7 gpcr \u00b7 100 ps",
+        "duration_ps": 100.0,
+        "temperature_k": 300.0,
+        "timestep_fs": 2.0,
+        "report_interval": 500,
+        "friction_ps": 1,
+        "seed": 20260915,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 5000,
+        "padding_nm": 1.0,
+        "measurements": [
+          {
+            "id": "backbone-distance",
+            "kind": "distance",
+            "atoms": [
+              1128,
+              2332
+            ],
+            "label": "Backbone separation",
+            "color": null,
+            "trackDuringRun": true
+          },
+          {
+            "id": "backbone-angle",
+            "kind": "angle",
+            "atoms": [
+              1503,
+              1505,
+              1507
+            ],
+            "label": "Backbone N\u2013CA\u2013C",
+            "color": null,
+            "trackDuringRun": true
+          },
+          {
+            "id": "backbone-dihedral",
+            "kind": "dihedral",
+            "atoms": [
+              1503,
+              1505,
+              1507,
+              1519
+            ],
+            "label": "Backbone psi",
+            "color": null,
+            "trackDuringRun": true
+          }
+        ]
+      },
+      "created_at": "2026-09-11T23:36:36.701218+00:00",
+      "worker_pid": 9745,
+      "error": "Cancelled by user. Partial outputs retained.",
+      "recovery": {
+        "available": true,
+        "checkpoint_saved": true,
+        "step": 6000,
+        "reason": "Resume continues the original configuration from its last complete native checkpoint.",
+        "attempts": 0
+      }
+    }
+  ],
+  "prepared_dataset_id": "421948174fed4441",
+  "solvated_dataset_id": "795381c62f624134",
+  "simulation_settings": {
+    "dataset_id": "795381c62f624134",
+    "name": "Pressure test \u00b7 gpcr \u00b7 100 ps",
+    "engine": "openmm",
+    "duration_ps": 100,
+    "timestep_fs": 2,
+    "report_interval": 500,
+    "temperature_k": 300,
+    "seed": 20260915,
+    "solvent": "explicit",
+    "padding_nm": 1,
+    "minimize": true,
+    "equilibration_steps": 5000,
+    "measurements": [
+      {
+        "id": "backbone-distance",
+        "kind": "distance",
+        "atoms": [
+          1128,
+          2332
+        ],
+        "label": "Backbone separation",
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-angle",
+        "kind": "angle",
+        "atoms": [
+          1503,
+          1505,
+          1507
+        ],
+        "label": "Backbone N\u2013CA\u2013C",
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-dihedral",
+        "kind": "dihedral",
+        "atoms": [
+          1503,
+          1505,
+          1507,
+          1519
+        ],
+        "label": "Backbone psi",
+        "trackDuringRun": true
+      }
+    ]
+  },
+  "simulation_readiness": {
+    "ready": true,
+    "mode": "simulation",
+    "dataset_id": "795381c62f624134",
+    "blockers": [],
+    "warnings": [],
+    "resources": {
+      "input_atoms": 87479,
+      "estimated_atoms": 87479,
+      "estimate_kind": "saved topology",
+      "solvent_allocation_bound": null,
+      "saved_frames": 101,
+      "coordinate_bytes": 106024548,
+      "working_memory_estimate_bytes": 424098192,
+      "disk_estimate_bytes": 882413144,
+      "free_disk_bytes": 165652860928,
+      "atom_limit": 100000,
+      "coordinate_limit_bytes": 268435456,
+      "note": "Planning estimates include retained coordinates and working copies; native engines can use additional memory. Runtime is measured after dynamics starts."
+    },
+    "chemical_state": {
+      "ph": 7.0,
+      "modifications": [],
+      "ligands": [
+        {
+          "key": "D:1361::P32",
+          "chain": "D",
+          "resid": "1361",
+          "insertion_code": " ",
+          "residue": "P32",
+          "component_id": "P32",
+          "error": null,
+          "atom_indices": [
+            2300,
+            2301,
+            2302,
+            2303,
+            2304,
+            2305,
+            2306,
+            2307,
+            2308,
+            2309,
+            2310,
+            2311,
+            2312,
+            2313,
+            2314,
+            2315,
+            2316,
+            2317,
+            2318,
+            2319,
+            2320
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "CC(C)(C)NC[C@H](O)COc1cccc2c1CC(C#N)=N2",
+          "original_formal_charge": 0,
+          "selected_smiles": "CC(C)(C)[NH2+]C[C@H](O)COc1cccc2c1CC(C#N)=N2",
+          "formal_charge": 1,
+          "candidate_smiles": [
+            "CC(C)(C)[NH2+]C[C@H](O)COc1cccc2c1CC(C#N)=N2"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 21,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "P32",
+            "url": "https://files.rcsb.org/ligands/download/P32.cif",
+            "sha256": "b85b70762259838af51714db9d8f98916de88676359fdbfa1490d4cbef25f595",
+            "retrieved_at": "2026-09-11T22:38:39.247056+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {
+            "C10": "S"
+          },
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs/datasets/2d151914298241d9/source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained.",
+          "hydrogen_placement": "MMFF94s hydrogen-only relaxation",
+          "hydrogens_added": 22,
+          "forcefield": "GAFF2",
+          "charge_method": "AmberTools antechamber AM1-BCC",
+          "charge_sum_e": 1.0000000005487781,
+          "charges_e": [
+            -0.6237303249315399,
+            0.11916967451968194,
+            -0.297730325480318,
+            0.10186967451968192,
+            -0.7619303271266525,
+            0.15326967451968193,
+            -0.1283633257053171,
+            -0.1283633257053171,
+            0.09846967451968193,
+            -0.35383032548031806,
+            0.11716967451968192,
+            -0.17293032548031806,
+            -0.09393032548031807,
+            -0.07893032548031806,
+            0.10946967451968193,
+            -0.13723032548031808,
+            -0.4620303254803181,
+            0.43026967451968195,
+            -0.10733032548031807,
+            0.19466967451968192,
+            -0.1283633257053171,
+            0.4500696745196819,
+            0.07176967451968191,
+            0.12126967451968193,
+            0.12126967451968193,
+            0.45336967451968196,
+            0.45336967451968196,
+            0.07643667429468289,
+            0.07643667429468289,
+            0.07643667429468289,
+            0.07643667429468289,
+            0.07643667429468289,
+            0.07643667429468289,
+            0.06926967451968193,
+            0.06926967451968193,
+            0.1400696745196819,
+            0.15406967451968193,
+            0.17206967451968194,
+            0.09326967451968192,
+            0.09326967451968192,
+            0.07643667429468289,
+            0.07643667429468289,
+            0.07643667429468289
+          ],
+          "charge_rounding": {
+            "native_charge_sum_e": 0.997004,
+            "sqm_declared_charge_e": 1.0,
+            "sqm_printed_atom_charge_sum_e": 0.9970000000000001,
+            "target_charge_e": 1,
+            "correction_per_atom_e": 6.967441860465113e-05,
+            "max_total_correction_e": 0.005,
+            "method": "Uniform numerical correction of demonstrated three-decimal SQM Mulliken-output rounding; native AM1-BCC charge differences retained.",
+            "native_file": "charged-native.mol2",
+            "normalized_file": "charged.mol2"
+          },
+          "template_name": "DML_18e8322f5fd5",
+          "ffxml_sha256": "f7de733451b0fb59aeac0b5c8e2e40ad328d5155b31ebde834daf3f57a7444af",
+          "heavy_coordinate_max_displacement_angstrom": 4.070144838902081e-15,
+          "seed": 20260915,
+          "versions": {
+            "rdkit": "2025.9.6",
+            "parmed": "4.3.1",
+            "dimorphite-dl": "2.0.2",
+            "gemmi": "0.7.5"
+          },
+          "artifacts_directory": "ligand-18e8322f5fd5",
+          "atom_map": [
+            {
+              "original_index": 2300,
+              "original_name": "O2",
+              "ligand_index": 0,
+              "prepared_name": "O2"
+            },
+            {
+              "original_index": 2301,
+              "original_name": "C10",
+              "ligand_index": 1,
+              "prepared_name": "C10"
+            },
+            {
+              "original_index": 2302,
+              "original_name": "N3",
+              "ligand_index": 2,
+              "prepared_name": "N3"
+            },
+            {
+              "original_index": 2303,
+              "original_name": "C11",
+              "ligand_index": 3,
+              "prepared_name": "C11"
+            },
+            {
+              "original_index": 2304,
+              "original_name": "N2",
+              "ligand_index": 4,
+              "prepared_name": "N2"
+            },
+            {
+              "original_index": 2305,
+              "original_name": "C12",
+              "ligand_index": 5,
+              "prepared_name": "C12"
+            },
+            {
+              "original_index": 2306,
+              "original_name": "C15",
+              "ligand_index": 6,
+              "prepared_name": "C15"
+            },
+            {
+              "original_index": 2307,
+              "original_name": "C13",
+              "ligand_index": 7,
+              "prepared_name": "C13"
+            },
+            {
+              "original_index": 2308,
+              "original_name": "C9",
+              "ligand_index": 8,
+              "prepared_name": "C9"
+            },
+            {
+              "original_index": 2309,
+              "original_name": "O1",
+              "ligand_index": 9,
+              "prepared_name": "O1"
+            },
+            {
+              "original_index": 2310,
+              "original_name": "C4",
+              "ligand_index": 10,
+              "prepared_name": "C4"
+            },
+            {
+              "original_index": 2311,
+              "original_name": "C5",
+              "ligand_index": 11,
+              "prepared_name": "C5"
+            },
+            {
+              "original_index": 2312,
+              "original_name": "C6",
+              "ligand_index": 12,
+              "prepared_name": "C6"
+            },
+            {
+              "original_index": 2313,
+              "original_name": "C7",
+              "ligand_index": 13,
+              "prepared_name": "C7"
+            },
+            {
+              "original_index": 2314,
+              "original_name": "C8",
+              "ligand_index": 14,
+              "prepared_name": "C8"
+            },
+            {
+              "original_index": 2315,
+              "original_name": "C3",
+              "ligand_index": 15,
+              "prepared_name": "C3"
+            },
+            {
+              "original_index": 2316,
+              "original_name": "N1",
+              "ligand_index": 16,
+              "prepared_name": "N1"
+            },
+            {
+              "original_index": 2317,
+              "original_name": "C1",
+              "ligand_index": 17,
+              "prepared_name": "C1"
+            },
+            {
+              "original_index": 2318,
+              "original_name": "C2",
+              "ligand_index": 18,
+              "prepared_name": "C2"
+            },
+            {
+              "original_index": 2319,
+              "original_name": "C16",
+              "ligand_index": 19,
+              "prepared_name": "C16"
+            },
+            {
+              "original_index": 2320,
+              "original_name": "C14",
+              "ligand_index": 20,
+              "prepared_name": "C14"
+            }
+          ],
+          "parameter_atom_map": [
+            {
+              "native_index": 0,
+              "prepared_name": "O2",
+              "template_atom_name": "O1"
+            },
+            {
+              "native_index": 1,
+              "prepared_name": "C10",
+              "template_atom_name": "C2"
+            },
+            {
+              "native_index": 2,
+              "prepared_name": "N3",
+              "template_atom_name": "N3"
+            },
+            {
+              "native_index": 3,
+              "prepared_name": "C11",
+              "template_atom_name": "C4"
+            },
+            {
+              "native_index": 4,
+              "prepared_name": "N2",
+              "template_atom_name": "N5"
+            },
+            {
+              "native_index": 5,
+              "prepared_name": "C12",
+              "template_atom_name": "C6"
+            },
+            {
+              "native_index": 6,
+              "prepared_name": "C15",
+              "template_atom_name": "C7"
+            },
+            {
+              "native_index": 7,
+              "prepared_name": "C13",
+              "template_atom_name": "C8"
+            },
+            {
+              "native_index": 8,
+              "prepared_name": "C9",
+              "template_atom_name": "C9"
+            },
+            {
+              "native_index": 9,
+              "prepared_name": "O1",
+              "template_atom_name": "O10"
+            },
+            {
+              "native_index": 10,
+              "prepared_name": "C4",
+              "template_atom_name": "C11"
+            },
+            {
+              "native_index": 11,
+              "prepared_name": "C5",
+              "template_atom_name": "C12"
+            },
+            {
+              "native_index": 12,
+              "prepared_name": "C6",
+              "template_atom_name": "C13"
+            },
+            {
+              "native_index": 13,
+              "prepared_name": "C7",
+              "template_atom_name": "C14"
+            },
+            {
+              "native_index": 14,
+              "prepared_name": "C8",
+              "template_atom_name": "C15"
+            },
+            {
+              "native_index": 15,
+              "prepared_name": "C3",
+              "template_atom_name": "C16"
+            },
+            {
+              "native_index": 16,
+              "prepared_name": "N1",
+              "template_atom_name": "N17"
+            },
+            {
+              "native_index": 17,
+              "prepared_name": "C1",
+              "template_atom_name": "C18"
+            },
+            {
+              "native_index": 18,
+              "prepared_name": "C2",
+              "template_atom_name": "C19"
+            },
+            {
+              "native_index": 19,
+              "prepared_name": "C16",
+              "template_atom_name": "C20"
+            },
+            {
+              "native_index": 20,
+              "prepared_name": "C14",
+              "template_atom_name": "C21"
+            },
+            {
+              "native_index": 21,
+              "prepared_name": "H1",
+              "template_atom_name": "H22"
+            },
+            {
+              "native_index": 22,
+              "prepared_name": "H2",
+              "template_atom_name": "H23"
+            },
+            {
+              "native_index": 23,
+              "prepared_name": "H3",
+              "template_atom_name": "H24"
+            },
+            {
+              "native_index": 24,
+              "prepared_name": "H4",
+              "template_atom_name": "H25"
+            },
+            {
+              "native_index": 25,
+              "prepared_name": "H5",
+              "template_atom_name": "H26"
+            },
+            {
+              "native_index": 26,
+              "prepared_name": "H6",
+              "template_atom_name": "H27"
+            },
+            {
+              "native_index": 27,
+              "prepared_name": "H7",
+              "template_atom_name": "H28"
+            },
+            {
+              "native_index": 28,
+              "prepared_name": "H8",
+              "template_atom_name": "H29"
+            },
+            {
+              "native_index": 29,
+              "prepared_name": "H9",
+              "template_atom_name": "H30"
+            },
+            {
+              "native_index": 30,
+              "prepared_name": "H10",
+              "template_atom_name": "H31"
+            },
+            {
+              "native_index": 31,
+              "prepared_name": "H11",
+              "template_atom_name": "H32"
+            },
+            {
+              "native_index": 32,
+              "prepared_name": "H12",
+              "template_atom_name": "H33"
+            },
+            {
+              "native_index": 33,
+              "prepared_name": "H13",
+              "template_atom_name": "H34"
+            },
+            {
+              "native_index": 34,
+              "prepared_name": "H14",
+              "template_atom_name": "H35"
+            },
+            {
+              "native_index": 35,
+              "prepared_name": "H15",
+              "template_atom_name": "H36"
+            },
+            {
+              "native_index": 36,
+              "prepared_name": "H16",
+              "template_atom_name": "H37"
+            },
+            {
+              "native_index": 37,
+              "prepared_name": "H17",
+              "template_atom_name": "H38"
+            },
+            {
+              "native_index": 38,
+              "prepared_name": "H18",
+              "template_atom_name": "H39"
+            },
+            {
+              "native_index": 39,
+              "prepared_name": "H19",
+              "template_atom_name": "H40"
+            },
+            {
+              "native_index": 40,
+              "prepared_name": "H20",
+              "template_atom_name": "H41"
+            },
+            {
+              "native_index": 41,
+              "prepared_name": "H21",
+              "template_atom_name": "H42"
+            },
+            {
+              "native_index": 42,
+              "prepared_name": "H22",
+              "template_atom_name": "H43"
+            }
+          ],
+          "parameterization_source_residue_key": [
+            "D",
+            "1361",
+            "",
+            "P32"
+          ],
+          "parameter_reuse_note": "Identical ordered chemical states share parameters from the first bound copy; each copy retains its own heavy-atom coordinates.",
+          "native_runtime": {
+            "ambertools_version": "24.8",
+            "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+            "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+            "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+            "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+          },
+          "implementation_sha256": "b4b38ec8b599200df5af7eaba3cfe079a7ea78c84f4619758e4dd1cfae85c61f",
+          "conversion_validation": {
+            "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+            "energy_tolerance_kj_mol": 0.0001,
+            "force_tolerance_kj_mol_nm": 0.001,
+            "atom_mapping": {
+              "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+              "atoms": [
+                {
+                  "prepared_name": "O1",
+                  "template_atom_name": "O1",
+                  "native_index": 0
+                },
+                {
+                  "prepared_name": "C1",
+                  "template_atom_name": "C2",
+                  "native_index": 1
+                },
+                {
+                  "prepared_name": "N1",
+                  "template_atom_name": "N3",
+                  "native_index": 2
+                },
+                {
+                  "prepared_name": "C2",
+                  "template_atom_name": "C4",
+                  "native_index": 3
+                },
+                {
+                  "prepared_name": "N2",
+                  "template_atom_name": "N5",
+                  "native_index": 4
+                },
+                {
+                  "prepared_name": "C3",
+                  "template_atom_name": "C6",
+                  "native_index": 5
+                },
+                {
+                  "prepared_name": "C4",
+                  "template_atom_name": "C7",
+                  "native_index": 6
+                },
+                {
+                  "prepared_name": "C5",
+                  "template_atom_name": "C8",
+                  "native_index": 7
+                },
+                {
+                  "prepared_name": "C6",
+                  "template_atom_name": "C9",
+                  "native_index": 8
+                },
+                {
+                  "prepared_name": "O2",
+                  "template_atom_name": "O10",
+                  "native_index": 9
+                },
+                {
+                  "prepared_name": "C7",
+                  "template_atom_name": "C11",
+                  "native_index": 10
+                },
+                {
+                  "prepared_name": "C8",
+                  "template_atom_name": "C12",
+                  "native_index": 11
+                },
+                {
+                  "prepared_name": "C9",
+                  "template_atom_name": "C13",
+                  "native_index": 12
+                },
+                {
+                  "prepared_name": "C10",
+                  "template_atom_name": "C14",
+                  "native_index": 13
+                },
+                {
+                  "prepared_name": "C11",
+                  "template_atom_name": "C15",
+                  "native_index": 14
+                },
+                {
+                  "prepared_name": "C12",
+                  "template_atom_name": "C16",
+                  "native_index": 15
+                },
+                {
+                  "prepared_name": "N3",
+                  "template_atom_name": "N17",
+                  "native_index": 16
+                },
+                {
+                  "prepared_name": "C13",
+                  "template_atom_name": "C18",
+                  "native_index": 17
+                },
+                {
+                  "prepared_name": "C14",
+                  "template_atom_name": "C19",
+                  "native_index": 18
+                },
+                {
+                  "prepared_name": "C15",
+                  "template_atom_name": "C20",
+                  "native_index": 19
+                },
+                {
+                  "prepared_name": "C16",
+                  "template_atom_name": "C21",
+                  "native_index": 20
+                },
+                {
+                  "prepared_name": "H1",
+                  "template_atom_name": "H22",
+                  "native_index": 21
+                },
+                {
+                  "prepared_name": "H2",
+                  "template_atom_name": "H23",
+                  "native_index": 22
+                },
+                {
+                  "prepared_name": "H3",
+                  "template_atom_name": "H24",
+                  "native_index": 23
+                },
+                {
+                  "prepared_name": "H4",
+                  "template_atom_name": "H25",
+                  "native_index": 24
+                },
+                {
+                  "prepared_name": "H5",
+                  "template_atom_name": "H26",
+                  "native_index": 25
+                },
+                {
+                  "prepared_name": "H6",
+                  "template_atom_name": "H27",
+                  "native_index": 26
+                },
+                {
+                  "prepared_name": "H7",
+                  "template_atom_name": "H28",
+                  "native_index": 27
+                },
+                {
+                  "prepared_name": "H8",
+                  "template_atom_name": "H29",
+                  "native_index": 28
+                },
+                {
+                  "prepared_name": "H9",
+                  "template_atom_name": "H30",
+                  "native_index": 29
+                },
+                {
+                  "prepared_name": "H10",
+                  "template_atom_name": "H31",
+                  "native_index": 30
+                },
+                {
+                  "prepared_name": "H11",
+                  "template_atom_name": "H32",
+                  "native_index": 31
+                },
+                {
+                  "prepared_name": "H12",
+                  "template_atom_name": "H33",
+                  "native_index": 32
+                },
+                {
+                  "prepared_name": "H13",
+                  "template_atom_name": "H34",
+                  "native_index": 33
+                },
+                {
+                  "prepared_name": "H14",
+                  "template_atom_name": "H35",
+                  "native_index": 34
+                },
+                {
+                  "prepared_name": "H15",
+                  "template_atom_name": "H36",
+                  "native_index": 35
+                },
+                {
+                  "prepared_name": "H16",
+                  "template_atom_name": "H37",
+                  "native_index": 36
+                },
+                {
+                  "prepared_name": "H17",
+                  "template_atom_name": "H38",
+                  "native_index": 37
+                },
+                {
+                  "prepared_name": "H18",
+                  "template_atom_name": "H39",
+                  "native_index": 38
+                },
+                {
+                  "prepared_name": "H19",
+                  "template_atom_name": "H40",
+                  "native_index": 39
+                },
+                {
+                  "prepared_name": "H20",
+                  "template_atom_name": "H41",
+                  "native_index": 40
+                },
+                {
+                  "prepared_name": "H21",
+                  "template_atom_name": "H42",
+                  "native_index": 41
+                },
+                {
+                  "prepared_name": "H22",
+                  "template_atom_name": "H43",
+                  "native_index": 42
+                }
+              ]
+            },
+            "conformations": [
+              {
+                "pose": "bound",
+                "native_energy_kj_mol": 378.7411073076388,
+                "xml_energy_kj_mol": 378.7411073031065,
+                "energy_delta_kj_mol": -4.5322963160288054e-09,
+                "maximum_force_delta_kj_mol_nm": 7.011208253970835e-07
+              },
+              {
+                "pose": "perturbed-1",
+                "native_energy_kj_mol": 387.5974539796891,
+                "xml_energy_kj_mol": 387.59745397546556,
+                "energy_delta_kj_mol": -4.223522864776896e-09,
+                "maximum_force_delta_kj_mol_nm": 6.982761533436133e-07
+              },
+              {
+                "pose": "perturbed-2",
+                "native_energy_kj_mol": 378.6221249449775,
+                "xml_energy_kj_mol": 378.6221249398659,
+                "energy_delta_kj_mol": -5.1115875976393e-09,
+                "maximum_force_delta_kj_mol_nm": 7.212724995042663e-07
+              }
+            ],
+            "passed": true
+          },
+          "assembled_forcefield_charge_e": 1.0000000005487781,
+          "assembled_atoms": 43
+        }
+      ],
+      "ions": [
+        {
+          "key": "B:1359::NA",
+          "residue": "NA",
+          "element": "Na",
+          "deposited_formal_charge": null,
+          "formal_charge": 1,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "NA",
+            "atom_type": "tip3p_standard-Na+",
+            "element": "Na",
+            "charge_e": 1.0,
+            "sigma_nm": 0.2439280690268249,
+            "epsilon_kj_mol": 0.3658460312,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/NA",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree.",
+            "prepared_particle_index": 4850,
+            "prepared_system_verified": true
+          }
+        },
+        {
+          "key": "C:1360::NA",
+          "residue": "NA",
+          "element": "Na",
+          "deposited_formal_charge": null,
+          "formal_charge": 1,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "NA",
+            "atom_type": "tip3p_standard-Na+",
+            "element": "Na",
+            "charge_e": 1.0,
+            "sigma_nm": 0.2439280690268249,
+            "epsilon_kj_mol": 0.3658460312,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/NA",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree.",
+            "prepared_particle_index": 4851,
+            "prepared_system_verified": true
+          }
+        }
+      ]
+    },
+    "model": "OPENMM \u00b7 CPU \u00b7 fixed-volume NVT \u00b7 explicit solvent"
+  },
+  "status": "failed",
+  "error": "Cancelled by user. Partial outputs retained."
+}

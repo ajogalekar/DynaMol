@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+    "docs/audit/five-system-pressure-test/run_openmm_case.py",
+    "--case",
+    "gpcr",
+    "--dataset",
+    "2d151914298241d9",
+    "--seed",
+    "20260915",
+    "--base-url",
+    "http://127.0.0.1:8793",
+    "--build-loops",
+    "--actions",
+    "{\"E:1362::MHA\": \"remove\", \"F:2001::OLC\": \"remove\", \"G:2002::OLC\": \"remove\", \"H:2003::OLC\": \"remove\", \"I:2004::OLC\": \"remove\", \"J:2005::OLC\": \"remove\", \"K:2006::OLC\": \"remove\", \"L:2007::OLC\": \"remove\"}"
+  ],
+  "started_utc": "2026-09-11T23:09:41Z",
+  "budget_seconds": 7200,
+  "budget_bytes": 5368709120,
+  "source_dataset": "2d151914298241d9",
+  "settings_source": "docs/audit/five-system-pressure-test/gpcr-ready-settings.json",
+  "status": "failed",
+  "elapsed_seconds": 10.01,
+  "generated_bytes": 1128295,
+  "pipeline_pid": 1427,
+  "exit_code": 1,
+  "failed_job_id": "7438dad9ca5d4476",
+  "terminal_reason": "Repair validation rejected inverted or near-planar standard residue stereochemistry at A:241 ILE CA; no dynamics launched."
+}

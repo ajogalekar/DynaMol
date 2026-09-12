@@ -15,6 +15,11 @@ def checkpoint(tmp_path, monkeypatch):
     folder.mkdir()
     for name in ['config.json', 'input.pdb', 'input-state.json', 'prepared.pdb', 'system.xml', 'integrator.xml']:
         (folder / name).write_text(name)
+    source = config.ROOT / 'docs/audit/preparation-fixtures/six_residues_intact.pdb'
+    (folder / 'input.pdb').write_bytes(source.read_bytes())
+    (folder / 'prepared.pdb').write_bytes(source.read_bytes())
+    atomic_json(folder / 'config.json', {'dataset_id': 'source', 'duration_ps': 1, 'timestep_fs': 2, 'report_interval': 50, 'solvent': 'implicit'})
+    atomic_json(folder / 'input-state.json', {})
     for name in ['ligands/LIG/parameters.xml', 'residue-parameters/phosaa.xml']:
         target = folder / name
         target.parent.mkdir(parents=True, exist_ok=True)

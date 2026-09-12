@@ -1,0 +1,45 @@
+[
+  {
+    "issue": "Terminal-imine CCD descriptor incorrectly treated as contrary observed stereochemistry",
+    "trigger": "3PTB BEN C=N1 has no observed terminal-N substituent direction",
+    "fix": "Distinguish unverified neutral terminal-imine descriptors from observed E/Z mismatches; retain explicit warning and strict observable/override checks",
+    "tests": "12 targeted stereo cases; actual BEN pH7 +1 and unchanged heavy coordinates"
+  },
+  {
+    "issue": "Author numbering jump prevents missing-sequence detection",
+    "trigger": "4BVN author240\u2192275 but only six consecutive missing sequence positions",
+    "fix": "Use authoritative mmCIF sequence scheme with source residue IDs and ambiguity guards",
+    "tests": "Sequence-scheme and insertion-code regressions pass; actual 4BVN preparation restores all six source IDs. Separate native 3PTB preparation restores GLY184A, GLY188A and ALA221A."
+  },
+  {
+    "issue": "Valid mmCIF optional metadata causes internal server error",
+    "trigger": "Generated1K4C tetramer: null chem_comp.type and absent optional auth_atom_id",
+    "fix": "Handle Gemmi null values and use mandatory label identifiers when optional author columns absent",
+    "tests": "23 residue/optional identity tests passed; channel inspection and preparation validation passed"
+  },
+  {
+    "issue": "Coarse missing-loop construction can invert newly modeled standard-residue stereocenters",
+    "trigger": "4BVN newly built ILE241 and ARG243 fail the strict chirality guard",
+    "fix": "A single proper-frame placement of only wholly new non-Pro sidechains, with observed/backbone preservation, complete template/bond/stereo/clash checks, low-confidence provenance and required minimization for unrelaxed soft overlaps",
+    "tests": "Nine targeted controls; actual preparation and eleven independent native identity/geometry checks pass. Failed native build and four bounded diagnostic candidates retained. Subsequent native minimization still inverted two different loop centers; initial-geometry acceptance is not a stable-loop validation. 4BVN was withdrawn and its production run stopped."
+  },
+  {
+    "issue": "Conservative solvent-density estimate falsely rejects a box that fits the local atom limit",
+    "trigger": "4BVN rough estimate 105048 exceeds 100000; actual generated box is 87479 atoms",
+    "fix": "Count the installed TIP3P oxygen lattice before exclusions to bound allocation without constructing a water grid; preserve the actual 100000-atom cap and record template hash plus bound/actual counts",
+    "tests": "15 lattice, boundary and large-box controls; 95161 pre-exclusion upper bound and 87479 native atoms at unchanged 1 nm padding; five independent continuity/allocation checks pass"
+  },
+  {
+    "issue": "Native minimization can invert modeled residue centers after preparation passes",
+    "trigger": "4BVN ASP242 and ALA272 CA inverted before first production frame",
+    "fix": "Check template-defined local residue handedness after minimization and relaxation, and across saved output frames; OpenMM checks each relaxation chunk and each saved frame. Stop on inversion, preserve failure coordinates, and never publish a successful trajectory. No chirality-restoring bias is added to dynamics.",
+    "tests": "Four completed trajectories pass every saved frame; native exact-input 4BVN regression stops automatically after minimization at zero production steps; analytical inversion/PBC/nonfinite and retained-history/topology controls pass.",
+    "limitation": "The 4BVN rebuilt loop remains unsuitable for this workflow; a different complete GPCR supplies the fifth class test."
+  },
+  {
+    "issue": "Checkpoint resume bypassed the current resource profile and could overwrite diagnostic history",
+    "trigger": "A larger-profile checkpoint could start under a smaller atom cap; a fresh worker replaced previous stereochemistry checks",
+    "fix": "Validate exact native particle count and current frame, memory and disk limits before resume; retain earlier checks and unique NPZ/CIF failure evidence with hashes. Geometry-rejected jobs require repaired input and a new simulation.",
+    "tests": "Both engine resource-profile rejection controls and blocked-resume API checks; old checkpoint compatibility; distinct failure evidence with matching native atom identity; nonfinite coordinates remain in NPZ with explicitly marked finite placeholders only in the topology file."
+  }
+]

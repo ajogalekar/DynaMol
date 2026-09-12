@@ -145,6 +145,13 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
                 sequence.chainId = chain_id
                 mapped.append(sequence)
         fixer.sequences = mapped
+        if source_path.suffix.lower() in {".cif", ".mmcif", ".pdbx"}:
+            from .sequence_evidence import load_scheme, recover_observed_insertion_codes
+            try:
+                fixer.sequence_scheme = load_scheme(source_path, label_to_author, original_to_canonical, chain_ids, mapped)
+                fixer.recovered_insertion_codes = recover_observed_insertion_codes(fixer)
+            except (ValueError, KeyError, TypeError) as exc:
+                fixer.sequence_scheme_error = str(exc)
     return fixer, source_path
 
 
@@ -179,6 +186,12 @@ def find_missing_residues_preserving_identity(fixer):
     only that dictionary lookup, without mutating library globals shared by
     concurrent inspection requests. Existing atom/residue names are untouched.
     """
+    if getattr(fixer, "sequence_scheme_error", None):
+        raise ValueError(fixer.sequence_scheme_error)
+    if getattr(fixer, "sequence_scheme", None):
+        from .sequence_evidence import missing_from_scheme
+        missing_from_scheme(fixer)
+        return
     from types import FunctionType
     original = type(fixer).findMissingResidues
     preserving = FunctionType(original.__code__, {**original.__globals__, "substitutions": {}},
@@ -227,6 +240,9 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
     atoms = metadata["atoms"]
     warnings, blockers = [], []
     fixer, sequence_source = current_fixer(dataset_id)
+    if getattr(fixer, "recovered_insertion_codes", None):
+        recovered = fixer.recovered_insertion_codes
+        warnings.append("Restored omitted insertion codes from unique source residue number/name matches and verified chain order: " + ", ".join(f"{r['chain']}:{r['resid']}{r['insertion_code']} {r['residue']}" for r in recovered) + ". Observed coordinates and original files are unchanged; the corrected identities are retained during preparation.")
     if fixer.protonation_aliases:
         warnings.append("Input LYN/CYM names identify protonation states of lysine/cysteine. Their heavy-atom graphs are retained under LYS/CYS template names; pressing Prep explicitly reassigns hydrogens at the selected pH and records the resulting state.")
     protein_keys = protein_residue_keys(dataset_id, fixer.topology, fixer.positions)
@@ -271,13 +287,15 @@ def inspect_preparation(dataset_id: str, ph: float = 7.0, ligand_overrides: dict
         find_missing_residues_preserving_identity(fixer)
     except (ValueError, IndexError) as exc:
         fixer.missingResidues = {}
-        warnings.append(f"Sequence mapping could not be established ({exc}); missing residue identities will not be inferred.")
+        blockers.append(f"Sequence mapping could not be established ({exc}); missing residue identities will not be inferred. Supply an unambiguous original sequence mapping or a validated complete model.")
     missing_residues = []
     chains = list(fixer.topology.chains())
     for (chain_index, position), names in fixer.missingResidues.items():
         terminal = position in {0, len(list(chains[chain_index].residues()))}
         buildable = not terminal and len(names) <= MAX_LOOP_LENGTH and all(name in STANDARD_PROTEINS for name in names)
         entry = {"chain": chains[chain_index].id, "position": position, "residues": names, "count": len(names), "terminal": terminal, "buildable": buildable, "chain_index": chain_index}
+        if (chain_index, position) in getattr(fixer, "missingResidueIdentities", {}):
+            entry["source_identities"] = fixer.missingResidueIdentities[(chain_index, position)]
         if any(name not in STANDARD_PROTEINS for name in names):
             entry["reason"] = unsupported_missing_residue_message(chains[chain_index].id, names)
             if terminal:

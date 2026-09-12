@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "name": "Protein preparation",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": false,
+    "optimize_sidechains": true,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "ligand_overrides": {},
+    "seed": 20260916,
+    "dataset_id": "e59d6d0bed574ad5",
+    "ligand_actions": {},
+    "complex": false,
+    "modified_residues": []
+  },
+  "blockers": [],
+  "ligand_errors": []
+}

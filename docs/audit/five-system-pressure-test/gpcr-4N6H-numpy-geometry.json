@@ -1,0 +1,51 @@
+{
+  "pdb_id": "4N6H",
+  "job_id": "0b89d27dadc34148",
+  "checks": [
+    {
+      "id": "backbone-distance",
+      "kind": "distance",
+      "output_atoms": [
+        1585,
+        3159
+      ],
+      "frames": 101,
+      "max_absolute_difference": 5.3477927934864056e-06,
+      "tolerance": 0.0002,
+      "times_match": true,
+      "passed": true
+    },
+    {
+      "id": "backbone-angle",
+      "kind": "angle",
+      "output_atoms": [
+        2057,
+        2059,
+        2061
+      ],
+      "frames": 101,
+      "max_absolute_difference": 1.4986726526444727e-05,
+      "tolerance": 0.0002,
+      "times_match": true,
+      "passed": true
+    },
+    {
+      "id": "backbone-dihedral",
+      "kind": "dihedral",
+      "output_atoms": [
+        2057,
+        2059,
+        2061,
+        2071
+      ],
+      "frames": 101,
+      "max_absolute_difference": 9.68733036188496e-06,
+      "tolerance": 0.0002,
+      "times_match": true,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "physical_sha256": "88f1aa3ae20bd7c6465c7a183483cf29339c3c064d9d59eb0964608084cbfbcf",
+  "method": "NumPy float64 vector geometry with independent orthorhombic minimum-image reduction, dot/arccos angles, projected-vector atan2 torsions, and wrapped torsion differences. Does not call app/MDTraj geometry routines. Unit torsion control \u221290 degrees checked."
+}

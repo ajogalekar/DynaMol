@@ -43,8 +43,10 @@ def _source_polymer_keys(dataset_id, topology):
     site = block.get_mmcif_category('_atom_site.')
     components = block.get_mmcif_category('_chem_comp.')
     entities = block.get_mmcif_category('_entity_poly.')
-    peptide_components = {name for name, kind in zip(components.get('id', []), components.get('type', [])) if 'PEPTIDE' in kind.upper()}
-    peptide_entities = {name for name, kind in zip(entities.get('entity_id', []), entities.get('type', [])) if 'polypeptide' in kind.lower()}
+    # Gemmi represents mmCIF '.' and '?' as False/None, including optional
+    # component types in valid program-generated structures.
+    peptide_components = {name for name, kind in zip(components.get('id', []), components.get('type', [])) if isinstance(kind, str) and 'PEPTIDE' in kind.upper()}
+    peptide_entities = {name for name, kind in zip(entities.get('entity_id', []), entities.get('type', [])) if isinstance(kind, str) and 'polypeptide' in kind.lower()}
     rows = len(site.get('id', []))
     groups = {}
     for i in range(rows):
@@ -59,8 +61,9 @@ def _source_polymer_keys(dataset_id, topology):
             continue
         insertion = site.get('pdbx_PDB_ins_code', [None] * rows)[i] or ''
         insertion = '' if insertion in {'.', '?'} else insertion
-        key = (site['label_asym_id'][i], site['auth_asym_id'][i], str(site['auth_seq_id'][i]), insertion, component)
-        groups.setdefault(key, set()).add(site['auth_atom_id'][i])
+        key = (site['label_asym_id'][i], (site.get('auth_asym_id') or site['label_asym_id'])[i],
+               str((site.get('auth_seq_id') or site['label_seq_id'])[i]), insertion, component)
+        groups.setdefault(key, set()).add((site.get('auth_atom_id') or site['label_atom_id'])[i])
     result = set()
     for residue in members(topology, 'residues'):
         key = residue_key(residue)

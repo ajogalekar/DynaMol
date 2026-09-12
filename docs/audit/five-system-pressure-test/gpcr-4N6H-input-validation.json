@@ -1,0 +1,498 @@
+{
+  "pdb_id": "4N6H",
+  "dataset_ids": {
+    "source": "5e4d0673f8ac4358",
+    "prepared": "753ba327007a441b",
+    "solvated": "343ace4483604405"
+  },
+  "checks": {
+    "full_408_residue_fusion": {
+      "passed": true,
+      "source_residues": 408,
+      "prepared_residues": 408
+    },
+    "all_selected_source_protein_heavy_atoms_retained": {
+      "passed": true,
+      "selected_source_heavy_atoms": 3089,
+      "source_conformer_note": "3140 source polymer atom rows contain51 alternate-conformer duplicate identities; all3089 distinct observed heavy-atom identities are retained."
+    },
+    "EJ4_and_source_Na_bound_coordinates": {
+      "passed": true,
+      "retained_heavy_atoms": 32,
+      "atoms": [
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAB",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAC",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAE",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAF",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAG",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAH",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAI",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAJ",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAK",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAL",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAM",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAO",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAP",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAR",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAT",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAU",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAV",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAW",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAX",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAY",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CAZ",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "NAN",
+            "N"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "NAS",
+            "N"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "OAA",
+            "O"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "OAD",
+            "O"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "OAQ",
+            "O"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CBA",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CBB",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CBC",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CBD",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "T",
+            "1219",
+            "",
+            "EJ4",
+            "CBE",
+            "C"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        },
+        {
+          "identity": [
+            "U",
+            "1220",
+            "",
+            "NA",
+            "NA",
+            "Na"
+          ],
+          "present": true,
+          "max_component_difference_nm": 0.0
+        }
+      ]
+    },
+    "no_internal_loop_reconstruction": {
+      "passed": true,
+      "rebuilt_segments": []
+    },
+    "prepared_stereochemistry": {
+      "passed": true,
+      "centers": 439,
+      "violations": []
+    },
+    "solvation_retains_prepared_atom_prefix": {
+      "passed": true,
+      "prepared_atoms": 6544
+    },
+    "solvation_retains_prepared_coordinate_prefix": {
+      "passed": true,
+      "max_component_difference_nm": 0.0
+    },
+    "explicit_resource_profile": {
+      "passed": true,
+      "atoms": 145913,
+      "native_allocation_bound": 155995,
+      "max_atoms": 200000,
+      "predicted_coordinate_bytes": 176846556,
+      "coordinate_cap_bytes": 268435456
+    },
+    "unchanged_water_protocol": {
+      "passed": true,
+      "padding_nm": 1.0,
+      "seed": 20260915,
+      "box_vectors_nm": [
+        [
+          11.459641910696561,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          11.459641910696561,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          11.459641910696561
+        ]
+      ]
+    },
+    "only_authorized_additives_removed": {
+      "passed": true,
+      "removed_residue_counts": {
+        "OLA": 12,
+        "OLC": 5,
+        "PGE": 3,
+        "TLA": 1
+      },
+      "removed_atom_counts": {
+        "heterogen_atoms": 309,
+        "water_atoms": 101
+      }
+    }
+  },
+  "passed": true,
+  "scope": "Input identity, bound-pose retention, ordinary heavy-atom preparation, and resource/protocol checks. Engineered delta-opioid-receptor/BRIL fusion in water only; no biological, binding-affinity, membrane, or convergence claim.",
+  "evidence": [
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/datasets/5e4d0673f8ac4358/source.cif",
+      "sha256": "a3b3030bc746372875dacaa5a69ccdac27abce88662ed1f2052c68c3d6f22c6b"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/datasets/753ba327007a441b/prepared.pdb",
+      "sha256": "fc928164120f00feacdacbae2dfb5bd768f492242cc2528dd75920124210b31a"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/datasets/753ba327007a441b/preparation.json",
+      "sha256": "0b116e0ba09f2f4d7dc8abc2bd095ed6e741e1f8e08b9c9034422f4938b86b30"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/datasets/343ace4483604405/prepared.pdb",
+      "sha256": "2ce81f567a42072057ec636cd5745190ae1a9f967dbca9e2361e3469e21033ca"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/datasets/343ace4483604405/metadata.json",
+      "sha256": "ccd1484044e2fc4f30706ac7af38592a3c6e58d48e1be1527a579feb68a0c309"
+    },
+    {
+      "path": "data/integration-checks/five-system-gpcr-large/4N6H-source-conformer-summary.json",
+      "sha256": "5ed99312f56f5814a237f423b802690292156eed7391d555a9ab12f4791beaff"
+    }
+  ]
+}

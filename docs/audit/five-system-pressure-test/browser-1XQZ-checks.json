@@ -1,0 +1,76 @@
+{
+  "case": {
+    "name": "Pim-1 kinase",
+    "pdbId": "1XQZ",
+    "jobId": "1f0e521a1f4d4f85",
+    "datasetId": "7909ef07cc224ad7",
+    "baseURL": "http://127.0.0.1:8793"
+  },
+  "startedAt": "2026-09-11T23:09:26.531Z",
+  "checks": [
+    "completed output: 101 finite saved samples, 0\u2013100 ps and three mapped measurements",
+    "real native job Files archive downloaded",
+    "Open trajectory enters Explore and restores all three visible saved plots",
+    "movie advances and pauses; slider and endpoint buttons reach both ends",
+    "water toggles both ways and both zoom buttons change the molecular canvas",
+    "three real UI posthoc plots agree with the saved native tracking samples"
+  ],
+  "posthoc": [
+    {
+      "kind": "distance",
+      "atoms": [
+        1056,
+        3299
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00c5"
+    },
+    {
+      "kind": "angle",
+      "atoms": [
+        2159,
+        2178,
+        2200
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00b0"
+    },
+    {
+      "kind": "dihedral",
+      "atoms": [
+        2159,
+        2178,
+        2200,
+        2212
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "\u00b0"
+    }
+  ],
+  "browserErrors": [],
+  "consoleErrors": [],
+  "forbiddenRequests": [],
+  "nativeOutput": {
+    "engine": "gromacs",
+    "jobName": "1XQZ \u00b7 100 ps GROMACS pressure test",
+    "atoms": 54537,
+    "frames": 101,
+    "firstTimePs": 0,
+    "lastTimePs": 100,
+    "waterAtoms": 50070
+  },
+  "download": {
+    "filename": "DynaMol-1f0e521a1f4d4f85.zip",
+    "bytes": 35991312
+  },
+  "playback": {
+    "pausedFrame": 5,
+    "first": 0,
+    "last": 100
+  },
+  "passed": true,
+  "finishedAt": "2026-09-11T23:09:40.949Z"
+}

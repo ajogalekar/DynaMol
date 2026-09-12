@@ -1,0 +1,62 @@
+{
+  "expected_failure_observed": true,
+  "job_id": "79b13f4ea8d1490c",
+  "status": "failed",
+  "completed_production_steps": 0,
+  "elapsed_seconds": 150.49,
+  "error": "After minimization inverted or flattened residue stereochemistry at A:242 ASP CA. Dynamics stopped; the prepared geometry needs repair. The coordinates were retained for inspection.",
+  "checks": {
+    "method": "Local minimum-image signed stereocenter volumes versus residue templates; no coordinate changes.",
+    "checks": [
+      {
+        "stage": "Before minimization",
+        "checked_centers": 324,
+        "violations": [],
+        "passed": true
+      },
+      {
+        "stage": "After minimization",
+        "checked_centers": 324,
+        "violations": [
+          {
+            "chain": "A",
+            "resid": "242",
+            "insertion_code": "",
+            "residue": "ASP",
+            "center": "CA",
+            "signed_volume_nm3": -0.0024029317131376727,
+            "template_signed_volume_nm3": 0.0023918106000000014,
+            "atom_indices": [
+              3299,
+              3297,
+              3307,
+              3301
+            ]
+          },
+          {
+            "chain": "A",
+            "resid": "272",
+            "insertion_code": "",
+            "residue": "ALA",
+            "center": "CA",
+            "signed_volume_nm3": -0.0026780392250898284,
+            "template_signed_volume_nm3": 0.0024989330000000014,
+            "atom_indices": [
+              3335,
+              3333,
+              3341,
+              3337
+            ]
+          }
+        ],
+        "passed": false
+      }
+    ]
+  },
+  "artifacts": {
+    "status.json": "0bec6d4c14dfc12c0e4abdef371a24b7369f8a8b9064577e7f84bc7e4bad8665",
+    "stereochemistry-checks.json": "7fe4e55dd9f2579029eaf36965578ecac6692d01f291dcfc2a86a1e6e47379be",
+    "stereochemistry-failure.npz": "8b6c80d79ccad6333ecab3620a0d962c13b4b881b79a91eae6bece84fed9f46f",
+    "provenance.json": "a98b0b77072b3a54104bd02c6edebb4d1b152da0f6f46d3f93a3fb54b6d27dd7"
+  }
+}

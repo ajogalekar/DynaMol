@@ -1,0 +1,24 @@
+{
+  "scope": "Independent read-only review of narrow terminal C=NH CCD stereo nonobservability correction, plus focused regression replay; no native modeling or dynamics.",
+  "independent_tests": {
+    "command": ".venv/bin/python -m pytest backend/tests/test_ligand_terminal_imine_stereo.py -q",
+    "passed": 8,
+    "elapsed_seconds": 0.34,
+    "warnings": "Three existing repeated residue-number warnings in the canonical3PTB PDB after MDTraj insertion-code loss; original CIF identity remains the evidence source."
+  },
+  "owner_final_tests": {
+    "passed": 12,
+    "elapsed_seconds": 0.35,
+    "additional_controls": "Both E-to-Z and Z-to-E observable C=C and substituted C=N contradictions."
+  },
+  "reviewed_files": {
+    "backend/ligands.py": "93308551cb6dcc27e142ea07a77ada5d4b6840e5c17a7fedad13e5f3e9b0c192",
+    "backend/tests/test_ligand_terminal_imine_stereo.py": "25bf92d2e107dc1602d37db7ba9b29fc08ef5c3ce90451c775989542d4b7ccca"
+  },
+  "outcome": "No open finding in the narrow stereo fix. Unobservable terminal descriptor is recorded as unverified and does not weaken observable or explicit-state mismatch rejection.",
+  "source": "https://www.rdkit.org/docs/RDKit_Book.html#stereogenic-bonds",
+  "dry_inspection": {
+    "path": "docs/audit/five-system-pressure-test/review-ben-stereo-inspection.json",
+    "sha256": "464c8e2f5de240b70bfc22a3a0064f290ddf3353b13560a0b04666d7abbb0055"
+  }
+}

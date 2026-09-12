@@ -146,3 +146,23 @@ def test_prepared_explicit_simulation_requires_visible_saved_preview():
     with pytest.raises(ValueError, match="explicit-water preview first"):
         jobs.submit_job(SimulationConfig(dataset_id=dataset["id"], engine="openmm", solvent="explicit"))
     assert jobs.list_jobs() == []
+
+
+@pytest.mark.parametrize("requires_minimization,minimize,ready", [(True, False, False), (True, True, True), (False, False, True)])
+def test_repaired_loop_minimization_gate_matches_readiness_and_submission(requires_minimization, minimize, ready):
+    from backend import readiness
+    dataset = imported_fixture("six_residues_intact.pdb")
+    folder = storage.dataset_dir(dataset["id"])
+    shutil.copy2(folder / "source.pdb", folder / "prepared.pdb")
+    dataset["preparation"] = {"ph": 7, "simulation_ready": True, "requires_minimization": requires_minimization}
+    storage.atomic_json(folder / "metadata.json", dataset)
+    settings = SimulationConfig(dataset_id=dataset["id"], minimize=minimize)
+    displayed = readiness.readiness(dataset["id"], readiness.ReadinessRequest(mode="simulation", settings=settings.model_dump()))
+    assert displayed["ready"] is ready
+    if ready:
+        assert jobs.validate_simulation(settings)["metadata"]["id"] == dataset["id"]
+    else:
+        assert any("Enable energy minimization" in item for item in displayed["blockers"])
+        with pytest.raises(ValueError, match="Enable energy minimization"):
+            jobs.submit_job(settings)
+    assert jobs.list_jobs() == []

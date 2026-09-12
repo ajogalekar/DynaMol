@@ -1,0 +1,115 @@
+{
+  "case": "GPCR 4BVN",
+  "status": "failed during preparation; no solvation or MD launched",
+  "source_dataset_id": "2d151914298241d9",
+  "data_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs",
+  "job_id": "7438dad9ca5d4476",
+  "elapsed_seconds": 3.06,
+  "error": "Repaired structure has inverted or near-planar standard residue stereochemistry at A:241 ILE CA. The model is rejected; use an externally validated repair instead.",
+  "config": {
+    "name": "Pressure test \u00b7 gpcr \u00b7 prepared",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": true,
+    "optimize_sidechains": true,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "ligand_overrides": {},
+    "seed": 20260915,
+    "dataset_id": "2d151914298241d9",
+    "ligand_actions": {
+      "E:1362::MHA": "remove",
+      "F:2001::OLC": "remove",
+      "G:2002::OLC": "remove",
+      "H:2003::OLC": "remove",
+      "I:2004::OLC": "remove",
+      "J:2005::OLC": "remove",
+      "K:2006::OLC": "remove",
+      "L:2007::OLC": "remove"
+    },
+    "complex": true,
+    "modified_residues": [],
+    "operation": "prepare"
+  },
+  "input_readiness": {
+    "ready": true,
+    "blockers": []
+  },
+  "retained_ligands": [
+    {
+      "key": "D:1361::P32",
+      "component_id": "P32",
+      "formal_charge": 1
+    }
+  ],
+  "retained_ions": [
+    {
+      "key": "B:1359::NA",
+      "formal_charge": 1
+    },
+    {
+      "key": "C:1360::NA",
+      "formal_charge": 1
+    }
+  ],
+  "observed_removals_from_worker_log": {
+    "existing_hydrogens": 0,
+    "water_heavy_atoms": 38,
+    "explicitly_selected_other_heavy_atoms": 144
+  },
+  "failure_stage": "After PDBFixer addMissingAtoms; repaired-structure stereochemistry validation at preparation_worker.py:353 rejected ILE A:241 CA. No ligand parameterization, solvation, dynamics, or output dataset was created.",
+  "fallback_performed": false,
+  "evidence": [
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/config.json",
+      "sha256": "e5e5e2aa4ab5f4d0385dafb3601863befad3187bfe7df7dd30e74643c000be61",
+      "bytes": 631
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/input-metadata.json",
+      "sha256": "6d8521ac8cecf3c2a2d67e9be6035f02edb54f1909dc979bf672e89a97af9dc3",
+      "bytes": 593956
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/input.pdb",
+      "sha256": "1ef08800216806cba276745d05e13c165934cec30782133bbafcc66a19f5c23d",
+      "bytes": 206854
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/provenance.json",
+      "sha256": "46e5ffe74ff08f7f7db21cfb66a801cc4d08cdef8b6e6f50038a6afab5aa482a",
+      "bytes": 1418
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/sequence-source.cif",
+      "sha256": "13a39e5046074a4f38e7fd18c029c14a934cb5fe201733f731ef363d3c890438",
+      "bytes": 322614
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/status.json",
+      "sha256": "8b7567f7f45b3988e19b407976ea41bd0b654f78af080e6f75ceda146ae45e69",
+      "bytes": 1717
+    },
+    {
+      "path": "data/integration-checks/five-system-gromacs/jobs/7438dad9ca5d4476/worker.log",
+      "sha256": "b31033c2597e19d6ca6ff252bdee2b73a0b82f711122e4b9df3c2fba5a114df3",
+      "bytes": 1105
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-run-20260911-160941.json",
+      "sha256": "f2733f24625807b66a6f38d156e1c58f2946dc0a0f8b9abc5f63811348f4496b",
+      "bytes": 11412
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-isolated-copy.json",
+      "sha256": "bcef7a2986898c169ae3fc94ccda8df9fada0a13e699b37161339003cd561be8",
+      "bytes": 2281
+    },
+    {
+      "path": "docs/audit/five-system-pressure-test/gpcr-ready-settings.json",
+      "sha256": "b8819c485966ef49cf0b29879973201b1a6eb82c9c17244b5b402b4b6646dc9e",
+      "bytes": 584
+    }
+  ],
+  "scope": "A rejected computational loop model; failure is retained for diagnosing the general builder. No stereochemistry gate was weakened."
+}

@@ -1,6 +1,8 @@
 """Create an actual, bounded TIP3P solvent box for preview and MD reuse."""
 import hashlib
 import math
+from functools import lru_cache
+from pathlib import Path
 
 import mdtraj as md
 import numpy as np
@@ -8,6 +10,78 @@ import numpy as np
 from . import config
 from .prepared_system import copy_ligand_parameters, ligand_parameter_files, load_prepared_forcefield
 from .storage import atomic_json, dataset_dir, get_dataset, save_dataset
+
+
+@lru_cache(maxsize=4)
+def _tip3p_lattice(path, mtime_ns, size):
+    """Read the same installed template as Modeller; cache by file revision."""
+    from openmm import app, unit
+    source = Path(path)
+    pdb = app.PDBFile(str(source))
+    coordinates = np.asarray(pdb.positions.value_in_unit(unit.nanometer))
+    periods = np.asarray(pdb.topology.getUnitCellDimensions().value_in_unit(unit.nanometer))
+    oxygens = []
+    for residue in pdb.topology.residues():
+        atoms = list(residue.atoms())
+        if len(atoms) != 3 or sum(a.element == app.element.oxygen for a in atoms) != 1 or sum(a.element == app.element.hydrogen for a in atoms) != 2:
+            raise ValueError("The installed TIP3P template is not a three-site water lattice; a safe allocation bound could not be established.")
+        oxygens.append(coordinates[next(a.index for a in atoms if a.element == app.element.oxygen)])
+    if not oxygens or not np.isfinite(oxygens).all() or not np.isfinite(periods).all() or np.any(periods <= 0):
+        raise ValueError("The installed TIP3P solvent lattice has invalid coordinates or dimensions.")
+    return np.asarray(oxygens), periods, hashlib.sha256(source.read_bytes()).hexdigest()
+
+
+def _accepted_axis_tiles(oxygen, period, side):
+    """Count native inclusive-boundary placements without allocating a tile grid."""
+    total = math.ceil(side / period)
+    lower, upper = 0, total
+    # Binary search the literal native floating-point expression instead of
+    # flooring (side-oxygen)/period, which can undercount exact boundaries.
+    while lower < upper:
+        middle = (lower + upper) // 2
+        if oxygen + middle * period <= side:
+            lower = middle + 1
+        else:
+            upper = middle
+    return lower
+
+
+def tip3p_allocation_bound(positions, padding_nm=1):
+    """Upper bound for OpenMM's cubic TIP3P construction, before all deletions.
+
+    Count every tiled template water accepted by the native box-boundary test.
+    Solute exclusions, water-edge filtering and zero-molar monovalent ion
+    replacement can only reduce this count. This is not a density estimate.
+    """
+    from openmm import Vec3, unit, version
+    from openmm.app import modeller as implementation
+    coordinates = np.asarray(positions.value_in_unit(unit.nanometer) if hasattr(positions, 'value_in_unit') else positions, dtype=float)
+    if coordinates.ndim != 2 or coordinates.shape[1] != 3 or not np.isfinite(coordinates).all():
+        raise ValueError("Finite N×3 nanometer coordinates are required to bound solvent allocation.")
+    if isinstance(padding_nm, bool) or not math.isfinite(float(padding_nm)) or float(padding_nm) <= 0:
+        raise ValueError("A finite positive solvent padding is required.")
+    if len(coordinates):
+        minimum = Vec3(*(float(v) for v in coordinates.min(axis=0)))
+        maximum = Vec3(*(float(v) for v in coordinates.max(axis=0)))
+        center = .5 * (minimum + maximum)
+        # Mirror native Vec3/unit.norm arithmetic, including center definition.
+        radius = max(unit.norm(center - Vec3(*(float(v) for v in point))) for point in coordinates)
+    else:
+        radius = 0
+    side = max(2 * radius + float(padding_nm), 2 * float(padding_nm))
+    if not math.isfinite(side):
+        raise ValueError("The requested box dimensions are too large for bounded solvent allocation.")
+    # Include neighboring representable boundaries conservatively. No change
+    # is made to the native box width or physical solute coordinates.
+    count_side = math.nextafter(math.nextafter(side, math.inf), math.inf)
+    source = Path(implementation.__file__).parent / 'data' / 'tip3p.pdb'
+    stat = source.stat()
+    oxygens, periods, digest = _tip3p_lattice(str(source), stat.st_mtime_ns, stat.st_size)
+    waters = sum(math.prod(_accepted_axis_tiles(float(oxygen[i]), float(periods[i]), count_side) for i in range(3)) for oxygen in oxygens)
+    return {"box_side_nm": side, "count_boundary_nm": count_side, "candidate_water_molecules": waters,
+            "maximum_added_water_atoms": 3 * waters, "maximum_total_atoms": len(coordinates) + 3 * waters,
+            "template_box_nm": periods.tolist(), "template_sha256": digest, "openmm_version": version.version,
+            "method": "Cubic TIP3P template oxygen lattice count before solute/edge exclusions or neutralizing monovalent-ion replacement; inclusive native upper boundaries plus two upward floating-point steps. No tiled grid is allocated; final actual atom cap is also enforced."}
 
 
 def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
@@ -50,13 +124,8 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
     coordinates = np.asarray(pdb.positions.value_in_unit(unit.nanometer))
     if not len(coordinates) or not np.isfinite(coordinates).all():
         raise ValueError("Prepared coordinates are empty or non-finite.")
-    # A deliberately conservative bound before allocating a water box. OpenMM
-    # uses max(sphere diameter + padding, 2*padding), where padding is the
-    # minimum separation from a periodic copy, not padding on both box faces.
-    radius = np.linalg.norm(coordinates - (coordinates.min(axis=0) + coordinates.max(axis=0)) / 2, axis=1).max()
-    side_upper = max(2 * radius + padding_nm, 2 * padding_nm)
-    estimated_atoms = len(coordinates) + math.ceil(side_upper ** 3 * 110)
-    if estimated_atoms > config.MAX_ATOMS:
+    allocation_bound = tip3p_allocation_bound(pdb.positions, padding_nm)
+    if allocation_bound['maximum_total_atoms'] > config.MAX_ATOMS:
         raise ValueError(f"The requested solvent box may exceed the {config.MAX_ATOMS:,}-atom local limit. Reduce padding or prepare a smaller structure.")
     forcefield, forcefield_files = load_prepared_forcefield(dataset_dir(dataset_id), preparation)
     modeller = app.Modeller(pdb.topology, pdb.positions)
@@ -74,6 +143,8 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
                                 boxShape="cube", neutralize=True, ionicStrength=0 * unit.molar)
         finally:
             random.setstate(previous_state)
+        if modeller.topology.getNumAtoms() > allocation_bound['maximum_total_atoms']:
+            raise ValueError("Native solvent construction exceeded its template-derived allocation bound; the preview is rejected for inspection.")
         if modeller.topology.getNumAtoms() > config.MAX_ATOMS:
             raise ValueError(f"The generated box exceeds {config.MAX_ATOMS:,} atoms. Reduce solvent padding.")
         # Template validation is not an equilibration or a stability claim.
@@ -92,6 +163,7 @@ def solvate_dataset(dataset_id, padding_nm=1, seed=2026, ph=7):
                "ionic_strength_molar": 0, "box_shape": "cube", "box_vectors_nm": traj.unitcell_vectors[0].tolist(),
                "openmm_version": version.version, "forcefield": forcefield_files,
                "prepared_pdb": "prepared.pdb", "input_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+               "allocation_bound": allocation_bound, "actual_atoms": modeller.topology.getNumAtoms(),
                "equilibrated": False, "preserves_prepared_protonation": True}
     provenance = {"operation": "explicit_water_preview", "parent_dataset_id": dataset_id, "preparation": preparation, "solvation": details}
     warnings = ["Real TIP3P coordinates and periodic box; this is an unequilibrated starting system. Run minimization and equilibration before interpreting dynamics.",

@@ -1,0 +1,24 @@
+{
+  "name": "Protein preparation",
+  "ph": 7.0,
+  "add_missing_atoms": true,
+  "build_missing_residues": true,
+  "optimize_sidechains": true,
+  "remove_waters": true,
+  "remove_heterogens": false,
+  "ligand_overrides": {},
+  "seed": 20260915,
+  "dataset_id": "2d151914298241d9",
+  "ligand_actions": {
+    "E:1362::MHA": "remove",
+    "F:2001::OLC": "remove",
+    "G:2002::OLC": "remove",
+    "H:2003::OLC": "remove",
+    "I:2004::OLC": "remove",
+    "J:2005::OLC": "remove",
+    "K:2006::OLC": "remove",
+    "L:2007::OLC": "remove"
+  },
+  "complex": true,
+  "modified_residues": []
+}

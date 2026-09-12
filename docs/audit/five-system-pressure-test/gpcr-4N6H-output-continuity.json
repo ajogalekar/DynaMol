@@ -1,0 +1,76 @@
+{
+  "job_id": "0b89d27dadc34148",
+  "output_dataset_id": "ab629697dd2449c7",
+  "checks": {
+    "all_prepared_solute_atom_identities": {
+      "passed": true,
+      "atoms": 6544,
+      "fields": [
+        "chain",
+        "residue_id",
+        "insertion_code",
+        "residue_name",
+        "atom_name",
+        "element"
+      ]
+    },
+    "display_solute_metadata": {
+      "passed": true,
+      "atoms": 6544
+    },
+    "full_fusion_protein_retained": {
+      "passed": true,
+      "residues": 408,
+      "internal_loop_builds": 0
+    },
+    "complete_EJ4_retained": {
+      "passed": true,
+      "total_atoms": 58,
+      "heavy_atoms": 31
+    },
+    "EJ4_native_particle_charges_preserved": {
+      "passed": true,
+      "atoms": 58,
+      "native_charge_e": 1.000000003292669,
+      "prepared_formal_charge_e": 1,
+      "maximum_charge_difference_e": 0.0
+    },
+    "EJ4_native_bond_connectivity_preserved": {
+      "passed": true,
+      "expected_bonds": 65,
+      "native_bonds": 65,
+      "missing": [],
+      "unexpected": [],
+      "method": "Union of native harmonic-bond pairs and constrained pairs; connectivity only, without inferring bond order or parameter accuracy."
+    },
+    "source_sodium_retained_with_native_charge": {
+      "passed": true,
+      "atom_index": 6543,
+      "identity": [
+        "U",
+        "1220",
+        "",
+        "NA",
+        "NA",
+        "Na"
+      ],
+      "charge_e": 1.0,
+      "sigma_nm": 0.2439280690268249,
+      "epsilon_kj_mol": 0.3658460312,
+      "mass_dalton": 22.99
+    },
+    "particle_topology_count": {
+      "passed": true,
+      "atoms": 145913
+    }
+  },
+  "passed": true,
+  "scope": "Saved solute identity, metadata, and sodium-particle continuity; no ligand-binding, ion-residence, convergence, or biological claim.",
+  "evidence": {
+    "datasets/753ba327007a441b/prepared.pdb": "fc928164120f00feacdacbae2dfb5bd768f492242cc2528dd75920124210b31a",
+    "jobs/0b89d27dadc34148/prepared.pdb": "8e43c0fd6c915fc6c28d254bf1772cb93c1a7fc8f6c483aa0ab1be0e9bcceda1",
+    "jobs/0b89d27dadc34148/system.xml": "277f27c0c24834e42a50c76af9437ba68d05d10e84da194ee62f230ae31cd7c2",
+    "datasets/ab629697dd2449c7/topology.pdb": "7b0c74669b7c0bc78bcda33ddbc74994f83f88208a533016bc4c50765258ef30",
+    "datasets/ab629697dd2449c7/metadata.json": "5a42e4c73156d6de3f058351c498a8b442d7252dd5f6762b37d851101314ab88"
+  }
+}

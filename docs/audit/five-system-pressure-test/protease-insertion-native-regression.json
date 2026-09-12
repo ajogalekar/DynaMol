@@ -1,0 +1,95 @@
+{
+  "job": {
+    "id": "98fe2f10abdc49e6",
+    "name": "3PTB insertion-code preparation regression",
+    "engine": "preparation",
+    "status": "completed",
+    "stage": "Prepared complex ready",
+    "progress": 100,
+    "completed_steps": 7,
+    "total_steps": 7,
+    "elapsed_seconds": 1.83,
+    "logs": [
+      "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+      "Inspecting original sequence evidence and current first-frame coordinates.",
+      "Explicitly removed 0 existing hydrogens before pH reassignment, 60 water heavy atoms, and 0 other heavy atoms.",
+      "Added 0 heavy/terminal atoms across existing residues and 0 rebuilt internal segment(s).",
+      "Resolving ligand chemistry while preserving bound heavy-atom coordinates.",
+      "antechamber: ligand-031359c7b86a",
+      "parmchk2: ligand-031359c7b86a",
+      "tleap: ligand-031359c7b86a",
+      "Sidechain sampling skipped by request.",
+      "Added 1604 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded.",
+      "Local relaxation stage complete.",
+      "Saved prepared dataset 4707af756a4f489a: 3,245 atoms. Protonation and modeling caveats retained."
+    ],
+    "config": {
+      "name": "3PTB insertion-code preparation regression",
+      "ph": 7.0,
+      "add_missing_atoms": true,
+      "build_missing_residues": false,
+      "optimize_sidechains": false,
+      "remove_waters": true,
+      "remove_heterogens": false,
+      "ligand_overrides": {},
+      "seed": 20260914,
+      "dataset_id": "59ff9ca69b454df1",
+      "ligand_actions": {},
+      "complex": true,
+      "modified_residues": [],
+      "operation": "prepare"
+    },
+    "created_at": "2026-09-11T23:06:00.096305+00:00",
+    "worker_pid": 99795,
+    "dataset_id": "4707af756a4f489a"
+  },
+  "recovered": [
+    {
+      "chain": "A",
+      "resid": "184",
+      "residue": "GLY",
+      "previous_insertion_code": "",
+      "insertion_code": "A",
+      "seq_id": 164,
+      "label_asym_id": "A",
+      "method": "Unique source residue number/name match with full observed chain order verified"
+    },
+    {
+      "chain": "A",
+      "resid": "188",
+      "residue": "GLY",
+      "previous_insertion_code": "",
+      "insertion_code": "A",
+      "seq_id": 169,
+      "label_asym_id": "A",
+      "method": "Unique source residue number/name match with full observed chain order verified"
+    },
+    {
+      "chain": "A",
+      "resid": "221",
+      "residue": "ALA",
+      "previous_insertion_code": "",
+      "insertion_code": "A",
+      "seq_id": 198,
+      "label_asym_id": "A",
+      "method": "Unique source residue number/name match with full observed chain order verified"
+    }
+  ],
+  "prepared_pdb_codes": [
+    [
+      "ALA",
+      "221",
+      "A"
+    ],
+    [
+      "GLY",
+      "184",
+      "A"
+    ],
+    [
+      "GLY",
+      "188",
+      "A"
+    ]
+  ]
+}

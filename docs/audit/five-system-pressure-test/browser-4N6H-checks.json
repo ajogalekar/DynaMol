@@ -1,0 +1,76 @@
+{
+  "case": {
+    "name": "GPCR 4N6H · 100 ps",
+    "pdbId": "4N6H",
+    "jobId": "0b89d27dadc34148",
+    "datasetId": "ab629697dd2449c7",
+    "baseURL": "http://127.0.0.1:8794"
+  },
+  "startedAt": "2026-09-12T01:17:12.063Z",
+  "checks": [
+    "completed output: 101 finite saved samples, 0–100 ps and three mapped measurements",
+    "real native job Files archive downloaded",
+    "Open trajectory enters Explore and restores all three visible saved plots",
+    "movie advances and pauses; slider and endpoint buttons reach both ends",
+    "water toggles both ways and both zoom buttons change the molecular canvas",
+    "three real UI posthoc plots agree with the saved native tracking samples"
+  ],
+  "posthoc": [
+    {
+      "kind": "distance",
+      "atoms": [
+        1585,
+        3159
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "Å"
+    },
+    {
+      "kind": "angle",
+      "atoms": [
+        2057,
+        2059,
+        2061
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "°"
+    },
+    {
+      "kind": "dihedral",
+      "atoms": [
+        2057,
+        2059,
+        2061,
+        2071
+      ],
+      "samples": 101,
+      "maxDifference": 0,
+      "unit": "°"
+    }
+  ],
+  "browserErrors": [],
+  "consoleErrors": [],
+  "forbiddenRequests": [],
+  "nativeOutput": {
+    "engine": "openmm",
+    "jobName": "Pressure test · gpcr-4N6H · 100 ps",
+    "atoms": 145913,
+    "frames": 101,
+    "firstTimePs": 0,
+    "lastTimePs": 100,
+    "waterAtoms": 139356
+  },
+  "download": {
+    "filename": "DynaMol-0b89d27dadc34148.zip",
+    "bytes": 398046622
+  },
+  "playback": {
+    "pausedFrame": 5,
+    "first": 0,
+    "last": 100
+  },
+  "passed": true,
+  "finishedAt": "2026-09-12T01:17:42.694Z"
+}

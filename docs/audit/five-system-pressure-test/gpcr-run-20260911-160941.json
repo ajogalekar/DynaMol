@@ -1,0 +1,242 @@
+{
+  "case": "gpcr",
+  "source_dataset_id": "2d151914298241d9",
+  "seed": 20260915,
+  "purpose": "Short explicit-water software stability test; no equilibration or biological claim",
+  "jobs": [
+    {
+      "id": "7438dad9ca5d4476",
+      "name": "Pressure test \u00b7 gpcr \u00b7 prepared",
+      "engine": "preparation",
+      "status": "failed",
+      "stage": "Preparation failed",
+      "progress": 28.571428571428573,
+      "completed_steps": 2,
+      "total_steps": 7,
+      "elapsed_seconds": 3.06,
+      "logs": [
+        "Background preparation uses real completed stages for progress, with two CPU threads by default.",
+        "Inspecting original sequence evidence and current first-frame coordinates.",
+        "Explicitly removed 0 existing hydrogens before pH reassignment, 38 water heavy atoms, and 144 other heavy atoms.",
+        "ERROR: Repaired structure has inverted or near-planar standard residue stereochemistry at A:241 ILE CA. The model is rejected; use an externally validated repair instead."
+      ],
+      "config": {
+        "name": "Pressure test \u00b7 gpcr \u00b7 prepared",
+        "ph": 7.0,
+        "add_missing_atoms": true,
+        "build_missing_residues": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_overrides": {},
+        "seed": 20260915,
+        "dataset_id": "2d151914298241d9",
+        "ligand_actions": {
+          "E:1362::MHA": "remove",
+          "F:2001::OLC": "remove",
+          "G:2002::OLC": "remove",
+          "H:2003::OLC": "remove",
+          "I:2004::OLC": "remove",
+          "J:2005::OLC": "remove",
+          "K:2006::OLC": "remove",
+          "L:2007::OLC": "remove"
+        },
+        "complex": true,
+        "modified_residues": [],
+        "operation": "prepare"
+      },
+      "created_at": "2026-09-11T23:09:43.238196+00:00",
+      "worker_pid": 1440,
+      "error": "Repaired structure has inverted or near-planar standard residue stereochemistry at A:241 ILE CA. The model is rejected; use an externally validated repair instead."
+    }
+  ],
+  "preparation_settings": {
+    "dataset_id": "2d151914298241d9",
+    "name": "Pressure test \u00b7 gpcr \u00b7 prepared",
+    "ph": 7,
+    "build_missing_residues": true,
+    "optimize_sidechains": true,
+    "ligand_actions": {
+      "E:1362::MHA": "remove",
+      "F:2001::OLC": "remove",
+      "G:2002::OLC": "remove",
+      "H:2003::OLC": "remove",
+      "I:2004::OLC": "remove",
+      "J:2005::OLC": "remove",
+      "K:2006::OLC": "remove",
+      "L:2007::OLC": "remove"
+    },
+    "seed": 20260915
+  },
+  "preparation_readiness": {
+    "ready": true,
+    "mode": "preparation",
+    "dataset_id": "2d151914298241d9",
+    "blockers": [],
+    "warnings": [
+      "Ligands are retained with their bound heavy-atom coordinates. Preparation assigns a recorded fixed protonation state and GAFF2 / AM1-BCC parameters for explicit-water OpenMM dynamics.",
+      "Retained ions use declared monatomic charge states and require explicit TIP3P water; coordination energetics and alternate oxidation states are not modeled.",
+      "Missing sequence-supported residues are listed. Rebuilding internal short gaps is opt-in and produces low-confidence coordinates, not an experimentally established loop.",
+      "A long backbone connection is present. Unresolved internal gaps must be repaired before force-field preparation or simulation; a stretched inferred peptide bond is not accepted.",
+      "Missing terminal sequence is reported but not rebuilt. The observed structure is prepared as a truncated chain with terminal groups.",
+      "pH assignment uses OpenMM template/heuristic protonation and histidine tautomer rules, not a pKa calculation or constant-pH simulation."
+    ],
+    "resources": {
+      "input_atoms": 2503,
+      "estimated_atoms": 2503,
+      "estimate_kind": "saved topology",
+      "saved_frames": 1,
+      "coordinate_bytes": 30036,
+      "working_memory_estimate_bytes": 120144,
+      "disk_estimate_bytes": 72415224,
+      "free_disk_bytes": 167596494848,
+      "atom_limit": 100000,
+      "coordinate_limit_bytes": 268435456,
+      "note": "Planning estimates include retained coordinates and working copies; native engines can use additional memory. Runtime is measured after dynamics starts."
+    },
+    "chemical_state": {
+      "ph": 7.0,
+      "modifications": [],
+      "ligands": [
+        {
+          "key": "D:1361::P32",
+          "chain": "D",
+          "resid": "1361",
+          "insertion_code": " ",
+          "residue": "P32",
+          "component_id": "P32",
+          "error": null,
+          "atom_indices": [
+            2300,
+            2301,
+            2302,
+            2303,
+            2304,
+            2305,
+            2306,
+            2307,
+            2308,
+            2309,
+            2310,
+            2311,
+            2312,
+            2313,
+            2314,
+            2315,
+            2316,
+            2317,
+            2318,
+            2319,
+            2320
+          ],
+          "selected_action": null,
+          "can_remove": true,
+          "can_repair": false,
+          "removed": false,
+          "missing_heavy_atoms": [],
+          "extra_heavy_atoms": [],
+          "repair_reason": null,
+          "original_smiles": "CC(C)(C)NC[C@H](O)COc1cccc2c1CC(C#N)=N2",
+          "original_formal_charge": 0,
+          "selected_smiles": "CC(C)(C)[NH2+]C[C@H](O)COc1cccc2c1CC(C#N)=N2",
+          "formal_charge": 1,
+          "candidate_smiles": [
+            "CC(C)(C)[NH2+]C[C@H](O)COc1cccc2c1CC(C#N)=N2"
+          ],
+          "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+          "ph": 7.0,
+          "warnings": [
+            "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+          ],
+          "heavy_atoms": 21,
+          "reference": {
+            "provider": "wwPDB CCD via RCSB",
+            "component_id": "P32",
+            "url": "https://files.rcsb.org/ligands/download/P32.cif",
+            "sha256": "b85b70762259838af51714db9d8f98916de88676359fdbfa1490d4cbef25f595",
+            "retrieved_at": "2026-09-11T22:38:39.247056+00:00",
+            "retrieval_note": null
+          },
+          "stereo_checked": {
+            "C10": "S"
+          },
+          "source_cif": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs/datasets/2d151914298241d9/source.cif",
+          "stereo_limitations": "Carbon tetrahedral CCD/input-SMILES configurations are checked. Nitrogen inversion, atropisomerism, and phosphorus stereodescriptors after ionization are not validated; the original bound heavy-atom pose is retained."
+        }
+      ],
+      "ions": [
+        {
+          "key": "B:1359::NA",
+          "residue": "NA",
+          "element": "Na",
+          "deposited_formal_charge": null,
+          "formal_charge": 1,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "NA",
+            "atom_type": "tip3p_standard-Na+",
+            "element": "Na",
+            "charge_e": 1.0,
+            "sigma_nm": 0.2439280690268249,
+            "epsilon_kj_mol": 0.3658460312,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/NA",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+          }
+        },
+        {
+          "key": "C:1360::NA",
+          "residue": "NA",
+          "element": "Na",
+          "deposited_formal_charge": null,
+          "formal_charge": 1,
+          "supported": true,
+          "error": null,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+          "parameters": {
+            "template": "NA",
+            "atom_type": "tip3p_standard-Na+",
+            "element": "Na",
+            "charge_e": 1.0,
+            "sigma_nm": 0.2439280690268249,
+            "epsilon_kj_mol": 0.3658460312,
+            "forcefield_file": "amber14/tip3p.xml",
+            "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+            "parameter_sources": [
+              "parm/frcmod.ionsjc_tip3p",
+              "parm/frcmod.ions234lm_126_tip3p",
+              "lib/atomic_ions.lib",
+              "tip3p.xml"
+            ],
+            "references": [
+              "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+              "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+              "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+              "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+            ],
+            "identity_source": "https://www.rcsb.org/ligand/NA",
+            "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+          }
+        }
+      ]
+    },
+    "model": "Fixed-state preparation with recorded protonation assumptions"
+  },
+  "status": "failed",
+  "error": "Repaired structure has inverted or near-planar standard residue stereochemistry at A:241 ILE CA. The model is rejected; use an externally validated repair instead."
+}

@@ -1,0 +1,264 @@
+{
+  "job_id": "21bf66d8a51744da",
+  "data_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm",
+  "checks": {
+    "completed": {
+      "passed": true,
+      "status": "completed",
+      "completed_steps": 50000,
+      "error": null
+    },
+    "physical_trajectory": {
+      "passed": true,
+      "dataset_id": "b0d233348dcf4344",
+      "atoms": 27365,
+      "frames": 101,
+      "final_time_ps": 100.0
+    },
+    "coordinates_evolve": {
+      "passed": true,
+      "maximum_displacement_nm": 4.362551689147949
+    },
+    "solvent_box": {
+      "passed": true,
+      "explicit": true,
+      "has_box": true,
+      "fixed_volume": true
+    },
+    "display_payload": {
+      "passed": true
+    },
+    "protein_heavy_bonds": {
+      "passed": true,
+      "bonds": 1666,
+      "frames": 101,
+      "maximum_angstrom": 2.1452505588531494,
+      "maximum_frame": 26,
+      "maximum_pair": [
+        2496,
+        2801
+      ],
+      "minimum_angstrom": 1.1497880220413208,
+      "threshold_angstrom": 3.0,
+      "note": "Gross bond-length screen with minimum-image distances; not a force-field or structural-quality validation."
+    },
+    "native_trajectory": {
+      "passed": true,
+      "max_coordinate_difference_nm": 0.0005006790161132812,
+      "tolerance_nm": 0.0006,
+      "frames": 101,
+      "atoms": 27365
+    },
+    "native_box": {
+      "passed": true
+    },
+    "energy_diagnostics": {
+      "passed": true,
+      "rows": 101,
+      "min_potential_kj_mol": -339168.29902732,
+      "max_potential_kj_mol": -336165.17878756
+    },
+    "gross_temperature_screen": {
+      "passed": true,
+      "target_k": 300.0,
+      "mean_k": 300.5774014943565,
+      "min_k": 295.08699609,
+      "max_k": 305.73422697,
+      "note": "Broad numerical alarm only; no claim of equilibration or expected distribution."
+    },
+    "native_system": {
+      "passed": true,
+      "particles": 27365
+    },
+    "temperature_from_kinetic_energy": {
+      "passed": true,
+      "degrees_of_freedom": 56375
+    },
+    "committed_checkpoint": {
+      "passed": true
+    },
+    "committed_physical_frames": {
+      "passed": true
+    },
+    "dcd_with_time_sidecar": {
+      "passed": true
+    },
+    "live_measurement_coverage": {
+      "passed": true,
+      "errors": []
+    },
+    "measurement:backbone-distance": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": false,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "measurement:backbone-angle": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": false,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "measurement:backbone-dihedral": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": true,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "recorded_artifact_hashes": {
+      "passed": true,
+      "checked": 145,
+      "mismatches": []
+    }
+  },
+  "evidence": {
+    "jobs/21bf66d8a51744da/status.json": {
+      "sha256": "931342af70f1a75d3ad6e2076f68f6afb9ba1e707112ca3042f092de6e1cd6f7",
+      "bytes": 11223
+    },
+    "jobs/21bf66d8a51744da/config.json": {
+      "sha256": "c4579e54ada0762cc7e34e17cdd3ce5870b31d9203f0a78581d49f8210cf6826",
+      "bytes": 1049
+    },
+    "jobs/21bf66d8a51744da/provenance.json": {
+      "sha256": "d3c2c873f2a01b8215fc19a37687ad8186a2f867822d7fb0d21b9417e41de332",
+      "bytes": 184345
+    },
+    "datasets/b0d233348dcf4344/metadata.json": {
+      "sha256": "e4a2a1b46646fb0621843612cf13a14087281f2606e0e635ba1e9621d0804e96",
+      "bytes": 6393993
+    },
+    "datasets/b0d233348dcf4344/physical.npz": {
+      "sha256": "4c0ecc8b8a00e7ec8729cc85ad353d82e038fdf6fdebb81beeac22249ab752f5",
+      "bytes": 30560691
+    },
+    "datasets/b0d233348dcf4344/topology.pdb": {
+      "sha256": "4ee9a31208657b19e8ed3fa5b6e66923d941c68fe7500e3a29ce407af5673a0d",
+      "bytes": 2217459
+    },
+    "jobs/21bf66d8a51744da/trajectory.xtc": {
+      "sha256": "79d3c4b63c2eecc707ef5a6af71620c9b3cdbb58bd9bc99afe8a6aa883005955",
+      "bytes": 10157372
+    },
+    "jobs/21bf66d8a51744da/prepared.pdb": {
+      "sha256": "55d261dc3091cdc5e59304863c72b2ce8c5bd38cd517da49370b1e3ec5db8c89",
+      "bytes": 2217450
+    },
+    "jobs/21bf66d8a51744da/energies.csv": {
+      "sha256": "caf6480f7a960842c891dd33bdec528079b35b2a6d72cb2e455f999035d1f4a2",
+      "bytes": 6389
+    },
+    "jobs/21bf66d8a51744da/system.xml": {
+      "sha256": "99f17897238046611d39844c7c935e8d30138e1471f1dd98b4aa3b99680339e3",
+      "bytes": 8192659
+    },
+    "jobs/21bf66d8a51744da/integrator.xml": {
+      "sha256": "ec3121a0e27867875ffeff95ab36019ccb82cc155b68eba5e9a27b87989fc514",
+      "bytes": 206
+    },
+    "jobs/21bf66d8a51744da/recovery.json": {
+      "sha256": "016952c4b2500853702189ed6070439e6112467a3011f0af27d8224739f1a3e1",
+      "bytes": 22647
+    },
+    "jobs/21bf66d8a51744da/measurements.json": {
+      "sha256": "47dde3fc1f0daa9ed0eea352a76a1a3cae36494b05b4c11a7065fbdc2df6873d",
+      "bytes": 18467
+    },
+    "jobs/21bf66d8a51744da/measurement-identity.json": {
+      "sha256": "6dc6e3f935130fca52560790c9cec0845bc4abf620420ce9b338af3785a42cfd",
+      "bytes": 278
+    },
+    "jobs/21bf66d8a51744da/input-state.json": {
+      "sha256": "41eae8091a94a5fb8954080fa3c889791b92dc19aecf8d49dceef13f8253504f",
+      "bytes": 166510
+    }
+  },
+  "scope": "Saved-artifact consistency and gross numerical health for exploratory NVT software pressure testing; no equilibration, convergence, biological stability, or pose-accuracy claim.",
+  "limits": [
+    "Temperature bands and bond limits are gross alarms, not statistical convergence tests.",
+    "NVT temperature fluctuations and total-energy changes are expected; NVE energy conservation is not tested.",
+    "Live/posthoc comparison uses the app's geometry implementation; its independent analytic controls are tested separately."
+  ],
+  "engine": "openmm",
+  "config": {
+    "dataset_id": "bc9ee7d832754aa0",
+    "engine": "openmm",
+    "name": "Pressure test \u00b7 protease \u00b7 100 ps",
+    "duration_ps": 100.0,
+    "temperature_k": 300.0,
+    "timestep_fs": 2.0,
+    "report_interval": 500,
+    "friction_ps": 1,
+    "seed": 20260914,
+    "solvent": "explicit",
+    "minimize": true,
+    "equilibration_steps": 5000,
+    "padding_nm": 1.0,
+    "measurements": [
+      {
+        "id": "backbone-distance",
+        "kind": "distance",
+        "atoms": [
+          799,
+          1630
+        ],
+        "label": "Backbone separation",
+        "color": null,
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-angle",
+        "kind": "angle",
+        "atoms": [
+          1081,
+          1083,
+          1085
+        ],
+        "label": "Backbone N\u2013CA\u2013C",
+        "color": null,
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-dihedral",
+        "kind": "dihedral",
+        "atoms": [
+          1081,
+          1083,
+          1085,
+          1092
+        ],
+        "label": "Backbone psi",
+        "color": null,
+        "trackDuringRun": true
+      }
+    ]
+  },
+  "elapsed_seconds": 1076.99,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6"
+  },
+  "cpu_threads": 4,
+  "expected": {
+    "production_steps": 50000,
+    "frames": 101,
+    "final_time_ps": 100.0
+  },
+  "passed": true
+}

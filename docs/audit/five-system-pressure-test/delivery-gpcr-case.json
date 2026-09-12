@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "name": "\u03b4-opioid receptor GPCR",
+      "pdbId": "4N6H",
+      "jobId": "0b89d27dadc34148",
+      "datasetId": "ab629697dd2449c7",
+      "baseURL": "http://127.0.0.1:8794",
+      "dataRoot": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gpcr-large"
+    }
+  ]
+}

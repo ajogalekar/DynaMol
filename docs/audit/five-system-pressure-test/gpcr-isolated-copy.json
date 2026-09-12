@@ -1,0 +1,72 @@
+{
+  "source_dataset_id": "2d151914298241d9",
+  "source_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm/datasets/2d151914298241d9",
+  "destination_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs/datasets/2d151914298241d9",
+  "files": [
+    {
+      "file": "coordinates.bin",
+      "sha256": "499d7adaa105a3c4ba59c0192b57e81473d7569b0003ac661f1386938d33b45a",
+      "bytes": 30036
+    },
+    {
+      "file": "metadata.json",
+      "sha256": "6d8521ac8cecf3c2a2d67e9be6035f02edb54f1909dc979bf672e89a97af9dc3",
+      "bytes": 593956
+    },
+    {
+      "file": "physical.npz",
+      "sha256": "0a08814605f7dad543e1e392af2a0106771f71198e453888e2dfe79a9a1fb30a",
+      "bytes": 26850
+    },
+    {
+      "file": "provenance.json",
+      "sha256": "cd99f06304928d3a5bff44b09aae9eb07c9488026921d36688391238ecf42638",
+      "bytes": 1418
+    },
+    {
+      "file": "source.cif",
+      "sha256": "13a39e5046074a4f38e7fd18c029c14a934cb5fe201733f731ef363d3c890438",
+      "bytes": 322614
+    },
+    {
+      "file": "topology.pdb",
+      "sha256": "1ef08800216806cba276745d05e13c165934cec30782133bbafcc66a19f5c23d",
+      "bytes": 206854
+    }
+  ],
+  "cache_files": [
+    {
+      "file": "P32.metadata.json",
+      "sha256": "e15af571fe25eb94791548e0023809ea1003847347421457b0ddb2c655a78421"
+    },
+    {
+      "file": "BEN.cif",
+      "sha256": "a7ce813cbbac599168d4772f635ae23d7c6edb4d83a9891ebabcbe9e8bb66849"
+    },
+    {
+      "file": "OLC.metadata.json",
+      "sha256": "7e99fc8442568a07a16dfcf4c47a4e2f5dae4c420baf5e384a306db18939449c"
+    },
+    {
+      "file": "MHA.cif",
+      "sha256": "dc604101ff373f365407b0f524a3266cb8b2ae1bd02230bff8de08afdce41043"
+    },
+    {
+      "file": "P32.cif",
+      "sha256": "b85b70762259838af51714db9d8f98916de88676359fdbfa1490d4cbef25f595"
+    },
+    {
+      "file": "MHA.metadata.json",
+      "sha256": "5ce43de34bb3d7381ab554ffb35907658c6fcef85ffdd8f77697c82ef3ab40c3"
+    },
+    {
+      "file": "BEN.metadata.json",
+      "sha256": "a7373830399919cc201047a676c250decdd0c52142418b0f5be2d2b1d67b9a6b"
+    },
+    {
+      "file": "OLC.cif",
+      "sha256": "a617a149c3e00a0ee064acc64db04a7d772f67d23250d5a70e93cf1e7e1a6c5a"
+    }
+  ],
+  "source_unchanged": true
+}

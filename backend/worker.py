@@ -52,10 +52,54 @@ class Worker:
             self.provenance = json.loads((self.folder / "provenance.json").read_text())
             self.provenance.pop("failure", None)
         self.provenance["restarts"] = self.job.get("restarts", [])
+        self.provenance["resource_limits"] = {"maximum_atoms": config.MAX_ATOMS, "maximum_coordinate_bytes": config.MAX_COORD_BYTES,
+                                              "maximum_frames": config.MAX_FRAMES}
 
     def check_cancel(self):
         if _termination_requested or (self.folder / "cancel.request").exists():
             raise Cancelled("Cancelled by user.")
+
+    def check_stereochemistry(self, topology, xyz_nm, stage, box_nm=None):
+        from .stereo_monitor import StereoMonitor, require_valid
+        if not hasattr(self, '_stereo_monitor'):
+            self._stereo_monitor = StereoMonitor(topology, xyz_nm, self.folder / 'input.pdb')
+        report = self._stereo_monitor.check(xyz_nm, box_nm, stage)
+        history_path = self.folder / 'stereochemistry-checks.json'
+        if not hasattr(self, '_stereo_checks'):
+            # A new worker may be continuing an interrupted run. Keep the
+            # preparation and earlier production evidence across that restart.
+            self._stereo_checks = json.loads(history_path.read_text())['checks'] if history_path.exists() else []
+        history = self._stereo_checks
+        history.append({k: v for k, v in report.items() if k != 'method'})
+        atomic_json(history_path, {'method': report['method'], 'checks': history})
+        if not report['passed']:
+            import numpy as np
+            from openmm import app, unit
+            evidence = self.folder / 'stereochemistry-failures' / uuid.uuid4().hex[:16]
+            evidence.mkdir(parents=True)
+            coordinates = evidence / 'coordinates.npz'
+            topology_path = evidence / 'topology.cif'
+            np.savez_compressed(coordinates, xyz_nm=xyz_nm,
+                                **({'box_nm': box_nm} if box_nm is not None else {}))
+            # Native preparation can add atoms before prepared.pdb exists. Save
+            # its matching topology too. NaNs remain in the NPZ; finite zero
+            # placeholders only make the topology file readable in that case.
+            xyz = np.asarray(xyz_nm)
+            nonfinite = int((~np.isfinite(xyz)).sum())
+            with topology_path.open('w') as stream:
+                app.PDBxFile.writeFile(topology, np.where(np.isfinite(xyz), xyz, 0) * unit.nanometer, stream, keepIds=True)
+            report['artifacts'] = {str(path.relative_to(self.folder)): hashlib.sha256(path.read_bytes()).hexdigest()
+                                   for path in (coordinates, topology_path)}
+            report['topology_coordinate_placeholders'] = nonfinite
+            atomic_json(evidence / 'report.json', report)
+            # Preserve the first failure's legacy path for existing download
+            # consumers, while every failure has its own immutable evidence.
+            legacy = self.folder / 'stereochemistry-failure.npz'
+            if not legacy.exists():
+                shutil.copy2(coordinates, legacy)
+            self.provenance['stereochemistry_failure'] = report
+            atomic_json(self.folder / 'provenance.json', self.provenance)
+        require_valid(report)
 
     def update(self, stage=None, completed=None, message=None, **fields):
         self.check_cancel()
@@ -251,9 +295,12 @@ class Worker:
             platform = mm.Platform.getPlatformByName("CPU")
             simulation = app.Simulation(modeller.topology, system, integrator, platform, {"Threads": str(config.CPU_THREADS), "DeterministicForces": "true"})
             simulation.context.setPositions(modeller.positions)
+            self.check_stereochemistry(modeller.topology, np.asarray(modeller.positions.value_in_unit(unit.nanometer)), 'Before minimization')
             if settings["minimize"]:
                 self.update(stage="Energy minimization", message="Minimizing up to 1,000 iterations (tolerance 10 kJ/mol/nm).")
                 simulation.minimizeEnergy(tolerance=10 * unit.kilojoule_per_mole / unit.nanometer, maxIterations=1000)
+                minimized = simulation.context.getState(getPositions=True)
+                self.check_stereochemistry(simulation.topology, minimized.getPositions(asNumpy=True).value_in_unit(unit.nanometer), 'After minimization')
             simulation.context.setVelocitiesToTemperature(settings["temperature_k"] * unit.kelvin, settings["seed"])
             if settings["equilibration_steps"]:
                 self.update(stage="Initial relaxation", message=f"Running {settings['equilibration_steps']:,} initial relaxation steps; this does not establish equilibration.")
@@ -262,6 +309,9 @@ class Worker:
                     count = min(remaining, 100)
                     simulation.step(count)
                     remaining -= count
+                    relaxed = simulation.context.getState(getPositions=True)
+                    self.check_stereochemistry(simulation.topology, relaxed.getPositions(asNumpy=True).value_in_unit(unit.nanometer),
+                                               f"Initial relaxation step {settings['equilibration_steps'] - remaining}")
                     self.update()
             simulation.currentStep = 0
             simulation.context.setTime(0 * unit.picosecond)
@@ -324,6 +374,8 @@ class Worker:
                 if is_frame and (not frame_records or frame_records[-1]["step"] != step):
                     state = simulation.context.getState(getPositions=True, getEnergy=True)
                     xyz = state.getPositions(asNumpy=True).value_in_unit(unit.nanometer)
+                    self.check_stereochemistry(simulation.topology, xyz, f'Production step {step}',
+                                               None if implicit else state.getPeriodicBoxVectors(asNumpy=True).value_in_unit(unit.nanometer))
                     potential = state.getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
                     kinetic = state.getKineticEnergy().value_in_unit(unit.kilojoule_per_mole)
                     temperature = 2 * kinetic / (0.00831446261815324 * dof) if dof > 0 else float("nan")
@@ -420,6 +472,8 @@ class Worker:
             self.report_measurements("read_xtc")
             self.report_measurements("flush", force=True)
         traj = md.load(str(self.folder / "production.xtc"), top=str(self.folder / "system.gro"))
+        for frame in traj:
+            self.check_stereochemistry(traj.topology.to_openmm(), frame.xyz[0], f'Production time {float(frame.time[0]):g} ps', frame.unitcell_vectors[0])
         self.report_measurements("read_xtc", final=True)
         self.report_measurements("finish", traj)
         traj[0].save_pdb(str(self.folder / "prepared.pdb"))
@@ -484,10 +538,13 @@ class Worker:
             raise ValueError("Prepared solvated output exceeds viewer limits. Increase report interval or use a smaller input.")
         cpu = ["-ntmpi", "1", "-ntomp", str(config.CPU_THREADS), "-nb", "cpu", "-pme", "cpu", "-bonded", "cpu", "-update", "cpu", "-pin", "off"]
         coordinates = "system.gro"
+        self.check_stereochemistry(prepared.topology.to_openmm(), prepared.xyz[0], 'Before minimization', prepared.unitcell_vectors[0])
         if settings["minimize"]:
             self.run_command([gmx, "grompp", "-f", "minimize.mdp", "-c", coordinates, "-p", "topol.top", "-o", "minimize.tpr"], "Preparing minimization")
             self.run_command([gmx, "mdrun", "-deffnm", str(self.folder / "minimize"), *cpu], "Energy minimization")
             coordinates = "minimize.gro"
+            minimized = md.load(str(self.folder / coordinates))
+            self.check_stereochemistry(minimized.topology.to_openmm(), minimized.xyz[0], 'After minimization', minimized.unitcell_vectors[0])
         def mdp(steps, continuation):
             return f"""integrator = sd
 nsteps = {steps}
@@ -519,6 +576,8 @@ pcoupl = no
             self.run_command([gmx, "grompp", "-f", "relax.mdp", "-c", coordinates, "-p", "topol.top", "-o", "relax.tpr"], "Preparing initial relaxation")
             self.run_command([gmx, "mdrun", "-deffnm", str(self.folder / "relax"), *cpu], "Initial relaxation")
             coordinates = "relax.gro"
+            relaxed = md.load(str(self.folder / coordinates))
+            self.check_stereochemistry(relaxed.topology.to_openmm(), relaxed.xyz[0], 'After initial relaxation', relaxed.unitcell_vectors[0])
         (self.folder / "production.mdp").write_text(mdp(self.job["total_steps"], bool(settings["equilibration_steps"])))
         self.run_command([gmx, "grompp", "-f", "production.mdp", "-c", coordinates, "-p", "topol.top", "-o", "production.tpr"], "Preparing production")
         return self.gromacs_production(gmx, cpu)

@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-09-11T23:39:32.537352+00:00",
+  "base_url": "http://127.0.0.1:8765",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "project_id": "pressure-491f0e8e7dc04c6c",
+      "name": "Pressure test \u00b7 1K4C \u00b7 KcsA ion channel \u00b7 100 ps",
+      "frames": 101,
+      "end_ps": 100.0,
+      "saved_plots": 3,
+      "coordinate_bytes": 68480424
+    },
+    {
+      "project_id": "pressure-4ee199dd7b4e4c1b",
+      "name": "Pressure test \u00b7 1SUG \u00b7 PTP1B phosphatase \u00b7 100 ps",
+      "frames": 101,
+      "end_ps": 100.0,
+      "saved_plots": 3,
+      "coordinate_bytes": 79453872
+    },
+    {
+      "project_id": "pressure-21bf66d8a51744da",
+      "name": "Pressure test \u00b7 3PTB \u00b7 Trypsin protease \u00b7 100 ps",
+      "frames": 101,
+      "end_ps": 100.0,
+      "saved_plots": 3,
+      "coordinate_bytes": 33166380
+    },
+    {
+      "project_id": "pressure-1f0e521a1f4d4f85",
+      "name": "Pressure test \u00b7 1XQZ \u00b7 Pim-1 kinase \u00b7 100 ps",
+      "frames": 101,
+      "end_ps": 100.0,
+      "saved_plots": 3,
+      "coordinate_bytes": 66098844
+    }
+  ],
+  "current_workspace_unchanged": true,
+  "server_pid": 10739
+}

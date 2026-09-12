@@ -1,0 +1,135 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/ashujo/Documents/Science/DynaMol/frontend/node_modules/.bin/playwright",
+      "test",
+      "tests/pressure-test-trajectories.spec.ts",
+      "--grep",
+      "4N6H",
+      "--reporter=list,json",
+      "--output=test-results/pressure-test-gpcr-final"
+    ],
+    "configFile": "/Users/ashujo/Documents/Science/DynaMol/frontend/playwright.config.ts",
+    "rootDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/test-results/pressure-test-gpcr-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ashujo/Documents/Science/DynaMol/frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pressure-test-trajectories.spec.ts",
+      "file": "pressure-test-trajectories.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "4N6H: GPCR 4N6H · 100 ps",
+          "file": "pressure-test-trajectories.spec.ts",
+          "line": 64,
+          "column": 8,
+          "specs": [
+            {
+              "title": "completed native trajectory opens, plots, plays, scrubs and downloads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 31022,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-12T01:17:11.238Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trajectory-audit",
+                          "contentType": "application/json",
+                          "body": "ewogICJjYXNlIjogewogICAgIm5hbWUiOiAiR1BDUiA0TjZIIMK3IDEwMCBwcyIsCiAgICAicGRiSWQiOiAiNE42SCIsCiAgICAiam9iSWQiOiAiMGI4OWQyN2RhZGMzNDE0OCIsCiAgICAiZGF0YXNldElkIjogImFiNjI5Njk3ZGQyNDQ5YzciLAogICAgImJhc2VVUkwiOiAiaHR0cDovLzEyNy4wLjAuMTo4Nzk0IgogIH0sCiAgInN0YXJ0ZWRBdCI6ICIyMDI2LTA5LTEyVDAxOjE3OjEyLjA2M1oiLAogICJjaGVja3MiOiBbCiAgICAiY29tcGxldGVkIG91dHB1dDogMTAxIGZpbml0ZSBzYXZlZCBzYW1wbGVzLCAw4oCTMTAwIHBzIGFuZCB0aHJlZSBtYXBwZWQgbWVhc3VyZW1lbnRzIiwKICAgICJyZWFsIG5hdGl2ZSBqb2IgRmlsZXMgYXJjaGl2ZSBkb3dubG9hZGVkIiwKICAgICJPcGVuIHRyYWplY3RvcnkgZW50ZXJzIEV4cGxvcmUgYW5kIHJlc3RvcmVzIGFsbCB0aHJlZSB2aXNpYmxlIHNhdmVkIHBsb3RzIiwKICAgICJtb3ZpZSBhZHZhbmNlcyBhbmQgcGF1c2VzOyBzbGlkZXIgYW5kIGVuZHBvaW50IGJ1dHRvbnMgcmVhY2ggYm90aCBlbmRzIiwKICAgICJ3YXRlciB0b2dnbGVzIGJvdGggd2F5cyBhbmQgYm90aCB6b29tIGJ1dHRvbnMgY2hhbmdlIHRoZSBtb2xlY3VsYXIgY2FudmFzIiwKICAgICJ0aHJlZSByZWFsIFVJIHBvc3Rob2MgcGxvdHMgYWdyZWUgd2l0aCB0aGUgc2F2ZWQgbmF0aXZlIHRyYWNraW5nIHNhbXBsZXMiCiAgXSwKICAicG9zdGhvYyI6IFsKICAgIHsKICAgICAgImtpbmQiOiAiZGlzdGFuY2UiLAogICAgICAiYXRvbXMiOiBbCiAgICAgICAgMTU4NSwKICAgICAgICAzMTU5CiAgICAgIF0sCiAgICAgICJzYW1wbGVzIjogMTAxLAogICAgICAibWF4RGlmZmVyZW5jZSI6IDAsCiAgICAgICJ1bml0IjogIsOFIgogICAgfSwKICAgIHsKICAgICAgImtpbmQiOiAiYW5nbGUiLAogICAgICAiYXRvbXMiOiBbCiAgICAgICAgMjA1NywKICAgICAgICAyMDU5LAogICAgICAgIDIwNjEKICAgICAgXSwKICAgICAgInNhbXBsZXMiOiAxMDEsCiAgICAgICJtYXhEaWZmZXJlbmNlIjogMCwKICAgICAgInVuaXQiOiAiwrAiCiAgICB9LAogICAgewogICAgICAia2luZCI6ICJkaWhlZHJhbCIsCiAgICAgICJhdG9tcyI6IFsKICAgICAgICAyMDU3LAogICAgICAgIDIwNTksCiAgICAgICAgMjA2MSwKICAgICAgICAyMDcxCiAgICAgIF0sCiAgICAgICJzYW1wbGVzIjogMTAxLAogICAgICAibWF4RGlmZmVyZW5jZSI6IDAsCiAgICAgICJ1bml0IjogIsKwIgogICAgfQogIF0sCiAgImJyb3dzZXJFcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJmb3JiaWRkZW5SZXF1ZXN0cyI6IFtdLAogICJuYXRpdmVPdXRwdXQiOiB7CiAgICAiZW5naW5lIjogIm9wZW5tbSIsCiAgICAiam9iTmFtZSI6ICJQcmVzc3VyZSB0ZXN0IMK3IGdwY3ItNE42SCDCtyAxMDAgcHMiLAogICAgImF0b21zIjogMTQ1OTEzLAogICAgImZyYW1lcyI6IDEwMSwKICAgICJmaXJzdFRpbWVQcyI6IDAsCiAgICAibGFzdFRpbWVQcyI6IDEwMCwKICAgICJ3YXRlckF0b21zIjogMTM5MzU2CiAgfSwKICAiZG93bmxvYWQiOiB7CiAgICAiZmlsZW5hbWUiOiAiRHluYU1vbC0wYjg5ZDI3ZGFkYzM0MTQ4LnppcCIsCiAgICAiYnl0ZXMiOiAzOTgwNDY2MjIKICB9LAogICJwbGF5YmFjayI6IHsKICAgICJwYXVzZWRGcmFtZSI6IDUsCiAgICAiZmlyc3QiOiAwLAogICAgImxhc3QiOiAxMDAKICB9LAogICJwYXNzZWQiOiB0cnVlLAogICJmaW5pc2hlZEF0IjogIjIwMjYtMDktMTJUMDE6MTc6NDIuNjk0WiIKfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d070a4d4317c8b5fca63-d0c78b83440be56e3780",
+              "file": "pressure-test-trajectories.spec.ts",
+              "line": 66,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-12T01:17:11.012Z",
+    "duration": 31988.679,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
