@@ -119,3 +119,66 @@ def test_nonfinite_failure_coordinates_remain_in_npz_with_readable_topology(tmp_
     assert np.isnan(np.load(npz)['xyz_nm']).sum() == 1
     cif = next(tmp_path / key for key in report['artifacts'] if key.endswith('.cif'))
     assert np.isfinite(app.PDBxFile(str(cif)).positions.value_in_unit(unit.nanometer)).all()
+
+
+def _fake_monitor(indices, reference_xyz):
+    monitor = StereoMonitor.__new__(StereoMonitor)
+    monitor.indices = np.asarray(indices, dtype=int).reshape(-1, 4)
+    monitor.centers = [{'chain': 'A', 'resid': str(i + 1), 'residue': 'ALA', 'center': 'CA',
+                        'atom_indices': list(map(int, idx)), 'insertion_code': '',
+                        'template_signed_volume_nm3': _signed_volume(reference_xyz, idx)}
+                       for i, idx in enumerate(monitor.indices)]
+    monitor.expected = np.asarray([c['template_signed_volume_nm3'] for c in monitor.centers])
+    return monitor
+
+
+def _signed_volume(xyz, idx):
+    p = np.asarray(xyz)[idx]
+    return float(np.linalg.det([p[1] - p[0], p[2] - p[0], p[3] - p[0]]))
+
+
+def test_protection_force_prevents_minimization_from_inverting_a_stereocenter():
+    """A driving force that alone would flip a center cannot invert it while the
+    temporary chirality restraint is applied; without it the center inverts."""
+    import openmm as mm
+    from openmm import unit
+
+    xyz = np.array([[0.0, 0.0, 0.05], [0.1, 0.0, 0.0],
+                    [-0.05, 0.0866, 0.0], [-0.05, -0.0866, 0.0]])
+    monitor = _fake_monitor([[0, 1, 2, 3]], xyz)
+    v0 = _signed_volume(xyz, monitor.indices[0])
+    assert abs(v0) > 1e-4
+
+    def minimize(protect):
+        system = mm.System()
+        for mass in (12.0, 0.0, 0.0, 0.0):  # only the apex atom is free to move
+            system.addParticle(mass)
+        driver = mm.CustomExternalForce('0.5*K*(z-zt)^2')
+        driver.addGlobalParameter('K', 1e6)
+        driver.addGlobalParameter('zt', -0.05)  # pull the apex across the plane
+        driver.addParticle(0, [])
+        system.addForce(driver)
+        if protect:
+            force, protected = monitor.protection_force(xyz)
+            assert len(protected) == 1
+            system.addForce(force)
+        context = mm.Context(system, mm.VerletIntegrator(0.001 * unit.picosecond),
+                             mm.Platform.getPlatformByName('Reference'))
+        context.setPositions(xyz * unit.nanometer)
+        mm.LocalEnergyMinimizer.minimize(context, 1e-6, 2000)
+        return np.asarray(context.getState(getPositions=True)
+                          .getPositions(asNumpy=True).value_in_unit(unit.nanometer))
+
+    unprotected = minimize(False)
+    protected = minimize(True)
+    assert np.sign(_signed_volume(unprotected, monitor.indices[0])) != np.sign(v0)
+    assert np.sign(_signed_volume(protected, monitor.indices[0])) == np.sign(v0)
+    assert not monitor.check(unprotected)['passed']
+    assert monitor.check(protected)['passed']
+
+
+def test_protection_force_skips_already_planar_centers():
+    planar = np.array([[0.0, 0.0, 0.0], [0.1, 0.0, 0.0], [0.05, 0.0866, 0.0], [-0.05, 0.0866, 0.0]])
+    monitor = _fake_monitor([[0, 1, 2, 3]], planar)
+    _, protected = monitor.protection_force(planar)
+    assert protected == []

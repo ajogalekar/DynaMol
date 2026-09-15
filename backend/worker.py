@@ -297,10 +297,23 @@ class Worker:
             platform = mm.Platform.getPlatformByName("CPU")
             simulation = app.Simulation(modeller.topology, system, integrator, platform, {"Threads": str(config.CPU_THREADS), "DeterministicForces": "true"})
             simulation.context.setPositions(modeller.positions)
-            self.check_stereochemistry(modeller.topology, np.asarray(modeller.positions.value_in_unit(unit.nanometer)), 'Before minimization')
+            before_min_xyz = np.asarray(modeller.positions.value_in_unit(unit.nanometer))
+            self.check_stereochemistry(modeller.topology, before_min_xyz, 'Before minimization')
             if settings["minimize"]:
                 self.update(stage="Energy minimization", message="Minimizing up to 1,000 iterations (tolerance 10 kJ/mol/nm).")
+                # Protect standard-residue stereocenters so gradient minimization
+                # can relieve clashes without pushing any center through a planar
+                # intermediate into its mirror image. Temporary; removed before
+                # dynamics so it never affects the physics.
+                protection, protected = self._stereo_monitor.protection_force(before_min_xyz)
+                protect_index = system.addForce(protection) if protected else None
+                if protect_index is not None:
+                    simulation.context.reinitialize(preserveState=True)
                 simulation.minimizeEnergy(tolerance=10 * unit.kilojoule_per_mole / unit.nanometer, maxIterations=1000)
+                if protect_index is not None:
+                    system.removeForce(protect_index)
+                    simulation.context.reinitialize(preserveState=True)
+                    self.record_preparation(f"Protected {len(protected)} standard-residue stereocenters with temporary flat-bottom chirality restraints during minimization; these restraints are not part of the dynamics force field.")
                 minimized = simulation.context.getState(getPositions=True)
                 self.check_stereochemistry(simulation.topology, minimized.getPositions(asNumpy=True).value_in_unit(unit.nanometer), 'After minimization')
             simulation.context.setVelocitiesToTemperature(settings["temperature_k"] * unit.kelvin, settings["seed"])
