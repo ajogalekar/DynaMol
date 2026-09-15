@@ -1,0 +1,251 @@
+{
+  "updated_unix": 1789359151.455408,
+  "active_covalent": {
+    "name": "6OIM geometry recovery with a 2000 MB allocation budget",
+    "status": "failed_process_monitor_timeout",
+    "controller_pid": 37084,
+    "worker_pid": 37089,
+    "runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/bin/python",
+    "spec": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/spec.json",
+    "spec_sha256": "3a2077e216b79b636afa6eac354ebf75e754d0b9eb3da7582c0dece1aaf6918a",
+    "controller_source_sha256": "e3f1ac0b86d2d9d13e2796ac564439eea76a93a39e554033f93b5a36cb1eec18",
+    "input": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/prepared/input.json",
+    "input_sha256": "bf48d681b57232bf0eb416ca5f4bde948902971561850716249a1b77db28154e",
+    "controller_progress": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/controller-progress.json",
+    "progress": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/optimization/progress.json",
+    "result": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/optimization/result.json",
+    "controller_result": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/controller-result.json",
+    "native_log": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/optimization/native.log",
+    "started_unix": 1789342244.992001,
+    "outer_deadline_unix": 1789363964.992001,
+    "native_memory_mb": 2000,
+    "rss_limit_bytes": 8000000000,
+    "rss_limit_kind": "Sampled once per second; terminates on observed crossing, not an OS allocation cap",
+    "peak_sampled_rss_bytes": 7991640064,
+    "last_observed_unix": 1789359151.455408,
+    "physical_acceptance": false,
+    "full_preparation_ready": false,
+    "next_steps": [
+      "Inspect existing native combined-product AM1-BCC/GAFF2 candidate and exact source mapping; do not repeat the completed run.",
+      "Define and compare one explicit protein charge/interface protocol in the existing neighboring-peptide assembly.",
+      "Select smaller chemically justified models for genuinely uncertain terms; check their transfer to the full adduct.",
+      "Retain full-complex GDP/Mg/water obligations and all frozen panel cases; neither coverage nor stable short MD proves physical accuracy."
+    ],
+    "process_exited": true,
+    "last_observed_progress": {
+      "phase": "optimization",
+      "accepted": false,
+      "cycle": 23,
+      "energy_hartree": -2794.0695119577804,
+      "gradient_norm_hartree_per_bohr": 0.06636347414789281,
+      "scf_converged": true
+    },
+    "last_resource_sample": {
+      "sample_unix": 1789356130.3237371,
+      "maximum_process_rss_bytes": 1946320896,
+      "process_group_rss_bytes": 1946320896,
+      "free_disk_bytes": 36530982912
+    },
+    "terminal_result_sha256": "ab835bd6145b258ea2ca359be2c785ec8a829e451dc412133f4722cb678d3c3e",
+    "failure_error": "Command '['ps', '-axo', 'pid=,pgid=,rss=,stat=,command=']' timed out after 3 seconds",
+    "failure_review": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-process-monitor-failure-v1/failure-review.json",
+    "next_evaluation_state": "Cycle 24 SCF converged in native log, but its gradient did not complete. No optimizer endpoint or new charges accepted."
+  },
+  "prepared_metal": {
+    "status": "prepared_not_launched_monitor_hold",
+    "spec": "/Users/ashujo/.cache/dynamol-research/1mnc-local-recovery-v2-memory2000/spec.json",
+    "spec_sha256": "ec77d2cf20f5e7b3f77408fb2ad9c03239c4e167f22d2c2c9f31030d1f43ee06",
+    "input": "/Users/ashujo/.cache/dynamol-research/1mnc-local-recovery-v2-memory2000/prepared/input.json",
+    "input_sha256": "51f3fc98f826eb00706219e5dad76716b8d8f36b411eb4d8b84ccfcaa47b1c0c",
+    "review": "/Users/ashujo/.cache/dynamol-research/1mnc-local-recovery-v1/prepared/preparation-review.json",
+    "queue_review": "/Users/ashujo/.cache/dynamol-research/1mnc-local-recovery-v1/queue-review.json",
+    "next": "Prepared but not launched. Hold because this supervisor has a demonstrated process-monitor timeout failure. Reassess launch only after the monitoring issue is resolved and original resource/chemistry checks pass; covalent literature does not validate this metal model.",
+    "full_preparation_ready": false,
+    "input_difference_review": "/Users/ashujo/.cache/dynamol-research/1mnc-local-recovery-v2-memory2000/prepared/input-difference-review.json",
+    "native_memory_mb": 2000
+  },
+  "continuation_policy": "Prioritize the literature-guided protocol revision in research_reassessment. Do not restart failed/claimed jobs or launch dependent ESP/RESP stages from the failed parent. Preserve all original chemistry, identity, engine-transport and full-complex validation requirements. Resource-control failures must be resolved before any future large job.",
+  "independent_recovery_tools": {
+    "df_gradient_integration_candidate_v1": {
+      "status": "seven_small_gradient_pairs_passed_independent_review",
+      "summary": {
+        "path": "/Users/ashujo/.cache/dynamol-research/df-gradient-integration-candidate-v1/summary.json",
+        "sha256": "f0225b22b0b36e6d2db486c7a2b7e90173c8ef669467dbfe84c29bd23f81ebf2"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/df-gradient-integration-candidate-v1/artifact-manifest.json",
+        "sha256": "22c8a6a53eb9ac399b8a73fc8323cbede879487bb4ebeebaa1b3fb79a311ade5"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/df-gradient-integration-independent-v1/result.json",
+        "sha256": "8f81f0c65e3e88e81ec13f024577a5c0d47d56db5ab71c8de961fea58890643f"
+      },
+      "max_pair_gradient_difference": 0.0,
+      "finite_difference_estimates": 24,
+      "native_seconds": 11.8511,
+      "scope": "Private provider small RHF/B3LYPG; no full94-atom RSS or physical accuracy qualification, active worker unchanged."
+    },
+    "evaluation_journal_native_qualification_v2": {
+      "status": "tiny_native_and_independent_review_passed",
+      "summary": {
+        "path": "/Users/ashujo/.cache/dynamol-research/qm-journal-native-qualification-v2/SUMMARY.json",
+        "sha256": "300c98f6d021fa1d4408db1e27f38696db85ec9e3853a425e48fd447c8694492"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/qm-journal-native-qualification-v2/artifact-manifest.json",
+        "sha256": "0b9aa5bea3ae0a088a5f4f3bbea43332418d977944b4b66f7133d896356ebce8"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/qm-journal-native-independent-v1/review.json",
+        "sha256": "827e83447451a09b9ed0d9c77aac5b2c838333a0caae8034a5d33116e2b1ed48"
+      },
+      "optimizer_pairs": 2,
+      "cold_replays": 10,
+      "max_replay_energy_error_hartree": 4.263256414560601e-14,
+      "max_replay_gradient_error_hartree_bohr": 1.1671192901019367e-09,
+      "enospc_committed_records": 0,
+      "native_seconds": 9.56,
+      "limits": "Children shorter than one-second RSS sampling, actual peak unknown. Three-atom scope; tiny 10GiB entry exception does not change large recovery 35GiB gate."
+    },
+    "covalent_preparation_runtime_local_v1": {
+      "status": "qualified_and_independently_reviewed",
+      "prefix": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1",
+      "qualification": {
+        "path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/qualification.json",
+        "sha256": "a4bf3f2f4e296f7333596673c23deae7755733460c95489c2ccbce0d1368617e"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-runtime-independent-review-v1/review.json",
+        "sha256": "e4913028d6c8692ec069fe79e33d82655d12b8816e1d8be545e7ea17cfc5e259"
+      },
+      "runtime_inventory_sha256": "2948f0700c2a0f308aaecdf26565ff5fc45e28513ec82d2178dbd856e34faeba",
+      "artifact_manifest_sha256": "cc5de227f9526b77c3107b38301942473bd287d0a208a23d4ccb9707b11afaf3",
+      "files": 2180,
+      "dataless_files": 0,
+      "scope": "Version-matched scientific prep packages. External uv interpreter remains; local research runtime, not portable app bundle or fitted model."
+    },
+    "resp_runtime_local_v1": {
+      "status": "four_reference_native_stage_fits_passed_independent_review",
+      "prefix": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1",
+      "executable": {
+        "path": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1/bin/resp",
+        "sha256": "2d759392c83363f4294c01bc7c8602134e51b3a58f6b350044e1becce61048a3"
+      },
+      "qualification": {
+        "path": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1/local-qualification/qualification.json",
+        "sha256": "dfe338698f80029eb15668cb44480b695e875ac0b85f37794b0e422448889851"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/resp-relocation-independent-review-v1/review.json",
+        "sha256": "92d59bc4bcdb50586aa3bcc39ca9f4cae6d8aa53f3f104be2f1514098de012a5"
+      },
+      "runtime_inventory_sha256": "80a80b1e6716aade0a42150957ee9056e56a49a16fa398e93d93212f167fb0c7",
+      "artifact_manifest_sha256": "f519f2266c1de508994292303192b14c612b9610e079f72d894879fcae7cf189",
+      "qout_reference_files_exact": 4,
+      "fixed_charges_exact": 18,
+      "peak_sampled_rss_bytes": 2076114944,
+      "native_seconds": 1.738708,
+      "retained_failures": [
+        "v1 insufficient 1GB test guard; actual stop peak unavailable",
+        "v2 RESP long filename truncation, zero exit and no results"
+      ],
+      "future_execution": "Reviewed lifecycle and ~3GB monitored profile, short relative filenames and parsed outputs. Existing fitter already uses short names; one-off qualification harness is not production supervisor. Frozen pending-review qualification is supplemented by separately pinned review.",
+      "scope": "RPATH relocation/native reference parity, not new sotorasib charges."
+    },
+    "covalent_recovery_esp_materializer_v1": {
+      "status": "37_software_tests_passed_independent_review_passed",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/6oim-resp-recovery-materializer-v1/README.md",
+      "initial_source_sha256": "7a7a588781b85b5ac84a951bc99267d38de1fbc05b00bcc9daa777d6e2fcad04",
+      "initial_prep_admitted_plan": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/plan-v2-prep-admitted.json",
+        "sha256": "be0750b9c76aa93513c28eed7bfa8d0e285874dcc06df5e1122c8fd9a9349120"
+      },
+      "actual_parent_refused_without_request": true,
+      "native_calculations": 0,
+      "remaining": "Actual terminal parent and successful materialization; native cold-ESP reader and RESP executor/handoff. Original scientific gates remain unchanged. Separate launch wrapper is qualified, no quantum launch yet.",
+      "current_source_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+      "current_plan": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/plan-v3-resp-admitted.json",
+        "sha256": "8753021db5fe96d71fffcb29e7198b4ecf7b8668343389c9f110b81d76e43a20"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-materializer-independent-review-v1/review.json",
+        "sha256": "3e7bf14aab7faa771640aa19af546d7bff4b0b9dc965ad2881755f6fa826f831"
+      }
+    },
+    "covalent_cold_evidence_core_v3": {
+      "status": "18_tests_passed_independent_review_passed",
+      "source": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/cold-evidence-core-v3/recovery_cold_evidence_core.py",
+        "sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-cold-evidence-independent-review-v1/review.json",
+        "sha256": "7089a43da91bd59b05f500807327ef5811cdabf088d812907009749e3c80b49d"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-cold-evidence-independent-review-v1/artifact-manifest.json",
+        "sha256": "5e02d61db8a938702ac42e82e20148a09ed1cf13e33458d2c52607ae995fa92d"
+      },
+      "scope": "Read-only exact reuse of 68 parent-admission statements, complete five-object binding, bounded NPY header checks before allocation. Genuine running parent refused before native reads. No accepted new endpoint, ESP or fitted model."
+    },
+    "cold_esp_launch_wrapper_v1": {
+      "status": "implementation_independently_reviewed_and_enabled_pending_actual_parent",
+      "source": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/cold-esp-launch-v1/launch_cold_esp.py",
+        "sha256": "66127b114c0f795a892d0d0ad0b4ff4bbb1c8961f934279363a2d235d67f5980"
+      },
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/6oim-cold-esp-launch-v1/REVIEW.md",
+      "qualification": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/result.json",
+        "sha256": "59879ae5efe633fdde945109d0f0bf87130292a8fbb003a1d8db2e08bbffd5c8"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/artifact-manifest.json",
+        "sha256": "2ab394c6176fbbec757142d74e168eb41dfd99a6415e13556630510c6fa9308c"
+      },
+      "pre_enable_independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-independent-final-v1/review.json",
+        "sha256": "6e7f4c72b8c1d3fe285133675d223897beb3e8d691c908e4ff2cd13588a8f2f5"
+      },
+      "enablement_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/enablement-review.json",
+        "sha256": "33832ebcca01ce6a3fde4f21b4695ba666b25cf900d387c761923ceb25446c61"
+      },
+      "actual_parent_refusal": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/actual-parent-refusal.json",
+        "sha256": "3ed4452f81b4a9383d6eeb56efcd1ff4349f14cf88bd4c3ef83894530ccdda92"
+      },
+      "software_tests": 17,
+      "tiny_process_cases": 2,
+      "quantum_launched": false,
+      "full_positive_native_path_tested": false,
+      "limits": "2threads,2000MB allocation,8e9-byte process/group sampled stops,14400s native/14520s outer,35GiB entry/8GiB running; serial large quantum jobs. New output directories only. Child -I -B and fresh pycache_prefix avoids excluded bytecode. No active runtime mutation.",
+      "next": "After genuine terminal parent passes, materialize a new complete request then run this wrapper in a new directory only if resource gates pass. Success remains pending separate full ESP science reader, never physical model acceptance."
+    },
+    "cold_native_reader_v2": {
+      "status": "25_tests_and_independent_scoped_review_passed",
+      "review": "/Users/ashujo/.cache/dynamol-research/6oim-cold-native-reader-independent-review-v1/review.json",
+      "review_sha256": "46bc2ef9117ea88484a4730f332708ab021e4d7c70bb0b7d0af74149bdf23ee9",
+      "source_sha256": "955fe3cdba694142464c738c014ee9f5b66f29303908e449127df373e54e5325",
+      "scope": "Actual-producer metadata and native ESP/charge parser validation. No successful full-adduct ESP or actual RESP handoff; fitting executor remains unadmitted. Pinned failed parent cannot be silently replaced.",
+      "physical_acceptance": false,
+      "simulation_ready": false
+    }
+  },
+  "research_reassessment": {
+    "status": "literature_review_complete_protocol_revision_next",
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-literature-reassessment-v1/REVIEW.md",
+    "report_sha256": "6d210f8155269edb26cfaa1e6db7fda0bfbe4839c69b2e088638420ecf0b2f47",
+    "priority": "Use existing combined-adduct native baseline; resolve the protein charge/interface protocol and prioritize local parameter uncertainties before another large covalent QM launch.",
+    "large_covalent_restart_authorized_by_this_checkpoint": false,
+    "full_preparation_ready": false,
+    "physical_acceptance": false,
+    "next_steps": [
+      "Inspect existing native combined-product AM1-BCC/GAFF2 candidate and exact source mapping; do not repeat the completed run.",
+      "Define and compare one explicit protein charge/interface protocol in the existing neighboring-peptide assembly.",
+      "Select smaller chemically justified models for genuinely uncertain terms; check their transfer to the full adduct.",
+      "Retain full-complex GDP/Mg/water obligations and all frozen panel cases; neither coverage nor stable short MD proves physical accuracy."
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "independent_source_and_noncomputing_contract_passed",
+  "candidate_worker_sha256": "780b5bb968fa9d45987597be9412331d071e17ea38b2299749dc5e92be9f12b5",
+  "helper_sha256": "b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528",
+  "verified_author_artifacts": 14,
+  "native_sources_match_preexisting_runtime_inventory": true,
+  "runtime_inventory_sha256": "683b958788605f35ce2fc9a5b7ac94edb03f5316bd0b166cfcb415ffaea1f416",
+  "native_source_count": 11,
+  "original_ast_exact_after_removing_only_observer_and_three_hooks": true,
+  "removed_hook_statements": [
+    "record_evaluation = _create_evaluation_journal(data, elements, initial_bohr, mean_field, out, report, lib.param.BOHR)",
+    "evaluation_record = record_evaluation(env)",
+    "if evaluation_record is not None:\n    step['evaluation_record'] = evaluation_record"
+  ],
+  "scf_convergence_assignments": [
+    {
+      "line": 137,
+      "value": "False",
+      "python_bool_constant": true,
+      "custom_hook": false
+    },
+    {
+      "line": 194,
+      "value": "mf.check_convergence(locals())",
+      "python_bool_constant": false,
+      "custom_hook": true
+    },
+    {
+      "line": 228,
+      "value": "mf.check_convergence(locals())",
+      "python_bool_constant": false,
+      "custom_hook": true
+    },
+    {
+      "line": 196,
+      "value": "True",
+      "python_bool_constant": true,
+      "custom_hook": false
+    },
+    {
+      "line": 230,
+      "value": "True",
+      "python_bool_constant": true,
+      "custom_hook": false
+    },
+    {
+      "line": 232,
+      "value": "False",
+      "python_bool_constant": true,
+      "custom_hook": false
+    }
+  ],
+  "independently_rerun_existing_mock_tests": {
+    "count": 20,
+    "passed": 20,
+    "seconds": 0.095,
+    "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 test_integration.py -v"
+  },
+  "native_object_dispatch_cases": 6,
+  "native_computational_evaluations": 0,
+  "blockers": [],
+  "native_numerical_qualification": "not performed",
+  "production_worker_or_runtime_sources_changed": false
+}

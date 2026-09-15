@@ -1,0 +1,27 @@
+{
+  "purpose": "Additional standard amino-acid CCD evidence for complete polymeric-ligand graph expansion; original15-case source selection unchanged.",
+  "retrieved_utc": "2026-09-13T17:18:15.937929+00:00",
+  "sources": [
+    {
+      "id": "ASP",
+      "url": "https://files.rcsb.org/ligands/download/ASP.cif",
+      "path": "docs/audit/advanced-chemistry/polymer-ccd/ASP.cif",
+      "sha256": "82c4a2d0b5eda0a32c36f106f0bb00edbc5bc51172db414fdc494025b7b8c858",
+      "bytes": 6574
+    },
+    {
+      "id": "GLU",
+      "url": "https://files.rcsb.org/ligands/download/GLU.cif",
+      "path": "docs/audit/advanced-chemistry/polymer-ccd/GLU.cif",
+      "sha256": "99fa19054d31b07e7101b33ad9cc847cc6a209da60de279aed5e6a9236bb6da4",
+      "bytes": 7120
+    },
+    {
+      "id": "VAL",
+      "url": "https://files.rcsb.org/ligands/download/VAL.cif",
+      "path": "docs/audit/advanced-chemistry/polymer-ccd/VAL.cif",
+      "sha256": "9c3c807970c817b1e1a4b43164db91a5bf1e7bf438b3269c5649f6ce84d4c0ed",
+      "bytes": 6068
+    }
+  ]
+}

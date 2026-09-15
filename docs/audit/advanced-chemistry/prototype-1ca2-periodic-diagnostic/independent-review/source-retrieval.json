@@ -1,0 +1,102 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme-solve.cpp",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/long_range_correction.cpp",
+    "file": "long_range_correction.cpp",
+    "sha256": "3f5d34590faf492a17d4934bf26cb160ac9822fc012cbc9ccf4739e79869d328",
+    "bytes": 9380,
+    "retrieved_at": "2026-09-13T18:09:27.820663+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/mdlib/forcerec.cpp",
+    "file": "forcerec.cpp",
+    "sha256": "6a46d53b0c76a34068aff7289ca0bbdd501d6775b9df4b89a2b511a7c5e317b9",
+    "bytes": 43529,
+    "retrieved_at": "2026-09-13T18:09:27.997862+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/mdlib/calc_verletbuf.cpp",
+    "file": "calc_verletbuf.cpp",
+    "sha256": "dbead1da3f47da136858584dc47949c6f332453ee70172ccda7299c352da02b4",
+    "bytes": 74493,
+    "retrieved_at": "2026-09-13T18:09:28.197625+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "pme_solve.cpp",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme_solve.cpp",
+    "sha256": "81278bec38096b457d566352e8fc02608e77a772118d72fd964a97e3f5476005",
+    "bytes": 30729,
+    "retrieved_at": "2026-09-13T18:10:28.194597+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "pme_gather.cpp",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme_gather.cpp",
+    "sha256": "41bf471e497cc2f784deed815fb46f51d63e920984d39a3f8a3acf46acefa66a",
+    "bytes": 16726,
+    "retrieved_at": "2026-09-13T18:10:28.385342+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "pme_internal.h",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme_internal.h",
+    "sha256": "927fbf407d7496518632f86c2e8c714c8a2a4971749c185a05f474d844c55daa",
+    "bytes": 18349,
+    "retrieved_at": "2026-09-13T18:10:28.551420+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "ewald_utils.cpp",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/ewald_utils.cpp",
+    "sha256": "b28e959d68ba6d9b6b327ff9bf37e58b86f74fabc36b84b9d5dfb79449de5e52",
+    "bytes": 3071,
+    "retrieved_at": "2026-09-13T18:10:28.722026+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "nbnxm_setup.cpp",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/nbnxm_setup.cpp",
+    "sha256": "da3ff1cc3e8e2ab943fae2623fe516697591addc7baf9afd281e8fc51d2448cd",
+    "bytes": 25837,
+    "retrieved_at": "2026-09-13T18:13:30.812743+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "simd_energy_accumulator.h",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_energy_accumulator.h",
+    "sha256": "c4fd891a9ab1460746fb9b2612af843e9df66ab8874f5ad432800c90517967e3",
+    "bytes": 20443,
+    "retrieved_at": "2026-09-13T18:13:30.992412+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "simd_energy_accumulator.cpp",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_energy_accumulator.cpp",
+    "sha256": "ae6a3379dedf169aacf596007b26cdee262892a30a1989c260220d19bb676ce6",
+    "bytes": 7297,
+    "retrieved_at": "2026-09-13T18:13:31.165875+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "simd_kernel.h",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_kernel.h",
+    "sha256": "72a0fbc1344757e6817d1e91e980c9f29371557be6b79a58212e6f9541072858",
+    "bytes": 21902,
+    "retrieved_at": "2026-09-13T18:13:31.335701+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  },
+  {
+    "file": "simd_coulomb_functions.h",
+    "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_coulomb_functions.h",
+    "sha256": "72c324079e4d7e337142f44196a27d98c7d3260e1b6c831c98cde4184abb957f",
+    "bytes": 15453,
+    "retrieved_at": "2026-09-13T18:13:31.512798+00:00",
+    "license": "LGPL-2.1-or-later per source header"
+  }
+]

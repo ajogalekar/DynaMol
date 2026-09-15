@@ -1,0 +1,20 @@
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+.venv/lib/python3.12/site-packages/starlette/testclient.py:53
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 10 durations =============================
+1.74s call     backend/tests/test_sources_solvent.py::test_real_tip3p_preview_reuses_exact_parent_and_rejects_oversize
+1.01s call     backend/tests/test_ligands.py::test_native_gaff2_xml_equivalence_and_combined_templates
+0.72s call     backend/tests/test_chemistry_support.py::test_halogen_aromatic_native_reversed_improper_converts_exactly
+0.65s call     backend/tests/test_ligands.py::test_native_prepared_atoms_survive_openmm_hydrogen_assignment
+0.54s call     backend/tests/test_ligands.py::test_identical_copies_keep_parameter_source_and_individual_provenance
+
+(5 durations < 0.005s hidden.  Use -vv to show these durations.)
+5 passed, 594 deselected, 2 warnings in 5.39s

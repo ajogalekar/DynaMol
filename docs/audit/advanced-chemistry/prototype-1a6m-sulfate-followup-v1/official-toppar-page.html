@@ -1,0 +1,258 @@
+<html>
+<head>
+  <title>CHARMM-GUI</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css?2" />
+  <link rel="stylesheet" type="text/css" media="print" href="css/basic_print.css" />
+  <link rel="stylesheet" href="css/lightbox/lightbox.css?2" type="text/css" />
+  <script src="javascripts/prototype.js" type="text/javascript"></script>
+  <script src="javascripts/lightbox.js?2" type="text/javascript"></script>
+  <!--[if lt IE 7.]>
+  <script defer type="text/javascript" src="javascripts/pngfix.js"></script>
+  <![endif]-->
+  <!--[if IE]>
+  <style type="text/css" media="screen">
+    body {
+      behavior: url('css/csshover.htc'); 
+    }
+
+    #menu li ul {
+      height: 1%;
+    }
+  </style>
+  <![endif]-->
+  <script>
+  
+  function openwin(url, name, property) {
+    var win = window.open(url, name, property);
+    return win;
+  }
+
+  function open_help(id,height,width) {
+    if (!height) var height=400;
+    if (!width) var width=500;
+    var url = "./?doc=help&id="+id;
+    return openwin(url, 'help', 'width='+width+',height='+height+',scrollbars=1');
+  }
+
+  function open_tutorial(project) {
+    var url = "./?doc=tutorial&project="+project;
+    openwin(url, 'tutorial', 'width=980,height=700,scrollbars=1');
+  }
+  
+  </script>
+
+</head>
+<body>
+
+<div id="header">
+<a href="./" class="logo"><img src="./images/basic/logo.png" border=0 width=275 height=63></a>
+<span class=quote>
+CHARMM is a versatile program for atomic-level simulation of<br> many-particle systems, particularly macromolecules of<br> biological interest. - M. Karplus
+</span><p style="height: 1px;"></p>
+</div>
+
+<div id="topnav">
+  <a href="/?doc=about">about us</a> ::
+  <a href="/?doc=input">input generator</a> ::
+  <a href="/?doc=api">API</a> ::
+  <a href="/?doc=stanalyzer">stanalyzer</a> ::
+  <a href="/?doc=qa">Q&amp;A</a> ::
+  <a href="/forum">forum</a> ::
+  <a href="/?doc=archive">archive</a> ::
+  <a href="/?doc=lecture">lectures</a> ::
+  <a href="/?doc=gallery">movie gallery</a> ::
+  <a href="/?doc=demo">video demo</a> ::
+  <a href="/?doc=citations">citations</a> ::
+  <a href="/?doc=log">update log</a> ::
+  <a href="/?doc=jobs">jobs &amp; events</a> ::
+  <a href="/?doc=donation">giving</a>
+</div>
+
+<div id="oneliner">
+Some <a href="?doc=lecture" target="_blank">lectures</a>,
+<a href="?doc=jobs" target="_blank">job postings</a>, and
+<a href="?doc=faq" target="_blank">FAQ</a> are now available. See
+<a href="?doc=log" target="_blank">update log</a> for update history and
+<a href="?doc=donation" target="_blank">giving</a> for donation.
+<a href="?doc=contact" target="_blank">Contact</a>
+info is given below.
+<button style="float:right" onclick="window.location.href='./?doc=sign'">Login</button></div>
+
+<div id="body">
+  <div id="col1" style="padding-bottom: 20">
+<div id="menu">
+  <h3>Toppar.str</h3>
+  <ul>
+    <li><a href="./?doc=toppar">CHARMM Topology Files</a>
+</li>
+  </ul>
+</div>
+
+</div>
+  
+<div id="content">
+  <div id="title">CHARMM Topology Files</div>
+<div id=main>
+
+   The CHARMM topology files used in PDB Reader are list below.
+   The residues in the PDB file that users want to read must be defined in these topology files. 
+   Otherwise, CHARMM will be terminated abnormally.
+   <p>
+
+   Please use the following website to obtain the official CHARMM additive FFs:
+   <a href="http://mackerell.umaryland.edu/charmm_ff.shtml">
+      http://mackerell.umaryland.edu/charmm_ff.shtml
+   </a>
+   
+<ul>
+  <li>Protein topologies and parameters <br>
+   <a href="./?doc=open_toppar&filename=top_all36_prot.rtf">top_all36_prot.rtf</a> <br>
+   <a href="./?doc=open_toppar&filename=par_all36_prot.prm">par_all36_prot.prm</a> <p>
+
+  <li> Nucleic acids topologies and parameters <br>
+   <a href="./?doc=open_toppar&filename=top_all36_na.rtf">top_all36_na.rtf</a> <br>
+   <a href="./?doc=open_toppar&filename=par_all36_na.prm">par_all36_na.prm</a> <p>
+
+  <li> Carbohydrates topologies and parameters <br>
+   <a href="./?doc=open_toppar&filename=top_all36_carb.rtf">top_all36_carb.rtf</a> <br>
+   <a href="./?doc=open_toppar&filename=par_all36_carb.prm">par_all36_carb.prm</a> <p>
+
+  <li> Lipids topologies and parameters <br>
+   <a href="./?doc=open_toppar&filename=top_all36_lipid.rtf">top_all36_lipid.rtf</a> <br>
+   <a href="./?doc=open_toppar&filename=par_all36_lipid.prm">par_all36_lipid.prm</a> <p>
+
+  <li> CGENFF topologies and parameters <br>
+   <a href="./?doc=open_toppar&filename=top_all36_cgenff.rtf">top_all36_cgenff.rtf</a> <br>
+   <a href="./?doc=open_toppar&filename=par_all36_cgenff.prm">par_all36_cgenff.prm</a> <p>
+
+  <li> Additional topologies and parameters for protein <br>
+   <a href="./?doc=open_toppar&filename=stream/prot/toppar_all36_prot_c36m_d_aminoacids.str">toppar_all36_prot_c36m_d_aminoacids.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/prot/toppar_all36_prot_fluoro_alkanes.str">toppar_all36_prot_fluoro_alkanes.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/prot/toppar_all36_prot_heme.str">toppar_all36_prot_heme.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/prot/toppar_all36_prot_na_combined.str">toppar_all36_prot_na_combined.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/prot/toppar_all36_prot_retinol.str">toppar_all36_prot_retinol.str</a> <p>
+   <a href="./?doc=open_toppar&filename=stream/prot/toppar_all36_prot_modify_res.str">toppar_all36_prot_modify_res.str</a> <p>
+  
+  <li> Additional topologies and parameters for nucleic acids <br>
+   <a href="./?doc=open_toppar&filename=stream/na/toppar_all36_na_nad_ppi.str">toppar_all36_na_nad_ppi.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/na/toppar_all36_na_rna_modified.str">toppar_all36_na_rna_modified.str</a> <p>
+
+  <li> Additional topologies and parameters for carbohydrates <br>
+   <a href="./?doc=open_toppar&filename=stream/carb/toppar_all36_carb_glycolipid.str">toppar_all36_carb_glycolipid.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/carb/toppar_all36_carb_glycopeptide.str">toppar_all36_carb_glycopeptide.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/carb/toppar_all36_carb_imlab.str">toppar_all36_carb_imlab.str</a> <p>
+
+  <li> Additional topologies and parameters for lipids <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_bacterial.str">toppar_all36_lipid_bacterial.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_cardiolipin.str">toppar_all36_lipid_cardiolipin.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_cholesterol.str">toppar_all36_lipid_cholesterol.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_detergent.str">toppar_all36_lipid_detergent.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_ether.str">toppar_all36_lipid_ether.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_hmmm.str">toppar_all36_lipid_hmmm.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_inositol.str">toppar_all36_lipid_inositol.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_lps.str">toppar_all36_lipid_lps.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_miscellaneous.str">toppar_all36_lipid_miscellaneous.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_model.str">toppar_all36_lipid_model.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_prot.str">toppar_all36_lipid_prot.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_sphingo.str">toppar_all36_lipid_sphingo.str </a> <br>
+   <a href="./?doc=open_toppar&filename=stream/lipid/toppar_all36_lipid_yeast.str">toppar_all36_lipid_yeast.str </a> <p>
+
+  <li> Additional topologies and parameters for spin / flourophore labels <br>
+   <a href="./?doc=open_toppar&filename=stream/label/toppar_all36_label_fluorophore.str">toppar_all36_label_fluorophore.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/label/toppar_all36_label_spin.str">toppar_all36_label_spin.str</a> <p>
+
+  <li> Additional topologies and parameters for unnatural amino acid substitution<br>
+   <a href="./?doc=open_toppar&filename=stream/uaa/toppar_all36_uaa_cgenff.str">toppar_all36_uaa_cgenff.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/uaa/toppar_all36_uaa_gaff.str">toppar_all36_uaa_gaff.str</a> <p>
+
+  <li> Additional topologies and parameters for water and ions <br>
+   <a href="./?doc=open_toppar&filename=stream/misc/toppar_dum_noble_gases.str">toppar_dum_noble_gases.str</a> <br>
+   <a href="./?doc=open_toppar&filename=stream/misc/toppar_ions_won.str">toppar_ions_won.str</a> <br>
+   <a href="./?doc=open_toppar&filename=toppar_water_ions.str">toppar_water_ions.str</a> <p>
+
+<p><br>
+  Additional CHARMM topologies and parameters used in Implicit Solvent Modeler are list below. <br>
+
+<ul>
+
+  <li> Additional topologies and parameters for ACE and FACTS_P19 model <br>
+  <a href="./?doc=open_toppar&filename=implicit/ace/ace2parpx.inp">ace2parpx.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/ace/acepar19.inp">acepar19.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=toph19.inp">toph19.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=param19.inp">param19.inp</a> <p>
+
+  <li> Additional topologies and parameters for EEF1 and SASA model <br>
+  <a href="./?doc=open_toppar&filename=implicit/eef1/toph19_eef1.inp">toph19_eef1.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/eef1/param19_eef1.inp">param19_eef1.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/eef1/solvpar.inp">solvpar.inp</a> <p>
+
+  <li> Additional topologies and parameters for GBSW and FACTS_P22 model <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbsw/top_all27_prot_na.rtf">top_all27_prot_na.rtf</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbsw/par_all27_prot_na_gbsw.prm">par_all27_prot_na_gbsw.prm</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbsw/radii_prot_na.str">radii_prot_na.str</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbsw/radius_gbsw.str">radius_gbsw.str</a> <p>
+
+  <li> Additional topologies and parameters for GBWV model <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbmv/radii_prot_na.str">radii_prot_na.str</a> <p>
+
+  <li> Additional topologies and parameters for SCPISM model <br>
+  <a href="./?doc=open_toppar&filename=implicit/scpism/scpism.inp">scpism.inp</a> <p>
+
+  <li> Additional topologies and parameters for EEF1/IMM1 model <br>
+  <a href="./?doc=open_toppar&filename=implicit/eef1_imm1/toph19_eef1.1.inp">toph19_eef1.1.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/eef1_imm1/param19_eef1.1.inp">param19_eef1.1.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/eef1_imm1/solvpar.inp">solvpar.inp</a> <p>
+
+  <li> Additional topologies and parameters for GBSWmemb model <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbswmemb/radii_prot_na.str">radii_prot_na.str</a> <p>
+
+  <li> Additional topologies and parameters for GBMVmemb model <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbmvmemb/radii_prot_na.str">radii_prot_na.str</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/gbmvmemb/radii_prot_na.str">radii_prot_na.str</a> <p>
+
+  <li> Additional topologies and parameters for PHMD model <br>
+  <a href="./?doc=open_toppar&filename=implicit/phmd/top_all27_prot_na_gbsw_phmd.rtf">top_all27_prot_na_gbsw_phmd.rtf</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/phmd/par_all27_prot_na_gbsw_phmd.prm">par_all27_prot_na_gbsw_phmd.prm</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/phmd/par_phmd.inp">par_phmd.inp</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/phmd/radii_prot_na.str">radii_prot_na.str</a> <br>
+  <a href="./?doc=open_toppar&filename=implicit/phmd/radius_gbsw.str">radius_gbsw.str</a> <p>
+
+</ul>
+
+</div>
+</div>
+</div>
+
+<!-- footer -->
+<div id=footer>
+<div style="float: left">
+  <a href="http://www.lehigh.edu" target="_blank"><img src="/images/basic/footer_logo.gif" border=0 height=35></a>
+</div>
+<a href="http://www.lehigh.edu" target="_blank">Lehigh University</a> / 
+<a href="http://www.lehigh.edu/~inbios/" target="_blank">Department of Biological Sciences</a> /
+<a href="http://chemistry.cas.lehigh.edu/" target="_blank">Department of Chemistry</a> /
+<a href="http://www.lehigh.edu/~inbioe/" target="_blank">Department of Bioengineering</a> /
+<a href="http://compbio.lehigh.edu/" target="_blank">Im Lab</a> <br>
+
+<!--a href="http://165.112.184.13/ubbthreads/ubbthreads.php?Cat=">Questions &amp; Comments</a-->
+Problems, Questions, &amp; Comments? / <a href="/?doc=contact">Contact</a> /
+<a href="/forum">Forum</a> /
+Copyright(c) 2006-2026 by the Im Lab<br>
+
+</div>
+<!--/ footer -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1722109-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1722109-1');
+</script>
+
+
+</body>
+</html>

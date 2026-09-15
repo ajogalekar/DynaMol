@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "atom_ids": [
+    "water/O",
+    "water/H1",
+    "water/H2"
+  ],
+  "elements": [
+    "O",
+    "H",
+    "H"
+  ],
+  "charge": 0,
+  "spin": 0,
+  "method": "RHF",
+  "basis": "sto-3g",
+  "operations": [
+    "gradient"
+  ],
+  "coords_bohr": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.4172945934237964,
+      0.0,
+      1.1149384134933864
+    ],
+    [
+      -1.436191854669447,
+      0.0,
+      1.133935674739037
+    ]
+  ],
+  "threads": 2,
+  "max_memory_mb": 8000,
+  "max_scf_cycles": 100,
+  "max_cphf_cycles": 100,
+  "grid_level": 3,
+  "esp_batch_size": 256,
+  "esp_crosscheck_points": 8,
+  "max_wall_seconds": 7200,
+  "scf_conv_tol": 1e-10,
+  "scf_conv_tol_grad": 1e-07,
+  "optimization": {
+    "enabled": false,
+    "max_steps": 100,
+    "freeze_atom_ids": [],
+    "convergence_energy": 1e-06,
+    "convergence_grms": 0.0003,
+    "convergence_gmax": 0.00045,
+    "convergence_drms": 0.0012,
+    "convergence_dmax": 0.0018
+  }
+}

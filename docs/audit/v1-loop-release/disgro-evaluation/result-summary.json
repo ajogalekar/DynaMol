@@ -1,0 +1,277 @@
+{
+  "source_archive_unmodified": true,
+  "source_manifest_sha256": "218245537dc4421b6afd86c364dd010038a5261487cc28b2851fbec033bb7b34",
+  "third_party_source_hash_mismatches": [],
+  "scope": "Source inspection is not a C++/Python numerical parity validation. The synthetic input below exists only to expose parser behavior.",
+  "probe_insertion_code": {
+    "ordinary_populated_atom_count": 1,
+    "insertion_A_populated_atom_count": 0,
+    "insertion_silently_omitted": true,
+    "empty_structure_default_numRes": 1
+  },
+  "probe_short_sequence": {
+    "requested_gap_length": 12,
+    "provided_sequence_length": 1,
+    "rejected": false,
+    "placeholder_count": 1
+  },
+  "adapter_short_sequence_behavior": "Exact length required before sampler call",
+  "upstream_provenance": {
+    "repository": "https://github.com/aa14k/Disgro",
+    "commit": "6c25da054ff391e93b7d41c221cbc0086d665371",
+    "tree_truncated": false,
+    "tree_sha256": "c70d2f9ff57dce6ad37f005a598920ece8170c917d33f01df6c677fe2a2cb73d",
+    "license_named_paths": [],
+    "files": [
+      {
+        "path": "Readme.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/Readme.txt",
+        "upstream_sha256": "28f9e6401c4db0157789fe4114d899b1bd88a575573f91453c2f1bc585391cd4",
+        "upstream_git_blob": "4179da3df5caa78c395e77b650c092aae972fa63",
+        "port_sha256": null,
+        "byte_identical": null
+      },
+      {
+        "path": "main.cpp",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/main.cpp",
+        "upstream_sha256": "c84395eeb7a1dd3c4cf5c22af96e768ed8618f88e8e42311295e9ca372e0d41c",
+        "upstream_git_blob": "6aba37c6a1e13e0cb491b4fff6d7c149ea2e8066",
+        "port_sha256": null,
+        "byte_identical": null
+      },
+      {
+        "path": "data/frag.C.CA_pdf_32_19.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/frag.C.CA_pdf_32_19.txt",
+        "upstream_sha256": "c131f800ec8cf7916c0cecf4e6042a98b42998d65c0048d5ebc333908df2df22",
+        "upstream_git_blob": "47dc75839bc1e0f93b5863de4caf163ec5ff4019",
+        "port_sha256": "c131f800ec8cf7916c0cecf4e6042a98b42998d65c0048d5ebc333908df2df22",
+        "byte_identical": true
+      },
+      {
+        "path": "data/SCT_PF.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/SCT_PF.txt",
+        "upstream_sha256": "81f7c752024a2c3fa7573013648d33baf367d1ac4e3f6162f1fa8e716d87c4c1",
+        "upstream_git_blob": "ba17314b6d7f3dec767257644c688441b1d5b52f",
+        "port_sha256": "81f7c752024a2c3fa7573013648d33baf367d1ac4e3f6162f1fa8e716d87c4c1",
+        "byte_identical": true
+      },
+      {
+        "path": "data/frag.N.C_pdf_32_19.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/frag.N.C_pdf_32_19.txt",
+        "upstream_sha256": "0bc1a707fb38c93ae374321aeb9dd4dd8b1a69168dea6bae09f6e6379e37d5f7",
+        "upstream_git_blob": "510356211640d360848533f3e0e420e01e995f13",
+        "port_sha256": "0bc1a707fb38c93ae374321aeb9dd4dd8b1a69168dea6bae09f6e6379e37d5f7",
+        "byte_identical": true
+      },
+      {
+        "path": "data/LoopGeo_37_pdf_21.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/LoopGeo_37_pdf_21.txt",
+        "upstream_sha256": "39124d1f1f4a77fab38dcad001fd12654d6bf87b20e99abb16782aac61f11c17",
+        "upstream_git_blob": "f8f28ab5c8c1527c07ceb6b24051bed19b51a778",
+        "port_sha256": "39124d1f1f4a77fab38dcad001fd12654d6bf87b20e99abb16782aac61f11c17",
+        "byte_identical": true
+      },
+      {
+        "path": "data/BBT_phi_psi_pair_NEW.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/BBT_phi_psi_pair_NEW.txt",
+        "upstream_sha256": "e16a22cdee2beb110328f2f531f75905fb2a769cebe6e2bde82914a71c8e7919",
+        "upstream_git_blob": "0227cb5763608d4fff31e348d438f3761ef78d2d",
+        "port_sha256": "e16a22cdee2beb110328f2f531f75905fb2a769cebe6e2bde82914a71c8e7919",
+        "byte_identical": true
+      },
+      {
+        "path": "data/atomProp2.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/atomProp2.txt",
+        "upstream_sha256": "97a43aa218d6313359986f029c6c4ec67ceae066df968b9046cc2b4cad5db615",
+        "upstream_git_blob": "73fcd24168abecc4b0a530a2774bd46812b36edb",
+        "port_sha256": "97a43aa218d6313359986f029c6c4ec67ceae066df968b9046cc2b4cad5db615",
+        "byte_identical": true
+      },
+      {
+        "path": "data/parameter.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/parameter.txt",
+        "upstream_sha256": "3808e423acfafa9364eb607cb3b3b2fed86ac4dc9a5479d3b29e5f06252d04e5",
+        "upstream_git_blob": "18cda29a46633b2297e4803d969f39da1b5d9854",
+        "port_sha256": "3808e423acfafa9364eb607cb3b3b2fed86ac4dc9a5479d3b29e5f06252d04e5",
+        "byte_identical": true
+      },
+      {
+        "path": "data/readme.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/readme.txt",
+        "upstream_sha256": "a6e7fb93aa14873a8a960d68341600122c775734d4f7e29f15f4850f63ee43f6",
+        "upstream_git_blob": "fc3215bcff5b40d247db207e9c86aabc42f82ab7",
+        "port_sha256": "a6e7fb93aa14873a8a960d68341600122c775734d4f7e29f15f4850f63ee43f6",
+        "byte_identical": true
+      },
+      {
+        "path": "data/LOODIS_ed4_8_V3.txt",
+        "url": "https://raw.githubusercontent.com/aa14k/Disgro/6c25da054ff391e93b7d41c221cbc0086d665371/data/LOODIS_ed4_8_V3.txt",
+        "upstream_sha256": "d40ebe8c3f637be5536fd0a228d7558572190ce81493412a9edbf4c710dc6ebd",
+        "upstream_git_blob": "48b2eb3e0ae8aafd037c5939da7dc4016bb2926a",
+        "port_sha256": "d40ebe8c3f637be5536fd0a228d7558572190ce81493412a9edbf4c710dc6ebd",
+        "byte_identical": true
+      }
+    ],
+    "inherited_redistribution_clearance": false
+  },
+  "cases": [
+    {
+      "case_id": "1UA2",
+      "source_sha256": "b7f28afee6df8770adf9ed5c3dcdcaad1c0da358d56e688b2c5e5802a4679de6",
+      "execution": {
+        "case_id": "1UA2",
+        "exit_code": 0,
+        "termination_reason": null,
+        "wall_seconds": 5.915266333962791,
+        "maximum_sampled_RSS_bytes": 129073152,
+        "memory_enforcement": "Supervisor polls resident memory every 0.2 seconds and kills worker process group above 4 GiB; one native BLAS thread. No child jobs invoked by package.",
+        "source_preserved": true
+      },
+      "loop": {
+        "first": 44,
+        "last": 55,
+        "sequence": "KLGHRSEAKDGI",
+        "seed": 91401
+      },
+      "source_atom_count": 2323,
+      "omitted_by_residue": {
+        "A:170::TPO": 11,
+        "A:311::ASN": 1,
+        "B:1::ATP": 31
+      },
+      "sampler_environment_complete": false,
+      "trials": {
+        "trials": 256,
+        "growth_returned": 214,
+        "closure_claimed": 100
+      },
+      "stored_proposals": 73,
+      "candidate_count": 20,
+      "coherent_gross_geometry_pass": 20,
+      "original_anchor_restored_geometry_pass": 0,
+      "coherent_rama_pass": 1,
+      "within_original_1A_anchor_cap": 0,
+      "anchor_shift_range_angstrom": [
+        1.8675618548571904,
+        2.6572597683967856
+      ],
+      "candidate_paths": [
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-000.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-001.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-002.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-003.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-004.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-005.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-006.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-007.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-008.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-009.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-010.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-011.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-012.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-013.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-014.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-015.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-016.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-017.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-018.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/1UA2/candidate-019.json"
+      ],
+      "raw_writer_audit": {
+        "raw_atom_count": 2332,
+        "raw_heterogen_atom_count": 0,
+        "chain_ids": [
+          " "
+        ],
+        "zero_coordinate_heavy_atom_count": 0,
+        "CONECT_count": 0,
+        "raw_output_can_replace_complex": false
+      },
+      "passed_whole_preparation": false
+    },
+    {
+      "case_id": "8K5R",
+      "source_sha256": "a065b52f7335296d4c2a71a0bd0c88d6cabfeb0e5489e9ee750fe1e976266fd5",
+      "execution": {
+        "case_id": "8K5R",
+        "exit_code": 0,
+        "termination_reason": null,
+        "wall_seconds": 4.031016165972687,
+        "maximum_sampled_RSS_bytes": 128106496,
+        "memory_enforcement": "Supervisor polls resident memory every 0.2 seconds and kills worker process group above 4 GiB; one native BLAS thread. No child jobs invoked by package.",
+        "source_preserved": true
+      },
+      "loop": {
+        "first": 177,
+        "last": 179,
+        "sequence": "AKN",
+        "seed": 91402
+      },
+      "source_atom_count": 2502,
+      "omitted_by_residue": {
+        "A:186::TPO": 11,
+        "A:327::MET": 1,
+        "B:1::VQE": 21
+      },
+      "sampler_environment_complete": false,
+      "trials": {
+        "trials": 256,
+        "growth_returned": 256,
+        "closure_claimed": 196
+      },
+      "stored_proposals": 196,
+      "candidate_count": 20,
+      "coherent_gross_geometry_pass": 20,
+      "original_anchor_restored_geometry_pass": 0,
+      "coherent_rama_pass": 3,
+      "within_original_1A_anchor_cap": 0,
+      "anchor_shift_range_angstrom": [
+        1.6209463512125466,
+        2.631020137375398
+      ],
+      "candidate_paths": [
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-000.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-001.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-002.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-003.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-004.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-005.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-006.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-007.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-008.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-009.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-010.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-011.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-012.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-013.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-014.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-015.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-016.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-017.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-018.json",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v2/8K5R/candidate-019.json"
+      ],
+      "raw_writer_audit": {
+        "raw_atom_count": 2480,
+        "raw_heterogen_atom_count": 0,
+        "chain_ids": [
+          " "
+        ],
+        "zero_coordinate_heavy_atom_count": 0,
+        "CONECT_count": 0,
+        "raw_output_can_replace_complex": false
+      },
+      "passed_whole_preparation": false
+    }
+  ],
+  "prior_failed_attempt": {
+    "path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/disgro-evaluation-v1",
+    "stage": "Adapter import before any sampling",
+    "error": "SMC is in pydisgro.smc, not package __init__",
+    "retained": true,
+    "corrected_only_in_private_adapter": true
+  },
+  "app_ready": false,
+  "inherited_redistribution_clearance": false,
+  "new_sampling_in_this_audit": false
+}

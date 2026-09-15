@@ -1,0 +1,69 @@
+{
+  "capture_scope": "Resolved native input files at assembly completion; native topologies separately pin resulting coefficients. No standard input files were modified.",
+  "files": {
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/conda-meta/ambertools-24.8-cuda_None_nompi_py314h5cdaa45_104.json": {
+      "sha256": "7e0ba2609f73e89ea767873ad601c1a101790f4b5dfc3ada8254e20e597d5965",
+      "bytes": 1583686
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/leaprc.protein.ff14SB": {
+      "sha256": "e96bd5b9d5fba9c027050e33efd3414e4d26ff616566b08730abedc554fac98c",
+      "bytes": 3011
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/leaprc.water.tip3p": {
+      "sha256": "679041e7b6a6776cd6a7552480ded0986c33ddd209da58f0c30a96bfb8818db7",
+      "bytes": 2332
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/amino12.lib": {
+      "sha256": "dcd92afbb7ee4c8a737f1ad47eb714618b6c186759c902cd5c06c22a5378df77",
+      "bytes": 81764
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/aminoct12.lib": {
+      "sha256": "4f45d160211ae20450ee59632012cba3ada60a5129de410da1bfbfd7f9a9a5f7",
+      "bytes": 77113
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/aminont12.lib": {
+      "sha256": "a7a267adbe63c3559283204ffd135b37e14dac0f33a7eae76f94cba80a56b58c",
+      "bytes": 75352
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/atomic_ions.lib": {
+      "sha256": "0f56b0f1b1cbf0e275c7e5e815f7f85b9b22e26de3b591a0b8a87c28d75d0d53",
+      "bytes": 69767
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/solvents.lib": {
+      "sha256": "c8aeb703f5769331541d1233e2f2c8f823dd516e861b04e215ae4da903f1d69b",
+      "bytes": 3271794
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.ff14SB": {
+      "sha256": "d7240947ca454e49fa2419343cff0090c1e9c02f39618e826d99fc5f1b29dc73",
+      "bytes": 24056
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.ions1lm_126_tip3p": {
+      "sha256": "09690dfab18fe46fe9bd9651d254db1ff4d6edfdfa4f74e0ff8c41a069715eeb",
+      "bytes": 1490
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.ions234lm_126_tip3p": {
+      "sha256": "4252f496d5462dc84ddfae7ef8e941bf8c927584201284be3ccae178ebab08d3",
+      "bytes": 4848
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.ionsjc_tip3p": {
+      "sha256": "eb7a1a59bf356581f89534287dd59d1bebbb2e5de7176d7c7dd69cb1d4928a55",
+      "bytes": 924
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.tip3p": {
+      "sha256": "a66a30117d8c0af008476715e1405587a67f473793c4ab1db822da41465e48f1",
+      "bytes": 330
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/parm10.dat": {
+      "sha256": "dc0c02d28fb7ee4f04d0a5edee3cd62968ba5e9bdb69e0f728bf01d242d7d062",
+      "bytes": 58579
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1hck-mg-atp/published/Parameters/ATP-B3.frcmod": {
+      "sha256": "88bd08307f54bdb900306dcf36b5457a258142a4693cbe8e8ac5668c62af7f3e",
+      "bytes": 1462
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1hck-mg-atp/published/Parameters/ATP-B3.prepi": {
+      "sha256": "239a209bf337ed8694855c302fbad03d875abc34512c25f78ec4fbed73761094",
+      "bytes": 3666
+    }
+  }
+}

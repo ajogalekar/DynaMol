@@ -1,0 +1,45 @@
+{
+  "updated_at": "2026-09-14T21:47:33.845749+00:00",
+  "status": "Backend extraction implemented; fresh common-preparation capture and snapshot validator qualification pending",
+  "components_sha256": {
+    "backend/loop_context.py": "c0aa8f79dc53be78ec25a5dfd5cab72b10891cfe978cfd7f2e9fbb134640e7b9",
+    "backend/loop_snapshot.py": "8f99070876507d993f29ea3d639a2a1d695bd44e7db6048ecadbe33615dc184d",
+    "backend/promod_candidate_worker.py": "851546f41d432690a62a97372ae476ca191fdbe8f38491a324585918656a05ff",
+    "backend/loop_candidate_validation.py": "fb1f175318985c438d6f5c62bd0292117124ceb68a8a19a08fc700f4f7e627b5",
+    "backend/loop_backbone_reference.py": "14ad03babfa3c9c2dcef66847880e2b27f80f945f3bacf1576d598c0c28bec55",
+    "backend/loop_process.py": "a238d333882347c6d6c8ca6f9dcc366fef19d2d3818439b5c211bdff7baf44e5",
+    "backend/preparation_worker.py": "433f5c8460bb1af2976eda9dc3272cf75b01cc836ad76dc70edc63b05ad41271",
+    "backend/prepared_system.py": "7832cec32978783261ece97292a626bfb29b6319f43ecb109cb6f642d726dd1b",
+    "docs/audit/v1-loop-release/fresh-source-integration/validate_snapshot.py": "018513965e8cb304cd4f3eba55146b15079058215ad8b965d2e262779bf5cd1d"
+  },
+  "regressions": {
+    "passed": 228,
+    "deselected": 1,
+    "command_scope": "loop_context, loop_snapshot, promod_candidate_worker, loop_candidate_validation, loop_process, prepared_system, loop_refinement, loop_search",
+    "excluded_test": "test_real_solvation_job_and_output_preserve_parameter_bundle",
+    "excluded_reason": "Tracked examples/demo/topology.pdb is an offloaded File Provider item; read returns no coordinate frames, causing OpenMM IndexError before the solvation test. Normal hydration failed; fixture was not changed. This test has not passed."
+  },
+  "native_generation": {
+    "case": "1UA2",
+    "missing_residues": 12,
+    "modeled_heavy_atoms": 91,
+    "observed_context_atoms": 16,
+    "attempts": 1,
+    "seconds": 1.994,
+    "peak_sampled_rss_bytes": 176930816,
+    "schema_source_checks_passed": true,
+    "full_validator_passed": false,
+    "candidate_sha256": "b1539ccc6e936d67078d5e1f2576963764ae49e70fd3d9b36ef1ef13f508fba0",
+    "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-worker-native-smoke-v1/REPORT.md"
+  },
+  "fresh_preparation": {
+    "status": "private capture harness in progress after source/runtime preflight; not yet launched",
+    "source_dataset": "3a661cfc670048c5",
+    "raw_atoms": 2322,
+    "preparation_archive_reused": false,
+    "artifacts": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-preparation-snapshot-v1"
+  },
+  "app_default_enabled": false,
+  "release_ready": false,
+  "new_md_qm_launched_by_root": false
+}

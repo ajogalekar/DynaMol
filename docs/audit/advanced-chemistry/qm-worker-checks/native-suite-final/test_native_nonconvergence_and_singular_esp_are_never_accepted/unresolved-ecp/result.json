@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "input",
+  "worker_sha256": "0095cf57e00b3fcae5cdb7d3f6b85d61a3bf09e701178eddd88048bce9fb382c",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "8128ab3986d09e6ddb74a500f6c1ff24b164890e09f7ade830ec71c7278ddc42",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200
+  },
+  "error": {
+    "type": "ValueError",
+    "message": "A requested ECP was not resolved; silently reverting to an all-electron model is not permitted"
+  },
+  "elapsed_seconds": 0.217101
+}

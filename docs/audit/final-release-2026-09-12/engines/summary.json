@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-09-13T04:49:57.806425+00:00",
+  "passed": true,
+  "fresh": {
+    "systems": 2,
+    "duration_ps_per_engine": 10,
+    "engines": [
+      "openmm",
+      "gromacs"
+    ],
+    "artifact_checks": 37,
+    "http_handoff_checks": 24,
+    "restarts_per_engine": 2,
+    "purpose": "Bounded numerical/software audit, not equilibration or convergence"
+  },
+  "historical": {
+    "systems": 5,
+    "duration_ps_per_system": 100,
+    "read_only_revalidation_checks": 95,
+    "new_dynamics": false
+  },
+  "regressions": {
+    "initial_focused_passed": 56,
+    "after_provenance_fix_passed": 34,
+    "counts_overlap": true
+  },
+  "fixed_issue": "Simulation provenance now identifies the shipped application version instead of stale 0.1.0; old resumed provenance remains intact.",
+  "harness_corrections": [
+    {
+      "issue": "Default TestClient testserver hostname blocked by loopback host protection",
+      "resolution": "Use allowed 127.0.0.1 test origin; no app change"
+    }
+  ],
+  "quiescent_jobs": {
+    "openmm": {
+      "job_id": "78deca65a05442e8",
+      "status": "completed",
+      "worker_still_owned": false,
+      "native_pid_retained": false
+    },
+    "gromacs": {
+      "job_id": "1729bd5d545a41f0",
+      "status": "completed",
+      "worker_still_owned": false,
+      "native_pid_retained": false
+    }
+  },
+  "evidence": {
+    "REPORT.md": {
+      "bytes": 7089,
+      "sha256": "b25c5ba03a006c3593be5269fa2e9732c3956d0225dc17de8993fb43b3dd6a1c"
+    },
+    "focused-tests.json": {
+      "bytes": 1676,
+      "sha256": "a43651e8ce756757250f463c1c7b0d1ee084847d8dd0e376b7298927e2e7460d"
+    },
+    "fresh-gromacs-validation.json": {
+      "bytes": 6953,
+      "sha256": "85cc17ef398cf65046f663d5d28ceb9bc019a28c82d4954463f2fe3c172c0ee5"
+    },
+    "fresh-handoff-validation.json": {
+      "bytes": 1919,
+      "sha256": "132fb441f5ff6d92e1189f3d828d582b4dfeec191c6466132d8bcb5d795af457"
+    },
+    "fresh-openmm-validation.json": {
+      "bytes": 7815,
+      "sha256": "227e21286b4871adefc4336d688b58c20d5dcf590429016932f6b71a8beb8387"
+    },
+    "historical-1K4C.json": {
+      "bytes": 7881,
+      "sha256": "ebf71af3c514e6ac8a12fa14fc8f55349d0e020007495a40ceff024262d19dad"
+    },
+    "historical-1SUG.json": {
+      "bytes": 7041,
+      "sha256": "f1122fb1dfc4cdd3fbbaa48b9be40ccb3a03b04db80b997db1144c37c71d1ec2"
+    },
+    "historical-1XQZ.json": {
+      "bytes": 7040,
+      "sha256": "2b55b3a251e66916516e26440480c9df1f7756e31b8b94081dd721eebe7b0c84"
+    },
+    "historical-3PTB.json": {
+      "bytes": 7880,
+      "sha256": "bb3c07e7c2adf236c4fc073111c9ac5c33025bc9b235589cdf141cb7ea8369b2"
+    },
+    "historical-4N6H.json": {
+      "bytes": 7895,
+      "sha256": "164679070ada8f679c1e7be3a50004231bb3fd2bb58128645d3a3a9ea0f866da"
+    },
+    "historical-revalidation.json": {
+      "bytes": 3169,
+      "sha256": "504e09968879b39caa44bb98b8c77029d8f4b4918c31ee202c5dd43cb5027378"
+    },
+    "native-log-screen.json": {
+      "bytes": 2561,
+      "sha256": "b2304a1105cbdab9e5883caf1f756e3cd8e0c7d18cfba86006cfb1ae1d6839cd"
+    },
+    "native-recovery.json": {
+      "bytes": 7749,
+      "sha256": "ea08cdeec7285d49f615155251b302bdc9ee5cfef04dd806c948e77ff364fb47"
+    },
+    "run_native_audit.py": {
+      "bytes": 9769,
+      "sha256": "8f569ef13f3dae14074e53ddae13c5fab8e45917871719a5baa26feb7072c138"
+    },
+    "runtime-probe.json": {
+      "bytes": 1129,
+      "sha256": "b4f21c9ed133629d265aa8c71a20dc90d43f2ecb6b30140929e74bca71ebc058"
+    },
+    "validate_fresh.py": {
+      "bytes": 4506,
+      "sha256": "668f260f423db95d7c34a2ebd433f33a1695c0d9cc81798187f6e2da2065fec6"
+    }
+  }
+}

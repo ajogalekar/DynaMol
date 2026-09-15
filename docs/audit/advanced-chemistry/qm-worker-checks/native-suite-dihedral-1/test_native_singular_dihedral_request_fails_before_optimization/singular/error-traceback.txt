@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 604, in run
+    data=validate_input(json.loads(raw))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 237, in validate_input
+    dihedral_degrees([coords[ids.index(x)] for x in selected])
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 84, in dihedral_degrees
+    raise ValueError('Singular dihedral: a defining angle is linear or nearly linear')
+ValueError: Singular dihedral: a defining angle is linear or nearly linear

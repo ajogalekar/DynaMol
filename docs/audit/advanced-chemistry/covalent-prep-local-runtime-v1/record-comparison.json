@@ -1,0 +1,1272 @@
+{
+  "packages": [
+    {
+      "package": "numpy",
+      "version": "2.4.6",
+      "record_rows": 915,
+      "hashed_payloads_verified": 914,
+      "unhashed_rows": [
+        "numpy-2.4.6.dist-info/RECORD"
+      ],
+      "metadata": {
+        "METADATA": {
+          "sha256": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0",
+          "bytes": 6608
+        },
+        "WHEEL": {
+          "sha256": "26726246f91715a154e07973ca8a82029674ee3cba86914a77f2e47c1a566739",
+          "bytes": 122
+        },
+        "RECORD": {
+          "sha256": "39f8f957ba8b1fa41cd97fc9bb22e038bba0eda2f7c1d3fba01258995f6b9312",
+          "bytes": 84555
+        }
+      },
+      "original_comparison": "same declared scientific payloads; matching local bytes verified",
+      "old_record_sha256": "67602a424210a97728148843b72be3c281e5f5d60f9780c41c85052996aeaeb0",
+      "scientific_payload_count": 890,
+      "metadata_and_wheel_byte_identical": true,
+      "changed_entrypoint_records": [
+        {
+          "path": "../../../bin/f2py",
+          "original": [
+            "sha256=99EhUHZCDYIb_Qz5gW5fOHc2Wiapo-I1J2iwsBI3YBo",
+            "340"
+          ],
+          "local": [
+            "sha256=j8Ra7wQY4MJCEMnX-OpXWQSLecTI3fqv3f8ObSpQ0Y0",
+            "354"
+          ]
+        },
+        {
+          "path": "../../../bin/numpy-config",
+          "original": [
+            "sha256=sMA3I739JIYkuOulY2p09c1SKLhic78JPAvXf71dONI",
+            "340"
+          ],
+          "local": [
+            "sha256=63k3gFAulRM3-gZ4X-3hijlFe7mCM7L-NzgGbXyD7BU",
+            "354"
+          ]
+        }
+      ],
+      "original_installed_payload_bytes_reread": false
+    },
+    {
+      "package": "rdkit",
+      "version": "2025.9.6",
+      "record_rows": 972,
+      "hashed_payloads_verified": 971,
+      "unhashed_rows": [
+        "rdkit-2025.9.6.dist-info/RECORD"
+      ],
+      "metadata": {
+        "METADATA": {
+          "sha256": "7a6493aa887af138f80d16ee5f31e490aeb7a7734eac33c304becbd6cdc71d72",
+          "bytes": 3798
+        },
+        "WHEEL": {
+          "sha256": "c6be3d9417267bb4c67b09e3fcd341ea54dff79b80220098e95d240ecab8791a",
+          "bytes": 136
+        },
+        "RECORD": {
+          "sha256": "aa969f94852b63eec2decfd48f6e5f43783ba4f8cee545df12097deee61dc938",
+          "bytes": 89392
+        }
+      },
+      "original_comparison": "same declared scientific payloads; matching local bytes verified",
+      "old_record_sha256": "aa969f94852b63eec2decfd48f6e5f43783ba4f8cee545df12097deee61dc938",
+      "scientific_payload_count": 965,
+      "metadata_and_wheel_byte_identical": true,
+      "changed_entrypoint_records": [],
+      "original_installed_payload_bytes_reread": false
+    },
+    {
+      "package": "parmed",
+      "version": "4.3.1",
+      "record_rows": 138,
+      "hashed_payloads_verified": 137,
+      "unhashed_rows": [
+        "parmed-4.3.1.dist-info/RECORD"
+      ],
+      "metadata": {
+        "METADATA": {
+          "sha256": "c5bb3c2f9dcb241ab992203fde5f29e09479bfa4b243d0363af540e362088096",
+          "bytes": 388
+        },
+        "WHEEL": {
+          "sha256": "e98238154fc1d69541ea8014d5f084c6ddfb76748b77463d26d3ca5f20168dbd",
+          "bytes": 109
+        },
+        "RECORD": {
+          "sha256": "512e4dbbe8d1158425f3d277bf4cc96761137f2cccc5ad3e88089d485f097fc0",
+          "bytes": 11622
+        }
+      },
+      "original_comparison": "same declared scientific payloads; matching local bytes verified",
+      "old_record_sha256": "a0a33bc8c5e34d2a109b10dec1e5ec8e86bb5d5f08e5950df3defabd1d257f64",
+      "scientific_payload_count": 129,
+      "metadata_and_wheel_byte_identical": true,
+      "changed_entrypoint_records": [
+        {
+          "path": "../../../bin/parmed",
+          "original": [
+            "sha256=OfJ-m839FjDEjMLdxdXoQhzigHki-SdpgFDp5Zt_Tp8",
+            "338"
+          ],
+          "local": [
+            "sha256=KoAYxlCZnXFA_yf1Tflm77OX20ars02uIPrKWWZYSNg",
+            "353"
+          ]
+        }
+      ],
+      "original_installed_payload_bytes_reread": false
+    },
+    {
+      "package": "pillow",
+      "version": "12.3.0",
+      "record_rows": 141,
+      "hashed_payloads_verified": 140,
+      "unhashed_rows": [
+        "pillow-12.3.0.dist-info/RECORD"
+      ],
+      "metadata": {
+        "METADATA": {
+          "sha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8",
+          "bytes": 9093
+        },
+        "WHEEL": {
+          "sha256": "70c6dd511e0cb89c0a4e4fdc7254cd728f8e5bab03ad06f067a32548cb65ac8e",
+          "bytes": 136
+        },
+        "RECORD": {
+          "sha256": "45c037b8a45b62c77f1a01fe5895a67a77c9c3cb68634f80a0d7a5b060ac5f65",
+          "bytes": 11180
+        }
+      },
+      "original_comparison": "not_requested_for_pillow"
+    }
+  ],
+  "native_payloads": [
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_multiarray_tests.cpython-312-darwin.so",
+      "sha256": "7eebe35f8c33291691312a8418d770da61837330588f966fbae8ad88099631eb",
+      "bytes": 120952
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-darwin.so",
+      "sha256": "b96123b811488473c23efa6d45f196641463c928372ff896785813b821aed652",
+      "bytes": 3678408
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_operand_flag_tests.cpython-312-darwin.so",
+      "sha256": "349c39c8494d2439e6732a0f8caf105a4737f21cbf1b962e1b07b36d853b58f6",
+      "bytes": 51240
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_rational_tests.cpython-312-darwin.so",
+      "sha256": "0bfbea6b715e9c44c438b868b76e252178a478ecd094a1521d086165b55fdf22",
+      "bytes": 72808
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_simd.cpython-312-darwin.so",
+      "sha256": "3178cd1f5ab8625fa8371bf48dbe54b4ed88896f9f70519c34ccaea970374197",
+      "bytes": 339592
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_struct_ufunc_tests.cpython-312-darwin.so",
+      "sha256": "9337744b95313d29845b741049a8cdaa8abe57520524e7f16c396b2ae64f1d32",
+      "bytes": 51480
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/_core/_umath_tests.cpython-312-darwin.so",
+      "sha256": "ba6ac034d6e710660862a3260c4e8d62171de92a9b3ea32029bc17774ea7f84f",
+      "bytes": 71712
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/fft/_pocketfft_umath.cpython-312-darwin.so",
+      "sha256": "d902fbb947127a8e78f56d67057fad07f73563a91a60a761423e3ba09ffb8731",
+      "bytes": 329912
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-darwin.so",
+      "sha256": "86f2c3a5e1a516211e144ba13d90c18b9db903477fa66154ee5cdc4cc59c3067",
+      "bytes": 154848
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/linalg/lapack_lite.cpython-312-darwin.so",
+      "sha256": "3f67c0ee45da7ae027d4e066495953574d9a901fe1304d9ddfbba79397a5d054",
+      "bytes": 53008
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-darwin.so",
+      "sha256": "0e08cf005eb9fb8378086928485ce30cfb12cd2bba411b6dd7202124734c2b75",
+      "bytes": 279912
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_common.cpython-312-darwin.so",
+      "sha256": "ecd16f24eea4c44bf28cb718300f4156cc99c1725dbeda82bb447066976cacdd",
+      "bytes": 232000
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-darwin.so",
+      "sha256": "391cf5d6d41959c14abe10d1108a6bfe664dd12677ae9f88abf57d35447524a8",
+      "bytes": 651216
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-darwin.so",
+      "sha256": "94083b8c1e0d99556bc732b8a59ffc273cbcb981836da95459919f3158faf475",
+      "bytes": 132176
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-darwin.so",
+      "sha256": "0230f385549bca10636d49991e15c021ced23c705bedde086fc72a6276c611b4",
+      "bytes": 133456
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-darwin.so",
+      "sha256": "9cebd1d7e17a5d9296bd1b6b1769466f71e773a31bf5505958cc2723af601730",
+      "bytes": 115648
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-darwin.so",
+      "sha256": "359fbd1de581fc5d26d87c9596675f9ceb35e394cc63d47812d4e6f73c5866ca",
+      "bytes": 97328
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-darwin.so",
+      "sha256": "8a1bba22fafd2ed834c3cd7e95cc2a5a4abc09fe27004949d18e04ab2dd4d277",
+      "bytes": 189920
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-darwin.so",
+      "sha256": "8152e184801e01d2c92e547bece71b1eba501d6bfce6fbd3308575852e50055c",
+      "bytes": 527616
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitAbbreviations.1.dylib",
+      "sha256": "ddd348fcdd0d10cfa73047aea584b563985459b3a6ee13897ea812fca98c39c0",
+      "bytes": 243200
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitAlignment.1.dylib",
+      "sha256": "62f3600bac8dd90dea7dd4564b02fe98d2b591dcf71be8669ab7851d0c746d5c",
+      "bytes": 125760
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitAvalonLib.1.dylib",
+      "sha256": "ea90b5aceb02db2e2d57b644bf3b60920d0217bab7308eac1e843c69314b1b48",
+      "bytes": 168416
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitCIPLabeler.1.dylib",
+      "sha256": "c056b905a23a3106d17ba09f787c2fef6fa248f225cae0b47e3e55714cc00c12",
+      "bytes": 322928
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitCatalogs.1.dylib",
+      "sha256": "a24dba3ee803a92822fcdde338bf9327010c209c8e4a418bc946b7e65759633c",
+      "bytes": 85200
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitChemDraw.1.dylib",
+      "sha256": "71d2d0d54226831302095a6c2cb58ce72742050da80e782efbe455edfeebaae2",
+      "bytes": 1034128
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitChemReactions.1.dylib",
+      "sha256": "09dac59306772deef29a2d455a561f52a5109b3493a7f7515dd24a4ab9e5a006",
+      "bytes": 1132608
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitChemTransforms.1.dylib",
+      "sha256": "2537541020762ac75971a3a7fb342000aa55a954bcbb91460e76127293710453",
+      "bytes": 561040
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitChemicalFeatures.1.dylib",
+      "sha256": "e58b7654f93adc163c019d20c3d744495cb3e628ef1e499ec8134d5dc4e3cd38",
+      "bytes": 127600
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDataStructs.1.dylib",
+      "sha256": "74c7ee1cb3e1fd5f53a673f6eb33285a7e0efdba0b47c31e9e6ffb400027f473",
+      "bytes": 337552
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDepictor.1.dylib",
+      "sha256": "86961b8a7f89814feac511a9d43284cd05bd7918ee44d8ddd02892967f4feb11",
+      "bytes": 530320
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDeprotect.1.dylib",
+      "sha256": "84650738d6e306ad1098f87d354e5cb0ac91482d7f6b50b1b56e93d4f0a4968b",
+      "bytes": 181696
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDescriptors.1.dylib",
+      "sha256": "1d817b7fcc04bc881388a068698583a06c9ca9afcfbad2bdade0d4112c6bd026",
+      "bytes": 818448
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDetermineBonds.1.dylib",
+      "sha256": "ec4e836f3d547f2da3d8283c29740e5e50544805c37eeed5406f48d80871c351",
+      "bytes": 240432
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDistGeomHelpers.1.dylib",
+      "sha256": "331e8185d0a8f91f42231ee19f50b25eb47c56ce941898260f1a732f4eb1e803",
+      "bytes": 502576
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitDistGeometry.1.dylib",
+      "sha256": "4d6feeb4dea3550113c8cf0e688e7436488be993024c03bc73fd206f631a46fa",
+      "bytes": 226688
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitEHTLib.1.dylib",
+      "sha256": "8b2834d1b5de865470ddf8baa5c60cafab1a8646b854bd6cc934964c4a4b2cec",
+      "bytes": 390896
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitEigenSolvers.1.dylib",
+      "sha256": "325511d85882c023532fbabd98c568c156755836b7e676b610059494ae7767c0",
+      "bytes": 124624
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitEnumerateStereoisomers.1.dylib",
+      "sha256": "5ccd534f56e6bbd0e052676eb203a1be364327382afd4c72b5fe2c70a269acf3",
+      "bytes": 194160
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitFMCS.1.dylib",
+      "sha256": "d733d15b92d392a92ecffbbf4ea693136dad4c3e0abc4892ea33a51c1420ff70",
+      "bytes": 424448
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitFileParsers.1.dylib",
+      "sha256": "879a1b63e595aee7926d41f3e7532f75d98255bb64d3099f50aa76009a61371a",
+      "bytes": 2124688
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitFilterCatalog.1.dylib",
+      "sha256": "62ca408660341b709805b8e4cf9d6fc2fc56262e6278c52295471f023ff03ec4",
+      "bytes": 996784
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitFingerprints.1.dylib",
+      "sha256": "abc9ef2c2036c77fb07b8c930dbd0b36c9aef1f24a54d165f3357e43660f9188",
+      "bytes": 889136
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitForceField.1.dylib",
+      "sha256": "a7a72ca62ad378a9784b3f74f55fd6fbc1110a85c48ffb7264303e11b7462275",
+      "bytes": 694128
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitForceFieldHelpers.1.dylib",
+      "sha256": "335aa74536e23fe427dc99eacc79dfbe97287ad1ca62a27d056e2450c9d89e1e",
+      "bytes": 562480
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitFragCatalog.1.dylib",
+      "sha256": "af57868c328e2d115164bc37a6d924f48bd5555fba06c1d45fda43a0d7da2fa2",
+      "bytes": 296160
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitFreeSASALib.1.dylib",
+      "sha256": "149013e51f27326914a55b4303edffc4011dd647c8d4ed2fa9a36b75899cceb6",
+      "bytes": 205696
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitGeneralizedSubstruct.1.dylib",
+      "sha256": "fb1bd0de7fd800a1f11bbae85c8a2123b051429eed6f0c84b4ac777fea00df56",
+      "bytes": 423120
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitGenericGroups.1.dylib",
+      "sha256": "5549fde72484a3ad9a44bf97c9828873e121c841bd9bc17804891f155a9f5d9b",
+      "bytes": 387408
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitGraphMol.1.dylib",
+      "sha256": "0ccf90b2b77aaeb837594228faf19394885e1041c5db9dcb3723b58264054be4",
+      "bytes": 2127696
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitInchi.1.dylib",
+      "sha256": "668278d8f970cf5438613ab1b57db7914e9e051da5026e56ba185160c71189ce",
+      "bytes": 1328384
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitInfoTheory.1.dylib",
+      "sha256": "dbe73853890cc77071af12143701533462f163669691e10d386fa87147172f43",
+      "bytes": 154800
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMMPA.1.dylib",
+      "sha256": "aa7d9d054fb4632f32f1dab25bf1fddc1bbed8db5fb1a04ae0a93c96614243fa",
+      "bytes": 193696
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMarvinParser.1.dylib",
+      "sha256": "de4b9f3675d5295119da1298d9a47cb4125809b3f6c21cfc55032f09db5046e1",
+      "bytes": 857968
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolAlign.1.dylib",
+      "sha256": "de12280bece61d4a2ce1e441609443b342084843cdf4ce12dfa03b8fb3d7949d",
+      "bytes": 276528
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolCatalog.1.dylib",
+      "sha256": "3dd16a4c1ed4804e1a473fed320c8c6a4ec1aefe5b8beaa72a6f248fe5cd6af8",
+      "bytes": 155104
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolChemicalFeatures.1.dylib",
+      "sha256": "e761e450ea771b9a847669c58237c22559bc16a358f0471c44611f11fe542182",
+      "bytes": 264992
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolDraw2D.1.dylib",
+      "sha256": "1ead3a89a8b545b8994b0b038d19a4000b0743119638912fe7ae5eb874e5969e",
+      "bytes": 3879776
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolEnumerator.1.dylib",
+      "sha256": "105c5ec3338205b5d48e4bcfcb30ca83903147096b4f1b01c8e720842fb56f9a",
+      "bytes": 440592
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolHash.1.dylib",
+      "sha256": "446700658c9174c34496b2075f5b14bab605bd96c7d84c468abae7ad8bd28e87",
+      "bytes": 187232
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolInteractionFields.1.dylib",
+      "sha256": "d0cda9d7d8871299216791d150a04ba00047cea87b921e0e21afb0df49567d7e",
+      "bytes": 267280
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolInterchange.1.dylib",
+      "sha256": "b31963992d5c5c16df2deb1312b031766326ea7009d85b80f852a01d54f8eefa",
+      "bytes": 893936
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolProcessing.1.dylib",
+      "sha256": "9b3afa48d6b6a9fac4854a07080da7b2cb8d0b35f0cf36c8be507e6817477884",
+      "bytes": 215520
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolStandardize.1.dylib",
+      "sha256": "d36926dfb0b8a3967d3415d0f511c50dea62469d4093d62147c55d9086f25a1a",
+      "bytes": 1120688
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitMolTransforms.1.dylib",
+      "sha256": "4a53ee60acf66b54c88646ba0d8014618bdd9ad078ab24c0e63869a621879b98",
+      "bytes": 219024
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitO3AAlign.1.dylib",
+      "sha256": "9a7613f54e33b39d8a9aac3904a142dcc2f32432d170dfa23efd788c7f5fa603",
+      "bytes": 299984
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitOptimizer.1.dylib",
+      "sha256": "0ebb7791f56cc6ebc1036f70e245373a8391822ce10f69a8ecb5c67e3500cc5b",
+      "bytes": 84576
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitPartialCharges.1.dylib",
+      "sha256": "92d94b3ad24651e8c50caabd7cccd8004cdfc547c66670598dc8e51f103508be",
+      "bytes": 184064
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitPubChemShape.1.dylib",
+      "sha256": "5b5eda148717e83946df82b79179c0d4b7f4f56398090acda7aa6de03ae9d35a",
+      "bytes": 370256
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDBoost.1.dylib",
+      "sha256": "fdb7f490430ef4f6c4eb07c740edab146dd693d5da5d445f2474b203493d47dd",
+      "bytes": 152256
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDChemDrawLib.1.dylib",
+      "sha256": "e2a70e0da7561169b1cda5c4f71eea8cd33a607f9bd76b7b9edb88c9c42348d8",
+      "bytes": 362512
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDChemDrawReactionLib.1.dylib",
+      "sha256": "4e215c6d3f951e0fd3ba30e820dc4933716a6a047f41bdfc33c03bd213b628a7",
+      "bytes": 196192
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDGeneral.1.dylib",
+      "sha256": "a9195a4e3fbc783e9bd59b1bf56326eedd4d6e1f1e365b0e6b60a7baed0af6b1",
+      "bytes": 215792
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDGeometryLib.1.dylib",
+      "sha256": "911d38371293bad476386bd618b1c04770f203d197b3c765c1de0fc9f3195db6",
+      "bytes": 230192
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDInchiLib.1.dylib",
+      "sha256": "7998763d937bb4f6f37d20580716be727ae7cbe884823281647f397038e23b8c",
+      "bytes": 204848
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRDStreams.1.dylib",
+      "sha256": "5e85144f7d02fecc8a1c6fb7a8be7a4fe70b3db3d55184f2dc7d22fe09ba4e2e",
+      "bytes": 203312
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRGroupDecomposition.1.dylib",
+      "sha256": "196349ad8339009b70c27b51c31f4148dccc4a69a46eddcf53545a1c6551aca0",
+      "bytes": 940816
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRascalMCES.1.dylib",
+      "sha256": "ba0d1dccafc75580a2ccfbeb79ea069d66a743f089d5054b163e450d18012560",
+      "bytes": 598656
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitReducedGraphs.1.dylib",
+      "sha256": "e857ce0e29cb46eb88f8fb5be8a7ffa74e8edbdde6436bcb9f432ffadad90850",
+      "bytes": 171296
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitRingDecomposerLib.1.dylib",
+      "sha256": "cc4827bdfd1453e9ff3fe417b1d211132168193ff38be6d02ca0a69de539a562",
+      "bytes": 192688
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSLNParse.1.dylib",
+      "sha256": "2ca692fb2fe138f4fd1f4ed8305521d0dc6dffe87744055d6ac180c3e03c5a5b",
+      "bytes": 432112
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitScaffoldNetwork.1.dylib",
+      "sha256": "15346688a5d2da9d39d8daa95566e53105d6b95063c43ef8c9ff319fd43d71d0",
+      "bytes": 307152
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitShapeHelpers.1.dylib",
+      "sha256": "9f7d3bb2d3b4c2507b4762862767f759d7b9ebb13ed88d971dc9ec72a4271f88",
+      "bytes": 145712
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSimDivPickers.1.dylib",
+      "sha256": "ba42f2a7eb3f2fa9e66a234781e8148103e2375a7079d75bf71c497f524a1f73",
+      "bytes": 124432
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSmilesParse.1.dylib",
+      "sha256": "6c821108ac8eb21fa3c9073d057c2ab7a93faeb520697d1fb432b2a617c11902",
+      "bytes": 928368
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSubgraphs.1.dylib",
+      "sha256": "be1a51b0529d0261dd1acb3a03ffd05c43760069efa312de0a9acce90e87b133",
+      "bytes": 168656
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSubstructLibrary.1.dylib",
+      "sha256": "2e4a2b860a9c87495dbba1f83c2e1bc5d01800ff3ebe8027ea5ba35171668ef9",
+      "bytes": 862592
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSubstructMatch.1.dylib",
+      "sha256": "4a7c6eda6c6946c8065e20b3c4b6e93e31a5e0836e7fd93132b0600c58bf85e3",
+      "bytes": 441744
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitSynthonSpaceSearch.1.dylib",
+      "sha256": "f75eacb08011a55b7ecbedb0f7f6a6052e477ae70da1afbe7b78b4d394be1eca",
+      "bytes": 938512
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitTautomerQuery.1.dylib",
+      "sha256": "6181178770ca84cfe409e5fccac0b1ba9401e1c5e99ad7d8404c2a8f73f8a1b5",
+      "bytes": 295632
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitTrajectory.1.dylib",
+      "sha256": "7367e50d7d0c8786cc78e0fc25744eb769da7671e973251faacba8faf3c41d5b",
+      "bytes": 176944
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitavalon_clib.1.dylib",
+      "sha256": "2b40ee8eaab70dc2bfeeef1bb8c933a535d65281bf173225e68f4986cb43838e",
+      "bytes": 493328
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitcoordgen.1.dylib",
+      "sha256": "939e5bd96b2c0dba6d8d77a71a916b36d6c86d704167cebf0bc51cbf7c9765c2",
+      "bytes": 781904
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitfreesasa_clib.1.dylib",
+      "sha256": "71b7d744fcc96a9a6737bd6d5741322ae786af03d966681b54609947a5e6cc8d",
+      "bytes": 215552
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitga.1.dylib",
+      "sha256": "06832e8c841d474fc499bcc8b02d413594da38f657f5ac3d3f73d05e3ccde312",
+      "bytes": 128208
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKithc.1.dylib",
+      "sha256": "9a01d9ba32e615d9a81cc864f4a1729ad089b643c3c61f1a36a6474519aa0b27",
+      "bytes": 101248
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitmaeparser.1.dylib",
+      "sha256": "6c1a764a9911d42ccbb6f2e943fb89a8d69b884071ab413e775a9d23b354c9a7",
+      "bytes": 297136
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libRDKitpubchem_align3d.1.dylib",
+      "sha256": "979c59314f4bba9aaa4292fc4a047ccdc2b9fc7e2a53df266d84fa344684c7a8",
+      "bytes": 141696
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_atomic.dylib",
+      "sha256": "6c3146b616ccdc83c3ea2f19a69b6a3cfab6af1337f78811058f2d4445e7f8cc",
+      "bytes": 104160
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_charconv.dylib",
+      "sha256": "6e1adeabf23b28b32f180486ad66ebd0299edfe01168d9ef1ea03ea853526737",
+      "bytes": 162080
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_chrono.dylib",
+      "sha256": "3f335dbb331879b281aea34d8dcb6b1fe127469e4d00347a8dda8cc60e30fcd3",
+      "bytes": 79472
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_container.dylib",
+      "sha256": "26d2ac296ce0c84aa4d9ec74e99dfe35060ef53cf702b7a62e800a3c437d8ef4",
+      "bytes": 123888
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_context.dylib",
+      "sha256": "3be0cd44ff2145bf3c244d626e41ac7d2b6094a651ad3b40ab52f25a1c770217",
+      "bytes": 69344
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_contract.dylib",
+      "sha256": "d0ad1030f1e65566dc884aa9a93d3c6b86801c924e2269630e5e4144ea755669",
+      "bytes": 161760
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_coroutine.dylib",
+      "sha256": "c05b52de1d98cb5e94e58a077b9ea13e3237be9d4bed0bb6b947a897e521ce92",
+      "bytes": 71680
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_date_time.dylib",
+      "sha256": "b363947e73e9190408a91f272631d0849eedddf62e31631cfefc1ac5546ced3d",
+      "bytes": 35008
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_fiber.dylib",
+      "sha256": "63ed6412b6b1290f32d3035215c998e1c3f674f04d982f79a424f64952677319",
+      "bytes": 135664
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_fiber_numa.dylib",
+      "sha256": "50700d439cf0df69af3a9582db5c85dfedc121f4f58a86a61139e8d3f82a84b5",
+      "bytes": 78864
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_filesystem.dylib",
+      "sha256": "4e235e70fccbc6ae0c02542c28af27c3031aa407fdf97229ab4901bada86de9c",
+      "bytes": 196176
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_graph.dylib",
+      "sha256": "0284fa5314a1fde5fe461607efc388f554d999739875fbcb4aca278bb64ada7d",
+      "bytes": 478832
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_iostreams.dylib",
+      "sha256": "d5e8412f4a17b5d0729d51d46a7e6e9aab1c9deb6e19f79cd820f09cd9959407",
+      "bytes": 260928
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_json.dylib",
+      "sha256": "77e4b9d10fe03229952348d1064619f7ec2e2421b94d6e2da484601d5bd5ddd1",
+      "bytes": 407456
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_locale.dylib",
+      "sha256": "639011d91ab0789d52aded966f7d431a0df43f99348741d7e0e0cdfa19c3a156",
+      "bytes": 1483248
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_log.dylib",
+      "sha256": "f514be525d47e03596517cc3cf36ee0d266a0551b239dd8c5e49dd9a52b750e5",
+      "bytes": 967184
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_log_setup.dylib",
+      "sha256": "fdb80e24832713a3c5f81ed9220c326cf34e45febc4f0bf0ab29df7a3115eac5",
+      "bytes": 1325376
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_math_c99.dylib",
+      "sha256": "2376935841288335ec2bee25973f73a522e5d9beb67260f6296f38ec22398efb",
+      "bytes": 97456
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_math_c99f.dylib",
+      "sha256": "59d9c6f290b7f4b6c0f9911a026360ed73d3a4d06b57546c376411b97f027001",
+      "bytes": 97184
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_math_c99l.dylib",
+      "sha256": "d2ce4f0829b9aaf3d615eea1d9816643c200b2bfe89fe62f03277a1318ee2655",
+      "bytes": 96352
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_math_tr1.dylib",
+      "sha256": "1ee9761e03c81d3735e08ddfa7e986500ca6e3d9146b2ff97a467484138049ec",
+      "bytes": 252512
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_math_tr1f.dylib",
+      "sha256": "0ca32c459303d562353f54e893965213c2cdf8f55ad46c2fd92f40d3603bcc7f",
+      "bytes": 276976
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_math_tr1l.dylib",
+      "sha256": "6e92e57ee2d1f682517d859b1a83e91de0505a30d047c0081ece96e86d66c3a8",
+      "bytes": 252144
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_nowide.dylib",
+      "sha256": "db4605b4ea888db85e3c3a1a759229891e5d3e0b8eb3fe34a3f509c4e562667f",
+      "bytes": 74480
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_numpy312.dylib",
+      "sha256": "a6b8d3f59984f6826452ea3b980817dbdba609e750f50c01cf67b2f20f5b08e6",
+      "bytes": 106224
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_prg_exec_monitor.dylib",
+      "sha256": "d92456c52224dd8f53c7ab3eaeef016c58aade71fd7efecde0cd8c193a52e56c",
+      "bytes": 108992
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_program_options.dylib",
+      "sha256": "b1459d9647d4e8ff5fb465849f08e8e2f8cab0c4c67a9f23f36a86e76cbc58dc",
+      "bytes": 414304
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_python312.dylib",
+      "sha256": "ee499e0cb8471ce34a6c7a922af1ec5fba9e8731a218a737b92a9587a2b5200e",
+      "bytes": 322944
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_random.dylib",
+      "sha256": "5fcedfa0f715b5eab4212b8822f9b6dc6c57607a5eb00cee672f4d4bb7d85f05",
+      "bytes": 76736
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_regex.dylib",
+      "sha256": "f5df52a70f903f244a851b02aa177ca73c698f16baaa96c02d4f0eff7c2c1832",
+      "bytes": 356464
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_serialization.dylib",
+      "sha256": "a36716ef077f4d693acecd59290fc517858565d820dc486d03c4f69f64d55ef7",
+      "bytes": 418304
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_thread.dylib",
+      "sha256": "69809eb155c90bcc7478eee3f00661cf51b3c1576120870a9510235d4968598f",
+      "bytes": 137072
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_timer.dylib",
+      "sha256": "f6444407a4798e03bcd8f76e4eb811a050ba8e5f6cf4187e3bb1d9e0a23bc81e",
+      "bytes": 81520
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_type_erasure.dylib",
+      "sha256": "0979d7e897cbfacc4eb88a674bf3d2adcb6ff6f12ea505b35c99f066ccc1dbcf",
+      "bytes": 100784
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_unit_test_framework.dylib",
+      "sha256": "0c3011093d96d6ac94697fe99840868e2d4c94d148bca98837985943439f2012",
+      "bytes": 770192
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_url.dylib",
+      "sha256": "61df94d4e41748572cd288c29669fc9224495509c64c669d647b2876b671da7d",
+      "bytes": 376480
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_wave.dylib",
+      "sha256": "9e94a5cb8176ab2c3da2a32a482d106a00eccffb67cb6ffa32cc0c6dbc23e8dc",
+      "bytes": 1673376
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/.dylibs/libboost_wserialization.dylib",
+      "sha256": "7ae9f31bb9147de5c64e2edfe83885b89c65f2d1d4b94a01c1b76ed536630382",
+      "bytes": 343936
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Avalon/pyAvalonTools.so",
+      "sha256": "a8cc986d22cdba961b82d24afb54cc5378ed04a1e9c9378ba35b5ccfaeec6c98",
+      "bytes": 282688
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/Draw/rdMolDraw2D.so",
+      "sha256": "ef084a6c9708eafab0ad487d93150353db36972160de48246f701b63a7bc20d2",
+      "bytes": 1092608
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/MolStandardize/rdMolStandardize.so",
+      "sha256": "87171eb432124ec904ee3a0322e81d9f4ab73a7557ec6de2e8a2371179e58151",
+      "bytes": 2110416
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/Scaffolds/rdScaffoldNetwork.so",
+      "sha256": "f7358c3123de35043b3807c6034cda26037077ea9d7cabff6edfb183b8248f7d",
+      "bytes": 671968
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdAbbreviations.so",
+      "sha256": "64bf16ebb43a386743792cad779046de048873b7408147ca2519c931aef4f820",
+      "bytes": 446272
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdCIPLabeler.so",
+      "sha256": "b483a433c15a645a191b98064d0a25813bd46670e1b05820711df47e0535109f",
+      "bytes": 158272
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdChemDraw.so",
+      "sha256": "1d90f36817f05c071c5f7f22541dcdcf2b397742ee55e6e32bce9d170375f04e",
+      "bytes": 222496
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdChemReactions.so",
+      "sha256": "53ac2933e3d07b3bd8051d5b0d7a9bcdeec4558493bf277db489c3d89c1e7239",
+      "bytes": 1865216
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdChemicalFeatures.so",
+      "sha256": "0d1032ad8d86cd9f27a5fe4715a0e80605519ec402d1435a9366ee992a9f2f0a",
+      "bytes": 242688
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdCoordGen.so",
+      "sha256": "066ddb3753b6bfdf1a11c000cd082400bbc3bf560f97accbe943905d245807e2",
+      "bytes": 289744
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdDepictor.so",
+      "sha256": "0bc8ad74569bb84d8565d1a55517f29f69cf01df531a490ccbe52d15f0097b55",
+      "bytes": 354128
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdDeprotect.so",
+      "sha256": "7b5eaff901601c816b6c9bbd942d948c5142e6a35f809e9d651cb0d8ce856117",
+      "bytes": 417376
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdDetermineBonds.so",
+      "sha256": "2ef47f310117b8910d8b23d0f67f346dd676b03bcd8ff8c69d94305754df2a53",
+      "bytes": 197872
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdDistGeom.so",
+      "sha256": "18b612ea3012d5ccbf4a4d523846d1258b6177a64f7d9fd818d61a4e80cd2156",
+      "bytes": 415280
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdEHTTools.so",
+      "sha256": "70a4043798227b94755935ebb3ce8d5592906e3d91c0a3a78d17cbea8d0ece66",
+      "bytes": 176288
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdEnumerateStereoisomers.so",
+      "sha256": "81eefd433d387cc126165bc1c4ce6b60047fb5e0995fc6fa91920a05e113145d",
+      "bytes": 241792
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdFMCS.so",
+      "sha256": "235562810509702740062c7fc6f10a7014f8b698f73edaf34dd1d59717d6f386",
+      "bytes": 590768
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdFingerprintGenerator.so",
+      "sha256": "066960bbfa05067076485d7df776e6013dd8c1ac9851c62004b0fce9dac82701",
+      "bytes": 748928
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdForceFieldHelpers.so",
+      "sha256": "78747ba3c0e162d0cf10a01e0a19ac8a2c355f323ea144d659e18188b32c7c46",
+      "bytes": 308080
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdFreeSASA.so",
+      "sha256": "a87e4a14b70129e696f3f59984b6665a872ab0b5ff64559703b65c8526620566",
+      "bytes": 261584
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdGeneralizedSubstruct.so",
+      "sha256": "27a6e19279831f4048ca9436831f3e5aee4c61c712adb679a134ff3c62311d2c",
+      "bytes": 327456
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMHFPFingerprint.so",
+      "sha256": "bd324176debae1b4ce9091c70490cc49caa37c85d7c323821a24a9449043bb16",
+      "bytes": 668192
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMIF.so",
+      "sha256": "3179540872aeff309eb6c941aeb8d38061a576d3fd9ca228a14b2b41091e34ad",
+      "bytes": 470560
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMMPA.so",
+      "sha256": "edfd56b2c4911b79b85c4da01df3d63bba34c6965c69cf0ce4ceaa54d2b5078a",
+      "bytes": 202448
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolAlign.so",
+      "sha256": "8c123f8b0812a9a1ae49cca4f9e15d23521449f875b931843a478960330a1439",
+      "bytes": 474832
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolCatalog.so",
+      "sha256": "d8322437e25ac98b29a61726deee0b75baa43fba23801e967f7fd5fee7240939",
+      "bytes": 345616
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolChemicalFeatures.so",
+      "sha256": "07a2c40e88e76c43ae4d4bc73931ebb6fd5d94e815b5ca188d153b7d686761f8",
+      "bytes": 350384
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolDescriptors.so",
+      "sha256": "6d8da1d57abd9752dcbbb0d716f8e14dda9415f98178ad329cca5545098dcdd3",
+      "bytes": 935136
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolEnumerator.so",
+      "sha256": "84db5ed56e372c49fb959540b9f951b9b1a8d59139ba005f01ee1f99ea738941",
+      "bytes": 333648
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolHash.so",
+      "sha256": "cba04d6cf35ad31ae3ac4374423bbcff220a2107be316f7f7bb78acda2cbee30",
+      "bytes": 154848
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolInterchange.so",
+      "sha256": "559ea308c81448f9d2edc4023d9cf7248d9e2859d9dd891e8606946f880c2bc9",
+      "bytes": 226800
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolProcessing.so",
+      "sha256": "51bc1009c99ffb6858ff8e6b4863c74732e6fbdca91b949112c76492ee7f1956",
+      "bytes": 247520
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdMolTransforms.so",
+      "sha256": "9bcaea1b773c41e0c04b813ce9e17bff342e191fe1529338c340b1c6996635b1",
+      "bytes": 258576
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdPartialCharges.so",
+      "sha256": "a4d5ab89c3362a58d97c525ab3a6c74a188656fb0890366b6328362e481d060f",
+      "bytes": 130096
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdRGroupDecomposition.so",
+      "sha256": "27e82dc0095c531319b7bc28a1706e960d33e904551fce15a0dc61771abc5f82",
+      "bytes": 552192
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdRascalMCES.so",
+      "sha256": "927b2c447156dd8a1c68ed322d0de0e13d76ae5053a8eaac600abf2a1f840b33",
+      "bytes": 355504
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdReducedGraphs.so",
+      "sha256": "3b52671f27be4dd9066dd09c23671c020c52e2f62977c97010be35f70ce9ee61",
+      "bytes": 159856
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdSLNParse.so",
+      "sha256": "08cc59ef1a6eae10d4f228a91c67f0f1154d926805dd2a8d105731e86b3c0772",
+      "bytes": 163344
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdShapeAlign.so",
+      "sha256": "59cb70e88e3543400810adc83a699027bf0d74a524fce5c4108f6ee9af258f17",
+      "bytes": 809424
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdShapeHelpers.so",
+      "sha256": "8027de67796a3513bb2ae8c051bcb6997e3ef93501676e18d7abbeeb449165aa",
+      "bytes": 242432
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdSubstructLibrary.so",
+      "sha256": "6b444128f35fd1915cc9bcd81354c5f3cbcbc0faeaa8e227a93ecc29858d2dc9",
+      "bytes": 1277088
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdSynthonSpaceSearch.so",
+      "sha256": "c93c3f5ba9e8ec5bb5f6cb8c00ad758e1b70cf1ffdee4e1e4ec9846a3d78fb23",
+      "bytes": 497296
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdTautomerQuery.so",
+      "sha256": "8e5c1c9aceb5a362d7eeea9c0a3c210cfc2825efa0d4743ad58892bbb1fb9661",
+      "bytes": 353024
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdchem.so",
+      "sha256": "601623ef7d59ab97c5bd3d769bbda1c09127408ca96e14d27a25c5f6ffa05f53",
+      "bytes": 4109664
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdfiltercatalog.so",
+      "sha256": "8767427a96491b2886684206dc5f84349d5a6359cc074152e30bd41327fa9d80",
+      "bytes": 1486240
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdfragcatalog.so",
+      "sha256": "78eef66dcc884d51aacef7221dc1c64f41c471d05ff2c4242608bc900d7bc1f2",
+      "bytes": 423888
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdinchi.so",
+      "sha256": "5ecbac554bca243eb11cde2c38a0a2016400d602fbfd90e6d81f1d63aed5d843",
+      "bytes": 197216
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdmolfiles.so",
+      "sha256": "c40f9caf34ee0dd17f45fd2928840340c092d5c860fa6e3e6c4d6d7220f5c93e",
+      "bytes": 2238000
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdmolops.so",
+      "sha256": "d7c2c4a226112c77964bfe2f0c65f4bea612a4d84196e2af5ecb8c17b92d8f71",
+      "bytes": 1739456
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdqueries.so",
+      "sha256": "f225b19b5fe7e8508fc2a98e729d5694dd87f2a75220dcec875b3a5882733187",
+      "bytes": 479600
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Chem/rdtrajectory.so",
+      "sha256": "6793f258175ab8481c62a1dd6d859a552e4a4e145df88f6a2cba2db3fbbbfb4c",
+      "bytes": 274640
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/DataManip/Metric/rdMetricMatrixCalc.so",
+      "sha256": "ce0239bb2e7d7d88f9dd08c813fdcd089d1e91ee1753835727b5fcc7931ab1ef",
+      "bytes": 158912
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/DataStructs/cDataStructs.so",
+      "sha256": "5d0328ce303c295c3835d4e10d5e8ee7695d6fc62847e7ebe374d67d0d1faebc",
+      "bytes": 1735968
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/DistanceGeometry/DistGeom.so",
+      "sha256": "27475ba137b9d704f81b281d45355d3445bab0c047d51f3f62833ce0845cafaf",
+      "bytes": 199296
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/ForceField/rdForceField.so",
+      "sha256": "e452f528b92ef15c3899039d910928741ddab3366411cd25a363399e5922279b",
+      "bytes": 420736
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Geometry/rdGeometry.so",
+      "sha256": "f54d45c18bb5a1bafd218ab8c7c37862b7e4eb1078df3dc7176a45e4b851fc6c",
+      "bytes": 779632
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/ML/Cluster/Clustering.so",
+      "sha256": "fc10040eda995f704fdb55c20532eb4435f94d82a9d9f9773b466a3901936175",
+      "bytes": 136944
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/ML/Data/cQuantize.so",
+      "sha256": "47704d5f49c984855fbb31d6e26cdd54b7297b9f6f1b31112c0cc119543b970e",
+      "bytes": 157760
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/ML/InfoTheory/rdInfoTheory.so",
+      "sha256": "a48bf85f15e32657c3e854e620992beab6c5f7b2b8018f8c00612e802573c904",
+      "bytes": 269472
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/Numerics/rdAlignment.so",
+      "sha256": "be80c22d2281f2bae506022615b810d3a04547b75b8053fd6f3ca2ad4d42921e",
+      "bytes": 179808
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/SimDivFilters/rdSimDivPickers.so",
+      "sha256": "b331da56ccb8560426c7dbca1ac82104407625732640a43b128f1eda964a5cc6",
+      "bytes": 299072
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/rdkit/rdBase.so",
+      "sha256": "726b28913a34b6192fb929538fdd3b78274d138e320d8c29f6bd8853be7d7d7e",
+      "bytes": 2193776
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/parmed/amber/_rdparm.cpython-312-darwin.so",
+      "sha256": "421e4d911973cdaa741e7e4f408cb3e25f05f0c5977310f92b52e034410d01f7",
+      "bytes": 85312
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libXau.6.dylib",
+      "sha256": "002a604dc76919d6606c610be703a6547d78dd0f401639c9e95e5a79227190bf",
+      "bytes": 69760
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libavif.16.4.2.dylib",
+      "sha256": "ee0124cb07fb6419ed743cf9658b25211f7cc87d9081ad3e9416100db02c3c09",
+      "bytes": 3031984
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libbrotlicommon.1.2.0.dylib",
+      "sha256": "3f4843c17f3cccc986279a4c9ac8a11dc3077c412fd856d1bad8231bf027a25f",
+      "bytes": 183712
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libbrotlidec.1.2.0.dylib",
+      "sha256": "351fa4a2f4faed4147dfead81a8b0f5500ada31db64f74c8368bc1ab894f0dd1",
+      "bytes": 104080
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libfreetype.6.dylib",
+      "sha256": "996f9be86f5cee9a44924dba75e3db7ad8a1e83ec1695505c60d314f269b6109",
+      "bytes": 1120896
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libharfbuzz.0.dylib",
+      "sha256": "7e6800c210dcc2b6faa1e05ef42d1d4fdd0bb0dc88cd4640c7cd86ac715c51fd",
+      "bytes": 1806576
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libjpeg.62.4.0.dylib",
+      "sha256": "cf7c4e5c2d2c007fc51afcb95b649415cfe0bc4d7137ace897a6eff6550fa967",
+      "bytes": 666208
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/liblcms2.2.dylib",
+      "sha256": "6c472f0956c937e85747a4f7c5987dec7c54a6c807006f50fe2e1df1e82ec5e5",
+      "bytes": 522272
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/liblzma.5.dylib",
+      "sha256": "a978dfb290d948f53867b6e3915fff71800062c770f176419391ccc95defd53b",
+      "bytes": 323328
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libopenjp2.2.5.4.dylib",
+      "sha256": "ad0cb293fe3da9efcd8e3c5128c37e012d5abc88289f43c2721020e9cf408bdd",
+      "bytes": 662656
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libpng16.16.dylib",
+      "sha256": "92d120e199c0981bc26d71af66450cb1fc4f0764ce3ceb18369881e6e1c5861c",
+      "bytes": 342480
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libsharpyuv.0.dylib",
+      "sha256": "6b2d464413fc35783c79936f1e6be631585448a37765cf79c238be2ea5e5505b",
+      "bytes": 85856
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libtiff.6.dylib",
+      "sha256": "e8988717b7470394a47d5ccd343130796b24ee70b6d885d3818e0e0b53238be1",
+      "bytes": 766064
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libwebp.7.dylib",
+      "sha256": "0a2ba0179e6bcc1bccc1a88c38b7d8efd0302d45a1bfc1eb4cf1f1f03ede73f0",
+      "bytes": 512672
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libwebpdemux.2.dylib",
+      "sha256": "f5ec6b6750ee91ff032ba62b18afc5f37c7bc842bfc9b2d325df41bc656ea066",
+      "bytes": 69616
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libwebpmux.3.dylib",
+      "sha256": "f9c291035190c3af29494ce9fb62987c25ee78c4365c92c323ccc5ec8740143d",
+      "bytes": 105792
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libxcb.1.1.0.dylib",
+      "sha256": "d7929b6650537224be0161cee998a0bf44f6d05b547ca86cbfbf6e93368726fd",
+      "bytes": 276160
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/.dylibs/libz.1.3.1.zlib-ng.dylib",
+      "sha256": "39ffbe6a87460a579cf414c3ee668e449b32c2cdc2cc0b64921d53fd59cb56ed",
+      "bytes": 176320
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_avif.cpython-312-darwin.so",
+      "sha256": "6e014a729a8127062ae9f88729a22ec38aa47e1033cc9033c77802a21cbe6178",
+      "bytes": 73680
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_imaging.cpython-312-darwin.so",
+      "sha256": "ee754300d3bda6413b80ddabe3a7ed7b419e1b0468bf2830e2b19fe68f14be42",
+      "bytes": 617424
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_imagingcms.cpython-312-darwin.so",
+      "sha256": "292f96c5464a5607e2674dae85d9739436c9f22b17590625f7d674ddcff59849",
+      "bytes": 97952
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_imagingft.cpython-312-darwin.so",
+      "sha256": "dde5db0339f044b53f15abc9deb1093021cd59787b58b073cb90a4bdb8a3d31c",
+      "bytes": 117200
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_imagingmath.cpython-312-darwin.so",
+      "sha256": "2e3922ab8e63b3260996a3c676431396d85b1ad5adb0aba4607a443d77818448",
+      "bytes": 72160
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_imagingmorph.cpython-312-darwin.so",
+      "sha256": "24d8534d10301f367d37b99352e410ae266258e9f149dd5da30e7b5de194ad19",
+      "bytes": 51472
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_imagingtk.cpython-312-darwin.so",
+      "sha256": "9e889cbafba6ddc60872d2307de7d73fca1e4867267dabdc8503e2aa4ece4ba1",
+      "bytes": 52784
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/lib/python3.12/site-packages/PIL/_webp.cpython-312-darwin.so",
+      "sha256": "cbc1d7bcf28753fc8a4c3bc220e50ffcc56328b6c9199194e96dea6089525c35",
+      "bytes": 75840
+    }
+  ]
+}

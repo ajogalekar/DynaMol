@@ -1,0 +1,30 @@
+[
+  {
+    "file": "jp5078906_si_001.pdf",
+    "url": "https://ndownloader.figshare.com/files/3869455",
+    "article_url": "https://acs.figshare.com/articles/journal_contribution/Effect_of_Including_Torsional_Parameters_for_Histidine_Metal_Interactions_in_Classical_Force_Fields_for_Metalloproteins/2233525",
+    "sha256": "726046879ff66ac2b81273cff57f9be1527d0621c925a7f1a5d25162da6b70a3",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    "bytes": 394072,
+    "md5_match": true,
+    "retrieved_at": "2026-09-13T17:33:39.392771+00:00"
+  },
+  {
+    "file": "jz9b02868_si_001.pdf",
+    "url": "https://ndownloader.figshare.com/files/20049944",
+    "article_url": "https://acs.figshare.com/articles/journal_contribution/An_Allosteric_Pathway_in_Copper_Zinc_Superoxide_Dismutase_Unravels_the_Molecular_Mechanism_of_the_G93A_Amyotrophic_Lateral_Sclerosis-Linked_Mutation/11312432",
+    "sha256": "47356832ff83d50e3933e427177f6940328bf38f4c6bb3d759dcf1429a2dc8cd",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    "bytes": 1268687,
+    "md5_match": true,
+    "retrieved_at": "2026-09-13T17:33:42.020425+00:00"
+  }
+]

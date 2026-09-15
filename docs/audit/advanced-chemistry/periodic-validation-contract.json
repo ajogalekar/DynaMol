@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "development_contract_no_production_policy_added",
+  "document": "docs/audit/advanced-chemistry/PERIODIC-VALIDATION.md",
+  "analyzer": "docs/audit/advanced-chemistry/periodic_comparison_analysis.py",
+  "default_numeric_limits": null,
+  "arbitrary_energy_offsets_allowed": false,
+  "aggregate_approval_inferred": false,
+  "required_independent_lanes": [
+    "full_native_parameter_and_identity_fidelity",
+    "same_evaluator_source_to_export_comparison",
+    "native_periodic_force_and_numerical_profile",
+    "raw_absolute_energy_comparability_and_agreement",
+    "volume_pressure_conventions_for_NPT_equivalence"
+  ],
+  "hard_boundaries": [
+    "unvalidated_extra_forces_or_custom_pair_terms",
+    "undeclared_constraints_or_virtual_sites",
+    "missing_or_changed_atoms_bonds_or_exclusions",
+    "nonfinite_energy_or_full_forces",
+    "mismatched_saved_geometry_box_or_units",
+    "site_scope_presented_as_full_system",
+    "threshold_selected_after_target_result",
+    "correction_constant_fitted_to_force_an_energy_pass"
+  ],
+  "required_force_metrics": [
+    "full_absolute_rms_vector_difference",
+    "full_absolute_maximum_vector_difference",
+    "reference_force_scale",
+    "declared_ligand_covalent_metal_site_groups"
+  ],
+  "states": [
+    "pass",
+    "fail",
+    "not_assessed",
+    "not_comparable",
+    "unsupported"
+  ],
+  "profile_requirements": [
+    "frozen_before_target_evaluation",
+    "exact_engine_importer_validator_and_native_core_hashes",
+    "independent_diverse_calibration_cases",
+    "negative_local_term_and_exclusion_controls",
+    "both_absolute_rms_and_max_force_limits",
+    "raw_energy_criteria_only_for_comparable_conventions",
+    "all_original_failures_retained"
+  ],
+  "sources": [
+    {
+      "url": "https://docs.openmm.org/latest/userguide/theory/02_standard_forces.html",
+      "observed_document_version": "8.6",
+      "used_for": "General force and PME error/tail definitions; this is not a claim that the stored prototype used OpenMM8.6."
+    },
+    {
+      "url": "https://manual.gromacs.org/2025.4/reference-manual/functions/nonbonded-interactions.html",
+      "used_for": "LJ combination, shifting and electrostatic conventions."
+    },
+    {
+      "url": "https://manual.gromacs.org/2025.4/reference-manual/functions/long-range-vdw.html",
+      "used_for": "Excluded-pair averaging and energy/pressure corrections."
+    },
+    {
+      "url": "https://github.com/gromacs/gromacs/blob/v2025.4/src/gromacs/mdlib/dispersioncorrection.cpp",
+      "used_for": "Pinned native exclusions and EnerPres/AllEnerPres convention evidence; retained by independent review."
+    }
+  ],
+  "created_unix": 1789329543.823613,
+  "hashes": {
+    "PERIODIC-VALIDATION.md": "7e37ee97438502f0372965d415ac5895c24b2ed6832aa35239bbf79ea9e69cbd",
+    "periodic_comparison_analysis.py": "eead182895dbe2d5f9d1427b6cc7c816258043d8ee28c367ff8c22a541919bdd",
+    "test_periodic_comparison_analysis.py": "173fbf94b398231fff8dd7313c20ce1328953c0ac6b2ab0489cd5fd204b78a96",
+    "periodic-analysis-tests.xml": "66b3701b3e001a328564bd75e71335c16a307a4180422c56ab8174a01960e29b",
+    "prototype-1ca2-periodic-diagnostic/review-double-residual.json": "6213c0a5560f7511d6226c3aed1232e1b6099e59e058b30d09bc45d5a55fa6eb",
+    "prototype-1ca2-periodic-diagnostic/numeric-lane-double-thread-replay.json": "bd64163819dc228324093cb62900c66db8b3ce1d31a1fa2f545890d40455648c"
+  },
+  "verification": {
+    "synthetic_tests": 19,
+    "failures": 0,
+    "same_tpr_native_data_replay": "prototype-1ca2-periodic-diagnostic/numeric-lane-double-thread-replay.json",
+    "new_native_calculations": false
+  },
+  "completed_unix": 1789329717.568488
+}

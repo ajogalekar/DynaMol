@@ -1,0 +1,67 @@
+
+<HTML>
+<title>AMBER Parameter Database</title>
+<body BGCOLOR="ffffff">
+
+<h2>Contributors</h2>
+<a href="http://www.umich.edu/~pharmacy/MedChem/faculty/carlson/">H.A.Carlson</a>, K.L.Meagher, L.T.Redman<br>
+College of Pharmacy, University of Michigan, USA<br>
+
+<h2>Reference</h2>
+
+Meagher KL, Redman LT, Carlson HA<br>
+<i>Journal of Computational Chemistry</i> <b>2003</b>,<i>24</i>,1016<br>
+<b>Development of polyphosphate parameters for use with the AMBER force field
+</b><br>
+Accurate force fields are essential for reproducing the conformational and dynamic behavior of condensed-phase systems. The popular AMBER
+force field has parameters for monophosphates, but they do not extend well to polyphorylated molecules such as ADP and ATP. This work presents
+parameters for the partial charges, atom types, bond angles, and torsions in simple polyphosphorylated compounds. The parameters are based on
+molecular orbital calculations of methyldiphosphate and methyltriphosphate at the RHF/6-31+G* level. The new parameters were fit to the entire
+potential energy surface (not just minima) with an RMSD of 0.62 kcal/mol. This is exceptional agreement and a significant improvement over. the
+current parameters that produce a potential surface with an RMSD of 7.8 kcal/mol to that of the ab initio calculations. Testing has shown that the
+parameters are transferable and capable of reproducing the gas-phase conformations of inorganic diphosphate and triphosphate. Also, the
+parameters are an improvement over existing parameters in the condensed phase,as shown by minimizations of ATP bound in several proteins.
+These parameters are intended for use with the existing AMBER 94/99force field, and they will permit users to apply AMBER to a wider variety
+of important enzymatic systems. 2003 Wiley Periodicals, Inc. J Comput Chem 24: 1016-1025, 2003.
+<p>
+
+<h1>Comments</h1>
+
+<br>
+
+Guide to using polyphosphate parameters:<p>
+
+We have recently parameterized di- and tri- phosphate tails for use with the
+AMBER95 force field.  The parameters are based on reproduction of RHF/6-31+G*
+potential surface.  Methyldiphosphate and methyltriphosphate were used as model
+compounds.  To most accurately model the behavior of the polyphosphates an
+additional atom type for the terminal anionic oxygens, O3, was added.  The RESP
+methodology was used to assign partial charges.<p>
+
+ADP.prep, ATP.prep<br>
+- AMBER6 prep files for ADP and ATP.  RESP partial charges are given in the
+  last column.<br>
+- Atom names (ie: C4*, PB, O3G) must match the atom names as given in the pdb.<p>
+
+frcmod.phosphate<br>
+- Need to copy the leaprc file to your working directory and modify it to
+  contain the O3 atom type.<p>
+
+        { "O"   "O" "sp2" }<br>
+        { "O3"  "O" "sp2" }<br>
+        { "O2"  "O" "sp2" }<br>
+        { "OW"  "O" "sp3" }<p>
+
+<hr>
+<center>
+[ <a href="../index.html">APD Home</a> ] [ <a href="../submit.html">Submit Parameters</a> ] [ <a href="http://www.amber.ucsf.edu/amber/amber.html">Amber Home</a> ] [ <a href="http://amber.ch.ic.ac.uk/amber.html">UK Mirror</a> ] [ <a href="http://pharmacy.man.ac.uk">Pharmacy Home</a> ] [ <a href="mailto:r.a.bryce@man.ac.uk">Contact</a> ]
+</center>
+
+<hr>
+Last modified 
+Fri Jun 29 17:44:33 BST 2001
+<br>
+
+
+</HTML>
+

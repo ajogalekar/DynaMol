@@ -1,0 +1,79 @@
+[
+  {
+    "file": "dryad-oxy-myoglobin/par_all27.inp",
+    "url": "https://datadryad.org/downloads/file_stream/1215",
+    "source_repository_md5": "536ea2f73f02d4f186ad2fd003536989",
+    "md5_match": true,
+    "sha256": "1a17325ae13d64cc863fe2dcd05935ff560f4bff5230d532ed9707f89663c8d6",
+    "bytes": 215219,
+    "retrieved_at": "2026-09-13T17:34:09.239366+00:00",
+    "method": "public Chrome download through official dataset page; API downloads required authentication and were not used",
+    "license": "CC0-1.0 per dataset API and visible dataset license"
+  },
+  {
+    "file": "dryad-oxy-myoglobin/Read_Me.txt",
+    "url": "https://datadryad.org/downloads/file_stream/1224",
+    "source_repository_md5": "b73d298272b23b02c1e3ac1246ccf310",
+    "md5_match": true,
+    "sha256": "6d81ae3aa2de17e014932915b2d54a2ce864d07f7e9b07d3da5604e23bf6fb28",
+    "bytes": 400,
+    "retrieved_at": "2026-09-13T17:34:09.239752+00:00",
+    "method": "public Chrome download through official dataset page; API downloads required authentication and were not used",
+    "license": "CC0-1.0 per dataset API and visible dataset license"
+  },
+  {
+    "file": "dryad-oxy-myoglobin/script_construction_oxy.pgn",
+    "url": "https://datadryad.org/downloads/file_stream/1218",
+    "source_repository_md5": "33e83ed0b9b7f1ddbf224dc669fee27c",
+    "md5_match": true,
+    "sha256": "6efe43500d38a8c605be81a90fd8a18cb0603dcce3b7a3f165cada84d6331a4a",
+    "bytes": 537,
+    "retrieved_at": "2026-09-13T17:34:09.239984+00:00",
+    "method": "public Chrome download through official dataset page; API downloads required authentication and were not used",
+    "license": "CC0-1.0 per dataset API and visible dataset license"
+  },
+  {
+    "file": "dryad-oxy-myoglobin/top_heme_oxy_optimized_charges.inp",
+    "url": "https://datadryad.org/downloads/file_stream/1225",
+    "source_repository_md5": "d88413d9e11579e1fcaae2ef35a2907f",
+    "md5_match": true,
+    "sha256": "81f46815f176ff42cb77a1c1ec5706c017748252a50a417669b2c0befb8cf6a2",
+    "bytes": 441910,
+    "retrieved_at": "2026-09-13T17:34:09.241275+00:00",
+    "method": "public Chrome download through official dataset page; API downloads required authentication and were not used",
+    "license": "CC0-1.0 per dataset API and visible dataset license"
+  },
+  {
+    "file": "dryad-oxy-myoglobin/top_heme.inp",
+    "url": "https://datadryad.org/downloads/file_stream/1216",
+    "source_repository_md5": "3f23724788736a3c1fa7336e6e75b156",
+    "md5_match": true,
+    "sha256": "0d8289719825311cf18485d4b908558a92a03129751c2cde5a155ee533039b55",
+    "bytes": 441830,
+    "retrieved_at": "2026-09-13T17:34:09.242955+00:00",
+    "method": "public Chrome download through official dataset page; API downloads required authentication and were not used",
+    "license": "CC0-1.0 per dataset API and visible dataset license"
+  },
+  {
+    "file": "dryad-oxy-myoglobin/horse_oxy_only_wbi_10ns.psf",
+    "url": "https://datadryad.org/downloads/file_stream/1211",
+    "sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e",
+    "repository_md5": "8f7d70c4adfec2b7863951e024bf6ba9",
+    "md5_match": true,
+    "bytes": 3068637,
+    "method": "official public browser download",
+    "retrieved_at": "2026-09-13T17:37:00.429294+00:00",
+    "license": "CC0-1.0 per dataset"
+  },
+  {
+    "file": "dryad-oxy-myoglobin/horse_oxy.pdb",
+    "url": "https://datadryad.org/downloads/file_stream/1209",
+    "sha256": "3d988a014336edbb92bde0c8c65f2a9e6d4869f2d6e5256eedae3679e5ba5a8e",
+    "repository_md5": "faa6c049a3421bce452454ef8737fae9",
+    "md5_match": true,
+    "bytes": 198932,
+    "method": "official public browser download",
+    "retrieved_at": "2026-09-13T17:37:00.430476+00:00",
+    "license": "CC0-1.0 per dataset"
+  }
+]

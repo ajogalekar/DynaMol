@@ -1,0 +1,17 @@
+{
+  "snapshot_sha256": "b6e228bf42119ad738e86a814cf33611dce23214add4177517f7f825e575b432",
+  "atom_count": 4825,
+  "common_cif_maximum_rounding_nm": 8.122345059801876e-06,
+  "forcefield_names_match": true,
+  "physical_parameters": {
+    "harmonic_bond_parameter_multisets_equal": false,
+    "bond_terms": 4886,
+    "other_system_fields_and_terms_exactly_equal": true,
+    "all_atom_indexed_parameters_equal": false
+  },
+  "context_created": false,
+  "minimization_performed": false,
+  "MD_or_QM_performed": false,
+  "loop_candidate_accepted": false,
+  "source": "Fresh captured topology/state/parameter files only; no archived prepared coordinates."
+}

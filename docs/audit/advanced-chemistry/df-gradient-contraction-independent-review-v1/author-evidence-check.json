@@ -1,0 +1,62 @@
+{
+  "artifact_manifest_sha256": "852b20eba81b947356afd544752456fe46561ef8d7c0d1c2daae765c628fe020",
+  "artifact_count": 10,
+  "checks": [
+    {
+      "file": "INTEGRATION-PLAN.md",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "REVIEW.md",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "reference-sources/df-gradient-rhf.py",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "reference-sources/numpy_helper.py",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "source-manifest.json",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "summary.json",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "test-result.json",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "test_tiled_contract.py",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "tests.log",
+      "hash_matches": true,
+      "size_matches": true
+    },
+    {
+      "file": "tiled_contract.py",
+      "hash_matches": true,
+      "size_matches": true
+    }
+  ],
+  "author_test_methods": 8,
+  "author_numeric_cases": 40,
+  "author_max_native_or_scalar_error": 1.4210854715202004e-14,
+  "independently_rerun_author_suite": false,
+  "own_independent_cases": 45,
+  "source_function_call_verified": "pyscf/df/grad/rhf.py:229 lib.einsum('pij,qji->pq', rhok_oo[k], rhok_oo[l])"
+}

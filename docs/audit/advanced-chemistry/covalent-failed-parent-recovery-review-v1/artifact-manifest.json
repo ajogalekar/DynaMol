@@ -1,0 +1,46 @@
+{
+  "accepted_quantum_result": false,
+  "physical_acceptance": false,
+  "files": [
+    {
+      "name": "all-58-frame-checks.json",
+      "size_bytes": 31032,
+      "sha256": "013d9619fb66ed499633531c7e0171218e8ca6e1097b3ab59810a446d785684c"
+    },
+    {
+      "name": "input-schema-and-pins-review.json",
+      "size_bytes": 1771,
+      "sha256": "d0361b6a8e958527ca4c1cb34423a92aae8faee59e5f5f0cde6e8a39fc46af12"
+    },
+    {
+      "name": "proposed-cold-restart-input.json",
+      "size_bytes": 10526,
+      "sha256": "ac4b19505b03238fdd964c09d78b0eddf4ec1fa43f122cd6e8648bb47b5bd0e5"
+    },
+    {
+      "name": "proposed-geometry-checks.json",
+      "size_bytes": 22282,
+      "sha256": "a9d13064da83cdbb1a9bf68a8f0fb162ff2bf7ab136fa9bfa6a60d39491bdfcb"
+    },
+    {
+      "name": "recovered-cycle-057.json",
+      "size_bytes": 42931,
+      "sha256": "972acf39854878036a27300a4605020cd67b23bec1d8d693f8d83611fd42449f"
+    },
+    {
+      "name": "recovered-cycle-058-unscored.json",
+      "size_bytes": 42680,
+      "sha256": "70d0a9673806a72a6ae0a09cab5528228f05e755a6d56924ccc5fc340104663c"
+    },
+    {
+      "name": "result.json",
+      "size_bytes": 10303,
+      "sha256": "58caf2d0ffa46db1f3567b8ad8aed070989cf64b37c9b5f72362a2e34a900426"
+    },
+    {
+      "name": "review_geometry.py",
+      "size_bytes": 13896,
+      "sha256": "0aee6ba18c7b1d8642fa8c6316ced125287c5bfc85ba67c12e3e2e8dd5056fe1"
+    }
+  ]
+}

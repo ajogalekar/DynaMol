@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "atom_ids": [
+    "water/O",
+    "water/H2",
+    "water/H1"
+  ],
+  "elements": [
+    "O",
+    "H",
+    "H"
+  ],
+  "coords_angstrom": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0.75,
+      0,
+      0.59
+    ],
+    [
+      -0.76,
+      0,
+      0.6
+    ]
+  ],
+  "charge": 0,
+  "spin": 0,
+  "method": "RHF",
+  "basis": "sto-3g",
+  "operations": [
+    "gradient"
+  ],
+  "initial_checkpoint": {
+    "result_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-worker-checks/native-suite-restart-1/test_native_checkpoint_rejects_changed_identity_geometry_state_basis_and_hash/source/result.json",
+    "checkpoint_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-worker-checks/native-suite-restart-1/test_native_checkpoint_rejects_changed_identity_geometry_state_basis_and_hash/source/scf.chk",
+    "result_sha256": "d60fdb24508dcae0fb7770311a86c6486507f736826f61d4043869cfa5e048d8",
+    "checkpoint_sha256": "4f55ef1cb070e6eee701743703059a4925fd3bf60cc5e982c6c37912f66ce6bf"
+  }
+}

@@ -1,0 +1,15 @@
+original_pdb site-input.pdb
+group_name site
+cut_off 2.8
+ion_ids 119
+ion_mol2files ZN.mol2
+naa_mol2files PLH.mol2
+frcmod_files PLH.frcmod
+force_field ff14SB
+water_model tip3p
+gaff 2
+large_opt 1
+smmodel_chg 1
+smmodel_spin 1
+lgmodel_chg 1
+lgmodel_spin 1

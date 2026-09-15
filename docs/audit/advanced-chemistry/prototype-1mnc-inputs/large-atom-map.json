@@ -1,0 +1,2087 @@
+[
+  {
+    "serial": 1,
+    "name": "HH31",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "217",
+    "xyz": [
+      6.764,
+      24.941,
+      18.629
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:217::ALA:N",
+    "stable_id": "cap:large:1:HH31"
+  },
+  {
+    "serial": 5,
+    "name": "CH3",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "217",
+    "xyz": [
+      7.056,
+      25.481,
+      17.728
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:217::ALA:CA",
+    "stable_id": "cap:large:5:CH3"
+  },
+  {
+    "serial": 6,
+    "name": "HH32",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "217",
+    "xyz": [
+      8.09,
+      25.817,
+      17.807
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:217::ALA:HA",
+    "stable_id": "cap:large:6:HH32"
+  },
+  {
+    "serial": 7,
+    "name": "C",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "217",
+    "xyz": [
+      6.225,
+      26.747,
+      17.651
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:217::ALA:C",
+    "stable_id": "cap:large:7:C"
+  },
+  {
+    "serial": 8,
+    "name": "O",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "217",
+    "xyz": [
+      6.755,
+      27.774,
+      17.301
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:217::ALA:O",
+    "stable_id": "cap:large:8:O"
+  },
+  {
+    "serial": 9,
+    "name": "HH33",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "217",
+    "xyz": [
+      6.953,
+      24.881,
+      16.824
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:217::ALA:CB",
+    "stable_id": "cap:large:9:HH33"
+  },
+  {
+    "serial": 13,
+    "name": "N",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      4.974,
+      26.697,
+      18.03
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:N",
+    "stable_id": "A:218::HID:N"
+  },
+  {
+    "serial": 14,
+    "name": "H",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      4.309,
+      25.777,
+      17.662
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:H",
+    "stable_id": "A:218::HID:H"
+  },
+  {
+    "serial": 15,
+    "name": "CA",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      4.14,
+      27.893,
+      18.067
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:CA",
+    "stable_id": "A:218::HID:CA"
+  },
+  {
+    "serial": 16,
+    "name": "HA",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      4.191,
+      28.428,
+      17.002
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:HA",
+    "stable_id": "A:218::HID:HA"
+  },
+  {
+    "serial": 17,
+    "name": "C",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      4.623,
+      28.841,
+      19.135
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:C",
+    "stable_id": "A:218::HID:C"
+  },
+  {
+    "serial": 18,
+    "name": "O",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      4.752,
+      30.011,
+      18.913
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:O",
+    "stable_id": "A:218::HID:O"
+  },
+  {
+    "serial": 19,
+    "name": "CB",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      2.677,
+      27.548,
+      18.442
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:CB",
+    "stable_id": "A:218::HID:CB"
+  },
+  {
+    "serial": 20,
+    "name": "HB2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      2.079,
+      26.955,
+      17.592
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:HB2",
+    "stable_id": "A:218::HID:HB2"
+  },
+  {
+    "serial": 21,
+    "name": "HB3",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      2.49,
+      26.785,
+      19.345
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:HB3",
+    "stable_id": "A:218::HID:HB3"
+  },
+  {
+    "serial": 22,
+    "name": "CG",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      1.774,
+      28.737,
+      18.531
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:CG",
+    "stable_id": "A:218::HID:CG"
+  },
+  {
+    "serial": 23,
+    "name": "ND1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      0.988,
+      29.229,
+      17.546
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:ND1",
+    "stable_id": "A:218::HID:ND1"
+  },
+  {
+    "serial": 24,
+    "name": "HD1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      0.808,
+      28.933,
+      16.408
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:HD1",
+    "stable_id": "A:218::HID:HD1"
+  },
+  {
+    "serial": 25,
+    "name": "CD2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      1.518,
+      29.501,
+      19.585
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:CD2",
+    "stable_id": "A:218::HID:CD2"
+  },
+  {
+    "serial": 26,
+    "name": "HD2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      1.136,
+      29.176,
+      20.664
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:HD2",
+    "stable_id": "A:218::HID:HD2"
+  },
+  {
+    "serial": 27,
+    "name": "CE1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      0.315,
+      30.241,
+      18.045
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:CE1",
+    "stable_id": "A:218::HID:CE1"
+  },
+  {
+    "serial": 28,
+    "name": "HE1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      -0.821,
+      30.359,
+      17.706
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:HE1",
+    "stable_id": "A:218::HID:HE1"
+  },
+  {
+    "serial": 29,
+    "name": "NE2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "218",
+    "xyz": [
+      0.598,
+      30.508,
+      19.304
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:218::HID:NE2",
+    "stable_id": "A:218::HID:NE2"
+  },
+  {
+    "serial": 30,
+    "name": "N",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "219",
+    "xyz": [
+      4.857,
+      28.448,
+      20.352
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:219::GLU:N",
+    "stable_id": "cap:large:30:N"
+  },
+  {
+    "serial": 31,
+    "name": "H",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "219",
+    "xyz": [
+      4.795,
+      27.294,
+      20.627
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:219::GLU:H",
+    "stable_id": "cap:large:31:H"
+  },
+  {
+    "serial": 32,
+    "name": "CH3",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "219",
+    "xyz": [
+      5.3,
+      29.242,
+      21.452
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:219::GLU:CA",
+    "stable_id": "cap:large:32:CH3"
+  },
+  {
+    "serial": 33,
+    "name": "HH31",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "219",
+    "xyz": [
+      4.615,
+      30.08,
+      21.581
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:219::GLU:HA",
+    "stable_id": "cap:large:33:HH31"
+  },
+  {
+    "serial": 34,
+    "name": "HH32",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "219",
+    "xyz": [
+      6.24,
+      29.74,
+      21.214
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:219::GLU:C",
+    "stable_id": "cap:large:34:HH32"
+  },
+  {
+    "serial": 36,
+    "name": "HH33",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "219",
+    "xyz": [
+      5.434,
+      28.67,
+      22.37
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:219::GLU:CB",
+    "stable_id": "cap:large:36:HH33"
+  },
+  {
+    "serial": 45,
+    "name": "HH31",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "221",
+    "xyz": [
+      7.72,
+      31.187,
+      18.015
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:221::GLY:N",
+    "stable_id": "cap:large:45:HH31"
+  },
+  {
+    "serial": 47,
+    "name": "CH3",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "221",
+    "xyz": [
+      7.549,
+      32.012,
+      17.324
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:221::GLY:CA",
+    "stable_id": "cap:large:47:CH3"
+  },
+  {
+    "serial": 48,
+    "name": "HH32",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "221",
+    "xyz": [
+      6.753,
+      31.828,
+      16.602
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:221::GLY:HA2",
+    "stable_id": "cap:large:48:HH32"
+  },
+  {
+    "serial": 49,
+    "name": "HH33",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "221",
+    "xyz": [
+      8.473,
+      32.12,
+      16.756
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:221::GLY:HA3",
+    "stable_id": "cap:large:49:HH33"
+  },
+  {
+    "serial": 50,
+    "name": "C",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "221",
+    "xyz": [
+      7.337,
+      33.247,
+      18.174
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:221::GLY:C",
+    "stable_id": "cap:large:50:C"
+  },
+  {
+    "serial": 51,
+    "name": "O",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "221",
+    "xyz": [
+      7.788,
+      34.354,
+      17.863
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:221::GLY:O",
+    "stable_id": "cap:large:51:O"
+  },
+  {
+    "serial": 52,
+    "name": "N",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      6.536,
+      33.198,
+      19.251
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:N",
+    "stable_id": "A:222::HID:N"
+  },
+  {
+    "serial": 53,
+    "name": "H",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      5.517,
+      32.686,
+      18.908
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:H",
+    "stable_id": "A:222::HID:H"
+  },
+  {
+    "serial": 54,
+    "name": "CA",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      6.266,
+      34.295,
+      20.187
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:CA",
+    "stable_id": "A:222::HID:CA"
+  },
+  {
+    "serial": 55,
+    "name": "HA",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      5.888,
+      35.219,
+      19.528
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:HA",
+    "stable_id": "A:222::HID:HA"
+  },
+  {
+    "serial": 56,
+    "name": "C",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      7.561,
+      34.738,
+      20.867
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:C",
+    "stable_id": "A:222::HID:C"
+  },
+  {
+    "serial": 57,
+    "name": "O",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      7.913,
+      35.914,
+      20.951
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:O",
+    "stable_id": "A:222::HID:O"
+  },
+  {
+    "serial": 58,
+    "name": "CB",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      5.33,
+      33.983,
+      21.403
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:CB",
+    "stable_id": "A:222::HID:CB"
+  },
+  {
+    "serial": 59,
+    "name": "HB2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      5.518,
+      33.191,
+      22.275
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:HB2",
+    "stable_id": "A:222::HID:HB2"
+  },
+  {
+    "serial": 60,
+    "name": "HB3",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      5.228,
+      34.984,
+      22.063
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:HB3",
+    "stable_id": "A:222::HID:HB3"
+  },
+  {
+    "serial": 61,
+    "name": "CG",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      3.918,
+      33.711,
+      20.963
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:CG",
+    "stable_id": "A:222::HID:CG"
+  },
+  {
+    "serial": 62,
+    "name": "ND1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      3.209,
+      34.629,
+      20.237
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:ND1",
+    "stable_id": "A:222::HID:ND1"
+  },
+  {
+    "serial": 63,
+    "name": "HD1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      3.374,
+      35.804,
+      20.203
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:HD1",
+    "stable_id": "A:222::HID:HD1"
+  },
+  {
+    "serial": 64,
+    "name": "CD2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      3.077,
+      32.66,
+      21.095
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:CD2",
+    "stable_id": "A:222::HID:CD2"
+  },
+  {
+    "serial": 65,
+    "name": "HD2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      2.811,
+      32.377,
+      22.222
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:HD2",
+    "stable_id": "A:222::HID:HD2"
+  },
+  {
+    "serial": 66,
+    "name": "CE1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      2.02,
+      34.138,
+      19.984
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:CE1",
+    "stable_id": "A:222::HID:CE1"
+  },
+  {
+    "serial": 67,
+    "name": "HE1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      1.14,
+      34.928,
+      20.107
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:HE1",
+    "stable_id": "A:222::HID:HE1"
+  },
+  {
+    "serial": 68,
+    "name": "NE2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "222",
+    "xyz": [
+      1.879,
+      32.947,
+      20.529
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:222::HID:NE2",
+    "stable_id": "A:222::HID:NE2"
+  },
+  {
+    "serial": 69,
+    "name": "N",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "223",
+    "xyz": [
+      8.332,
+      33.789,
+      21.348
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:223::SER:N",
+    "stable_id": "cap:large:69:N"
+  },
+  {
+    "serial": 70,
+    "name": "H",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "223",
+    "xyz": [
+      7.897,
+      32.774,
+      21.77
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:223::SER:H",
+    "stable_id": "cap:large:70:H"
+  },
+  {
+    "serial": 71,
+    "name": "CH3",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "223",
+    "xyz": [
+      9.613,
+      33.96,
+      21.991
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:223::SER:CA",
+    "stable_id": "cap:large:71:CH3"
+  },
+  {
+    "serial": 72,
+    "name": "HH31",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "223",
+    "xyz": [
+      9.512,
+      34.576,
+      22.884
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:223::SER:HA",
+    "stable_id": "cap:large:72:HH31"
+  },
+  {
+    "serial": 73,
+    "name": "HH32",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "223",
+    "xyz": [
+      10.308,
+      34.547,
+      21.39
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:223::SER:C",
+    "stable_id": "cap:large:73:HH32"
+  },
+  {
+    "serial": 75,
+    "name": "HH33",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "223",
+    "xyz": [
+      10.053,
+      32.993,
+      22.234
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:223::SER:CB",
+    "stable_id": "cap:large:75:HH33"
+  },
+  {
+    "serial": 80,
+    "name": "HH31",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "227",
+    "xyz": [
+      3.446,
+      37.529,
+      16.19
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:227::ALA:N",
+    "stable_id": "cap:large:80:HH31"
+  },
+  {
+    "serial": 82,
+    "name": "CH3",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "227",
+    "xyz": [
+      2.434,
+      37.623,
+      16.584
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:227::ALA:CA",
+    "stable_id": "cap:large:82:CH3"
+  },
+  {
+    "serial": 83,
+    "name": "HH32",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "227",
+    "xyz": [
+      2.631,
+      37.545,
+      17.653
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:227::ALA:HA",
+    "stable_id": "cap:large:83:HH32"
+  },
+  {
+    "serial": 84,
+    "name": "C",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "227",
+    "xyz": [
+      1.588,
+      36.49,
+      15.991
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:227::ALA:C",
+    "stable_id": "cap:large:84:C"
+  },
+  {
+    "serial": 85,
+    "name": "O",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "227",
+    "xyz": [
+      2.14,
+      35.705,
+      15.2
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:227::ALA:O",
+    "stable_id": "cap:large:85:O"
+  },
+  {
+    "serial": 86,
+    "name": "HH33",
+    "resname": "ACE",
+    "chain": "A",
+    "resid": "227",
+    "xyz": [
+      1.968,
+      38.583,
+      16.362
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:227::ALA:CB",
+    "stable_id": "cap:large:86:HH33"
+  },
+  {
+    "serial": 90,
+    "name": "N",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      0.308,
+      36.467,
+      16.326
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:N",
+    "stable_id": "A:228::HID:N"
+  },
+  {
+    "serial": 91,
+    "name": "H",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -0.209,
+      37.138,
+      17.159
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:H",
+    "stable_id": "A:228::HID:H"
+  },
+  {
+    "serial": 92,
+    "name": "CA",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -0.516,
+      35.447,
+      15.745
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:CA",
+    "stable_id": "A:228::HID:CA"
+  },
+  {
+    "serial": 93,
+    "name": "HA",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      0.146,
+      34.456,
+      15.738
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:HA",
+    "stable_id": "A:228::HID:HA"
+  },
+  {
+    "serial": 94,
+    "name": "C",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -0.774,
+      35.739,
+      14.278
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:C",
+    "stable_id": "A:228::HID:C"
+  },
+  {
+    "serial": 95,
+    "name": "O",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -0.707,
+      36.883,
+      13.851
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:O",
+    "stable_id": "A:228::HID:O"
+  },
+  {
+    "serial": 96,
+    "name": "CB",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -1.852,
+      35.29,
+      16.452
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:CB",
+    "stable_id": "A:228::HID:CB"
+  },
+  {
+    "serial": 97,
+    "name": "HB2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -2.506,
+      35.361,
+      15.448
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:HB2",
+    "stable_id": "A:228::HID:HB2"
+  },
+  {
+    "serial": 98,
+    "name": "HB3",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -2.836,
+      35.758,
+      16.965
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:HB3",
+    "stable_id": "A:228::HID:HB3"
+  },
+  {
+    "serial": 99,
+    "name": "CG",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -1.653,
+      34.589,
+      17.786
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:CG",
+    "stable_id": "A:228::HID:CG"
+  },
+  {
+    "serial": 100,
+    "name": "ND1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -2.31,
+      34.855,
+      18.927
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:ND1",
+    "stable_id": "A:228::HID:ND1"
+  },
+  {
+    "serial": 101,
+    "name": "HD1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -3.084,
+      35.678,
+      19.304
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:HD1",
+    "stable_id": "A:228::HID:HD1"
+  },
+  {
+    "serial": 102,
+    "name": "CD2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -0.769,
+      33.613,
+      18.107
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:CD2",
+    "stable_id": "A:228::HID:CD2"
+  },
+  {
+    "serial": 103,
+    "name": "HD2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      0.043,
+      32.952,
+      17.551
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:HD2",
+    "stable_id": "A:228::HID:HD2"
+  },
+  {
+    "serial": 104,
+    "name": "CE1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -1.928,
+      34.047,
+      19.892
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:CE1",
+    "stable_id": "A:228::HID:CE1"
+  },
+  {
+    "serial": 105,
+    "name": "HE1",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -2.394,
+      33.844,
+      20.967
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:HE1",
+    "stable_id": "A:228::HID:HE1"
+  },
+  {
+    "serial": 106,
+    "name": "NE2",
+    "resname": "HID",
+    "chain": "A",
+    "resid": "228",
+    "xyz": [
+      -0.957,
+      33.291,
+      19.417
+    ],
+    "role": "retained",
+    "source_or_placed_id": "A:228::HID:NE2",
+    "stable_id": "A:228::HID:NE2"
+  },
+  {
+    "serial": 107,
+    "name": "N",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "229",
+    "xyz": [
+      -1.067,
+      34.672,
+      13.554
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:229::SER:N",
+    "stable_id": "cap:large:107:N"
+  },
+  {
+    "serial": 108,
+    "name": "H",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "229",
+    "xyz": [
+      -1.219,
+      33.573,
+      13.979
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:229::SER:H",
+    "stable_id": "cap:large:108:H"
+  },
+  {
+    "serial": 109,
+    "name": "CH3",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "229",
+    "xyz": [
+      -1.373,
+      34.694,
+      12.136
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:229::SER:CA",
+    "stable_id": "cap:large:109:CH3"
+  },
+  {
+    "serial": 110,
+    "name": "HH31",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "229",
+    "xyz": [
+      -1.257,
+      35.646,
+      11.617
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:229::SER:HA",
+    "stable_id": "cap:large:110:HH31"
+  },
+  {
+    "serial": 111,
+    "name": "HH32",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "229",
+    "xyz": [
+      -2.432,
+      34.518,
+      11.947
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:229::SER:C",
+    "stable_id": "cap:large:111:HH32"
+  },
+  {
+    "serial": 113,
+    "name": "HH33",
+    "resname": "NME",
+    "chain": "A",
+    "resid": "229",
+    "xyz": [
+      -0.871,
+      33.857,
+      11.651
+    ],
+    "role": "native MCPB cap",
+    "source_or_placed_id": "A:229::SER:CB",
+    "stable_id": "cap:large:113:HH33"
+  },
+  {
+    "serial": 121,
+    "name": "C1",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.385,
+      30.552,
+      22.464
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C1",
+    "stable_id": "E:280::PLH:C1"
+  },
+  {
+    "serial": 122,
+    "name": "C2",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -2.456,
+      29.699,
+      22.961
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C2",
+    "stable_id": "E:280::PLH:C2"
+  },
+  {
+    "serial": 123,
+    "name": "C3",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -2.815,
+      28.604,
+      21.925
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C3",
+    "stable_id": "E:280::PLH:C3"
+  },
+  {
+    "serial": 124,
+    "name": "C4",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.646,
+      27.678,
+      21.507
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C4",
+    "stable_id": "E:280::PLH:C4"
+  },
+  {
+    "serial": 125,
+    "name": "C5",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.795,
+      26.672,
+      20.349
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C5",
+    "stable_id": "E:280::PLH:C5"
+  },
+  {
+    "serial": 126,
+    "name": "C6",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.848,
+      27.42,
+      18.993
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C6",
+    "stable_id": "E:280::PLH:C6"
+  },
+  {
+    "serial": 127,
+    "name": "C7",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -0.538,
+      25.805,
+      20.277
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C7",
+    "stable_id": "E:280::PLH:C7"
+  },
+  {
+    "serial": 128,
+    "name": "C8",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -3.984,
+      27.85,
+      22.395
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C8",
+    "stable_id": "E:280::PLH:C8"
+  },
+  {
+    "serial": 129,
+    "name": "C9",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.301,
+      27.138,
+      22.059
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C9",
+    "stable_id": "E:280::PLH:C9"
+  },
+  {
+    "serial": 130,
+    "name": "C10",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.432,
+      25.78,
+      21.531
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C10",
+    "stable_id": "E:280::PLH:C10"
+  },
+  {
+    "serial": 131,
+    "name": "C11",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.976,
+      23.528,
+      22.079
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C11",
+    "stable_id": "E:280::PLH:C11"
+  },
+  {
+    "serial": 132,
+    "name": "C12",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.558,
+      27.865,
+      21.554
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C12",
+    "stable_id": "E:280::PLH:C12"
+  },
+  {
+    "serial": 133,
+    "name": "C13",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.778,
+      29.172,
+      22.19
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C13",
+    "stable_id": "E:280::PLH:C13"
+  },
+  {
+    "serial": 134,
+    "name": "C14",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.481,
+      30.353,
+      21.553
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C14",
+    "stable_id": "E:280::PLH:C14"
+  },
+  {
+    "serial": 135,
+    "name": "C15",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.69,
+      31.57,
+      22.172
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C15",
+    "stable_id": "E:280::PLH:C15"
+  },
+  {
+    "serial": 136,
+    "name": "C16",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.199,
+      31.597,
+      23.47
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C16",
+    "stable_id": "E:280::PLH:C16"
+  },
+  {
+    "serial": 137,
+    "name": "C17",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.479,
+      30.452,
+      24.145
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C17",
+    "stable_id": "E:280::PLH:C17"
+  },
+  {
+    "serial": 138,
+    "name": "C18",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.281,
+      29.258,
+      23.483
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:C18",
+    "stable_id": "E:280::PLH:C18"
+  },
+  {
+    "serial": 139,
+    "name": "N1",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -0.151,
+      30.506,
+      22.986
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:N1",
+    "stable_id": "E:280::PLH:N1"
+  },
+  {
+    "serial": 140,
+    "name": "N2",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -5.129,
+      27.823,
+      21.657
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:N2",
+    "stable_id": "E:280::PLH:N2"
+  },
+  {
+    "serial": 141,
+    "name": "N3",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.776,
+      24.886,
+      22.438
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:N3",
+    "stable_id": "E:280::PLH:N3"
+  },
+  {
+    "serial": 142,
+    "name": "O1",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      0.861,
+      31.185,
+      22.581
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:O1",
+    "stable_id": "E:280::PLH:O1"
+  },
+  {
+    "serial": 143,
+    "name": "O2",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.656,
+      31.307,
+      21.532
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:O2",
+    "stable_id": "E:280::PLH:O2"
+  },
+  {
+    "serial": 144,
+    "name": "O3",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -3.921,
+      27.237,
+      23.466
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:O3",
+    "stable_id": "E:280::PLH:O3"
+  },
+  {
+    "serial": 145,
+    "name": "O4",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.218,
+      25.576,
+      20.317
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:O4",
+    "stable_id": "E:280::PLH:O4"
+  },
+  {
+    "serial": 146,
+    "name": "H1",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -2.153,
+      29.233,
+      23.907
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H1",
+    "stable_id": "E:280::PLH:H1"
+  },
+  {
+    "serial": 147,
+    "name": "H2",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -3.332,
+      30.32,
+      23.187
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H2",
+    "stable_id": "E:280::PLH:H2"
+  },
+  {
+    "serial": 148,
+    "name": "H3",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -3.117,
+      29.137,
+      21.013
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H3",
+    "stable_id": "E:280::PLH:H3"
+  },
+  {
+    "serial": 149,
+    "name": "H4",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -0.773,
+      28.304,
+      21.281
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H4",
+    "stable_id": "E:280::PLH:H4"
+  },
+  {
+    "serial": 150,
+    "name": "H5",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.363,
+      27.106,
+      22.403
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H5",
+    "stable_id": "E:280::PLH:H5"
+  },
+  {
+    "serial": 151,
+    "name": "H6",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -2.685,
+      26.047,
+      20.479
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H6",
+    "stable_id": "E:280::PLH:H6"
+  },
+  {
+    "serial": 152,
+    "name": "H7",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -2.74,
+      28.052,
+      18.941
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H7",
+    "stable_id": "E:280::PLH:H7"
+  },
+  {
+    "serial": 153,
+    "name": "H8",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -0.97,
+      28.059,
+      18.847
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H8",
+    "stable_id": "E:280::PLH:H8"
+  },
+  {
+    "serial": 154,
+    "name": "H9",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -1.899,
+      26.71,
+      18.16
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H9",
+    "stable_id": "E:280::PLH:H9"
+  },
+  {
+    "serial": 155,
+    "name": "H10",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -0.416,
+      25.227,
+      21.2
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H10",
+    "stable_id": "E:280::PLH:H10"
+  },
+  {
+    "serial": 156,
+    "name": "H11",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -0.602,
+      25.09,
+      19.45
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H11",
+    "stable_id": "E:280::PLH:H11"
+  },
+  {
+    "serial": 157,
+    "name": "H12",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      0.368,
+      26.406,
+      20.136
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H12",
+    "stable_id": "E:280::PLH:H12"
+  },
+  {
+    "serial": 158,
+    "name": "H13",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.322,
+      27.121,
+      23.156
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H13",
+    "stable_id": "E:280::PLH:H13"
+  },
+  {
+    "serial": 159,
+    "name": "H14",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.52,
+      23.027,
+      22.883
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H14",
+    "stable_id": "E:280::PLH:H14"
+  },
+  {
+    "serial": 160,
+    "name": "H15",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.547,
+      23.454,
+      21.149
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H15",
+    "stable_id": "E:280::PLH:H15"
+  },
+  {
+    "serial": 161,
+    "name": "H16",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.003,
+      23.048,
+      21.943
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H16",
+    "stable_id": "E:280::PLH:H16"
+  },
+  {
+    "serial": 162,
+    "name": "H17",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.511,
+      27.987,
+      20.462
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H17",
+    "stable_id": "E:280::PLH:H17"
+  },
+  {
+    "serial": 163,
+    "name": "H18",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.452,
+      27.247,
+      21.724
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H18",
+    "stable_id": "E:280::PLH:H18"
+  },
+  {
+    "serial": 164,
+    "name": "H19",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.067,
+      30.348,
+      20.546
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H19",
+    "stable_id": "E:280::PLH:H19"
+  },
+  {
+    "serial": 165,
+    "name": "H20",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -7.444,
+      32.497,
+      21.661
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H20",
+    "stable_id": "E:280::PLH:H20"
+  },
+  {
+    "serial": 166,
+    "name": "H21",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.345,
+      32.56,
+      23.954
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H21",
+    "stable_id": "E:280::PLH:H21"
+  },
+  {
+    "serial": 167,
+    "name": "H22",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.856,
+      30.473,
+      25.161
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H22",
+    "stable_id": "E:280::PLH:H22"
+  },
+  {
+    "serial": 168,
+    "name": "H23",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -8.517,
+      28.34,
+      24.022
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H23",
+    "stable_id": "E:280::PLH:H23"
+  },
+  {
+    "serial": 169,
+    "name": "H24",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      0.039,
+      29.88,
+      23.757
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H24",
+    "stable_id": "E:280::PLH:H24"
+  },
+  {
+    "serial": 170,
+    "name": "H25",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -5.085,
+      28.187,
+      20.713
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H25",
+    "stable_id": "E:280::PLH:H25"
+  },
+  {
+    "serial": 171,
+    "name": "H26",
+    "resname": "PLH",
+    "chain": "A",
+    "resid": "280",
+    "xyz": [
+      -6.736,
+      25.122,
+      23.423
+    ],
+    "role": "retained",
+    "source_or_placed_id": "E:280::PLH:H26",
+    "stable_id": "E:280::PLH:H26"
+  },
+  {
+    "serial": 119,
+    "name": "ZN",
+    "resname": "ZN",
+    "chain": "A",
+    "resid": "281",
+    "xyz": [
+      0.098,
+      31.954,
+      20.56
+    ],
+    "role": "retained",
+    "source_or_placed_id": "B:281::ZN:ZN",
+    "stable_id": "B:281::ZN:ZN"
+  }
+]

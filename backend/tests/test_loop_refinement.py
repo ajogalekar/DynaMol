@@ -7,7 +7,7 @@ import pytest
 from openmm import app, unit
 
 from backend import config
-from backend.loop_refinement import minimize_modeled_loops
+from backend.loop_refinement import _failed_loop_flanks, _minimize_attempt, minimize_modeled_loops
 from backend.residue_identity import residue_key
 
 
@@ -194,6 +194,82 @@ def test_construction_torsions_only_touch_modeled_residues_and_stay_out_of_fresh
     assert not any(isinstance(force, mm.CustomTorsionForce) for force in fresh.getForces())
 
 
+def test_geometry_continuation_keeps_total_budget_and_targets_and_reports_comparable_energies(monkeypatch):
+    from backend import loop_geometry
+    topology,xyz=peptide_fixture();residues=list(topology.residues())
+    forcefield=BackboneForceField(xyz)
+    native_minimize=mm.LocalEnergyMinimizer.minimize;budgets=[];checks=iter([False,True,True])
+    def minimize(context,tolerance,max_iterations):
+        budgets.append(max_iterations)
+        return native_minimize(context,tolerance,max_iterations)
+    monkeypatch.setattr(mm.LocalEnergyMinimizer,'minimize',minimize)
+    monkeypatch.setattr(loop_geometry,'loop_geometry_report',lambda *args: {
+        'accepted':next(checks),'errors':['fixture requires second construction phase']})
+    refined,report=minimize_modeled_loops(topology,xyz*unit.nanometer,forcefield,{residue_key(residues[2])})
+    assert budgets==[500,500] and sum(budgets)==report['max_iterations']
+    assert [stage['peptide_strength_kj_mol'] for stage in report['phases']]==[200,1000]
+    assert all(row['target_degrees']==180 for row in report['peptide_construction_restraints']['targets'])
+    assert report['peptide_construction_restraints']['exported_to_simulation'] is False
+    assert report['energy_after_kj_mol']<=report['energy_before_kj_mol']
+    fixed=[a.index for a in topology.atoms() if a.residue!=residues[2]]
+    np.testing.assert_array_equal(refined.value_in_unit(unit.nanometer)[fixed],xyz[fixed])
+
+
+def test_native_nan_during_minimization_is_reported_as_an_explicit_rejection(monkeypatch):
+    monkeypatch.setattr(config, "CPU_THREADS", 2)
+    topology,xyz=peptide_fixture();residues=list(topology.residues())
+    def minimize(context,tolerance,max_iterations):
+        raise mm.OpenMMException('Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan')
+    monkeypatch.setattr(mm.LocalEnergyMinimizer,'minimize',minimize)
+    with pytest.raises(ValueError, match='non-finite coordinates for the reconstructed loop.*no prepared model was accepted') as excinfo:
+        minimize_modeled_loops(topology,xyz*unit.nanometer,BackboneForceField(xyz),{residue_key(residues[2])})
+    assert isinstance(excinfo.value.__cause__, mm.OpenMMException)
+
+
+def test_other_native_minimizer_errors_are_not_relabeled(monkeypatch):
+    monkeypatch.setattr(config, "CPU_THREADS", 2)
+    topology,xyz=peptide_fixture();residues=list(topology.residues())
+    def minimize(context,tolerance,max_iterations):
+        raise mm.OpenMMException('Called setPositions() on a Context with the wrong number of positions')
+    monkeypatch.setattr(mm.LocalEnergyMinimizer,'minimize',minimize)
+    with pytest.raises(mm.OpenMMException, match='wrong number of positions'):
+        minimize_modeled_loops(topology,xyz*unit.nanometer,BackboneForceField(xyz),{residue_key(residues[2])})
+
+
+def test_flank_selection_is_local_and_excludes_protected_modified_and_crosslinked_residues():
+    topology,xyz=peptide_fixture();residues=list(topology.residues())
+    keys={residue_key(residues[2])}
+    index=next(a.index for a in residues[2].atoms() if a.name=='CA')
+    failed={'angle_checks':[{'accepted':False,'atoms':[index]}]}
+    assert _failed_loop_flanks(topology,keys,failed,())=={residue_key(residues[1]),residue_key(residues[3])}
+    assert _failed_loop_flanks(topology,keys,failed,{residue_key(residues[1])})=={residue_key(residues[3])}
+    residues[3].name='TPO'
+    assert _failed_loop_flanks(topology,keys,failed,{residue_key(residues[1])})==set()
+    # Any non-peptide inter-residue bond makes that flank unavailable.
+    left=next(a for a in residues[1].atoms() if a.name=='CB')
+    distant=next(a for a in residues[5].atoms() if a.name=='CB')
+    topology.addBond(left,distant)
+    assert _failed_loop_flanks(topology,keys,failed,())==set()
+
+
+def test_restrained_flank_attempt_preserves_distant_atoms_and_chirality_barriers_are_temporary():
+    topology,xyz=peptide_fixture();residues=list(topology.residues())
+    keys={residue_key(residues[2])};flanks={residue_key(residues[1])}
+    factory=BackboneForceField(xyz)
+    result,report=_minimize_attempt(topology,xyz*unit.nanometer,factory,keys,mobile_flank_keys=flanks,
+                                   reference_positions=xyz*unit.nanometer)
+    moving=keys|flanks
+    fixed=[a.index for a in topology.atoms() if residue_key(a.residue) not in moving]
+    np.testing.assert_array_equal(result.value_in_unit(unit.nanometer)[fixed],xyz[fixed])
+    assert report['flank_relaxation']['maximum_allowed_displacement_nm']==.1
+    assert report['flank_relaxation']['displacement_boundary_start_nm']==.075
+    assert report['flank_relaxation']['chirality_construction']['targets']
+    assert report['flank_relaxation']['chirality_construction']['exported_to_simulation'] is False
+    assert any(isinstance(force,mm.CustomCompoundBondForce) for force in factory.systems[0].getForces())
+    fresh=factory.createSystem(topology,constraints=None)
+    assert not any(isinstance(force,mm.CustomCompoundBondForce) for force in fresh.getForces())
+
+
 @pytest.mark.parametrize("name,cis,target", [("PRO", True, 0), ("PRO", False, 180),
                                           ("HYP", True, 0), ("PHE", True, 180)])
 def test_target_basin_policy_is_recorded_for_new_link_to_observed_neighbor(monkeypatch, name, cis, target):
@@ -216,3 +292,73 @@ def test_target_basin_policy_is_recorded_for_new_link_to_observed_neighbor(monke
                if row['modeled_bond_before_residue'][1] == '4')
     assert row['target_degrees'] == target
     assert (abs(row['initial_omega_degrees']) < 90) is cis
+
+
+def test_opt_in_context_peptides_cover_every_mobile_link_and_remain_temporary(monkeypatch):
+    monkeypatch.setattr(config, 'CPU_THREADS', 2)
+    topology, xyz = peptide_fixture()
+    residues = list(topology.residues())
+    modeled = {residue_key(residues[2])}
+    flanks = {residue_key(residues[1]), residue_key(residues[3])}
+    factory = BackboneForceField(xyz)
+    result, report = _minimize_attempt(topology, xyz * unit.nanometer, factory, modeled,
+        mobile_flank_keys=flanks, reference_positions=xyz * unit.nanometer,
+        preserve_context_peptides=True)
+    atoms = list(topology.atoms())
+    targets = report['peptide_construction_restraints']['targets']
+    pairs = {(atoms[row['atoms'][1]].residue.index, atoms[row['atoms'][2]].residue.index) for row in targets}
+    assert pairs == {(0, 1), (1, 2), (2, 3), (3, 4)}
+    observed = [row for row in targets if not row['touches_modeled_residue']]
+    assert len(observed) == 2
+    assert all(row['target_origin'] == 'original observed peptide basin' for row in observed)
+    fixed = [a.index for a in atoms if residue_key(a.residue) not in modeled | flanks]
+    np.testing.assert_array_equal(result.value_in_unit(unit.nanometer)[fixed], xyz[fixed])
+    assert report['flank_relaxation']['maximum_allowed_displacement_nm'] == .1
+    assert report['peptide_construction_restraints']['observed_context_peptides_preserved']
+    assert report['peptide_construction_restraints']['exported_to_simulation'] is False
+    fresh = factory.createSystem(topology, constraints=None)
+    assert not any(isinstance(force, mm.CustomTorsionForce) for force in fresh.getForces())
+
+
+@pytest.mark.parametrize('name', ['PRO', 'HYP', 'PHE'])
+@pytest.mark.parametrize('source_cis', [True, False])
+def test_context_isomer_target_uses_source_even_when_seed_is_opposite(monkeypatch, name, source_cis):
+    monkeypatch.setattr(config, 'CPU_THREADS', 2)
+    topology, xyz = peptide_fixture()
+    residues = list(topology.residues())
+    residues[3].name = name
+
+    def flip(positions):
+        before = {a.name: a.index for a in residues[2].atoms()}
+        after = {a.name: a.index for a in residues[3].atoms()}
+        pivot = positions[after['N']].copy()
+        axis = pivot - positions[before['C']]
+        axis /= np.linalg.norm(axis)
+        downstream = [a.index for a in topology.atoms() if a.residue.index >= 3]
+        vectors = positions[downstream] - pivot
+        positions[downstream] = pivot - vectors + 2 * np.outer(vectors @ axis, axis)
+
+    source = xyz.copy()
+    if source_cis:
+        flip(source)
+    seed = source.copy()
+    flip(seed)
+    _, report = _minimize_attempt(topology, seed * unit.nanometer, BackboneForceField(seed),
+        {residue_key(residues[0])}, mobile_flank_keys={residue_key(residues[2])},
+        reference_positions=source * unit.nanometer, preserve_context_peptides=True, max_iterations=1)
+    row = next(row for row in report['peptide_construction_restraints']['targets']
+               if row['modeled_bond_before_residue'][1] == '4')
+    assert row['target_degrees'] == (0 if source_cis else 180)
+    assert (abs(row['initial_omega_degrees']) < 90) is not source_cis
+    assert (abs(row['reference_omega_degrees']) < 90) is source_cis
+    assert not row['touches_modeled_residue']
+
+
+def test_context_peptide_preservation_requires_original_coordinates_before_system_creation():
+    topology, xyz = peptide_fixture()
+    residues = list(topology.residues())
+    factory = BackboneForceField(xyz)
+    with pytest.raises(ValueError, match='original reference coordinates'):
+        _minimize_attempt(topology, xyz * unit.nanometer, factory, {residue_key(residues[2])},
+            mobile_flank_keys={residue_key(residues[1])}, preserve_context_peptides=True)
+    assert factory.systems == []

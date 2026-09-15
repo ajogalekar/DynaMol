@@ -1,0 +1,21 @@
+{
+  "updated_unix": 1789323400.252136,
+  "scope": "Metal-site development checkpoint; exact neutral-water ZAFF6 1CA2 prototype only. Other metal families remain separately reviewed; advanced chemistry is not app-ready.",
+  "active_simulations": [],
+  "completed_motion": {
+    "NPT_warmup_ps": 75,
+    "GROMACS_NVT_ps": 20,
+    "OpenMM_NVT_ps": 20,
+    "common_source_density_g_ml": 1.0245457266289093,
+    "same_physical_start_and_box_verified": true,
+    "finite_unrestrained_motion_and_broad_coordination_checks_passed": true,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-warmed-comparison.json",
+    "sha256": "701aa2cab32c972ee3325d1124d5b4e955014ca00b9f7c43bd2bbdb67899bae2"
+  },
+  "unresolved": {
+    "absolute_periodic_energy_difference": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/periodic-comparison-matrix.json",
+    "current_state": "Independent review localizes the large energy offset mainly to direct-space Coulomb/exclusion/self-energy, not reciprocal mesh. loop_workflow_benchmark owns bounded native same-TPR CPU/thread zero-step checks; report to root. No arbitrary energy shift or periodic parity claim.",
+    "suggested_discriminator": "Isolated native double-precision GROMACS static evaluation if the source review does not establish the numerical cause."
+  },
+  "retained_initial_smoke": "Two OpenMM5ps plus one GROMACS5ps at initial low density0.814g/mL remain unchanged and explicitly labeled as initial smoke tests."
+}

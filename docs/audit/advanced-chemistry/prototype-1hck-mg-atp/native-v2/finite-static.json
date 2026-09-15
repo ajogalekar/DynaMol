@@ -1,0 +1,12 @@
+{
+  "finite_energy_and_all_forces": true,
+  "energy_kj_mol": -23029.88262747091,
+  "maximum_force_vector_kj_mol_nm": 103754.50676658525,
+  "rms_force_component_kj_mol_nm": 1225.445573112074,
+  "platform": "OpenMM Reference",
+  "dynamics_steps": 0,
+  "constraints": 0,
+  "interpretation": "Unrelaxed crystal/template coordinate sanity only; finite/high forces do not establish equilibrium or model accuracy. Native cross-engine result remains separate.",
+  "system_sha256": "cdd2233e80b874a2969cf9c41d9843b397a38a68942e88f16cb36f9be0a1a49d",
+  "coordinates_sha256": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "created_unix": 1789330648.674549,
+  "scope": "Standard native parameter, atom identity, snapshot, independent constraint inventory and unsupported virtual-site validation; not physical parameter accuracy or app readiness.",
+  "test_command": ".venv/bin/python -m pytest backend/tests/test_bonded_site_validation.py backend/tests/test_advanced_parameters.py backend/tests/test_native_atom_mapping.py -q",
+  "result": "80 passed in 0.70s",
+  "files": {
+    "backend/bonded_site_validation.py": "583e8e329c7c8adb2666c488f63bccaa17c5b052f5081b393d3eb01b2245e623",
+    "backend/tests/test_bonded_site_validation.py": "93264673f90a832ca55f2e02ecef533bb9c0e3e0f63f59261d5f51de9e22f407",
+    "docs/audit/advanced-chemistry/BONDED-SITE-VALIDATION.md": "51dc5c6962f1ebc2d54f4654c123503064f8202704c9bc63a609c731873e6780",
+    "build/advanced-chemistry/full-force-constraint-virtual-coverage-tests.log": "3fa77cd733a7cc4248276f5ba6a236a6b0f018fb0375e9629803f97341b05ce3"
+  },
+  "prior_partial_run": "build/advanced-chemistry/full-force-coverage-tests-interruption.json",
+  "new_guards": [
+    "Full-system unvalidated additional potential-energy forces reject even when physical bonds match",
+    "Constraints match independently declared pairs and lengths; missing inventory means no constraints",
+    "Boundary terms and constraints remain explicitly unvalidated in site scope",
+    "Virtual sites within validated scope reject until geometry is independently supported; outside partial-scope virtual sites remain explicitly unvalidated context"
+  ],
+  "supersedes_for_current_source": {
+    "path": "docs/audit/advanced-chemistry/full-force-constraint-coverage-checkpoint.json",
+    "sha256": "1ba4007879c125c9371cd18406f6d823aff4d7d59e1e485cf175b72bfdbc25b3"
+  },
+  "independent_review": "Reproduced a full-system false-pass by adding an undeclared massless TwoParticleAverageSite to a parameter-matched specimen; validator and finite Context both accepted before this guard. Three new regression cases cover full, included partial and excluded partial scope."
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "scf",
+  "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "021e4ba225a5b55306f97d9989dba1091b22a45a7ca248f20c4f6f8a798ae933",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "runtime_manifest": {
+    "present": false
+  },
+  "optimization": {
+    "requested": false,
+    "converged": null,
+    "settings": {
+      "enabled": false,
+      "max_steps": 100,
+      "freeze_atom_ids": [],
+      "dihedral_constraints": [],
+      "dihedral_tolerance_degrees": 0.1,
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": []
+  },
+  "scf": {
+    "converged": false,
+    "cycles": 1,
+    "max_cycles": 1,
+    "conv_tol_hartree": 1e-10,
+    "conv_tol_grad": 1e-07
+  },
+  "error": {
+    "type": "RuntimeError",
+    "message": "SCF did not converge to a finite energy within the cycle limit"
+  },
+  "elapsed_seconds": 0.491808
+}

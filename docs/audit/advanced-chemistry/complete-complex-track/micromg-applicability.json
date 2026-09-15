@@ -1,0 +1,5289 @@
+{
+  "stage": "pinned_micromg_complete_complex_applicability_inventory",
+  "case": "6OIM",
+  "app_ready": false,
+  "physical_model_validated": false,
+  "ready_for_direct_complete_complex_substitution": false,
+  "parameters_assigned_or_changed": false,
+  "new_md_or_qm": false,
+  "pinned_repository": {
+    "url": "https://github.com/bio-phys/Magnesium-FFs",
+    "commit": "e71379d1a88b54221018af53ca54d3c18066ba05",
+    "source_blob_count": 80,
+    "recursive_tree_complete": true,
+    "root_and_both_examples_microMg_overrides_equal": true
+  },
+  "paper": {
+    "doi": "10.1021/acs.jctc.0c01281",
+    "full_text_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8047801/fullTextXML",
+    "table_1": [
+      {
+        "symbol": "\u03c3ii",
+        "unit": "[nm]",
+        "microMg": "0.1019"
+      },
+      {
+        "symbol": "\u03b5ii",
+        "unit": "[kJ/mol]",
+        "microMg": "235.80"
+      },
+      {
+        "symbol": "\u03c3io",
+        "unit": "[nm]",
+        "microMg": "0.2085"
+      },
+      {
+        "symbol": "\u03b5io",
+        "unit": "[kJ/mol]",
+        "microMg": "12.250"
+      },
+      {
+        "symbol": "\u03bb\u03c3Cl",
+        "unit": "\u00a0",
+        "microMg": "1.8000"
+      },
+      {
+        "symbol": "\u03bb\u03b5Cl",
+        "unit": "\u00a0",
+        "microMg": "0.1000"
+      },
+      {
+        "symbol": "\u03c3MgCl",
+        "unit": "[nm]",
+        "microMg": "0.4878"
+      },
+      {
+        "symbol": "\u03b5MgCl",
+        "unit": "[kJ/mol]",
+        "microMg": "0.8181"
+      },
+      {
+        "symbol": "\u03bb\u03c3RNA",
+        "unit": "\u00a0",
+        "microMg": "1.1375"
+      },
+      {
+        "symbol": "\u03bb\u03b5RNA",
+        "unit": "\u00a0",
+        "microMg": "0.3200"
+      },
+      {
+        "symbol": "\u03c3MgOP",
+        "unit": "[nm]",
+        "microMg": "0.2262"
+      },
+      {
+        "symbol": "\u03b5MgOP",
+        "unit": "[kJ/mol]",
+        "microMg": "4.6061"
+      }
+    ],
+    "license_evidence": [
+      "<license xmlns:ns0=\"http://www.w3.org/1999/xlink\"><license-p>Permits the broadest form of re-use including for commercial purposes, provided that author attribution and integrity are maintained (<ext-link ns0:href=\"https://creativecommons.org/licenses/by/4.0/\" ext-link-type=\"uri\">https://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p></license>"
+    ],
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "calibration_scope": "TIP3P hydration and exchange; Mamatkulov-Schwierz chloride; DMP with donor charge/type/angles changed to parmBSC0chiOL3 RNA, then RNA tests.",
+    "no_complete_KRAS_GDP_Ser17_covalent_validation_reported": true
+  },
+  "source_model": {
+    "microMg_atomtype": {
+      "atomic_number": 12,
+      "mass_da": 24.305,
+      "type_charge_field_e": 2.0,
+      "sigma_nm": 0.101934,
+      "epsilon_kj_mol": 235.804213166223,
+      "sigma_text": "0.101934",
+      "epsilon_text": "235.804213166223",
+      "line": 22
+    },
+    "required_combination_rule": "Lorentz-Berthelot with listed pair overrides",
+    "published_microMg_pairs": {
+      "mMg": {
+        "sigma_nm": 0.101934,
+        "epsilon_kj_mol": 235.804213166,
+        "sigma_text": "0.101934",
+        "epsilon_text": "235.804213166",
+        "line": 60
+      },
+      "CXY": {
+        "sigma_nm": 0.48782511,
+        "epsilon_kj_mol": 0.8180958,
+        "sigma_text": "0.48782511",
+        "epsilon_text": "0.8180958",
+        "line": 61
+      },
+      "C": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 62
+      },
+      "CA": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 63
+      },
+      "CB": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 64
+      },
+      "CI": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 3.32453146161,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "3.32453146161",
+        "line": 65
+      },
+      "CP": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 66
+      },
+      "CQ": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 67
+      },
+      "CS": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 68
+      },
+      "CT": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 3.32453146161,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "3.32453146161",
+        "line": 69
+      },
+      "C4": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 70
+      },
+      "C5": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 71
+      },
+      "H": {
+        "sigma_nm": 0.1187788875,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.1187788875",
+        "epsilon_text": "1.25942242703",
+        "line": 72
+      },
+      "HO": {
+        "sigma_nm": 0.0579749625,
+        "epsilon_kj_mol": 0.0,
+        "sigma_text": "0.0579749625",
+        "epsilon_text": "0.0",
+        "line": 73
+      },
+      "H1": {
+        "sigma_nm": 0.19853299375,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.19853299375",
+        "epsilon_text": "1.25942242703",
+        "line": 74
+      },
+      "H2": {
+        "sigma_nm": 0.18839900625,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.18839900625",
+        "epsilon_text": "1.25942242703",
+        "line": 75
+      },
+      "HA": {
+        "sigma_nm": 0.2058294875,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.2058294875",
+        "epsilon_text": "1.2310260012",
+        "line": 76
+      },
+      "H4": {
+        "sigma_nm": 0.20076249375,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.20076249375",
+        "epsilon_text": "1.2310260012",
+        "line": 77
+      },
+      "H5": {
+        "sigma_nm": 0.1956955,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.1956955",
+        "epsilon_text": "1.2310260012",
+        "line": 78
+      },
+      "NA": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 79
+      },
+      "NB": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 80
+      },
+      "NC": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 81
+      },
+      "N2": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 82
+      },
+      "N*": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 83
+      },
+      "O": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 84
+      },
+      "O2": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 85
+      },
+      "OH": {
+        "sigma_nm": 0.23238044375,
+        "epsilon_kj_mol": 4.61046323173,
+        "sigma_text": "0.23238044375",
+        "epsilon_text": "4.61046323173",
+        "line": 86
+      },
+      "OS": {
+        "sigma_nm": 0.22860053125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.22860053125",
+        "epsilon_text": "4.14425105946",
+        "line": 87
+      },
+      "P": {
+        "sigma_nm": 0.27078813125,
+        "epsilon_kj_mol": 4.49507139822,
+        "sigma_text": "0.27078813125",
+        "epsilon_text": "4.49507139822",
+        "line": 88
+      }
+    },
+    "pair_count_including_self_and_chloride": 29,
+    "nMg_excluded_from_this_inventory": true,
+    "published_type_charge_fields_are_not_residue_partial_charges": true
+  },
+  "complete_complex_atom_counts": {
+    "protein": 2693,
+    "covalent_drug_residue": 82,
+    "magnesium": 1,
+    "GDP": 40,
+    "sodium_counterion": 7,
+    "TIP3P_water": 24654
+  },
+  "native_unique_type_count": 72,
+  "component_type_inventory": [
+    {
+      "component": "GDP",
+      "native_type": "QA",
+      "original_type_before_gdp_scoping": "C",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.477,
+        0.477
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "C",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 62
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2798,
+          "atom": "C6",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C6",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QB",
+      "original_type_before_gdp_scoping": "CA",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.7656999994512218,
+        0.7656999994512218
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "CA",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 63
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2802,
+          "atom": "C2",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C2",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QC",
+      "original_type_before_gdp_scoping": "CB",
+      "atom_count": 2,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.12219999999999999,
+        0.1744
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "CB",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 64
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2797,
+          "atom": "C5",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C5",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2807,
+          "atom": "C4",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C4",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QD",
+      "original_type_before_gdp_scoping": "CK",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.1374,
+        0.1374
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2794,
+          "atom": "C8",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C8",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QE",
+      "original_type_before_gdp_scoping": "CT",
+      "atom_count": 5,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.0191,
+        0.2022
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "CT",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 3.32453146161,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "3.32453146161",
+        "line": 69
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2785,
+          "atom": "C5*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C5'",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2788,
+          "atom": "C4*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C4'",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2791,
+          "atom": "C1*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "C1'",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QF",
+      "original_type_before_gdp_scoping": "H",
+      "atom_count": 3,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.3424,
+        0.4364
+      ],
+      "native_lj": {
+        "sigma_nm": 0.10690784617205226,
+        "epsilon_kj_mol": 0.06568880001765333,
+        "rmin_half_angstrom": 0.5999999999731258,
+        "epsilon_kcal_mol": 0.015700000004219245
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "H",
+      "published_override": {
+        "sigma_nm": 0.1187788875,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.1187788875",
+        "epsilon_text": "1.25942242703",
+        "line": 72
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.10442092308602613,
+        "epsilon_kj_mol": 3.935695084987672
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2801,
+          "atom": "H1N",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H1N",
+            "source_heavy": false
+          }
+        },
+        {
+          "native_index": 2804,
+          "atom": "H21",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H21",
+            "source_heavy": false
+          }
+        },
+        {
+          "native_index": 2805,
+          "atom": "H22",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H22",
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QG",
+      "original_type_before_gdp_scoping": "H1",
+      "atom_count": 5,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.06149999999999999,
+        0.11739999999999999
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24713530426421654,
+        "epsilon_kj_mol": 0.0656888004119626,
+        "rmin_half_angstrom": 1.3869999991698632,
+        "epsilon_kcal_mol": 0.01570000009846142
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "H1",
+      "published_override": {
+        "sigma_nm": 0.19853299375,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.19853299375",
+        "epsilon_text": "1.25942242703",
+        "line": 74
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17453465213210828,
+        "epsilon_kj_mol": 3.935695096800044
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2786,
+          "atom": "H50",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H50",
+            "source_heavy": false
+          }
+        },
+        {
+          "native_index": 2787,
+          "atom": "H51",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H51",
+            "source_heavy": false
+          }
+        },
+        {
+          "native_index": 2789,
+          "atom": "H40",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H40",
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QH",
+      "original_type_before_gdp_scoping": "H2",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.2006,
+        0.2006
+      ],
+      "native_lj": {
+        "sigma_nm": 0.22931733000782098,
+        "epsilon_kj_mol": 0.06568880008901636,
+        "rmin_half_angstrom": 1.286999999767076,
+        "epsilon_kcal_mol": 0.015700000021275418
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "H2",
+      "published_override": {
+        "sigma_nm": 0.18839900625,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.18839900625",
+        "epsilon_text": "1.25942242703",
+        "line": 75
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.1656256650039105,
+        "epsilon_kj_mol": 3.935695087125503
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2792,
+          "atom": "H10",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H10",
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QI",
+      "original_type_before_gdp_scoping": "H5",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.164,
+        0.164
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24214627154564852,
+        "epsilon_kj_mol": 0.06276000013920789,
+        "rmin_half_angstrom": 1.3589999997480315,
+        "epsilon_kcal_mol": 0.015000000033271484
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "H5",
+      "published_override": {
+        "sigma_nm": 0.1956955,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.1956955",
+        "epsilon_text": "1.2310260012",
+        "line": 78
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17204013577282426,
+        "epsilon_kj_mol": 3.8469562580224332
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2795,
+          "atom": "H80",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H80",
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QJ",
+      "original_type_before_gdp_scoping": "HO",
+      "atom_count": 2,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.41859999999999997,
+        0.4376
+      ],
+      "native_lj": {
+        "sigma_nm": 0.0,
+        "epsilon_kj_mol": 0.0,
+        "rmin_half_angstrom": 0,
+        "epsilon_kcal_mol": 0
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "HO",
+      "published_override": {
+        "sigma_nm": 0.0579749625,
+        "epsilon_kj_mol": 0.0,
+        "sigma_text": "0.0579749625",
+        "epsilon_text": "0.0",
+        "line": 73
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.050967,
+        "epsilon_kj_mol": 0.0
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2813,
+          "atom": "H2*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H2'",
+            "source_heavy": false
+          }
+        },
+        {
+          "native_index": 2815,
+          "atom": "H3*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "H3'",
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QK",
+      "original_type_before_gdp_scoping": "N*",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        0.0492,
+        0.0492
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "N*",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 83
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2793,
+          "atom": "N9",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "N9",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QL",
+      "original_type_before_gdp_scoping": "N2",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.9672000021951125,
+        -0.9672000021951125
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "N2",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 82
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2803,
+          "atom": "N2",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "N2",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QM",
+      "original_type_before_gdp_scoping": "NA",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.47869999999999996,
+        -0.47869999999999996
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "NA",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 79
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2800,
+          "atom": "N1",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "N1",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QN",
+      "original_type_before_gdp_scoping": "NB",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.5709000016463345,
+        -0.5709000016463345
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "NB",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 80
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2796,
+          "atom": "N7",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "N7",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QO",
+      "original_type_before_gdp_scoping": "NC",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.6323000005487781,
+        -0.6323000005487781
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "NC",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 81
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2806,
+          "atom": "N3",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "N3",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QP",
+      "original_type_before_gdp_scoping": "O",
+      "atom_count": 1,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.5596999994512218,
+        -0.5596999994512218
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2959921901644687,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "epsilon_kcal_mol": 0.20999999984182244
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "O",
+      "published_override": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 84
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.19896309508223436,
+        "epsilon_kj_mol": 14.393992278041262
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2799,
+          "atom": "O6",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O6",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QQ",
+      "original_type_before_gdp_scoping": "O2",
+      "atom_count": 2,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.9473999989024436,
+        -0.9473999989024436
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2959921901644687,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "epsilon_kcal_mol": 0.20999999984182244
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "O2",
+      "published_override": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 85
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.19896309508223436,
+        "epsilon_kj_mol": 14.393992278041262
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2782,
+          "atom": "O1A",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O1A",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2783,
+          "atom": "O2A",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O2A",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QR",
+      "original_type_before_gdp_scoping": "O3",
+      "atom_count": 3,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.9552000021951125,
+        -0.9552000021951125
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2959921901644687,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "epsilon_kcal_mol": 0.20999999984182244
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.19896309508223436,
+        "epsilon_kj_mol": 14.393992278041262
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2776,
+          "atom": "O1B",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O1B",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2778,
+          "atom": "O2B",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O2B",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2779,
+          "atom": "O3B",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O3B",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QS",
+      "original_type_before_gdp_scoping": "OH",
+      "atom_count": 2,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6540999983536655,
+        -0.6139000016463344
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3066473387458142,
+        "epsilon_kj_mol": 0.8803136010405576,
+        "rmin_half_angstrom": 1.7209999997862238,
+        "epsilon_kcal_mol": 0.2104000002486992
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "OH",
+      "published_override": {
+        "sigma_nm": 0.23238044375,
+        "epsilon_kj_mol": 4.61046323173,
+        "sigma_text": "0.23238044375",
+        "epsilon_text": "4.61046323173",
+        "line": 86
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.20429066937290707,
+        "epsilon_kj_mol": 14.40769433437887
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2812,
+          "atom": "O2*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O2'",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2814,
+          "atom": "O3*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O3'",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QT",
+      "original_type_before_gdp_scoping": "OS",
+      "atom_count": 3,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6579000016463344,
+        -0.3548
+      ],
+      "native_lj": {
+        "sigma_nm": 0.30000123432245224,
+        "epsilon_kj_mol": 0.7112800004413506,
+        "rmin_half_angstrom": 1.6836999998645996,
+        "epsilon_kcal_mol": 0.17000000010548533
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "OS",
+      "published_override": {
+        "sigma_nm": 0.22860053125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.22860053125",
+        "epsilon_text": "4.14425105946",
+        "line": 87
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.20096761716122613,
+        "epsilon_kj_mol": 12.950784564841754
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2780,
+          "atom": "O3A",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O3A",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2784,
+          "atom": "O5*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O5'",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2790,
+          "atom": "O4*",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "O4'",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "GDP",
+      "native_type": "QU",
+      "original_type_before_gdp_scoping": "P",
+      "atom_count": 2,
+      "atomic_numbers": [
+        15
+      ],
+      "charge_range_e": [
+        1.3672000021951125,
+        1.4929000016463343
+      ],
+      "native_lj": {
+        "sigma_nm": 0.37417746157842785,
+        "epsilon_kj_mol": 0.8368000014583313,
+        "rmin_half_angstrom": 2.0999999997726193,
+        "epsilon_kcal_mol": 0.20000000034854953
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": true,
+      "published_partner": "P",
+      "published_override": {
+        "sigma_nm": 0.27078813125,
+        "epsilon_kj_mol": 4.49507139822,
+        "sigma_text": "0.27078813125",
+        "epsilon_text": "4.49507139822",
+        "line": 88
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.23805573078921394,
+        "epsilon_kj_mol": 14.047098131691687
+      },
+      "applicability": "not_validated_for_retained_diphosphate_model",
+      "source_atom_examples": [
+        {
+          "native_index": 2777,
+          "atom": "PB",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "PB",
+            "source_heavy": true
+          }
+        },
+        {
+          "native_index": 2781,
+          "atom": "PA",
+          "source": {
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "atom": "PA",
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "component": "TIP3P_water",
+      "native_type": "HW",
+      "original_type_before_gdp_scoping": "HW",
+      "atom_count": 16436,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.417,
+        0.417
+      ],
+      "native_lj": {
+        "sigma_nm": 0.0,
+        "epsilon_kj_mol": 0.0,
+        "rmin_half_angstrom": 0,
+        "epsilon_kcal_mol": 0
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.050967,
+        "epsilon_kj_mol": 0.0
+      },
+      "applicability": "published_water_family_but_exact_oxygen_lj_variant_differs",
+      "source_atom_examples": [
+        {
+          "native_index": 2824,
+          "atom": "H1",
+          "source": null
+        },
+        {
+          "native_index": 2825,
+          "atom": "H2",
+          "source": null
+        },
+        {
+          "native_index": 2827,
+          "atom": "H1",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "TIP3P_water",
+      "native_type": "OW",
+      "original_type_before_gdp_scoping": "OW",
+      "atom_count": 8218,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.834,
+        -0.834
+      ],
+      "native_lj": {
+        "sigma_nm": 0.315075240713007,
+        "epsilon_kj_mol": 0.6359679988330078,
+        "rmin_half_angstrom": 1.768300000311453,
+        "epsilon_kcal_mol": 0.15199999972108216
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.20850462035650352,
+        "epsilon_kj_mol": 12.245976219302193
+      },
+      "applicability": "published_water_family_but_exact_oxygen_lj_variant_differs",
+      "source_atom_examples": [
+        {
+          "native_index": 2823,
+          "atom": "O",
+          "source": {
+            "residue": [
+              "E",
+              "401",
+              "",
+              "HOH"
+            ],
+            "atom": "O"
+          }
+        },
+        {
+          "native_index": 2826,
+          "atom": "O",
+          "source": {
+            "residue": [
+              "E",
+              "402",
+              "",
+              "HOH"
+            ],
+            "atom": "O"
+          }
+        },
+        {
+          "native_index": 2829,
+          "atom": "O",
+          "source": {
+            "residue": [
+              "E",
+              "403",
+              "",
+              "HOH"
+            ],
+            "atom": "O"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "C",
+      "original_type_before_gdp_scoping": "C",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.6482760024804772,
+        0.6482760024804772
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "C",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 62
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 262,
+          "atom": "C",
+          "source": {
+            "index": 5,
+            "name": "C",
+            "chain": "A",
+            "resid": "12",
+            "resname": "CYS",
+            "atom": "C",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "CX",
+      "original_type_before_gdp_scoping": "CX",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.036803999989024436,
+        0.036803999989024436
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 184,
+          "atom": "CA",
+          "source": {
+            "index": 4,
+            "name": "CA",
+            "chain": "A",
+            "resid": "12",
+            "resname": "CYS",
+            "atom": "CA",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "H",
+      "original_type_before_gdp_scoping": "H",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.3306,
+        0.3306
+      ],
+      "native_lj": {
+        "sigma_nm": 0.10690784617205226,
+        "epsilon_kj_mol": 0.06568880001765333,
+        "rmin_half_angstrom": 0.5999999999731258,
+        "epsilon_kcal_mol": 0.015700000004219245
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "H",
+      "published_override": {
+        "sigma_nm": 0.1187788875,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.1187788875",
+        "epsilon_text": "1.25942242703",
+        "line": 72
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.10442092308602613,
+        "epsilon_kj_mol": 3.935695084987672
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 183,
+          "atom": "H",
+          "source": {
+            "index": 55,
+            "name": "H56",
+            "role": "generated-hydrogen",
+            "parent_index": 3
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "H1",
+      "original_type_before_gdp_scoping": "H1",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.10603800014268232,
+        0.10603800014268232
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24713530426421654,
+        "epsilon_kj_mol": 0.0656888004119626,
+        "rmin_half_angstrom": 1.3869999991698632,
+        "epsilon_kcal_mol": 0.01570000009846142
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "H1",
+      "published_override": {
+        "sigma_nm": 0.19853299375,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.19853299375",
+        "epsilon_text": "1.25942242703",
+        "line": 74
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17453465213210828,
+        "epsilon_kj_mol": 3.935695096800044
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 261,
+          "atom": "HA",
+          "source": {
+            "index": 56,
+            "name": "H57",
+            "role": "generated-hydrogen",
+            "parent_index": 4
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "N",
+      "original_type_before_gdp_scoping": "N",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.5630000000000001,
+        -0.5630000000000001
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 182,
+          "atom": "N",
+          "source": {
+            "index": 3,
+            "name": "N",
+            "chain": "A",
+            "resid": "12",
+            "resname": "CYS",
+            "atom": "N",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "O",
+      "original_type_before_gdp_scoping": "O",
+      "atom_count": 1,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6210019975524494,
+        -0.6210019975524494
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2959921901644687,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "epsilon_kcal_mol": 0.20999999984182244
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "O",
+      "published_override": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 84
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.19896309508223436,
+        "epsilon_kj_mol": 14.393992278041262
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 263,
+          "atom": "O",
+          "source": {
+            "index": 6,
+            "name": "O",
+            "chain": "A",
+            "resid": "12",
+            "resname": "CYS",
+            "atom": "O",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "c",
+      "original_type_before_gdp_scoping": "c",
+      "atom_count": 2,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.6733610027274274,
+        0.8537729979201308
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33152123100281,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "epsilon_kcal_mol": 0.0987999999994569
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.216727615501405,
+        "epsilon_kj_mol": 9.87302167498618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 189,
+          "atom": "C015",
+          "source": {
+            "index": 15,
+            "name": "MOV_C23",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C23",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 237,
+          "atom": "C024",
+          "source": {
+            "index": 24,
+            "name": "MOV_C8",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C8",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "c3",
+      "original_type_before_gdp_scoping": "c3",
+      "atom_count": 8,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.14592299984085433,
+        -0.02523500002743891
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3397709531257257,
+        "epsilon_kj_mol": 0.4510352003144314,
+        "rmin_half_angstrom": 1.9069000000076504,
+        "epsilon_kcal_mol": 0.1078000000751509
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22085247656286283,
+        "epsilon_kj_mol": 10.312904562751187
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 185,
+          "atom": "CB",
+          "source": {
+            "index": 7,
+            "name": "CB",
+            "chain": "A",
+            "resid": "12",
+            "resname": "CYS",
+            "atom": "CB",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 187,
+          "atom": "C018",
+          "source": {
+            "index": 18,
+            "name": "MOV_C25",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C25",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 188,
+          "atom": "C017",
+          "source": {
+            "index": 17,
+            "name": "MOV_C24",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C24",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "c6",
+      "original_type_before_gdp_scoping": "c6",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.07322699988475659,
+        0.22423900001646332
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3397709531257257,
+        "epsilon_kj_mol": 0.4510352003144314,
+        "rmin_half_angstrom": 1.9069000000076504,
+        "epsilon_kcal_mol": 0.1078000000751509
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22085247656286283,
+        "epsilon_kj_mol": 10.312904562751187
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 191,
+          "atom": "C013",
+          "source": {
+            "index": 13,
+            "name": "MOV_C19",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C19",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 192,
+          "atom": "C012",
+          "source": {
+            "index": 12,
+            "name": "MOV_C20",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C20",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 241,
+          "atom": "C020",
+          "source": {
+            "index": 20,
+            "name": "MOV_C17",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C17",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "ca",
+      "original_type_before_gdp_scoping": "ca",
+      "atom_count": 14,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.3470370002689013,
+        0.5781390000164633
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33152123100281,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "epsilon_kcal_mol": 0.0987999999994569
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.216727615501405,
+        "epsilon_kj_mol": 9.87302167498618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 195,
+          "atom": "C039",
+          "source": {
+            "index": 39,
+            "name": "MOV_C1",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C1",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 196,
+          "atom": "C040",
+          "source": {
+            "index": 40,
+            "name": "MOV_C5",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C5",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 197,
+          "atom": "C041",
+          "source": {
+            "index": 41,
+            "name": "MOV_C4",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C4",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "cc",
+      "original_type_before_gdp_scoping": "cc",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.7723970025737695,
+        0.7723970025737695
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33152123100281,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "epsilon_kcal_mol": 0.0987999999994569
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.216727615501405,
+        "epsilon_kj_mol": 9.87302167498618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 194,
+          "atom": "C022",
+          "source": {
+            "index": 22,
+            "name": "MOV_C7",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C7",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "cp",
+      "original_type_before_gdp_scoping": "cp",
+      "atom_count": 2,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.27956699977500094,
+        0.5115130000054877
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33152123100281,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "epsilon_kcal_mol": 0.0987999999994569
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.216727615501405,
+        "epsilon_kj_mol": 9.87302167498618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 199,
+          "atom": "C043",
+          "source": {
+            "index": 43,
+            "name": "MOV_C3",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C3",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 200,
+          "atom": "C044",
+          "source": {
+            "index": 44,
+            "name": "MOV_C6",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "C6",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "f",
+      "original_type_before_gdp_scoping": "f",
+      "atom_count": 2,
+      "atomic_numbers": [
+        9
+      ],
+      "charge_range_e": [
+        -0.13147200024146238,
+        -0.11652299984085435
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3034222854639816,
+        "epsilon_kj_mol": 0.3481087995050717,
+        "rmin_half_angstrom": 1.7029000002230603,
+        "epsilon_kcal_mol": 0.08319999988170929
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.2026781427319908,
+        "epsilon_kj_mol": 9.060106045931908
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 198,
+          "atom": "F042",
+          "source": {
+            "index": 42,
+            "name": "MOV_F1",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "F1",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 208,
+          "atom": "F046",
+          "source": {
+            "index": 46,
+            "name": "MOV_F2",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "F2",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "h1",
+      "original_type_before_gdp_scoping": "h1",
+      "atom_count": 11,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.05235600001097556,
+        0.09148899974207428
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24219972552023336,
+        "epsilon_kj_mol": 0.08702720008258066,
+        "rmin_half_angstrom": 1.3593000000370454,
+        "epsilon_kcal_mol": 0.020800000019737253
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17206686276011668,
+        "epsilon_kj_mol": 4.530053028335583
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 243,
+          "atom": "H073",
+          "source": {
+            "index": 73,
+            "name": "H74",
+            "role": "generated-hydrogen",
+            "parent_index": 19
+          }
+        },
+        {
+          "native_index": 244,
+          "atom": "H074",
+          "source": {
+            "index": 74,
+            "name": "H75",
+            "role": "generated-hydrogen",
+            "parent_index": 19
+          }
+        },
+        {
+          "native_index": 245,
+          "atom": "H075",
+          "source": {
+            "index": 75,
+            "name": "H76",
+            "role": "generated-hydrogen",
+            "parent_index": 20
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "h4",
+      "original_type_before_gdp_scoping": "h4",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.024160999983536657,
+        0.024160999983536657
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2536388651896133,
+        "epsilon_kj_mol": 0.06736239962967548,
+        "rmin_half_angstrom": 1.4235000007579914,
+        "epsilon_kcal_mol": 0.016099999911490314
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17778643259480664,
+        "epsilon_kj_mol": 3.985515981860354
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 235,
+          "atom": "H081",
+          "source": {
+            "index": 81,
+            "name": "H82",
+            "role": "generated-hydrogen",
+            "parent_index": 31
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "ha",
+      "original_type_before_gdp_scoping": "ha",
+      "atom_count": 5,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.1454720002414624,
+        0.16754700010426785
+      ],
+      "native_lj": {
+        "sigma_nm": 0.26254785220391275,
+        "epsilon_kj_mol": 0.06736240007496809,
+        "rmin_half_angstrom": 1.4734999998201521,
+        "epsilon_kcal_mol": 0.016100000017917802
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.18224092610195636,
+        "epsilon_kj_mol": 3.9855159950332872
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 209,
+          "atom": "H090",
+          "source": {
+            "index": 90,
+            "name": "H91",
+            "role": "generated-hydrogen",
+            "parent_index": 47
+          }
+        },
+        {
+          "native_index": 210,
+          "atom": "H091",
+          "source": {
+            "index": 91,
+            "name": "H92",
+            "role": "generated-hydrogen",
+            "parent_index": 48
+          }
+        },
+        {
+          "native_index": 211,
+          "atom": "H092",
+          "source": {
+            "index": 92,
+            "name": "H93",
+            "role": "generated-hydrogen",
+            "parent_index": 49
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "hc",
+      "original_type_before_gdp_scoping": "hc",
+      "atom_count": 15,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.04232200002195113,
+        0.0774409997640254
+      ],
+      "native_lj": {
+        "sigma_nm": 0.26001769980833955,
+        "epsilon_kj_mol": 0.08702720023662243,
+        "rmin_half_angstrom": 1.4592999996178027,
+        "epsilon_kcal_mol": 0.020800000056554118
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.18097584990416976,
+        "epsilon_kj_mol": 4.5300530323447745
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 218,
+          "atom": "H077",
+          "source": {
+            "index": 77,
+            "name": "H78",
+            "role": "generated-hydrogen",
+            "parent_index": 29
+          }
+        },
+        {
+          "native_index": 219,
+          "atom": "H078",
+          "source": {
+            "index": 78,
+            "name": "H79",
+            "role": "generated-hydrogen",
+            "parent_index": 29
+          }
+        },
+        {
+          "native_index": 220,
+          "atom": "H079",
+          "source": {
+            "index": 79,
+            "name": "H80",
+            "role": "generated-hydrogen",
+            "parent_index": 29
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "ho",
+      "original_type_before_gdp_scoping": "ho",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.43545500019207234,
+        0.43545500019207234
+      ],
+      "native_lj": {
+        "sigma_nm": 0.05379246460854296,
+        "epsilon_kj_mol": 0.019664799991173057,
+        "rmin_half_angstrom": 0.30190000004057294,
+        "epsilon_kcal_mol": 0.00469999999789031
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.07786323230427147,
+        "epsilon_kj_mol": 2.1533793648564834
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 203,
+          "atom": "H093",
+          "source": {
+            "index": 93,
+            "name": "H94",
+            "role": "generated-hydrogen",
+            "parent_index": 51
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "n",
+      "original_type_before_gdp_scoping": "n",
+      "atom_count": 2,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.46024999972561087,
+        -0.37324700010426787
+      ],
+      "native_lj": {
+        "sigma_nm": 0.318086478283279,
+        "epsilon_kj_mol": 0.6845024006060481,
+        "rmin_half_angstrom": 1.7851999997668213,
+        "epsilon_kcal_mol": 0.16360000014484896
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21001023914163952,
+        "epsilon_kj_mol": 12.704666464937201
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 190,
+          "atom": "N014",
+          "source": {
+            "index": 14,
+            "name": "MOV_N6",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "N6",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 214,
+          "atom": "N026",
+          "source": {
+            "index": 26,
+            "name": "MOV_N4",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "N4",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "nb",
+      "original_type_before_gdp_scoping": "nb",
+      "atom_count": 2,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.6886710020140158,
+        -0.6677419974426938
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33841678702229117,
+        "epsilon_kj_mol": 0.3937144005608645,
+        "rmin_half_angstrom": 1.899299999716589,
+        "epsilon_kcal_mol": 0.09410000013404983
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22017539351114557,
+        "epsilon_kj_mol": 9.635326379343141
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 212,
+          "atom": "N038",
+          "source": {
+            "index": 38,
+            "name": "MOV_N1",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "N1",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 223,
+          "atom": "N032",
+          "source": {
+            "index": 32,
+            "name": "MOV_N5",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "N5",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "nd",
+      "original_type_before_gdp_scoping": "nd",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.7106959988585415,
+        -0.7106959988585415
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33841678702229117,
+        "epsilon_kj_mol": 0.3937144005608645,
+        "rmin_half_angstrom": 1.899299999716589,
+        "epsilon_kcal_mol": 0.09410000013404983
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22017539351114557,
+        "epsilon_kj_mol": 9.635326379343141
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 238,
+          "atom": "N023",
+          "source": {
+            "index": 23,
+            "name": "MOV_N3",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "N3",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "nh",
+      "original_type_before_gdp_scoping": "nh",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.7241499975304984,
+        -0.7241499975304984
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3189951950029202,
+        "epsilon_kj_mol": 0.8995600004982638,
+        "rmin_half_angstrom": 1.7902999999191282,
+        "epsilon_kcal_mol": 0.2150000001190879
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21046459750146007,
+        "epsilon_kj_mol": 14.56434132095579
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 193,
+          "atom": "N021",
+          "source": {
+            "index": 21,
+            "name": "MOV_N2",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "N2",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "o",
+      "original_type_before_gdp_scoping": "o",
+      "atom_count": 2,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6399370002689012,
+        -0.575556998842078
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3048120873800651,
+        "epsilon_kj_mol": 0.6121192008473053,
+        "rmin_half_angstrom": 1.7106999997504173,
+        "epsilon_kcal_mol": 0.14630000020251083
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.20337304369003256,
+        "epsilon_kj_mol": 12.014170238503201
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 239,
+          "atom": "O025",
+          "source": {
+            "index": 25,
+            "name": "MOV_O1",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "O1",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "native_index": 254,
+          "atom": "O016",
+          "source": {
+            "index": 16,
+            "name": "MOV_O2",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "O2",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "oh",
+      "original_type_before_gdp_scoping": "oh",
+      "atom_count": 1,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.48646099998353665,
+        -0.48646099998353665
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3242871333503238,
+        "epsilon_kj_mol": 0.3891120004851147,
+        "rmin_half_angstrom": 1.819999999703896,
+        "epsilon_kcal_mol": 0.09300000011594518
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21311056667516187,
+        "epsilon_kj_mol": 9.578843829394414
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 202,
+          "atom": "O051",
+          "source": {
+            "index": 51,
+            "name": "MOV_O3",
+            "chain": "A",
+            "resid": "303",
+            "resname": "MOV",
+            "atom": "O3",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "covalent_drug_residue",
+      "native_type": "ss",
+      "original_type_before_gdp_scoping": "ss",
+      "atom_count": 1,
+      "atomic_numbers": [
+        16
+      ],
+      "charge_range_e": [
+        -0.2772749998628054,
+        -0.2772749998628054
+      ],
+      "native_lj": {
+        "sigma_nm": 0.353241341803475,
+        "epsilon_kj_mol": 1.1815615967990405,
+        "rmin_half_angstrom": 1.9825000003413995,
+        "epsilon_kcal_mol": 0.2823999992349523
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22758767090173748,
+        "epsilon_kj_mol": 16.691830416123445
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 186,
+          "atom": "SG",
+          "source": {
+            "index": 8,
+            "name": "SG",
+            "chain": "A",
+            "resid": "12",
+            "resname": "CYS",
+            "atom": "SG",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "component": "magnesium",
+      "native_type": "Mg2+",
+      "original_type_before_gdp_scoping": "Mg2+",
+      "atom_count": 1,
+      "atomic_numbers": [
+        12
+      ],
+      "charge_range_e": [
+        2.0,
+        2.0
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2423244513767447,
+        "epsilon_kj_mol": 0.04268671605453583,
+        "rmin_half_angstrom": 1.3600000002389294,
+        "epsilon_kcal_mol": 0.010202369993913916
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17212922568837236,
+        "epsilon_kj_mol": 3.1726499163774435
+      },
+      "applicability": "candidate_replaces_current_mg_parameters_no_assignment_made",
+      "source_atom_examples": [
+        {
+          "native_index": 2775,
+          "atom": "MG",
+          "source": {
+            "residue": [
+              "B",
+              "301",
+              "",
+              "MG"
+            ],
+            "atom": "MG"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "2C",
+      "original_type_before_gdp_scoping": "2C",
+      "atom_count": 104,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.20409999999999998,
+        0.2117
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 13,
+          "atom": "CB",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "CB"
+          }
+        },
+        {
+          "native_index": 16,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 44,
+          "atom": "CB",
+          "source": {
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ],
+            "atom": "CB"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "3C",
+      "original_type_before_gdp_scoping": "3C",
+      "atom_count": 50,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.1303,
+        0.3654
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 30,
+          "atom": "CB",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "CB"
+          }
+        },
+        {
+          "native_index": 105,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "6",
+              "",
+              "LEU"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 121,
+          "atom": "CB",
+          "source": {
+            "residue": [
+              "A",
+              "7",
+              "",
+              "VAL"
+            ],
+            "atom": "CB"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "C",
+      "original_type_before_gdp_scoping": "C",
+      "atom_count": 190,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.3226,
+        0.8487999978048874
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "C",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 62
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 7,
+          "atom": "C",
+          "source": {
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ],
+            "atom": "C"
+          }
+        },
+        {
+          "native_index": 24,
+          "atom": "C",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "C"
+          }
+        },
+        {
+          "native_index": 38,
+          "atom": "C",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "C"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "C8",
+      "original_type_before_gdp_scoping": "C8",
+      "atom_count": 78,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.0538,
+        0.0486
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 80,
+          "atom": "CB",
+          "source": {
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ],
+            "atom": "CB"
+          }
+        },
+        {
+          "native_index": 83,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 86,
+          "atom": "CD",
+          "source": {
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ],
+            "atom": "CD"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CA",
+      "original_type_before_gdp_scoping": "CA",
+      "atom_count": 86,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.23409999999999997,
+        0.8076000010975563
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "CA",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 2.94761543562,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "2.94761543562",
+        "line": 63
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 62,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 63,
+          "atom": "CD1",
+          "source": {
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ],
+            "atom": "CD1"
+          }
+        },
+        {
+          "native_index": 65,
+          "atom": "CE1",
+          "source": {
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ],
+            "atom": "CE1"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CC",
+      "original_type_before_gdp_scoping": "CC",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.0266,
+        -0.0266
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 482,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 1533,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 1550,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ],
+            "atom": "CG"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CO",
+      "original_type_before_gdp_scoping": "CO",
+      "atom_count": 28,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.7993999989024436,
+        0.8053999989024436
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 50,
+          "atom": "CD",
+          "source": {
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ],
+            "atom": "CD"
+          }
+        },
+        {
+          "native_index": 535,
+          "atom": "CG",
+          "source": {
+            "residue": [
+              "A",
+              "30",
+              "",
+              "ASP"
+            ],
+            "atom": "CG"
+          }
+        },
+        {
+          "native_index": 550,
+          "atom": "CD",
+          "source": {
+            "residue": [
+              "A",
+              "31",
+              "",
+              "GLU"
+            ],
+            "atom": "CD"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CR",
+      "original_type_before_gdp_scoping": "CR",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.2057,
+        0.2057
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 485,
+          "atom": "CE1",
+          "source": {
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ],
+            "atom": "CE1"
+          }
+        },
+        {
+          "native_index": 1536,
+          "atom": "CE1",
+          "source": {
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ],
+            "atom": "CE1"
+          }
+        },
+        {
+          "native_index": 1553,
+          "atom": "CE1",
+          "source": {
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ],
+            "atom": "CE1"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CT",
+      "original_type_before_gdp_scoping": "CT",
+      "atom_count": 131,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.41209999999999997,
+        0.0192
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "CT",
+      "published_override": {
+        "sigma_nm": 0.25133119375,
+        "epsilon_kj_mol": 3.32453146161,
+        "sigma_text": "0.25133119375",
+        "epsilon_text": "3.32453146161",
+        "line": 69
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 20,
+          "atom": "CE",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "CE"
+          }
+        },
+        {
+          "native_index": 32,
+          "atom": "CG2",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "CG2"
+          }
+        },
+        {
+          "native_index": 59,
+          "atom": "CB",
+          "source": {
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ],
+            "atom": "CB"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CV",
+      "original_type_before_gdp_scoping": "CV",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.1292,
+        0.1292
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3399669507944831,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "epsilon_kcal_mol": 0.08600000012835884
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047539724155,
+        "epsilon_kj_mol": 9.211298243188226
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 488,
+          "atom": "CD2",
+          "source": {
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ],
+            "atom": "CD2"
+          }
+        },
+        {
+          "native_index": 1539,
+          "atom": "CD2",
+          "source": {
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ],
+            "atom": "CD2"
+          }
+        },
+        {
+          "native_index": 1556,
+          "atom": "CD2",
+          "source": {
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ],
+            "atom": "CD2"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "CX",
+      "original_type_before_gdp_scoping": "CX",
+      "atom_count": 169,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.2903,
+        0.0397
+      ],
+      "native_lj": {
+        "sigma_nm": 0.33996695084507406,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "epsilon_kcal_mol": 0.10939999991572774
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.22095047542253704,
+        "epsilon_kj_mol": 10.389156274103618
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 4,
+          "atom": "CA",
+          "source": {
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ],
+            "atom": "CA"
+          }
+        },
+        {
+          "native_index": 11,
+          "atom": "CA",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "CA"
+          }
+        },
+        {
+          "native_index": 28,
+          "atom": "CA",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "CA"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "H",
+      "original_type_before_gdp_scoping": "H",
+      "atom_count": 283,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.16419999999999998,
+        0.4478
+      ],
+      "native_lj": {
+        "sigma_nm": 0.10690784617205226,
+        "epsilon_kj_mol": 0.06568880001765333,
+        "rmin_half_angstrom": 0.5999999999731258,
+        "epsilon_kcal_mol": 0.015700000004219245
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "H",
+      "published_override": {
+        "sigma_nm": 0.1187788875,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.1187788875",
+        "epsilon_text": "1.25942242703",
+        "line": 72
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.10442092308602613,
+        "epsilon_kj_mol": 3.935695084987672
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 1,
+          "atom": "H1",
+          "source": null
+        },
+        {
+          "native_index": 2,
+          "atom": "H2",
+          "source": null
+        },
+        {
+          "native_index": 3,
+          "atom": "H3",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "H1",
+      "original_type_before_gdp_scoping": "H1",
+      "atom_count": 258,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.0043,
+        0.156
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24713530426421654,
+        "epsilon_kj_mol": 0.0656888004119626,
+        "rmin_half_angstrom": 1.3869999991698632,
+        "epsilon_kcal_mol": 0.01570000009846142
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "H1",
+      "published_override": {
+        "sigma_nm": 0.19853299375,
+        "epsilon_kj_mol": 1.25942242703,
+        "sigma_text": "0.19853299375",
+        "epsilon_text": "1.25942242703",
+        "line": 74
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17453465213210828,
+        "epsilon_kj_mol": 3.935695096800044
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 12,
+          "atom": "HA",
+          "source": null
+        },
+        {
+          "native_index": 17,
+          "atom": "HG2",
+          "source": null
+        },
+        {
+          "native_index": 18,
+          "atom": "HG3",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "H4",
+      "original_type_before_gdp_scoping": "H4",
+      "atom_count": 4,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.1147,
+        0.1147
+      ],
+      "native_lj": {
+        "sigma_nm": 0.25105525875831347,
+        "epsilon_kj_mol": 0.06275999996435834,
+        "rmin_half_angstrom": 1.408999999923481,
+        "epsilon_kcal_mol": 0.014999999991481439
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "H4",
+      "published_override": {
+        "sigma_nm": 0.20076249375,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.20076249375",
+        "epsilon_text": "1.2310260012",
+        "line": 77
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17649462937915672,
+        "epsilon_kj_mol": 3.8469562526636176
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 489,
+          "atom": "HD2",
+          "source": null
+        },
+        {
+          "native_index": 1540,
+          "atom": "HD2",
+          "source": null
+        },
+        {
+          "native_index": 1557,
+          "atom": "HD2",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "H5",
+      "original_type_before_gdp_scoping": "H5",
+      "atom_count": 4,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.1392,
+        0.1392
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24214627154564852,
+        "epsilon_kj_mol": 0.06276000013920789,
+        "rmin_half_angstrom": 1.3589999997480315,
+        "epsilon_kcal_mol": 0.015000000033271484
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "H5",
+      "published_override": {
+        "sigma_nm": 0.1956955,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.1956955",
+        "epsilon_text": "1.2310260012",
+        "line": 78
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17204013577282426,
+        "epsilon_kj_mol": 3.8469562580224332
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 486,
+          "atom": "HE1",
+          "source": null
+        },
+        {
+          "native_index": 1537,
+          "atom": "HE1",
+          "source": null
+        },
+        {
+          "native_index": 1554,
+          "atom": "HE1",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "HA",
+      "original_type_before_gdp_scoping": "HA",
+      "atom_count": 62,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.12969999999999998,
+        0.1699
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2599642458735085,
+        "epsilon_kj_mol": 0.06276000026869927,
+        "rmin_half_angstrom": 1.4589999995518992,
+        "epsilon_kcal_mol": 0.015000000064220666
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "HA",
+      "published_override": {
+        "sigma_nm": 0.2058294875,
+        "epsilon_kj_mol": 1.2310260012,
+        "sigma_text": "0.2058294875",
+        "epsilon_text": "1.2310260012",
+        "line": 76
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.18094912293675425,
+        "epsilon_kj_mol": 3.846956261991105
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 64,
+          "atom": "HD1",
+          "source": null
+        },
+        {
+          "native_index": 66,
+          "atom": "HE1",
+          "source": null
+        },
+        {
+          "native_index": 71,
+          "atom": "HE2",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "HC",
+      "original_type_before_gdp_scoping": "HC",
+      "atom_count": 673,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        -0.042499999999999996,
+        0.09999999999999999
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2649532787260222,
+        "epsilon_kj_mol": 0.06568880010977264,
+        "rmin_half_angstrom": 1.4869999997254757,
+        "epsilon_kcal_mol": 0.01570000002623629
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.1834436393630111,
+        "epsilon_kj_mol": 3.935695087747302
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 14,
+          "atom": "HB2",
+          "source": null
+        },
+        {
+          "native_index": 15,
+          "atom": "HB3",
+          "source": null
+        },
+        {
+          "native_index": 33,
+          "atom": "HG21",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "HO",
+      "original_type_before_gdp_scoping": "HO",
+      "atom_count": 30,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.3992,
+        0.42749999999999994
+      ],
+      "native_lj": {
+        "sigma_nm": 0.0,
+        "epsilon_kj_mol": 0.0,
+        "rmin_half_angstrom": 0,
+        "epsilon_kcal_mol": 0
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "HO",
+      "published_override": {
+        "sigma_nm": 0.0579749625,
+        "epsilon_kj_mol": 0.0,
+        "sigma_text": "0.0579749625",
+        "epsilon_text": "0.0",
+        "line": 73
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.050967,
+        "epsilon_kj_mol": 0.0
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 37,
+          "atom": "HG1",
+          "source": null
+        },
+        {
+          "native_index": 69,
+          "atom": "HH",
+          "source": null
+        },
+        {
+          "native_index": 324,
+          "atom": "HG",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "HP",
+      "original_type_before_gdp_scoping": "HP",
+      "atom_count": 26,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.0895,
+        0.1135
+      ],
+      "native_lj": {
+        "sigma_nm": 0.1959977179007358,
+        "epsilon_kj_mol": 0.06568880026244604,
+        "rmin_half_angstrom": 1.099999999494113,
+        "epsilon_kcal_mol": 0.015700000062726108
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.1489658589503679,
+        "epsilon_kj_mol": 3.935695092320958
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 5,
+          "atom": "HA2",
+          "source": null
+        },
+        {
+          "native_index": 6,
+          "atom": "HA3",
+          "source": null
+        },
+        {
+          "native_index": 90,
+          "atom": "HE2",
+          "source": null
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "N",
+      "original_type_before_gdp_scoping": "N",
+      "atom_count": 181,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.9406999994512218,
+        -0.25479999999999997
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 9,
+          "atom": "N",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "N"
+          }
+        },
+        {
+          "native_index": 26,
+          "atom": "N",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "N"
+          }
+        },
+        {
+          "native_index": 40,
+          "atom": "N",
+          "source": {
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ],
+            "atom": "N"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "N2",
+      "original_type_before_gdp_scoping": "N2",
+      "atom_count": 30,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.8626999994512219,
+        -0.5295
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "N2",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 82
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 707,
+          "atom": "NE",
+          "source": {
+            "residue": [
+              "A",
+              "41",
+              "",
+              "ARG"
+            ],
+            "atom": "NE"
+          }
+        },
+        {
+          "native_index": 710,
+          "atom": "NH1",
+          "source": {
+            "residue": [
+              "A",
+              "41",
+              "",
+              "ARG"
+            ],
+            "atom": "NH1"
+          }
+        },
+        {
+          "native_index": 713,
+          "atom": "NH2",
+          "source": {
+            "residue": [
+              "A",
+              "41",
+              "",
+              "ARG"
+            ],
+            "atom": "NH2"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "N3",
+      "original_type_before_gdp_scoping": "N3",
+      "atom_count": 13,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.38539999999999996,
+        0.2943
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 0,
+          "atom": "N",
+          "source": {
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ],
+            "atom": "N"
+          }
+        },
+        {
+          "native_index": 92,
+          "atom": "NZ",
+          "source": {
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ],
+            "atom": "NZ"
+          }
+        },
+        {
+          "native_index": 310,
+          "atom": "NZ",
+          "source": {
+            "residue": [
+              "A",
+              "16",
+              "",
+              "LYS"
+            ],
+            "atom": "NZ"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "NA",
+      "original_type_before_gdp_scoping": "NA",
+      "atom_count": 4,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.3811,
+        -0.3811
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "NA",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 79
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 483,
+          "atom": "ND1",
+          "source": {
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ],
+            "atom": "ND1"
+          }
+        },
+        {
+          "native_index": 1534,
+          "atom": "ND1",
+          "source": {
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ],
+            "atom": "ND1"
+          }
+        },
+        {
+          "native_index": 1551,
+          "atom": "ND1",
+          "source": {
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ],
+            "atom": "ND1"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "NB",
+      "original_type_before_gdp_scoping": "NB",
+      "atom_count": 4,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.5726999994512219,
+        -0.5726999994512219
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3249998524031036,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "epsilon_kcal_mol": 0.16999999991766696
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "NB",
+      "published_override": {
+        "sigma_nm": 0.2428187125,
+        "epsilon_kj_mol": 4.14425105946,
+        "sigma_text": "0.2428187125",
+        "epsilon_text": "4.14425105946",
+        "line": 80
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.21346692620155178,
+        "epsilon_kj_mol": 12.950784557687651
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 487,
+          "atom": "NE2",
+          "source": {
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ],
+            "atom": "NE2"
+          }
+        },
+        {
+          "native_index": 1538,
+          "atom": "NE2",
+          "source": {
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ],
+            "atom": "NE2"
+          }
+        },
+        {
+          "native_index": 1555,
+          "atom": "NE2",
+          "source": {
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ],
+            "atom": "NE2"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "O",
+      "original_type_before_gdp_scoping": "O",
+      "atom_count": 181,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6086000010975563,
+        -0.5679000016463344
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2959921901644687,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "epsilon_kcal_mol": 0.20999999984182244
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "O",
+      "published_override": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 84
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.19896309508223436,
+        "epsilon_kj_mol": 14.393992278041262
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 8,
+          "atom": "O",
+          "source": {
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ],
+            "atom": "O"
+          }
+        },
+        {
+          "native_index": 25,
+          "atom": "O",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "O"
+          }
+        },
+        {
+          "native_index": 39,
+          "atom": "O",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "O"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "O2",
+      "original_type_before_gdp_scoping": "O2",
+      "atom_count": 58,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.8252000021951126,
+        -0.8013999989024437
+      ],
+      "native_lj": {
+        "sigma_nm": 0.2959921901644687,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "epsilon_kcal_mol": 0.20999999984182244
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "O2",
+      "published_override": {
+        "sigma_nm": 0.2263204125,
+        "epsilon_kj_mol": 4.60607753071,
+        "sigma_text": "0.2263204125",
+        "epsilon_text": "4.60607753071",
+        "line": 85
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.19896309508223436,
+        "epsilon_kj_mol": 14.393992278041262
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 51,
+          "atom": "OE1",
+          "source": {
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ],
+            "atom": "OE1"
+          }
+        },
+        {
+          "native_index": 52,
+          "atom": "OE2",
+          "source": {
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ],
+            "atom": "OE2"
+          }
+        },
+        {
+          "native_index": 536,
+          "atom": "OD1",
+          "source": {
+            "residue": [
+              "A",
+              "30",
+              "",
+              "ASP"
+            ],
+            "atom": "OD1"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "OH",
+      "original_type_before_gdp_scoping": "OH",
+      "atom_count": 30,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6760999983536655,
+        -0.5579000016463345
+      ],
+      "native_lj": {
+        "sigma_nm": 0.3066473387458142,
+        "epsilon_kj_mol": 0.8803136010405576,
+        "rmin_half_angstrom": 1.7209999997862238,
+        "epsilon_kcal_mol": 0.2104000002486992
+      },
+      "direct_name_override_exists": true,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": "OH",
+      "published_override": {
+        "sigma_nm": 0.23238044375,
+        "epsilon_kj_mol": 4.61046323173,
+        "sigma_text": "0.23238044375",
+        "epsilon_text": "4.61046323173",
+        "line": 86
+      },
+      "source_lj_numeric_comparison": {
+        "sigma_matches_source_printed_precision": true,
+        "epsilon_matches_source_printed_precision": true
+      },
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.20429066937290707,
+        "epsilon_kj_mol": 14.40769433437887
+      },
+      "applicability": "same_type_named_in_rna_overrides_application_to_this_component_unvalidated",
+      "source_atom_examples": [
+        {
+          "native_index": 36,
+          "atom": "OG1",
+          "source": {
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ],
+            "atom": "OG1"
+          }
+        },
+        {
+          "native_index": 68,
+          "atom": "OH",
+          "source": {
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ],
+            "atom": "OH"
+          }
+        },
+        {
+          "native_index": 323,
+          "atom": "OG",
+          "source": {
+            "residue": [
+              "A",
+              "17",
+              "",
+              "SER"
+            ],
+            "atom": "OG"
+          }
+        }
+      ]
+    },
+    {
+      "component": "protein",
+      "native_type": "S",
+      "original_type_before_gdp_scoping": "S",
+      "atom_count": 4,
+      "atomic_numbers": [
+        16
+      ],
+      "charge_range_e": [
+        -0.2737,
+        -0.2737
+      ],
+      "native_lj": {
+        "sigma_nm": 0.35635948725613564,
+        "epsilon_kj_mol": 1.046,
+        "rmin_half_angstrom": 1.9999999999999998,
+        "epsilon_kcal_mol": 0.25
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.2291467436280678,
+        "epsilon_kj_mol": 15.70513314085141
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 19,
+          "atom": "SD",
+          "source": {
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ],
+            "atom": "SD"
+          }
+        },
+        {
+          "native_index": 1097,
+          "atom": "SD",
+          "source": {
+            "residue": [
+              "A",
+              "67",
+              "",
+              "MET"
+            ],
+            "atom": "SD"
+          }
+        },
+        {
+          "native_index": 1188,
+          "atom": "SD",
+          "source": {
+            "residue": [
+              "A",
+              "72",
+              "",
+              "MET"
+            ],
+            "atom": "SD"
+          }
+        }
+      ]
+    },
+    {
+      "component": "sodium_counterion",
+      "native_type": "Na+",
+      "original_type_before_gdp_scoping": "Na+",
+      "atom_count": 7,
+      "atomic_numbers": [
+        11
+      ],
+      "charge_range_e": [
+        1.0,
+        1.0
+      ],
+      "native_lj": {
+        "sigma_nm": 0.24392806894005906,
+        "epsilon_kj_mol": 0.36584603217194595,
+        "rmin_half_angstrom": 1.3689999995130433,
+        "epsilon_kcal_mol": 0.08743930023230065
+      },
+      "direct_name_override_exists": false,
+      "override_exists_only_after_gdp_unscoping": false,
+      "published_partner": null,
+      "published_override": null,
+      "source_lj_numeric_comparison": null,
+      "nominal_unmodified_lb_pair_if_mg_alone_replaced": {
+        "sigma_nm": 0.17293103447002953,
+        "epsilon_kj_mol": 9.288058772224174
+      },
+      "applicability": "no_component_specific_override_standard_mixing_would_still_define_a_pair",
+      "source_atom_examples": [
+        {
+          "native_index": 2816,
+          "atom": "Na+",
+          "source": null
+        },
+        {
+          "native_index": 2817,
+          "atom": "Na+",
+          "source": null
+        },
+        {
+          "native_index": 2818,
+          "atom": "Na+",
+          "source": null
+        }
+      ]
+    }
+  ],
+  "retained_site_atoms": {
+    "GDP_O2B": {
+      "native_index": 2778,
+      "source": {
+        "residue": [
+          "C",
+          "302",
+          "",
+          "GDP"
+        ],
+        "atom": "O2B",
+        "source_heavy": true
+      },
+      "native_type": "QR",
+      "original_type": "O3",
+      "charge_e": -0.9552000021951125,
+      "sigma_nm": 0.2959921901644687,
+      "epsilon_kj_mol": 0.8786399993381852,
+      "rmin_half_angstrom": 1.661200000277935,
+      "epsilon_kcal_mol": 0.20999999984182244
+    },
+    "SER17_OG": {
+      "native_index": 323,
+      "source": {
+        "residue": [
+          "A",
+          "17",
+          "",
+          "SER"
+        ],
+        "atom": "OG"
+      },
+      "native_type": "OH",
+      "original_type": "OH",
+      "charge_e": -0.6546000010975562,
+      "sigma_nm": 0.3066473387458142,
+      "epsilon_kj_mol": 0.8803136010405576,
+      "rmin_half_angstrom": 1.7209999997862238,
+      "epsilon_kcal_mol": 0.2104000002486992
+    },
+    "water_O": {
+      "native_index": 2835,
+      "source": {
+        "residue": [
+          "E",
+          "405",
+          "",
+          "HOH"
+        ],
+        "atom": "O"
+      },
+      "native_type": "OW",
+      "original_type": "OW",
+      "charge_e": -0.834,
+      "sigma_nm": 0.315075240713007,
+      "epsilon_kj_mol": 0.6359679988330078,
+      "rmin_half_angstrom": 1.768300000311453,
+      "epsilon_kcal_mol": 0.15199999972108216
+    },
+    "Mg": {
+      "native_index": 2775,
+      "source": {
+        "residue": [
+          "B",
+          "301",
+          "",
+          "MG"
+        ],
+        "atom": "MG"
+      },
+      "native_type": "Mg2+",
+      "original_type": "Mg2+",
+      "charge_e": 2.0,
+      "sigma_nm": 0.2423244513767447,
+      "epsilon_kj_mol": 0.04268671605453583,
+      "rmin_half_angstrom": 1.3600000002389294,
+      "epsilon_kcal_mol": 0.010202369993913916
+    }
+  },
+  "GDP_applicability": {
+    "actual_type_count": 21,
+    "types_with_no_override_even_after_unscoping": [
+      "CK",
+      "O3"
+    ],
+    "source_model": "Preserved Meagher\u2013Redman\u2013Carlson GDP(-3) native Amber99-based source model, scoped without protein parameter overrides.",
+    "RNA_RG_phosphate_oxygen": {
+      "type": "O2",
+      "charge_e": -0.776,
+      "line": 695
+    },
+    "bound_GDP_oxygen_charge_difference_from_RNA_RG_e": -0.17920000219511245,
+    "O3_to_O2_mapping_not_authorized_or_applied": true,
+    "diphosphate_is_not_the_published_phosphodiester_calibration": true
+  },
+  "SER17_applicability": {
+    "source_SER_OG": {
+      "type": "OH",
+      "charge_e": -0.6546,
+      "line": 217
+    },
+    "RNA_RG_ribose_OH": {
+      "type": "OH",
+      "charge_e": -0.6139,
+      "line": 725
+    },
+    "published_mMg_OH_override": {
+      "sigma_nm": 0.23238044375,
+      "epsilon_kj_mol": 4.61046323173,
+      "sigma_text": "0.23238044375",
+      "epsilon_text": "4.61046323173",
+      "line": 86
+    },
+    "shared_OH_type_does_not_establish_protein_site_validation": true
+  },
+  "water_compatibility": {
+    "current": {
+      "native_index": 2835,
+      "source": {
+        "residue": [
+          "E",
+          "405",
+          "",
+          "HOH"
+        ],
+        "atom": "O"
+      },
+      "native_type": "OW",
+      "original_type": "OW",
+      "charge_e": -0.834,
+      "sigma_nm": 0.315075240713007,
+      "epsilon_kj_mol": 0.6359679988330078,
+      "rmin_half_angstrom": 1.768300000311453,
+      "epsilon_kcal_mol": 0.15199999972108216
+    },
+    "published_example_OW": {
+      "atomic_number": 8,
+      "mass_da": 16.0,
+      "type_charge_field_e": 0.0,
+      "sigma_nm": 0.315061,
+      "epsilon_kj_mol": 0.636386,
+      "sigma_text": "3.15061e-01",
+      "epsilon_text": "6.36386e-01",
+      "line": 60
+    },
+    "sigma_difference_nm": 1.4240713007040995e-05,
+    "epsilon_difference_kj_mol": -0.000418001166992199,
+    "published_example_hydrogen_and_oxygen_charges": [
+      -0.834,
+      0.417,
+      0.417
+    ],
+    "parameter_family": "TIP3P",
+    "exact_lj_match": false,
+    "same_water_family_is_not_exact_reproduction": true
+  },
+  "redistribution_evidence": {
+    "license_named_files_in_pinned_tree": [],
+    "repository_wide_explicit_grant_found": false,
+    "scope": "No license-named file in complete pinned tree and no explicit Mg code grant in retrieved model files/README. Third-party file headers were not all audited.",
+    "article_CC_BY_4_0_verified_from_full_text": true,
+    "possible_route": "Independently implement equations/parameters from the licensed article with attribution and a record of changes; reconcile published precision and source differences before using it. Do not infer a license for copied repository files."
+  },
+  "blocking_gaps_for_direct_substitution": [
+    "Retained GDP O3 (including coordinating O2B) and CK have no published named pair override; scoped QA-QU names match no raw overrides.",
+    "GDP charges and diphosphate chemistry differ from the RNA-matched DMP calibration; charge/type/angle equivalence is not established.",
+    "Protein and GAFF covalent-adduct environments are outside the demonstrated calibration; sharing a type name does not supply that validation.",
+    "Current TIP3P oxygen LJ values differ slightly from the pinned example.",
+    "Native sodium counterions have no corresponding calibrated Mg-sodium pair in this source; published chloride correction does not apply to them.",
+    "Repository redistribution grant is not established; licensed-paper reimplementation has a route but needs exact numerical provenance."
+  ],
+  "next_alternative": {
+    "model": "Panteva-Giambasu-York modified 12-6-4",
+    "doi": "10.1021/acs.jpcb.5b10423",
+    "primary_source": "https://theory.rutgers.edu/resources/pdfs/Panteva_JChemPhysB_2015_v119_p15460.pdf",
+    "reason_to_inspect": "Published site-specific phosphate/purine calibration addresses binding balance explicitly.",
+    "known_limits": "TIP4P-Ew and defined nucleic-acid charge models; it is not a direct TIP3P/GDP/Ser replacement. Requires coherent water/cofactor model choice and full C4 pair transport.",
+    "accepted_or_implemented": false
+  },
+  "input_sha256": {
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/mg-gdp-model-assessment-v1/retrieval.json": "0c81d9b13a843fbcbd694558c25bb5d30cda334476bbf8844c4c70db0c43c0db",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/retrieval.json": "edf1320cb2eff72ba2a2f5bfd5476e08a336d89327971aaa49596e8e82aedefe",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source-files.json": "4776919c4bf8f11cc7203a0bddacdf0f1a2d3015ff9653344af68b73da96c79a",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/pinned-tree.json": "10c5e7e65f19d02466a5f3424d09b249bcddd5225731e2714a0f53be43fb5fc1",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/published-micromg-paper.xml": "5105537c5b6573ac4af97179030edd15a13beb49cb826d1332d08db9cd275624",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/paper-retrieval.json": "f0bf5a819cf86dd6674aae13cbb428f722e1df513bc2ab080e671e710ebb051b",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/mg-gdp-model-assessment-v1/README.md": "592966021bc3af63fe3f6c27b5ae97393704cfe3a69f49e35b1d927a72e9b78a",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/mg-gdp-model-assessment-v1/ff_Mg.itp": "08e7349831324e2c34e6917f5a7eecefaf8c301a7c4056c4218d7cbb05999ddb",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/mg-gdp-model-assessment-v1/Mg.itp": "d042249b929364b935a5a2d22a5a39fb3708ea54ba711a143648899d6beac479",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_MgCl2/amber14sb.ff/forcefield.itp": "cb6c523d3e0233d1491905d21606d0085c1b5f29c198acc8f1245d19ff0723dc",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_MgCl2/amber14sb.ff/ffnonbonded.itp": "98d34c0ec4bffbd31173ace98f9fa01b8244b68482cc625e6d15d21a0638227d",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_MgCl2/amber14sb.ff/tip3p.itp": "c3eeb41bd1840248b0da6070e40bc8229a94d253830a1f392542f329d1ff386b",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_1y26withMg/amber14sb.ff/rna.rtp": "96ac85d09c510f6f33baada8d1537cbfc009fcb47ac81b374d1a2ddc81c6a800",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_1y26withMg/amber14sb.ff/aminoacids.rtp": "23ef8be4a88574fa5476e74e99a8302f6319afe4b8306d0064faec29bf3c65f4",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_MgCl2/topol_MgCl2.top": "ac0ef0b0d28f6215c7369e4333eaa9db7c16935d064d9ab9072d8ee3a876bf9f",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_1y26withMg/topol_1y26withMg.top": "86ce09fe86f38fb8bda7e316a2cdc22a3886881511c8a71f196c60977473a831",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_MgCl2/ions.ff/ff_Mg.itp": "c0ba2630d25ffda8448de38ee55b18c30ac0cdb8859329a5a3d9d1fd8916da81",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/micromg-applicability-v1/source/example_1y26withMg/ions.ff/ff_Mg.itp": "599a7be5825b09e5baf8fea16aaed4d4ccc9eca098f1edb44f13807efa04ed03",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/solvated.prmtop": "d4a3c152a0a39d0c5a5dce8903178f0823a8da164d7a5bade438475c505f3f6c",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/result.json": "eec2b3051309dd061877b6ff66359a3376dc27718e713f169ce7e7dea4a80a68",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/source-mapping.json": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-scoped-v6/result.json": "ecb3f7c128b4b7355b1c1b98280f0f9485938a86cf39237844a01dc28379bdbd"
+  }
+}

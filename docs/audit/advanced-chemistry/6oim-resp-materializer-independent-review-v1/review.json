@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "no_blocking_finding_for_scoped_no_launch_materializer",
+  "source_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+  "tests_sha256": "cac71b1fea9b29e62a3f4909504aa83af64362fed1a7d8e16b37c95795a1b914",
+  "plan_path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/plan-v3-resp-admitted.json",
+  "plan_sha256": "8753021db5fe96d71fffcb29e7198b4ecf7b8668343389c9f110b81d76e43a20",
+  "independent_tests_passed": 37,
+  "original_type_gaps_reproduced_and_rejected": 3,
+  "actual_parent_refused_before_native_reads": true,
+  "actual_runtime_and_source_admission_passed": true,
+  "qm_launched": false,
+  "fits_launched": false,
+  "native_positive_parent_path_qualified": false,
+  "immutable_reader_qualified": false,
+  "launch_admitted": false,
+  "physical_acceptance": false,
+  "limitations": [
+    "Native accepted-parent positive path remains unexercised",
+    "Pure validator requires independently reviewed immutable file reader",
+    "Per-file publication is not a multi-file transaction; require final successful report and complete artifact bindings",
+    "No native fit, force-field or model-transferability acceptance"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "source_psf_sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e",
+  "atoms": 27386,
+  "residues": 8487,
+  "residue_counts": {
+    "GLY": 15,
+    "LEU": 17,
+    "SER": 5,
+    "ASP": 8,
+    "GLU": 13,
+    "TRP": 2,
+    "GLN": 6,
+    "VAL": 7,
+    "ASN": 2,
+    "LYS": 19,
+    "ALA": 15,
+    "ILE": 9,
+    "HSD": 11,
+    "ARG": 2,
+    "PHE": 7,
+    "THR": 7,
+    "PRO": 4,
+    "MET": 2,
+    "TYR": 2,
+    "HEM": 1,
+    "OXY": 1,
+    "TIP3": 8284,
+    "SOD": 25,
+    "CLA": 23
+  },
+  "term_counts": {
+    "NBOND": 19089,
+    "NTHETA": 12874,
+    "NPHI": 6702,
+    "NIMPHI": 482
+  },
+  "terminal_patches": [
+    {
+      "segment": "A",
+      "resid": "1",
+      "patch": "GLYP"
+    },
+    {
+      "segment": "A",
+      "resid": "153",
+      "patch": "CTER"
+    }
+  ],
+  "template_mismatches": [],
+  "all_atoms_match_supplied_baseline_templates_after_declared_terminal_patches": true,
+  "published_pdb_atom_count": 2486,
+  "caveat": "The supplied horse PDB is unsolvated and is not a coordinate file for the full 27386-atom saved PSF. No coordinates are silently assigned by index."
+}

@@ -1,0 +1,104 @@
+{
+  "recorded_utc": "2026-09-13T04:51:39.585927+00:00",
+  "read_only_package_check": true,
+  "rebuilt_or_published": false,
+  "existing_release": {
+    "tag": "v0.1.1",
+    "build_id": "5f3ddf04190fe583",
+    "version": "0.1.1",
+    "manifest_sha256": "253e31aee06770b621bfbe47f4498d9e836f9533301cd4005d41bf7508872128",
+    "dmg_sha256_from_matching_container_receipt": "b224b4ae7d90328df5a9dae49377f3a59cde663fe21313b39689a22d2d99804a",
+    "copied_app_path": "/private/tmp/DynaMol Loop DMG 5f3ddf04190fe583/Applications/DynaMol.app",
+    "fresh_check_scope": "Read actual package files against its recorded manifest. No new DMG extraction or launch; copy-to-DMG identity was established by the existing matching receipt."
+  },
+  "checks": [
+    {
+      "path": "backend/worker.py",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "fa527f785fc2eed185392649e1fc595343c6861d0546c13e84f77f261aab5d2a",
+      "matches_manifest": true,
+      "current_checkout_sha256": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3",
+      "matches_current_checkout": false
+    },
+    {
+      "path": "pyproject.toml",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "60872787a24d0e94f108a26f87fbd66e77290f968b4d1a6ee476b33d29e28c60",
+      "matches_manifest": true,
+      "current_checkout_sha256": "60872787a24d0e94f108a26f87fbd66e77290f968b4d1a6ee476b33d29e28c60",
+      "matches_current_checkout": true
+    },
+    {
+      "path": "backend/workspaces.py",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "33ca59ce0b469202468e65a1fd1ff6cfe5e9ce73fa20f4788adfd2ab7e059a09",
+      "matches_manifest": true,
+      "current_checkout_sha256": "63c3506a120dc6460a0e3f8f7f4722bdda035be4947d0db0be68bc92d271e82f",
+      "matches_current_checkout": false
+    },
+    {
+      "path": "frontend-source/src/App.tsx",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "aa931095ccf1f6eea7c81764e8bbd87c072b973eec5793a014cd7cd39a382b62",
+      "matches_manifest": true,
+      "current_checkout_sha256": "7f1371772d56015cc3c3fc5d2ded1dc19c6bc26275132bf0f81cf0f05e094070",
+      "matches_current_checkout": false
+    },
+    {
+      "path": "frontend-source/src/components/MolecularViewer.tsx",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "43ede19a16f2cb4bed837697f0bbdf474451ba0383e0b908fdb56601966d44c7",
+      "matches_manifest": true,
+      "current_checkout_sha256": "c9c1dce0acdfdb6a8a7b5544421d6bad6bd526f306b92b7de51657e2cc7479f6",
+      "matches_current_checkout": false
+    },
+    {
+      "path": "backend/preparation.py",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "bad14d01a3f239ee0cd4a99f96031536892bf918083c422cb6e4c739097f02af",
+      "matches_manifest": true,
+      "current_checkout_sha256": "bad14d01a3f239ee0cd4a99f96031536892bf918083c422cb6e4c739097f02af",
+      "matches_current_checkout": true
+    },
+    {
+      "path": "backend/ions.py",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "9b6980e506e6229a3f8cec5d5402e17243b4e7cf1fb420c5f957a5c9d9452d68",
+      "matches_manifest": true,
+      "current_checkout_sha256": "9b6980e506e6229a3f8cec5d5402e17243b4e7cf1fb420c5f957a5c9d9452d68",
+      "matches_current_checkout": true
+    },
+    {
+      "path": "backend/ligand_repair.py",
+      "present_in_package_and_manifest": true,
+      "packaged_sha256": "d6f1b19a7b04121829e4af6bf6eedae0a7d73ccdcb8dc11cf6286e6d315ff914",
+      "matches_manifest": true,
+      "current_checkout_sha256": "d6f1b19a7b04121829e4af6bf6eedae0a7d73ccdcb8dc11cf6286e6d315ff914",
+      "matches_current_checkout": true
+    }
+  ],
+  "builder": {
+    "script": "scripts/package_macos.py",
+    "sha256": "fb98ab7aad5dc1b451493812e13989a791f9d245edf23c0d53b7cb289702acb1",
+    "backend_copy_line": 367,
+    "pyproject_copy_line": 372,
+    "source_manifest_line": 385,
+    "pyproject_available_at_worker_config_root": true,
+    "python_tomllib_supported_by_bundled_python": "3.12",
+    "frontend_requirement": "Build current frontend source before packaging, or supply its freshly built --frontend-dir. Builder copies an existing build."
+  },
+  "documentation_corrections": [
+    "README.md",
+    "docs/MODIFIED_RESIDUES.md",
+    "docs/PREPARATION_CONTRACT.md",
+    "docs/CHEMISTRY_SUPPORT.md"
+  ],
+  "broken_local_links_in_changed_docs": [],
+  "stale_current_six_residue_limit_claims": [],
+  "remaining_limitations": [
+    "The published 0.1.1 DMG does not include the current atom-color defaults or the worker provenance-version fix.",
+    "It already includes the same current 12-residue/96-total loop implementation, named-ion registry, and bounded ligand-repair implementation.",
+    "A rebuilt, signed/sealed package needs its own build ID, manifest/source-material binding, and installation/runtime acceptance; source-suite results do not replace exact-payload checks.",
+    "Unregistered unnatural residues, covalent ligands/cofactors, specialized metal models, membranes, GROMACS complex/state transfer, and non-Apple-Silicon app downloads remain outside current automatic support."
+  ]
+}

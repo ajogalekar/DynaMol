@@ -1,0 +1,94 @@
+{
+  "build_id": "589ff2dddea916f5",
+  "bundle": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app",
+  "mode": "ad-hoc complete bundle; no Developer ID or notarization",
+  "native_objects_verified": 403,
+  "nested_bundles_verified": 0,
+  "inner_signatures_repaired": [
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/dcd.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/dtr.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/trr.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/xtc.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/_geometry.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/drid.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/neighborlist.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/neighbors.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/_lprmsd.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/_rmsd.cpython-312-darwin.so",
+    "Contents/Resources/python/lib/python3.12/site-packages/uvloop/loop.cpython-312-darwin.so"
+  ],
+  "outer_bundle_signed_last": true,
+  "inner_signature_changes": [
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/dcd.cpython-312-darwin.so",
+      "before_sha256": "a7c8fec8095082e9bbc958b94a8efa9d117e2e95a3ffdb11de3aeadbe86f8d74",
+      "after_sha256": "9e69093a710e7ae9c93dbcc128c9191cbfffa14b4b99ef7e4674952515b0ba2d",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/dcd.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/dtr.cpython-312-darwin.so",
+      "before_sha256": "a0d8d167e64377ec5cb4abb472e34c74754cf7bcac4339794c5697ac7cad8cc4",
+      "after_sha256": "5fe55aa5f88e1f542232bf30697093e845ce18bac24d288a4c752859d95ac57b",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/dtr.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/trr.cpython-312-darwin.so",
+      "before_sha256": "27fcdffad086f24d15b4f24aa9a0f0ab10c4574ab16e076392a8bbec6a9f66fb",
+      "after_sha256": "d46cd379edf46ec2ac02d93d7060330cb00ab09e1712aaec80d0859bce08019d",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/trr.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/xtc.cpython-312-darwin.so",
+      "before_sha256": "03496429f8be845889e57b9caa1f9686ba9da39be8766534a4a5e35356cf2810",
+      "after_sha256": "0a647eb570472cac5f82465c750425ef625785714b1822e50ad8ebefc35c4683",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/formats/xtc.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/_geometry.cpython-312-darwin.so",
+      "before_sha256": "16fdccb079df3a356f95c64a0f38f2d70716bece935eb42639429a0e2a8abc1d",
+      "after_sha256": "617a3bc19bf06f46eb985d80da93b7d5984a96e424d6e49a738c5bb7d9161edd",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/_geometry.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/drid.cpython-312-darwin.so",
+      "before_sha256": "d25589e40b848361b625c041bc431dbd862ee6bf42dec8cd6f42c6586be6c51d",
+      "after_sha256": "ff5aff7f0638320a68a2f1e9c4407fb6f91ec5812cac9e29be27850337fb08eb",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/drid.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/neighborlist.cpython-312-darwin.so",
+      "before_sha256": "1e971a823c7b4117f5ebfa9dfe1e99d4cf9b356a3c1e3cf9f9f64bab68ebcbcb",
+      "after_sha256": "ff1d8a9eee9d98e9b33cd2c57641093fa70665bf2adff6d6803be8313449e456",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/neighborlist.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/neighbors.cpython-312-darwin.so",
+      "before_sha256": "87ec4e511a7184bbe73c81fcc46be41f8f84bc2b741937ff8b97438d2ce1b56a",
+      "after_sha256": "290ef695edbe669690c7193a765ceabe0c1d4e4255f808d05d60520d2717e8a6",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/geometry/neighbors.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/_lprmsd.cpython-312-darwin.so",
+      "before_sha256": "ee86840ab6ec2fb2be28b7d63d5abdffd048410e3d0ba87d46e35eafae929871",
+      "after_sha256": "e08d144e0302088d57770829db76d36979040760092d254ff09fd34f1f3d0ae5",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/_lprmsd.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/mdtraj/_rmsd.cpython-312-darwin.so",
+      "before_sha256": "2d072ffd9c004114e92000fee0fbc918ee6870fcedd4c89663695259f4df5246",
+      "after_sha256": "1dd53d1f4ed3aa956ee1bff4e4e08c3bc24df57e9a479dcf3bd88a3a8baa1e1c",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/mdtraj/_rmsd.cpython-312-darwin.so: code object is not signed at all"
+    },
+    {
+      "path": "Contents/Resources/python/lib/python3.12/site-packages/uvloop/loop.cpython-312-darwin.so",
+      "before_sha256": "4cda94fa238105d94ceeb52812a4dc1026c7dc6f34fc74ff79cda5fefcb7e7b0",
+      "after_sha256": "50893d3d521d0782849f3c1610d7f498c8036822469869ad5a69c2c00081110e",
+      "prior_verification_error": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app/Contents/Resources/python/lib/python3.12/site-packages/uvloop/loop.cpython-312-darwin.so: code object is not signed at all"
+    }
+  ],
+  "presentation_attributes_removed": [],
+  "resource_seal_sha256": "f2525394aea8434802a0df5d2a11d4b461c47215428593e60abb64f5b58db9f3",
+  "strict_deep_verification_passed": true,
+  "verification_output": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app: valid on disk\n/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app: satisfies its Designated Requirement",
+  "reference": "https://developer.apple.com/library/archive/technotes/tn2206/"
+}

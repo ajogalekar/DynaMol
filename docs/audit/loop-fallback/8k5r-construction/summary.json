@@ -1,0 +1,90 @@
+{
+  "scope": "Native loop candidate construction only; full preparation, original-atom preservation, geometry and stereochemistry acceptance are checked separately. No MD or native-loop accuracy claim.",
+  "input": "Same copied 8K5R chain-A structure, including retained chemistry context, that failed in the installed app.",
+  "baseline": {
+    "status": "failed",
+    "error": "Fragment database did not close the requested gap: ['A.PRO87-(YNRC)-A.LYS92', 'A.LEU172-(AKN)-A.SER176', 'A.GLU256-(LYEK)-A.LEU261']"
+  },
+  "candidate": {
+    "status": "candidate",
+    "gaps_before": [
+      "A.ILE21-(GQGTFG)-A.GLU28",
+      "A.PRO87-(YNRC)-A.LYS92",
+      "A.LEU172-(AKN)-A.SER176",
+      "A.GLU256-(LYEK)-A.LEU261"
+    ],
+    "gaps_after": [],
+    "elapsed_seconds": 0.8238011249923147,
+    "originally_missing_residues": 17,
+    "modeled_heavy_atoms": 136,
+    "attempts": [
+      {
+        "method": "fragment_database",
+        "context_extension_residues": 0,
+        "settings": {
+          "min_loops_required": 4
+        },
+        "gaps_before": [
+          "A.ILE21-(GQGTFG)-A.GLU28",
+          "A.PRO87-(YNRC)-A.LYS92",
+          "A.LEU172-(AKN)-A.SER176",
+          "A.GLU256-(LYEK)-A.LEU261"
+        ],
+        "status": "complete",
+        "gaps_after": [
+          "A.PRO87-(YNRC)-A.LYS92",
+          "A.LEU172-(AKN)-A.SER176",
+          "A.GLU256-(LYEK)-A.LEU261"
+        ],
+        "elapsed_seconds": 0.061663499975111336
+      },
+      {
+        "method": "sparse_fragment_database",
+        "context_extension_residues": 0,
+        "settings": {
+          "min_loops_required": 1
+        },
+        "gaps_before": [
+          "A.PRO87-(YNRC)-A.LYS92",
+          "A.LEU172-(AKN)-A.SER176",
+          "A.GLU256-(LYEK)-A.LEU261"
+        ],
+        "status": "complete",
+        "gaps_after": [
+          "A.PRO87-(YNRC)-A.LYS92",
+          "A.LEU172-(AKN)-A.SER176",
+          "A.GLU256-(LYEK)-A.LEU261"
+        ],
+        "elapsed_seconds": 0.006997958000283688
+      },
+      {
+        "method": "context_fragment_database",
+        "context_extension_residues": 1,
+        "settings": {
+          "min_loops_required": 1
+        },
+        "gaps_before": [
+          "A.PRO87-(YNRC)-A.LYS92",
+          "A.LEU172-(AKN)-A.SER176",
+          "A.GLU256-(LYEK)-A.LEU261"
+        ],
+        "status": "complete",
+        "gaps_after": [],
+        "elapsed_seconds": 0.3787666250136681
+      }
+    ]
+  },
+  "diagnosis": "Original rigid-stem database search had zero candidates for three gaps. Retrying sparse candidates also failed. Zero-extension native Monte Carlo recovered one gap; both KIC and CCD initialized unsuccessfully on the others. Database search with one neighboring residue of temporary context closed all four gaps. Only originally missing atoms are emitted.",
+  "files": {
+    "baseline-reproduced-output.json": "6e55fdbd4bbdad5270fa3f254c1219f2215c4dc4bd26895963d8910045a726f4",
+    "baseline-reproduced.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline_worker.py": "a99a10958b0b2b44096599cecb24226a68f3268f3409e215cd47251a73d51001",
+    "candidate-worker.py": "9a2a58117f0cdedf68b1dbaac2a24130222124385f9e3843f2e70f48ac911984",
+    "final-candidate-output.json": "552d9b6f7152c463c6cbecd5a72f4c27942cbe30a70dc6babd00403bc70522a9",
+    "final-candidate.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.json": "58f3e0ef71cf228df2583226ad8a7146a900abfde0cbc583a15c0e4ee54f70d1",
+    "loop-model-context.pdb": "494553ecef8f0a47837fd4bfdf8584d7efcf008dc1f3b9e1d6eb076272493548",
+    "probe-kic.log": "bd5bbea59b1782f7e13895ed44b415a0d537cb1bc94bce33223b08a03bcd72eb",
+    "probe-verbose.log": "a3b6a17ac11d72dd0b3edffe7043828c266bf1c631cdce1b2d0eeef282721e2d"
+  }
+}

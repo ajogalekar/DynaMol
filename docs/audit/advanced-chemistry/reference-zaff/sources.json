@@ -1,0 +1,29 @@
+{
+  "source_page": "https://ambermd.org/tutorials/advanced/tutorial20/ZAFF.php",
+  "retrieved_date": "2026-09-13",
+  "files": [
+    {
+      "name": "ZAFF.prep",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/zaff/ZAFF.prep",
+      "bytes": 42582,
+      "sha256": "eefd39e5a4db122813accf40df27669379a91f5ed89b7f35aba5528aa84225a5"
+    },
+    {
+      "name": "ZAFF.frcmod",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/zaff/ZAFF.frcmod",
+      "bytes": 56954,
+      "sha256": "3492d30e3cb8bfa389fd332f595a5faa30fb1d20b1ad431e0a0c9614a67da275"
+    }
+  ],
+  "structural_reference": {
+    "url": "https://files.rcsb.org/download/2USN.cif",
+    "path": "2USN.cif",
+    "sha256": "6074410c023e52d160298cc0f4025b12a42a2dc02a465f471590e5dd1fbbdc53",
+    "role": "Published ZAFF center9 structural Zn reference; not a new case in the frozen panel"
+  },
+  "official_template_table": {
+    "url": "https://ambermd.org/tutorials/advanced/tutorial20/images/ZAFF_table.png",
+    "path": "ZAFF_table.png",
+    "sha256": "f1f6ef75a1ab4cfa6608441b95fd4e7cdf142084c0771e634f1839d3a78805aa"
+  }
+}

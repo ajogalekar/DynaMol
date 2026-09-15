@@ -1,0 +1,8 @@
+{
+  "archive_path": "/Users/ashujo/Documents/Science/DynaMol/build/releases/source-materials/archives/52fb4fb3370a-AmberTools24_rc5.tar.bz2",
+  "archive_sha256_from_pinned_prior_provenance": "52fb4fb3370a89b7ce738a2dc3e513c2fc1943fde4b4381846d9e75cc48d840f",
+  "member": "amber24_src/AmberTools/src/sander/charmm.F90",
+  "returncode": 0,
+  "stderr": "",
+  "source_sha256": "ad583d5b3cd1b8e5e62ca7303442c60793e33d73177167dcf98f7268e5a05c1d"
+}

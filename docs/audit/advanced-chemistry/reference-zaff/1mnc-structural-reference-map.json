@@ -1,0 +1,192 @@
+{
+  "scope": "Reference-site identity/context comparison only; not final parameter transfer acceptance or full MMP model",
+  "published_source": "https://ambermd.org/tutorials/advanced/tutorial20/ZAFF.php",
+  "reference_structure": "2USN human stromelysin-1, published ZAFF center9",
+  "reference_hash": "6074410c023e52d160298cc0f4025b12a42a2dc02a465f471590e5dd1fbbdc53",
+  "target_structure": "1MNC structural Zn282",
+  "target_hash": "cc018b0440f630092ad87fbf111cf2dd78c928db20e636bbf4e1f52646f608f9",
+  "reference_center": {
+    "chain": "C",
+    "resid": "258",
+    "source_donor_distances_angstrom": [
+      2.063096943917079,
+      2.085428013622142,
+      2.0094728164371842,
+      1.9642884207773548
+    ]
+  },
+  "exact_template_table_mapping": {
+    "HD8": "2USN His151 / 1MNC His168",
+    "AP2": "2USN Asp153 / 1MNC Asp170",
+    "HD9": "2USN His166 / 1MNC His183",
+    "HE5": "2USN His179 / 1MNC His196",
+    "ZN9": "structural Zn, author1MNC282"
+  },
+  "matched_coordinating_residue_heavy_atoms": 38,
+  "rigid_fit_rmsd_angstrom": 0.242099665082334,
+  "backbone_context_distances_angstrom": {
+    "2USN:151O-179N": 9.350797880395023,
+    "2USN:151N-179O": 10.554657502733097,
+    "2USN:166O-179N": 2.7655303288881243,
+    "2USN:166N-179O": 2.9577168559549456,
+    "1MNC:168O-196N": 9.743372054889415,
+    "1MNC:168N-196O": 10.844854171449242,
+    "1MNC:183O-196N": 2.9765123886857916,
+    "1MNC:183N-196O": 2.9467918148386376
+  },
+  "atom_correspondence": [
+    [
+      "A:151:C",
+      "A:168:C"
+    ],
+    [
+      "A:151:CA",
+      "A:168:CA"
+    ],
+    [
+      "A:151:CB",
+      "A:168:CB"
+    ],
+    [
+      "A:151:CD2",
+      "A:168:CD2"
+    ],
+    [
+      "A:151:CE1",
+      "A:168:CE1"
+    ],
+    [
+      "A:151:CG",
+      "A:168:CG"
+    ],
+    [
+      "A:151:N",
+      "A:168:N"
+    ],
+    [
+      "A:151:ND1",
+      "A:168:ND1"
+    ],
+    [
+      "A:151:NE2",
+      "A:168:NE2"
+    ],
+    [
+      "A:151:O",
+      "A:168:O"
+    ],
+    [
+      "A:153:C",
+      "A:170:C"
+    ],
+    [
+      "A:153:CA",
+      "A:170:CA"
+    ],
+    [
+      "A:153:CB",
+      "A:170:CB"
+    ],
+    [
+      "A:153:CG",
+      "A:170:CG"
+    ],
+    [
+      "A:153:N",
+      "A:170:N"
+    ],
+    [
+      "A:153:O",
+      "A:170:O"
+    ],
+    [
+      "A:153:OD1",
+      "A:170:OD1"
+    ],
+    [
+      "A:153:OD2",
+      "A:170:OD2"
+    ],
+    [
+      "A:166:C",
+      "A:183:C"
+    ],
+    [
+      "A:166:CA",
+      "A:183:CA"
+    ],
+    [
+      "A:166:CB",
+      "A:183:CB"
+    ],
+    [
+      "A:166:CD2",
+      "A:183:CD2"
+    ],
+    [
+      "A:166:CE1",
+      "A:183:CE1"
+    ],
+    [
+      "A:166:CG",
+      "A:183:CG"
+    ],
+    [
+      "A:166:N",
+      "A:183:N"
+    ],
+    [
+      "A:166:ND1",
+      "A:183:ND1"
+    ],
+    [
+      "A:166:NE2",
+      "A:183:NE2"
+    ],
+    [
+      "A:166:O",
+      "A:183:O"
+    ],
+    [
+      "A:179:C",
+      "A:196:C"
+    ],
+    [
+      "A:179:CA",
+      "A:196:CA"
+    ],
+    [
+      "A:179:CB",
+      "A:196:CB"
+    ],
+    [
+      "A:179:CD2",
+      "A:196:CD2"
+    ],
+    [
+      "A:179:CE1",
+      "A:196:CE1"
+    ],
+    [
+      "A:179:CG",
+      "A:196:CG"
+    ],
+    [
+      "A:179:N",
+      "A:196:N"
+    ],
+    [
+      "A:179:ND1",
+      "A:196:ND1"
+    ],
+    [
+      "A:179:NE2",
+      "A:196:NE2"
+    ],
+    [
+      "A:179:O",
+      "A:196:O"
+    ]
+  ],
+  "important_distinction": "For center9, the backbone-H-bonding HID is HD9, unlike center6 where it is HD4. Do not map by generic first-HID ordering. Use the exact native reference."
+}

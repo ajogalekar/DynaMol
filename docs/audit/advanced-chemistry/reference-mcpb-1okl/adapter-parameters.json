@@ -1,0 +1,519 @@
+{
+  "atom_ids": [
+    "published-small-model:1",
+    "published-small-model:2",
+    "published-small-model:3",
+    "published-small-model:4",
+    "published-small-model:5",
+    "published-small-model:6",
+    "published-small-model:7",
+    "published-small-model:8",
+    "published-small-model:9",
+    "published-small-model:10",
+    "published-small-model:11",
+    "published-small-model:12",
+    "published-small-model:13",
+    "published-small-model:14",
+    "published-small-model:15",
+    "published-small-model:16",
+    "published-small-model:17",
+    "published-small-model:18",
+    "published-small-model:19",
+    "published-small-model:20",
+    "published-small-model:21",
+    "published-small-model:22",
+    "published-small-model:23",
+    "published-small-model:24",
+    "published-small-model:25",
+    "published-small-model:26",
+    "published-small-model:27",
+    "published-small-model:28",
+    "published-small-model:29",
+    "published-small-model:30",
+    "published-small-model:31",
+    "published-small-model:32",
+    "published-small-model:33",
+    "published-small-model:34",
+    "published-small-model:35",
+    "published-small-model:36",
+    "published-small-model:37",
+    "published-small-model:38",
+    "published-small-model:39",
+    "published-small-model:40",
+    "published-small-model:41",
+    "published-small-model:42",
+    "published-small-model:43",
+    "published-small-model:44",
+    "published-small-model:45",
+    "published-small-model:46",
+    "published-small-model:47",
+    "published-small-model:48",
+    "published-small-model:49",
+    "published-small-model:50",
+    "published-small-model:51",
+    "published-small-model:52",
+    "published-small-model:53",
+    "published-small-model:54",
+    "published-small-model:55",
+    "published-small-model:56",
+    "published-small-model:57",
+    "published-small-model:58",
+    "published-small-model:59",
+    "published-small-model:60",
+    "published-small-model:61",
+    "published-small-model:62",
+    "published-small-model:63",
+    "published-small-model:64",
+    "published-small-model:65",
+    "published-small-model:66",
+    "published-small-model:67",
+    "published-small-model:68",
+    "published-small-model:69",
+    "published-small-model:70",
+    "published-small-model:71",
+    "published-small-model:72",
+    "published-small-model:73",
+    "published-small-model:74",
+    "published-small-model:75",
+    "published-small-model:76"
+  ],
+  "bonds": [
+    {
+      "name": "M1-Y4",
+      "atoms": [
+        45,
+        62
+      ],
+      "atom_ids": [
+        "published-small-model:46",
+        "published-small-model:63"
+      ],
+      "equilibrium": 1.9618696291573143,
+      "force_constant": 101.21024107164031,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y1-M1",
+      "atoms": [
+        11,
+        45
+      ],
+      "atom_ids": [
+        "published-small-model:12",
+        "published-small-model:46"
+      ],
+      "equilibrium": 2.022940543796755,
+      "force_constant": 72.72879956865121,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y2-M1",
+      "atoms": [
+        26,
+        45
+      ],
+      "atom_ids": [
+        "published-small-model:27",
+        "published-small-model:46"
+      ],
+      "equilibrium": 2.061035239688183,
+      "force_constant": 57.64509047211422,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y3-M1",
+      "atoms": [
+        37,
+        45
+      ],
+      "atom_ids": [
+        "published-small-model:38",
+        "published-small-model:46"
+      ],
+      "equilibrium": 2.035425203498485,
+      "force_constant": 66.27505261246148,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "CR1-Y1",
+      "atoms": [
+        9,
+        11
+      ],
+      "atom_ids": [
+        "published-small-model:10",
+        "published-small-model:12"
+      ],
+      "equilibrium": 1.3270047645059406,
+      "force_constant": 453.19015074951335,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y1-CV1",
+      "atoms": [
+        11,
+        12
+      ],
+      "atom_ids": [
+        "published-small-model:12",
+        "published-small-model:13"
+      ],
+      "equilibrium": 1.3864760294846445,
+      "force_constant": 310.25515938463195,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "CR2-Y2",
+      "atoms": [
+        24,
+        26
+      ],
+      "atom_ids": [
+        "published-small-model:25",
+        "published-small-model:27"
+      ],
+      "equilibrium": 1.3245221966431802,
+      "force_constant": 456.73461189783063,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y2-CV2",
+      "atoms": [
+        26,
+        27
+      ],
+      "atom_ids": [
+        "published-small-model:27",
+        "published-small-model:28"
+      ],
+      "equilibrium": 1.3846127014049159,
+      "force_constant": 308.68321421748084,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "CC3-Y3",
+      "atoms": [
+        36,
+        37
+      ],
+      "atom_ids": [
+        "published-small-model:37",
+        "published-small-model:38"
+      ],
+      "equilibrium": 1.3940545492935739,
+      "force_constant": 274.82873020592564,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y3-CR3",
+      "atoms": [
+        37,
+        38
+      ],
+      "atom_ids": [
+        "published-small-model:38",
+        "published-small-model:39"
+      ],
+      "equilibrium": 1.3312127913033884,
+      "force_constant": 442.232736352739,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "Y4-hn4",
+      "atoms": [
+        62,
+        63
+      ],
+      "atom_ids": [
+        "published-small-model:63",
+        "published-small-model:64"
+      ],
+      "equilibrium": 1.0201179509436316,
+      "force_constant": 478.4390816820843,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    },
+    {
+      "name": "sy4-Y4",
+      "atoms": [
+        59,
+        62
+      ],
+      "atom_ids": [
+        "published-small-model:60",
+        "published-small-model:63"
+      ],
+      "equilibrium": 1.6277380972360613,
+      "force_constant": 281.9146944142109,
+      "equilibrium_unit": "angstrom",
+      "force_constant_unit": "kcal mol^-1 angstrom^-2"
+    }
+  ],
+  "angles": [
+    {
+      "name": "CC-Y3-M1",
+      "atoms": [
+        36,
+        37,
+        45
+      ],
+      "atom_ids": [
+        "published-small-model:37",
+        "published-small-model:38",
+        "published-small-model:46"
+      ],
+      "equilibrium": 131.47874701681238,
+      "force_constant": 53.872975327899404,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "CR-Y1-M1",
+      "atoms": [
+        9,
+        11,
+        45
+      ],
+      "atom_ids": [
+        "published-small-model:10",
+        "published-small-model:12",
+        "published-small-model:46"
+      ],
+      "equilibrium": 123.52558163673804,
+      "force_constant": 48.758471787988796,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "CR-Y2-M1",
+      "atoms": [
+        24,
+        26,
+        45
+      ],
+      "atom_ids": [
+        "published-small-model:25",
+        "published-small-model:27",
+        "published-small-model:46"
+      ],
+      "equilibrium": 126.21030334037327,
+      "force_constant": 49.4603091291439,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "M1-Y1-CV",
+      "atoms": [
+        45,
+        11,
+        12
+      ],
+      "atom_ids": [
+        "published-small-model:46",
+        "published-small-model:12",
+        "published-small-model:13"
+      ],
+      "equilibrium": 129.91299073739054,
+      "force_constant": 51.32812665888044,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "M1-Y2-CV",
+      "atoms": [
+        45,
+        26,
+        27
+      ],
+      "atom_ids": [
+        "published-small-model:46",
+        "published-small-model:27",
+        "published-small-model:28"
+      ],
+      "equilibrium": 126.99937319815575,
+      "force_constant": 49.776531052333375,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "M1-Y3-CR",
+      "atoms": [
+        45,
+        37,
+        38
+      ],
+      "atom_ids": [
+        "published-small-model:46",
+        "published-small-model:38",
+        "published-small-model:39"
+      ],
+      "equilibrium": 121.16730442981148,
+      "force_constant": 54.20989024527015,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "M1-Y4-hn",
+      "atoms": [
+        45,
+        62,
+        63
+      ],
+      "atom_ids": [
+        "published-small-model:46",
+        "published-small-model:63",
+        "published-small-model:64"
+      ],
+      "equilibrium": 119.67854608082928,
+      "force_constant": 44.075160511494545,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "M1-Y4-sy",
+      "atoms": [
+        45,
+        62,
+        59
+      ],
+      "atom_ids": [
+        "published-small-model:46",
+        "published-small-model:63",
+        "published-small-model:60"
+      ],
+      "equilibrium": 113.36901745028072,
+      "force_constant": 75.33798918568206,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "Y1-M1-Y2",
+      "atoms": [
+        11,
+        45,
+        26
+      ],
+      "atom_ids": [
+        "published-small-model:12",
+        "published-small-model:46",
+        "published-small-model:27"
+      ],
+      "equilibrium": 104.49702812910482,
+      "force_constant": 36.667357495590295,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "Y1-M1-Y3",
+      "atoms": [
+        11,
+        45,
+        37
+      ],
+      "atom_ids": [
+        "published-small-model:12",
+        "published-small-model:46",
+        "published-small-model:38"
+      ],
+      "equilibrium": 112.71207948260802,
+      "force_constant": 32.4189548200521,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "Y1-M1-Y4",
+      "atoms": [
+        11,
+        45,
+        62
+      ],
+      "atom_ids": [
+        "published-small-model:12",
+        "published-small-model:46",
+        "published-small-model:63"
+      ],
+      "equilibrium": 114.6896343800111,
+      "force_constant": 47.921960818928575,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "Y2-M1-Y3",
+      "atoms": [
+        26,
+        45,
+        37
+      ],
+      "atom_ids": [
+        "published-small-model:27",
+        "published-small-model:46",
+        "published-small-model:38"
+      ],
+      "equilibrium": 105.07773431642144,
+      "force_constant": 34.854558193539255,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "Y2-M1-Y4",
+      "atoms": [
+        26,
+        45,
+        62
+      ],
+      "atom_ids": [
+        "published-small-model:27",
+        "published-small-model:46",
+        "published-small-model:63"
+      ],
+      "equilibrium": 104.18832558990788,
+      "force_constant": 44.498034077128445,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    },
+    {
+      "name": "Y3-M1-Y4",
+      "atoms": [
+        37,
+        45,
+        62
+      ],
+      "atom_ids": [
+        "published-small-model:38",
+        "published-small-model:46",
+        "published-small-model:63"
+      ],
+      "equilibrium": 114.24609908274988,
+      "force_constant": 26.96056398520081,
+      "equilibrium_unit": "degree",
+      "force_constant_unit": "kcal mol^-1 rad^-2"
+    }
+  ],
+  "method": "native MCPB classic Seminario",
+  "frequency_scale": 1.0,
+  "force_constant_scale": 1.0,
+  "average_blocks": false,
+  "equilibrium_reference": "supplied QM coordinates",
+  "hessian_max_asymmetry": 0.0,
+  "native": {
+    "implementation": "native pymsmt.mcpb.gene_final_frcmod_file",
+    "source_file": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/lib/python3.14/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py",
+    "source_sha256": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7",
+    "B_TO_A": 0.529177249,
+    "H_TO_KCAL_MOL": 627.5095,
+    "HB2_TO_KCAL_MOL_A2": 2240.876780834858,
+    "numpy_version": "2.5.3",
+    "parameter_energy_convention": "Amber k*(x-x0)^2, not one-half*k*(x-x0)^2"
+  },
+  "scope": "parameter extraction only; chemistry/QM/model adequacy not established"
+}

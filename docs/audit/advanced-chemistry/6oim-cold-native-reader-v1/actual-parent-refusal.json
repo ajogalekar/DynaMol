@@ -1,0 +1,11 @@
+{
+  "scope": "Actual running parent refusal only; no QM/ESP/RESP launch, no output request",
+  "error_type": "ValueError",
+  "error": "Accepted terminal parent absent; no request emitted",
+  "downstream_calls": [],
+  "elapsed_seconds": 0.021687042026314884,
+  "source_sha256": "b94c08c2ccc9c92e81842c5a3eab5c5a4cbda079eda951e7b799c7ee727f4bff",
+  "accepted": false,
+  "physical_acceptance": false,
+  "simulation_ready": false
+}

@@ -1,0 +1,1221 @@
+{
+  "scope": "Read-only saved-coordinate/native-implementation audit; no new closure, sampling, refinement, MD, or acceptance.",
+  "source_sha256": {
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb": "d964e53473ee684f76b064fb94b45132c006e9bff68f843cb01e085eac68b78c",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/preparation-fixtures/six_residues_intact.pdb": "039779d649c37c7f01f56fceebcc5bab28ec0d21ca68df877f875d04d14af1a1",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/native-sampling/audit_kic_endpoints.py": "520c06012c8178ed2f9dafd02d9e50f69f64a9ad309087539842fbcac5cc7b61",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-native-sampling-v1/native/result.json": "bc289bf8f3f1abf8017e75505d26f2349a3fe6b3f575f12759c7c27210bcc582",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-coherent-native-sampling-v1/native/result.json": "ae3c6581f7ff9ec0b7d9e1a74bb1f3aa2f161a7f5454dc42e04a1531995cd460",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-fragment-pool-v1/native/result.json": "1b4e490363cd546238e4775ca7d598d0352c9b8423ac92a01e5e5ef3b48c5b25",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/kic-endpoint-audit-v1/source-release-3.6.0.cc": "6f5d88c5b8c52508d56c60f4db8c57980c13d129fe717680fc7cd3b465d7095a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/kic-endpoint-audit-v1/source-release-backbone-3.6.0.cc": "cd516c263fa9b674de62e7fa1949725a40cb31d09340ab2133ca2c1b6a58f937",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/promod3-dfd2a559551cd2f2/include/promod3/loop/backbone.hh": "18039c51463023a30917a410cbb90704e8571b90aa40edbfb48a209d3d16baf7",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/promod3-dfd2a559551cd2f2/include/promod3/modelling/kic.hh": "e3ab6d6f7ca3af049138fb8479a8ca1950c811f7e2fed81d5f7f48d38a18cc9d"
+  },
+  "coordinate_units": "angstrom",
+  "case_summaries": [
+    {
+      "run": "8k5r-native-sampling-v1",
+      "case": "intact-control",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/preparation-fixtures/six_residues_intact.pdb",
+      "start": 1,
+      "end": 6,
+      "solution_count": 12,
+      "max_n_endpoint_N_CA_C_A": 4.296765424282786e-06,
+      "max_c_endpoint_N_CA_C_A": 2.2942034618300247e-06,
+      "max_endpoint_O_A": 3.050622730165665e-06,
+      "max_observed_internal_A": 3.529425770656411,
+      "endpoint_identities": [
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "N"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "CA"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "C"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "O"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "N"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "CA"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "C"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-native-sampling-v1",
+      "case": "original-stems",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 176,
+      "end": 180,
+      "solution_count": 2,
+      "max_n_endpoint_N_CA_C_A": 2.50602093907327e-06,
+      "max_c_endpoint_N_CA_C_A": 1.799862136593364e-06,
+      "max_endpoint_O_A": 0.05117132892327347,
+      "max_observed_internal_A": 0.0,
+      "endpoint_identities": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "N"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "CA"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-native-sampling-v1",
+      "case": "two-observed-context-residues",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 175,
+      "end": 181,
+      "solution_count": 44,
+      "max_n_endpoint_N_CA_C_A": 6.5354526471612905e-06,
+      "max_c_endpoint_N_CA_C_A": 3.265320698322866e-06,
+      "max_endpoint_O_A": 0.08206807858583157,
+      "max_observed_internal_A": 4.643970587059619,
+      "endpoint_identities": [
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "O"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "N"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "CA"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "C"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-coherent-native-sampling-v1",
+      "case": "intact-control",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/preparation-fixtures/six_residues_intact.pdb",
+      "start": 1,
+      "end": 6,
+      "solution_count": 12,
+      "max_n_endpoint_N_CA_C_A": 4.296765424282786e-06,
+      "max_c_endpoint_N_CA_C_A": 2.2942034618300247e-06,
+      "max_endpoint_O_A": 3.050622730165665e-06,
+      "max_observed_internal_A": 3.529425770656411,
+      "endpoint_identities": [
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "N"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "CA"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "C"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "O"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "N"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "CA"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "C"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-coherent-native-sampling-v1",
+      "case": "original-stems",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 176,
+      "end": 180,
+      "solution_count": 0,
+      "max_n_endpoint_N_CA_C_A": 0.0,
+      "max_c_endpoint_N_CA_C_A": 0.0,
+      "max_endpoint_O_A": 0.0,
+      "max_observed_internal_A": 0.0,
+      "endpoint_identities": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "N"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "CA"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-coherent-native-sampling-v1",
+      "case": "two-observed-context-residues",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 175,
+      "end": 181,
+      "solution_count": 36,
+      "max_n_endpoint_N_CA_C_A": 6.159473443833752e-06,
+      "max_c_endpoint_N_CA_C_A": 0.00037842189948223147,
+      "max_endpoint_O_A": 0.08211359207898632,
+      "max_observed_internal_A": 4.3017183342230005,
+      "endpoint_identities": [
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "O"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "N"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "CA"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "C"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "intact-control",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/preparation-fixtures/six_residues_intact.pdb",
+      "start": 1,
+      "end": 6,
+      "solution_count": 12,
+      "max_n_endpoint_N_CA_C_A": 4.296765424282786e-06,
+      "max_c_endpoint_N_CA_C_A": 2.2942034618300247e-06,
+      "max_endpoint_O_A": 3.050622730165665e-06,
+      "max_observed_internal_A": 3.529425770656411,
+      "endpoint_identities": [
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "N"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "CA"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "C"
+        ],
+        [
+          "A",
+          "1",
+          "",
+          "MET",
+          "O"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "N"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "CA"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "C"
+        ],
+        [
+          "A",
+          "6",
+          "",
+          "LYS",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-00-58969c4a1a3d",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 175,
+      "end": 180,
+      "solution_count": 0,
+      "max_n_endpoint_N_CA_C_A": 0.0,
+      "max_c_endpoint_N_CA_C_A": 0.0,
+      "max_endpoint_O_A": 0.0,
+      "max_observed_internal_A": 0.0,
+      "endpoint_identities": [
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "O"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-01-2230dbbc83e0",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 175,
+      "end": 180,
+      "solution_count": 0,
+      "max_n_endpoint_N_CA_C_A": 0.0,
+      "max_c_endpoint_N_CA_C_A": 0.0,
+      "max_endpoint_O_A": 0.0,
+      "max_observed_internal_A": 0.0,
+      "endpoint_identities": [
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "O"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-02-86c1f7d573b9",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 176,
+      "end": 181,
+      "solution_count": 0,
+      "max_n_endpoint_N_CA_C_A": 0.0,
+      "max_c_endpoint_N_CA_C_A": 0.0,
+      "max_endpoint_O_A": 0.0,
+      "max_observed_internal_A": 0.0,
+      "endpoint_identities": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "N"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "CA"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "N"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "CA"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "C"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-03-900d083b545e",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 176,
+      "end": 181,
+      "solution_count": 0,
+      "max_n_endpoint_N_CA_C_A": 0.0,
+      "max_c_endpoint_N_CA_C_A": 0.0,
+      "max_endpoint_O_A": 0.0,
+      "max_observed_internal_A": 0.0,
+      "endpoint_identities": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "N"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "CA"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "N"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "CA"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "C"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-04-9336497832a3",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 174,
+      "end": 180,
+      "solution_count": 4,
+      "max_n_endpoint_N_CA_C_A": 0.009502139752427148,
+      "max_c_endpoint_N_CA_C_A": 0.04697020445119256,
+      "max_endpoint_O_A": 0.08928994475417487,
+      "max_observed_internal_A": 5.263538843388922,
+      "endpoint_identities": [
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "N"
+        ],
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "CA"
+        ],
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "C"
+        ],
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "O"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-05-3e719461494c",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 174,
+      "end": 180,
+      "solution_count": 2,
+      "max_n_endpoint_N_CA_C_A": 0.018806033882599087,
+      "max_c_endpoint_N_CA_C_A": 0.051223825517863975,
+      "max_endpoint_O_A": 0.10520176354911749,
+      "max_observed_internal_A": 4.1063784169172495,
+      "endpoint_identities": [
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "N"
+        ],
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "CA"
+        ],
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "C"
+        ],
+        [
+          "A",
+          "174",
+          "",
+          "PHE",
+          "O"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-06-2618ffce2178",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 175,
+      "end": 181,
+      "solution_count": 10,
+      "max_n_endpoint_N_CA_C_A": 0.030679028794023712,
+      "max_c_endpoint_N_CA_C_A": 0.03504116903337878,
+      "max_endpoint_O_A": 0.08907167329868128,
+      "max_observed_internal_A": 3.426387045720991,
+      "endpoint_identities": [
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "O"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "N"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "CA"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "C"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-07-6aedddba3075",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 175,
+      "end": 181,
+      "solution_count": 10,
+      "max_n_endpoint_N_CA_C_A": 0.05554188679614202,
+      "max_c_endpoint_N_CA_C_A": 0.02516630686821213,
+      "max_endpoint_O_A": 0.09994639053344732,
+      "max_observed_internal_A": 3.975290854853144,
+      "endpoint_identities": [
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "N"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "CA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "C"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "SER",
+          "O"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "N"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "CA"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "C"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-08-cd20ba78ca05",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 176,
+      "end": 182,
+      "solution_count": 10,
+      "max_n_endpoint_N_CA_C_A": 0.02544195956058116,
+      "max_c_endpoint_N_CA_C_A": 0.06740184239834195,
+      "max_endpoint_O_A": 0.16032796037574865,
+      "max_observed_internal_A": 6.322489353589837,
+      "endpoint_identities": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "N"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "CA"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "N"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "CA"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "C"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "O"
+        ]
+      ]
+    },
+    {
+      "run": "8k5r-fragment-pool-v1",
+      "case": "fragment-09-44903c883fc4",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "start": 176,
+      "end": 182,
+      "solution_count": 4,
+      "max_n_endpoint_N_CA_C_A": 0.02577378342008339,
+      "max_c_endpoint_N_CA_C_A": 0.022773595998167254,
+      "max_endpoint_O_A": 0.06327548890990506,
+      "max_observed_internal_A": 5.823332653254563,
+      "endpoint_identities": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "N"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "CA"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "N"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "CA"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "C"
+        ],
+        [
+          "A",
+          "182",
+          "",
+          "PRO",
+          "O"
+        ]
+      ]
+    }
+  ],
+  "solution_count_including_repeated_controls": 158,
+  "metrics": {
+    "maximum_saved_displacement_recalculation_error_A": 4.0020228784423114e-06,
+    "n_endpoint_fit_prediction_error_A": 5.128883500861166e-06,
+    "c_endpoint_fit_prediction_error_A": 4.252814311222568e-06,
+    "n_oxygen_prediction_error_A": 5.118894603638418e-06,
+    "c_oxygen_prediction_error_A": 1.5875423009673232e-06
+  },
+  "identity_checks_passed": true,
+  "physical_model_validated": false,
+  "app_ready": false,
+  "full_result_sha256": "81c4cbd38b84e25a41cf105d162cb45c98e7586de368c9337e477aa0a8150a3b",
+  "full_result_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/kic-endpoint-audit-v1/result.json"
+}

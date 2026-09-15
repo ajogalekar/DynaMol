@@ -1,0 +1,13 @@
+{
+  "repo": "nwchemgit/nwchem",
+  "source_url": "https://api.github.com/repos/nwchemgit/nwchem/license",
+  "html_url": "https://github.com/nwchemgit/nwchem/blob/master/LICENSE.TXT",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "sha256": "1d39a9817c57b17343d6706c88d8b4386f980e2049687c0c38efcd57dedc9aee"
+}

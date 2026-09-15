@@ -1,0 +1,1519 @@
+{
+  "schema": "dynamol.reddb-public-dmp-artifacts.v1",
+  "generated_utc": "2026-09-14T20:00:55.883851+00:00",
+  "scope": "source artifact recovery only; no assignment or model validation",
+  "public_database_lookups_used": 2,
+  "public_database_lookup_limit": 3,
+  "lookups": [
+    {
+      "lookup_number": 1,
+      "maximum_lookups": 3,
+      "request_url": "https://upjv.q4md-forcefieldtools.org/REDDB/download.php",
+      "method": "POST",
+      "fields": {
+        "choice": "bymolname",
+        "enter": "dimethyl phosphate",
+        "ok": "OK"
+      },
+      "utc": "2026-09-14T19:53:32.756179+00:00",
+      "TLS_verification_enabled": true,
+      "form_observed_at": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/red-db-download.html",
+      "resolved_url": "https://upjv.q4md-forcefieldtools.org/REDDB/download.php",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "success": true,
+      "sha256": "7ef2eafbfee0b136b7e0cc7e044f8755695d6027155fa5f82c86640ef3afef5a",
+      "bytes": 5774
+    },
+    {
+      "lookup_number": 2,
+      "maximum_lookups": 3,
+      "request_url": "https://upjv.q4md-forcefieldtools.org/REDDB/download.php",
+      "method": "POST",
+      "fields": {
+        "choice": "bymolname",
+        "enter": "dimethyl",
+        "ok": "OK"
+      },
+      "utc": "2026-09-14T19:53:59.784790+00:00",
+      "TLS_verification_enabled": true,
+      "purpose": "Broader molecule-name stem after exact phrase returned no project; no project identity guessed.",
+      "resolved_url": "https://upjv.q4md-forcefieldtools.org/REDDB/download.php",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "success": true,
+      "sha256": "7200ccbb54a9851b3ec432bda7c408f19685ee26e072cbebd4129650abc1e77d",
+      "bytes": 294876
+    }
+  ],
+  "projects": [
+    {
+      "project": "W-11",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-11/",
+      "retrievals": [
+        {
+          "project": "W-11",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-11/",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/summary.html",
+          "requested_utc": "2026-09-14T19:58:25.784651+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-11/",
+          "content_type": "text/html; charset=UTF-8",
+          "last_modified": null,
+          "bytes": 12431,
+          "sha256": "cf3513fd57a01dc3d3d17b2068bfa68e5cc475e02c5df6e8029b6f3446f51eec"
+        },
+        {
+          "project": "W-11",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-11/W-11.tar.bz2",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/W-11.tar.bz2",
+          "requested_utc": "2026-09-14T19:58:25.785035+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-11/W-11.tar.bz2",
+          "content_type": "application/x-bzip2",
+          "last_modified": "Mon, 22 Feb 2016 14:21:52 GMT",
+          "bytes": 5318,
+          "sha256": "b05fb6963e24c23c857fd0ee100e9d15abc4fb76c65ef1caa1697732e3c61875"
+        }
+      ],
+      "summary_text_cache": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/summary.txt",
+      "summary_text_sha256": "bb7ef3c309cc5bf8cf6b9b2ae3a8b8f1240922a9ac5a91b37263bb1d13f3550e",
+      "archive_members": [
+        {
+          "name": "W-11/tripos1.mol2",
+          "bytes": 1517,
+          "sha256": "ac5d52d0501c4999fca081a5e180d6a1f0ff9852412a70bc244e3ae4ea426987",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:33+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/tripos1.mol2"
+        },
+        {
+          "name": "W-11/mol1.pdb",
+          "bytes": 883,
+          "sha256": "ecff6e8682c88d5ee8937859d32665b65a02393a7351b00aa6a13ac07d5d9595",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/mol1.pdb"
+        },
+        {
+          "name": "W-11/input1.in",
+          "bytes": 725,
+          "sha256": "fcf4af46581a955425d540691c9c4558d3f582404902403740d7adfedba84b2a",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/input1.in"
+        },
+        {
+          "name": "W-11/input2.in",
+          "bytes": 724,
+          "sha256": "85a071377d1dc0702f1ef4c6aea4b501e6079fd39d33ac4bd486328c55ab35c2",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/input2.in"
+        },
+        {
+          "name": "W-11/script1.ff",
+          "bytes": 272,
+          "sha256": "39de5cb90b66ff4e32a0053417a02b4d22cb8decc2e26243f62381de9be5c539",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/script1.ff"
+        },
+        {
+          "name": "W-11/script2.ff",
+          "bytes": 275,
+          "sha256": "0a4af1c531a36043cba50fddb3a511810c95a9762bc457bb6d757e5e6bd8696b",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/script2.ff"
+        },
+        {
+          "name": "W-11/script3.ff",
+          "bytes": 272,
+          "sha256": "51700e288716cf52e2ee9622d3cb56d777c931e8617532a588f1eb219e11b62e",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/script3.ff"
+        },
+        {
+          "name": "W-11/script4.ff",
+          "bytes": 277,
+          "sha256": "fee70caea9a85b88468c40e614510bb9cbbbab916cb99a4cb549bef851171847",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/script4.ff"
+        },
+        {
+          "name": "W-11/script5.ff",
+          "bytes": 277,
+          "sha256": "f34a7a57b8f40949bcdd4e8a8e2f108d3eb3ac970c0a279439b165f71752fe04",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/script5.ff"
+        },
+        {
+          "name": "W-11/index.php",
+          "bytes": 12930,
+          "sha256": "18c74f6212d9a2359c3d6f0b9a13bc8b4593a1ac7c78a1d1508c7e7e1924da30",
+          "regular_file": true,
+          "archive_mtime_utc": "2016-02-22T14:15:49+00:00"
+        }
+      ],
+      "mol2": {
+        "atoms": [
+          {
+            "id": 1,
+            "name": "H11",
+            "coordinates_A": [
+              -2.490573,
+              -1.861208,
+              -0.735244
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0298
+          },
+          {
+            "id": 2,
+            "name": "C1",
+            "coordinates_A": [
+              -1.953081,
+              -1.209735,
+              -0.051312
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0697
+          },
+          {
+            "id": 3,
+            "name": "H12",
+            "coordinates_A": [
+              -2.64916,
+              -0.517022,
+              0.405315
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0298
+          },
+          {
+            "id": 4,
+            "name": "H13",
+            "coordinates_A": [
+              -1.514728,
+              -1.820834,
+              0.7336
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0298
+          },
+          {
+            "id": 5,
+            "name": "O2",
+            "coordinates_A": [
+              -0.975739,
+              -0.539288,
+              -0.783614
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4744
+          },
+          {
+            "id": 6,
+            "name": "P3",
+            "coordinates_A": [
+              0.0,
+              0.523795,
+              -0.0
+            ],
+            "type": "P",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 1.2205
+          },
+          {
+            "id": 7,
+            "name": "O4",
+            "coordinates_A": [
+              -0.786684,
+              1.204302,
+              1.039166
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7956
+          },
+          {
+            "id": 8,
+            "name": "O5",
+            "coordinates_A": [
+              0.786687,
+              1.204302,
+              -1.039164
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7956
+          },
+          {
+            "id": 9,
+            "name": "O6",
+            "coordinates_A": [
+              0.975736,
+              -0.539292,
+              0.783613
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4769
+          },
+          {
+            "id": 10,
+            "name": "C7",
+            "coordinates_A": [
+              1.95308,
+              -1.209737,
+              0.051311
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0849
+          },
+          {
+            "id": 11,
+            "name": "H71",
+            "coordinates_A": [
+              1.514727,
+              -1.820824,
+              -0.73361
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 12,
+            "name": "H72",
+            "coordinates_A": [
+              2.649166,
+              -0.517025,
+              -0.405306
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 13,
+            "name": "H73",
+            "coordinates_A": [
+              2.490567,
+              -1.861216,
+              0.735241
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          }
+        ],
+        "bonds": [
+          {
+            "id": 1,
+            "a": 1,
+            "b": 2,
+            "type": "1"
+          },
+          {
+            "id": 2,
+            "a": 2,
+            "b": 3,
+            "type": "1"
+          },
+          {
+            "id": 3,
+            "a": 2,
+            "b": 4,
+            "type": "1"
+          },
+          {
+            "id": 4,
+            "a": 2,
+            "b": 5,
+            "type": "1"
+          },
+          {
+            "id": 5,
+            "a": 5,
+            "b": 6,
+            "type": "1"
+          },
+          {
+            "id": 6,
+            "a": 6,
+            "b": 7,
+            "type": "1"
+          },
+          {
+            "id": 7,
+            "a": 6,
+            "b": 8,
+            "type": "1"
+          },
+          {
+            "id": 8,
+            "a": 6,
+            "b": 9,
+            "type": "1"
+          },
+          {
+            "id": 9,
+            "a": 9,
+            "b": 10,
+            "type": "1"
+          },
+          {
+            "id": 10,
+            "a": 10,
+            "b": 11,
+            "type": "1"
+          },
+          {
+            "id": 11,
+            "a": 10,
+            "b": 12,
+            "type": "1"
+          },
+          {
+            "id": 12,
+            "a": 10,
+            "b": 13,
+            "type": "1"
+          }
+        ],
+        "atom_count": 13,
+        "bond_count": 12,
+        "total_charge_e": -1.0
+      }
+    },
+    {
+      "project": "W-12",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-12/",
+      "retrievals": [
+        {
+          "project": "W-12",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-12/",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/summary.html",
+          "requested_utc": "2026-09-14T19:58:26.609762+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-12/",
+          "content_type": "text/html; charset=UTF-8",
+          "last_modified": null,
+          "bytes": 12431,
+          "sha256": "ba7bb23a636f62e24ac3b083dd0257d245989e21a4cf5ae958d9f49380082403"
+        },
+        {
+          "project": "W-12",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-12/W-12.tar.bz2",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/W-12.tar.bz2",
+          "requested_utc": "2026-09-14T19:58:26.769187+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-12/W-12.tar.bz2",
+          "content_type": "application/x-bzip2",
+          "last_modified": "Mon, 22 Feb 2016 14:21:52 GMT",
+          "bytes": 5321,
+          "sha256": "187981719d19253b1eba263aebe05ab0a5e014f0e40714194d94e2491dfd24bf"
+        }
+      ],
+      "summary_text_cache": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/summary.txt",
+      "summary_text_sha256": "61b926cf85c3f336378471e849dc162e085dd3fba2b2cb641a43574087faa878",
+      "archive_members": [
+        {
+          "name": "W-12/tripos1.mol2",
+          "bytes": 1517,
+          "sha256": "fe075ef4f3278b76ca391d9614d09f035252447a16412abb9147a672b1956148",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/tripos1.mol2"
+        },
+        {
+          "name": "W-12/mol1.pdb",
+          "bytes": 883,
+          "sha256": "d39cb7ac52c0561c77b946d8d9367e3fd7db0e46866bb86b6c5ef6c8bdff2dcc",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/mol1.pdb"
+        },
+        {
+          "name": "W-12/input1.in",
+          "bytes": 725,
+          "sha256": "fcf4af46581a955425d540691c9c4558d3f582404902403740d7adfedba84b2a",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/input1.in"
+        },
+        {
+          "name": "W-12/input2.in",
+          "bytes": 724,
+          "sha256": "85a071377d1dc0702f1ef4c6aea4b501e6079fd39d33ac4bd486328c55ab35c2",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/input2.in"
+        },
+        {
+          "name": "W-12/script1.ff",
+          "bytes": 272,
+          "sha256": "6be4b7ec868f7407492f91f5426dfd35044aee79dfded45847d2e12212c4b7e9",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/script1.ff"
+        },
+        {
+          "name": "W-12/script2.ff",
+          "bytes": 275,
+          "sha256": "b57003af81e4bd4caa3a77935a633808cc9e5d290f02965a6e642018740dd540",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/script2.ff"
+        },
+        {
+          "name": "W-12/script3.ff",
+          "bytes": 272,
+          "sha256": "10a790a536a2bc9a11b60c296db8a03ebbf1dd7431a6b20598ed37b141dd5121",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/script3.ff"
+        },
+        {
+          "name": "W-12/script4.ff",
+          "bytes": 277,
+          "sha256": "d3650b0362446c1055b523af62c4e7ef6ef1ca30bf9461ab7c80333f612df29a",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/script4.ff"
+        },
+        {
+          "name": "W-12/script5.ff",
+          "bytes": 277,
+          "sha256": "97e07d5aa2696d757a5986b7c9efff79b0b5bb6db575a0c9d202f55ed4b3fbae",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:16:10+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/script5.ff"
+        },
+        {
+          "name": "W-12/index.php",
+          "bytes": 12931,
+          "sha256": "b3fca912442015820062e2a77bb0feb89c1fcfcb936baf25df9da103010406c4",
+          "regular_file": true,
+          "archive_mtime_utc": "2016-02-22T14:15:49+00:00"
+        }
+      ],
+      "mol2": {
+        "atoms": [
+          {
+            "id": 1,
+            "name": "H11",
+            "coordinates_A": [
+              2.490612,
+              -1.861157,
+              0.735266
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 2,
+            "name": "C1",
+            "coordinates_A": [
+              1.953054,
+              -1.209762,
+              0.051312
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0849
+          },
+          {
+            "id": 3,
+            "name": "H12",
+            "coordinates_A": [
+              2.64908,
+              -0.517073,
+              -0.40543
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 4,
+            "name": "H13",
+            "coordinates_A": [
+              1.514661,
+              -1.820947,
+              -0.733512
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 5,
+            "name": "O2",
+            "coordinates_A": [
+              0.975742,
+              -0.539276,
+              0.783618
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4769
+          },
+          {
+            "id": 6,
+            "name": "P3",
+            "coordinates_A": [
+              0.0,
+              0.523802,
+              -1e-06
+            ],
+            "type": "P",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 1.2205
+          },
+          {
+            "id": 7,
+            "name": "O4",
+            "coordinates_A": [
+              0.786688,
+              1.204309,
+              -1.039165
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7956
+          },
+          {
+            "id": 8,
+            "name": "O5",
+            "coordinates_A": [
+              -0.78669,
+              1.204312,
+              1.03916
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7956
+          },
+          {
+            "id": 9,
+            "name": "O6",
+            "coordinates_A": [
+              -0.975735,
+              -0.539286,
+              -0.783614
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4744
+          },
+          {
+            "id": 10,
+            "name": "C7",
+            "coordinates_A": [
+              -1.953059,
+              -1.209758,
+              -0.051311
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0697
+          },
+          {
+            "id": 11,
+            "name": "H71",
+            "coordinates_A": [
+              -1.514679,
+              -1.820898,
+              0.733554
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0298
+          },
+          {
+            "id": 12,
+            "name": "H72",
+            "coordinates_A": [
+              -2.649111,
+              -0.517063,
+              0.405384
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0298
+          },
+          {
+            "id": 13,
+            "name": "H73",
+            "coordinates_A": [
+              -2.490587,
+              -1.86119,
+              -0.735254
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0298
+          }
+        ],
+        "bonds": [
+          {
+            "id": 1,
+            "a": 1,
+            "b": 2,
+            "type": "1"
+          },
+          {
+            "id": 2,
+            "a": 2,
+            "b": 3,
+            "type": "1"
+          },
+          {
+            "id": 3,
+            "a": 2,
+            "b": 4,
+            "type": "1"
+          },
+          {
+            "id": 4,
+            "a": 2,
+            "b": 5,
+            "type": "1"
+          },
+          {
+            "id": 5,
+            "a": 5,
+            "b": 6,
+            "type": "1"
+          },
+          {
+            "id": 6,
+            "a": 6,
+            "b": 7,
+            "type": "1"
+          },
+          {
+            "id": 7,
+            "a": 6,
+            "b": 8,
+            "type": "1"
+          },
+          {
+            "id": 8,
+            "a": 6,
+            "b": 9,
+            "type": "1"
+          },
+          {
+            "id": 9,
+            "a": 9,
+            "b": 10,
+            "type": "1"
+          },
+          {
+            "id": 10,
+            "a": 10,
+            "b": 11,
+            "type": "1"
+          },
+          {
+            "id": 11,
+            "a": 10,
+            "b": 12,
+            "type": "1"
+          },
+          {
+            "id": 12,
+            "a": 10,
+            "b": 13,
+            "type": "1"
+          }
+        ],
+        "atom_count": 13,
+        "bond_count": 12,
+        "total_charge_e": -1.0
+      }
+    },
+    {
+      "project": "W-13",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-13/",
+      "retrievals": [
+        {
+          "project": "W-13",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-13/",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/summary.html",
+          "requested_utc": "2026-09-14T19:58:27.301326+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-13/",
+          "content_type": "text/html; charset=UTF-8",
+          "last_modified": null,
+          "bytes": 12390,
+          "sha256": "468f18ff55a94f4fc4f1935b4e1569c7927c2f4d514654c3174bfc9602844117"
+        },
+        {
+          "project": "W-13",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-13/W-13.tar.bz2",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/W-13.tar.bz2",
+          "requested_utc": "2026-09-14T19:58:27.301645+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-13/W-13.tar.bz2",
+          "content_type": "application/x-bzip2",
+          "last_modified": "Mon, 22 Feb 2016 14:21:52 GMT",
+          "bytes": 5188,
+          "sha256": "dcdb95f8e402b3d179df8c69e280ab12a4595e17df3f1c3a048defe08971f937"
+        }
+      ],
+      "summary_text_cache": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/summary.txt",
+      "summary_text_sha256": "d1225af6b47bedbde23229ab3979861b4b6160e01da53053c24b0d98e32cc48b",
+      "archive_members": [
+        {
+          "name": "W-13/tripos1.mol2",
+          "bytes": 1517,
+          "sha256": "c2f07b5f92449af53128817b35cdbf6480dc51765d088077bce07833f11accaa",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/tripos1.mol2"
+        },
+        {
+          "name": "W-13/mol1.pdb",
+          "bytes": 745,
+          "sha256": "ad1d547c722fd6dc4932582afbeb16567ab5c44bb25b2b5048707427e0d5b97d",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:31+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/mol1.pdb"
+        },
+        {
+          "name": "W-13/input1.in",
+          "bytes": 725,
+          "sha256": "fcf4af46581a955425d540691c9c4558d3f582404902403740d7adfedba84b2a",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:32+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/input1.in"
+        },
+        {
+          "name": "W-13/input2.in",
+          "bytes": 724,
+          "sha256": "85a071377d1dc0702f1ef4c6aea4b501e6079fd39d33ac4bd486328c55ab35c2",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:31+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/input2.in"
+        },
+        {
+          "name": "W-13/script2.ff",
+          "bytes": 275,
+          "sha256": "b2037c3caf0c0b480fb93c1a9ced5a822747f295983e65bdfe56330103114d2d",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:31+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/script2.ff"
+        },
+        {
+          "name": "W-13/script3.ff",
+          "bytes": 272,
+          "sha256": "d054f2ec38ca7dc75cddd52d49a68499d89c911e9dcedf4f4b93c114ec250225",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:31+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/script3.ff"
+        },
+        {
+          "name": "W-13/script4.ff",
+          "bytes": 277,
+          "sha256": "e29c5c7e4a5401bb5545e11c20cef8d80b8cd6210f8a4f5241561aa1559d0b9c",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:31+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/script4.ff"
+        },
+        {
+          "name": "W-13/script5.ff",
+          "bytes": 277,
+          "sha256": "9dc1ae5db076209df18e5be719cdb27581a15b1945e521b0c8fcc90b579c582b",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:31+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/script5.ff"
+        },
+        {
+          "name": "W-13/index.php",
+          "bytes": 12889,
+          "sha256": "7dbfb6b89c2f7851e0c92d371520d5d616541c0f95f3b9819213f38bd57d9a4b",
+          "regular_file": true,
+          "archive_mtime_utc": "2016-02-22T14:15:49+00:00"
+        }
+      ],
+      "mol2": {
+        "atoms": [
+          {
+            "id": 1,
+            "name": "H11",
+            "coordinates_A": [
+              -2.486956,
+              1.793262,
+              0.747319
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.03
+          },
+          {
+            "id": 2,
+            "name": "C1",
+            "coordinates_A": [
+              -1.952801,
+              1.141773,
+              0.060792
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0691
+          },
+          {
+            "id": 3,
+            "name": "H12",
+            "coordinates_A": [
+              -2.651099,
+              0.449061,
+              -0.392436
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.03
+          },
+          {
+            "id": 4,
+            "name": "H13",
+            "coordinates_A": [
+              -1.518264,
+              1.752855,
+              -0.726251
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.03
+          },
+          {
+            "id": 5,
+            "name": "O2",
+            "coordinates_A": [
+              -0.971915,
+              0.471328,
+              0.788342
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4746
+          },
+          {
+            "id": 6,
+            "name": "P3",
+            "coordinates_A": [
+              0.0,
+              -0.591763,
+              6e-06
+            ],
+            "type": "P",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 1.2199
+          },
+          {
+            "id": 7,
+            "name": "O4",
+            "coordinates_A": [
+              -0.791733,
+              -1.27228,
+              -1.035312
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7952
+          },
+          {
+            "id": 8,
+            "name": "O5",
+            "coordinates_A": [
+              0.791733,
+              -1.272258,
+              1.035338
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7952
+          },
+          {
+            "id": 9,
+            "name": "O6",
+            "coordinates_A": [
+              0.971915,
+              0.471312,
+              -0.788352
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4774
+          },
+          {
+            "id": 10,
+            "name": "C7",
+            "coordinates_A": [
+              1.952801,
+              1.141772,
+              -0.060816
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0852
+          },
+          {
+            "id": 11,
+            "name": "H71",
+            "coordinates_A": [
+              1.518264,
+              1.75287,
+              0.726215
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 12,
+            "name": "H72",
+            "coordinates_A": [
+              2.651099,
+              0.449069,
+              0.392427
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 13,
+            "name": "H73",
+            "coordinates_A": [
+              2.486956,
+              1.793246,
+              -0.747356
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          }
+        ],
+        "bonds": [
+          {
+            "id": 1,
+            "a": 1,
+            "b": 2,
+            "type": "1"
+          },
+          {
+            "id": 2,
+            "a": 2,
+            "b": 3,
+            "type": "1"
+          },
+          {
+            "id": 3,
+            "a": 2,
+            "b": 4,
+            "type": "1"
+          },
+          {
+            "id": 4,
+            "a": 2,
+            "b": 5,
+            "type": "1"
+          },
+          {
+            "id": 5,
+            "a": 5,
+            "b": 6,
+            "type": "1"
+          },
+          {
+            "id": 6,
+            "a": 6,
+            "b": 7,
+            "type": "1"
+          },
+          {
+            "id": 7,
+            "a": 6,
+            "b": 8,
+            "type": "1"
+          },
+          {
+            "id": 8,
+            "a": 6,
+            "b": 9,
+            "type": "1"
+          },
+          {
+            "id": 9,
+            "a": 9,
+            "b": 10,
+            "type": "1"
+          },
+          {
+            "id": 10,
+            "a": 10,
+            "b": 11,
+            "type": "1"
+          },
+          {
+            "id": 11,
+            "a": 10,
+            "b": 12,
+            "type": "1"
+          },
+          {
+            "id": 12,
+            "a": 10,
+            "b": 13,
+            "type": "1"
+          }
+        ],
+        "atom_count": 13,
+        "bond_count": 12,
+        "total_charge_e": -1.0002
+      }
+    },
+    {
+      "project": "W-14",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-14/",
+      "retrievals": [
+        {
+          "project": "W-14",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-14/",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/summary.html",
+          "requested_utc": "2026-09-14T19:58:27.983211+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-14/",
+          "content_type": "text/html; charset=UTF-8",
+          "last_modified": null,
+          "bytes": 12440,
+          "sha256": "8e7124bd04673476832e071dd707becc0d7047139858bff1e4fdaebd1e13f718"
+        },
+        {
+          "project": "W-14",
+          "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-14/W-14.tar.bz2",
+          "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/W-14.tar.bz2",
+          "requested_utc": "2026-09-14T19:58:28.175644+00:00",
+          "tls_verification": "default verified urllib context",
+          "request_method": "GET",
+          "source_link": "lookup-2.html",
+          "status": 200,
+          "final_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-14/W-14.tar.bz2",
+          "content_type": "application/x-bzip2",
+          "last_modified": "Mon, 22 Feb 2016 14:21:52 GMT",
+          "bytes": 5253,
+          "sha256": "3f259ece2fbf08ebbce187f80229ebae04d0b7d4ccf3fc46d4013a75e5cdb58d"
+        }
+      ],
+      "summary_text_cache": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/summary.txt",
+      "summary_text_sha256": "0e07000f00eb448d608a264a1c90654e06cb4165153ad04b8c71644022ef4904",
+      "archive_members": [
+        {
+          "name": "W-14/tripos1.mol2",
+          "bytes": 1517,
+          "sha256": "90f45ffbd569290339b28686e0530d1f2dbd8701785d3a6e480f3190bc940bdf",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/tripos1.mol2"
+        },
+        {
+          "name": "W-14/mol1.pdb",
+          "bytes": 745,
+          "sha256": "860892b04c9e88d2963cebf1b5f1927f812806d6a2b8d1913ca23da9880da059",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/mol1.pdb"
+        },
+        {
+          "name": "W-14/input1.in",
+          "bytes": 725,
+          "sha256": "fcf4af46581a955425d540691c9c4558d3f582404902403740d7adfedba84b2a",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/input1.in"
+        },
+        {
+          "name": "W-14/input2.in",
+          "bytes": 724,
+          "sha256": "85a071377d1dc0702f1ef4c6aea4b501e6079fd39d33ac4bd486328c55ab35c2",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/input2.in"
+        },
+        {
+          "name": "W-14/script1.ff",
+          "bytes": 272,
+          "sha256": "c08c1001c0b1c41772beddae98e359c7d4aea2065e47e75d8c7d62cefc2881c3",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/script1.ff"
+        },
+        {
+          "name": "W-14/script2.ff",
+          "bytes": 275,
+          "sha256": "811ca4b95fc05b5af027d4ff2b8e8b3007ece8948ba2dfabcc6b30f8be3a7476",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/script2.ff"
+        },
+        {
+          "name": "W-14/script3.ff",
+          "bytes": 272,
+          "sha256": "2d5e74845cdc902b8af4068b6144fe90472521f33bf93975a7533da90b3bbdb9",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/script3.ff"
+        },
+        {
+          "name": "W-14/script4.ff",
+          "bytes": 277,
+          "sha256": "6b62761c08e18b4940817058206952b69ad6c08e6ce6a91413a4b4c1985430d2",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/script4.ff"
+        },
+        {
+          "name": "W-14/script5.ff",
+          "bytes": 277,
+          "sha256": "402384126dfa27fa993990307608e2df816623f752e58ec8453ef6eb5443bee2",
+          "regular_file": true,
+          "archive_mtime_utc": "2013-01-30T15:15:43+00:00",
+          "inspected_copy": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/script5.ff"
+        },
+        {
+          "name": "W-14/index.php",
+          "bytes": 12945,
+          "sha256": "2f9af5a74d4f5dcadbfcc8e6d8e9dd0116ce55b5fa67323e14713b1c11b8df28",
+          "regular_file": true,
+          "archive_mtime_utc": "2016-02-22T14:15:49+00:00"
+        }
+      ],
+      "mol2": {
+        "atoms": [
+          {
+            "id": 1,
+            "name": "H11",
+            "coordinates_A": [
+              2.486957,
+              1.793248,
+              -0.747347
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 2,
+            "name": "C1",
+            "coordinates_A": [
+              1.952801,
+              1.141772,
+              -0.06081
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0852
+          },
+          {
+            "id": 3,
+            "name": "H12",
+            "coordinates_A": [
+              2.651098,
+              0.449068,
+              0.392432
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 4,
+            "name": "H13",
+            "coordinates_A": [
+              1.518263,
+              1.752868,
+              0.726222
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.026
+          },
+          {
+            "id": 5,
+            "name": "O2",
+            "coordinates_A": [
+              0.971917,
+              0.471314,
+              -0.788349
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4774
+          },
+          {
+            "id": 6,
+            "name": "P3",
+            "coordinates_A": [
+              0.0,
+              -0.591763,
+              5e-06
+            ],
+            "type": "P",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 1.2199
+          },
+          {
+            "id": 7,
+            "name": "O4",
+            "coordinates_A": [
+              0.791731,
+              -1.272261,
+              1.035336
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7952
+          },
+          {
+            "id": 8,
+            "name": "O5",
+            "coordinates_A": [
+              -0.791731,
+              -1.272277,
+              -1.035316
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.7952
+          },
+          {
+            "id": 9,
+            "name": "O6",
+            "coordinates_A": [
+              -0.971917,
+              0.471326,
+              0.788342
+            ],
+            "type": "O",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": -0.4746
+          },
+          {
+            "id": 10,
+            "name": "C7",
+            "coordinates_A": [
+              -1.952801,
+              1.141773,
+              0.060792
+            ],
+            "type": "C",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.0691
+          },
+          {
+            "id": 11,
+            "name": "H71",
+            "coordinates_A": [
+              -1.518263,
+              1.752857,
+              -0.726249
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.03
+          },
+          {
+            "id": 12,
+            "name": "H72",
+            "coordinates_A": [
+              -2.651098,
+              0.449062,
+              -0.392439
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.03
+          },
+          {
+            "id": 13,
+            "name": "H73",
+            "coordinates_A": [
+              -2.486957,
+              1.79326,
+              0.747319
+            ],
+            "type": "H",
+            "residue_id": 1,
+            "residue_name": "DMP",
+            "charge_e": 0.03
+          }
+        ],
+        "bonds": [
+          {
+            "id": 1,
+            "a": 1,
+            "b": 2,
+            "type": "1"
+          },
+          {
+            "id": 2,
+            "a": 2,
+            "b": 3,
+            "type": "1"
+          },
+          {
+            "id": 3,
+            "a": 2,
+            "b": 4,
+            "type": "1"
+          },
+          {
+            "id": 4,
+            "a": 2,
+            "b": 5,
+            "type": "1"
+          },
+          {
+            "id": 5,
+            "a": 5,
+            "b": 6,
+            "type": "1"
+          },
+          {
+            "id": 6,
+            "a": 6,
+            "b": 7,
+            "type": "1"
+          },
+          {
+            "id": 7,
+            "a": 6,
+            "b": 8,
+            "type": "1"
+          },
+          {
+            "id": 8,
+            "a": 6,
+            "b": 9,
+            "type": "1"
+          },
+          {
+            "id": 9,
+            "a": 9,
+            "b": 10,
+            "type": "1"
+          },
+          {
+            "id": 10,
+            "a": 10,
+            "b": 11,
+            "type": "1"
+          },
+          {
+            "id": 11,
+            "a": 10,
+            "b": 12,
+            "type": "1"
+          },
+          {
+            "id": 12,
+            "a": 10,
+            "b": 13,
+            "type": "1"
+          }
+        ],
+        "atom_count": 13,
+        "bond_count": 12,
+        "total_charge_e": -1.0002
+      }
+    }
+  ]
+}

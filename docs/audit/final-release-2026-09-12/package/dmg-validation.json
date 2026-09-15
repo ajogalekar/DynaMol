@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-09-13T05:10:11.677199+00:00",
+  "build_id": "589ff2dddea916f5",
+  "input_app": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app",
+  "input_manifest_sha256": "f4c09de3ee4ee78db44180348aab66a6aa0d0d50a2c6101dbc31e092168da51a",
+  "script_sha256": "0585a1c8e2983da307fa46bc3ca052b5e3129a9c91350e8eee62cecc4df96476",
+  "app_inventory": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/app-inventory.json",
+  "app_inventory_sha256": "cb45065e763ece9c7daca3e71a01f4cba22bbf29caa3610097a6ec98e6b52eaf",
+  "app_entries_checked": 20178,
+  "app_tree_sha256": "ef31a1ccfc87c59527c4d17fd1738080e2277c5cf9f2e10241b8bbf989f4169d",
+  "volume_name": "Drag DynaMol to Applications",
+  "finder_layout": {
+    "method": "direct DS_Store metadata, no Finder automation",
+    "ds_store": "1.3.3",
+    "mac_alias": "2.2.3",
+    "window": {
+      "WindowBounds": "{{360, 180}, {680, 380}}",
+      "ShowToolbar": false,
+      "ShowStatusBar": false,
+      "ShowSidebar": false,
+      "ShowPathbar": false,
+      "ShowTabView": false,
+      "ContainerShowSidebar": false,
+      "SidebarWidth": 0
+    },
+    "icons": {
+      "viewOptionsVersion": 1,
+      "arrangeBy": "none",
+      "iconSize": 104.0,
+      "textSize": 14.0,
+      "gridSpacing": 100.0,
+      "gridOffsetX": 0.0,
+      "gridOffsetY": 0.0,
+      "labelOnBottom": true,
+      "showIconPreview": true,
+      "showItemInfo": false,
+      "backgroundType": 0,
+      "scrollPositionX": 0.0,
+      "scrollPositionY": 0.0
+    },
+    "positions": {
+      "DynaMol.app": [
+        175,
+        170
+      ],
+      "Applications": [
+        495,
+        170
+      ]
+    },
+    "metadata_sha256": "411280e22ef61cd62b4e3e6c31b8c79f79647db3a71ea135304daf27bb183c06"
+  },
+  "unsigned": true,
+  "filesystem": "APFS",
+  "checks": {
+    "input_app_signature_integrity": true,
+    "compressed_udzo": true,
+    "hdiutil_verify": true,
+    "mounted_read_only": true,
+    "write_rejected_erofs": true,
+    "applications_shortcut": true,
+    "exactly_two_visible_items": true,
+    "mounted_app_matches": true,
+    "isolated_drag_copy_matches": true,
+    "copied_launcher_executable": true,
+    "staged_app_signature_integrity": true,
+    "mounted_app_signature_integrity": true,
+    "installed_app_signature_integrity": true,
+    "input_app_unchanged": true,
+    "validation_mount_detached": true
+  },
+  "passed": true,
+  "dmg": "/Users/ashujo/Documents/Science/DynaMol/build/releases/final-audit-2026-09-12/DynaMol-0.1.1-macos-arm64-candidate.dmg",
+  "dmg_sha256": "29adffe128d249f7040abcf05c65a6206a70da2d59c9375393b6c0d63b196e7a",
+  "dmg_bytes": 1692901364,
+  "isolated_installed_app": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app",
+  "elapsed_seconds": 98.27,
+  "limitations": [
+    "Container and copy validation only; the script does not launch the app or run simulations.",
+    "No Developer ID signing, notarization, Gatekeeper bypass or /Applications mutation.",
+    "Finder layout is prepared only when not explicitly disabled."
+  ]
+}

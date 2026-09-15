@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 517, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 426, in calculate
+    raise RuntimeError('SCF did not converge to a finite energy within the cycle limit')
+RuntimeError: SCF did not converge to a finite energy within the cycle limit

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 386, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 279, in calculate
+    raise RuntimeError('Geometry optimization did not converge within the step limit')
+RuntimeError: Geometry optimization did not converge within the step limit

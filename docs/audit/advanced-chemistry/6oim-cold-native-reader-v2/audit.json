@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "standalone_candidate_pending_independent_review",
+  "source_sha256": "955fe3cdba694142464c738c014ee9f5b66f29303908e449127df373e54e5325",
+  "test_sha256": "5b0bd7fae0f0cf0abbf34fd8b1aa5bd2607b2e13e7f8af02c8d419be8cdf7793",
+  "core_sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187",
+  "materializer_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+  "test_count": 25,
+  "test_seconds": 0.513,
+  "test_exit_code": 0,
+  "actual_parent_refused_before_downstream": true,
+  "native_QM_ESP_RESP_launched": false,
+  "physical_acceptance": false,
+  "simulation_ready": false,
+  "RESP_execution_admitted": false,
+  "next_step": "Reviewed stable-cache RESP executor and bound terminal stage receipts; then native charge handoff.",
+  "previous_unadmitted_source_sha256": "b94c08c2ccc9c92e81842c5a3eab5c5a4cbda079eda951e7b799c7ee727f4bff",
+  "delta": "Exact native worker memory_limit_kind field plus producer-AST regression test"
+}

@@ -123,7 +123,7 @@ export default function App() {
       hydrogens: 'none',
     }),
     [representation, setRepresentation] = useState<Representation>('cartoon'),
-    [colorScheme, setColorScheme] = useState<'chain' | 'residue' | 'element'>('residue');
+    [colorScheme, setColorScheme] = useState<'chain' | 'residue' | 'element'>('element');
   const [measurements, setMeasurements] = useState<Measurement[]>([]),
     [activeMeasurement, setActiveMeasurement] = useState<string | null>(null),
     [kind, setKind] = useState<MeasureKind>('distance'),
@@ -302,6 +302,7 @@ export default function App() {
           hydrogens: options.showHydrogens ? 'polar' : 'none',
         });
         setRepresentation('cartoon');
+        setColorScheme('element');
         if (options.workspace) {
           const restored = options.workspace;
           setFrame(restored.frame);
@@ -956,7 +957,7 @@ export default function App() {
       ...(!sameSource
         ? {
             representation: 'cartoon' as const,
-            color_scheme: 'residue' as const,
+            color_scheme: 'element' as const,
             visibility: {
               protein: true,
               water: !!d.solvation,
@@ -1203,7 +1204,7 @@ export default function App() {
           >
             <CircleHelp size={18} />
           </button>
-          <span className="version">v0.1</span>
+          <span className="version">v1.0</span>
         </div>
       </header>
       <div className="workspace-bar">

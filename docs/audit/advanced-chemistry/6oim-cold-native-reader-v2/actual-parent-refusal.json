@@ -1,0 +1,11 @@
+{
+  "scope": "Actual running parent refusal only; no QM/ESP/RESP launch, no output request",
+  "error_type": "ValueError",
+  "error": "Parent is running, failed or nonterminal",
+  "downstream_calls": [],
+  "elapsed_seconds": 0.01783774996874854,
+  "source_sha256": "955fe3cdba694142464c738c014ee9f5b66f29303908e449127df373e54e5325",
+  "accepted": false,
+  "physical_acceptance": false,
+  "simulation_ready": false
+}

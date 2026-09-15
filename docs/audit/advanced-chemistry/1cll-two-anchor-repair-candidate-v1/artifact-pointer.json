@@ -1,0 +1,9 @@
+{
+  "artifact_root": "/Users/ashujo/.cache/dynamol-research/1cll-two-anchor-repair-v1",
+  "artifact_manifest_sha256": "5f20a0ef5605590919cac76b051a1dc381a82a1709b795b68783809695db9abe",
+  "applicability_root": "/Users/ashujo/.cache/dynamol-research/1cll-prep-applicability-v1",
+  "applicability_manifest_sha256": "c54972352b68d6a47b21d2342433456b0e43909c4b4b600a694fff41368e5da0",
+  "backend_changed": false,
+  "physical_acceptance": false,
+  "simulation_ready": false
+}

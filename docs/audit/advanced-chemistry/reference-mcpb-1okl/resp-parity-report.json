@@ -1,0 +1,845 @@
+{
+  "status": "mismatch",
+  "scope": "Published-reference RESP parity only; not new-site model validation",
+  "method": "Native MCPB 3b input constraints, ff14SB; direct native RESP over array-written ESP",
+  "published_atom_count": 82,
+  "published_comparisons": [
+    {
+      "atom_id": "90-HID-N",
+      "published": -0.4157,
+      "actual": -0.4157,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "90-HID-H",
+      "published": 0.301812,
+      "actual": 0.317341,
+      "absolute_difference": 0.01552899999999996,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-CA",
+      "published": 0.0188,
+      "actual": 0.0188,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "90-HID-HA",
+      "published": 0.077512,
+      "actual": 0.073416,
+      "absolute_difference": 0.004096000000000002,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-CB",
+      "published": -0.139108,
+      "actual": -0.176754,
+      "absolute_difference": 0.037645999999999985,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-HB2",
+      "published": 0.096771,
+      "actual": 0.108341,
+      "absolute_difference": 0.01157000000000001,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-HB3",
+      "published": 0.096771,
+      "actual": 0.108341,
+      "absolute_difference": 0.01157000000000001,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-CG",
+      "published": -0.038382,
+      "actual": -0.018176,
+      "absolute_difference": 0.020206,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-ND1",
+      "published": -0.063832,
+      "actual": -0.140867,
+      "absolute_difference": 0.07703499999999999,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-HD1",
+      "published": 0.315234,
+      "actual": 0.356882,
+      "absolute_difference": 0.04164799999999996,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-CE1",
+      "published": -0.128101,
+      "actual": -0.114383,
+      "absolute_difference": 0.013717999999999994,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-HE1",
+      "published": 0.194063,
+      "actual": 0.198712,
+      "absolute_difference": 0.0046489999999999865,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-NE2",
+      "published": -0.064248,
+      "actual": -0.064049,
+      "absolute_difference": 0.00019900000000000473,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-CD2",
+      "published": -0.144981,
+      "actual": -0.128907,
+      "absolute_difference": 0.016074000000000005,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-HD2",
+      "published": 0.111322,
+      "actual": 0.105086,
+      "absolute_difference": 0.006236000000000005,
+      "pass": false
+    },
+    {
+      "atom_id": "90-HID-C",
+      "published": 0.5973,
+      "actual": 0.5973,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "90-HID-O",
+      "published": -0.5679,
+      "actual": -0.5679,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "92-HID-N",
+      "published": -0.4157,
+      "actual": -0.4157,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "92-HID-H",
+      "published": 0.328629,
+      "actual": 0.328262,
+      "absolute_difference": 0.0003670000000000062,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-CA",
+      "published": 0.0188,
+      "actual": 0.0188,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "92-HID-HA",
+      "published": 0.090435,
+      "actual": 0.089611,
+      "absolute_difference": 0.0008240000000000053,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-CB",
+      "published": 0.198128,
+      "actual": 0.167799,
+      "absolute_difference": 0.030328999999999995,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-HB2",
+      "published": 0.02873,
+      "actual": 0.04101,
+      "absolute_difference": 0.01228,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-HB3",
+      "published": 0.02873,
+      "actual": 0.04101,
+      "absolute_difference": 0.01228,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-CG",
+      "published": -0.251311,
+      "actual": -0.270089,
+      "absolute_difference": 0.018778000000000017,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-ND1",
+      "published": -0.089645,
+      "actual": -0.051354,
+      "absolute_difference": 0.038291000000000006,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-HD1",
+      "published": 0.319161,
+      "actual": 0.319942,
+      "absolute_difference": 0.0007810000000000317,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-CE1",
+      "published": -0.09202,
+      "actual": -0.122731,
+      "absolute_difference": 0.030711000000000002,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-HE1",
+      "published": 0.199321,
+      "actual": 0.20199,
+      "absolute_difference": 0.0026690000000000047,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-NE2",
+      "published": -0.035369,
+      "actual": -0.011567,
+      "absolute_difference": 0.023801999999999997,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-CD2",
+      "published": 0.033328,
+      "actual": -0.013245,
+      "absolute_difference": 0.046573,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-HD2",
+      "published": 0.05353,
+      "actual": 0.095432,
+      "absolute_difference": 0.041902,
+      "pass": false
+    },
+    {
+      "atom_id": "92-HID-C",
+      "published": 0.5973,
+      "actual": 0.5973,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "92-HID-O",
+      "published": -0.5679,
+      "actual": -0.5679,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "115-HIE-N",
+      "published": -0.4157,
+      "actual": -0.4157,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "115-HIE-H",
+      "published": 0.308293,
+      "actual": 0.295467,
+      "absolute_difference": 0.012826000000000004,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-CA",
+      "published": -0.0581,
+      "actual": -0.0581,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "115-HIE-HA",
+      "published": 0.165886,
+      "actual": 0.128736,
+      "absolute_difference": 0.037150000000000016,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-CB",
+      "published": 0.013224,
+      "actual": 0.08179,
+      "absolute_difference": 0.068566,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-HB2",
+      "published": 0.08329,
+      "actual": 0.051598,
+      "absolute_difference": 0.031692000000000005,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-HB3",
+      "published": 0.08329,
+      "actual": 0.051598,
+      "absolute_difference": 0.031692000000000005,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-CG",
+      "published": -0.073362,
+      "actual": -0.045151,
+      "absolute_difference": 0.028211,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-ND1",
+      "published": -0.0031,
+      "actual": -0.003687,
+      "absolute_difference": 0.0005870000000000003,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-CE1",
+      "published": -0.088983,
+      "actual": -0.083878,
+      "absolute_difference": 0.005105000000000012,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-HE1",
+      "published": 0.154081,
+      "actual": 0.159705,
+      "absolute_difference": 0.005624000000000018,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-NE2",
+      "published": -0.122709,
+      "actual": -0.158412,
+      "absolute_difference": 0.035703,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-HE2",
+      "published": 0.334098,
+      "actual": 0.340525,
+      "absolute_difference": 0.006427000000000016,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-CD2",
+      "published": -0.144946,
+      "actual": -0.141916,
+      "absolute_difference": 0.003030000000000005,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-HD2",
+      "published": 0.149298,
+      "actual": 0.169412,
+      "absolute_difference": 0.02011400000000002,
+      "pass": false
+    },
+    {
+      "atom_id": "115-HIE-C",
+      "published": 0.5973,
+      "actual": 0.5973,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "115-HIE-O",
+      "published": -0.5679,
+      "actual": -0.5679,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "atom_id": "256-ZN-ZN",
+      "published": 0.434803,
+      "actual": 0.433482,
+      "absolute_difference": 0.0013210000000000166,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C1",
+      "published": 0.032022,
+      "actual": 0.024123,
+      "absolute_difference": 0.007899000000000003,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C2",
+      "published": -0.012426,
+      "actual": 0.017432,
+      "absolute_difference": 0.029858,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C3",
+      "published": -0.18823,
+      "actual": -0.238255,
+      "absolute_difference": 0.050024999999999986,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C4",
+      "published": -0.196827,
+      "actual": -0.164243,
+      "absolute_difference": 0.032584,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C4A",
+      "published": 0.115559,
+      "actual": 0.127714,
+      "absolute_difference": 0.012155,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C5",
+      "published": 0.001137,
+      "actual": 0.047266,
+      "absolute_difference": 0.046129,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C6",
+      "published": -0.026447,
+      "actual": -0.040579,
+      "absolute_difference": 0.014131999999999999,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C7",
+      "published": -0.154968,
+      "actual": -0.166655,
+      "absolute_difference": 0.011687000000000003,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C8",
+      "published": -0.190227,
+      "actual": -0.165719,
+      "absolute_difference": 0.024508000000000002,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-C8A",
+      "published": 0.074575,
+      "actual": 0.035452,
+      "absolute_difference": 0.039123000000000005,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-N",
+      "published": -0.101366,
+      "actual": -0.251387,
+      "absolute_difference": 0.15002100000000002,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-CM1",
+      "published": -0.070959,
+      "actual": 0.071121,
+      "absolute_difference": 0.14207999999999998,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-CM2",
+      "published": -0.186889,
+      "actual": -0.013113,
+      "absolute_difference": 0.17377599999999999,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-S",
+      "published": 0.381402,
+      "actual": 0.392623,
+      "absolute_difference": 0.011220999999999981,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-O1S",
+      "published": -0.43944,
+      "actual": -0.444881,
+      "absolute_difference": 0.005441000000000029,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-O2S",
+      "published": -0.416015,
+      "actual": -0.417442,
+      "absolute_difference": 0.001426999999999956,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-N3S",
+      "published": -0.555733,
+      "actual": -0.572243,
+      "absolute_difference": 0.016509999999999914,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HN31",
+      "published": 0.317674,
+      "actual": 0.322709,
+      "absolute_difference": 0.005035000000000012,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HM23",
+      "published": 0.073609,
+      "actual": 0.026229,
+      "absolute_difference": 0.04737999999999999,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HM22",
+      "published": 0.073609,
+      "actual": 0.026229,
+      "absolute_difference": 0.04737999999999999,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HM21",
+      "published": 0.073609,
+      "actual": 0.026229,
+      "absolute_difference": 0.04737999999999999,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HM13",
+      "published": 0.036158,
+      "actual": -0.001146,
+      "absolute_difference": 0.037304000000000004,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HM12",
+      "published": 0.036158,
+      "actual": -0.001146,
+      "absolute_difference": 0.037304000000000004,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-HM11",
+      "published": 0.036158,
+      "actual": -0.001146,
+      "absolute_difference": 0.037304000000000004,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-H8",
+      "published": 0.191859,
+      "actual": 0.190021,
+      "absolute_difference": 0.0018380000000000063,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-H7",
+      "published": 0.147741,
+      "actual": 0.148413,
+      "absolute_difference": 0.0006719999999999782,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-H6",
+      "published": 0.08863,
+      "actual": 0.100279,
+      "absolute_difference": 0.011648999999999993,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-H4",
+      "published": 0.114865,
+      "actual": 0.176227,
+      "absolute_difference": 0.061362,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-H3",
+      "published": 0.144369,
+      "actual": 0.14203,
+      "absolute_difference": 0.0023390000000000077,
+      "pass": false
+    },
+    {
+      "atom_id": "257-MNS-H2",
+      "published": 0.06015,
+      "actual": 0.062938,
+      "absolute_difference": 0.002787999999999992,
+      "pass": false
+    }
+  ],
+  "same_charges_as_direct_native_original_esp": true,
+  "max_published_absolute_difference": 0.17377599999999999,
+  "fit": {
+    "method": "native AmberTools two-stage RESP",
+    "atom_ids": [
+      "89-ACE-HH31",
+      "89-ACE-CH3",
+      "89-ACE-HH32",
+      "89-ACE-HH33",
+      "89-ACE-C",
+      "89-ACE-O",
+      "90-HID-N",
+      "90-HID-H",
+      "90-HID-CA",
+      "90-HID-HA",
+      "90-HID-CB",
+      "90-HID-HB2",
+      "90-HID-HB3",
+      "90-HID-CG",
+      "90-HID-ND1",
+      "90-HID-HD1",
+      "90-HID-CE1",
+      "90-HID-HE1",
+      "90-HID-NE2",
+      "90-HID-CD2",
+      "90-HID-HD2",
+      "90-HID-C",
+      "90-HID-O",
+      "91-GLY-N",
+      "91-GLY-H",
+      "91-GLY-CA",
+      "91-GLY-HA2",
+      "91-GLY-HA3",
+      "91-GLY-C",
+      "91-GLY-O",
+      "92-HID-N",
+      "92-HID-H",
+      "92-HID-CA",
+      "92-HID-HA",
+      "92-HID-CB",
+      "92-HID-HB2",
+      "92-HID-HB3",
+      "92-HID-CG",
+      "92-HID-ND1",
+      "92-HID-HD1",
+      "92-HID-CE1",
+      "92-HID-HE1",
+      "92-HID-NE2",
+      "92-HID-CD2",
+      "92-HID-HD2",
+      "92-HID-C",
+      "92-HID-O",
+      "93-NME-N",
+      "93-NME-H",
+      "93-NME-CH3",
+      "93-NME-HH31",
+      "93-NME-HH32",
+      "93-NME-HH33",
+      "114-ACE-HH31",
+      "114-ACE-CH3",
+      "114-ACE-HH32",
+      "114-ACE-HH33",
+      "114-ACE-C",
+      "114-ACE-O",
+      "115-HIE-N",
+      "115-HIE-H",
+      "115-HIE-CA",
+      "115-HIE-HA",
+      "115-HIE-CB",
+      "115-HIE-HB2",
+      "115-HIE-HB3",
+      "115-HIE-CG",
+      "115-HIE-ND1",
+      "115-HIE-CE1",
+      "115-HIE-HE1",
+      "115-HIE-NE2",
+      "115-HIE-HE2",
+      "115-HIE-CD2",
+      "115-HIE-HD2",
+      "115-HIE-C",
+      "115-HIE-O",
+      "116-NME-N",
+      "116-NME-H",
+      "116-NME-CH3",
+      "116-NME-HH31",
+      "116-NME-HH32",
+      "116-NME-HH33",
+      "256-ZN-ZN",
+      "257-MNS-C1",
+      "257-MNS-C2",
+      "257-MNS-C3",
+      "257-MNS-C4",
+      "257-MNS-C4A",
+      "257-MNS-C5",
+      "257-MNS-C6",
+      "257-MNS-C7",
+      "257-MNS-C8",
+      "257-MNS-C8A",
+      "257-MNS-N",
+      "257-MNS-CM1",
+      "257-MNS-CM2",
+      "257-MNS-S",
+      "257-MNS-O1S",
+      "257-MNS-O2S",
+      "257-MNS-N3S",
+      "257-MNS-HN31",
+      "257-MNS-HM23",
+      "257-MNS-HM22",
+      "257-MNS-HM21",
+      "257-MNS-HM13",
+      "257-MNS-HM12",
+      "257-MNS-HM11",
+      "257-MNS-H8",
+      "257-MNS-H7",
+      "257-MNS-H6",
+      "257-MNS-H4",
+      "257-MNS-H3",
+      "257-MNS-H2"
+    ],
+    "charges": [
+      0.139747,
+      -0.450432,
+      0.139747,
+      0.139747,
+      0.532514,
+      -0.501322,
+      -0.4157,
+      0.317341,
+      0.0188,
+      0.073416,
+      -0.176754,
+      0.108341,
+      0.108341,
+      -0.018176,
+      -0.140867,
+      0.356882,
+      -0.114383,
+      0.198712,
+      -0.064049,
+      -0.128907,
+      0.105086,
+      0.5973,
+      -0.5679,
+      -0.412249,
+      0.290089,
+      -0.01723,
+      0.06717,
+      0.06717,
+      0.513162,
+      -0.508112,
+      -0.4157,
+      0.328262,
+      0.0188,
+      0.089611,
+      0.167799,
+      0.04101,
+      0.04101,
+      -0.270089,
+      -0.051354,
+      0.319942,
+      -0.122731,
+      0.20199,
+      -0.011567,
+      -0.013245,
+      0.095432,
+      0.5973,
+      -0.5679,
+      -0.646331,
+      0.345628,
+      0.041971,
+      0.086244,
+      0.086244,
+      0.086244,
+      0.122602,
+      -0.419494,
+      0.122602,
+      0.122602,
+      0.607911,
+      -0.556222,
+      -0.4157,
+      0.295467,
+      -0.0581,
+      0.128736,
+      0.08179,
+      0.051598,
+      0.051598,
+      -0.045151,
+      -0.003687,
+      -0.083878,
+      0.159705,
+      -0.158412,
+      0.340525,
+      -0.141916,
+      0.169412,
+      0.5973,
+      -0.5679,
+      -0.561198,
+      0.331324,
+      -0.019555,
+      0.083143,
+      0.083143,
+      0.083143,
+      0.433482,
+      0.024123,
+      0.017432,
+      -0.238255,
+      -0.164243,
+      0.127714,
+      0.047266,
+      -0.040579,
+      -0.166655,
+      -0.165719,
+      0.035452,
+      -0.251387,
+      0.071121,
+      -0.013113,
+      0.392623,
+      -0.444881,
+      -0.417442,
+      -0.572243,
+      0.322709,
+      0.026229,
+      0.026229,
+      0.026229,
+      -0.001146,
+      -0.001146,
+      -0.001146,
+      0.190021,
+      0.148413,
+      0.100279,
+      0.176227,
+      0.14203,
+      0.062938
+    ],
+    "total_charge": 1,
+    "stages": [
+      {
+        "stage": 1,
+        "iterations": 9,
+        "charge_sum": 1.0000099999999996,
+        "charge_rounding_bound": 5.65001e-05,
+        "esp_relative_rms": 0.02597,
+        "charges_sha256": "59c29f6fbc1c27846e8dfee390968f78311bd0b7651a0c8276a9470cf705ed65"
+      },
+      {
+        "stage": 2,
+        "iterations": 5,
+        "charge_sum": 1.0000040000000003,
+        "charge_rounding_bound": 5.65001e-05,
+        "esp_relative_rms": 0.03685,
+        "charges_sha256": "b1bd436d28cb43cfdde04c3c4ff3e087321f1947f232bf3de0fa84ce39784b60"
+      }
+    ],
+    "executable_sha256": "46c9781ead942e046b097b24f27db6dafffd721aaf3419158784b46541c86a84",
+    "input_sha256": {
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/reference-mcpb-1okl/native-regenerated/resp1.in": "a53a6548acbbab5e0f670c95e09d141625e138d6c8bcca5a8d0bb979d8f2650e",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/reference-mcpb-1okl/native-regenerated/resp2.in": "7809e1ad2454d040577db926df3b34c241c7c38c524fdb623772fe7689abe846",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/reference-mcpb-1okl/array-adapter.esp": "89d7e8f6e92e6dafd71d77dae2e23d97fa28873726b1c3b14ebefebaba30e029"
+    },
+    "scope": "numerically converged charge fit for supplied ESP and constraints; model adequacy separate"
+  },
+  "output_directory": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/reference-mcpb-1okl/resp-parity-s86gzi2c/fit",
+  "preserved_failure": "native-regenerated/step3b.log: transient dyld shared-cache failure during shell-invoked second RESP; direct subprocess stages succeeded"
+}

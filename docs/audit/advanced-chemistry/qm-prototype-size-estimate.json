@@ -1,0 +1,32 @@
+[
+  {
+    "label": "1OKL-small-reference",
+    "atoms": 76,
+    "electrons": 316,
+    "basis_functions": 644,
+    "cart": false,
+    "double_precision_hessian_MiB": 0.3966064453125,
+    "screening_status": "basis construction only; no SCF",
+    "density_fit": false
+  },
+  {
+    "label": "1MNC-small",
+    "atoms": 97,
+    "electrons": 372,
+    "basis_functions": 778,
+    "cart": false,
+    "double_precision_hessian_MiB": 0.6460647583007812,
+    "screening_status": "basis construction only; no SCF",
+    "density_fit": false
+  },
+  {
+    "label": "1MNC-large",
+    "atoms": 139,
+    "electrons": 552,
+    "basis_functions": 1150,
+    "cart": false,
+    "double_precision_hessian_MiB": 1.3266677856445312,
+    "screening_status": "basis construction only; no SCF",
+    "density_fit": false
+  }
+]

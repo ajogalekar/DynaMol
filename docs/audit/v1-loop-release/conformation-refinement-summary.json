@@ -1,0 +1,149 @@
+{
+  "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/1ua2-conformation-replay-v1/result.json",
+  "result_sha256": "3625f3532154613faf22b22d15c9a226f771cb660ea7137d1cad8f37e5418f2f",
+  "protocols": [
+    {
+      "protocol": "original",
+      "atom_count": 4825,
+      "fixed_heavy_atom_count": 2323,
+      "fixed_heavy_coordinates_bitwise_equal": true,
+      "geometry_pass": true,
+      "stereo_error": null,
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "backbone_reference_pass": false,
+      "passed_recorded_checks": false,
+      "elapsed_refinement_seconds": 1.6904824580415152,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "geometry_errors": [],
+      "failed_angles": [],
+      "soft_overlaps": [],
+      "seed_outliers": [
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "native_force_types": [
+        "HarmonicBondForce",
+        "PeriodicTorsionForce",
+        "NonbondedForce",
+        "CMMotionRemover",
+        "HarmonicAngleForce"
+      ]
+    },
+    {
+      "protocol": "protect-allowed",
+      "atom_count": 4825,
+      "fixed_heavy_atom_count": 2323,
+      "fixed_heavy_coordinates_bitwise_equal": true,
+      "geometry_pass": false,
+      "stereo_error": null,
+      "modeled_outliers": [],
+      "boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "backbone_reference_pass": false,
+      "passed_recorded_checks": false,
+      "elapsed_refinement_seconds": 2.4716280000284314,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "geometry_errors": [
+        "Modeled backbone angle O-C-N at atom 497 is undefined or outside 80\u2013150\u00b0."
+      ],
+      "failed_angles": [
+        {
+          "atoms": [
+            498,
+            497,
+            512
+          ],
+          "kind": "O-C-N",
+          "degrees": 62.50800188681395,
+          "accepted": false
+        }
+      ],
+      "soft_overlaps": [
+        {
+          "atoms": [
+            498,
+            514
+          ],
+          "distance_nm": 0.23309108886489383,
+          "vdw_distance_ratio": 0.723885369145633,
+          "external_environment_index": null
+        }
+      ],
+      "seed_outliers": [
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "native_force_types": [
+        "HarmonicBondForce",
+        "PeriodicTorsionForce",
+        "NonbondedForce",
+        "CMMotionRemover",
+        "HarmonicAngleForce"
+      ]
+    }
+  ],
+  "checks": {
+    "ast": true,
+    "targeted_whitespace": true,
+    "native_systems_identical": true,
+    "temporary_protection_absent_from_native_system": true,
+    "original_replay_max_coordinate_difference_from_archived_final_angstrom": 0.2075888903013155
+  },
+  "identical_start_and_physical_parameters_verified": true,
+  "source_files_unchanged": true,
+  "app_ready": false,
+  "scope": "One paired saved 1UA2 complete-complex refinement replay. No preparation, dynamics, force-field fitting or candidate admission."
+}

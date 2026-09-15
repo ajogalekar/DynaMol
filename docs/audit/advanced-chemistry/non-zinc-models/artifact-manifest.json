@@ -1,0 +1,294 @@
+{
+  "created_at": "2026-09-13T17:44:57.603626+00:00",
+  "all_retrieval_hashes_verified": true,
+  "verified_retrieval_records": 37,
+  "files": [
+    {
+      "path": "FEASIBILITY.md",
+      "bytes": 9384,
+      "sha256": "2dea5bb84ae4ae007e7f2c7b51aad9025dc76df47a4d31f56b54fe4fd8ed0de3"
+    },
+    {
+      "path": "PMC11350471.xml",
+      "bytes": 150503,
+      "sha256": "25db0f6630841a55286d6c17253a0cf845bb0b748bc6ec27e5bfd35423028427"
+    },
+    {
+      "path": "PMC13297126.xml",
+      "bytes": 137468,
+      "sha256": "c8cda789db0bbba0c260d0c9e94b82ed82f4afcdaf574d7bea65646b2ede115a"
+    },
+    {
+      "path": "PMC4451517.xml",
+      "bytes": 113545,
+      "sha256": "b1297f4aa8b583a3ad7c9b21c37ccc35eafbf0f0cc9c53de9ea6ff08633b017a"
+    },
+    {
+      "path": "PMC5969255.xml",
+      "bytes": 79614,
+      "sha256": "da150dfb84310826c592ce60d0ffd084e0808b78ae699118c927729f00e991c9"
+    },
+    {
+      "path": "PMC6926953.xml",
+      "bytes": 80466,
+      "sha256": "c27cfb27bc100e8de51a8b37ffcc129365ffba05b26cf55b449c142346a27988"
+    },
+    {
+      "path": "PMC9774195.xml",
+      "bytes": 170882,
+      "sha256": "40d946df96cea265dd523f502dbf6512d02e180a51db6d1dfc8d3eb640af2faf"
+    },
+    {
+      "path": "amber-frcmod.hemall",
+      "bytes": 3435,
+      "sha256": "681f892fa8374e9ee5043abd7e0ae543d5569aadcb6237cb60fd4078bb5e69f3"
+    },
+    {
+      "path": "amber-heme-all.in",
+      "bytes": 7012,
+      "sha256": "1240972761ccf0b0894366188280f5df8b42f083c29a19a2ebccb4cad7a83bf7"
+    },
+    {
+      "path": "charmm-heme-extracted-0.str",
+      "bytes": 26130,
+      "sha256": "4b3c916e8bcd12c65250bee7e264b942900acd20d29673de651c78772b49d302"
+    },
+    {
+      "path": "charmm-heme.html",
+      "bytes": 26141,
+      "sha256": "a1eea115a0c8dd0d8ddba24e41f8760ab8097978d6ce416a0e9df1dabdc1b2ac"
+    },
+    {
+      "path": "charmm-ions-won-extracted-0.str",
+      "bytes": 15492,
+      "sha256": "b771f22b9d23f8e0c1dd094a0f47ae84e4c9638d4ab1314c7b51e69f148330c6"
+    },
+    {
+      "path": "charmm-ions-won.html",
+      "bytes": 15503,
+      "sha256": "f97799b3376ea1a4a71fbc1816e46611196e7d2f002653470e65106fc9990603"
+    },
+    {
+      "path": "cucu-mismatch/ForceFieldFiles/CuSite/ReducedCuSite.frcmod",
+      "bytes": 4768,
+      "sha256": "61ec5f89ff1a865f985dde4acf4977dbdded5f16b51386e495fda40c6fd8b655"
+    },
+    {
+      "path": "cucu-mismatch/ForceFieldFiles/CuSite/ReducedCuSite.lib",
+      "bytes": 10402,
+      "sha256": "86d738fc15975e26f4ac68e42dcd53ef068101e8f80b4c447e66d1fcbd22a7a9"
+    },
+    {
+      "path": "cucu-mismatch/ForceFieldFiles/ZnSite_NonBondedHis63/ReducedCuInZnSite.frcmod",
+      "bytes": 4549,
+      "sha256": "8a9c9c80559ac7b03a2fe6e45179edc59168469efaf0ee52b6563e2ae4a6cf09"
+    },
+    {
+      "path": "cucu-mismatch/ForceFieldFiles/ZnSite_NonBondedHis63/ReducedCuInZnSite.lib",
+      "bytes": 9769,
+      "sha256": "91fee8424bbb8b8f4988b9e5188917890221e9e58d7dd5993c6604cdd887f5e6"
+    },
+    {
+      "path": "cucu-mismatch/README.md",
+      "bytes": 189,
+      "sha256": "8173d3d5d892049c517f7e5e5cacb296d4e1d5470266f06e87cc5de9bcd9a239"
+    },
+    {
+      "path": "cucusod-repo.json",
+      "bytes": 5702,
+      "sha256": "f19f0bdc48ec9bf9dec6f1c5beecf5cfc5cce7a71618edca65f49c5e23ab32af"
+    },
+    {
+      "path": "cucusod-tree.json",
+      "bytes": 8637,
+      "sha256": "433a7ebba261093ef05064c1fce705a5909fbf8e75f39ad890841d45559342eb"
+    },
+    {
+      "path": "dryad-api.json",
+      "bytes": 9295,
+      "sha256": "21006a3df1cbc9b95248561049e7fb729f16cace36e9ca6c9fbab1abd287f473"
+    },
+    {
+      "path": "dryad-files.json",
+      "bytes": 11064,
+      "sha256": "cfb3c5c5f49b0998b492d1f3b3f1424381e7893c73f476bb55e775e6da50c470"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/Read_Me.txt",
+      "bytes": 400,
+      "sha256": "6d81ae3aa2de17e014932915b2d54a2ce864d07f7e9b07d3da5604e23bf6fb28"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/horse_oxy.pdb",
+      "bytes": 198932,
+      "sha256": "3d988a014336edbb92bde0c8c65f2a9e6d4869f2d6e5256eedae3679e5ba5a8e"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/horse_oxy_only_wbi_10ns.psf",
+      "bytes": 3068637,
+      "sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/par_all27.inp",
+      "bytes": 215219,
+      "sha256": "1a17325ae13d64cc863fe2dcd05935ff560f4bff5230d532ed9707f89663c8d6"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/script_construction_oxy.pgn",
+      "bytes": 537,
+      "sha256": "6efe43500d38a8c605be81a90fd8a18cb0603dcce3b7a3f165cada84d6331a4a"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/top_heme.inp",
+      "bytes": 441830,
+      "sha256": "0d8289719825311cf18485d4b908558a92a03129751c2cde5a155ee533039b55"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/top_heme_oxy_optimized_charges.inp",
+      "bytes": 441910,
+      "sha256": "81f46815f176ff42cb77a1c1ec5706c017748252a50a417669b2c0befb8cf6a2"
+    },
+    {
+      "path": "dryad-oxy-myoglobin/topology-charge-diff.txt",
+      "bytes": 4197,
+      "sha256": "5b9bed6c6f9790cf75e4c181270fdcabe6554b154cc7e87bbba29b767b3488e9"
+    },
+    {
+      "path": "dryad-terms.html",
+      "bytes": 32244,
+      "sha256": "877f1f07ffea5709856bdf39db15ea8e0159a7aea8c88434d48d6d7187c47fa9"
+    },
+    {
+      "path": "feasibility.json",
+      "bytes": 3755,
+      "sha256": "6c7c0a0c6eac820874a109bfca67af1d2946aa342d494785855cdf484c3c34a9"
+    },
+    {
+      "path": "figshare-11312432.json",
+      "bytes": 7270,
+      "sha256": "01272fce534177f848a9ce1d25bd217ef5924537b72f895f2911625392c9680c"
+    },
+    {
+      "path": "figshare-2233525.json",
+      "bytes": 6305,
+      "sha256": "68b81982c79738f45e212dd9ca2a98ef72aeeeb261be0b8f769c4b3ec73d8e31"
+    },
+    {
+      "path": "inspect_sources.py",
+      "bytes": 5279,
+      "sha256": "fd25d5b90694d3dc959f48298be8e5416719ac2b10d32e5890df26c8e202d263"
+    },
+    {
+      "path": "jp056855l_si_001.pdf",
+      "bytes": 222162,
+      "sha256": "9bd1c3fc61d8c2d4b96154b5c6e6e87f7cbeaeab6b651d9dccb165ec3f36b7cd"
+    },
+    {
+      "path": "jp056855l_si_001.txt",
+      "bytes": 56459,
+      "sha256": "34c11bcde2be009313befb920efaf6aadbbab6004529e1f9806e199440e2bcd7"
+    },
+    {
+      "path": "jp5078906_si_001.pdf",
+      "bytes": 394072,
+      "sha256": "726046879ff66ac2b81273cff57f9be1527d0621c925a7f1a5d25162da6b70a3"
+    },
+    {
+      "path": "jp5078906_si_001.txt",
+      "bytes": 6016,
+      "sha256": "a488cecc7665a1db7bf83f0b95e0971c56f9b3a8eb03e040c0b58dec1267943d"
+    },
+    {
+      "path": "jz9b02868_si_001.pdf",
+      "bytes": 1268687,
+      "sha256": "47356832ff83d50e3933e427177f6940328bf38f4c6bb3d759dcf1429a2dc8cd"
+    },
+    {
+      "path": "jz9b02868_si_001.txt",
+      "bytes": 29464,
+      "sha256": "9a56f8a7619c8a138a2c5a3a31a0ff002e00b796d8bb538db746100fcc1383d5"
+    },
+    {
+      "path": "retrieval-context-papers.json",
+      "bytes": 1341,
+      "sha256": "cd2d4f1d97f09157a89e394e7f3f280e3c21656fa504ed6d0ae2bd6a60c0b68f"
+    },
+    {
+      "path": "retrieval-cucu.json",
+      "bytes": 2214,
+      "sha256": "16a3842427a94e391083bb2fe8b3804215bb5cc04ca9fe510b62b16a093ba547"
+    },
+    {
+      "path": "retrieval-dryad-browser.json",
+      "bytes": 3760,
+      "sha256": "84644a04439fd3118599826694eed0c879533e33d9e18039c32ed1739ed03197"
+    },
+    {
+      "path": "retrieval-followup.json",
+      "bytes": 850,
+      "sha256": "1ff16d27fc72c1119f920205b0239924fec992f41012b23d6a5ea94c72431bb0"
+    },
+    {
+      "path": "retrieval-initial.json",
+      "bytes": 1053,
+      "sha256": "51fede1a032e958f52b890e5fea688b96b358cd564c669b318e07b1483834ce2"
+    },
+    {
+      "path": "retrieval-metadata.json",
+      "bytes": 2084,
+      "sha256": "cf489b1c072470a1e350b35e80f8929c47c8f9d2145d5e02d36a20d050581dc6"
+    },
+    {
+      "path": "retrieval-models.json",
+      "bytes": 3657,
+      "sha256": "8a6e93aedb1e18c2c784805b8c69efdaec125cd92849979e7720f2ca9bd091ba"
+    },
+    {
+      "path": "retrieval-sod-branco.json",
+      "bytes": 403,
+      "sha256": "bdfc65b7d2d34f5930456959e7d414f2ba5d89e7d1638c9f9b0c1cd9dd8824ba"
+    },
+    {
+      "path": "retrieval-sod-si.json",
+      "bytes": 1291,
+      "sha256": "c9d70733c1320564bbfe24c0e86fa77f272b9c1105e8d7152c4fe9b5b1e8036b"
+    },
+    {
+      "path": "sod-allosteric-si.json",
+      "bytes": 1380,
+      "sha256": "aa60da292ca4c76fd64bd4c13c76113cfda0e6c8f14fbfc2cea30d7dc083dde6"
+    },
+    {
+      "path": "sod-branco-list.json",
+      "bytes": 1070,
+      "sha256": "a0ed86fab770e1d5da19c884890bb8e292247b84e4e045dbbe869e14a142ddbf"
+    },
+    {
+      "path": "sod-branco-si.json",
+      "bytes": 6455,
+      "sha256": "bda2cc750cc49e50a9cb99ffd6c378e0efbf84af41625010601b509f4f18bbc4"
+    },
+    {
+      "path": "sod-torsions-figshare-api.json",
+      "bytes": 1226,
+      "sha256": "719a208b367ac9a99234c54c9922cb25b9b751ac2992e7f6f67474bd6a5141ea"
+    },
+    {
+      "path": "sod-torsions-si.json",
+      "bytes": 6305,
+      "sha256": "68b81982c79738f45e212dd9ca2a98ef72aeeeb261be0b8f769c4b3ec73d8e31"
+    },
+    {
+      "path": "source-inspection.json",
+      "bytes": 26010,
+      "sha256": "306e2be43cb53c870284382c61de079c1fb14649b5c196c4fd2393b2c5e28f46"
+    },
+    {
+      "path": "target-sites.json",
+      "bytes": 104681,
+      "sha256": "5d5877decfd49b1e50a94e045d3c0bb0c8d626165338e6c5ee234b30a5490fca"
+    }
+  ],
+  "total_bytes": 7467105,
+  "note": "Exact source URLs/licenses are in retrieval records. Extracted text and the report are derived artifacts. This manifest is a provenance snapshot, not an accuracy or production-readiness certificate."
+}

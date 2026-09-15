@@ -1,0 +1,12 @@
+--- v1
++++ v2
+@@ -83,7 +83,8 @@
+         for key in ('requested_threads','actual_pyscf_threads'):
+             require(type(report_.get(key)) is int and report_[key]==request['threads'],'Native ESP thread report changed')
+     require(digest(result.get('resources'))==digest({'threads':request['threads'],'max_memory_mb':request['max_memory_mb'],
+-        'max_wall_seconds':request['max_wall_seconds'],'requested_threads':request['threads'],'actual_pyscf_threads':request['threads']}),
++        'max_wall_seconds':request['max_wall_seconds'],'requested_threads':request['threads'],'actual_pyscf_threads':request['threads'],
++        'memory_limit_kind':'PySCF allocation setting, not an operating-system hard limit'}),
+         'Native ESP resource metadata changed')
+     check=result.get('esp',{})
+     error=check.get('max_absolute_error_hartree_per_e')

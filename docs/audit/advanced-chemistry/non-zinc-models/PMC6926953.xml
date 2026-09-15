@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?><article xml:lang="en" article-type="rapid-communication"><front><journal-meta><journal-id journal-id-type="pmc-domain-id">822</journal-id><journal-id journal-id-type="pmc-domain">acssd</journal-id><journal-title-group><journal-title>The Journal of Physical Chemistry Letters</journal-title><abbrev-journal-title>J Phys Chem Lett</abbrev-journal-title></journal-title-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC6926953</article-id><article-id pub-id-type="pmcaid">6926953</article-id><article-id pub-id-type="pmcaiid">6926953</article-id><article-id pub-id-type="pmid">31747286</article-id><article-id pub-id-type="doi">10.1021/acs.jpclett.9b02868</article-id><title-group><article-title>An Allosteric
+Pathway in Copper, Zinc Superoxide Dismutase
+Unravels the Molecular Mechanism of the G93A Amyotrophic Lateral Sclerosis-Linked
+Mutation</article-title></title-group><contrib-group content-type="author"><contrib><name name-style="western"><surname>Souza</surname><given-names initials="PCT">Paulo
+C T</given-names></name><xref ref-type="aff" rid="aff1">†</xref></contrib><contrib><name name-style="western"><surname>Thallmair</surname><given-names initials="S">Sebastian</given-names></name><xref ref-type="aff" rid="aff1">†</xref></contrib><contrib><name name-style="western"><surname>Marrink</surname><given-names initials="SJ">Siewert J</given-names></name><xref ref-type="aff" rid="aff1">†</xref><xref rid="cor1" ref-type="author-notes">*</xref></contrib><contrib><name name-style="western"><surname>Mera-Adasme</surname><given-names initials="R">Raúl</given-names></name><xref ref-type="aff" rid="aff2">‡</xref><xref rid="cor2" ref-type="author-notes">*</xref></contrib></contrib-group><aff id="aff1"><label>†</label>Groningen
+Biomolecular Sciences and Biotechnology Institute, University of Groningen, Nijenborgh 4, 9747 AG Groningen, The Netherlands</aff><aff id="aff2"><label>‡</label>Departamento
+de Ciencias del Ambiente, Facultad de Química y Biología, Universidad de Santiago de Chile (USACH), Av. Libertador Bernardo O’Higgins
+3363, 9170022 Estacion
+Central, Chile</aff><author-notes><fn id="cor1"><label>*</label><p>E-mail: <email>s.j.marrink@rug.nl</email>.</p></fn><fn id="cor2"><label>*</label><p>E-mail: <email>raul.mera@usach.cl</email>.</p></fn></author-notes><pub-date><day>20</day><month>11</month><year>2019</year></pub-date><volume>10</volume><issue>24</issue><fpage>7740</fpage><page-range>7740–7744</page-range><pub-history><event event-type="pmc-release"><date><day>24</day><month>12</month><year>2019</year></date></event></pub-history><permissions><copyright-statement>Copyright © 2019 American Chemical Society</copyright-statement><license><license-p>This is an open access article published under a Creative Commons Non-Commercial No Derivative Works (CC-BY-NC-ND) Attribution <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/page/policy/authorchoice_ccbyncnd_termsofuse.html" ext-link-type="uri">License</ext-link>, which permits copying and redistribution of the article, and creation of adaptations, all for non-commercial purposes.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jz9b02868.pdf" content-type="pmc-pdf"><?cloudpmc-path 9195/6926953/fae163d7f4cf/jz9b02868.pdf?><?cloudpmc-bucket app?><?size 2395932?></self-uri><abstract id="abstract1"><title>Abstract</title><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="ab-d30e159" xlink:href="jz9b02868_0004.jpg"><?cloudpmc-path blobs/9195/6926953/14310937c397/jz9b02868_0004.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 556?><?original-width 1000?><?scaled-height 370?><?scaled-width 666?></graphic><p>Several different mutations of the protein copper, zinc
+superoxide
+dismutase (SOD1) produce the neurodegenerative disorder amyotrophic
+lateral sclerosis (ALS). The molecular mechanism by which the diverse
+mutations converge to a similar pathology is currently unknown. The
+electrostatic loop (EL) of SOD1 is known to be affected in all of
+the studied ALS-linked mutations of SOD1. In this work, we employ
+a multiscale simulation approach to show that this perturbation corresponds
+to an increased probability of the EL detaching from its native position,
+exposing the metal site of the protein to water. From extensive atomistic
+and coarse-grained molecular dynamics (MD) simulations, we identify
+an allosteric pathway that explains the action of the distant G93A
+mutation on the EL. Finally, we employ quantum mechanics/molecular
+mechanics MD simulations to show that the opening of the EL decreases
+the Zn(II) affinity of the protein. As the loss of Zn(II) is at the
+center of several proposed pathogenic mechanisms in SOD1-linked ALS,
+the structural effect identified here not only is in agreement with
+the experimental data but also places the opening of the electrostatic
+loop as the possible main pathogenic effect for a significant number
+of ALS-linked SOD1 mutations.</p></abstract><custom-meta-group><custom-meta><meta-name>status</meta-name><meta-value>released</meta-value></custom-meta><custom-meta><meta-name>display-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>is-in-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>is-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-journal-matter</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-scanned</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-retracted</meta-name><meta-value>no</meta-value></custom-meta></custom-meta-group></article-meta><notes notes-type="article-notes"><sec id="historyarticle-meta1" sec-type="history" disp-level="2"><p>Received 2019 Sep 28; Accepted 2019 Nov 20; Issue date 2019 Dec 19.</p></sec></notes></front><body><p id="sec1">The protein copper, zinc superoxide
+dismutase (SOD1) catalyzes the dismutation of the superoxide radical
+into molecular oxygen and peroxide.<sup><xref rid="ref1" ref-type="bibr">1</xref></sup> It
+protects the cell from the radical, which is naturally formed during
+cell respiration. Human SOD1 is a dimeric protein, which binds a Zn(II)
+and a Cu(I/II) ion per monomer (see <xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>A,B).</p><fig id="fig1" position="float"><?disp-level 1?><label>Figure 1</label><caption><p>Atomistic structure and dynamics of SOD1.
+(A) Ribbon view of the
+crystallographic structure of dimeric SOD1.<sup><xref rid="ref27" ref-type="bibr">27</xref></sup> The EL is colored blue; the G93 residue is shown as red sticks,
+and Cu(I) and Zn(II) ions are shown as orange and gray spheres, respectively.
+(B) Details of the metal site. Oxygen atoms are colored red, and nitrogen
+atoms blue. (C and D) Superimposed frames colored from blue to white
+to red for the first eigenvector of the covariance matrix for WT and
+G93A mutant MD trajectories, respectively, where the EL opening can
+be seen.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr2" xlink:href="jz9b02868_0001.jpg"><?cloudpmc-path blobs/9195/6926953/8c75adde808f/jz9b02868_0001.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 812?><?original-width 933?><?scaled-height 541?><?scaled-width 622?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="jz9b02868_0001.gif"><?cloudpmc-path blobs/9195/6926953/dda7817e4431/jz9b02868_0001.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Well more than 100 mutations, scattered along the
+whole sequence
+of SOD1, are linked to familial forms of the neurodegenerative disease
+amyotrophic lateral sclerosis (ALS).<sup><xref rid="ref2" ref-type="bibr">2</xref></sup> The
+study of SOD1-linked cases of ALS is expected to shed light on the
+pathogenic mechanism of the most prevalent sporadic form of the disease.
+The pathogenic mechanisms of the ALS-linked mutations of SOD1 have
+not been elucidated in detail. The current data indicate that a gain
+of a pathological function is responsible for the toxicity of the
+mutant, rather than a loss of enzymatic activity.<sup><xref rid="ref3" ref-type="bibr">3</xref></sup> Several hypotheses for the pathological function exist:
+SOD1 misfolding could interfere with cellular metabolism.<sup><xref rid="ref4" ref-type="bibr">4</xref>−<xref rid="ref8" ref-type="bibr">8</xref></sup> A distortion of the active site of the protein could cause aberrant
+redox catalysis and cellular oxidative stress.<sup><xref rid="ref9" ref-type="bibr">9</xref></sup> Finally, a loss of metal ions, particularly Zn(II), from the SOD1
+active site, could cause a harmful metal dyshomeostasis.<sup><xref rid="ref10" ref-type="bibr">10</xref>−<xref rid="ref13" ref-type="bibr">13</xref></sup></p><p>A loss of Zn(II) from the active site of SOD1 appears to play
+a
+critical role in the hypotheses for SOD1 pathogenicity:<sup><xref rid="ref14" ref-type="bibr">14</xref></sup> It destabilizes the protein’s structure<sup><xref rid="ref15" ref-type="bibr">15</xref>−<xref rid="ref17" ref-type="bibr">17</xref></sup> and alters its active site,<sup><xref rid="ref18" ref-type="bibr">18</xref>,<xref rid="ref19" ref-type="bibr">19</xref></sup> and mutant SOD1 has
+been shown to cause Zn(II) dyshomeostasis in mice.<sup><xref rid="ref20" ref-type="bibr">20</xref></sup> Close to the Zn(II) site of SOD1 is the electrostatic loop
+(EL), which is known to be destabilized in several ALS-linked mutants.<sup><xref rid="ref21" ref-type="bibr">21</xref></sup> From a physicochemical point of view, the diversity
+of the pathogenic mutations, regarding both the amino acid substitution
+and its location in the protein structure, is intriguing. Because
+demetalation has been shown to be important for the misfolding process,<sup><xref rid="ref14" ref-type="bibr">14</xref></sup> computational investigation of pathogenic mutants
+of SOD1 has been preferentially performed on the zinc-deficient apoenzyme,<sup><xref rid="ref7" ref-type="bibr">7</xref>,<xref rid="ref8" ref-type="bibr">8</xref>,<xref rid="ref18" ref-type="bibr">18</xref></sup> confirming that ALS-linked mutations
+also increase the level of oligomerization. Mera-Adasme and collaborators
+have investigated the effect of SOD1 mutations on the metal site by
+means of computational chemistry.<sup><xref rid="ref22" ref-type="bibr">22</xref>,<xref rid="ref23" ref-type="bibr">23</xref></sup> Their focus
+was exclusively on mutations in the proximity of the metal site, where
+altered Zn(II) binding or interactions with the EL determined the
+impact of the mutations. The effect of non-active site mutations of
+SOD1 on the metal affinity of the protein and the underlying molecular
+mechanisms are still unclear. To the best of our knowledge, neither
+aspect has been elucidated.</p><p>This work focuses on the G93A mutation
+of SOD1, a widely studied
+mutation, as the expression of its human form in mice constitutes
+a common animal model of ALS.<sup><xref rid="ref24" ref-type="bibr">24</xref></sup> Because
+the mutation occurs away from the metal site (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>, top), it must affect the metal site allosterically.
+While the G93A mutant is experimentally known to affect the EL and
+the metal site of the protein,<sup><xref rid="ref20" ref-type="bibr">20</xref>,<xref rid="ref21" ref-type="bibr">21</xref>,<xref rid="ref25" ref-type="bibr">25</xref></sup> the effect is subtle, as only a methyl group is added, and the purified
+variant has also been shown to be metalated and catalytically active.<sup><xref rid="ref26" ref-type="bibr">26</xref></sup> We use atomistic and coarse-grained (CG) molecular
+dynamics (MD) simulations of the SOD1 wild type (WT) and its G93A
+mutant to compare their EL loop opening. Moreover, to evaluate the
+impact of the EL loop opening on the metal site, we also perform hybrid
+quantum mechanical/molecular mechanical (QM/MM) MD simulations. The
+thorough statistics from the CG simulations allow us to identify for
+the first time the allosteric pathway from the distant G93A mutation
+to the metal site of SOD1.</p><p>We performed atomistic MD simulations
+on models for the monomer
+of the wild type (WT) and G93A variants of human SOD1, both derived
+from the high-resolution crystallographic structure for the WT enzyme.<sup><xref rid="ref27" ref-type="bibr">27</xref></sup> Three 1 μs simulations were performed
+for each variant and show a stable protein fold. In one of the mutant
+trajectories and two of the WT ones, full opening of the EL could
+be observed (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Figures S4 and S5</ext-link>). During
+the opening, weak interactions between one half of the loop and the
+rest of the protein are broken, and the detached loop adopts a distorted
+configuration (<xref rid="fig1" ref-type="fig">Figure <xref rid="fig1" ref-type="fig">1</xref></xref>C,D). The “open” half of the loop matches the amino
+acid sequence previously shown by H/D exchange to have enhanced hydration
+in ALS-linked mutants of SOD1.<sup><xref rid="ref21" ref-type="bibr">21</xref></sup> However,
+the obtained atomistic simulation times are insufficient for judging
+whether there is an altered tendency for loop opening in G93A SOD1.</p><p>To obtain reliable statistics, we performed CG MD simulations with
+the Martini force field. To the best of our knowledge, this is not
+only the first exploration of the combined Martini 3 (open-beta version<sup><xref rid="ref28" ref-type="bibr">28</xref>−<xref rid="ref30" ref-type="bibr">30</xref></sup>) and Go̅-like models<sup><xref rid="ref31" ref-type="bibr">31</xref></sup> but also
+among the first uses of Martini for the study of a conformational
+transition in a protein.<sup><xref rid="ref28" ref-type="bibr">28</xref>,<xref rid="ref32" ref-type="bibr">32</xref></sup> A total of 480 μs
+of simulation time (12 × 40 μs) was obtained for each variant
+(WT and G93A) of SOD1. The CG simulations revealed similar EL opening
+events compared to the atomistic simulations, indicating that the
+CG model reliably reproduces the protein flexibility. <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref> summarizes the key findings of the CG simulations.
+The distribution of the average protein backbone root-mean-square
+deviation (RMSD) depicted in <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>A has a similar maximum position for the WT (blue)
+and the G93A mutant (red). However, above an RMSD of 2.3 Å, a
+clear shoulder is present in the mutant that is missing in the WT.
+Thus, the mutation results in an increased population at a higher
+RMSD. <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>B shows
+that the EL exhibits the highest RMSD of ∼4.5 Å in the
+case of the WT, indicating that the shoulder at the high RMSD might
+impact the EL to a large extent. Interestingly, the vicinity of the
+mutation site in the G93A mutant becomes rigid compared to that of
+the WT (see <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>C). In contrast, the EL exhibits an increased flexibility in the
+mutant, which is in agreement with the experimentally reported increased
+mobility of the SOD1 EL.<sup><xref rid="ref21" ref-type="bibr">21</xref></sup> Moreover, the
+increased flexibility of the Zn loop (ZL) as well as the unaffected
+dimerization surface are in agreement with observations from H/D exchange
+experiments.<sup><xref rid="ref25" ref-type="bibr">25</xref></sup></p><fig id="fig2" position="float"><?disp-level 1?><label>Figure 2</label><caption><p>Comparison of the SOD1
+WT and G93A mutant based on the CG Martini
+simulations. (A) Distribution of the average protein backbone RMSD
+for the WT (blue) and the G93A mutant (red) obtained from 480 μs
+of simulation each. The inset shows the region between 1.75 and 2.55
+Å including error bars. (B) Flexibility of the protein backbone
+of the WT. Snapshots were taken every 1 μs; the color scale
+represents the backbone RMSD. (C) Change in RMSD between the WT and
+G93A. Blue indicates rigidification in G93A; red indicates increased
+flexibility. (D and E) Free energy surfaces of WT and G93A, respectively,
+spanned by the EL RMSD and the water–active site contacts (top
+left). The underlying probability distribution of the EL RMSD (top
+right) and the number of water–active site contacts (bottom)
+are also depicted. The differences in the probability distributions
+are small, but meaningful as shown by the error bars in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Figure S6</ext-link>. For the sake of clarity, the error
+bars have been omitted.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr3" xlink:href="jz9b02868_0002.jpg"><?cloudpmc-path blobs/9195/6926953/82fdf3dc4f3b/jz9b02868_0002.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 920?><?original-width 928?><?scaled-height 613?><?scaled-width 618?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="jz9b02868_0002.gif"><?cloudpmc-path blobs/9195/6926953/15d3ac70d235/jz9b02868_0002.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>The G93A mutation has been shown to impair the
+Zn metabolism in
+the cell and to destabilize the metal site.<sup><xref rid="ref6" ref-type="bibr">6</xref>,<xref rid="ref20" ref-type="bibr">20</xref>,<xref rid="ref25" ref-type="bibr">25</xref></sup> We had previously proposed an increased
+level of hydration of the metal site via EL opening, resulting in
+a decreased affinity of SOD1 for Zn(II), as a pathogenic mechanism
+for ALS-linked SOD1 mutants.<sup><xref rid="ref22" ref-type="bibr">22</xref>,<xref rid="ref33" ref-type="bibr">33</xref></sup> We analyzed the number
+of contacts between the active site of SOD1 and CG water beads. The
+G93A mutant shows more water–active site contacts than the
+WT (bottom panels in <xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>D,E). Note that one CG water bead represents four water molecules.
+Thus, 1.5 CG water beads are sufficient to form a hexaaqua complex
+with the Cu(I/II) or Zn(II) ions. To resolve the connection between
+the water–active site contacts and the RMSD of the EL, we calculated
+the corresponding two-dimensional free energy surface for the WT (<xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>D) and the G93A mutant
+(<xref rid="fig2" ref-type="fig">Figure <xref rid="fig2" ref-type="fig">2</xref></xref>E). In both
+cases, the global minimum is located at a low RMSD (∼2.5 Å)
+and ∼70 water–active site contacts. A closer look at
+the tail of the minimum at a higher RMSD reveals that the G93A mutant
+exhibits a wider and slightly deeper minimum at an RMSD of ∼6
+Å and ∼80 water–active site contacts. Overall,
+our CG simulations show a stronger tendency for EL opening in the
+G93A mutant, in agreement with experimental observations, together
+with a higher level of hydration of the active site.</p><p>To determine
+whether the increased level of hydration of the metal
+site has an effect on the binding energy of Zn(II), implicated in
+proposed mechanisms for SOD1 pathogenic function, we performed QM/MM
+MD simulations starting from structures taken from the atomistic trajectories
+(see <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>A,B).
+The QM subsystem, treated at the composite HF-3c level of theory,
+contained 590 atoms, in line with what we previously showed to be
+adequate<sup><xref rid="ref34" ref-type="bibr">34</xref></sup> (see the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Supporting Information</ext-link>). Four simulations of 4 ps each were
+performed: with the EL in open and closed configurations and, for
+each of them, with and without Zn(II) bound to the protein. Subtraction
+of the potential energy averages for the trajectories can be assimilated
+to the difference in ΔΔ<italic>H</italic> of Zn(II) binding
+between the protein in open and closed EL conformations. The closed
+EL conformation has a more favorable Δ<italic>H</italic> of
+Zn(II) binding by −99 kJ/mol. A frequency-based estimation
+for the ΔΔ<italic>S</italic> for the process, employing
+the full protein plus the water molecules within ∼10 Å
+of the metal site (see the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Supporting Information</ext-link>), gave a −<italic>T</italic>ΔΔ<italic>S</italic> value of 15 kJ/mol, close to an order of magnitude lower than the
+calculated ΔΔ<italic>H</italic>.</p><fig id="fig3" position="float"><?disp-level 1?><label>Figure 3</label><caption><p>(A and B) QM/MM-optimized
+structures for the G93A mutant in the
+closed and open EL conformations, respectively. The EL is colored
+blue; the G93 residue is shown as red sticks, and Cu(I) and Zn(II)
+ions are shown as orange and gray spheres, respectively. (C) Matrix
+representation of the integrated absolute difference in the distance
+distributions between all backbone beads. The bottom left triangle
+represents the full data set. In the top right triangle, only values
+of &gt;0.3 are depicted; all other values are colored blue. (D) Residues
+exhibiting an integrated absolute difference between the distributions
+of the distance of the respective residue and the mutation site of
+WT and G93A of &gt;0.3 are colored red. The red bonds between the
+backbone
+chain indicate transfer pathways based on the Go̅-like model.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" id="gr4" xlink:href="jz9b02868_0003.jpg"><?cloudpmc-path blobs/9195/6926953/1d0d524b5cc7/jz9b02868_0003.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 747?><?original-width 952?><?scaled-height 497?><?scaled-width 634?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="jz9b02868_0003.gif"><?cloudpmc-path blobs/9195/6926953/7fe0d406b6fc/jz9b02868_0003.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>To unravel the pathway transmitting the subtle
+mutation G93A toward
+the EL, we analyzed the distance distributions between all pairwise
+residue combinations in the CG trajectories (as described in <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Figures S3 and S8A,B</ext-link>). The integrated absolute
+differences between the distance distributions of the WT and the G93A
+mutant are depicted in <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>C. The largest changes are observed between the region of
+residues 90–95 (around the mutation site) and all other residues.
+In <xref rid="fig3" ref-type="fig">Figure <xref rid="fig3" ref-type="fig">3</xref></xref>D, the residues
+of the SOD1 monomer for which the integrated absolute difference between
+the distance distributions of mutation site 93 and all other residues
+is larger than 0.3 are colored red. Besides the vicinity of the mutation
+site, several residues connecting the mutation site with the joint
+for the EL opening (residues 122 and 141) exhibit significant differences
+in the distance distributions (see <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Figure S8C,D</ext-link>).</p><p>A closer look at the atomistic structure reveals a network
+comprising
+hydrogen and peptide bonds that are responsible for the mechanical
+communication of G93 with the EL. The backbone of L38 is closely packed
+with G93 in the WT structure and directly linked to the first residue
+in the network, T39. The packing is altered in the mutant by a steric
+clash between C<sub>β</sub> of A93 and the backbone oxygen of
+L38. This clash can also be observed in our atomistic simulations
+resulting in a change in the G/A93(C<sub>β3</sub>)–L38(O)
+distance distribution (see <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Figures S9 and S10</ext-link>). The identified network promotes this altered distance via three
+hydrogen and two peptide bonds toward the joint of the EL. Namely,
+residues T39, H43, K122, A123, A140, and G141 are involved in the
+network and all exhibit significant changes in their distributions
+(<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Figure S8</ext-link>). The allosteric pathway thus
+identified is comprised mainly of backbone-mediated interactions,
+which explains its lack of susceptibility to ALS-causing mutations,
+as previously discussed.<sup><xref rid="ref22" ref-type="bibr">22</xref></sup> The exception
+is the H43 residue, which participates in the interactions with its
+side chain and is the target of at least one known ALS-causing mutation.<sup><xref rid="ref35" ref-type="bibr">35</xref></sup></p><p>In summary, our multiscale simulation
+study provides a molecular
+mechanism for the pathogenic effect of the widely studied G93A mutation
+of SOD1. Our results directly link the G93A mutation to a Zn(II) site
+destabilization via an increased level of electrostatic loop opening.
+It arises from a steric clash between G93 and L38 in the mutant. We
+identified a network connecting G93 with the main point of EL opening,
+which is responsible for transmitting the steric clash to the EL.
+In a more general view, our results back the general involvement of
+the EL in SOD1-linked ALS pathogenesis by providing molecular level
+insights into EL destabilization. Moreover, the results also mark
+a milestone in the combined use of the Martini 3 force field and Go̅-like
+models to study long-range structural communication and allosteric
+changes caused by single-point mutations.</p><sec id="sec2" disp-level="1"><title>Computational Methods</title><p>All MD simulations were performed
+with the MD package GROMACS (version
+2018).<sup><xref rid="ref36" ref-type="bibr">36</xref>,<xref rid="ref37" ref-type="bibr">37</xref></sup> Atomistic simulations were realized with
+the AMBER99SB-ILDN force field for the protein,<sup><xref rid="ref38" ref-type="bibr">38</xref>,<xref rid="ref39" ref-type="bibr">39</xref></sup> while metal parameters were obtained in a previous work.<sup><xref rid="ref40" ref-type="bibr">40</xref></sup> The open-beta version of the Martini 3 force
+field<sup><xref rid="ref28" ref-type="bibr">28</xref>,<xref rid="ref30" ref-type="bibr">30</xref></sup> in combination with a Go̅-like model<sup><xref rid="ref31" ref-type="bibr">31</xref></sup> was used for the CG MD simulations. The beta
+release of Martini 3 is available online at the webpage of Marrink’s
+group.<sup><xref rid="ref29" ref-type="bibr">29</xref></sup> QM/MM calculations were performed
+with the program packages pDynamo,<sup><xref rid="ref41" ref-type="bibr">41</xref></sup> ORCA
+4.0,<sup><xref rid="ref42" ref-type="bibr">42</xref></sup> Turbomole version 7.3,<sup><xref rid="ref43" ref-type="bibr">43</xref>,<xref rid="ref44" ref-type="bibr">44</xref></sup> and xtb.<sup><xref rid="ref45" ref-type="bibr">45</xref></sup> The HF-3c composite method
+and GFN0-xTB semiempirical method from Grimme<sup><xref rid="ref46" ref-type="bibr">46</xref>,<xref rid="ref47" ref-type="bibr">47</xref></sup> were employed for the QM part of the system, while the AMBER-ILDN
+force field<sup><xref rid="ref38" ref-type="bibr">38</xref>,<xref rid="ref39" ref-type="bibr">39</xref></sup> was employed for the MM subsystem.
+Further details are given in the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">Supporting Information</ext-link>.</p></sec><sec id="ack1" sec-type="ack" disp-level="1"><title>Acknowledgments</title><p>R.M.-A. thanks CONICYT-Chile for support under FONDECYT
+N° 11160032. S.T. thanks the European Commission for support
+via a Marie Skłodowska-Curie Actions Individual Fellowship (MicroMod-PSII,
+Grant Agreement 748895). P.C.T.S., S.T., and S.J.M. acknowledge the
+National Computing Facilities Foundation (NCF) of The Netherlands
+Organization for Scientific Research (NWO) for providing computing
+time.</p></sec><sec id="notes1" disp-level="1"><title>Supporting Information Available</title><p>The Supporting Information is
+available free of charge at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://pubs.acs.org/doi/10.1021/acs.jpclett.9b02868?goto=supporting-info" ext-link-type="uri">https://pubs.acs.org/doi/10.1021/acs.jpclett.9b02868</ext-link>.</p><list list-type="simple" id="silist"><list-item><p>Computational details and parameters of atomistic MD
+simulations, QM/MM simulations, and CG MD simulations; and additional
+analysis, including the flexibility of the EL loop in atomistic simulations,
+RMSD and hydration analysis of the CG simulations, significance of
+the QM/MM energy values, comparison of backbone bead distributions
+of the CG simulations, and impact of the mutation on the 93C–38O
+distance (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b02868/suppl_file/jz9b02868_si_001.pdf" ext-link-type="uri">PDF</ext-link>)</p></list-item></list></sec><sec id="notes2" disp-level="1"><title>Author Contributions</title><p>All authors
+designed the research. P.C.T.S., S.T., and R.M.-A. performed the simulations.
+All authors analyzed the data. The manuscript was written by P.C.T.S.,
+S.T., and R.M.-A. with suggestions from S.J.M. All authors have given
+approval to the final version of the manuscript.</p></sec><sec id="notes3" disp-level="1"><p>The authors
+declare no competing financial interest.</p></sec><sec id="sec2_pmc" disp-level="1"><title>Supplementary Material</title><supplementary-material id="sifile1" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jz9b02868_si_001.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path 9195/6926953/72188018bbea/jz9b02868_si_001.pdf?><?cloudpmc-bucket app?><?size 1268687?><caption><p>jz9b02868_si_001.pdf</p></caption></media></supplementary-material></sec><sec id="ref-list1" sec-type="ref-list" disp-level="1"><title>References</title><sec id="ref-list1_sec2" disp-level="2"><ref-list><ref id="ref1"><mixed-citation id="cit1"><named-content content-type="citation-string">Hart P. J.; Balbirnie M. M.; Ogihara N. L.; Nersissian A. M.; Weiss M. S.; Valentine J. S.; Eisenberg D.
+A Structure-Based
+Mechanism for Copper–Zinc Superoxide Dismutase. Biochemistry
+1999, 38 (7), 2167–2178. 10.1021/bi982284u.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/bi982284u"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="10026301"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Biochemistry&amp;title=A Structure-Based Mechanism for Copper–Zinc Superoxide Dismutase&amp;author=P. J. Hart&amp;author=M. M. Balbirnie&amp;author=N. L. Ogihara&amp;author=A. M. Nersissian&amp;author=M. S. Weiss&amp;volume=38&amp;issue=7&amp;publication_year=1999&amp;pages=2167-2178&amp;pmid=10026301&amp;doi=10.1021/bi982284u&amp;"/></mixed-citation></ref><ref id="ref2"><mixed-citation id="cit2"><named-content content-type="citation-string">Wroe R.; Wai-Ling Butler A.; Andersen P. M.; Powell J. F.; Al-Chalabi A.
+ALSOD: The
+Amyotrophic Lateral Sclerosis Online Database. Amyotrophic Lateral Scler.
+2008, 9 (4), 249–250. 10.1080/17482960802146106.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1080/17482960802146106"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="18608099"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Amyotrophic Lateral Scler.&amp;title=ALSOD: The Amyotrophic Lateral Sclerosis Online Database&amp;author=R. Wroe&amp;author=A. Wai-Ling Butler&amp;author=P. M. Andersen&amp;author=J. F. Powell&amp;author=A. Al-Chalabi&amp;volume=9&amp;issue=4&amp;publication_year=2008&amp;pages=249-250&amp;pmid=18608099&amp;doi=10.1080/17482960802146106&amp;"/></mixed-citation></ref><ref id="ref3"><mixed-citation id="cit3"><named-content content-type="citation-string">Valentine J. S.; Hart P. J.
+Misfolded CuZnSOD
+and Amyotrophic Lateral Sclerosis. Proc. Natl.
+Acad. Sci. U. S. A.
+2003, 100 (7), 3617–3622. 10.1073/pnas.0730423100.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1073/pnas.0730423100"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC152971"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="12655070"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Proc. Natl. Acad. Sci. U. S. A.&amp;title=Misfolded CuZnSOD and Amyotrophic Lateral Sclerosis&amp;author=J. S. Valentine&amp;author=P. J. Hart&amp;volume=100&amp;issue=7&amp;publication_year=2003&amp;pages=3617-3622&amp;pmid=12655070&amp;doi=10.1073/pnas.0730423100&amp;"/></mixed-citation></ref><ref id="ref4"><mixed-citation id="cit4"><named-content content-type="citation-string">Ido A.; Fukuyama H.; Urushitani M.
+Protein Misdirection
+inside and Outside
+Motor Neurons in Amyotrophic Lateral Sclerosis (ALS): A Possible Clue
+for Therapeutic Strategies. Int. J. Mol. Sci.
+2011, 12 (10), 6980–7003. 10.3390/ijms12106980.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3390/ijms12106980"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC3211022"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="22072931"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Int. J. Mol. Sci.&amp;title=Protein Misdirection inside and Outside Motor Neurons in Amyotrophic Lateral Sclerosis (ALS): A Possible Clue for Therapeutic Strategies&amp;author=A. Ido&amp;author=H. Fukuyama&amp;author=M. Urushitani&amp;volume=12&amp;issue=10&amp;publication_year=2011&amp;pages=6980-7003&amp;pmid=22072931&amp;doi=10.3390/ijms12106980&amp;"/></mixed-citation></ref><ref id="ref5"><mixed-citation id="cit5"><named-content content-type="citation-string">Perry J. J. P.; Shin D. S.; Getzoff E. D.; Tainer J. A.
+The Structural Biochemistry
+of the Superoxide Dismutases. Biochim. Biophys.
+Acta, Proteins Proteomics
+2010, 1804 (2), 245–262. 10.1016/j.bbapap.2009.11.004.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.bbapap.2009.11.004"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC3098211"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19914407"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Biochim. Biophys. Acta, Proteins Proteomics&amp;title=The Structural Biochemistry of the Superoxide Dismutases&amp;author=J. J. P. Perry&amp;author=D. S. Shin&amp;author=E. D. Getzoff&amp;author=J. A. Tainer&amp;volume=1804&amp;issue=2&amp;publication_year=2010&amp;pages=245-262&amp;pmid=19914407&amp;doi=10.1016/j.bbapap.2009.11.004&amp;"/></mixed-citation></ref><ref id="ref6"><mixed-citation id="cit6"><named-content content-type="citation-string">Kim J. M.; Billington E.; Reyes A.; Notarianni T.; Sage J.; Agbas E.; Taylor M.; Monast I.; Stanford J. A.; Agbas A.
+Impaired Cu-Zn
+Superoxide Dismutase
+(SOD1) and Calcineurin (Cn) Interaction in ALS: A Presumed Consequence
+for TDP-43 and Zinc Aggregation in Tg SOD1G93A Rodent Spinal Cord
+Tissue. Neurochem. Res.
+2019, 44 (1), 228–233. 10.1007/s11064-017-2461-z.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1007/s11064-017-2461-z"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6345727"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="29299811"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Neurochem. Res.&amp;title=Impaired Cu-Zn Superoxide Dismutase (SOD1) and Calcineurin (Cn) Interaction in ALS: A Presumed Consequence for TDP-43 and Zinc Aggregation in Tg SOD1G93A Rodent Spinal Cord Tissue&amp;author=J. M. Kim&amp;author=E. Billington&amp;author=A. Reyes&amp;author=T. Notarianni&amp;author=J. Sage&amp;volume=44&amp;issue=1&amp;publication_year=2019&amp;pages=228-233&amp;pmid=29299811&amp;doi=10.1007/s11064-017-2461-z&amp;"/></mixed-citation></ref><ref id="ref7"><mixed-citation id="cit7"><named-content content-type="citation-string">Khare S. D.; Dokholyan N. V.
+Common
+Dynamical Signatures of Familial Amyotrophic
+Lateral Sclerosis-Associated Structurally Diverse Cu, Zn Superoxide
+Dismutase Mutants. Proc. Natl. Acad. Sci. U.
+S. A.
+2006, 103 (9), 3147–3152. 10.1073/pnas.0511266103.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1073/pnas.0511266103"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC1413921"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="16488975"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Proc. Natl. Acad. Sci. U. S. A.&amp;title=Common Dynamical Signatures of Familial Amyotrophic Lateral Sclerosis-Associated Structurally Diverse Cu, Zn Superoxide Dismutase Mutants&amp;author=S. D. Khare&amp;author=N. V. Dokholyan&amp;volume=103&amp;issue=9&amp;publication_year=2006&amp;pages=3147-3152&amp;pmid=16488975&amp;doi=10.1073/pnas.0511266103&amp;"/></mixed-citation></ref><ref id="ref8"><mixed-citation id="cit8"><named-content content-type="citation-string">Proctor E. A.; Fee L.; Tao Y.; Redler R. L.; Fay J. M.; Zhang Y.; Lv Z.; Mercer I. P.; Deshmukh M.; Lyubchenko Y. L.; et al. Nonnative SOD1 Trimer Is Toxic to Motor Neurons in a Model of Amyotrophic
+Lateral Sclerosis. Proc. Natl. Acad. Sci. U.
+S. A.
+2016, 113 (3), 614–619. 10.1073/pnas.1516725113.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1073/pnas.1516725113"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4725519"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="26719414"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Proc. Natl. Acad. Sci. U. S. A.&amp;title=Nonnative SOD1 Trimer Is Toxic to Motor Neurons in a Model of Amyotrophic Lateral Sclerosis&amp;author=E. A. Proctor&amp;author=L. Fee&amp;author=Y. Tao&amp;author=R. L. Redler&amp;author=J. M. Fay&amp;volume=113&amp;issue=3&amp;publication_year=2016&amp;pages=614-619&amp;pmid=26719414&amp;doi=10.1073/pnas.1516725113&amp;"/></mixed-citation></ref><ref id="ref9"><mixed-citation id="cit9"><named-content content-type="citation-string">Crow J. P.; Sampson J. B.; Zhuang Y.; Thompson J. A.; Beckman J. S.
+Decreased
+Zinc Affinity of Amyotrophic Lateral Sclerosis-Associated Superoxide
+Dismutase Mutants Leads to Enhanced Catalysis of Tyrosine Nitration
+by Peroxynitrite. J. Neurochem.
+1997, 69 (5), 1936–1944. 10.1046/j.1471-4159.1997.69051936.x.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1046/j.1471-4159.1997.69051936.x"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="9349538"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Neurochem.&amp;title=Decreased Zinc Affinity of Amyotrophic Lateral Sclerosis-Associated Superoxide Dismutase Mutants Leads to Enhanced Catalysis of Tyrosine Nitration by Peroxynitrite&amp;author=J. P. Crow&amp;author=J. B. Sampson&amp;author=Y. Zhuang&amp;author=J. A. Thompson&amp;author=J. S. Beckman&amp;volume=69&amp;issue=5&amp;publication_year=1997&amp;pages=1936-1944&amp;pmid=9349538&amp;doi=10.1046/j.1471-4159.1997.69051936.x&amp;"/></mixed-citation></ref><ref id="ref10"><mixed-citation id="cit10"><named-content content-type="citation-string">Smith A. P.; Lee N. M.
+Role of Zinc in ALS. Amyotrophic
+Lateral Scler.
+2007, 8 (3), 131–143. 10.1080/17482960701249241.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1080/17482960701249241"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="17538774"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Amyotrophic Lateral Scler.&amp;title=Role of Zinc in ALS&amp;author=A. P. Smith&amp;author=N. M. Lee&amp;volume=8&amp;issue=3&amp;publication_year=2007&amp;pages=131-143&amp;pmid=17538774&amp;doi=10.1080/17482960701249241&amp;"/></mixed-citation></ref><ref id="ref11"><mixed-citation id="cit11"><named-content content-type="citation-string">Nagano S.; Satoh M.; Sumi H.; Fujimura H.; Tohyama C.; Yanagihara T.; Sakoda S.
+Reduction of Metallothioneins
+Promotes
+the Disease Expression of Familial Amyotrophic Lateral Sclerosis Mice
+in a Dose-Dependent Manner. Eur. J. Neurosci.
+2001, 13 (7), 1363–1370. 10.1046/j.0953-816x.2001.01512.x.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1046/j.0953-816x.2001.01512.x"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="11298796"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Eur. J. Neurosci.&amp;title=Reduction of Metallothioneins Promotes the Disease Expression of Familial Amyotrophic Lateral Sclerosis Mice in a Dose-Dependent Manner&amp;author=S. Nagano&amp;author=M. Satoh&amp;author=H. Sumi&amp;author=H. Fujimura&amp;author=C. Tohyama&amp;volume=13&amp;issue=7&amp;publication_year=2001&amp;pages=1363-1370&amp;pmid=11298796&amp;doi=10.1046/j.0953-816x.2001.01512.x&amp;"/></mixed-citation></ref><ref id="ref12"><mixed-citation id="cit12"><named-content content-type="citation-string">Hashimoto K.; Hayashi Y.; Watabe K.; Inuzuka T.; Hozumi I.
+Metallothionein-III
+Prevents Neuronal Death and Prolongs Life Span in Amyotrophic Lateral
+Sclerosis Model Mice. Neuroscience
+2011, 189, 293–298. 10.1016/j.neuroscience.2011.05.034.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.neuroscience.2011.05.034"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="21640795"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Neuroscience&amp;title=Metallothionein-III Prevents Neuronal Death and Prolongs Life Span in Amyotrophic Lateral Sclerosis Model Mice&amp;author=K. Hashimoto&amp;author=Y. Hayashi&amp;author=K. Watabe&amp;author=T. Inuzuka&amp;author=I. Hozumi&amp;volume=189&amp;publication_year=2011&amp;pages=293-298&amp;pmid=21640795&amp;doi=10.1016/j.neuroscience.2011.05.034&amp;"/></mixed-citation></ref><ref id="ref13"><mixed-citation id="cit13"><named-content content-type="citation-string">Kaneko M.; Noguchi T.; Ikegami S.; Sakurai T.; Kakita A.; Toyoshima Y.; Kambe T.; Yamada M.; Inden M.; Hara H.; et al. Zinc Transporters ZnT3 and ZnT6 Are Downregulated in
+the Spinal Cords of Patients with Sporadic Amyotrophic Lateral Sclerosis. J. Neurosci. Res.
+2015, 93 (2), 370–379. 10.1002/jnr.23491.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/jnr.23491"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25284286"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Neurosci. Res.&amp;title=Zinc Transporters ZnT3 and ZnT6 Are Downregulated in the Spinal Cords of Patients with Sporadic Amyotrophic Lateral Sclerosis&amp;author=M. Kaneko&amp;author=T. Noguchi&amp;author=S. Ikegami&amp;author=T. Sakurai&amp;author=A. Kakita&amp;volume=93&amp;issue=2&amp;publication_year=2015&amp;pages=370-379&amp;pmid=25284286&amp;doi=10.1002/jnr.23491&amp;"/></mixed-citation></ref><ref id="ref14"><mixed-citation id="cit14"><named-content content-type="citation-string">Sirangelo I.; Iannuzzi C.
+The Role of Metal Binding
+in the Amyotrophic Lateral
+Sclerosis-Related Aggregation of Copper-Zinc Superoxide Dismutase. Molecules
+2017, 22 (9), E1429. 10.3390/molecules22091429.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3390/molecules22091429"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6151412"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="28850080"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Molecules&amp;title=The Role of Metal Binding in the Amyotrophic Lateral Sclerosis-Related Aggregation of Copper-Zinc Superoxide Dismutase&amp;author=I. Sirangelo&amp;author=C. Iannuzzi&amp;volume=22&amp;issue=9&amp;publication_year=2017&amp;pages=E1429&amp;pmid=28850080&amp;doi=10.3390/molecules22091429&amp;"/></mixed-citation></ref><ref id="ref15"><mixed-citation id="cit15"><named-content content-type="citation-string">Kayatekin C.; Zitzewitz J. A.; Matthews C. R.
+Zinc Binding Modulates
+the Entire
+Folding Free Energy Surface of Human Cu,Zn Superoxide Dismutase. J. Mol. Biol.
+2008, 384 (2), 540–555. 10.1016/j.jmb.2008.09.045.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jmb.2008.09.045"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC2756654"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="18840448"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Biol.&amp;title=Zinc Binding Modulates the Entire Folding Free Energy Surface of Human Cu,Zn Superoxide Dismutase&amp;author=C. Kayatekin&amp;author=J. A. Zitzewitz&amp;author=C. R. Matthews&amp;volume=384&amp;issue=2&amp;publication_year=2008&amp;pages=540-555&amp;pmid=18840448&amp;doi=10.1016/j.jmb.2008.09.045&amp;"/></mixed-citation></ref><ref id="ref16"><mixed-citation id="cit16"><named-content content-type="citation-string">Roberts B. R.; Tainer J. A.; Getzoff E. D.; Malencik D. A.; Anderson S. R.; Bomben V. C.; Meyers K. R.; Karplus P. A.; Beckman J. S.
+Structural
+Characterization of Zinc-Deficient Human Superoxide Dismutase and
+Implications for ALS. J. Mol. Biol.
+2007, 373 (4), 877–890. 10.1016/j.jmb.2007.07.043.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jmb.2007.07.043"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC2175016"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="17888947"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Biol.&amp;title=Structural Characterization of Zinc-Deficient Human Superoxide Dismutase and Implications for ALS&amp;author=B. R. Roberts&amp;author=J. A. Tainer&amp;author=E. D. Getzoff&amp;author=D. A. Malencik&amp;author=S. R. Anderson&amp;volume=373&amp;issue=4&amp;publication_year=2007&amp;pages=877-890&amp;pmid=17888947&amp;doi=10.1016/j.jmb.2007.07.043&amp;"/></mixed-citation></ref><ref id="ref17"><mixed-citation id="cit17"><named-content content-type="citation-string">Ding F.; Dokholyan N. V.
+Dynamical Roles of Metal Ions and the Disulfide Bond
+in Cu, Zn Superoxide Dismutase Folding and Aggregation. Proc. Natl. Acad. Sci. U. S. A.
+2008, 105 (50), 19696–19701. 10.1073/pnas.0803266105.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1073/pnas.0803266105"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC2604981"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19052230"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Proc. Natl. Acad. Sci. U. S. A.&amp;title=Dynamical Roles of Metal Ions and the Disulfide Bond in Cu, Zn Superoxide Dismutase Folding and Aggregation&amp;author=F. Ding&amp;author=N. V. Dokholyan&amp;volume=105&amp;issue=50&amp;publication_year=2008&amp;pages=19696-19701&amp;pmid=19052230&amp;doi=10.1073/pnas.0803266105&amp;"/></mixed-citation></ref><ref id="ref18"><mixed-citation id="cit18"><named-content content-type="citation-string">Nedd S.; Redler R. L.; Proctor E. A.; Dokholyan N. V.; Alexandrova A. N.
+Cu,Zn-Superoxide Dismutase without
+Zn Is Folded but
+Catalytically Inactive. J. Mol. Biol.
+2014, 426 (24), 4112–4124. 10.1016/j.jmb.2014.07.016.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jmb.2014.07.016"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4258539"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25083917"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Biol.&amp;title=Cu,Zn-Superoxide Dismutase without Zn Is Folded but Catalytically Inactive&amp;author=S. Nedd&amp;author=R. L. Redler&amp;author=E. A. Proctor&amp;author=N. V. Dokholyan&amp;author=A. N. Alexandrova&amp;volume=426&amp;issue=24&amp;publication_year=2014&amp;pages=4112-4124&amp;pmid=25083917&amp;doi=10.1016/j.jmb.2014.07.016&amp;"/></mixed-citation></ref><ref id="ref19"><mixed-citation id="cit19"><named-content content-type="citation-string">Trumbull K. A.; Beckman J. S.
+A Role for Copper in the Toxicity of Zinc-Deficient
+Superoxide Dismutase to Motor Neurons in Amyotrophic Lateral Sclerosis. Antioxid. Redox Signaling
+2009, 11 (7), 1627–1639. 10.1089/ars.2009.2574.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1089/ars.2009.2574"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC2842582"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19309264"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Antioxid. Redox Signaling&amp;title=A Role for Copper in the Toxicity of Zinc-Deficient Superoxide Dismutase to Motor Neurons in Amyotrophic Lateral Sclerosis&amp;author=K. A. Trumbull&amp;author=J. S. Beckman&amp;volume=11&amp;issue=7&amp;publication_year=2009&amp;pages=1627-1639&amp;pmid=19309264&amp;doi=10.1089/ars.2009.2574&amp;"/></mixed-citation></ref><ref id="ref20"><mixed-citation id="cit20"><named-content content-type="citation-string">Kim J.; Kim T.-Y.; Hwang J. J.; Lee J.-Y.; Shin J.-H.; Gwag B. J.; Koh J.-Y.
+Accumulation
+of Labile Zinc in Neurons
+and Astrocytes in the Spinal Cords of G93A SOD-1 Transgenic Mice. Neurobiol. Dis.
+2009, 34 (2), 221–229. 10.1016/j.nbd.2009.01.004.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.nbd.2009.01.004"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19344646"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Neurobiol. Dis.&amp;title=Accumulation of Labile Zinc in Neurons and Astrocytes in the Spinal Cords of G93A SOD-1 Transgenic Mice&amp;author=J. Kim&amp;author=T.-Y. Kim&amp;author=J. J. Hwang&amp;author=J.-Y. Lee&amp;author=J.-H. Shin&amp;volume=34&amp;issue=2&amp;publication_year=2009&amp;pages=221-229&amp;pmid=19344646&amp;doi=10.1016/j.nbd.2009.01.004&amp;"/></mixed-citation></ref><ref id="ref21"><mixed-citation id="cit21"><named-content content-type="citation-string">Molnar K. S.; Karabacak N. M.; Johnson J. L.; Wang Q.; Tiwari A.; Hayward L. J.; Coales S. J.; Hamuro Y.; Agar J. N.
+A Common
+Property of Amyotrophic Lateral Sclerosis-Associated Variants: Destabilization
+of the Copper/zinc Superoxide Dismutase Electrostatic Loop. J. Biol. Chem.
+2009, 284 (45), 30965–30973. 10.1074/jbc.M109.023945.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1074/jbc.M109.023945"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC2781497"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19635794"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Biol. Chem.&amp;title=A Common Property of Amyotrophic Lateral Sclerosis-Associated Variants: Destabilization of the Copper/zinc Superoxide Dismutase Electrostatic Loop&amp;author=K. S. Molnar&amp;author=N. M. Karabacak&amp;author=J. L. Johnson&amp;author=Q. Wang&amp;author=A. Tiwari&amp;volume=284&amp;issue=45&amp;publication_year=2009&amp;pages=30965-30973&amp;pmid=19635794&amp;doi=10.1074/jbc.M109.023945&amp;"/></mixed-citation></ref><ref id="ref22"><mixed-citation id="cit22"><named-content content-type="citation-string">Mera-Adasme R.; Erdmann H.; Bereźniak T.; Ochsenfeld C.
+Destabilization
+of the Metal Site as a Hub for the Pathogenic Mechanism of Five ALS-Linked
+Mutants of Copper, Zinc Superoxide Dismutase. Metallomics
+2016, 8 (10), 1141–1150. 10.1039/C6MT00085A.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/C6MT00085A"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="27603566"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Metallomics&amp;title=Destabilization of the Metal Site as a Hub for the Pathogenic Mechanism of Five ALS-Linked Mutants of Copper, Zinc Superoxide Dismutase&amp;author=R. Mera-Adasme&amp;author=H. Erdmann&amp;author=T. Bereźniak&amp;author=C. Ochsenfeld&amp;volume=8&amp;issue=10&amp;publication_year=2016&amp;pages=1141-1150&amp;pmid=27603566&amp;doi=10.1039/C6MT00085A&amp;"/></mixed-citation></ref><ref id="ref23"><mixed-citation id="cit23"><named-content content-type="citation-string">Mera-Adasme R.; Mendizábal F.; Gonzalez M.; Miranda-Rojas S.; Olea-Azar C.; Sundholm D.
+Computational Studies of the Metal-Binding
+Site of the Wild-Type and the H46R Mutant of the Copper, Zinc Superoxide
+Dismutase. Inorg. Chem.
+2012, 51 (10), 5561–5568. 10.1021/ic202416d.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ic202416d"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="22545761"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Inorg. Chem.&amp;title=Computational Studies of the Metal-Binding Site of the Wild-Type and the H46R Mutant of the Copper, Zinc Superoxide Dismutase&amp;author=R. Mera-Adasme&amp;author=F. Mendizábal&amp;author=M. Gonzalez&amp;author=S. Miranda-Rojas&amp;author=C. Olea-Azar&amp;volume=51&amp;issue=10&amp;publication_year=2012&amp;pages=5561-5568&amp;pmid=22545761&amp;doi=10.1021/ic202416d&amp;"/></mixed-citation></ref><ref id="ref24"><mixed-citation id="cit24"><named-content content-type="citation-string">Kim R. B.; Irvin C. W.; Tilva K. R.; Mitchell C. S.
+State of the Field:
+An Informatics-Based Systematic Review of the SOD1-G93A Amyotrophic
+Lateral Sclerosis Transgenic Mouse Model. Amyotrophic
+Lateral Scler. Frontotemporal Degener.
+2016, 17 (1–2), 1–14. 10.3109/21678421.2015.1047455.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3109/21678421.2015.1047455"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4724331"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25998063"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Amyotrophic Lateral Scler. Frontotemporal Degener.&amp;title=State of the Field: An Informatics-Based Systematic Review of the SOD1-G93A Amyotrophic Lateral Sclerosis Transgenic Mouse Model&amp;author=R. B. Kim&amp;author=C. W. Irvin&amp;author=K. R. Tilva&amp;author=C. S. Mitchell&amp;volume=17&amp;issue=1–2&amp;publication_year=2016&amp;pages=1-14&amp;pmid=25998063&amp;doi=10.3109/21678421.2015.1047455&amp;"/></mixed-citation></ref><ref id="ref25"><mixed-citation id="cit25"><named-content content-type="citation-string">Museth A. K.; Brorsson A.-C.; Lundqvist M.; Tibell L. A. E.; Jonsson B.-H.
+The ALS-Associated
+Mutation G93A in Human Copper-Zinc Superoxide Dismutase Selectively
+Destabilizes the Remote Metal Binding Region. Biochemistry
+2009, 48 (37), 8817–8829. 10.1021/bi900703v.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/bi900703v"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="19655787"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Biochemistry&amp;title=The ALS-Associated Mutation G93A in Human Copper-Zinc Superoxide Dismutase Selectively Destabilizes the Remote Metal Binding Region&amp;author=A. K. Museth&amp;author=A.-C. Brorsson&amp;author=M. Lundqvist&amp;author=L. A. E. Tibell&amp;author=B.-H. Jonsson&amp;volume=48&amp;issue=37&amp;publication_year=2009&amp;pages=8817-8829&amp;pmid=19655787&amp;doi=10.1021/bi900703v&amp;"/></mixed-citation></ref><ref id="ref26"><mixed-citation id="cit26"><named-content content-type="citation-string">Hayward L. J.; Rodriguez J. A.; Kim J. W.; Tiwari A.; Goto J. J.; Cabelli D. E.; Valentine J. S.; Brown R. H. Jr
+Decreased Metallation and Activity in Subsets of Mutant Superoxide
+Dismutases Associated with Familial Amyotrophic Lateral Sclerosis. J. Biol. Chem.
+2002, 277 (18), 15923–15931. 10.1074/jbc.M112087200.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1074/jbc.M112087200"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="11854284"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Biol. Chem.&amp;title=Decreased Metallation and Activity in Subsets of Mutant Superoxide Dismutases Associated with Familial Amyotrophic Lateral Sclerosis&amp;author=L. J. Hayward&amp;author=J. A. Rodriguez&amp;author=J. W. Kim&amp;author=A. Tiwari&amp;author=J. J. Goto&amp;volume=277&amp;issue=18&amp;publication_year=2002&amp;pages=15923-15931&amp;pmid=11854284&amp;doi=10.1074/jbc.M112087200&amp;"/></mixed-citation></ref><ref id="ref27"><mixed-citation id="cit27"><named-content content-type="citation-string">Strange R. W.; Antonyuk S. V.; Hough M. A.; Doucette P. A.; Valentine J. S.; Hasnain S. S.
+Variable Metallation
+of Human Superoxide Dismutase:
+Atomic Resolution Crystal Structures of Cu-Zn, Zn-Zn and as-Isolated
+Wild-Type Enzymes. J. Mol. Biol.
+2006, 356 (5), 1152–1162. 10.1016/j.jmb.2005.11.081.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.jmb.2005.11.081"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="16406071"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Biol.&amp;title=Variable Metallation of Human Superoxide Dismutase: Atomic Resolution Crystal Structures of Cu-Zn, Zn-Zn and as-Isolated Wild-Type Enzymes&amp;author=R. W. Strange&amp;author=S. V. Antonyuk&amp;author=M. A. Hough&amp;author=P. A. Doucette&amp;author=J. S. Valentine&amp;volume=356&amp;issue=5&amp;publication_year=2006&amp;pages=1152-1162&amp;pmid=16406071&amp;doi=10.1016/j.jmb.2005.11.081&amp;"/></mixed-citation></ref><ref id="ref28"><mixed-citation id="cit28"><named-content content-type="citation-string">Marrink S. J.; Tieleman D. P.
+Perspective on the Martini Model. Chem. Soc. Rev.
+2013, 42 (16), 6801–6822. 10.1039/c3cs60093a.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1039/c3cs60093a"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="23708257"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Soc. Rev.&amp;title=Perspective on the Martini Model&amp;author=S. J. Marrink&amp;author=D. P. Tieleman&amp;volume=42&amp;issue=16&amp;publication_year=2013&amp;pages=6801-6822&amp;pmid=23708257&amp;doi=10.1039/c3cs60093a&amp;"/></mixed-citation></ref><ref id="ref29"><mixed-citation id="cit29"><named-content content-type="citation-string">Martini 3
+open-beta version. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.cgmartini.nl/index.php/force-field-parameters/particle-definitions" ext-link-type="uri">www.cgmartini.nl/index.php/force-field-parameters/particle-definitions</ext-link>.</named-content></mixed-citation></ref><ref id="ref30"><mixed-citation id="cit30"><named-content content-type="citation-string">Alessandri R.; Souza P. C. T.; Thallmair S.; Melo M. N.; de Vries A. H.; Marrink S. J.
+Pitfalls of the
+Martini Model. J. Chem. Theory Comput.
+2019, 15, 5448. 10.1021/acs.jctc.9b00473.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jctc.9b00473"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6785803"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31498621"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Theory Comput.&amp;title=Pitfalls of the Martini Model&amp;author=R. Alessandri&amp;author=P. C. T. Souza&amp;author=S. Thallmair&amp;author=M. N. Melo&amp;author=A. H. de Vries&amp;volume=15&amp;publication_year=2019&amp;pages=5448&amp;pmid=31498621&amp;doi=10.1021/acs.jctc.9b00473&amp;"/></mixed-citation></ref><ref id="ref31"><mixed-citation id="cit31"><named-content content-type="citation-string">Poma A. B.; Cieplak M.; Theodorakis P. E.
+Combining
+the MARTINI and Structure-Based
+Coarse-Grained Approaches for the Molecular Dynamics Studies of Conformational
+Transitions in Proteins. J. Chem. Theory Comput.
+2017, 13 (3), 1366–1374. 10.1021/acs.jctc.6b00986.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.jctc.6b00986"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="28195464"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Theory Comput.&amp;title=Combining the MARTINI and Structure-Based Coarse-Grained Approaches for the Molecular Dynamics Studies of Conformational Transitions in Proteins&amp;author=A. B. Poma&amp;author=M. Cieplak&amp;author=P. E. Theodorakis&amp;volume=13&amp;issue=3&amp;publication_year=2017&amp;pages=1366-1374&amp;pmid=28195464&amp;doi=10.1021/acs.jctc.6b00986&amp;"/></mixed-citation></ref><ref id="ref32"><mixed-citation id="cit32"><named-content content-type="citation-string">Kmiecik S.; Gront D.; Kolinski M.; Wieteska L.; Dawid A. E.; Kolinski A.
+Coarse-Grained Protein Models and Their Applications. Chem. Rev.
+2016, 116 (14), 7898–7936. 10.1021/acs.chemrev.6b00163.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/acs.chemrev.6b00163"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="27333362"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Rev.&amp;title=Coarse-Grained Protein Models and Their Applications&amp;author=S. Kmiecik&amp;author=D. Gront&amp;author=M. Kolinski&amp;author=L. Wieteska&amp;author=A. E. Dawid&amp;volume=116&amp;issue=14&amp;publication_year=2016&amp;pages=7898-7936&amp;pmid=27333362&amp;doi=10.1021/acs.chemrev.6b00163&amp;"/></mixed-citation></ref><ref id="ref33"><mixed-citation id="cit33"><named-content content-type="citation-string">Mera-Adasme R.; Suomivuori C.-M.; Fierro A.; Pesonen J.; Sundholm D.
+The Role of
+Solvent Exclusion in the Interaction between D124 and the Metal Site
+in SOD1: Implications for ALS. JBIC, J. Biol.
+Inorg. Chem.
+2013, 18 (8), 931–938. 10.1007/s00775-013-1039-8.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1007/s00775-013-1039-8"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="24026444"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=JBIC, J. Biol. Inorg. Chem.&amp;title=The Role of Solvent Exclusion in the Interaction between D124 and the Metal Site in SOD1: Implications for ALS&amp;author=R. Mera-Adasme&amp;author=C.-M. Suomivuori&amp;author=A. Fierro&amp;author=J. Pesonen&amp;author=D. Sundholm&amp;volume=18&amp;issue=8&amp;publication_year=2013&amp;pages=931-938&amp;pmid=24026444&amp;doi=10.1007/s00775-013-1039-8&amp;"/></mixed-citation></ref><ref id="ref34"><mixed-citation id="cit34"><named-content content-type="citation-string">Mera-Adasme R.; Domínguez M.; Denis-Alpizar O.
+A Benchmark
+for the Size of the QM
+System Required for Accurate Hybrid QM/MM Calculations on the Metal
+Site of the Protein Copper, Zinc Superoxide Dismutase. J. Mol. Model.
+2019, 25 (6), 176. 10.1007/s00894-019-4066-8.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1007/s00894-019-4066-8"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31154525"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Mol. Model.&amp;title=A Benchmark for the Size of the QM System Required for Accurate Hybrid QM/MM Calculations on the Metal Site of the Protein Copper, Zinc Superoxide Dismutase&amp;author=R. Mera-Adasme&amp;author=M. Domínguez&amp;author=O. Denis-Alpizar&amp;volume=25&amp;issue=6&amp;publication_year=2019&amp;pages=176&amp;pmid=31154525&amp;doi=10.1007/s00894-019-4066-8&amp;"/></mixed-citation></ref><ref id="ref35"><mixed-citation id="cit35"><named-content content-type="citation-string">Muneeswaran G.; Kartheeswaran S.; Muthukumar K.; Dharmaraj C. D.; Karunakaran C.
+Comparative Structural and Conformational
+Studies on
+H43R and W32F Mutants of Copper-Zinc Superoxide Dismutase by Molecular
+Dynamics Simulation. Biophys. Chem.
+2014, 185, 70–78. 10.1016/j.bpc.2013.11.010.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.bpc.2013.11.010"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="24369116"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Biophys. Chem.&amp;title=Comparative Structural and Conformational Studies on H43R and W32F Mutants of Copper-Zinc Superoxide Dismutase by Molecular Dynamics Simulation&amp;author=G. Muneeswaran&amp;author=S. Kartheeswaran&amp;author=K. Muthukumar&amp;author=C. D. Dharmaraj&amp;author=C. Karunakaran&amp;volume=185&amp;publication_year=2014&amp;pages=70-78&amp;pmid=24369116&amp;doi=10.1016/j.bpc.2013.11.010&amp;"/></mixed-citation></ref><ref id="ref36"><mixed-citation id="cit36"><named-content content-type="citation-string">Abraham M. J.; Murtola T.; Schulz R.; Páll S.; Smith J. C.; Hess B.; Lindahl E.
+GROMACS: High
+Performance
+Molecular Simulations through Multi-Level Parallelism from Laptops
+to Supercomputers. SoftwareX
+2015, 1–2, 19–25. 10.1016/j.softx.2015.06.001.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.softx.2015.06.001"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=SoftwareX&amp;title=GROMACS: High Performance Molecular Simulations through Multi-Level Parallelism from Laptops to Supercomputers&amp;author=M. J. Abraham&amp;author=T. Murtola&amp;author=R. Schulz&amp;author=S. Páll&amp;author=J. C. Smith&amp;volume=1–2&amp;publication_year=2015&amp;pages=19-25&amp;doi=10.1016/j.softx.2015.06.001&amp;"/></mixed-citation></ref><ref id="ref37"><mixed-citation id="cit37"><named-content content-type="citation-string">Pronk S.; Páll S.; Schulz R.; Larsson P.; Bjelkmar P.; Apostolov R.; Shirts M. R.; Smith J. C.; Kasson P. M.; van der
+Spoel D.; et al. GROMACS 4.5: A High-Throughput and Highly Parallel
+Open Source Molecular Simulation Toolkit. Bioinformatics
+2013, 29 (7), 845–854. 10.1093/bioinformatics/btt055.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/bioinformatics/btt055"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC3605599"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="23407358"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Bioinformatics&amp;title=GROMACS 4.5: A High-Throughput and Highly Parallel Open Source Molecular Simulation Toolkit&amp;author=S. Pronk&amp;author=S. Páll&amp;author=R. Schulz&amp;author=P. Larsson&amp;author=P. Bjelkmar&amp;volume=29&amp;issue=7&amp;publication_year=2013&amp;pages=845-854&amp;pmid=23407358&amp;doi=10.1093/bioinformatics/btt055&amp;"/></mixed-citation></ref><ref id="ref38"><mixed-citation id="cit38"><named-content content-type="citation-string">Hornak V.; Abel R.; Okur A.; Strockbine B.; Roitberg A.; Simmerling C.
+Comparison of Multiple Amber Force
+Fields and Development of Improved Protein Backbone Parameters. Proteins: Struct., Funct., Genet.
+2006, 65 (3), 712–725. 10.1002/prot.21123.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/prot.21123"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4805110"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="16981200"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Proteins: Struct., Funct., Genet.&amp;title=Comparison of Multiple Amber Force Fields and Development of Improved Protein Backbone Parameters&amp;author=V. Hornak&amp;author=R. Abel&amp;author=A. Okur&amp;author=B. Strockbine&amp;author=A. Roitberg&amp;volume=65&amp;issue=3&amp;publication_year=2006&amp;pages=712-725&amp;pmid=16981200&amp;doi=10.1002/prot.21123&amp;"/></mixed-citation></ref><ref id="ref39"><mixed-citation id="cit39"><named-content content-type="citation-string">Lindorff-Larsen K.; Piana S.; Palmo K.; Maragakis P.; Klepeis J. L.; Dror R. O.; Shaw D. E.
+Improved
+Side-Chain
+Torsion Potentials for the Amber ff99SB Protein Force Field. Proteins: Struct., Funct., Genet.
+2010, 78 (8), 1950–1958. 10.1002/prot.22711.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/prot.22711"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC2970904"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="20408171"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Proteins: Struct., Funct., Genet.&amp;title=Improved Side-Chain Torsion Potentials for the Amber ff99SB Protein Force Field&amp;author=K. Lindorff-Larsen&amp;author=S. Piana&amp;author=K. Palmo&amp;author=P. Maragakis&amp;author=J. L. Klepeis&amp;volume=78&amp;issue=8&amp;publication_year=2010&amp;pages=1950-1958&amp;pmid=20408171&amp;doi=10.1002/prot.22711&amp;"/></mixed-citation></ref><ref id="ref40"><mixed-citation id="cit40"><named-content content-type="citation-string">Mera-Adasme R.; Sadeghian K.; Sundholm D.; Ochsenfeld C.
+Effect of
+Including Torsional Parameters for Histidine–Metal Interactions
+in Classical Force Fields for Metalloproteins. J. Phys. Chem. B
+2014, 118, 13106–13111. 10.1021/jp5078906.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/jp5078906"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25410708"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Phys. Chem. B&amp;title=Effect of Including Torsional Parameters for Histidine–Metal Interactions in Classical Force Fields for Metalloproteins&amp;author=R. Mera-Adasme&amp;author=K. Sadeghian&amp;author=D. Sundholm&amp;author=C. Ochsenfeld&amp;volume=118&amp;publication_year=2014&amp;pages=13106-13111&amp;pmid=25410708&amp;doi=10.1021/jp5078906&amp;"/></mixed-citation></ref><ref id="ref41"><mixed-citation id="cit41"><named-content content-type="citation-string">Field M. J.
+The pDynamo
+Program for Molecular Simulations Using Hybrid Quantum Chemical and
+Molecular Mechanical Potentials. J. Chem. Theory
+Comput.
+2008, 4 (7), 1151–1161. 10.1021/ct800092p.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/ct800092p"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="26636368"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Chem. Theory Comput.&amp;title=The pDynamo Program for Molecular Simulations Using Hybrid Quantum Chemical and Molecular Mechanical Potentials&amp;author=M. J. Field&amp;volume=4&amp;issue=7&amp;publication_year=2008&amp;pages=1151-1161&amp;pmid=26636368&amp;doi=10.1021/ct800092p&amp;"/></mixed-citation></ref><ref id="ref42"><mixed-citation id="cit42"><named-content content-type="citation-string">Neese F.
+Software Update:
+The ORCA Program System, Version 4.0. WIREs
+Comput. Mol. Sci.
+2018, 8 (1), e1327 10.1002/wcms.1327.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/wcms.1327"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=WIREs Comput. Mol. Sci.&amp;title=Software Update: The ORCA Program System, Version 4.0&amp;author=F. Neese&amp;volume=8&amp;issue=1&amp;publication_year=2018&amp;pages=e1327&amp;doi=10.1002/wcms.1327&amp;"/></mixed-citation></ref><ref id="ref43"><mixed-citation id="cit43"><named-content content-type="citation-string">Ahlrichs R.; Bär M.; Häser M.; Horn H.; Kölmel C.
+Electronic
+Structure Calculations on Workstation Computers: The Program System
+Turbomole. Chem. Phys. Lett.
+1989, 162 (3), 165–169. 10.1016/0009-2614(89)85118-8.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/0009-2614(89)85118-8"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Chem. Phys. Lett.&amp;title=Electronic Structure Calculations on Workstation Computers: The Program System Turbomole&amp;author=R. Ahlrichs&amp;author=M. Bär&amp;author=M. Häser&amp;author=H. Horn&amp;author=C. Kölmel&amp;volume=162&amp;issue=3&amp;publication_year=1989&amp;pages=165-169&amp;doi=10.1016/0009-2614(89)85118-8&amp;"/></mixed-citation></ref><ref id="ref44"><mixed-citation id="cit44"><named-content content-type="citation-string">Furche F.; Ahlrichs R.; Hättig C.; Klopper W.; Sierka M.; Weigend F.
+Turbomole. Wiley Interdiscip.
+Rev.: Comput. Mol. Sci.
+2014, 4 (2), 91–100. 10.1002/wcms.1162.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/wcms.1162"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Wiley Interdiscip. Rev.: Comput. Mol. Sci.&amp;title=Turbomole&amp;author=F. Furche&amp;author=R. Ahlrichs&amp;author=C. Hättig&amp;author=W. Klopper&amp;author=M. Sierka&amp;volume=4&amp;issue=2&amp;publication_year=2014&amp;pages=91-100&amp;doi=10.1002/wcms.1162&amp;"/></mixed-citation></ref><ref id="ref45"><mixed-citation id="cit45"><named-content content-type="citation-string">Xtb. <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/grimme-lab/xtb" ext-link-type="uri">https://github.com/grimme-lab/xtb</ext-link> (accessed November 19, 2019).</named-content></mixed-citation></ref><ref id="ref46"><mixed-citation id="cit46"><named-content content-type="citation-string">Sure R.; Grimme S.
+Corrected Small Basis Set Hartree-Fock Method for Large
+Systems. J. Comput. Chem.
+2013, 34 (19), 1672–1685. 10.1002/jcc.23317.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/jcc.23317"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="23670872"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Comput. Chem.&amp;title=Corrected Small Basis Set Hartree-Fock Method for Large Systems&amp;author=R. Sure&amp;author=S. Grimme&amp;volume=34&amp;issue=19&amp;publication_year=2013&amp;pages=1672-1685&amp;pmid=23670872&amp;doi=10.1002/jcc.23317&amp;"/></mixed-citation></ref><ref id="ref47"><mixed-citation id="cit47"><named-content content-type="citation-string">Pracht P.; Caldeweyher E.; Ehlert S.; Grimme S.. A Robust Non-Self-Consistent
+Tight-Binding Quantum Chemistry Method for Large Molecules. ChemRxiv 2019.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="title=ChemRxiv&amp;publication_year=2019&amp;"/></mixed-citation></ref></ref-list></sec></sec><sec id="_ad93_" xml:lang="en" sec-type="associated-data" disp-level="1"><title>Associated Data</title><sec id="_adsm93_" xml:lang="en" sec-type="supplementary-materials" disp-level="2"><title>Supplementary Materials</title><supplementary-material id="db_ds_supplementary-material1_reqid_" position="float"><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="jz9b02868_si_001.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path 9195/6926953/72188018bbea/jz9b02868_si_001.pdf?><?cloudpmc-bucket app?><?size 1268687?><caption><p>jz9b02868_si_001.pdf</p></caption></media></supplementary-material></sec></sec></body></article>

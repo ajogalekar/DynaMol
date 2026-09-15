@@ -1,0 +1,2509 @@
+{
+  "plan_sha256": "bc8d4c1cccfcba2350c046d37d174654327037224c31eb810bc56e51ee81f4b9",
+  "implementation_sha256": "11f57be1c9559fc81d56cfeb9504dc30b3b10997c7a23ae1ed49f7da5bff9e4a",
+  "existing_screen_sha256": "f18520b1028444d76f85c6834bb6d5002adc98a242fea58adb6a4eba9d833b2e",
+  "candidate_sha256": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2026/candidate.json": "52ef58294501866af80927f5c280893cced2bd73b1acf84f616513e587f0fc74",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2027/candidate.json": "a7e11a7504047c6b910ff2542f6791783225002ca33779c5e10e20e0f3a6577f",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2027/candidate.json": "504970f40372e51ff6f7e681d025c555df475c420956ce642d73af1770f8b7ab",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2026/candidate.json": "7332c74ac4670a5bd39ee6fb78e6c1eab09d1ac0806ad99f5fa7ba46f9aeefce",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2027/candidate.json": "fa9ee69728e5715c3a77bb6ea77a4b2d487b6a21758f47b1b814e22d37c724f2"
+  },
+  "trial_sha256": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2026/trial-coordinates.json": "071bca6592c6d320ee8fe46de2e0dae04d69551c4e938ee6b653ee964367c264",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2027/trial-coordinates.json": "2a1c95fb30506026492046f894e7600860484b17bcd1e55c94599aa54f76eb1a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2026/trial-coordinates.json": "c134c458c7570802c2d9929e7cd27e2821b33d10ed6dbca691c75151c80eebe8",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2027/trial-coordinates.json": "04134149381cbb02e7c901c1841986060c811e44c807f1d8b8bcaa4e773143c2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2026/trial-coordinates.json": "24118fecdccbe03ea3204dea9ee1db4fd184986910f2f600c3d7af5b03bed9e5",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2027/trial-coordinates.json": "59b0bfd1f7d69321054891e1d254857d14da9f3f7f98d75ff86407f28a90a71a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/masked-control/native/fragment-source-ccd-seed-2026/trial-coordinates.json": "fee4faf0646f7798da9d949ca7be906b54aa3df94479c93ae40505dfddc56f37",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/masked-control/native/torsion-source-ccd-seed-2026/trial-coordinates.json": "45786935f4f940f2973b39fe78d3658d5f0f775b4382de67ec4933d96d628ffb",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/masked-control/native/torsion-source-dirty-seed-2026/trial-coordinates.json": "f72ef3960906a19fd9b905a38a12e717f1bf580f9fac17a84b58e20b4f0fbd3f"
+  },
+  "frozen_source_implementation_hashes_verified": true,
+  "attempts": 9,
+  "native_closure_calls": 9,
+  "native_successes": 5,
+  "native_and_backbone_screen_passes": 0,
+  "rows": [
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2026/candidate.json",
+      "candidate_sha256": "7332c74ac4670a5bd39ee6fb78e6c1eab09d1ac0806ad99f5fa7ba46f9aeefce",
+      "id": "d3ce6f2323ff18de640a5af32d691cd2d24dfa8af1c81d5c671ddd6252a1b793",
+      "case": "1UA2",
+      "generator": "promod3_shifted_anchor_ccd",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.19077848575649678,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07437511341294,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 172.4064252180967,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "backbone_only_diagnostic_pass": false,
+      "native_closure_success": true,
+      "native_and_backbone_screen_pass": false,
+      "name": "torsion-source-dirty-seed-2026",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": false,
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74730945663129,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368350591014428,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.35030825992766,
+          "psi_degrees": 3.1888916930261644,
+          "preceding_omega_degrees": 175.07437511341314,
+          "rama_class": "isoleucine or valine",
+          "score": 0.03553839241835552,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": 122.51410291227522,
+          "psi_degrees": 55.313908812768865,
+          "preceding_omega_degrees": 179.98942561588154,
+          "rama_class": "general",
+          "score": 4.5768590281147914e-07,
+          "classification": "outlier",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 68.70505756661987,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 172.40642521809673,
+          "rama_class": "general",
+          "score": 0.00030345583324840354,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "native_sidechain_coverage": true,
+      "all_sidechain_backbone_max_difference_A": 0.0,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.05807700896485516,
+        "CA": 0.03682102538860421,
+        "C": 0.05638215032156269,
+        "O": 0.09623518343508461
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 2.1457672119140625e-06,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3313032388687134,
+        "CA_C_N_degrees": 116.77970574942661,
+        "O_C_N_degrees": 121.59108224608035,
+        "C_N_CA_degrees": 121.4674831428598,
+        "omega_degrees": 179.98242410203272
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3313032388687134,
+        "CA_C_N_degrees": 116.77970574942661,
+        "O_C_N_degrees": 121.59108224608035,
+        "C_N_CA_degrees": 121.4674831428598,
+        "omega_degrees": 179.98242410203272
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2026/candidate.json",
+      "source_candidate_sha256": "7b06c0f064e74034486888ca182370cb6dd5ece696d47bd1baff94a12fa8c38a",
+      "c_stem_N_CA_C_RMSD_A": 0.0999220243305507
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2027/candidate.json",
+      "candidate_sha256": "fa9ee69728e5715c3a77bb6ea77a4b2d487b6a21758f47b1b814e22d37c724f2",
+      "id": "0e79e90a46dcb91dee05c20e3f467f45ed6ab4e908f2408c97c2b8cc8b8a9242",
+      "case": "1UA2",
+      "generator": "promod3_shifted_anchor_ccd",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.23487517230265587,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07213219119728,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 166.97754557406148,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "backbone_only_diagnostic_pass": false,
+      "native_closure_success": true,
+      "native_and_backbone_screen_pass": false,
+      "name": "torsion-source-dirty-seed-2027",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": false,
+      "modeled_outliers": [
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74882372649,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368317918444052,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.35055323486453,
+          "psi_degrees": 3.191617785206687,
+          "preceding_omega_degrees": 175.07213219119754,
+          "rama_class": "isoleucine or valine",
+          "score": 0.03553592501012497,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -149.9830802104224,
+          "psi_degrees": 76.10610677267856,
+          "preceding_omega_degrees": -179.99030042432815,
+          "rama_class": "general",
+          "score": 0.012735757154807266,
+          "classification": "allowed",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 63.858499670670284,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 166.97754557406157,
+          "rama_class": "general",
+          "score": 0.0002489849983424499,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "native_sidechain_coverage": true,
+      "all_sidechain_backbone_max_difference_A": 0.0,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.05812378851437543,
+        "CA": 0.036772038953468866,
+        "C": 0.056524408600001214,
+        "O": 0.09655738150603388
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 0.0,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3313724994659424,
+        "CA_C_N_degrees": 116.77801186251244,
+        "O_C_N_degrees": 121.59302201980464,
+        "C_N_CA_degrees": 121.46976442604259,
+        "omega_degrees": 179.99234153670758
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3313724994659424,
+        "CA_C_N_degrees": 116.77801186251244,
+        "O_C_N_degrees": 121.59302201980464,
+        "C_N_CA_degrees": 121.46976442604259,
+        "omega_degrees": 179.99234153670758
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2027/candidate.json",
+      "source_candidate_sha256": "8bf20da8de839f8bdb945b55509404c20fe39c04be3c79b9fa71d1d696c12085",
+      "c_stem_N_CA_C_RMSD_A": 0.09950830419342507
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2026/failed-backbone-for-screen.json",
+      "candidate_sha256": "294f52019750889408d7aebbf910641b290209e0ba844387b5e8cc3e4fe9b422",
+      "id": "torsion-source-ccd-seed-2026-native-closure-failed",
+      "case": "1UA2",
+      "generator": "failed_shifted_anchor_ccd_trial",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.5367699673511426,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07448802490535,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 166.27791221115388,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "backbone_only_diagnostic_pass": false,
+      "native_closure_success": false,
+      "native_and_backbone_screen_pass": false,
+      "name": "torsion-source-ccd-seed-2026",
+      "native_closure_calls": 1,
+      "gross_pass": false,
+      "gross_failures": [
+        {
+          "check_type": "bond_checks",
+          "atoms": [
+            [
+              56,
+              "C"
+            ],
+            [
+              57,
+              "N"
+            ]
+          ],
+          "angstrom": 1.1453374875558293,
+          "accepted": false
+        }
+      ],
+      "rama_pass": false,
+      "modeled_outliers": [
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74916684027215,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368310515266125,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.35187058201937,
+          "psi_degrees": 3.2060757169196044,
+          "preceding_omega_degrees": 175.07448802490546,
+          "rama_class": "isoleucine or valine",
+          "score": 0.03552275563353912,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -149.09728841609953,
+          "psi_degrees": 57.46653512034009,
+          "preceding_omega_degrees": 179.99399771115782,
+          "rama_class": "general",
+          "score": 0.010185628637608113,
+          "classification": "allowed",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 59.25647668742607,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 166.27791221115402,
+          "rama_class": "general",
+          "score": 0.00018331964964474182,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "native_sidechain_coverage": false,
+      "all_sidechain_backbone_max_difference_A": null,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.058151556116187435,
+        "CA": 0.03678736624690528,
+        "C": 0.05649171411075465,
+        "O": 0.09633944407925653
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 1.6689300537109375e-06,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3308782577514648,
+        "CA_C_N_degrees": 116.75913321964653,
+        "O_C_N_degrees": 121.63210436223545,
+        "C_N_CA_degrees": 121.46555702951386,
+        "omega_degrees": 179.9842955738653
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3308782577514648,
+        "CA_C_N_degrees": 116.75913321964653,
+        "O_C_N_degrees": 121.63210436223545,
+        "C_N_CA_degrees": 121.46555702951386,
+        "omega_degrees": 179.9842955738653
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/candidate.json",
+      "source_candidate_sha256": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d",
+      "c_stem_N_CA_C_RMSD_A": 0.2393895319529749
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2027/candidate.json",
+      "candidate_sha256": "504970f40372e51ff6f7e681d025c555df475c420956ce642d73af1770f8b7ab",
+      "id": "bcf6b853996d28745a44f4532205c857bbbd365e53d64fe18b804280bd5d60a6",
+      "case": "1UA2",
+      "generator": "promod3_shifted_anchor_ccd",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.1603954349849303,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07269387251768,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 167.96059686556242,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "backbone_only_diagnostic_pass": false,
+      "native_closure_success": true,
+      "native_and_backbone_screen_pass": false,
+      "name": "torsion-source-ccd-seed-2027",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": false,
+      "modeled_outliers": [
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74690232997526,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368359375363033,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.34888675693149,
+          "psi_degrees": 3.1888724440907783,
+          "preceding_omega_degrees": 175.07269387251813,
+          "rama_class": "isoleucine or valine",
+          "score": 0.03554508445755238,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -149.82767800289065,
+          "psi_degrees": 75.67221165302219,
+          "preceding_omega_degrees": 179.98326783341952,
+          "rama_class": "general",
+          "score": 0.01264605543573421,
+          "classification": "allowed",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 65.49881233905572,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 167.96059686556256,
+          "rama_class": "general",
+          "score": 0.00027166745687744095,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "native_sidechain_coverage": true,
+      "all_sidechain_backbone_max_difference_A": 0.0,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.058069975081225356,
+        "CA": 0.03678350213497301,
+        "C": 0.056387988581150725,
+        "O": 0.0961888177481847
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 9.5367431640625e-07,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3307307958602905,
+        "CA_C_N_degrees": 116.75250793615162,
+        "O_C_N_degrees": 121.64036889113116,
+        "C_N_CA_degrees": 121.44947876420765,
+        "omega_degrees": -179.99803791447536
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3307307958602905,
+        "CA_C_N_degrees": 116.75250793615162,
+        "O_C_N_degrees": 121.64036889113116,
+        "C_N_CA_degrees": 121.44947876420765,
+        "omega_degrees": -179.99803791447536
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/candidate.json",
+      "source_candidate_sha256": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+      "c_stem_N_CA_C_RMSD_A": 0.09959998923888158
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2026/candidate.json",
+      "candidate_sha256": "52ef58294501866af80927f5c280893cced2bd73b1acf84f616513e587f0fc74",
+      "id": "289ee02c3e816ee704b774ae76b462a297f1b8122f2cd5431a8802a871dbe34f",
+      "case": "1UA2",
+      "generator": "promod3_shifted_anchor_ccd",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.12145172392579652,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.8435695189278,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 174.42688754888653,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "backbone_only_diagnostic_pass": false,
+      "native_closure_success": true,
+      "native_and_backbone_screen_pass": false,
+      "name": "fragment-source-ccd-seed-2026",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": false,
+      "modeled_outliers": [
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 130.2214560653724,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5358120189640914,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -128.21787984117384,
+          "psi_degrees": 2.624213919131516,
+          "preceding_omega_degrees": 175.84356951892795,
+          "rama_class": "isoleucine or valine",
+          "score": 0.0317853290343702,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -101.32933900847941,
+          "psi_degrees": 47.58259697104832,
+          "preceding_omega_degrees": 173.91777080655118,
+          "rama_class": "general",
+          "score": 0.00907124231732133,
+          "classification": "allowed",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 68.47745353413778,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 174.4268875488867,
+          "rama_class": "general",
+          "score": 0.0003017513232804816,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "native_sidechain_coverage": true,
+      "all_sidechain_backbone_max_difference_A": 0.0,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.07245590043238567,
+        "CA": 0.04761240800002463,
+        "C": 0.07221109949272787,
+        "O": 0.0937889108827219
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": -1.9073486328125e-06,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.317765474319458,
+        "CA_C_N_degrees": 116.76118227639753,
+        "O_C_N_degrees": 122.37195045313123,
+        "C_N_CA_degrees": 122.70989455288512,
+        "omega_degrees": 177.7297184307358
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.317765474319458,
+        "CA_C_N_degrees": 116.76118227639753,
+        "O_C_N_degrees": 122.37195045313123,
+        "C_N_CA_degrees": 122.70989455288512,
+        "omega_degrees": 177.7297184307358
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/candidate.json",
+      "source_candidate_sha256": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b",
+      "c_stem_N_CA_C_RMSD_A": 0.09899226946630296
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2027/candidate.json",
+      "candidate_sha256": "a7e11a7504047c6b910ff2542f6791783225002ca33779c5e10e20e0f3a6577f",
+      "id": "180ea3267bc276c9057f87d8ef65894101a48d43a138cab8a1fe15ec20da58ff",
+      "case": "1UA2",
+      "generator": "promod3_shifted_anchor_ccd",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.17025967104846415,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.72718573413383,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 170.52203295297738,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "backbone_only_diagnostic_pass": false,
+      "native_closure_success": true,
+      "native_and_backbone_screen_pass": false,
+      "name": "fragment-source-ccd-seed-2027",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": false,
+      "modeled_outliers": [
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 130.27338390159292,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.535699977119396,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -128.18552761451102,
+          "psi_degrees": 3.134458056645341,
+          "preceding_omega_degrees": 175.72718573413422,
+          "rama_class": "isoleucine or valine",
+          "score": 0.0316345921018626,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -128.9818412133158,
+          "psi_degrees": 55.46670476222884,
+          "preceding_omega_degrees": 179.1788713634155,
+          "rama_class": "general",
+          "score": 0.0173124777981911,
+          "classification": "allowed",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 65.14860021708708,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 170.52203295297755,
+          "rama_class": "general",
+          "score": 0.00026723043791850764,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "native_sidechain_coverage": true,
+      "all_sidechain_backbone_max_difference_A": 0.0,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.07949919756513847,
+        "CA": 0.03948700616537062,
+        "C": 0.0748697427669758,
+        "O": 0.09956425567756771
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 5.7220458984375e-06,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3283765316009521,
+        "CA_C_N_degrees": 114.96075807156052,
+        "O_C_N_degrees": 124.39238871151271,
+        "C_N_CA_degrees": 123.88392210894027,
+        "omega_degrees": -179.6174461135439
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "second": [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        "C_N_A": 1.3283765316009521,
+        "CA_C_N_degrees": 114.96075807156052,
+        "O_C_N_degrees": 124.39238871151271,
+        "C_N_CA_degrees": 123.88392210894027,
+        "omega_degrees": -179.6174461135439
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/candidate.json",
+      "source_candidate_sha256": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e",
+      "c_stem_N_CA_C_RMSD_A": 0.09844813589398035
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/masked-control/native/torsion-source-dirty-seed-2026/failed-backbone-for-screen.json",
+      "candidate_sha256": "19e98a41402c425c471a714080907a567aec1041074e210a4ab223702aba6575",
+      "id": "torsion-source-dirty-seed-2026-native-closure-failed",
+      "case": "masked-control",
+      "generator": "failed_shifted_anchor_ccd_trial",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.5671753116832036,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 5,
+          "second": 6,
+          "source_degrees": -178.11596466664395,
+          "candidate_degrees": -160.99881374615669,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "3",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "4",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "heldout_modeled_backbone_RMSD_A": 0.7600163170080174,
+      "heldout_coordinates_used_for_generation_or_ranking": false,
+      "backbone_only_diagnostic_pass": true,
+      "native_closure_success": false,
+      "native_and_backbone_screen_pass": false,
+      "name": "torsion-source-dirty-seed-2026",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": true,
+      "modeled_outliers": [],
+      "boundary_outliers": [],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ],
+          "phi_degrees": -122.74362584320303,
+          "psi_degrees": 117.7357957819126,
+          "preceding_omega_degrees": -179.99942084993356,
+          "rama_class": "isoleucine or valine",
+          "score": 0.5282859653049509,
+          "classification": "favored",
+          "phi_atoms": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "psi_atoms": [
+            16,
+            17,
+            18,
+            20
+          ]
+        }
+      ],
+      "native_sidechain_coverage": false,
+      "all_sidechain_backbone_max_difference_A": null,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.023626024861176084,
+        "CA": 0.03442007439310366,
+        "C": 0.02214528268850595,
+        "O": 0.1058673291995115
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 9.5367431640625e-07,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "second": [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        "C_N_A": 1.3310043811798096,
+        "CA_C_N_degrees": 116.76899601280803,
+        "O_C_N_degrees": 121.61524745536386,
+        "C_N_CA_degrees": 121.4672782371847,
+        "omega_degrees": -179.9998957259296
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "second": [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        "C_N_A": 1.3310043811798096,
+        "CA_C_N_degrees": 116.76899601280803,
+        "O_C_N_degrees": 121.61524745536386,
+        "C_N_CA_degrees": 121.4672782371847,
+        "omega_degrees": -179.9998957259296
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/torsion-source-dirty/native/1-5-seed-2026/candidate.json",
+      "source_candidate_sha256": "95527742de3005e78a4af5eb29436fdadd483d6a601b0033db7dc0c6a3ef06e3",
+      "c_stem_N_CA_C_RMSD_A": 0.47145128647594725
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/masked-control/native/torsion-source-ccd-seed-2026/failed-backbone-for-screen.json",
+      "candidate_sha256": "1487805b24a86b647ae17ff369070f7c37723ed7fd9826d97a3b1c1f0813614d",
+      "id": "torsion-source-ccd-seed-2026-native-closure-failed",
+      "case": "masked-control",
+      "generator": "failed_shifted_anchor_ccd_trial",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.376198487971699,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 5,
+          "second": 6,
+          "source_degrees": -178.11596466664395,
+          "candidate_degrees": -170.52724037748885,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "3",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "4",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "heldout_modeled_backbone_RMSD_A": 0.45376127953426215,
+      "heldout_coordinates_used_for_generation_or_ranking": false,
+      "backbone_only_diagnostic_pass": true,
+      "native_closure_success": false,
+      "native_and_backbone_screen_pass": false,
+      "name": "torsion-source-ccd-seed-2026",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": true,
+      "modeled_outliers": [],
+      "boundary_outliers": [],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ],
+          "phi_degrees": -129.67517872252193,
+          "psi_degrees": 108.79084096350093,
+          "preceding_omega_degrees": -179.99991396774027,
+          "rama_class": "isoleucine or valine",
+          "score": 0.16951298220451097,
+          "classification": "favored",
+          "phi_atoms": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "psi_atoms": [
+            16,
+            17,
+            18,
+            20
+          ]
+        }
+      ],
+      "native_sidechain_coverage": false,
+      "all_sidechain_backbone_max_difference_A": null,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.023626024861176084,
+        "CA": 0.03442007439310366,
+        "C": 0.02214528268850595,
+        "O": 0.10586913427316909
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 1.1920928955078125e-06,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "second": [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        "C_N_A": 1.3310037851333618,
+        "CA_C_N_degrees": 116.76887306940297,
+        "O_C_N_degrees": 121.61528843649887,
+        "C_N_CA_degrees": 121.46710065226628,
+        "omega_degrees": -179.99995036744298
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "second": [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        "C_N_A": 1.3310037851333618,
+        "CA_C_N_degrees": 116.76887306940297,
+        "O_C_N_degrees": 121.61528843649887,
+        "C_N_CA_degrees": 121.46710065226628,
+        "omega_degrees": -179.99995036744298
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/torsion-source-ccd/native/1-5-seed-2026/candidate.json",
+      "source_candidate_sha256": "781add9f492c40d8a9a557dd919bb9b99f826afca9f6ef0bc4d4fc19b1afd240",
+      "c_stem_N_CA_C_RMSD_A": 0.12676789826686885
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/masked-control/native/fragment-source-ccd-seed-2026/failed-backbone-for-screen.json",
+      "candidate_sha256": "569328a2f08c4be3d99909b96876756b662e312f95b1be1cdadfc0db09f054c0",
+      "id": "fragment-source-ccd-seed-2026-native-closure-failed",
+      "case": "masked-control",
+      "generator": "failed_shifted_anchor_ccd_trial",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.47573590622285,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 5,
+          "second": 6,
+          "source_degrees": -178.11596466664395,
+          "candidate_degrees": -174.7707208332052,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "3",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "4",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "heldout_modeled_backbone_RMSD_A": 1.2064738977078258,
+      "heldout_coordinates_used_for_generation_or_ranking": false,
+      "backbone_only_diagnostic_pass": true,
+      "native_closure_success": false,
+      "native_and_backbone_screen_pass": false,
+      "name": "fragment-source-ccd-seed-2026",
+      "native_closure_calls": 1,
+      "gross_pass": true,
+      "gross_failures": [],
+      "rama_pass": true,
+      "modeled_outliers": [],
+      "boundary_outliers": [],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ],
+          "phi_degrees": -144.99554655000117,
+          "psi_degrees": 92.21798535023015,
+          "preceding_omega_degrees": 176.69205675806816,
+          "rama_class": "isoleucine or valine",
+          "score": 0.0037108132475810397,
+          "classification": "allowed",
+          "phi_atoms": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "psi_atoms": [
+            16,
+            17,
+            18,
+            20
+          ]
+        }
+      ],
+      "native_sidechain_coverage": false,
+      "all_sidechain_backbone_max_difference_A": null,
+      "locked_prefix_source_displacements_A": {
+        "N": 0.010026192611705695,
+        "CA": 0.01732295153965501,
+        "C": 0.008253235220938465,
+        "O": 0.048094870586290375
+      },
+      "locked_prefix_displacements_during_closure_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0,
+        "O": 0.0
+      },
+      "virtual_anchor_N_CA_C_displacements_A": {
+        "N": 0.0,
+        "CA": 0.0,
+        "C": 0.0
+      },
+      "locked_carbonyl_orientation_error_radians": 3.5762786865234375e-07,
+      "first_join_locked": {
+        "first": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "second": [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        "C_N_A": 1.3317792415618896,
+        "CA_C_N_degrees": 116.33896730266403,
+        "O_C_N_degrees": 123.07409389980855,
+        "C_N_CA_degrees": 120.68468882246297,
+        "omega_degrees": 176.68323782724147
+      },
+      "first_join_recombined": {
+        "first": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "second": [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        "C_N_A": 1.3317792415618896,
+        "CA_C_N_degrees": 116.33896730266403,
+        "O_C_N_degrees": 123.07409389980855,
+        "C_N_CA_degrees": 120.68468882246297,
+        "omega_degrees": 176.68323782724147
+      },
+      "source_candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/fragment-source-ccd/native/1-5-seed-2026/candidate.json",
+      "source_candidate_sha256": "51e454598e1e5bf6374a30af00cf4eb1974f668dfd86ed6730051b646bc3e098",
+      "c_stem_N_CA_C_RMSD_A": 0.4136501587765544
+    }
+  ],
+  "scope": "One shifted-anchor native closure per saved candidate, then independent local static screen of every output including failed closures. Full complex remains unvalidated.",
+  "app_ready": false,
+  "physical_model_validated": false
+}

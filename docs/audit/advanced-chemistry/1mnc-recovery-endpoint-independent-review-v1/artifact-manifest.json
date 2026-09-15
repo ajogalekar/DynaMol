@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "file": "REVIEW.md",
+      "bytes": 3067,
+      "sha256": "70874a4321583a3d5fafa5d726b376f750a1202749c34b72f62140f0dcc2caea"
+    },
+    {
+      "file": "after-fix-review.json",
+      "bytes": 4663,
+      "sha256": "11ab15e7a7b263154bce33582b67809b87293623a0225c52135d1e3bb07bec4e"
+    },
+    {
+      "file": "after-fix-source.diff",
+      "bytes": 2638,
+      "sha256": "595cec293d3c79e563e55d4a2cd22397d4afc425eb58156fa98b2f40f136cad1"
+    },
+    {
+      "file": "after-fix-source.py",
+      "bytes": 19981,
+      "sha256": "28dcd268ea8d5aaa094bf1c777c3fb4064216583b9ab089ef46cd5efebfc167e"
+    },
+    {
+      "file": "controller-discriminator-result.json",
+      "bytes": 4856,
+      "sha256": "b5876eff002bde21c60aff1774b3bf6fa6e48deae3b96bf12723e95c1b8dab1d"
+    },
+    {
+      "file": "lineage-and-inventory-review.json",
+      "bytes": 1203,
+      "sha256": "cb73b5d26d551b68acf41d2a5a67bbb9a6a24ef325bf8abc79b824e3a2e2fd32"
+    },
+    {
+      "file": "reviewed-original-analyzer.py",
+      "bytes": 32093,
+      "sha256": "291abdc7971a8676912fcf1bda655edd5439c75fe37535633406072e128085d0"
+    },
+    {
+      "file": "reviewed-source.py",
+      "bytes": 19332,
+      "sha256": "6ae8763596e763c4b18840f850e0fc8a7bef7bea3c018fe35bcb87bd9da99567"
+    },
+    {
+      "file": "source-equivalence-review.json",
+      "bytes": 2765,
+      "sha256": "61e1a9626dbd75f8acb0915f53ca322b85dc28bc6851a13cac674a5c545ccc54"
+    }
+  ]
+}

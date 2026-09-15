@@ -1,0 +1,83 @@
+{
+  "requested": true,
+  "converged": true,
+  "settings": {
+    "enabled": true,
+    "max_steps": 60,
+    "freeze_atom_ids": [
+      "O-left",
+      "O-right"
+    ],
+    "dihedral_constraints": [
+      {
+        "atom_ids": [
+          "H-left",
+          "O-left",
+          "O-right",
+          "H-right"
+        ],
+        "target_degrees": 60
+      }
+    ],
+    "dihedral_tolerance_degrees": 0.1,
+    "convergence_energy": 1e-06,
+    "convergence_grms": 0.0003,
+    "convergence_gmax": 0.00045,
+    "convergence_drms": 0.0012,
+    "convergence_dmax": 0.0018
+  },
+  "steps": [],
+  "initial_dihedral_constraints": [
+    {
+      "atom_ids": [
+        "H-left",
+        "O-left",
+        "O-right",
+        "H-right"
+      ],
+      "atom_indices_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "target_degrees": 60,
+      "canonical_target_degrees": 60.0,
+      "measured_degrees": 90.0,
+      "periodic_error_degrees": 30.0,
+      "absolute_periodic_error_degrees": 30.0,
+      "tolerance_degrees": 0.1,
+      "target_satisfied": false
+    }
+  ],
+  "constraint_atom_indices_zero_based": [
+    1,
+    2
+  ],
+  "constraint_file_sha256": "92e2a0a525415e17c706cf08b19308fee2371bc56826e9dbad34485545a2cde3",
+  "final_dihedral_constraints": [
+    {
+      "atom_ids": [
+        "H-left",
+        "O-left",
+        "O-right",
+        "H-right"
+      ],
+      "atom_indices_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "target_degrees": 60,
+      "canonical_target_degrees": 60.0,
+      "measured_degrees": 90.0,
+      "periodic_error_degrees": 30.0,
+      "absolute_periodic_error_degrees": 30.0,
+      "tolerance_degrees": 0.1,
+      "target_satisfied": false
+    }
+  ],
+  "dihedral_constraints_satisfied": false,
+  "max_frozen_displacement_bohr": 0.0
+}

@@ -1,0 +1,111 @@
+{
+  "id": "K",
+  "input": {
+    "path": "inputs/ccd/K.cif",
+    "source_url": "https://files.rcsb.org/ligands/download/K.cif",
+    "sha256": "3b918af6f7214439c3744ac66f8fb4b3bc4416ba960df6d9579aa51e29a5c7f5",
+    "bytes": 3403
+  },
+  "chem_comp": [
+    {
+      "id": "K",
+      "name": "POTASSIUM ION",
+      "type": "NON-POLYMER",
+      "pdbx_type": "HETAI",
+      "formula": "K",
+      "mon_nstd_parent_comp_id": null,
+      "pdbx_synonyms": null,
+      "pdbx_formal_charge": "1",
+      "pdbx_initial_date": "1999-07-08",
+      "pdbx_modified_date": "2011-06-04",
+      "pdbx_ambiguous_flag": "N",
+      "pdbx_release_status": "REL",
+      "pdbx_replaced_by": null,
+      "pdbx_replaces": null,
+      "formula_weight": "39.098",
+      "one_letter_code": null,
+      "three_letter_code": "K",
+      "pdbx_model_coordinates_details": null,
+      "pdbx_model_coordinates_missing_flag": "N",
+      "pdbx_ideal_coordinates_details": null,
+      "pdbx_ideal_coordinates_missing_flag": "N",
+      "pdbx_model_coordinates_db_code": null,
+      "pdbx_subcomponent_list": null,
+      "pdbx_processing_site": "RCSB"
+    }
+  ],
+  "atoms": [
+    {
+      "comp_id": "K",
+      "atom_id": "K",
+      "alt_atom_id": "K",
+      "type_symbol": "K",
+      "charge": "1",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "0.000",
+      "model_Cartn_y": "0.000",
+      "model_Cartn_z": "0.000",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.000",
+      "pdbx_component_atom_id": "K",
+      "pdbx_component_comp_id": "K",
+      "pdbx_ordinal": "1"
+    }
+  ],
+  "bonds": [],
+  "descriptors": [
+    {
+      "comp_id": "K",
+      "type": "SMILES",
+      "program": "ACDLabs",
+      "program_version": "10.04",
+      "descriptor": "[K+]"
+    },
+    {
+      "comp_id": "K",
+      "type": "SMILES_CANONICAL",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[K+]"
+    },
+    {
+      "comp_id": "K",
+      "type": "SMILES",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[K+]"
+    },
+    {
+      "comp_id": "K",
+      "type": "SMILES_CANONICAL",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[K+]"
+    },
+    {
+      "comp_id": "K",
+      "type": "SMILES",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[K+]"
+    },
+    {
+      "comp_id": "K",
+      "type": "InChI",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "InChI=1S/K/q+1"
+    },
+    {
+      "comp_id": "K",
+      "type": "InChIKey",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "NPYPAHLBTDXSSS-UHFFFAOYSA-N"
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "status": "plan_only_no_training_or_fitting_launched",
+  "case": "6OIM",
+  "source_capped_graph_sha256": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+  "native_v4_prmtop_sha256": "f0a19dc96b0bf84785be8bdead2fad42cbc6f3ca63a3234e8bcf90a0676df544",
+  "scope": "Predeclared limited proper-torsion fitting handoff. Chemistry acceptance remains separate. Native values listed below are current analogy parameters, not quantum-fitted parameters.",
+  "selected_terms": [
+    {
+      "name": "sulfur_ligand_attachment",
+      "atom_ids": [
+        "007:CB",
+        "008:SG",
+        "018:MOV_C25",
+        "017:MOV_C24"
+      ],
+      "central_bond": [
+        "008:SG",
+        "018:MOV_C25"
+      ],
+      "native_atom_type_pattern": [
+        "c3",
+        "ss",
+        "c3",
+        "c3"
+      ],
+      "native_pattern_occurrences": [
+        {
+          "atom_ids": [
+            "007:CB",
+            "008:SG",
+            "018:MOV_C25",
+            "017:MOV_C24"
+          ],
+          "atom_types": [
+            "c3",
+            "ss",
+            "c3",
+            "c3"
+          ],
+          "periodicity": 1.0,
+          "phase_degrees": 180.00007714362235,
+          "barrier_kcal_mol": 0.2,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        }
+      ],
+      "all_native_terms_about_axis": [
+        {
+          "atom_ids": [
+            "007:CB",
+            "008:SG",
+            "018:MOV_C25",
+            "017:MOV_C24"
+          ],
+          "atom_types": [
+            "c3",
+            "ss",
+            "c3",
+            "c3"
+          ],
+          "periodicity": 1.0,
+          "phase_degrees": 180.00007714362235,
+          "barrier_kcal_mol": 0.2,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "007:CB",
+            "008:SG",
+            "018:MOV_C25",
+            "071:H72"
+          ],
+          "atom_types": [
+            "c3",
+            "ss",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.22,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "007:CB",
+            "008:SG",
+            "018:MOV_C25",
+            "072:H73"
+          ],
+          "atom_types": [
+            "c3",
+            "ss",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.22,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        }
+      ],
+      "initial_fit_scope": "Only the explicit heavy-atom proper tuple above. Preserve hydrogen-ended and every other torsion. Up to n=1,2,3 Fourier amplitudes per selected tuple; total six amplitudes maximum. Phases follow a recorded fixed convention.",
+      "type_pattern_scope_check": "The current pattern has exactly one occurrence; re-enumerate after whole-protein integration and reject any unintended change outside the selected source tuple."
+    },
+    {
+      "name": "reacted_ligand_linker",
+      "atom_ids": [
+        "008:SG",
+        "018:MOV_C25",
+        "017:MOV_C24",
+        "015:MOV_C23"
+      ],
+      "central_bond": [
+        "018:MOV_C25",
+        "017:MOV_C24"
+      ],
+      "native_atom_type_pattern": [
+        "ss",
+        "c3",
+        "c3",
+        "c"
+      ],
+      "native_pattern_occurrences": [
+        {
+          "atom_ids": [
+            "008:SG",
+            "018:MOV_C25",
+            "017:MOV_C24",
+            "015:MOV_C23"
+          ],
+          "atom_types": [
+            "ss",
+            "c3",
+            "c3",
+            "c"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        }
+      ],
+      "all_native_terms_about_axis": [
+        {
+          "atom_ids": [
+            "008:SG",
+            "018:MOV_C25",
+            "017:MOV_C24",
+            "015:MOV_C23"
+          ],
+          "atom_types": [
+            "ss",
+            "c3",
+            "c3",
+            "c"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "008:SG",
+            "018:MOV_C25",
+            "017:MOV_C24",
+            "069:H70"
+          ],
+          "atom_types": [
+            "ss",
+            "c3",
+            "c3",
+            "hc"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "008:SG",
+            "018:MOV_C25",
+            "017:MOV_C24",
+            "070:H71"
+          ],
+          "atom_types": [
+            "ss",
+            "c3",
+            "c3",
+            "hc"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "015:MOV_C23",
+            "017:MOV_C24",
+            "018:MOV_C25",
+            "071:H72"
+          ],
+          "atom_types": [
+            "c",
+            "c3",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "015:MOV_C23",
+            "017:MOV_C24",
+            "018:MOV_C25",
+            "072:H73"
+          ],
+          "atom_types": [
+            "c",
+            "c3",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "069:H70",
+            "017:MOV_C24",
+            "018:MOV_C25",
+            "071:H72"
+          ],
+          "atom_types": [
+            "hc",
+            "c3",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "069:H70",
+            "017:MOV_C24",
+            "018:MOV_C25",
+            "072:H73"
+          ],
+          "atom_types": [
+            "hc",
+            "c3",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "070:H71",
+            "017:MOV_C24",
+            "018:MOV_C25",
+            "071:H72"
+          ],
+          "atom_types": [
+            "hc",
+            "c3",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        },
+        {
+          "atom_ids": [
+            "070:H71",
+            "017:MOV_C24",
+            "018:MOV_C25",
+            "072:H73"
+          ],
+          "atom_types": [
+            "hc",
+            "c3",
+            "c3",
+            "h1"
+          ],
+          "periodicity": 3.0,
+          "phase_degrees": 0.0,
+          "barrier_kcal_mol": 0.155555556,
+          "scee": 1.2,
+          "scnb": 2.0,
+          "ignore_end": false
+        }
+      ],
+      "initial_fit_scope": "Only the explicit heavy-atom proper tuple above. Preserve hydrogen-ended and every other torsion. Up to n=1,2,3 Fourier amplitudes per selected tuple; total six amplitudes maximum. Phases follow a recorded fixed convention.",
+      "type_pattern_scope_check": "The current pattern has exactly one occurrence; re-enumerate after whole-protein integration and reject any unintended change outside the selected source tuple."
+    }
+  ],
+  "frozen_parameters": [
+    "Joint exact-parent constrained RESP charges, including all 18 canonical cap/backbone charges",
+    "All masses and Lennard-Jones parameters",
+    "All bond and angle parameters pending a separate Hessian/gradient evidence review",
+    "All improper torsions, canonical ff14SB peptide mechanics, 1-4 electrostatic and LJ scaling",
+    "All proper torsions except the two explicit source quadruples"
+  ],
+  "reference_contract": {
+    "method": "Qualified dispersion-corrected full-parent provider with exact functional/B3LYP variant, D3 version and two-body policy, expanded DZVP basis, state, units, worker/runtime and all artifact hashes recorded. No RHF-only conformational accuracy claim.",
+    "graph": "Same complete 94-atom reacted product, charge 0, spin 0, stable atom IDs, two stereocenters, no truncation or second reaction",
+    "geometry": "Accepted parent and explicitly constrained torsion geometries with same five cap heavy atoms. Any cheaper geometry protocol requires the separate method-feasibility gate and remains labeled. Record all companion angles; reject bond-breaking, stereo changes, unconverged constraints or collisions.",
+    "point_payload": [
+      "source graph and accepted parent result hashes",
+      "ordered atom IDs and elements",
+      "charge, spin, exact method/basis/dispersion provenance",
+      "coordinates in explicit units, array hash, native job status and actual convergence",
+      "target and realized periodic torsion angle; fixed-cap displacement",
+      "QM electronic, dispersion and total energy; total and separated gradients when available",
+      "unchanged native-MM component energies/forces at those exact coordinates with current joint RESP charge artifact hash",
+      "fit/train/held-out assignment fixed before fitting"
+    ]
+  },
+  "dataset_split": {
+    "status": "Targets declared before fitting, not jobs launched",
+    "angle_convention": "Periodic offsets in degrees from accepted parent torsion; wrap to [-180,180). Independent profiles of each selected axis. The same parent baseline is shared.",
+    "training_offsets_degrees": [
+      -180,
+      -150,
+      -120,
+      -90,
+      -60,
+      -30,
+      0,
+      30,
+      60,
+      90,
+      120,
+      150
+    ],
+    "held_out_offsets_degrees": [
+      -165,
+      -105,
+      -45,
+      15,
+      75,
+      135
+    ],
+    "failed_points": "Remain in the planned denominator. Never replace failed geometries with easier points or relabel held-out data as training to improve reported validation.",
+    "earlier_six_point_diagnostics": "Remain separate diagnostics; do not present already-consulted points as unseen validation.",
+    "resource_gate": "Root controller must qualify full-parent cost and geometry protocol before launching this larger dataset. No schedule or completion claim here."
+  },
+  "fitting_contract": {
+    "model": "Fit only up to six selected proper-torsion Fourier amplitudes, all other terms and charges fixed. Regularization and amplitude limits require a recorded pre-fit rationale. Check design-matrix rank and conditioning before fitting.",
+    "objective": "Use consistent QM versus unchanged-MM relative energies. A common nuisance offset for the QM/MM energy origin may be fitted or removed explicitly; this is never a cross-engine conversion correction. Record weights and omitted/high-energy points before the fit.",
+    "tool": "Native Amber Paramfit has only synthetic upstream numerical qualification so far. A selected-term run must verify that the chosen parameter inventory exactly matches this plan.",
+    "export": "Enumerate every changed atom tuple/term. Retain multiplicities, phase convention and 1-4 rules; check full capped/polymer native and OpenMM/GROMACS energy-force transport without fitted engine offsets.",
+    "no_automatic_acceptance": true
+  },
+  "acceptance_obligations": [
+    "Held-out relative energies and gradients/torques, before/after comparison, periodic continuity and shape of minima/barriers",
+    "No improvement claim from training error alone, no softening toward steric clashes or new incorrect minima",
+    "A second independent conformational context and full protein-complex geometry must be assessed; a one-dimensional gas-phase scan is not a free-energy surface",
+    "Actual covalent bond/angle geometry and unrestrained dynamics require separate checks after parameter fidelity passes",
+    "Fixed 15-complex benchmark remains the full application denominator"
+  ],
+  "physical_parameter_acceptance": false
+}

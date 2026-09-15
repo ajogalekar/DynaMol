@@ -1,0 +1,232 @@
+{
+  "reviewed_unix": 1789331265.395307,
+  "status": "saved_numerical_comparison_independently_reproduced",
+  "full_preparation_ready": false,
+  "model_accuracy_validated": false,
+  "native_reruns": 0,
+  "checks": {
+    "hash_bound_saved_inputs_and_outputs": true,
+    "same_97_ordered_atom_coordinates_exact": true,
+    "same_resolved_orbital_basis_functional_grid_charge_spin": true,
+    "all_numerical_arrays_finite": true,
+    "native_cluster_and_checkpoint_mappings_verified": true,
+    "independent_metrics_match_controller_exactly": true
+  },
+  "metrics": {
+    "energy_difference_hartree": -0.0004871647870459128,
+    "gradient_max_component_difference_hartree_per_bohr": 4.59547007167771e-05,
+    "gradient_rms_component_difference_hartree_per_bohr": 9.785361992903044e-06,
+    "gradient_max_vector_difference_hartree_per_bohr": 5.073214905328541e-05,
+    "gradient_rms_vector_difference_hartree_per_bohr": 1.6948744142161517e-05,
+    "largest_vector_difference_atom": "E:280::PLH:C11",
+    "df_absolute_gradient_max_component_hartree_per_bohr": 0.12062212267883998,
+    "df_absolute_gradient_rms_component_hartree_per_bohr": 0.0299160487859844,
+    "gradient_difference_norm_over_reference_gradient_norm": 0.00032712600574970704
+  },
+  "input_coordinate_unit_roundtrip": {
+    "actual_both_runs_bohr_and_angstrom_exactly_equal": true,
+    "input_to_internal_bohr_exact_formula": "input_angstrom * (1 / pyscf.lib.param.BOHR)",
+    "output_angstrom_exact_formula": "internal_bohr * pyscf.lib.param.BOHR",
+    "maximum_roundtrip_component_angstrom": 7.105427357601002e-15,
+    "coordinate_relaxation_allowed": false
+  },
+  "reference_native_seconds": 6505.751479,
+  "df_native_seconds": 734.93354,
+  "reference_scf_cycles": 22,
+  "df_scf_cycles": 9,
+  "method": {
+    "orbital_basis": "PySCF spherical 6-31g*",
+    "functional": "B3LYPG",
+    "grid_level": 4,
+    "DF_auxbasis": "def2-universal-jkfit",
+    "charge": 1,
+    "spin_2S": 0,
+    "atom_count": 97,
+    "electron_count": 372,
+    "nao": 778
+  },
+  "limitations": [
+    "One fixed geometry with appreciable gradients, not an optimized structure, force-field fit, or physical validation.",
+    "DF calculation began from the converged conventional density; wall times are not a controlled speedup comparison.",
+    "Worker/runtime builds differ. Both declare the same PySCF/libxc versions and resolved scientific method; loaded binary provenance is not independently re-attested here.",
+    "No relative conformer-energy, Hessian, convergence-path, protonation-state or full-complex equivalence claim.",
+    "The explicitly selected Zn(II)/HID/hydroxamate state remains a model hypothesis; structural Zn, Ca, protein environment and solvent are excluded.",
+    "Spherical basis is a distinct documented method, not a reproduction of Gaussian mixed 6D/7F results."
+  ],
+  "next_request": {
+    "status": "model_boundary_choice_required_before_constrained_request",
+    "launch_ready": false,
+    "native_request": "Original MCPB small-model Gaussian/GAMESS optimization is unconstrained; no cap-freeze list is inherited.",
+    "verified_cap_carbons_at_original_CA": [
+      {
+        "atom_id": "cap:small:15:CH3",
+        "source_atom_id": "A:218::HID:CA",
+        "coords_angstrom": [
+          4.14,
+          27.893,
+          18.067
+        ]
+      },
+      {
+        "atom_id": "cap:small:54:CH3",
+        "source_atom_id": "A:222::HID:CA",
+        "coords_angstrom": [
+          6.266,
+          34.295,
+          20.187
+        ]
+      },
+      {
+        "atom_id": "cap:small:92:CH3",
+        "source_atom_id": "A:228::HID:CA",
+        "coords_angstrom": [
+          -0.516,
+          35.447,
+          15.745
+        ]
+      }
+    ],
+    "remaining_native_cap_atoms": [
+      "cap:small:13:H1",
+      "cap:small:16:H2",
+      "cap:small:17:H3",
+      "cap:small:52:H1",
+      "cap:small:55:H2",
+      "cap:small:56:H3",
+      "cap:small:90:H1",
+      "cap:small:93:H2",
+      "cap:small:94:H3"
+    ],
+    "candidate_only_not_selected": "Freezing only the three cap carbons would preserve their source CA positions while allowing methyl H relaxation, but is a new constrained-cluster approximation. Freezing all twelve cap atoms adds a different constraint and would preserve unrelaxed native H guesses. Neither policy is silently selected.",
+    "specified_model": {
+      "Zn281": "Zn(II), closed-shell singlet",
+      "His218/222/228": "HID; NE2 unprotonated",
+      "PLH280": "hydroxamate candidate: O1 deprotonated (-1), N1 remains protonated",
+      "basis": "explicit model hypothesis, not a state inferred from neutral CCD or distances",
+      "cluster_charge": 1,
+      "spin_2S": 0
+    },
+    "required_decisions": [
+      "Select and document unconstrained versus exact cap-freeze policy; do not infer it from native input.",
+      "Define geometry/coordination/stereochemistry and cap-displacement diagnostics before optimization; convergence alone is not model acceptance.",
+      "Specify accepted treatment of missing nonlocal protein/electrostatic environment and full-PLH relaxation for this isolated model.",
+      "Choose and freeze numerical convergence/resource limits and subsequent exact-gradient verification; the measured initial-geometry DF error is not an endpoint guarantee."
+    ],
+    "later_unfinished_stages": [
+      "Converged, checked optimized geometry",
+      "Hessian and parameter extraction/diagnostics",
+      "Larger-cluster ESP/RESP",
+      "Other structural Zn and Ca models",
+      "Full-complex parameter mapping and native energy/force validation",
+      "Unrestrained motion evaluation"
+    ],
+    "optimization_or_hessian_launched_by_review": false
+  },
+  "evidence": {
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/result.json": {
+      "bytes": 2284,
+      "sha256": "327c0c54130b24d67f052d5a0dc1a784fbb8972ddcf0694d73359a424b67f413"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-small-screen-v1/calculation/result.json": {
+      "bytes": 6181,
+      "sha256": "5bed5d62e4712c7e2ea4679b06e52dd3ea76cc49d6029272d0d09b0cbe0aa1f2"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/result.json": {
+      "bytes": 8239,
+      "sha256": "de9be565922bb299c1e949f101dd2d5420cc9141de3ff9ca650fe4552ff3539c"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-small-screen-v1/calculation/input.json": {
+      "bytes": 8497,
+      "sha256": "2ded45e0140c22eb307e3fea4b5d73cc758fef576e8eacbc4dda521e9a645251"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/input.json": {
+      "bytes": 9028,
+      "sha256": "709d1ffb3ec017ee419670808ea6f65f7b33811f366f5d12cd8acf8491bfea4e"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-small-screen-v1/calculation/resolved-method.json": {
+      "bytes": 7146,
+      "sha256": "bcfcf7af35e082ca8f811cbf49db66844985c4aaf6398692d01617ca8d8c6827"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/resolved-method.json": {
+      "bytes": 21458,
+      "sha256": "61b78c80ebbf2479de4552b05f3b3b707e4b33ce9f36415d05c788752248fa85"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-inputs/small-atom-map.json": {
+      "bytes": 26157,
+      "sha256": "f38ee22e2bf74708b6938dd3cd02d17dfeaff05ec9d2f99dbebc67fbd35959df"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-inputs/small-screening-qm-request.json": {
+      "bytes": 8497,
+      "sha256": "2ded45e0140c22eb307e3fea4b5d73cc758fef576e8eacbc4dda521e9a645251"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-inputs/cluster-input-report.json": {
+      "bytes": 1458,
+      "sha256": "3d64978ea5bd426b953304e97746ef098088c81b56869c211fc656c49551d1a0"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/lib/python3.14/site-packages/pymsmt/mcpb/gene_model_files.py": {
+      "bytes": 73275,
+      "sha256": "0c017b66a397388cdcbd23e0a8b74a9e2eaab857f499c093f75dced4b49ff59d"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/compare_1mnc_density_fit.py": {
+      "bytes": 9907,
+      "sha256": "eedee8b00cd9de332295c8953e4acb9987a2cd06410174d4a670f80ce4ec824b"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-small-screen-v1/calculation/arrays.npz": {
+      "bytes": 7087,
+      "sha256": "a45fe0aad551344ba1ee621678cd1d3761357ad215cf877d385457ec108a1aac"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/arrays.npz": {
+      "bytes": 7085,
+      "sha256": "f1191c5d6feec2aa5dc4e32051718ce16c427539d4b7b982255aa9c40d70fd70"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/qm_worker.py": {
+      "bytes": 40497,
+      "sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/input.json": {
+      "bytes": 9028,
+      "sha256": "709d1ffb3ec017ee419670808ea6f65f7b33811f366f5d12cd8acf8491bfea4e"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/initial-checkpoint/result.json": {
+      "bytes": 6181,
+      "sha256": "5bed5d62e4712c7e2ea4679b06e52dd3ea76cc49d6029272d0d09b0cbe0aa1f2"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/initial-checkpoint/arrays.npz": {
+      "bytes": 7087,
+      "sha256": "a45fe0aad551344ba1ee621678cd1d3761357ad215cf877d385457ec108a1aac"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-small-screen-v1/calculation/scf.chk": {
+      "bytes": 4898952,
+      "sha256": "ef7cabee5b83157311d8485ff561dd3fdaa00ba0ef198d3ddd0f9cbdd474544e"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/initial-checkpoint/scf.chk": {
+      "bytes": 4898952,
+      "sha256": "ef7cabee5b83157311d8485ff561dd3fdaa00ba0ef198d3ddd0f9cbdd474544e"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/initial-checkpoint/resolved-method.json": {
+      "bytes": 7146,
+      "sha256": "bcfcf7af35e082ca8f811cbf49db66844985c4aaf6398692d01617ca8d8c6827"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/scf.chk": {
+      "bytes": 4898952,
+      "sha256": "8dcff31d769fe244d4db6ca8913a653ae8d1fc2307fb0d7bc839af5e560dd551"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-df-comparison-v2/calculation/runtime-manifest.json": {
+      "bytes": 3141,
+      "sha256": "5b9a88283c49974a8ede4be085988137085324ff8f5952dd2694c0dbf35ca6a4"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-inputs/site_small_opt.com": {
+      "bytes": 3627,
+      "sha256": "ea5500e2b2def50b8ee0798d8221f8270e21dab33120f63089732c1c3b586398"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-inputs/site-input.pdb": {
+      "bytes": 16197,
+      "sha256": "c450d18f721e0f7d72c7c35d5c8518045068d2b16150d5a67b3a178b651e166d"
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/review_1mnc_density_fit.py": {
+      "bytes": 15844,
+      "sha256": "6406c59e0d210bda7f3d08f267a20d572e512bf8e8b085d2f112a8db02bcb562"
+    }
+  },
+  "review_script_sha256": "6406c59e0d210bda7f3d08f267a20d572e512bf8e8b085d2f112a8db02bcb562"
+}

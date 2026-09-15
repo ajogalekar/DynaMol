@@ -1,0 +1,228 @@
+{
+  "id": "PO4",
+  "input": {
+    "path": "inputs/ccd/PO4.cif",
+    "source_url": "https://files.rcsb.org/ligands/download/PO4.cif",
+    "sha256": "57d988e2ed80b9b6d9fb0b7384c3e0874ea186dfeb8a89c781d2c78ee05686e5",
+    "bytes": 3989
+  },
+  "chem_comp": [
+    {
+      "id": "PO4",
+      "name": "PHOSPHATE ION",
+      "type": "NON-POLYMER",
+      "pdbx_type": "HETAI",
+      "formula": "O4 P",
+      "mon_nstd_parent_comp_id": null,
+      "pdbx_synonyms": null,
+      "pdbx_formal_charge": "-3",
+      "pdbx_initial_date": "1999-07-08",
+      "pdbx_modified_date": "2011-06-04",
+      "pdbx_ambiguous_flag": "N",
+      "pdbx_release_status": "REL",
+      "pdbx_replaced_by": null,
+      "pdbx_replaces": "IPS",
+      "formula_weight": "94.971",
+      "one_letter_code": null,
+      "three_letter_code": "PO4",
+      "pdbx_model_coordinates_details": null,
+      "pdbx_model_coordinates_missing_flag": "N",
+      "pdbx_ideal_coordinates_details": null,
+      "pdbx_ideal_coordinates_missing_flag": "N",
+      "pdbx_model_coordinates_db_code": "1IXG",
+      "pdbx_subcomponent_list": null,
+      "pdbx_processing_site": "EBI"
+    }
+  ],
+  "atoms": [
+    {
+      "comp_id": "PO4",
+      "atom_id": "P",
+      "alt_atom_id": "P",
+      "type_symbol": "P",
+      "charge": "0",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "29.995",
+      "model_Cartn_y": "23.516",
+      "model_Cartn_z": "13.249",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.000",
+      "pdbx_component_atom_id": "P",
+      "pdbx_component_comp_id": "PO4",
+      "pdbx_ordinal": "1"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id": "O1",
+      "alt_atom_id": "O1",
+      "type_symbol": "O",
+      "charge": "0",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "31.092",
+      "model_Cartn_y": "22.988",
+      "model_Cartn_z": "14.164",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "-1.288",
+      "pdbx_model_Cartn_z_ideal": "-0.911",
+      "pdbx_component_atom_id": "O1",
+      "pdbx_component_comp_id": "PO4",
+      "pdbx_ordinal": "2"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id": "O2",
+      "alt_atom_id": "O2",
+      "type_symbol": "O",
+      "charge": "-1",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "30.404",
+      "model_Cartn_y": "24.896",
+      "model_Cartn_z": "12.647",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "1.288",
+      "pdbx_model_Cartn_z_ideal": "-0.911",
+      "pdbx_component_atom_id": "O2",
+      "pdbx_component_comp_id": "PO4",
+      "pdbx_ordinal": "3"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id": "O3",
+      "alt_atom_id": "O3",
+      "type_symbol": "O",
+      "charge": "-1",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "29.646",
+      "model_Cartn_y": "22.518",
+      "model_Cartn_z": "12.126",
+      "pdbx_model_Cartn_x_ideal": "-1.288",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.911",
+      "pdbx_component_atom_id": "O3",
+      "pdbx_component_comp_id": "PO4",
+      "pdbx_ordinal": "4"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id": "O4",
+      "alt_atom_id": "O4",
+      "type_symbol": "O",
+      "charge": "-1",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "28.727",
+      "model_Cartn_y": "23.744",
+      "model_Cartn_z": "14.161",
+      "pdbx_model_Cartn_x_ideal": "1.288",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.911",
+      "pdbx_component_atom_id": "O4",
+      "pdbx_component_comp_id": "PO4",
+      "pdbx_ordinal": "5"
+    }
+  ],
+  "bonds": [
+    {
+      "comp_id": "PO4",
+      "atom_id_1": "P",
+      "atom_id_2": "O1",
+      "value_order": "DOUB",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_ordinal": "1"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id_1": "P",
+      "atom_id_2": "O2",
+      "value_order": "SING",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_ordinal": "2"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id_1": "P",
+      "atom_id_2": "O3",
+      "value_order": "SING",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_ordinal": "3"
+    },
+    {
+      "comp_id": "PO4",
+      "atom_id_1": "P",
+      "atom_id_2": "O4",
+      "value_order": "SING",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_ordinal": "4"
+    }
+  ],
+  "descriptors": [
+    {
+      "comp_id": "PO4",
+      "type": "SMILES",
+      "program": "ACDLabs",
+      "program_version": "10.04",
+      "descriptor": "[O-]P([O-])([O-])=O"
+    },
+    {
+      "comp_id": "PO4",
+      "type": "SMILES_CANONICAL",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[O-][P]([O-])([O-])=O"
+    },
+    {
+      "comp_id": "PO4",
+      "type": "SMILES",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[O-][P]([O-])([O-])=O"
+    },
+    {
+      "comp_id": "PO4",
+      "type": "SMILES_CANONICAL",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[O-]P(=O)([O-])[O-]"
+    },
+    {
+      "comp_id": "PO4",
+      "type": "SMILES",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[O-]P(=O)([O-])[O-]"
+    },
+    {
+      "comp_id": "PO4",
+      "type": "InChI",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-3"
+    },
+    {
+      "comp_id": "PO4",
+      "type": "InChIKey",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "NBIIXXVUZAFLBC-UHFFFAOYSA-K"
+    }
+  ]
+}

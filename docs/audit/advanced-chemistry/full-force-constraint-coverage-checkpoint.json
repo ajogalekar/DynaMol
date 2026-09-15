@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_unix": 1789330363.198889,
+  "scope": "Standard native parameter, atom identity, snapshot, and independent constraint inventory validation; not physical parameter accuracy or app readiness.",
+  "test_command": ".venv/bin/python -m pytest backend/tests/test_bonded_site_validation.py backend/tests/test_advanced_parameters.py backend/tests/test_native_atom_mapping.py -q",
+  "result": "77 passed in 140.46s",
+  "files": {
+    "backend/bonded_site_validation.py": "0920311795563cde277b378644a267174ecf1049ec389407be92c4d167b23024",
+    "backend/tests/test_bonded_site_validation.py": "35574a69e52b682b6b693e1b1f8324bfdf0de6c766f919a553dc862611487c46",
+    "docs/audit/advanced-chemistry/BONDED-SITE-VALIDATION.md": "194d4f170afd8e0eaddd276e47a9d9085cfbaf8afbbaf855e6c18d2726537044",
+    "build/advanced-chemistry/full-force-constraint-coverage-tests.log": "1f3003ee5fb6d4a961026a3c8f7af8fc57d676a4e59ffa411539dbd95717b481"
+  },
+  "prior_partial_run": "build/advanced-chemistry/full-force-coverage-tests-interruption.json",
+  "new_guards": [
+    "Full-system unvalidated additional potential-energy forces reject even when physical bonds match",
+    "Constraints match independently declared pairs and lengths; missing inventory means no constraints",
+    "Boundary terms and constraints remain explicitly unvalidated in site scope"
+  ]
+}

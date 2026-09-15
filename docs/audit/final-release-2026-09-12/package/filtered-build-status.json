@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-09-13T05:09:18.902115+00:00",
+  "command": [
+    ".venv/bin/python",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/final-release-2026-09-12/package/build_filtered_candidate.py"
+  ],
+  "limit_seconds": 180,
+  "filter": "Within this final audit only, omit ZIP/MP4/BIN files and package receipts. Application source unchanged.",
+  "exit_code": 0,
+  "elapsed_seconds": 26.7
+}

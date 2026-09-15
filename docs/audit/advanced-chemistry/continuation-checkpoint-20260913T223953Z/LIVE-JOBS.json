@@ -1,0 +1,225 @@
+{
+  "updated_unix": 1789335962.990675,
+  "scope": "Live covalent-chemistry research jobs. Neither is a prepared complex or approved force field. App integration and 30-case final acceptance remain unfinished.",
+  "jobs": [
+    {
+      "name": "6OIM same-geometry conventional RHF reference",
+      "controller_pid": 37450,
+      "worker_pid": 37451,
+      "runtime": "/Users/ashujo/Documents/Science/DynaMol/.tools/qm/bin/python",
+      "started_unix_approx": 1789317873.731472,
+      "start_time_basis": "Native log creation timestamp, immediately after validated same-geometry DF checkpoint checks.",
+      "native_wall_seconds": 7200,
+      "independent_timeout_seconds": 7320,
+      "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference/progress.json",
+      "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference/result.json",
+      "native_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference/native.log",
+      "controller_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference.log",
+      "next_steps": [
+        "When accepted, compare exact versus DF energy/gradient at identical atoms/geometry.",
+        "Record approximation error; no physical accuracy claim from convergence alone.",
+        "Do not stop active optimizer solely because a reference wait remains."
+      ],
+      "status": "completed_numeric_reference",
+      "completed_result_sha256": "b8ee3976b4130e59fc9d3fdd4e02ad0bcb3882f6ae34038006c61546862c796a",
+      "elapsed_seconds": 3808.35350162501,
+      "independent_comparison": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-rhf-initial-comparison-independent.json",
+      "process_exited": true
+    },
+    {
+      "name": "6OIM full94-atom DF-RHF constrained geometry candidate",
+      "controller_pid": 45943,
+      "worker_pid": 45944,
+      "runtime": "/Users/ashujo/Documents/Science/DynaMol/.tools/qm-parallel/bin/python",
+      "started_unix": 1789319674.686395,
+      "native_wall_seconds": 21600,
+      "independent_timeout_seconds": 21720,
+      "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/progress.json",
+      "controller_progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/progress.json",
+      "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/result.json",
+      "native_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/native.log",
+      "controller_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/controller.log",
+      "input": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1-input.json",
+      "next_steps": [
+        "Require actual geometry convergence, five frozen capheavy coordinates, source stereochemistry and plausible bond geometry.",
+        "After candidate inspection, obtain exact conventional HF ESP initialized from the accepted final DF checkpoint, preserving exact atom/state/basis/coordinate checks.",
+        "Run constrained native RESP using the explicitly validated heap runtime; preserve exact canonical cap/backbone charges.",
+        "After geometry/charge completion and resource review, assess the prepared dispersion-corrected full-parent reference, then varied attachment torsion geometries and held-out mechanics checks before physical acceptance."
+      ],
+      "status": "optimization_running",
+      "last_observed_progress": {
+        "phase": "optimization",
+        "accepted": false,
+        "cycle": 52,
+        "energy_hartree": -2794.069108779926,
+        "gradient_norm_hartree_per_bohr": 0.06658464842275537,
+        "scf_converged": true
+      },
+      "last_observed_unix": 1789335962.9890811
+    }
+  ],
+  "independent_work": {
+    "product_graph_audit": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/frozen15-graph-v4/summary.json",
+    "result": "14/15 graph candidates constructed, including the complete peptide ligand in 2H5I; boronate remains an explicit state/model obligation. These are not preparation successes.",
+    "native_type_parameter_coverage": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/frozen15-native-coverage-v2/summary.json",
+    "native_coverage_result": "14 unique graph chemistries typed with explicit bond orders retained and native parameter assignments without ATTN or invalid zero-periodicity entries. Analogy penalties reach 780; states/charges/physical behavior are not accepted. No QM or dynamics in this screen.",
+    "tests": "18 graph and coverage contract tests passed.",
+    "next": "Existing parent and exact-HF-ESP/RESP continuation remain active. DFT waiting continuation18420 now follows accepted geometry and RESP; verify actual PID/stage before launching anything.",
+    "profile_plan": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-torsion-profile-plan.json",
+    "reference_method_review": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-reference-method-feasibility.md",
+    "profile_status": "No full-parent DFT calculation or scans launched yet. Numerically qualified provider now has reviewed durable waiting continuation after actual parent and RESP, with resource/deadline/provenance gates.",
+    "reference_provider": {
+      "status": "passed_numerical_qualification",
+      "worker": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_reference_worker.py",
+      "worker_sha256": "e74a0ee5cae3fe954b918a824b4ea466aa99f46ac5311c0696eeea73e9557225",
+      "qualification_result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-provider/qualification-v3/result.json",
+      "qualification_result_sha256": "3942dfa8799fd7853ee21ea8a88a1cc59a8c7348de33094903f1f90f5d11df09",
+      "runtime_manifest": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-provider/runtime-manifest.json",
+      "contract_tests": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-provider/resource-and-parent-contract-tests.json",
+      "method_documentation": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/COVALENT-REFERENCE-PROVIDER.md",
+      "full_parent_request_plan": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-parent-reference-request-plan.json",
+      "full_parent_job_launched": false,
+      "physical_force_field_acceptance": false,
+      "waiting_controller_launched": true
+    },
+    "charge_handoff": {
+      "status": "adapter_contract_tests_passed_pending_actual_RESP",
+      "tests": 28,
+      "adapter": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_charge_handoff.py",
+      "plan": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-charge-handoff-plan.json",
+      "actual_pending_chain_refusal": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/charge-handoff-pending-refusal-v1/result.json",
+      "actual_QM_to_native_execution_completed": false,
+      "no_synthetic_or_approximate_charge_substitution": true
+    },
+    "geometry_provider": {
+      "status": "small_neutral_calculator_and_constrained_optimizer_qualification_passed",
+      "calculator_current": {
+        "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/calculator.py",
+        "sha256": "296790c82b86aa5b4d522392f38b7fd9c0abb2b33c6e99d331d8ac995a77c28c"
+      },
+      "qualification": {
+        "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/geometry-provider-qualification-v2/result.json",
+        "sha256": "b5508536fafe005260ae20b3378750ebfef7051025462223b4a07b01969f46e0"
+      },
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/QUALIFICATION.md",
+      "runtime": "/Users/ashujo/.cache/dynamol-runtimes/covalent-geometry-v1",
+      "maximum_admitted_atoms": 32,
+      "native_thread_count": 1,
+      "finite_difference_components": 63,
+      "finite_difference_steps": 2,
+      "worst_gradient_component_error_hartree_bohr": 1.4e-08,
+      "independent_review": "Runtime/source/artifact hashes, SCC protocol, FD errors, transformations and thread controls independently reviewed without repeating quantum evaluations. Positive fixtures neutral only. Guard-only correction preserves evaluated calculator functions.",
+      "full_parent_admitted": false,
+      "physical_acceptance": false,
+      "next": "Wait actual accepted parent, completed same-geometry RESP and first full-parent DFT cost/reference gate. Only then consider a separately admitted complete94atom baseline/+30/-30 geometry experiment and matched constrained DFT comparison; no automatic 36-point scan or charge substitution.",
+      "geometry_adapter": {
+        "source": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/geometric_adapter.py",
+          "sha256": "7f32d1812face4e59c229926a8a5f00f99f45c5ec964bc5df50891475cc8ce2a"
+        },
+        "native_qualification": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/geometric-adapter-qualification-v2/result.json",
+          "sha256": "89e8964ec834fdf9c3019533b784ade7f534f9befa3d373276fc5dd2b1cf749a"
+        },
+        "contract_review": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/geometric-adapter-contract-audit-v3/result.json",
+          "sha256": "858c7b57fa469685eb979d996b646efc7fc142a334f33a6b9bc11fb947107e1b"
+        },
+        "contract_tests_passed": 62,
+        "actual_process_lifecycle_cases": 8,
+        "native_small_molecule_cases": 2,
+        "native_total_seconds": 8.176945624989457,
+        "native_numerical_core_unchanged_by_supervisor_fixes": true,
+        "independent_final_review": "No blocking numerical or lifecycle findings; every recorded child leader reaped and no live group remains in eight process cases.",
+        "full_parent_admitted": false,
+        "physical_acceptance": false
+      }
+    },
+    "retained_GDP": {
+      "source_graph_matches": true,
+      "native_parameter_transport_matches": true,
+      "whole_complex_prepared": false,
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/REVIEW.md",
+      "checkpoint": {
+        "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/checkpoint.json",
+        "sha256": "1bd03f9978f4a54ac6f540b0e4b64bcace7933c4149dd265887101002f8ab924"
+      },
+      "signed_fourier_fix": {
+        "focused_tests_passed": 47,
+        "independent_review": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/signed-torsion-independent-review-v1/result.json",
+          "sha256": "3efc9458e0c4f69706d397a1941b32bcb248cb14763463339f9ee749e99f929f"
+        },
+        "negative_GDP_terms_preserved": 8,
+        "analytic_energy_and_derivative_controls": 12,
+        "negative_controls": 7,
+        "no_parameter_or_tolerance_change": true
+      },
+      "remaining": "Experimental coordinates and all sourceGDP/Mg/waters, explicit nucleotide/ion/water applicability, loop repair, actual adduct charges/torsions and full-complex motion."
+    }
+  },
+  "continuation": {
+    "name": "Verified parent geometry to exact HF ESP and constrained native RESP",
+    "controller_pid": 71825,
+    "started_unix": 1789321392.160741,
+    "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/progress.json",
+    "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/result.json",
+    "log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/controller.log",
+    "optimizer_wait_seconds": 21600,
+    "exact_esp_native_wall_seconds": 14400,
+    "exact_esp_independent_timeout_seconds": 14520,
+    "resp_stage_timeout_seconds": 120,
+    "quantum_process_limit": 3,
+    "launch_lock": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/QM-LAUNCH.lock",
+    "state": "Only active waiting controller is 71825 in original resp-continuation-v1; now has 15 GiB future exact-ESP disk reserve and original wait deadline.",
+    "next_steps": [
+      "Inspect actual progress/result; never launch a duplicate completed or still-running stage.",
+      "Source identities, hashes, stereochemistry, frozen cap coordinates and gross bond distances must pass before exact ESP.",
+      "Exact ESP is conventional RHF with accepted final DF density as initial guess only; geometry approximation stays explicit.",
+      "Completed fitting remains a research candidate pending full-adduct torsion and complete complex validation."
+    ],
+    "minimum_free_disk_gib_before_exact_esp": 15,
+    "restart_evidence": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/controller-disk-gate-restart.json",
+    "cancelled_extra_waiting_controller": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v2-disk-gated/result.json",
+    "source_checkpoints": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/source-checkpoints/manifest.json",
+    "resident_script_sha256": "c4cc79444bd8dd896d9882439ad34e6dac538cebe2fa2c10c7c69dc768f0db4b",
+    "future_source_sha256": "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3",
+    "last_observed_progress": {
+      "status": "running",
+      "stage": "waiting_for_optimization",
+      "controller_pid": 71825,
+      "child_pid": null,
+      "updated_unix": null
+    },
+    "last_observed_unix": 1789335962.989821
+  },
+  "reference_continuation": {
+    "controller_pid": 18420,
+    "status": "running",
+    "stage": "waiting_for_parent",
+    "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/parent-dft-continuation-v1/progress.json",
+    "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/parent-dft-continuation-v1/result.json",
+    "controller_source_sha256": "8124f88d0ed844a96d3768b4077500c624b17780d5385ddbff9c38f096e57768",
+    "config_sha256": "fb3262b99cb1f2a83828a80913e78841a433fab6ebfc31ec9e42b7f39b6b9877",
+    "started_unix": 1789334276.9262102,
+    "wait_deadline_unix": 1789363076.926211,
+    "native_wall_seconds": 14400,
+    "outer_timeout_seconds": 14520,
+    "entry_disk_reserve_gib": 25,
+    "running_disk_reserve_gib": 8,
+    "threads": 2,
+    "memory_hint_mb": 8000,
+    "tests_passed": 18,
+    "review": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-continuation-review-v2/review.json",
+    "next": "Wait actual accepted parent and same-geometry RESP; pinned materializer makes one mixed-level full-parent DFT single point. No duplicate, automatic retry, torsion fit, model approval or app integration.",
+    "physical_acceptance": false,
+    "last_observed_progress": {
+      "status": "running",
+      "stage": "waiting_for_parent",
+      "controller_pid": 18420,
+      "child_pid": null,
+      "updated_unix": 1789335955.518108
+    },
+    "last_observed_unix": 1789335962.990674
+  }
+}

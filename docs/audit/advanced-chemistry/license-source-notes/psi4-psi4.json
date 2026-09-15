@@ -1,0 +1,13 @@
+{
+  "repo": "psi4/psi4",
+  "source_url": "https://api.github.com/repos/psi4/psi4/license",
+  "html_url": "https://github.com/psi4/psi4/blob/master/COPYING",
+  "license": {
+    "key": "lgpl-3.0",
+    "name": "GNU Lesser General Public License v3.0",
+    "spdx_id": "LGPL-3.0",
+    "url": "https://api.github.com/licenses/lgpl-3.0",
+    "node_id": "MDc6TGljZW5zZTEy"
+  },
+  "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+}

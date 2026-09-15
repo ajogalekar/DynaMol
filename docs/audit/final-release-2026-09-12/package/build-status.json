@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-09-13T05:07:15.052384+00:00",
+  "command": [
+    ".venv/bin/python",
+    "scripts/package_macos.py",
+    "--app-only",
+    "--output-dir",
+    "build/releases/final-audit-2026-09-12"
+  ],
+  "limit_seconds": 300,
+  "exit_code": 0,
+  "elapsed_seconds": 28.06
+}

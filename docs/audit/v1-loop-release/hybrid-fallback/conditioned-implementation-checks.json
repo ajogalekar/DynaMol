@@ -1,0 +1,55 @@
+{
+  "completed_at": "2026-09-14T19:15:53.688771+00:00",
+  "targeted_ast_whitespace_pass": true,
+  "source_sha256": {
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/native_mc_adapter.py": "af65d382c8c74ace1847e0cb448bf85492ad2f45f9dc65c6d8719ca06bcfe993",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/run_conditioned_comparison.py": "2de249de93e130f5a330731192b6e80075df15bc5c8eb4851f81294b4ccd5cab",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/validate_complete_candidate.py": "ccc790988d88df373e5fe3d79689dd569a992bd5d8c1e487ec7e76f9f92e6e6c",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/validate_conditioned_candidates.py": "434a87f45fc8114ffcef9384acd5a969b22142e4d748ea0efde5b67cff76ac60"
+  },
+  "frozen_native_and_complete_implementation_snapshots_match_executed_sources": true,
+  "previous_69_backend_test_result_not_repeated_or_reclassified": true,
+  "native_controls_and_full_comparison": {
+    "status": "15 source-conditioned native attempts and12 complete-complex refinements complete; no admitted candidate",
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/CONDITIONED-COMPLETE.md",
+    "native_summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/conditioned-native-summary.json",
+    "native_summary_sha256": "fe457dc7e8231b51e9806ceb99431fada4769cfd744e883cc8d4c58522d952ed",
+    "complete_summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/conditioned-complete-summary.json",
+    "complete_summary_sha256": "8b393a7ea6840169a14ec4fb292888c475e70947f75daf433d0f9ab8bec85932",
+    "native_attempts": 15,
+    "returned_candidates": 9,
+    "local_masked_control_passes": 3,
+    "local_real_case_passes": 0,
+    "complete_refinements": 12,
+    "complete_candidate_passes": 0,
+    "complete_checks_passed": {
+      "identity": 12,
+      "retained_environment": 12,
+      "geometry": 12,
+      "stereochemistry": 11,
+      "backbone_reference": 0,
+      "observed_displacement": 12,
+      "serialized_output": 11,
+      "parameter_integrity": 12
+    },
+    "real_source_boundaries_supplied": true,
+    "raw_1ua2_displacement_failures_localized_to": "ILE43 O",
+    "best_full_candidate": "torsion-source-ccd-43-56-seed-2027-mobile_flanks",
+    "best_full_remaining_reference_failure": "ARG57 is pre-existing but its defining ASN56 C moved; no exemption applied",
+    "native_jobs_active": [],
+    "app_default_enabled": false,
+    "new_md_qm": false,
+    "next_design": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/CARBONYL-LOCK-DESIGN.md",
+    "shifted_anchor_intact_control": {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/carbonyl-lock-design-v1/intact-control.json",
+      "sha256": "c39cd2fbe9b65d13d61e78553a1b4076e2510562e78e3c5a14325a076590f0ae",
+      "target_protein_search_performed": false
+    }
+  },
+  "checkpoint_backups": [
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/checkpoint-history/2026-09-14T191553-688771+0000-before-boundary-conditioned-current-checkpoint.json",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/checkpoint-history/2026-09-14T191553-688771+0000-before-boundary-conditioned-current-checkpoint.json",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/checkpoint-history/2026-09-14T191553-688771+0000-before-boundary-conditioned-LIVE-JOBS.json"
+  ],
+  "live_other_sections_preserved": true
+}

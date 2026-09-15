@@ -1,0 +1,448 @@
+{
+  "source": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1",
+  "plan_sha256": "8fe1b09ac1622398760c04d739dba185ba1a740228ec0187b0dc30f933552710",
+  "attempts": [
+    {
+      "case": "1UA2",
+      "attempt": "archive-fragment",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/archive-fragment/validation/result.json",
+      "result_sha256": "1412e7478829bcc5753f540b7ad5be556b7d4fd78a83865deac1ac1eff1e4d7d",
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "atom_count": 4825,
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.0,
+      "elapsed_seconds": 4.703336332982872,
+      "peak_sampled_rss_bytes": 222593024,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "1UA2",
+      "attempt": "torsion_mc-2026",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/torsion_mc-2026/validation/result.json",
+      "result_sha256": "2c48bfbc5adf891c5ef9464e5d1e0c0ed8afd991ce505a28bcca9935f16ee656",
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "atom_count": 4825,
+      "modeled_outliers": [
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.7510944429781294,
+      "elapsed_seconds": 3.9628214580006897,
+      "peak_sampled_rss_bytes": 238649344,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "1UA2",
+      "attempt": "torsion_mc-2027",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/torsion_mc-2027/validation/result.json",
+      "result_sha256": "5d10325976a141e100b8466161a3701676ad7d35cf9bb517e23fafc189ce32d9",
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "atom_count": 4825,
+      "modeled_outliers": [
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.7393164806862584,
+      "elapsed_seconds": 3.3114948329748586,
+      "peak_sampled_rss_bytes": 232669184,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "1UA2",
+      "attempt": "fragment_mc-2026",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/fragment_mc-2026/validation/result.json",
+      "result_sha256": "2e98c7339a68acb26d1adf0d0e1b0a9b926573f30c75eee64bda007ea07cd647",
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "atom_count": 4825,
+      "modeled_outliers": [
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.7087865852624642,
+      "elapsed_seconds": 3.279987375019118,
+      "peak_sampled_rss_bytes": 245645312,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "1UA2",
+      "attempt": "fragment_mc-2027",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/fragment_mc-2027/validation/result.json",
+      "result_sha256": "9ecbda23891d1970dbacfbe9830259cc46b9f24b2788345a0931d2a18f0774f7",
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "atom_count": 4825,
+      "modeled_outliers": [],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.7573645858008009,
+      "elapsed_seconds": 3.5219665420008823,
+      "peak_sampled_rss_bytes": 230785024,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "1UA2",
+      "attempt": "disgro-representative",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/disgro-representative/validation/result.json",
+      "result_sha256": "2058c817906cb6637953961de3fcf8bc47cd9484ff3b4ea8b6424a87ff858fef",
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "atom_count": 4825,
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.7867159212680956,
+      "elapsed_seconds": 4.174137499998324,
+      "peak_sampled_rss_bytes": 232161280,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "8K5R",
+      "attempt": "archive-fragment",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/8K5R/search/archive-fragment/validation/result.json",
+      "result_sha256": "f9870830e1fafd4c79afa456762704c91702100da42245b4d7c36c880b3ec58c",
+      "native_system_sha256": "055858f917900e9ded78a670b437e76d5d4d4b5a51ea11a02ab33ef476eed6cb",
+      "atom_count": 5317,
+      "modeled_outliers": [
+        [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "94",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "95",
+          "",
+          "CYS"
+        ],
+        [
+          "A",
+          "178",
+          "",
+          "LYS"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "91",
+          "",
+          "PRO"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.0,
+      "elapsed_seconds": 51.81687524996232,
+      "peak_sampled_rss_bytes": 233553920,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    },
+    {
+      "case": "8K5R",
+      "attempt": "disgro-representative",
+      "status": "rejected",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": false,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": false,
+        "parameter_integrity": true
+      },
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/8K5R/search/disgro-representative/validation/result.json",
+      "result_sha256": "aca14326cf8ce1996383a2b1a5b8cb0736cf0d50bb5c9b52d7ee67a192b1ad9b",
+      "native_system_sha256": "055858f917900e9ded78a670b437e76d5d4d4b5a51ea11a02ab33ef476eed6cb",
+      "atom_count": 5317,
+      "modeled_outliers": [
+        [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "94",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "95",
+          "",
+          "CYS"
+        ],
+        [
+          "A",
+          "177",
+          "",
+          "ALA"
+        ]
+      ],
+      "affected_observed_outliers": [
+        [
+          "A",
+          "91",
+          "",
+          "PRO"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      ],
+      "maximum_observed_heavy_displacement_angstrom": 0.7585796828186122,
+      "elapsed_seconds": 5.0442409589886665,
+      "peak_sampled_rss_bytes": 240926720,
+      "scope": "Private archived complete-complex refinement and saved-file screening; no full preparation rerun or release admission."
+    }
+  ],
+  "completed_attempts": 8,
+  "accepted_candidates": 0,
+  "elapsed_native_validation_seconds": 79.81486024992773,
+  "peak_sampled_rss_bytes": 245645312,
+  "checks_passed": {
+    "identity": 8,
+    "retained_environment": 8,
+    "geometry": 7,
+    "stereochemistry": 8,
+    "backbone_reference": 0,
+    "observed_displacement": 8,
+    "serialized_output": 7,
+    "parameter_integrity": 8
+  },
+  "inputs_implementations_and_saved_artifacts_unchanged": true,
+  "within_case_native_systems_identical": true,
+  "app_ready": false,
+  "full_preparation_rerun": false,
+  "physical_model_validated": false,
+  "new_md_or_qm": false,
+  "software_regression_tests_passed": 69,
+  "software_test_command": "PYTHONPATH=<pytest-target>:<repo> PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 DYNAMOL_CPU_THREADS=2 OPENBLAS_NUM_THREADS=2 <focused-python> -m pytest backend/tests/test_loop_search.py backend/tests/test_loop_refinement.py backend/tests/test_promod_loop_worker.py -q",
+  "selection_limit": "Order frozen before full-complex refinement. All original-stem native 1UA2 candidates, plus one representative per DiSGro case selected from prior local screens. This is a feasibility probe, not a success-rate estimate."
+}

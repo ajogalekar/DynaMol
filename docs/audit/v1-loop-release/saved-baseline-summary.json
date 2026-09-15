@@ -1,0 +1,454 @@
+{
+  "completed_at": "2026-09-14T16:06:47.483982+00:00",
+  "source_sha256": {
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/audit_saved_loop_baseline.py": "1aafad1f0462ae414b21d28d60b97b4d8f69c41d7249fdb9ace5fdc1baf73f3e",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/summary.json": "aa784521e71b1aa7c6282e6e2dc83c2ca7f3450d947ce645bb572d818f27b302",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/benchmark-manifest.json": "a0ebcf95c9f1ea27299ea8fe4c717e55d6fdab596c566c2869f5e775c9b2c587",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/8k5r-full-prep-final/summary.json": "6ee6fff89f0803927661112b9923bb9363374d838dc211928ecc49e3dad9b51f",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-v1-focused/rama_reference.py": "c6cd91b3c6428cc725e0d3a0f0cc3b1f01a889bcc2421e6fa9e425618649dd7d"
+  },
+  "original_panel_size": 15,
+  "audited_panel_case_count": 10,
+  "audit_error_count": 0,
+  "scope": "Saved static structure reference audit only; no native-loop accuracy, MD stability, or app admission claim.",
+  "full_results": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/result.json",
+  "full_results_sha256": "658186a3260f162a620573fb10a3c78c55e07f506be2dff6a1f5848d23c549f0",
+  "cases": [
+    {
+      "id": "8K5R",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 17,
+      "selected_count": 17,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "94",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "95",
+          "",
+          "CYS"
+        ],
+        [
+          "A",
+          "178",
+          "",
+          "LYS"
+        ]
+      ],
+      "affected_boundary_outliers": [
+        [
+          "A",
+          "91",
+          "",
+          "PRO"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 5,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/8K5R/result.json"
+    },
+    {
+      "id": "1UA2",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 12,
+      "selected_count": 12,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 1,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ]
+      ],
+      "affected_boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 18,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/1UA2/result.json"
+    },
+    {
+      "id": "1HCK",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 4,
+      "selected_count": 4,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": true,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [],
+      "affected_boundary_outliers": [
+        [
+          "A",
+          "36",
+          "",
+          "ARG"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 3,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/1HCK/result.json"
+    },
+    {
+      "id": "4HJO",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 4,
+      "selected_count": 4,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": true,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [],
+      "affected_boundary_outliers": [
+        [
+          "A",
+          "709",
+          "",
+          "PRO"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 0,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/4HJO/result.json"
+    },
+    {
+      "id": "1M17",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 12,
+      "selected_count": 12,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 2,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "A",
+          "966",
+          "",
+          "PRO"
+        ]
+      ],
+      "affected_boundary_outliers": [],
+      "unchanged_observed_outlier_count": 7,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/1M17/result.json"
+    },
+    {
+      "id": "2HYY",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 4,
+      "selected_count": 4,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "C",
+          "276",
+          "",
+          "ASP"
+        ]
+      ],
+      "affected_boundary_outliers": [
+        [
+          "C",
+          "275",
+          "",
+          "GLU"
+        ],
+        [
+          "C",
+          "392",
+          "",
+          "THR"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 1,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/2HYY/result.json"
+    },
+    {
+      "id": "3HEG",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 15,
+      "selected_count": 15,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 1,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "A",
+          "172",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "175",
+          "",
+          "THR"
+        ]
+      ],
+      "affected_boundary_outliers": [],
+      "unchanged_observed_outlier_count": 10,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/3HEG/result.json"
+    },
+    {
+      "id": "2CG9",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 9,
+      "selected_count": 9,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": true,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [],
+      "affected_boundary_outliers": [
+        [
+          "C",
+          "87",
+          "",
+          "GLY"
+        ],
+        [
+          "C",
+          "90",
+          "",
+          "TYR"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 8,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/2CG9/result.json"
+    },
+    {
+      "id": "1FPU",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 5,
+      "selected_count": 5,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": true,
+      "selected_and_affected_boundary_native_reference_pass": true,
+      "selected_unavailable": [],
+      "selected_outliers": [],
+      "affected_boundary_outliers": [],
+      "unchanged_observed_outlier_count": 6,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/1FPU/result.json"
+    },
+    {
+      "id": "4HHY",
+      "kind": "panel",
+      "status": "audited",
+      "modeled_count": 8,
+      "selected_count": 8,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": true,
+      "selected_and_affected_boundary_native_reference_pass": true,
+      "selected_unavailable": [],
+      "selected_outliers": [],
+      "affected_boundary_outliers": [],
+      "unchanged_observed_outlier_count": 5,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/4HHY/result.json"
+    },
+    {
+      "id": "8K5R-repeat-42",
+      "kind": "repeat",
+      "status": "audited",
+      "modeled_count": 17,
+      "selected_count": 21,
+      "actually_moved_observed_context_residues": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "260",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "265",
+          "",
+          "LEU"
+        ]
+      ],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "94",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "95",
+          "",
+          "CYS"
+        ],
+        [
+          "A",
+          "178",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "260",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "264",
+          "",
+          "LYS"
+        ]
+      ],
+      "affected_boundary_outliers": [
+        [
+          "A",
+          "91",
+          "",
+          "PRO"
+        ],
+        [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 4,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/8K5R-repeat-42/result.json"
+    },
+    {
+      "id": "8K5R-repeat-2026",
+      "kind": "repeat",
+      "status": "audited",
+      "modeled_count": 17,
+      "selected_count": 17,
+      "actually_moved_observed_context_residues": [],
+      "refinement_entry_selected_outlier_count": 0,
+      "selected_native_reference_pass": false,
+      "selected_and_affected_boundary_native_reference_pass": false,
+      "selected_unavailable": [],
+      "selected_outliers": [
+        [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "178",
+          "",
+          "LYS"
+        ]
+      ],
+      "affected_boundary_outliers": [
+        [
+          "A",
+          "91",
+          "",
+          "PRO"
+        ]
+      ],
+      "unchanged_observed_outlier_count": 5,
+      "report": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/saved-baseline-v1/8K5R-repeat-2026/result.json"
+    }
+  ]
+}

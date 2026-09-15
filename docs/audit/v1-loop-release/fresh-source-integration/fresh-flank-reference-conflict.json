@@ -1,0 +1,344 @@
+{
+  "updated_at": "2026-09-14T21:56:49.929940+00:00",
+  "snapshot_sha256": "b6e228bf42119ad738e86a814cf33611dce23214add4177517f7f825e575b432",
+  "fresh_capture_result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-preparation-snapshot-v1-attempt-02/result.json",
+  "flank_source_to_common_movements": [
+    {
+      "source_index": 241,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "N"
+      ],
+      "prepared_index": 493,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "N"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 242,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CA"
+      ],
+      "prepared_index": 495,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CA"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 243,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "C"
+      ],
+      "prepared_index": 497,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "C"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 244,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "O"
+      ],
+      "prepared_index": 498,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "O"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 245,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CB"
+      ],
+      "prepared_index": 499,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CB"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 246,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CG1"
+      ],
+      "prepared_index": 501,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CG1"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 2.2472197940069654
+    },
+    {
+      "source_index": 247,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CG2"
+      ],
+      "prepared_index": 504,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CG2"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 2.2871591311530786
+    },
+    {
+      "source_index": 248,
+      "source_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CD1"
+      ],
+      "prepared_index": 508,
+      "prepared_identity": [
+        "A",
+        "43",
+        "",
+        "ILE",
+        "CD1"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 3.7196503902618163
+    },
+    {
+      "source_index": 249,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "N"
+      ],
+      "prepared_index": 697,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "N"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 250,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "CA"
+      ],
+      "prepared_index": 699,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "CA"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 251,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "C"
+      ],
+      "prepared_index": 701,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "C"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 252,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "O"
+      ],
+      "prepared_index": 702,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "O"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 253,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "CB"
+      ],
+      "prepared_index": 703,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "CB"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 254,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "CG"
+      ],
+      "prepared_index": 706,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "CG"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 255,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "OD1"
+      ],
+      "prepared_index": 707,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "OD1"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    },
+    {
+      "source_index": 256,
+      "source_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "ND2"
+      ],
+      "prepared_index": 708,
+      "prepared_identity": [
+        "A",
+        "56",
+        "",
+        "ASN",
+        "ND2"
+      ],
+      "reason": "Exact heavy atom identity",
+      "displacement_angstrom": 0.0
+    }
+  ],
+  "maximum_angstrom": 3.7196503902618163,
+  "maximum_identity": [
+    "A",
+    "43",
+    "",
+    "ILE",
+    "CD1"
+  ],
+  "required_final_caps_angstrom": {
+    "against_common_preparation": 1.0,
+    "against_original_source": 1.0
+  },
+  "necessary_triangle_inequality_condition_passed": false,
+  "complete_refinement_launched": false,
+  "reason": "A final point cannot lie within 1 A of both source and common positions separated by 3.72 A. Preserve loop-adjacent observed residues during preliminary chi sampling, then let complete candidate refinement handle their explicitly capped movement. Do not relax either cap or regenerate parameters for each loop candidate.",
+  "app_default_search_enabled": false,
+  "release_ready": false
+}

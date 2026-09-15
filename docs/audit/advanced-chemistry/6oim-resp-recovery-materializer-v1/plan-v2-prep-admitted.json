@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scope": "No-launch recovery materializer. Not an accepted endpoint, charge model, RESP run or native assembly.",
+  "parent": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run",
+  "checkpoint_policy": "cold_scf_no_checkpoint",
+  "sources": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/sources",
+  "source_pins": {
+    "cap/capped-adduct.json": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+    "cap/capped-adduct.sdf": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+    "cap/resp/constraints.json": "7e19a5ae0c40cf3bec67fbce7b2cbf55b293722cf3212f16e0f53af0164ca1b7",
+    "cap/resp/stage1.in": "f5f75223995db2898cffb91eefa2e7836cf74e1c7e4141aa13c4a9f86ecb7277",
+    "cap/resp/stage2.in": "714b9689341195a0b73f374ce1a43367a64027704d611b4b942a8e9a2ce2cae2",
+    "cap/resp/canonical.qin": "8b1e25408a0081e74e2b2014ae099080a2df64461225d5fa0fbba999f3fcdf66",
+    "continue_covalent_qm.py": "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3",
+    "covalent_charge_handoff.py": "b9548748219357d76478158a91af955fe9794885cb9f12d84a96bb6182a3d1af",
+    "covalent_resp_spike.py": "d15a9343820f4a7958e7c2f87a2e1a5d249c49829c1c592de642c37550ec2d19",
+    "vdw_surface.py": "319ee2e4e4dd18c99856f46e3b22ab8e8eae62acb85392ced4829c120cc26e02",
+    "qm_worker.py": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+    "original-handoff-plan.json": "fdebcdacfa479a637d08f55d2dcac9e15037efab0c198b38c81aaec7be5e99ec",
+    "original-stopped-continuation.json": "ffcbee9a22b9673849d1b24d6a803e48c8f5943a65edfb567e2f640372d3f2d2",
+    "initial-reference-comparison.json": "b8ee3976b4130e59fc9d3fdd4e02ad0bcb3882f6ae34038006c61546862c796a"
+  },
+  "preparation_runtime_admission": {
+    "path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/qualification.json",
+    "sha256": "a4bf3f2f4e296f7333596673c23deae7755733460c95489c2ccbce0d1368617e",
+    "root_reviewed": true,
+    "artifact_manifest_path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/artifact-manifest.json",
+    "artifact_manifest_sha256": "cc5de227f9526b77c3107b38301942473bd287d0a208a23d4ccb9707b11afaf3",
+    "independent_review_path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-runtime-independent-review-v1/review.json",
+    "independent_review_sha256": "e4913028d6c8692ec069fe79e33d82655d12b8816e1d8be545e7ea17cfc5e259"
+  },
+  "future_ESP_runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/bin/python",
+  "future_ESP_runtime_manifest_sha256": "91a060defde8a3506861dffbb5277a4672bbfd041208c2cbbfeedb66dfe0c1b9",
+  "future_RESP_runtime": {
+    "planned_path": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1",
+    "status": "root relocation and qualification pending",
+    "qualified_original_executable_sha256": "1bde6a28988bfb9d08caee06e54d4f1b086808d154861bc9e0fd48cb3935ac3b"
+  },
+  "native_fit_contract": {
+    "maximum_cpu_threads": 2,
+    "cap_and_backbone_fixed_charge_count": 18,
+    "neutral_cap_atoms_removed": 12,
+    "joint_adduct_charge_vector": "Preserve exactly by stable source atom identity; never independently refit ligand or residue, substitute AM1-BCC, or renormalize after removing neutral caps.",
+    "parameter_precedence": "Pinned native ff14SB canonical terms and v4 adduct-only supplement; protein parmchk2 output is not loaded.",
+    "physical_parameter_acceptance": false
+  },
+  "future_handoff_status": "Existing checkpoint-only handoff intentionally unchanged; separate cold-ESP immutable-file admission reader and independent review required.",
+  "physical_acceptance": false,
+  "simulation_ready": false,
+  "QM_launched": false,
+  "RESP_launched": false
+}

@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-09-13T06:19:31.181734+00:00",
+  "scope": "Independent software review of bounded loop candidate generation; no native-loop accuracy or universal support claim. No implementation edits made by reviewer.",
+  "source_hashes": {
+    "backend/loop_modeling.py": "507660a4ff80d91cfd96f7930c55ca2c67a02d76ad16309091d6b8ca44494356",
+    "backend/promod_loop_worker.py": "3d44fefc229ee2663f3a2893e232c5d25186815db01098ca9303006dcba7bbee",
+    "backend/loop_geometry.py": "aaf36c0c4fd3f699e074e13f2770fe24a02eccdbf7266aba6a136da25f073973",
+    "backend/loop_refinement.py": "27e81f379d8bf9f69388685cf51b20c51435bb2fc0524fdef2517fb9e01759be",
+    ".tools/promod3/lib/python3.12/site-packages/promod3/modelling/_closegaps.py": "0333c158e09e6bd2a11abcb0ceba8b0995642f1134686ccca6662864ff6ae5e6",
+    ".tools/promod3/lib/python3.12/site-packages/promod3/modelling/_raw_model.py": "d7f66996bc65c47b543dfaa3c0f74bd7e19e4caa82189cbb0decc626fd33f994"
+  },
+  "baseline_tests": {
+    "command": ".venv/bin/python -m pytest -q backend/tests/test_loop_modeling.py backend/tests/test_loop_geometry.py backend/tests/test_loop_refinement.py backend/tests/test_loop_sidechain_correction.py",
+    "passed": 66,
+    "failed": 0,
+    "elapsed_seconds": 0.98
+  },
+  "native_source_findings": [
+    {
+      "finding": "Database min_loops_required can skip 1-3 already closed/scored candidates; min1 retry retains CCD/ring/scoring stages.",
+      "source": "_closegaps.py:875"
+    },
+    {
+      "finding": "max_extension=0 MC tries only the original gap once; mc_num_loops controls diversity for that gap, not max_loops_to_search.",
+      "source": "_closegaps.py:1053"
+    },
+    {
+      "finding": "The generic caught MC RuntimeError text does not prove stems too far apart.",
+      "source": "_closegaps.py:1120"
+    },
+    {
+      "finding": "BuildRawModel may omit observed residues with invalid backbones or D geometry; expected-vs-raw missing inventory equality must remain.",
+      "source": "_raw_model.py:44"
+    },
+    {
+      "finding": "Native LoopCandidates.FillFromMonteCarloSampler default random_seed=0 verified by installed3.6.0 docstring. A requested application seed is not necessarily applied to native components."
+    }
+  ],
+  "independent_8k5r_anchor_distances": [
+    {
+      "before": "PRO91",
+      "missing": [
+        "TYR",
+        "ASN",
+        "ARG",
+        "CYS"
+      ],
+      "after": "LYS96",
+      "ca_distance_angstrom": 8.491153717041016,
+      "c_n_distance_angstrom": 9.963577270507812,
+      "interpretation": "Not geometrically ruled out by loose contour-length bound; closure success not established."
+    },
+    {
+      "before": "LEU176",
+      "missing": [
+        "ALA",
+        "LYS",
+        "ASN"
+      ],
+      "after": "SER180",
+      "ca_distance_angstrom": 6.019643306732178,
+      "c_n_distance_angstrom": 5.9215545654296875,
+      "interpretation": "Not geometrically ruled out by loose contour-length bound; closure success not established."
+    }
+  ],
+  "recommendations": [
+    "Search-only context extension must explicitly record temporarily changed observed stems and export only original missing heavy atoms.",
+    "Keep exact original atom transplant target, unchanged coordinates check, total worker deadline, cancellation, full prepared-complex geometry and stereochemistry gates.",
+    "Log unsuccessful DB/MC attempts and stage timings, including failures.",
+    "Compare true before/after construction NPZ artifacts; both had previously recorded postconstruction coordinates. Root reports this corrected."
+  ],
+  "pending": [
+    "Candidate implementation review",
+    "Five allocated real-structure full preparation cases from frozen15-case manifest"
+  ]
+}

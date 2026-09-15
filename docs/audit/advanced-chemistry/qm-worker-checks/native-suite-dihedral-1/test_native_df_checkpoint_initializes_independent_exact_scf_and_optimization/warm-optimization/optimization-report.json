@@ -1,0 +1,58 @@
+{
+  "requested": true,
+  "converged": true,
+  "settings": {
+    "enabled": true,
+    "max_steps": 40,
+    "freeze_atom_ids": [
+      "water/O"
+    ],
+    "dihedral_constraints": [],
+    "dihedral_tolerance_degrees": 0.1,
+    "convergence_energy": 1e-06,
+    "convergence_grms": 0.0003,
+    "convergence_gmax": 0.00045,
+    "convergence_drms": 0.0012,
+    "convergence_dmax": 0.0018
+  },
+  "steps": [
+    {
+      "cycle": 1,
+      "energy_hartree": -74.96361400506834,
+      "gradient_norm_hartree_per_bohr": 0.07548919603518453,
+      "scf_converged": true
+    },
+    {
+      "cycle": 2,
+      "energy_hartree": -74.96584343927364,
+      "gradient_norm_hartree_per_bohr": 0.01052184645351981,
+      "scf_converged": true
+    },
+    {
+      "cycle": 3,
+      "energy_hartree": -74.96589550181675,
+      "gradient_norm_hartree_per_bohr": 0.002121833094189609,
+      "scf_converged": true
+    },
+    {
+      "cycle": 4,
+      "energy_hartree": -74.96590036314065,
+      "gradient_norm_hartree_per_bohr": 0.0011685609798149429,
+      "scf_converged": true
+    },
+    {
+      "cycle": 5,
+      "energy_hartree": -74.96590119072688,
+      "gradient_norm_hartree_per_bohr": 6.80044966499296e-05,
+      "scf_converged": true
+    }
+  ],
+  "initial_dihedral_constraints": [],
+  "constraint_atom_indices_zero_based": [
+    0
+  ],
+  "constraint_file_sha256": "a354c8e5f16ed2d989dab8ea330493d94dcb7ac468883e0d5054f44b86c4da82",
+  "final_dihedral_constraints": [],
+  "dihedral_constraints_satisfied": true,
+  "max_frozen_displacement_bohr": 6.699217779929066e-11
+}

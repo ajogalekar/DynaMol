@@ -1,0 +1,13 @@
+{
+  "repo": "duartegroup/metallicious",
+  "source_url": "https://api.github.com/repos/duartegroup/metallicious/license",
+  "html_url": "https://github.com/duartegroup/metallicious/blob/main/LICENSE.md",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "sha256": "dcbcf97f89c93790441f440ec5de2dcbbff88810ab3537a7ef8819671301c514"
+}

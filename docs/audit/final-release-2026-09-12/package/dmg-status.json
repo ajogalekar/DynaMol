@@ -1,0 +1,19 @@
+{
+  "started_utc": "2026-09-13T05:10:08.286081+00:00",
+  "build_id": "589ff2dddea916f5",
+  "current_source_matches": true,
+  "audit_archive_excluded": true,
+  "command": [
+    ".tools/packaging/bin/python",
+    "scripts/create_macos_dmg.py",
+    "--app",
+    "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol application build zjdiizvv/DynaMol.app",
+    "--output",
+    "/Users/ashujo/Documents/Science/DynaMol/build/releases/final-audit-2026-09-12/DynaMol-0.1.1-macos-arm64-candidate.dmg",
+    "--validation-dir",
+    "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6"
+  ],
+  "limit_seconds": 180,
+  "exit_code": 0,
+  "elapsed_seconds": 101.69
+}

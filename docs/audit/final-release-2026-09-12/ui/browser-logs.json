@@ -1,0 +1,60 @@
+{
+  "run": [
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:57:50.993Z",
+      "url": "http://127.0.0.1:8877/assets/index-WHMjHI86.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:57:51.264Z",
+      "url": "http://127.0.0.1:8877/assets/index-WHMjHI86.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T05:00:05.371Z",
+      "url": "http://127.0.0.1:8877/assets/index-WHMjHI86.js"
+    }
+  ],
+  "inputs": [
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:56:50.437Z",
+      "url": "http://127.0.0.1:8878/assets/index-yvncpNeg.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:57:12.166Z",
+      "url": "http://127.0.0.1:8878/assets/index-yvncpNeg.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:57:41.735Z",
+      "url": "http://127.0.0.1:8878/assets/index-yvncpNeg.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:58:15.744Z",
+      "url": "http://127.0.0.1:8878/assets/index-yvncpNeg.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:58:40.342Z",
+      "url": "http://127.0.0.1:8878/assets/index-yvncpNeg.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T04:59:00.716Z",
+      "url": "http://127.0.0.1:8878/assets/index-yvncpNeg.js"
+    }
+  ]
+}

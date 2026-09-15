@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/
+dc: http://purl.org/dc/terms/
+foaf: http://xmlns.com/foaf/0.1/
+og: http://ogp.me/ns#
+rdfs: http://www.w3.org/2000/01/rdf-schema#
+sioc: http://rdfs.org/sioc/ns#
+sioct: http://rdfs.org/sioc/types#
+skos: http://www.w3.org/2004/02/skos/core#
+xsd: http://www.w3.org/2001/XMLSchema#
+">
+<head>
+  <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://bionano.physics.illinois.edu/CUFIX" />
+<link rel="shortlink" href="/node/131" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="https://bionano.physics.illinois.edu/sites/default/files/web-icon-32.png" type="image/png" />
+  <script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
+    document.documentElement.className+=' ie10';
+  }</script>    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>CUFIX: Non-bonded Fix (NBFIX) parameters for the CHARMM and AMBER force fields | The Aksimentiev Group</title>
+  <link type="text/css" rel="stylesheet" href="https://bionano.physics.illinois.edu/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://bionano.physics.illinois.edu/sites/default/files/css/css_Ksjtjh2LPiWKFfxsRv9-iL0kJRy7cFIsHOlRmi0yFx0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://bionano.physics.illinois.edu/sites/default/files/css/css_L3hkeEk_SYknbkA_M644pvJAAeZ9FauMhJ1kiRGuqMc.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://bionano.physics.illinois.edu/sites/default/files/css/css_Ft4CsgRuK1SpLlAEZ3-Dsc9R0lZImY7gZbl8IZpixSE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" media="all" />
+<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://bionano.physics.illinois.edu/sites/default/files/css/css_SNiaNl-KRzmrdtAZfeP9_DQRJYUM-A8OI9ReGlTfass.css" media="all" />
+
+<!--[if iE 9]>
+<link type="text/css" rel="stylesheet" href="https://bionano.physics.illinois.edu/sites/all/themes/gratis/css/ie9-fixes.css?so90g1" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_Pt6OpwTd6jcHLRIjrE-eSPLWMxWDkcyYrPTIrXDSON0.js"></script>
+<script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_J6KeVu9ghbpPiYbrhyS52lWeyKjWXSrunTffhpU32Yk.js"></script>
+<script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_oSdJY8ClRyFP9RjbYogcrP30pZPLBidwr7nlj7tdWhI.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_teRA0H4R3jCy9neQ2X7wXf_RFrGYEY2FA6mRR4OHHRU.js"></script>
+<script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_R2aFfIRVwFM0WCxL5x5N_DS0dg_v8M7rJQwmXaI3lBg.js"></script>
+<script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_cow2BAMOUnGhgIMD0PT-mnKqlLCsojtD-m39BfOl8QI.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"gratis_subtheme3","theme_token":"-_DCLTwv5AkTs1TOKV7yfCVOOSxevoboBhuw7eMU-gY","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.12\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_browser.js":1,"sites\/all\/modules\/biblio_ajax_abstract\/biblio_ajax_abstract.js":1,"sites\/all\/modules\/entityreference\/js\/entityreference.js":1,"sites\/all\/modules\/views_slideshow_xtra\/views_slideshow_xtra_overlay\/js\/views_slideshow_xtra_overlay.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"\/\/cdn.jsdelivr.net\/qtip2\/3.0.3\/jquery.qtip.min.js":1,"sites\/all\/modules\/video\/js\/video.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"sites\/all\/modules\/field_group\/field_group.js":1,"sites\/all\/modules\/qtip\/js\/qtip.js":1,"sites\/all\/themes\/gratis_subtheme3\/js\/jquery.qtip.js":1,"sites\/all\/themes\/gratis_subtheme3\/js\/flexslider-customization.js":1,"sites\/all\/themes\/gratis\/js\/scripts.js":1,"sites\/all\/modules\/flexslider\/assets\/js\/flexslider.load.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/custom_css\/custom_css.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views_slideshow_xtra\/views_slideshow_xtra_overlay\/css\/views_slideshow_xtra_overlay.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/themes\/corporate\/css\/background.css":1,"sites\/all\/libraries\/colorbox\/example4\/colorbox.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom_csscustom_css.css":1,"\/\/cdn.jsdelivr.net\/qtip2\/3.0.3\/jquery.qtip.min.css":1,"sites\/all\/modules\/qtip\/css\/qtip.css":1,"sites\/all\/modules\/video\/css\/video.css":1,"sites\/all\/modules\/biblio.fix\/biblio.css":1,"sites\/all\/modules\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400italic,600italic,700italic,400,600,700":1,"\/\/netdna.bootstrapcdn.com\/font-awesome\/3.2.1\/css\/font-awesome.min.css":1,"sites\/all\/themes\/gratis_subtheme3\/css\/style.css":1,"sites\/all\/themes\/gratis_subtheme3\/css\/design.css":1,"sites\/all\/themes\/gratis\/css\/forms.css":1,"sites\/all\/themes\/gratis\/css\/unsemantic-grid-responsive.css":1,"sites\/all\/themes\/gratis\/css\/responsive.css":1,"sites\/all\/themes\/gratis\/css\/menu.css":1,"sites\/all\/themes\/gratis_subtheme3\/css\/flexbox.css":1,"sites\/all\/themes\/gratis_subtheme3\/css\/video.css":1,"sites\/all\/themes\/gratis_subtheme3\/css\/jquery.qtip.css":1,"sites\/all\/themes\/gratis\/css\/ie9-fixes.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":false,"mobiledevicewidth":"480px","file_public_path":"\/sites\/default\/files","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"instances":"{\u0022default\u0022:{\u0022content\u0022:{\u0022text\u0022:\u0022\u0022},\u0022style\u0022:{\u0022tip\u0022:false,\u0022classes\u0022:\u0022\u0022},\u0022position\u0022:{\u0022at\u0022:\u0022bottom right\u0022,\u0022adjust\u0022:{\u0022method\u0022:\u0022\u0022},\u0022my\u0022:\u0022top left\u0022,\u0022viewport\u0022:false},\u0022show\u0022:{\u0022event\u0022:\u0022mouseenter \u0022},\u0022hide\u0022:{\u0022event\u0022:\u0022mouseleave \u0022}},\u0022testelement\u0022:{\u0022content\u0022:{\u0022text\u0022:\u0022\u0022},\u0022style\u0022:{\u0022tip\u0022:{\u0022width\u0022:6,\u0022height\u0022:6,\u0022border\u0022:0,\u0022offset\u0022:0,\u0022corner\u0022:true},\u0022classes\u0022:\u0022qtip-bootstrap qtip-shadow qtip-rounded\u0022},\u0022position\u0022:{\u0022at\u0022:\u0022bottom right\u0022,\u0022adjust\u0022:{\u0022method\u0022:\u0022\u0022},\u0022my\u0022:\u0022top left\u0022,\u0022viewport\u0022:false},\u0022show\u0022:{\u0022event\u0022:\u0022mouseenter \u0022},\u0022hide\u0022:{\u0022event\u0022:\u0022mouseleave \u0022}}}","qtipDebug":"{\u0022leaveElement\u0022:0}","better_exposed_filters":{"views":{"selected_publications":{"displays":{"block_1":{"filters":[]}}},"group_menu":{"displays":{"block":{"filters":[]}}}}},"field_group":{"html-element":"text_and_slider"}});
+//--><!]]>
+</script>
+    <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-131 node-type-project site-name site-slogan theme-logo-none color-palette-orange section-cufix is-node page-node-view">
+<div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+</div>
+
+
+
+<div id="wrapper">
+
+
+  <div id="header-bar">
+    <header role="banner" class="grid-container banner" style="max-width:">
+      <div class="grid-25 logo-wrapper header-grid">
+        <div id="brand">
+          <div id="logo">
+            
+                 
+        <h1 class="site-name">
+          <a href="/">
+            The Aksimentiev Group</a>
+          </h1>
+     
+                      </div>
+        </div>
+      </div><!--//logo-wrapper-->
+
+<div class="grid-75 branding-grid header-grid">
+  <div id="branding-wrapper">
+    
+        
+                 <h3 class="branding">Theoretical and Computational Research at the Interface of Physics, Biology, and Nanotechnology</h3>
+          
+      </div>
+      </div><!--//branding-grid-->
+
+</header>
+</div>
+
+<div id="menu-wrapper">
+  <div class="grid-container main-menu-wrapper" style="max-width:">
+    <div class="grid-100">
+      <section id="main-menu" role="navigation">
+                <a class="menu-link" href="#menu">
+         <i class="icon-fixed-width menu-icon">&#xf039;</i>
+        </a>
+        <nav id="menu" class="main-navigation">
+                    <ul class="toggle-menu" data-breakpoint="769"><li class="first leaf menu-218 home level-1"><a href="/">Home</a></li>
+<li class="expanded menu-492 group level-1"><a href="/people" title="">Group</a><ul class="menu"><li class="first last leaf menu-views"><div class="view view-group-menu view-id-group_menu view-display-id-block view-dom-id-3dc722456b9fe75f08ab13fdf9350490">
+        
+  
+  
+      <div class="view-content">
+        <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/aleksei-aksimentiev">Aleksei Aksimentiev</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/behzad-mehrafrooz">Behzad Mehrafrooz</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/christopher-maffeo">Christopher Maffeo</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/hemani-chhabra">Hemani Chhabra</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/jingqian-liu">Jingqian Liu</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/kumar-sarthak">Kumar Sarthak</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/kush-coshic">Kush Coshic</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/parth-chaturvedi">Parth Chaturvedi</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/pin-yi-li">Pin-Yi Li</a></span>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/people/siddharth-krishnan">Siddharth Krishnan</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+</ul></li>
+<li class="expanded menu-1025 publications level-1"><a href="/publications/author/aksimentiev" title="">Publications</a><ul class="menu"><li class="first leaf menu-1244 all level-2"><a href="/publications/author/aksimentiev" title="View all publications">all</a></li>
+<li class="leaf menu-1117 reviewarticles level-2"><a href="/review-articles">Review Articles</a></li>
+<li class="last leaf menu-1118 covergallery level-2"><a href="/cover-gallery">Cover Gallery</a></li>
+</ul></li>
+<li class="expanded menu-1035 research level-1"><a href="/research" title="">Research</a><ul class="menu"><li class="first expanded menu-1032 dnainbiology level-2"><a href="/node/122">DNA in biology</a><ul class="menu"><li class="first last leaf menu-1376 dnadnainteractions level-3"><a href="/node/203">DNA–DNA interactions</a></li>
+</ul></li>
+<li class="collapsed menu-1033 nanopores level-2"><a href="/node/124" title="for single molecule detection and manipulation">Nanopores</a></li>
+<li class="last collapsed menu-1034 syntheticmolecularsystems level-2"><a href="/node/126">Synthetic molecular systems</a></li>
+</ul></li>
+<li class="expanded active-trail menu-769 modelsmethodologies level-1"><a href="/methods" title="" class="active-trail">Models &amp; Methodologies</a><ul class="menu"><li class="first collapsed menu-1637 dnananotechnology level-2"><a href="/dna-nanotechnology" title="Publications, services, and tutorials related to DNA nanotechnology">DNA nanotechnology</a></li>
+<li class="leaf active-trail menu-1595 cufixchampaignurbananonbondedfixnbfix level-2"><a href="/CUFIX" class="active-trail active">CUFIX: Champaign-Urbana Non-bonded Fix (NBFIX)</a></li>
+<li class="leaf menu-1710 atomicresolutionbrowniandynamics level-2"><a href="/arbd" title="GPU-accelerated biomolecular simulation software">Atomic Resolution Brownian Dynamics</a></li>
+<li class="last leaf menu-1846 gridsteeredmoleculardynamics level-2"><a href="/grid-steered-MD">Grid-steered molecular dynamics</a></li>
+</ul></li>
+<li class="last expanded menu-459 tutorials level-1"><a href="/tutorials" title="">Tutorials</a><ul class="menu"><li class="first leaf menu-726 bionanotechnologytutorial level-2"><a href="/tutorials/bionanotechnology-tutorial">Bionanotechnology Tutorial</a></li>
+<li class="leaf menu-867 electrostaticmapsandionconduction level-2"><a href="/tutorials/electrostatic-maps-and-ion-conduction">Electrostatic Maps and Ion Conduction</a></li>
+<li class="leaf menu-923 introductiontomdsimulationofdnaproteinsystems level-2"><a href="/tutorials/introduction-md-simulation-dna-protein-systems">Introduction to MD simulation of DNA-protein systems</a></li>
+<li class="leaf menu-865 membraneproteinstutorial level-2"><a href="/tutorials/membrane-proteins-tutorial">Membrane Proteins Tutorial</a></li>
+<li class="leaf menu-781 modelingnanoporesforsequencingdna level-2"><a href="/tutorials/modeling-nanopores-sequencing-dna">Modeling Nanopores for Sequencing DNA</a></li>
+<li class="leaf menu-868 modelingsyntheticionchannelswithcoarsegrainedmoleculardynamics level-2"><a href="/tutorials/modeling-synthetic-ion-channels-coarse-grained-molecular-dynamics">Modeling Synthetic Ion Channels with Coarse-Grained Molecular Dynamics</a></li>
+<li class="leaf menu-780 renderingwithtachyon level-2"><a href="/tutorials/rendering-tachyon">Rendering with Tachyon</a></li>
+<li class="leaf menu-725 userdefinedforcesinnamd level-2"><a href="/tutorials/user-defined-forces-namd">User-Defined Forces in NAMD</a></li>
+<li class="leaf menu-866 vmdimagesandmoviestutorial level-2"><a href="/tutorials/vmd-images-and-movies-tutorial">VMD Images and Movies Tutorial</a></li>
+<li class="leaf menu-869 visualizingmdresultsstretchingdsdnaminitutorial level-2"><a href="/tutorials/visualizing-md-results-stretching-dsdna-mini-tutorial">Visualizing MD Results: Stretching dsDNA Mini Tutorial</a></li>
+<li class="leaf menu-1638 apracticalguidetodnaorigamisimulationsusingnamd level-2"><a href="/tutorials/practical-guide-dna-origami-simulations-using-namd">A Practical Guide to DNA Origami Simulations Using NAMD</a></li>
+<li class="last leaf menu-1708 analyzingdnaflexibility level-2"><a href="/tutorials/analyzing-changes-dna-flexibility-due-base-modifications-using-namd">Analyzing DNA Flexibility</a></li>
+</ul></li>
+</ul>              </nav>
+    
+    <!-- for third party menu systems or modules-->
+    </section>
+</div>
+</div>
+</div>
+
+
+
+<main role="main" class="grid-container" style="max-width:" id="content">
+  <div id = "main-content" class="grid-100">
+                          
+    
+    
+    <div  about="/CUFIX" typeof="sioc:Item foaf:Document" role="article" class="ds-1col node node-project node-promoted node-full view-mode-full  clearfix">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h1>CUFIX: Non-bonded Fix (NBFIX) parameters for the CHARMM and AMBER force fields</h1></div></div></div><div class="img-float-right" id="node-article-full-group-image-text">
+<span class="field field-name-field-image field-type-image field-label-hidden">
+    <figure class="field-item even"><img typeof="foaf:Image" src="https://bionano.physics.illinois.edu/sites/default/files/styles/large/public/field/image/osm_figures.png?itok=WzAFIA-E" width="480" height="390" alt="" />    <!-- render the alt tag as caption -->
+    </figure>
+</span>
+</div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Over the past decades, molecular dynamics (MD) simulations of biomolecules have become a mainstream biophysics technique. As the length and time scales amenable to the MD method increase, shortcomings of the empirical force fields—which were developed and validated using relatively short simulations of small molecules—become apparent. One common artifact is artificial aggregation of water-soluble biomolecules, which has been observed in a variety of systems, including electrolyte solutions, intrinsically disordered proteins, lipid bilayer membranes and DNA arrays. Here, we report a systematic refinement of Lennard-Jones parameters (CUFIX) describing amine-carboxyate, amine-phosphate, and aliphatic carbon-carbon interactions, which brings the results of MD simulations of proteins, nucleic acids, and lipids in remarkable agreement with experiments. To refine the amine-carboxylate and aliphatic carbon-carbon interactions, we matched the simulated osmotic pressure of amino acid solutions to the experimental data. Similarly, we refined the amine-phosphate interaction by matching the simulated and experimental osmotic pressure of a DNA array. We demonstrate the utility of our CUFIX corrections through simulations of lysine-mediated DNA—DNA forces, lipid-bilayer membranes and folded proteins. As our refinement neither affects the existing parameterization of bonded interaction nor does it alter the solvation free energies, it improves realism of an MD simulation without introducing any new artifacts.</p>
+<p>How to use CUFIX (contact Jejoong Yoo <a href="mailto:jejoong@gmail.com">jejoong@gmail.com</a>):</p>
+<ul>
+<li>
+	AMBER ff99/ff14 variants in the Gromacs format:
+<ul>
+<li>
+		&gt; Option 1: If you want to use a complete package that was used for our publications, download one of the followings. Make sure our CUFIX corrections are optimized with the TIP3P water model (use tip3p.itp).
+<ul>
+<li>
+			<a href="sites/default/files/cufix_files/amber99sb-ildn-phi-bsc0-cufix.ff.zip">ff99sb-ildn-phi for proteins, bsc0 for DNA and RNA </a>
+			</li>
+<li>
+			<a href="sites/default/files/cufix_files/amber14sb_parmbsc1_cufix.ff.zip">ff14sb for proteins, bsc1 for DNA, OL3 for RNA </a>
+			</li>
+<li>
+			<a href="sites/default/files/cufix_files/amber14sb_OL15_cufix.ff.zip">ff14sb for proteins, OL15 for DNA, OL3 for RNA</a>
+			</li>
+</ul>
+</li>
+<li>
+		&gt; Option 2: If you want to integrate CUFIX to your version of AMBER ff99/ff14 variants, follow these steps.
+<ul>
+<li>
+			&gt;&gt; Download <a href="sites/default/files/cufix_files/amber99sb-ildn-phi-bsc0-cufix.ff.zip">ff99sb-ildn-phi-bsc0-cufix</a> package.
+			</li>
+<li>
+			&gt;&gt; Copy the following files in the downloaded package to your gromacs-format ff99 folder: cufix.itp, mg-sol6.itp mg-sol6.pdb ca-sol7.itp ca-sol7.pdb.
+			</li>
+<li>
+			&gt;&gt; Replace atom types of O1P and O2P atoms (O2) with ON2 for all nucleotides in dna.rtp and rna.rtp. ON2 atom type is defined in cufix.itp.
+			</li>
+<li>
+			&gt;&gt; Add #include "cufix.itp" to forcefield.itp between #include "ffnonbonded.itp" and #include "ffbonded.it".
+			</li>
+<li>
+			&gt;&gt; Delete the following ions from ffnonbonded.itp: Li, Na, K, Cl, MG, Rb, Cs, F, Br, I. CUFIX uses new ion parameters by the Cheatham group.
+			</li>
+<li>
+			&gt;&gt; You're ready to go! Make sure that CUFIX is optimized with tip3p.itp.
+			</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+	​AMBER ff99/ff14 variants in AMBER format
+<ul>
+<li>
+		&gt; Download <a href="sites/default/files/cufix_files/AMBER_cufix.tar">cufix.tar</a> and untar in the amber16/dat/leap directory.
+		</li>
+<li>
+		&gt; For DNA and RNA, we prepared leaprc.DNA.bsc1.cufix and leaprc.RNA.OL3.cufix. In these files, we introduce ON2 atom type for the phosphate oxygen atoms to differentiate them from the carboxylate atom type O2.frcmod.ff99cufix file will work with any ff99 and ff14 variant protein force field in combination with leaprc.water.tip3p.
+		</li>
+<li>
+		&gt; For example, do the followings in the leap command:
+		</li>
+</ul>
+</li>
+</ul>
+<blockquote><p>
+source &lt;A FF99 PROTEIN FORCE FIELD CMD FILE&gt;<br />
+source leaprc.water.tip3p<br />
+cufix = loadamberparams frcmod.ff99cufix
+</p></blockquote>
+<ul>
+<li>
+	CHARMM 36/27/22 force fields
+<ul>
+<li>
+		&gt; Download <a href="sites/default/files/cufix_files/toppar_water_ions_cufix.str">CHARMM36/27/22 force fields: stream file for NAMD packages</a>
+		</li>
+<li>
+		&gt; Replace the standard toppar_water_ions.str with the downloaded file.
+		</li>
+<li>
+		&gt; Our CUFIX corrections are optimized for CHARMM36-version ion parameters (LIT, SOD, K, MG, CAL and CL) with CHARMM-format TIP3P water model.
+		</li>
+<li>
+		&gt; For magnesium and calcium ions, we use hexa- or hepta-hydrated forms, respectively. The downloaded file contains RESI definitions for these Mg/Ca-water complexes, but additional bonds (extrabonds) are required between Mg/Ca and water oxygen atoms. Please refer to our <a href="http://bionano.physics.illinois.edu/tutorials/practical-guide-dna-origami-simulations-using-namd">DNA origami tutorial</a> to learn how to use it.
+		</li>
+</ul>
+</li>
+<li>Anton
+<ul>
+<li>
+		&gt; Download <a href="sites/default/files/cufix_files/VIPARR-amber99SBstar-ILDN-bsc0-nbfix.zip">amber99SBstar-ILDN-bsc0-nbfix in VIPARR format</a>.
+		</li>
+<li>
+		&gt; Just use it the same way as the other force fields at $VIPARR3_FFDIR.
+		</li>
+</ul>
+</li>
+</ul>
+</div></div></div><div class="field field-name-field-publications field-type-entityreference field-label-hidden"><div class="field-items"><div class="field-item even"><div  about="/node/282" typeof="sioc:Item foaf:Document" role="article" class="ds-1col node node-biblio view-mode-text_and_slider  clearfix">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/node/282">New tricks for old dogs: Improving the accuracy of biomolecular force fields by pair-specific corrections to non-bonded interactions</a></h2></div></div></div><div class="field field-name-mybiblio-short field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p class="biblio-authors">Jejoong Yoo, and Aleksei Aksimentiev  <i>Physical Chemistry Chemical Physics</i> (2018)</p></div></div></div><div class="float-right"><div class="field field-name-Project-page-slide-content field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><script type="text/javascript" charset="utf-8">jQuery("document").ready(function() {jQuery('.slides-282').flexslider() });</script><div class="flexslider slides-282"><ul class="slides"><li class='slide-image'><div><div><img typeof="foaf:Image" src="https://bionano.physics.illinois.edu/sites/default/files/styles/large/public/summ.jpg?itok=PRBMUuO2" alt="" title="" /></div></div></li></div></div></div></div></div><div class="field field-name-highlight-or-abstract field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>In contrast to ordinary polymers, the vast majority of biological macromolecules adopt highly ordered three-dimensional structures that define their functions. The key to folding of a biopolymer into a unique 3D structure or to assembly of several biopolymers into a functional unit is a delicate balance between the attractive and repulsive forces that also makes such self-assembly reversible under physiological conditions. The all-atom molecular dynamics (MD) method has emerged as a powerful tool for studies of individual biomolecules and their functional assemblies, encompassing systems of ever increasing complexity. However, advances in parallel computing technology have outpaced development of the underlying theoretical models—the molecular force fields, pushing the MD method into untested territory. Recent tests of the MD method have found the most commonly used molecular force fields to be out of balance, overestimating attractive interactions between charged and hydrophobic groups, which can promote artificial aggregation in MD simulations of multi-component protein, nucleic acid, and lipid systems. One route to improving the force fields is through the NBFIX corrections method, in which the intermolecular forces are calibrated against experimentally measured quantities such as osmotic pressure by making atom pair-specific adjustments to the non-bonded interactions. In this article, we review development of the NBFIX corrections to the AMBER and CHARMM force fields and discuss their implications for MD simulations of electrolyte solutions, dense DNA systems, Holliday junctions, protein folding, and lipid bilayer membranes.</p>
+</div></div></div></div>
+
+</div><div class="field-item odd"><div  about="/node/239" typeof="sioc:Item foaf:Document" role="article" class="ds-1col node node-biblio view-mode-text_and_slider  clearfix">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/node/239">Refined Parameterization of Nonbonded Interactions Improves Conformational Sampling and Kinetics of Protein Folding Simulations</a></h2></div></div></div><div class="field field-name-mybiblio-short field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p class="biblio-authors">Jejoong Yoo, and Aleksei Aksimentiev  <i>Journal of Physical Chemistry Letters</i> (2016)</p></div></div></div><div class="float-right"><div class="field field-name-Project-page-slide-content field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><script type="text/javascript" charset="utf-8">jQuery("document").ready(function() {jQuery('.slides-239').flexslider() });</script><div class="flexslider slides-239"><ul class="slides"><li class='slide-image'><div><div><img typeof="foaf:Image" src="https://bionano.physics.illinois.edu/sites/default/files/styles/large/public/ww.png?itok=k43YjWcY" alt="" title="" /></div></div></li></div></div></div></div></div><div class="field field-name-highlight-or-abstract field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>Recent advances in computational technology have enabled brute-force molecular dynamics (MD) simulations of protein folding using physics-based molecular force fields. The extensive sampling of protein conformations afforded by such simulations revealed, however, considerable compaction of the protein conformations in the unfolded state, which is inconsistent with experiment. Here, we show that a set of surgical corrections to nonbonded interactions between amine nitrogen–carboxylate oxygen and aliphatic carbon–carbon atom pairs can considerably improve the realism of protein folding simulations. Specifically, we show that employing our corrections in ∼500 μs all-atom replica-exchange MD simulations of the WW domain and villin head piece proteins increases the size of the denatured proteins’ conformations and does not destabilize the native conformations of the proteins. In addition to making the folded conformations a global minimum of the respective free energy landscapes at room temperature, our corrections also make the free energy landscape smoother, considerably accelerating the folding kinetics and, hence, reducing the computational expense of a protein folding simulation.</p>
+</div></div></div></div>
+
+</div><div class="field-item even"><div  about="/node/209" typeof="sioc:Item foaf:Document" role="article" class="ds-1col node node-biblio view-mode-text_and_slider  clearfix">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/node/209">Improved Parameterization of Amine–Carboxylate and Amine–Phosphate Interactions for Molecular Dynamics Simulations Using the CHARMM and AMBER Force Fields</a></h2></div></div></div><div class="field field-name-mybiblio-short field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p class="biblio-authors">Jejoong Yoo, and Aleksei Aksimentiev  <i>Journal of Chemical Theory and Computation</i> (2016)</p></div></div></div><div class="float-right"><div class="field field-name-Project-page-slide-content field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><script type="text/javascript" charset="utf-8">jQuery("document").ready(function() {jQuery('.slides-209').flexslider() });</script><div class="flexslider slides-209"><ul class="slides"><li class='slide-image'><div><div><img typeof="foaf:Image" src="https://bionano.physics.illinois.edu/sites/default/files/styles/large/public/toc_1.png?itok=F0GUANHR" alt="" title="" /></div></div></li></div></div></div></div></div><div class="field field-name-highlight-or-abstract field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>Over the past decades, molecular dynamics (MD) simulations of biomolecules have become a mainstream biophysics technique. As the length and time scales amenable to the MD method increase, shortcomings of the empirical force fields, which have been developed and validated using relatively short simulations of small molecules, become apparent. One common artifact is aggregation of water-soluble biomolecules driven by artificially strong charge–charge interactions. Here, we report a systematic atom pair-specific refinement of Lennard-Jones parameters (NBFIX) describing amine–carboxylate and amine–phosphate interactions, which bring MD simulations of basic peptide-mediated nucleic acid assemblies and lipid bilayer membranes into better agreement with experimental data. As our refinement does not affect the existing parametrization of bonded interactions or alter the solvation free energies, it improves the realism of an MD simulation without introducing additional artifacts.</p>
+</div></div></div></div>
+
+</div><div class="field-item odd"><div  about="/node/218" typeof="sioc:Item foaf:Document" role="article" class="ds-1col node node-biblio view-mode-text_and_slider  clearfix">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/node/218">Improved model of hydrated calcium ion for molecular dynamics simulations using classical biomolecular force fields</a></h2></div></div></div><div class="field field-name-mybiblio-short field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p class="biblio-authors">Jejoong Yoo, James Wilson, and Aleksei Aksimentiev  <i>Biopolymers</i> (2016)</p></div></div></div><div class="float-right"><div class="field field-name-Project-page-slide-content field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><script type="text/javascript" charset="utf-8">jQuery("document").ready(function() {jQuery('.slides-218').flexslider() });</script><div class="flexslider slides-218"><ul class="slides"><li class='slide-image'><div><div><img typeof="foaf:Image" src="https://bionano.physics.illinois.edu/sites/default/files/styles/large/public/toc_3.png?itok=MI3Gd0KQ" alt="" title="" /></div></div></li></div></div></div></div></div><div class="field field-name-highlight-or-abstract field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">Calcium ions (Ca2+) play key roles in various fundamental biological processes such as cell signaling and brain function . Molecular dynamics (MD) simulations have been used to study such interactions, however, the accuracy of the Ca2+ models provided by the standard M D force fields has not been rigorously tested. Here, we assess the performance of the Ca2+ models from the most popular classical force fields AMBER and CHARMM by computing the osmotic pressure of model compounds and the free energy of DNA–DNA inter act i on s. In the simulations performed using the two standard models, Ca2+ ions are seen to form artificial clusters with chloride, acetate, and phosphate species; the osmotic pressure of CaAc2and CaCl2solutions is a small fraction of the experimental values for both force fields. Using the standard parameterization of Ca2+ ions in the simulations of Ca2+-mediated DNA-DNA interact ions leads to qualitatively wrong outcomes: both AMBER and CHARMM simulations suggest strong inter-DNA attraction whereas, in experiment, DNA molecules repel one another. The artificial attraction of Ca2+to DNA phosphate is strong enough to affect the direction of the electric field-driven translocation of DNA through a solid-state nanopore. To address these shortcomings of the standard Ca2+ model, we introduce a custom model of a hydrated Ca2+ ion and show that using our model brings the results of the above MD simulations in quantitative agreement with experiment. Our improved model of Ca2+ can be readily applied to MD simulations of various biomolecular systems, including nucleic acids, proteins and lipid bilayer membranes.
+</div></div></div></div>
+
+</div><div class="field-item even"><div  about="/node/91" typeof="sioc:Item foaf:Document" role="article" class="ds-1col node node-biblio view-mode-text_and_slider  clearfix">
+
+  
+  <div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h2><a href="/node/91">Improved Parametrization of Li+, Na+, K+, and Mg2+ Ions for All-Atom Molecular Dynamics Simulations of Nucleic Acid Systems</a></h2></div></div></div><div class="field field-name-mybiblio-short field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p class="biblio-authors">Jejoong Yoo, and Aleksei Aksimentiev  <i>The Journal of Physical Chemistry Letters</i> (2012)</p></div></div></div><div class="float-right"><div class="field field-name-Project-page-slide-content field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><script type="text/javascript" charset="utf-8">jQuery("document").ready(function() {jQuery('.slides-91').flexslider() });</script><div class="flexslider slides-91"><ul class="slides"><li class='slide-image'><div><div><img typeof="foaf:Image" src="https://bionano.physics.illinois.edu/sites/default/files/styles/large/public/ions2.png?itok=7Pfsl3xa" alt="" title="" /></div></div></li></div></div></div></div></div><div class="field field-name-highlight-or-abstract field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>Atomic-scale modeling of compacted nucleic acids has the ability to reveal the inner workings of spectacular biomolecular machines, yet the outcome of such modeling efforts sensitively depends on the accuracy of the underlying computational models. Our molecular dynamics simulations of an array of 64 parallel duplex DNA revealed considerable artifacts of cation−DNA phosphate interactions in CHARMM and AMBER parameter sets: both the DNA arrangement and the pressure inside the DNA arrays were found to be in considerable disagreement with experiment. To improve the models, we fine-tuned van der Waals interaction parameters for specific ion pairs to reproduce experimental osmotic pressure of binary electrolyte solutions of biologically relevant ions. Repeating the DNA array simulations using our parameters produced results consistent with experiment. Our improved parametrization can be directly applied to molecular dynamics simulations of various charged biomolecular systems, including nucleic acids, proteins, and lipid bilayer membranes.</p>
+</div></div></div></div>
+
+</div></div></div></div>
+
+
+    
+  </div>
+
+  <!--Sidebar first-->
+    <!-- // Sidebar first  (first only - grid-20 pull-80) -->
+
+  <!--Sidebar second-->
+    <!-- // Sidebar second-->
+
+</main>
+
+
+<div class="push-sticky"></div>
+
+</div>
+
+<footer id="footer" role="footer">
+  <section class="grid-container" style="max-width:">
+    <div class="grid-100">
+                <div class="region region-footer-first">
+    <div id="block-block-2" class="block block-block">
+<div class="block-inner clearfix">
+          <div class="block-content" >
+      <p><a href="https://www.vpaa.uillinois.edu/resources/web_privacy/supplemental_web_privacy_notice" target="_self">Privacy notice</a></p>
+    </div>
+</div>
+</div>
+  </div>
+          </div>
+  </section>
+</footer>
+<script type="text/javascript" src="https://bionano.physics.illinois.edu/sites/default/files/js/js_uTpGZRbRZm_lrt5640lI88hN-6jGIe3E3hxZcagIuss.js"></script>
+</body>
+</html>

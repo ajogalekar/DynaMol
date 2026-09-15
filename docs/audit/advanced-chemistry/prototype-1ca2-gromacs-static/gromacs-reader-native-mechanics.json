@@ -1,0 +1,6077 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "checks": [],
+  "failures": [
+    {
+      "kind": "missing_atom",
+      "id": "native:4037",
+      "identity": {
+        "chain": "1",
+        "resid": "259",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4038",
+      "identity": {
+        "chain": "1",
+        "resid": "259",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4039",
+      "identity": {
+        "chain": "1",
+        "resid": "259",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4040",
+      "identity": {
+        "chain": "1",
+        "resid": "260",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4041",
+      "identity": {
+        "chain": "1",
+        "resid": "260",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4042",
+      "identity": {
+        "chain": "1",
+        "resid": "260",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4043",
+      "identity": {
+        "chain": "1",
+        "resid": "261",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4044",
+      "identity": {
+        "chain": "1",
+        "resid": "261",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4045",
+      "identity": {
+        "chain": "1",
+        "resid": "261",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4046",
+      "identity": {
+        "chain": "1",
+        "resid": "262",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4047",
+      "identity": {
+        "chain": "1",
+        "resid": "262",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4048",
+      "identity": {
+        "chain": "1",
+        "resid": "262",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4049",
+      "identity": {
+        "chain": "1",
+        "resid": "263",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4050",
+      "identity": {
+        "chain": "1",
+        "resid": "263",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4051",
+      "identity": {
+        "chain": "1",
+        "resid": "263",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4052",
+      "identity": {
+        "chain": "1",
+        "resid": "264",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4053",
+      "identity": {
+        "chain": "1",
+        "resid": "264",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4054",
+      "identity": {
+        "chain": "1",
+        "resid": "264",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4055",
+      "identity": {
+        "chain": "1",
+        "resid": "265",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4056",
+      "identity": {
+        "chain": "1",
+        "resid": "265",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4057",
+      "identity": {
+        "chain": "1",
+        "resid": "265",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4058",
+      "identity": {
+        "chain": "1",
+        "resid": "266",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4059",
+      "identity": {
+        "chain": "1",
+        "resid": "266",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4060",
+      "identity": {
+        "chain": "1",
+        "resid": "266",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4061",
+      "identity": {
+        "chain": "1",
+        "resid": "267",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4062",
+      "identity": {
+        "chain": "1",
+        "resid": "267",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4063",
+      "identity": {
+        "chain": "1",
+        "resid": "267",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4064",
+      "identity": {
+        "chain": "1",
+        "resid": "268",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4065",
+      "identity": {
+        "chain": "1",
+        "resid": "268",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4066",
+      "identity": {
+        "chain": "1",
+        "resid": "268",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4067",
+      "identity": {
+        "chain": "1",
+        "resid": "269",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4068",
+      "identity": {
+        "chain": "1",
+        "resid": "269",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4069",
+      "identity": {
+        "chain": "1",
+        "resid": "269",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4070",
+      "identity": {
+        "chain": "1",
+        "resid": "270",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4071",
+      "identity": {
+        "chain": "1",
+        "resid": "270",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4072",
+      "identity": {
+        "chain": "1",
+        "resid": "270",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4073",
+      "identity": {
+        "chain": "1",
+        "resid": "271",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4074",
+      "identity": {
+        "chain": "1",
+        "resid": "271",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4075",
+      "identity": {
+        "chain": "1",
+        "resid": "271",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4076",
+      "identity": {
+        "chain": "1",
+        "resid": "272",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4077",
+      "identity": {
+        "chain": "1",
+        "resid": "272",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4078",
+      "identity": {
+        "chain": "1",
+        "resid": "272",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4079",
+      "identity": {
+        "chain": "1",
+        "resid": "273",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4080",
+      "identity": {
+        "chain": "1",
+        "resid": "273",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4081",
+      "identity": {
+        "chain": "1",
+        "resid": "273",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4082",
+      "identity": {
+        "chain": "1",
+        "resid": "274",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4083",
+      "identity": {
+        "chain": "1",
+        "resid": "274",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4084",
+      "identity": {
+        "chain": "1",
+        "resid": "274",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4085",
+      "identity": {
+        "chain": "1",
+        "resid": "275",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4086",
+      "identity": {
+        "chain": "1",
+        "resid": "275",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4087",
+      "identity": {
+        "chain": "1",
+        "resid": "275",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4088",
+      "identity": {
+        "chain": "1",
+        "resid": "276",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4089",
+      "identity": {
+        "chain": "1",
+        "resid": "276",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4090",
+      "identity": {
+        "chain": "1",
+        "resid": "276",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4091",
+      "identity": {
+        "chain": "1",
+        "resid": "277",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4092",
+      "identity": {
+        "chain": "1",
+        "resid": "277",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4093",
+      "identity": {
+        "chain": "1",
+        "resid": "277",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4094",
+      "identity": {
+        "chain": "1",
+        "resid": "278",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4095",
+      "identity": {
+        "chain": "1",
+        "resid": "278",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4096",
+      "identity": {
+        "chain": "1",
+        "resid": "278",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4097",
+      "identity": {
+        "chain": "1",
+        "resid": "279",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4098",
+      "identity": {
+        "chain": "1",
+        "resid": "279",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4099",
+      "identity": {
+        "chain": "1",
+        "resid": "279",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4100",
+      "identity": {
+        "chain": "1",
+        "resid": "280",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4101",
+      "identity": {
+        "chain": "1",
+        "resid": "280",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4102",
+      "identity": {
+        "chain": "1",
+        "resid": "280",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4103",
+      "identity": {
+        "chain": "1",
+        "resid": "281",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4104",
+      "identity": {
+        "chain": "1",
+        "resid": "281",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4105",
+      "identity": {
+        "chain": "1",
+        "resid": "281",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4106",
+      "identity": {
+        "chain": "1",
+        "resid": "282",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4107",
+      "identity": {
+        "chain": "1",
+        "resid": "282",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4108",
+      "identity": {
+        "chain": "1",
+        "resid": "282",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4109",
+      "identity": {
+        "chain": "1",
+        "resid": "283",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4110",
+      "identity": {
+        "chain": "1",
+        "resid": "283",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4111",
+      "identity": {
+        "chain": "1",
+        "resid": "283",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4112",
+      "identity": {
+        "chain": "1",
+        "resid": "284",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4113",
+      "identity": {
+        "chain": "1",
+        "resid": "284",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4114",
+      "identity": {
+        "chain": "1",
+        "resid": "284",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4115",
+      "identity": {
+        "chain": "1",
+        "resid": "285",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4116",
+      "identity": {
+        "chain": "1",
+        "resid": "285",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4117",
+      "identity": {
+        "chain": "1",
+        "resid": "285",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4118",
+      "identity": {
+        "chain": "1",
+        "resid": "286",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4119",
+      "identity": {
+        "chain": "1",
+        "resid": "286",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4120",
+      "identity": {
+        "chain": "1",
+        "resid": "286",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4121",
+      "identity": {
+        "chain": "1",
+        "resid": "287",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4122",
+      "identity": {
+        "chain": "1",
+        "resid": "287",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4123",
+      "identity": {
+        "chain": "1",
+        "resid": "287",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4124",
+      "identity": {
+        "chain": "1",
+        "resid": "288",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4125",
+      "identity": {
+        "chain": "1",
+        "resid": "288",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4126",
+      "identity": {
+        "chain": "1",
+        "resid": "288",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4127",
+      "identity": {
+        "chain": "1",
+        "resid": "289",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4128",
+      "identity": {
+        "chain": "1",
+        "resid": "289",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4129",
+      "identity": {
+        "chain": "1",
+        "resid": "289",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4130",
+      "identity": {
+        "chain": "1",
+        "resid": "290",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4131",
+      "identity": {
+        "chain": "1",
+        "resid": "290",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4132",
+      "identity": {
+        "chain": "1",
+        "resid": "290",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4133",
+      "identity": {
+        "chain": "1",
+        "resid": "291",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4134",
+      "identity": {
+        "chain": "1",
+        "resid": "291",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4135",
+      "identity": {
+        "chain": "1",
+        "resid": "291",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4136",
+      "identity": {
+        "chain": "1",
+        "resid": "292",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4137",
+      "identity": {
+        "chain": "1",
+        "resid": "292",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4138",
+      "identity": {
+        "chain": "1",
+        "resid": "292",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4139",
+      "identity": {
+        "chain": "1",
+        "resid": "293",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4140",
+      "identity": {
+        "chain": "1",
+        "resid": "293",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4141",
+      "identity": {
+        "chain": "1",
+        "resid": "293",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4142",
+      "identity": {
+        "chain": "1",
+        "resid": "294",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4143",
+      "identity": {
+        "chain": "1",
+        "resid": "294",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4144",
+      "identity": {
+        "chain": "1",
+        "resid": "294",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4145",
+      "identity": {
+        "chain": "1",
+        "resid": "295",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4146",
+      "identity": {
+        "chain": "1",
+        "resid": "295",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4147",
+      "identity": {
+        "chain": "1",
+        "resid": "295",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4148",
+      "identity": {
+        "chain": "1",
+        "resid": "296",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4149",
+      "identity": {
+        "chain": "1",
+        "resid": "296",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4150",
+      "identity": {
+        "chain": "1",
+        "resid": "296",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4151",
+      "identity": {
+        "chain": "1",
+        "resid": "297",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4152",
+      "identity": {
+        "chain": "1",
+        "resid": "297",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4153",
+      "identity": {
+        "chain": "1",
+        "resid": "297",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4154",
+      "identity": {
+        "chain": "1",
+        "resid": "298",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4155",
+      "identity": {
+        "chain": "1",
+        "resid": "298",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4156",
+      "identity": {
+        "chain": "1",
+        "resid": "298",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4157",
+      "identity": {
+        "chain": "1",
+        "resid": "299",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4158",
+      "identity": {
+        "chain": "1",
+        "resid": "299",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4159",
+      "identity": {
+        "chain": "1",
+        "resid": "299",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4160",
+      "identity": {
+        "chain": "1",
+        "resid": "300",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4161",
+      "identity": {
+        "chain": "1",
+        "resid": "300",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4162",
+      "identity": {
+        "chain": "1",
+        "resid": "300",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4163",
+      "identity": {
+        "chain": "1",
+        "resid": "301",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4164",
+      "identity": {
+        "chain": "1",
+        "resid": "301",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4165",
+      "identity": {
+        "chain": "1",
+        "resid": "301",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4166",
+      "identity": {
+        "chain": "1",
+        "resid": "302",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4167",
+      "identity": {
+        "chain": "1",
+        "resid": "302",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4168",
+      "identity": {
+        "chain": "1",
+        "resid": "302",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4169",
+      "identity": {
+        "chain": "1",
+        "resid": "303",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4170",
+      "identity": {
+        "chain": "1",
+        "resid": "303",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4171",
+      "identity": {
+        "chain": "1",
+        "resid": "303",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4172",
+      "identity": {
+        "chain": "1",
+        "resid": "304",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4173",
+      "identity": {
+        "chain": "1",
+        "resid": "304",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4174",
+      "identity": {
+        "chain": "1",
+        "resid": "304",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4175",
+      "identity": {
+        "chain": "1",
+        "resid": "305",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4176",
+      "identity": {
+        "chain": "1",
+        "resid": "305",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4177",
+      "identity": {
+        "chain": "1",
+        "resid": "305",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4178",
+      "identity": {
+        "chain": "1",
+        "resid": "306",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4179",
+      "identity": {
+        "chain": "1",
+        "resid": "306",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4180",
+      "identity": {
+        "chain": "1",
+        "resid": "306",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4181",
+      "identity": {
+        "chain": "1",
+        "resid": "307",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4182",
+      "identity": {
+        "chain": "1",
+        "resid": "307",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4183",
+      "identity": {
+        "chain": "1",
+        "resid": "307",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4184",
+      "identity": {
+        "chain": "1",
+        "resid": "308",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4185",
+      "identity": {
+        "chain": "1",
+        "resid": "308",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4186",
+      "identity": {
+        "chain": "1",
+        "resid": "308",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4187",
+      "identity": {
+        "chain": "1",
+        "resid": "309",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4188",
+      "identity": {
+        "chain": "1",
+        "resid": "309",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4189",
+      "identity": {
+        "chain": "1",
+        "resid": "309",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4190",
+      "identity": {
+        "chain": "1",
+        "resid": "310",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4191",
+      "identity": {
+        "chain": "1",
+        "resid": "310",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4192",
+      "identity": {
+        "chain": "1",
+        "resid": "310",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4193",
+      "identity": {
+        "chain": "1",
+        "resid": "311",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4194",
+      "identity": {
+        "chain": "1",
+        "resid": "311",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4195",
+      "identity": {
+        "chain": "1",
+        "resid": "311",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4196",
+      "identity": {
+        "chain": "1",
+        "resid": "312",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4197",
+      "identity": {
+        "chain": "1",
+        "resid": "312",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4198",
+      "identity": {
+        "chain": "1",
+        "resid": "312",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4199",
+      "identity": {
+        "chain": "1",
+        "resid": "313",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4200",
+      "identity": {
+        "chain": "1",
+        "resid": "313",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4201",
+      "identity": {
+        "chain": "1",
+        "resid": "313",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4202",
+      "identity": {
+        "chain": "1",
+        "resid": "314",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4203",
+      "identity": {
+        "chain": "1",
+        "resid": "314",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4204",
+      "identity": {
+        "chain": "1",
+        "resid": "314",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4205",
+      "identity": {
+        "chain": "1",
+        "resid": "315",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4206",
+      "identity": {
+        "chain": "1",
+        "resid": "315",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4207",
+      "identity": {
+        "chain": "1",
+        "resid": "315",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4208",
+      "identity": {
+        "chain": "1",
+        "resid": "316",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4209",
+      "identity": {
+        "chain": "1",
+        "resid": "316",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4210",
+      "identity": {
+        "chain": "1",
+        "resid": "316",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4211",
+      "identity": {
+        "chain": "1",
+        "resid": "317",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4212",
+      "identity": {
+        "chain": "1",
+        "resid": "317",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4213",
+      "identity": {
+        "chain": "1",
+        "resid": "317",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4214",
+      "identity": {
+        "chain": "1",
+        "resid": "318",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4215",
+      "identity": {
+        "chain": "1",
+        "resid": "318",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4216",
+      "identity": {
+        "chain": "1",
+        "resid": "318",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4217",
+      "identity": {
+        "chain": "1",
+        "resid": "319",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4218",
+      "identity": {
+        "chain": "1",
+        "resid": "319",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4219",
+      "identity": {
+        "chain": "1",
+        "resid": "319",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4220",
+      "identity": {
+        "chain": "1",
+        "resid": "320",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4221",
+      "identity": {
+        "chain": "1",
+        "resid": "320",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4222",
+      "identity": {
+        "chain": "1",
+        "resid": "320",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4223",
+      "identity": {
+        "chain": "1",
+        "resid": "321",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4224",
+      "identity": {
+        "chain": "1",
+        "resid": "321",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4225",
+      "identity": {
+        "chain": "1",
+        "resid": "321",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4226",
+      "identity": {
+        "chain": "1",
+        "resid": "322",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4227",
+      "identity": {
+        "chain": "1",
+        "resid": "322",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4228",
+      "identity": {
+        "chain": "1",
+        "resid": "322",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4229",
+      "identity": {
+        "chain": "1",
+        "resid": "323",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4230",
+      "identity": {
+        "chain": "1",
+        "resid": "323",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4231",
+      "identity": {
+        "chain": "1",
+        "resid": "323",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4232",
+      "identity": {
+        "chain": "1",
+        "resid": "324",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4233",
+      "identity": {
+        "chain": "1",
+        "resid": "324",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4234",
+      "identity": {
+        "chain": "1",
+        "resid": "324",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4235",
+      "identity": {
+        "chain": "1",
+        "resid": "325",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4236",
+      "identity": {
+        "chain": "1",
+        "resid": "325",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4237",
+      "identity": {
+        "chain": "1",
+        "resid": "325",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4238",
+      "identity": {
+        "chain": "1",
+        "resid": "326",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4239",
+      "identity": {
+        "chain": "1",
+        "resid": "326",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4240",
+      "identity": {
+        "chain": "1",
+        "resid": "326",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4241",
+      "identity": {
+        "chain": "1",
+        "resid": "327",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4242",
+      "identity": {
+        "chain": "1",
+        "resid": "327",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4243",
+      "identity": {
+        "chain": "1",
+        "resid": "327",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4244",
+      "identity": {
+        "chain": "1",
+        "resid": "328",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4245",
+      "identity": {
+        "chain": "1",
+        "resid": "328",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4246",
+      "identity": {
+        "chain": "1",
+        "resid": "328",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4247",
+      "identity": {
+        "chain": "1",
+        "resid": "329",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4248",
+      "identity": {
+        "chain": "1",
+        "resid": "329",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4249",
+      "identity": {
+        "chain": "1",
+        "resid": "329",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4250",
+      "identity": {
+        "chain": "1",
+        "resid": "330",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4251",
+      "identity": {
+        "chain": "1",
+        "resid": "330",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4252",
+      "identity": {
+        "chain": "1",
+        "resid": "330",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4253",
+      "identity": {
+        "chain": "1",
+        "resid": "331",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4254",
+      "identity": {
+        "chain": "1",
+        "resid": "331",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4255",
+      "identity": {
+        "chain": "1",
+        "resid": "331",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4256",
+      "identity": {
+        "chain": "1",
+        "resid": "332",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4257",
+      "identity": {
+        "chain": "1",
+        "resid": "332",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4258",
+      "identity": {
+        "chain": "1",
+        "resid": "332",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4259",
+      "identity": {
+        "chain": "1",
+        "resid": "333",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4260",
+      "identity": {
+        "chain": "1",
+        "resid": "333",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4261",
+      "identity": {
+        "chain": "1",
+        "resid": "333",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4262",
+      "identity": {
+        "chain": "1",
+        "resid": "334",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4263",
+      "identity": {
+        "chain": "1",
+        "resid": "334",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4264",
+      "identity": {
+        "chain": "1",
+        "resid": "334",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4265",
+      "identity": {
+        "chain": "1",
+        "resid": "335",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4266",
+      "identity": {
+        "chain": "1",
+        "resid": "335",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4267",
+      "identity": {
+        "chain": "1",
+        "resid": "335",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4268",
+      "identity": {
+        "chain": "1",
+        "resid": "336",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4269",
+      "identity": {
+        "chain": "1",
+        "resid": "336",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4270",
+      "identity": {
+        "chain": "1",
+        "resid": "336",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4271",
+      "identity": {
+        "chain": "1",
+        "resid": "337",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4272",
+      "identity": {
+        "chain": "1",
+        "resid": "337",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4273",
+      "identity": {
+        "chain": "1",
+        "resid": "337",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4274",
+      "identity": {
+        "chain": "1",
+        "resid": "338",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4275",
+      "identity": {
+        "chain": "1",
+        "resid": "338",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4276",
+      "identity": {
+        "chain": "1",
+        "resid": "338",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4277",
+      "identity": {
+        "chain": "1",
+        "resid": "339",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4278",
+      "identity": {
+        "chain": "1",
+        "resid": "339",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4279",
+      "identity": {
+        "chain": "1",
+        "resid": "339",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4280",
+      "identity": {
+        "chain": "1",
+        "resid": "340",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4281",
+      "identity": {
+        "chain": "1",
+        "resid": "340",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4282",
+      "identity": {
+        "chain": "1",
+        "resid": "340",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4283",
+      "identity": {
+        "chain": "1",
+        "resid": "341",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4284",
+      "identity": {
+        "chain": "1",
+        "resid": "341",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4285",
+      "identity": {
+        "chain": "1",
+        "resid": "341",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4286",
+      "identity": {
+        "chain": "1",
+        "resid": "342",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4287",
+      "identity": {
+        "chain": "1",
+        "resid": "342",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4288",
+      "identity": {
+        "chain": "1",
+        "resid": "342",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4289",
+      "identity": {
+        "chain": "1",
+        "resid": "343",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4290",
+      "identity": {
+        "chain": "1",
+        "resid": "343",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4291",
+      "identity": {
+        "chain": "1",
+        "resid": "343",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4292",
+      "identity": {
+        "chain": "1",
+        "resid": "344",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4293",
+      "identity": {
+        "chain": "1",
+        "resid": "344",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4294",
+      "identity": {
+        "chain": "1",
+        "resid": "344",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4295",
+      "identity": {
+        "chain": "1",
+        "resid": "345",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4296",
+      "identity": {
+        "chain": "1",
+        "resid": "345",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4297",
+      "identity": {
+        "chain": "1",
+        "resid": "345",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4298",
+      "identity": {
+        "chain": "1",
+        "resid": "346",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4299",
+      "identity": {
+        "chain": "1",
+        "resid": "346",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4300",
+      "identity": {
+        "chain": "1",
+        "resid": "346",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4301",
+      "identity": {
+        "chain": "1",
+        "resid": "347",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4302",
+      "identity": {
+        "chain": "1",
+        "resid": "347",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4303",
+      "identity": {
+        "chain": "1",
+        "resid": "347",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4304",
+      "identity": {
+        "chain": "1",
+        "resid": "348",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4305",
+      "identity": {
+        "chain": "1",
+        "resid": "348",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4306",
+      "identity": {
+        "chain": "1",
+        "resid": "348",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4307",
+      "identity": {
+        "chain": "1",
+        "resid": "349",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4308",
+      "identity": {
+        "chain": "1",
+        "resid": "349",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4309",
+      "identity": {
+        "chain": "1",
+        "resid": "349",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4310",
+      "identity": {
+        "chain": "1",
+        "resid": "350",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4311",
+      "identity": {
+        "chain": "1",
+        "resid": "350",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4312",
+      "identity": {
+        "chain": "1",
+        "resid": "350",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4313",
+      "identity": {
+        "chain": "1",
+        "resid": "351",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4314",
+      "identity": {
+        "chain": "1",
+        "resid": "351",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4315",
+      "identity": {
+        "chain": "1",
+        "resid": "351",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4316",
+      "identity": {
+        "chain": "1",
+        "resid": "352",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4317",
+      "identity": {
+        "chain": "1",
+        "resid": "352",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4318",
+      "identity": {
+        "chain": "1",
+        "resid": "352",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4319",
+      "identity": {
+        "chain": "1",
+        "resid": "353",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4320",
+      "identity": {
+        "chain": "1",
+        "resid": "353",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4321",
+      "identity": {
+        "chain": "1",
+        "resid": "353",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4322",
+      "identity": {
+        "chain": "1",
+        "resid": "354",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4323",
+      "identity": {
+        "chain": "1",
+        "resid": "354",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4324",
+      "identity": {
+        "chain": "1",
+        "resid": "354",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4325",
+      "identity": {
+        "chain": "1",
+        "resid": "355",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4326",
+      "identity": {
+        "chain": "1",
+        "resid": "355",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4327",
+      "identity": {
+        "chain": "1",
+        "resid": "355",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4328",
+      "identity": {
+        "chain": "1",
+        "resid": "356",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4329",
+      "identity": {
+        "chain": "1",
+        "resid": "356",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4330",
+      "identity": {
+        "chain": "1",
+        "resid": "356",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4331",
+      "identity": {
+        "chain": "1",
+        "resid": "357",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4332",
+      "identity": {
+        "chain": "1",
+        "resid": "357",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4333",
+      "identity": {
+        "chain": "1",
+        "resid": "357",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4334",
+      "identity": {
+        "chain": "1",
+        "resid": "358",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4335",
+      "identity": {
+        "chain": "1",
+        "resid": "358",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4336",
+      "identity": {
+        "chain": "1",
+        "resid": "358",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4337",
+      "identity": {
+        "chain": "1",
+        "resid": "359",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4338",
+      "identity": {
+        "chain": "1",
+        "resid": "359",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4339",
+      "identity": {
+        "chain": "1",
+        "resid": "359",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4340",
+      "identity": {
+        "chain": "1",
+        "resid": "360",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4341",
+      "identity": {
+        "chain": "1",
+        "resid": "360",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4342",
+      "identity": {
+        "chain": "1",
+        "resid": "360",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4343",
+      "identity": {
+        "chain": "1",
+        "resid": "361",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4344",
+      "identity": {
+        "chain": "1",
+        "resid": "361",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4345",
+      "identity": {
+        "chain": "1",
+        "resid": "361",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4346",
+      "identity": {
+        "chain": "1",
+        "resid": "362",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4347",
+      "identity": {
+        "chain": "1",
+        "resid": "362",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4348",
+      "identity": {
+        "chain": "1",
+        "resid": "362",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4349",
+      "identity": {
+        "chain": "1",
+        "resid": "363",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4350",
+      "identity": {
+        "chain": "1",
+        "resid": "363",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4351",
+      "identity": {
+        "chain": "1",
+        "resid": "363",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4352",
+      "identity": {
+        "chain": "1",
+        "resid": "364",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4353",
+      "identity": {
+        "chain": "1",
+        "resid": "364",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4354",
+      "identity": {
+        "chain": "1",
+        "resid": "364",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4355",
+      "identity": {
+        "chain": "1",
+        "resid": "365",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4356",
+      "identity": {
+        "chain": "1",
+        "resid": "365",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4357",
+      "identity": {
+        "chain": "1",
+        "resid": "365",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4358",
+      "identity": {
+        "chain": "1",
+        "resid": "366",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4359",
+      "identity": {
+        "chain": "1",
+        "resid": "366",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4360",
+      "identity": {
+        "chain": "1",
+        "resid": "366",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4361",
+      "identity": {
+        "chain": "1",
+        "resid": "367",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4362",
+      "identity": {
+        "chain": "1",
+        "resid": "367",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4363",
+      "identity": {
+        "chain": "1",
+        "resid": "367",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4364",
+      "identity": {
+        "chain": "1",
+        "resid": "368",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4365",
+      "identity": {
+        "chain": "1",
+        "resid": "368",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4366",
+      "identity": {
+        "chain": "1",
+        "resid": "368",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4367",
+      "identity": {
+        "chain": "1",
+        "resid": "369",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4368",
+      "identity": {
+        "chain": "1",
+        "resid": "369",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4369",
+      "identity": {
+        "chain": "1",
+        "resid": "369",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4370",
+      "identity": {
+        "chain": "1",
+        "resid": "370",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4371",
+      "identity": {
+        "chain": "1",
+        "resid": "370",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4372",
+      "identity": {
+        "chain": "1",
+        "resid": "370",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4373",
+      "identity": {
+        "chain": "1",
+        "resid": "371",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4374",
+      "identity": {
+        "chain": "1",
+        "resid": "371",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4375",
+      "identity": {
+        "chain": "1",
+        "resid": "371",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4376",
+      "identity": {
+        "chain": "1",
+        "resid": "372",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4377",
+      "identity": {
+        "chain": "1",
+        "resid": "372",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4378",
+      "identity": {
+        "chain": "1",
+        "resid": "372",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4379",
+      "identity": {
+        "chain": "1",
+        "resid": "373",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4380",
+      "identity": {
+        "chain": "1",
+        "resid": "373",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4381",
+      "identity": {
+        "chain": "1",
+        "resid": "373",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4382",
+      "identity": {
+        "chain": "1",
+        "resid": "374",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4383",
+      "identity": {
+        "chain": "1",
+        "resid": "374",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4384",
+      "identity": {
+        "chain": "1",
+        "resid": "374",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4385",
+      "identity": {
+        "chain": "1",
+        "resid": "375",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4386",
+      "identity": {
+        "chain": "1",
+        "resid": "375",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4387",
+      "identity": {
+        "chain": "1",
+        "resid": "375",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4388",
+      "identity": {
+        "chain": "1",
+        "resid": "376",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4389",
+      "identity": {
+        "chain": "1",
+        "resid": "376",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4390",
+      "identity": {
+        "chain": "1",
+        "resid": "376",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4391",
+      "identity": {
+        "chain": "1",
+        "resid": "377",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4392",
+      "identity": {
+        "chain": "1",
+        "resid": "377",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4393",
+      "identity": {
+        "chain": "1",
+        "resid": "377",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4394",
+      "identity": {
+        "chain": "1",
+        "resid": "378",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4395",
+      "identity": {
+        "chain": "1",
+        "resid": "378",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4396",
+      "identity": {
+        "chain": "1",
+        "resid": "378",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4397",
+      "identity": {
+        "chain": "1",
+        "resid": "379",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4398",
+      "identity": {
+        "chain": "1",
+        "resid": "379",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4399",
+      "identity": {
+        "chain": "1",
+        "resid": "379",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4400",
+      "identity": {
+        "chain": "1",
+        "resid": "380",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4401",
+      "identity": {
+        "chain": "1",
+        "resid": "380",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4402",
+      "identity": {
+        "chain": "1",
+        "resid": "380",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4403",
+      "identity": {
+        "chain": "1",
+        "resid": "381",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4404",
+      "identity": {
+        "chain": "1",
+        "resid": "381",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4405",
+      "identity": {
+        "chain": "1",
+        "resid": "381",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4406",
+      "identity": {
+        "chain": "1",
+        "resid": "382",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4407",
+      "identity": {
+        "chain": "1",
+        "resid": "382",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4408",
+      "identity": {
+        "chain": "1",
+        "resid": "382",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4409",
+      "identity": {
+        "chain": "1",
+        "resid": "383",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4410",
+      "identity": {
+        "chain": "1",
+        "resid": "383",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4411",
+      "identity": {
+        "chain": "1",
+        "resid": "383",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4412",
+      "identity": {
+        "chain": "1",
+        "resid": "384",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4413",
+      "identity": {
+        "chain": "1",
+        "resid": "384",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4414",
+      "identity": {
+        "chain": "1",
+        "resid": "384",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4415",
+      "identity": {
+        "chain": "1",
+        "resid": "385",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4416",
+      "identity": {
+        "chain": "1",
+        "resid": "385",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4417",
+      "identity": {
+        "chain": "1",
+        "resid": "385",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4418",
+      "identity": {
+        "chain": "1",
+        "resid": "386",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4419",
+      "identity": {
+        "chain": "1",
+        "resid": "386",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4420",
+      "identity": {
+        "chain": "1",
+        "resid": "386",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4421",
+      "identity": {
+        "chain": "1",
+        "resid": "387",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4422",
+      "identity": {
+        "chain": "1",
+        "resid": "387",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4423",
+      "identity": {
+        "chain": "1",
+        "resid": "387",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4424",
+      "identity": {
+        "chain": "1",
+        "resid": "388",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4425",
+      "identity": {
+        "chain": "1",
+        "resid": "388",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4426",
+      "identity": {
+        "chain": "1",
+        "resid": "388",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4427",
+      "identity": {
+        "chain": "1",
+        "resid": "389",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4428",
+      "identity": {
+        "chain": "1",
+        "resid": "389",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4429",
+      "identity": {
+        "chain": "1",
+        "resid": "389",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4430",
+      "identity": {
+        "chain": "1",
+        "resid": "390",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4431",
+      "identity": {
+        "chain": "1",
+        "resid": "390",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4432",
+      "identity": {
+        "chain": "1",
+        "resid": "390",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4433",
+      "identity": {
+        "chain": "1",
+        "resid": "391",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4434",
+      "identity": {
+        "chain": "1",
+        "resid": "391",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4435",
+      "identity": {
+        "chain": "1",
+        "resid": "391",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4436",
+      "identity": {
+        "chain": "1",
+        "resid": "392",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4437",
+      "identity": {
+        "chain": "1",
+        "resid": "392",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4438",
+      "identity": {
+        "chain": "1",
+        "resid": "392",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4439",
+      "identity": {
+        "chain": "1",
+        "resid": "393",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4440",
+      "identity": {
+        "chain": "1",
+        "resid": "393",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4441",
+      "identity": {
+        "chain": "1",
+        "resid": "393",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4442",
+      "identity": {
+        "chain": "1",
+        "resid": "394",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4443",
+      "identity": {
+        "chain": "1",
+        "resid": "394",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4444",
+      "identity": {
+        "chain": "1",
+        "resid": "394",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4445",
+      "identity": {
+        "chain": "1",
+        "resid": "395",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4446",
+      "identity": {
+        "chain": "1",
+        "resid": "395",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4447",
+      "identity": {
+        "chain": "1",
+        "resid": "395",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4448",
+      "identity": {
+        "chain": "1",
+        "resid": "396",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4449",
+      "identity": {
+        "chain": "1",
+        "resid": "396",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4450",
+      "identity": {
+        "chain": "1",
+        "resid": "396",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4451",
+      "identity": {
+        "chain": "1",
+        "resid": "397",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4452",
+      "identity": {
+        "chain": "1",
+        "resid": "397",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4453",
+      "identity": {
+        "chain": "1",
+        "resid": "397",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4454",
+      "identity": {
+        "chain": "1",
+        "resid": "398",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4455",
+      "identity": {
+        "chain": "1",
+        "resid": "398",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4456",
+      "identity": {
+        "chain": "1",
+        "resid": "398",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4457",
+      "identity": {
+        "chain": "1",
+        "resid": "399",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4458",
+      "identity": {
+        "chain": "1",
+        "resid": "399",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4459",
+      "identity": {
+        "chain": "1",
+        "resid": "399",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4460",
+      "identity": {
+        "chain": "1",
+        "resid": "400",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4461",
+      "identity": {
+        "chain": "1",
+        "resid": "400",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4462",
+      "identity": {
+        "chain": "1",
+        "resid": "400",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4463",
+      "identity": {
+        "chain": "1",
+        "resid": "401",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4464",
+      "identity": {
+        "chain": "1",
+        "resid": "401",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4465",
+      "identity": {
+        "chain": "1",
+        "resid": "401",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4466",
+      "identity": {
+        "chain": "1",
+        "resid": "402",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4467",
+      "identity": {
+        "chain": "1",
+        "resid": "402",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4468",
+      "identity": {
+        "chain": "1",
+        "resid": "402",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4469",
+      "identity": {
+        "chain": "1",
+        "resid": "403",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4470",
+      "identity": {
+        "chain": "1",
+        "resid": "403",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4471",
+      "identity": {
+        "chain": "1",
+        "resid": "403",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4472",
+      "identity": {
+        "chain": "1",
+        "resid": "404",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4473",
+      "identity": {
+        "chain": "1",
+        "resid": "404",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4474",
+      "identity": {
+        "chain": "1",
+        "resid": "404",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4475",
+      "identity": {
+        "chain": "1",
+        "resid": "405",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4476",
+      "identity": {
+        "chain": "1",
+        "resid": "405",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4477",
+      "identity": {
+        "chain": "1",
+        "resid": "405",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4478",
+      "identity": {
+        "chain": "1",
+        "resid": "406",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4479",
+      "identity": {
+        "chain": "1",
+        "resid": "406",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4480",
+      "identity": {
+        "chain": "1",
+        "resid": "406",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4481",
+      "identity": {
+        "chain": "1",
+        "resid": "407",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4482",
+      "identity": {
+        "chain": "1",
+        "resid": "407",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4483",
+      "identity": {
+        "chain": "1",
+        "resid": "407",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4484",
+      "identity": {
+        "chain": "1",
+        "resid": "408",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4485",
+      "identity": {
+        "chain": "1",
+        "resid": "408",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4486",
+      "identity": {
+        "chain": "1",
+        "resid": "408",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4487",
+      "identity": {
+        "chain": "1",
+        "resid": "409",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4488",
+      "identity": {
+        "chain": "1",
+        "resid": "409",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4489",
+      "identity": {
+        "chain": "1",
+        "resid": "409",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4490",
+      "identity": {
+        "chain": "1",
+        "resid": "410",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4491",
+      "identity": {
+        "chain": "1",
+        "resid": "410",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4492",
+      "identity": {
+        "chain": "1",
+        "resid": "410",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4493",
+      "identity": {
+        "chain": "1",
+        "resid": "411",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4494",
+      "identity": {
+        "chain": "1",
+        "resid": "411",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4495",
+      "identity": {
+        "chain": "1",
+        "resid": "411",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4496",
+      "identity": {
+        "chain": "1",
+        "resid": "412",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4497",
+      "identity": {
+        "chain": "1",
+        "resid": "412",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4498",
+      "identity": {
+        "chain": "1",
+        "resid": "412",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4499",
+      "identity": {
+        "chain": "1",
+        "resid": "413",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4500",
+      "identity": {
+        "chain": "1",
+        "resid": "413",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4501",
+      "identity": {
+        "chain": "1",
+        "resid": "413",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4502",
+      "identity": {
+        "chain": "1",
+        "resid": "414",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4503",
+      "identity": {
+        "chain": "1",
+        "resid": "414",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4504",
+      "identity": {
+        "chain": "1",
+        "resid": "414",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4505",
+      "identity": {
+        "chain": "1",
+        "resid": "415",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4506",
+      "identity": {
+        "chain": "1",
+        "resid": "415",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4507",
+      "identity": {
+        "chain": "1",
+        "resid": "415",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4508",
+      "identity": {
+        "chain": "1",
+        "resid": "416",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4509",
+      "identity": {
+        "chain": "1",
+        "resid": "416",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4510",
+      "identity": {
+        "chain": "1",
+        "resid": "416",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4511",
+      "identity": {
+        "chain": "1",
+        "resid": "417",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4512",
+      "identity": {
+        "chain": "1",
+        "resid": "417",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4513",
+      "identity": {
+        "chain": "1",
+        "resid": "417",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4514",
+      "identity": {
+        "chain": "1",
+        "resid": "418",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4515",
+      "identity": {
+        "chain": "1",
+        "resid": "418",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4516",
+      "identity": {
+        "chain": "1",
+        "resid": "418",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4517",
+      "identity": {
+        "chain": "1",
+        "resid": "419",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4518",
+      "identity": {
+        "chain": "1",
+        "resid": "419",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4519",
+      "identity": {
+        "chain": "1",
+        "resid": "419",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4520",
+      "identity": {
+        "chain": "1",
+        "resid": "420",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4521",
+      "identity": {
+        "chain": "1",
+        "resid": "420",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4522",
+      "identity": {
+        "chain": "1",
+        "resid": "420",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4523",
+      "identity": {
+        "chain": "1",
+        "resid": "421",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4524",
+      "identity": {
+        "chain": "1",
+        "resid": "421",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4525",
+      "identity": {
+        "chain": "1",
+        "resid": "421",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4526",
+      "identity": {
+        "chain": "1",
+        "resid": "422",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4527",
+      "identity": {
+        "chain": "1",
+        "resid": "422",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4528",
+      "identity": {
+        "chain": "1",
+        "resid": "422",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4529",
+      "identity": {
+        "chain": "1",
+        "resid": "423",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4530",
+      "identity": {
+        "chain": "1",
+        "resid": "423",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4531",
+      "identity": {
+        "chain": "1",
+        "resid": "423",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4532",
+      "identity": {
+        "chain": "1",
+        "resid": "424",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "O"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4533",
+      "identity": {
+        "chain": "1",
+        "resid": "424",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H1"
+      },
+      "matches": 0
+    },
+    {
+      "kind": "missing_atom",
+      "id": "native:4534",
+      "identity": {
+        "chain": "1",
+        "resid": "424",
+        "insertion": "",
+        "resname": "HOH",
+        "atomname": "H2"
+      },
+      "matches": 0
+    }
+  ],
+  "meaning_of_accepted": "Native-declared standard mechanical terms match the System within the explicit scope; not model accuracy, oxidation-state validation, or stability proof.",
+  "tolerances": {
+    "absolute": 1e-06,
+    "relative": 1e-07
+  },
+  "model_id": "1CA2-published-ZAFF-center6-ff14SB-TIP3P",
+  "scope": "full_system",
+  "native_reference": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-zaff-water-v3/prepared.prmtop",
+    "sha256": "90c1145a084fd19dbdd3e78edaec5e7286b2fb181bf0e2979bd4b35e4d40e8a4",
+    "reader": "ParmEd 4.3.1"
+  },
+  "chemical_state_metadata": {
+    "status": "explicit published water-state benchmark model; not an experimental protonation assignment",
+    "oxidation_state": "Zn(II)",
+    "electronic_spin": 0,
+    "bound_solvent": "neutral water, two hydrogens; center6",
+    "alternative": "Separate center7 hydroxide: HD6/HD7/HE3/OH1/ZN7, one H and whole-site charge +1; not substituted automatically",
+    "chosen_state_rationale": "Retains deposited HOH263 identity using the published Zn-HHH-water parameter family; source CIF has no crystallization pH field. Protonation uncertainty remains.",
+    "forcefield": "ff14SB + official ZAFF.prep/frcmod + TIP3P; unmodified original ZAFF Zn Lennard-Jones parameters",
+    "histidines": [
+      {
+        "source_chain": "A",
+        "source_resid": "4",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "10",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "15",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "17",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "36",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "64",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "94",
+        "variant": "HID",
+        "selection": "explicit metal donor"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "96",
+        "variant": "HID",
+        "selection": "explicit metal donor"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "107",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "119",
+        "variant": "HIE",
+        "selection": "explicit metal donor"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "122",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      }
+    ]
+  },
+  "chemical_state_validated": false,
+  "validator_sha256": "0a24d1ebdafe5fb7cfe79f7d760db3cbd4e5916cb0bc6dd1ee411b21c90b154d",
+  "system_xml_sha256": "66a6e0361fea969b61fabe107ad787372ae2cc24ee4447411f145058078cb9ea",
+  "manifest_canonical_sha256": "50cabea2f23247b653fe04fd8a77316305b4a686cda63236d2b9766469330acf",
+  "topology_identity_sha256": "e6468da4b99e81e52eaac9b70a51d0d89092d115c8b88f57cb16cdf4142516cb"
+}

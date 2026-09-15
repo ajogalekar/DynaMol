@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "owned_bootstrap_pid": 89305,
+  "owned_api_pid": 89306,
+  "service_record_removed": true,
+  "api_no_longer_reachable": true,
+  "no_active_jobs_at_shutdown": true,
+  "harness_note": "Initial cleanup assertion expected HTTP 200; the documented control endpoint correctly returned HTTP 204 and successfully shut down. No repeated shutdown was needed. The source contract was checked and cleanup then verified."
+}

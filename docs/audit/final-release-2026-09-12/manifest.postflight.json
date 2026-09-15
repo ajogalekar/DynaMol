@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "pipeline_type": "molecular-modeling",
+  "stage": "postflight",
+  "decision_context": "exploratory",
+  "created_at": "2026-09-13T05:05:30.696033+00:00",
+  "purpose": "Final DynaMol v0.1.1 software release audit: source UI, file/API formats and measurements; representative protein/ligand/ion/cofactor and supported loop preparation; fresh 10 ps explicit-water OpenMM and GROMACS checkpoint/stop/resume runs; read-only historical output revalidation. Numerical and functional checks only, no biological accuracy, tautomer populations, metal coordination, convergence or experimental prediction claims.",
+  "reproducibility": {
+    "inputs_versioned": true,
+    "software_versions_recorded": true,
+    "random_seeds_recorded": true,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "versions": {
+      "openmm": "8.6.0",
+      "rdkit": "2025.9.6",
+      "pdbfixer": "1.12.0",
+      "mdtraj": "1.11.1.post2",
+      "numpy": "2.4.6",
+      "parmed": "4.3.1",
+      "gemmi": "0.7.5",
+      "dimorphite-dl": "2.0.2"
+    },
+    "planned_seed": 2026,
+    "hardware": "Local Apple Silicon CPU; native AmberTools and OpenMM Reference/CPU; no cloud or GPU compute",
+    "budget": "44 representative chemistry template/ligand cases with minimal numerical continuity, three real complex preparations and solvations (6DBK, 6A93, 1UA2), bounded native timeouts; two 10 ps explicit-water runs with checkpoint interruption/stop/resume, max four CPU threads combined. Prior five-system trajectories read-only. Optional UI preparation and small demonstration run.",
+    "inputs": {
+      "matrix": "43 existing cases plus Zn; representative PTMs, missing ligand atom repair and 1UA2 supported loop; explicit unsupported chemistry boundaries. Native matrix and actual complex work recorded separately."
+    },
+    "git_revision": "da200d2e2abbbe89e12be0bec5ec7a7a2741a569",
+    "outputs_and_exclusions_recorded": true,
+    "actual_additional_scope": "Local candidate DMG built, sealed, copied, runtime/app acceptance and Chrome smoke. No new scientific accuracy claims or GitHub publication."
+  },
+  "data": {
+    "structure_parse_failures": 0,
+    "representation_policy_documented": true,
+    "policy": "Preserve identities, elements, all deposited heavy atoms and stereochemistry; no parent-residue mutation, arbitrary GAFF on covalent proteins, fabricated parameters or silent removal. Keep view/identity/preparation/native-check status separate. Explicitly disclose fixed protonation assumptions and nonbonded ion limitations. Resume must preserve topology/system/config/platform compatibility and retained coordinates. RMSD/RMSF use documented selections, alignment/reference, units and handling of periodic boundaries. Missing ligand atom repair is explicit and preserves observed atoms with geometry checks; supported internal loop builds up to 12 residues per gap are provisional models, never asserted to reproduce experimental coordinates."
+  },
+  "validation": {
+    "status": "Execution complete; deterministic/native/Chrome software evidence attached, one documented resource-cap refusal retained.",
+    "scope": "Tests against native Amber/OpenMM and analytic/synthetic motion baselines; exact charges/connectivity/stereochemistry checks, failure-case regressions; checkpoint compatibility and output continuity; finite simulation diagnostics. Representative tests cannot establish universal chemical coverage.",
+    "evidence": [
+      "regression/verification.json",
+      "chemistry/summary.json",
+      "engines/summary.json",
+      "ui/summary.json",
+      "ui/native-ui-run-validation.json",
+      "package/dmg-validation.json",
+      "package/runtime-validation.json",
+      "package/app-validation.json",
+      "package/chrome-smoke.json",
+      "package/source-materials-binding.json"
+    ],
+    "package_build_id": "589ff2dddea916f5",
+    "package_sha256": "29adffe128d249f7040abcf05c65a6206a70da2d59c9375393b6c0d63b196e7a"
+  },
+  "comparison": {
+    "method_count": 0,
+    "notes": "No replica distributions, confidence intervals, convergence or predictive scientific accuracy have been established. Binary software checks and representative modeled structures cannot substitute for these. Any resulting scientific-model promotion block is retained; this release assessment concerns application behavior within documented model limits.",
+    "uncertainty_intervals_reported": false
+  },
+  "review_identity": "Language-model evidence synthesis and automated PatAgent checklist; not a domain-expert certification or Pat Walters endorsement."
+}

@@ -1,0 +1,50 @@
+{
+  "native_runtime": [
+    {
+      "path": ".tools/ambertools/bin/python3.14",
+      "sha256": "9d04f159034becfcbb2c34786ce60211f6131e58730b100cd03630e15248aa9c"
+    },
+    {
+      "path": ".tools/ambertools/lib/python3.14/site-packages/sander/__init__.py",
+      "sha256": "144fd9999dc5b87abed0cbd79c21f5512f3e9681dff2dc69404b759ed9259fc7"
+    },
+    {
+      "path": ".tools/ambertools/lib/python3.14/site-packages/sander/pysander.cpython-314-darwin.so",
+      "sha256": "795699da2b98de9d2d7b2db400080e46f13719e43a7b9edfb7e68d949b09befa"
+    }
+  ],
+  "helper_sha256": "5b8b249bad31c2d9517480c2b0d0d46ddbff39a68f385b4202c7bc761a148eb0",
+  "script_sha256": "1548dcf23fd57fdc0be2a9cfdfbd4eb68b224498315a8a9556ef50e230a0f008",
+  "regression_test_sha256": "8c2217b5f8fb6b263e32b6bf94c22a4ebdeafa2da0710f836489a7c897d33027",
+  "focused_tests": {
+    "focused_tests_passed": 3,
+    "test_file": "backend/tests/test_native_sander_parity_helper.py",
+    "test_duration_seconds": 0.06,
+    "command": ".venv/bin/python -m pytest backend/tests/test_native_sander_parity_helper.py -q"
+  },
+  "files": {
+    "ASSEMBLY-REVIEW.md.before-parity": "f19edd248e416ba30d2159b62be1bb51eee76ec15a08afd21a2c737f5ec9a5d5",
+    "STATUS.json.before-parity": "230e4b02e4438ffad34bb2e321c1af1fe2d418be0244dd76453d98bdb7bbf7f5",
+    "component-convention-diagnostic.json": "c33f282a6c6b0e02dc7c63a15667e98dfc5284f3a6577667bd1ab700239db514",
+    "component-diagnostic-attempt-1.log": "0da58e4c7d087ff3d261dc9b84844748e4889a33a6fa5ec8cb7667f13a71e55b",
+    "component-diagnostic.log": "7c7a2079946e6291ba1ae1c47bb20c6dca9860e76c3c6cb778385e4879d248dc",
+    "controller.log": "d92fa1be57851df600fd07e13ef2f867cbe1e8cbdfcfe1f8a7599c20118512e8",
+    "diagnostic-before-general-phases.py": "be83fe3c6602b762af00be5856804b61ae8c54794fa13be7510f13bdf7770ee6",
+    "diagnostic-executed.py": "1548dcf23fd57fdc0be2a9cfdfbd4eb68b224498315a8a9556ef50e230a0f008",
+    "full-force-components.npz": "e2af7376a0a52605773995ae01402f65d705cfedf7556149a3672b8d567d07fa",
+    "helper-before-isolated-processes.py": "361c8e6d0b37d2ec4a967e7a2a50c0da6ff8cce737b204230a28a7b00da38174",
+    "native_sander_parity-executed.py": "5b8b249bad31c2d9517480c2b0d0d46ddbff39a68f385b4202c7bc761a148eb0",
+    "sander-parity-input.json": "cb384997851a5bdae3e7353e7a2cac10f07b8ae96d4ddcf41e7fc04afcf56e4e",
+    "sander-parity-native.json": "53e67e3ce2213778b01ce712154bac3c113607e5531f5648e5d024932f94f9ba",
+    "sander-parity.json": "75f3239ab95caec2d5d7e82cf95f8e17c454f1eb748a1aa0101f55f61db3f7ef",
+    "sander-pose-00-input.json": "02ad55f369a1a7e1f59883d26035bde5f598cc40ce6accce88ed7ada0bfab70c",
+    "sander-pose-00-native.json": "6a7dd8e4e293c283026e6858be613492ec8c35437372b571bbde39f050bef5f5",
+    "sander-pose-00.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "sander-pose-01-input.json": "f36d0f2e39374244e32ef938b9950328eb5d9819df1fa89e45e8a1429df9913a",
+    "sander-pose-01-native.json": "00166c191d4c9f67d63ebb3adf841c4766e8600f8a3da413e0fbd9cbda68c279",
+    "sander-pose-01.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "sander-pose-02-input.json": "70360d51c32330fe37474a459ddafd4535f1e766e4dda05533b0164e99398cd0",
+    "sander-pose-02-native.json": "252dc2eaca471129daad000e0c7f9a19bd371911995becfe95530881b9ac1156",
+    "sander-pose-02.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  }
+}

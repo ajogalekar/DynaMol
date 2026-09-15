@@ -1,0 +1,270 @@
+{
+  "job_id": "491f0e8e7dc04c6c",
+  "data_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm",
+  "checks": {
+    "completed": {
+      "passed": true,
+      "status": "completed",
+      "completed_steps": 50000,
+      "error": null
+    },
+    "physical_trajectory": {
+      "passed": true,
+      "dataset_id": "6dc9ed17492b49a8",
+      "atoms": 56502,
+      "frames": 101,
+      "final_time_ps": 100.0
+    },
+    "coordinates_evolve": {
+      "passed": true,
+      "maximum_displacement_nm": 4.810725688934326
+    },
+    "solvent_box": {
+      "passed": true,
+      "explicit": true,
+      "has_box": true,
+      "fixed_volume": true
+    },
+    "display_payload": {
+      "passed": true
+    },
+    "protein_heavy_bonds": {
+      "passed": true,
+      "bonds": 3188,
+      "frames": 101,
+      "maximum_angstrom": 1.9235124588012695,
+      "maximum_frame": 41,
+      "maximum_pair": [
+        4187,
+        4190
+      ],
+      "minimum_angstrom": 1.1427826881408691,
+      "threshold_angstrom": 3.0,
+      "note": "Gross bond-length screen with minimum-image distances; not a force-field or structural-quality validation."
+    },
+    "residue_stereochemistry": {
+      "passed": true,
+      "centers_per_frame": 416,
+      "frames": 101,
+      "failures": []
+    },
+    "native_trajectory": {
+      "passed": true,
+      "max_coordinate_difference_nm": 0.0005016326904296875,
+      "tolerance_nm": 0.0006,
+      "frames": 101,
+      "atoms": 56502
+    },
+    "native_box": {
+      "passed": true
+    },
+    "energy_diagnostics": {
+      "passed": true,
+      "rows": 101,
+      "min_potential_kj_mol": -706366.90345523,
+      "max_potential_kj_mol": -702586.8523132
+    },
+    "gross_temperature_screen": {
+      "passed": true,
+      "target_k": 300.0,
+      "mean_k": 300.1985193359406,
+      "min_k": 297.28962838,
+      "max_k": 303.23542021,
+      "note": "Broad numerical alarm only; no claim of equilibration or expected distribution."
+    },
+    "native_system": {
+      "passed": true,
+      "particles": 56502
+    },
+    "temperature_from_kinetic_energy": {
+      "passed": true,
+      "degrees_of_freedom": 116123
+    },
+    "committed_checkpoint": {
+      "passed": true
+    },
+    "committed_physical_frames": {
+      "passed": true
+    },
+    "dcd_with_time_sidecar": {
+      "passed": true
+    },
+    "live_measurement_coverage": {
+      "passed": true,
+      "errors": []
+    },
+    "measurement:backbone-distance": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": false,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "measurement:backbone-angle": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": false,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "measurement:backbone-dihedral": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": true,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "recorded_artifact_hashes": {
+      "passed": true,
+      "checked": 118,
+      "mismatches": []
+    }
+  },
+  "evidence": {
+    "jobs/491f0e8e7dc04c6c/status.json": {
+      "sha256": "242160a5f505dd7e3b8d75e01528efdfd28d069dc8c03d4695f9a963e41274f3",
+      "bytes": 11219
+    },
+    "jobs/491f0e8e7dc04c6c/config.json": {
+      "sha256": "37c6326928a697d2894b1e96903dafc023d301454ed2badd2dcc8b207af5197f",
+      "bytes": 1049
+    },
+    "jobs/491f0e8e7dc04c6c/provenance.json": {
+      "sha256": "1aebb82d329199f81b5a0470dd416fe2fb4407c188343d1ca32c01a346bfb6e1",
+      "bytes": 287992
+    },
+    "datasets/6dc9ed17492b49a8/metadata.json": {
+      "sha256": "21527829a01db949af91536bea971d61a47cd3643ddafefd6537565475f6a9d2",
+      "bytes": 13151701
+    },
+    "datasets/6dc9ed17492b49a8/physical.npz": {
+      "sha256": "bfebce95b606e5030d65442ec459679e3c11ded056ec93c03aae45329092f258",
+      "bytes": 60811986
+    },
+    "datasets/6dc9ed17492b49a8/topology.pdb": {
+      "sha256": "a539d24588f6157e5542ce9c5fcf3cc11c3c1e1fced7983afdb0875a003af2e7",
+      "bytes": 4576983
+    },
+    "jobs/491f0e8e7dc04c6c/trajectory.xtc": {
+      "sha256": "656fd08cf352aa981e27f1e3c92d7c975a75424f9f95f643bbb4e9082888e6e8",
+      "bytes": 21136148
+    },
+    "jobs/491f0e8e7dc04c6c/prepared.pdb": {
+      "sha256": "8c79ac064b9ab5e7e7815197c1334b421d95971fddd5ce724f283094bfcdd227",
+      "bytes": 4576974
+    },
+    "jobs/491f0e8e7dc04c6c/energies.csv": {
+      "sha256": "9dad0dd730a58b8355c443cbe24f909643659572c6072490423a00088da5a35c",
+      "bytes": 6490
+    },
+    "jobs/491f0e8e7dc04c6c/system.xml": {
+      "sha256": "2f85a98c26a81dcb738099cf03868067b34d5cd040309d9035b00db9a0fc9791",
+      "bytes": 16544610
+    },
+    "jobs/491f0e8e7dc04c6c/integrator.xml": {
+      "sha256": "52e13f762d019948ce84a4f18a88c8831ef184875d40e3895e1c680a3151bd17",
+      "bytes": 206
+    },
+    "jobs/491f0e8e7dc04c6c/recovery.json": {
+      "sha256": "d4ef4933af7ddd74e0971f2de835060cec961ab426232cc51d6c2a605526fb22",
+      "bytes": 19321
+    },
+    "jobs/491f0e8e7dc04c6c/measurements.json": {
+      "sha256": "1b696153e623a6618d185d6746aa952ccefc44108378a08eee733cd1622410e0",
+      "bytes": 18553
+    },
+    "jobs/491f0e8e7dc04c6c/measurement-identity.json": {
+      "sha256": "306becbcf2574ecd42e360e42eea2e5623721a299369f647aee04ac52fb16b30",
+      "bytes": 280
+    },
+    "jobs/491f0e8e7dc04c6c/input-state.json": {
+      "sha256": "108b08d2df2e7dbc6c4f4fc17abba506db00b7e5fb6bf987004adce23275c1cb",
+      "bytes": 273537
+    }
+  },
+  "scope": "Saved-artifact consistency and gross numerical health for exploratory NVT software pressure testing; no equilibration, convergence, biological stability, or pose-accuracy claim.",
+  "limits": [
+    "Temperature bands and bond limits are gross alarms, not statistical convergence tests.",
+    "NVT temperature fluctuations and total-energy changes are expected; NVE energy conservation is not tested.",
+    "Live/posthoc comparison uses the app's geometry implementation; its independent analytic controls are tested separately."
+  ],
+  "engine": "openmm",
+  "config": {
+    "dataset_id": "56b7ece073ec4cce",
+    "engine": "openmm",
+    "name": "Pressure test \u00b7 channel \u00b7 100 ps",
+    "duration_ps": 100.0,
+    "temperature_k": 300.0,
+    "timestep_fs": 2.0,
+    "report_interval": 500,
+    "friction_ps": 1,
+    "seed": 20260916,
+    "solvent": "explicit",
+    "minimize": true,
+    "equilibration_steps": 5000,
+    "padding_nm": 1.0,
+    "measurements": [
+      {
+        "id": "backbone-distance",
+        "kind": "distance",
+        "atoms": [
+          1574,
+          3144
+        ],
+        "label": "Backbone separation",
+        "color": null,
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-angle",
+        "kind": "angle",
+        "atoms": [
+          2074,
+          2076,
+          2079
+        ],
+        "label": "Backbone N\u2013CA\u2013C",
+        "color": null,
+        "trackDuringRun": true
+      },
+      {
+        "id": "backbone-dihedral",
+        "kind": "dihedral",
+        "atoms": [
+          2074,
+          2076,
+          2079,
+          2081
+        ],
+        "label": "Backbone psi",
+        "color": null,
+        "trackDuringRun": true
+      }
+    ]
+  },
+  "elapsed_seconds": 1739.0,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6"
+  },
+  "cpu_threads": 4,
+  "expected": {
+    "production_steps": 50000,
+    "frames": 101,
+    "final_time_ps": 100.0
+  },
+  "passed": true
+}

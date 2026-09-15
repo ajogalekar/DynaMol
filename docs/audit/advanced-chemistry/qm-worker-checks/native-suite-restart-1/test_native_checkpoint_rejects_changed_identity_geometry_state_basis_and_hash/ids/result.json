@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "initial_checkpoint",
+  "worker_sha256": "e7841b3fb0fa71d8ffdd2b6b49c856b5481174facbdde5fe790dd55acf06ef4d",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "fe86e940be969f344f26b30c1a9e9e8a3f120e1b825e473ef2299ee57c765f11",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200
+  },
+  "error": {
+    "type": "ValueError",
+    "message": "Initial checkpoint atom order, charge, spin, electron count or AO count differs"
+  },
+  "elapsed_seconds": 0.278754
+}

@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/sources/upstream-v0.7.0-test_interface.py",
+      "url": "https://raw.githubusercontent.com/tblite/tblite/v0.7.0/python/tblite/test_interface.py",
+      "bytes": 33809,
+      "sha256": "d1314a98354ffaa7af2e4d1ee6da06fd44fb3e017bdb87bcaa655ae4d509def0"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/sources/upstream-v0.7.0-interface.py",
+      "url": "https://raw.githubusercontent.com/tblite/tblite/v0.7.0/python/tblite/interface.py",
+      "bytes": 28298,
+      "sha256": "286e061853eb219a7d57a2ddd5df3f30f34612d6a6d2f81c0f30747302b2f6fb"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/sources/pypi-tblite-0.7.0.json",
+      "url": "https://pypi.org/pypi/tblite/0.7.0/json",
+      "bytes": 37206,
+      "sha256": "d4f5742461a5524a57fcf85ec6116432512f9a28f7793c34711fd61823609b39"
+    }
+  ],
+  "installed_wheel_record": {
+    "comment_text": null,
+    "core-metadata": {
+      "sha256": "e0965828f3013de39f39f61d32a5903248b1b42e04c3c8f9198761b2a93546c6"
+    },
+    "digests": {
+      "blake2b_256": "825654d9abe1db0b1926e19663df1db8a2129d8fcbf8575c78551995ec7d430e",
+      "md5": "6f3e772e9b8ea25aa05aea4aa8c05ab7",
+      "sha256": "29f4838f63bd22da973462c8912f2dfa6d260d39e1db2eb4bda455ec562ccfe4"
+    },
+    "downloads": -1,
+    "filename": "tblite-0.7.0-cp312-cp312-macosx_15_0_arm64.whl",
+    "has_sig": false,
+    "md5_digest": "6f3e772e9b8ea25aa05aea4aa8c05ab7",
+    "packagetype": "bdist_wheel",
+    "python_version": "cp312",
+    "requires_python": ">=3.7",
+    "size": 12045408,
+    "upload_time": "2026-07-13T14:45:57",
+    "upload_time_iso_8601": "2026-07-13T14:45:57.818728Z",
+    "url": "https://files.pythonhosted.org/packages/82/56/54d9abe1db0b1926e19663df1db8a2129d8fcbf8575c78551995ec7d430e/tblite-0.7.0-cp312-cp312-macosx_15_0_arm64.whl",
+    "yanked": false,
+    "yanked_reason": null
+  }
+}

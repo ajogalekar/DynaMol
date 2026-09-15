@@ -1,0 +1,147 @@
+{
+  "schema": "dynamol.dupradeau-manuscript-followup.v1",
+  "stage": "bounded_source_retrieval_complete_no_exact_fit_identification",
+  "started_utc": "2026-09-14T20:03:58Z",
+  "last_source_operation_utc": "2026-09-14T20:04:52Z",
+  "limits": {
+    "maximum_source_operations": 8,
+    "source_operations_used": 8,
+    "maximum_elapsed_minutes": 10,
+    "stop_reason": "Source-operation cap reached; no further network operations."
+  },
+  "operations": [
+    {
+      "id": 1,
+      "type": "search",
+      "query": "\"Dupradeau\" \"2010\" \"W-11\"",
+      "result": "Dupradeau primary PMC article appeared; indexed excerpt did not supply an exact project-selection claim.",
+      "saved_result": "queries-1-2.json"
+    },
+    {
+      "id": 2,
+      "type": "search",
+      "query": "\"c0cp00111b\" \"supporting\"",
+      "result": "No usable primary SI artifact URL identified.",
+      "saved_result": "queries-1-2.json"
+    },
+    {
+      "id": 3,
+      "type": "search",
+      "query": "site:upjv.q4md-forcefieldtools.org \"2010\" \"7821\"",
+      "result": "Author/institutional project records F-60, F-50, F-56 and other families share the 2010 citation. They are not evidence of Panteva's input selection.",
+      "saved_result": "queries-3-4.json"
+    },
+    {
+      "id": 4,
+      "type": "search",
+      "query": "\"c0cp00111b\" \"suppdata\"",
+      "result": "No directly observed SI download link identified.",
+      "saved_result": "queries-3-4.json"
+    },
+    {
+      "id": 5,
+      "type": "find_on_indexed_primary_search_result",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2918240/",
+      "pattern": "dimethyl",
+      "result": "Search-result expansion resolved to the existing browser challenge. No manuscript text recovered; no challenge bypass or further retry.",
+      "saved_result": "operation-5-challenge.json",
+      "route_limit": "This expansion did revisit the previously challenged PMC URL; it did not create a new accessible source route."
+    },
+    {
+      "id": 6,
+      "type": "search",
+      "query": "\"The R.E.D. tools\" \"pdf\" -site:pmc.ncbi.nlm.nih.gov -site:pubs.rsc.org -site:researchgate.net",
+      "result": "Author-hosted history and user guide surfaced, not the requested 2010 manuscript/SI. Third-party mirrors were not accepted as primary evidence.",
+      "saved_result": "queries-6-7.json"
+    },
+    {
+      "id": 7,
+      "type": "search",
+      "query": "\"c0cp00111b\" \"hal\"",
+      "result": "No matching institutional manuscript deposit located.",
+      "saved_result": "queries-6-7.json"
+    },
+    {
+      "id": 8,
+      "type": "retrieve_primary_publisher_si_candidate",
+      "url": "https://www.rsc.org/suppdata/cp/c0/c0cp00111b/c0cp00111b.pdf",
+      "url_origin": "Unverified candidate following a conventional RSC supplement path; not an observed author link.",
+      "result": "HTTP 404; artifact identity/existence not established.",
+      "saved_result": "operation-8-si-404.json"
+    }
+  ],
+  "source_scope": {
+    "dupradeau_manuscript_full_text_recovered": false,
+    "dupradeau_si_recovered": false,
+    "claim_that_full_text_contains_no_project_selection": false,
+    "panteva_exact_project_identified": false,
+    "matching_publication_is_exact_input_identity": false
+  },
+  "useful_primary_crossreferences": [
+    {
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/F-60/",
+      "evidence_level": "Primary institutional project excerpt returned by source search; full page not separately fetched in this pass.",
+      "paper": "Dupradeau PCCP 2010 12 7821–7839",
+      "description": "DNA/RNA topology project; DMP in a four-orientation, multi-molecule fit.",
+      "uploaded_paris": "08-02-2006 09:17",
+      "updated_paris": "28-09-2011 16:12",
+      "submission_author": "Francois-Yves Dupradeau",
+      "implication": "The reference covers multiple model-generation choices beyond single-orientation W-11–W-14."
+    },
+    {
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/up/F-50/",
+      "evidence_level": "Primary institutional project excerpt returned by source search; full page not separately fetched.",
+      "paper": "Dupradeau PCCP 2010 12 7821–7839",
+      "description": "DNA family fit includes DMP in four orientations; explicitly compares related F-45–F-49 projects."
+    },
+    {
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/up/F-56/",
+      "evidence_level": "Primary institutional project excerpt returned by source search; full page not separately fetched.",
+      "paper": "Dupradeau PCCP 2010 12 7821–7839",
+      "description": "RNA family fit includes DMP in four orientations; explicitly compares F-51–F-55."
+    }
+  ],
+  "preserved_candidate_files": [
+    {
+      "path": "../red-db-followup/artifact-inventory.json",
+      "sha256": "aee8c5d8422792a9bd6a17105f98ee2e32eeef3e1c264030ecb752d6cf1f4c94"
+    },
+    {
+      "path": "../red-db-followup/evidence.json",
+      "sha256": "238236d4e683b5b2928fe8a86d27b51812008156ac6aa4426a180ac1f2459329"
+    },
+    {
+      "path": "../red-db-followup/REPORT.md",
+      "sha256": "96418122863fa8f7d6a6cdf564205f1cb5e7e4458bc1969f62a535f54434a5d7"
+    }
+  ],
+  "cached_tool_results": {
+    "directory": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/dupradeau-manuscript-followup-v1/",
+    "hashes": {
+      "queries-1-2.json": "8af9b6e96262d22d225a1225f7e0f70f576e1bd2d54cc540641d6dfc1ded2f7e",
+      "queries-3-4.json": "3361af84339f7137f0a74fce37c69e5638631fb86adb75f60a653c0c3a125491",
+      "operation-5-challenge.json": "efe057e54f4c4b557ed397cb82a1e3a66e6621aeeff3d6ccb8f40ca9a354e9aa",
+      "queries-6-7.json": "253d713bfc0ed8cced1191c285a5ea9e9a402c29403803ee689ff299e6f6ad36",
+      "operation-8-si-404.json": "a21199a37531b9540198ea0fd7e84bb8b68fc589a8acdbdbc8668cfa1492e68b"
+    }
+  },
+  "remaining_unknowns": [
+    "Exact DMP charge/orientation choice used by Panteva.",
+    "Complete original DMP Amber atom types and parameters.",
+    "Transfer of fitted correction to native GDP(−3) in the complete corrected 6OIM environment.",
+    "Documented c6 polarizability crosswalk."
+  ],
+  "actions_not_taken": [
+    "downloaded-code execution",
+    "scientific code execution",
+    "charge fitting or parameter assignment",
+    "topology change",
+    "MD/QM",
+    "app/backend/shared-checkpoint modification",
+    "paywall or authentication bypass",
+    "author contact",
+    "publication"
+  ],
+  "conclusion": "Unresolved exact-input provenance. Preserve W-11–W-14 as recovered candidate charge graphs, not validated Panteva inputs. This pass cannot establish absence of a selection statement in manuscript/SI because those documents were not recovered.",
+  "next_step": "End this retrieval branch rather than repeat challenged routes. Reopen exact-input attribution only on a new primary manuscript/SI or author-supplied fitting artifact that explicitly identifies the charge/type bundle. Separate complete-complex research assessment may proceed without treating these candidates as a validated default."
+}

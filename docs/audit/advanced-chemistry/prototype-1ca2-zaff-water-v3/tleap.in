@@ -1,0 +1,14 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+addAtomTypes { { "ZN" "Zn" "sp3" } { "N5" "N" "sp2" } { "N6" "N" "sp2" } { "N7" "N" "sp2" } { "O1" "O" "sp3" } }
+loadamberprep ZAFF.prep
+loadamberparams ZAFF.frcmod
+mol = loadpdb prepared-input.pdb
+bond mol.257.ZN mol.91.NE2
+bond mol.257.ZN mol.93.NE2
+bond mol.257.ZN mol.116.ND1
+bond mol.257.ZN mol.258.O
+check mol
+savepdb mol prepared-native.pdb
+saveamberparm mol prepared.prmtop prepared.inpcrd
+quit

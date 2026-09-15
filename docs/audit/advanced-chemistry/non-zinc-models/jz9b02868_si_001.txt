@@ -1,0 +1,439 @@
+Supporting Information for:
+An allosteric pathway in SOD1 unravels the molecular mechanism of the G93A
+ALS-linked mutation
+Paulo C.T. Souza,[a] Sebastian Thallmair,[a] Siewert-Jan Marrink,*[a] and Raul Mera-Adasme*[b]
+
+
+[a] Groningen Biomolecular Sciences and Biotechnology Institute, University of Groningen,
+Nijenborgh 4, 9747 AG Groningen (The Netherlands)
+[b] Departamento de Ciencias del Ambiente, Facultad de Química y Biología, Universidad de
+Santiago de Chile, Av.Libertador Bernardo O’Higgins 3363, 9170022 Estacion Central (Chile)
+
+Corresponding authors:         S.J. Marrink - s.j.marrink@rug.nl
+                               R. Raul Mera-Adasme - raul.mera@usach.cl
+
+Content:
+
+S1. Computational details
+
+
+S1.1 Atomistic classical simulations
+S1.2 Hybrid quantum-mechanics / molecular mechanics (QM/MM) simulations
+S1.3 Coarse-grained (CG) simulations
+
+
+S2. Additional analysis
+
+
+S2.1. Flexibility of EL loop in atomistic simulations.
+S2.2 RMSD and hydration analysis of the CG simulations.
+S2.3 On the significance of the QM/MM energy values.
+S2.4 Comparison of backbone bead distributions of the CG simulations.
+S2.5 Impact of the mutation on the 93C𝛼-38O distance.
+S1. Computational details
+
+S1.1 Atomistic classical simulations
+
+The crystallographic structure for the fully-metallated, reduced, wild-type human SOD1, resolved
+at 1.09 Å by Strange et al1 (PDB code: 2C9V) was employed as a starting point. For residues with
+more than one crystallographic conformation, the one with the highest occupancy was selected.
+For the mutant structures, the G93A mutation was generated with PyMOL. The monomeric
+structure was protonated with the Reduce program.2 The protein structures were treated with the
+AMBER99SB-ILDN force field3,4 and the metal-site parameters for SOD1 obtained by Mera-
+Adasme et al5. The structure was solvated on a TIP36 solvent box such that every protein atom
+was at least 1 nm away from the side of the box. Na+ and Cl- ions were added to neutralization
+plus a 100 mM NaCl concentration. Periodic boundary conditions were employed with the particle-
+mesh Ewald method7,8 for the treating of long-range electrostatic interactions. The systems were
+optimized and equilibrated for at least 1 ns in the NVT ensemble and 1 ns in the NPT ensemble.
+3 production runs of 1 𝜇s each were performed in the NPT ensemble with the Nose-Hoover
+thermostat9,10 and the Parrinello-Raman barostat11,12 with a reference temperature and pressure
+of 310 K and 1 bar, respectively. The Gromacs program package 13,14 was employed for all
+atomistic MD simulations.
+
+Principal component analysis was performed on the resulting trajectories. The 3 widest
+eigenvectors of the covariance matrix were projected onto the respective trajectory and analyzed
+visually with PyMOL. Additional analyses (RMSD, RMSF, distances, hydration, among others)
+were performed with Gromacs13 and with tools programmed ad-hoc by us.
+
+S1.2 Hybrid quantum-mechanics / molecular mechanics (QM/MM) simulations.
+
+The systems for QM/MM calculations were built from snapshots with the electrostatic loop in open
+and closed conformations. Both structures were selected from the same G93A-SOD1 atomistic
+trajectory. The protein was re-solvated and the quantum-chemical subsystem was defined to
+properly treat the metal-site of SOD1. It included 590 atoms, 5 sub-sequences of the protein and
+(25 residues) and 64 solvent molecules (Figure S1). Thus, it the QM site follows our previous
+recommendations on QM size for QM/MM studies on SOD1. The system was optimized and
+equilibrated to 310 K in spherical boundary conditions, with a sphere of 36 Å radius (Figure S2),
+and a constraint for all atoms with an equilibrium position range covering all the 36 Å sphere, and
+a force constant of 10 kJ/mol*Å. The HF-3c composite method from Grimme15, previously tested
+on the system16, was employed for the QM part of the system, while the AMBER-ILDN force field3,4
+was employed for the MM subsystem. Langevin dynamics production simulations were performed
+in the NVT ensemble for 5.15 ps, where the first 1.15 ps were not considered for the analysis.
+Four equilibration+simulations were performed: Electrostatic-loop open + Zn(II), Electrostatic-loop
+closed + Zn(II), Electrostatic-loop open and Electrostatic loop closed. We obtained the average
+potential energy (i.e. the full QM/MM energy) for each simulation (400 points for each simulation).
+The four averaged values were added and subtracted according to Equation S1, to obtain the
+difference in Zn(II)-binding enthalpy between the open electrostatic loop and the closed
+electrostatic loop conformations. In Equation S1, we compare the Zn(II) binding to SOD1 with the
+EL open and with the loop closed, obtaining a ΔΔH value which is not associated to interaction
+energy for ion zinc of either conformation, but to the difference in interaction energy between both.
+QM/MM calculations were performed with pDynamo17 , ORCA 4.018 and Turbomole v7.319,20.
+
+ΔΔHZn(II)-binding =   HELclosed-Zn(II) - HELclosed - ( HElopen-Zn(II) - HELopen)         Equation S1
+
+
+An estimation of the ΔΔS for the process was obtained from a pure-QM central-difference,
+numerical frequencies calculations on the full protein plus the water molecules within ~10 Å from
+the metal center (34 water molecules) to a total of ~2300 atoms per system. Each system was
+taken from the equilibrated corresponding structure and optimized in vacuo. Both the optimization
+and the Hessian determination performed with the novel non self-consistent semiempirical
+method by Grimme, GFN0-xTB21, which is optimized for both properties (geometries and
+frequencies, in addition to non-covalent interactions).
+
+
+
+
+Figure S1: The QM subsystem considered for the QM/MM calculations in the present work: QM atoms are
+shown in sticks (green for carbon, blue for nitrogen, red for oxygen, white for hydrogen). The rest of the
+protein is shown in gray ribbons. The Cu(I) and Zn(II) ions are shown as orange and gray spheres,
+respectively. The solvent molecules in the classical, or MM, subsystem are omitted for clarity (See Figure
+S2).
+Figure S2: The full QM/MM system employed in the present work. Solvent molecules are shown in lines
+                            while the protein is given in green ribbons.
+
+S1.3 Coarse-grained (CG) simulations
+
+All CG simulations were performed with the program package Gromacs13 (version 2018.1) and
+the open-beta version of the Martini 3 force field22. The simulation parameters were chosen in
+accordance to reference23. The leap-frog propagator was employed in combination with the Verlet
+cutoff scheme and a buffer tolerance of 0.005 kJ/mol. Van-der-Waals interactions were treated
+with the cutoff scheme using a cutoff distance of 1.1 nm; Coulomb interactions were treated with
+the reaction-field method, a cutoff of 1.1 nm, and a dielectric constant of 𝜀r = 15 for water. The
+temperature and pressure were controlled using a velocity-rescale thermostat (reference
+temperature T = 310 K, coupling constant 𝜏T = 1 ps) and a Parrinello-Rahman barostat (p = 1 bar,
+𝜏p = 12 ps, compressibility 𝛽 = 3⋅104 bar−1), respectively.
+
+The protein was simulated in a cubic box with an edge length of 8.3 nm and solvated with
+approximately 4,600 CG water beads which correspond to 18,400 water molecules. After the
+protein net charge of −3 was neutralized, 145 mM NaCl was added. Each replica was minimized
+for 5000 steps using a steepest descent algorithm, followed by an equilibration for 500 ps (time
+step 𝛥t = 5 fs). Before the equilibration, random velocities were assigned to all particles
+corresponding to a temperature of 310 K. Each of the twelve production runs was performed for
+40 µs using a time step of 𝛥t = 20 fs.
+
+The Martini protein model of SOD1 was generated from an equilibrated atomistic structure of the
+wild-type enzyme with a closed electrostatic loop. In addition to the Martini protein model24, the
+recently proposed sidechain corrections were used25. Following the procedure of Poma et al.26, a
+Gō-like model was set up to maintain the tertiary structure of the protein. Lennard-Jones
+interactions with a dissociation energy of 𝜀 = 12.0 kJ/mol were added based on structure-based
+contacts derived from an overlap and contact of structural units-criterion. Contacts up to a
+distance of 1.1 nm were taken into account27 resulting in 331 Lennard-Jones interactions. The
+metal ions Cu(I) and Zn(II) are represented by tiny Q0 beads with a charge of +1. Although the
+formal charge of the Zn metal is +2, in SOD1 (and other metalloenzymes) this charge is spread
+between the Zn and its coordination shell, covalently bonded to the metal (both in CG and
+atomistic models). Comparison to quantum mechanical calculations show that a lower charge
+provides a more realistic model. Indeed, in the atomistic model, the charge on the Zn(II), derived
+from RESP charges on an isolated model complex, is not +2, but around +0.4, with the rest of the
+positive charged spread in some of the other atoms around. In a CG model as MARTINI, parts
+of the electrostatic interactions, like dipoles and quadruples, are implicitly included in the LJ
+potential. Besides, beads of different sizes represent different number of non-hydrogen atoms,
+from 4 (regular beads) to 3 (small beads) and 2 (tiny beads). So, the tiny Q0 bead is, in this case,
+representing Zn and part of its 1st coordination shell, which includes a negatively charged aspartic
+acid. We ended up with an effective charge of +1, which is not very different from the sum of the
+charges in the atomistic model. Similar considerations were taken into account to attribute the
+charge of Cu(I) as +1. The bonded parameters of the metals were optimized to maintain a stable
+coordination environment and to reproduce the flexibility observed in the atomistic simulations.
+The effect of the G93A mutation was taken into account by changing the bead of residue 93 from
+a SP1 bead representing glycine to a P1 bead representing alanine. Note that this is the only
+difference between the CG models of WT SOD1 and its G93A mutant.
+
+All analysis of the CG simulations were performed for the whole 480 µs of all trajectories.
+Statistical errors were estimated using the block average method. Visual inspection of the
+trajectories were performed with VMD28. RMSD calculations were performed using a homemade
+Fortran program, based in MDLovoFit code29. The alignment protocol of the backbone beads can
+be described in four steps: (i) standard rigid-body alignment of the structures using all BB beads
+as reference; (ii) calculation of the RMSD per residue for all BB beads; (iii) identification of the
+residues with RMSD lower than 1 Å; (iv) a new rigid body alignment using only this subgroup of
+residues that represents the most rigid parts of SOD1. Steps (iii) and (iv) were repeated until the
+RMSD and the residues used in the rigid subgroup are converged. As standard reference for the
+trajectory alignment, we used the average structure obtained in the CG simulation of each system.
+To calculate the water-active site contacts shown in Figure 2 of the manuscript and Figure S6B,
+we employed the Gromacs tool gmx select to select all CG water beads within a distance cutoff
+1.1 nm of the active site. The active site was defined as the two metal ions Zn(II) and Cu(I) as
+well as their coordinating amino acids, residues 46, 48, 63, 71, 80, 83, and 120. The number of
+water beads within the cutoff at each time step yield the actual water-active site contacts. The
+free energies were obtained based on the population density along the 2D space described by
+the RMSD of EL in relation to average structure of the whole data and the water-active site
+contacts.
+
+The distance distributions between all backbone beads of SOD1 were calculated using the
+Gromacs tool gmx distance with a bin width of 0.01 nm. Examples of the distributions are shown
+in Figure S7, panel A and B. To visualize the difference in the distributions of the WT and the
+G93A mutant, we integrated the absolute difference between the individual backbone bead
+distributions of both proteins according to:
+
+          ∞
+𝐷(𝑖,𝑗) = ∫0 | 𝑝𝐺93𝐴
+               𝑑    (𝑟;𝑖,𝑗) ― 𝑝𝑊𝑇
+                               𝑑 (𝑟;𝑖,𝑗) | 𝑑𝑟                                            Equation S2
+
+with 𝑝𝑊𝑇
+      𝑑 and 𝑝𝑑
+                𝐺93𝐴
+                     being the normalized distance distribution of the WT and G93A mutant,
+respectively, 𝑟 being the distance, and 𝐷(𝑖,𝑗) being integrated absolute difference between the
+backbone beads of residue 𝑖 and 𝑗. Figure S3 schematically visualizes the workflow to calculate
+one matrix element 𝐷(𝑖,𝑗). The full matrix of the integrated absolute difference 𝑫 is depicted in
+Figure 3C of the manuscript; selected rows are shown in Figures S8C and S8D.
+
+
+
+
+Figure S3: Schematic view of the procedure to obtain the matrix elements D(i,j) as described in Eq. S2.
+
+
+
+S2. Additional analyses
+
+S2.1. Flexibility of EL loop in atomistic simulations.
+
+WT simulations showed 2 trajectories with opening events of EL, which are indicated by RMSD
+higher than 3.5 Å. In one case (WT-1), EL starts to open around 600 ns, with the full open state
+(average RMSD of 6.0 Å) achieved in 800 ns. At the end of this simulation, EL come back to
+intermediate open state, with RMSD around 3.5 Å. In the second simulation (WT-2), EL only
+partially opens around 900 ns, staying in this state for around 50 ns. In the case of G93A, only
+one MD simulation showed the opening of EL during the trajectory (G93A-3). In this case, EL
+completely open in 500 ns (RMSD around 6.0 Å), without any stable intermediate open state been
+formed in the whole simulation. EL stays open until the end of the 1 𝜇s. A comparison between
+both systems does not indicate if WT or G93A show higher tendency to open EL and expose the
+catalytic site to water molecules. While WT show two opening events, G93A definitely stay for
+more time in the completely open state. As we highlighted in the main manuscript, the atomistic
+simulation data is insufficient to judge whether there is an altered tendency for loop opening in
+G93A SOD1.
+ WT-1
+
+
+
+
+ WT-2
+
+
+
+
+ WT-3
+
+
+
+
+Figure S4: Time evolution of root-mean-square deviation (RMSD) of EL C-α backbone along three atomistic
+trajectories of WT.
+ G93A-1
+
+
+
+
+ G93A-2
+
+
+
+
+ G93A-3
+
+
+
+
+Figure S5: Time evolution of root-mean-square deviation (RMSD) of EL C-α backbone along three atomistic
+trajectories of G93A mutant.
+S2.2 RMSD and hydration analysis of the CG simulations
+
+Figure S6A shows a comparison of the overall average RMSD of SOD1 for the whole protein and
+split into the contribution of the electrostatic loop (EL) and the rest of the protein. As can be clearly
+recognized, the shoulder at RMSD values above 2.0 Å is mainly due to the EL. Figure S6B clarifies
+that the difference of the active site hydration between the WT and the G93A mutant is significant
+because the error bars do not overlap. The RMSD of the individual residues is depicted in Figure
+S6C and D.
+                                                                     Figure S6: Overall comparison of
+                                                                     flexibility and hydration of WT and
+                                                                     G93A: (A) RMSD distribution of all
+                                                                     backbone beads, electrostatic loop
+                                                                     and the rest of the backbone,
+                                                                     computed with respect to its
+                                                                     average structure (upper panel) and
+                                                                     to     the    equilibrated    atomistic
+                                                                     structure       used       as      initial
+                                                                     configuration (lower panel). (B)
+                                                                     Water         active-site      contacts
+                                                                     distribution. The inset graph
+                                                                     highlights        the       meaningful
+                                                                     differences observed between WT
+                                                                     and G93A hydration. (C) The upper
+                                                                     graph shows the average RMSD per
+                                                                     residue in relation to the average
+                                                                     structure. The joint for the EL
+                                                                     opening (residues 122 and 141) is
+                                                                     indicated as green dots. To
+                                                                     separate the meaningful RMSD
+                                                                     differences between WT and G93A,
+                                                                     the overlap between |ΔRMSDWT-
+                                                                     G93A|    and the total error was
+                                                                     computed via the subtraction of the
+                                                                     values. The results are shown in the
+                                                                     lower graph. (D) Change in RMSD
+                                                                     between the WT and G93A. Blue
+                                                                     color indicates rigidification in G93A;
+                                                                     red color increased flexibility. The
+                                                                     left figure shows the all ΔRMSDWT-
+                                                                     G93A while the right one only show
+                                                                     results that do not overlap with the
+                                                                     errors.
+S2.3. On the significance of the QM/MM energy values.
+
+The QM/MM energies reported are obtained from four averages of 500 energies each, which are,
+themselves sampled evenly from 5 ps runs (5000 single-points, see section S1.2). As the values
+come separate averages, and are later combined, as opposed from an averaged combination of
+values, it is difficult to obtain a single variance or equivalent value that would allow us to estimate
+the reliability of the final differences. We can, though, compare the energy histograms for the pairs
+of values that correspond to systems with the same number of atoms (i.e. the pair with Zn(II) and,
+separately, the pair without Zn(II)). These histograms are shown in Figure S7. The histograms
+show a clear separation between the different samples, indicating that the energy difference
+reported is significant. I should be noted that, even though the histograms show a more negative
+energy for the two EL-open conformations, EL opening is a relatively large conformational
+change, and it would be incorrect to estimate it with a small sample like we employ here. Instead,
+a method such as Umbrella Sampling, Metadynamics, or similar should be employed. The
+instantaneous dissociation of Zn(II) is a local change, so it can be studied with a moderate
+sampling as done here.
+
+
+
+
+Figure S7 Normalized histograms for the 4 energy distributions employed in our calculation of ΔΔH for
+Zn(II) binding between apo-SOD1 (A) and Zn-SOD1 (B). Each histogram is paired with the one for the
+distribution with the same number of atoms (also the closest in energy). The energy values were shifted,
+with the zero being in the center of open EL histograms.
+S2.4. Comparison of backbone bead distributions of the CG simulations
+
+Figure S8 compares the backbone bead distributions of the WT (blue) and the G93A mutant (red)
+within the identified allosteric pathway. The difference which emerges for residue 39 is propagated
+along the pathway.
+
+
+                                                           Figure S8: Relevant distance distribution
+                                                           between backbone BB beads of SOD1
+                                                           residues involved in the allosteric
+                                                           pathway. (A) The distance distributions
+                                                           between the mutation site 93 and the
+                                                           residues along the pathway are depicted.
+                                                           (B) Distances between neighboring
+                                                           beads in the allosteric pathway. Because
+                                                           the distances between the neighboring
+                                                           backbone beads do not change and thus
+                                                           not compensate the effect of the
+                                                           mutation, the distance change is
+                                                           propagated towards the EL. (C)
+                                                           Integrated absolute differences (blue)
+                                                           which are most affected by the mutation,
+                                                           namely for the residues 39 and 90-95
+                                                           (see also Figure 3A in the manuscript).
+                                                           The grey lines depict all remaining
+                                                           integrated absolute differences. The vast
+                                                           majority of their values are below 0.3 (red
+                                                           dashed line), that represents the total
+                                                           average plus 2 times the standard
+                                                           deviation. (D) Integrated absolute
+                                                           differences in relation to the mutation site
+                                                           (residue G93, red dot). The main
+                                                           residues involved in the allosteric
+                                                           pathway are highlighted.
+S2.5. Impact of the mutation on the 93C𝛼-38O distance
+
+
+
+
+Figure S9 Histogram for the G/A93 (Cα) -- L38(O) distance in the WT (blue) and mutant (red) atomistic
+MD trajectories (from a total of 3 µs of simulation time each). The increased distance in the mutant
+structure, caused by the steric clash between A93(Cβ) and L38(O) can be seen.
+
+
+
+
+        A                                                B
+
+Figure S10 Interaction between L38 (left) and the residue 93 (right) in the wild-type (A) and the G93A
+mutant (B) mutant equilibrated structures. The change of position in the mutant due to the A93 methyl
+group can be appreciated.
+References
+
+(1) Strange, R. W.; Antonyuk, S. V.; Hough, M. A.; Doucette, P. A.; Valentine, J. S.; Hasnain,
+     S. S. Variable Metallation of Human Superoxide Dismutase: Atomic Resolution Crystal
+     Structures of Cu-Zn, Zn-Zn and as-Isolated Wild-Type Enzymes. J. Mol. Biol. 2006, 356 (5),
+     1152–1162.
+(2) Word, J. M.; Lovell, S. C.; Richardson, J. S.; Richardson, D. C. Asparagine and Glutamine:
+     Using Hydrogen Atom Contacts in the Choice of Side-Chain Amide Orientation. J. Mol. Biol.
+     1999, 285 (4), 1735–1747.
+(3) Hornak, V.; Abel, R.; Okur, A.; Strockbine, B.; Roitberg, A.; Simmerling, C. Comparison of
+     Multiple Amber Force Fields and Development of Improved Protein Backbone Parameters.
+     Proteins 2006, 65 (3), 712–725.
+(4) Lindorff-Larsen, K.; Piana, S.; Palmo, K.; Maragakis, P.; Klepeis, J. L.; Dror, R. O.; Shaw,
+     D. E. Improved Side-Chain Torsion Potentials for the Amber ff99SB Protein Force Field.
+     Proteins 2010, 78 (8), 1950–1958.
+(5) Mera-Adasme, R.; Sadeghian, K.; Sundholm, D.; Ochsenfeld, C. Effect of Including
+     Torsional Parameters for Histidine–Metal Interactions in Classical Force Fields for
+     Metalloproteins. J. Phys. Chem. B 2014, 118 (46), 13106–13111.
+(6) Jorgensen, W. L.; Chandrasekhar, J.; Madura, J. D.; Impey, R. W.; Klein, M. L. Refined
+     TIP3P Model for Water. J. Chem. Phys. 1983, 79, 926–935.
+(7) Darden, T.; York, D.; Pedersen, L. Particle Mesh Ewald: An N⋅log(N) Method for Ewald
+     Sums in Large Systems. J. Chem. Phys. 1993, 98 (12), 10089–10092.
+(8) Essmann, U.; Perera, L.; Berkowitz, M. L.; Darden, T.; Lee, H.; Pedersen, L. G. A Smooth
+     Particle Mesh Ewald Method. J. Chem. Phys. 1995, 103 (19), 8577–8593.
+(9) Nosé, S. A Unified Formulation of the Constant Temperature Molecular Dynamics Methods.
+     The Journal of Chemical Physics. 1984, pp 511–519.
+(10) Hoover, W. G. Canonical Dynamics: Equilibrium Phase-Space Distributions. Physical
+     Review A. 1985, pp 1695–1697.
+(11) Parrinello, M.; Rahman, A. Polymorphic Transitions in Single Crystals: A New Molecular
+     Dynamics Method. J. Appl. Phys. 1981, 52 (12), 7182–7190.
+(12) Nosé, S.; Klein, M. L. Constant Pressure Molecular Dynamics for Molecular Systems. Mol.
+     Phys. 1983, 50 (5), 1055–1076.
+(13) Abraham, M. J.; Murtola, T.; Schulz, R.; Páll, S.; Smith, J. C.; Hess, B.; Lindahl, E.
+     GROMACS: High Performance Molecular Simulations through Multi-Level Parallelism from
+     Laptops to Supercomputers. SoftwareX 2015, 1-2, 19–25.
+(14) Pronk, S.; Páll, S.; Schulz, R.; Larsson, P.; Bjelkmar, P.; Apostolov, R.; Shirts, M. R.; Smith,
+     J. C.; Kasson, P. M.; van der Spoel, D.; et al. GROMACS 4.5: A High-Throughput and
+     Highly Parallel Open Source Molecular Simulation Toolkit. Bioinformatics 2013, 29 (7),
+     845–854.
+(15) Sure, R.; Grimme, S. Corrected Small Basis Set Hartree-Fock Method for Large Systems.
+     J. Comput. Chem. 2013, 34 (19), 1672–1685.
+(16) Savasci, G.; Borges-Martínez, M.; Berger, R. J. F.; Ochsenfeld, C.; Mera-Adasme, R. A
+     Comparison of Computational Methodologies for the Structural Modelling of Biologically
+     Relevant Zinc Complexes. J. Mol. Model. 2019, 25 (9), 258.
+(17) Field, M. J. The pDynamo Program for Molecular Simulations Using Hybrid Quantum
+     Chemical and Molecular Mechanical Potentials. J. Chem. Theory Comput. 2008, 4 (7),
+     1151–1161.
+(18) Neese, F. Software Update: The ORCA Program System, Version 4.0. WIREs Comput Mol
+     Sci 2018, 8 (1), e1327.
+(19) Ahlrichs, R.; Bär, M.; Häser, M.; Horn, H.; Kölmel, C. Electronic Structure Calculations on
+     Workstation Computers: The Program System Turbomole. Chem. Phys. Lett. 1989, 162 (3),
+     165–169.
+(20) Furche, F.; Ahlrichs, R.; Hättig, C.; Klopper, W.; Sierka, M.; Weigend, F. Turbomole. WIREs
+     Comput Mol Sci 2014, 4 (2), 91–100.
+(21) Pracht, P.; Caldeweyher, E.; Ehlert, S.; Grimme, S. A Robust Non-Self-Consistent Tight-
+     Binding Quantum Chemistry Method for Large Molecules. 2019.
+(22) Martini 3 open-beta version www.cgmartini.nl/index.php/force-field-parameters/particle-
+     definitions.
+(23) de Jong, D. H.; Baoukina, S.; Ingólfsson, H. I.; Marrink, S. J. Martini Straight: Boosting
+     Performance Using a Shorter Cutoff and GPUs. Comput. Phys. Commun. 2016, 199, 1–7.
+(24) de Jong, D. H.; Singh, G.; Bennett, W. F. D.; Arnarez, C.; Wassenaar, T. A.; Schäfer, L. V.;
+     Periole, X.; Tieleman, D. P.; Marrink, S. J. Improved Parameters for the Martini Coarse-
+     Grained Protein Force Field. J. Chem. Theory Comput. 2013, 9 (1), 687–697.
+(25) Herzog, F. A.; Braun, L.; Schoen, I.; Vogel, V. Improved Side Chain Dynamics in MARTINI
+     Simulations of Protein-Lipid Interfaces. J. Chem. Theory Comput. 2016, 12 (5), 2446–2458.
+(26) Poma, A. B.; Cieplak, M.; Theodorakis, P. E. Combining the MARTINI and Structure-Based
+     Coarse-Grained Approaches for the Molecular Dynamics Studies of Conformational
+     Transitions in Proteins. J. Chem. Theory Comput. 2017, 13 (3), 1366–1374.
+(27) Thallmair, S.; Vainikka, P. A.; Marrink, S. J. Lipid Fingerprints and Cofactor Dynamics of
+     Light-Harvesting Complex II in Different Membranes. Biophys. J. 2019, 116 (8), 1446–1455.
+(28) Humphrey, W.; Dalke, A.; Schulten, K. VMD: Visual Molecular Dynamics. J. Mol. Graph.
+     1996, 14 (1), 33–38.
+(29) Martínez, L. Automatic Identification of Mobile and Rigid Substructures in Molecular
+     Dynamics Simulations and Fractional Structural Fluctuation Analysis. PLoS One 2015, 10
+     (3), e0119264.
+

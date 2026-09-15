@@ -1,0 +1,1129 @@
+{
+  "plan_sha256": "754610f376259366a8aa38fe2f070d4869c526abcaa72f4941e836a30c3d6237",
+  "audit_implementation_sha256": "c46f8d02440cb9022505d399e2367829d923963b66083bf1ace12b342d84946d",
+  "verified_hashes": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/source.pdb": "c58d4cce211bab37bb61ede35799dce5534408f27cbceac7fa8b5208263b8ded",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/archive-fragment.json": "ec920dfb63711b30b67e36d500407a1bcfe79d777839bb3c3fd85e9d00304861",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/candidate.json": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/candidate.json": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/candidate.json": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/candidate.json": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-topology.cif": "79784fdf00348d2153f25622899d521a1d95bc28466ccc7364cd84eaa0bdfa40",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-input.npz": "8bd9acd39fe9bc22dbfb78efc8e25807d7784343f42a9622b4e7b1ddfe672a0a",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-parameters.json": "1614e9ad0800340a2fbc00215e971a71aebb28c414d4b87544a402eda9c1a760",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/run_complete_comparison.py": "47d8734d76fab2a717da00e96374ffc7f4cb154b86a574c1e19002d160027862",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/run_accepted_handoff.py": "85bfa949952a3e58a336033a9e7846980471766a06c47ce2a89f2d38498034e4",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/loop_search.py": "d13a15585b5aaeda7c609ccfe864efdd5a01a532cfd01abee1a82a7a859aabbf",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/context_integrity.py": "083f948b5c282dac4ce5d07118707c4e3485275b8ee6370dbe4006cc6d1db6f2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/validate_complete_candidate.py": "92047f62100180bda610414609e263a92895d7162fa92530440776170787d3d4",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/proposal.json": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/ligands/ligand-aecaa3f182e6/ligand.xml": "e8609564fca7c8cd3ddaff519ec0df35d1a7027bd4e2d50368b9aab7d97abfe7",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/residue-parameters/phosaa14SB.xml": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/data/amber14/tip3p.xml": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/data/amber14/protein.ff14SB.xml": "d9f9779c09d67cd5f8bc657692f174ffab14c469dfd06d560ac1899fa7e976b8",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.npz": "99e31cc3175ff7d0a8d6b606e4e4b3fb2456786c15576504bc9945ae3d8ecb23",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.pdb": "637f7899a19dd59043188f3ed25733900526c01fb9c59382251d957643739182",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/result.json": "45bb8ffac7c58704b093b4b2006f29ea2bbe55aed6a7859b703656306b7e7851"
+  },
+  "physical_system": {
+    "fresh_native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "particle_count": 4825,
+    "zero_mass_particles": [],
+    "force_classes": [
+      "HarmonicBondForce",
+      "PeriodicTorsionForce",
+      "NonbondedForce",
+      "CMMotionRemover",
+      "HarmonicAngleForce"
+    ],
+    "constraint_count": 0,
+    "parameter_files": [
+      "amber14/protein.ff14SB.xml",
+      "amber14/tip3p.xml",
+      "residue-parameters/phosaa14SB.xml",
+      "ligands/ligand-aecaa3f182e6/ligand.xml"
+    ],
+    "no_construction_force_classes": true
+  },
+  "results": [
+    {
+      "name": "torsion-source-ccd-2027",
+      "result_sha256": "45bb8ffac7c58704b093b4b2006f29ea2bbe55aed6a7859b703656306b7e7851",
+      "verified_artifact_sha256": {
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.npz": "99e31cc3175ff7d0a8d6b606e4e4b3fb2456786c15576504bc9945ae3d8ecb23",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.pdb": "637f7899a19dd59043188f3ed25733900526c01fb9c59382251d957643739182",
+        "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2"
+      },
+      "atom_count": 4825,
+      "bond_count": 4886,
+      "all_atom_identity_elements_bonds_preserved": true,
+      "outside_selected_observed_heavy_atoms_exactly_preserved": true,
+      "selected_reference_keys": [
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "selected_reference_count": 14,
+      "recomputed_geometry_stereo_reference_pass": true,
+      "maximum_saved_rounding_difference_A": 0.0008604878477227442,
+      "observed_heavy_maximum_displacement_A": 0.7545643093565786,
+      "saved_observed_heavy_maximum_displacement_A": 0.7544077147007465,
+      "ARG57_definitions": {
+        "phi": {
+          "atoms": [
+            [
+              "A",
+              "56",
+              "",
+              "ASN",
+              "C"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "N"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "CA"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "C"
+            ]
+          ],
+          "all_four_coordinate_sets_exactly_equal": true,
+          "degrees": 67.7190902150901,
+          "source_xyz_nm": [
+            [
+              3.1619,
+              -2.0763000000000003,
+              3.5089
+            ],
+            [
+              3.1182,
+              -2.1709,
+              3.4259000000000004
+            ],
+            [
+              2.9783000000000004,
+              -2.1916,
+              3.3837000000000006
+            ],
+            [
+              2.9196000000000004,
+              -2.0828,
+              3.2960000000000003
+            ]
+          ],
+          "maximum_change_A": 0.0
+        },
+        "psi": {
+          "atoms": [
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "N"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "CA"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "C"
+            ],
+            [
+              "A",
+              "58",
+              "",
+              "THR",
+              "N"
+            ]
+          ],
+          "all_four_coordinate_sets_exactly_equal": true,
+          "degrees": -83.36629375184779,
+          "source_xyz_nm": [
+            [
+              3.1182,
+              -2.1709,
+              3.4259000000000004
+            ],
+            [
+              2.9783000000000004,
+              -2.1916,
+              3.3837000000000006
+            ],
+            [
+              2.9196000000000004,
+              -2.0828,
+              3.2960000000000003
+            ],
+            [
+              2.8702000000000005,
+              -1.9747000000000001,
+              3.3559
+            ]
+          ],
+          "maximum_change_A": 0.0
+        },
+        "preceding_omega": {
+          "atoms": [
+            [
+              "A",
+              "56",
+              "",
+              "ASN",
+              "CA"
+            ],
+            [
+              "A",
+              "56",
+              "",
+              "ASN",
+              "C"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "N"
+            ],
+            [
+              "A",
+              "57",
+              "",
+              "ARG",
+              "CA"
+            ]
+          ],
+          "all_four_coordinate_sets_exactly_equal": true,
+          "degrees": 171.13059563921902,
+          "source_xyz_nm": [
+            [
+              3.3087000000000004,
+              -2.0922,
+              3.5512
+            ],
+            [
+              3.1619,
+              -2.0763000000000003,
+              3.5089
+            ],
+            [
+              3.1182,
+              -2.1709,
+              3.4259000000000004
+            ],
+            [
+              2.9783000000000004,
+              -2.1916,
+              3.3837000000000006
+            ]
+          ],
+          "maximum_change_A": 0.0
+        }
+      },
+      "ARG57_current_reference": {
+        "residue": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ],
+        "phi_degrees": 67.7190902150901,
+        "psi_degrees": -83.36629375184779,
+        "preceding_omega_degrees": 171.13059563921902,
+        "rama_class": "general",
+        "score": 0.00029607199579877354,
+        "classification": "outlier",
+        "phi_atoms": [
+          701,
+          711,
+          713,
+          715
+        ],
+        "psi_atoms": [
+          711,
+          713,
+          715,
+          735
+        ]
+      },
+      "ARG57_excluded_only_because_all_defining_coordinates_unchanged": true,
+      "retained_components": [
+        {
+          "identity": [
+            "A",
+            "170",
+            "",
+            "TPO"
+          ],
+          "atoms": 17,
+          "heavy_atoms": 11,
+          "hydrogens": 6,
+          "source_and_archive_heavy_identities_exact": true,
+          "archive_refined_heavy_coordinates_exact": true,
+          "source_pdb_saved_pdb_heavy_coordinates_exact": true,
+          "source_pdb_archive_cif_maximum_numeric_roundoff_A": 0.0,
+          "incident_bonds": 18,
+          "saved_bonds_equal_archive": true,
+          "hydrogen_parent_pairs": [
+            [
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "H"
+              ],
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "N"
+              ]
+            ],
+            [
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "HA"
+              ],
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "CA"
+              ]
+            ],
+            [
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "HB"
+              ],
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "CB"
+              ]
+            ],
+            [
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "HG22"
+              ],
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "CG2"
+              ]
+            ],
+            [
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "HG21"
+              ],
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "CG2"
+              ]
+            ],
+            [
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "HG23"
+              ],
+              [
+                "A",
+                "170",
+                "",
+                "TPO",
+                "CG2"
+              ]
+            ]
+          ],
+          "archive_saved_atom_keys": [
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "N"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "H"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "CA"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "HA"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "CB"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "HB"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "CG2"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "HG22"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "HG21"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "HG23"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "OG1"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "P"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "O1P"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "O2P"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "O3P"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "C"
+            ],
+            [
+              "A",
+              "170",
+              "",
+              "TPO",
+              "O"
+            ]
+          ],
+          "maximum_hydrogen_coordinate_change_A": 0.037227899594430465
+        },
+        {
+          "identity": [
+            "E",
+            "381",
+            "",
+            "ATP"
+          ],
+          "atoms": 43,
+          "heavy_atoms": 31,
+          "hydrogens": 12,
+          "source_and_archive_heavy_identities_exact": true,
+          "archive_refined_heavy_coordinates_exact": true,
+          "source_pdb_saved_pdb_heavy_coordinates_exact": true,
+          "source_pdb_archive_cif_maximum_numeric_roundoff_A": 8.881784197001252e-15,
+          "incident_bonds": 45,
+          "saved_bonds_equal_archive": true,
+          "hydrogen_parent_pairs": [
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H1"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C5'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H2"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C5'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H3"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C4'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H4"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C3'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H5"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "O3'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H6"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C2'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H7"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "O2'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H8"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C1'"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H9"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C8"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H10"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "N6"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H11"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "N6"
+              ]
+            ],
+            [
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "H12"
+              ],
+              [
+                "E",
+                "381",
+                "",
+                "ATP",
+                "C2"
+              ]
+            ]
+          ],
+          "archive_saved_atom_keys": [
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "PG"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O1G"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O2G"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O3G"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "PB"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O1B"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O2B"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O3B"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "PA"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O1A"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O2A"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O3A"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O5'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C5'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C4'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O4'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C3'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O3'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C2'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "O2'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C1'"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "N9"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C8"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "N7"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C5"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C6"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "N6"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "N1"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C2"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "N3"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "C4"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H1"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H2"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H3"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H4"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H5"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H6"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H7"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H8"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H9"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H10"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H11"
+            ],
+            [
+              "E",
+              "381",
+              "",
+              "ATP",
+              "H12"
+            ]
+          ],
+          "maximum_hydrogen_coordinate_change_A": 1.8939256118759926
+        }
+      ],
+      "fresh_system_matches_archive_and_saved_topology_parameters": true,
+      "saved_topology_fresh_system_sha256": "5269f48ebdedca5530d2a84ce939f7ccc0b83278beca2910c20418c54cb465ab",
+      "saved_topology_parameter_comparison": {
+        "harmonic_bond_parameter_multisets_equal": true,
+        "bond_terms": 4886,
+        "other_system_fields_and_terms_exactly_equal": true,
+        "difference_is_only_harmonic_bond_term_order": true,
+        "all_atom_indexed_parameters_equal": true
+      },
+      "source_hashes_verified": true,
+      "artifact_files_unchanged": true,
+      "scope": "Independent private static saved-artifact verification, not preparation rerun or MD/release qualification."
+    }
+  ],
+  "native_library_sha256": "b7a531377948dc6c1534ffe2f4041cfe28c38eac6817e12e0808e828da28935c",
+  "elapsed_seconds": 1.3133690409595147,
+  "max_rss_bytes": 327417856,
+  "all_requested_checks_pass": true,
+  "app_ready": false,
+  "physical_model_validated": false,
+  "new_md_or_qm": false,
+  "parameter_limit": "Same current frozen native force field with archived ligand/TPO manifests; historical protein/water distribution equivalence was not established."
+}

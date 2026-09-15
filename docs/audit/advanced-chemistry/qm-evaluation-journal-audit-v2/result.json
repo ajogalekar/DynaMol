@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "test_count": 35,
+  "test_exit_code": 0,
+  "before_fix_regression_count": 4,
+  "before_fix_expected_failures": 4,
+  "new_regressions": [
+    "test_rehashed_boolean_charge_is_refused_even_when_equal_to_integer_zero",
+    "test_rehashed_float_spin_is_refused_even_when_equal_to_integer_zero",
+    "test_rehashed_boolean_record_schema_is_refused_even_when_equal_to_integer_one",
+    "test_boolean_manifest_schema_is_refused_even_with_matching_expected_binding"
+  ],
+  "before_fix_audit_preserved": true,
+  "before_fix_manifest_sha256": "96ed47a86aa6d9cfd8922b8430f80291e6e3072ccff90141def37091d5b60714",
+  "changed_helper_functions": [
+    "EvaluationJournal._check_manifest",
+    "EvaluationJournal.records"
+  ],
+  "scope": "Strict recovery identity and exact-integer schema validation only; append/publication/numerical behavior unchanged",
+  "native_qm_launched": false,
+  "production_worker_edited": false,
+  "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "accepted": false,
+  "optimization_converged": false,
+  "physical_acceptance": false
+}

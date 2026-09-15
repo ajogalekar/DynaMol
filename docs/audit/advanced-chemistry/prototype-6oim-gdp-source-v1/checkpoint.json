@@ -1,0 +1,80 @@
+{
+  "created_unix": 1789334959.880942,
+  "source_graph_matches": true,
+  "native_parameter_transport_matches": true,
+  "focused_tests_passed": 47,
+  "physical_acceptance": false,
+  "full_6oim_preparation_complete": false,
+  "files": [
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/retrieval.json",
+      "sha256": "ed674ebb7a6cb61bf217e56502a1dd5982bfd237233c0adb9bea05d3efd50637",
+      "bytes": 3742
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/REVIEW.md",
+      "sha256": "ad4dc6d23af990ea31122ccb0fa6604432a9b2775d63c481ee225b53a4d64668",
+      "bytes": 3221
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/gdp-source-native-v1/result.json",
+      "sha256": "f7a5e4bbaf802a44b43916691490f41cdb4117cc9b438d3a7ab96d0b25d7b21c",
+      "bytes": 972
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/gdp-source-native-v1/graph-audit.json",
+      "sha256": "a686b53529806ee054e04a6b5bd46b542ee08d7251cb0b452a1dcc2b994bef63",
+      "bytes": 3926
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/gdp-source-native-v1/native-manifest.json",
+      "sha256": "2660df57e38af21ff86778541031aff787d5f3866bfb4510888244e658073e45",
+      "bytes": 121745
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/gdp-source-native-v1/mechanics-before-signed-amplitude-fix.json",
+      "sha256": "7abc6cd20a1e924c8a1f363f25547624dc7baac5ae8e5c7e131d924e5d82b986",
+      "bytes": 454
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/gdp-source-native-v1/mechanics-after-signed-amplitude-fix.json",
+      "sha256": "4e29698e3622f762dc0881b76a4e93355ebea1b448a22ec8ad18878827eb2d46",
+      "bytes": 3243
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/gdp-source-native-v1/signed-amplitude-tests.log",
+      "sha256": "b802c190aaad18f54c8c528a0af2efb13c89ed5e6470d07ad776e519bce9143e",
+      "bytes": 100
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/bonded_site_validation.py",
+      "sha256": "c737bd9463b2a24e2bdbae83a12cdbc6e45d2f52927edacc6d87fa1d22f76ed7",
+      "bytes": 31673
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/tests/test_bonded_site_validation.py",
+      "sha256": "614523fb6e52abcd1a1f3964ef841a880010aa8a1b81057ac6bfacdd40acf525",
+      "bytes": 24165
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/export_native_parameter_manifest.py",
+      "sha256": "14720e25b484335c27f1803c57ecd167843c2cb10f1aad2c6dd0169ecbf00bab",
+      "bytes": 8846
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/teLeap",
+      "sha256": "7b69cdb8192eb6654b4cbf96eccebf0c28f91907944ad7fe10a8bef7fa7ed042",
+      "bytes": 781872
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/cmd/oldff/leaprc.ff99",
+      "sha256": "9fb05084d7a9aa8008fc4470af69770d1f9ec85f51adef02b524fc50321ab654",
+      "bytes": 4119
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/parm99.dat",
+      "sha256": "3997101649f048522213c7ea1445c47e71830c5066eba2b4cc2c681a6248e198",
+      "bytes": 41916
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# 1HCK: complete Mg–ATP research specimen
+
+**The complete native structure and mandatory-term transport audit pass. Independent native numerical parity is unresolved. This is not a validated CDK2 metal-site model or an app-ready parameter bundle.** No dynamics or quantum calculations were run.
+
+## Source, selection and chemical state
+
+The frozen [1HCK entry](https://www.rcsb.org/structure/1HCK) is human CDK2. Its original CIF SHA256 is `62807748b242e7e8026668edbc4242d1e46de8770e784bcfdf97b73219976d5a`. The assembly retains the complete protein, ATP, magnesium and all **108 crystal waters**. The selected GLN131 alternate is A (occupancy0.80); four B records (occupancy0.20) are explicitly retained in the exclusion inventory. All **2,506 selected source heavy atoms** retain their coordinates. This is alternate-conformer selection, not deletion of a chemical component.
+
+The four-residue loop A37–40 (`LDTE`) comes from the previously accepted preparation. The prior and frozen source hashes match. Its provisional loop geometry and pH7 hydrogen templates are reused with observed-heavy-atom checks; neither loop conformation nor histidine protonation is experimental truth.
+
+The model contains **5,216 atoms / 408 residues**, including a 43-atom **ATP4−** template and **Mg(II), charge+2**. The deposited Mg occupancy0.60 describes the source; this explicit occupied-state model does not scale ionic charge by occupancy. The source declares Mg contacts with Asn132OD1, Asp145OD2, ATP O1G/O2B/O1A, and water503O. These remain nonbonded coordination contacts, with no artificial metal–donor bonds or restraints. The complete unsolvated test system has charge approximately+2; no counterions were silently added.
+
+1CLL was deferred as the next specimen because its deposited ethanol lacks oxygen. It remains in the frozen panel; no incomplete component was removed to obtain a pass.
+
+## Published model and applicability boundary
+
+The exact final [Hu et al.2024 ACS supporting information](https://doi.org/10.1021/acs.jctc.4c01142.s002) supplies ATP-B3 PREPI/frcmod, a mandatory24×24 CMAP and Mg pair-specific Lennard-Jones corrections. The complete recipe here uses ff14SB, TIP3P and Li–Merz compromise Mg parameters as the baseline, followed by the unmodified published `mod.py` with `-method B3LYP`. The [authors' preprint](https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2) provides the accessible method context. Final SI and preprint are separately identified; the actual parameters come from the final SI.
+
+**The published postprocessor is not ATP-local.** LEaP shares one LJ table index among `O/O2/O3`, and another among `OS/OY`. Five named corrections therefore change three table entries, including magnesium interactions with protein carbonyl/carboxylate oxygens. This literal behavior is preserved, documented and mechanically checked. The paper's ATP/Mg aqueous validation does not by itself establish the accuracy of these transferred protein-site interactions. Renaming ATP types or restoring protein pairs would define a different model and needs an explicit scientific decision.
+
+The final SI metadata specifies **CC BY-NC4.0**; the preprint has **CC BY-NC-ND4.0**. This is a retrieved research model, not an unrestricted redistribution choice for DynaMol.
+
+## What passed and what remains
+
+- Native LEaP assembled every retained source entity. Loading ATP parameters left the protein's internal bonded parameters, masses, charges and ordinary LJ parameters unchanged. Baseline and published topologies remain separate.
+- The case-specific transport audit checks all576 CMAP values and its exact atom ordering, all361 native pair-table entries, every particle's mass/charge/type/identity and all27,248 exclusions/exceptions. Ordinary force definitions are unchanged; the added CMAP and custom pair force are retained. No constraints are present.
+- The ordinary Amber exporter now explicitly refuses both Amber and CHARMM CMAP payloads. Thirteen negative/empty-map tests pass. A standard-term-only manifest cannot be mistaken for complete model coverage.
+- The first assembly audit expected five distinct LJ entries and stopped. Its artifacts remain in `native-v1/`; `native-v2/` recognizes the actual shared native indices without changing the published model. The first Sander launch failed because an evicted local Python executable returned `Exec format error`; that infrastructure failure is retained in its controller log.
+- After hydration, the three-pose Sander API helper asserted at `charmm.F90:2328`. The pinned AmberTools24rc5 source identifies that line as the status check immediately after allocating `cmap_index`. A fresh single-pose native process successfully reads and evaluates the identical topology, consistent with incomplete CMAP cleanup across repeated setups rather than an unreadable parameter file. The single-pose raw energies are Sander−23028.447382742 and OpenMM Reference−23029.882627471kJ/mol (difference−1.435244729kJ/mol). No constant matching, normalization or claimed parity is inferred from this one result. All OpenMM forces are finite; their maximum vector magnitude is103754.5kJ/mol/nm at the unrelaxed input.
+- This is an unrelaxed static specimen. LEaP reports close contacts involving newly added hydrogens/water orientations. Source atom retention and finite static mechanics do not establish equilibrated geometry, coordination stability, exchange kinetics, torsion-profile accuracy, or experimental agreement.
+
+The next scientific decision is whether the published global Mg–oxygen correction is justified for a protein-bound site. The next engineering stages are an isolated-process native parity driver and residual localization, hydrogen relaxation with source mapping intact, then explicitly authorized dynamics and meaningful coordination/conformation checks. Application lifecycle integration remains disabled.
+
+## Reproducibility
+
+`parameter-retrieval.json` and `published-files.json` pin exact official URLs, licenses and hashes. `native-v2/input-selection.json` retains original atom-site records and repair provenance; `source-atom-map.json` binds every native atom. `native-assembly-report.json` and `mandatory-term-transport.json` record numerical checks and output hashes. The reproducible drivers are `../build_1hck_mg_atp_prototype.py` and `../audit_1hck_model_transport.py`. Published source files are unchanged.

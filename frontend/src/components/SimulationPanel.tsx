@@ -110,6 +110,7 @@ export default function SimulationPanel({
     recoveryDetails[`${job.id}:${job.status}:${recovery(job)?.step ?? ''}`] ?? recovery(job);
   const [ph, setPh] = useState(dataset?.preparation?.ph ?? 7);
   const [submitting, setSubmitting] = useState<'preparation' | 'solvation' | null>(null);
+  const [monitorOperation, setMonitorOperation] = useState<'preparation' | 'solvation'>('preparation');
   const [monitorId, setMonitorId] = useState<string | null>(null);
   const [dismissed, setDismissed] = useState<string[]>([]);
   const [monitorError, setMonitorError] = useState('');
@@ -168,6 +169,10 @@ export default function SimulationPanel({
   const complexPrepared = !!dataset?.preparation?.ligand_parameters;
   const modifiedPrepared = !!dataset?.preparation?.modified_residues?.length;
   const requiresExplicit = complexPrepared || !!dataset?.preparation?.requires_explicit_solvent;
+  const paddingError =
+    !Number.isFinite(padding) || padding < 1 || padding > 3
+      ? 'Enter a box padding between 1 and 3 nm.'
+      : '';
   const resultViewerError =
     resultSelected && viewerError ? `Could not display the prepared structure: ${viewerError}` : '';
   useEffect(() => {
@@ -244,6 +249,7 @@ export default function SimulationPanel({
     if (!dataset) return;
     setError('');
     setMonitorError('');
+    setMonitorOperation('preparation');
     setMonitorId(job.id);
     setPending({ id: job.id, sourceId: dataset.id, operation: 'preparation' });
     setOpenLog(job.id);
@@ -279,8 +285,10 @@ export default function SimulationPanel({
       return;
     }
     if (dataset.solvation && !force) return;
+    if (paddingError) return;
     setBusy(true);
     setSubmitting('solvation');
+    setMonitorOperation('solvation');
     setMonitorId(null);
     setMonitorError('');
     try {
@@ -334,7 +342,10 @@ export default function SimulationPanel({
     solvent: engine === 'gromacs' ? 'explicit' : solvent,
     minimize,
     equilibration_steps: equil,
-    padding_nm: dataset?.solvation?.padding_nm ?? padding,
+    padding_nm:
+      engine === 'gromacs' || solvent === 'explicit'
+        ? (dataset?.solvation?.padding_nm ?? padding)
+        : 1,
     measurements: trackedMeasurements.map(({ id, kind, atoms, label, color }) => ({
       id,
       kind,
@@ -354,6 +365,7 @@ export default function SimulationPanel({
     !anyActive &&
     !hasMeasurementEditor &&
     !incompatibleGromacsInput &&
+    !((engine === 'gromacs' || solvent === 'explicit') && paddingError) &&
     !(engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation) &&
     !!dataset &&
     !!selected?.available &&
@@ -396,6 +408,7 @@ export default function SimulationPanel({
           complexPreparation={!!dataset?.atoms.some((atom) => atom.category === 'ligands')}
           job={submitting || (monitorError && !monitorId) ? undefined : monitoredJob}
           submitting={submitting}
+          requestOperation={monitorOperation}
           loadingResult={loadingResult || (resultSelected && !viewerReady && !viewerError)}
           loadError={monitorError || resultViewerError}
           resultInView={resultSelected && viewerReady && !viewerError}
@@ -515,6 +528,7 @@ export default function SimulationPanel({
               onPreparationStarted={prepared}
               onPreparationRequest={(starting, requestError) => {
                 setSubmitting(starting ? 'preparation' : null);
+                setMonitorOperation('preparation');
                 setMonitorError(requestError ?? '');
                 if (starting) setMonitorId(null);
               }}
@@ -556,7 +570,7 @@ export default function SimulationPanel({
                   <button
                     type="button"
                     className="primary-button water-build-button"
-                    disabled={engineLocked || !dataset?.preparation}
+                    disabled={engineLocked || !dataset?.preparation || !!paddingError}
                     onClick={() => void previewWater(true)}
                   >
                     {submitting === 'solvation' || pending?.operation === 'solvation' ? (
@@ -591,12 +605,21 @@ export default function SimulationPanel({
                     step="0.1"
                     value={padding}
                     onChange={(e) => setPadding(Number(e.target.value))}
+                    aria-invalid={!!paddingError}
+                    aria-describedby="water-padding-help"
                     required
                     disabled={engineLocked || (engine === 'openmm' && solvent === 'implicit')}
                   />
                   <span>nm</span>
                 </div>
               </label>
+              <p
+                id="water-padding-help"
+                className={paddingError ? 'error-box' : 'form-note'}
+                role={paddingError ? 'alert' : undefined}
+              >
+                {paddingError || 'Choose 1–3 nm of water padding around the structure.'}
+              </p>
             </section>
             <div className="field-heading">
               <span>04</span>

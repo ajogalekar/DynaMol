@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "status": "completed",
+  "phase": "completed",
+  "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "9bb04704e3845e0c19b7f731ff150b617be8065b19343e1d55980531378a1a44",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "runtime_manifest": {
+    "present": false
+  },
+  "initial_checkpoint": {
+    "accepted_as_initial_guess": true,
+    "source_result_sha256": "62f34004fc4f1d2b267008996fba401af77df120907f82221f2d9c3049800fca",
+    "source_checkpoint_sha256": "121961bc205c8a11c8b472845b7d33b4844d1a40a258bedc2aa756710c1f376a",
+    "source_arrays_sha256": "c0b176625fdb6bb7d08102f20bdd8ad78500cf094409f3a80fe085c2beedc068",
+    "source_resolved_method_sha256": "61522c09bbd3b3aba58ceed3427eedced3253303def8e377ed8b6b0406acb6b2",
+    "source_worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+    "source_energy_hartree": -74.96370108048038,
+    "energy_provenance": "Checkpoint e_tot matches the pinned accepted result; source energy is not recomputed here.",
+    "source_density_fit": true,
+    "requested_density_fit": false,
+    "maximum_coordinate_difference_bohr": 0.0,
+    "coordinate_tolerance_bohr": 1e-10,
+    "orbital_orthogonality_max_error": 1.1102230246251565e-15,
+    "density_electron_count": 9.999999999999996,
+    "copied_folder": "initial-checkpoint",
+    "source_files_modified": false,
+    "meaning": "Same-state same-geometry initial density only; requested SCF must independently converge.",
+    "requested_method_initial_scf_converged": true
+  },
+  "optimization": {
+    "requested": true,
+    "converged": true,
+    "settings": {
+      "enabled": true,
+      "max_steps": 40,
+      "freeze_atom_ids": [
+        "water/O"
+      ],
+      "dihedral_constraints": [],
+      "dihedral_tolerance_degrees": 0.1,
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": [
+      {
+        "cycle": 1,
+        "energy_hartree": -74.96361400506834,
+        "gradient_norm_hartree_per_bohr": 0.07548919603518453,
+        "scf_converged": true
+      },
+      {
+        "cycle": 2,
+        "energy_hartree": -74.96584343927364,
+        "gradient_norm_hartree_per_bohr": 0.01052184645351981,
+        "scf_converged": true
+      },
+      {
+        "cycle": 3,
+        "energy_hartree": -74.96589550181675,
+        "gradient_norm_hartree_per_bohr": 0.002121833094189609,
+        "scf_converged": true
+      },
+      {
+        "cycle": 4,
+        "energy_hartree": -74.96590036314065,
+        "gradient_norm_hartree_per_bohr": 0.0011685609798149429,
+        "scf_converged": true
+      },
+      {
+        "cycle": 5,
+        "energy_hartree": -74.96590119072688,
+        "gradient_norm_hartree_per_bohr": 6.80044966499296e-05,
+        "scf_converged": true
+      }
+    ],
+    "initial_dihedral_constraints": [],
+    "constraint_atom_indices_zero_based": [
+      0
+    ],
+    "constraint_file_sha256": "a354c8e5f16ed2d989dab8ea330493d94dcb7ac468883e0d5054f44b86c4da82",
+    "final_dihedral_constraints": [],
+    "dihedral_constraints_satisfied": true,
+    "max_frozen_displacement_bohr": 6.699217779929066e-11
+  },
+  "scf": {
+    "converged": true,
+    "cycles": 7,
+    "max_cycles": 100,
+    "conv_tol_hartree": 1e-10,
+    "conv_tol_grad": 1e-07
+  },
+  "energy_hartree": -74.96590119072691,
+  "atom_ids": [
+    "water/O",
+    "water/H1",
+    "water/H2"
+  ],
+  "elements": [
+    "O",
+    "H",
+    "H"
+  ],
+  "requested_threads": 2,
+  "actual_pyscf_threads": 1,
+  "charge": 0,
+  "spin_2S": 0,
+  "explicit_electron_count": 10,
+  "density_electron_count": 10.000000000000009,
+  "nao": 7,
+  "method": {
+    "method": "RHF",
+    "basis_requested": "sto-3g",
+    "ecp_requested": null,
+    "basis_sha256": "20ecc80f30bc2f269c85b01c4996643bb068087722a2c54829a5ce6d549c9849",
+    "ecp_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "spherical_basis": true,
+    "symmetry": false,
+    "density_fit": false,
+    "functional_requested": null,
+    "grid_level": null,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "resolved_method_file": "resolved-method.json",
+  "resolved_method_file_sha256": "e5bf669d0b3fc54081fa9bb437010635ec8e438667aebbfdc2de433abad41289",
+  "arrays_file": "arrays.npz",
+  "arrays_sha256": "7385a509e86149a2d1ceaeb7c951e1bbb3707400297db9e8312cd1d0f57b718d",
+  "checkpoint_file": "scf.chk",
+  "checkpoint_sha256": "0a1b9dbc7f7d8dda00d923caf72ebe0d2797380463d41ebe794abe94d0b03382",
+  "arrays": {
+    "coords_bohr": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "coords_angstrom": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "atomic_numbers": {
+      "shape": [
+        3
+      ],
+      "dtype": "int64"
+    },
+    "effective_nuclear_charges": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "gradient_hartree_per_bohr": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "units": {
+    "energy": "hartree",
+    "coords_bohr": "bohr",
+    "coords_angstrom": "angstrom",
+    "gradient_hartree_per_bohr": "hartree/bohr",
+    "hessian_hartree_per_bohr2": "hartree/bohr^2",
+    "esp_points_bohr": "bohr",
+    "esp_hartree_per_e": "hartree/e",
+    "effective_nuclear_charges": "e",
+    "bohr_to_angstrom": 0.52917721092,
+    "bohr_constant_source": "pyscf.lib.param.BOHR"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "pyscf": "2.14.0",
+    "numpy": "2.5.3",
+    "geometric": "1.1.1",
+    "libxc": "7.0.0"
+  },
+  "elapsed_seconds": 0.914242
+}

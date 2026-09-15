@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 517, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 372, in calculate
+    guess=initial_density(data,mol,out,report)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 289, in initial_density
+    raise ValueError('Initial checkpoint geometry differs; no density projection or coordinate transfer is permitted')
+ValueError: Initial checkpoint geometry differs; no density projection or coordinate transfer is permitted

@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Mag14011/CuCuSOD1_SI_CompMethods/fae9b1add7843d19e331786395475092e119ff95/README.md",
+    "file": "cucu-mismatch/README.md",
+    "sha256": "8173d3d5d892049c517f7e5e5cacb296d4e1d5470266f06e87cc5de9bcd9a239",
+    "retrieved_at": "2026-09-13T17:32:16.576766+00:00",
+    "commit": "fae9b1add7843d19e331786395475092e119ff95"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Mag14011/CuCuSOD1_SI_CompMethods/fae9b1add7843d19e331786395475092e119ff95/ForceFieldFiles/CuSite/ReducedCuSite.lib",
+    "file": "cucu-mismatch/ForceFieldFiles/CuSite/ReducedCuSite.lib",
+    "sha256": "86d738fc15975e26f4ac68e42dcd53ef068101e8f80b4c447e66d1fcbd22a7a9",
+    "retrieved_at": "2026-09-13T17:32:16.766824+00:00",
+    "commit": "fae9b1add7843d19e331786395475092e119ff95"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Mag14011/CuCuSOD1_SI_CompMethods/fae9b1add7843d19e331786395475092e119ff95/ForceFieldFiles/CuSite/ReducedCuSite.frcmod",
+    "file": "cucu-mismatch/ForceFieldFiles/CuSite/ReducedCuSite.frcmod",
+    "sha256": "61ec5f89ff1a865f985dde4acf4977dbdded5f16b51386e495fda40c6fd8b655",
+    "retrieved_at": "2026-09-13T17:32:16.938489+00:00",
+    "commit": "fae9b1add7843d19e331786395475092e119ff95"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Mag14011/CuCuSOD1_SI_CompMethods/fae9b1add7843d19e331786395475092e119ff95/ForceFieldFiles/ZnSite_NonBondedHis63/ReducedCuInZnSite.lib",
+    "file": "cucu-mismatch/ForceFieldFiles/ZnSite_NonBondedHis63/ReducedCuInZnSite.lib",
+    "sha256": "91fee8424bbb8b8f4988b9e5188917890221e9e58d7dd5993c6604cdd887f5e6",
+    "retrieved_at": "2026-09-13T17:32:17.113235+00:00",
+    "commit": "fae9b1add7843d19e331786395475092e119ff95"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Mag14011/CuCuSOD1_SI_CompMethods/fae9b1add7843d19e331786395475092e119ff95/ForceFieldFiles/ZnSite_NonBondedHis63/ReducedCuInZnSite.frcmod",
+    "file": "cucu-mismatch/ForceFieldFiles/ZnSite_NonBondedHis63/ReducedCuInZnSite.frcmod",
+    "sha256": "8a9c9c80559ac7b03a2fe6e45179edc59168469efaf0ee52b6563e2ae4a6cf09",
+    "retrieved_at": "2026-09-13T17:32:17.277346+00:00",
+    "commit": "fae9b1add7843d19e331786395475092e119ff95"
+  }
+]

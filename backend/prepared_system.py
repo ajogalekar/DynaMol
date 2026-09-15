@@ -101,7 +101,8 @@ def ligand_parameter_files(folder: Path, preparation: dict | None, *, required: 
     return [path for path, _ in _validated_xml(Path(folder), preparation, required=required)]
 
 
-def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent: str = "explicit"):
+def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent: str = "explicit",
+                            base_parameter_paths: dict[str, Path] | None = None):
     """Return ``(OpenMM ForceField, provenance_files)`` without changing state.
 
     Protein-only implicit GBn2 remains available. Ligand bundles are accepted
@@ -125,13 +126,26 @@ def load_prepared_forcefield(folder: Path, preparation: dict | None, *, solvent:
     if bundle is not None and solvent != "explicit":
         raise ValueError("Prepared protein–ligand complexes require explicit TIP3P water. GBn2 implicit parameters are not available for these ligands.")
     base = ["amber14/protein.ff14SB.xml", "implicit/gbn2.xml" if solvent == "implicit" else "amber14/tip3p.xml"]
+    base_inputs = base
+    if base_parameter_paths is not None:
+        # Internal snapshot callers have already verified these copied bytes,
+        # including all recursive XML Includes. Preserve the same named model
+        # instead of falling back to a possibly changed runtime distribution.
+        if not isinstance(base_parameter_paths, dict) or set(base_parameter_paths) != set(base):
+            raise ValueError('A pinned preparation must provide exactly its named protein and solvent base files.')
+        base_inputs = []
+        for name in base:
+            path = Path(base_parameter_paths[name]).absolute()
+            if not path.is_file() or any(part.is_symlink() for part in (path, *path.parents)):
+                raise ValueError('Pinned base force-field files must be existing regular files without symlinks.')
+            base_inputs.append(str(path))
     verified = _validated_xml(Path(folder), preparation)
     # Feed the verified bytes to OpenMM, not an unchecked second path read.
     supplemental = modified_forcefield_files(preparation or {})
     if modified:
         supplemental = [str(Path(folder) / "residue-parameters" / Path(path).name) for path in supplemental]
     identities = _ligand_atom_maps(bundle, verified)
-    forcefield = IdentityForceField(*base, *supplemental, *(io.StringIO(data.decode("utf-8")) for _, data in verified),
+    forcefield = IdentityForceField(*base_inputs, *supplemental, *(io.StringIO(data.decode("utf-8")) for _, data in verified),
                                    ligand_atom_maps=identities)
     if modified:
         register_modified_forcefield(forcefield)

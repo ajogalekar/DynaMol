@@ -1,0 +1,83 @@
+[
+  {
+    "file": "DynaMol-Ubiquitin \u00b7 in motion-frame-1.png",
+    "bytes": 390267,
+    "sha256": "2ade03c3be70679e902a2a2301868874773f52d725950df9a6364379044637f5",
+    "png_size": [
+      1968,
+      720
+    ]
+  },
+  {
+    "file": "DynaMol-Ubiquitin \u00b7 in motion-rmsf.csv",
+    "bytes": 2794,
+    "sha256": "609fd127ecd573f25a220e5ba15db85bc7cdd9d2fd39c3b0b5c3764293203db7",
+    "rows": 77,
+    "columns": [
+      "Selected residue",
+      "label",
+      "rmsf_angstrom"
+    ],
+    "sample": [
+      [
+        "1",
+        "A:MET1",
+        "0.2993397885279708"
+      ],
+      [
+        "2",
+        "A:GLN2",
+        "0.21789818434676272"
+      ]
+    ]
+  },
+  {
+    "file": "dynamol-angle-0-4-6.csv",
+    "bytes": 2391,
+    "sha256": "d69df54413a38182a6193d3c8887552883712f0f2eed49895f7760dd8ecde709",
+    "rows": 102,
+    "columns": [
+      "time_ps",
+      "angle_degrees"
+    ],
+    "sample": [
+      [
+        "0",
+        "109.81561279296875"
+      ],
+      [
+        "0.02",
+        "111.64887237548828"
+      ]
+    ]
+  },
+  {
+    "file": "DynaMol-project-464761304e74421e.zip",
+    "bytes": 21744881,
+    "sha256": "2659e7d59494b973176d4bb6848a134e60ab7b49a656a5c669271387bff5eabc",
+    "zip_error": null,
+    "entry_count": 88,
+    "entries": [
+      "dynamol-project.json",
+      "datasets/270d605111404b00/coordinates.bin",
+      "datasets/270d605111404b00/metadata.json",
+      "datasets/270d605111404b00/physical.npz",
+      "datasets/270d605111404b00/prepared.pdb",
+      "datasets/270d605111404b00/provenance.json",
+      "datasets/270d605111404b00/topology.pdb",
+      "datasets/6b582650d43b4124/atom-map.json",
+      "datasets/6b582650d43b4124/coordinates.bin",
+      "datasets/6b582650d43b4124/metadata.json",
+      "datasets/6b582650d43b4124/physical.npz",
+      "datasets/6b582650d43b4124/preparation.json",
+      "datasets/6b582650d43b4124/prepared.pdb",
+      "datasets/6b582650d43b4124/provenance.json",
+      "datasets/6b582650d43b4124/sequence-source.cif",
+      "datasets/6b582650d43b4124/topology.pdb",
+      "datasets/29d53f7cbfc544a9/coordinates.bin",
+      "datasets/29d53f7cbfc544a9/metadata.json",
+      "datasets/29d53f7cbfc544a9/physical.npz",
+      "datasets/29d53f7cbfc544a9/provenance.json"
+    ]
+  }
+]

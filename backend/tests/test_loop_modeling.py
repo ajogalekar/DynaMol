@@ -117,6 +117,25 @@ def test_failed_worker_preserves_failure_and_input_evidence(runtime,tmp_path,mon
     assert saved['status']=='failed' and saved['files']['loop-model-output.json']['sha256']
 
 
+def test_worker_progress_updates_once_per_phase_and_timeout_preserves_attempts(runtime,tmp_path,monkeypatch):
+    top,xyz,observed=scaffold();messages=[]
+    progress={'message':'Sampling conformations (2 gaps remaining)…',
+              'attempts':[{'method':'monte_carlo','status':'running'}]}
+    def timeout(command,folder,runtime,check_cancel):
+        (folder/'loop-model-progress.json').write_text(json.dumps(progress))
+        check_cancel();check_cancel()
+        raise TimeoutError('construction deadline')
+    monkeypatch.setattr(lm,'_run',timeout)
+    with pytest.raises(TimeoutError):
+        lm.generate_loop_model(top,xyz,observed,tmp_path/'attempt',2026,on_progress=messages.append)
+    assert messages.count(progress['message'])==1
+    saved=json.loads((tmp_path/'attempt/loop-model-provenance.json').read_text())
+    assert saved['status']=='failed'
+    assert saved['last_worker_progress']==progress
+    assert saved['native_build_attempts']==progress['attempts']
+    assert saved['files']['loop-model-progress.json']['sha256']
+
+
 def test_invalid_runtime_versions_fail_read_only(runtime):
     marker=runtime/'conda-meta/openmm-8.5.1-fixture.json'
     marker.write_text(json.dumps(dict(name='openmm',version='8.6.1')))

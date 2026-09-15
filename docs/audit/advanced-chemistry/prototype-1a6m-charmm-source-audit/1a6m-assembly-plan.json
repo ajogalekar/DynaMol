@@ -1,0 +1,164 @@
+{
+  "status": "Not runnable: additive all-atom sulfate model remains unresolved; no component removed.",
+  "source": {
+    "path": "inputs/1A6M.cif",
+    "source_url": "https://files.rcsb.org/download/1A6M.cif",
+    "sha256": "25ae24d2b518a7cb7ef24aeb1eb3fc5c35707ce4e696956d11b8f9fdf9fa7218",
+    "bytes": 358898
+  },
+  "assembly_choice": {
+    "id": "1",
+    "declaration": {
+      "id": "1",
+      "details": "author_defined_assembly",
+      "method_details": null,
+      "oligomeric_details": "monomeric",
+      "oligomeric_count": "1"
+    },
+    "generators": [
+      {
+        "assembly_id": "1",
+        "oper_expression": "1",
+        "asym_id_list": "A,B,C,D,E,F"
+      }
+    ],
+    "operators": [
+      {
+        "id": "1",
+        "type": "identity operation",
+        "name": "1_555",
+        "symmetry_operation": "x,y,z",
+        "matrix[1][1]": "1.0000000000",
+        "matrix[1][2]": "0.0000000000",
+        "matrix[1][3]": "0.0000000000",
+        "vector[1]": "0.0000000000",
+        "matrix[2][1]": "0.0000000000",
+        "matrix[2][2]": "1.0000000000",
+        "matrix[2][3]": "0.0000000000",
+        "vector[2]": "0.0000000000",
+        "matrix[3][1]": "0.0000000000",
+        "matrix[3][2]": "0.0000000000",
+        "matrix[3][3]": "1.0000000000",
+        "vector[3]": "0.0000000000"
+      }
+    ],
+    "label_chains": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "protein_chains": [
+      {
+        "label_chain": "A",
+        "author_chain": "A",
+        "entity_id": "1",
+        "sequence_length": 151,
+        "observed_residues": 151,
+        "internal_gaps": []
+      }
+    ],
+    "policy": "Use every component and operator in deposited assembly1. Other independent assemblies are excluded by this predeclared assembly choice; original input is preserved."
+  },
+  "source_atom_rows": 1584,
+  "selected_heavy_atoms": 1445,
+  "excluded_alternate_rows": 139,
+  "selected_residue_counts": {
+    "VAL": 8,
+    "LEU": 18,
+    "SER": 6,
+    "GLU": 14,
+    "GLY": 10,
+    "TRP": 2,
+    "GLN": 4,
+    "HIS": 12,
+    "ALA": 17,
+    "LYS": 19,
+    "ASP": 7,
+    "ILE": 9,
+    "ARG": 4,
+    "PHE": 6,
+    "PRO": 4,
+    "THR": 5,
+    "MET": 2,
+    "TYR": 3,
+    "ASN": 1,
+    "SO4": 2,
+    "HEM": 1,
+    "OXY": 1,
+    "HOH": 186
+  },
+  "model_variants": [
+    {
+      "id": "dryad-2015-baseline",
+      "topology": "top_heme.inp",
+      "topology_sha256": "0d8289719825311cf18485d4b908558a92a03129751c2cde5a155ee533039b55",
+      "published_saved_psf_matches": true
+    },
+    {
+      "id": "dryad-2015-updated-charges",
+      "topology": "top_heme_oxy_optimized_charges.inp",
+      "topology_sha256": "81f46815f176ff42cb77a1c1ec5706c017748252a50a417669b2c0befb8cf6a2",
+      "published_saved_psf_matches": false
+    }
+  ],
+  "parameter_file": {
+    "path": "non-zinc-models/dryad-oxy-myoglobin/par_all27.inp",
+    "sha256": "1a17325ae13d64cc863fe2dcd05935ff560f4bff5230d532ed9707f89663c8d6"
+  },
+  "patch_order": [
+    "PHEM PROA:93 HEME:154",
+    "PLO2 OXY:157 HEME:154 PROA:93"
+  ],
+  "protein_terminal_patches": {
+    "PROA:1:VAL": "NTER",
+    "PROA:151:TYR": "CTER"
+  },
+  "do_not_copy_horse_terminal_patch": "Saved horse PSF uses GLYP on GLY1; 1A6M begins VAL1 and requires its own NTER template.",
+  "additional_deposited_Fe_O2_contact": "Retain as source coordination evidence; published PLO2 creates only Fe-O1. No second Fe-O2 bond is generated.",
+  "water_model": "Published additive CHARMM TIP3 including hydrogen Lennard-Jones terms; retain all 186 source water oxygens and account for every added H.",
+  "sulfate_obligations": [
+    {
+      "label_chain": "B",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "155",
+      "insertion_code": null,
+      "component": "SO4",
+      "observed_heavy_atom_names": [
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "S"
+      ]
+    },
+    {
+      "label_chain": "C",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "156",
+      "insertion_code": null,
+      "component": "SO4",
+      "observed_heavy_atom_names": [
+        "O1",
+        "O2",
+        "O3",
+        "O4",
+        "S"
+      ]
+    }
+  ],
+  "protonation_obligations": [
+    "Explicitly assess nonproximal His states; proposed all-HSD alias mirrors deposited script, not an independent pKa determination.",
+    "HEM propionates and two SO4 groups retain declared dianion model states; partial Fe charge is not oxidation/spin evidence."
+  ],
+  "validation_remaining": [
+    "Complete matched sulfate topology, bonded terms and nonbonded parameters with provenance and redistribution terms.",
+    "Native full 1A6M PSF/coordinate build preserving every selected observed heavy atom.",
+    "Native/static energy-force and exception parity for entire CHARMM Hamiltonian.",
+    "Independent whole-site angular/torsion validation; no accuracy conclusion from zero-angle terms or intact bonds alone."
+  ]
+}

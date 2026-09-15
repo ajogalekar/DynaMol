@@ -1,0 +1,39 @@
+{
+  "atom_ids": [
+    "Be2+"
+  ],
+  "elements": [
+    "Be"
+  ],
+  "coords_bohr": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "charge": 2,
+  "spin": 0,
+  "method": "RHF",
+  "basis": "sto-3g",
+  "operations": [
+    "esp"
+  ],
+  "esp_points_bohr": [
+    [
+      0,
+      0,
+      30
+    ],
+    [
+      0,
+      0,
+      60
+    ],
+    [
+      0,
+      0,
+      120
+    ]
+  ]
+}

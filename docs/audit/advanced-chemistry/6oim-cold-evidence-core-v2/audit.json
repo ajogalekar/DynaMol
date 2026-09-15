@@ -1,0 +1,12 @@
+{
+  "status": "15_synthetic_tests_passed",
+  "source_pins": {
+    "recovery_cold_evidence_core.py": "fa403d08c0353a1e3f7ffe452108addff6735d1c33cf047746cd44806e4b69d6",
+    "test_recovery_cold_evidence_core.py": "ff2f16d13cb57662962f5ac12fc6dfca5eeff6e1dfc270b5f9cb28088bfee83d"
+  },
+  "old_core_preserved": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/cold-evidence-core-v1",
+  "actual_parent_endpoint_accepted": false,
+  "QM_launched": false,
+  "RESP_launched": false,
+  "physical_acceptance": false
+}

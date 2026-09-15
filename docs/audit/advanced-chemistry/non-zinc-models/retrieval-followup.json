@@ -1,0 +1,24 @@
+[
+  {
+    "file": "dryad-optimized-download",
+    "url": "https://datadryad.org/api/v2/files/1225/download",
+    "retrieved_at": "2026-09-13T17:31:42.955919+00:00",
+    "error": "HTTP Error 401: Unauthorized"
+  },
+  {
+    "file": "sod-torsions-si.json",
+    "url": "https://api.figshare.com/v2/articles/2233525",
+    "retrieved_at": "2026-09-13T17:31:42.956289+00:00",
+    "content_type": "application/json",
+    "sha256": "68b81982c79738f45e212dd9ca2a98ef72aeeeb261be0b8f769c4b3ec73d8e31",
+    "bytes": 6305
+  },
+  {
+    "file": "sod-allosteric-si.json",
+    "url": "https://api.figshare.com/v2/articles?resource_doi=10.1021/acs.jpclett.9b02868",
+    "retrieved_at": "2026-09-13T17:31:42.956584+00:00",
+    "content_type": "application/json",
+    "sha256": "aa60da292ca4c76fd64bd4c13c76113cfda0e6c8f14fbfc2cea30d7dc083dde6",
+    "bytes": 1380
+  }
+]

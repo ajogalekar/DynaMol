@@ -1,0 +1,157 @@
+{
+  "status": "completed_native_double_precision_discriminator",
+  "raw_absolute_periodic_parity": "not_declared",
+  "scope": "Only two nsteps=0 evaluations of the unchanged TPR, using one and two CPU threads. No new MD or scientific-parameter changes.",
+  "raw_results": {
+    "status": "completed",
+    "scope": "Native double-precision zero-step discriminator only; no MD, changed TPR, parameter edits or arbitrary energy offsets.",
+    "elapsed_seconds": 3.646540207962971,
+    "source_archive_sha256": "ca17720b4a260eb73649211e9f6a940ee7543452129844213c3accb0a927a5c3",
+    "native_executable": "/Users/ashujo/.cache/dynamol-native-builds/gromacs-2025.4-double-v1/build/bin/gmx_d",
+    "native_executable_sha256": "d6cd47def235332e6c528bf700af5458fe66f6b56ef8a2389b2240304d8e16b9",
+    "native_compiler_difference": "AppleClang /usr/bin/clang++; arm64 Release; differs from bundled conda Clang19, recorded as an additional build difference",
+    "openmm_reference_energy_kj_mol": -429191.2916377305,
+    "cases": [
+      {
+        "threads": 2,
+        "command": [
+          "/Users/ashujo/.cache/dynamol-native-builds/gromacs-2025.4-double-v1/build/bin/gmx_d",
+          "mdrun",
+          "-s",
+          "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/matched-mesh/diagnostic.tpr",
+          "-deffnm",
+          "double",
+          "-ntmpi",
+          "1",
+          "-ntomp",
+          "2",
+          "-nb",
+          "cpu",
+          "-notunepme"
+        ],
+        "energy_command": [
+          "/Users/ashujo/.cache/dynamol-native-builds/gromacs-2025.4-double-v1/build/bin/gmx_d",
+          "energy",
+          "-f",
+          "double.edr",
+          "-o",
+          "energy.xvg",
+          "-xvg",
+          "none",
+          "-dp"
+        ],
+        "stored_trr_precision_bytes": 8,
+        "components_kj_mol": {
+          "Bond": 3032.926903036823,
+          "Angle": 8989.997816472638,
+          "Proper-Dih.": 13028.026563085808,
+          "Per.-Imp.-Dih.": 496.670754485063,
+          "LJ-14": 3925.419924536789,
+          "Coulomb-14": 52261.90102583567,
+          "LJ-(SR)": 52860.29565122781,
+          "Disper.-corr.": -2395.302924765479,
+          "Coulomb-(SR)": -565353.7184919886,
+          "Coul.-recip.": 3962.08239205576,
+          "Potential": -429191.7003860177
+        },
+        "energy_difference_from_openmm_reference_kj_mol": -0.40874828718369827,
+        "maximum_coordinate_difference_from_original_nm": 0.0,
+        "maximum_minimum_image_coordinate_difference_nm": 0.0,
+        "maximum_box_difference_nm": 0.0,
+        "maximum_force_vector_difference_kj_mol_nm": 0.007062158682990017,
+        "rms_force_vector_difference_kj_mol_nm": 0.0012434450005620024,
+        "finite_full_system_forces": true,
+        "input_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "output_hashes": {
+          "double.trr": "47a6ba0c42161896a1aa66ce2c36b01917015e2c866ef33ffe6ca234f55ba8c6",
+          "double.edr": "a03caa99dffc0ed1edb534d34640af33caf81999846f4eda82291f9d525d1734",
+          "energy.xvg": "cd555ef9e867261d48475b96d02644f62fbd935681a5b0d67a5688786eb6108c",
+          "double-frame.npz": "11d1e9f4773a4374dd4712b4225d7a1a79f0657c3be173106bf672704db6433d"
+        }
+      },
+      {
+        "threads": 1,
+        "command": [
+          "/Users/ashujo/.cache/dynamol-native-builds/gromacs-2025.4-double-v1/build/bin/gmx_d",
+          "mdrun",
+          "-s",
+          "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/matched-mesh/diagnostic.tpr",
+          "-deffnm",
+          "double",
+          "-ntmpi",
+          "1",
+          "-ntomp",
+          "1",
+          "-nb",
+          "cpu",
+          "-notunepme"
+        ],
+        "energy_command": [
+          "/Users/ashujo/.cache/dynamol-native-builds/gromacs-2025.4-double-v1/build/bin/gmx_d",
+          "energy",
+          "-f",
+          "double.edr",
+          "-o",
+          "energy.xvg",
+          "-xvg",
+          "none",
+          "-dp"
+        ],
+        "stored_trr_precision_bytes": 8,
+        "components_kj_mol": {
+          "Bond": 3032.926903036829,
+          "Angle": 8989.997816472598,
+          "Proper-Dih.": 13028.026563085801,
+          "Per.-Imp.-Dih.": 496.670754485063,
+          "LJ-14": 3925.419924536809,
+          "Coulomb-14": 52261.90102583538,
+          "LJ-(SR)": 52860.29565122785,
+          "Disper.-corr.": -2395.302924765479,
+          "Coulomb-(SR)": -565353.7184922437,
+          "Coul.-recip.": 3962.082392055273,
+          "Potential": -429191.7003862736
+        },
+        "energy_difference_from_openmm_reference_kj_mol": -0.4087485431227833,
+        "maximum_coordinate_difference_from_original_nm": 0.0,
+        "maximum_minimum_image_coordinate_difference_nm": 0.0,
+        "maximum_box_difference_nm": 0.0,
+        "maximum_force_vector_difference_kj_mol_nm": 0.007062158683052756,
+        "rms_force_vector_difference_kj_mol_nm": 0.0012434450005607358,
+        "finite_full_system_forces": true,
+        "input_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "output_hashes": {
+          "double.trr": "c4fcba310bd34da7a220f4def065d528a94674c2704b971aa94f27cd0fc4066b",
+          "double.edr": "008f115f7e22779930ebe769be259913d60d089833e6b1bffae46c6b55bcc099",
+          "energy.xvg": "6b06689c55669f18814aab60329ea2582e2f372142995a7effe9fc5ade4e1fa4",
+          "double-frame.npz": "1dccf171a745cb9b5cb75babf3a46a19adb636e2552d66d14201dff26e91d411"
+        }
+      }
+    ],
+    "thread_energy_difference_1_minus_2_kj_mol": -2.559390850365162e-07,
+    "thread_force_rms_vector_difference_kj_mol_nm": 3.468175252045448e-13,
+    "thread_coordinate_arrays_exact": true,
+    "original_installed_binary_unchanged": true,
+    "raw_periodic_differences_retained": true,
+    "interpretation": "Evaluate the measured precision/thread effects and remaining explicit energy conventions separately. This runtime comparison is not chemical-model validation."
+  },
+  "runtime_evidence": "build/advanced-chemistry/gromacs-double-v1/runtime-evidence.json",
+  "previous_mixed_thread_energy_difference_1_minus_2_kj_mol": -41.71875,
+  "double_thread_energy_difference_1_minus_2_kj_mol": -2.559390850365162e-07,
+  "component_bookkeeping": {
+    "source": "Existing paired OpenMM dispersion-on/off component calculation and actual double native energy components; explanatory decomposition only, never an applied energy offset.",
+    "openmm_dispersion_correction_kj_mol": -2394.8459132649004,
+    "double_native_dispersion_correction_kj_mol": -2395.302924765479,
+    "native_minus_openmm_dispersion_correction_kj_mol": -0.45701150057857376,
+    "raw_total_difference_kj_mol": -0.40874828718369827,
+    "remaining_difference_after_identifying_this_component_kj_mol": 0.04826321339487549
+  },
+  "interpretation": "The large thread-dependent scalar energy discrepancy collapses in the double runtime while all coordinates and the box remain bitwise identical. Combined with the prior direct-space localization, this strongly supports a native numerical-accumulation cause rather than a missing metal force-field term. Precision was not the only build variable: compiler and optional components also differ. The smaller raw absolute residual remains recorded and no exact periodic-parity or chemical-validity claim is made.",
+  "source_and_output_hashes": {
+    "build/advanced-chemistry/gromacs-double-v1/double-static-comparison.json": "b60f21bc9b7ad6c1e552688f77908abf38cc4595ddec3460f0600f33e5376b77",
+    "build/advanced-chemistry/gromacs-double-v1/runtime-evidence.json": "0996dba4c90e206173bed4ed9ffe661a9d944df8bf38691236c8e7fd06e825c2",
+    "docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/openmm-reference.json": "babda85edfca6ec7bff67ce19787fc3382ac0bffb07a78875ce6f1c52f54f758",
+    "docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/openmm-reference.npz": "84c3b4a7430b57db031ca3b6e6823eda5a241a7b532510e63d4f760e87f39df6",
+    "docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/openmm-components.json": "743fe38910213cd0de62b3aac2ede774f1e08203cc5662fb4780ad5796b6dba0",
+    "docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/review-periodic-localization.json": "d7102359fc49736773daae03f69afc004828c7259a927b6cbdbc58c9721aaac5"
+  }
+}

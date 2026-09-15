@@ -1,0 +1,178 @@
+# Full-complex handoff and loop follow-up, 14 September 2026
+
+Corrected KRAS, BTK and the 6JX0 EGFR control now have actual 20 ps unrestrained GROMACS
+continuations from their audited OpenMM endpoints. They use the same molecular
+parameters, 300 K stochastic velocity rescaling, 1 bar stochastic cell rescaling,
+PME and constrained hydrogen bonds/rigid water. These are engine-handoff tests,
+not independent preparations or force-field accuracy validation.
+
+| Case | Atoms | Saved frames | Mean temperature | Attachment range |
+| --- | ---: | ---: | ---: | ---: |
+| BTK 5P9J | 36,093 | 21 | 299.37 K | 1.805–1.916 Å |
+| EGFR 6JX0 | 53,791 | 21 | 299.54 K | 1.764–1.899 Å |
+| KRAS 6OIM corrected | 27,477 | 21 | 299.77 K | 1.792–1.929 Å |
+
+All three runs have finite saved forces, retained mapped stereochemistry and no
+LINCS warnings. Inputs, velocities and source atom order are checked. The
+complete topology comparisons in OpenMM Reference match within the fixed
+0.001 kJ/mol energy and 0.01 kJ/mol/nm force-component tolerances. This reader
+comparison is distinct from native GROMACS arithmetic. Raw outputs are
+`5p9j-gromacs-continuation-v3`, `6jx0-gromacs-continuation-v1` and
+`6oim-gromacs-continuation-v2` in the cache.
+
+The first BTK harness attempt incorrectly expected a topology loaded with
+`xyz=` to contain velocities; reading the GRO container separately fixed the
+check. The next attempt exposed cumulative decimal rounding in the text
+export. `precise_gromacs_export.py` restores native LJ, charge, mass and 1–4
+scaling precision, with explicit ambiguity rejection and no fitting. This
+reduces full-BTK energy discrepancy from 0.00415 to 0.0000443 kJ/mol.
+Failed attempts remain preserved. No application converter was changed.
+
+## KRAS correction required by the engine comparison
+
+The first KRAS full-complex handoff was correctly rejected: constraint counts
+differed by 12, with a 17.7 kJ/mol energy discrepancy. This was not a new force
+field problem. Renaming GDP atom types to an isolated Q-prefixed namespace
+left all 40 native element entries unspecified. ParmEd's mass-based inference
+masked this in an earlier inventory check; OpenMM read the native metadata and
+omitted the 12 GDP hydrogen constraints. The original KRAS run is preserved,
+but is superseded as a test of the intended hydrogen-constraint protocol.
+
+`native_elements.py` now rejects unspecified elements in these all-atom
+research models. Native LEaP declarations bind each renamed atom to its
+explicit source element. Integer atom selectors avoid native parsing of `*`
+in sugar atom names. The rejected name-selector attempt is preserved.
+`gdp-scoped-v6` passes exact source-element and three unconstrained energy/force
+comparisons. The complete dry complex's unconstrained mechanics are unchanged
+to 1.1e-11 kJ/mol and 9.1e-13 kJ/mol/nm. No charges or force constants were fitted.
+
+The corrected `6oim-complex-v3` retains all original protein, GDP, Mg and water
+atoms. Fresh solvation adds one more bulk water than the earlier build, giving
+27,477 atoms and 26,041 constraints. Its new 100 ps OpenMM run in
+`6oim-stability-v2` completed with all 100 saved frames audited and a verified
+portable restart. Mean unrestrained temperature is 300.377 K, final density
+1.024319 g/mL, and the unconstrained drug attachment ranges 1.762–1.956 Å.
+
+The corrected GROMACS handoff preserves all 26,041 constraints; Reference-reader
+energy and maximum force-component differences are -2.6583e-5 kJ/mol and
+1.4169e-5 kJ/mol/nm. Native 20 ps dynamics completed in 73.3 seconds on two CPU
+threads, with 21 checked frames and no LINCS warnings. The Mg–GDP physical-model
+concern remains: corrected OpenMM and GROMACS sampled Mg–O2B means are 1.887 Å
+and 1.899 Å versus 2.157 Å initially. Corrected metadata is not its resolution.
+
+## Original EGFR loop candidate
+
+The report-only native context audit supplies a geometrically coherent seed.
+Importing that context and applying the existing minimizer alone still fails
+one C–N–CA angle (155.9 degrees). A separate candidate adds temporary backbone
+angle construction forces using native equilibrium angles and four times the
+native angular strength, in addition to the unchanged original force field.
+Those forces exist only during construction and are not exported for MD.
+
+`6jxt-coherent-context-v2` passes the existing independent geometry and
+stereochemistry checks. Its maximum observed-context displacement is 0.789 Å,
+below the unchanged 1 Å bound. Exact source identities, modeled residues and
+all changed context atoms are recorded. Its subsequent retained-environment
+screen **fails**: rebuilt GLY A873 carbonyl oxygen is 1.022 Å from deposited
+water D1226 oxygen. The screen includes all 87 retained nonprotein heavy atoms
+and all modeled or changed-context residues; stereochemistry and the 1 Å
+displacement limit still pass after the PDB roundtrip. Evidence is
+`6jxt-retained-environment-check-v1`, generated by `check_loop_environment.py`.
+
+The water and failed candidate remain unchanged. This exposes a general gap:
+the local protein-only refinement did not include retained molecules. A repair
+must account for that environment, then pass independent geometry and stereo
+checks before complete assembly and dynamics. Broader loop-panel regression
+remains before app integration. The earlier failures, including
+`6jxt-coherent-context-v1`, remain retained.
+
+## Retained environment correction and complete 6JXT assembly
+
+`6jxt-coherent-context-v3` adds temporary, fixed steric obstacles for all 87
+retained nonprotein heavy atoms against every modeled/context heavy atom.
+There are 7,917 pairs, without a stale initial-neighbor selection. The temporary
+flat-bottom radial construction strength is 100,000 kJ/mol/nm², with a target
+of 0.9 times summed elemental screening radii. These are geometric construction
+aids; they omit environment electrostatics and are not physical ligand/ion
+parameters. Existing backbone construction forces and the independent geometry,
+stereo and 1 Å displacement limits are unchanged. No source water moves.
+
+The previous 1.022 Å GLY A873 O–water D1226 O contact is now 2.899 Å. Independent
+PDB-roundtrip validation in `6jxt-retained-environment-check-v2` passes, with zero
+external soft overlaps, maximum observed-context displacement 0.78935 Å and
+exactly unchanged unselected heavy atoms. One internal soft overlap remains
+flagged for complete-complex minimization. The local minimizer took 3.78 seconds;
+this is not a physical force-field or native-loop validation.
+
+`export_loop_intermediate.py` binds the passing audit to unchanged source hashes
+and produces `6jxt-protein-v5`. Histidine labels only express hydrogen patterns
+already present in the screened candidate. No coordinates or retained molecules
+change during export. `assemble_complex.py --protein` explicitly selects this
+intermediate, preserving rejected v1–v4 folders. Native assembly checks adduct
+charges, bonds, peptide boundaries, elements and retained atom coordinates.
+
+The resulting `6jxt-complex-v1` has 4,861 dry atoms and 42,900 solvated atoms.
+All four rebuilt residues, the full covalent drug, chloride and 49 deposited
+waters are retained. The original covalent cysteine heavy atoms do not move.
+`check_complex_loops.py` maps source loop/context identities into the complete
+native topology and passes its initial geometry/stereo screen. The native
+system contains ordinary bonded/nonbonded terms and no construction forces.
+
+A 100 ps test launched in `6jxt-stability-v1`, under the existing two-thread,
+two-hour/4 GB observed bounds. The optional loop monitor writes geometry and
+standard-protein stereo checks before/after minimization and at each saved ps,
+and stops on rejection. The same heating/NPT schedule and unconstrained drug
+attachment are retained. This first test was rejected at 1 ps, as detailed below.
+Saved-file audit, native GROMACS continuation and broader regression remain.
+Implementation snapshots accompany the new construction, export, assembly and
+stability artifacts. No app source, QM parameters, packaging or release changed.
+
+### Residual peptide strain during native dynamics
+
+The ALA750–THR751 peptide omega is -172.720° after assembly, -147.701° after
+full-complex minimization, and -143.066° at the first saved ps. The last value
+departs 36.934° from planarity, beyond the unchanged 35° gross screen. Standard
+protein stereochemistry, nonbonded collision and bond-angle checks still pass.
+The loop monitor stopped the run and retained the frame and full rejection
+report. `loop-failure-diagnosis.json` records the specific native/source atoms.
+
+The normal warm-up restrains all protein heavy atoms, including uncertain rebuilt
+positions. A separate `6jxt-stability-v2` test excludes only the mapped rebuilt
+and adjusted-context residues from those positional restraints. The source model,
+native force field, temperature/pressure schedule and all admission limits are
+unchanged; no temporary construction force is reintroduced. Its hypothesis is
+that the uncertain starting region needs to relax freely while the rest of the
+protein equilibrates. That test subsequently stopped at 7 ps on the same peptide,
+at a 38.383° deviation, so the change alone did not resolve the concern. Both
+runs and their implementation snapshots remain unchanged.
+
+The [planarity control analysis](PEPTIDE-PLANARITY-DIAGNOSTIC.md) subsequently
+found occasional excursions beyond the static preparation cutoff in all three
+completed controls, alongside a larger persistent bias at the repaired EGFR
+peptide. The separate `6jxt-stability-diagnostic-v3` completed 100 ps with 20
+recorded loop-geometry failure frames. Independent DCD replay confirms every
+recorded peptide angle and failure; all 100 saved frames, final coordinates/box
+and a portable restart are verified. These checks preserve diagnostic-only
+status and do not qualify a GROMACS handoff.
+
+The target peptide's mean departure from planarity falls from 35.03 degrees
+during restrained NPT to 11.20 degrees during the final unrestrained 70 ps.
+The comparison `6jxt-stability-diagnostic-v4` completed 100 ps, releasing positional
+restraints after the same initial minimization and before heating. Inputs,
+native force-field parameters and temperature/pressure schedule are otherwise
+unchanged. Its 100 saved frames and portable restart are verified. The target
+peptide improves in 11–30 ps (mean deviation 17.00 versus 35.03 degrees) but is
+more distorted in 31–100 ps (23.14 versus 11.20 degrees). Thirteen loop/context
+frames remain flagged. This mixed result does not justify a default warm-up
+change; both runs remain diagnostic and unqualified. The native local atom,
+bond, angle, proper and improper torsion terms at ALA750/THR751 match the 6JX0
+control exactly, so those assigned local terms do not explain their difference.
+Local conformation and nonbonded environment remain to assess.
+
+Separately, `6jxt-native-relaxation-v1` minimized the entire native complex
+without positional restraints. It passes its initial geometry/stereo checks,
+but leaves the target peptide 33.41 degrees from planarity and moves observed
+context up to 4.39 Å relative to the assembled input. This is not an improved
+local-preparation candidate, does not meet the earlier local displacement cap,
+and supplies no coordinates to v4. Its original output is retained. Do not
+restart either failed qualification attempt or promote a diagnostic endpoint.

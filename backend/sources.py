@@ -43,22 +43,28 @@ def _source_metadata(data, suffix, provenance):
             "source_sha256": hashlib.sha256(data).hexdigest(), "retrieved_at": dt.datetime.now(dt.timezone.utc).isoformat()}
 
 
-def _save(traj, name, data, suffix, provenance, warnings, chemistry=None, sdf=None):
+def _save(traj, name, data, suffix, provenance, warnings, chemistry=None, sdf=None, native=None):
     dataset_id = uuid.uuid4().hex[:16]
     try:
-        return _save_files(traj, name, data, suffix, provenance, warnings, chemistry, sdf, dataset_id)
+        return _save_files(traj, name, data, suffix, provenance, warnings, chemistry, sdf, dataset_id, native)
     except Exception:
         # A serializer or sidecar failure must never publish a partial import.
         shutil.rmtree(dataset_dir(dataset_id), ignore_errors=True)
         raise
 
 
-def _save_files(traj, name, data, suffix, provenance, warnings, chemistry, sdf, dataset_id):
+def _save_files(traj, name, data, suffix, provenance, warnings, chemistry, sdf, dataset_id, native=None):
     provenance = _source_metadata(data, suffix, provenance)
     original_chains = [chain.chain_id for chain in traj.topology.chains]
+    exact_pdb = None
+    if native is not None:
+        from openmm import app, unit
+        output = io.StringIO()
+        app.PDBFile.writeFile(native.topology, traj.xyz[0] * unit.nanometer, output, keepIds=True)
+        exact_pdb = output.getvalue()
     metadata = save_dataset(traj, name, provenance.get("provider", "upload"),
                             "Imported molecular structure" if not provenance.get("conformer") else "Computed 3D conformer for viewing; MD parameters are not assigned.",
-                            warnings=warnings, provenance=provenance, dataset_id=dataset_id)
+                            warnings=warnings, provenance=provenance, dataset_id=dataset_id, exact_pdb=exact_pdb)
     folder = dataset_dir(metadata["id"])
     (folder / provenance["source_file"]).write_bytes(data)
     metadata.update(source_file=provenance["source_file"], source_format=provenance["source_format"])
@@ -278,7 +284,7 @@ def import_structure(path, name=None, provenance=None):
         metadata.update(source_file=combined["source_file"], source_format=combined["source_format"])
         atomic_json(folder / "metadata.json", metadata)
         return metadata
-    chemistry, sdf = None, None
+    chemistry, sdf, native = None, None, None
     warnings = []
     try:
         if suffix == ".mol2":
@@ -308,9 +314,31 @@ def import_structure(path, name=None, provenance=None):
         else:
             if suffix == ".pdb":
                 traj = md.load_frame(str(path), 0)
+                from openmm import app
+                native = app.PDBFile(str(path))
             else:
                 from openmm import app, unit
-                cif = app.PDBxFile(str(path))
+                import gemmi
+                # OpenMM reads struct_conn bonds without applying their crystal
+                # symmetry. A different-image endpoint is not an atom in this
+                # loaded coordinate model; keep those records in the original
+                # source while excluding them from a private parser view.
+                document = gemmi.cif.read_file(str(path))
+                structure = gemmi.make_structure_from_block(document.sole_block())
+                from .sequence_evidence import different_image_connection_ids
+                different_images = different_image_connection_ids(document.sole_block())
+                omitted = [link.name for link in structure.connections if link.name in different_images]
+                if omitted:
+                    table = document.sole_block().find_mmcif_category("_struct_conn.")
+                    id_column = list(table.tags).index("_struct_conn.id")
+                    for index in reversed(range(len(table))):
+                        if gemmi.cif.as_string(table[index][id_column]) in omitted:
+                            table.remove_row(index)
+                    provenance = {**(provenance or {}), "excluded_symmetry_connection_ids": omitted,
+                                  "symmetry_connection_scope": "Different crystallographic images are absent from the loaded coordinate unit; original connection records remain in the unchanged source."}
+                    warnings.append(f"{len(omitted)} source connection(s) to crystallographic symmetry mates are recorded but are not bonds between the loaded atoms.")
+                cif = app.PDBxFile(io.StringIO(document.as_string()))
+                native = cif
                 traj = md.Trajectory(np.asarray(cif.positions.value_in_unit(unit.nanometer))[None], md.Topology.from_openmm(cif.topology), time=[0])
                 vectors = cif.topology.getPeriodicBoxVectors()
                 if vectors is not None:
@@ -320,7 +348,7 @@ def import_structure(path, name=None, provenance=None):
         raise ValueError(f"Could not import this structure: {exc}") from exc
     if not any(a.residue.is_protein for a in traj.topology.atoms):
         warnings.append("This structure can be viewed and measured; the current automatic MD presets require a standard protein.")
-    return _save(traj, _name(name, path.stem), data, suffix, provenance, warnings, chemistry, sdf)
+    return _save(traj, _name(name, path.stem), data, suffix, provenance, warnings, chemistry, sdf, native)
 
 
 class _NoRedirect(urllib.request.HTTPRedirectHandler):

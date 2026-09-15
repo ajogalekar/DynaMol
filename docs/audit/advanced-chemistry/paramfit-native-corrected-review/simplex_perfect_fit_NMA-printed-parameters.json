@@ -1,0 +1,272 @@
+{
+  "initial": {
+    "bond|CT|HC|": {
+      "Kr": 340.0,
+      "r_eq": 1.09
+    },
+    "bond|CT|H1|": {
+      "Kr": 340.0,
+      "r_eq": 1.09
+    },
+    "bond|N|H|": {
+      "Kr": 434.0,
+      "r_eq": 1.01
+    },
+    "bond|C|O|": {
+      "Kr": 570.0,
+      "r_eq": 1.229
+    },
+    "bond|C|N|": {
+      "Kr": 490.0,
+      "r_eq": 1.335
+    },
+    "bond|CT|C|": {
+      "Kr": 317.0,
+      "r_eq": 1.522
+    },
+    "bond|N|CT|": {
+      "Kr": 337.0,
+      "r_eq": 1.449
+    },
+    "angle|C|N|H|": {
+      "Kt": 50.0,
+      "th_eq": 120.0001
+    },
+    "angle|HC|CT|C|": {
+      "Kt": 50.0,
+      "th_eq": 109.5
+    },
+    "angle|HC|CT|HC|": {
+      "Kt": 35.0,
+      "th_eq": 109.5
+    },
+    "angle|H1|CT|H1|": {
+      "Kt": 35.0,
+      "th_eq": 109.5
+    },
+    "angle|H|N|CT|": {
+      "Kt": 50.0,
+      "th_eq": 118.0401
+    },
+    "angle|N|CT|H1|": {
+      "Kt": 50.0,
+      "th_eq": 109.5
+    },
+    "angle|O|C|N|": {
+      "Kt": 80.0,
+      "th_eq": 122.9001
+    },
+    "angle|C|N|CT|": {
+      "Kt": 50.0,
+      "th_eq": 121.9001
+    },
+    "angle|CT|C|O|": {
+      "Kt": 80.0,
+      "th_eq": 120.4001
+    },
+    "angle|CT|C|N|": {
+      "Kt": 70.0,
+      "th_eq": 116.6
+    },
+    "proper|O|C|N|H|1.0": {
+      "Kp": 2.0,
+      "Np": 1.0,
+      "Phase": 0.0
+    },
+    "proper|O|C|N|H|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|C|N|CT|H1|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "proper|HC|CT|C|O|1.0": {
+      "Kp": 0.8,
+      "Np": 1.0,
+      "Phase": 0.0
+    },
+    "proper|HC|CT|C|O|3.0": {
+      "Kp": 0.08,
+      "Np": 3.0,
+      "Phase": 180.0001
+    },
+    "proper|HC|CT|C|O|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "proper|HC|CT|C|N|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "proper|CT|C|N|H|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|H|N|CT|H1|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "improper|C|CT|N|H|2.0": {
+      "Kp": 1.1,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|O|C|N|CT|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|CT|C|N|CT|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "improper|CT|N|C|O|2.0": {
+      "Kp": 10.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    }
+  },
+  "final": {
+    "bond|CT|HC|": {
+      "Kr": 340.0,
+      "r_eq": 1.09
+    },
+    "bond|CT|H1|": {
+      "Kr": 340.0,
+      "r_eq": 1.09
+    },
+    "bond|N|H|": {
+      "Kr": 434.0,
+      "r_eq": 1.01
+    },
+    "bond|C|O|": {
+      "Kr": 570.0,
+      "r_eq": 1.229
+    },
+    "bond|C|N|": {
+      "Kr": 490.0,
+      "r_eq": 1.335
+    },
+    "bond|CT|C|": {
+      "Kr": 317.0,
+      "r_eq": 1.522
+    },
+    "bond|N|CT|": {
+      "Kr": 337.0,
+      "r_eq": 1.449
+    },
+    "angle|C|N|H|": {
+      "Kt": 50.0,
+      "th_eq": 120.0001
+    },
+    "angle|HC|CT|C|": {
+      "Kt": 50.0,
+      "th_eq": 109.5
+    },
+    "angle|HC|CT|HC|": {
+      "Kt": 35.0,
+      "th_eq": 109.5
+    },
+    "angle|H1|CT|H1|": {
+      "Kt": 35.0,
+      "th_eq": 109.5
+    },
+    "angle|H|N|CT|": {
+      "Kt": 50.0,
+      "th_eq": 118.0401
+    },
+    "angle|N|CT|H1|": {
+      "Kt": 50.0,
+      "th_eq": 109.5
+    },
+    "angle|O|C|N|": {
+      "Kt": 80.0,
+      "th_eq": 122.9001
+    },
+    "angle|C|N|CT|": {
+      "Kt": 50.0,
+      "th_eq": 121.9001
+    },
+    "angle|CT|C|O|": {
+      "Kt": 80.0,
+      "th_eq": 120.4001
+    },
+    "angle|CT|C|N|": {
+      "Kt": 70.0,
+      "th_eq": 116.6
+    },
+    "proper|O|C|N|H|1.0": {
+      "Kp": 1.9981,
+      "Np": 1.0,
+      "Phase": 0.0
+    },
+    "proper|O|C|N|H|2.0": {
+      "Kp": 2.5004,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|C|N|CT|H1|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "proper|HC|CT|C|O|1.0": {
+      "Kp": 0.8,
+      "Np": 1.0,
+      "Phase": 0.0
+    },
+    "proper|HC|CT|C|O|3.0": {
+      "Kp": 0.08,
+      "Np": 3.0,
+      "Phase": 180.0001
+    },
+    "proper|HC|CT|C|O|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "proper|HC|CT|C|N|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "proper|CT|C|N|H|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|H|N|CT|H1|2.0": {
+      "Kp": 0.0,
+      "Np": 2.0,
+      "Phase": 0.0
+    },
+    "improper|C|CT|N|H|2.0": {
+      "Kp": 1.1,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|O|C|N|CT|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "proper|CT|C|N|CT|2.0": {
+      "Kp": 2.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    },
+    "improper|CT|N|C|O|2.0": {
+      "Kp": 10.5,
+      "Np": 2.0,
+      "Phase": 180.0001
+    }
+  }
+}

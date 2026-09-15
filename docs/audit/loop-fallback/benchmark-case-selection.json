@@ -1,0 +1,1320 @@
+{
+  "frozen_at": "2026-09-13T06:20:21.387746+00:00",
+  "scope": "15 distinct experimental PDB entries with actual sequence-supported internal gaps; native preparation only. Selection considers protein/ligand categories and gap lengths before any native preparation outcomes. This convenience panel is not a random or universal success-rate estimate.",
+  "original_source_files_unchanged": true,
+  "source_screening_inventory": "benchmark-screening-inventory.json",
+  "source_screening_sha256": "7fb1c684c3736003e0bcd495282142e4af6e7be78f8ab46a34e639d8cfc470eb",
+  "inventory_data_dir": "/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/dynamol-loop-benchmark-inventory-_84wlugd",
+  "cases": [
+    {
+      "id": "8K5R",
+      "pdb_id": "8K5R",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/8K5R.cif",
+      "input_sha256": "1eb1ad85ceb3565f573dd787661b5609de7f6339e298a3bdd6ce26736d0702d6",
+      "source_url": "https://files.rcsb.org/download/8K5R.cif",
+      "protein_identity": "Cyclin-dependent kinase 9",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 6,
+          "label_sequence_ids": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "residues": [
+            "GLY",
+            "GLN",
+            "GLY",
+            "THR",
+            "PHE",
+            "GLY"
+          ],
+          "author_residue_ids": [
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        },
+        {
+          "length": 4,
+          "label_sequence_ids": [
+            92,
+            93,
+            94,
+            95
+          ],
+          "residues": [
+            "TYR",
+            "ASN",
+            "ARG",
+            "CYS"
+          ],
+          "author_residue_ids": [
+            "92",
+            "93",
+            "94",
+            "95"
+          ]
+        },
+        {
+          "length": 3,
+          "label_sequence_ids": [
+            177,
+            178,
+            179
+          ],
+          "residues": [
+            "ALA",
+            "LYS",
+            "ASN"
+          ],
+          "author_residue_ids": [
+            "177",
+            "178",
+            "179"
+          ]
+        },
+        {
+          "length": 4,
+          "label_sequence_ids": [
+            261,
+            262,
+            263,
+            264
+          ],
+          "residues": [
+            "LEU",
+            "TYR",
+            "GLU",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "261",
+            "262",
+            "263",
+            "264"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "VQE"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "1UA2",
+      "pdb_id": "1UA2",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1UA2.cif",
+      "input_sha256": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+      "source_url": "https://files.rcsb.org/download/1UA2.cif",
+      "protein_identity": "Cell division protein kinase 7",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 12,
+          "label_sequence_ids": [
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "residues": [
+            "LYS",
+            "LEU",
+            "GLY",
+            "HIS",
+            "ARG",
+            "SER",
+            "GLU",
+            "ALA",
+            "LYS",
+            "ASP",
+            "GLY",
+            "ILE"
+          ],
+          "author_residue_ids": [
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "ATP",
+        "HOH"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "1HCK",
+      "pdb_id": "1HCK",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1HCK.cif",
+      "input_sha256": "62807748b242e7e8026668edbc4242d1e46de8770e784bcfdf97b73219976d5a",
+      "source_url": "https://files.rcsb.org/download/1HCK.cif",
+      "protein_identity": "HUMAN CYCLIN-DEPENDENT KINASE 2",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 4,
+          "label_sequence_ids": [
+            37,
+            38,
+            39,
+            40
+          ],
+          "residues": [
+            "LEU",
+            "ASP",
+            "THR",
+            "GLU"
+          ],
+          "author_residue_ids": [
+            "37",
+            "38",
+            "39",
+            "40"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "ATP",
+        "HOH",
+        "MG"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "4HJO",
+      "pdb_id": "4HJO",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/4HJO.cif",
+      "input_sha256": "c896b9aafcf7f6fc46b357fb082d5e49a47826a775b5acd56cfaaa4a41ebd4a5",
+      "source_url": "https://files.rcsb.org/download/4HJO.cif",
+      "protein_identity": "Epidermal growth factor receptor",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 4,
+          "label_sequence_ids": [
+            49,
+            50,
+            51,
+            52
+          ],
+          "residues": [
+            "GLU",
+            "GLY",
+            "GLU",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "710",
+            "711",
+            "712",
+            "713"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "AQ4",
+        "HOH"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "1M17",
+      "pdb_id": "1M17",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1M17.cif",
+      "input_sha256": "849bd2548dffb7ddcb7229a05202c1e2e41019a1fd69ec39483654cf984fc4d0",
+      "source_url": "https://files.rcsb.org/download/1M17.cif",
+      "protein_identity": "epidermal growth factor receptor",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 12,
+          "label_sequence_ids": [
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311
+          ],
+          "residues": [
+            "LEU",
+            "PRO",
+            "SER",
+            "PRO",
+            "THR",
+            "ASP",
+            "SER",
+            "ASN",
+            "PHE",
+            "TYR",
+            "ARG",
+            "ALA"
+          ],
+          "author_residue_ids": [
+            "965",
+            "966",
+            "967",
+            "968",
+            "969",
+            "970",
+            "971",
+            "972",
+            "973",
+            "974",
+            "975",
+            "976"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "AQ4",
+        "HOH"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "2HYY",
+      "pdb_id": "2HYY",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2HYY.cif",
+      "input_sha256": "4845da16db0c39e36f8531657c955dff7e92b78be02fa55c4d50eed4425de018",
+      "source_url": "https://files.rcsb.org/download/2HYY.cif",
+      "protein_identity": "Proto-oncogene tyrosine-protein kinase ABL1",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "C",
+      "label_chain": "C",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 1,
+          "label_sequence_ids": [
+            49
+          ],
+          "residues": [
+            "ASP"
+          ],
+          "author_residue_ids": [
+            "276"
+          ]
+        },
+        {
+          "length": 3,
+          "label_sequence_ids": [
+            162,
+            163,
+            164
+          ],
+          "residues": [
+            "THR",
+            "GLY",
+            "ASP"
+          ],
+          "author_residue_ids": [
+            "389",
+            "390",
+            "391"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "HOH",
+        "STI"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "3HEG",
+      "pdb_id": "3HEG",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/3HEG.cif",
+      "input_sha256": "1aa0a750b9488c1a1d2f7102dddce41f8f781b70b86841920cf14b04a272e405",
+      "source_url": "https://files.rcsb.org/download/3HEG.cif",
+      "protein_identity": "Mitogen-activated protein kinase 14",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 4,
+          "label_sequence_ids": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "residues": [
+            "GLY",
+            "SER",
+            "GLY",
+            "ALA"
+          ],
+          "author_residue_ids": [
+            "31",
+            "32",
+            "33",
+            "34"
+          ]
+        },
+        {
+          "length": 11,
+          "label_sequence_ids": [
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177
+          ],
+          "residues": [
+            "LEU",
+            "ALA",
+            "ARG",
+            "HIS",
+            "THR",
+            "ASP",
+            "ASP",
+            "GLU",
+            "MET",
+            "THR",
+            "GLY"
+          ],
+          "author_residue_ids": [
+            "171",
+            "172",
+            "173",
+            "174",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "181"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "BAX",
+        "HOH"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "6A93",
+      "pdb_id": "6A93",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/6A93.cif",
+      "input_sha256": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+      "source_url": "https://files.rcsb.org/download/6A93.cif",
+      "protein_identity": "5-hydroxytryptamine receptor 2A,Soluble cytochrome b562",
+      "organisms": [
+        "Escherichia coli",
+        "Homo sapiens"
+      ],
+      "author_chain": "B",
+      "label_chain": "B",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 7,
+          "label_sequence_ids": [
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121
+          ],
+          "residues": [
+            "ILE",
+            "HIS",
+            "HIS",
+            "SER",
+            "ARG",
+            "PHE",
+            "ASN"
+          ],
+          "author_residue_ids": [
+            "181",
+            "182",
+            "183",
+            "184",
+            "185",
+            "186",
+            "187"
+          ]
+        },
+        {
+          "length": 3,
+          "label_sequence_ids": [
+            241,
+            242,
+            243
+          ],
+          "residues": [
+            "SER",
+            "GLY",
+            "SER"
+          ],
+          "author_residue_ids": [
+            "1042",
+            "1043",
+            "1044"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "8NU",
+        "CLR",
+        "PLM"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "2CG9",
+      "pdb_id": "2CG9",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2CG9.cif",
+      "input_sha256": "206d500f98c127adb36163b166579aa52fe000edbbe32489d29d2e7b2546ec99",
+      "source_url": "https://files.rcsb.org/download/2CG9.cif",
+      "protein_identity": "CO-CHAPERONE PROTEIN SBA1",
+      "organisms": [
+        "SACCHAROMYCES CEREVISIAE"
+      ],
+      "author_chain": "X",
+      "label_chain": "C",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 7,
+          "label_sequence_ids": [
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "residues": [
+            "PRO",
+            "HIS",
+            "VAL",
+            "GLY",
+            "ASP",
+            "GLU",
+            "ASN"
+          ],
+          "author_residue_ids": [
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61"
+          ]
+        },
+        {
+          "length": 2,
+          "label_sequence_ids": [
+            87,
+            88
+          ],
+          "residues": [
+            "GLN",
+            "HIS"
+          ],
+          "author_residue_ids": [
+            "88",
+            "89"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "2BEL",
+      "pdb_id": "2BEL",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2BEL.cif",
+      "input_sha256": "c38068dde28e02604cdf0c05a78529776f4c300450b5aa0f2d88b2e3f6bb70ca",
+      "source_url": "https://files.rcsb.org/download/2BEL.cif",
+      "protein_identity": "CORTICOSTEROID 11-BETA-DEHYDROGENASE ISOZYME 1",
+      "organisms": [
+        "HOMO SAPIENS"
+      ],
+      "author_chain": "C",
+      "label_chain": "C",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 3,
+          "label_sequence_ids": [
+            227,
+            228,
+            229
+          ],
+          "residues": [
+            "ILE",
+            "VAL",
+            "HIS"
+          ],
+          "author_residue_ids": [
+            "230",
+            "231",
+            "232"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "CBO",
+        "CL",
+        "HOH",
+        "NAP"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "1FPU",
+      "pdb_id": "1FPU",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1FPU.cif",
+      "input_sha256": "67298b2666f60457a21b2784a580d9a65896a055e90bae64d1afe377571f0cee",
+      "source_url": "https://files.rcsb.org/download/1FPU.cif",
+      "protein_identity": "PROTO-ONCOGENE TYROSINE-PROTEIN KINASE ABL",
+      "organisms": [
+        "Mus musculus"
+      ],
+      "author_chain": "B",
+      "label_chain": "B",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 5,
+          "label_sequence_ids": [
+            165,
+            166,
+            167,
+            168,
+            169
+          ],
+          "residues": [
+            "LEU",
+            "MET",
+            "THR",
+            "GLY",
+            "ASP"
+          ],
+          "author_residue_ids": [
+            "387",
+            "388",
+            "389",
+            "390",
+            "391"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "HOH",
+        "PRC"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "4HHY",
+      "pdb_id": "4HHY",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/4HHY.cif",
+      "input_sha256": "4a748aa668010d247325fef9b490de886f83ecf04dfd21f4c340040ec8c12a32",
+      "source_url": "https://files.rcsb.org/download/4HHY.cif",
+      "protein_identity": "Poly [ADP-ribose] polymerase 1",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "B",
+      "label_chain": "B",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 8,
+          "label_sequence_ids": [
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131
+          ],
+          "residues": [
+            "GLY",
+            "GLY",
+            "SER",
+            "ASP",
+            "ASP",
+            "SER",
+            "SER",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "119",
+            "120",
+            "121",
+            "122",
+            "123",
+            "124",
+            "125",
+            "126"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "15R",
+        "HOH",
+        "SO4"
+      ],
+      "scope_expectation": "within_loop_size_budget",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "2REN",
+      "pdb_id": "2REN",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2REN.cif",
+      "input_sha256": "99f950f66fbfddf9ea6f7633ba8770ecc8e105fd422fdcc74ebe3dcb4d53d41a",
+      "source_url": "https://files.rcsb.org/download/2REN.cif",
+      "protein_identity": "RENIN",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 3,
+          "label_sequence_ids": [
+            53,
+            54,
+            55
+          ],
+          "residues": [
+            "ARG",
+            "LEU",
+            "TYR"
+          ],
+          "author_residue_ids": [
+            "53",
+            "54",
+            "55"
+          ]
+        },
+        {
+          "length": 5,
+          "label_sequence_ids": [
+            166,
+            167,
+            168,
+            169,
+            170
+          ],
+          "residues": [
+            "SER",
+            "GLU",
+            "ASN",
+            "SER",
+            "GLN"
+          ],
+          "author_residue_ids": [
+            "166",
+            "167",
+            "168",
+            "169",
+            "170"
+          ]
+        },
+        {
+          "length": 9,
+          "label_sequence_ids": [
+            287,
+            288,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295
+          ],
+          "residues": [
+            "GLN",
+            "GLU",
+            "SER",
+            "TYR",
+            "SER",
+            "SER",
+            "LYS",
+            "LYS",
+            "LEU"
+          ],
+          "author_residue_ids": [
+            "287",
+            "288",
+            "289",
+            "290",
+            "291",
+            "292",
+            "293",
+            "294",
+            "295"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "NAG"
+      ],
+      "scope_expectation": "expected_unsupported_covalent_glycan",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "1RNE",
+      "pdb_id": "1RNE",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1RNE.cif",
+      "input_sha256": "946f3a9c589f09bf2b22fa4cc5d186aa200ea2315a94d9fd6eb15807c51ba303",
+      "source_url": "https://files.rcsb.org/download/1RNE.cif",
+      "protein_identity": "RENIN",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 6,
+          "label_sequence_ids": [
+            166,
+            167,
+            168,
+            169,
+            170,
+            171
+          ],
+          "residues": [
+            "SER",
+            "GLU",
+            "ASN",
+            "SER",
+            "GLN",
+            "SER"
+          ],
+          "author_residue_ids": [
+            "158",
+            "158",
+            "158",
+            "158",
+            "158",
+            "158"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "C60",
+        "HOH",
+        "NAG"
+      ],
+      "scope_expectation": "expected_unsupported_covalent_glycan",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    },
+    {
+      "id": "2ITY",
+      "pdb_id": "2ITY",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2ITY.cif",
+      "input_sha256": "6e0dbc7d08de1441850beee33f03e8b9278b915ac17c68a11bd4b32ef782a25d",
+      "source_url": "https://files.rcsb.org/download/2ITY.cif",
+      "protein_identity": "EPIDERMAL GROWTH FACTOR RECEPTOR",
+      "organisms": [
+        "HOMO SAPIENS"
+      ],
+      "author_chain": "A",
+      "label_chain": "A",
+      "chain_index": null,
+      "keep_associated_molecules": true,
+      "source_gap_inventory": [
+        {
+          "length": 10,
+          "label_sequence_ids": [
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180
+          ],
+          "residues": [
+            "GLU",
+            "LYS",
+            "GLU",
+            "TYR",
+            "HIS",
+            "ALA",
+            "GLU",
+            "GLY",
+            "GLY",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "866",
+            "867",
+            "868",
+            "869",
+            "870",
+            "871",
+            "872",
+            "873",
+            "874",
+            "875"
+          ]
+        },
+        {
+          "length": 13,
+          "label_sequence_ids": [
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307
+          ],
+          "residues": [
+            "PRO",
+            "SER",
+            "PRO",
+            "THR",
+            "ASP",
+            "SER",
+            "ASN",
+            "PHE",
+            "TYR",
+            "ARG",
+            "ALA",
+            "LEU",
+            "MET"
+          ],
+          "author_residue_ids": [
+            "990",
+            "991",
+            "992",
+            "993",
+            "994",
+            "995",
+            "996",
+            "997",
+            "998",
+            "999",
+            "1000",
+            "1001",
+            "1002"
+          ]
+        }
+      ],
+      "source_ligand_codes_by_author_chain": [
+        "HOH",
+        "IRE"
+      ],
+      "scope_expectation": "expected_unsupported_size",
+      "settings": {
+        "engine": "openmm",
+        "ph": 7,
+        "seed": 42,
+        "build_missing_residues": true,
+        "add_missing_atoms": true,
+        "optimize_sidechains": true,
+        "remove_waters": true,
+        "remove_heterogens": false,
+        "ligand_actions": {}
+      },
+      "selection_note": "One observed protein chain with associated molecules retained by existing application selection; this does not assert a biological monomer."
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "id": "1ATP",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1FIN",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "2SRC",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1Y57",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1IEP",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1T46",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1QCF",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1PTY",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1BZH",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1OVA",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1AKE",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1HVY",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1U72",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1DHF",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "3MXF",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "4I23",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1A52",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "6DBK",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1YET",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1YER",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1BYQ",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1AM1",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1A4H",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1AH3",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1XU7",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "3CPR",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1GOS",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1A9U",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "1AQ1",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "2VV5",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    },
+    {
+      "id": "3K8V",
+      "reason": "Not selected from pre-preparation inventory: no internal gap in relevant chain, redundant chemistry, or panel-size limit. All actual screened source/gap inventories retained."
+    }
+  ]
+}

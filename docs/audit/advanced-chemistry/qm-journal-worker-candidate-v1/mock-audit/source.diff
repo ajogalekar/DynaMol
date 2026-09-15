@@ -1,0 +1,130 @@
+--- backend/qm_worker.py
++++ candidate/qm_worker.py
+@@ -398,6 +398,110 @@
+     return density
+ 
+ 
++def _create_evaluation_journal(data, elements, initial_bohr, mean_field, out, report,
++                               bohr_to_angstrom):
++    """Candidate-only observer: no SCF calls, coordinate edits or acceptance.
++
++    Positional stable IDs come from the validated input. PySCF exposes element
++    order, not independent stable IDs; same-element permutations cannot be
++    independently detected here. Current engine/scanner/base coordinates and
++    returned derivatives must agree exactly before an evaluation is committed.
++    A completed evaluation can still be a rejected optimizer trial geometry.
++    """
++    import importlib.util
++    helper_path=Path(__file__).with_name('qm_evaluation_journal.py')
++    helper_sha=hashlib.sha256(helper_path.read_bytes()).hexdigest()
++    if helper_sha!='b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528':
++        raise ValueError('Candidate evaluation-journal helper hash mismatch')
++    spec=importlib.util.spec_from_file_location('_candidate_qm_evaluation_journal',helper_path)
++    journal_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(journal_module)
++    elements=tuple(elements)
++    request=json.loads(json.dumps(_plain(data),allow_nan=False))
++    original_resolved_request_sha=_hash(request)
++    request['elements']=list(elements)  # Same canonical symbols selected by gto.M.
++    binding=journal_module.make_binding(request,source_input_sha256=report['input_sha256'],
++        worker_source_sha256=report['worker_sha256'])
++    expected_identity=binding['identity']
++    native_family=type(mean_field)
++
++    def native_method(method):
++        if not isinstance(method,native_family):
++            raise ValueError('Current callback SCF method family differs from its initial method')
++        molecule=method.mol
++        density_fit=getattr(method,'with_df',None)
++        return {'native_family':native_family.__module__+'.'+native_family.__qualname__,
++            'basis_sha256':_hash(molecule._basis),'ecp_sha256':_hash(molecule._ecp),
++            'cartesian_basis':bool(molecule.cart),'symmetry':bool(molecule.symmetry),
++            'xc':getattr(method,'xc',None),
++            'grid_level':getattr(method.grids,'level',None) if hasattr(method,'grids') else None,
++            'density_fit':density_fit is not None,
++            'auxbasis':_plain(getattr(density_fit,'auxbasis',None)),
++            'max_scf_cycles':method.max_cycle,'scf_conv_tol':method.conv_tol,
++            'scf_conv_tol_grad':method.conv_tol_grad,'max_memory_mb':method.max_memory}
++
++    initial_method=native_method(mean_field)
++    initial_method_sha=_hash(initial_method)
++    conversion=journal_module._number(bohr_to_angstrom)
++    if conversion<=0:raise ValueError('Invalid native Bohr to Angstrom conversion')
++    binding['callback_contract']={
++        'helper_source_sha256':helper_sha,
++        'original_resolved_input_sha256':original_resolved_request_sha,
++        'original_input_elements':list(data['elements']),
++        'canonical_native_elements':list(elements),
++        'input_coordinate_unit':'bohr' if 'coords_bohr' in data else 'angstrom',
++        'native_initial_geometry_bohr_sha256':_hash(_plain(initial_bohr)),
++        'native_initial_method':initial_method,'native_initial_method_sha256':initial_method_sha,
++        'bohr_to_angstrom':conversion,'conversion_source':'pyscf.lib.param.BOHR',
++        'callback_coordinate_unit':'bohr','callback_gradient_unit':'hartree/bohr',
++        'gradient_convention':'positive dE/dx; no sign or unit conversion',
++        'stable_id_origin':'validated positional input map; native element order checked',
++        'geometry_meaning':'completed SCF/gradient evaluation, possibly an optimizer trial; not an accepted minimum'}
++    journal=journal_module.EvaluationJournal(out/'evaluation-journal',binding,create=True)
++    report['optimization']['evaluation_journal']={
++        'directory':'evaluation-journal','manifest_sha256':journal.manifest_sha256,
++        'helper_source_sha256':helper_sha,'accepted':False,'optimization_converged':False,
++        'checkpoint_reuse_authorized':False,'meaning':binding['callback_contract']['geometry_meaning']}
++
++    def record_evaluation(env):
++        scanner=env['g_scanner']
++        if scanner.converged is False:
++            # Native PySCF asserts this immediately after the callback. Preserve
++            # that behavior; there is no completed-SCF journal record to write.
++            return None
++        if scanner.converged is not True or scanner.base.converged is not True:
++            raise ValueError('Callback requires an explicit native SCF convergence flag')
++        if scanner.unit!='au':raise ValueError('Callback native gradient unit is not atomic units')
++        atmlst=getattr(scanner,'atmlst',None)
++        if atmlst is not None:
++            indices=_plain(atmlst)
++            if (not isinstance(indices,list) or any(type(i) is not int for i in indices)
++                    or indices!=list(range(len(elements)))):
++                raise ValueError('Callback gradient atom indices are not the complete input order')
++        xyz=journal_module._matrix(env['coords'],len(elements),'callback coords',flat=True)
++        gradient=journal_module._matrix(env['gradients'],len(elements),'callback gradient',flat=False)
++        energy=journal_module._number(env['energy'])
++        if energy!=journal_module._number(scanner.base.e_tot):
++            raise ValueError('Callback energy differs from current SCF energy')
++        if gradient!=journal_module._matrix(scanner.de,len(elements),'scanner gradient',flat=False):
++            raise ValueError('Callback gradient differs from current scanner gradient')
++        for molecule in (env['mol'],scanner.mol,scanner.base.mol):
++            observed={'atom_ids':list(expected_identity['atom_ids']),
++                'elements':[molecule.atom_symbol(i) for i in range(molecule.natm)],
++                'charge':molecule.charge,'spin':molecule.spin}
++            if journal_module._identity(observed)!=expected_identity:
++                raise ValueError('Callback native element order or molecular state changed')
++            if xyz!=journal_module._matrix(molecule.atom_coords(unit='Bohr'),len(elements),'native coords',flat=False):
++                raise ValueError('Callback geometry differs from current native molecule')
++        if _hash(native_method(scanner.base))!=initial_method_sha:
++            raise ValueError('Callback current method or resolved basis/settings changed')
++        result=journal.append(cycle=env['self'].cycle,coords=xyz,gradient=gradient,energy=energy,
++            units=journal_module.UNITS,observed_identity=observed,scf_converged=True,
++            requested_method_fingerprint_sha256=binding['requested_method_fingerprint_sha256'])
++        return {'file':'evaluation-journal/'+Path(result['path']).name,
++            'file_sha256':result['file_sha256'],'accepted':False}
++    return record_evaluation
++
++
+ def calculate(data, out, report):
+     import numpy as np
+     import pyscf
+@@ -479,13 +583,16 @@
+             constraint_path.write_text('\n'.join(constraint_lines)+'\n')
+         report['optimization']['constraint_atom_indices_zero_based']=frozen_indices
+         report['optimization']['constraint_file_sha256']=hashlib.sha256(constraint_path.read_bytes()).hexdigest() if constraint_path else None
++        record_evaluation=_create_evaluation_journal(data,elements,initial_bohr,mean_field,out,report,lib.param.BOHR)
+         def callback(env):
++            evaluation_record=record_evaluation(env)
+             energy=float(env['energy']);gradient=np.asarray(env['gradients'])
+             if not math.isfinite(energy) or not np.isfinite(gradient).all():
+                 raise ValueError('Nonfinite energy/gradient during optimization')
+             step={'cycle':int(env['self'].cycle),'energy_hartree':energy,
+                   'gradient_norm_hartree_per_bohr':float(np.linalg.norm(gradient)),
+                   'scf_converged':bool(env['g_scanner'].converged)}
++            if evaluation_record is not None:step['evaluation_record']=evaluation_record
+             if dihedrals:
+                 step['dihedrals']=_dihedral_rows(env['coords'],data['atom_ids'],dihedrals,opt['dihedral_tolerance_degrees'])
+             report['optimization']['steps'].append(step)

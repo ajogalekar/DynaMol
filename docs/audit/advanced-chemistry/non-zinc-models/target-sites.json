@@ -1,0 +1,3496 @@
+[
+  {
+    "id": "1A6Q",
+    "label": "PPM1A phosphatase",
+    "status": "frozen_source_case_not_prepared",
+    "notes": "Two Mn sites and phosphate; four-residue internal gap.",
+    "source": {
+      "path": "inputs/1A6Q.cif",
+      "source_url": "https://files.rcsb.org/download/1A6Q.cif",
+      "sha256": "3057f31ae88a26769a5e5a584c3c3aebeee815c8b276129c06b05c9235219f9a",
+      "bytes": 353248
+    },
+    "rcsb_entry_url": "https://www.rcsb.org/structure/1A6Q",
+    "pdb_doi": "https://doi.org/10.2210/pdb1A6Q/pdb",
+    "title": "CRYSTAL STRUCTURE OF THE PROTEIN SERINE/THREONINE PHOSPHATASE 2C AT 2 A RESOLUTION",
+    "organisms": [
+      "Homo sapiens"
+    ],
+    "resolution_angstrom": 2.0,
+    "primary_citations": [
+      {
+        "id": "primary",
+        "title": "Crystal structure of the protein serine/threonine phosphatase 2C at 2.0 A resolution.",
+        "journal_abbrev": "EMBO J.",
+        "journal_volume": "15",
+        "page_first": "6798",
+        "page_last": "6809",
+        "year": "1996",
+        "journal_id_ASTM": "EMJODG",
+        "country": "UK",
+        "journal_id_ISSN": "0261-4189",
+        "journal_id_CSD": "0897",
+        "book_publisher": null,
+        "pdbx_database_id_PubMed": "9003755",
+        "pdbx_database_id_DOI": null
+      }
+    ],
+    "assembly_choice": {
+      "id": "1",
+      "declaration": {
+        "id": "1",
+        "details": "software_defined_assembly",
+        "method_details": "PISA",
+        "oligomeric_details": "monomeric",
+        "oligomeric_count": "1"
+      },
+      "generators": [
+        {
+          "assembly_id": "1",
+          "oper_expression": "1",
+          "asym_id_list": "A,B,C,D,E"
+        }
+      ],
+      "operators": [
+        {
+          "id": "1",
+          "type": "identity operation",
+          "name": "1_555",
+          "symmetry_operation": "x,y,z",
+          "matrix[1][1]": "1.0000000000",
+          "matrix[1][2]": "0.0000000000",
+          "matrix[1][3]": "0.0000000000",
+          "vector[1]": "0.0000000000",
+          "matrix[2][1]": "0.0000000000",
+          "matrix[2][2]": "1.0000000000",
+          "matrix[2][3]": "0.0000000000",
+          "vector[2]": "0.0000000000",
+          "matrix[3][1]": "0.0000000000",
+          "matrix[3][2]": "0.0000000000",
+          "matrix[3][3]": "1.0000000000",
+          "vector[3]": "0.0000000000"
+        }
+      ],
+      "label_chains": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "protein_chains": [
+        {
+          "label_chain": "A",
+          "author_chain": "A",
+          "entity_id": "1",
+          "sequence_length": 382,
+          "observed_residues": 363,
+          "internal_gaps": [
+            {
+              "length": 4,
+              "residues": [
+                "LYS",
+                "GLN",
+                "GLY",
+                "GLU"
+              ],
+              "label_sequence_ids": [
+                "322",
+                "323",
+                "324",
+                "325"
+              ]
+            }
+          ]
+        }
+      ],
+      "policy": "Use every component and operator in deposited assembly1. Other independent assemblies are excluded by this predeclared assembly choice; original input is preserved."
+    },
+    "retained_nonstandard_residues": [
+      {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "383",
+        "insertion_code": null,
+        "component": "MN",
+        "observed_heavy_atom_names": [
+          "MN"
+        ]
+      },
+      {
+        "label_chain": "C",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "384",
+        "insertion_code": null,
+        "component": "MN",
+        "observed_heavy_atom_names": [
+          "MN"
+        ]
+      },
+      {
+        "label_chain": "D",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "701",
+        "insertion_code": null,
+        "component": "PO4",
+        "observed_heavy_atom_names": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "P"
+        ]
+      }
+    ],
+    "ccd_sources": [
+      {
+        "id": "MN",
+        "source": {
+          "path": "inputs/ccd/MN.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/MN.cif",
+          "sha256": "34069721472535643756eb140039ced4053cec1f4814f69658e7b244ee2bebc6",
+          "bytes": 3435
+        },
+        "name": "MANGANESE (II) ION",
+        "component_formal_charge": "2",
+        "metal_atom_formal_charges": {
+          "MN": "2"
+        },
+        "leaving_atom_names": []
+      },
+      {
+        "id": "PO4",
+        "source": {
+          "path": "inputs/ccd/PO4.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/PO4.cif",
+          "sha256": "57d988e2ed80b9b6d9fb0b7384c3e0874ea186dfeb8a89c781d2c78ee05686e5",
+          "bytes": 3989
+        },
+        "name": "PHOSPHATE ION",
+        "component_formal_charge": "-3",
+        "metal_atom_formal_charges": {},
+        "leaving_atom_names": []
+      }
+    ],
+    "ccd_coordinate_differences": [],
+    "deposited_connections": [
+      {
+        "id": "metalc1",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "60",
+          "component": "ASP",
+          "atom": "OD2",
+          "author_chain": "A",
+          "author_residue_id": "60",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "B",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "383",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.208",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc2",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "60",
+          "component": "ASP",
+          "atom": "OD1",
+          "author_chain": "A",
+          "author_residue_id": "60",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "384",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.525",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc3",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "61",
+          "component": "GLY",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "61",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "384",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.138",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc4",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "239",
+          "component": "ASP",
+          "atom": "OD1",
+          "author_chain": "A",
+          "author_residue_id": "239",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "B",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "383",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.322",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc5",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "282",
+          "component": "ASP",
+          "atom": "OD2",
+          "author_chain": "A",
+          "author_residue_id": "282",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "B",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "383",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.165",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc6",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "383",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "799",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.656",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc7",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "383",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "880",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.191",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc8",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "383",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "889",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.868",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc9",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "384",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "702",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.099",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc10",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "384",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "800",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.339",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc11",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "384",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "879",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.644",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc12",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "384",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "880",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.275",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      }
+    ],
+    "metal_sites": [
+      {
+        "element": "MN",
+        "component": "MN",
+        "label_chain": "B",
+        "author_chain": "A",
+        "author_residue_id": "383",
+        "insertion_code": null,
+        "atom": "MN",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          54.087,
+          41.191,
+          43.777
+        ],
+        "ccd": {
+          "id": "MN",
+          "source": {
+            "path": "inputs/ccd/MN.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/MN.cif",
+            "sha256": "34069721472535643756eb140039ced4053cec1f4814f69658e7b244ee2bebc6",
+            "bytes": 3435
+          },
+          "name": "MANGANESE (II) ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "MN": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc1",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "60",
+              "component": "ASP",
+              "atom": "OD2",
+              "author_chain": "A",
+              "author_residue_id": "60",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.208",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc4",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "239",
+              "component": "ASP",
+              "atom": "OD1",
+              "author_chain": "A",
+              "author_residue_id": "239",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.322",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc5",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "282",
+              "component": "ASP",
+              "atom": "OD2",
+              "author_chain": "A",
+              "author_residue_id": "282",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.165",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc6",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "799",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.656",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc7",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "880",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.191",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc8",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "889",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.868",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [
+          {
+            "connection_id": "metalc6",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "799",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.656",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc7",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "880",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.191",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc8",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "889",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.868",
+            "same_explicit_image": true
+          }
+        ],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      },
+      {
+        "element": "MN",
+        "component": "MN",
+        "label_chain": "C",
+        "author_chain": "A",
+        "author_residue_id": "384",
+        "insertion_code": null,
+        "atom": "MN",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          57.949,
+          42.116,
+          43.453
+        ],
+        "ccd": {
+          "id": "MN",
+          "source": {
+            "path": "inputs/ccd/MN.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/MN.cif",
+            "sha256": "34069721472535643756eb140039ced4053cec1f4814f69658e7b244ee2bebc6",
+            "bytes": 3435
+          },
+          "name": "MANGANESE (II) ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "MN": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc2",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "60",
+              "component": "ASP",
+              "atom": "OD1",
+              "author_chain": "A",
+              "author_residue_id": "60",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.525",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc3",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "61",
+              "component": "GLY",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "61",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.138",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc9",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "702",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.099",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc10",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "800",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.339",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc11",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "879",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.644",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc12",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "880",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.275",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [
+          {
+            "connection_id": "metalc9",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "702",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.099",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc10",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "800",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.339",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc11",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "879",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.644",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc12",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "880",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.275",
+            "same_explicit_image": true
+          }
+        ],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      }
+    ],
+    "excluded_source_label_chains": [],
+    "future_preparation_policy": {
+      "remove_heterogens": false,
+      "remove_coordinating_waters": false,
+      "build_missing_internal_residues": "Only with existing supported sequence and geometry safeguards; retained gaps listed above.",
+      "chemical_mutation": "No undeclared protein/ligand mutation or ligand deletion; any accepted bound-state transformation must be recorded and validated."
+    }
+  },
+  {
+    "id": "1HL5",
+    "label": "Cu/Zn superoxide dismutase",
+    "status": "frozen_source_case_not_prepared",
+    "notes": "Assembly1 is the deposited A/H dimer with Cu/Zn sites. CCD declares Cu(II), but redox and bridging-His protonation are separate model decisions.",
+    "source": {
+      "path": "inputs/1HL5.cif",
+      "source_url": "https://files.rcsb.org/download/1HL5.cif",
+      "sha256": "948db2ef0d8b3b7a3db65377ee604cae0cd315cfa83612ac7d2b8f2adaccba40",
+      "bytes": 2340178
+    },
+    "rcsb_entry_url": "https://www.rcsb.org/structure/1HL5",
+    "pdb_doi": "https://doi.org/10.2210/pdb1HL5/pdb",
+    "title": "The Structure of Holo Type Human Cu, Zn Superoxide Dismutase",
+    "organisms": [
+      "HOMO SAPIENS"
+    ],
+    "resolution_angstrom": 1.8,
+    "primary_citations": [
+      {
+        "id": "primary",
+        "title": "The Structure of Holo and Metal-Deficient Wild-Type Human Cu, Zn Superoxide Dismutase and its Relevance to Familial Amyotrophic Lateral Sclerosis",
+        "journal_abbrev": "J.Mol.Biol.",
+        "journal_volume": "328",
+        "page_first": "877",
+        "page_last": null,
+        "year": "2003",
+        "journal_id_ASTM": "JMOBAK",
+        "country": "UK",
+        "journal_id_ISSN": "0022-2836",
+        "journal_id_CSD": "0070",
+        "book_publisher": null,
+        "pdbx_database_id_PubMed": "12729761",
+        "pdbx_database_id_DOI": "10.1016/S0022-2836(03)00355-3"
+      }
+    ],
+    "assembly_choice": {
+      "id": "1",
+      "declaration": {
+        "id": "1",
+        "details": "author_and_software_defined_assembly",
+        "method_details": "PQS",
+        "oligomeric_details": "dimeric",
+        "oligomeric_count": "2"
+      },
+      "generators": [
+        {
+          "assembly_id": "1",
+          "oper_expression": "1",
+          "asym_id_list": "A,H,S,T,IA,JA,FB,MB"
+        }
+      ],
+      "operators": [
+        {
+          "id": "1",
+          "type": "identity operation",
+          "name": "1_555",
+          "symmetry_operation": "x,y,z",
+          "matrix[1][1]": "1.0000000000",
+          "matrix[1][2]": "0.0000000000",
+          "matrix[1][3]": "0.0000000000",
+          "vector[1]": "0.0000000000",
+          "matrix[2][1]": "0.0000000000",
+          "matrix[2][2]": "1.0000000000",
+          "matrix[2][3]": "0.0000000000",
+          "vector[2]": "0.0000000000",
+          "matrix[3][1]": "0.0000000000",
+          "matrix[3][2]": "0.0000000000",
+          "matrix[3][3]": "1.0000000000",
+          "vector[3]": "0.0000000000"
+        }
+      ],
+      "label_chains": [
+        "A",
+        "FB",
+        "H",
+        "IA",
+        "JA",
+        "MB",
+        "S",
+        "T"
+      ],
+      "protein_chains": [
+        {
+          "label_chain": "A",
+          "author_chain": "A",
+          "entity_id": "1",
+          "sequence_length": 153,
+          "observed_residues": 153,
+          "internal_gaps": []
+        },
+        {
+          "label_chain": "H",
+          "author_chain": "H",
+          "entity_id": "1",
+          "sequence_length": 153,
+          "observed_residues": 153,
+          "internal_gaps": []
+        }
+      ],
+      "policy": "Use every component and operator in deposited assembly1. Other independent assemblies are excluded by this predeclared assembly choice; original input is preserved."
+    },
+    "retained_nonstandard_residues": [
+      {
+        "label_chain": "S",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "154",
+        "insertion_code": null,
+        "component": "CU",
+        "observed_heavy_atom_names": [
+          "CU"
+        ]
+      },
+      {
+        "label_chain": "T",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "155",
+        "insertion_code": null,
+        "component": "ZN",
+        "observed_heavy_atom_names": [
+          "ZN"
+        ]
+      },
+      {
+        "label_chain": "IA",
+        "label_sequence_id": null,
+        "author_chain": "H",
+        "author_residue_id": "154",
+        "insertion_code": null,
+        "component": "CU",
+        "observed_heavy_atom_names": [
+          "CU"
+        ]
+      },
+      {
+        "label_chain": "JA",
+        "label_sequence_id": null,
+        "author_chain": "H",
+        "author_residue_id": "155",
+        "insertion_code": null,
+        "component": "ZN",
+        "observed_heavy_atom_names": [
+          "ZN"
+        ]
+      }
+    ],
+    "ccd_sources": [
+      {
+        "id": "CU",
+        "source": {
+          "path": "inputs/ccd/CU.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/CU.cif",
+          "sha256": "d323810c8e522c79c00d55cbbd2a7463ee1567ea79be1d4f3b1984eab92d81e3",
+          "bytes": 3470
+        },
+        "name": "COPPER (II) ION",
+        "component_formal_charge": "2",
+        "metal_atom_formal_charges": {
+          "CU": "2"
+        },
+        "leaving_atom_names": []
+      },
+      {
+        "id": "ZN",
+        "source": {
+          "path": "inputs/ccd/ZN.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/ZN.cif",
+          "sha256": "dfd90cb88732a63f688150e3768c67b26dc9e9dfcd43037e125781a7e9cd9667",
+          "bytes": 3409
+        },
+        "name": "ZINC ION",
+        "component_formal_charge": "2",
+        "metal_atom_formal_charges": {
+          "ZN": "2"
+        },
+        "leaving_atom_names": []
+      }
+    ],
+    "ccd_coordinate_differences": [],
+    "deposited_connections": [
+      {
+        "id": "disulf1",
+        "type": "disulf",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "57",
+          "component": "CYS",
+          "atom": "SG",
+          "author_chain": "A",
+          "author_residue_id": "57",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "A",
+          "label_sequence_id": "146",
+          "component": "CYS",
+          "atom": "SG",
+          "author_chain": "A",
+          "author_residue_id": "146",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.129",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "disulf8",
+        "type": "disulf",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "57",
+          "component": "CYS",
+          "atom": "SG",
+          "author_chain": "H",
+          "author_residue_id": "57",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "H",
+          "label_sequence_id": "146",
+          "component": "CYS",
+          "atom": "SG",
+          "author_chain": "H",
+          "author_residue_id": "146",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.115",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc1",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "46",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "A",
+          "author_residue_id": "46",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "S",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.136",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc2",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "48",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "48",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "S",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.132",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc3",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "63",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "63",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "S",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.455",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc4",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "63",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "A",
+          "author_residue_id": "63",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "T",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "A",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.020",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc5",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "71",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "A",
+          "author_residue_id": "71",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "T",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "A",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.990",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc6",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "80",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "A",
+          "author_residue_id": "80",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "T",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "A",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.000",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc7",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "83",
+          "component": "ASP",
+          "atom": "OD1",
+          "author_chain": "A",
+          "author_residue_id": "83",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "T",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "A",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.899",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc8",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "120",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "120",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "S",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.116",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc9",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "S",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "FB",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "2047",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.653",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc81",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "46",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "H",
+          "author_residue_id": "46",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "IA",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "H",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.132",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc82",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "48",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "H",
+          "author_residue_id": "48",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "IA",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "H",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.102",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc83",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "63",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "H",
+          "author_residue_id": "63",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "IA",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "H",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.521",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc84",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "63",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "H",
+          "author_residue_id": "63",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "JA",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "H",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.032",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc85",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "71",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "H",
+          "author_residue_id": "71",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "JA",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "H",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.056",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc86",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "80",
+          "component": "HIS",
+          "atom": "ND1",
+          "author_chain": "H",
+          "author_residue_id": "80",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "JA",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "H",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.861",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc87",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "83",
+          "component": "ASP",
+          "atom": "OD1",
+          "author_chain": "H",
+          "author_residue_id": "83",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "JA",
+          "label_sequence_id": null,
+          "component": "ZN",
+          "atom": "ZN",
+          "author_chain": "H",
+          "author_residue_id": "155",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.976",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc89",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "H",
+          "label_sequence_id": "120",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "H",
+          "author_residue_id": "120",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "IA",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "H",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.113",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc90",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "IA",
+          "label_sequence_id": null,
+          "component": "CU",
+          "atom": "CU",
+          "author_chain": "H",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "MB",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "H",
+          "author_residue_id": "2050",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.736",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      }
+    ],
+    "metal_sites": [
+      {
+        "element": "CU",
+        "component": "CU",
+        "label_chain": "S",
+        "author_chain": "A",
+        "author_residue_id": "154",
+        "insertion_code": null,
+        "atom": "CU",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          40.567,
+          99.024,
+          78.969
+        ],
+        "ccd": {
+          "id": "CU",
+          "source": {
+            "path": "inputs/ccd/CU.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/CU.cif",
+            "sha256": "d323810c8e522c79c00d55cbbd2a7463ee1567ea79be1d4f3b1984eab92d81e3",
+            "bytes": 3470
+          },
+          "name": "COPPER (II) ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "CU": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc1",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "46",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "A",
+              "author_residue_id": "46",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.136",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc2",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "48",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "48",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.132",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc3",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "63",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "63",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.455",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc8",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "120",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "120",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.116",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc9",
+            "donor": {
+              "label_chain": "FB",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "2047",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.653",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [
+          {
+            "connection_id": "metalc9",
+            "donor": {
+              "label_chain": "FB",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "2047",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.653",
+            "same_explicit_image": true
+          }
+        ],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      },
+      {
+        "element": "ZN",
+        "component": "ZN",
+        "label_chain": "T",
+        "author_chain": "A",
+        "author_residue_id": "155",
+        "insertion_code": null,
+        "atom": "ZN",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          46.625,
+          100.446,
+          77.673
+        ],
+        "ccd": {
+          "id": "ZN",
+          "source": {
+            "path": "inputs/ccd/ZN.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/ZN.cif",
+            "sha256": "dfd90cb88732a63f688150e3768c67b26dc9e9dfcd43037e125781a7e9cd9667",
+            "bytes": 3409
+          },
+          "name": "ZINC ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "ZN": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc4",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "63",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "A",
+              "author_residue_id": "63",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.020",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc5",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "71",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "A",
+              "author_residue_id": "71",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.990",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc6",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "80",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "A",
+              "author_residue_id": "80",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.000",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc7",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "83",
+              "component": "ASP",
+              "atom": "OD1",
+              "author_chain": "A",
+              "author_residue_id": "83",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.899",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      },
+      {
+        "element": "CU",
+        "component": "CU",
+        "label_chain": "IA",
+        "author_chain": "H",
+        "author_residue_id": "154",
+        "insertion_code": null,
+        "atom": "CU",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          33.003,
+          74.154,
+          99.422
+        ],
+        "ccd": {
+          "id": "CU",
+          "source": {
+            "path": "inputs/ccd/CU.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/CU.cif",
+            "sha256": "d323810c8e522c79c00d55cbbd2a7463ee1567ea79be1d4f3b1984eab92d81e3",
+            "bytes": 3470
+          },
+          "name": "COPPER (II) ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "CU": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc81",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "46",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "H",
+              "author_residue_id": "46",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.132",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc82",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "48",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "H",
+              "author_residue_id": "48",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.102",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc83",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "63",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "H",
+              "author_residue_id": "63",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.521",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc89",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "120",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "H",
+              "author_residue_id": "120",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.113",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc90",
+            "donor": {
+              "label_chain": "MB",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "H",
+              "author_residue_id": "2050",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.736",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [
+          {
+            "connection_id": "metalc90",
+            "donor": {
+              "label_chain": "MB",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "H",
+              "author_residue_id": "2050",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.736",
+            "same_explicit_image": true
+          }
+        ],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      },
+      {
+        "element": "ZN",
+        "component": "ZN",
+        "label_chain": "JA",
+        "author_chain": "H",
+        "author_residue_id": "155",
+        "insertion_code": null,
+        "atom": "ZN",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          37.619,
+          70.645,
+          102.158
+        ],
+        "ccd": {
+          "id": "ZN",
+          "source": {
+            "path": "inputs/ccd/ZN.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/ZN.cif",
+            "sha256": "dfd90cb88732a63f688150e3768c67b26dc9e9dfcd43037e125781a7e9cd9667",
+            "bytes": 3409
+          },
+          "name": "ZINC ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "ZN": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc84",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "63",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "H",
+              "author_residue_id": "63",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.032",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc85",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "71",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "H",
+              "author_residue_id": "71",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.056",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc86",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "80",
+              "component": "HIS",
+              "atom": "ND1",
+              "author_chain": "H",
+              "author_residue_id": "80",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.861",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc87",
+            "donor": {
+              "label_chain": "H",
+              "label_sequence_id": "83",
+              "component": "ASP",
+              "atom": "OD1",
+              "author_chain": "H",
+              "author_residue_id": "83",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.976",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      }
+    ],
+    "excluded_source_label_chains": [
+      "AA",
+      "AB",
+      "B",
+      "BA",
+      "BB",
+      "C",
+      "CA",
+      "CB",
+      "D",
+      "DA",
+      "DB",
+      "E",
+      "EA",
+      "EB",
+      "F",
+      "FA",
+      "G",
+      "GA",
+      "HA",
+      "I",
+      "J",
+      "K",
+      "KA",
+      "L",
+      "LA",
+      "M",
+      "MA",
+      "N",
+      "NA",
+      "O",
+      "OA",
+      "P",
+      "PA",
+      "Q",
+      "QA",
+      "R",
+      "RA",
+      "SA",
+      "TA",
+      "U",
+      "UA",
+      "V",
+      "VA",
+      "W",
+      "WA",
+      "X",
+      "XA",
+      "Y",
+      "YA",
+      "Z",
+      "ZA"
+    ],
+    "future_preparation_policy": {
+      "remove_heterogens": false,
+      "remove_coordinating_waters": false,
+      "build_missing_internal_residues": "Only with existing supported sequence and geometry safeguards; retained gaps listed above.",
+      "chemical_mutation": "No undeclared protein/ligand mutation or ligand deletion; any accepted bound-state transformation must be recorded and validated."
+    }
+  },
+  {
+    "id": "1A6M",
+    "label": "Oxy-myoglobin",
+    "status": "frozen_source_case_not_prepared",
+    "notes": "Heme Fe and bound O2: redox, spin, Fe\u2013O2 bonding and oxygen occupancy require a heme-specific model. CCD does not declare the Fe formal charge.",
+    "source": {
+      "path": "inputs/1A6M.cif",
+      "source_url": "https://files.rcsb.org/download/1A6M.cif",
+      "sha256": "25ae24d2b518a7cb7ef24aeb1eb3fc5c35707ce4e696956d11b8f9fdf9fa7218",
+      "bytes": 358898
+    },
+    "rcsb_entry_url": "https://www.rcsb.org/structure/1A6M",
+    "pdb_doi": "https://doi.org/10.2210/pdb1A6M/pdb",
+    "title": "OXY-MYOGLOBIN, ATOMIC RESOLUTION",
+    "organisms": [
+      "Physeter catodon"
+    ],
+    "resolution_angstrom": 1.0,
+    "primary_citations": [
+      {
+        "id": "primary",
+        "title": "Crystal structures of myoglobin-ligand complexes at near-atomic resolution.",
+        "journal_abbrev": "Biophys.J.",
+        "journal_volume": "77",
+        "page_first": "2153",
+        "page_last": "2174",
+        "year": "1999",
+        "journal_id_ASTM": "BIOJAU",
+        "country": "US",
+        "journal_id_ISSN": "0006-3495",
+        "journal_id_CSD": "0030",
+        "book_publisher": null,
+        "pdbx_database_id_PubMed": "10512835",
+        "pdbx_database_id_DOI": null
+      }
+    ],
+    "assembly_choice": {
+      "id": "1",
+      "declaration": {
+        "id": "1",
+        "details": "author_defined_assembly",
+        "method_details": null,
+        "oligomeric_details": "monomeric",
+        "oligomeric_count": "1"
+      },
+      "generators": [
+        {
+          "assembly_id": "1",
+          "oper_expression": "1",
+          "asym_id_list": "A,B,C,D,E,F"
+        }
+      ],
+      "operators": [
+        {
+          "id": "1",
+          "type": "identity operation",
+          "name": "1_555",
+          "symmetry_operation": "x,y,z",
+          "matrix[1][1]": "1.0000000000",
+          "matrix[1][2]": "0.0000000000",
+          "matrix[1][3]": "0.0000000000",
+          "vector[1]": "0.0000000000",
+          "matrix[2][1]": "0.0000000000",
+          "matrix[2][2]": "1.0000000000",
+          "matrix[2][3]": "0.0000000000",
+          "vector[2]": "0.0000000000",
+          "matrix[3][1]": "0.0000000000",
+          "matrix[3][2]": "0.0000000000",
+          "matrix[3][3]": "1.0000000000",
+          "vector[3]": "0.0000000000"
+        }
+      ],
+      "label_chains": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "protein_chains": [
+        {
+          "label_chain": "A",
+          "author_chain": "A",
+          "entity_id": "1",
+          "sequence_length": 151,
+          "observed_residues": 151,
+          "internal_gaps": []
+        }
+      ],
+      "policy": "Use every component and operator in deposited assembly1. Other independent assemblies are excluded by this predeclared assembly choice; original input is preserved."
+    },
+    "retained_nonstandard_residues": [
+      {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "155",
+        "insertion_code": null,
+        "component": "SO4",
+        "observed_heavy_atom_names": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "S"
+        ]
+      },
+      {
+        "label_chain": "C",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "156",
+        "insertion_code": null,
+        "component": "SO4",
+        "observed_heavy_atom_names": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "S"
+        ]
+      },
+      {
+        "label_chain": "D",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "154",
+        "insertion_code": null,
+        "component": "HEM",
+        "observed_heavy_atom_names": [
+          "C1A",
+          "C1B",
+          "C1C",
+          "C1D",
+          "C2A",
+          "C2B",
+          "C2C",
+          "C2D",
+          "C3A",
+          "C3B",
+          "C3C",
+          "C3D",
+          "C4A",
+          "C4B",
+          "C4C",
+          "C4D",
+          "CAA",
+          "CAB",
+          "CAC",
+          "CAD",
+          "CBA",
+          "CBB",
+          "CBC",
+          "CBD",
+          "CGA",
+          "CGD",
+          "CHA",
+          "CHB",
+          "CHC",
+          "CHD",
+          "CMA",
+          "CMB",
+          "CMC",
+          "CMD",
+          "FE",
+          "NA",
+          "NB",
+          "NC",
+          "ND",
+          "O1A",
+          "O1D",
+          "O2A",
+          "O2D"
+        ]
+      },
+      {
+        "label_chain": "E",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "157",
+        "insertion_code": null,
+        "component": "OXY",
+        "observed_heavy_atom_names": [
+          "O1",
+          "O2"
+        ]
+      }
+    ],
+    "ccd_sources": [
+      {
+        "id": "SO4",
+        "source": {
+          "path": "inputs/ccd/SO4.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/SO4.cif",
+          "sha256": "89409c769690c31746c8c43e5f02fb212ecf65542ea5b26f58d18532677fa893",
+          "bytes": 3969
+        },
+        "name": "SULFATE ION",
+        "component_formal_charge": "-2",
+        "metal_atom_formal_charges": {},
+        "leaving_atom_names": []
+      },
+      {
+        "id": "HEM",
+        "source": {
+          "path": "inputs/ccd/HEM.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/HEM.cif",
+          "sha256": "55b1660d3f3fda1cf4fcb6610857bfde5b14d54258938d7158d7d8b3e8bcddab",
+          "bytes": 20968
+        },
+        "name": "PROTOPORPHYRIN IX CONTAINING FE",
+        "component_formal_charge": null,
+        "metal_atom_formal_charges": {
+          "FE": null
+        },
+        "leaving_atom_names": []
+      },
+      {
+        "id": "OXY",
+        "source": {
+          "path": "inputs/ccd/OXY.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/OXY.cif",
+          "sha256": "a17b992972a62bc1e4bbc4294ac78c5a2d31a437e4ac0cabdbfa8a185f205f37",
+          "bytes": 3791
+        },
+        "name": "OXYGEN MOLECULE",
+        "component_formal_charge": "0",
+        "metal_atom_formal_charges": {},
+        "leaving_atom_names": []
+      }
+    ],
+    "ccd_coordinate_differences": [],
+    "deposited_connections": [
+      {
+        "id": "metalc1",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "93",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "93",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "HEM",
+          "atom": "FE",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.064",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc2",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "HEM",
+          "atom": "FE",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "OXY",
+          "atom": "O1",
+          "author_chain": "A",
+          "author_residue_id": "157",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "1.806",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc3",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "HEM",
+          "atom": "FE",
+          "author_chain": "A",
+          "author_residue_id": "154",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "OXY",
+          "atom": "O2",
+          "author_chain": "A",
+          "author_residue_id": "157",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.681",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      }
+    ],
+    "metal_sites": [
+      {
+        "element": "FE",
+        "component": "HEM",
+        "label_chain": "D",
+        "author_chain": "A",
+        "author_residue_id": "154",
+        "insertion_code": null,
+        "atom": "FE",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          14.515,
+          27.975,
+          4.75
+        ],
+        "ccd": {
+          "id": "HEM",
+          "source": {
+            "path": "inputs/ccd/HEM.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/HEM.cif",
+            "sha256": "55b1660d3f3fda1cf4fcb6610857bfde5b14d54258938d7158d7d8b3e8bcddab",
+            "bytes": 20968
+          },
+          "name": "PROTOPORPHYRIN IX CONTAINING FE",
+          "component_formal_charge": null,
+          "metal_atom_formal_charges": {
+            "FE": null
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc1",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "93",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "93",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.064",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc2",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "OXY",
+              "atom": "O1",
+              "author_chain": "A",
+              "author_residue_id": "157",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "1.806",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc3",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "OXY",
+              "atom": "O2",
+              "author_chain": "A",
+              "author_residue_id": "157",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.681",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [],
+        "intra_component_ccd_metal_bonds": [
+          {
+            "comp_id": "HEM",
+            "atom_id_1": "FE",
+            "atom_id_2": "NA",
+            "value_order": "SING",
+            "pdbx_aromatic_flag": "N",
+            "pdbx_stereo_config": "N",
+            "pdbx_ordinal": "79",
+            "pdbx_metal_coordination_flag": "Y",
+            "pdbx_metal_pi_flag": "N"
+          },
+          {
+            "comp_id": "HEM",
+            "atom_id_1": "FE",
+            "atom_id_2": "NB",
+            "value_order": "SING",
+            "pdbx_aromatic_flag": "N",
+            "pdbx_stereo_config": "N",
+            "pdbx_ordinal": "80",
+            "pdbx_metal_coordination_flag": "Y",
+            "pdbx_metal_pi_flag": "N"
+          },
+          {
+            "comp_id": "HEM",
+            "atom_id_1": "FE",
+            "atom_id_2": "NC",
+            "value_order": "SING",
+            "pdbx_aromatic_flag": "N",
+            "pdbx_stereo_config": "N",
+            "pdbx_ordinal": "81",
+            "pdbx_metal_coordination_flag": "Y",
+            "pdbx_metal_pi_flag": "N"
+          },
+          {
+            "comp_id": "HEM",
+            "atom_id_1": "FE",
+            "atom_id_2": "ND",
+            "value_order": "SING",
+            "pdbx_aromatic_flag": "N",
+            "pdbx_stereo_config": "N",
+            "pdbx_ordinal": "82",
+            "pdbx_metal_coordination_flag": "Y",
+            "pdbx_metal_pi_flag": "N"
+          }
+        ],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      }
+    ],
+    "excluded_source_label_chains": [],
+    "future_preparation_policy": {
+      "remove_heterogens": false,
+      "remove_coordinating_waters": false,
+      "build_missing_internal_residues": "Only with existing supported sequence and geometry safeguards; retained gaps listed above.",
+      "chemical_mutation": "No undeclared protein/ligand mutation or ligand deletion; any accepted bound-state transformation must be recorded and validated."
+    }
+  },
+  {
+    "id": "1LUV",
+    "label": "Human MnSOD H30V",
+    "status": "frozen_source_case_not_prepared",
+    "notes": "Two deposited Mn sites expanded to the declared tetramer; CCD Mn(II) is recorded without claiming the experiment determines oxidation/spin state.",
+    "source": {
+      "path": "inputs/1LUV.cif",
+      "source_url": "https://files.rcsb.org/download/1LUV.cif",
+      "sha256": "d9ee98c7d0b85aedf2fa38b3244eea06d720c40054346d8d48a0d8263aefe521",
+      "bytes": 396197
+    },
+    "rcsb_entry_url": "https://www.rcsb.org/structure/1LUV",
+    "pdb_doi": "https://doi.org/10.2210/pdb1LUV/pdb",
+    "title": "CATALYTIC AND STRUCTURAL EFFECTS OF AMINO-ACID SUBSTITUTION AT HIS 30 IN HUMAN MANGANESE SUPEROXIDE DISMUTASE: INSERTION OF VAL CGAMMA INTO THE SUBSTRATE ACCESS CHANNEL",
+    "organisms": [
+      "Homo sapiens"
+    ],
+    "resolution_angstrom": 1.85,
+    "primary_citations": [
+      {
+        "id": "primary",
+        "title": "Catalytic and structural effects of amino acid substitution at histidine 30 in human manganese superoxide dismutase: insertion of valine C gamma into the substrate access channel",
+        "journal_abbrev": "Biochemistry",
+        "journal_volume": "42",
+        "page_first": "2781",
+        "page_last": "2789",
+        "year": "2003",
+        "journal_id_ASTM": "BICHAW",
+        "country": "US",
+        "journal_id_ISSN": "0006-2960",
+        "journal_id_CSD": "0033",
+        "book_publisher": null,
+        "pdbx_database_id_PubMed": "12627943",
+        "pdbx_database_id_DOI": "10.1021/bi0266481"
+      }
+    ],
+    "assembly_choice": {
+      "id": "1",
+      "declaration": {
+        "id": "1",
+        "details": "author_and_software_defined_assembly",
+        "method_details": "PISA,PQS",
+        "oligomeric_details": "tetrameric",
+        "oligomeric_count": "4"
+      },
+      "generators": [
+        {
+          "assembly_id": "1",
+          "oper_expression": "1,2",
+          "asym_id_list": "A,B,C,D,E,F"
+        }
+      ],
+      "operators": [
+        {
+          "id": "1",
+          "type": "identity operation",
+          "name": "1_555",
+          "symmetry_operation": "x,y,z",
+          "matrix[1][1]": "1.0000000000",
+          "matrix[1][2]": "0.0000000000",
+          "matrix[1][3]": "0.0000000000",
+          "vector[1]": "0.0000000000",
+          "matrix[2][1]": "0.0000000000",
+          "matrix[2][2]": "1.0000000000",
+          "matrix[2][3]": "0.0000000000",
+          "vector[2]": "0.0000000000",
+          "matrix[3][1]": "0.0000000000",
+          "matrix[3][2]": "0.0000000000",
+          "matrix[3][3]": "1.0000000000",
+          "vector[3]": "0.0000000000"
+        },
+        {
+          "id": "2",
+          "type": "crystal symmetry operation",
+          "name": "10_665",
+          "symmetry_operation": "-y+1,-x+1,-z+5/6",
+          "matrix[1][1]": "0.5000000000",
+          "matrix[1][2]": "-0.8660254038",
+          "matrix[1][3]": "0.0000000000",
+          "vector[1]": "39.9505000000",
+          "matrix[2][1]": "-0.8660254038",
+          "matrix[2][2]": "-0.5000000000",
+          "matrix[2][3]": "0.0000000000",
+          "vector[2]": "69.1962957878",
+          "matrix[3][1]": "0.0000000000",
+          "matrix[3][2]": "0.0000000000",
+          "matrix[3][3]": "-1.0000000000",
+          "vector[3]": "200.9375000000"
+        }
+      ],
+      "label_chains": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "protein_chains": [
+        {
+          "label_chain": "A",
+          "author_chain": "A",
+          "entity_id": "1",
+          "sequence_length": 198,
+          "observed_residues": 198,
+          "internal_gaps": []
+        },
+        {
+          "label_chain": "B",
+          "author_chain": "B",
+          "entity_id": "1",
+          "sequence_length": 198,
+          "observed_residues": 198,
+          "internal_gaps": []
+        }
+      ],
+      "policy": "Use every component and operator in deposited assembly1. Other independent assemblies are excluded by this predeclared assembly choice; original input is preserved."
+    },
+    "retained_nonstandard_residues": [
+      {
+        "label_chain": "C",
+        "label_sequence_id": null,
+        "author_chain": "A",
+        "author_residue_id": "199",
+        "insertion_code": null,
+        "component": "MN",
+        "observed_heavy_atom_names": [
+          "MN"
+        ]
+      },
+      {
+        "label_chain": "D",
+        "label_sequence_id": null,
+        "author_chain": "B",
+        "author_residue_id": "200",
+        "insertion_code": null,
+        "component": "MN",
+        "observed_heavy_atom_names": [
+          "MN"
+        ]
+      }
+    ],
+    "ccd_sources": [
+      {
+        "id": "MN",
+        "source": {
+          "path": "inputs/ccd/MN.cif",
+          "source_url": "https://files.rcsb.org/ligands/download/MN.cif",
+          "sha256": "34069721472535643756eb140039ced4053cec1f4814f69658e7b244ee2bebc6",
+          "bytes": 3435
+        },
+        "name": "MANGANESE (II) ION",
+        "component_formal_charge": "2",
+        "metal_atom_formal_charges": {
+          "MN": "2"
+        },
+        "leaving_atom_names": []
+      }
+    ],
+    "ccd_coordinate_differences": [],
+    "deposited_connections": [
+      {
+        "id": "metalc1",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "26",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "26",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "199",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.196",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc2",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "74",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "74",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "199",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.276",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc3",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "159",
+          "component": "ASP",
+          "atom": "OD1",
+          "author_chain": "A",
+          "author_residue_id": "159",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "199",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.038",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc4",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "A",
+          "label_sequence_id": "163",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "A",
+          "author_residue_id": "163",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "199",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.069",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc5",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "C",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "A",
+          "author_residue_id": "199",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "E",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "A",
+          "author_residue_id": "200",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.172",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc6",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": "26",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "B",
+          "author_residue_id": "26",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "B",
+          "author_residue_id": "200",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.428",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc7",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": "74",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "B",
+          "author_residue_id": "74",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "B",
+          "author_residue_id": "200",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.156",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc8",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": "159",
+          "component": "ASP",
+          "atom": "OD1",
+          "author_chain": "B",
+          "author_residue_id": "159",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "B",
+          "author_residue_id": "200",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.025",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc9",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "B",
+          "label_sequence_id": "163",
+          "component": "HIS",
+          "atom": "NE2",
+          "author_chain": "B",
+          "author_residue_id": "163",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "B",
+          "author_residue_id": "200",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.235",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      },
+      {
+        "id": "metalc10",
+        "type": "metalc",
+        "partner1": {
+          "label_chain": "D",
+          "label_sequence_id": null,
+          "component": "MN",
+          "atom": "MN",
+          "author_chain": "B",
+          "author_residue_id": "200",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "partner2": {
+          "label_chain": "F",
+          "label_sequence_id": null,
+          "component": "HOH",
+          "atom": "O",
+          "author_chain": "B",
+          "author_residue_id": "201",
+          "symmetry": "1_555",
+          "insertion_code": null,
+          "altloc": null
+        },
+        "deposited_distance_angstrom": "2.021",
+        "deposited_order": null,
+        "leaving_atom_flag": null
+      }
+    ],
+    "metal_sites": [
+      {
+        "element": "MN",
+        "component": "MN",
+        "label_chain": "C",
+        "author_chain": "A",
+        "author_residue_id": "199",
+        "insertion_code": null,
+        "atom": "MN",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          49.679,
+          25.033,
+          94.023
+        ],
+        "ccd": {
+          "id": "MN",
+          "source": {
+            "path": "inputs/ccd/MN.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/MN.cif",
+            "sha256": "34069721472535643756eb140039ced4053cec1f4814f69658e7b244ee2bebc6",
+            "bytes": 3435
+          },
+          "name": "MANGANESE (II) ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "MN": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc1",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "26",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "26",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.196",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc2",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "74",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "74",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.276",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc3",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "159",
+              "component": "ASP",
+              "atom": "OD1",
+              "author_chain": "A",
+              "author_residue_id": "159",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.038",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc4",
+            "donor": {
+              "label_chain": "A",
+              "label_sequence_id": "163",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "A",
+              "author_residue_id": "163",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.069",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc5",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "200",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.172",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [
+          {
+            "connection_id": "metalc5",
+            "donor": {
+              "label_chain": "E",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "A",
+              "author_residue_id": "200",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.172",
+            "same_explicit_image": true
+          }
+        ],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      },
+      {
+        "element": "MN",
+        "component": "MN",
+        "label_chain": "D",
+        "author_chain": "B",
+        "author_residue_id": "200",
+        "insertion_code": null,
+        "atom": "MN",
+        "altloc": null,
+        "occupancy": "1.00",
+        "source_formal_charge": null,
+        "cartesian_angstrom": [
+          10.763,
+          34.963,
+          92.325
+        ],
+        "ccd": {
+          "id": "MN",
+          "source": {
+            "path": "inputs/ccd/MN.cif",
+            "source_url": "https://files.rcsb.org/ligands/download/MN.cif",
+            "sha256": "34069721472535643756eb140039ced4053cec1f4814f69658e7b244ee2bebc6",
+            "bytes": 3435
+          },
+          "name": "MANGANESE (II) ION",
+          "component_formal_charge": "2",
+          "metal_atom_formal_charges": {
+            "MN": "2"
+          },
+          "leaving_atom_names": []
+        },
+        "deposited_contacts": [
+          {
+            "connection_id": "metalc6",
+            "donor": {
+              "label_chain": "B",
+              "label_sequence_id": "26",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "B",
+              "author_residue_id": "26",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.428",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc7",
+            "donor": {
+              "label_chain": "B",
+              "label_sequence_id": "74",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "B",
+              "author_residue_id": "74",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.156",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc8",
+            "donor": {
+              "label_chain": "B",
+              "label_sequence_id": "159",
+              "component": "ASP",
+              "atom": "OD1",
+              "author_chain": "B",
+              "author_residue_id": "159",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.025",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc9",
+            "donor": {
+              "label_chain": "B",
+              "label_sequence_id": "163",
+              "component": "HIS",
+              "atom": "NE2",
+              "author_chain": "B",
+              "author_residue_id": "163",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.235",
+            "same_explicit_image": true
+          },
+          {
+            "connection_id": "metalc10",
+            "donor": {
+              "label_chain": "F",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "B",
+              "author_residue_id": "201",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.021",
+            "same_explicit_image": true
+          }
+        ],
+        "deposited_coordinating_waters": [
+          {
+            "connection_id": "metalc10",
+            "donor": {
+              "label_chain": "F",
+              "label_sequence_id": null,
+              "component": "HOH",
+              "atom": "O",
+              "author_chain": "B",
+              "author_residue_id": "201",
+              "symmetry": "1_555",
+              "insertion_code": null,
+              "altloc": null
+            },
+            "metal_symmetry": "1_555",
+            "distance_angstrom": "2.021",
+            "same_explicit_image": true
+          }
+        ],
+        "intra_component_ccd_metal_bonds": [],
+        "coordination_basis": "Original struct_conn plus explicit same-component CCD bonds; no distance-derived donor assignment.",
+        "chosen_oxidation_state": null,
+        "chosen_spin_state": null,
+        "chosen_model_id": null,
+        "model_status": "Not assigned by curation; source formal charges are evidence, not an automatically validated bound-state model."
+      }
+    ],
+    "excluded_source_label_chains": [],
+    "future_preparation_policy": {
+      "remove_heterogens": false,
+      "remove_coordinating_waters": false,
+      "build_missing_internal_residues": "Only with existing supported sequence and geometry safeguards; retained gaps listed above.",
+      "chemical_mutation": "No undeclared protein/ligand mutation or ligand deletion; any accepted bound-state transformation must be recorded and validated."
+    }
+  }
+]

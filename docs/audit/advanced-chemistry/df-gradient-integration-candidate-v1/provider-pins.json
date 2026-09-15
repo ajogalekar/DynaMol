@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "file": "predeclared-plan.json",
+      "sha256": "ffd703ebd1c91907abff62eb03f805b9eeb2bebc4528ef1c86fedba979983bd5",
+      "bytes": 3396
+    },
+    {
+      "file": "native_worker.py",
+      "sha256": "e3e89378d2bc0e5a35d4ec07708a371df3ba3c16f2660bd2aaf4088f81a0cb47",
+      "bytes": 8966
+    },
+    {
+      "file": "controller.py",
+      "sha256": "bd61c63e6533f178abe92fa5160ffc530ed247392bb43b696a27a19d81887e46",
+      "bytes": 7651
+    },
+    {
+      "file": "provider/baseline_rhf.py",
+      "sha256": "a52525f269974884b28846b55d021c169d430048e0755b55557480f733128735",
+      "bytes": 23309
+    },
+    {
+      "file": "provider/candidate_rhf.py",
+      "sha256": "4480bdc1df639cadd7b0e89f86caac7943fc11765291c9b6e191b92431421df0",
+      "bytes": 23369
+    },
+    {
+      "file": "provider/pinned_bridge.py",
+      "sha256": "a754c926360a15e564a5e3ca7a02c91fbb5636fc7ef38358545cde7c9573f28e",
+      "bytes": 1142
+    },
+    {
+      "file": "provider/tiled_contract.py",
+      "sha256": "8d9e6bbb64e9e525ac2d41cb2783f699050e32c0516e89cb821a1229b1012060",
+      "bytes": 5962
+    }
+  ]
+}

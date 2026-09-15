@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-09-13T17:10:44.602587+00:00",
+  "status": "40 full-suite tests plus 1 new false-convergence control passed; 41 total",
+  "files": {
+    "backend/qm_worker.py": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+    "backend/tests/test_qm_worker.py": "8014457c4ed3c7cfc96bfbaa95c179e738c88d08f5b9563d3ed4e1b33629ed00",
+    "docs/audit/advanced-chemistry/qm-worker-checks/native-dihedral-tests.log": "b7ce0526710518b931743e4e54d427f0fe290283aa368f62e8c0c002d252b715",
+    "docs/audit/advanced-chemistry/qm-worker-checks/native-dihedral-tests.xml": "f683a20c7ce2ecdfc1d4b897195078a0c2bec1ffd4230bc3ff0124ce59d0a375",
+    "docs/audit/advanced-chemistry/qm-worker-checks/dihedral-false-convergence-test.log": "dcda0eac3f149a2ae54828ec9fdc5577a4627f589183d952e988eeb7ef09a5f1",
+    "docs/audit/advanced-chemistry/qm-worker-checks/dihedral-false-convergence-test.xml": "88df388eca0570f44822faad29742dea4199ecaf8f09be81a68ab72ad89ea975",
+    "docs/audit/advanced-chemistry/qm-worker-checks/parallel-dihedral-smoke/result.json": "58e3b4b34a47565b61a859f8c8dc3481d97419ec2920a24318e976d38d511ac3"
+  },
+  "native_evidence_directories": [
+    "native-suite-dihedral-1",
+    "native-suite-dihedral-negative",
+    "parallel-dihedral-smoke"
+  ],
+  "scope": "Tiny constrained QM implementation checks; no large covalent/metal scan or force-field-accuracy claim."
+}

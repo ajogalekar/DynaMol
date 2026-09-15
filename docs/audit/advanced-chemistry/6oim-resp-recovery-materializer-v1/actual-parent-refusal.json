@@ -1,0 +1,13 @@
+{
+  "status": "refused",
+  "accepted": false,
+  "physical_acceptance": false,
+  "request_emitted": false,
+  "QM_launched": false,
+  "RESP_launched": false,
+  "checkpoint_reused": false,
+  "script_sha256": "7a7a588781b85b5ac84a951bc99267d38de1fbc05b00bcc9daa777d6e2fcad04",
+  "plan_sha256": "be0750b9c76aa93513c28eed7bfa8d0e285874dcc06df5e1122c8fd9a9349120",
+  "error_type": "ValueError",
+  "error": "Accepted terminal parent absent; no request emitted"
+}

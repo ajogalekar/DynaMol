@@ -1,0 +1,87 @@
+{
+  "scope": "Independent read-only verification of saved three-atom numerical qualification. No native calculations.",
+  "outer_manifest_sha256": "0b9aa5bea3ae0a088a5f4f3bbea43332418d977944b4b66f7133d896356ebce8",
+  "package_manifest_sha256": "aa9e15d38e9a45f60a4258e3b153f4058797b595beec99df7ac672f9c699176e",
+  "outer_artifacts_verified": 200,
+  "original_candidate_helper_sources_verified": true,
+  "profiles": {
+    "rhf": {
+      "pair_all_arrays_and_final_energy_exact": true,
+      "moving_evaluations": 5,
+      "replays": [
+        {
+          "cycle": 1,
+          "energy_difference_hartree": 0.0,
+          "gradient_max_difference_hartree_per_bohr": 0.0,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 2,
+          "energy_difference_hartree": 2.842170943040401e-14,
+          "gradient_max_difference_hartree_per_bohr": 7.917444477811841e-11,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 3,
+          "energy_difference_hartree": 1.4210854715202004e-14,
+          "gradient_max_difference_hartree_per_bohr": 4.941740350261625e-10,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 4,
+          "energy_difference_hartree": 2.842170943040401e-14,
+          "gradient_max_difference_hartree_per_bohr": 7.295679615992867e-10,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 5,
+          "energy_difference_hartree": 2.842170943040401e-14,
+          "gradient_max_difference_hartree_per_bohr": 4.800213559974509e-10,
+          "exact_geometry": true
+        }
+      ]
+    },
+    "rks": {
+      "pair_all_arrays_and_final_energy_exact": true,
+      "moving_evaluations": 5,
+      "replays": [
+        {
+          "cycle": 1,
+          "energy_difference_hartree": 0.0,
+          "gradient_max_difference_hartree_per_bohr": 0.0,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 2,
+          "energy_difference_hartree": 4.263256414560601e-14,
+          "gradient_max_difference_hartree_per_bohr": 2.582876135193146e-10,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 3,
+          "energy_difference_hartree": 2.842170943040401e-14,
+          "gradient_max_difference_hartree_per_bohr": 6.284437414905142e-10,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 4,
+          "energy_difference_hartree": 2.842170943040401e-14,
+          "gradient_max_difference_hartree_per_bohr": 1.1671192901019367e-09,
+          "exact_geometry": true
+        },
+        {
+          "cycle": 5,
+          "energy_difference_hartree": 2.842170943040401e-14,
+          "gradient_max_difference_hartree_per_bohr": 5.52923484775647e-10,
+          "exact_geometry": true
+        }
+      ]
+    }
+  },
+  "QM_launched": false,
+  "physical_acceptance": false,
+  "ENOSPC_before_commit_rejects_acceptance_and_retains_temporary": true,
+  "memory_evidence": "All children <1s; once-per-second samples observe startup, not true peak RSS. No large-system memory qualification.",
+  "maximum_native_child_elapsed_seconds": 0.815727949142456,
+  "status": "no_blocker_for_scoped_three_atom_journal_candidate"
+}

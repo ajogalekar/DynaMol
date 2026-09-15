@@ -1,0 +1,295 @@
+{
+  "scope": "Complete retained 1HCK isolated audit, including initial failures and published immutable sources; generated after all checks, no further native jobs",
+  "files": {
+    "ASSEMBLY-REVIEW.md": {
+      "bytes": 6416,
+      "sha256": "f19edd248e416ba30d2159b62be1bb51eee76ec15a08afd21a2c737f5ec9a5d5"
+    },
+    "parameter-retrieval.json": {
+      "bytes": 994,
+      "sha256": "cba24d71b631624596c543ce9a910f946ef2586ca2304dd7af622e6b5c5511bf"
+    },
+    "ct4c01142_si_002.zip": {
+      "bytes": 16255,
+      "sha256": "a64f00b51aa85103bf160b68ebfe3784c397597208d0d9c144905dbcdb473539"
+    },
+    "preprint.txt": {
+      "bytes": 67162,
+      "sha256": "ef7bfcb624ba932892b75a86d59a496ec0737832425b2bc58a9fb443663e5cf5"
+    },
+    "charmm-amberclassic-current.F90": {
+      "bytes": 105719,
+      "sha256": "cd86897376e3b55ee5debfc1795b75c5b4bdf1cfbacd2c670c0f0723f4db8929"
+    },
+    "supporting-information.txt": {
+      "bytes": 7640,
+      "sha256": "b2646e5458a4ab3b6185e82d194804913f25861e275eaebb3837274b41078bf7"
+    },
+    "Chemrxiv20240830_TPffs.pdf": {
+      "bytes": 2900452,
+      "sha256": "bd8c9fa2f31aff0ac8493f4370b396397a42100adf69940b14159c9422458992"
+    },
+    "native-input-files.json": {
+      "bytes": 3646,
+      "sha256": "fb2695ec34023f1075a3b46752f765c64c59c703bc9bf718698ef460a97c462d"
+    },
+    "acs-si-27886059.json": {
+      "bytes": 7045,
+      "sha256": "274d0a63395de1f7ef93603273e728be00fa08739d9198857fde8da0fe05f2d2"
+    },
+    "native-v2-static-retry-controller.log": {
+      "bytes": 619,
+      "sha256": "6c1a8fa1504d965d96985c9a5bfc2356850355980cbe6342d1a1427f5a4c5a52"
+    },
+    "acs-si-27886062.json": {
+      "bytes": 6916,
+      "sha256": "95001faac3516ef39e69efbda9088076b301548c112b996e4e1e339d0698003b"
+    },
+    "ct4c01142_si_001.pdf": {
+      "bytes": 731088,
+      "sha256": "f974227991c48a05d155e3e83b749dc7a823a477b7bd48d2a0eeeaa3b3a8b816"
+    },
+    "charmm-AmberTools24-rc5.F90": {
+      "bytes": 112125,
+      "sha256": "ad583d5b3cd1b8e5e62ca7303442c60793e33d73177167dcf98f7268e5a05c1d"
+    },
+    "native-v1-controller.log": {
+      "bytes": 652,
+      "sha256": "a301051ccc5154dc30dd35bb907fa89e8f9334e013980dbfec223c1103b5101c"
+    },
+    "published-files.json": {
+      "bytes": 1329,
+      "sha256": "ddef0c1eb356ffc0efb580cf7557d44e5adcf547f162df4c4dce5f6349ac9de1"
+    },
+    "native-python-launch-diagnostic.json": {
+      "bytes": 232,
+      "sha256": "f4dbabc10e4e983ac0a4c09a86db4238cc10a8d66a614908f5fcc2f8819fedbc"
+    },
+    "native-source-extraction.json": {
+      "bytes": 442,
+      "sha256": "648cc30d804e76cc9421f90a59268ad7b81af53a7873cc004b7deffb1e7b5c7b"
+    },
+    "native-v2-transport-controller.log": {
+      "bytes": 1736,
+      "sha256": "571b916c0d2061033419cbdf0ac4d44fd37fb35d93ae3f64ca5a97ff54ac2008"
+    },
+    "preprint-source.json": {
+      "bytes": 385,
+      "sha256": "048def50122cd14258c65b56d54630fa55de3b226f4eafa479e9cba2327df42d"
+    },
+    "acs-si-query.json": {
+      "bytes": 2617,
+      "sha256": "0808ec8586060fdc21672361585b1f94c17eb793329a607ab6f7ea87a307c0a0"
+    },
+    "STATUS.json": {
+      "bytes": 3322,
+      "sha256": "230e4b02e4438ffad34bb2e321c1af1fe2d418be0244dd76453d98bdb7bbf7f5"
+    },
+    "native-v2-static-controller.log": {
+      "bytes": 1297,
+      "sha256": "db8a3d8eecba6efe12110185401d5e9ef5e857d4249f4b205a6cde63e160dfc1"
+    },
+    "native-v2-controller.log": {
+      "bytes": 2234,
+      "sha256": "bffbbd373e190217b919cb28999cddd3c0e3e52d4cdcfbfe123142a7277eb8b6"
+    },
+    "native-v1/tleap.in": {
+      "bytes": 631,
+      "sha256": "e1c9921bc8ef6fa52fcaf5a6c24cb3097f166f958c4ddeb8c27b1cebb63502f5"
+    },
+    "native-v1/leap.log": {
+      "bytes": 19159,
+      "sha256": "419154f8398c6a127ffe26c66fc2266d1161ff9af55e0e7a664140fc37473d9c"
+    },
+    "native-v1/published.prmtop": {
+      "bytes": 2190193,
+      "sha256": "4c784722a0226c554a33fda3f4c19de5ea69c019bd105012da7fca5b89a82452"
+    },
+    "native-v1/published-modification.log": {
+      "bytes": 34,
+      "sha256": "f08b122325102d2227817d264be7201ca426b607d08b92d1827ca31ee4b53224"
+    },
+    "native-v1/prepared-input.pdb": {
+      "bytes": 404476,
+      "sha256": "4459fcdd74e9c4437329f6abd6a67f445dddb219e7868cf5e8ca5bb26ff53ff4"
+    },
+    "native-v1/baseline.inpcrd": {
+      "bytes": 190404,
+      "sha256": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7"
+    },
+    "native-v1/baseline-native.pdb": {
+      "bytes": 350256,
+      "sha256": "4809444dd5ca8bc73711b3c018cb76b5128a123ace3de0d0d016bf83828122f6"
+    },
+    "native-v1/input-selection.json": {
+      "bytes": 9070,
+      "sha256": "59a19995c54afb50a84412e502f331736bf047a65890e2a215711b4da97e6f46"
+    },
+    "native-v1/protein-reference.prmtop": {
+      "bytes": 2115024,
+      "sha256": "c368d0ca12a2090dd21b80b98c495b69340bf986f1a5bec9b484f4d44c407376"
+    },
+    "native-v1/initial-pair-sharing-diagnostic.json": {
+      "bytes": 1339,
+      "sha256": "c739b1e9f795dc3445bde888a6a8bb1dd217492144c699b6d46119dedd2a6bab"
+    },
+    "native-v1/source-atom-map.json": {
+      "bytes": 3707428,
+      "sha256": "b90d761ed796f19ac3943240b18393b1f4d5617fa303f47dcca70f5bb64e4937"
+    },
+    "native-v1/published.inpcrd": {
+      "bytes": 190404,
+      "sha256": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7"
+    },
+    "native-v1/protein-reference.inpcrd": {
+      "bytes": 176972,
+      "sha256": "8e7fd45edf3ee5daff2ade15a0e7fb2e25e987bb97ae14a6918ffbaa87913fac"
+    },
+    "native-v1/protein-input.pdb": {
+      "bytes": 392696,
+      "sha256": "04a6b5fb750a5975eebb1412ac2f5ed3231adab13165dc35df8c24d5812d2dff"
+    },
+    "native-v1/baseline.prmtop": {
+      "bytes": 2189941,
+      "sha256": "7e68c597aa72caa011ba32bb4d22e38d7d68201e55e8e487d0d7decbdfebad3f"
+    },
+    "native-v1/tleap.log": {
+      "bytes": 10487,
+      "sha256": "ced8fb5479a8956707ccd456a4945932973d4d171f36e2ee96602daa4402a5ea"
+    },
+    "native-v2/published-openmm-system.xml": {
+      "bytes": 6919066,
+      "sha256": "cdd2233e80b874a2969cf9c41d9843b397a38a68942e88f16cb36f9be0a1a49d"
+    },
+    "native-v2/tleap.in": {
+      "bytes": 631,
+      "sha256": "e1c9921bc8ef6fa52fcaf5a6c24cb3097f166f958c4ddeb8c27b1cebb63502f5"
+    },
+    "native-v2/leap.log": {
+      "bytes": 19159,
+      "sha256": "e6ccf30c1199e500c429454df34a6ee6b09fc0c3ac8dd5059fe81023fe28f417"
+    },
+    "native-v2/published.prmtop": {
+      "bytes": 2190193,
+      "sha256": "bda6ae78ee73d7aeec372a0d83f1ad5253b27f61724fa449f4f70abafd41a4da"
+    },
+    "native-v2/published-modification.log": {
+      "bytes": 34,
+      "sha256": "f08b122325102d2227817d264be7201ca426b607d08b92d1827ca31ee4b53224"
+    },
+    "native-v2/prepared-input.pdb": {
+      "bytes": 404476,
+      "sha256": "4459fcdd74e9c4437329f6abd6a67f445dddb219e7868cf5e8ca5bb26ff53ff4"
+    },
+    "native-v2/baseline.inpcrd": {
+      "bytes": 190404,
+      "sha256": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7"
+    },
+    "native-v2/baseline-native.pdb": {
+      "bytes": 350256,
+      "sha256": "4809444dd5ca8bc73711b3c018cb76b5128a123ace3de0d0d016bf83828122f6"
+    },
+    "native-v2/input-selection.json": {
+      "bytes": 9070,
+      "sha256": "59a19995c54afb50a84412e502f331736bf047a65890e2a215711b4da97e6f46"
+    },
+    "native-v2/finite-static.json": {
+      "bytes": 634,
+      "sha256": "2180e966d5e85d68f26166b52d628e4dc5e549b7c101fe0c0275740668daf355"
+    },
+    "native-v2/protein-reference.prmtop": {
+      "bytes": 2115024,
+      "sha256": "c678390bc33dd7135c74b1cc313ec954c90156d0bd9779aecf2233311442d522"
+    },
+    "native-v2/sander-single-pose-native.json": {
+      "bytes": 322000,
+      "sha256": "e25ef04b0d86451ac9ecd8fee96eb75301961c00b43cdd998b91295a880d6a9f"
+    },
+    "native-v2/mandatory-term-transport.json": {
+      "bytes": 1736,
+      "sha256": "571b916c0d2061033419cbdf0ac4d44fd37fb35d93ae3f64ca5a97ff54ac2008"
+    },
+    "native-v2/source-atom-map.json": {
+      "bytes": 3707428,
+      "sha256": "b90d761ed796f19ac3943240b18393b1f4d5617fa303f47dcca70f5bb64e4937"
+    },
+    "native-v2/published.inpcrd": {
+      "bytes": 190404,
+      "sha256": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7"
+    },
+    "native-v2/native-assembly-report.json": {
+      "bytes": 19120,
+      "sha256": "beb96fb07b4ef01fe1362788e97ac813415699e39e8e5bc3d7d5d42490dde748"
+    },
+    "native-v2/sander-single-pose.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native-v2/sander-parity-input.json": {
+      "bytes": 759947,
+      "sha256": "cb384997851a5bdae3e7353e7a2cac10f07b8ae96d4ddcf41e7fc04afcf56e4e"
+    },
+    "native-v2/protein-reference.inpcrd": {
+      "bytes": 176972,
+      "sha256": "8e7fd45edf3ee5daff2ade15a0e7fb2e25e987bb97ae14a6918ffbaa87913fac"
+    },
+    "native-v2/protein-input.pdb": {
+      "bytes": 392696,
+      "sha256": "04a6b5fb750a5975eebb1412ac2f5ed3231adab13165dc35df8c24d5812d2dff"
+    },
+    "native-v2/baseline.prmtop": {
+      "bytes": 2189941,
+      "sha256": "3dc34aa2ece96ea44ff07cf402aac4cd0bf93d75c7852267009d0b54223093a3"
+    },
+    "native-v2/sander-single-pose-input.json": {
+      "bytes": 139664,
+      "sha256": "02ad55f369a1a7e1f59883d26035bde5f598cc40ce6accce88ed7ada0bfab70c"
+    },
+    "native-v2/tleap.log": {
+      "bytes": 10487,
+      "sha256": "ced8fb5479a8956707ccd456a4945932973d4d171f36e2ee96602daa4402a5ea"
+    },
+    "native-v2/sander-parity.log": {
+      "bytes": 144,
+      "sha256": "8b5b7a3c9bf079a5f44e6b30f7cd8eeae4c7e8b06aa261e9fd5112c863d19af4"
+    },
+    "published/Parameters/ATP-B3.frcmod": {
+      "bytes": 1462,
+      "sha256": "88bd08307f54bdb900306dcf36b5457a258142a4693cbe8e8ac5668c62af7f3e"
+    },
+    "published/Parameters/ADP-B3.prepi": {
+      "bytes": 3368,
+      "sha256": "1de3d0859174529ec820bbc014c18f5013885bb240d455765a9432455247666d"
+    },
+    "published/Parameters/GTP-B3.prepi": {
+      "bytes": 3751,
+      "sha256": "d2276890887fac54b28920303e2ee7811b746e39588527f4bca6ee0ad16102a5"
+    },
+    "published/Parameters/ATP-HF.prepi": {
+      "bytes": 3729,
+      "sha256": "d5e430ee6ea3e2a10c3499ecd875673b07067821a8c721c8a5051f9ab1eaf92f"
+    },
+    "published/Parameters/ATP-HF.frcmod": {
+      "bytes": 1461,
+      "sha256": "2cb455e4bbf668fcd5d7a345e63b8fd46f469e526d04bc80a4129023a95cd877"
+    },
+    "published/Parameters/useage.txt": {
+      "bytes": 781,
+      "sha256": "d6709e7e9698d441a9f9164cb18114570d8cb99bd2002931db9aef537dc257dd"
+    },
+    "published/Parameters/GDP-B3.prepi": {
+      "bytes": 3463,
+      "sha256": "ace5db3e157006cb8dd6814b1bcfc0e93bf8f4bc169c68822df09fa8b9f96fa9"
+    },
+    "published/Parameters/mod.py": {
+      "bytes": 20254,
+      "sha256": "f82e931e216377409941fd9c4f372ccebe339db090e02f2c0167adfa1ecf8040"
+    },
+    "published/Parameters/ATP-B3.prepi": {
+      "bytes": 3666,
+      "sha256": "239a209bf337ed8694855c302fbad03d875abc34512c25f78ec4fbed73761094"
+    }
+  },
+  "integrity_verification": "Every read byte count equals filesystem size; final hashes reread and verified.",
+  "hash_readback_changes": []
+}

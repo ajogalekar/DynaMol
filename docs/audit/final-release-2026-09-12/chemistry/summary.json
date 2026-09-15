@@ -1,0 +1,188 @@
+{
+  "created_at": "2026-09-13T04:55:29.295437+00:00",
+  "scope": "Representative source-checkout chemistry preparation and numerical software checks. Not universal chemical coverage, binding-site state accuracy, loop accuracy, aqueous stability, or convergence.",
+  "matrix": {
+    "passed": true,
+    "cases": 44,
+    "categories": {
+      "protein-template": 28,
+      "ion": 6,
+      "organic ligand/cofactor": 10
+    }
+  },
+  "boundaries": {
+    "passed": true,
+    "cases": 6
+  },
+  "complexes": [
+    {
+      "id": "6DBK",
+      "input_sha256": "bb4b0fb2bfdd7690188a90e65f7c7c9b5f0d0286e22a6be4f0e9837b6a800ef5",
+      "preparation_passed": true,
+      "prepared_atoms": 4713,
+      "preparation_seconds": 67.38,
+      "solvation_status": "completed",
+      "solvated_atoms": 50033,
+      "solvation_error": null,
+      "ligands": [
+        {
+          "key": "B:4000::G5D",
+          "charge_e": 1,
+          "conversion_parity": true,
+          "modeled_atoms": []
+        }
+      ],
+      "ions": [],
+      "modified_residues": [
+        {
+          "name": "PTR",
+          "charge_e": -2.0
+        }
+      ],
+      "rebuilt_segments": [],
+      "stereocenters_checked": 294,
+      "stereochemistry_violations": [],
+      "source_unchanged": true
+    },
+    {
+      "id": "6A93",
+      "input_sha256": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+      "preparation_passed": true,
+      "prepared_atoms": 6142,
+      "preparation_seconds": 69.22,
+      "solvation_status": "failed",
+      "solvated_atoms": null,
+      "solvation_error": "The requested solvent box may exceed the 100,000-atom local limit. Reduce padding or prepare a smaller structure.",
+      "ligands": [
+        {
+          "key": "C:3001::8NU",
+          "charge_e": 1,
+          "conversion_parity": true,
+          "modeled_atoms": []
+        },
+        {
+          "key": "D:3002::CLR",
+          "charge_e": 0,
+          "conversion_parity": true,
+          "modeled_atoms": []
+        },
+        {
+          "key": "F:3004::1PE",
+          "charge_e": 0,
+          "conversion_parity": true,
+          "modeled_atoms": [
+            "C12",
+            "C22",
+            "OH2"
+          ]
+        },
+        {
+          "key": "G:3005::1PE",
+          "charge_e": 0,
+          "conversion_parity": true,
+          "modeled_atoms": []
+        },
+        {
+          "key": "H:3006::1PE",
+          "charge_e": 0,
+          "conversion_parity": true,
+          "modeled_atoms": [
+            "C15",
+            "C16",
+            "C25",
+            "C26",
+            "OH6",
+            "OH7"
+          ]
+        }
+      ],
+      "ions": [
+        {
+          "key": "E:3003::ZN",
+          "charge_e": 2
+        }
+      ],
+      "modified_residues": [],
+      "rebuilt_segments": [],
+      "stereocenters_checked": 407,
+      "stereochemistry_violations": [],
+      "source_unchanged": true
+    },
+    {
+      "id": "1UA2",
+      "input_sha256": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+      "preparation_passed": true,
+      "prepared_atoms": 4825,
+      "preparation_seconds": 49.74,
+      "solvation_status": "completed",
+      "solvated_atoms": 58392,
+      "solvation_error": null,
+      "ligands": [
+        {
+          "key": "E:381::ATP",
+          "charge_e": -4,
+          "conversion_parity": true,
+          "modeled_atoms": []
+        }
+      ],
+      "ions": [],
+      "modified_residues": [
+        {
+          "name": "TPO",
+          "charge_e": -1.9999999999999998
+        }
+      ],
+      "rebuilt_segments": [
+        {
+          "chain": "A",
+          "position": 31,
+          "residues": [
+            "LYS",
+            "LEU",
+            "GLY",
+            "HIS",
+            "ARG",
+            "SER",
+            "GLU",
+            "ALA",
+            "LYS",
+            "ASP",
+            "GLY",
+            "ILE"
+          ],
+          "count": 12,
+          "confidence": "low",
+          "method": "ProMod3 fragment-database model plus bounded OpenMM refinement with observed heavy atoms fixed; no claim of native loop accuracy"
+        }
+      ],
+      "stereocenters_checked": 312,
+      "stereochemistry_violations": [],
+      "source_unchanged": true
+    }
+  ],
+  "exclusions": [
+    "GROMACS prepared-complex transfer remains unsupported; native GROMACS standard-protein stability is audited separately.",
+    "No metal coordination or oxidation-state inference: Zn is the named divalent Amber TIP3P nonbonded model.",
+    "SEP/TPO/PTR use fixed -2 states, not protein pKa calculations. HYP has only its documented template forms; MSE, ALY, and other unregistered amino acids are blocked, not mutated.",
+    "Heme/iron, covalent cofactors, unsupported elements/radicals and ambiguous graphs remain outside automatic preparation.",
+    "Only explicitly selected eligible incomplete ligands and sequence-supported standard internal loops are built; modeled atoms are low confidence. Terminal sequence extensions are not built.",
+    "6A93 at 1 nm padding exceeds the 100,000-atom default profile. Its failed water job is retained; no partner was trimmed and no atom cap or padding bound was relaxed.",
+    "Organic matrix fixtures use fixed-seed SMILES or CCD ideal coordinates, not experimental complexes. Their 5 Reference-platform steps (0.001 ps, vacuum) establish finite numerical continuity only.",
+    "Complex CIFs are retained previously fetched RCSB inputs copied into the audit, not fresh web retrievals. Fresh network fetches and uploads are audited separately."
+  ],
+  "versions": {
+    "openmm": "8.6.0",
+    "rdkit": "2025.9.6",
+    "pdbfixer": "1.12.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6",
+    "parmed": "4.3.1",
+    "gemmi": "0.7.5",
+    "dimorphite-dl": "2.0.2",
+    "scipy": "1.18.1"
+  },
+  "preparation_cases_passed": 3,
+  "water_previews_completed": 2,
+  "water_previews_rejected_at_resource_cap": 1,
+  "chemistry_preparation_passed": true
+}

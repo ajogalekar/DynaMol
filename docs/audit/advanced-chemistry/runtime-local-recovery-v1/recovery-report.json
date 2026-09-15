@@ -1,0 +1,62 @@
+{
+  "status": "ready_for_bounded_research_recovery",
+  "runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1",
+  "python": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/bin/python",
+  "resolved_python": "/Users/ashujo/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/bin/python3.12",
+  "python_sha256": "f1c4ad59c4adf1e5dfb5e9f558f7b95e4d7a62387d4bb4572fcf84f42648fee3",
+  "runtime_manifest": {
+    "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/dynamol-qm-runtime.json",
+    "sha256": "91a060defde8a3506861dffbb5277a4672bbfd041208c2cbbfeedb66dfe0c1b9"
+  },
+  "file_inventory": {
+    "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/local-recovery-evidence/runtime-files.json",
+    "sha256": "683b958788605f35ce2fc9a5b7ac94edb03f5316bd0b166cfcb415ffaea1f416",
+    "files": 9051,
+    "regular_file_bytes": 332079540,
+    "symlinks": 6
+  },
+  "native_files_checked": 177,
+  "original_runtime_modified": false,
+  "native_sections_unchanged": true,
+  "copied_dylibs_relocated": 16,
+  "scripts_relocated": 15,
+  "psutil_version": "7.2.2",
+  "small_water_regression": {
+    "status": "passed",
+    "energy_hartree": -74.96361400506848,
+    "reference_energy_hartree": -74.96361400506842,
+    "absolute_energy_difference_hartree": 5.684341886080802e-14,
+    "max_absolute_gradient_difference_hartree_per_bohr": 6.852296507986466e-12,
+    "energy_tolerance_hartree": 1e-10,
+    "gradient_tolerance_hartree_per_bohr": 1e-10,
+    "same_coordinates_exact": true,
+    "same_resolved_physics_exact": true,
+    "new_observation_fields": {
+      "actual_pyscf_threads": 2,
+      "requested_threads": 2
+    },
+    "native_elapsed_seconds": 0.268178,
+    "scf_cycles": 8,
+    "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+    "runtime_manifest_sha256": "91a060defde8a3506861dffbb5277a4672bbfd041208c2cbbfeedb66dfe0c1b9",
+    "reference_arrays_sha256": "d8fff9daf4d9f550a93046dabc1a2d864350ab14d548014755bcca1b3204d658",
+    "new_arrays_sha256": "eebe5f63cd1172ee960218094c4dd0dae4545f682ed3cb0e80494d280e6ec963",
+    "actual_memory": {
+      "pyscf_memory_mb": [
+        126.451712,
+        452311.334912
+      ],
+      "psutil_rss_bytes": 126451712,
+      "ps_rss_bytes": 126451712
+    },
+    "scope": "One small gas-phase RHF/STO-3G water energy/gradient regression after runtime relocation and psutil addition; not new large chemistry or parameter validation."
+  },
+  "loaded_files_under_documents": [],
+  "limitations": [
+    "Retains the original shared uv-managed interpreter/stdlib outside Documents; not a distributable self-contained bundle.",
+    "One water energy/gradient relocation regression; not a new large-adduct, optimization, scientific force-field or release qualification.",
+    "Existing File Provider-dataless checkpoints are not recovered by this runtime relocation.",
+    "PySCF max_memory_mb remains an allocation hint; an external sampled RSS cap and process-group wall-time/cancellation supervisor are still required."
+  ],
+  "report_scope": "Runtime copy/relocation and resource reporting only; no central checkpoints, original runtimes, active workers or chemical settings edited."
+}

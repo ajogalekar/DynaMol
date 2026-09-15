@@ -1,0 +1,540 @@
+{
+  "source": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1",
+  "plan_sha256": "e98ce75746286410bc9b7ed37619756e5bcfe9c3ad52a65bf57ae93a080272c9",
+  "attempts": [
+    {
+      "attempt": "fragment-source-ccd-43-56-seed-2026-mobile_flanks",
+      "policy": "mobile_flanks",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "motion_A": 0.7532772040351852,
+      "elapsed_seconds": 4.3510164999752305,
+      "peak_rss_bytes": 244482048,
+      "seed_geometry_pass": true,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2026-mobile_flanks/validation/result.json",
+      "result_sha256": "09377aa915f238b34eb4d382b2440d3dbd42ef38968cc82b4297446d2175ed01"
+    },
+    {
+      "attempt": "fragment-source-ccd-43-56-seed-2026-fixed_observed",
+      "policy": "fixed_observed",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ]
+      ],
+      "boundary_outliers": [],
+      "motion_A": 0.0,
+      "elapsed_seconds": 3.692493457987439,
+      "peak_rss_bytes": 241401856,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2026-fixed_observed/validation/result.json",
+      "result_sha256": "6ee58d43b357a7709645ad175ec5c67a9d4ad19ec5d57929882a6673818be540"
+    },
+    {
+      "attempt": "fragment-source-ccd-43-56-seed-2027-mobile_flanks",
+      "policy": "mobile_flanks",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "motion_A": 0.7561375620201644,
+      "elapsed_seconds": 3.709332875034306,
+      "peak_rss_bytes": 240238592,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2027-mobile_flanks/validation/result.json",
+      "result_sha256": "23f01b3392d3a446592bb07da29931ae7d0391b016a5a23384304ca780ae1365"
+    },
+    {
+      "attempt": "fragment-source-ccd-43-56-seed-2027-fixed_observed",
+      "policy": "fixed_observed",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "boundary_outliers": [],
+      "motion_A": 0.0,
+      "elapsed_seconds": 3.708238249993883,
+      "peak_rss_bytes": 240631808,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2027-fixed_observed/validation/result.json",
+      "result_sha256": "94bc26e9140ae3a808cdd3410878552a9256134a21af4c26cbf79233469d9be2"
+    },
+    {
+      "attempt": "torsion-source-ccd-43-56-seed-2026-mobile_flanks",
+      "policy": "mobile_flanks",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "motion_A": 0.7524846097943183,
+      "elapsed_seconds": 4.356542750028893,
+      "peak_rss_bytes": 247529472,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2026-mobile_flanks/validation/result.json",
+      "result_sha256": "7529e9f4feb21a32a555ba3beede7cbde320a3987db67e981893eb6ba0242582"
+    },
+    {
+      "attempt": "torsion-source-ccd-43-56-seed-2026-fixed_observed",
+      "policy": "fixed_observed",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": false,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": false,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ]
+      ],
+      "boundary_outliers": [],
+      "motion_A": 0.0,
+      "elapsed_seconds": 3.6899422500282526,
+      "peak_rss_bytes": 244613120,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2026-fixed_observed/validation/result.json",
+      "result_sha256": "a6e54efceea7f61522fd4c8f9bd349f2299c23d7b59328cd6c2a8d50ee757a36"
+    },
+    {
+      "attempt": "torsion-source-ccd-43-56-seed-2027-mobile_flanks",
+      "policy": "mobile_flanks",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "motion_A": 0.7554808941099556,
+      "elapsed_seconds": 3.037853291956708,
+      "peak_rss_bytes": 239878144,
+      "seed_geometry_pass": true,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2027-mobile_flanks/validation/result.json",
+      "result_sha256": "3ce15966541269e185eca4ec86c45d8f84bbb559debe353cd86a3939af90f415"
+    },
+    {
+      "attempt": "torsion-source-ccd-43-56-seed-2027-fixed_observed",
+      "policy": "fixed_observed",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [],
+      "motion_A": 0.0,
+      "elapsed_seconds": 3.484491666953545,
+      "peak_rss_bytes": 240631808,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2027-fixed_observed/validation/result.json",
+      "result_sha256": "affc9508f6676b9373e292b85270e7d61c4bfb321a0815ec4dba3c07a37410f2"
+    },
+    {
+      "attempt": "torsion-source-dirty-43-56-seed-2026-mobile_flanks",
+      "policy": "mobile_flanks",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "motion_A": 0.757148729017805,
+      "elapsed_seconds": 4.795039916993119,
+      "peak_rss_bytes": 244350976,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2026-mobile_flanks/validation/result.json",
+      "result_sha256": "409868fbea298a8c7e11610bdaa002d94ff79f68c6a73839fa92b9011bc62bed"
+    },
+    {
+      "attempt": "torsion-source-dirty-43-56-seed-2026-fixed_observed",
+      "policy": "fixed_observed",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "motion_A": 0.0,
+      "elapsed_seconds": 3.9364884170354344,
+      "peak_rss_bytes": 241319936,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2026-fixed_observed/validation/result.json",
+      "result_sha256": "9275245baf5b3e6c40b544cc80dc2a2f02a2502425e85d9971e494f2356650b4"
+    },
+    {
+      "attempt": "torsion-source-dirty-43-56-seed-2027-mobile_flanks",
+      "policy": "mobile_flanks",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "motion_A": 0.7528571299716373,
+      "elapsed_seconds": 3.277186458988581,
+      "peak_rss_bytes": 244301824,
+      "seed_geometry_pass": true,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2027-mobile_flanks/validation/result.json",
+      "result_sha256": "0ab879b3f7e8dc27b6103050567114c83dfcc782e703626a1aa529a29d2f38b2"
+    },
+    {
+      "attempt": "torsion-source-dirty-43-56-seed-2027-fixed_observed",
+      "policy": "fixed_observed",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "boundary_outliers": [],
+      "motion_A": 0.0,
+      "elapsed_seconds": 3.6985202499781735,
+      "peak_rss_bytes": 243154944,
+      "seed_geometry_pass": false,
+      "native_system_sha256": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2027-fixed_observed/validation/result.json",
+      "result_sha256": "d440030365277f4c678167c38b535440d89b6881891f67169a1c662bb8c0b311"
+    }
+  ],
+  "completed_attempts": 12,
+  "passing_complete_candidates": 0,
+  "checks_passed": {
+    "identity": 12,
+    "retained_environment": 12,
+    "geometry": 12,
+    "stereochemistry": 11,
+    "backbone_reference": 0,
+    "observed_displacement": 12,
+    "serialized_output": 11,
+    "parameter_integrity": 12
+  },
+  "native_validation_seconds": 45.737146084953565,
+  "peak_sampled_rss_bytes": 247529472,
+  "all_sources_and_results_hash_verified": true,
+  "distinct_native_systems": 1,
+  "app_ready": false,
+  "new_md_or_qm": false
+}

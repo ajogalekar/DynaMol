@@ -1,0 +1,7 @@
+{
+  "worker_sha256": "0095cf57e00b3fcae5cdb7d3f6b85d61a3bf09e701178eddd88048bce9fb382c",
+  "tests_sha256": "4fa6cebbf356828968e82e4635b8c64bcd0703b926e2197c1bab964e4e865023",
+  "native_validation": "24 passed in 9.75s",
+  "evidence": "native-suite-final",
+  "scope": "Tiny molecules only; no full protein-site Hessian/force-field accuracy claim."
+}

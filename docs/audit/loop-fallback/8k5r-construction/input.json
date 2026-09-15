@@ -1,0 +1,2596 @@
+{
+  "input_pdb": "loop-model-context.pdb",
+  "chains": [
+    {
+      "chain_id": "A",
+      "residues": [
+        {
+          "chain": "A",
+          "resid": "5",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "6",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "7",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "8",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "9",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "10",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "11",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "12",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "13",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "14",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "15",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "16",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "17",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "18",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "19",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "20",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "21",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "22",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "23",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "24",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "25",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "26",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "27",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "28",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "29",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "30",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "31",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "32",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "33",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "34",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "35",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "36",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "37",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "38",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "39",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "40",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "41",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "42",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "43",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "44",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "45",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "46",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "47",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "48",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "49",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "50",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "51",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "52",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "53",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "54",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "55",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "56",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "57",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "58",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "59",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "60",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "61",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "62",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "63",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "64",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "65",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "66",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "67",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "68",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "69",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "70",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "71",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "72",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "73",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "74",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "75",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "76",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "77",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "78",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "79",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "80",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "81",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "82",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "83",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "84",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "85",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "86",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "87",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "88",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "89",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "90",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "91",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "92",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "93",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "94",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "95",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "96",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "97",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "98",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "99",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "100",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "101",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "102",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "103",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "104",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "105",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "106",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "107",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "108",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "109",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "110",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "111",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "112",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "113",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "114",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "115",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "116",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "117",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "118",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "119",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "120",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "121",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "122",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "123",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "124",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "125",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "126",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "127",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "128",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "129",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "130",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "131",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "132",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "133",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "134",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "135",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "136",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "137",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "138",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "139",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "140",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "141",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "142",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "143",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "144",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "145",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "146",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "147",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "148",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "149",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "150",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "151",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "152",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "153",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "154",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "155",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "156",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "157",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "158",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "159",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "160",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "161",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "162",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "163",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "164",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "165",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "166",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "167",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "168",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "169",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "170",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "171",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "172",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "173",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "174",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "175",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "176",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "177",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "178",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "179",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "180",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "181",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "182",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "183",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "184",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "185",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "186",
+          "insertion_code": "",
+          "residue": "TPO",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "187",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "188",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "189",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "190",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "191",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "192",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "193",
+          "insertion_code": "",
+          "residue": "TRP",
+          "one_letter": "W",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "194",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "195",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "196",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "197",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "198",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "199",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "200",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "201",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "202",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "203",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "204",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "205",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "206",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "207",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "208",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "209",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "210",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "211",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "212",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "213",
+          "insertion_code": "",
+          "residue": "TRP",
+          "one_letter": "W",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "214",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "215",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "216",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "217",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "218",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "219",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "220",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "221",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "222",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "223",
+          "insertion_code": "",
+          "residue": "TRP",
+          "one_letter": "W",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "224",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "225",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "226",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "227",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "228",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "229",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "230",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "231",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "232",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "233",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "234",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "235",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "236",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "237",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "238",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "239",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "240",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "241",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "242",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "243",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "244",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "245",
+          "insertion_code": "",
+          "residue": "CYS",
+          "one_letter": "C",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "246",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "247",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "248",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "249",
+          "insertion_code": "",
+          "residue": "THR",
+          "one_letter": "T",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "250",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "251",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "252",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "253",
+          "insertion_code": "",
+          "residue": "TRP",
+          "one_letter": "W",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "254",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "255",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "256",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "257",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "258",
+          "insertion_code": "",
+          "residue": "ASN",
+          "one_letter": "N",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "259",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "260",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "261",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "262",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "263",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "264",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": false
+        },
+        {
+          "chain": "A",
+          "resid": "265",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "266",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "267",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "268",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "269",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "270",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "271",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "272",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "273",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "274",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "275",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "276",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "277",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "278",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "279",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "280",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "281",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "282",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "283",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "284",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "285",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "286",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "287",
+          "insertion_code": "",
+          "residue": "TYR",
+          "one_letter": "Y",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "288",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "289",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "290",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "291",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "292",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "293",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "294",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "295",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "296",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "297",
+          "insertion_code": "",
+          "residue": "VAL",
+          "one_letter": "V",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "298",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "299",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "300",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "301",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "302",
+          "insertion_code": "",
+          "residue": "GLN",
+          "one_letter": "Q",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "303",
+          "insertion_code": "",
+          "residue": "ARG",
+          "one_letter": "R",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "304",
+          "insertion_code": "",
+          "residue": "ILE",
+          "one_letter": "I",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "305",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "306",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "307",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "308",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "309",
+          "insertion_code": "",
+          "residue": "ALA",
+          "one_letter": "A",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "310",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "311",
+          "insertion_code": "",
+          "residue": "GLU",
+          "one_letter": "E",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "312",
+          "insertion_code": "",
+          "residue": "HIS",
+          "one_letter": "H",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "313",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "314",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "315",
+          "insertion_code": "",
+          "residue": "PHE",
+          "one_letter": "F",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "316",
+          "insertion_code": "",
+          "residue": "TRP",
+          "one_letter": "W",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "317",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "318",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "319",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "320",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "321",
+          "insertion_code": "",
+          "residue": "PRO",
+          "one_letter": "P",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "322",
+          "insertion_code": "",
+          "residue": "SER",
+          "one_letter": "S",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "323",
+          "insertion_code": "",
+          "residue": "ASP",
+          "one_letter": "D",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "324",
+          "insertion_code": "",
+          "residue": "LEU",
+          "one_letter": "L",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "325",
+          "insertion_code": "",
+          "residue": "LYS",
+          "one_letter": "K",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "326",
+          "insertion_code": "",
+          "residue": "GLY",
+          "one_letter": "G",
+          "observed": true
+        },
+        {
+          "chain": "A",
+          "resid": "327",
+          "insertion_code": "",
+          "residue": "MET",
+          "one_letter": "M",
+          "observed": true
+        }
+      ]
+    }
+  ],
+  "max_res_extension": 0,
+  "requested_seed": 42
+}

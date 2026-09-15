@@ -1,0 +1,4290 @@
+{
+  "created_at": "2026-09-13T04:41:16.967057+00:00",
+  "seed": 2026,
+  "scope": "Representative software/numerical checks, not universal chemistry or biological accuracy. Native artifacts retained in isolated data root.",
+  "rows": [
+    {
+      "id": "ALA",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ALA",
+          "state": "ALA",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 5.551115123125783e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ALA",
+            "state": "ALA",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 5.551115123125783e-17
+          }
+        ],
+        "charge_e": 0.0
+      },
+      "runtime": {
+        "atoms": 22,
+        "charge_e": 0.0,
+        "finite_energy_kj_mol": -83.83647258270007,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ARG",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ARG",
+          "state": "ARG",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "NE": [
+              "HE"
+            ],
+            "NH1": [
+              "HH11",
+              "HH12"
+            ],
+            "NH2": [
+              "HH21",
+              "HH22"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 13,
+          "forcefield_charge_e": 0.9999999999999999
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ARG",
+            "state": "ARG",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NE": [
+                "HE"
+              ],
+              "NH1": [
+                "HH11",
+                "HH12"
+              ],
+              "NH2": [
+                "HH21",
+                "HH22"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 13,
+            "forcefield_charge_e": 0.9999999999999999
+          }
+        ],
+        "charge_e": 0.9999999999999998
+      },
+      "runtime": {
+        "atoms": 36,
+        "charge_e": 0.9999999999999998,
+        "finite_energy_kj_mol": -604.3147064068522,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ASN",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ASN",
+          "state": "ASN",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OD1": [],
+            "ND2": [
+              "HD21",
+              "HD22"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 6,
+          "forcefield_charge_e": -3.469446951953614e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ASN",
+            "state": "ASN",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OD1": [],
+              "ND2": [
+                "HD21",
+                "HD22"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 6,
+            "forcefield_charge_e": -3.469446951953614e-17
+          }
+        ],
+        "charge_e": -9.020562075079397e-17
+      },
+      "runtime": {
+        "atoms": 26,
+        "charge_e": -9.020562075079397e-17,
+        "finite_energy_kj_mol": -393.8215530366691,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ASP",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ASP",
+          "state": "ASP",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OD1": [],
+            "OD2": [],
+            "O": []
+          },
+          "hydrogen_count": 4,
+          "forcefield_charge_e": -1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ASP",
+            "state": "ASP",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OD1": [],
+              "OD2": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": -1.0
+          }
+        ],
+        "charge_e": -1.0
+      },
+      "runtime": {
+        "atoms": 24,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": -104.75554050420219,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "CYS",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "CYS",
+          "state": "CYS",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SG": [
+              "HG"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 2.7755575615628914e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "CYS",
+            "state": "CYS",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [
+                "HG"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 2.7755575615628914e-17
+          }
+        ],
+        "charge_e": -2.7755575615628914e-17
+      },
+      "runtime": {
+        "atoms": 23,
+        "charge_e": -2.7755575615628914e-17,
+        "finite_energy_kj_mol": -69.32634314296716,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLN",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLN",
+          "state": "GLN",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OE1": [],
+            "NE2": [
+              "HE21",
+              "HE22"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 8,
+          "forcefield_charge_e": 6.028164079019405e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLN",
+            "state": "GLN",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OE1": [],
+              "NE2": [
+                "HE21",
+                "HE22"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 8,
+            "forcefield_charge_e": 6.028164079019405e-17
+          }
+        ],
+        "charge_e": 4.7704895589362195e-18
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": 4.7704895589362195e-18,
+        "finite_energy_kj_mol": -306.8955393646582,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLU",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLU",
+          "state": "GLU",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OE1": [],
+            "OE2": [],
+            "O": []
+          },
+          "hydrogen_count": 6,
+          "forcefield_charge_e": -0.9999999999999999
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLU",
+            "state": "GLU",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OE1": [],
+              "OE2": [],
+              "O": []
+            },
+            "hydrogen_count": 6,
+            "forcefield_charge_e": -0.9999999999999999
+          }
+        ],
+        "charge_e": -1.0
+      },
+      "runtime": {
+        "atoms": 27,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": -43.668647546332245,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLY",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLY",
+          "state": "GLY",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 3,
+          "forcefield_charge_e": 5.551115123125783e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLY",
+            "state": "GLY",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 3,
+            "forcefield_charge_e": 5.551115123125783e-17
+          }
+        ],
+        "charge_e": 0.0
+      },
+      "runtime": {
+        "atoms": 19,
+        "charge_e": 0.0,
+        "finite_energy_kj_mol": -120.6399348443952,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "HID",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "HIS",
+          "state": "HID",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "ND1": [
+              "HD1"
+            ],
+            "NE2": [],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 6.591949208711867e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "HIS",
+            "state": "HID",
+            "openmm_returned_variant": "HID",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "ND1": [
+                "HD1"
+              ],
+              "NE2": [],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 6.591949208711867e-17
+          }
+        ],
+        "charge_e": 1.0408340855860843e-17
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": 1.0408340855860843e-17,
+        "finite_energy_kj_mol": -26.95296551701219,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "HIE",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "HIS",
+          "state": "HIE",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "ND1": [],
+            "NE2": [
+              "HE2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": -1.0408340855860843e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "HIS",
+            "state": "HID",
+            "openmm_returned_variant": "HID",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "ND1": [
+                "HD1"
+              ],
+              "NE2": [],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 6.591949208711867e-17
+          }
+        ],
+        "charge_e": 1.0408340855860843e-17
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": -6.591949208711867e-17,
+        "finite_energy_kj_mol": -49.0404297092161,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "HIP",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "HIS",
+          "state": "HIP",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "ND1": [
+              "HD1"
+            ],
+            "NE2": [
+              "HE2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 8,
+          "forcefield_charge_e": 1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 2,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "HIS",
+            "state": "HIP",
+            "openmm_returned_variant": "HIP",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "ND1": [
+                "HD1"
+              ],
+              "NE2": [
+                "HE2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 8,
+            "forcefield_charge_e": 1.0
+          }
+        ],
+        "charge_e": 0.9999999999999999
+      },
+      "runtime": {
+        "atoms": 30,
+        "charge_e": 0.9999999999999999,
+        "finite_energy_kj_mol": 240.7608780518763,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ILE",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ILE",
+          "state": "ILE",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 11,
+          "forcefield_charge_e": 3.469446951953614e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ILE",
+            "state": "ILE",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 11,
+            "forcefield_charge_e": 3.469446951953614e-17
+          }
+        ],
+        "charge_e": -2.0816681711721685e-17
+      },
+      "runtime": {
+        "atoms": 31,
+        "charge_e": -2.0816681711721685e-17,
+        "finite_energy_kj_mol": -83.60433968099834,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "LEU",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "LEU",
+          "state": "LEU",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 11,
+          "forcefield_charge_e": 6.245004513516506e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "LEU",
+            "state": "LEU",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 11,
+            "forcefield_charge_e": 6.245004513516506e-17
+          }
+        ],
+        "charge_e": 6.938893903907228e-18
+      },
+      "runtime": {
+        "atoms": 31,
+        "charge_e": 6.938893903907228e-18,
+        "finite_energy_kj_mol": -168.74258460921234,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "LYS",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "LYS",
+          "state": "LYS",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "NZ": [
+              "HZ1",
+              "HZ2",
+              "HZ3"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 13,
+          "forcefield_charge_e": 1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "LYS",
+            "state": "LYS",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NZ": [
+                "HZ1",
+                "HZ2",
+                "HZ3"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 13,
+            "forcefield_charge_e": 1.0
+          }
+        ],
+        "charge_e": 1.0
+      },
+      "runtime": {
+        "atoms": 34,
+        "charge_e": 1.0,
+        "finite_energy_kj_mol": 97.16648752802848,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "MET",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "MET",
+          "state": "MET",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SD": [],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 5.2475385148298415e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "MET",
+            "state": "MET",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SD": [],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 5.2475385148298415e-17
+          }
+        ],
+        "charge_e": -3.0357660829594124e-18
+      },
+      "runtime": {
+        "atoms": 29,
+        "charge_e": -3.0357660829594124e-18,
+        "finite_energy_kj_mol": -79.32176982988756,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "PHE",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "PHE",
+          "state": "PHE",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 7.762887554996212e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "PHE",
+            "state": "PHE",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 7.762887554996212e-17
+          }
+        ],
+        "charge_e": 2.211772431870429e-17
+      },
+      "runtime": {
+        "atoms": 32,
+        "charge_e": 2.211772431870429e-17,
+        "finite_energy_kj_mol": -75.4934568425298,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "PRO",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "PRO",
+          "state": "PRO",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 1.6479873021779667e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "PRO",
+            "state": "PRO",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 1.6479873021779667e-17
+          }
+        ],
+        "charge_e": -3.903127820947816e-17
+      },
+      "runtime": {
+        "atoms": 26,
+        "charge_e": -3.903127820947816e-17,
+        "finite_energy_kj_mol": 3.1359953552275073,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "SER",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "SER",
+          "state": "SER",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OG": [
+              "HG"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 9.020562075079397e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "SER",
+            "state": "SER",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OG": [
+                "HG"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 9.020562075079397e-17
+          }
+        ],
+        "charge_e": 3.469446951953614e-17
+      },
+      "runtime": {
+        "atoms": 23,
+        "charge_e": 3.469446951953614e-17,
+        "finite_energy_kj_mol": -110.34711944663432,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "THR",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "THR",
+          "state": "THR",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OG1": [
+              "HG1"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 2.2551405187698492e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "THR",
+            "state": "THR",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OG1": [
+                "HG1"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 2.2551405187698492e-17
+          }
+        ],
+        "charge_e": -3.2959746043559335e-17
+      },
+      "runtime": {
+        "atoms": 26,
+        "charge_e": -3.2959746043559335e-17,
+        "finite_energy_kj_mol": -170.35185201495878,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "TRP",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "TRP",
+          "state": "TRP",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "NE1": [
+              "HE1"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 10,
+          "forcefield_charge_e": 9.80118763926896e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "TRP",
+            "state": "TRP",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NE1": [
+                "HE1"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 10,
+            "forcefield_charge_e": 9.80118763926896e-17
+          }
+        ],
+        "charge_e": 4.2500725161431774e-17
+      },
+      "runtime": {
+        "atoms": 36,
+        "charge_e": 4.2500725161431774e-17,
+        "finite_energy_kj_mol": -39.789316133207585,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "TYR",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "TYR",
+          "state": "TYR",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OH": [
+              "HH"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 9.063930161978817e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "TYR",
+            "state": "TYR",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OH": [
+                "HH"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 9.063930161978817e-17
+          }
+        ],
+        "charge_e": 3.5128150388530344e-17
+      },
+      "runtime": {
+        "atoms": 33,
+        "charge_e": 3.5128150388530344e-17,
+        "finite_energy_kj_mol": -151.70221994029387,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "VAL",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "VAL",
+          "state": "VAL",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 9,
+          "forcefield_charge_e": 1.0061396160665481e-16
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "VAL",
+            "state": "VAL",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 9,
+            "forcefield_charge_e": 1.0061396160665481e-16
+          }
+        ],
+        "charge_e": 4.5102810375396984e-17
+      },
+      "runtime": {
+        "atoms": 28,
+        "charge_e": 4.5102810375396984e-17,
+        "finite_energy_kj_mol": -163.19065656999692,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "ASH",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "ASP",
+          "state": "ASH",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OD1": [],
+            "OD2": [
+              "HD2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 5,
+          "forcefield_charge_e": 1.1796119636642288e-16
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 2,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "ASP",
+            "state": "ASH",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OD1": [],
+              "OD2": [
+                "HD2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 5,
+            "forcefield_charge_e": 1.1796119636642288e-16
+          }
+        ],
+        "charge_e": 6.245004513516506e-17
+      },
+      "runtime": {
+        "atoms": 25,
+        "charge_e": 6.245004513516506e-17,
+        "finite_energy_kj_mol": -254.28811171314192,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "GLH",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLU",
+          "state": "GLH",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "OE1": [],
+            "OE2": [
+              "HE2"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 1.0061396160665481e-16
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 2,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLU",
+            "state": "GLH",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "OE1": [],
+              "OE2": [
+                "HE2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 1.0061396160665481e-16
+          }
+        ],
+        "charge_e": 4.5102810375396984e-17
+      },
+      "runtime": {
+        "atoms": 28,
+        "charge_e": 4.5102810375396984e-17,
+        "finite_energy_kj_mol": -203.2346685591079,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "LYN",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [],
+      "pH_reassignment": {
+        "ph": 12,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "LYS",
+            "state": "LYN",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "NZ": [
+                "HZ1",
+                "HZ2"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 12,
+            "forcefield_charge_e": 1.5265566588595902e-16
+          }
+        ],
+        "charge_e": 9.71445146547012e-17
+      },
+      "runtime": {
+        "atoms": 33,
+        "charge_e": 9.71445146547012e-17,
+        "finite_energy_kj_mol": -127.74864224334331,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "CYM",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [],
+      "pH_reassignment": {
+        "ph": 12,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "CYS",
+            "state": "CYM",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": -0.9999999999999999
+          }
+        ],
+        "charge_e": -1.0
+      },
+      "runtime": {
+        "atoms": 22,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": -92.236823587854,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "termini",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "1",
+          "residue": "ALA",
+          "state": "ALA",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H",
+              "H2",
+              "H3"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 7,
+          "forcefield_charge_e": 0.9999999999999999
+        },
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "GLY",
+          "state": "GLY",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": [],
+            "OXT": []
+          },
+          "hydrogen_count": 3,
+          "forcefield_charge_e": -1.0
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "1",
+            "residue": "ALA",
+            "state": "ALA",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H",
+                "H2",
+                "H3"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 7,
+            "forcefield_charge_e": 0.9999999999999999
+          },
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "GLY",
+            "state": "GLY",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": [],
+              "OXT": []
+            },
+            "hydrogen_count": 3,
+            "forcefield_charge_e": -1.0
+          }
+        ],
+        "charge_e": -9.71445146547012e-17
+      },
+      "runtime": {
+        "atoms": 20,
+        "charge_e": -9.71445146547012e-17,
+        "finite_energy_kj_mol": -264.5936349454257,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "disulfide",
+      "kind": "protein-template",
+      "passed": true,
+      "native_template_states": [
+        {
+          "chain": "1",
+          "resid": "2",
+          "residue": "CYS",
+          "state": "CYX",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SG": [],
+            "O": []
+          },
+          "hydrogen_count": 4,
+          "forcefield_charge_e": 4.85722573273506e-17
+        },
+        {
+          "chain": "1",
+          "resid": "3",
+          "residue": "GLY",
+          "state": "GLY",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "O": []
+          },
+          "hydrogen_count": 3,
+          "forcefield_charge_e": 5.551115123125783e-17
+        },
+        {
+          "chain": "1",
+          "resid": "4",
+          "residue": "CYS",
+          "state": "CYX",
+          "openmm_returned_variant": null,
+          "bonded_hydrogens": {
+            "N": [
+              "H"
+            ],
+            "SG": [],
+            "O": []
+          },
+          "hydrogen_count": 4,
+          "forcefield_charge_e": 4.85722573273506e-17
+        }
+      ],
+      "pH_reassignment": {
+        "ph": 7,
+        "states": [
+          {
+            "chain": " ",
+            "resid": "2",
+            "residue": "CYS",
+            "state": "CYX",
+            "openmm_returned_variant": "CYX",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": 4.85722573273506e-17
+          },
+          {
+            "chain": " ",
+            "resid": "3",
+            "residue": "GLY",
+            "state": "GLY",
+            "openmm_returned_variant": null,
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "O": []
+            },
+            "hydrogen_count": 3,
+            "forcefield_charge_e": 5.551115123125783e-17
+          },
+          {
+            "chain": " ",
+            "resid": "4",
+            "residue": "CYS",
+            "state": "CYX",
+            "openmm_returned_variant": "CYX",
+            "bonded_hydrogens": {
+              "N": [
+                "H"
+              ],
+              "SG": [],
+              "O": []
+            },
+            "hydrogen_count": 4,
+            "forcefield_charge_e": 4.85722573273506e-17
+          }
+        ],
+        "charge_e": 9.71445146547012e-17
+      },
+      "runtime": {
+        "atoms": 39,
+        "charge_e": 9.71445146547012e-17,
+        "finite_energy_kj_mol": 16.294438348687148,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD.",
+        "native_per_atom_charges_match": true
+      }
+    },
+    {
+      "id": "NA",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::NA",
+        "residue": "NA",
+        "element": "Na",
+        "deposited_formal_charge": null,
+        "formal_charge": 1,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "NA",
+          "atom_type": "tip3p_standard-Na+",
+          "element": "Na",
+          "charge_e": 1.0,
+          "sigma_nm": 0.2439280690268249,
+          "epsilon_kj_mol": 0.3658460312,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/NA",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 1.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "CL",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::CL",
+        "residue": "CL",
+        "element": "Cl",
+        "deposited_formal_charge": null,
+        "formal_charge": -1,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "CL",
+          "atom_type": "tip3p_standard-Cl-",
+          "element": "Cl",
+          "charge_e": -1.0,
+          "sigma_nm": 0.4477656957373345,
+          "epsilon_kj_mol": 0.14891274399999999,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/CL",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": -1.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "K",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::K",
+        "residue": "K",
+        "element": "K",
+        "deposited_formal_charge": null,
+        "formal_charge": 1,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "K",
+          "atom_type": "tip3p_standard-K+",
+          "element": "K",
+          "charge_e": 1.0,
+          "sigma_nm": 0.3037964628858557,
+          "epsilon_kj_mol": 0.8103692536,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/K",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 1.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "MG",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::MG",
+        "residue": "MG",
+        "element": "Mg",
+        "deposited_formal_charge": null,
+        "formal_charge": 2,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "MG",
+          "atom_type": "tip3p_standard-Mg2+",
+          "element": "Mg",
+          "charge_e": 2.0,
+          "sigma_nm": 0.2423244513341723,
+          "epsilon_kj_mol": 0.042686716080000006,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/MG",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 2.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "CA",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::CA",
+        "residue": "CA",
+        "element": "Ca",
+        "deposited_formal_charge": null,
+        "formal_charge": 2,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "CA",
+          "atom_type": "tip3p_standard-Ca2+",
+          "element": "Ca",
+          "charge_e": 2.0,
+          "sigma_nm": 0.29381839724268394,
+          "epsilon_kj_mol": 0.4432056808,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/CA",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 2.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    },
+    {
+      "id": "ethanol",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "a546464e20794e4d",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "CCO",
+      "formal_charge": 0,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 3,
+      "heavy_coordinate_max_displacement_nm": 1.3877787807814457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H9",
+              "native_index": 8
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -8.407278485774983,
+            "xml_energy_kj_mol": -8.407278482101097,
+            "energy_delta_kj_mol": 3.6738860842433496e-09,
+            "maximum_force_delta_kj_mol_nm": 2.5742622256075265e-08
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -8.419469221994005,
+            "xml_energy_kj_mol": -8.419469218310667,
+            "energy_delta_kj_mol": 3.6833380789857983e-09,
+            "maximum_force_delta_kj_mol_nm": 2.591193037915218e-08
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -8.35768600799415,
+            "xml_energy_kj_mol": -8.357686004341396,
+            "energy_delta_kj_mol": 3.6527545432818442e-09,
+            "maximum_force_delta_kj_mol_nm": 2.5653832835814683e-08
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 9,
+        "charge_e": -9.87800646834458e-10,
+        "finite_energy_kj_mol": -8.766387060346162,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/ethanol/ligand-e56dd8d017e6"
+    },
+    {
+      "id": "acetate",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "f02b2baa96e84be6",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "CC(=O)[O-]",
+      "formal_charge": -1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 4,
+      "heavy_coordinate_max_displacement_nm": 1.3877787807814457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "O2",
+              "template_atom_name": "O4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H7",
+              "native_index": 6
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 244.0771238799871,
+            "xml_energy_kj_mol": 244.0771238670857,
+            "energy_delta_kj_mol": -1.290140971832443e-08,
+            "maximum_force_delta_kj_mol_nm": 1.4252873370423913e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 249.90533712901046,
+            "xml_energy_kj_mol": 249.90533711604814,
+            "energy_delta_kj_mol": -1.2962317441633786e-08,
+            "maximum_force_delta_kj_mol_nm": 1.4319311958388425e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 244.39423421994962,
+            "xml_energy_kj_mol": 244.39423420706106,
+            "energy_delta_kj_mol": -1.2888563105661888e-08,
+            "maximum_force_delta_kj_mol_nm": 1.4217857824405655e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 7,
+        "charge_e": -1.0000000005487784,
+        "finite_energy_kj_mol": 183.73916698095695,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/acetate/ligand-879f0748fde8"
+    },
+    {
+      "id": "methylammonium",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "a92a6445f0c1499f",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "C[NH3+]",
+      "formal_charge": 1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 2,
+      "heavy_coordinate_max_displacement_nm": 1.5515838457795457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "N1",
+              "template_atom_name": "N2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H8",
+              "native_index": 7
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 238.55438522475595,
+            "xml_energy_kj_mol": 238.55438522474856,
+            "energy_delta_kj_mol": -7.389644451905042e-12,
+            "maximum_force_delta_kj_mol_nm": 1.8320633898838423e-10
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 239.35860338647828,
+            "xml_energy_kj_mol": 239.35860338647097,
+            "energy_delta_kj_mol": -7.30437932361383e-12,
+            "maximum_force_delta_kj_mol_nm": 1.8553691916167736e-10
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 239.61154573744102,
+            "xml_energy_kj_mol": 239.6115457374335,
+            "energy_delta_kj_mol": -7.531752999057062e-12,
+            "maximum_force_delta_kj_mol_nm": 1.9133494788547978e-10
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 8,
+        "charge_e": 0.9999999989024435,
+        "finite_energy_kj_mol": 232.56287397546265,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/methylammonium/ligand-5aa67a8ae285"
+    },
+    {
+      "id": "halogen-aromatic",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "359d900ac55f4539",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "Fc1cc(Cl)cc(Br)c1",
+      "formal_charge": 0,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 9,
+      "heavy_coordinate_max_displacement_nm": 3.925231146709438e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "F1",
+              "template_atom_name": "F1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "C3",
+              "template_atom_name": "C4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "Cl1",
+              "template_atom_name": "Cl5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "C4",
+              "template_atom_name": "C6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "C5",
+              "template_atom_name": "C7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "Br1",
+              "template_atom_name": "Br8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "C6",
+              "template_atom_name": "C9",
+              "native_index": 8
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H10",
+              "native_index": 9
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H11",
+              "native_index": 10
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H12",
+              "native_index": 11
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -44.841838879891704,
+            "xml_energy_kj_mol": -44.84183888719803,
+            "energy_delta_kj_mol": -7.3063262107098126e-09,
+            "maximum_force_delta_kj_mol_nm": 1.286235260522517e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -44.3552035016127,
+            "xml_energy_kj_mol": -44.35520350895542,
+            "energy_delta_kj_mol": -7.342720209635445e-09,
+            "maximum_force_delta_kj_mol_nm": 1.2979396046830516e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -43.798085277504136,
+            "xml_energy_kj_mol": -43.79808528490332,
+            "energy_delta_kj_mol": -7.3991870408463e-09,
+            "maximum_force_delta_kj_mol_nm": 1.2899585044578998e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 12,
+        "charge_e": 8.673617379884035e-19,
+        "finite_energy_kj_mol": -47.474836414292206,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/halogen-aromatic/ligand-5bd9d6f93eb2"
+    },
+    {
+      "id": "phosphate",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "daf79c1c99bd48ba",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "COP(=O)([O-])[O-]",
+      "formal_charge": -2,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 6,
+      "heavy_coordinate_max_displacement_nm": 3.122502256758253e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "P1",
+              "template_atom_name": "P3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "O2",
+              "template_atom_name": "O4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "O3",
+              "template_atom_name": "O5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "O4",
+              "template_atom_name": "O6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H9",
+              "native_index": 8
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 10.80516696128737,
+            "xml_energy_kj_mol": 10.805166964998563,
+            "energy_delta_kj_mol": 3.7111931305844337e-09,
+            "maximum_force_delta_kj_mol_nm": 2.2855601855553687e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 9.572951365915884,
+            "xml_energy_kj_mol": 9.572951369652657,
+            "energy_delta_kj_mol": 3.736772669071797e-09,
+            "maximum_force_delta_kj_mol_nm": 2.2998028725851327e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 14.630259812776956,
+            "xml_energy_kj_mol": 14.630259816383486,
+            "energy_delta_kj_mol": 3.606530185606971e-09,
+            "maximum_force_delta_kj_mol_nm": 2.2379026631824672e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 9,
+        "charge_e": -1.9999999964329422,
+        "finite_energy_kj_mol": -78.58112771022931,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/phosphate/ligand-c0833fae6bd7"
+    },
+    {
+      "id": "chiral-amide",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "13d9c88eb64841f1",
+      "reference": {
+        "provider": "Retained authoritative source chemical graph"
+      },
+      "selected_smiles": "CC(=O)N[C@@H](C)C[NH+](C)C",
+      "formal_charge": 1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 10,
+      "heavy_coordinate_max_displacement_nm": 1.3877787807814457e-17,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "N1",
+              "template_atom_name": "N4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "C3",
+              "template_atom_name": "C5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "C4",
+              "template_atom_name": "C6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "C5",
+              "template_atom_name": "C7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "N2",
+              "template_atom_name": "N8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "C6",
+              "template_atom_name": "C9",
+              "native_index": 8
+            },
+            {
+              "prepared_name": "C7",
+              "template_atom_name": "C10",
+              "native_index": 9
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H11",
+              "native_index": 10
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H12",
+              "native_index": 11
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H13",
+              "native_index": 12
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H14",
+              "native_index": 13
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H15",
+              "native_index": 14
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H16",
+              "native_index": 15
+            },
+            {
+              "prepared_name": "H7",
+              "template_atom_name": "H17",
+              "native_index": 16
+            },
+            {
+              "prepared_name": "H8",
+              "template_atom_name": "H18",
+              "native_index": 17
+            },
+            {
+              "prepared_name": "H9",
+              "template_atom_name": "H19",
+              "native_index": 18
+            },
+            {
+              "prepared_name": "H10",
+              "template_atom_name": "H20",
+              "native_index": 19
+            },
+            {
+              "prepared_name": "H11",
+              "template_atom_name": "H21",
+              "native_index": 20
+            },
+            {
+              "prepared_name": "H12",
+              "template_atom_name": "H22",
+              "native_index": 21
+            },
+            {
+              "prepared_name": "H13",
+              "template_atom_name": "H23",
+              "native_index": 22
+            },
+            {
+              "prepared_name": "H14",
+              "template_atom_name": "H24",
+              "native_index": 23
+            },
+            {
+              "prepared_name": "H15",
+              "template_atom_name": "H25",
+              "native_index": 24
+            },
+            {
+              "prepared_name": "H16",
+              "template_atom_name": "H26",
+              "native_index": 25
+            },
+            {
+              "prepared_name": "H17",
+              "template_atom_name": "H27",
+              "native_index": 26
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": 320.76970512080254,
+            "xml_energy_kj_mol": 320.7697051128406,
+            "energy_delta_kj_mol": -7.961943992995657e-09,
+            "maximum_force_delta_kj_mol_nm": 4.947927436660393e-07
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": 323.09155218246786,
+            "xml_energy_kj_mol": 323.0915521750406,
+            "energy_delta_kj_mol": -7.427274795190897e-09,
+            "maximum_force_delta_kj_mol_nm": 4.976520813215757e-07
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": 322.8173908985855,
+            "xml_energy_kj_mol": 322.81739089038183,
+            "energy_delta_kj_mol": -8.203642209991813e-09,
+            "maximum_force_delta_kj_mol_nm": 4.889349725090142e-07
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 27,
+        "charge_e": 0.9999999961585528,
+        "finite_energy_kj_mol": 225.95771560253485,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/chiral-amide/ligand-5221b39701d1"
+    },
+    {
+      "id": "ATP",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "482c9b8ea6404173",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "ATP",
+        "url": "https://files.rcsb.org/ligands/download/ATP.cif",
+        "sha256": "06d876e9fe28b6981725288cd03943818ef6faf4839782c2a0a8929d65c85336",
+        "retrieved_at": "2026-09-13T04:40:06.573067+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO[P@@](=O)([O-])O[P@](=O)([O-])OP(=O)([O-])[O-])[C@@H](O)[C@H]1O",
+      "formal_charge": -4,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 31,
+      "heavy_coordinate_max_displacement_nm": 1.1443916996305594e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "P1",
+              "template_atom_name": "P1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O2",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "O3",
+              "template_atom_name": "O4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "P2",
+              "template_atom_name": "P5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "O4",
+              "template_atom_name": "O6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "O5",
+              "template_atom_name": "O7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "O6",
+              "template_atom_name": "O8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "P3",
+              "template_atom_name": "P9",
+              "native_index": 8
+            },
+            {
+              "prepared_name": "O7",
+              "template_atom_name": "O10",
+              "native_index": 9
+            },
+            {
+              "prepared_name": "O8",
+              "template_atom_name": "O11",
+              "native_index": 10
+            },
+            {
+              "prepared_name": "O9",
+              "template_atom_name": "O12",
+              "native_index": 11
+            },
+            {
+              "prepared_name": "O10",
+              "template_atom_name": "O13",
+              "native_index": 12
+            },
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C14",
+              "native_index": 13
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C15",
+              "native_index": 14
+            },
+            {
+              "prepared_name": "O11",
+              "template_atom_name": "O16",
+              "native_index": 15
+            },
+            {
+              "prepared_name": "C3",
+              "template_atom_name": "C17",
+              "native_index": 16
+            },
+            {
+              "prepared_name": "O12",
+              "template_atom_name": "O18",
+              "native_index": 17
+            },
+            {
+              "prepared_name": "C4",
+              "template_atom_name": "C19",
+              "native_index": 18
+            },
+            {
+              "prepared_name": "O13",
+              "template_atom_name": "O20",
+              "native_index": 19
+            },
+            {
+              "prepared_name": "C5",
+              "template_atom_name": "C21",
+              "native_index": 20
+            },
+            {
+              "prepared_name": "N1",
+              "template_atom_name": "N22",
+              "native_index": 21
+            },
+            {
+              "prepared_name": "C6",
+              "template_atom_name": "C23",
+              "native_index": 22
+            },
+            {
+              "prepared_name": "N2",
+              "template_atom_name": "N24",
+              "native_index": 23
+            },
+            {
+              "prepared_name": "C7",
+              "template_atom_name": "C25",
+              "native_index": 24
+            },
+            {
+              "prepared_name": "C8",
+              "template_atom_name": "C26",
+              "native_index": 25
+            },
+            {
+              "prepared_name": "N3",
+              "template_atom_name": "N27",
+              "native_index": 26
+            },
+            {
+              "prepared_name": "N4",
+              "template_atom_name": "N28",
+              "native_index": 27
+            },
+            {
+              "prepared_name": "C9",
+              "template_atom_name": "C29",
+              "native_index": 28
+            },
+            {
+              "prepared_name": "N5",
+              "template_atom_name": "N30",
+              "native_index": 29
+            },
+            {
+              "prepared_name": "C10",
+              "template_atom_name": "C31",
+              "native_index": 30
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H32",
+              "native_index": 31
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H33",
+              "native_index": 32
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H34",
+              "native_index": 33
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H35",
+              "native_index": 34
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H36",
+              "native_index": 35
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H37",
+              "native_index": 36
+            },
+            {
+              "prepared_name": "H7",
+              "template_atom_name": "H38",
+              "native_index": 37
+            },
+            {
+              "prepared_name": "H8",
+              "template_atom_name": "H39",
+              "native_index": 38
+            },
+            {
+              "prepared_name": "H9",
+              "template_atom_name": "H40",
+              "native_index": 39
+            },
+            {
+              "prepared_name": "H10",
+              "template_atom_name": "H41",
+              "native_index": 40
+            },
+            {
+              "prepared_name": "H11",
+              "template_atom_name": "H42",
+              "native_index": 41
+            },
+            {
+              "prepared_name": "H12",
+              "template_atom_name": "H43",
+              "native_index": 42
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -546.5784340802898,
+            "xml_energy_kj_mol": -546.5784342125123,
+            "energy_delta_kj_mol": -1.3222256711742375e-07,
+            "maximum_force_delta_kj_mol_nm": 1.8440014173393138e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -539.2845649635681,
+            "xml_energy_kj_mol": -539.2845650952052,
+            "energy_delta_kj_mol": -1.3163707990315743e-07,
+            "maximum_force_delta_kj_mol_nm": 1.8284267753188033e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -542.6761272865185,
+            "xml_energy_kj_mol": -542.676127417316,
+            "energy_delta_kj_mol": -1.307975026065833e-07,
+            "maximum_force_delta_kj_mol_nm": 1.8440196072333492e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 43,
+        "charge_e": -4.000000015365788,
+        "finite_energy_kj_mol": -1129.4783123830352,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/ATP/ligand-88af5ac44e8d"
+    },
+    {
+      "id": "ADP",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "f173a72cec2141f9",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "ADP",
+        "url": "https://files.rcsb.org/ligands/download/ADP.cif",
+        "sha256": "fa9eabb464c85c7c5a44146d492b907acd3151a250a4598001cc6abba8da84af",
+        "retrieved_at": "2026-09-13T04:41:52.721517+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO[P@](=O)([O-])OP(=O)([O-])[O-])[C@@H](O)[C@H]1O",
+      "formal_charge": -3,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 27,
+      "heavy_coordinate_max_displacement_nm": 1.1123893155135927e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "P1",
+              "template_atom_name": "P1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O2",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "O3",
+              "template_atom_name": "O4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "P2",
+              "template_atom_name": "P5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "O4",
+              "template_atom_name": "O6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "O5",
+              "template_atom_name": "O7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "O6",
+              "template_atom_name": "O8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "O7",
+              "template_atom_name": "O9",
+              "native_index": 8
+            },
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C10",
+              "native_index": 9
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C11",
+              "native_index": 10
+            },
+            {
+              "prepared_name": "O8",
+              "template_atom_name": "O12",
+              "native_index": 11
+            },
+            {
+              "prepared_name": "C3",
+              "template_atom_name": "C13",
+              "native_index": 12
+            },
+            {
+              "prepared_name": "O9",
+              "template_atom_name": "O14",
+              "native_index": 13
+            },
+            {
+              "prepared_name": "C4",
+              "template_atom_name": "C15",
+              "native_index": 14
+            },
+            {
+              "prepared_name": "O10",
+              "template_atom_name": "O16",
+              "native_index": 15
+            },
+            {
+              "prepared_name": "C5",
+              "template_atom_name": "C17",
+              "native_index": 16
+            },
+            {
+              "prepared_name": "N1",
+              "template_atom_name": "N18",
+              "native_index": 17
+            },
+            {
+              "prepared_name": "C6",
+              "template_atom_name": "C19",
+              "native_index": 18
+            },
+            {
+              "prepared_name": "N2",
+              "template_atom_name": "N20",
+              "native_index": 19
+            },
+            {
+              "prepared_name": "C7",
+              "template_atom_name": "C21",
+              "native_index": 20
+            },
+            {
+              "prepared_name": "C8",
+              "template_atom_name": "C22",
+              "native_index": 21
+            },
+            {
+              "prepared_name": "N3",
+              "template_atom_name": "N23",
+              "native_index": 22
+            },
+            {
+              "prepared_name": "N4",
+              "template_atom_name": "N24",
+              "native_index": 23
+            },
+            {
+              "prepared_name": "C9",
+              "template_atom_name": "C25",
+              "native_index": 24
+            },
+            {
+              "prepared_name": "N5",
+              "template_atom_name": "N26",
+              "native_index": 25
+            },
+            {
+              "prepared_name": "C10",
+              "template_atom_name": "C27",
+              "native_index": 26
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H28",
+              "native_index": 27
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H29",
+              "native_index": 28
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H30",
+              "native_index": 29
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H31",
+              "native_index": 30
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H32",
+              "native_index": 31
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H33",
+              "native_index": 32
+            },
+            {
+              "prepared_name": "H7",
+              "template_atom_name": "H34",
+              "native_index": 33
+            },
+            {
+              "prepared_name": "H8",
+              "template_atom_name": "H35",
+              "native_index": 34
+            },
+            {
+              "prepared_name": "H9",
+              "template_atom_name": "H36",
+              "native_index": 35
+            },
+            {
+              "prepared_name": "H10",
+              "template_atom_name": "H37",
+              "native_index": 36
+            },
+            {
+              "prepared_name": "H11",
+              "template_atom_name": "H38",
+              "native_index": 37
+            },
+            {
+              "prepared_name": "H12",
+              "template_atom_name": "H39",
+              "native_index": 38
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -306.9099449502272,
+            "xml_energy_kj_mol": -306.90994500504166,
+            "energy_delta_kj_mol": -5.4814449867990334e-08,
+            "maximum_force_delta_kj_mol_nm": 1.7772363207768649e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -302.89955243086,
+            "xml_energy_kj_mol": -302.89955248622573,
+            "energy_delta_kj_mol": -5.536571734410245e-08,
+            "maximum_force_delta_kj_mol_nm": 1.800947757146787e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -309.663858664396,
+            "xml_energy_kj_mol": -309.6638587190637,
+            "energy_delta_kj_mol": -5.466768016049173e-08,
+            "maximum_force_delta_kj_mol_nm": 1.7858465071185492e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 39,
+        "charge_e": -3.0000000010152394,
+        "finite_energy_kj_mol": -629.5064168146886,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/ADP/ligand-e71eebf3963f"
+    },
+    {
+      "id": "NAD",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "8edc19a9b8364741",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "NAD",
+        "url": "https://files.rcsb.org/ligands/download/NAD.cif",
+        "sha256": "f202c206d06c8aafa01516df17e91d21a6c60ed1a02f815e60bca00d12a62439",
+        "retrieved_at": "2026-09-13T04:42:18.058071+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO[P@@](=O)([O-])O[P@@](=O)([O-])OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3O)[C@@H](O)[C@H]2O)c1",
+      "formal_charge": -1,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking. A missing protonation-tool atom map was restored by a unique element/connectivity match constrained by all retained maps."
+      ],
+      "heavy_atoms": 44,
+      "heavy_coordinate_max_displacement_nm": 1.1102230246251565e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "P1",
+              "template_atom_name": "P1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O2",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "O3",
+              "template_atom_name": "O4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "O4",
+              "template_atom_name": "O7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "C3",
+              "template_atom_name": "C8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "O5",
+              "template_atom_name": "O9",
+              "native_index": 8
+            },
+            {
+              "prepared_name": "C4",
+              "template_atom_name": "C10",
+              "native_index": 9
+            },
+            {
+              "prepared_name": "O6",
+              "template_atom_name": "O11",
+              "native_index": 10
+            },
+            {
+              "prepared_name": "C5",
+              "template_atom_name": "C12",
+              "native_index": 11
+            },
+            {
+              "prepared_name": "N1",
+              "template_atom_name": "N13",
+              "native_index": 12
+            },
+            {
+              "prepared_name": "C6",
+              "template_atom_name": "C14",
+              "native_index": 13
+            },
+            {
+              "prepared_name": "N2",
+              "template_atom_name": "N15",
+              "native_index": 14
+            },
+            {
+              "prepared_name": "C7",
+              "template_atom_name": "C16",
+              "native_index": 15
+            },
+            {
+              "prepared_name": "C8",
+              "template_atom_name": "C17",
+              "native_index": 16
+            },
+            {
+              "prepared_name": "N3",
+              "template_atom_name": "N18",
+              "native_index": 17
+            },
+            {
+              "prepared_name": "N4",
+              "template_atom_name": "N19",
+              "native_index": 18
+            },
+            {
+              "prepared_name": "C9",
+              "template_atom_name": "C20",
+              "native_index": 19
+            },
+            {
+              "prepared_name": "N5",
+              "template_atom_name": "N21",
+              "native_index": 20
+            },
+            {
+              "prepared_name": "C10",
+              "template_atom_name": "C22",
+              "native_index": 21
+            },
+            {
+              "prepared_name": "O7",
+              "template_atom_name": "O23",
+              "native_index": 22
+            },
+            {
+              "prepared_name": "P2",
+              "template_atom_name": "P24",
+              "native_index": 23
+            },
+            {
+              "prepared_name": "O8",
+              "template_atom_name": "O25",
+              "native_index": 24
+            },
+            {
+              "prepared_name": "O9",
+              "template_atom_name": "O26",
+              "native_index": 25
+            },
+            {
+              "prepared_name": "O10",
+              "template_atom_name": "O27",
+              "native_index": 26
+            },
+            {
+              "prepared_name": "C11",
+              "template_atom_name": "C28",
+              "native_index": 27
+            },
+            {
+              "prepared_name": "C12",
+              "template_atom_name": "C29",
+              "native_index": 28
+            },
+            {
+              "prepared_name": "O11",
+              "template_atom_name": "O30",
+              "native_index": 29
+            },
+            {
+              "prepared_name": "C13",
+              "template_atom_name": "C31",
+              "native_index": 30
+            },
+            {
+              "prepared_name": "O12",
+              "template_atom_name": "O32",
+              "native_index": 31
+            },
+            {
+              "prepared_name": "C14",
+              "template_atom_name": "C33",
+              "native_index": 32
+            },
+            {
+              "prepared_name": "O13",
+              "template_atom_name": "O34",
+              "native_index": 33
+            },
+            {
+              "prepared_name": "C15",
+              "template_atom_name": "C35",
+              "native_index": 34
+            },
+            {
+              "prepared_name": "N6",
+              "template_atom_name": "N36",
+              "native_index": 35
+            },
+            {
+              "prepared_name": "C16",
+              "template_atom_name": "C37",
+              "native_index": 36
+            },
+            {
+              "prepared_name": "C17",
+              "template_atom_name": "C38",
+              "native_index": 37
+            },
+            {
+              "prepared_name": "C18",
+              "template_atom_name": "C39",
+              "native_index": 38
+            },
+            {
+              "prepared_name": "O14",
+              "template_atom_name": "O40",
+              "native_index": 39
+            },
+            {
+              "prepared_name": "N7",
+              "template_atom_name": "N41",
+              "native_index": 40
+            },
+            {
+              "prepared_name": "C19",
+              "template_atom_name": "C42",
+              "native_index": 41
+            },
+            {
+              "prepared_name": "C20",
+              "template_atom_name": "C43",
+              "native_index": 42
+            },
+            {
+              "prepared_name": "C21",
+              "template_atom_name": "C44",
+              "native_index": 43
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H45",
+              "native_index": 44
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H46",
+              "native_index": 45
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H47",
+              "native_index": 46
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H48",
+              "native_index": 47
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H49",
+              "native_index": 48
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H50",
+              "native_index": 49
+            },
+            {
+              "prepared_name": "H7",
+              "template_atom_name": "H51",
+              "native_index": 50
+            },
+            {
+              "prepared_name": "H8",
+              "template_atom_name": "H52",
+              "native_index": 51
+            },
+            {
+              "prepared_name": "H9",
+              "template_atom_name": "H53",
+              "native_index": 52
+            },
+            {
+              "prepared_name": "H10",
+              "template_atom_name": "H54",
+              "native_index": 53
+            },
+            {
+              "prepared_name": "H11",
+              "template_atom_name": "H55",
+              "native_index": 54
+            },
+            {
+              "prepared_name": "H12",
+              "template_atom_name": "H56",
+              "native_index": 55
+            },
+            {
+              "prepared_name": "H13",
+              "template_atom_name": "H57",
+              "native_index": 56
+            },
+            {
+              "prepared_name": "H14",
+              "template_atom_name": "H58",
+              "native_index": 57
+            },
+            {
+              "prepared_name": "H15",
+              "template_atom_name": "H59",
+              "native_index": 58
+            },
+            {
+              "prepared_name": "H16",
+              "template_atom_name": "H60",
+              "native_index": 59
+            },
+            {
+              "prepared_name": "H17",
+              "template_atom_name": "H61",
+              "native_index": 60
+            },
+            {
+              "prepared_name": "H18",
+              "template_atom_name": "H62",
+              "native_index": 61
+            },
+            {
+              "prepared_name": "H19",
+              "template_atom_name": "H63",
+              "native_index": 62
+            },
+            {
+              "prepared_name": "H20",
+              "template_atom_name": "H64",
+              "native_index": 63
+            },
+            {
+              "prepared_name": "H21",
+              "template_atom_name": "H65",
+              "native_index": 64
+            },
+            {
+              "prepared_name": "H22",
+              "template_atom_name": "H66",
+              "native_index": 65
+            },
+            {
+              "prepared_name": "H23",
+              "template_atom_name": "H67",
+              "native_index": 66
+            },
+            {
+              "prepared_name": "H24",
+              "template_atom_name": "H68",
+              "native_index": 67
+            },
+            {
+              "prepared_name": "H25",
+              "template_atom_name": "H69",
+              "native_index": 68
+            },
+            {
+              "prepared_name": "H26",
+              "template_atom_name": "H70",
+              "native_index": 69
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -1201.9308490942701,
+            "xml_energy_kj_mol": -1201.9308491386166,
+            "energy_delta_kj_mol": -4.4346506911097094e-08,
+            "maximum_force_delta_kj_mol_nm": 2.639477315824479e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -1197.401612695083,
+            "xml_energy_kj_mol": -1197.4016127385498,
+            "energy_delta_kj_mol": -4.346679816080723e-08,
+            "maximum_force_delta_kj_mol_nm": 2.594449597381754e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -1199.8396970000572,
+            "xml_energy_kj_mol": -1199.8396970421154,
+            "energy_delta_kj_mol": -4.205821824143641e-08,
+            "maximum_force_delta_kj_mol_nm": 2.5519470909785014e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 70,
+        "charge_e": -1.0000000145426204,
+        "finite_energy_kj_mol": -1528.3304764961003,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/NAD/ligand-4925b2bd6fd8"
+    },
+    {
+      "id": "FAD",
+      "kind": "organic ligand/cofactor",
+      "passed": true,
+      "dataset_id": "cb569854994e47b6",
+      "reference": {
+        "provider": "wwPDB CCD via RCSB",
+        "component_id": "FAD",
+        "url": "https://files.rcsb.org/ligands/download/FAD.cif",
+        "sha256": "85fc5af9d315a3cdbfb0efe1c30dc1aa7d227ddc8fa9b3054de81f1ffe4d0851",
+        "retrieved_at": "2026-09-13T04:45:04.368484+00:00",
+        "retrieval_note": null
+      },
+      "selected_smiles": "Cc1cc2nc3c(=O)[nH]c(=O)nc-3n(C[C@H](O)[C@H](O)[C@H](O)CO[P@@](=O)([O-])O[P@](=O)([O-])OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3O)c2cc1C",
+      "formal_charge": -2,
+      "protonation_method": "Dimorphite-DL 2 empirical site rules at requested pH, pKa precision=0; amide/N\u2013N sites retained from source; original graph/stereotags preserved; no microscopic pKa or tautomer ranking",
+      "warnings": [
+        "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+      ],
+      "heavy_atoms": 53,
+      "heavy_coordinate_max_displacement_nm": 2.220446049250313e-16,
+      "conversion_validation": {
+        "method": "Native Amber versus converted XML OpenMM Reference energy/force comparison at bound pose plus two deterministic 0.003 \u00c5 perturbations.",
+        "energy_tolerance_kj_mol": 0.0001,
+        "force_tolerance_kj_mol_nm": 0.001,
+        "atom_mapping": {
+          "method": "Verified native atom names, elements and bonds; symmetric graph permutations are not used.",
+          "atoms": [
+            {
+              "prepared_name": "P1",
+              "template_atom_name": "P1",
+              "native_index": 0
+            },
+            {
+              "prepared_name": "O1",
+              "template_atom_name": "O2",
+              "native_index": 1
+            },
+            {
+              "prepared_name": "O2",
+              "template_atom_name": "O3",
+              "native_index": 2
+            },
+            {
+              "prepared_name": "O3",
+              "template_atom_name": "O4",
+              "native_index": 3
+            },
+            {
+              "prepared_name": "C1",
+              "template_atom_name": "C5",
+              "native_index": 4
+            },
+            {
+              "prepared_name": "C2",
+              "template_atom_name": "C6",
+              "native_index": 5
+            },
+            {
+              "prepared_name": "O4",
+              "template_atom_name": "O7",
+              "native_index": 6
+            },
+            {
+              "prepared_name": "C3",
+              "template_atom_name": "C8",
+              "native_index": 7
+            },
+            {
+              "prepared_name": "O5",
+              "template_atom_name": "O9",
+              "native_index": 8
+            },
+            {
+              "prepared_name": "C4",
+              "template_atom_name": "C10",
+              "native_index": 9
+            },
+            {
+              "prepared_name": "O6",
+              "template_atom_name": "O11",
+              "native_index": 10
+            },
+            {
+              "prepared_name": "C5",
+              "template_atom_name": "C12",
+              "native_index": 11
+            },
+            {
+              "prepared_name": "N1",
+              "template_atom_name": "N13",
+              "native_index": 12
+            },
+            {
+              "prepared_name": "C6",
+              "template_atom_name": "C14",
+              "native_index": 13
+            },
+            {
+              "prepared_name": "N2",
+              "template_atom_name": "N15",
+              "native_index": 14
+            },
+            {
+              "prepared_name": "C7",
+              "template_atom_name": "C16",
+              "native_index": 15
+            },
+            {
+              "prepared_name": "C8",
+              "template_atom_name": "C17",
+              "native_index": 16
+            },
+            {
+              "prepared_name": "N3",
+              "template_atom_name": "N18",
+              "native_index": 17
+            },
+            {
+              "prepared_name": "N4",
+              "template_atom_name": "N19",
+              "native_index": 18
+            },
+            {
+              "prepared_name": "C9",
+              "template_atom_name": "C20",
+              "native_index": 19
+            },
+            {
+              "prepared_name": "N5",
+              "template_atom_name": "N21",
+              "native_index": 20
+            },
+            {
+              "prepared_name": "C10",
+              "template_atom_name": "C22",
+              "native_index": 21
+            },
+            {
+              "prepared_name": "N6",
+              "template_atom_name": "N23",
+              "native_index": 22
+            },
+            {
+              "prepared_name": "C11",
+              "template_atom_name": "C24",
+              "native_index": 23
+            },
+            {
+              "prepared_name": "O7",
+              "template_atom_name": "O25",
+              "native_index": 24
+            },
+            {
+              "prepared_name": "N7",
+              "template_atom_name": "N26",
+              "native_index": 25
+            },
+            {
+              "prepared_name": "C12",
+              "template_atom_name": "C27",
+              "native_index": 26
+            },
+            {
+              "prepared_name": "O8",
+              "template_atom_name": "O28",
+              "native_index": 27
+            },
+            {
+              "prepared_name": "C13",
+              "template_atom_name": "C29",
+              "native_index": 28
+            },
+            {
+              "prepared_name": "N8",
+              "template_atom_name": "N30",
+              "native_index": 29
+            },
+            {
+              "prepared_name": "C14",
+              "template_atom_name": "C31",
+              "native_index": 30
+            },
+            {
+              "prepared_name": "C15",
+              "template_atom_name": "C32",
+              "native_index": 31
+            },
+            {
+              "prepared_name": "C16",
+              "template_atom_name": "C33",
+              "native_index": 32
+            },
+            {
+              "prepared_name": "C17",
+              "template_atom_name": "C34",
+              "native_index": 33
+            },
+            {
+              "prepared_name": "C18",
+              "template_atom_name": "C35",
+              "native_index": 34
+            },
+            {
+              "prepared_name": "C19",
+              "template_atom_name": "C36",
+              "native_index": 35
+            },
+            {
+              "prepared_name": "C20",
+              "template_atom_name": "C37",
+              "native_index": 36
+            },
+            {
+              "prepared_name": "C21",
+              "template_atom_name": "C38",
+              "native_index": 37
+            },
+            {
+              "prepared_name": "N9",
+              "template_atom_name": "N39",
+              "native_index": 38
+            },
+            {
+              "prepared_name": "C22",
+              "template_atom_name": "C40",
+              "native_index": 39
+            },
+            {
+              "prepared_name": "C23",
+              "template_atom_name": "C41",
+              "native_index": 40
+            },
+            {
+              "prepared_name": "C24",
+              "template_atom_name": "C42",
+              "native_index": 41
+            },
+            {
+              "prepared_name": "O9",
+              "template_atom_name": "O43",
+              "native_index": 42
+            },
+            {
+              "prepared_name": "C25",
+              "template_atom_name": "C44",
+              "native_index": 43
+            },
+            {
+              "prepared_name": "O10",
+              "template_atom_name": "O45",
+              "native_index": 44
+            },
+            {
+              "prepared_name": "C26",
+              "template_atom_name": "C46",
+              "native_index": 45
+            },
+            {
+              "prepared_name": "O11",
+              "template_atom_name": "O47",
+              "native_index": 46
+            },
+            {
+              "prepared_name": "C27",
+              "template_atom_name": "C48",
+              "native_index": 47
+            },
+            {
+              "prepared_name": "O12",
+              "template_atom_name": "O49",
+              "native_index": 48
+            },
+            {
+              "prepared_name": "P2",
+              "template_atom_name": "P50",
+              "native_index": 49
+            },
+            {
+              "prepared_name": "O13",
+              "template_atom_name": "O51",
+              "native_index": 50
+            },
+            {
+              "prepared_name": "O14",
+              "template_atom_name": "O52",
+              "native_index": 51
+            },
+            {
+              "prepared_name": "O15",
+              "template_atom_name": "O53",
+              "native_index": 52
+            },
+            {
+              "prepared_name": "H1",
+              "template_atom_name": "H54",
+              "native_index": 53
+            },
+            {
+              "prepared_name": "H2",
+              "template_atom_name": "H55",
+              "native_index": 54
+            },
+            {
+              "prepared_name": "H3",
+              "template_atom_name": "H56",
+              "native_index": 55
+            },
+            {
+              "prepared_name": "H4",
+              "template_atom_name": "H57",
+              "native_index": 56
+            },
+            {
+              "prepared_name": "H5",
+              "template_atom_name": "H58",
+              "native_index": 57
+            },
+            {
+              "prepared_name": "H6",
+              "template_atom_name": "H59",
+              "native_index": 58
+            },
+            {
+              "prepared_name": "H7",
+              "template_atom_name": "H60",
+              "native_index": 59
+            },
+            {
+              "prepared_name": "H8",
+              "template_atom_name": "H61",
+              "native_index": 60
+            },
+            {
+              "prepared_name": "H9",
+              "template_atom_name": "H62",
+              "native_index": 61
+            },
+            {
+              "prepared_name": "H10",
+              "template_atom_name": "H63",
+              "native_index": 62
+            },
+            {
+              "prepared_name": "H11",
+              "template_atom_name": "H64",
+              "native_index": 63
+            },
+            {
+              "prepared_name": "H12",
+              "template_atom_name": "H65",
+              "native_index": 64
+            },
+            {
+              "prepared_name": "H13",
+              "template_atom_name": "H66",
+              "native_index": 65
+            },
+            {
+              "prepared_name": "H14",
+              "template_atom_name": "H67",
+              "native_index": 66
+            },
+            {
+              "prepared_name": "H15",
+              "template_atom_name": "H68",
+              "native_index": 67
+            },
+            {
+              "prepared_name": "H16",
+              "template_atom_name": "H69",
+              "native_index": 68
+            },
+            {
+              "prepared_name": "H17",
+              "template_atom_name": "H70",
+              "native_index": 69
+            },
+            {
+              "prepared_name": "H18",
+              "template_atom_name": "H71",
+              "native_index": 70
+            },
+            {
+              "prepared_name": "H19",
+              "template_atom_name": "H72",
+              "native_index": 71
+            },
+            {
+              "prepared_name": "H20",
+              "template_atom_name": "H73",
+              "native_index": 72
+            },
+            {
+              "prepared_name": "H21",
+              "template_atom_name": "H74",
+              "native_index": 73
+            },
+            {
+              "prepared_name": "H22",
+              "template_atom_name": "H75",
+              "native_index": 74
+            },
+            {
+              "prepared_name": "H23",
+              "template_atom_name": "H76",
+              "native_index": 75
+            },
+            {
+              "prepared_name": "H24",
+              "template_atom_name": "H77",
+              "native_index": 76
+            },
+            {
+              "prepared_name": "H25",
+              "template_atom_name": "H78",
+              "native_index": 77
+            },
+            {
+              "prepared_name": "H26",
+              "template_atom_name": "H79",
+              "native_index": 78
+            },
+            {
+              "prepared_name": "H27",
+              "template_atom_name": "H80",
+              "native_index": 79
+            },
+            {
+              "prepared_name": "H28",
+              "template_atom_name": "H81",
+              "native_index": 80
+            },
+            {
+              "prepared_name": "H29",
+              "template_atom_name": "H82",
+              "native_index": 81
+            },
+            {
+              "prepared_name": "H30",
+              "template_atom_name": "H83",
+              "native_index": 82
+            },
+            {
+              "prepared_name": "H31",
+              "template_atom_name": "H84",
+              "native_index": 83
+            }
+          ]
+        },
+        "conformations": [
+          {
+            "pose": "bound",
+            "native_energy_kj_mol": -990.5667861215946,
+            "xml_energy_kj_mol": -990.5667861741958,
+            "energy_delta_kj_mol": -5.260119451122591e-08,
+            "maximum_force_delta_kj_mol_nm": 1.922275714605348e-06
+          },
+          {
+            "pose": "perturbed-1",
+            "native_energy_kj_mol": -989.4426288089385,
+            "xml_energy_kj_mol": -989.4426288609068,
+            "energy_delta_kj_mol": -5.1968299885629676e-08,
+            "maximum_force_delta_kj_mol_nm": 1.9075428099313285e-06
+          },
+          {
+            "pose": "perturbed-2",
+            "native_energy_kj_mol": -986.4109243830942,
+            "xml_energy_kj_mol": -986.4109244368217,
+            "energy_delta_kj_mol": -5.372749001253396e-08,
+            "maximum_force_delta_kj_mol_nm": 1.9296089703857433e-06
+          }
+        ],
+        "passed": true
+      },
+      "native_runtime": {
+        "ambertools_version": "24.8",
+        "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+        "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+        "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+        "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+      },
+      "runtime": {
+        "atoms": 84,
+        "charge_e": -2.0000000362303325,
+        "finite_energy_kj_mol": -1498.3212004780426,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      },
+      "artifacts": "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/FAD/ligand-851fd63cd1fb"
+    },
+    {
+      "id": "ZN",
+      "kind": "ion",
+      "passed": true,
+      "inspection": {
+        "key": "I:1::ZN",
+        "residue": "ZN",
+        "element": "Zn",
+        "deposited_formal_charge": null,
+        "formal_charge": 2,
+        "supported": true,
+        "error": null,
+        "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model.",
+        "parameters": {
+          "template": "ZN",
+          "atom_type": "tip3p_standard-Zn2+",
+          "element": "Zn",
+          "charge_e": 2.0,
+          "sigma_nm": 0.22646645415127425,
+          "epsilon_kj_mol": 0.01381916624,
+          "forcefield_file": "amber14/tip3p.xml",
+          "forcefield_sha256": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+          "parameter_sources": [
+            "parm/frcmod.ionsjc_tip3p",
+            "parm/frcmod.ions234lm_126_tip3p",
+            "lib/atomic_ions.lib",
+            "tip3p.xml"
+          ],
+          "references": [
+            "Joung, I.S., and Cheatham, Thomas E. (2008). Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations. J. Phys. Chem. B 112, 9020-9041.",
+            "Joung, I.S., and Cheatham, T.E. (2009). Molecular Dynamics Simulations of the Dynamic and Energetic Properties of Alkali and Halide Ions Using Water-Model-Specific Ion Parameters. J. Phys. Chem. B 113, 13279-13290.",
+            "Li, P., Roberts, B.P., Chakravorty, D.K., and Merz, K.M. (2013). Rational Design of Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in Explicit Solvent. J. Chem. Theory Comput. 9, 2733-2748.",
+            "Jorgensen, W.L., Chandrasekhar, J., Madura, J.D., Impey, R.W., and Klein, M.L. (1983). Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics 79, 926-935."
+          ],
+          "identity_source": "https://www.rcsb.org/ligand/ZN",
+          "validation": "Named template and actual OpenMM NonbondedForce particle charge/Lennard-Jones parameters agree."
+        }
+      },
+      "runtime": {
+        "atoms": 1,
+        "charge_e": 2.0,
+        "finite_energy_kj_mol": 0.0,
+        "steps": 5,
+        "time_ps": 0.001,
+        "note": "Reference-platform, nonperiodic vacuum numerical continuity only; not aqueous or converged MD."
+      }
+    }
+  ],
+  "versions": {
+    "openmm": "8.6.0",
+    "rdkit": "2025.9.6",
+    "pdbfixer": "1.12.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6",
+    "parmed": "4.3.1",
+    "gemmi": "0.7.5",
+    "dimorphite-dl": "2.0.2"
+  },
+  "script_sha256": "06f3341a36c772df156f978fdd342cc22985d635dd6d62b3a1770f17e34f2acb",
+  "native_source": {
+    "runtime": {
+      "ambertools_version": "24.8",
+      "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+      "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+      "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+      "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+    },
+    "files": {
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ALA.inpcrd": "389e8309634f3b7966a610c61052eb9633927adbf86986f4aa0e393a35e40c9c",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ALA.pdb": "dd50bd9cb68713d7705e204fbc84897e2c3a9b33c135fd3574bda0edebaa3bd4",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ALA.prmtop": "88a4df9e72736452569aba0d4344e6037c35d051b457400d5f8c21a6b62ce7e5",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ARG.inpcrd": "1cf6efca037a7775686726fe264e9b9b39c0d2218e58695f08ed9a6f00ee5912",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ARG.pdb": "29355c4bead1fd7f0bc214b98a08daf9aa34f5df02bef97cc76b126a077679c5",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ARG.prmtop": "7d88b0afe686d784f1cdd956b0285dd2c2fe97a356549f1b2e056ad503cfccd9",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASH.inpcrd": "325c0d4a8b85dbebbeaaa621c3f5e6c612eeb0e1a587bf3372a4cc9458531ea4",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASH.pdb": "34fcb34762416f1028b8df9eca7b482d4c916943caad2b7f5535e42cda4737c5",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASH.prmtop": "fce4b8cad35cbe7ec4aa2c7a67297c096e685e568f138f5e6672959c9217f7e3",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASN.inpcrd": "383ff7e0624af0703fbf9f7f9113eecf1ab2c76d85801b1cd67f291c2277dac3",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASN.pdb": "802aaebd57229306784fa548ce6f1c5054a029dcda1224580bd584925951ef2a",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASN.prmtop": "b762ef863f04706ed17525f5637ba98af1402c0c7c10330ba2a30198ec78f9c0",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASP.inpcrd": "5c11add72ef7994d55b6480213bb6d758bbf524db6b38fd1c52a416d72a7fb44",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASP.pdb": "b7c4df21da1abd12dadbfc451ef4b6069817fbeb0cfd5e905edc8516f4767666",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ASP.prmtop": "53e1902959e8d252e4ca3a50b992f3883c2a6e12c54fd8f3c798d0f8f5cc2d33",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/CYM.inpcrd": "eea3be5953623b5c8165c67d2ebd65ed3cbd034b130b05baa215ef3b6124536f",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/CYM.pdb": "52e8bd8fe137824a8573c2eb40244a9c90acc38097a554da90a059363a37ea25",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/CYM.prmtop": "752b6cbfd423822d9d8e87469ce0341e014d7f8e6334147f4d157dde5f1b77a8",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/CYS.inpcrd": "99fd817809987c92ed700e99fb9028feeb566c459b611ae449bc3c9185742555",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/CYS.pdb": "b57b7bb2bd3326f70e04dbac3c1b1337d3686c3c0bbae647adcc13a0c27c16b8",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/CYS.prmtop": "d62ffbce4de2898cbab40ee088d34d142fa1eb0de53d0ced1429a15cc9366bdb",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLH.inpcrd": "5eb2290ce94f8aac47e0a4acdcd55c785221617006ee469755a16497b8a7fe57",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLH.pdb": "c646bf798f95c7dcc579e1815f190bc4e16c6ce33dfa4635334f99dda27559cf",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLH.prmtop": "6036b1dce7a96f79e5ede02fd9442912e0c26f42b49a39dd517b9ffb47cb3193",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLN.inpcrd": "74975a0ec050881e87d01977a39d59b63674175332e4ee2464e415fb4f56983d",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLN.pdb": "7876772dcc13031ca36ce4bb7415039c1bf87d96dcd3f78e94cd2f29513cf912",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLN.prmtop": "d645b3c236e9c8fcd956e05be02b2978480eaad5516d25dcc6556131b43d8753",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLU.inpcrd": "13b6818df1476a1d21cd94746a215dd38168c9772ab66728f795b0662df9fb10",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLU.pdb": "b8cd206ca415356211dfa68b7ccadac653b30855a688f9e787ea41b86872d55f",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLU.prmtop": "43f7173f6e9c86e32262fbde375826df6b0b042d582df2389ebc891e0f8a5f1e",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLY.inpcrd": "81461737555ae996d3f9dd277c72bf8f65e2a09737283926ebc567b7c74ec67f",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLY.pdb": "f4ed0cd39e8c49e79daed8f7d1be71a1d0a8ec22ef4f54a2c00725378b63c9ba",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/GLY.prmtop": "517ee94b07243aa1de76811d81b3c2f0ab5438656b1ea6006888ec9594c96c84",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HID.inpcrd": "f5ab6951aeb223c0e20e9f5506c35a1de4544ff397dfc4fd196d42d69ad77792",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HID.pdb": "66059b4683328f108647c6f3c304856828a4b45d49efb26ab81d9f0f763af8ba",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HID.prmtop": "f5512668549eeb1ee6b684aae572924dfea7b492a5ada30fc626d64ec4e13e12",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HIE.inpcrd": "6f6b09d120dec1319139c4276b447d87bbf22bfb17d30f7bcc93537e71d3108a",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HIE.pdb": "abb97c643fc8bde1061778e74624bf5ad0cf5b1d0568af9ccf6f1ba27ab0c4d8",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HIE.prmtop": "374d31db9b804dddfc263cf61874f528b95713aae03b6ef3f606822edf29c901",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HIP.inpcrd": "260fa36f893074e108a0dccdedc952c06c15af2600feea925c8d65d2cc8a2c22",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HIP.pdb": "61e76bec1c8395fa03b6da417c54c528047c9c9d123ead4bc4037aa6b83b0b51",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/HIP.prmtop": "93240c15945ba42a659433b5b1625b759f916a6eca26f0962090752ff30a5e2c",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ILE.inpcrd": "bcc62a350815f55822cc661959998fcb61831b36b2cae56aaf4f512f229eb6d5",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ILE.pdb": "6cb339df3748f07e5737959742b946b97ac17739043b3eb29dd1d4380f256f3c",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/ILE.prmtop": "80777d5eab6f9577f9539329f10531f03ff4b9f7d5fe5514c54d92d3b3c30150",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LEU.inpcrd": "3bf3e8a52e24808d453e7b22a1e9ba6bc91072b035d69277cc700cbb2ce41602",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LEU.pdb": "8ece6f9e0fbe49bf764cab6e86409f2478e6b09003c93c6dbb9d3b6aab261659",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LEU.prmtop": "a58112b5d7cdf1058f15971ed9dfb296325c783710c775edac124ce9670fa08a",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LYN.inpcrd": "30fda60825e32a535e133897a10435cc6b58990b97e8c0b081c037b27ac30696",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LYN.pdb": "e1f46f6f7e9091aca8e9bbd738894a45ec63be9599ee282c40027659a3456af8",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LYN.prmtop": "9b2cb54e2159a4da47b2cec9f93aa681e6b6c94f302f260f38b0b6649b48f7cf",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LYS.inpcrd": "322d64beaef33261dc03e016890cc6546d0b636184ba5482c1a23994b34a202d",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LYS.pdb": "9c38deb80e44c4640f9e037630a2d839954202f965fd9226f7be5f1191be72cb",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/LYS.prmtop": "60a151cf95b504a35f2345c43339aa1445362801e852882888ba3c85138b6e42",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/MET.inpcrd": "9a6e0b38a1fa11e1334ec3b0cfca2610386648d663121eccc8518707687f3401",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/MET.pdb": "015330febd8366fc7fa0dd4e6d8ea7148ab59fb72716b07388cd93148668175f",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/MET.prmtop": "f6a74b52e123da7792f3f024f9c6083513c9ed6dedce3e16ccdb7a03c6c37866",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/PHE.inpcrd": "6f3c0a82668cc509131c5db6c6233858428800a211a8db026541cce8af3987c3",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/PHE.pdb": "2772fb6dce64afeb6025146560376100cd99caacf24f8ea1f827786baf002c13",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/PHE.prmtop": "a898a6ac5d6d3e0fbd24c45c87a0aeccab6221204c11e759705e90204bf8439f",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/PRO.inpcrd": "c3439fe3c6ebc9ef872be62c2c11a5b89e893ac1c0a031c700fbfb7430bdc3c0",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/PRO.pdb": "226ee252a65b943a5d22fc83a6c1f4725f5460f6f17c2ccf132b0c43865d97db",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/PRO.prmtop": "f1e5db54183633de4c9d9d8902f2a18936e9b7b1d12e10ce2fdd0897e236a8f0",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/SER.inpcrd": "83aa74e485661fed2026b9af1fa74043a14638980c325fd644300cb7b062bd2e",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/SER.pdb": "c2dc3822783137cae939472b59a4826fb59fa2faf80346db868a4c2df147223c",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/SER.prmtop": "8cda83d3ff3efbdfce55ed3fc5a51ea526471faa3883257c5f809dcc56313384",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/THR.inpcrd": "020c5cb62e6f1038c36da7882866638e5d26b58f6329db3272c414679c85be29",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/THR.pdb": "6b154abca48be2b722e339fd63dcce0780e15ef2edc2e3793126b811af16df0f",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/THR.prmtop": "6ec127c04fabfbfc76a8ebb242cfe6e44467aa2529faae63ec16a05352112013",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/TRP.inpcrd": "8ca4472ad47e8d2bcccf694b8827690ebd44e9d16a0e807d9fd82559baba8ff5",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/TRP.pdb": "0a78b92ba08871599ad4dc4d1a5879a4cf62d1b518324a7b23a19b59cb4e6d07",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/TRP.prmtop": "649d125a997600e39ee3b7b00051763fc0516c29cbb56c5faa2de60370d35f27",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/TYR.inpcrd": "42374543806d255df89c838e0ed1c7d704b04cf23f5a18c762b58aeb20f2f996",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/TYR.pdb": "c8af867450355b6c0a7c76e4cf01c7e5a1f4e45c12ba167ad1e6630606024cea",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/TYR.prmtop": "35a2379265d7f3fd0425ea1887f60078f1569d726961da2c85ea17831a55eb21",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/VAL.inpcrd": "5da8766ab9daa5ca8e1d92985742bb481a606db2a30d037f2025737f4114fe9d",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/VAL.pdb": "71ce3e262bea52d50519a0cf0a7cf29293e0936beb4b08d6510fb09e9c4e7996",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/VAL.prmtop": "a553c339fdcaf5ab5635777b904a01bb1724a53cbd1c777307cac86cc200ee9d",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/disulfide.inpcrd": "99598c37a81e117f48bcbaa1e8f20914dfdfb96be425759afd7654707d9b5860",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/disulfide.pdb": "c166bb0d73396377ed0e0c57a0ff9fbcb553ff909c56b17dcdba40796030957e",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/disulfide.prmtop": "6b828d6d45863315c083ff1989ee736c7fbece0741e406dd78e36beb7cdf6957",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/leap.in": "61ba0eba2afb0d405db90a383e7a0a7703b873aa4109a6a1d9afab0f056606c4",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/termini.inpcrd": "aaabfc1e4273560673d40b8321468a144a64cab3f8e1e11728dacfe1e4998138",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/termini.pdb": "fa93aa6937b67552577b1b23e8c3d02f186a03180a5c692735e4bfda818fb3f7",
+      "data/integration-checks/final-release-2026-09-12/chemistry/chemistry-matrix/protein-native/termini.prmtop": "6bf2fc3d86a6243de9fd7b4808e070de0d6de921f32c836b04884b516efe9853"
+    }
+  },
+  "passed": true,
+  "finished_at": "2026-09-13T04:48:02.230296+00:00",
+  "audit_driver_sha256": "bf00e930ad07e2019cba2339d731b5a206d4ac51a6787e037fa1f7f70016980e"
+}

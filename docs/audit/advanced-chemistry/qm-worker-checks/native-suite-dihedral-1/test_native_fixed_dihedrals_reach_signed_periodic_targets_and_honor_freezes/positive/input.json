@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "atom_ids": [
+    "H-left",
+    "O-left",
+    "O-right",
+    "H-right"
+  ],
+  "elements": [
+    "H",
+    "O",
+    "O",
+    "H"
+  ],
+  "coords_angstrom": [
+    [
+      -0.3,
+      0.92,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1.45,
+      0,
+      0
+    ],
+    [
+      1.75,
+      0,
+      0.92
+    ]
+  ],
+  "charge": 0,
+  "spin": 0,
+  "method": "RHF",
+  "basis": "sto-3g",
+  "operations": [
+    "gradient"
+  ],
+  "optimization": {
+    "enabled": true,
+    "max_steps": 60,
+    "freeze_atom_ids": [
+      "O-left",
+      "O-right"
+    ],
+    "dihedral_constraints": [
+      {
+        "atom_ids": [
+          "H-left",
+          "O-left",
+          "O-right",
+          "H-right"
+        ],
+        "target_degrees": 60
+      }
+    ]
+  }
+}

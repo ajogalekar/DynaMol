@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-09-13T16:58:24.967147+00:00",
+  "supersedes": "native-covalent-mechanics-check.json",
+  "reason": "Serialized parameter agreement did not prove that the native System could create a Context; zero-periodicity native torsions are now rejected. Original evidence is preserved.",
+  "native_prmtop_sha256": "24a2d7616c238fc4657052118ea2f70decafa2319d2648e5215f66d20919f740",
+  "current_validator_report": {
+    "schema_version": 1,
+    "accepted": false,
+    "checks": [],
+    "failures": [
+      {
+        "kind": "invalid_manifest_or_unsupported_system",
+        "message": "Torsion periodicity must be positive; even a zero-amplitude periodicity-zero native placeholder prevents an OpenMM Context"
+      }
+    ],
+    "meaning_of_accepted": "Native-declared standard mechanical terms match the System within the explicit scope; not model accuracy, oxidation-state validation, or stability proof.",
+    "tolerances": {
+      "absolute": 1e-06,
+      "relative": 1e-07
+    }
+  },
+  "actual_context_creation": {
+    "accepted": false,
+    "error": "PeriodicTorsionForce: periodicity must be positive"
+  }
+}

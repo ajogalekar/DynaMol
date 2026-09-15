@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "recorded_utc": "2026-09-13T05:19:54.212263+00:00",
+  "candidate_dmg": "/Users/ashujo/Documents/Science/DynaMol/build/releases/final-audit-2026-09-12/DynaMol-0.1.1-macos-arm64-candidate.dmg",
+  "candidate_build_id": "589ff2dddea916f5",
+  "candidate_version": "0.1.1",
+  "candidate_sha256": "29adffe128d249f7040abcf05c65a6206a70da2d59c9375393b6c0d63b196e7a",
+  "candidate_bytes": 1692901364,
+  "published": false,
+  "dmg_checks": {
+    "input_app_signature_integrity": true,
+    "compressed_udzo": true,
+    "hdiutil_verify": true,
+    "mounted_read_only": true,
+    "write_rejected_erofs": true,
+    "applications_shortcut": true,
+    "exactly_two_visible_items": true,
+    "mounted_app_matches": true,
+    "isolated_drag_copy_matches": true,
+    "copied_launcher_executable": true,
+    "staged_app_signature_integrity": true,
+    "mounted_app_signature_integrity": true,
+    "installed_app_signature_integrity": true,
+    "input_app_unchanged": true,
+    "validation_mount_detached": true
+  },
+  "runtime_passed": true,
+  "application_passed": true,
+  "native_workers": [
+    {
+      "engine": "openmm",
+      "status": "completed",
+      "frames": 6,
+      "atoms": 1231,
+      "application": "DynaMol 0.1.1",
+      "worker_source_sha256": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3"
+    },
+    {
+      "engine": "gromacs",
+      "status": "completed",
+      "frames": 6,
+      "atoms": 26842,
+      "application": "DynaMol 0.1.1",
+      "worker_source_sha256": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3"
+    }
+  ],
+  "chrome_smoke": {
+    "passed": true,
+    "url": "http://127.0.0.1:59254/",
+    "build_id": "589ff2dddea916f5",
+    "checks": [
+      "Packaged UI rendered real bundled trajectory with enabled snapshot/playback",
+      "Element color selected by default",
+      "Ball & stick rendered N/O element colors",
+      "New simulation opened with both engine installed indicators",
+      "Loop option visible before preparation",
+      "Final water padding guidance present"
+    ],
+    "logs": [
+      {
+        "level": "warn",
+        "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+        "timestamp": "2026-09-13T05:16:59.259Z",
+        "url": "http://127.0.0.1:59254/assets/index-WHMjHI86.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+        "timestamp": "2026-09-13T05:16:59.347Z",
+        "url": "http://127.0.0.1:59254/assets/index-WHMjHI86.js"
+      }
+    ]
+  },
+  "owned_service_stopped": true,
+  "build_filter": "Local recorded harness excludes this final audit ZIP/MP4/BIN artifacts and package-output folder from documentation copy; application source unchanged.",
+  "source_evidence": "Targeted current source matched byte-for-byte before DMG creation (dmg-status.json); parent final hash check records zero changes and packaged Chrome checks validate final frontend.",
+  "limitations": [
+    "Local candidate not uploaded; prior GitHub release preserved.",
+    "Ad-hoc package integrity only; no Developer ID/notarization, quarantined-download opening test, independent clean Mac or minimum-OS validation.",
+    "Native runtime test uses private prefixes, sanitized PATH and dynamic-library path checks; disabled proxies are not an OS network sandbox.",
+    "ProMod3 self-test covers imports, ABI pins and bundled data lookup; loop reconstruction has separate native evidence.",
+    "New public release records/source-materials binding must identify this exact build."
+  ]
+}

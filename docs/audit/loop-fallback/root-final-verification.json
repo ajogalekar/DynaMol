@@ -1,0 +1,169 @@
+{
+  "checked_at": "2026-09-13T07:25:42.598586+00:00",
+  "cases": [
+    {
+      "id": "1M17",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/root-final/1M17/result.json",
+      "report_sha256": "048683e7b5120ff4834e4afd9f37d67dba181fff5c7313ba995e6c6f98a8f01b"
+    },
+    {
+      "id": "1UA2",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/root-final/1UA2/result.json",
+      "report_sha256": "496de06504e09dff5cfc6922fb62e9a4d907e4218fc93e419444427a3738ec93"
+    },
+    {
+      "id": "2HYY",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/root-final/2HYY/result.json",
+      "report_sha256": "66f6360f4b64dd40800688345ea95faf0d7990e1a5d0f4397ee5ff9e29ac3cfc"
+    },
+    {
+      "id": "3HEG",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/root-final/3HEG/result.json",
+      "report_sha256": "de3e163a89a5e62b514fd103dc52dc1fb336a7c9963dc86f9819e2ac27cca496"
+    },
+    {
+      "id": "8K5R",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/root-final/8K5R/result.json",
+      "report_sha256": "b3951e08697b118a9ff2f69dcc7f962cfbf5a3ae0e73c12749600514d71fcdea"
+    },
+    {
+      "id": "1FPU",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/review-final/1FPU/result.json",
+      "report_sha256": "0c1556fa7f51d1d6107a7ae097391305a539cba4ff21ac943846a2fb617a9874"
+    },
+    {
+      "id": "1HCK",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/review-final/1HCK/result.json",
+      "report_sha256": "514d55300f84ffa9aa06868cba006135df6edbc25ebb49c3507e54c68145d70b"
+    },
+    {
+      "id": "2BEL",
+      "passed": false,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/review-final/2BEL/result.json",
+      "report_sha256": "7c6fd2373b6272bf8775aebe5e0c9fe123688421bf3ee297eda44b787fe09cf1"
+    },
+    {
+      "id": "4HHY",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/review-final/4HHY/result.json",
+      "report_sha256": "99d6a7e608b500425a1da78acf93a47147cc35520700873b04142b665476c06f"
+    },
+    {
+      "id": "4HJO",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/review-final/4HJO/result.json",
+      "report_sha256": "470b4a602edb18cfd1ac386e97fdc8eac40cf8def5ecb2cbecb64aec104033ad"
+    },
+    {
+      "id": "1RNE",
+      "passed": false,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/identities-final/1RNE/result.json",
+      "report_sha256": "d42ee5d6bec6932fe86261c70bb727a80be5c34347a5096a1c7a2626f7222601"
+    },
+    {
+      "id": "2CG9",
+      "passed": true,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/identities-final/2CG9/result.json",
+      "report_sha256": "5e4c1fa4b0fa00d9d39457e75eee8aea7fd2abefd43531a1d8f4d19b6402c4d6"
+    },
+    {
+      "id": "2ITY",
+      "passed": false,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/identities-final/2ITY/result.json",
+      "report_sha256": "01b09269181160ca105f035e61b1a98d779ecad300ee13d59bbd015d203171e6"
+    },
+    {
+      "id": "2REN",
+      "passed": false,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/identities-final/2REN/result.json",
+      "report_sha256": "e4e25dfbe9a3a83984289e046ce0bf2753f709352792d19907f4a6dd25bc323d"
+    },
+    {
+      "id": "6A93",
+      "passed": false,
+      "all_reported_checks_passed": true,
+      "matches_frozen_source": true,
+      "matches_driver": true,
+      "input_unchanged": true,
+      "report": "runs/identities-final/6A93/result.json",
+      "report_sha256": "f70ac5dd6b1b4b538ccc3b7c0c5e0e5aa369c5903185cea5a9c3f143fffd84ab"
+    }
+  ],
+  "current_source_matches_checkpoint": true,
+  "backend_tests": {
+    "passed": 647,
+    "warnings": 9,
+    "log": "backend-final-regression.log",
+    "junit_xml": "backend-final-regression.xml"
+  },
+  "frontend_build": {
+    "passed": true,
+    "command": "npm run build",
+    "warning": "Existing bundle size advisory; build and TypeScript compilation succeeded."
+  },
+  "git_diff_check_passed": true,
+  "md_run": false
+}

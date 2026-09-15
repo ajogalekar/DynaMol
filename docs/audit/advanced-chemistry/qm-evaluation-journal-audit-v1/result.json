@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "synthetic_bookkeeping_tests_passed",
+  "purpose": "Future integration candidate; immutable completed SCF/gradient evaluation recovery snapshots",
+  "test_command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "docs/audit/advanced-chemistry/qm-evaluation-journal-audit-v1/test_qm_evaluation_journal.py",
+    "-v"
+  ],
+  "test_exit_code": 0,
+  "test_count": 31,
+  "elapsed_seconds": 0.16769208299228922,
+  "native_qm_launched": false,
+  "native_calculations_or_optimizer_runs": 0,
+  "production_worker_edited": false,
+  "worker_read_only_source": "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py",
+  "worker_read_only_source_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "integration_state": "not_integrated; not a prerequisite for reviewed recovery launch",
+  "imports": [
+    "hashlib",
+    "json",
+    "math",
+    "numbers",
+    "os",
+    "pathlib",
+    "re",
+    "tempfile"
+  ],
+  "checks": [
+    "Full coordinate, positive gradient, energy and ordered identity preservation",
+    "Explicit units and native SCF flag required independently of downstream native assertion",
+    "Requested method fingerprint covers all nongeometry and nonatom-array resolved-request fields",
+    "Raw input-byte, worker-byte and resolved-request canonical digests separately recorded",
+    "Atomic no-clobber commit follows complete write and file fsync; directory fsync follows link",
+    "Short/zero-progress/partial writes, KeyboardInterrupt before commit, and errors/interruption after commit",
+    "Cycle collision, nonfinite/shape/unit/identity/state/method mismatches fail",
+    "Temp files preserved and ignored; malformed or corrupt committed file causes recovery refusal",
+    "No checkpoint read; no mutable latest pointer; no acceptance API"
+  ],
+  "limitations": [
+    "Synthetic arrays only; no new chemistry or numerical qualification",
+    "Local POSIX hardlink/fsync behavior tested; power-loss durability remains filesystem-dependent",
+    "Caller must verify actual scanner atom order/state and derive same-evaluation arrays",
+    "Source hashes and requested method are declared provenance, not loaded-runtime attestation",
+    "Recorded evaluation may be a rejected line-search trial; independent optimization and chemistry checks remain mandatory",
+    "SCF checkpoint geometry/state consistency is explicitly not established"
+  ],
+  "accepted": false,
+  "optimization_converged": false,
+  "physical_acceptance": false
+}

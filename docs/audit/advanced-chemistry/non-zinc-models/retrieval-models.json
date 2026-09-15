@@ -1,0 +1,90 @@
+[
+  {
+    "file": "dryad-top-heme-oxy-optimized.inp",
+    "url": "https://datadryad.org/downloads/file_stream/1225",
+    "retrieved_at": "2026-09-13T17:30:23.921021+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "accepted_retrieval": false
+  },
+  {
+    "file": "dryad-par-all27.inp",
+    "url": "https://datadryad.org/downloads/file_stream/1215",
+    "retrieved_at": "2026-09-13T17:30:23.921333+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "accepted_retrieval": false
+  },
+  {
+    "file": "dryad-script-oxy.pgn",
+    "url": "https://datadryad.org/downloads/file_stream/1218",
+    "retrieved_at": "2026-09-13T17:30:23.921517+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "accepted_retrieval": false
+  },
+  {
+    "file": "dryad-README.txt",
+    "url": "https://datadryad.org/downloads/file_stream/1224",
+    "retrieved_at": "2026-09-13T17:30:23.921596+00:00",
+    "error": "HTTP Error 403: Forbidden",
+    "accepted_retrieval": false
+  },
+  {
+    "file": "dryad-terms.html",
+    "url": "https://datadryad.org/terms",
+    "retrieved_at": "2026-09-13T17:30:24.060924+00:00",
+    "final_url": "https://datadryad.org/terms",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "877f1f07ffea5709856bdf39db15ea8e0159a7aea8c88434d48d6d7187c47fa9",
+    "bytes": 32244,
+    "accepted_retrieval": true
+  },
+  {
+    "file": "charmm-heme.html",
+    "url": "https://charmm-gui.org/?doc=open_toppar&filename=stream/prot/toppar_all36_prot_heme.str",
+    "retrieved_at": "2026-09-13T17:30:24.066333+00:00",
+    "final_url": "https://charmm-gui.org/?doc=open_toppar&filename=stream/prot/toppar_all36_prot_heme.str",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "a1eea115a0c8dd0d8ddba24e41f8760ab8097978d6ce416a0e9df1dabdc1b2ac",
+    "bytes": 26141,
+    "accepted_retrieval": true
+  },
+  {
+    "file": "charmm-ions-won.html",
+    "url": "https://charmm-gui.org/?doc=open_toppar&filename=stream/misc/toppar_ions_won.str",
+    "retrieved_at": "2026-09-13T17:30:24.068209+00:00",
+    "final_url": "https://charmm-gui.org/?doc=open_toppar&filename=stream/misc/toppar_ions_won.str",
+    "content_type": "text/html; charset=UTF-8",
+    "sha256": "f97799b3376ea1a4a71fbc1816e46611196e7d2f002653470e65106fc9990603",
+    "bytes": 15503,
+    "accepted_retrieval": true
+  },
+  {
+    "file": "amber-heme-all.in",
+    "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/heme_all.in",
+    "retrieved_at": "2026-09-13T17:30:24.068297+00:00",
+    "final_url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/heme_all.in",
+    "content_type": "text/plain",
+    "sha256": "1240972761ccf0b0894366188280f5df8b42f083c29a19a2ebccb4cad7a83bf7",
+    "bytes": 7012,
+    "accepted_retrieval": true
+  },
+  {
+    "file": "amber-frcmod.hemall",
+    "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/frcmod.hemall",
+    "retrieved_at": "2026-09-13T17:30:24.217182+00:00",
+    "final_url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/frcmod.hemall",
+    "content_type": null,
+    "sha256": "681f892fa8374e9ee5043abd7e0ae543d5569aadcb6237cb60fd4078bb5e69f3",
+    "bytes": 3435,
+    "accepted_retrieval": true
+  },
+  {
+    "file": "cucusod-repo.json",
+    "url": "https://api.github.com/repos/Mag14011/CuCuSOD1_SI_CompMethods",
+    "retrieved_at": "2026-09-13T17:30:24.443220+00:00",
+    "final_url": "https://api.github.com/repos/Mag14011/CuCuSOD1_SI_CompMethods",
+    "content_type": "application/json; charset=utf-8",
+    "sha256": "f19f0bdc48ec9bf9dec6f1c5beecf5cfc5cce7a71618edca65f49c5e23ab32af",
+    "bytes": 5702,
+    "accepted_retrieval": true
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "openmm_version": "8.6.0.dev-c6173db",
+  "particles": 27386,
+  "changed_particle_charges": 27,
+  "changed_exception_charge_products": 189,
+  "nonbonded_exceptions": 38552,
+  "maximum_unscaled_nonzero_14_charge_product_error_e2": 0.0,
+  "unchanged": [
+    "All other force XML definitions, including zero-amplitude site terms",
+    "Particle masses and Lennard-Jones terms",
+    "Exception pairs and Lennard-Jones terms",
+    "Excluded charge products"
+  ],
+  "system_sha256": [
+    "0abc07238e9ad570231327f612573c6472e8d16a49eedc833ecbbfab1ac82c43",
+    "ca225779a84650d5f1546e2a8e39bb7eb939ffc8661af39436668f84b21a8d5f"
+  ],
+  "scope": "Two OpenMM import definitions are internally consistent with declared charge-only changes. No independent native-engine energy/force parity, no Context, and no model-accuracy validation."
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "8K5R",
+    "returncode": 0,
+    "report": "/Users/ashujo/Claude/DynaMol/docs/audit/loop-fallback/runs/v1-recheck-20260914/8K5R/result.json"
+  },
+  {
+    "id": "3HEG",
+    "returncode": 1,
+    "report": "/Users/ashujo/Claude/DynaMol/docs/audit/loop-fallback/runs/v1-recheck-20260914/3HEG/result.json"
+  },
+  {
+    "id": "2CG9",
+    "returncode": 1,
+    "report": "/Users/ashujo/Claude/DynaMol/docs/audit/loop-fallback/runs/v1-recheck-20260914/2CG9/result.json"
+  }
+]

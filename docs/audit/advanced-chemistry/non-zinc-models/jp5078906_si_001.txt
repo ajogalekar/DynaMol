@@ -1,0 +1,164 @@
+      Supplementary information for: The effect of
+including torsional parameters for histidine–metal
+          interactions in classical force fields for
+                                 metalloproteins
+
+ Raúl Mera-Adasme,∗,† Keyarash Sadeghian,† Dage Sundholm,‡ and Christian
+
+                                         Ochsenfeld†
+
+Chair of Theoretical Chemistry, Department of Chemistry, University of Munich (LMU),
+Germany, and Department of Chemistry, P.O. Box 55 (A.I. Virtanens plats 1), FIN-00014
+                               University of Helsinki, Finland.
+
+                            E-mail: raul.mera@cup.uni-muenchen.de
+
+
+
+
+  ∗
+    To whom correspondence should be addressed
+  †
+    Ludwig-Maximilian University of Munich
+  ‡
+    University of Helsinki
+
+
+                                                 1
+Table 1: Force constants (in kcal mol−1 Å−2 ), equilibrium distances (in Å), and
+the R2 fitting parameters for the stretching of metal–ligand bonds of the re-
+duced metal-site of SOD1, Using a protocol in which Cβ carbons of the residues
+not being scanned were kept fixed, in addition to the atoms fixed in the final
+procedure reported in this work.
+
+              Interaction   Force constant       Equilibrium distance   R2
+              Cu(I)–ND1     105.4                1.98                   0.986
+              Cu(I)–NE2     78.6                 2.06                   0.989
+              Zn(II)–ND1    76.2                 2.10                   0.987
+              Zn(II)–OD1    119.3                2.04                   0.966
+
+
+
+
+                                             2
+                            (a) Zn(II)–OD1 (aspartate oxygen δ1 )
+
+
+
+
+                            (b) Zn(II)–ND1 (histidine nitrogen δ1 )
+
+
+
+
+                            (c) Cu(I)–ND1 (histidine nitrogen δ1 )
+
+
+
+
+                               (d) Cu(I) (histidine nitrogen 2 )
+
+Figure 1: Energies (kcal mol−1 ) Vs. bond stretching distances (Å) for the metal–ligand in-
+teractions in SOD1 calculated at the TPSS-D3/def2-TZVPP level of theory (in red triangles)
+and the respective fitted harmonic function (in blue). The number on top of each figure gives
+the zero of each relative scale.              3
+              (a) ND1 (histidine nitrogen δ1 )– Zn(II)–OD1 (aspartate oxygen δ1 )
+
+
+
+
+              (b) ND1 (histidine nitrogen δ1 )–Zn(II)–ND1 (histidine nitrogen δ1 )
+
+
+
+
+               (c) NE2 (histidine nitrogen 2 )–Cu(I)–NE2 (histidine nitrogen 2 )
+
+
+
+
+               (d) NE2 (histidine nitrogen 2 )–Cu(I)–ND1 (histidine nitrogen δ1 )
+
+Figure 2: Energies (kcal mol−1 ) Vs. bond bending angle (radians) for the metal–ligand inter-
+actions in SOD1 calculated at the TPSS-D3/def2-TZVPP level of theory (in red triangles)
+and the respective fitted harmonic function (in blue). The number on top of each figure
+gives the zero of each relative scale.       4
+             (a) Zn(II)–ND1–CE1-CG (histidine nitrogen δ1 , carbon 1 , carbon γ)
+
+
+
+
+             (b) Cu(I)–NE2–CE1–CG (histidine nitrogen 2 , carbon 1 , carbon γ)
+
+
+
+
+             (c) Cu(I)–ND1–CE1–CG (histidine nitrogen δ1 , carbon 1 , carbon γ)
+
+Figure 3: Energies (kcal mol−1 ) Vs. bond bending angle (radians) for the metal–ligand inter-
+actions in SOD1 calculated at the TPSS-D3/def2-TZVPP level of theory (in red triangles)
+and the respective fitted periodic function shown as equation 1 in the paper (in blue). The
+number on top of each figure gives the zero of each relative scale.
+
+
+
+
+                                              5
+Table 2: RESP charges, in atomic units, for the atoms in the metal-coordinating
+residues of SOD1, and for the metal themselves. The names of the residues are
+conserved from Branco et al.’s work, and identified in parenthesis according to
+the atom coordinating the respective metal ion.
+
+ PDB       HIC (ND1–Cu(I))    HIF (NE2–Cu(I))   HIX (ND1–Zn(II))   ASZ (OD1–Zn(II))
+ atom name
+ CA        -0.03646           0.04043           -0.03646           0.05973
+ HA        0.15763            0.10973           0.15763            0.10963
+ CB        -0.09353           -0.27953          -0.21537           -0.47984
+ CG        0.03831            0.10996           0.06269            0.79291
+ ND1       -0.20117           -0.26358          -0.05045           –
+ CD2       -0.15487           -0.08520          -0.20639           –
+ CE1       0.00420            0.01714           -0.06666           –
+ NE2       -0.26947           -0.38490          -0.23999           –
+ HB2       0.08447            0.17450           0.15053            0.20781
+ HB3       0.08447            0.17450           0.15053            0.20781
+ HD1       –                  0.36499           –                  –
+ HD2       0.1899             0.17698           0.21321            –
+ HE1       0.16014            0.19158           0.20573            –
+ HE2       0.35912            –                 0.37213            –
+ OD1       –                  –                 –                  -0.66608
+ OD1       –                  –                 –                  -0.66695
+ CU        0.46323            –                 –                  –
+ ZN        0.41881            –                 –                  –
+
+
+
+
+                                         6
+                (a) Parameters from the present work, no dihedrals included
+
+
+
+
+                  (b) Parameters from the present work, dihedrals included
+
+Figure 4: Backbone RMSD in nm for the MD simulations using different sets of parameters
+
+
+
+
+                                             7
+                (a) Parameters from the present work, no dihedrals included
+
+
+
+
+                  (b) Parameters from the present work, dihedrals included
+
+Figure 5: RMSD in nm for the metal site of SOD1 in MD simulations using different sets of
+parameters
+
+
+
+
+                                             8
+

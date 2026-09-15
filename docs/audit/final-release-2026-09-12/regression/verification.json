@@ -1,0 +1,82 @@
+{
+  "verified_utc": "2026-09-13T04:47:34.062843+00:00",
+  "backend_source_changed_since_final_suite_started": [],
+  "backend_pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "601",
+    "time": "21.569",
+    "timestamp": "2026-09-12T21:46:44.449574-07:00",
+    "hostname": "Mac.attlocal.net"
+  },
+  "api_cases": {
+    "passed": 53,
+    "failed": 0
+  },
+  "application_bug_found_in_format_measurement_workspace_paths": false,
+  "harness_initial_failure_preserved": true,
+  "artifacts": {
+    "runtime.json": {
+      "bytes": 509,
+      "sha256": "6e14d413b417f7860c2fd67a5d5bac2e036960ffc73d82338dc2f4a1506d98fb"
+    },
+    "backend-initial.xml": {
+      "bytes": 87234,
+      "sha256": "868414a5cb2161832f1498e870347f654a74fe1195d7e5699e45ea2dd038a63f"
+    },
+    "api-initial.json": {
+      "bytes": 27102,
+      "sha256": "d3c7860a24aa6ec866f1f6d839e55db9a79347f5b374a46bba4729629e3d6555"
+    },
+    "api-initial.txt": {
+      "bytes": 3351,
+      "sha256": "c6b4dcda8a2aad72e0196169d1b2af140828228d5dd4ee553ad020b79e577019"
+    },
+    "backend-initial.txt": {
+      "bytes": 7191,
+      "sha256": "79fc2dfc9eb740a63164592c74c4bfab06c589e21ee9a505b65e6243f348d654"
+    },
+    "README.md": {
+      "bytes": 5815,
+      "sha256": "5cd7b03653db2147bdf008206e9f0f66b91ce1a32958ad48ed3ea6f872c56d30"
+    },
+    "backend-final.txt": {
+      "bytes": 7027,
+      "sha256": "7e1067cb3e08063d7eeceef700fb70c7ad3836d90a62c8a1f38db2fcd3b62ab6"
+    },
+    "api_contract_audit.py": {
+      "bytes": 17837,
+      "sha256": "365287aaf67ecb8e03c47d72f3b9e2178a330a5dc5b34611d54522caddb806bf"
+    },
+    "native-deferred.xml": {
+      "bytes": 943,
+      "sha256": "42f87ee847a8099445fab9d376e2b5fd431d547ade8b4fde35493f5aeab655af"
+    },
+    "backend-final.xml": {
+      "bytes": 88220,
+      "sha256": "0f988b43718f9ed86057481c1d923b72efa8abd628593ef66234e21e7ab3f611"
+    },
+    "api-final.json": {
+      "bytes": 26895,
+      "sha256": "6d492ccf3f0058b159d7ce138a9c5eb5dd5fba402415d19fc42df6fa5f463d23"
+    },
+    "native-deferred.txt": {
+      "bytes": 1708,
+      "sha256": "a8d4fdbb9c9ca7d34e21d8460b98cc67e7ba2a5e15aab9fe7264e4e2fd470883"
+    },
+    "api-final.txt": {
+      "bytes": 3337,
+      "sha256": "b0c0d9cdc7b003d32d7640217919dd4d091aace177fc58fa56cd73792862ed52"
+    },
+    "source-initial.json": {
+      "bytes": 9254,
+      "sha256": "baa891bcfb78dea85bc877ac0663252662ca4403bb62e9a0647080bdfc0724a9"
+    },
+    "source-final.json": {
+      "bytes": 12908,
+      "sha256": "c87df77798bc7386d8ab45fc36f659bbb1d3b5026754ecf2cf7c27967d1b48a4"
+    }
+  }
+}

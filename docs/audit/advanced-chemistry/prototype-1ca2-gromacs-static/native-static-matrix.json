@@ -1,0 +1,160 @@
+{
+  "scope": "Native GROMACS mixed-precision evaluation, original Amber/OpenMM Reference and exported GROMACS/OpenMM Reference on identical saved coordinates",
+  "source_model": "Complete 1CA2 published ZAFF6 + ff14SB/TIP3P including all crystal waters",
+  "forcefield_terms_or_charges_modified": false,
+  "numerical_setup": "20nm box,9nm unshifted cutoffs encompass every pair without interacting with periodic images; no constraints and FLEXIBLE waters",
+  "time_integration": "none; actual nsteps0 static evaluations",
+  "parameter_mechanics_report": "gromacs-reader-native-mechanics-remapped.json",
+  "interpretation": "Raw numerical errors are reported; double-precision parameter conversion and mixed-precision native arithmetic are distinct checks. No tolerance adjusted in the application.",
+  "conformations": [
+    {
+      "pose": "raw-centered",
+      "gromacs_energy_kj_mol": 172955.765625,
+      "native_precision": "mixed, recorded positions and forces float32",
+      "maximum_coordinate_serialization_error_nm": 4.7607422004602995e-07,
+      "readers": [
+        {
+          "reader": "native_amber",
+          "energy_kj_mol": 172955.60959972197,
+          "energy_difference_kj_mol": -0.15602527803275734,
+          "energy_relative_difference": 9.021116944044361e-07,
+          "maximum_force_difference_kj_mol_nm": 0.06693714913717486,
+          "rms_force_difference_kj_mol_nm": 0.0020574234210234046,
+          "force_maximum_reference_kj_mol_nm": 35956.83722129918,
+          "force_rms_reference_kj_mol_nm": 5044.162646206386,
+          "force_maximum_difference_normalized_to_maximum": 1.8615972457534269e-06,
+          "force_rms_relative_error": 4.0788205403542086e-07
+        },
+        {
+          "reader": "gromacs_export",
+          "energy_kj_mol": 172955.60894771124,
+          "energy_difference_kj_mol": -0.15667728875996545,
+          "energy_relative_difference": 9.058815132577335e-07,
+          "maximum_force_difference_kj_mol_nm": 0.06693457917560863,
+          "rms_force_difference_kj_mol_nm": 0.002057226921334016,
+          "force_maximum_reference_kj_mol_nm": 35956.83549669807,
+          "force_rms_reference_kj_mol_nm": 5044.162643342563,
+          "force_maximum_difference_normalized_to_maximum": 1.8615258615223595e-06,
+          "force_rms_relative_error": 4.078430984078608e-07
+        }
+      ],
+      "double_precision_source_vs_export": {
+        "energy_difference_kj_mol": -0.0006520107272081077,
+        "maximum_force_difference_kj_mol_nm": 0.0017317601450486109
+      }
+    },
+    {
+      "pose": "relaxed",
+      "gromacs_energy_kj_mol": -32715.957031,
+      "native_precision": "mixed, recorded positions and forces float32",
+      "maximum_coordinate_serialization_error_nm": 2.8610229563241774e-07,
+      "readers": [
+        {
+          "reader": "native_amber",
+          "energy_kj_mol": -32716.196773608684,
+          "energy_difference_kj_mol": -0.23974260868271813,
+          "energy_relative_difference": 7.327948610338239e-06,
+          "maximum_force_difference_kj_mol_nm": 0.008795303181330816,
+          "rms_force_difference_kj_mol_nm": 0.0016403164087637268,
+          "force_maximum_reference_kj_mol_nm": 2062.0664220270664,
+          "force_rms_reference_kj_mol_nm": 210.46720191541635,
+          "force_maximum_difference_normalized_to_maximum": 4.26528606808155e-06,
+          "force_rms_relative_error": 7.793691339246985e-06
+        },
+        {
+          "reader": "gromacs_export",
+          "energy_kj_mol": -32716.197170781037,
+          "energy_difference_kj_mol": -0.24013978103539557,
+          "energy_relative_difference": 7.340088451657375e-06,
+          "maximum_force_difference_kj_mol_nm": 0.008790999806837618,
+          "rms_force_difference_kj_mol_nm": 0.0016406894010521618,
+          "force_maximum_reference_kj_mol_nm": 2062.066493325226,
+          "force_rms_reference_kj_mol_nm": 210.46720185556077,
+          "force_maximum_difference_normalized_to_maximum": 4.263198997361873e-06,
+          "force_rms_relative_error": 7.795463552454755e-06
+        }
+      ],
+      "double_precision_source_vs_export": {
+        "energy_difference_kj_mol": -0.000397172352677444,
+        "maximum_force_difference_kj_mol_nm": 0.00011057480434573108
+      }
+    },
+    {
+      "pose": "relaxed-perturb-2027",
+      "gromacs_energy_kj_mol": -32512.039062,
+      "native_precision": "mixed, recorded positions and forces float32",
+      "maximum_coordinate_serialization_error_nm": 2.8524191453271897e-07,
+      "readers": [
+        {
+          "reader": "native_amber",
+          "energy_kj_mol": -32512.09321271334,
+          "energy_difference_kj_mol": -0.054150713338458445,
+          "energy_relative_difference": 1.665556043536553e-06,
+          "maximum_force_difference_kj_mol_nm": 0.007955137756454178,
+          "rms_force_difference_kj_mol_nm": 0.0016302625462307691,
+          "force_maximum_reference_kj_mol_nm": 2141.587383582042,
+          "force_rms_reference_kj_mol_nm": 263.01794287923286,
+          "force_maximum_difference_normalized_to_maximum": 3.714598721229077e-06,
+          "force_rms_relative_error": 6.198294034180472e-06
+        },
+        {
+          "reader": "gromacs_export",
+          "energy_kj_mol": -32512.093609440555,
+          "energy_difference_kj_mol": -0.05454744055532501,
+          "energy_relative_difference": 1.6777584738340578e-06,
+          "maximum_force_difference_kj_mol_nm": 0.007970506654565668,
+          "rms_force_difference_kj_mol_nm": 0.0016306024927830406,
+          "force_maximum_reference_kj_mol_nm": 2141.5874545414244,
+          "force_rms_reference_kj_mol_nm": 263.01794288928204,
+          "force_maximum_difference_normalized_to_maximum": 3.7217750027735302e-06,
+          "force_rms_relative_error": 6.199586518207414e-06
+        }
+      ],
+      "double_precision_source_vs_export": {
+        "energy_difference_kj_mol": -0.00039672721686656587,
+        "maximum_force_difference_kj_mol_nm": 0.00011346446120796827
+      }
+    },
+    {
+      "pose": "relaxed-perturb-2028",
+      "gromacs_energy_kj_mol": -32532.910156,
+      "native_precision": "mixed, recorded positions and forces float32",
+      "maximum_coordinate_serialization_error_nm": 2.8434203613869613e-07,
+      "readers": [
+        {
+          "reader": "native_amber",
+          "energy_kj_mol": -32532.912980439847,
+          "energy_difference_kj_mol": -0.002824439845426241,
+          "energy_relative_difference": 8.681792027429e-08,
+          "maximum_force_difference_kj_mol_nm": 0.009898168428520648,
+          "rms_force_difference_kj_mol_nm": 0.0016337074711981023,
+          "force_maximum_reference_kj_mol_nm": 2119.223079215394,
+          "force_rms_reference_kj_mol_nm": 259.2298313059858,
+          "force_maximum_difference_normalized_to_maximum": 4.6706590380212706e-06,
+          "force_rms_relative_error": 6.302158447457891e-06
+        },
+        {
+          "reader": "gromacs_export",
+          "energy_kj_mol": -32532.91337754516,
+          "energy_difference_kj_mol": -0.003221545157430228,
+          "energy_relative_difference": 9.902418268060186e-08,
+          "maximum_force_difference_kj_mol_nm": 0.009908799443493876,
+          "rms_force_difference_kj_mol_nm": 0.0016341808096185138,
+          "force_maximum_reference_kj_mol_nm": 2119.2231503469093,
+          "force_rms_reference_kj_mol_nm": 259.2298312721808,
+          "force_maximum_difference_normalized_to_maximum": 4.675675349182478e-06,
+          "force_rms_relative_error": 6.303984389445867e-06
+        }
+      ],
+      "double_precision_source_vs_export": {
+        "energy_difference_kj_mol": -0.0003971053120039869,
+        "maximum_force_difference_kj_mol_nm": 0.00011040547445873017
+      }
+    }
+  ],
+  "elapsed_seconds": 2.5428048750036396,
+  "hashes": {
+    "system.top": "41b0de9a7ad2bbb75754b1e2be93c5f358908b4e7a43fbe3b4f3a1a892365340",
+    "static.mdp": "f5d4bc21c48d7228798d0504e74747cdd65c97407330582f4616ea3d27c834a4"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "on_hold_for_reference_method_feasibility",
+  "scope": "Coarse held-out mechanics diagnostics for the complete 94-atom ACE-Cys(sotorasib)-NME product; no fragment substitution, parameter refitting or physical acceptance from numerical convergence alone.",
+  "requires": [
+    "Qualify an informative, affordable dispersion-corrected reference strategy before executing the six long HF diagnostic optimizations; see the separate bounded feasibility review.",
+    "Actual accepted full-parent optimization with preserved product graph, stereo and frozen cap coordinates",
+    "Completed exact-HF ESP and constrained native RESP; actual charges replace all synthetic charge fixtures",
+    "Native ff14SB/GAFF2 interface precedence, complete term inventory and matched-engine energy/force checks for those actual charges"
+  ],
+  "baseline": "Use the final full-parent DF geometry, state, atom order and exact recorded cap freezes. All targets are periodic offsets from the measured optimized baseline angle.",
+  "first_stage": [
+    {
+      "name": "sulfur_ligand_attachment",
+      "atom_ids": [
+        "007:CB",
+        "008:SG",
+        "018:MOV_C25",
+        "017:MOV_C24"
+      ],
+      "central_bond": [
+        "008:SG",
+        "018:MOV_C25"
+      ],
+      "offsets_degrees": [
+        -30,
+        30,
+        180
+      ],
+      "purpose": "Probe local attachment softness in both directions and one widely separated orientation. Three offsets do not locate all minima or the rotational barrier."
+    },
+    {
+      "name": "reacted_ligand_linker",
+      "atom_ids": [
+        "008:SG",
+        "018:MOV_C25",
+        "017:MOV_C24",
+        "015:MOV_C23"
+      ],
+      "central_bond": [
+        "018:MOV_C25",
+        "017:MOV_C24"
+      ],
+      "offsets_degrees": [
+        -30,
+        30,
+        180
+      ],
+      "purpose": "Probe flexibility adjacent to the newly saturated warhead, retaining the complete actual ligand electronic and steric environment."
+    }
+  ],
+  "later_if_needed": [
+    {
+      "name": "modified_cysteine_chi2",
+      "atom_ids": [
+        "004:CA",
+        "007:CB",
+        "008:SG",
+        "018:MOV_C25"
+      ]
+    },
+    {
+      "name": "modified_cysteine_chi1",
+      "atom_ids": [
+        "003:N",
+        "004:CA",
+        "007:CB",
+        "008:SG"
+      ]
+    }
+  ],
+  "quantum_method": {
+    "geometry": "Explicit DF-RHF/6-31G* (spherical), def2-universal-jkfit, full closed-shell neutral adduct",
+    "state": "Same charge/spin and complete product graph as accepted parent",
+    "constraints": "The same five cap heavy Cartesian coordinates plus one explicit dihedral target per job; require actual final periodic-angle and cap checks",
+    "initial_density": "Verified accepted parent checkpoint at exactly the same initial geometry; never use a density from an unverified rotated geometry",
+    "limitations": "The measured DF error at one parent geometry is not a bound on conformational energies. RHF omits electron correlation and dispersion; profiles are declared model diagnostics, not experimental free-energy surfaces or sufficient chemical validation."
+  },
+  "bounds": {
+    "first_stage_new_qm_jobs": 6,
+    "max_optimization_steps_per_job": 100,
+    "max_wall_seconds_per_job": 21600,
+    "independent_timeout_seconds_per_job": 21720,
+    "threads_per_job": 2,
+    "memory_setting_mb_per_job": 8000,
+    "max_all_project_qm_processes": 3,
+    "large_df_policy": "Sequential by default; no concurrent large DF jobs unless more than 30 GiB free disk and the existing process/memory limits also permit it. Current parent optimizer has demonstrated approximately 12 GiB temporary DF storage.",
+    "launch_lock": "build/advanced-chemistry/QM-LAUNCH.lock",
+    "launch_policy": "Prepare requests only now; launch the two near-angle attachment diagnostics first after the required parent evidence, inspect actual convergence/cost, then proceed to the remaining frozen targets. Keep failures and do not add replacement targets to inflate completion."
+  },
+  "comparison": {
+    "classical": "Evaluate the unchanged full native force field with actual joint RESP charges at each exact QM geometry, and use the identical parent baseline; retain component energies and all original atom identities.",
+    "reference": "Record QM and MM relative energies separately, target/final angles, companion torsion changes, bonded geometry and stereo. Retain unsuccessful conformers in the planned six-point denominator.",
+    "held_out": "Do not fit or tune torsions using these same points and then call their agreement validation. Any parameter revision needs separate held-out geometries.",
+    "acceptance": "No automatic accuracy threshold or full-preparation acceptance is attached to this coarse plan. Unexpected stiffness, favorable high-strain conformers, incorrect minima or large relative-energy disagreement require investigation."
+  },
+  "reference_method_review": "docs/audit/advanced-chemistry/covalent-reference-method-feasibility.md"
+}

@@ -1,0 +1,239 @@
+{
+  "scope": "Short unrestrained warmed 1CA2 neutral-water ZAFF6 engineering comparison; one starting conformation and one independent specimen per engine.",
+  "limitations": [
+    "Not a thermodynamic-convergence assessment, catalytic model validation, experimental accuracy claim, or general metal-family acceptance.",
+    "GROMACS v-rescale and OpenMM LangevinMiddle use different thermostats and velocities; trajectories are not expected to coincide.",
+    "Geometry limits are broad alarms. Bond survival in a bonded model is necessary implementation evidence, not independent proof of chemical accuracy."
+  ],
+  "source_review": {
+    "ready_for_short_comparison": true,
+    "total_NPT_warmup_ps": 75,
+    "decision": "Proceed to short20ps unrestrained NVT engine specimens using this exact saved configuration and box. The final10ps energy trend is nearly flat after the earlier sustained relaxation; thermal/density fluctuations are bounded. This does not establish thermodynamic convergence.",
+    "last10ps_metrics": {
+      "potential_energy_kj_mol": {
+        "mean": -430113.31497524754,
+        "standard_deviation": 495.0021645024052,
+        "slope_per_ps": 2.9598136284431313,
+        "first5ps_mean": -430170.71125,
+        "last5ps_mean": -430057.04411764705
+      },
+      "temperature_kelvin": {
+        "mean": 300.8817513168317,
+        "standard_deviation": 1.3013271888543376,
+        "slope_per_ps": 0.12469137891670679,
+        "first5ps_mean": 300.43470092,
+        "last5ps_mean": 301.3200360196078
+      },
+      "pressure_bar": {
+        "mean": 16.275722316831683,
+        "standard_deviation": 174.26913028431863,
+        "slope_per_ps": -9.181093445893993,
+        "first5ps_mean": 40.51840878,
+        "last5ps_mean": -7.491617352941174
+      },
+      "volume_nm3": {
+        "mean": 342.53068946534654,
+        "standard_deviation": 0.5779836414230287,
+        "slope_per_ps": 0.06801723750728865,
+        "first5ps_mean": 342.26774532,
+        "last5ps_mean": 342.7884778431373
+      },
+      "density_kg_m3": {
+        "mean": 1024.2289773465345,
+        "standard_deviation": 1.727092333868949,
+        "slope_per_ps": -0.20367949935940333,
+        "first5ps_mean": 1025.0152099400002,
+        "last5ps_mean": 1023.4581610784313
+      }
+    },
+    "additional_stage_10ps_energy_means_kj_mol": [
+      -430656.259375,
+      -430353.9934375
+    ],
+    "final_density_g_ml": 1.0245457266289093,
+    "mobile_dof": 70866.0,
+    "geometry": {
+      "broad_geometry_alarms_clear": true,
+      "Zn_min_angstrom": [
+        1.845739610687227,
+        1.8416403125666494,
+        1.89976296671065,
+        1.7635160360143267
+      ],
+      "Zn_max_angstrom": [
+        2.1316278899507934,
+        2.123301388380405,
+        2.0670633265885714,
+        2.0818448656225983
+      ],
+      "maximum_CA_rmsd_angstrom": 0.7777805295302911
+    },
+    "limitations": [
+      "One solvated source conformation; finite correlated samples; sample standard deviations are not confidence intervals.",
+      "GROMACS v-rescale and OpenMM LangevinMiddle have different stochastic dynamics; separately documented velocities/seeds.",
+      "No position restraints during warmup or comparison. Bonded-site retention is a numerical/coordination check, not independent chemical-accuracy evidence."
+    ],
+    "evidence_hashes": {
+      "stage-status.json": "3cfc4c10c9dd1c3809dbfc5136440af80e09e83b9f7a0572a52119dd47a92dfb",
+      "independent-site-geometry.json": "f1c0ce27a4e66e629eed52e45e0477ef6d913c83ff6b5b439126e29386d8d43a",
+      "endpoint.npz": "bcb48bb2ff13614ebe502278960a9b91066e444f19b71fd86eb41457f2d82a7a"
+    }
+  },
+  "shared_initial_state": {
+    "gromacs_maximum_minimum_image_coordinate_difference_nm": 0.0,
+    "gromacs_maximum_box_difference_nm": 0.0,
+    "openmm_raw_coordinates_and_box_exact": true,
+    "openmm_initial_constraint_projection_nm": 5.633204146933617e-07,
+    "actual_openmm_runtime_volume_maximum_error_nm3": 5.684341886080802e-14,
+    "actual_openmm_kinetic_temperature_maximum_recalculation_error_kelvin": 5.684341886080802e-14,
+    "mobile_dof": 70866,
+    "volume_nm3": 342.42381883065127,
+    "density_g_ml": 1.0245457266289093
+  },
+  "periodic_energy_comparison": {
+    "status": "unresolved_absolute_periodic_energy_difference",
+    "evidence": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/periodic-comparison-matrix.json",
+    "meaning": "Finite motion and coordination do not resolve the separately retained absolute periodic-energy discrepancy."
+  },
+  "finite_unrestrained_motion_and_broad_coordination_checks_passed": true,
+  "gromacs": {
+    "stage_duration_ps": 20,
+    "last10ps_metrics": {
+      "potential_energy_kj_mol": {
+        "mean": -430297.7676361386,
+        "standard_deviation": 482.18948996768904,
+        "slope_per_ps": 78.01943797322004,
+        "first5ps_mean": -430512.529375,
+        "last5ps_mean": -430087.2169117647
+      },
+      "temperature_kelvin": {
+        "mean": 299.4847287920792,
+        "standard_deviation": 1.2901972969999476,
+        "slope_per_ps": 0.09711951741407954,
+        "first5ps_mean": 299.15866755999997,
+        "last5ps_mean": 299.80439666666666
+      },
+      "pressure_bar": {
+        "mean": -1.081192960396042,
+        "standard_deviation": 137.8389829344069,
+        "slope_per_ps": -4.68598086010483,
+        "first5ps_mean": -3.544135620000002,
+        "last5ps_mean": 1.3334567058823552
+      }
+    },
+    "elapsed_seconds": 347.6885948749841,
+    "frame_count": 21,
+    "Zn_min_angstrom": [
+      1.9063593752704628,
+      1.8168663726829712,
+      1.887942090602916,
+      1.8431824009409423
+    ],
+    "Zn_max_angstrom": [
+      2.1017012971943116,
+      2.123301388380405,
+      2.098148105864671,
+      2.1412579571992802
+    ],
+    "Zn_mean_angstrom": [
+      1.9817630596453282,
+      1.9581260448674938,
+      1.9926581592192016,
+      1.995908545638721
+    ],
+    "Zn_angle_mean_degrees": [
+      106.28685717226514,
+      121.68018390756065,
+      105.67390360624148,
+      108.29945497709079,
+      112.81322465204627,
+      101.88423125540297
+    ],
+    "maximum_CA_rmsd_angstrom": 0.7072795731141506
+  },
+  "openmm": {
+    "duration_ps": 20,
+    "last10ps_metrics": {
+      "potential_kj_mol": {
+        "mean": -429706.13570216217,
+        "standard_deviation": 625.6841190779508,
+        "slope_per_ps": -23.55938549963252,
+        "first5ps_mean": -429593.52116396814,
+        "last5ps_mean": -429816.5421121564
+      },
+      "temperature_kelvin": {
+        "mean": 300.90044867278885,
+        "standard_deviation": 1.515631058788634,
+        "slope_per_ps": -0.09837559268769742,
+        "first5ps_mean": 301.1215219910794,
+        "last5ps_mean": 300.6837101254451
+      }
+    },
+    "elapsed_seconds": 1126.584096000006,
+    "Zn_min_angstrom": [
+      1.7785894903234034,
+      1.7627038836495506,
+      1.779624538340775,
+      1.7098543087597917
+    ],
+    "Zn_max_angstrom": [
+      2.1061499803406734,
+      2.123301388380405,
+      2.1290502239134272,
+      2.180801776183397
+    ],
+    "Zn_mean_angstrom": [
+      1.9697813809933493,
+      1.949699580247819,
+      1.9839259356845116,
+      1.9597110431002878
+    ],
+    "Zn_angle_mean_degrees": [
+      107.30868746176564,
+      122.28169112302453,
+      104.51624762707294,
+      108.34563757293625,
+      112.56337050403499,
+      101.24198626017025
+    ],
+    "maximum_CA_rmsd_angstrom": 0.7281828892479929
+  },
+  "evidence": [
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-gromacs-npt-extra25/comparison-readiness.json",
+      "sha256": "de8c25d9a05add6d319d7207b3273630cec80345d81a44a7cffd01c1e296acba"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-gromacs-npt-extra25/endpoint.npz",
+      "sha256": "bcb48bb2ff13614ebe502278960a9b91066e444f19b71fd86eb41457f2d82a7a"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-gromacs-warmed20/stage-status.json",
+      "sha256": "66161b0e2eaceb4ef1edbe51093a82c7a4fa78c4ceaca0feafc5aea741e570e7"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-gromacs-warmed20/independent-site-geometry.json",
+      "sha256": "30112a62b64e47341ac8f297de58481db5211334bce31e2208a3655c516039d2"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-openmm-warmed20/comparison-report.json",
+      "sha256": "a22c2fe31cbfd1d9ad3b78069bd05d0920be57788e0904d49a6ea1ef9891d2fb"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-openmm-warmed20/system.xml",
+      "sha256": "71b1b2b574c257fee3e5d41f9fd6a6f65804d3ca1a40d3a9f41cf38bfea28f26"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-openmm-warmed20/initial-image-mapping.npz",
+      "sha256": "8b7d1ecdbc038bcdb56176caae50e478ded9bc09a39d7e0a2f06ae92a04d485d"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-openmm-warmed20/thermodynamics.csv",
+      "sha256": "2f0742e405196c9dfdac8e82965c709f256f5fd92657e443711f7ab102351884"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/periodic-comparison-matrix.json",
+      "sha256": "3b7d3df339315cd85ac00ee467451aaf82500de9281c274759a438bc62fb8da6"
+    }
+  ]
+}

@@ -1,0 +1,3363 @@
+{
+  "scope": "Independent local backbone screen only; all-atom refinement and acceptance remain separate. No new generation or old-output overwrites.",
+  "plan_sha256": "f6a9035794093d2ce1d574eee7e2b05778244e9a3ed89f5934e3d82c1f4c1a04",
+  "screen_implementation_sha256": "f18520b1028444d76f85c6834bb6d5002adc98a242fea58adb6a4eba9d833b2e",
+  "review_script_sha256": "38a6bf6ec5a91bce942a542e2759b0150e13ef72c22054549db90d1b7f48e1f8",
+  "frozen_input_implementation_hashes_verified": true,
+  "verified_hashes": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/source.pdb": {
+      "expected": "d964e53473ee684f76b064fb94b45132c006e9bff68f843cb01e085eac68b78c",
+      "actual": "d964e53473ee684f76b064fb94b45132c006e9bff68f843cb01e085eac68b78c"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/source.pdb": {
+      "expected": "c58d4cce211bab37bb61ede35799dce5534408f27cbceac7fa8b5208263b8ded",
+      "actual": "c58d4cce211bab37bb61ede35799dce5534408f27cbceac7fa8b5208263b8ded"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/source.pdb": {
+      "expected": "bd7e3936746dbe487af81869b87ee27884f45a8e041256a536cb2a5e4d276fc8",
+      "actual": "bd7e3936746dbe487af81869b87ee27884f45a8e041256a536cb2a5e4d276fc8"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/input.json": {
+      "expected": "944315bc887061589e189c22a2b28e5a6ac9978cc7c3dc85c6bbfe988deca087",
+      "actual": "944315bc887061589e189c22a2b28e5a6ac9978cc7c3dc85c6bbfe988deca087"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/input.json": {
+      "expected": "4944f3a06dc8d580e7e3b5b31e99f264d63df649bb8a06e40e43bcd89bce3a25",
+      "actual": "4944f3a06dc8d580e7e3b5b31e99f264d63df649bb8a06e40e43bcd89bce3a25"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/input.json": {
+      "expected": "94c7f7b16c8b0ec2a0b6d1d5365c292af5954fa9898b3104e45beb37e9b4b9d7",
+      "actual": "94c7f7b16c8b0ec2a0b6d1d5365c292af5954fa9898b3104e45beb37e9b4b9d7"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/context.pdb": {
+      "expected": "a065b52f7335296d4c2a71a0bd0c88d6cabfeb0e5489e9ee750fe1e976266fd5",
+      "actual": "a065b52f7335296d4c2a71a0bd0c88d6cabfeb0e5489e9ee750fe1e976266fd5"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/context.pdb": {
+      "expected": "b7f28afee6df8770adf9ed5c3dcdcaad1c0da358d56e688b2c5e5802a4679de6",
+      "actual": "b7f28afee6df8770adf9ed5c3dcdcaad1c0da358d56e688b2c5e5802a4679de6"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/context.pdb": {
+      "expected": "bd7e3936746dbe487af81869b87ee27884f45a8e041256a536cb2a5e4d276fc8",
+      "actual": "bd7e3936746dbe487af81869b87ee27884f45a8e041256a536cb2a5e4d276fc8"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/implementation/native_mc_adapter.py": {
+      "expected": "fb3335d9eca5f8016a74a805dec4ca9faad2d2c6f3f892ddce1d4283f47ed28b",
+      "actual": "fb3335d9eca5f8016a74a805dec4ca9faad2d2c6f3f892ddce1d4283f47ed28b"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/implementation/run_native_comparison.py": {
+      "expected": "34acc3ea3f355ab16e6a8b50be1535489cbcdf74f06f8c5ca7399e474cb52c49",
+      "actual": "34acc3ea3f355ab16e6a8b50be1535489cbcdf74f06f8c5ca7399e474cb52c49"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/implementation/native_mc_adapter.py": {
+      "expected": "af65d382c8c74ace1847e0cb448bf85492ad2f45f9dc65c6d8719ca06bcfe993",
+      "actual": "af65d382c8c74ace1847e0cb448bf85492ad2f45f9dc65c6d8719ca06bcfe993"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/implementation/run_conditioned_comparison.py": {
+      "expected": "2de249de93e130f5a330731192b6e80075df15bc5c8eb4851f81294b4ccd5cab",
+      "actual": "2de249de93e130f5a330731192b6e80075df15bc5c8eb4851f81294b4ccd5cab"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/implementation/run_native_comparison.py": {
+      "expected": "34acc3ea3f355ab16e6a8b50be1535489cbcdf74f06f8c5ca7399e474cb52c49",
+      "actual": "34acc3ea3f355ab16e6a8b50be1535489cbcdf74f06f8c5ca7399e474cb52c49"
+    },
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/plan.json": {
+      "expected": "1a1d36c14a38439a93ecbc293c98a1539b2ced0a798b08d8311c26f8b1620054",
+      "actual": "1a1d36c14a38439a93ecbc293c98a1539b2ced0a798b08d8311c26f8b1620054"
+    }
+  },
+  "old_candidate_hashes_verified": true,
+  "attempt_count": 15,
+  "candidate_count": 9,
+  "plausible_backbone_count": 3,
+  "attempts": [
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-dirty",
+      "mode": "torsion_mc",
+      "seed": 2026,
+      "span": [
+        176,
+        180
+      ],
+      "new_status": "failed",
+      "new_error": "Failed to initialize monte carlo sampling protocol!",
+      "old_status": "failed",
+      "old_error": "Failed to initialize monte carlo sampling protocol!",
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/8K5R/torsion-source-dirty/native/176-180-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "9559f5a153d9ade4986647d1d643843ce5ab038d15956a86e60ead3d8ad492b5",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/torsion_mc/native/176-180-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "e4753208d8c8d8b1b84d161ec747872b14d8d8092b74a915d82397ec81c16404"
+    },
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-dirty",
+      "mode": "torsion_mc",
+      "seed": 2027,
+      "span": [
+        176,
+        180
+      ],
+      "new_status": "failed",
+      "new_error": "Failed to initialize monte carlo sampling protocol!",
+      "old_status": "failed",
+      "old_error": "Failed to initialize monte carlo sampling protocol!",
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/8K5R/torsion-source-dirty/native/176-180-seed-2027/attempt-result.json",
+      "new_attempt_sha256": "fabb24e62a4b990d3ffd43422377e12dbcf35be3da838aabb3383a0e9852babb",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/torsion_mc/native/176-180-seed-2027/attempt-result.json",
+      "old_attempt_sha256": "cd7605607031c5e1130eb73337444d0a1dd02f835d1e88262c396c6f95896620"
+    },
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-ccd",
+      "mode": "torsion_mc",
+      "seed": 2026,
+      "span": [
+        176,
+        180
+      ],
+      "new_status": "failed",
+      "new_error": "Failed to initialize monte carlo sampling protocol!",
+      "old_status": "failed",
+      "old_error": "Failed to initialize monte carlo sampling protocol!",
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/8K5R/torsion-source-ccd/native/176-180-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "c370e1f46c4e9952de8025c47c4dd97add3129a296a6e4484cfc40d464ba34a0",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/torsion_mc/native/176-180-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "e4753208d8c8d8b1b84d161ec747872b14d8d8092b74a915d82397ec81c16404"
+    },
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-ccd",
+      "mode": "torsion_mc",
+      "seed": 2027,
+      "span": [
+        176,
+        180
+      ],
+      "new_status": "failed",
+      "new_error": "Failed to initialize monte carlo sampling protocol!",
+      "old_status": "failed",
+      "old_error": "Failed to initialize monte carlo sampling protocol!",
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/8K5R/torsion-source-ccd/native/176-180-seed-2027/attempt-result.json",
+      "new_attempt_sha256": "407bf55f76864733ea64204d36502ad49f07163eb77532f043d34e4c2251a2de",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/torsion_mc/native/176-180-seed-2027/attempt-result.json",
+      "old_attempt_sha256": "cd7605607031c5e1130eb73337444d0a1dd02f835d1e88262c396c6f95896620"
+    },
+    {
+      "case": "8K5R",
+      "protocol": "fragment-source-ccd",
+      "mode": "fragment_mc",
+      "seed": 2026,
+      "span": [
+        176,
+        180
+      ],
+      "new_status": "failed",
+      "new_error": "Failed to initialize monte carlo sampling protocol!",
+      "old_status": "failed",
+      "old_error": "Failed to initialize monte carlo sampling protocol!",
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/8K5R/fragment-source-ccd/native/176-180-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "d137fee33f0411f684439c65a2b0b8253e31718efc45b99b96c3ee534585c929",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/fragment_mc/native/176-180-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "733d985c329ab437f759e3b37750679975bf538c9e0a61a534d13e7e51fcaf3d"
+    },
+    {
+      "case": "8K5R",
+      "protocol": "fragment-source-ccd",
+      "mode": "fragment_mc",
+      "seed": 2027,
+      "span": [
+        176,
+        180
+      ],
+      "new_status": "failed",
+      "new_error": "Failed to initialize monte carlo sampling protocol!",
+      "old_status": "failed",
+      "old_error": "Failed to initialize monte carlo sampling protocol!",
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/8K5R/fragment-source-ccd/native/176-180-seed-2027/attempt-result.json",
+      "new_attempt_sha256": "0849b23ccc787fd6645d88de7fe1b22d8d2c94446dcfdd3b821ae50074629727",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/8K5R/fragment_mc/native/176-180-seed-2027/attempt-result.json",
+      "old_attempt_sha256": "908d8b111bcbfcf7f4d2d13f6517d3b374176f747132c97ff60d56f711b5c1f2"
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-dirty",
+      "mode": "torsion_mc",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "e4873fcc039b6a0e4c81f1b2786ed82bb0a4cc0c6da0408ac5831b085723c124",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "d4053157c15cb721a4ef3a81d49c404362de91e5b41a7473c54f963c7c9b4622",
+      "candidate_sha256": "7b06c0f064e74034486888ca182370cb6dd5ece696d47bd1baff94a12fa8c38a"
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-dirty",
+      "mode": "torsion_mc",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2027/attempt-result.json",
+      "new_attempt_sha256": "88eb450a50a566b17a8ce95928d5912c369f781cd8dc37f7a583fbd8b585bd0d",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2027/attempt-result.json",
+      "old_attempt_sha256": "a18a5737151aa0b54e76ece5066f99184620f8319f4d87215ed731d9f1f96516",
+      "candidate_sha256": "8bf20da8de839f8bdb945b55509404c20fe39c04be3c79b9fa71d1d696c12085"
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-ccd",
+      "mode": "torsion_mc",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "d849c1da297b5df0f40c8adf72e21f5649e4a8099533a4bcba9278cbd9832b30",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "d4053157c15cb721a4ef3a81d49c404362de91e5b41a7473c54f963c7c9b4622",
+      "candidate_sha256": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d"
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-ccd",
+      "mode": "torsion_mc",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/attempt-result.json",
+      "new_attempt_sha256": "ba058cd2f001ee671c2ecb8009ada8ed44930d4c5b751a958b55d147157f0380",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2027/attempt-result.json",
+      "old_attempt_sha256": "a18a5737151aa0b54e76ece5066f99184620f8319f4d87215ed731d9f1f96516",
+      "candidate_sha256": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998"
+    },
+    {
+      "case": "1UA2",
+      "protocol": "fragment-source-ccd",
+      "mode": "fragment_mc",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "541955cee8e01e446ee1e3bfbbd96de9acc5333ff1bbea41c6097f8b91a49440",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/fragment_mc/native/43-56-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "32544e4e38b6a9ae5f5f27aa6e84f37270e3db85914397ba3c82af78b0f414a3",
+      "candidate_sha256": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b"
+    },
+    {
+      "case": "1UA2",
+      "protocol": "fragment-source-ccd",
+      "mode": "fragment_mc",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/attempt-result.json",
+      "new_attempt_sha256": "b13ff7da43df1fc2d5b654fe4d7689c3a0c94914d17dedff797761002fd1ce74",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/fragment_mc/native/43-56-seed-2027/attempt-result.json",
+      "old_attempt_sha256": "778c0d60c78dc4252aabaa2b6c54cb257877b03f6436199791080742914fdd7d",
+      "candidate_sha256": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e"
+    },
+    {
+      "case": "masked-control",
+      "protocol": "torsion-source-dirty",
+      "mode": "torsion_mc",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/torsion-source-dirty/native/1-5-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "60d983220ba1695d3268d75d25b17ba3af6820b784f49e246db6cf0adf7871f5",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/torsion_mc/native/1-5-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "95e579b9021520f47392bba5ba7259e2f9d6818ad8da1232491bc1d346c8356a",
+      "candidate_sha256": "95527742de3005e78a4af5eb29436fdadd483d6a601b0033db7dc0c6a3ef06e3"
+    },
+    {
+      "case": "masked-control",
+      "protocol": "torsion-source-ccd",
+      "mode": "torsion_mc",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/torsion-source-ccd/native/1-5-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "bc77395f64e199148e399bb92dde5dede72dc06f20f6219562b6b341b0f40f95",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/torsion_mc/native/1-5-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "95e579b9021520f47392bba5ba7259e2f9d6818ad8da1232491bc1d346c8356a",
+      "candidate_sha256": "781add9f492c40d8a9a557dd919bb9b99f826afca9f6ef0bc4d4fc19b1afd240"
+    },
+    {
+      "case": "masked-control",
+      "protocol": "fragment-source-ccd",
+      "mode": "fragment_mc",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "new_status": "candidate",
+      "new_error": null,
+      "old_status": "candidate",
+      "old_error": null,
+      "new_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/fragment-source-ccd/native/1-5-seed-2026/attempt-result.json",
+      "new_attempt_sha256": "cd7bafe8b5cff7198f3671f3bbdf150eed3cca2b136065a29ec96b1eb3bbda1a",
+      "old_attempt_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/fragment_mc/native/1-5-seed-2026/attempt-result.json",
+      "old_attempt_sha256": "db31b9ba2d3e495b67b40a9c0237556376ea7da526e8dd087fc38ab4dc1b434d",
+      "candidate_sha256": "51e454598e1e5bf6374a30af00cf4eb1974f668dfd86ed6730051b646bc3e098"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2026/candidate.json",
+      "candidate_sha256": "7b06c0f064e74034486888ca182370cb6dd5ece696d47bd1baff94a12fa8c38a",
+      "id": "c7ad016554230921fd52040ca42ac8a03016c045820bfa34f78b576de63bf969",
+      "case": "1UA2",
+      "generator": "promod3_torsion_mc",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": false,
+      "maximum_observed_backbone_displacement_A": 1.0217300290383156,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07438895307402,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 167.9273400716544,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "gross_pass": true,
+      "rama_pass": false,
+      "rama_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "modeled_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74735965248743,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368349507965966,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.35023999741003,
+          "psi_degrees": 58.42410701363705,
+          "preceding_omega_degrees": 175.0743889530741,
+          "rama_class": "isoleucine or valine",
+          "score": 0.0031006928848946974,
+          "classification": "allowed",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": 122.5137743288918,
+          "psi_degrees": 69.80928575945897,
+          "preceding_omega_degrees": 179.98938064418857,
+          "rama_class": "general",
+          "score": 2.82582e-06,
+          "classification": "outlier",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 65.21909142639875,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 167.9273400716545,
+          "rama_class": "general",
+          "score": 0.0002681235275991156,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "protocol": "torsion-source-dirty",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2026/candidate.json",
+        "candidate_sha256": "d3ca248796da80abc555a0c6a30be01ed4ac73cd1f09947df5674a58e2e64cd6",
+        "observed_backbone_cap_pass": false,
+        "maximum_observed_backbone_displacement_A": 1.8479457700436783,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [
+          [
+            "A",
+            "45",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "51",
+            "",
+            "ALA"
+          ],
+          [
+            "A",
+            "55",
+            "",
+            "ILE"
+          ]
+        ],
+        "boundary_outliers": [
+          [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 10.90267870711413
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2027/candidate.json",
+      "candidate_sha256": "8bf20da8de839f8bdb945b55509404c20fe39c04be3c79b9fa71d1d696c12085",
+      "id": "a139f0edd4277a5c77344df785f1ab021f132792263d5849e133e62e2e753f78",
+      "case": "1UA2",
+      "generator": "promod3_torsion_mc",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": false,
+      "maximum_observed_backbone_displacement_A": 1.6721865780731526,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07213372913245,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 167.69189334153347,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "gross_pass": true,
+      "rama_pass": false,
+      "rama_outliers": [
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "modeled_outliers": [
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74896877941234,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368314788716688,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.35054781833999,
+          "psi_degrees": 102.53504642019377,
+          "preceding_omega_degrees": 175.0721337291327,
+          "rama_class": "isoleucine or valine",
+          "score": 0.09305607023545029,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -63.8890434131052,
+          "psi_degrees": 74.08419230621078,
+          "preceding_omega_degrees": -179.99006184283954,
+          "rama_class": "general",
+          "score": 0.00030141897634988003,
+          "classification": "outlier",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 65.54592315529015,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 167.69189334153359,
+          "rama_class": "general",
+          "score": 0.0002722643282353711,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "protocol": "torsion-source-dirty",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2027/candidate.json",
+        "candidate_sha256": "70fb52bc0f3071bc2a9911291cb452b0020f85e341d34a4a82ee831b46a8a4be",
+        "observed_backbone_cap_pass": false,
+        "maximum_observed_backbone_displacement_A": 1.1587373773160228,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [
+          [
+            "A",
+            "45",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "48",
+            "",
+            "ARG"
+          ],
+          [
+            "A",
+            "49",
+            "",
+            "SER"
+          ],
+          [
+            "A",
+            "52",
+            "",
+            "LYS"
+          ],
+          [
+            "A",
+            "54",
+            "",
+            "GLY"
+          ]
+        ],
+        "boundary_outliers": [
+          [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 10.832274637075376
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/candidate.json",
+      "candidate_sha256": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d",
+      "id": "c4d25d41ec5054a4f15e1d083ca5a5e6f658ba881a11cec814dfa5f2875d779a",
+      "case": "1UA2",
+      "generator": "promod3_torsion_mc",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": false,
+      "maximum_observed_backbone_displacement_A": 1.9413355657217686,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07450337240238,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 167.88471059815754,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "gross_pass": true,
+      "rama_pass": false,
+      "rama_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "modeled_outliers": [],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.74930070443477,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368307626952494,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.3519988317988,
+          "psi_degrees": 127.93694858422268,
+          "preceding_omega_degrees": 175.07450337240246,
+          "rama_class": "isoleucine or valine",
+          "score": 0.6956698883172868,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -91.51885978233412,
+          "psi_degrees": 73.1221221658304,
+          "preceding_omega_degrees": 179.99387814272055,
+          "rama_class": "general",
+          "score": 0.059914634784283015,
+          "classification": "favored",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 64.44215105602674,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 167.88471059815762,
+          "rama_class": "general",
+          "score": 0.0002573513030603368,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "protocol": "torsion-source-ccd",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2026/candidate.json",
+        "candidate_sha256": "d3ca248796da80abc555a0c6a30be01ed4ac73cd1f09947df5674a58e2e64cd6",
+        "observed_backbone_cap_pass": false,
+        "maximum_observed_backbone_displacement_A": 1.8479457700436783,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [
+          [
+            "A",
+            "45",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "51",
+            "",
+            "ALA"
+          ],
+          [
+            "A",
+            "55",
+            "",
+            "ILE"
+          ]
+        ],
+        "boundary_outliers": [
+          [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 13.828164810351426
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/candidate.json",
+      "candidate_sha256": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+      "id": "8169685614f72137fa57bfd10877cb067c2de97bb19876c4ef2a23543f36d449",
+      "case": "1UA2",
+      "generator": "promod3_torsion_mc",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": false,
+      "maximum_observed_backbone_displacement_A": 2.1617435719229667,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.07272080245002,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 167.14082643453432,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "gross_pass": true,
+      "rama_pass": false,
+      "rama_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "modeled_outliers": [],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 129.7469608852657,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5368358111947641,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -127.34900906833438,
+          "psi_degrees": 164.97888915168738,
+          "preceding_omega_degrees": 175.07272080245036,
+          "rama_class": "isoleucine or valine",
+          "score": 0.27091555392366906,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -89.502944075618,
+          "psi_degrees": 76.67536307801176,
+          "preceding_omega_degrees": 179.98334535020842,
+          "rama_class": "general",
+          "score": 0.07390668415649623,
+          "classification": "favored",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 63.87964052010135,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 167.14082643453446,
+          "rama_class": "general",
+          "score": 0.0002492880401800482,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "protocol": "torsion-source-ccd",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/torsion_mc/native/43-56-seed-2027/candidate.json",
+        "candidate_sha256": "70fb52bc0f3071bc2a9911291cb452b0020f85e341d34a4a82ee831b46a8a4be",
+        "observed_backbone_cap_pass": false,
+        "maximum_observed_backbone_displacement_A": 1.1587373773160228,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [
+          [
+            "A",
+            "45",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "48",
+            "",
+            "ARG"
+          ],
+          [
+            "A",
+            "49",
+            "",
+            "SER"
+          ],
+          [
+            "A",
+            "52",
+            "",
+            "LYS"
+          ],
+          [
+            "A",
+            "54",
+            "",
+            "GLY"
+          ]
+        ],
+        "boundary_outliers": [
+          [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 13.814785351026016
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/candidate.json",
+      "candidate_sha256": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b",
+      "id": "eae29ef7d63a5329738d69982dbea6cdf244a8d2ace84b961e44399c691b94bc",
+      "case": "1UA2",
+      "generator": "promod3_fragment_mc",
+      "seed": 2026,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": false,
+      "maximum_observed_backbone_displacement_A": 1.8853166942981674,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.84340527314455,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 170.20027314143545,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "gross_pass": true,
+      "rama_pass": false,
+      "rama_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "modeled_outliers": [],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 130.22138604854777,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.5358121700355544,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -128.2177554008013,
+          "psi_degrees": 117.30815249060593,
+          "preceding_omega_degrees": 175.84340527314455,
+          "rama_class": "isoleucine or valine",
+          "score": 0.45183535045244944,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -78.93419825130744,
+          "psi_degrees": 74.555390644267,
+          "preceding_omega_degrees": 173.91876382644105,
+          "rama_class": "general",
+          "score": 0.05455728382542801,
+          "classification": "favored",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 68.37025978777133,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 170.20027314143553,
+          "rama_class": "general",
+          "score": 0.0003009485571467362,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "protocol": "fragment-source-ccd",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/fragment_mc/native/43-56-seed-2026/candidate.json",
+        "candidate_sha256": "76b7b2e515a8bbcb8042a40deb6701c1cdcc47888adc68427cd2f4b86c7746ff",
+        "observed_backbone_cap_pass": false,
+        "maximum_observed_backbone_displacement_A": 1.8376368778769114,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [
+          [
+            "A",
+            "54",
+            "",
+            "GLY"
+          ]
+        ],
+        "boundary_outliers": [
+          [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 10.429233625059513
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/candidate.json",
+      "candidate_sha256": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e",
+      "id": "b432e0fbf6727265c70d77fc4b308b9bf6adb1c1863eff62f8b33d6feb0ca836",
+      "case": "1UA2",
+      "generator": "promod3_fragment_mc",
+      "seed": 2027,
+      "span": [
+        43,
+        56
+      ],
+      "observed_backbone_cap_pass": false,
+      "maximum_observed_backbone_displacement_A": 2.0655843635597284,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 42,
+          "second": 43,
+          "source_degrees": 172.02090646570605,
+          "candidate_degrees": 175.72718573413383,
+          "basin_preserved": true
+        },
+        {
+          "first": 56,
+          "second": 57,
+          "source_degrees": 171.13059563921885,
+          "candidate_degrees": 168.19761478868523,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "47",
+          "",
+          "HIS"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": false,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "gross_pass": true,
+      "rama_pass": false,
+      "rama_outliers": [
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "modeled_outliers": [
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "boundary_outliers": [
+        [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      ],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "42",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -105.45028427875073,
+          "psi_degrees": 130.27338390159292,
+          "preceding_omega_degrees": -176.19825423810408,
+          "rama_class": "general",
+          "score": 0.535699977119396,
+          "classification": "favored",
+          "phi_atoms": [
+            114,
+            116,
+            117,
+            118
+          ],
+          "psi_atoms": [
+            116,
+            117,
+            118,
+            120
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "43",
+            "",
+            "ILE"
+          ],
+          "phi_degrees": -128.18552761451102,
+          "psi_degrees": 140.12562320330312,
+          "preceding_omega_degrees": 175.72718573413422,
+          "rama_class": "isoleucine or valine",
+          "score": 0.5003148877392499,
+          "classification": "favored",
+          "phi_atoms": [
+            118,
+            120,
+            121,
+            122
+          ],
+          "psi_atoms": [
+            120,
+            121,
+            122,
+            124
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -126.737987752186,
+          "psi_degrees": 76.2296688672714,
+          "preceding_omega_degrees": 179.1793542540227,
+          "rama_class": "general",
+          "score": 0.01620844524968315,
+          "classification": "allowed",
+          "phi_atoms": [
+            170,
+            172,
+            173,
+            174
+          ],
+          "psi_atoms": [
+            172,
+            173,
+            174,
+            176
+          ]
+        },
+        {
+          "residue": [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 64.86236948327874,
+          "psi_degrees": -83.3662937518478,
+          "preceding_omega_degrees": 168.19761478868534,
+          "rama_class": "general",
+          "score": 0.0002633748909394511,
+          "classification": "outlier",
+          "phi_atoms": [
+            174,
+            176,
+            177,
+            178
+          ],
+          "psi_atoms": [
+            176,
+            177,
+            178,
+            180
+          ]
+        }
+      ],
+      "protocol": "fragment-source-ccd",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/fragment_mc/native/43-56-seed-2027/candidate.json",
+        "candidate_sha256": "0ed45b3576a98677feec9ce84bb0aba53c1155f5ad28e03045a5db79b2a1c5dd",
+        "observed_backbone_cap_pass": false,
+        "maximum_observed_backbone_displacement_A": 2.1985500570599807,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [
+          [
+            "A",
+            "48",
+            "",
+            "ARG"
+          ]
+        ],
+        "boundary_outliers": [
+          [
+            "A",
+            "56",
+            "",
+            "ASN"
+          ],
+          [
+            "A",
+            "57",
+            "",
+            "ARG"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 11.377571239790488
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/torsion-source-dirty/native/1-5-seed-2026/candidate.json",
+      "candidate_sha256": "95527742de3005e78a4af5eb29436fdadd483d6a601b0033db7dc0c6a3ef06e3",
+      "id": "3d62647a9377af126b1a4e6fbaf3c6cb58a16fc550fb1201754380905b7a99af",
+      "case": "masked-control",
+      "generator": "promod3_torsion_mc",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.5014336311815933,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 5,
+          "second": 6,
+          "source_degrees": -178.11596466664395,
+          "candidate_degrees": -175.56948532609312,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "3",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "4",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": true,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "heldout_modeled_backbone_RMSD_A": 0.762518247812769,
+      "heldout_coordinates_used_for_generation_or_ranking": false,
+      "gross_pass": true,
+      "rama_pass": true,
+      "rama_outliers": [],
+      "modeled_outliers": [],
+      "boundary_outliers": [],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ],
+          "phi_degrees": -118.43229370219554,
+          "psi_degrees": 101.82441879116968,
+          "preceding_omega_degrees": -179.9998325860146,
+          "rama_class": "isoleucine or valine",
+          "score": 0.12293656396574387,
+          "classification": "favored",
+          "phi_atoms": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "psi_atoms": [
+            16,
+            17,
+            18,
+            20
+          ]
+        }
+      ],
+      "protocol": "torsion-source-dirty",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/torsion_mc/native/1-5-seed-2026/candidate.json",
+        "candidate_sha256": "003508d72a29228ea243ec28b775058fd00f7cfe2130c67165e4dd73096323ac",
+        "observed_backbone_cap_pass": true,
+        "maximum_observed_backbone_displacement_A": 0.4851595755458296,
+        "gross_pass": true,
+        "rama_pass": true,
+        "modeled_outliers": [],
+        "boundary_outliers": [],
+        "plausible_backbone_screen_pass": true
+      },
+      "maximum_backbone_difference_from_matched_default_A": 0.04541537681407907
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/torsion-source-ccd/native/1-5-seed-2026/candidate.json",
+      "candidate_sha256": "781add9f492c40d8a9a557dd919bb9b99f826afca9f6ef0bc4d4fc19b1afd240",
+      "id": "df0a817d324ac6c18843d5ba181afb43efacee172d682c93ec58e5ac5b0c5f9b",
+      "case": "masked-control",
+      "generator": "promod3_torsion_mc",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.3130825704819487,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 5,
+          "second": 6,
+          "source_degrees": -178.11596466664395,
+          "candidate_degrees": -174.06027994884238,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "3",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "4",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": true,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "heldout_modeled_backbone_RMSD_A": 0.386577100717994,
+      "heldout_coordinates_used_for_generation_or_ranking": false,
+      "gross_pass": true,
+      "rama_pass": true,
+      "rama_outliers": [],
+      "modeled_outliers": [],
+      "boundary_outliers": [],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ],
+          "phi_degrees": -128.8913750793536,
+          "psi_degrees": 101.90039589758787,
+          "preceding_omega_degrees": -179.99988809433944,
+          "rama_class": "isoleucine or valine",
+          "score": 0.07253084143433064,
+          "classification": "favored",
+          "phi_atoms": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "psi_atoms": [
+            16,
+            17,
+            18,
+            20
+          ]
+        }
+      ],
+      "protocol": "torsion-source-ccd",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/torsion_mc/native/1-5-seed-2026/candidate.json",
+        "candidate_sha256": "003508d72a29228ea243ec28b775058fd00f7cfe2130c67165e4dd73096323ac",
+        "observed_backbone_cap_pass": true,
+        "maximum_observed_backbone_displacement_A": 0.4851595755458296,
+        "gross_pass": true,
+        "rama_pass": true,
+        "modeled_outliers": [],
+        "boundary_outliers": [],
+        "plausible_backbone_screen_pass": true
+      },
+      "maximum_backbone_difference_from_matched_default_A": 0.9155424446256304
+    },
+    {
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/masked-control/fragment-source-ccd/native/1-5-seed-2026/candidate.json",
+      "candidate_sha256": "51e454598e1e5bf6374a30af00cf4eb1974f668dfd86ed6730051b646bc3e098",
+      "id": "d5944701cfad0b16767e542197b7ebbe29ed22b3801197719450feb1cf9b7ede",
+      "case": "masked-control",
+      "generator": "promod3_fragment_mc",
+      "seed": 2026,
+      "span": [
+        1,
+        5
+      ],
+      "observed_backbone_cap_pass": true,
+      "maximum_observed_backbone_displacement_A": 0.5378864778213192,
+      "observed_omega_basins_preserved": true,
+      "observed_omega_checks_including_outer_joins": [
+        {
+          "first": 5,
+          "second": 6,
+          "source_degrees": -178.11596466664395,
+          "candidate_degrees": -174.5132698141662,
+          "basin_preserved": true
+        }
+      ],
+      "affected_residue_keys": [
+        [
+          "A",
+          "2",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "3",
+          "",
+          "ILE"
+        ],
+        [
+          "A",
+          "4",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ]
+      ],
+      "raw_vs_sidechain_backbone_maximum_difference_A": 0.0,
+      "observed_heavy_changes_outside_declared_context": [],
+      "plausible_backbone_screen_pass": true,
+      "sidechain_full_complex_validated": false,
+      "app_ready": false,
+      "heldout_modeled_backbone_RMSD_A": 0.806461817306235,
+      "heldout_coordinates_used_for_generation_or_ranking": false,
+      "gross_pass": true,
+      "rama_pass": true,
+      "rama_outliers": [],
+      "modeled_outliers": [],
+      "boundary_outliers": [],
+      "boundary_reference_rows": [
+        {
+          "residue": [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ],
+          "phi_degrees": -144.9955647561296,
+          "psi_degrees": 104.10603871103575,
+          "preceding_omega_degrees": 176.69204379956406,
+          "rama_class": "isoleucine or valine",
+          "score": 0.0069772255350869184,
+          "classification": "allowed",
+          "phi_atoms": [
+            14,
+            16,
+            17,
+            18
+          ],
+          "psi_atoms": [
+            16,
+            17,
+            18,
+            20
+          ]
+        }
+      ],
+      "protocol": "fragment-source-ccd",
+      "source_binding_pass": true,
+      "sidechain_status": "complete",
+      "all_backbone_atoms_after_sidechain_max_difference_A": 0.0,
+      "matched_default": {
+        "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/masked-control/fragment_mc/native/1-5-seed-2026/candidate.json",
+        "candidate_sha256": "237fa5e3932142c91d56492cd1cdd43a328a39f0a63d0e00f3816d90261dc886",
+        "observed_backbone_cap_pass": true,
+        "maximum_observed_backbone_displacement_A": 0.7550762826272879,
+        "gross_pass": true,
+        "rama_pass": false,
+        "modeled_outliers": [],
+        "boundary_outliers": [
+          [
+            "A",
+            "5",
+            "",
+            "VAL"
+          ]
+        ],
+        "plausible_backbone_screen_pass": false
+      },
+      "maximum_backbone_difference_from_matched_default_A": 0.4985497110641659
+    }
+  ],
+  "boundary_conditioning": [
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-dirty",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "c_stem": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "previous": [
+          "A",
+          "175",
+          "",
+          "SER"
+        ],
+        "next": [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "n_stem_phi_degrees": -67.99921374523664,
+        "c_stem_psi_degrees": -52.70475904779852
+      },
+      "recorded": {
+        "n_stem_phi": -1.186810851097107,
+        "c_stem_psi": -0.9198717474937439,
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -67.99925284819342,
+        "c_stem_psi_degrees": -52.70476882471529
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -3.910295677655995e-05,
+        "c_stem_psi_degrees": -9.776916769510535e-06
+      }
+    },
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-dirty",
+      "seed": 2027,
+      "identities": {
+        "n_stem": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "c_stem": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "previous": [
+          "A",
+          "175",
+          "",
+          "SER"
+        ],
+        "next": [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "n_stem_phi_degrees": -67.99921374523664,
+        "c_stem_psi_degrees": -52.70475904779852
+      },
+      "recorded": {
+        "n_stem_phi": -1.186810851097107,
+        "c_stem_psi": -0.9198717474937439,
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -67.99925284819342,
+        "c_stem_psi_degrees": -52.70476882471529
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -3.910295677655995e-05,
+        "c_stem_psi_degrees": -9.776916769510535e-06
+      }
+    },
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-ccd",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "c_stem": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "previous": [
+          "A",
+          "175",
+          "",
+          "SER"
+        ],
+        "next": [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "n_stem_phi_degrees": -67.99921374523664,
+        "c_stem_psi_degrees": -52.70475904779852
+      },
+      "recorded": {
+        "n_stem_phi": -1.186810851097107,
+        "c_stem_psi": -0.9198717474937439,
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -67.99925284819342,
+        "c_stem_psi_degrees": -52.70476882471529
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -3.910295677655995e-05,
+        "c_stem_psi_degrees": -9.776916769510535e-06
+      }
+    },
+    {
+      "case": "8K5R",
+      "protocol": "torsion-source-ccd",
+      "seed": 2027,
+      "identities": {
+        "n_stem": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "c_stem": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "previous": [
+          "A",
+          "175",
+          "",
+          "SER"
+        ],
+        "next": [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "n_stem_phi_degrees": -67.99921374523664,
+        "c_stem_psi_degrees": -52.70475904779852
+      },
+      "recorded": {
+        "n_stem_phi": -1.186810851097107,
+        "c_stem_psi": -0.9198717474937439,
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -67.99925284819342,
+        "c_stem_psi_degrees": -52.70476882471529
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -3.910295677655995e-05,
+        "c_stem_psi_degrees": -9.776916769510535e-06
+      }
+    },
+    {
+      "case": "8K5R",
+      "protocol": "fragment-source-ccd",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "c_stem": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "previous": [
+          "A",
+          "175",
+          "",
+          "SER"
+        ],
+        "next": [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "n_stem_phi_degrees": -67.99921374523664,
+        "c_stem_psi_degrees": -52.70475904779852
+      },
+      "recorded": {
+        "n_stem_phi": -1.186810851097107,
+        "c_stem_psi": -0.9198717474937439,
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -67.99925284819342,
+        "c_stem_psi_degrees": -52.70476882471529
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -3.910295677655995e-05,
+        "c_stem_psi_degrees": -9.776916769510535e-06
+      }
+    },
+    {
+      "case": "8K5R",
+      "protocol": "fragment-source-ccd",
+      "seed": 2027,
+      "identities": {
+        "n_stem": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "c_stem": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "previous": [
+          "A",
+          "175",
+          "",
+          "SER"
+        ],
+        "next": [
+          "A",
+          "181",
+          "",
+          "GLN"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "n_stem_phi_degrees": -67.99921374523664,
+        "c_stem_psi_degrees": -52.70475904779852
+      },
+      "recorded": {
+        "n_stem_phi": -1.186810851097107,
+        "c_stem_psi": -0.9198717474937439,
+        "prev_aa": "S",
+        "next_aa": "Q",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -67.99925284819342,
+        "c_stem_psi_degrees": -52.70476882471529
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -3.910295677655995e-05,
+        "c_stem_psi_degrees": -9.776916769510535e-06
+      }
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-dirty",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "c_stem": [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        "previous": [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        "next": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "K",
+        "next_aa": "R",
+        "n_stem_phi_degrees": -123.94276026473463,
+        "c_stem_psi_degrees": 62.367210952518086
+      },
+      "recorded": {
+        "n_stem_phi": -2.163212537765503,
+        "c_stem_psi": 1.0885114669799805,
+        "prev_aa": "K",
+        "next_aa": "R",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -123.94294860374752,
+        "c_stem_psi_degrees": 62.36711300954675
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -0.00018833901289383448,
+        "c_stem_psi_degrees": -9.79429713368063e-05
+      }
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-dirty",
+      "seed": 2027,
+      "identities": {
+        "n_stem": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "c_stem": [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        "previous": [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        "next": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "K",
+        "next_aa": "R",
+        "n_stem_phi_degrees": -123.94276026473463,
+        "c_stem_psi_degrees": 62.367210952518086
+      },
+      "recorded": {
+        "n_stem_phi": -2.163212537765503,
+        "c_stem_psi": 1.0885114669799805,
+        "prev_aa": "K",
+        "next_aa": "R",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -123.94294860374752,
+        "c_stem_psi_degrees": 62.36711300954675
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -0.00018833901289383448,
+        "c_stem_psi_degrees": -9.79429713368063e-05
+      }
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-ccd",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "c_stem": [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        "previous": [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        "next": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "K",
+        "next_aa": "R",
+        "n_stem_phi_degrees": -123.94276026473463,
+        "c_stem_psi_degrees": 62.367210952518086
+      },
+      "recorded": {
+        "n_stem_phi": -2.163212537765503,
+        "c_stem_psi": 1.0885114669799805,
+        "prev_aa": "K",
+        "next_aa": "R",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -123.94294860374752,
+        "c_stem_psi_degrees": 62.36711300954675
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -0.00018833901289383448,
+        "c_stem_psi_degrees": -9.79429713368063e-05
+      }
+    },
+    {
+      "case": "1UA2",
+      "protocol": "torsion-source-ccd",
+      "seed": 2027,
+      "identities": {
+        "n_stem": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "c_stem": [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        "previous": [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        "next": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "K",
+        "next_aa": "R",
+        "n_stem_phi_degrees": -123.94276026473463,
+        "c_stem_psi_degrees": 62.367210952518086
+      },
+      "recorded": {
+        "n_stem_phi": -2.163212537765503,
+        "c_stem_psi": 1.0885114669799805,
+        "prev_aa": "K",
+        "next_aa": "R",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -123.94294860374752,
+        "c_stem_psi_degrees": 62.36711300954675
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -0.00018833901289383448,
+        "c_stem_psi_degrees": -9.79429713368063e-05
+      }
+    },
+    {
+      "case": "1UA2",
+      "protocol": "fragment-source-ccd",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "c_stem": [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        "previous": [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        "next": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "K",
+        "next_aa": "R",
+        "n_stem_phi_degrees": -123.94276026473463,
+        "c_stem_psi_degrees": 62.367210952518086
+      },
+      "recorded": {
+        "n_stem_phi": -2.163212537765503,
+        "c_stem_psi": 1.0885114669799805,
+        "prev_aa": "K",
+        "next_aa": "R",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -123.94294860374752,
+        "c_stem_psi_degrees": 62.36711300954675
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -0.00018833901289383448,
+        "c_stem_psi_degrees": -9.79429713368063e-05
+      }
+    },
+    {
+      "case": "1UA2",
+      "protocol": "fragment-source-ccd",
+      "seed": 2027,
+      "identities": {
+        "n_stem": [
+          "A",
+          "43",
+          "",
+          "ILE"
+        ],
+        "c_stem": [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ],
+        "previous": [
+          "A",
+          "42",
+          "",
+          "LYS"
+        ],
+        "next": [
+          "A",
+          "57",
+          "",
+          "ARG"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "K",
+        "next_aa": "R",
+        "n_stem_phi_degrees": -123.94276026473463,
+        "c_stem_psi_degrees": 62.367210952518086
+      },
+      "recorded": {
+        "n_stem_phi": -2.163212537765503,
+        "c_stem_psi": 1.0885114669799805,
+        "prev_aa": "K",
+        "next_aa": "R",
+        "terminal_defaults": [],
+        "n_stem_phi_degrees": -123.94294860374752,
+        "c_stem_psi_degrees": 62.36711300954675
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": -0.00018833901289383448,
+        "c_stem_psi_degrees": -9.79429713368063e-05
+      }
+    },
+    {
+      "case": "masked-control",
+      "protocol": "torsion-source-dirty",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "c_stem": [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ],
+        "previous": null,
+        "next": [
+          "A",
+          "6",
+          "",
+          "LYS"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "A",
+        "next_aa": "K",
+        "n_stem_phi_degrees": -60.0001403060998,
+        "c_stem_psi_degrees": 114.22437155662234
+      },
+      "recorded": {
+        "n_stem_phi": -1.0472,
+        "c_stem_psi": 1.9935911893844604,
+        "prev_aa": "A",
+        "next_aa": "K",
+        "terminal_defaults": [
+          "N-terminal stem has no observed preceding phi; explicit native default retained"
+        ],
+        "n_stem_phi_degrees": -60.0001403060998,
+        "c_stem_psi_degrees": 114.22436122619558
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": 0.0,
+        "c_stem_psi_degrees": -1.0330426761129274e-05
+      }
+    },
+    {
+      "case": "masked-control",
+      "protocol": "torsion-source-ccd",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "c_stem": [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ],
+        "previous": null,
+        "next": [
+          "A",
+          "6",
+          "",
+          "LYS"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "A",
+        "next_aa": "K",
+        "n_stem_phi_degrees": -60.0001403060998,
+        "c_stem_psi_degrees": 114.22437155662234
+      },
+      "recorded": {
+        "n_stem_phi": -1.0472,
+        "c_stem_psi": 1.9935911893844604,
+        "prev_aa": "A",
+        "next_aa": "K",
+        "terminal_defaults": [
+          "N-terminal stem has no observed preceding phi; explicit native default retained"
+        ],
+        "n_stem_phi_degrees": -60.0001403060998,
+        "c_stem_psi_degrees": 114.22436122619558
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": 0.0,
+        "c_stem_psi_degrees": -1.0330426761129274e-05
+      }
+    },
+    {
+      "case": "masked-control",
+      "protocol": "fragment-source-ccd",
+      "seed": 2026,
+      "identities": {
+        "n_stem": [
+          "A",
+          "1",
+          "",
+          "MET"
+        ],
+        "c_stem": [
+          "A",
+          "5",
+          "",
+          "VAL"
+        ],
+        "previous": null,
+        "next": [
+          "A",
+          "6",
+          "",
+          "LYS"
+        ]
+      },
+      "expected_double_precision": {
+        "prev_aa": "A",
+        "next_aa": "K",
+        "n_stem_phi_degrees": -60.0001403060998,
+        "c_stem_psi_degrees": 114.22437155662234
+      },
+      "recorded": {
+        "n_stem_phi": -1.0472,
+        "c_stem_psi": 1.9935911893844604,
+        "prev_aa": "A",
+        "next_aa": "K",
+        "terminal_defaults": [
+          "N-terminal stem has no observed preceding phi; explicit native default retained"
+        ],
+        "n_stem_phi_degrees": -60.0001403060998,
+        "c_stem_psi_degrees": 114.22436122619558
+      },
+      "residual_degrees": {
+        "n_stem_phi_degrees": 0.0,
+        "c_stem_psi_degrees": -1.0330426761129274e-05
+      }
+    }
+  ],
+  "all_physical_models_unvalidated": true,
+  "app_ready": false,
+  "elapsed_seconds": 0.16073050000704825,
+  "max_rss_bytes": 98713600
+}

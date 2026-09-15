@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 517, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 372, in calculate
+    guess=initial_density(data,mol,out,report)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 250, in initial_density
+    copy_checked(request['checkpoint_path'],'scf.chk',request['checkpoint_sha256'])
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 238, in copy_checked
+    raise ValueError(f'Initial checkpoint artifact hash mismatch: {name}')
+ValueError: Initial checkpoint artifact hash mismatch: scf.chk

@@ -1,0 +1,53 @@
+{
+  "scope": "Native implementation numerical-convention diagnostic only; production parameters and raw failed comparison unchanged",
+  "native_source": {
+    "path": "build/advanced-chemistry/amber-sander-source-check/set.F90",
+    "sha256": "3a4252429404df028416364822084a7de7bed4425ad06278fa85680ab2b13cc7",
+    "archive": "build/loop-repair-review/new-source-materials/archives/52fb4fb3370a-AmberTools24_rc5.tar.bz2",
+    "routine": "dihpar; lines433\u2013437",
+    "behavior": "If phase is within 0.001 radians of pi, evaluate at exact mathematical pi; zero sine/cosine components whose absolute value is at most 1e-6"
+  },
+  "prior_report": {
+    "path": "sander-parity.json",
+    "sha256": "f9731cfcd3c666627e4a1616677221189e91805700ed60308223086da49c7106",
+    "passed": false
+  },
+  "phase_terms_matched": 5380,
+  "phase_change_radians": [
+    1.346410206881643e-06
+  ],
+  "global_energy_difference_upper_bound_from_phase_rounding_kj_mol": 0.0628925956444605,
+  "bound_method": "Triangle inequality: sum_i amplitude_i * abs(delta_phase_i), using |cos(a)-cos(b)| <= |a-b|. Independent of tested coordinates.",
+  "electrostatic_convention": {
+    "amber_legacy_charge_scale": 18.2223,
+    "amber_coulomb_kj_mol_nm_e2": 138.93064771413603,
+    "openmm_coulomb_kj_mol_nm_e2": 138.93545764438198,
+    "energy_scale_ratio": 0.9999653801101065,
+    "method": "Diagnostic copy only: particle charges and1\u20134 products scaled to match Amber legacy electrostatic convention. Both raw and convention-matched errors recorded; saved production parameters untouched."
+  },
+  "conformations": [
+    {
+      "pose": "bound",
+      "energy_difference_kj_mol": 2.7782516553997993e-06,
+      "maximum_force_difference_kj_mol_nm": 3.867326086037792e-06,
+      "accepted_with_original_tolerances": true
+    },
+    {
+      "pose": "perturb-2027",
+      "energy_difference_kj_mol": 2.7759233489632607e-06,
+      "maximum_force_difference_kj_mol_nm": 3.88757780456217e-06,
+      "accepted_with_original_tolerances": true
+    },
+    {
+      "pose": "perturb-2028",
+      "energy_difference_kj_mol": 2.7847709134221077e-06,
+      "maximum_force_difference_kj_mol_nm": 3.835681127384305e-06,
+      "accepted_with_original_tolerances": true
+    }
+  ],
+  "accepted_after_matching_documented_native_conventions": true,
+  "production_parameter_files_unchanged": {
+    "prepared.prmtop": "90c1145a084fd19dbdd3e78edaec5e7286b2fb181bf0e2979bd4b35e4d40e8a4",
+    "prepared.inpcrd": "efdd37c5218195997e13683c289e7e308bff97c809909a75c27493481b60c55f"
+  }
+}

@@ -1,0 +1,593 @@
+{
+  "status": "two independently audited archived complete-complex static passes; separate accepted-coordinate handoff also audited",
+  "case": "1UA2",
+  "missing_residues_per_gap": 12,
+  "atom_count": 4825,
+  "plan": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/plan.json",
+  "plan_sha256": "f82fd5ee003d949cb7f08915b484fc6fd79022a5b35e471cd555a3fbfd660aba",
+  "frozen_comparison_summary": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/summary.json",
+  "frozen_comparison_summary_sha256": "fcfd39ab1dbdebebbdb84a0d41d81d6e227eed6cac0b0342c8b8006f1409a226",
+  "full_refinements": 11,
+  "passed": 2,
+  "checks_passed": {
+    "identity": 11,
+    "retained_environment": 11,
+    "geometry": 8,
+    "stereochemistry": 11,
+    "observed_displacement": 11,
+    "serialized_output": 8,
+    "parameter_integrity": 11,
+    "backbone_reference": 2
+  },
+  "rows": [
+    {
+      "attempt": "01-conditioned",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/01-conditioned/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.7539415108767631
+    },
+    {
+      "attempt": "02-conditioned",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/02-conditioned/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.7579997004888396
+    },
+    {
+      "attempt": "03-conditioned",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/03-conditioned/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.754444375772435
+    },
+    {
+      "attempt": "04-conditioned",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/04-conditioned/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": true,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": true,
+      "reference_outliers": [],
+      "observed_heavy_motion_A": 0.7542028996042132
+    },
+    {
+      "attempt": "05-conditioned",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2026/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/05-conditioned/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "48",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.7398976900623053
+    },
+    {
+      "attempt": "06-conditioned",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2027/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/06-conditioned/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.7529609803788273
+    },
+    {
+      "attempt": "07-shifted",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2026/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/07-shifted/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": false,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": false,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "49",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.7085313963985191
+    },
+    {
+      "attempt": "08-shifted",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2027/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/08-shifted/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": true,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": true,
+      "reference_outliers": [],
+      "observed_heavy_motion_A": 0.6024551280223625
+    },
+    {
+      "attempt": "09-shifted",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2027/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/09-shifted/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": false,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": false,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "44",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "51",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.78503692967567
+    },
+    {
+      "attempt": "10-shifted",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2026/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/10-shifted/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": false,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": false,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "45",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "52",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "54",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "56",
+          "",
+          "ASN"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.7437166329147672
+    },
+    {
+      "attempt": "11-shifted",
+      "candidate": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2027/candidate.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/11-shifted/validation/result.json",
+      "checks": {
+        "identity": true,
+        "retained_environment": true,
+        "geometry": true,
+        "stereochemistry": true,
+        "backbone_reference": false,
+        "observed_displacement": true,
+        "serialized_output": true,
+        "parameter_integrity": true
+      },
+      "accepted_by_private_checks": false,
+      "reference_outliers": [
+        [
+          "A",
+          "46",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "50",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "53",
+          "",
+          "ASP"
+        ],
+        [
+          "A",
+          "55",
+          "",
+          "ILE"
+        ]
+      ],
+      "observed_heavy_motion_A": 0.5918027993419921
+    }
+  ],
+  "total_validation_seconds": 45.03424150199862,
+  "minimum_validation_seconds": 3.2595513749984093,
+  "maximum_validation_seconds": 4.786787416029256,
+  "peak_sampled_rss_bytes": 242499584,
+  "all_native_children_exited_zero": true,
+  "observed_outer_torsion_definitions_exactly_preserved_per_attempt": 852,
+  "software_regressions": {
+    "tests_passed": 27,
+    "new_context_tests": 7,
+    "existing_runner_tests": 20
+  },
+  "old_scope_regression": {
+    "audits": 20,
+    "all_previous_reference_selections_identical": true,
+    "evidence": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/outer-anchor-scope-compatibility.json",
+    "sha256": "51403e137e9f4153510a8bdb141c68b3837bc2cd5ff29a794984e6ba31cd6812"
+  },
+  "verified_source_and_artifact_hashes": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/candidate.json": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-parameters.json": "1614e9ad0800340a2fbc00215e971a71aebb28c414d4b87544a402eda9c1a760",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-topology.cif": "79784fdf00348d2153f25622899d521a1d95bc28466ccc7364cd84eaa0bdfa40",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-input.npz": "8bd9acd39fe9bc22dbfb78efc8e25807d7784343f42a9622b4e7b1ddfe672a0a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/source.pdb": "c58d4cce211bab37bb61ede35799dce5534408f27cbceac7fa8b5208263b8ded",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/ligands/ligand-aecaa3f182e6/ligand.xml": "e8609564fca7c8cd3ddaff519ec0df35d1a7027bd4e2d50368b9aab7d97abfe7",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/residue-parameters/phosaa14SB.xml": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/data/amber14/tip3p.xml": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/data/amber14/protein.ff14SB.xml": "d9f9779c09d67cd5f8bc657692f174ffab14c469dfd06d560ac1899fa7e976b8",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/01-conditioned/validation/refined.npz": "b479cd8d021884d512dab059c161385dcf218bdac0e1eb8ea85f808ee3ddf531",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/01-conditioned/validation/refined.pdb": "48b59e1a38c152373040cc6eb00719e4f4928313ba7ef0390ad4a91263177cc4",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/01-conditioned/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/candidate.json": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/02-conditioned/validation/refined.npz": "8baf24499a435242d58e8a429711eb1e8d029f2bf560b1d8109327f25a6dc79f",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/02-conditioned/validation/refined.pdb": "1934744e47256ca117d34261ae41dc2c20cd55357e605c3ba6e78e2240e1b045",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/02-conditioned/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/candidate.json": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/03-conditioned/validation/refined.npz": "5e67259ee71db305d87179649d8e7673b09ce83766e1b86897aa710dd577aeb2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/03-conditioned/validation/refined.pdb": "6178471112bdf78d30cd4c6ed1a711089b8eb19046a15bddcccd37e88cbccc72",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/03-conditioned/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/candidate.json": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/04-conditioned/validation/refined.npz": "6b95c2a52f32a06774e09e2540caf01e53441941e4589924a0b5417b704b8606",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/04-conditioned/validation/refined.pdb": "21f64387a44f2211ebba930a5156cceb693cfb3b27d5af57a4a07288d7dd18c9",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/04-conditioned/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2026/candidate.json": "7b06c0f064e74034486888ca182370cb6dd5ece696d47bd1baff94a12fa8c38a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/05-conditioned/validation/refined.npz": "f0512aea0e55badc8be6f9edc7d50e3b4ce36bfbedb55eabd3ddf8cdf409abcb",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/05-conditioned/validation/refined.pdb": "6304ff28a5b01aaf91ab475772ac4e9032d9a856b90feaca5d7500e1f8d4e58e",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/05-conditioned/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-dirty/native/43-56-seed-2027/candidate.json": "8bf20da8de839f8bdb945b55509404c20fe39c04be3c79b9fa71d1d696c12085",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/06-conditioned/validation/refined.npz": "deca5b9ee2e2bac89bff4fb6dfeb0ce742be5ed8ee188a6ea6a566e549e217e8",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/06-conditioned/validation/refined.pdb": "3477c5ab570785da5f1a1fb056c2a98cfa3fed6baaff648f7e304a2fd1b11014",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/06-conditioned/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2026/candidate.json": "52ef58294501866af80927f5c280893cced2bd73b1acf84f616513e587f0fc74",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/07-shifted/validation/refined.npz": "9fc16f2db1817b1c34649d76b61185ccbb0842129abad1de53d5f390aea5fd2d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/07-shifted/validation/refined.pdb": "0e78518edd9005f04e7805fc8491530bb4c43b4b88db52d20ebe7fe79e36ca8b",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/07-shifted/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/fragment-source-ccd-seed-2027/candidate.json": "a7e11a7504047c6b910ff2542f6791783225002ca33779c5e10e20e0f3a6577f",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/08-shifted/validation/refined.npz": "e47764c300d332cdbeea81b236b1a4005f732e8431ef78ee3f3587cd2ddaeef0",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/08-shifted/validation/refined.pdb": "d76643f644bdbf9289698791dfbccfe5f06e4912bcf39860a14534b8686dd6c1",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/08-shifted/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-ccd-seed-2027/candidate.json": "504970f40372e51ff6f7e681d025c555df475c420956ce642d73af1770f8b7ab",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/09-shifted/validation/refined.npz": "105270a56c9b0a7f3cbf39eb416373598f60338c7e2c97a346c5a08c8d7573ab",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/09-shifted/validation/refined.pdb": "bb74d7918ebf87d280fda513942323981fcd8665f22b1e98a819462014705d88",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/09-shifted/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2026/candidate.json": "7332c74ac4670a5bd39ee6fb78e6c1eab09d1ac0806ad99f5fa7ba46f9aeefce",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/10-shifted/validation/refined.npz": "281bfeba29d92c1c73a150067295b6cf85c68bc22d0fda18d97297be514141c1",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/10-shifted/validation/refined.pdb": "060aa7ce1f6b1bf7cb08fb77affbc830228d2fc9b340689e70f578e4cd428d8a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/10-shifted/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/shifted-anchor-native-v1/1UA2/native/torsion-source-dirty-seed-2027/candidate.json": "fa9ee69728e5715c3a77bb6ea77a4b2d487b6a21758f47b1b814e22d37c724f2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/11-shifted/validation/refined.npz": "6f50cf492fed749ba076431c642451f4dfe110200b825a6078d6f848d9d0543a",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/11-shifted/validation/refined.pdb": "0b78e1b2763a48356b838c461b9060f3d1bfefd920a25e307ad634c5303934f4",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/11-shifted/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2"
+  },
+  "accepted_handoff_regression": {
+    "status": "accepted",
+    "accepted_candidate": "torsion-source-ccd-2027",
+    "accepted_artifact": {
+      "path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.npz",
+      "sha256": "99e31cc3175ff7d0a8d6b606e4e4b3fb2456786c15576504bc9945ae3d8ecb23"
+    },
+    "earlier_rejected_candidates": [
+      "archive-fragment",
+      "fragment-source-ccd-2026",
+      "fragment-source-ccd-2027",
+      "torsion-source-ccd-2026"
+    ],
+    "attempts_executed": 5,
+    "progress_events": 15,
+    "all_frozen_inputs_unchanged": true,
+    "final_coordinates_returned_instead_of_proposal_or_report": true,
+    "app_ready": false,
+    "full_preparation_rerun": false,
+    "new_md_or_qm": false
+  },
+  "accepted_handoff_summary_sha256": "93e520503b1a5d3628c8992377cf2b9c7e93935a326e6d5c41534ba929198d7c",
+  "parameter_integrity_scope": "Pinned archived ligand/modified parameters, current base XML files, fresh native-system replay. Historical protein/water XML equivalence not established.",
+  "app_ready": false,
+  "full_preparation_rerun": false,
+  "new_md_or_qm": false,
+  "release_ready": false,
+  "next": "Integrate complete candidate validation and coherent context handoff in an opt-in fresh-source preparation, then frozen panel; unchanged gates and 12-residue per-gap target.",
+  "independent_saved_artifact_review": {
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/REPORT.md",
+    "evidence": {
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/audit-summary.json": "896f4416c7f011e984e3f4bcf38573d05540840b043ffe837a604fc0dc3f8359",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/handoff-audit-summary.json": "28e68f6cb3af111ffb099e2f125ddcc957cdcace32eeb6959c39ae5df4b684cf",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/handoff-variation.json": "47ee8dc6ccf1ca80552040338b90eaba8dca681e9d93203cf1ddb939381460d9"
+    },
+    "both_initial_endpoints_and_separate_handoff_pass": true,
+    "physical_parameters_equivalent_after_pdb_reload": true,
+    "native_refinement_bitwise_reproducible": false,
+    "variation": {
+      "candidate-seed.npz": {
+        "all": {
+          "coordinates_bitwise_equal": false,
+          "maximum_difference_A": 0.0010833916099949284,
+          "rms_difference_A": 4.7586683331456396e-05,
+          "maximum_atom": [
+            "A",
+            "43",
+            "ILE",
+            "HG23"
+          ]
+        },
+        "heavy": {
+          "coordinates_bitwise_equal": true,
+          "maximum_difference_A": 0.0,
+          "rms_difference_A": 0.0,
+          "maximum_atom": [
+            "A",
+            "13",
+            "GLU",
+            "N"
+          ]
+        },
+        "hydrogen": {
+          "coordinates_bitwise_equal": false,
+          "maximum_difference_A": 0.0010833916099949284,
+          "rms_difference_A": 6.73186642919441e-05,
+          "maximum_atom": [
+            "A",
+            "43",
+            "ILE",
+            "HG23"
+          ]
+        }
+      },
+      "refined.npz": {
+        "all": {
+          "coordinates_bitwise_equal": false,
+          "maximum_difference_A": 0.5786521611519814,
+          "rms_difference_A": 0.03358675573236197,
+          "maximum_atom": [
+            "A",
+            "53",
+            "ASP",
+            "OD1"
+          ]
+        },
+        "heavy": {
+          "coordinates_bitwise_equal": false,
+          "maximum_difference_A": 0.5786521611519814,
+          "rms_difference_A": 0.03153953707818542,
+          "maximum_atom": [
+            "A",
+            "53",
+            "ASP",
+            "OD1"
+          ]
+        },
+        "hydrogen": {
+          "coordinates_bitwise_equal": false,
+          "maximum_difference_A": 0.5000139457484287,
+          "rms_difference_A": 0.03551849970753883,
+          "maximum_atom": [
+            "A",
+            "54",
+            "GLY",
+            "HA2"
+          ]
+        }
+      }
+    }
+  }
+}

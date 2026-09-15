@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "pyscf_version": "2.14.0",
+  "build_report_sha256": "881529617339a09e81d701398f6edf6bb3731ba8b2d79e17d7cc6b6f2fc7cddd",
+  "native_libraries": {
+    "lib/python3.12/site-packages/pyscf/lib/libcvhf.dylib": "5a7511c776f9ae438e86c870d85efabf34ac9faa562671ad29068c4844a28401",
+    "lib/python3.12/site-packages/pyscf/lib/libxcfun_itrf.dylib": "defa0bf1e4bcb9c647b94b963e3876d8c48fd5c53815d49c599e2ade33d8b15c",
+    "lib/python3.12/site-packages/pyscf/lib/libxc_itrf.dylib": "dfe2e53e6858810bd9162fbb35c7a7b23bd2a16c59d95582370a2955c5d7c819",
+    "lib/python3.12/site-packages/pyscf/lib/libmp.dylib": "7b34006a11849dfc123d1cb22df5ab178fb2fe452844542fa1481ed41603a134",
+    "lib/python3.12/site-packages/pyscf/lib/libcgto.dylib": "0b2bce19963d43f1455dbcada0492263c322ac1c6752b0664a80eab871d7a050",
+    "lib/python3.12/site-packages/pyscf/lib/libpbc.dylib": "2b9d407b7e6cc75f528c422ec82bcf4c4a05fe70b6a2e3a2fcc7dceaea4a89b6",
+    "lib/python3.12/site-packages/pyscf/lib/libccsdt.dylib": "92842cf09e01589e7a6ec517c3c0054cbc877054d844444a061181c6e406e645",
+    "lib/python3.12/site-packages/pyscf/lib/libfci.dylib": "dc0508d6d44e4ef4f05ced62b2e42bf6279e93f2d44687466fdca15528077a77",
+    "lib/python3.12/site-packages/pyscf/lib/libpdft.dylib": "50c79f50699d84a36ee651658b994e4626cc65fed1447323a167a1ca051d416a",
+    "lib/python3.12/site-packages/pyscf/lib/libao2mo.dylib": "100238ebaf16c5a45a0daa8c02ab84dabba9f81a8c2c27905ee744221f0601fc",
+    "lib/python3.12/site-packages/pyscf/lib/libnp_helper.dylib": "726bf9361e40a3c0d09cfe33b51b35111ad7f98010da8378c9114f167d821bec",
+    "lib/python3.12/site-packages/pyscf/lib/libagf2.dylib": "b77e03fd57c6225598ca82dd241469eaa83bb5b17e4b7d742cae0655e264c47b",
+    "lib/python3.12/site-packages/pyscf/lib/libcc.dylib": "9006f2fd183c4055fd6472144882cecebf493f478384d812109444827114eeb2",
+    "lib/python3.12/site-packages/pyscf/lib/libmcscf.dylib": "3d31153e62ec365835c1b8b3afb8c7c6cbbc00ddf8150c205cd85a5b693adf07",
+    "lib/python3.12/site-packages/pyscf/lib/libri.dylib": "a8a9882e6c28298a313ac5b0a5a717d5023ea7b0361b0530dbf1cf8c38da82bc",
+    "lib/python3.12/site-packages/pyscf/lib/libdft.dylib": "3ce3036283aaeb05b0f03e1ad25f48cdc8459fa8fc9ff8590e50b0070b324381",
+    "lib/python3.12/site-packages/pyscf/lib/deps/lib/libxcfun.2.dylib": "5ba9ad79e1bca6f80fe8dcce212caa6168b24f190ed9837fbb351fc66f120a8b",
+    "lib/python3.12/site-packages/pyscf/lib/deps/lib/libcint.6.dylib": "325c71251b72331c6ea458d36b3513f3ef567a8530b74392bcbe5756652ab5e1",
+    "lib/python3.12/site-packages/pyscf/lib/deps/lib/libxc.15.dylib": "9b4104a63355535c62eaed3ff426179e1772ca9bdb845e31ac07eeab30f4f8b5"
+  },
+  "openmp_library": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/resp-build/lib/libomp.dylib",
+    "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+  },
+  "native_tests": {
+    "passed": 31,
+    "log_sha256": "283d8ecdb980194ee03a8ff61ba5515cfe390b0d998c7236b491e57c3e7a83eb"
+  },
+  "scope": "Independent development runtime, not packaged or qualified for release. C extensions rebuilt with OpenMP; original wheel dependency libraries retained."
+}

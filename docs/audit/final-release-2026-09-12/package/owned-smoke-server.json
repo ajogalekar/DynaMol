@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-09-13T05:16:34.085630+00:00",
+  "url": "http://127.0.0.1:59254/",
+  "build_id": "589ff2dddea916f5",
+  "bootstrap_pid": 89305,
+  "api_pid": 89306,
+  "private_home": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate Private Home 8dddn9d7",
+  "resources": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources",
+  "owner": "final_regression_formats",
+  "cleanup_status": "stopped by authenticated scoped shutdown after Chrome smoke",
+  "default_scene": "bundled demo, fresh workspace, element color default",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "no_browser_launched": true,
+  "stopped_utc": "2026-09-13T05:19:54.211388+00:00",
+  "no_active_jobs_at_shutdown": true,
+  "service_record_removed": true,
+  "api_no_longer_reachable": true
+}

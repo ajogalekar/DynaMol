@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1HCK",
+    "returncode": 0,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/1HCK/result.json"
+  },
+  {
+    "id": "4HJO",
+    "returncode": 0,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/4HJO/result.json"
+  },
+  {
+    "id": "2BEL",
+    "returncode": 1,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/2BEL/result.json"
+  },
+  {
+    "id": "1FPU",
+    "returncode": 1,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/1FPU/result.json"
+  },
+  {
+    "id": "4HHY",
+    "returncode": 1,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/4HHY/result.json"
+  }
+]

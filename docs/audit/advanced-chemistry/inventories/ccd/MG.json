@@ -1,0 +1,111 @@
+{
+  "id": "MG",
+  "input": {
+    "path": "inputs/ccd/MG.cif",
+    "source_url": "https://files.rcsb.org/ligands/download/MG.cif",
+    "sha256": "b7d9dd418bc6c6faad45284c27a54c9bee13b2d9a249db31f78284b9a61b2296",
+    "bytes": 3424
+  },
+  "chem_comp": [
+    {
+      "id": "MG",
+      "name": "MAGNESIUM ION",
+      "type": "NON-POLYMER",
+      "pdbx_type": "HETAI",
+      "formula": "Mg",
+      "mon_nstd_parent_comp_id": null,
+      "pdbx_synonyms": null,
+      "pdbx_formal_charge": "2",
+      "pdbx_initial_date": "1999-07-08",
+      "pdbx_modified_date": "2011-06-04",
+      "pdbx_ambiguous_flag": "N",
+      "pdbx_release_status": "REL",
+      "pdbx_replaced_by": null,
+      "pdbx_replaces": null,
+      "formula_weight": "24.305",
+      "one_letter_code": null,
+      "three_letter_code": "MG",
+      "pdbx_model_coordinates_details": null,
+      "pdbx_model_coordinates_missing_flag": "N",
+      "pdbx_ideal_coordinates_details": null,
+      "pdbx_ideal_coordinates_missing_flag": "N",
+      "pdbx_model_coordinates_db_code": null,
+      "pdbx_subcomponent_list": null,
+      "pdbx_processing_site": "PDBJ"
+    }
+  ],
+  "atoms": [
+    {
+      "comp_id": "MG",
+      "atom_id": "MG",
+      "alt_atom_id": "MG",
+      "type_symbol": "MG",
+      "charge": "2",
+      "pdbx_align": "0",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "0.000",
+      "model_Cartn_y": "0.000",
+      "model_Cartn_z": "0.000",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.000",
+      "pdbx_component_atom_id": "MG",
+      "pdbx_component_comp_id": "MG",
+      "pdbx_ordinal": "1"
+    }
+  ],
+  "bonds": [],
+  "descriptors": [
+    {
+      "comp_id": "MG",
+      "type": "SMILES",
+      "program": "ACDLabs",
+      "program_version": "10.04",
+      "descriptor": "[Mg+2]"
+    },
+    {
+      "comp_id": "MG",
+      "type": "SMILES_CANONICAL",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[Mg++]"
+    },
+    {
+      "comp_id": "MG",
+      "type": "SMILES",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[Mg++]"
+    },
+    {
+      "comp_id": "MG",
+      "type": "SMILES_CANONICAL",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[Mg+2]"
+    },
+    {
+      "comp_id": "MG",
+      "type": "SMILES",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[Mg+2]"
+    },
+    {
+      "comp_id": "MG",
+      "type": "InChI",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "InChI=1S/Mg/q+2"
+    },
+    {
+      "comp_id": "MG",
+      "type": "InChIKey",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "JLVVSXFLKOJNIY-UHFFFAOYSA-N"
+    }
+  ]
+}

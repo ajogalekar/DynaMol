@@ -1,0 +1,29 @@
+{
+  "python": "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+  "python_realpath": "/Users/ashujo/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/bin/python3.12",
+  "openmm_version": "8.6",
+  "openmm_path": "/Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/__init__.py",
+  "path": "/usr/bin:/bin:/usr/sbin:/sbin",
+  "gmx_on_path": null,
+  "selected_gmx": "/Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "purpose": "Source private-runtime availability under restricted PATH; fresh native runs follow separately. This is not a DMG installation test."
+}

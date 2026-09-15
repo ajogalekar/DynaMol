@@ -620,7 +620,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
           component.addRepresentation(type, { sele: 'none', ...parameters });
         groupsRef.current = {
           polymer: add('cartoon', {
-            colorScheme: 'residueindex',
+            colorScheme: COLOR_SCHEMES[latest.current.colorScheme],
             colorScale: ['#69ddd3', '#6cb4f5', '#a989e5'],
             quality: 'high',
             aspectRatio: 4,

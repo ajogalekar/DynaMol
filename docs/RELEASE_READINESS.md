@@ -1,4 +1,39 @@
-# DynaMol 0.1 early-release scope
+# DynaMol release scope and readiness
+
+## v1.0.0 release decision — September 2026
+
+v1.0.0 publishes the source, documentation and evidence for the existing
+viewer, analysis, engine and supported metal-free preparation functionality,
+with the loop builder enabled as shipped in 0.1.1 plus the September fixes to
+loop-flank handling, added-atom stereochemistry and refinement diagnostics.
+The v1.0.0 gates that passed on the released source:
+
+- Backend suite: 1,042 passed, 0 failed, 15 skipped (12 opt-in PySCF checks,
+  3 optional audit fixtures); frontend TypeScript/Vite production build.
+- Frozen loop panel through the real preparation worker: 7 of 9 metal-free
+  repair candidates prepared with 20/20 checks each, including both 12-residue
+  examples and the four-gap 8K5R; 2CG9 and 3HEG rejected by the acceptance
+  gates. See the [recheck](audit/loop-fallback/REPORT.md#v100-recheck-on-the-released-source).
+- Isolated browser regressions (Playwright against a disposable data root);
+  results are recorded in [the v1.0.0 release notes](releases/v1.0.0.md).
+
+The stated limitation is conformational: 4 of the 7 accepted panel loops carry
+modeled-residue Ramachandran outliers under an independent CCTBX reference,
+because the shipped acceptance gates test geometry, chirality and collisions
+but not backbone conformation. The stricter candidate-search workflow that
+passes 6 of 9 cases on all eight complete checks remains research code in
+`docs/audit/v1-loop-release/`; it is not enabled in the app and is the
+planned loop change after v1.0.0. Modeled loops stay provisional starting
+coordinates; see [loop repair](LOOP_REPAIR.md).
+
+The 0.1.1 Mac installer remains the current application download. A v1.0.0
+installer requires a fresh packaging run and its own acceptance record before
+it is attached to the release; the source release does not change the
+installed 0.1.1 application. Covalent and metal-containing complete-complex
+development continues as a separate track outside the release; see the
+[two-track plan](audit/v1-loop-release/PLAN.md).
+
+## Historical package and feature evidence
 
 **The 0.1.0 installer was withdrawn for a packaging signature error.** The 0.1.1
 replacement repairs the bundle seal and adds a private ProMod3 runtime. The

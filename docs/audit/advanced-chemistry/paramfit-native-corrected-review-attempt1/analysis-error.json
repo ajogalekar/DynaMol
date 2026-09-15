@@ -1,0 +1,5 @@
+{
+  "phase": "read-only review parser",
+  "error": "Parameter parser initially treated the explanatory (* means...) line as a parameter row. No native process ran and no original evidence changed.",
+  "script_sha256": "21abda103bae2475ac9549d84d01492505fcc5fdb3da313432599cd7dff9269e"
+}

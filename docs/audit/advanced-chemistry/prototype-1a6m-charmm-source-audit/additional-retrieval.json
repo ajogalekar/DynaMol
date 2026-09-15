@@ -1,0 +1,36 @@
+[
+  {
+    "url": "https://mackerell.umaryland.edu/charmm_ff.shtml",
+    "sha256": "dbe16da8db3022407672e0b2ef43eac8820109ea5573b653839648f3cf14e714",
+    "bytes": 42579,
+    "retrieved_utc": "2026-09-13T18:24:36.496702+00:00"
+  },
+  {
+    "url": "https://mackerell.umaryland.edu/download.php?filename=CHARMM_ff_params_files/toppar_c31b1.tar.gz",
+    "retrieved_utc": "2026-09-13T18:25:39.211836+00:00",
+    "file": "toppar_c31b1.tar.gz",
+    "bytes": 531199,
+    "sha256": "0ac3cc4c88cdfa27bdb14cdbd9dc306e585fc348e395fee66b8efe60e4a96ba4",
+    "exact_sulfate_residue_matches": [
+      {
+        "path": "toppar/toph19.inp",
+        "block": "\nRESI SO4  -2.0\nGROUP\nATOM S    S     0.0\nATOM O1   OC   -0.5\nATOM O2   OC   -0.5\nATOM O3   OC   -0.5\nATOM O4   OC   -0.5\nBOND S O1    S O2    S O3    S O4\nACCE O1  S\nACCE O2  S\nACCE O3  S\nACCE O4  S\nPATC FIRS NONE LAST NONE\n"
+      }
+    ],
+    "archive_file_count": 58
+  },
+  {
+    "url": "https://mackerell.umaryland.edu/download.php?filename=CHARMM_ff_params_files/toppar_c36_feb26.tgz",
+    "retrieved_utc": "2026-09-13T18:29:02.512677+00:00",
+    "file": "toppar_c36_feb26.tgz",
+    "bytes": 13764993,
+    "sha256": "7d4d21ebdb216a48f600fadee862dc77d369a10d5753150635f35e09c3209e08",
+    "exact_sulfate_residue_matches": [
+      {
+        "path": "toppar/toph19.inp",
+        "block": "\nRESI SO4  -2.0\nGROUP\nATOM S    S     0.0\nATOM O1   OC   -0.5\nATOM O2   OC   -0.5\nATOM O3   OC   -0.5\nATOM O4   OC   -0.5\nBOND S O1    S O2    S O3    S O4\nACCE O1  S\nACCE O2  S\nACCE O3  S\nACCE O4  S\nPATC FIRS NONE LAST NONE\n"
+      }
+    ],
+    "archive_file_count": 272
+  }
+]

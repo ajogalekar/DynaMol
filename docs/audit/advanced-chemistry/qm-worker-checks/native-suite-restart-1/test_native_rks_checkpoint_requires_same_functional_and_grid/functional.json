@@ -1,0 +1,37 @@
+{
+  "atom_ids": [
+    "H1",
+    "H2"
+  ],
+  "elements": [
+    "H",
+    "H"
+  ],
+  "coords_bohr": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1.4
+    ]
+  ],
+  "charge": 0,
+  "spin": 0,
+  "method": "RKS",
+  "functional": "PBE",
+  "grid_level": 3,
+  "basis": "sto-3g",
+  "operations": [
+    "energy"
+  ],
+  "initial_checkpoint": {
+    "result_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-worker-checks/native-suite-restart-1/test_native_rks_checkpoint_requires_same_functional_and_grid/source/result.json",
+    "checkpoint_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-worker-checks/native-suite-restart-1/test_native_rks_checkpoint_requires_same_functional_and_grid/source/scf.chk",
+    "result_sha256": "42271d1b04de55783177c15f07385a9b3c2f02b30bee38d921a67f424dace2f5",
+    "checkpoint_sha256": "bd92ce0ed6320704b46c2534247ad64adc1817d215a9abcbd537bb5c495ef15c"
+  }
+}

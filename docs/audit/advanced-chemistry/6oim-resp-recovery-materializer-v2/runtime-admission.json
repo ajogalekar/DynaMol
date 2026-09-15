@@ -1,0 +1,21 @@
+{
+  "status": "RESP_provider_admission_passed",
+  "elapsed_seconds": 0.021742833021562546,
+  "provider": {
+    "provider_admitted": true,
+    "prefix": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1",
+    "pins": {
+      "qualification_sha256": "dfe338698f80029eb15668cb44480b695e875ac0b85f37794b0e422448889851",
+      "inventory_sha256": "80a80b1e6716aade0a42150957ee9056e56a49a16fa398e93d93212f167fb0c7",
+      "artifact_manifest_sha256": "f519f2266c1de508994292303192b14c612b9610e079f72d894879fcae7cf189",
+      "independent_review_sha256": "92d59bc4bcdb50586aa3bcc39ca9f4cae6d8aa53f3f104be2f1514098de012a5",
+      "executable_sha256": "2d759392c83363f4294c01bc7c8602134e51b3a58f6b350044e1becce61048a3"
+    },
+    "fit_launched": false,
+    "charges_accepted": false,
+    "physical_acceptance": false,
+    "required_executor": "Reviewed generic supervisor with fresh private cwd, short relative filenames, 3 GB sampled RSS stop and parsed native outputs/charge checks; not the parity harness."
+  },
+  "QM_launched": false,
+  "RESP_launched": false
+}

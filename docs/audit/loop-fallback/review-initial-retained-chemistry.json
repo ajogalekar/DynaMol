@@ -1,0 +1,27 @@
+{
+  "scope": "Independent identity and bound heavy-atom coordinate check for passed initial cases; no MD performed.",
+  "cases": [
+    {
+      "id": "1HCK",
+      "checked_ligand_ion_heavy_atoms": 32,
+      "all_present": true,
+      "max_saved_pdb_displacement_angstrom": 0.0,
+      "ligand_models": 1,
+      "conversion_checks_all_passed": true,
+      "ions": 1,
+      "source_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/1HCK/workspace/datasets/c2366b2c0de94da4/topology.pdb",
+      "prepared_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/1HCK/workspace/datasets/a558f51e8a394b2a/prepared.pdb"
+    },
+    {
+      "id": "4HJO",
+      "checked_ligand_ion_heavy_atoms": 29,
+      "all_present": true,
+      "max_saved_pdb_displacement_angstrom": 0.0,
+      "ligand_models": 1,
+      "conversion_checks_all_passed": true,
+      "ions": 0,
+      "source_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/4HJO/workspace/datasets/2136bab0a7ff4c70/topology.pdb",
+      "prepared_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-initial/4HJO/workspace/datasets/905d9e434ab840ea/prepared.pdb"
+    }
+  ]
+}

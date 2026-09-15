@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+import re
 
 _ALIASES = {"HID": "HIS", "HIE": "HIS", "HIP": "HIS", "CYX": "CYS", "CYM": "CYS", "ASH": "ASP", "GLH": "GLU", "LYN": "LYS"}
 
@@ -10,7 +11,44 @@ def _text(value):
     return "" if value in {None, False, "", ".", "?"} else str(value).strip()
 
 
-def load_scheme(path, label_to_author, original_to_canonical, chain_ids, sequences):
+def different_image_connection_ids(block):
+    """Exclude a CIF connection only when both image IDs are explicit and known."""
+    table = block.get_mmcif_category("_struct_conn.")
+    if not all(key in table for key in ("id", "ptnr1_symmetry", "ptnr2_symmetry")):
+        return set()
+    result = set()
+    for identity, first, second in zip(table['id'], table['ptnr1_symmetry'], table['ptnr2_symmetry']):
+        first, second = _text(first), _text(second)
+        if all(re.fullmatch(r'[1-9]\d*_\d{3}', value) for value in (first, second)) and first != second:
+            result.add(identity)
+    return result
+
+
+def source_cif_chain_ids(path, topology):
+    """Map label-asym identifiers to the chains the native reader actually used.
+
+    OpenMM can choose label or author chains depending on source contents. Atom
+    IDs connect the original CIF to its native topology without guessing which
+    namespace was selected or assuming author chains uniquely identify ligands.
+    """
+    import gemmi
+    table = gemmi.cif.read_file(str(path)).sole_block().get_mmcif_category("_atom_site.")
+    atoms = {}
+    for atom in topology.atoms():
+        key = str(atom.id)
+        if key in atoms:
+            raise ValueError("Source atom IDs are ambiguous for chain identity mapping")
+        atoms[key] = atom.residue.chain.id
+    mapped = defaultdict(set)
+    for i, atom_id in enumerate(table.get("id", [])):
+        if str(atom_id) in atoms:
+            mapped[table["label_asym_id"][i]].add(atoms[str(atom_id)])
+    if any(len(values) != 1 for values in mapped.values()):
+        raise ValueError("A source label chain maps to multiple native chains")
+    return {label: next(iter(values)) for label, values in mapped.items()}
+
+
+def load_scheme(path, label_to_author, original_to_canonical, chain_ids, sequences, label_to_original=None):
     """Read explicit sequence identities; no sequence/numbering interpolation."""
     import gemmi
     table = gemmi.cif.read_file(str(path)).sole_block().get_mmcif_category("_pdbx_poly_seq_scheme.")
@@ -20,7 +58,8 @@ def load_scheme(path, label_to_author, original_to_canonical, chain_ids, sequenc
     labels = defaultdict(set)
     for i, label in enumerate(table.get("asym_id", [])):
         author = _text(table.get("pdb_strand_id", [None] * len(table["asym_id"]))[i]) or label_to_author.get(label, label)
-        chain = original_to_canonical.get(author, author)
+        original = (label_to_original or {}).get(label, author)
+        chain = original_to_canonical.get(original, original)
         if chain not in chain_ids:
             continue
         if "," in author:
@@ -73,6 +112,12 @@ def recover_observed_insertion_codes(fixer):
             candidates = [row for row in rows if row['resid'] == residue.id
                           and _ALIASES.get(row['residue'], row['residue']) == _ALIASES.get(residue.name, residue.name)
                           and (not code or row['insertion_code'] == code)]
+            exact = [row for row in candidates if row['insertion_code'] == code]
+            if len(exact) == 1:
+                # An explicitly preserved blank code is an identity too. Full
+                # chain-order validation below still rejects collapsed legacy
+                # duplicates instead of assigning them sequentially by guess.
+                candidates = exact
             if len(candidates) != 1:
                 raise ValueError(f"Observed residue {chain.id}:{residue.id}{code} {residue.name} has no unique number/name/insertion-code match in the polymer scheme")
             row = candidates[0]

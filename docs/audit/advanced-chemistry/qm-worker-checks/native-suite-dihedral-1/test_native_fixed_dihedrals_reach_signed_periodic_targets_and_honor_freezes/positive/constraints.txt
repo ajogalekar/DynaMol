@@ -1,0 +1,4 @@
+$freeze
+xyz 2,3
+$set
+dihedral 1 2 3 4 60

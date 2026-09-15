@@ -1,0 +1,111 @@
+{
+  "id": "HG",
+  "input": {
+    "path": "inputs/ccd/HG.cif",
+    "source_url": "https://files.rcsb.org/ligands/download/HG.cif",
+    "sha256": "d28d19d5d99fcd648e224904e6f17be91b118523c2d3f206029974e39c8a40bf",
+    "bytes": 3423
+  },
+  "chem_comp": [
+    {
+      "id": "HG",
+      "name": "MERCURY (II) ION",
+      "type": "NON-POLYMER",
+      "pdbx_type": "HETAI",
+      "formula": "Hg",
+      "mon_nstd_parent_comp_id": null,
+      "pdbx_synonyms": null,
+      "pdbx_formal_charge": "2",
+      "pdbx_initial_date": "1999-07-08",
+      "pdbx_modified_date": "2011-06-04",
+      "pdbx_ambiguous_flag": "N",
+      "pdbx_release_status": "REL",
+      "pdbx_replaced_by": null,
+      "pdbx_replaces": null,
+      "formula_weight": "200.590",
+      "one_letter_code": null,
+      "three_letter_code": "HG",
+      "pdbx_model_coordinates_details": null,
+      "pdbx_model_coordinates_missing_flag": "N",
+      "pdbx_ideal_coordinates_details": null,
+      "pdbx_ideal_coordinates_missing_flag": "N",
+      "pdbx_model_coordinates_db_code": null,
+      "pdbx_subcomponent_list": null,
+      "pdbx_processing_site": "EBI"
+    }
+  ],
+  "atoms": [
+    {
+      "comp_id": "HG",
+      "atom_id": "HG",
+      "alt_atom_id": "HG",
+      "type_symbol": "HG",
+      "charge": "2",
+      "pdbx_align": "0",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "model_Cartn_x": "0.000",
+      "model_Cartn_y": "0.000",
+      "model_Cartn_z": "0.000",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.000",
+      "pdbx_component_atom_id": "HG",
+      "pdbx_component_comp_id": "HG",
+      "pdbx_ordinal": "1"
+    }
+  ],
+  "bonds": [],
+  "descriptors": [
+    {
+      "comp_id": "HG",
+      "type": "SMILES",
+      "program": "ACDLabs",
+      "program_version": "10.04",
+      "descriptor": "[Hg+2]"
+    },
+    {
+      "comp_id": "HG",
+      "type": "SMILES_CANONICAL",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[Hg++]"
+    },
+    {
+      "comp_id": "HG",
+      "type": "SMILES",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "[Hg++]"
+    },
+    {
+      "comp_id": "HG",
+      "type": "SMILES_CANONICAL",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[Hg+2]"
+    },
+    {
+      "comp_id": "HG",
+      "type": "SMILES",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "[Hg+2]"
+    },
+    {
+      "comp_id": "HG",
+      "type": "InChI",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "InChI=1S/Hg/q+2"
+    },
+    {
+      "comp_id": "HG",
+      "type": "InChIKey",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "BQPIGGFYSBELGY-UHFFFAOYSA-N"
+    }
+  ]
+}

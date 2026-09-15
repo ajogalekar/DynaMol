@@ -1,0 +1,148 @@
+{
+  "status": "native model constructed; mechanical checks recorded separately",
+  "source_sha256": "8e6392a25c03fe10addfd11baabc0c4190129ab2f005e62d05fe768b2f8f3280",
+  "script_sha256": "63709c499b113dbb0cda517da0e84383e03e1b5ebe536871da7d22aee15425e0",
+  "parameters": {
+    "source_page": "https://ambermd.org/tutorials/advanced/tutorial20/ZAFF.php",
+    "retrieved_date": "2026-09-13",
+    "files": [
+      {
+        "name": "ZAFF.prep",
+        "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/zaff/ZAFF.prep",
+        "bytes": 42582,
+        "sha256": "eefd39e5a4db122813accf40df27669379a91f5ed89b7f35aba5528aa84225a5"
+      },
+      {
+        "name": "ZAFF.frcmod",
+        "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/zaff/ZAFF.frcmod",
+        "bytes": 56954,
+        "sha256": "3492d30e3cb8bfa389fd332f595a5faa30fb1d20b1ad431e0a0c9614a67da275"
+      }
+    ]
+  },
+  "model_state": {
+    "status": "explicit published water-state benchmark model; not an experimental protonation assignment",
+    "oxidation_state": "Zn(II)",
+    "electronic_spin": 0,
+    "bound_solvent": "neutral water, two hydrogens; center6",
+    "alternative": "Separate center7 hydroxide: HD6/HD7/HE3/OH1/ZN7, one H and whole-site charge +1; not substituted automatically",
+    "chosen_state_rationale": "Retains deposited HOH263 identity using the published Zn-HHH-water parameter family; source CIF has no crystallization pH field. Protonation uncertainty remains.",
+    "forcefield": "ff14SB + official ZAFF.prep/frcmod + TIP3P; unmodified original ZAFF Zn Lennard-Jones parameters",
+    "histidines": [
+      {
+        "source_chain": "A",
+        "source_resid": "4",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "10",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "15",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "17",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "36",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "64",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "94",
+        "variant": "HID",
+        "selection": "explicit metal donor"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "96",
+        "variant": "HID",
+        "selection": "explicit metal donor"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "107",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "119",
+        "variant": "HIE",
+        "selection": "explicit metal donor"
+      },
+      {
+        "source_chain": "A",
+        "source_resid": "122",
+        "variant": "HID",
+        "selection": "OpenMM pH7 geometric default; not pKa calculation"
+      }
+    ]
+  },
+  "published_template_context_angstrom": {
+    "His94:O-His119:N": 2.8319309666727404,
+    "His94:N-His119:O": 3.1006736364861087,
+    "His96:O-His119:N": 7.655376019504201,
+    "His96:N-His119:O": 7.941137009270148
+  },
+  "template_assignments": {
+    "A:94": "HD4",
+    "A:96": "HD5",
+    "A:119": "HE2",
+    "B:262": "ZN6",
+    "C:263": "WT1"
+  },
+  "observed_heavy_atoms_retained": 2207,
+  "source_observed_heavy_atoms": 2207,
+  "maximum_native_serialization_error_angstrom": 0.0004999970359271799,
+  "native_atoms": 4534,
+  "native_residues": 424,
+  "native_Zn_bonds": [
+    [
+      1416,
+      4032
+    ],
+    [
+      1453,
+      4032
+    ],
+    [
+      1796,
+      4032
+    ],
+    [
+      4032,
+      4034
+    ]
+  ],
+  "site_partial_charge_sum_e": 1.9999899991219547,
+  "total_system_charge_e": -1.0123804345279195e-05,
+  "mechanical_terms_match": false,
+  "finite_configuration_check": {
+    "accepted": true,
+    "potential_energy_kj_mol": 172955.60001842905,
+    "max_force_kj_mol_nm": 38484.78027122991,
+    "platform": "Reference",
+    "meaning": "Finite single-configuration energy/forces; not stability or model-accuracy evidence."
+  },
+  "dynamics": "not run",
+  "interpretation": "Construction and same-parameter mechanical implementation checks only. No new site fitting, experimental validation, or app integration."
+}

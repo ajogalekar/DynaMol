@@ -711,7 +711,7 @@ export default function StructureWorkbench({
                 {!inspecting && inspection && hasProtein && (
                   <p className="form-note missing-build-note" id="missing-loop-help">
                     {canBuild
-                      ? `Use the original sequence to build a provisional starting model. ${hasExtendedBuildableLoop ? 'Longer loops take more work. ' : ''}Geometry is checked; loop conformations remain uncertain.`
+                      ? `Use the original sequence to build a provisional starting model. Immediate protein neighbors may relax slightly to close a gap. ${hasExtendedBuildableLoop ? 'Longer loops take more work. ' : ''}Geometry is checked; loop conformations remain uncertain.`
                       : missingCount
                         ? internalMissingCount
                           ? 'Unsupported internal gaps require additional modeling before preparation.'

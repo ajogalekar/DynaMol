@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "status": "completed",
+  "phase": "completed",
+  "worker_sha256": "e7841b3fb0fa71d8ffdd2b6b49c856b5481174facbdde5fe790dd55acf06ef4d",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "5626eef7f2aae3ff230b030e5ccac97947f8b2a10db9ff154d0a2d1eb9966803",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200
+  },
+  "optimization": {
+    "requested": false,
+    "converged": null,
+    "settings": {
+      "enabled": false,
+      "max_steps": 100,
+      "freeze_atom_ids": [],
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": []
+  },
+  "scf": {
+    "converged": true,
+    "cycles": 7,
+    "max_cycles": 100,
+    "conv_tol_hartree": 1e-10,
+    "conv_tol_grad": 1e-07
+  },
+  "esp": {
+    "method": "Batched int3c2e/fakemol_for_charges; independent int1e_rinv",
+    "batch_size": 256,
+    "checked_point_indices": [
+      0,
+      1,
+      2
+    ],
+    "max_absolute_error_hartree_per_e": 0.0,
+    "tolerance_hartree_per_e": 1e-08,
+    "passed": true,
+    "ecp_convention": "Effective point ionic cores plus valence electron density; all-electron core ESP is not reconstructed."
+  },
+  "energy_hartree": -13.439757957776543,
+  "atom_ids": [
+    "Be2+"
+  ],
+  "elements": [
+    "Be"
+  ],
+  "charge": 2,
+  "spin_2S": 0,
+  "explicit_electron_count": 2,
+  "density_electron_count": 2.0,
+  "nao": 5,
+  "method": {
+    "method": "RHF",
+    "basis_requested": "sto-3g",
+    "ecp_requested": null,
+    "basis_sha256": "4a5b9b8e2c746e965f6212cf653c18d5eae2153eece6aff8ee79887a6514290a",
+    "ecp_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "spherical_basis": true,
+    "symmetry": false,
+    "density_fit": false,
+    "functional_requested": null,
+    "grid_level": null
+  },
+  "resolved_method_file": "resolved-method.json",
+  "resolved_method_file_sha256": "2ee888b856ed1f0385376873ebbb5af1fed2a80d25217b5534724eb3433e1802",
+  "arrays_file": "arrays.npz",
+  "arrays_sha256": "97e277d7f528479906c68040acda4203a8dc20b80173b7ed308154fa236a7d97",
+  "checkpoint_file": "scf.chk",
+  "checkpoint_sha256": "beecc74aefb3461355af8f8d33c0cb86031bc15cb8fd3c48e80b178f3674f80f",
+  "arrays": {
+    "coords_bohr": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "coords_angstrom": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "atomic_numbers": {
+      "shape": [
+        1
+      ],
+      "dtype": "int64"
+    },
+    "effective_nuclear_charges": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "esp_points_bohr": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "esp_hartree_per_e": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "units": {
+    "energy": "hartree",
+    "coords_bohr": "bohr",
+    "coords_angstrom": "angstrom",
+    "gradient_hartree_per_bohr": "hartree/bohr",
+    "hessian_hartree_per_bohr2": "hartree/bohr^2",
+    "esp_points_bohr": "bohr",
+    "esp_hartree_per_e": "hartree/e",
+    "effective_nuclear_charges": "e",
+    "bohr_to_angstrom": 0.52917721092,
+    "bohr_constant_source": "pyscf.lib.param.BOHR"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "pyscf": "2.14.0",
+    "numpy": "2.5.3",
+    "geometric": "1.1.1",
+    "libxc": "7.0.0"
+  },
+  "elapsed_seconds": 0.34165
+}

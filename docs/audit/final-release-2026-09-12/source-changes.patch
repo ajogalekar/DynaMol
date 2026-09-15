@@ -1,0 +1,342 @@
+diff --git a/README.md b/README.md
+index 40b2306..6139ba4 100644
+--- a/README.md
++++ b/README.md
+@@ -119,9 +119,9 @@ The Simulate structure loader accepts one molecule per SDF/SMILES file and one M
+ 
+ ## Simulation scope
+ 
+-Automatic preparation supports **standard amino-acid proteins, SEP/TPO/PTR/HYP modifications, and supported noncovalent protein–ligand complexes**. Ligands are retained by default. An unknown chemical graph, missing ligand heavy atoms, unsupported element, covalent ligand linkage, or unassigned force-field term produces a component-specific error; source molecules are not silently removed. Other unnatural residues are recognized and retained, with a specific template blocker; this does not provide parameters for every unnatural amino acid. Nucleic acids require another preparation workflow.
++Automatic preparation supports **standard amino-acid proteins, SEP/TPO/PTR/HYP modifications, and supported noncovalent protein–ligand complexes**. Ligands are retained by default. Eligible missing ligand fragments can be modeled only after explicit repair selection; larger or ambiguous omissions stay blocked. An unknown chemical graph, unsupported element, covalent ligand linkage, or unassigned force-field term produces a component-specific error; source molecules are not silently removed. Other unnatural residues are recognized and retained, with a specific template blocker; this does not provide parameters for every unnatural amino acid. Nucleic acids require another preparation workflow.
+ 
+-The [chemistry support matrix](docs/CHEMISTRY_SUPPORT.md) records checks across all 20 standard amino-acid types, representative charge states, termini/caps, disulfides, organic ligands, ATP/ADP/NAD/FAD and Na+/Cl−/K+/Mg2+/Ca2+. Heme, covalent cofactors, other metal states and unregistered unnatural amino acids still need specialized validated templates. Loading these structures remains separate from eligibility for MD preparation.
++The [chemistry support matrix](docs/CHEMISTRY_SUPPORT.md) records checks across all 20 standard amino-acid types, representative charge states, termini/caps, disulfides, organic ligands, ATP/ADP/NAD/FAD and named ions including Na+/Cl−/K+/Mg2+/Ca2+/Zn2+. Heme, covalent cofactors, unregistered metal states and unregistered unnatural amino acids still need specialized validated templates. Loading these structures remains separate from eligibility for MD preparation.
+ 
+ - **OpenMM:** ff14SB with GBn2 implicit solvent, or TIP3P explicit solvent with PME. Langevin-middle, hydrogen-bond constraints, up to 2 fs integration steps. Implicit mode requires a protein-only input.
+ - **Protein–ligand OpenMM:** ff14SB protein + GAFF2/AM1-BCC organic ligands + TIP3P-compatible Amber ions/water. Each ligand is limited to 200 heavy atoms and supported closed-shell organic chemistry. Bound heavy-atom coordinates are preserved during preparation. XML templates, atom mappings, native charge/parameter files and logs remain attached through solvation and dynamics.
+diff --git a/backend/tests/test_workspaces.py b/backend/tests/test_workspaces.py
+index 66a6484..6de8c58 100644
+--- a/backend/tests/test_workspaces.py
++++ b/backend/tests/test_workspaces.py
+@@ -68,6 +68,18 @@ def test_autosave_restores_complete_scene_and_detects_changed_atom_order(workspa
+     assert "atom order" in result["warning"]
+ 
+ 
++def test_fresh_workspace_defaults_to_elements_and_preserves_explicit_color(workspace):
++    dataset, state, _, _ = workspace
++    workspaces.save_workspace({"state": {**state, "color_scheme": "chain"}})
++    assert workspaces.get_workspace()["state"]["color_scheme"] == "chain"
++    # A fresh scene should not inherit the previous scene's colors or selections.
++    workspaces.save_workspace({"state": {"version": 1, "dataset_id": dataset["id"]}})
++    fresh = workspaces.get_workspace()["state"]
++    assert fresh["color_scheme"] == "element"
++    assert fresh["selected_atoms"] == []
++    assert fresh["measurements"] == []
++
++
+ @pytest.mark.parametrize("change", [
+     {"selected_atoms": [100]}, {"frame": 3}, {"camera": [0] * 16}, {"camera": [float("nan")] * 16},
+     {"visibility": {"hydrogens": "polar"}}, {"named_selections": [{"id": "../escape", "name": "X", "atoms": [0]}]},
+diff --git a/backend/worker.py b/backend/worker.py
+index d1bb6a6..cec6171 100644
+--- a/backend/worker.py
++++ b/backend/worker.py
+@@ -17,6 +17,7 @@ import uuid
+ import subprocess
+ import sys
+ import time
++import tomllib
+ import traceback
+ from pathlib import Path
+ 
+@@ -46,7 +47,8 @@ class Worker:
+         self.input_state = json.loads(state_path.read_text()) if state_path.exists() else {}
+         self.started = time.monotonic()
+         self.previous_elapsed = self.job.get("elapsed_seconds", 0) if self.job.get("resume_requested") else 0
+-        self.provenance = {"application": "DynaMol 0.1.0", "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.", "config": self.settings, "input_sha256": hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest(), "cpu_threads": config.CPU_THREADS, "versions": {name: importlib.metadata.version(name) for name in ("openmm", "mdtraj", "numpy")}, "commands": [], "preparation": [], "worker_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "source_dataset_id": self.settings["dataset_id"]}
++        application_version = tomllib.loads((config.ROOT / "pyproject.toml").read_text())["project"]["version"]
++        self.provenance = {"application": f"DynaMol {application_version}", "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.", "config": self.settings, "input_sha256": hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest(), "cpu_threads": config.CPU_THREADS, "versions": {name: importlib.metadata.version(name) for name in ("openmm", "mdtraj", "numpy")}, "commands": [], "preparation": [], "worker_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "source_dataset_id": self.settings["dataset_id"]}
+ 
+         if self.job.get("resume_requested") and (self.folder / "provenance.json").exists():
+             self.provenance = json.loads((self.folder / "provenance.json").read_text())
+diff --git a/backend/workspaces.py b/backend/workspaces.py
+index 11c797f..d6bad1d 100644
+--- a/backend/workspaces.py
++++ b/backend/workspaces.py
+@@ -128,7 +128,7 @@ def _validate_state(state: dict, dataset: dict | None = None, physical_path: Pat
+     result["camera"] = camera
+     for field, allowed, default in (
+         ("representation", {"cartoon", "ball+stick", "licorice", "surface"}, "cartoon"),
+-        ("color_scheme", {"chain", "residue", "element"}, "residue"),
++        ("color_scheme", {"chain", "residue", "element"}, "element"),
+         ("measure_kind", {"distance", "angle", "dihedral", "hbond"}, "distance"),
+     ):
+         value = state.get(field, default)
+diff --git a/docs/CHEMISTRY_SUPPORT.md b/docs/CHEMISTRY_SUPPORT.md
+index 5eebf55..17e9220 100644
+--- a/docs/CHEMISTRY_SUPPORT.md
++++ b/docs/CHEMISTRY_SUPPORT.md
+@@ -16,9 +16,11 @@ accuracy of a protonation state, force field or biological conclusion.
+ | Noncovalent organic ligands | Retained graph/CCD/explicit SMILES → recorded state → native GAFF2/AM1-BCC | Neutral alcohol, anionic carboxylate/phosphate, cationic amine, halogenated aromatic and chiral amide representatives. Every generated XML must reproduce native Amber energies and forces |
+ | ATP, ADP, NAD, FAD | Supported as complete, noncovalent organic cofactor graphs through the ligand route | At nominal pH 7, these fixtures selected net charges −4, −3, −1 and −2 respectively. These are whole-molecule net charges; NAD's pyridinium center is +1. They do not establish the dominant bound state or redox behavior |
+ | Na+, Cl−, K+, Mg2+, Ca2+ | Explicit TIP3P-compatible nonbonded ion models | Exact element/name/atom-count and template charges checked; SOD/CLA/POT/CAL aliases also checked. Five ions survived actual capped-protein preparation and solvation |
++| Additional named ion states | Li+, Rb+, Cs+, F−, Br−, I−, Zn2+, Mn2+, Co2+, Ni2+, Cu2+ use matching installed Amber TIP3P nonbonded templates | Exact named identity, element, deposited charge when present, and actual particle charge/Lennard-Jones parameters must agree. All registered states have regression checks; a retained Zn complex has a separate [preparation check](CHEMISTRY_REPAIR.md). These are not bonded coordination or oxidation-state models |
+ | Heme/organometallics, other metal states | Require specialized models; no guessed oxidation state or metal parameters | Iron-containing HEM explicitly rejected. Retaining nonbonded Mg/Ca and observed donor/water coordinates does not validate coordination energetics |
+ | Covalent inhibitors/cofactors and nonstandard crosslinks | Explicit blockers unless a matching supported covalent template exists | Original covalent FAD linkage and nonstandard protein crosslink checks; no bond is deleted to make a ligand appear independent |
+-| Radicals, incomplete/ambiguous ligand graphs, other elements | Explicit actionable rejection | Boron-containing ligand, radical methyl and ATP missing a heavy atom tested; no closed-shell or missing-atom replacement is invented |
++| Small incomplete ligand fragments | Explicit modeled repair from a complete chemical reference, or explicit per-molecule removal | At most eight missing heavy atoms and half the ligand, a connected observed core with sufficient noncollinear anchors, and no missing ring atoms. Observed coordinates remain fixed; larger or unsupported omissions stay blocked. [Repair method and evidence](CHEMISTRY_REPAIR.md) |
++| Radicals, ambiguous ligand graphs, unsupported elements | Explicit actionable rejection | Boron-containing ligand and radical methyl tested. Incomplete ligands remain blocked until an eligible repair is explicitly selected; no closed-shell state or silent atom replacement is invented |
+ 
+ Preparation and the readiness pane share `validate_preparation`, so known
+ structural gaps, missing templates, disabled required repairs and ligand chemistry
+diff --git a/docs/MODIFIED_RESIDUES.md b/docs/MODIFIED_RESIDUES.md
+index 66163eb..50d2a2c 100644
+--- a/docs/MODIFIED_RESIDUES.md
++++ b/docs/MODIFIED_RESIDUES.md
+@@ -94,9 +94,12 @@ rotamer, missing loop, coordination model, or converged simulation.
+ Inspection of the original 1UA2 dataset recognizes all four TPO170 residues and
+ their peptide links, separately from its four ATP ligands. Each protein chain also
+ has a genuine 12-residue internal sequence gap between residues 43 and 56. These
+-gaps exceed the current six-residue local builder and still require external loop
+-modeling before full-structure preparation. No phosphate removal or artificial
+-bond across a missing loop is used to bypass this requirement.
++gaps are within the current optional builder's limit of 12 standard residues per
++internal gap and 96 total. Subsequent full monomer and four-chain preparation
++checks rebuilt 12 and 48 residues while retaining ATP/TPO; see the
++[loop validation record](audit/loop-repair/REVIEW.md). These are provisional
++starting models, not verified native loops. No phosphate removal or artificial
++bond across an unbuilt gap bypasses the preparation requirements.
+ 
+ A documented 13-residue fragment, 1UA2 chain A residues 164–176, passed the actual
+ background preparation, explicit-solvation and OpenMM worker pipeline. All 11 TPO
+diff --git a/docs/PREPARATION_CONTRACT.md b/docs/PREPARATION_CONTRACT.md
+index d1790d8..5f7f67d 100644
+--- a/docs/PREPARATION_CONTRACT.md
++++ b/docs/PREPARATION_CONTRACT.md
+@@ -12,7 +12,7 @@ Imports retain original files, sequence evidence and relevant chemical metadata.
+ 
+ ## Inspection and preparation
+ 
+-`GET /datasets/{id}/inspection?ph=7` inspects without geometry optimization or native charge assignment. `POST` to the same path additionally accepts `ph` and `ligand_overrides`. Inspection reports missing atoms, sequence-supported missing residues, numbering gaps, ligand identity/state choices, warnings and blockers. Numbering gaps do not establish missing sequences.
++`GET /datasets/{id}/inspection?ph=7` inspects without geometry optimization or native charge assignment. `POST` to the same path additionally accepts `ph`, `ligand_overrides` and `ligand_actions`. Inspection reports missing atoms, sequence-supported missing residues, numbering gaps, ligand identity/state choices, warnings and blockers. Numbering gaps do not establish missing sequences.
+ 
+ `POST /preparations` returns a job and accepts:
+ 
+@@ -26,12 +26,15 @@ Imports retain original files, sequence evidence and relevant chemical metadata.
+   "remove_waters": true,
+   "remove_heterogens": false,
+   "ligand_overrides": {},
++  "ligand_actions": {},
+   "seed": 2026
+ }
+ ```
+ 
+ Optional `name` labels the result. The interface displays an active spinner, current stage, elapsed time, logs and completion or failure. Missing-loop building requires the explicit option and available sequence evidence. Rebuilt geometry remains a model, not an experimentally resolved loop.
+ 
++`ligand_actions` maps a component key (`chain:resid:insertion_code:residue`) to `repair` or `remove`. Eligible ligand repairs require explicit selection and a complete chemical reference: at most eight missing heavy atoms, no more than half the ligand, with a connected observed core, sufficient noncollinear anchors and no missing ring atoms. Observed heavy atoms stay fixed. See [chemistry repair](CHEMISTRY_REPAIR.md) for the modeling checks and limits.
++
+ PDBFixer repairs supported heavy atoms; OpenMM assigns protein hydrogen states at the requested pH. A bounded steric chi-angle search records its accepted changes and stereochemistry checks. These are not residue pKa calculations or exhaustive rotamer packing.
+ 
+ `validate_preparation(settings)` is shared by readiness and job submission. It returns normalized settings plus inspection without creating a dataset/job. Missing CCD references may populate the reference cache. LYN/CYM input protonation aliases use the same LYS/CYS heavy-atom graphs during explicit pH reassignment; `input_protonation_aliases` records this normalization. Other unnatural sidechains are never replaced by parent residues. Built-in ACE/NME caps are accepted, and a thiolate CYM is distinguished from a bonded CYX disulfide in the actual hydrogen/connectivity inventory.
+@@ -46,7 +49,7 @@ Supported internal SEP/TPO/PTR use fixed −2 phosaa14SB states; HYP uses neutra
+ 
+ Prepared metadata records `modified_residues`, `modified_residue_parameters` and `requires_explicit_solvent`. The `residue-parameters/` snapshot contains the pinned manifest and reference/parameter files, checked against their hashes before use and carried into solvation and trajectory outputs. The registry implementation hash is recorded because PTR requires a native-improper ordering correction during system assembly. The prepared dataset's `modified-residue-system.xml` preserves the assembled unsolvated terms; a completed MD job's `system.xml` describes the actual simulation system. Bare XML templates alone do not include the Python correction.
+ 
+-All supported modifications currently require OpenMM and explicit TIP3P water. Genuine sequence gaps remain separate modeling requirements. In 1UA2, TPO170 is recognized in each of the four protein chains; each chain also has a 12-residue internal gap that exceeds the local six-residue loop builder. The bounded native worker test around TPO170 does not establish full-1UA2 preparation.
++All supported modifications currently require OpenMM and explicit TIP3P water. Genuine sequence gaps remain separate modeling requirements. In 1UA2, TPO170 is recognized in each of the four protein chains; each chain also has a 12-residue internal gap within the optional builder's limit of 12 standard residues per gap and 96 total. Full monomer and four-chain preparation have separate [recorded loop checks](audit/loop-repair/REVIEW.md); the earlier bounded worker test around TPO170 remains fragment-only evidence. Rebuilt loops are provisional models.
+ 
+ ## Ligand identity and parameter bundle
+ 
+diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
+index b7ad1f1..5789f25 100644
+--- a/frontend/src/App.tsx
++++ b/frontend/src/App.tsx
+@@ -123,7 +123,7 @@ export default function App() {
+       hydrogens: 'none',
+     }),
+     [representation, setRepresentation] = useState<Representation>('cartoon'),
+-    [colorScheme, setColorScheme] = useState<'chain' | 'residue' | 'element'>('residue');
++    [colorScheme, setColorScheme] = useState<'chain' | 'residue' | 'element'>('element');
+   const [measurements, setMeasurements] = useState<Measurement[]>([]),
+     [activeMeasurement, setActiveMeasurement] = useState<string | null>(null),
+     [kind, setKind] = useState<MeasureKind>('distance'),
+@@ -302,6 +302,7 @@ export default function App() {
+           hydrogens: options.showHydrogens ? 'polar' : 'none',
+         });
+         setRepresentation('cartoon');
++        setColorScheme('element');
+         if (options.workspace) {
+           const restored = options.workspace;
+           setFrame(restored.frame);
+@@ -956,7 +957,7 @@ export default function App() {
+       ...(!sameSource
+         ? {
+             representation: 'cartoon' as const,
+-            color_scheme: 'residue' as const,
++            color_scheme: 'element' as const,
+             visibility: {
+               protein: true,
+               water: !!d.solvation,
+diff --git a/frontend/src/components/MolecularViewer.tsx b/frontend/src/components/MolecularViewer.tsx
+index 2012901..8046b70 100644
+--- a/frontend/src/components/MolecularViewer.tsx
++++ b/frontend/src/components/MolecularViewer.tsx
+@@ -620,7 +620,7 @@ const MolecularViewer = forwardRef<ViewerHandle, MolecularViewerProps>(
+           component.addRepresentation(type, { sele: 'none', ...parameters });
+         groupsRef.current = {
+           polymer: add('cartoon', {
+-            colorScheme: 'residueindex',
++            colorScheme: COLOR_SCHEMES[latest.current.colorScheme],
+             colorScale: ['#69ddd3', '#6cb4f5', '#a989e5'],
+             quality: 'high',
+             aspectRatio: 4,
+diff --git a/frontend/src/components/SimulationPanel.tsx b/frontend/src/components/SimulationPanel.tsx
+index 31eefd7..e526b12 100644
+--- a/frontend/src/components/SimulationPanel.tsx
++++ b/frontend/src/components/SimulationPanel.tsx
+@@ -110,6 +110,7 @@ export default function SimulationPanel({
+     recoveryDetails[`${job.id}:${job.status}:${recovery(job)?.step ?? ''}`] ?? recovery(job);
+   const [ph, setPh] = useState(dataset?.preparation?.ph ?? 7);
+   const [submitting, setSubmitting] = useState<'preparation' | 'solvation' | null>(null);
++  const [monitorOperation, setMonitorOperation] = useState<'preparation' | 'solvation'>('preparation');
+   const [monitorId, setMonitorId] = useState<string | null>(null);
+   const [dismissed, setDismissed] = useState<string[]>([]);
+   const [monitorError, setMonitorError] = useState('');
+@@ -168,6 +169,10 @@ export default function SimulationPanel({
+   const complexPrepared = !!dataset?.preparation?.ligand_parameters;
+   const modifiedPrepared = !!dataset?.preparation?.modified_residues?.length;
+   const requiresExplicit = complexPrepared || !!dataset?.preparation?.requires_explicit_solvent;
++  const paddingError =
++    !Number.isFinite(padding) || padding < 1 || padding > 3
++      ? 'Enter a box padding between 1 and 3 nm.'
++      : '';
+   const resultViewerError =
+     resultSelected && viewerError ? `Could not display the prepared structure: ${viewerError}` : '';
+   useEffect(() => {
+@@ -244,6 +249,7 @@ export default function SimulationPanel({
+     if (!dataset) return;
+     setError('');
+     setMonitorError('');
++    setMonitorOperation('preparation');
+     setMonitorId(job.id);
+     setPending({ id: job.id, sourceId: dataset.id, operation: 'preparation' });
+     setOpenLog(job.id);
+@@ -279,8 +285,10 @@ export default function SimulationPanel({
+       return;
+     }
+     if (dataset.solvation && !force) return;
++    if (paddingError) return;
+     setBusy(true);
+     setSubmitting('solvation');
++    setMonitorOperation('solvation');
+     setMonitorId(null);
+     setMonitorError('');
+     try {
+@@ -334,7 +342,10 @@ export default function SimulationPanel({
+     solvent: engine === 'gromacs' ? 'explicit' : solvent,
+     minimize,
+     equilibration_steps: equil,
+-    padding_nm: dataset?.solvation?.padding_nm ?? padding,
++    padding_nm:
++      engine === 'gromacs' || solvent === 'explicit'
++        ? (dataset?.solvation?.padding_nm ?? padding)
++        : 1,
+     measurements: trackedMeasurements.map(({ id, kind, atoms, label, color }) => ({
+       id,
+       kind,
+@@ -354,6 +365,7 @@ export default function SimulationPanel({
+     !anyActive &&
+     !hasMeasurementEditor &&
+     !incompatibleGromacsInput &&
++    !((engine === 'gromacs' || solvent === 'explicit') && paddingError) &&
+     !(engine === 'openmm' && solvent === 'explicit' && !dataset?.solvation) &&
+     !!dataset &&
+     !!selected?.available &&
+@@ -396,6 +408,7 @@ export default function SimulationPanel({
+           complexPreparation={!!dataset?.atoms.some((atom) => atom.category === 'ligands')}
+           job={submitting || (monitorError && !monitorId) ? undefined : monitoredJob}
+           submitting={submitting}
++          requestOperation={monitorOperation}
+           loadingResult={loadingResult || (resultSelected && !viewerReady && !viewerError)}
+           loadError={monitorError || resultViewerError}
+           resultInView={resultSelected && viewerReady && !viewerError}
+@@ -515,6 +528,7 @@ export default function SimulationPanel({
+               onPreparationStarted={prepared}
+               onPreparationRequest={(starting, requestError) => {
+                 setSubmitting(starting ? 'preparation' : null);
++                setMonitorOperation('preparation');
+                 setMonitorError(requestError ?? '');
+                 if (starting) setMonitorId(null);
+               }}
+@@ -556,7 +570,7 @@ export default function SimulationPanel({
+                   <button
+                     type="button"
+                     className="primary-button water-build-button"
+-                    disabled={engineLocked || !dataset?.preparation}
++                    disabled={engineLocked || !dataset?.preparation || !!paddingError}
+                     onClick={() => void previewWater(true)}
+                   >
+                     {submitting === 'solvation' || pending?.operation === 'solvation' ? (
+@@ -591,12 +605,21 @@ export default function SimulationPanel({
+                     step="0.1"
+                     value={padding}
+                     onChange={(e) => setPadding(Number(e.target.value))}
++                    aria-invalid={!!paddingError}
++                    aria-describedby="water-padding-help"
+                     required
+                     disabled={engineLocked || (engine === 'openmm' && solvent === 'implicit')}
+                   />
+                   <span>nm</span>
+                 </div>
+               </label>
++              <p
++                id="water-padding-help"
++                className={paddingError ? 'error-box' : 'form-note'}
++                role={paddingError ? 'alert' : undefined}
++              >
++                {paddingError || 'Choose 1–3 nm of water padding around the structure.'}
++              </p>
+             </section>
+             <div className="field-heading">
+               <span>04</span>
+diff --git a/frontend/src/components/StructureJobMonitor.tsx b/frontend/src/components/StructureJobMonitor.tsx
+index ae35adb..3a16b8f 100644
+--- a/frontend/src/components/StructureJobMonitor.tsx
++++ b/frontend/src/components/StructureJobMonitor.tsx
+@@ -15,6 +15,7 @@ interface StructureJobMonitorProps {
+   complexPreparation?: boolean;
+   job?: Job;
+   submitting?: 'preparation' | 'solvation' | null;
++  requestOperation?: 'preparation' | 'solvation';
+   loadingResult?: boolean;
+   loadError?: string;
+   resultInView?: boolean;
+@@ -37,6 +38,7 @@ export default function StructureJobMonitor({
+   complexPreparation = false,
+   job: previousJob,
+   submitting,
++  requestOperation = 'preparation',
+   loadingResult = false,
+   loadError,
+   resultInView = false,
+@@ -70,7 +72,8 @@ export default function StructureJobMonitor({
+ 
+   if (!job && !submitting && !loadError) return null;
+ 
+-  const operation = submitting ?? (job?.engine === 'solvation' ? 'solvation' : 'preparation');
++  const operation =
++    submitting ?? (job ? (job.engine === 'solvation' ? 'solvation' : 'preparation') : requestOperation);
+   const water = operation === 'solvation';
+   const complex = job ? job.config.complex === true : complexPreparation;
+   const subject = complex ? 'Complex' : 'Protein';
+@@ -97,7 +100,9 @@ export default function StructureJobMonitor({
+             ? water
+               ? 'Building explicit water'
+               : `Preparing your ${complex ? 'complex' : 'protein'}`
+-            : 'Preparation needs attention';
++            : water
++              ? 'Explicit-water setup needs attention'
++              : 'Preparation needs attention';
+   const stage = submitting
+     ? 'Starting a background worker. You can keep exploring the viewer.'
+     : loadingResult

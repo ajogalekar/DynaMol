@@ -101,6 +101,36 @@ def test_ssbond_blocks_cross_chain_cut_even_when_sg_atoms_are_missing():
         extract(dataset)
 
 
+def test_symmetry_mate_ssbond_is_recorded_without_linking_displayed_chains():
+    dataset = source()
+    add_record(dataset, "SSBOND   1 CYS A    1    CYS B    1                          1555   3555  2.03")
+    result = extract(dataset)
+    assert result["n_atoms"] == 4
+    records = result["monomer_selection"]["excluded_symmetry_connections"]
+    assert len(records) == 1 and records[0]["relation"] == "different_asymmetric_units"
+    assert records[0]["partners"][1]["chain"] == "B"
+    assert records[0]["source_sha256"]
+    assert any("symmetry mates" in message for message in result["warnings"])
+    # Re-extraction must retain the explanation without restoring the ancestor
+    # connection to an absent symmetry mate.
+    again = extract(result)
+    assert again["monomer_selection"]["excluded_symmetry_connections"] == records
+
+
+def test_same_image_ssbond_remains_a_required_connection():
+    dataset = source()
+    add_record(dataset, "SSBOND   1 CYS A    1    CYS B    1                          3555   3555  2.03")
+    with pytest.raises(ValueError, match="covalently connected"):
+        extract(dataset)
+
+
+def test_symmetry_record_does_not_override_an_actual_supplied_topology_bond():
+    dataset = source(linked=True)
+    add_record(dataset, "SSBOND   1 CYS A    1    CYS B    1                          1555   3555  2.03")
+    with pytest.raises(ValueError, match="covalently connected"):
+        extract(dataset)
+
+
 def test_dangling_conect_on_selected_chain_is_refused():
     dataset = source()
     add_record(dataset, "CONECT    1 9999")

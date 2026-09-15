@@ -1,0 +1,18 @@
+1. Refer to the following example to create a TOP file using the command "tleap -f tleap.in"
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<tleap.in>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+addatomtypes {{"O3""O""sp2"}}
+addatomtypes {{"O2""O""sp2"}}
+addatomtypes {{"O""O""sp2"}}
+addatomtypes {{"OW""O""sp3"}}
+addatomtypes {{"OY""O""sp3"}}
+source leaprc.*****  			#Replace with whatever force field you want
+source leaprc.water.tip3p 		
+loadAmberPrep ATP-HF/B3.prepi   	#Choose HF/B3
+loadAmberParams ATP-HF/B3.frcmod  	#Choose HF/B3
+*****					#Other Operations
+saveamberparm aa *.prmtop *.inpcrd
+quit
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+2. Use "Mod.py" to modify vdW parameters and add CMAP parameters 
+python Mod.py -top *.prmtop -out *-out.prmtop -method B3/HF 

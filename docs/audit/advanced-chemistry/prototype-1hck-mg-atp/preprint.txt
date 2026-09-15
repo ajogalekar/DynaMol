@@ -1,0 +1,2513 @@
+Developing Force Fields for Accurate Mg2+ and Triphosphate
+Interactions in ATP∙Mg2+ and GTP∙Mg2+ Complexes
+Fangchen Hu†, Yuwei Zhang‡, Pengfei Li˧, Ruibo Wu and Fei Xia*,†
+†
+
+School of Chemistry and Molecular Engineering, NYU-ECNU Center for Computational
+
+Chemistry at NYU Shanghai, East China Normal University, Shanghai 200062, China
+‡
+
+Jiangsu Key Laboratory of New Power Batteries, Jiangsu Collaborative Innovation Centre of
+
+Biomedical Functional Materials, School of Chemistry and Materials Science, Nanjing Normal
+University, Nanjing 210023, P. R. China.
+˧
+
+Department of Chemistry and Biochemistry, Loyola University Chicago, 1068 W. Sheridan
+
+Rd., Chicago, Illinois 60660, United States
+School of Pharmaceutical Sciences, Sun Yat-sen University, Guangzhou 510006, China
+
+Abstract
+In cells, adenosine triphosphate (ATP) and guanosine triphosphate (GTP) molecules
+typically form tri-coordinated or bi-coordinated ATP∙Mg2+ or GTP∙Mg2+ complexes
+with Mg2+ ions and bind to proteins, participating in and regulating many important
+cellular functions. The accuracy of their force field parameters plays a crucial role in
+studying the function-related conformations of ATP∙Mg2+ or GTP∙Mg2+ using
+molecular dynamics (MD) simulations. The parameters developed based on the methyl
+triphosphate model in existing AMBER force fields cannot accurately describe the
+conformational distribution of tri-coordinated or bi-coordinated ATP∙Mg2+ or
+GTP∙Mg2+ complexes in solution. In this study, we develop force field parameters for
+the triphosphate group based on the new ribosyl triphosphate model, considering
+dihedral coupling effect, accurate van der Waals (vdW) interactions, and the influence
+of strongly polarized charges on conformational balance. The new force fields can
+accurately describe the conformational balance of tri-coordinated and bi-coordinated
+ATP∙Mg2+ or GTP∙Mg2+ conformations in solution and can be applied to simulate
+biological systems containing ATP∙Mg2+ or GTP∙Mg2+ complexes.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+1. INTRODUCTION
+Nucleotide polyphosphate molecules such as ATP (adenosine triphosphate) and
+GTP (guanosine triphosphate) are essential participants in numerous biochemical
+reactions within cells, playing crucial roles in various life processes.1, 2 Both molecules
+share a common structural feature: a nucleoside linked to a triphosphate group, as
+illustrated in Figure 1. When they form complexes with proteins in cells, they typically
+coordinate with metal cations, such as Mg2+ or Ca2+.3, 4 The α-, β-, and γ-O atoms in the
+triphosphate moiety of ATP and GTP can adopt either a tridentate (C3) or bidentate
+(C2) coordination conformation with Mg2+. Early nuclear magnetic resonance (NMR)
+and spectroscopic studies5, 6 on the conformations of ATP∙Mg2+ and GTP∙Mg2+ in
+solution revealed the existence of both C3 and C2 coordination forms. These two
+conformations can interconvert in solution. The conformation distribution measured in
+NMR experiments suggested a minimal free energy difference, ∆GC23 = ∆GC2  ∆GC3
+between the C2 and C3 conformations.
+To support simulation studies on the biological functions of ATP and GTP
+molecules, several research groups have made significant contributions to developing
+force fields for polyphosphate molecules.7-11 Weiner et al.7 and Pavelites et al.9
+systematically developed the force fields for polyphosphates, facilitating the simulation
+of complex systems such as nucleotides. Meagher et al.12 advanced these efforts by
+developing polyphosphate force fields specifically for simulating ATP molecules, using
+the methyl triphosphate (MTP) model and fitting potential energy surfaces of dihedral
+angles derived from quantum mechanics (QM) calculations. Buelens et al.13 applied
+ATP force field parameters to simulate the conformational transition between the C3
+and C2 states of ATP∙Mg2+ complexes. However, comparisons of the potential of mean
+force (PMF) profiles of ATP∙Mg2+ obtained from the AMBER12 and CHARMM229
+force fields revealed a significant discrepancy, with the predicted free energy difference
+between the C2 conformations exceeding 12.0 kcal/mol.13
+The ΔGC23 for the ATP∙Mg2+ complex obtained from AMBER force field
+simulations is approximately 7.8 kcal/mol (Figure S1 of Supporting Information
+(SI)), which underestimates the stability of the C2 conformation. The energy barrier
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+between the calculated C3 conformation and the transition state (TS) is as high as 17.0
+kcal/mol. In contrast, the ΔGC23 result from CHARMM22 force field simulations by
+Branduardit et al.14 is around -5.0 kcal/mol, overestimating the stability of the C2
+conformation, with the energy barrier between the C3 conformation and TS around 8.7
+kcal/mol. Additionally, they reported a ΔGC23 value of approximately -2.4 kcal/mol
+using the CHARMM27 force fields, with an energy barrier between the C3 and TS
+structures of about 13.8 kcal/mol. Moreover, Komuro et al.15 refined the parameters of
+the P-OS-P angles in phosphate groups within the CHARMM27 force field using highlevel MP2 calculations, resulting in corrected parameters that accurately described the
+P-OS-P bond angle distribution of ATP molecules in crystal structures.
+As mentioned earlier, the phosphate group in the current AMBER force field12
+struggles to accurately describe the distribution of the C3 and C2 conformations of
+ATP∙Mg2+ complexes in solution. Several factors may contribute to these inaccuracies:
+First, the original force field parameters were derived from the MTP model,12 which
+did not adequately capture the influence of the ribosyl ring on the phosphate group
+conformation. We propose developing a new model that includes the ribosyl ring.
+Second, the dihedral angle parameters for the phosphate group in the original force field
+were fitted only to one-dimensional (1D) potential energy curves, without accounting
+for dihedral coupling effects. Tian et al. successfully applied the grid-energy correction
+map (CMAP)16, 17 to parametrize backbone dihedral angles in the AMBER19SB18 force
+fields, significantly improving the accuracy of dihedral descriptions. We plan to use
+CMAP to describe the dihedral interactions within the triphosphate group as well.
+Additionally, the non-bonded interaction parameters inherited from the earlier
+ABMER94/998, 19 force fields, which describe the interaction between Mg2+ ions and
+triphosphate oxygen atoms, may not accurately represent these interactions. Therefore,
+we will refine the vdW parameters for Mg2+ ions and phosphate oxygen atoms based
+on precise density functional theory (DFT) calculations.20, 21 Considering these reasons,
+we aim to develop new parameters for the phosphate groups of ATP and GTP in the
+AMBER force field and explore the relevant energetic factors on conformational
+distribution.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+2. Methods and Simulation Details
+2.1 Potential Energy Surface Scans
+The original MTP model12 was extended to include a ribosyl ring, capped it with a
+hydrogen atom, resulting in the ribosyl triphosphate (RTP) model, as shown in Figure
+1. We employed the HF/6-31+G* and MP2/6-31+G* methods in the Gaussian1622 QM
+package to recalculate potential energy curves of the six dihedral angles in the MTP
+model, as listed in Table 1. The potential energy surfaces (PES) were calculated based
+on the optimized MTP structures by rotating the dihedral angles in 10-degree
+increments. The PES scans with the HF and MP2 methods resulted in 37 data points for
+the MTP model (Figure S2 of SI). For the RTP model, the original OS atom type of the
+O5 atom was designated with a new OY type, resulting in eight specific types of the
+dihedral angles. We used the same HF/6-31+G* level to perform PES scans at 15degree intervals for the six dihedral angles of the RTP model and obtained the PES
+curves in Figure 2.
+The calculated QM energy 𝐸𝑙𝑄𝑀 for the lth dihedral angle in the RTP model was
+fitted to the corresponding molecular mechanics (MM) energy 𝐸𝑙𝑀𝑀 using the Amber
+built-in program paramfit23 according to eq.(1):
+2
+
+𝑄𝑀
+𝜒12 = ∑𝑁
+− 𝐸𝑙𝑀𝑀 ) + 𝐾]
+𝑙=1 𝜔𝑙 [(𝐸𝑙
+
+(1)
+
+In eq.(1), the residual 𝜒12 is defined to minimize the squared difference of the
+𝐸𝑙𝑀𝑀 and 𝐸𝑙𝑄𝑀 energies. The constant K compensates for the variations between the
+QM and MM energies, and the parameter l is a scaling factor set to 1.0. The energy
+terms in 𝐸𝑙𝑀𝑀 are presented in eq.(2):
+𝐸𝑙𝑀𝑀 = ∑ 𝐾𝑏 (𝑏 − 𝑏0 )2 + ∑ 𝐾𝑏 (𝑏 − 𝑏0 )2 +
+𝐵𝑜𝑛𝑑𝑠
+
+𝐴𝑛𝑔𝑙𝑒𝑠
+
++
+
+∑
+𝑁𝑜𝑛𝑏𝑜𝑛𝑑𝑒𝑑
+
+∑
+𝐷𝑖ℎ𝑒𝑑𝑟𝑎𝑙𝑠
+
+𝑉𝑛
+(1 + cos(𝑛𝜃 − 𝛿))
+2
+
+(2)
+
+𝐴𝑖𝑗 𝐵𝑖𝑗 𝑞𝑖 𝑞𝑗
+( 12 − 6 +
+)
+𝑟𝑖𝑗
+𝑟𝑖𝑗
+𝑟𝑖𝑗
+
+The first and second terms represent harmonic bond and angle interactions, where
+Kb and Kθ are the force constants, and b0 and θ0 are the equilibrium values of bonds and
+angles, respectively. The cosine functions in the third term describe dihedral angle
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+interactions, with the parameters Vn, n, and δ representing the energy barriers, the
+periodicity, and the phase of dihedral angles, respectively.
+A two-dimensional (2D) CMAP (2D-CMAP)16, 17 was calculated using the HF/631+G* method by scanning two adjacent dihedrals at 15-degree intervals, resulting in
+a total of 576 data points. In AMBER, the CMAP grid is represented using a bicubic
+spline function, as shown in eq.(3):
+3
+
+3
+
+𝑈𝑐𝑚𝑎𝑝 (𝜑, 𝜓) = ∑ ∑ 𝑎𝑖𝑗 𝜑 𝑖 𝜓 𝑗
+
+(3)
+
+𝑖=0 𝑗=0
+
+In eq.(3), aij are the coefficients, and both  and  are dihedral angles measured
+in radians. More details about the 2D-CMAP can be found in previous references.18 It
+is supported in the pmemd.cuda in AMEBER18.24 The fourth term consists of the vdW
+and electrostatic interactions. Aij and Bij are the parameters for the pairwise atoms i and
+j in a 12-6 Lennard-Jones (LJ) potential,25 while qi and qj represent the atomic charges
+of atoms i and j for electrostatic interaction.
+2.2 Deviation of Parameters and RESP Charges
+To develop accurate LJ parameters Aij and Bij in eq.(2) for Mg2+O coordination
+interactions, we adopted an approach similar to that utilized in the development of the
+AMOEBA+ force field.26 The method involves parameterizing nonbonded vdW
+interactions using the exchange-repulsion and dispersion-like energies calculated from
+high-level DFT methods. It is important to note that the dispersion interaction, as
+defined in the widely used energy decomposition analysis (EDA) based on the
+symmetry-adapted perturbation theory (SAPT) method,20, 21 includes the entire
+Coulomb correlation and dispersion correction energies.
+We employed a distinct EDA scheme known as the sobEDA method27 for energy
+decomposition. In the sobEDA method, the sum of the exchange energy ∆𝐸𝑥 and the
+repulsion energy ∆𝐸𝑟𝑒𝑝 is defined as the exchange-repulsion interaction ∆𝐸𝑥𝑟𝑒𝑝 . The
+sum of the DFT correction energy 𝐸𝐷𝐹𝑇𝑐 and the dispersion correlation ∆𝐸𝑑𝑐 is
+defined as the dispersion-like Coulomb correlation ∆𝐸𝑐 . Lu et al.27 suggested that the
+combined energies of 𝐸𝑥𝑟𝑒𝑝 and ∆𝐸𝑐 in the sobEDA method appropriately
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+correspond to the exchange-repulsion correlation and dispersion correction energies in
+the SAPT method when using the accurate B3LYP-D3BJ functional.28-30 Therefore, we
+used the summed energies of 𝐸𝑥𝑟𝑒𝑝 and ∆𝐸𝑐 to derive the vdW parameters between
+the Mg2+ ion and the other atoms in ATP.
+To reduce computational cost, we initially utilized a simplified RTP∙Mg2+ model
+instead of the entire ATP∙Mg2+ complex to perform umbrella sampling (US)31
+simulations for the conformational change from the C3 to C2 structures. A total of 216
+conformations were then randomly extracted from the different windows of the US
+simulation, including C3, C2, and transition state (TS) structures. Next, 216 singlepoint energy calculations were conducted on these structures using the accurate B3LYPD3BJ/6-31+G** method. The sobEDA method27 was employed for energy
+decomposition to obtain the 𝐸𝑥𝑟𝑒𝑝 and ∆𝐸𝑐 energies from single-point calculations.
+Finally, a least-square fitting was performed using the gradient descent method to
+minimize the residual 𝜒22 defined in eq.(5):
+𝑀=216
+
+𝜒22 = ∑
+𝑚=1
+
+𝑁=30
+𝑄𝑀,𝑣𝑑𝑊
+(𝐸𝑚
+−
+
+2
+
+𝑀𝑀,𝑣𝑑𝑊
+∑ 𝐸𝑚,𝑛
+)
+𝑛=1
+
+(4)
+
+𝑄𝑀,𝑣𝑑𝑊
+In eq.(4), the first term 𝐸𝑚
+represents the QM energy sum of 𝐸𝑥𝑟𝑒𝑝 and
+
+∆𝐸𝑐 calculated from the mth structure among the M = 216 conformations using the
+𝑀𝑀,𝑣𝑑𝑊
+B3LYP-D3BJ/6-31G+G* method. The second term 𝐸𝑚,𝑛
+denotes the molecular
+
+mechanics (MM) vdW interaction energies between the Mg2+ ion and the other N = 30
+atoms of the RTP model in the mth structure. Minimizing 𝜒22 serves to optimize the
+vdW parameters Aij and Bij indicated in eq.(2) for Mg2+ and ATP.
+For the electrostatic interactions, the original atomic charges of ATP used in the
+AMBER force fields are based on RESP19 charges calculated using the HF/6-31+G*
+method. As an alternative, we propose using the B3LYP-D3BJ/6-311+G** method
+combined the PCM model,32 using a dielectric constant 78.35, to calculate the RESP
+charges of ATP. The atomic charges are determined using the standard RESP procedure.
+2.3 MD Simulation Details and Umbrella Sampling
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+The C3 conformation of the ATP∙Mg2+ complex was extracted from the crystal
+structure 1B3833 and served as the initial structure in our simulations. The ATP∙Mg2+
+complex was immersed in a TIP3P34 water box with a length of 14 Å and neutralized
+with two Na+ ions. The ATP parameters developed by Meagher et al.12 and the
+compromise Mg2+ parameters developed by Li et al.35 were used for the ATP∙Mg2+
+complex. The SHAKE36 algorithm was employed to maintain constraints on hydrogencontaining bonds. A non-bonded cutoff of 10 Å was applied, and long-range
+electrostatic interactions were treated using the Particle Mesh Ewald37 method. The
+whole system underwent energy minimization, followed by heating in the NVT
+ensemble. The temperature was maintained at 300 K using a Langevin thermostat38
+with a collision frequency of 2.0 ps-1, and the pressure was maintained at 1.0 bar using
+the Berendsen barostat.39 The system was then equilibrated in the NPT ensemble at 300
+K with an integration step of 2.0 fs, utilizing the Amber ff14SB40 force fields within the
+AMBER18 package.24
+In the US simulation, the distance between the Mg2+ ion and the Oα atom, denoted
+as Mg2+Oα, was selected as the 1D reaction coordinate. The Mg2+Oα distance ranges
+from 1.7 to 5.9 Å, consistent with values used in previous simulations.13 This range was
+divided into 43 windows with a 0.1 Å interval. In each window, a 5 ns US simulation
+was conducted using a harmonic potential applied to the Mg2+Oα distance, with a force
+constant of 150 kcal·mol−1·Å−2. The US trajectories were then used to generate 1D
+potential of mean force (PMF) curves using the WHAM method.41
+2.4 Replica-Exchange MD (REMD) Simulations and Analysis
+A total of 22 replicas spanning a temperature range of 300420 K were employed
+for 150 ns REMD simulations.42 The temperatures for each replica were generated
+using a tool available at https://jerkwin.github.io/gmxtools. The REMD simulations
+were initiated from the C3 structures of the ATP∙Mg2+ complex. We used the pypdb
+library to gather 1685 ATP∙Mg2+ complexes in proteins from the PDB database,
+focusing on the C2 and C3 conformations. Principal component analysis (PCA) was
+performed on the backbones of triphosphate groups in ATP and the Mg2+ ions using the
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+CPPTRAJ43 module in the AMBER18 package. The first two components, PC1 and
+PC2, were used as coordinates to construct two-dimensional free energy landscapes
+(2D-FELs). The crystal structures of 1685 ATP∙Mg2+ complexes and the REMD
+trajectories were projected onto the 2D-FELs to yield the distributions of the C3 and
+C2 structures using the WHAM method.41
+3. Results and Discussion
+3.1 The Ribosyl Triphosphate (RTP) Model
+We initially employed HF/6-31+G* to recalculate the 1D potential energy curves
+of the six dihedral angles previously calculated by Meagher et al.12 The HF-calculated
+curves (Figure S2 of SI) align perfectly with their published results. To access the
+impact of high-level methods on the calculation of dihedral angle potential energy
+curves, we applied the MP2/6-31+G* method for more accurate energy calculations,
+using the HF-optimized structures as a basis. The resulting black curves (Figure S2 of
+SI) exhibit no significant differences from those obtained with HF/6-31+G*. This
+suggests that simply employing a high-level method does not substantially improve the
+computational results. Consequently, we propose developing a new model to
+parameterize the triphosphate groups in ATP and GTP molecules.
+As shown in Figure 1, the triphosphate groups in actual ATP or GTP molecules
+are connected to ribose rings. In the MTP model, a hydrogen atom was used to cap the
+C5' atom in place of the ribose, which failed to reflect the steric influence of ribose on
+the dihedral angles of the triphosphate group. In this work, we propose using the ribosyl
+triphosphate (RTP) model instead of the MTP model for parameterizing the
+triphosphate group. The advantage of the RTP model lies in its inclusion of the ribose
+moiety, allowing it to better capture the influence of ribose on the conformations of
+triphosphate group. Despite the increased number of atoms in the RTP model compared
+to the MTP model, and the minimal difference observed between the PES curves
+calculated by HF and MP2, we opted to use the HF/6-31+G* method for PES
+calculations on the crucial dihedral angles in the RTP model.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 2 display the results of restrained PES scans for dihedral angles in the RTP
+model. In Figure 2a and 2b, the curves for the dihedrals O1G-PG-O3B-PB and PGO3B-PB-O3A show minimal differences compared to those from the MTP model.
+However, the energy curves for the dihedral angles O3B-PB-O3A-PA, PB-O3A-PAO5′, O3A-PA-O5′-C5′, and PA-O5′-C5′-C4′ in Figures 2c-2f exhibit notable
+differences, especially in Figures 2e and 2f, where discrepancies with the MTP model
+are particularly pronounced. In Figure 2e, the MTP curve shows two minima at
+approximately 70°and 310°, with identical energies. In contrast, the RTP model has
+two unequal minima, with the result at 310°being approximately 15.0 kcal/mol higher
+than that of the MTP model. In Figure 2f, the PA-O5′-C5′-C4′ dihedral angle in the
+MTP model exhibits three energy minima due to the periodicity of the methyl group,
+located at 60°, 180°, and 300°, respectively. By contrast, the RTP model presents two
+unequal minima at 90°and 225°. This discrepancy is clearly attributed to the presence
+of the ribose moiety in the RTP model, which introduces a strong steric effect on the
+rotation of the PA-O5′-C5′-C4′ dihedral angle, thereby eliminating the pseudoperiodicity of the methyl group observed in the MTP model.
+3.2 Dihedral Parameters for the RTP Model
+Based on the energy curves of the RTP model in Figure 2, we used the paramfit
+program to optimize the parameters for the P-OS-P angle and dihedral types according
+to eq.(1). The average RMSD value of the fitted data compared to the RTP model
+(Figure S3 of SI) is 1.46 kcal/mol. Table 1 lists the new parameters for the dihedrals
+and angle fitted to the PES curves of the RTP model. For comparison, the original
+parameters of the MTP model are also included in Table 1. The MTP model, shown in
+Figure 1, has six dihedral types, where the O5, O3A, and O3B atoms belong to the
+atom type OS. However, in the RTP model, the heterogeneous environment of the O5
+atom differs from that of the O3A and O3B atoms. Therefore, we designated a new
+atom type OY for the O5 atom in the RTP model. Consequently, the P-OS-P-OS
+dihedral type in the MTP model split into two types of dihedrals: P-OS-P-OS and POS-P-OY. The specific dihedral PB-O3A-PA-O5 is now categorized under the new
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+dihedral type P-OS-P-OY. Additionally, the original dihedral types CT-OS-P-O2, CTOS-P-OS, and HC-CT-OS-P were renamed as CT-OY-P-O2, CT-OY-P-OS, and HCCT-OY-P, respectively. As a result, the RTP model includes a total of seven dihedral
+angles and an angle type P-OS-P.
+Comparing the derived dihedral parameters of both models reveals significant
+difference due to substantial structural variations. The equilibrium value of the angle POS-P obtained from our fitting is 142.9°, which is close to the 150.0° value of the MTP
+model.12 To validate these parameters, we conducted US simulations to estimate the
+PMF curve for the ATPMg2+ transition from the C3 to C2 conformations. In Figure
+3a, the black curve was obtained using the original parameters of the MTP model,12
+while the red curve for the RTP model utilized the new parameters listed in Table 1.
+Both the MTP and RTP curves indicate that the Mg2+Oα distance in the stable C3
+conformation is approximately 1.9 Å. However, the most stable C2 conformation for
+the MTP model is located at an Mg2+Oα distance of around 3.9 Å, whereas for the RTP
+model, it is around 4.8 Å.
+We collected 1685 ATP∙Mg2+ complexes from various crystal structures, which
+includes 519 C3 conformations and 1142 C2 conformations. Figure 3b shows the
+normalized histogram distributions of Mg2+Oα distances for these complexes. The C3
+conformations exhibits a sharp distribution, with 5.5% of them at approximately 2.0 Å,
+while the C2 conformations show a broader distribution of Mg2+Oα distances ranging
+from 4.0 to 5.0 Å, with percentages beyond 6.0%. Both the MTP and RTP curves in
+Figure 3a appear relatively flat in the range of 4.0-5.0 Å, aligning reasonably well with
+the distributions presented in Figure 3b. Although the ribose ring was involved in the
+RTP model, the energies of the C3 conformations in this model were slightly lowered
+than those in the MTP model. Further improvements in the free energy change ∆GC23
+are anticipated based on the RTP model.
+3.3 The Grid-Energy Correction Map
+To accurately account for the influence of dihedral angle changes on
+conformations, it is essential to consider coupled effects among dihedral interactions in
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+MD simulations. As shown in Figures 2c-2f, the 3th, 4th, 5th, and 6th dihedrals of the
+RTP model exhibit significant changes due to the presence of the ribose moiety.
+Therefore, we concentrated on the coupled interactions of the three pairs of the
+dihedrals: the 3th and 4th, 4th and 5th, 5th and 6th dihedrals. Using the HF/6-31+G*
+method, we conducted 2D PES scans for the three pairs of dihedrals, resulting in the
+reaction of three corresponding CMAPs: CMAP34, CMAP45, and CMAP56. However,
+due to the convergence issues encountered in restricted calculations, we have only
+obtained a complete 2D CMAP34 presented in Figure 3c. The other two CMAP45 and
+CMAP56 (Figure S4 of SI) are incomplete. Since using incomplete 2D-CMAPs could
+result in arbitrary and potentially inaccurate outcomes, we decided to incorporate only
+the complete 2D CMAP34 in the subsequent MD simulations.
+The 2D CMAP34 in Figure 3c provides valuable energetic insights into the
+interactions between the two adjacent dihedrals, O3B-PB-O3A-PA and PB-O3A-PAO5'. Using this information, we re-estimated the PMF curve by including the CMAP34
+in US simulations. The resulting PMF curve, displayed as the blue curve shown in
+Figure 3a, shows significant differences compared to the red curve without
+incorporating the CMAP34. Notably, the blue curve appears smoother and lower in
+energy in the Mg2+Oα distance range of 4.0-5.0 Å. It reveals two relatively stable
+energy minima at distances of 4.0 and 5.5 Å. The free energy difference GC23
+measured from the blue curve is approximately 5.3 kcal/mol, which is 1.8 kcal/mol
+lower than the 7.1 kcal/mol observed in the red curve. These results indicate that
+incorporating dihedral interactions through the CMAP method effectively reduced the
+difference in conformational free energies between C2 and C3 conformations. However,
+the TS energy barrier has an unreasonable value of 16.2 kcal/mol. Further
+considerations of other factors influencing conformational equilibria may be necessary.
+3.4 Refinement of Nonbonded Parameters from QM Calculations
+In the previous simulation of ATP∙Mg2+ complexes,13 the vdW parameters for Mg2+
+ions and O atoms were derived from the optimized parameters for Mg2+ provided by Li
+et al.35 and from the O, P atom parameters in the ABMER94/99 force fields. However,
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+the accuracy of these vdW parameters in describing the Mg2+O coordination
+interactions has not been verified. Inspired by the sobEDA method used by Liu et al.26
+for developing vdW parameters for the AMOEBA+ force field, we aim to parameterize
+vdW interactions using exchange-repulsion and dispersion energies obtained from
+accurate QM calculations.
+To reduce computational cost, we initially utilized a simplified ATP∙Mg2+ model,
+referred to as the RTP∙Mg2+ model, for US simulations. We then randomly sampled 216
+conformations from the trajectories across different US windows, including the C3, C2,
+and TS structures during conformational transition. Single-point energy calculations for
+these structures were performed using the accurate B3LYP-D3BJ/6-31+G* method.
+The sobEDA method27 was employed to decompose the energy into exchange-repulsion
+energy ∆𝐸𝑥𝑟𝑒𝑝 and dispersion correction energy ∆𝐸𝑑𝑐 , resulting in the summed QM
+energy 𝐸 𝑄𝑀,𝑣𝑑𝑊 . Finally, a least-square fitting was conducted on the 𝐸 𝑄𝑀,𝑣𝑑𝑊 and
+𝐸𝑀𝑀,𝑣𝑑𝑊 data, according to eq.(4). The derived pairwise parameters Aij and Bij for the
+12-6 LJ potential interactions between Mg2+ ions and the O and P atom types are
+represented in Table 2. The results indicate that the Aij values for the O3 and O2 types
+differ significantly between the original and QM-derived parameters, with the original
+Aij being 26767.87 kcalÅ12/mol and the QM-derived being 56958.78 kcalÅ12/mol.
+However, the Aij and Bij parameters for the pairwise interactions involving Mg2+ ions
+with OS, OY, and P atoms show no significant difference.
+Figure 4a compares the 𝐸𝑀𝑀,𝑣𝑑𝑊 data calculated using both the original and
+QM-derived LJ parameters. It is evident that the original LJ parameters significantly
+underestimated the total exchange-repulsion and dispersion interaction energies
+between Mg2+ ions and O atoms, as indicated from the blue dots. The underestimation
+of vdW repulsion results in a stronger attraction between Mg2+ and O atoms, which in
+turs requires more energy to disrupt the Mg2+O coordination bond. Consequently,
+this leads to a high TS barrier and higher relative energy for transitioning to the C2
+conformation. The root-mean square deviation (RMSD) between the 𝐸𝑀𝑀,𝑣𝑑𝑊 data
+calculated from QM-derived LJ parameters and the 𝐸 𝑄𝑀,𝑣𝑑𝑊 is 5.1 kcal/mol, with a
+Pearson correlation coefficient 0.938. In contrast, the 𝐸𝑀𝑀,𝑣𝑑𝑊 calculated from
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+original LJ parameters exhibited an RMSD value of 33.7 kcal/mol compared to
+𝐸 𝑄𝑀,𝑣𝑑𝑊 energies.
+The orange PMF curve in Figure 4b represents the results obtained using default
+HF charges, the CMAP34, and the QM-derived LJ parameters. Compared to the 5.3
+kcal/mol shown in Figure 3a, the free energy difference decreased to 0.3 kcal/mol. The
+Mg2+O distance corresponding to the most stable C2 conformation is 4.1 Å, and a
+respective structure of C2 conformations (RSC2) extracted from US windows confirms
+the bidentate coordination of the Mg2+ ion with the ATP β-, and γ-O atoms, as illustrated
+in Figure 4c. Additionally, the TS barrier for conformational change in Figure 4b also
+decreased to a reasonable value of 11.1 kcal/mol, compared to 13.8 kcal/mol obtained
+from the CHARMM27 force field.14 This simulation demonstrates that fitting force
+field parameters using precise QM energies can enhance the description of interactions
+between Mg2+ ions and O atoms. However, the orange PMF curve is not entirely
+satisfactory, since the C2 conformations of ATP∙Mg2+ complexes are more preferable
+than C3 conformations, as observed in NMR experiments.
+3.5 Polarized Charge Effects on Conformational Equilibrium of ATP∙Mg+
+Another factor affecting the interaction between Mg2+ ions and O atoms is the
+polarization effect of the P and O atoms in ATP. One way to explicitly account for the
+polarization effect in the vdW interaction is to use the LJ 12-6-4 potential11, 44, 45 instead
+of the 12-6 potential. Alternatively, we could use RESP charges calculated from DFT
+methods to substitute the original HF charges, since recent studies46 have shown that
+DFT methods such as B3LYP under the PCM model, produce more polarized atomic
+charges and accurate molecular dipole moments than the HF/6-31G* method.19 Duan
+et al.47 had used the B3LYP method with the PCM model to calculate atomic charges
+for developing the AMBER03 force field. Therefore, we aim to use a set of strongly
+polarized charges calculated to evaluate the electrostatic interactions.
+The atomistic RESP charges of ATP (Table S1 of SI) were recalculated using the
+B3LYP-D3BJ/6-311+G** method with the PCM model to represent the water solution
+(with a dielectric constant of 78.3). The difference between the HF and B3LYP charges
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+primarily arises from the heavy atoms. To assess the effect of these polarized charges
+on simulations, we refitted the dihedral angle parameters for ATP under the B3LYP
+charges, shown in Table 1, and conducted US simulations using the refitted dihedral
+angles, CMAP34, the QM-derived LJ parameters, and B3LYP charges. The resulting
+purple PMF curve is presented in Figure 4b. Its relative free energy ΔGC23 is -0.9
+kcal/mol, which is 1.2 kcal/mol lower than that of the yellow curve. The TS barrier is
+estimated to be 11.3 kcal/mol, similar to the 11.1 kcal/mol of the yellow curve. Figure
+4c confirms that the corresponding RSC2 in is indeed bi-coordinated. The results
+indicate that the purple curve obtained using the B3LYP charges provides a better fit
+than the yellow ones from HF charges.
+Further, we performed 150 ns REMD simulations to sample the C3 and C2
+conformations of ATP∙Mg2+ in solution, and compared to the results of using HF
+charges. The initial structures for the REMD simulations were based on C3
+conformations. Principal component analysis of the backbones of the triphosphate
+groups in ATP∙Mg2+ complexes was performed by projecting the REMD trajectories at
+300 K on a 2D plot, using the first two major principal components, PC1 and PC2.
+Figure 5a illustrates the REMD-sampled C3 and C2 regions, and the distributions of
+the complex crystal structures. In contrast, the 150 ns REMD simulation with the
+original parameters and HF charges only sampled the localized C3 region, as depicted
+in Figure 5b. Figure 5c and Figure 5d show the representative structures of C3 and
+C2 conformations (RSC3 and RSC2) generated from clustering analysis of the REMD
+trajectories and crystal structures, respectively. It is evident that the sampled regions
+closely align with the distributions observed in crystal structures. A comparison of the
+RSC3 and RSC2 structures indicates that the REMD simulations using new force field
+successfully and efficiently sampled both C3 and C2 conformations, despite the high
+barriers separating them. In addition, we developed the parameters for adenosine
+diphosphate (ADP) (Figure S5 of SI) using B3LYP-derived charges (Table S2 of SI).
+3.6 Conformational Equilibrium of GTP∙Mg2+ Complexes
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+The main difference between ATP and GTP molecules is their bases. To perform
+accurate MD simulations for GTP∙Mg2+ complexes, we calculated the B3LYP charges
+of GTP (Table S3 of SI) and developed the force fields for GTP based on the RTP
+model. We conducted US simulations and evaluated the corresponding PMF curve for
+conformational changes, as shown in Figure 6. The PMF curve of GTP∙Mg2+ closely
+resembles that of ATP∙Mg2+. The green curve exhibits two local energy minima at
+Mg2+Oα distances 2.1 and 4.0 Å, with the corresponding structures presented in the
+inset of Figure 6. The estimated free energy difference G23 from the PMF curve is 0.l
+kcal/mol. For the GTP∙Mg2+ complexes, the C3 conformations were preferred to C2
+conformations as what has been reported in previous NMR measurements.6, 48 It should
+be noted that when GTP∙Mg2+ is complexed with signaling transduction proteins such
+as Ras,49, 50 GTP∙Mg2+ usually adopts a bi-coordinated structure rather than a tricoordinated one due to the environmental constraints within the proteins. Based on the
+validated results for GTP∙Mg2+ complexes, we also developed the force field
+parameters for guanosine diphosphate (GDP) (Figure S5 of SI) molecules using
+B3LYP-derived polarized charges (Table S2 of SI).
+4. Conclusion
+In this study, we proposed the RTP model and developed force field parameters
+for the triphosphate groups in ATP and GTP. We primarily considered several factors
+influencing the equilibrium distribution of the C3 and C2 conformations. First, we
+examined the impact of the ribose ring on the conformation changes of the triphosphate
+group. We recalculated the 1D PES curves for dihedral angles in the RTP model,
+revealing significant differences from the MTP model. Second, we used CMAP
+potentials to describe the coupling effects between dihedral angles. Next, we refined
+the vdW parameters for accurately describing the interactions of Mg2+ ions with P and
+O atoms through high-level DFT calculations. Combining the polarized charged
+calculated using the B3LYP/6-311+G** method with these new parameters, we
+obtained a free energy difference ΔGC23 of -0.9 kcal/mol, which aligns with the results
+observed in NMR experiments.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Further simulations demonstrated that the new force field parameters could
+accurately sample the C3 and C2 conformations of ATP∙Mg2+. Based on these results,
+we developed force field parameters for GTP, ADP, and GDP molecules. In future
+applications, we recommend using the B3LYP-derived polarization charges, along with
+the calculated 2D-CMAP and QM-derived vdW parameters, to simulate biological
+systems such as the adenylate kinases,51 microtubules,52, 53 and Ras proteins54-56 that
+contain the ATP∙Mg2+, ADP∙Mg2+, GTP∙Mg2+ and GDP∙Mg2+ complexes. The relevant
+parameter files have been attached.
+
+ASSOCIATED CONTENT
+Supporting Information
+Figure S1 presents the estimated PMF for ATP∙Mg2+ complex using original AMBER
+force fields. Figure S2 presents the calculated PES curves for dihedral angles using the
+HF and MP2 methods. Figure S3 presents fitted results based the RTP model. Figure
+S4 shows the calculated CMAP45 and CMAP56. Figure S5 shows the topology
+structures of ADP and GDP molecules. Table S1 presents original HF charges and
+B3LYP-derived charges for ATP. Table S2 presents original HF charges and B3LYPderived charges for ADP and GDP. Table S3 presents original HF charges and B3LYPderived charges for atoms for GTP. Section S1 provides a script for using the new
+developed parameters.
+
+AUTHOR INFORMATION
+Corresponding Authors
+*Emails: fxia@chem.ecnu.edu.cn (F.X.)
+ORCID
+Yuwei Zhang: 0009-0002-8741-3889
+Pengfei Li: 0000-0002-2572-5935
+Ruibo Wu: 0000-0002-1984-046X
+Fei Xia: 0000-0001-9458-9175
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+ACKNOWLEDGMENT
+
+This work was supported by the National Natural Science Foundation of China (No.
+22073029, 22473118). P.L. acknowledges the financial support by the start-up funds
+from Loyola University Chicago (to P.L.). We also acknowledge the support of the
+NYU-ECNU Center for Computational Chemistry at NYU Shanghai as well as the
+ECNU Public Platform for Innovation (001) for providing computer time.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+References:
+1. Boyer, P. D. Energy, Life, and ATP (Nobel Lecture). Angew. Chem. Int. Ed. 1998,
+37 (17), 2296-2307.
+2. Kolch, W.;
+
+Berta, D.; Rosta, E. Dynamic Regulation of RAS and RAS Signaling.
+
+Biochem. J. 2023, 480 (1), 1-23.
+3. Li, P.; Merz, K. M., Jr. Metal Ion Modeling Using Classical Mechanics. Chem. Rev.
+2017, 117 (3), 1564-1686.
+4. Li, P.;
+
+Song, L. F.; Merz, K. M., Jr. Systematic Parameterization of Monovalent
+
+Ions Employing the Nonbonded Model. J. Chem. Theory Comput. 2015, 11 (4), 164557.
+5. Huang, S. L.; Tsai, M.-D. Does the Magnesium(II) Ion Interact with the -Phosphate
+of Adenosine. Biochemistry 1982, 21 (5), 951-959.
+6. Takeuchi, H.; Murata, H.; Harada, I. Interaction of Adenosine 5'-Triphosphate
+with Mg2 Vibrational Study of Coordination Sites by Use of 18Q-Labeled. J. Am. Chem.
+Soc. 1988, 91 (5), 1629-1637.
+7. Weiner, S. J.;
+
+Kollman, P. A.;
+
+Case, D. A.;
+
+Singh, U. C.;
+
+Ghio, C.;
+
+Alagona, G.; Profeta, J., S.; Weiner, P. A New Force Field for Molecular Mechanical
+Simulation of Nucleic Acids and Proteins. J. Am. Chem. Soc. 1984, 106 (3), 765-784.
+8. Cornell, W. D.;
+Ferguson, D. M.;
+
+Cieplak, P.;
+
+Bayly, C. I.;
+
+Spellmeyer, D. C.;
+
+Gould, I. R.;
+
+Merz, J., K. M.;
+
+Fox, T.; Caldwell, J. W.; Kollman, P. A. A
+
+Second Generation Force Field for the Simulation of Proteins, Nucleic Acids and
+Organic Molecules. J. Am. Chem. Soc. 1995, 117 (19), 5179-5197.
+9. Pavelites, J. J.; Gao, J. A Molecular Mechanics Force Field for NAD+, NADH, and
+the Pyrophosphate. J. Comput. Chem. 1997, 18 (2), 221-239.
+10. Petrova, P.;
+
+Koca, J.; Imberty, A. Potential Energy Hypersurfaces of Nucleotide
+
+Sugars: Ab Initio Calculations, Force-Field Parametrization, and Exploration of the
+Flexibility. J. Am. Chem. Soc. 1999, 121 (23), 5535-5547.
+11. Koca Findik, B.;
+
+Jafari, M.;
+
+Song, L. F.;
+
+Li, Z.;
+
+Aviyente, V.; Merz, K. M.,
+
+Jr. Binding of Phosphate Species to Ca(2+) and Mg(2+) in Aqueous Solution. J. Chem.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Theory Comput. 2024.
+12. Meagher, K. L.;
+
+Redman, L. T.; Carlson, H. A. Development of Polyphosphate
+
+Parameters for Use with the AMBER Force Field. J. Comput. Chem. 2003, 24 (9),
+1016–1025.
+13. Buelens, F. P.;
+
+Leonov, H.; de Groot, B. L.; Grubmuller, H. ATP-Magnesium
+
+Coordination: Protein Structure-Based Force Field Evaluation and Corrections. J.
+Chem. Theory Comput. 2021, 17 (3), 1922-1930.
+14. Branduardi, D.;
+
+Marinelli, F.; Faraldo-Gomez, J. D. Atomic-resolution
+
+Dissection of the Energetics and Mechanism of Isomerization of Hydrated ATP-Mg(2+)
+through the SOMA String Method. J. Comput. Chem. 2016, 37 (6), 575-86.
+15. Komuro, Y.;
+
+Re, S.;
+
+Kobayashi, C.;
+
+Muneyuki, E.; Sugita, Y. CHARMM
+
+Force-Fields with Modified Polyphosphate Parameters Allow Stable Simulation of the
+ATP-Bound Structure of Ca(2+)-ATPase. J. Chem. Theory Comput. 2014, 10 (9), 413342.
+16. Mackerell, A. D., Jr.;
+
+Feig, M.; Brooks, I., C. L. Extending the Treatment of
+
+Backbone Energetics in Protein Force Fields: Limitations of Gas-phase Quantum
+Mechanics in Reproducing Protein Conformational Distributions in Molecular
+Dynamics Simulations. J. Comput. Chem. 2004, 25 (11), 1400-15.
+17. MacKerell, J., A. D.;
+
+Feig, M.; Brooks, I., C. L. Improved Treatment of the
+
+Protein Backbone in Empirical Force Fields. J. Am. Chem. Soc. 2004, 126 (3), 698-699.
+18. Tian, C.;
+
+Kasavajhala, K.;
+
+Belfon, K. A. A.;
+
+Migues, A. N.; Bickel, J.; Wang, Y.;
+
+Raguette, L.;
+
+Huang, H.;
+
+Pincay, J.; Wu, Q.; Simmerling, C. ff19SB:
+
+Amino-Acid-Specific Protein Backbone Parameters Trained against Quantum
+Mechanics Energy Surfaces in Solution. J. Chem. Theory Comput. 2020, 16 (1), 528552.
+19. Wang, J.;
+
+Cieplak, P.; Kollman, P. A. How Well Does a Restrained Electrostatic
+
+Potential (RESP) Model Perform in Calculating Conformational Energies of Organic
+and Biological Molecules? J. Comput. Chem. 2000, 21 (12), 1049–1074.
+20. Jeziorski, B.;
+
+Moszynski, R.; Szalewicz, K. Perturbation Theory Approach to
+
+Intermolecular Potential Energy Surfaces of van der Waals Complexes. Chem. Rev.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+1994, 94 (7), 1887-1930.
+21. Stasyuk, O. A.; Sedlak, R.;
+
+Guerra, C. F.; Hobza, P. Comparison of the DFT-
+
+SAPT and Canonical EDA Schemes for the Energy Decomposition of Various Types of
+Noncovalent Interactions. J. Chem. Theory Comput. 2018, 14 (7), 3440-3450.
+22. Gaussian 16, Revision C.01, Frisch, M. J.; Trucks, G. W.; Schlegel, H. B.; Scuseria,
+G. E.; Robb, M. A.; Cheeseman, J. R.; Scalmani, G.; Barone, V.; Petersson, G. A.;
+Nakatsuji, H.; Li, X.; Caricato, M.; Marenich, A. V.; Bloino, J.; Janesko, B. G.;
+Gomperts, R.; Mennucci, B.; Hratchian, H. P.; Ortiz, J. V.; Izmaylov, A. F.; Sonnenberg,
+J. L.; Williams-Young, D.; Ding, F.; Lipparini, F.; Egidi, F.; Goings, J.; Peng, B.;
+Petrone, A.; Henderson, T.; Ranasinghe, D.; Zakrzewski, V. G.; Gao, J.; Rega, N.;
+Zheng, G.; Liang, W.; Hada, M.; Ehara, M.; Toyota, K.; Fukuda, R.; Hasegawa, J.;
+Ishida, M.; Nakajima, T.; Honda, Y.; Kitao, O.; Nakai, H.; Vreven, T.; Throssell, K.;
+Montgomery, J. A., Jr.; Peralta, J. E.; Ogliaro, F.; Bearpark, M. J.; Heyd, J. J.; Brothers,
+E. N.; Kudin, K. N.; Staroverov, V. N.; Keith, T. A.; Kobayashi, R.; Normand, J.;
+Raghavachari, K.; Rendell, A. P.; Burant, J. C.; Iyengar, S. S.; Tomasi, J.; Cossi, M.;
+Millam, J. M.; Klene, M.; Adamo, C.; Cammi, R.; Ochterski, J. W.; Martin, R. L.;
+Morokuma, K.; Farkas, O.; Foresman, J. B.; Fox, D. J. Gaussian, Inc., Wallingford CT,
+2016.
+23. Betz, R. M.; Walker, R. C. Paramfit: Automated Optimization of Force Field
+Parameters for Molecular Dynamics Simulations. J. Comput. Chem. 2015, 36 (2), 7987.
+24. Case, D. A.; Cheatham, T. E., 3rd; Darden, T.;
+K. M., Jr.;
+
+Onufriev, A.;
+
+Simmerling, C.;
+
+Gohlke, H.;
+
+Luo, R.;
+
+Merz,
+
+Wang, B.; Woods, R. J. The Amber
+
+Biomolecular Simulation Programs. J. Comput. Chem. 2005, 26 (16), 1668-88.
+25. Schwerdtfeger, P.; Wales, D. J. 100 Years of the Lennard-Jones Potential. J. Chem.
+Theory Comput. 2024, 20 (9), 3379-3405.
+26. Liu, C.;
+
+Piquemal, J.-P.; Ren, P. AMOEBA+ Classical Potential for Modeling
+
+Molecular Interactions. J. Chem. Theory Comput. 2019, 15 (7), 4122-4139.
+27. Lu, T.; Chen, Q. Simple, Efficient, and Universal Energy Decomposition Analysis
+Method Based on Dispersion-Corrected Density Functional Theory. J. Phys. Chem. A
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+2023, 127 (33), 7023-7035.
+28. Becke, A. D. Density-functional Exchange-energy Approximation with Correct
+Asymptotic Behavior. Phys. Rev. A 1988, 38 (6), 3098-3100.
+29. Lee, C.;
+
+Yang, W.; Parr, R. G. Development of the Colle-Salvetti Correlation-
+
+energy Formula into a Functional of the Electron Density. Phys. Rev. B 1988, 37 (2),
+785-789.
+30. Grimme, S.;
+
+Ehrlich, S.; Goerigk, L. Effect of the Damping Function in
+
+Dispersion Corrected Density Functional Theory. J. Comput. Chem. 2011, 32 (7), 145665.
+31. Torrie, G. M.; Valleau, J. P. Nonphysical Sampling Distributions in Monte Carlo
+Free-energy Estimation: Umbrella Sampling. J. Comput. Phys. 1977, 23 (2), 187-199.
+32. Tomasi, J.;
+
+Mennucci, B.; Cammi, R. Quantum Mechanical Continuum
+
+Solvation Models. Chem. Rev. 2005, 105 (8), 2999−3093.
+33. Brown, N. R.;
+
+Noble, M. E. M.;
+
+Lawrie, A. M.;
+
+Morris, M. C.;
+
+Tunnah, P.;
+
+Divita, G.; Johnson, L. N.; Endicott, J. A. Effects of Phosphorylation of Threonine
+160 on Cyclin-dependent Kinase 2 Structure and Activity. J. Biol. Chem. 1999, 274
+(13), 8746–8756.
+34. Jorgensen, W. L.;
+
+Chandrasekhar, J.;
+
+Madura, J. D.; Impey, R. W.; Klein, M.
+
+L. Comparison of Simple Potential Functions for Simulating Liquid Water. J. Chem.
+Phys. 1983, 79 (2), 926-935.
+35. Li, P.;
+
+Roberts, B. P.;
+
+Chakravorty, D. K.; Merz, K. M., Jr. Rational Design of
+
+Particle Mesh Ewald Compatible Lennard-Jones Parameters for +2 Metal Cations in
+Explicit Solvent. J. Chem. Theory Comput. 2013, 9 (6), 2733-2748.
+36. Ryckaert, J. P.;
+
+Ciccotti, G.; Berendsen, H. J. C. Numerical Integration of a
+
+System with Constraints: of the Cartesian Equations of Motion Molecular Dynamics of
+n-Alkanes. J. Comput. Phys. 1977, 23 (3), 321-341.
+37. Salomon-Ferrer, R.;
+
+Gotz, A. W.;
+
+Poole, D.;
+
+Le Grand, S.; Walker, R. C.
+
+Routine Microsecond Molecular Dynamics Simulations with AMBER on GPUs. 2.
+Explicit Solvent Particle Mesh Ewald. J. Chem. Theory Comput. 2013, 9 (9), 3878-88.
+38. Pastor, R. W.;
+
+Brooks, B. R.; Szabo, A. An Analysis of the Accuracy of Langevin
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+and Molecular Dynamics Algorithms. Mol. Phys. 1988, 65 (6), 1409-1419.
+39. Berendsen, H. J. C.;
+
+Postma, J. P. M.;
+
+van Gunsteren, W. F.;
+
+DiNola, A.; Haak,
+
+J. R. Molecular Dynamics with Coupling to an External Bath. J. Chem. Phys. 1984, 81
+(8), 3684-3690.
+40. Maier, J. A.; Martinez, C.; Kasavajhala, K.; Wickstrom, L.;
+
+Hauser, K. E.;
+
+Simmerling, C. ff14SB: Improving the Accuracy of Protein Side Chain and Backbone
+Parameters from ff99SB. J. Chem. Theory Comput. 2015, 11 (8), 3696-3713.
+41. Kumar, S.;
+
+Rosenberg, J. M.;
+
+Bouzida, D.; Swendsen, R. H.; Kollman, P. A.
+
+The Weighted Histogram Analysis Method for Free ‐ energy Calculations on
+Biomolecules. I. The Method. J. Comput. Chem. 2004, 13 (8), 1011-1021.
+42. Sugita, Y.; Okamoto, Y. Replica-exchange Molecular Dynamics Method for
+Protein Folding. Chem. Phys. Lett. 1999, 314 (1-2), 141–151.
+43. Roe, D. R.; Cheatham, T. E. PTRAJ and CPPTRAJ: Software for Processing and
+Analysis of Molecular Dynamics Trajectory Data. J. Chem. Theory Comput. 2013, 9
+(7), 3084-3095.
+44. Li, P.;
+
+Song, L. F.; Merz, K. M., Jr. Parameterization of Highly Charged Metal
+
+Ions Using the 12-6-4 LJ-type Nonbonded Model in Explicit Water. J. Phys. Chem. B
+2015, 119 (3), 883-895.
+45. Li, Z.;
+
+Bhowmik, S.;
+
+Sagresti, L.;
+
+Brancato, G.; Smith, M.;
+
+Benson, D. E.;
+
+Li, P.; Merz, K. M., Jr. Simulating Metal-Imidazole Complexes. J. Chem. Theory
+Comput. 2024, 20 (15), 6706-6716.
+46. Zhou, A.;
+
+Schauperl, M.; Nerenberg, P. S. Benchmarking Electronic Structure
+
+Methods for Accurate Fixed-Charge Electrostatic Models. J. Chem. Inf. Model. 2020,
+60 (1), 249-258.
+47. Duan, Y.;
+Yang, R.;
+
+Wu, C.;
+
+Cieplak, P.;
+
+Chowdhury, S.;
+
+Lee, M. C.;
+
+Luo, R.;
+
+Caldwell, J.; Wang, J.; Kollman, P. A
+
+Lee, T.;
+
+Xiong, G.;
+
+Zhang, W.;
+
+Point-Charge Force Field for Molecular Mechanics Simulations of Proteins based on
+Condensed-phase Quantum Mechanical Calculations. J. Comput. Chem. 2003, 24 (16),
+1999-2012.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+48. Wang, J. H.; Xiao, D. G.; Deng, H.; Callender, R.; Webb, M. R. Vibrational
+Study of Phosphate Modes in GDP and GTP and their Interaction with Magnesium in
+Aqueous Solution. Biospectroscopy 1998, 4 (4), 219-227.
+49. Spoerner, M.;
+
+Hozsa, C.;
+
+Poetzl, J. A.; Reiss, K.; Ganser, P.;
+
+Geyer, M.;
+
+Kalbitzer, H. R. Conformational States of Human Rat sarcoma (Ras) Protein
+Complexed with its Natural Ligand GTP and Their Role for Effector Interaction and
+GTP Hydrolysis. J. Biol. Chem. 2010, 285 (51), 39768-78.
+50. Rudack, T.;
+
+Xia, F.;
+
+Schlitter, J.;
+
+Kotting, C.; Gerwert, K. Ras and GTPase-
+
+activating Protein (GAP) Drive GTP into a Precatalytic State as Revealed by
+Combining FTIR and Biomolecular Simulations. Proc. Natl. Acad. Sci. U.S.A. 2012,
+109 (38), 15295-300.
+51. Zhang, Y.;
+
+Cao, Z.;
+
+Zhang, J. Z.; Xia, F. Double-Well Ultra-Coarse-Grained
+
+Model to Describe Protein Conformational Transitions. J. Chem. Theory Comput. 2020,
+16 (10), 6678-6689.
+52. Zha, J.;
+
+Zhang, Y.;
+
+Xia, K.; Grater, F.; Xia, F. Coarse-Grained Simulation of
+
+Mechanical Properties of Single Microtubules With Micrometer Length. Front. Mol.
+Biosci. 2020, 7, 632122.
+53. Zha, J.; Xia, F. Developing Hybrid All-Atom and Ultra-Coarse-Grained Models to
+Investigate Taxol-Binding and Dynein Interactions on Microtubules. J. Chem. Theory
+Comput. 2023, 19 (16), 5621-5632.
+54. Zeng, J.;
+
+Weng, J.;
+
+Zhang, Y.;
+
+Xia, F.;
+
+Cui, Q.; Xu, X. Conformational
+
+Features of Ras: Key Hydrogen-Bonding Interactions of Gln61 in the Intermediate
+State during GTP Hydrolysis. J. Phys. Chem. B 2021, 125 (31), 8805-8813.
+55. Zeng, J.;
+
+Chen, J.;
+
+Xia, F.;
+
+Cui, Q.;
+
+Deng, X.; Xu, X. Identification of
+
+Functional Substates of KRas during GTP Hydrolysis with Enhanced Sampling
+Simulations. Phys. Chem. Chem. Phys. 2022, 24 (13), 7653-7665.
+56. Hu, F.;
+
+Wang, Y.;
+
+Zeng, J.;
+
+Deng, X.;
+
+Xia, F.; Xu, X. Unveiling the State
+
+Transition Mechanisms of Ras Proteins through Enhanced Sampling and QM/MM
+Simulations. J. Phys. Chem. B 2024, 128 (6), 1418-1427.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Table 1. The angle and dihedral parameters of the RTP models are derived by fitting
+the potential energy curves of the dihedral angles shown in Figure 1 using the HF/631+G* method and B3LYP-D3BJ/6-311+G** method with the PCM model,
+respectively. For the dihedral angels, Vn/2 represents the magnitude of the torsions in
+kcal/mol, γ denotes the phase offset in degrees, and n indicates the periodicity. The Kθ
+and θ represent the force constant and equilibrium value of the P-O-P angle,
+respectively.
+Models
+
+MTP
+
+RTP
+
+RTP
+
+Methods
+
+HF/6-31G*
+
+HF/6-31G*
+
+B3LYP-D3BJ/6-311+G**
+
+No.
+
+Dihedrals
+
+Vn /2
+
+
+
+n
+
+Dihedrals
+
+Vn /2
+
+
+
+n
+
+Dihedrals
+
+Vn /2
+
+
+
+n
+
+1
+
+P-OS-P-O3
+
+0.085
+
+0
+
+3
+
+P-OS-P-O3
+
+0.197
+
+-18.92
+
+3
+
+P-OS-P-O3
+
+0.095
+
+51.52
+
+3
+
+2
+
+P-OS-P-O2
+
+0.355
+
+0
+
+2
+
+P-OS-P-O2
+
+0.204
+
+103.11
+
+2
+
+P-OS-P-O2
+
+-0.076
+
+30.39
+
+2
+
+P-OS-P-OS
+
+2.867
+
+-18.72
+
+1
+
+P-OS-P-OS
+
+-0.824
+
+92.24
+
+1
+
+3
+
+P-OS-P-OS
+
+0.897
+
+0
+
+1
+P-OS-P-OY
+
+0.796
+
+8.48
+
+1
+
+P-OS-P-OY
+
+1.708
+
+13.88
+
+1
+
+-1.193
+
+68.39
+
+2
+
+-0.020
+
+92.87
+
+2
+
+-0.211
+
+107.08
+
+3
+
+-0.406
+4
+
+0
+
+2
+
+CT-OS-P-O2
+
+CT-OY-P-O2
+0.590
+
+0
+
+3
+
+CT-OY-P-O2
+-0.308
+
+150.63
+
+3
+
+5
+
+CT-OS-P-OS
+
+-1.560
+
+0
+
+1
+
+CT-OY-P-OS
+
+-2.577
+
+121.18
+
+1
+
+CT-OY-P-OS
+
+1.400
+
+51.75
+
+1
+
+6
+
+HC-CT-OS-P
+
+0.035
+
+0
+
+3
+
+H1-CT-OY-P
+
+1.401
+
+164.87
+
+3
+
+H1-CT-OY-P
+
+-0.896
+
+-15.97
+
+3
+
+Angle
+
+Kθ
+
+θ
+
+Angle
+
+Kθ
+
+θ
+
+Angle
+
+Kθ
+
+θ
+
+P-OS-P
+
+12.685
+
+150.0
+
+P-OS-P
+
+20.117
+
+142.9
+
+P-OS-P
+
+56.45
+
+142.9
+
+7
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Table 2. Comparison of the original LJ parameters Aij and Bij calculated from Ref.12
+with the QM-derived ones using the B3LYP-D3BJ/6-31+G* method for the pairwise
+interactions of Mg2+ ions and P, O atom types. The units of Aij and Bij are kcalÅ12/mol
+and kcalÅ6/mol, respectively. The parameters are the same for both O3 and O2 atom
+types, as well as OS and OY.
+
+Atom Type Pair
+
+Mg2+--O3/O2
+
+Mg2+--OS/OY
+
+Mg2+--P
+
+Original Aij
+
+26767.87
+
+26326.74
+
+132977.70
+
+QM-derived Aij
+
+56958.78
+
+26407.56
+
+133097.78
+
+Original Bij
+
+70.40
+
+66.22
+
+155.01
+
+QM-derived Bij
+
+69.26
+
+66.18
+
+154.94
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 1 An illustration of the tridentate (C3) or bidentate (C2) conformations of
+ATP∙Mg2+ or GTP∙Mg2+ complexes. For both the MTP and ATP models, the left
+structures are labeled with atomic names, while the right cartoons depict the
+corresponding atomic types.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 2. Calculated potential energy curves for the dihedrals O1G-PG-O3B-PB, PGO3B-PB-O3A, O3B-PB-O3A-PA, PB-O3A-PA-O5′, O3A-PA-O5′-C5′, and PA-O5′C5′-C4′, respectively. The black curves represent the results for the MTP model, while
+the red curves represent the results for the RTP models. Dihedral angles in the MTP
+and RTP models were scanned at 10-degree and 15-degree intervals, respectively, using
+the HF/6-31+G* method. Energy units are given in kcal/mol.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 3. (a) The calculated PMF curves for the transition of ATPMg2+ complexes
+from the C3 to C2 conformations obtained using US simulations. Error bars represent
+standard deviations. The reaction coordinate Mg2+Oα distance ranges from 1.7 to 5.9
+Å and is divided into 43 windows. The black curve shows the results of the MTP model,
+while the red and blue curves correspond to the RTP models without and with CMAP34
+corrections, respectively. The Mg2+Oα distances and relative energies of the C3, TS,
+and C2 conformations are given in parentheses. Hollow triangles indicate the local
+minima within the C2 regions. (b) Histogram shows the distribution of Mg2+-Oα
+distances, based on 1685 ATPMg2+ complexes extracted from crystal structures which
+includes 1142 C2 and 519 C3 conformations. The distributions are fitted with Gaussian
+functions, as indicated by the dashed line. (c) The 2D CMAP34 calculated using the
+HF/6-31+G* method, plotted for the PB-O3A-PA-O5 and O3B-PB-O3A-PA dihedrals.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 4. (a) A comparison of 𝐸 𝑄𝑀,𝑣𝑑𝑊 obtained from DFT calculations and
+𝐸𝑀𝑀,𝑣𝑑𝑊 calculated from force fields. The blue dots and red triangles denote the MM
+vdW results calculated using the original and new QM-derived LJ parameters,
+respectively. The RMSD values of the blue and red MM results compared to 𝐸 𝑄𝑀,𝑣𝑑𝑊
+are 33.7 and 5.1 kcal/mol, respectively. (b) The calculated PMF curves for the
+ATPMg2+ complexes transitioning from the C3 to C2 conformations using US
+simulations are depicted, with error bars representing standard deviations. The black
+and blue curves correspond to the RTP model with the original force fields and the QMderived vdW parameters, respectively. The Mg2+-Oα distances and relative energies of
+the C3, TS, and C2 conformations are indicated in parentheses. (c) The representative
+structures of C2 conformations (RSC2) correspond to the PMF minima shown in plot
+(b).
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 5. (a) The constructed 2D-FEL for ATPMg2+ transitioning from the C3 to the
+C2 based on REMD simulations using the B3LYP-derived charges and parameters. The
+two energy basins represent the distributions of the C3 and C2 conformations. The
+scattered circles represent the projections of crystal structures for ATPMg2+ complexes
+on the 2D-FEL. (b) The constructed 2D-FEL from REMD simulations using the
+original HF charges and parameters. A comparison of the (c) C3 and (d) C2
+representative structures (RSC3 and RSC2) extracted from REMD simulations with those
+from crystal structures.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure 6. The calculated PMF curves for the transition of GTPMg2+ complexes from
+the C3 to C2 conformations obtained using US simulations with the B3LYP-derived
+charges and parameters. Error bars represent standard deviations. The Mg2+Oα
+distances and relative energies of the C3, TS, and C2 conformations are given in
+parentheses. The calculated TS barrier and the free energy difference are 11.5 kcal/mol
+and 0.1 kcal/mol, respectively. The insert shows a comparison of the C3 and C2
+representative structures (RSC3 and RSC2) extracted from the two minima in the PMF
+curve.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Supporting Information
+
+Figure S1. The 1D-PMF for the conformational change from the C3 to C2 structures
+of the ATPMg2+ complex was estimated based on the US simulations using AMBER
+force fields according to the Mg2+-Oα distance.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure S2. Calculated potential energy curves for the dihedral types O3-P-OS-P, P-OSP-OS, P-OS-P-OS, P-OS-P-OS, OS-P-OS-CT, and OS-P-CT-H1, respectively. The
+black curves represent the calculated results using the MP2/6-31+G* method, while the
+red curves represent the ones using the HF/6-31+G* method. Dihedral angles were
+scanned at 10-degree intervals and energy units are given in kcal/mol.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure S3. Comparison of the potential energy curves for the dihedrals O1G-PG-O3BPB, PG-O3B-PB-O3A, O3B-PB-O3A-PA, PB-O3A-PA-O5′, O3A-PA-O5′-C5′, and
+PA-O5′-C5′-C4′. The black, red, and blue curves represent the results of the MTP model,
+the RTP model, and the fitted results using paramfit, respectively. The average RMSD
+value of the fitted data compared to the RTP model is 1.46 kcal/mol.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure S4. The incomplete 2D (a) CMAP45 and CMAP56 calculated using the HF/631+G* method.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Figure S5. A schematic illustration of the topology structures of ADP and GDP.
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Table S1. Comparison of atomic charges in ATP obtained by RESP fitting from
+electrostatic potentials calculated using HF/6-31G* and B3LYP-D3BJ/6-311+G** in
+PCM.
+Atom
+Names
+
+HF Charges
+
+B3LYP
+Charges
+
+HF Charges
+
+B3LYP
+Charges
+
+O1G
+
+-0.9526
+
+-1.0327
+
+C8
+
+0.2006
+
+0.3579
+
+PG
+
+1.2650
+
+1.5524
+
+H80
+
+0.1553
+
+0.1108
+
+O2G
+
+-0.9526
+
+-1.0327
+
+N7
+
+-0.6073
+
+-0.7078
+
+O3G
+
+-0.9526
+
+-1.0327
+
+C5
+
+0.0515
+
+0.0693
+
+O3B
+
+-0.5322
+
+-0.6957
+
+C6
+
+0.7009
+
+0.7878
+
+PB
+
+1.3852
+
+1.5528
+
+N6
+
+-0.9019
+
+-0.9445
+
+O1B
+
+-0.8894
+
+-0.9506
+
+H60
+
+0.4115
+
+0.4370
+
+O2B
+
+-0.8894
+
+-0.9506
+
+H61
+
+0.4115
+
+0.4370
+
+O3A
+
+-0.5689
+
+-0.6819
+
+N1
+
+-0.7615
+
+0.8172
+
+PA
+
+1.2532
+
+1.4253
+
+C2
+
+0.5875
+
+0.5309
+
+O1A
+
+-0.8799
+
+-0.9041
+
+H2
+
+0.0473
+
+0.0634
+
+O2A
+
+-0.8799
+
+-0.9041
+
+N3
+
+-0.6997
+
+-0.6838
+
+O5’
+
+-0.5987
+
+-0.5669
+
+C4
+
+0.3053
+
+0.4197
+
+C5’
+
+0.0558
+
+-0.0142
+
+C3’
+
+0.2022
+
+0.2676
+
+H50
+
+0.0679
+
+0.0880
+
+H30
+
+0.0615
+
+0.0867
+
+H51
+
+0.0679
+
+0.0880
+
+O3’
+
+-0.6541
+
+-0.7597
+
+C4’
+
+0.1065
+
+0.2628
+
+H3’
+
+0.4376
+
+0.4733
+
+H40
+
+0.1174
+
+0.1052
+
+C2’
+
+0.0670
+
+0.0740
+
+O4’
+
+-0.3548
+
+-0.5296
+
+H20
+
+0.0972
+
+0.1178
+
+C1’
+
+0.0394
+
+0.3132
+
+O2’
+
+-0.6139
+
+-0.7100
+
+H10
+
+0.2007
+
+0.0994
+
+H2’
+
+0.4186
+
+0.4277
+
+N9
+
+-0.0251
+
+-0.2293
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Table S2. Comparison of atomic charges in ADP and GDP obtained by RESP fitting
+from electrostatic potentials calculated using HF/6-31G* and B3LYP-D3BJ/6311+G** in PCM.
+
+GDP
+
+HF Charges
+
+B3LYP
+Charges
+
+ADP
+
+HF Charges
+
+B3LYP
+Charges
+
+O1B
+
+-0.9552
+
+-1.0296
+
+O1B
+
+-0.9552
+
+-1.0293
+
+PB
+
+1.3672
+
+1.5494
+
+PB
+
+1.3672
+
+1.5490
+
+O2B
+
+-0.9552
+
+-1.0296
+
+O2B
+
+-0.9552
+
+-1.0293
+
+O3B
+
+-0.9552
+
+-1.0296
+
+O3B
+
+-0.9552
+
+-1.0293
+
+O3A
+
+-0.6346
+
+-0.6950
+
+O3A
+
+-0.6346
+
+-0.6966
+
+PA
+
+1.4929
+
+1.5567
+
+PA
+
+1.4929
+
+1.5402
+
+O1A
+
+-0.9474
+
+-0.9500
+
+O1A
+
+-0.9474
+
+-0.9462
+
+O2A
+
+-0.9474
+
+-0.9500
+
+O2A
+
+-0.9474
+
+-0.9462
+
+O5’
+
+-0.6579
+
+-0.6559
+
+O5’
+
+-0.6579
+
+-0.6410
+
+C5’
+
+0.0558
+
+0.0269
+
+C5’
+
+0.0558
+
+0.0166
+
+H50
+
+0.0679
+
+0.0657
+
+H50
+
+0.0679
+
+0.0685
+
+H51
+
+0.0679
+
+0.0657
+
+H51
+
+0.0679
+
+0.0685
+
+C4’
+
+0.1065
+
+0.3317
+
+C4’
+
+0.1065
+
+0.3644
+
+H40
+
+0.1174
+
+0.0864
+
+H40
+
+0.1174
+
+0.0780
+
+O4’
+
+-0.3548
+
+-0.5563
+
+O4’
+
+-0.3548
+
+-0.5584
+
+C1’
+
+0.0191
+
+0.2758
+
+C1’
+
+0.0394
+
+0.2990
+
+H10
+
+0.2006
+
+0.1004
+
+H10
+
+0.2007
+
+0.1052
+
+N9
+
+0.0492
+
+-0.0819
+
+N9
+
+-0.0251
+
+-0.2061
+
+C8
+
+0.1374
+
+0.2886
+
+C8
+
+0.2006
+
+0.3298
+
+H80
+
+0.1640
+
+0.1189
+
+H80
+
+0.1553
+
+0.1230
+
+N7
+
+-0.5709
+
+-0.7268
+
+N7
+
+-0.6073
+
+-0.7043
+
+C5
+
+0.1744
+
+0.2022
+
+C5
+
+0.0515
+
+0.0875
+
+C6
+
+0.4770
+
+0.6161
+
+C6
+
+0.7009
+
+0.7767
+
+O6
+
+-0.5597
+
+-0.6604
+
+N6
+
+-0.9019
+
+-0.9410
+
+N1
+
+-0.4787
+
+-0.6322
+
+H60
+
+0.4115
+
+0.4366
+
+H1N
+
+0.3424
+
+0.4171
+
+H61
+
+0.4115
+
+0.4366
+
+C2
+
+0.7657
+
+0.7860
+
+N1
+
+-0.7615
+
+-0.8151
+
+N2
+
+-0.9672
+
+-0.8896
+
+C2
+
+0.5875
+
+0.5326
+
+H21
+
+0.4364
+
+0.4273
+
+H2
+
+0.0473
+
+0.0626
+
+H22
+
+0.4364
+
+0.4273
+
+N3
+
+-0.6997
+
+-0.6766
+
+N3
+
+-0.6323
+
+-0.6484
+
+C4
+
+0.3053
+
+0.3996
+
+C4
+
+0.1222
+
+0.1937
+
+C3’
+
+0.2022
+
+0.2491
+
+C3’
+
+0.2022
+
+0.2859
+
+H30
+
+0.0615
+
+0.0856
+
+H30
+
+0.0615
+
+0.0749
+
+O3’
+
+-0.6541
+
+-0.7687
+
+C2’
+
+0.0670
+
+0.0729
+
+H3’
+
+0.4376
+
+0.4757
+
+H20
+
+0.0972
+
+0.1260
+
+C2’
+
+0.0670
+
+0.0670
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+GDP
+
+HF Charges
+
+B3LYP
+Charges
+
+ADP
+
+HF Charges
+
+B3LYP
+Charges
+
+O2’
+
+-0.6139
+
+-0.7307
+
+H20
+
+0.0972
+
+0.1172
+
+H2’
+
+0.4186
+
+0.4640
+
+O2’
+
+-0.6139
+
+-0.7047
+
+O3’
+
+-0.6541
+
+-0.7724
+
+H2’
+
+0.4186
+
+0.4239
+
+H3’
+
+0.4376
+
+0.4784
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Table S2. Comparison of atomic charges in GTP obtained by RESP fitting from
+electrostatic potentials calculated using HF/6-31G* and B3LYP-D3BJ/6-311+G** in
+PCM.
+Atom
+Names
+
+HF Charges
+
+B3LYP
+Charges
+
+HF Charges
+
+B3LYP
+Charges
+
+O1G
+
+-0.9526
+
+-1.0314
+
+C8
+
+0.1374
+
+0.2926
+
+PG
+
+1.2650
+
+1.5503
+
+H8
+
+0.1640
+
+0.1180
+
+O2G
+
+-0.9526
+
+-1.0314
+
+N7
+
+-0.5709
+
+-0.7442
+
+O3G
+
+-0.9526
+
+-1.0314
+
+C5
+
+0.1744
+
+0.1961
+
+O3B
+
+-0.5322
+
+-0.6994
+
+C6
+
+0.4770
+
+0.6178
+
+PB
+
+1.3852
+
+1.5575
+
+O6
+
+-0.5597
+
+-0.6613
+
+O1B
+
+-0.8894
+
+-0.9517
+
+N1
+
+-0.4787
+
+-0.6344
+
+O2B
+
+-0.8894
+
+-0.9517
+
+H1
+
+0.3424
+
+0.4180
+
+O3A
+
+-0.5689
+
+-0.6812
+
+C2
+
+0.7657
+
+0.7883
+
+PA
+
+1.2532
+
+1.4246
+
+N2
+
+-0.9672
+
+-0.8876
+
+O1A
+
+-0.8799
+
+-0.9040
+
+H21
+
+0.4364
+
+0.4262
+
+O2A
+
+-0.8799
+
+-0.9040
+
+H22
+
+0.4364
+
+0.4262
+
+O5'
+
+-0.5987
+
+-0.5673
+
+N3
+
+-0.6323
+
+-0.6545
+
+C5'
+
+0.0558
+
+-0.0184
+
+C4
+
+0.1222
+
+0.2101
+
+H5'1
+
+0.0679
+
+0.0887
+
+C3'
+
+0.2022
+
+0.2940
+
+H5'2
+
+0.0679
+
+0.0887
+
+O3'
+
+-0.6541
+
+-0.7637
+
+C4'
+
+0.1065
+
+0.2567
+
+H3T
+
+0.4376
+
+0.4748
+
+H4'
+
+0.1174
+
+0.1060
+
+H3'
+
+0.0615
+
+0.0751
+
+O4'
+
+-0.3548
+
+-0.5344
+
+C2'
+
+0.0670
+
+0.0900
+
+C1'
+
+0.0191
+
+0.2909
+
+H2'1
+
+0.0972
+
+0.1187
+
+H1'
+
+0.2006
+
+0.0952
+
+O2'
+
+-0.6139
+
+-0.7360
+
+N9
+
+0.0492
+
+-0.1034
+
+HO'2
+
+0.4186
+
+0.4670
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+Section S1: The script for using the new parameters.
+1. Create a TOP file using the command "tleap -f tleap.in":
+addatomtypes {{"O3""O""sp2"}}
+addatomtypes {{"O2""O""sp2"}}
+addatomtypes {{"O""O""sp2"}}
+addatomtypes {{"OW""O""sp3"}}
+addatomtypes {{"OY""O""sp3"}}
+source leaprc.*
+# Load protein force fields you want
+source leaprc.water.tip3p
+# Load water models
+loadAmberPrep ATP-HF/B3.prepi
+# Load prepi file
+loadAmberParams ATP-HF/B3.frcmod # Load frcmod file
+……
+# Other operations
+saveamberparm name *.prmtop *.inpcrd
+quit
+2. Use "mod.py" to modify vdW parameters and add CMAP parameters:
+Please install parmed and numpy extral python packages. The Python version needs to
+be greater than 3.6.
+python mod.py -top *.prmtop -out *-out.prmtop -method B3LYP/HF
+
+https://doi.org/10.26434/chemrxiv-2024-wfqmg-v2 ORCID: https://orcid.org/0000-0001-9458-9175 Content not peer-reviewed by ChemRxiv. License: CC BY-NC-ND 4.0
+
+

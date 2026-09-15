@@ -1,0 +1,569 @@
+{
+  "scope": "Identical complete static models, three input poses, native process per pose; no dynamics or chemistry accuracy inference.",
+  "energy_tolerance_kj_mol": 0.001,
+  "maximum_force_component_tolerance_kj_mol_nm": 0.01,
+  "electrostatic_convention": {
+    "amber_legacy_charge_scale": 18.2223,
+    "amber_coulomb_kj_mol_nm_e2": 138.93064771413603,
+    "openmm_coulomb_kj_mol_nm_e2": 138.93545764438198,
+    "energy_scale_ratio": 0.9999653801101065,
+    "method": "Diagnostic copy only: particle charges and1\u20134 products scaled to match Amber legacy electrostatic convention. Both raw and convention-matched errors recorded; saved production parameters untouched."
+  },
+  "phase_source": {
+    "path": "build/advanced-chemistry/amber-sander-source-check/set.F90",
+    "sha256": "3a4252429404df028416364822084a7de7bed4425ad06278fa85680ab2b13cc7",
+    "routine": "dihpar",
+    "lines": "433-437"
+  },
+  "changed_phase_terms": 6225,
+  "phase_deltas": [
+    1.346410206881643e-06
+  ],
+  "general_phases_unchanged": [
+    -0.278713493,
+    0.242269257,
+    0.530470364,
+    0.899239395,
+    0.903166387,
+    1.60997617,
+    1.62096302,
+    1.86884875
+  ],
+  "coordinate_independent_phase_energy_difference_bound_kj_mol": 0.07175102984120088,
+  "modes": {
+    "raw": [
+      {
+        "pose": "bound",
+        "energy_kj_mol": -23029.88262747091,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1196.5144475774644,
+          "1:HarmonicAngleForce": 3766.7010616128005,
+          "2:PeriodicTorsionForce": 14702.650522566957,
+          "3:CMAPTorsionForce": -8.497294127601329,
+          "4:CustomNonbondedForce": -7122.6516595228095,
+          "5:NonbondedForce": -35564.59970557772,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -23028.447382741924,
+        "difference_kj_mol": -1.4352447289857082,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 0.1275138817154584,
+          "rms_component_kj_mol_nm": 0.0075026571363206685,
+          "maximum_vector_kj_mol_nm": 0.17311980989608927,
+          "maximum_component_index": [
+            4849,
+            2
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1196.5144475774644,
+            "sander": 1196.514447577459,
+            "difference_kj_mol": 5.4569682106375694e-12
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3766.7010616128005,
+            "sander": 3766.701061612795,
+            "difference_kj_mol": 5.4569682106375694e-12
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14702.650522566957,
+            "sander": 14702.647962963973,
+            "difference_kj_mol": 0.0025596029845473822
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.497294127601329,
+            "sander": -8.497294127624878,
+            "difference_kj_mol": 2.354916261992912e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7122.6516595228095,
+            "sander": -7122.651659520836,
+            "difference_kj_mol": -1.9736035028472543e-09
+          },
+          "NonbondedForce": {
+            "openmm": -35564.59970557772,
+            "sander": -35563.1619012477,
+            "difference_kj_mol": -1.437804330016661
+          }
+        },
+        "passed_original_tolerances": false
+      },
+      {
+        "pose": "perturb-2027",
+        "energy_kj_mol": -22733.467026910574,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1343.0078546487,
+          "1:HarmonicAngleForce": 3827.7876584645514,
+          "2:PeriodicTorsionForce": 14709.442242106003,
+          "3:CMAPTorsionForce": -8.47256448085423,
+          "4:CustomNonbondedForce": -7053.1640894147495,
+          "5:NonbondedForce": -35552.06812823423,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -22732.03208774278,
+        "difference_kj_mol": -1.4349391677933454,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 0.12869041938529335,
+          "rms_component_kj_mol_nm": 0.007502561934025505,
+          "maximum_vector_kj_mol_nm": 0.17412061952824154,
+          "maximum_component_index": [
+            4849,
+            2
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1343.0078546487,
+            "sander": 1343.0078546487027,
+            "difference_kj_mol": -2.7284841053187847e-12
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3827.7876584645514,
+            "sander": 3827.7876584645396,
+            "difference_kj_mol": 1.1823431123048067e-11
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14709.442242106003,
+            "sander": 14709.439691390513,
+            "difference_kj_mol": 0.0025507154896331485
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.47256448085423,
+            "sander": -8.472564480879011,
+            "difference_kj_mol": 2.4781954266472894e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7053.1640894147495,
+            "sander": -7053.164089415554,
+            "difference_kj_mol": 8.049028110690415e-10
+          },
+          "NonbondedForce": {
+            "openmm": -35552.06812823423,
+            "sander": -35550.630638350085,
+            "difference_kj_mol": -1.4374898841415416
+          }
+        },
+        "passed_original_tolerances": false
+      },
+      {
+        "pose": "perturb-2028",
+        "energy_kj_mol": -22711.88403749509,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1355.4503409345966,
+          "1:HarmonicAngleForce": 3804.049700456526,
+          "2:PeriodicTorsionForce": 14713.226199587605,
+          "3:CMAPTorsionForce": -8.448665955101168,
+          "4:CustomNonbondedForce": -7024.376744420189,
+          "5:NonbondedForce": -35551.784868098526,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -22710.448916658803,
+        "difference_kj_mol": -1.4351208362859325,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 0.128491636553008,
+          "rms_component_kj_mol_nm": 0.0074985728228111,
+          "maximum_vector_kj_mol_nm": 0.17362028758195325,
+          "maximum_component_index": [
+            4849,
+            2
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1355.4503409345966,
+            "sander": 1355.4503409346119,
+            "difference_kj_mol": -1.5234036254696548e-11
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3804.049700456526,
+            "sander": 3804.049700456519,
+            "difference_kj_mol": 6.821210263296962e-12
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14713.226199587605,
+            "sander": 14713.223643346784,
+            "difference_kj_mol": 0.0025562408209225396
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.448665955101168,
+            "sander": -8.44866595512674,
+            "difference_kj_mol": 2.5572433060006006e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7024.376744420189,
+            "sander": -7024.376744419815,
+            "difference_kj_mol": -3.7471181713044643e-10
+          },
+          "NonbondedForce": {
+            "openmm": -35551.784868098526,
+            "sander": -35550.347191021785,
+            "difference_kj_mol": -1.4376770767412381
+          }
+        },
+        "passed_original_tolerances": false
+      }
+    ],
+    "native_electrostatics": [
+      {
+        "pose": "bound",
+        "energy_kj_mol": -23028.444823129703,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1196.5144475774644,
+          "1:HarmonicAngleForce": 3766.7010616128005,
+          "2:PeriodicTorsionForce": 14702.650522566957,
+          "3:CMAPTorsionForce": -8.497294127601329,
+          "4:CustomNonbondedForce": -7122.6516595228095,
+          "5:NonbondedForce": -35563.16190123651,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -23028.447382741924,
+        "difference_kj_mol": 0.0025596122213755734,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 0.0037911002033297336,
+          "rms_component_kj_mol_nm": 0.0006223918210889389,
+          "maximum_vector_kj_mol_nm": 0.0038821055146622653,
+          "maximum_component_index": [
+            2883,
+            1
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1196.5144475774644,
+            "sander": 1196.514447577459,
+            "difference_kj_mol": 5.4569682106375694e-12
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3766.7010616128005,
+            "sander": 3766.701061612795,
+            "difference_kj_mol": 5.4569682106375694e-12
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14702.650522566957,
+            "sander": 14702.647962963973,
+            "difference_kj_mol": 0.0025596029845473822
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.497294127601329,
+            "sander": -8.497294127624878,
+            "difference_kj_mol": 2.354916261992912e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7122.6516595228095,
+            "sander": -7122.651659520836,
+            "difference_kj_mol": -1.9736035028472543e-09
+          },
+          "NonbondedForce": {
+            "openmm": -35563.16190123651,
+            "sander": -35563.1619012477,
+            "difference_kj_mol": 1.1190422810614109e-08
+          }
+        },
+        "passed_original_tolerances": false
+      },
+      {
+        "pose": "perturb-2027",
+        "energy_kj_mol": -22732.029537019665,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1343.0078546487,
+          "1:HarmonicAngleForce": 3827.7876584645514,
+          "2:PeriodicTorsionForce": 14709.442242106003,
+          "3:CMAPTorsionForce": -8.47256448085423,
+          "4:CustomNonbondedForce": -7053.1640894147495,
+          "5:NonbondedForce": -35550.63063834332,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -22732.03208774278,
+        "difference_kj_mol": 0.002550723114836728,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 0.003783957157452278,
+          "rms_component_kj_mol_nm": 0.0006223593258946863,
+          "maximum_vector_kj_mol_nm": 0.00388464063066892,
+          "maximum_component_index": [
+            2883,
+            1
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1343.0078546487,
+            "sander": 1343.0078546487027,
+            "difference_kj_mol": -2.7284841053187847e-12
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3827.7876584645514,
+            "sander": 3827.7876584645396,
+            "difference_kj_mol": 1.1823431123048067e-11
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14709.442242106003,
+            "sander": 14709.439691390513,
+            "difference_kj_mol": 0.0025507154896331485
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.47256448085423,
+            "sander": -8.472564480879011,
+            "difference_kj_mol": 2.4781954266472894e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7053.1640894147495,
+            "sander": -7053.164089415554,
+            "difference_kj_mol": 8.049028110690415e-10
+          },
+          "NonbondedForce": {
+            "openmm": -35550.63063834332,
+            "sander": -35550.630638350085,
+            "difference_kj_mol": 6.766640581190586e-09
+          }
+        },
+        "passed_original_tolerances": false
+      },
+      {
+        "pose": "perturb-2028",
+        "energy_kj_mol": -22710.446360412527,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1355.4503409345966,
+          "1:HarmonicAngleForce": 3804.049700456526,
+          "2:PeriodicTorsionForce": 14713.226199587605,
+          "3:CMAPTorsionForce": -8.448665955101168,
+          "4:CustomNonbondedForce": -7024.376744420189,
+          "5:NonbondedForce": -35550.347191015964,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -22710.448916658803,
+        "difference_kj_mol": 0.002556246276071761,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 0.0038031226898169734,
+          "rms_component_kj_mol_nm": 0.0006221940032825295,
+          "maximum_vector_kj_mol_nm": 0.0038875632095297205,
+          "maximum_component_index": [
+            2883,
+            1
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1355.4503409345966,
+            "sander": 1355.4503409346119,
+            "difference_kj_mol": -1.5234036254696548e-11
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3804.049700456526,
+            "sander": 3804.049700456519,
+            "difference_kj_mol": 6.821210263296962e-12
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14713.226199587605,
+            "sander": 14713.223643346784,
+            "difference_kj_mol": 0.0025562408209225396
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.448665955101168,
+            "sander": -8.44866595512674,
+            "difference_kj_mol": 2.5572433060006006e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7024.376744420189,
+            "sander": -7024.376744419815,
+            "difference_kj_mol": -3.7471181713044643e-10
+          },
+          "NonbondedForce": {
+            "openmm": -35550.347191015964,
+            "sander": -35550.347191021785,
+            "difference_kj_mol": 5.820766091346741e-09
+          }
+        },
+        "passed_original_tolerances": false
+      }
+    ],
+    "native_electrostatics_and_phase": [
+      {
+        "pose": "bound",
+        "energy_kj_mol": -23028.447382732713,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1196.5144475774644,
+          "1:HarmonicAngleForce": 3766.7010616128005,
+          "2:PeriodicTorsionForce": 14702.647962963947,
+          "3:CMAPTorsionForce": -8.497294127601329,
+          "4:CustomNonbondedForce": -7122.6516595228095,
+          "5:NonbondedForce": -35563.16190123651,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -23028.447382741924,
+        "difference_kj_mol": 9.211362339556217e-09,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 2.5320332497358322e-09,
+          "rms_component_kj_mol_nm": 2.3118927737502145e-10,
+          "maximum_vector_kj_mol_nm": 3.663045434746145e-09,
+          "maximum_component_index": [
+            5132,
+            0
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1196.5144475774644,
+            "sander": 1196.514447577459,
+            "difference_kj_mol": 5.4569682106375694e-12
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3766.7010616128005,
+            "sander": 3766.701061612795,
+            "difference_kj_mol": 5.4569682106375694e-12
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14702.647962963947,
+            "sander": 14702.647962963973,
+            "difference_kj_mol": -2.546585164964199e-11
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.497294127601329,
+            "sander": -8.497294127624878,
+            "difference_kj_mol": 2.354916261992912e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7122.6516595228095,
+            "sander": -7122.651659520836,
+            "difference_kj_mol": -1.9736035028472543e-09
+          },
+          "NonbondedForce": {
+            "openmm": -35563.16190123651,
+            "sander": -35563.1619012477,
+            "difference_kj_mol": 1.1190422810614109e-08
+          }
+        },
+        "passed_original_tolerances": true
+      },
+      {
+        "pose": "perturb-2027",
+        "energy_kj_mol": -22732.032087735097,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1343.0078546487,
+          "1:HarmonicAngleForce": 3827.7876584645514,
+          "2:PeriodicTorsionForce": 14709.439691390573,
+          "3:CMAPTorsionForce": -8.47256448085423,
+          "4:CustomNonbondedForce": -7053.1640894147495,
+          "5:NonbondedForce": -35550.63063834332,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -22732.03208774278,
+        "difference_kj_mol": 7.683411240577698e-09,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 2.0941115508321673e-09,
+          "rms_component_kj_mol_nm": 2.2897600852132302e-10,
+          "maximum_vector_kj_mol_nm": 2.812869984627485e-09,
+          "maximum_component_index": [
+            4858,
+            0
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1343.0078546487,
+            "sander": 1343.0078546487027,
+            "difference_kj_mol": -2.7284841053187847e-12
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3827.7876584645514,
+            "sander": 3827.7876584645396,
+            "difference_kj_mol": 1.1823431123048067e-11
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14709.439691390573,
+            "sander": 14709.439691390513,
+            "difference_kj_mol": 6.002665031701326e-11
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.47256448085423,
+            "sander": -8.472564480879011,
+            "difference_kj_mol": 2.4781954266472894e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7053.1640894147495,
+            "sander": -7053.164089415554,
+            "difference_kj_mol": 8.049028110690415e-10
+          },
+          "NonbondedForce": {
+            "openmm": -35550.63063834332,
+            "sander": -35550.630638350085,
+            "difference_kj_mol": 6.766640581190586e-09
+          }
+        },
+        "passed_original_tolerances": true
+      },
+      {
+        "pose": "perturb-2028",
+        "energy_kj_mol": -22710.44891665333,
+        "components_kj_mol": {
+          "0:HarmonicBondForce": 1355.4503409345966,
+          "1:HarmonicAngleForce": 3804.049700456526,
+          "2:PeriodicTorsionForce": 14713.223643346799,
+          "3:CMAPTorsionForce": -8.448665955101168,
+          "4:CustomNonbondedForce": -7024.376744420189,
+          "5:NonbondedForce": -35550.347191015964,
+          "6:CMMotionRemover": 0.0
+        },
+        "sander_energy_kj_mol": -22710.448916658803,
+        "difference_kj_mol": 5.471520125865936e-09,
+        "force_difference": {
+          "maximum_component_kj_mol_nm": 6.446498446166515e-09,
+          "rms_component_kj_mol_nm": 2.512062057565707e-10,
+          "maximum_vector_kj_mol_nm": 9.298030472824652e-09,
+          "maximum_component_index": [
+            5132,
+            0
+          ]
+        },
+        "component_comparison": {
+          "HarmonicBondForce": {
+            "openmm": 1355.4503409345966,
+            "sander": 1355.4503409346119,
+            "difference_kj_mol": -1.5234036254696548e-11
+          },
+          "HarmonicAngleForce": {
+            "openmm": 3804.049700456526,
+            "sander": 3804.049700456519,
+            "difference_kj_mol": 6.821210263296962e-12
+          },
+          "PeriodicTorsionForce": {
+            "openmm": 14713.223643346799,
+            "sander": 14713.223643346784,
+            "difference_kj_mol": 1.4551915228366852e-11
+          },
+          "CMAPTorsionForce": {
+            "openmm": -8.448665955101168,
+            "sander": -8.44866595512674,
+            "difference_kj_mol": 2.5572433060006006e-11
+          },
+          "CustomNonbondedForce": {
+            "openmm": -7024.376744420189,
+            "sander": -7024.376744419815,
+            "difference_kj_mol": -3.7471181713044643e-10
+          },
+          "NonbondedForce": {
+            "openmm": -35550.347191015964,
+            "sander": -35550.347191021785,
+            "difference_kj_mol": 5.820766091346741e-09
+          }
+        },
+        "passed_original_tolerances": true
+      }
+    ]
+  },
+  "model_sha256_unchanged": {
+    "published.prmtop": "bda6ae78ee73d7aeec372a0d83f1ad5253b27f61724fa449f4f70abafd41a4da",
+    "published.inpcrd": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7",
+    "published-openmm-system.xml": "cdd2233e80b874a2969cf9c41d9843b397a38a68942e88f16cb36f9be0a1a49d"
+  },
+  "script_sha256": "1548dcf23fd57fdc0be2a9cfdfbd4eb68b224498315a8a9556ef50e230a0f008",
+  "native_evidence_sha256": {
+    "sander-parity-input.json": "cb384997851a5bdae3e7353e7a2cac10f07b8ae96d4ddcf41e7fc04afcf56e4e",
+    "sander-parity-native.json": "53e67e3ce2213778b01ce712154bac3c113607e5531f5648e5d024932f94f9ba",
+    "sander-parity.json": "75f3239ab95caec2d5d7e82cf95f8e17c454f1eb748a1aa0101f55f61db3f7ef"
+  },
+  "full_force_components": {
+    "path": "full-force-components.npz",
+    "sha256": "e2af7376a0a52605773995ae01402f65d705cfedf7556149a3672b8d567d07fa"
+  }
+}

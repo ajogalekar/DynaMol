@@ -1,0 +1,60 @@
+--- unadmitted-v1
++++ candidate-v2
+@@ -101,6 +101,45 @@
+ def hashes(snapshot_):return {k:hashlib.sha256(v).hexdigest() for k,v in snapshot_.items()}
+ 
+ 
++def expected_materialized_payloads(context):
++    """Evaluate the exact pinned publication expressions against rechecked locals."""
++    module=context['materializer'];source=data(module.__file__,MATERIALIZER_SHA)
++    function=next(x for x in ast.parse(source).body if isinstance(x,ast.FunctionDef) and x.name=='materialize')
++    block=next(x for x in function.body if isinstance(x,ast.Try)).body
++    namespace=dict(module.__dict__);namespace.update(context)
++    namespace.update(coords=context['arrays']['coords_bohr'].tolist(),
++                     admission=context['plan']['preparation_runtime_admission'],expected_pins=context['plan']['source_pins'])
++    outputs={}
++    for statement in block:
++        if not (isinstance(statement,ast.Expr) and isinstance(statement.value,ast.Call) and
++                isinstance(statement.value.func,ast.Name) and statement.value.func.id=='publish'):continue
++        call=statement.value
++        require(len(call.args)==2 and isinstance(call.args[0],ast.BinOp) and
++                isinstance(call.args[0].right,ast.Constant),'Pinned materializer publication changed')
++        name=call.args[0].right.value
++        outputs[name]=eval(compile(ast.Expression(body=copy.deepcopy(call.args[1])),module.__file__,'eval'),namespace)
++    require(set(outputs)==MATERIALIZED_FILES-{'result.json'},'Pinned materialized payload set changed')
++    return outputs
++
++
++def expected_materialized_report(folder,context):
++    module=context['materializer'];source=data(module.__file__,MATERIALIZER_SHA)
++    function=next(x for x in ast.parse(source).body if isinstance(x,ast.FunctionDef) and x.name=='materialize')
++    initial=next(x.value for x in function.body if isinstance(x,ast.Assign) and
++                 any(isinstance(t,ast.Name) and t.id=='report' for t in x.targets))
++    block=next(x for x in function.body if isinstance(x,ast.Try)).body
++    final=next(x.value for x in block if isinstance(x,ast.Expr) and isinstance(x.value,ast.Call) and
++               isinstance(x.value.func,ast.Attribute) and isinstance(x.value.func.value,ast.Name) and
++               x.value.func.value.id=='report' and x.value.func.attr=='update')
++    namespace=dict(module.__dict__);namespace.update(context);namespace['output']=Path(folder)
++    report=eval(compile(ast.Expression(body=copy.deepcopy(initial)),module.__file__,'eval'),namespace)
++    report['plan_sha256']=MATERIALIZER_PLAN_SHA
++    require(not final.args and all(k.arg is not None for k in final.keywords),'Pinned successful report changed')
++    report.update({k.arg:eval(compile(ast.Expression(body=copy.deepcopy(k.value)),module.__file__,'eval'),namespace)
++                   for k in final.keywords})
++    return report
++
++
+ def verify_materialized_request(folder,context):
+     """Bind the complete unlaunched request set back to independently rechecked parent."""
+     folder=Path(folder);module=context['materializer']
+@@ -115,6 +154,11 @@
+     require(result.get('script_sha256')==MATERIALIZER_SHA and result.get('plan_sha256')==MATERIALIZER_PLAN_SHA and
+             result.get('input_sha256')==pins['exact-esp-input.json'] and
+             result.get('parent_result_sha256')==context['before']['result.json'],'Materializer source/input/parent binding changed')
++    expected_payloads=expected_materialized_payloads(context)
++    for name,expected in expected_payloads.items():
++        require(digest(parsed[name])==digest(expected),'Complete materialized payload changed: '+name)
++    require(digest(result)==digest(expected_materialized_report(folder,context)),
++            'Complete materializer terminal report changed')
+     require(binding.get('native_hashes')==context['before'] and binding.get('controller')==context['controller'] and
+             binding.get('geometry_sha256')==digest(context['arrays']['coords_bohr'].tolist()) and
+             binding.get('method_sha256')==digest(context['method']),'Materializer parent evidence changed')

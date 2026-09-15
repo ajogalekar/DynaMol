@@ -1,0 +1,19 @@
+--- pinned-original-df-grad-rhf.py
++++ private-candidate-df-grad-rhf.py
+@@ -22,6 +22,7 @@
+ # Author: Qiming Sun <osirpt.sun@gmail.com>
+ #
+ 
++from pinned_bridge import contract as _dynamol_tiled_contract
+ import numpy
+ import ctypes
+ import scipy.linalg
+@@ -226,7 +227,7 @@
+     for i, j in product (range (nset), repeat=2):
+         k = (i*nset) + j
+         l = (j*nset) + i
+-        tmp = lib.einsum('pij,qji->pq', rhok_oo[k], rhok_oo[l])
++        tmp = _dynamol_tiled_contract(rhok_oo[k], rhok_oo[l])
+         vkaux[i,j] -= lib.einsum('xpq,pq->xp', int2c_e1, tmp)
+     t1 = logger.timer_debug1 (mf_grad, "df grad vj and vk aux (P'|Q) eval", *t1)
+ 

@@ -1,0 +1,30 @@
+{
+  "requested": true,
+  "converged": false,
+  "settings": {
+    "enabled": true,
+    "max_steps": 1,
+    "freeze_atom_ids": [],
+    "convergence_energy": 1e-06,
+    "convergence_grms": 0.0003,
+    "convergence_gmax": 0.00045,
+    "convergence_drms": 0.0012,
+    "convergence_dmax": 0.0018
+  },
+  "steps": [
+    {
+      "cycle": 1,
+      "energy_hartree": -74.96361400506842,
+      "gradient_norm_hartree_per_bohr": 0.07548919610216111,
+      "scf_converged": true
+    },
+    {
+      "cycle": 2,
+      "energy_hartree": -74.9657857238769,
+      "gradient_norm_hartree_per_bohr": 0.013462268061921115,
+      "scf_converged": true
+    }
+  ],
+  "constraint_atom_indices_zero_based": [],
+  "constraint_file_sha256": null
+}

@@ -1,0 +1,17 @@
+--- v2/materialize_6oim_recovery_esp.py
++++ v3/materialize_6oim_recovery_esp.py
+@@ -173,9 +173,13 @@
+             request.get('density_fit') is False,'Malformed cold request schema/method flag')
+     for key in ('threads','max_memory_mb','max_wall_seconds','esp_batch_size'):
+         require(type(request.get(key)) is int,'Malformed cold request resource: '+key)
++    for key in ('max_scf_cycles','max_cphf_cycles','esp_crosscheck_points','grid_level'):
++        if key in request:require(type(request[key]) is int,'Malformed cold request integer setting: '+key)
+     validate_identity(request,parent_request)
+     for name,matrix,rows in [('coordinates',coords_bohr,len(parent_request['atom_ids'])),
+-                             ('grid',points_bohr,len(points_bohr))]:
++                             ('grid',points_bohr,len(points_bohr)),
++                             ('request coordinates',request.get('coords_bohr'),len(parent_request['atom_ids'])),
++                             ('request grid',request.get('esp_points_bohr'),len(points_bohr))]:
+         require(type(matrix) is list and len(matrix)==rows and rows>0 and
+                 all(type(row) is list and len(row)==3 and all(type(x) in (int,float) and math.isfinite(x) for x in row)
+                     for row in matrix),'Invalid cold ESP '+name)

@@ -1,0 +1,92 @@
+{
+  "cache": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-coherent-native-sampling-v1",
+  "native_result_sha256": "ae3c6581f7ff9ec0b7d9e1a74bb1f3aa2f161a7f5454dc42e04a1531995cd460",
+  "reference_screen_sha256": "8fd450dc6195a93d04b682b44278a4d7e43130edcff9230274415df208de5462",
+  "source_worker_sha256": "400f2e4cf5860773ebb838c64671958d0427d8e48159c5ba9b5007a7aff28975",
+  "coherent_seed_export_reproduced_byte_for_byte": true,
+  "coherent_seed_sha256": "58552241c736368283b76873443407d52c9d3b8264945dd6166b060835d812c5",
+  "cases": [
+    {
+      "name": "intact-control",
+      "candidate_count": 12,
+      "within_observed_cap_and_omega": 4,
+      "cap_omega_and_rama_pass": 4,
+      "plausible_backbone_screen_pass_count": 4
+    },
+    {
+      "name": "original-stems",
+      "candidate_count": 0,
+      "within_observed_cap_and_omega": 0,
+      "cap_omega_and_rama_pass": 0,
+      "plausible_backbone_screen_pass_count": 0
+    },
+    {
+      "name": "two-observed-context-residues",
+      "candidate_count": 36,
+      "within_observed_cap_and_omega": 0,
+      "cap_omega_and_rama_pass": 0,
+      "plausible_backbone_screen_pass_count": 0
+    }
+  ],
+  "best_context_trial": 3,
+  "best_context_solution": 0,
+  "best_context_maximum_observed_backbone_displacement_angstrom": 4.0101543363086725,
+  "largest_best_candidate_displacements": [
+    {
+      "identity": [
+        "A",
+        "180",
+        "",
+        "SER",
+        "O"
+      ],
+      "displacement_angstrom": 4.0101543363086725
+    },
+    {
+      "identity": [
+        "A",
+        "180",
+        "",
+        "SER",
+        "N"
+      ],
+      "displacement_angstrom": 2.140946769047158
+    },
+    {
+      "identity": [
+        "A",
+        "180",
+        "",
+        "SER",
+        "C"
+      ],
+      "displacement_angstrom": 1.9668705489331237
+    },
+    {
+      "identity": [
+        "A",
+        "180",
+        "",
+        "SER",
+        "CA"
+      ],
+      "displacement_angstrom": 1.580732935002233
+    },
+    {
+      "identity": [
+        "A",
+        "176",
+        "",
+        "LEU",
+        "O"
+      ],
+      "displacement_angstrom": 1.3399788637328787
+    }
+  ],
+  "context_gross_backbone_pass_count": 36,
+  "context_rama_pass_count": 3,
+  "context_observed_omega_basins_preserved_count": 36,
+  "app_ready": false,
+  "physical_model_validated": false,
+  "complete_candidate_accepted": false
+}

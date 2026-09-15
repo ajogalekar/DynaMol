@@ -1,0 +1,216 @@
+{
+  "source_sha256": "1a17325ae13d64cc863fe2dcd05935ff560f4bff5230d532ed9707f89663c8d6",
+  "duplicates": [
+    {
+      "canonical_types": [
+        "CPH2",
+        "NR2",
+        "NR1",
+        "HR1"
+      ],
+      "records": [
+        {
+          "line": 3537,
+          "types": [
+            "HR1",
+            "NR1",
+            "NR2",
+            "CPH2"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR1  NR1  NR2  CPH2    0.5000         0      0.0000 ! ALLOW ARO"
+        },
+        {
+          "line": 3648,
+          "types": [
+            "HR1",
+            "NR1",
+            "NR2",
+            "CPH2"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR1  NR1  NR2  CPH2    0.50         0      0.00 ! From imidazole (NF)"
+        }
+      ],
+      "numeric_parameters_identical": true
+    },
+    {
+      "canonical_types": [
+        "CPH2",
+        "NR1",
+        "NR2",
+        "HR1"
+      ],
+      "records": [
+        {
+          "line": 3539,
+          "types": [
+            "HR1",
+            "NR2",
+            "NR1",
+            "CPH2"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR1  NR2  NR1  CPH2    0.5000         0      0.0000 ! ALLOW ARO"
+        },
+        {
+          "line": 3649,
+          "types": [
+            "HR1",
+            "NR2",
+            "NR1",
+            "CPH2"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR1  NR2  NR1  CPH2    0.50         0      0.00 ! From imidazole (NF)"
+        }
+      ],
+      "numeric_parameters_identical": true
+    },
+    {
+      "canonical_types": [
+        "CPH1",
+        "NR1",
+        "CPH1",
+        "HR3"
+      ],
+      "records": [
+        {
+          "line": 3541,
+          "types": [
+            "HR3",
+            "CPH1",
+            "NR1",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  CPH1 NR1  CPH1    0.5000         0      0.0000 ! ALLOW ARO"
+        },
+        {
+          "line": 3650,
+          "types": [
+            "HR3",
+            "CPH1",
+            "NR1",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  CPH1 NR1  CPH1    0.50         0      0.00 ! From imidazole (NF)"
+        }
+      ],
+      "numeric_parameters_identical": true
+    },
+    {
+      "canonical_types": [
+        "CPH1",
+        "NR2",
+        "CPH1",
+        "HR3"
+      ],
+      "records": [
+        {
+          "line": 3543,
+          "types": [
+            "HR3",
+            "CPH1",
+            "NR2",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  CPH1 NR2  CPH1    0.5000         0      0.0000 ! ALLOW ARO"
+        },
+        {
+          "line": 3651,
+          "types": [
+            "HR3",
+            "CPH1",
+            "NR2",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  CPH1 NR2  CPH1    0.50         0      0.00 ! From imidazole (NF)"
+        }
+      ],
+      "numeric_parameters_identical": true
+    },
+    {
+      "canonical_types": [
+        "CPH1",
+        "CPH1",
+        "NR1",
+        "HR3"
+      ],
+      "records": [
+        {
+          "line": 3547,
+          "types": [
+            "HR3",
+            "NR1",
+            "CPH1",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  NR1  CPH1 CPH1    0.5000         0      0.0000 ! ALLOW ARO"
+        },
+        {
+          "line": 3652,
+          "types": [
+            "HR3",
+            "NR1",
+            "CPH1",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  NR1  CPH1 CPH1    0.50         0      0.00 ! From imidazole (NF)"
+        }
+      ],
+      "numeric_parameters_identical": true
+    },
+    {
+      "canonical_types": [
+        "CPH1",
+        "CPH1",
+        "NR2",
+        "HR3"
+      ],
+      "records": [
+        {
+          "line": 3549,
+          "types": [
+            "HR3",
+            "NR2",
+            "CPH1",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  NR2  CPH1 CPH1    0.5000         0      0.0000 ! ALLOW ARO"
+        },
+        {
+          "line": 3653,
+          "types": [
+            "HR3",
+            "NR2",
+            "CPH1",
+            "CPH1"
+          ],
+          "k_kcal_mol_rad2": 0.5,
+          "equilibrium_degrees": 0.0,
+          "original_line": "HR3  NR2  CPH1 CPH1    0.50         0      0.00 ! From imidazole (NF)"
+        }
+      ],
+      "numeric_parameters_identical": true
+    }
+  ],
+  "verdict": "All six reader warnings correspond to duplicate improper definitions with identical numeric force constants and equilibrium angles. Last-definition precedence changes no numeric term for these keys; warnings and originals retained."
+}

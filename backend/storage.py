@@ -151,7 +151,7 @@ def load_uploaded(topology: Path, trajectory: Path | None, stride: int, frame_in
     return traj, warnings
 
 
-def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, warnings: list[str] | None = None, dataset_id: str | None = None, provenance: dict | None = None) -> dict:
+def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, warnings: list[str] | None = None, dataset_id: str | None = None, provenance: dict | None = None, *, exact_pdb: str | None = None) -> dict:
     check_size(traj)
     dataset_id = safe_id(dataset_id or uuid.uuid4().hex[:16])
     folder = dataset_dir(dataset_id)
@@ -171,9 +171,17 @@ def save_dataset(traj: md.Trajectory, name: str, source: str, description: str, 
     # integer serials; renumber a copy without changing source order or bytes.
     for atom in pdb_frame.topology.atoms:
         atom.serial = atom.index + 1
-    pdb_frame.save_pdb(str(folder / "topology.pdb"))
+    if exact_pdb is None:
+        pdb_frame.save_pdb(str(folder / "topology.pdb"))
+    else:
+        # MDTraj cannot represent residue insertion codes. Native structure
+        # writers supply the exact PDB before the canonical read so distinct
+        # residues sharing an author number cannot collapse into one residue.
+        (folder / "topology.pdb").write_text(exact_pdb)
     # PDB round trip avoids metadata and measurement connectivity disagreeing.
     canonical = md.load_topology(str(folder / "topology.pdb"))
+    if canonical.n_atoms != traj.n_atoms:
+        raise ValueError("Canonical topology serialization changed the atom inventory; exact source residue identities are required.")
     traj.topology = canonical
     display = traj.slice(slice(None), copy=True)
     if has_cell:

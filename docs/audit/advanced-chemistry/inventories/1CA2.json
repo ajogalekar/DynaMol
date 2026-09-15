@@ -1,0 +1,685 @@
+{
+  "id": "1CA2",
+  "recorded_at_utc": "2026-09-13T15:57:55.840469+00:00",
+  "input": {
+    "path": "inputs/1CA2.cif",
+    "source_url": "https://files.rcsb.org/download/1CA2.cif",
+    "sha256": "8e6392a25c03fe10addfd11baabc0c4190129ab2f005e62d05fe768b2f8f3280",
+    "bytes": 279033
+  },
+  "title": "REFINED STRUCTURE OF HUMAN CARBONIC ANHYDRASE II AT 2.0 ANGSTROMS RESOLUTION",
+  "organisms": [
+    "Homo sapiens"
+  ],
+  "resolution_angstrom": "2.0",
+  "primary_citations": [
+    {
+      "id": "primary",
+      "title": "Refined structure of human carbonic anhydrase II at 2.0 A resolution.",
+      "journal_abbrev": "Proteins",
+      "journal_volume": "4",
+      "page_first": "274",
+      "page_last": "282",
+      "year": "1988",
+      "journal_id_ASTM": "PSFGEY",
+      "country": "US",
+      "journal_id_ISSN": "0887-3585",
+      "journal_id_CSD": "0867",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": "3151019",
+      "pdbx_database_id_DOI": "10.1002/prot.340040406"
+    },
+    {
+      "id": "1",
+      "title": "Crystallographic Studies of Inhibitor Binding Sites in Human Carbonic Anhydrase II. A Pentacoordinated Binding of the Scn-Ion to the Zinc at High Ph",
+      "journal_abbrev": "Proteins",
+      "journal_volume": "4",
+      "page_first": "283",
+      "page_last": null,
+      "year": "1988",
+      "journal_id_ASTM": "PSFGEY",
+      "country": "US",
+      "journal_id_ISSN": "0887-3585",
+      "journal_id_CSD": "0867",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": null,
+      "pdbx_database_id_DOI": null
+    },
+    {
+      "id": "2",
+      "title": "Structural Relationship of Human Erythrocyte Carbonic Anhydrase Isozymes B and C",
+      "journal_abbrev": "Isozymes-Molecular Structure",
+      "journal_volume": "1",
+      "page_first": "575",
+      "page_last": null,
+      "year": "1975",
+      "journal_id_ASTM": null,
+      "country": null,
+      "journal_id_ISSN": "0-12-472701-8",
+      "journal_id_CSD": "0979",
+      "book_publisher": "Academic Press,New York",
+      "pdbx_database_id_PubMed": null,
+      "pdbx_database_id_DOI": null
+    },
+    {
+      "id": "3",
+      "title": "Crystal Structure of Human Erythrocyte Carbonic Anhydrase C. Vi. The Three-Dimensional Structure at High Resolution in Relation to Other Mammalian Carbonic Anhydrases",
+      "journal_abbrev": "Cold Spring Harbor Symp.Quant.Biol.",
+      "journal_volume": "36",
+      "page_first": "221",
+      "page_last": null,
+      "year": "1972",
+      "journal_id_ASTM": "CSHSAZ",
+      "country": "US",
+      "journal_id_ISSN": "0091-7451",
+      "journal_id_CSD": "0421",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": null,
+      "pdbx_database_id_DOI": null
+    },
+    {
+      "id": "4",
+      "title": "Crystal Structure of Human Carbonic Anhydrase C",
+      "journal_abbrev": "Nature New Biol.",
+      "journal_volume": "235",
+      "page_first": "131",
+      "page_last": null,
+      "year": "1972",
+      "journal_id_ASTM": "NNBYA7",
+      "country": "UK",
+      "journal_id_ISSN": "0369-4887",
+      "journal_id_CSD": "0192",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": null,
+      "pdbx_database_id_DOI": null
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "1",
+      "details": "author_defined_assembly",
+      "method_details": null,
+      "oligomeric_details": "monomeric",
+      "oligomeric_count": "1"
+    }
+  ],
+  "assembly_generators": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C"
+    }
+  ],
+  "assembly_operators": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "entities": [
+    {
+      "id": "1",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "CARBONIC ANHYDRASE II",
+      "formula_weight": "29157.863",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": "4.2.1.1",
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "2",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "ZINC ION",
+      "formula_weight": "65.409",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "3",
+      "type": "water",
+      "src_method": "nat",
+      "pdbx_description": "water",
+      "formula_weight": "18.015",
+      "pdbx_number_of_molecules": "167",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    }
+  ],
+  "components": [
+    {
+      "id": "ALA",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2",
+      "formula_weight": "89.093"
+    },
+    {
+      "id": "ARG",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ARGININE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N4 O2 1",
+      "formula_weight": "175.209"
+    },
+    {
+      "id": "ASN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARAGINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H8 N2 O3",
+      "formula_weight": "132.118"
+    },
+    {
+      "id": "ASP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARTIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C4 H7 N O4",
+      "formula_weight": "133.103"
+    },
+    {
+      "id": "CYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "CYSTEINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2 S",
+      "formula_weight": "121.158"
+    },
+    {
+      "id": "GLN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H10 N2 O3",
+      "formula_weight": "146.144"
+    },
+    {
+      "id": "GLU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O4",
+      "formula_weight": "147.129"
+    },
+    {
+      "id": "GLY",
+      "type": "peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLYCINE",
+      "pdbx_synonyms": null,
+      "formula": "C2 H5 N O2",
+      "formula_weight": "75.067"
+    },
+    {
+      "id": "HIS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "HISTIDINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H10 N3 O2 1",
+      "formula_weight": "156.162"
+    },
+    {
+      "id": "HOH",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "WATER",
+      "pdbx_synonyms": null,
+      "formula": "H2 O",
+      "formula_weight": "18.015"
+    },
+    {
+      "id": "ILE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ISOLEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LEU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LYSINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N2 O2 1",
+      "formula_weight": "147.195"
+    },
+    {
+      "id": "MET",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "METHIONINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2 S",
+      "formula_weight": "149.211"
+    },
+    {
+      "id": "PHE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PHENYLALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O2",
+      "formula_weight": "165.189"
+    },
+    {
+      "id": "PRO",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PROLINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O2",
+      "formula_weight": "115.130"
+    },
+    {
+      "id": "SER",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "SERINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O3",
+      "formula_weight": "105.093"
+    },
+    {
+      "id": "THR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "THREONINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "TRP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TRYPTOPHAN",
+      "pdbx_synonyms": null,
+      "formula": "C11 H12 N2 O2",
+      "formula_weight": "204.225"
+    },
+    {
+      "id": "TYR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TYROSINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O3",
+      "formula_weight": "181.189"
+    },
+    {
+      "id": "VAL",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "VALINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2",
+      "formula_weight": "117.146"
+    },
+    {
+      "id": "ZN",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "ZINC ION",
+      "pdbx_synonyms": null,
+      "formula": "Zn 2",
+      "formula_weight": "65.409"
+    }
+  ],
+  "modified_residues": [],
+  "raw_connections": [
+    {
+      "id": "metalc1",
+      "conn_type_id": "metalc",
+      "pdbx_leaving_atom_flag": null,
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "A",
+      "ptnr1_label_comp_id": "HIS",
+      "ptnr1_label_seq_id": "93",
+      "ptnr1_label_atom_id": "NE2",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "B",
+      "ptnr2_label_comp_id": "ZN",
+      "ptnr2_label_seq_id": null,
+      "ptnr2_label_atom_id": "ZN",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "A",
+      "ptnr1_auth_comp_id": "HIS",
+      "ptnr1_auth_seq_id": "94",
+      "ptnr2_auth_asym_id": "A",
+      "ptnr2_auth_comp_id": "ZN",
+      "ptnr2_auth_seq_id": "262",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "1.995",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    },
+    {
+      "id": "metalc2",
+      "conn_type_id": "metalc",
+      "pdbx_leaving_atom_flag": null,
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "A",
+      "ptnr1_label_comp_id": "HIS",
+      "ptnr1_label_seq_id": "95",
+      "ptnr1_label_atom_id": "NE2",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "B",
+      "ptnr2_label_comp_id": "ZN",
+      "ptnr2_label_seq_id": null,
+      "ptnr2_label_atom_id": "ZN",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "A",
+      "ptnr1_auth_comp_id": "HIS",
+      "ptnr1_auth_seq_id": "96",
+      "ptnr2_auth_asym_id": "A",
+      "ptnr2_auth_comp_id": "ZN",
+      "ptnr2_auth_seq_id": "262",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "2.103",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    },
+    {
+      "id": "metalc3",
+      "conn_type_id": "metalc",
+      "pdbx_leaving_atom_flag": null,
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "A",
+      "ptnr1_label_comp_id": "HIS",
+      "ptnr1_label_seq_id": "118",
+      "ptnr1_label_atom_id": "ND1",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "B",
+      "ptnr2_label_comp_id": "ZN",
+      "ptnr2_label_seq_id": null,
+      "ptnr2_label_atom_id": "ZN",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "A",
+      "ptnr1_auth_comp_id": "HIS",
+      "ptnr1_auth_seq_id": "119",
+      "ptnr2_auth_asym_id": "A",
+      "ptnr2_auth_comp_id": "ZN",
+      "ptnr2_auth_seq_id": "262",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "1.910",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    },
+    {
+      "id": "metalc4",
+      "conn_type_id": "metalc",
+      "pdbx_leaving_atom_flag": null,
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "B",
+      "ptnr1_label_comp_id": "ZN",
+      "ptnr1_label_seq_id": null,
+      "ptnr1_label_atom_id": "ZN",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "C",
+      "ptnr2_label_comp_id": "HOH",
+      "ptnr2_label_seq_id": null,
+      "ptnr2_label_atom_id": "O",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "A",
+      "ptnr1_auth_comp_id": "ZN",
+      "ptnr1_auth_seq_id": "262",
+      "ptnr2_auth_asym_id": "A",
+      "ptnr2_auth_comp_id": "HOH",
+      "ptnr2_auth_seq_id": "263",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "2.087",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    }
+  ],
+  "connections": [
+    {
+      "id": "metalc1",
+      "type": "metalc",
+      "partner1": {
+        "label_chain": "A",
+        "label_sequence_id": "93",
+        "component": "HIS",
+        "atom": "NE2",
+        "author_chain": "A",
+        "author_residue_id": "94",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "component": "ZN",
+        "atom": "ZN",
+        "author_chain": "A",
+        "author_residue_id": "262",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "1.995",
+      "deposited_order": null,
+      "leaving_atom_flag": null
+    },
+    {
+      "id": "metalc2",
+      "type": "metalc",
+      "partner1": {
+        "label_chain": "A",
+        "label_sequence_id": "95",
+        "component": "HIS",
+        "atom": "NE2",
+        "author_chain": "A",
+        "author_residue_id": "96",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "component": "ZN",
+        "atom": "ZN",
+        "author_chain": "A",
+        "author_residue_id": "262",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "2.103",
+      "deposited_order": null,
+      "leaving_atom_flag": null
+    },
+    {
+      "id": "metalc3",
+      "type": "metalc",
+      "partner1": {
+        "label_chain": "A",
+        "label_sequence_id": "118",
+        "component": "HIS",
+        "atom": "ND1",
+        "author_chain": "A",
+        "author_residue_id": "119",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "component": "ZN",
+        "atom": "ZN",
+        "author_chain": "A",
+        "author_residue_id": "262",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "1.910",
+      "deposited_order": null,
+      "leaving_atom_flag": null
+    },
+    {
+      "id": "metalc4",
+      "type": "metalc",
+      "partner1": {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "component": "ZN",
+        "atom": "ZN",
+        "author_chain": "A",
+        "author_residue_id": "262",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "C",
+        "label_sequence_id": null,
+        "component": "HOH",
+        "atom": "O",
+        "author_chain": "A",
+        "author_residue_id": "263",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "2.087",
+      "deposited_order": null,
+      "leaving_atom_flag": null
+    }
+  ],
+  "metal_atoms": [
+    {
+      "element": "ZN",
+      "component": "ZN",
+      "label_chain": "B",
+      "author_chain": "A",
+      "author_residue_id": "262",
+      "insertion_code": null,
+      "atom": "ZN",
+      "altloc": null,
+      "occupancy": "1.00",
+      "source_formal_charge": null,
+      "cartesian_angstrom": [
+        -6.788,
+        -1.621,
+        15.381
+      ]
+    }
+  ],
+  "nonstandard_residues": [
+    {
+      "label_chain": "B",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "262",
+      "insertion_code": null,
+      "component": "ZN",
+      "observed_heavy_atom_names": [
+        "ZN"
+      ]
+    }
+  ],
+  "water_residue_count": 167,
+  "atom_count_model1": 2207,
+  "chains": [
+    {
+      "label_chain": "A",
+      "author_chain": "A",
+      "entity_id": "1",
+      "sequence_length": 259,
+      "observed_residues": 256,
+      "internal_gaps": []
+    }
+  ],
+  "status": "inventoried"
+}

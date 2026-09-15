@@ -1,0 +1,42 @@
+{
+  "name": "8K5R \u00b7 chain A \u00b7 prepared",
+  "ph": 7.0,
+  "add_missing_atoms": true,
+  "build_missing_residues": true,
+  "optimize_sidechains": true,
+  "remove_waters": true,
+  "remove_heterogens": false,
+  "ligand_overrides": {},
+  "seed": 42,
+  "dataset_id": "5575d78b7b6b4ea7",
+  "ligand_actions": {},
+  "complex": true,
+  "modified_residues": [
+    {
+      "chain": "A",
+      "resid": "186",
+      "insertion_code": "",
+      "residue": "TPO",
+      "name": "Phosphothreonine",
+      "parent_residue": "THR",
+      "template": "TPO",
+      "formal_charge": -2,
+      "forcefield": "phosaa14SB",
+      "ph": 7.0,
+      "protonation_note": "Fixed dianionic phosphate (-2 e) from the published phosaa14SB TPO template. Requested pH 7 does not calculate or change its protonation state; review bound-state chemistry.",
+      "missing_heavy_atoms": [],
+      "external_bonds": [
+        [
+          "N",
+          "C"
+        ],
+        [
+          "C",
+          "N"
+        ]
+      ],
+      "supported": true
+    }
+  ],
+  "operation": "prepare"
+}

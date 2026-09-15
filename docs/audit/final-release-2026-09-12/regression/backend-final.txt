@@ -1,0 +1,65 @@
+........................................................................ [ 11%]
+........................................................................ [ 23%]
+........................................................................ [ 35%]
+........................................................................ [ 47%]
+........................................................................ [ 59%]
+........................................................................ [ 71%]
+........................................................................ [ 83%]
+........................................................................ [ 95%]
+.........................                                                [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+.venv/lib/python3.12/site-packages/starlette/testclient.py:53
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+backend/tests/test_ligand_terminal_imine_stereo.py::test_cached_benzamidine_preserves_pose_and_selects_protonated_ph7_state
+backend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:444: UserWarning: WARNING: two consecutive residues with same number (ATOM   1200  N   TYR A 184      -3.354   6.845   8.125  1.00  0.00           N  , ATOM   1199  O   GLY A 184      -1.990   5.032   7.802  1.00  0.00           O  )
+    warnings.warn("WARNING: two consecutive residues with same number (%s, %s)" % (atom, self._current_residue.atoms[-1]))
+
+backend/tests/test_ligand_terminal_imine_stereo.py::test_cached_benzamidine_preserves_pose_and_selects_protonated_ph7_state
+backend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:444: UserWarning: WARNING: two consecutive residues with same number (ATOM   1237  N   LYS A 188      -8.945   8.456  10.550  1.00  0.00           N  , ATOM   1236  O   GLY A 188     -11.047   8.523  11.393  1.00  0.00           O  )
+    warnings.warn("WARNING: two consecutive residues with same number (%s, %s)" % (atom, self._current_residue.atoms[-1]))
+
+backend/tests/test_ligand_terminal_imine_stereo.py::test_cached_benzamidine_preserves_pose_and_selects_protonated_ph7_state
+backend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:444: UserWarning: WARNING: two consecutive residues with same number (ATOM   1428  N   GLN A 221      -7.100  14.390   9.469  1.00  0.00           N  , ATOM   1427  CB  ALA A 221      -8.798  12.053  11.750  1.00  0.00           C  )
+    warnings.warn("WARNING: two consecutive residues with same number (%s, %s)" % (atom, self._current_residue.atoms[-1]))
+
+backend/tests/test_stereo_monitor.py::test_nonfinite_failure_coordinates_remain_in_npz_with_readable_topology
+  /Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/numpy/linalg/_linalg.py:2407: RuntimeWarning: invalid value encountered in det
+    r = _umath_linalg.det(a, signature=signature)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 25 durations =============================
+9.38s call     backend/tests/test_prepared_system.py::test_real_solvation_job_and_output_preserve_parameter_bundle
+1.88s call     backend/tests/test_sources_solvent.py::test_real_tip3p_preview_reuses_exact_parent_and_rejects_oversize
+1.03s call     backend/tests/test_ligands.py::test_native_gaff2_xml_equivalence_and_combined_templates
+0.75s call     backend/tests/test_chemistry_support.py::test_halogen_aromatic_native_reversed_improper_converts_exactly
+0.53s call     backend/tests/test_ligands.py::test_native_prepared_atoms_survive_openmm_hydrogen_assignment
+0.52s call     backend/tests/test_ligands.py::test_identical_copies_keep_parameter_source_and_individual_provenance
+0.26s call     backend/tests/test_resource_profile.py::test_bounded_atom_profile_is_shared_with_selection_validation[None-100000]
+0.24s call     backend/tests/test_resource_profile.py::test_bounded_atom_profile_is_shared_with_selection_validation[200000-200000]
+0.23s call     backend/tests/test_resource_profile.py::test_bounded_atom_profile_is_shared_with_selection_validation[125000-125000]
+0.19s call     backend/tests/test_sequence_scheme.py::test_retained_4bvn_scheme_has_six_exact_internal_omissions
+0.17s call     backend/tests/test_ions.py::test_prepared_protein_retains_zinc_coordinates_identity_and_parameters_through_pdb
+0.15s call     backend/tests/test_sequence_scheme.py::test_retained_3ptb_recovers_only_unique_source_codes
+0.11s call     backend/tests/test_resource_submission.py::test_resource_blockers_match_readiness_and_actual_http_submission[disk-disk space]
+0.11s call     backend/tests/test_recovery.py::test_poll_and_resume_transitions_share_a_lock
+0.09s call     backend/tests/test_modified_residues.py::test_repairs_modified_heavy_atom_and_adds_fixed_hydrogens[HYP-OD1]
+0.08s call     backend/tests/test_solvent_allocation.py::test_bound_contains_every_native_template_placement[9.6936]
+0.07s call     backend/tests/test_workspaces.py::test_real_tpo_parameter_bundle_remains_loadable_after_portable_import
+0.07s call     backend/tests/test_missing_modified_sequence.py::test_standard_missing_loop_stays_buildable
+0.06s call     backend/tests/test_loop_limits.py::test_inspection_and_submission_agree_at_per_loop_boundary[6-True-short]
+0.06s call     backend/tests/test_loop_limits.py::test_four_monomers_with_twelve_residue_loops_can_prepare
+0.05s call     backend/tests/test_modified_residues.py::test_native_amber_parameters_energy_forces_and_atom_order[TPO]
+0.05s call     backend/tests/test_preparation.py::test_known_internal_gap_requires_explicit_building
+0.05s call     backend/tests/test_solvent_allocation.py::test_bound_contains_every_native_template_placement[3.0000000000000004]
+0.05s call     backend/tests/test_chemistry_support.py::test_readiness_validation_uses_submission_rules_without_job_or_dataset_writes
+0.05s call     backend/tests/test_ligand_identity.py::test_two_ligand_copies_keep_separate_residue_identity_maps
+601 passed, 9 warnings in 21.70s

@@ -1,0 +1,11 @@
+{
+  "copied_from": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/geometric_adapter.py",
+  "source_sha256": "7f32d1812face4e59c229926a8a5f00f99f45c5ec964bc5df50891475cc8ce2a",
+  "ast_sha256": {
+    "Cancelled": "f9bbc12536643efe4f8e3feb1e6d171f4330ef85bca74304c2cdb357ff636927",
+    "_cancellation_scope": "b66ff343f718c35459ed18df27d9d1ecc87c98bbb90befaa9bbede8160cc62cd",
+    "_uninterrupted_cleanup": "0bc0f58f40581102c16fe165b627e7189eef9deac82cee024dffab961f2c0751",
+    "_group_is_alive": "693f57f6ca99ebc654ba095dc47c6050b2410449a4d71fa6b2fc7d59bdcbb3e8",
+    "_terminate_owned_group": "50bbcbcb107e310ebbc80249162748ad16362e73d3cd47021a4a511b8d2baad4"
+  }
+}

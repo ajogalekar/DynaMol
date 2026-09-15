@@ -1,0 +1,8 @@
+{
+  "tests": 11,
+  "errors": 1,
+  "test": "test_original_charge_gate_function_is_exact",
+  "error": "KeyError: atom_count",
+  "reason": "The intentionally incomplete dummy constraints lacked the schema keys expected by the unmodified original validator. The test expected ValueError; either exception refuses malformed data. Corrected the dummy schema to exercise the intended count mismatch without altering the validator.",
+  "QM_launched": false
+}

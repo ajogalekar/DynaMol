@@ -1,0 +1,366 @@
+[
+  {
+    "variant": "baseline",
+    "source_psf_sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e",
+    "output_psf_sha256": "d773fc2e42c63243e06037aa2cdb3f65f38307ef30c99e9afef97ab3e99c2dca",
+    "system_xml_sha256": "0abc07238e9ad570231327f612573c6472e8d16a49eedc833ecbbfab1ac82c43",
+    "particle_count": 27386,
+    "force_classes": [
+      "HarmonicBondForce",
+      "HarmonicAngleForce",
+      "HarmonicBondForce",
+      "PeriodicTorsionForce",
+      "CustomTorsionForce",
+      "CMAPTorsionForce",
+      "NonbondedForce",
+      "CMMotionRemover"
+    ],
+    "constraint_count": 0,
+    "nonbonded_exceptions": 38552,
+    "total_partial_charge_e": 1.6237011735142914e-15,
+    "particle_charges_match_psf": true,
+    "all_psf_term_indices_unchanged": true,
+    "maximum_particle_mass_error_dalton": 0.0,
+    "charge_modifications": [],
+    "reader_warnings": [
+      "Repeat improper dihedral found ('CPH2', 'NR2', 'NR1', 'HR1') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH2', 'NR1', 'NR2', 'HR1') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'NR1', 'CPH1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'NR2', 'CPH1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'CPH1', 'NR1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'CPH1', 'NR2', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use"
+    ],
+    "scope": "Complete published horse PSF mechanical definition only; no coordinates, Context, energy, QM, MD or 1A6M parameterization acceptance."
+  },
+  {
+    "variant": "updated-charges",
+    "source_psf_sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e",
+    "output_psf_sha256": "9d10e1ae56a173de6e11eceee0178aa1ab6d2525d51aa15cf432b138409f9166",
+    "system_xml_sha256": "ca225779a84650d5f1546e2a8e39bb7eb939ffc8661af39436668f84b21a8d5f",
+    "particle_count": 27386,
+    "force_classes": [
+      "HarmonicBondForce",
+      "HarmonicAngleForce",
+      "HarmonicBondForce",
+      "PeriodicTorsionForce",
+      "CustomTorsionForce",
+      "CMAPTorsionForce",
+      "NonbondedForce",
+      "CMMotionRemover"
+    ],
+    "constraint_count": 0,
+    "nonbonded_exceptions": 38552,
+    "total_partial_charge_e": 1.2906342661267445e-15,
+    "particle_charges_match_psf": true,
+    "all_psf_term_indices_unchanged": true,
+    "maximum_particle_mass_error_dalton": 0.0,
+    "charge_modifications": [
+      {
+        "index_1based": 2412,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "FE"
+        ],
+        "old_charge_e": 0.24,
+        "new_charge_e": 1.42
+      },
+      {
+        "index_1based": 2413,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "NA"
+        ],
+        "old_charge_e": -0.18,
+        "new_charge_e": -0.65
+      },
+      {
+        "index_1based": 2414,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "NB"
+        ],
+        "old_charge_e": -0.18,
+        "new_charge_e": -0.65
+      },
+      {
+        "index_1based": 2415,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "NC"
+        ],
+        "old_charge_e": -0.18,
+        "new_charge_e": -0.65
+      },
+      {
+        "index_1based": 2416,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "ND"
+        ],
+        "old_charge_e": -0.18,
+        "new_charge_e": -0.65
+      },
+      {
+        "index_1based": 2417,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C1A"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2418,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C2A"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2419,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C3A"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2420,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C4A"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2421,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C1B"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2422,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C2B"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2423,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C3B"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2424,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C4B"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2425,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C1C"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2426,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C2C"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2427,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C3C"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2428,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C4C"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2429,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C1D"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2430,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C2D"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2431,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C3D"
+        ],
+        "old_charge_e": -0.06,
+        "new_charge_e": -0.12
+      },
+      {
+        "index_1based": 2432,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "C4D"
+        ],
+        "old_charge_e": 0.12,
+        "new_charge_e": 0.42
+      },
+      {
+        "index_1based": 2433,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "CHA"
+        ],
+        "old_charge_e": -0.1,
+        "new_charge_e": -0.28
+      },
+      {
+        "index_1based": 2435,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "CHB"
+        ],
+        "old_charge_e": -0.1,
+        "new_charge_e": -0.28
+      },
+      {
+        "index_1based": 2437,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "CHC"
+        ],
+        "old_charge_e": -0.1,
+        "new_charge_e": -0.28
+      },
+      {
+        "index_1based": 2439,
+        "identity": [
+          "B",
+          "155",
+          "HEM",
+          "CHD"
+        ],
+        "old_charge_e": -0.1,
+        "new_charge_e": -0.28
+      },
+      {
+        "index_1based": 2485,
+        "identity": [
+          "C",
+          "555",
+          "OXY",
+          "O1"
+        ],
+        "old_charge_e": 0.021,
+        "new_charge_e": -0.18
+      },
+      {
+        "index_1based": 2486,
+        "identity": [
+          "C",
+          "555",
+          "OXY",
+          "O2"
+        ],
+        "old_charge_e": -0.021,
+        "new_charge_e": -0.32
+      }
+    ],
+    "reader_warnings": [
+      "Repeat improper dihedral found ('CPH2', 'NR2', 'NR1', 'HR1') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH2', 'NR1', 'NR2', 'HR1') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'NR1', 'CPH1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'NR2', 'CPH1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'CPH1', 'NR1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+      "Repeat improper dihedral found ('CPH1', 'CPH1', 'NR2', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use"
+    ],
+    "scope": "Complete published horse PSF mechanical definition only; no coordinates, Context, energy, QM, MD or 1A6M parameterization acceptance."
+  }
+]

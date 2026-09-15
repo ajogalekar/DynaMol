@@ -51,7 +51,7 @@ class LocalOriginMiddleware(BaseHTTPMiddleware):
         return await call_next(request)
 
 
-app = FastAPI(title="DynaMol", version="0.1.1", description="Local molecular dynamics studio — real trajectories, explicit provenance.")
+app = FastAPI(title="DynaMol", version="1.0.0", description="Local molecular dynamics studio — real trajectories, explicit provenance.")
 browser_origins = local_browser_origins(os.environ.get("DYNAMOL_ORIGIN"))
 app.add_middleware(CORSMiddleware, allow_origins=browser_origins, allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 app.add_middleware(LocalOriginMiddleware, allowed_origins=browser_origins)

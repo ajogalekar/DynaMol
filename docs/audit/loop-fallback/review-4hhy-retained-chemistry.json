@@ -1,0 +1,590 @@
+{
+  "id": "4HHY",
+  "scope": "Independent saved-PDB ligand/ion heavy-atom identity and bound-pose check; no MD.",
+  "checked_atoms": 48,
+  "all_present": true,
+  "max_displacement_angstrom": 0.0,
+  "atoms": [
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "OAA",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBA",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "NAY",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAV",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBO",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBJ",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBG",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAJ",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAH",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAI",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBF",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAP",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAS",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "NBQ",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBC",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "OAC",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBN",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAR",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAU",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAQ",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAT",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "NBP",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBB",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "OAB",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBH",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAO",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBE",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "FAE",
+        "F"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAL",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAK",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBD",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAW",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBI",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "NAX",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "NAZ",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBK",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "OAD",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBM",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CBL",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAM",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAF",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAG",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "H",
+        "401",
+        "",
+        "15R",
+        "CAN",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "I",
+        "402",
+        "",
+        "SO4",
+        "S",
+        "S"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "I",
+        "402",
+        "",
+        "SO4",
+        "O1",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "I",
+        "402",
+        "",
+        "SO4",
+        "O2",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "I",
+        "402",
+        "",
+        "SO4",
+        "O3",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "I",
+        "402",
+        "",
+        "SO4",
+        "O4",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    }
+  ],
+  "ligand_models": 2,
+  "conversion_passed": true,
+  "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-scale-fixed/4HHY/workspace/datasets/b453887c7cac4dae/topology.pdb",
+  "prepared": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-scale-fixed/4HHY/workspace/datasets/d41657f92b224797/prepared.pdb",
+  "prepared_sha256": "046f306d86729f0229bf26b1fd9919de6b09a9f9c5ed1831a755f9221750ac70"
+}

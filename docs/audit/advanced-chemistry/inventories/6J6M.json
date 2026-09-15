@@ -1,0 +1,488 @@
+{
+  "id": "6J6M",
+  "recorded_at_utc": "2026-09-13T15:59:01.887924+00:00",
+  "input": {
+    "path": "inputs/6J6M.cif",
+    "source_url": "https://files.rcsb.org/download/6J6M.cif",
+    "sha256": "129d406a1b2156b9cf20834f006695c60f6b1138325447c4b00ae983512eb442",
+    "bytes": 546390
+  },
+  "title": "Co-crystal structure of BTK kinase domain with Zanubrutinib",
+  "organisms": [
+    "Homo sapiens"
+  ],
+  "resolution_angstrom": "1.250",
+  "primary_citations": [
+    {
+      "abstract": null,
+      "abstract_id_CAS": null,
+      "book_id_ISBN": null,
+      "book_publisher": null,
+      "book_publisher_city": null,
+      "book_title": null,
+      "coordinate_linkage": null,
+      "country": "US",
+      "database_id_Medline": null,
+      "details": null,
+      "id": "primary",
+      "journal_abbrev": "J.Med.Chem.",
+      "journal_id_ASTM": "JMCMAR",
+      "journal_id_CSD": "0151",
+      "journal_id_ISSN": "0022-2623",
+      "journal_full": null,
+      "journal_issue": null,
+      "journal_volume": "62",
+      "language": null,
+      "page_first": "7923",
+      "page_last": "7940",
+      "title": "Discovery of Zanubrutinib (BGB-3111), a Novel, Potent, and Selective Covalent Inhibitor of Bruton's Tyrosine Kinase.",
+      "year": "2019",
+      "database_id_CSD": null,
+      "pdbx_database_id_DOI": "10.1021/acs.jmedchem.9b00687",
+      "pdbx_database_id_PubMed": "31381333",
+      "unpublished_flag": null
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "1",
+      "details": "author_defined_assembly",
+      "method_details": null,
+      "oligomeric_details": "monomeric",
+      "oligomeric_count": "1"
+    }
+  ],
+  "assembly_generators": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D"
+    }
+  ],
+  "assembly_operators": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "entities": [
+    {
+      "id": "1",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "Tyrosine-protein kinase BTK",
+      "formula_weight": "31351.984",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": "2.7.10.2",
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "2",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "(7S)-2-(4-phenoxyphenyl)-7-(1-propanoylpiperidin-4-yl)-4,5,6,7-tetrahydropyrazolo[1,5-a]pyrimidine-3-carboxamide",
+      "formula_weight": "473.567",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "3",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "IMIDAZOLE",
+      "formula_weight": "69.085",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "4",
+      "type": "water",
+      "src_method": "nat",
+      "pdbx_description": "water",
+      "formula_weight": "18.015",
+      "pdbx_number_of_molecules": "441",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    }
+  ],
+  "components": [
+    {
+      "id": "ALA",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2",
+      "formula_weight": "89.093"
+    },
+    {
+      "id": "ARG",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ARGININE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N4 O2 1",
+      "formula_weight": "175.209"
+    },
+    {
+      "id": "ASN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARAGINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H8 N2 O3",
+      "formula_weight": "132.118"
+    },
+    {
+      "id": "ASP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARTIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C4 H7 N O4",
+      "formula_weight": "133.103"
+    },
+    {
+      "id": "BA0",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "(7S)-2-(4-phenoxyphenyl)-7-(1-propanoylpiperidin-4-yl)-4,5,6,7-tetrahydropyrazolo[1,5-a]pyrimidine-3-carboxamide",
+      "pdbx_synonyms": "Zanubrutinib",
+      "formula": "C27 H31 N5 O3",
+      "formula_weight": "473.567"
+    },
+    {
+      "id": "CYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "CYSTEINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2 S",
+      "formula_weight": "121.158"
+    },
+    {
+      "id": "GLN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H10 N2 O3",
+      "formula_weight": "146.144"
+    },
+    {
+      "id": "GLU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O4",
+      "formula_weight": "147.129"
+    },
+    {
+      "id": "GLY",
+      "type": "peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLYCINE",
+      "pdbx_synonyms": null,
+      "formula": "C2 H5 N O2",
+      "formula_weight": "75.067"
+    },
+    {
+      "id": "HIS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "HISTIDINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H10 N3 O2 1",
+      "formula_weight": "156.162"
+    },
+    {
+      "id": "HOH",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "WATER",
+      "pdbx_synonyms": null,
+      "formula": "H2 O",
+      "formula_weight": "18.015"
+    },
+    {
+      "id": "ILE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ISOLEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "IMD",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "IMIDAZOLE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H5 N2 1",
+      "formula_weight": "69.085"
+    },
+    {
+      "id": "LEU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LYSINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N2 O2 1",
+      "formula_weight": "147.195"
+    },
+    {
+      "id": "MET",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "METHIONINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2 S",
+      "formula_weight": "149.211"
+    },
+    {
+      "id": "PHE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PHENYLALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O2",
+      "formula_weight": "165.189"
+    },
+    {
+      "id": "PRO",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PROLINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O2",
+      "formula_weight": "115.130"
+    },
+    {
+      "id": "SER",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "SERINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O3",
+      "formula_weight": "105.093"
+    },
+    {
+      "id": "THR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "THREONINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "TRP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TRYPTOPHAN",
+      "pdbx_synonyms": null,
+      "formula": "C11 H12 N2 O2",
+      "formula_weight": "204.225"
+    },
+    {
+      "id": "TYR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TYROSINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O3",
+      "formula_weight": "181.189"
+    },
+    {
+      "id": "VAL",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "VALINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2",
+      "formula_weight": "117.146"
+    }
+  ],
+  "modified_residues": [],
+  "raw_connections": [
+    {
+      "id": "covale1",
+      "conn_type_id": "covale",
+      "pdbx_leaving_atom_flag": "none",
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "A",
+      "ptnr1_label_comp_id": "CYS",
+      "ptnr1_label_seq_id": "91",
+      "ptnr1_label_atom_id": "SG",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "B",
+      "ptnr2_label_comp_id": "BA0",
+      "ptnr2_label_seq_id": null,
+      "ptnr2_label_atom_id": "C15",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "A",
+      "ptnr1_auth_comp_id": "CYS",
+      "ptnr1_auth_seq_id": "481",
+      "ptnr2_auth_asym_id": "A",
+      "ptnr2_auth_comp_id": "BA0",
+      "ptnr2_auth_seq_id": "701",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "1.812",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    }
+  ],
+  "connections": [
+    {
+      "id": "covale1",
+      "type": "covale",
+      "partner1": {
+        "label_chain": "A",
+        "label_sequence_id": "91",
+        "component": "CYS",
+        "atom": "SG",
+        "author_chain": "A",
+        "author_residue_id": "481",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "B",
+        "label_sequence_id": null,
+        "component": "BA0",
+        "atom": "C15",
+        "author_chain": "A",
+        "author_residue_id": "701",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "1.812",
+      "deposited_order": null,
+      "leaving_atom_flag": "none"
+    }
+  ],
+  "metal_atoms": [],
+  "nonstandard_residues": [
+    {
+      "label_chain": "B",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "701",
+      "insertion_code": null,
+      "component": "BA0",
+      "observed_heavy_atom_names": [
+        "C02",
+        "C03",
+        "C04",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C13",
+        "C14",
+        "C15",
+        "C17",
+        "C18",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C29",
+        "C30",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "N01",
+        "N05",
+        "N12",
+        "N19",
+        "N20",
+        "O16",
+        "O28",
+        "O35"
+      ]
+    },
+    {
+      "label_chain": "C",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "702",
+      "insertion_code": null,
+      "component": "IMD",
+      "observed_heavy_atom_names": [
+        "C2",
+        "C4",
+        "C5",
+        "N1",
+        "N3"
+      ]
+    }
+  ],
+  "water_residue_count": 441,
+  "atom_count_model1": 2739,
+  "chains": [
+    {
+      "label_chain": "A",
+      "author_chain": "A",
+      "entity_id": "1",
+      "sequence_length": 269,
+      "observed_residues": 267,
+      "internal_gaps": []
+    }
+  ],
+  "status": "inventoried"
+}

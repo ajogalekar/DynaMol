@@ -1,0 +1,2954 @@
+{
+  "provided_pdb_atom_count": 2486,
+  "full_psf_atom_count": 27386,
+  "matches_exact_psf_solute_prefix_without_aliases": false,
+  "matches_exact_psf_solute_prefix_with_deposited_script_aliases": true,
+  "explicit_aliases": [
+    "HIS\u2192HSD",
+    "ILE CD1\u2192CD"
+  ],
+  "raw_identity_differences": [
+    {
+      "pdb_index": 316,
+      "observed": [
+        "A",
+        "21",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "21",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 339,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 340,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 341,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 342,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 343,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 344,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 345,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 346,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 347,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 348,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 349,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 350,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 351,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 352,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 353,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 354,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 355,
+      "observed": [
+        "A",
+        "24",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "24",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 443,
+      "observed": [
+        "A",
+        "30",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "30",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 533,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 534,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 535,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 536,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 537,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 538,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 539,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 540,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 541,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 542,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 543,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 544,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 545,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 546,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 547,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 548,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 549,
+      "observed": [
+        "A",
+        "36",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "36",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 745,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 746,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 747,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 748,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 749,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 750,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 751,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 752,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 753,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 754,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 755,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 756,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 757,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 758,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 759,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 760,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 761,
+      "observed": [
+        "A",
+        "48",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "48",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1007,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1008,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1009,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1010,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1011,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1012,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1013,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1014,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1015,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1016,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1017,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1018,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1019,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1020,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1021,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1022,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1023,
+      "observed": [
+        "A",
+        "64",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "64",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1166,
+      "observed": [
+        "A",
+        "75",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "75",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 1264,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1265,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1266,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1267,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1268,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1269,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1270,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1271,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1272,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1273,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1274,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1275,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1276,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1277,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1278,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1279,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1280,
+      "observed": [
+        "A",
+        "81",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "81",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1281,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1282,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1283,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1284,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1285,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1286,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1287,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1288,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1289,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1290,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1291,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1292,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1293,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1294,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1295,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1296,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1297,
+      "observed": [
+        "A",
+        "82",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "82",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1450,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1451,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1452,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1453,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1454,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1455,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1456,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1457,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1458,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1459,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1460,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1461,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1462,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1463,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1464,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1465,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1466,
+      "observed": [
+        "A",
+        "93",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "93",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1513,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1514,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1515,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1516,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1517,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1518,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1519,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1520,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1521,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1522,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1523,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1524,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1525,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1526,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1527,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1528,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1529,
+      "observed": [
+        "A",
+        "97",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "97",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1565,
+      "observed": [
+        "A",
+        "99",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "99",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 1598,
+      "observed": [
+        "A",
+        "101",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "101",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 1714,
+      "observed": [
+        "A",
+        "107",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "107",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 1766,
+      "observed": [
+        "A",
+        "111",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "111",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 1785,
+      "observed": [
+        "A",
+        "112",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "112",
+        "ILE",
+        "CD"
+      ]
+    },
+    {
+      "pdb_index": 1791,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1792,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1793,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1794,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1795,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1796,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1797,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1798,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1799,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1800,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1801,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1802,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1803,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1804,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1805,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1806,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1807,
+      "observed": [
+        "A",
+        "113",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "113",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1843,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1844,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1845,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1846,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1847,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1848,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1849,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1850,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1851,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1852,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1853,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1854,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1855,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1856,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1857,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1858,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1859,
+      "observed": [
+        "A",
+        "116",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "116",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 1893,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "N"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "N"
+      ]
+    },
+    {
+      "pdb_index": 1894,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HN"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HN"
+      ]
+    },
+    {
+      "pdb_index": 1895,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "CA"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "CA"
+      ]
+    },
+    {
+      "pdb_index": 1896,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HA"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HA"
+      ]
+    },
+    {
+      "pdb_index": 1897,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "CB"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "CB"
+      ]
+    },
+    {
+      "pdb_index": 1898,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HB1"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HB1"
+      ]
+    },
+    {
+      "pdb_index": 1899,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HB2"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HB2"
+      ]
+    },
+    {
+      "pdb_index": 1900,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "ND1"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "ND1"
+      ]
+    },
+    {
+      "pdb_index": 1901,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HD1"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HD1"
+      ]
+    },
+    {
+      "pdb_index": 1902,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "CG"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "CG"
+      ]
+    },
+    {
+      "pdb_index": 1903,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "CE1"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "CE1"
+      ]
+    },
+    {
+      "pdb_index": 1904,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HE1"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HE1"
+      ]
+    },
+    {
+      "pdb_index": 1905,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "NE2"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "NE2"
+      ]
+    },
+    {
+      "pdb_index": 1906,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "CD2"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "CD2"
+      ]
+    },
+    {
+      "pdb_index": 1907,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "HD2"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "HD2"
+      ]
+    },
+    {
+      "pdb_index": 1908,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "C"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "C"
+      ]
+    },
+    {
+      "pdb_index": 1909,
+      "observed": [
+        "A",
+        "119",
+        "HIS",
+        "O"
+      ],
+      "psf": [
+        "A",
+        "119",
+        "HSD",
+        "O"
+      ]
+    },
+    {
+      "pdb_index": 2235,
+      "observed": [
+        "A",
+        "142",
+        "ILE",
+        "CD1"
+      ],
+      "psf": [
+        "A",
+        "142",
+        "ILE",
+        "CD"
+      ]
+    }
+  ],
+  "remaining_mismatches": [],
+  "caveat": "Mapped solute prefix does not provide missing solvent/ion coordinates or establish a periodic box; no full PSF Context was created."
+}

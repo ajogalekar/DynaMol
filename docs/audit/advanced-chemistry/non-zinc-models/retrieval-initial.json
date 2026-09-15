@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6926953/fullTextXML",
+    "file": "PMC6926953.xml",
+    "sha256": "c27cfb27bc100e8de51a8b37ffcc129365ffba05b26cf55b449c142346a27988",
+    "retrieved_at": "2026-09-13T17:30:01.888850+00:00"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4451517/fullTextXML",
+    "file": "PMC4451517.xml",
+    "sha256": "b1297f4aa8b583a3ad7c9b21c37ccc35eafbf0f0cc9c53de9ea6ff08633b017a",
+    "retrieved_at": "2026-09-13T17:30:02.941341+00:00"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5969255/fullTextXML",
+    "file": "PMC5969255.xml",
+    "sha256": "da150dfb84310826c592ce60d0ffd084e0808b78ae699118c927729f00e991c9",
+    "retrieved_at": "2026-09-13T17:30:03.913118+00:00"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13297126/fullTextXML",
+    "file": "PMC13297126.xml",
+    "sha256": "c8cda789db0bbba0c260d0c9e94b82ed82f4afcdaf574d7bea65646b2ede115a",
+    "retrieved_at": "2026-09-13T17:30:05.194203+00:00"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "review_only": true,
+  "native_reruns": 0,
+  "source_files_unchanged_after_analysis": true,
+  "artifacts": {
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-df-independent-review/README.md": "fbf11e6f02021b12e5f66cac039f5c10f1ac092f3269bddfcabb932a7b6b7e8a",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-df-independent-review/review.json": "837b230b9e72a6fd8c801ca258ee62839a1c82af7018878a0f9372f89671c1da",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-df-independent-review/optimization-readiness.json": "be50c7f07d14aa81a24de2fce5f82bca46e05bc6f2b1fe424bd73959952ad481",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-df-independent-review/native-cap-construction-source.py": "0c017b66a397388cdcbd23e0a8b74a9e2eaab857f499c093f75dced4b49ff59d",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1mnc-df-independent-review/metal-status-before-1mnc-update.json": "61155f445471ee2c49d423f052f6eeedfef51374714a6c725f5cf559a1fe07eb",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/review_1mnc_density_fit.py": "6406c59e0d210bda7f3d08f267a20d572e512bf8e8b085d2f112a8db02bcb562",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/METAL-STATUS.json": "e220eae1277c05a1f99633b85701d87b6e248c4a4e9603948e28333d92f03a1c"
+  }
+}

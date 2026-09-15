@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "atom_ids": [
+    "water/O",
+    "water/H1",
+    "water/H2"
+  ],
+  "elements": [
+    "O",
+    "H",
+    "H"
+  ],
+  "charge": 0,
+  "spin": 0,
+  "method": "RHF",
+  "basis": "sto-3g",
+  "operations": [
+    "gradient"
+  ],
+  "coords_bohr": [
+    [
+      0.0,
+      0.0,
+      0.0001
+    ],
+    [
+      1.4172945934237964,
+      0.0,
+      1.1149384134933864
+    ],
+    [
+      -1.436191854669447,
+      0.0,
+      1.133835674739037
+    ]
+  ]
+}

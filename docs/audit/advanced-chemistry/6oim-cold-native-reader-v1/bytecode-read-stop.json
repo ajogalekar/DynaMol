@@ -1,0 +1,9 @@
+{
+  "scope": "Software tests only, no native calculation",
+  "process_pid": 77366,
+  "cause": "-B disables writes but still opened stale Documents __pycache__ file; read paused",
+  "action": "Requested termination after sampling, but process had already completed successfully; no process was stopped. Fresh stable-cache repetition used a unique pycache prefix.",
+  "original_test_exit_code": 0,
+  "original_tests": 22,
+  "sample": "/Users/ashujo/.cache/dynamol-research/reader-test-wait-sample.txt"
+}

@@ -152,7 +152,7 @@ def main() -> int:
                 address = json.loads(startup.read_text()).get('url', '')
                 if address.startswith('http://127.0.0.1:'):
                     subprocess.run(['/usr/bin/open', address], check=False)
-            print('DynaMol is already starting. Please wait for its browser window.', flush=True)
+            print('DynaMol is already starting. Please wait for its workspace to open.', flush=True)
             return 0
     progress = ThreadingHTTPServer(('127.0.0.1', 0), ProgressHandler)
     threading.Thread(target=progress.serve_forever, daemon=True).start()

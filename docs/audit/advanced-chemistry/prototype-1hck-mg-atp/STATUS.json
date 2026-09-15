@@ -1,0 +1,87 @@
+{
+  "pdb_id": "1HCK",
+  "stage": "complete_native_research_assembly_static_same_convention_parity_passed",
+  "ready_for_app": false,
+  "dynamics_run": false,
+  "quantum_run": false,
+  "source_heavy_atoms_retained": 2506,
+  "native_atoms": 5216,
+  "water_residues_retained": 108,
+  "chemical_state": "occupied Mg(II)+2 / ATP4\u2212 / ff14SB pH7 hydrogen templates / TIP3P crystal waters",
+  "native_assembly_passed": true,
+  "mandatory_term_data_transport_passed": true,
+  "cmap_values_checked": 576,
+  "native_pair_entries_checked": 361,
+  "exclusions_and_exceptions_checked": 27248,
+  "finite_openmm_configuration": {
+    "finite_energy_and_all_forces": true,
+    "energy_kj_mol": -23029.88262747091,
+    "maximum_force_vector_kj_mol_nm": 103754.50676658525,
+    "rms_force_component_kj_mol_nm": 1225.445573112074,
+    "platform": "OpenMM Reference",
+    "dynamics_steps": 0,
+    "constraints": 0,
+    "interpretation": "Unrelaxed crystal/template coordinate sanity only; finite/high forces do not establish equilibrium or model accuracy. Native cross-engine result remains separate.",
+    "system_sha256": "cdd2233e80b874a2969cf9c41d9843b397a38a68942e88f16cb36f9be0a1a49d",
+    "coordinates_sha256": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7"
+  },
+  "native_static": {
+    "three_pose_helper": "native assertion during repeated API setup; not a parameter-read failure demonstrated in fresh process",
+    "single_pose_fresh_process_completed": true,
+    "sander_energy_kj_mol": -23028.447382741924,
+    "openmm_energy_kj_mol": -23029.88262747091,
+    "raw_difference_openmm_minus_sander_kj_mol": -1.4352447289857082,
+    "numeric_parity_passed": false,
+    "status": "Raw engine differences retained. Same-convention energies and all forces agree at three poses under original tolerances; this is numerical implementation evidence, not chemistry validation.",
+    "source_localization": {
+      "source": "charmm-AmberTools24-rc5.F90",
+      "source_sha256": "ad583d5b3cd1b8e5e62ca7303442c60793e33d73177167dcf98f7268e5a05c1d",
+      "line": 2328,
+      "operation": "REQUIRE(ier==0) immediately after allocate(cmap_index(6,cmap_term_count),stat=ier)",
+      "inference": "Fresh single-pose success plus repeated-setup failure is consistent with missing CMAP cleanup in native API lifecycle; no installed engine edits made."
+    },
+    "raw_numeric_parity_passed": false,
+    "same_convention_numeric_parity_passed": true,
+    "fresh_process_pose_count": 3,
+    "independent_phase_convention_source": {
+      "path": "build/advanced-chemistry/amber-sander-source-check/set.F90",
+      "sha256": "3a4252429404df028416364822084a7de7bed4425ad06278fa85680ab2b13cc7",
+      "routine": "dihpar",
+      "lines": "433-437"
+    },
+    "same_convention_maximum_energy_difference_kj_mol": 9.211362339556217e-09,
+    "same_convention_maximum_force_component_difference_kj_mol_nm": 6.446498446166515e-09,
+    "diagnostic_report": "native-parity-v3/component-convention-diagnostic.json",
+    "chemical_parameter_files_unchanged": {
+      "published.prmtop": "bda6ae78ee73d7aeec372a0d83f1ad5253b27f61724fa449f4f70abafd41a4da",
+      "published.inpcrd": "e69922e7fa6fc43864bf602dfe7cc449ca09a3d4a79241da862b9155af90aeb7",
+      "published-openmm-system.xml": "cdd2233e80b874a2969cf9c41d9843b397a38a68942e88f16cb36f9be0a1a49d"
+    },
+    "helper_validation": {
+      "focused_tests_passed": 3,
+      "test_file": "backend/tests/test_native_sander_parity_helper.py",
+      "test_duration_seconds": 0.06,
+      "command": ".venv/bin/python -m pytest backend/tests/test_native_sander_parity_helper.py -q"
+    }
+  },
+  "boundaries": [
+    "Published shared O/O2/O3 LJ type correction changes Mg-protein carbonyl and carboxylate interactions; protein transferability not established by ATP/water benchmarks.",
+    "Final parameter SI CC BY-NC4.0 is not an unrestricted bundle license.",
+    "Unrelaxed hydrogen contacts and high initial forces require separate relaxation before MD.",
+    "Loop/protonation states are explicit models, not experimentally proven.",
+    "Special CMAP/NBFIX model is deliberately unsupported by ordinary parameter exporter and application lifecycle."
+  ],
+  "deferred_alternative": {
+    "pdb_id": "1CLL",
+    "reason": "Incomplete deposited EOH missing oxygen; no entity removed"
+  },
+  "report": "ASSEMBLY-REVIEW.md",
+  "artifacts": {
+    "assembly": "native-v2/native-assembly-report.json",
+    "mandatory_terms": "native-v2/mandatory-term-transport.json",
+    "source_map": "native-v2/source-atom-map.json",
+    "native_failure": "native-v2/sander-parity.log",
+    "native_success": "native-v2/sander-single-pose-native.json"
+  },
+  "updated_unix": 1789332274.644605
+}

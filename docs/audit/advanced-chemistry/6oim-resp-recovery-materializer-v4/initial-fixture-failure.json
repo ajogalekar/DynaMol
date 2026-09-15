@@ -1,0 +1,8 @@
+{
+  "tests": 37,
+  "errors": 1,
+  "case": "test_synthetic_parent_metadata_only",
+  "error": "ValueError: Parent units changed",
+  "cause": "The newly introduced synthetic parent metadata fixture omitted the required gradient_hartree_per_bohr unit label. The production metadata predicate correctly refused it.",
+  "QM_launched": false
+}

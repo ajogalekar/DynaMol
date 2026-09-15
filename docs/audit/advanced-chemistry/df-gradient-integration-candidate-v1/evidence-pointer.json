@@ -1,0 +1,8 @@
+{
+  "evidence_directory": "/Users/ashujo/.cache/dynamol-research/df-gradient-integration-candidate-v1",
+  "artifact_manifest": "/Users/ashujo/.cache/dynamol-research/df-gradient-integration-candidate-v1/artifact-manifest.json",
+  "manifest_sha256": "22c8a6a53eb9ac399b8a73fc8323cbede879487bb4ebeebaa1b3fb79a311ade5",
+  "artifact_count": 175,
+  "total_bytes": 1233021,
+  "status": "small native full-gradient qualification passed; independent review and large resource qualification pending"
+}

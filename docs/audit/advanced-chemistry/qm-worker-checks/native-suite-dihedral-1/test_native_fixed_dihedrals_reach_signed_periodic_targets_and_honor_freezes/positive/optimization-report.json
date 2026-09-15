@@ -1,0 +1,258 @@
+{
+  "requested": true,
+  "converged": true,
+  "settings": {
+    "enabled": true,
+    "max_steps": 60,
+    "freeze_atom_ids": [
+      "O-left",
+      "O-right"
+    ],
+    "dihedral_constraints": [
+      {
+        "atom_ids": [
+          "H-left",
+          "O-left",
+          "O-right",
+          "H-right"
+        ],
+        "target_degrees": 60
+      }
+    ],
+    "dihedral_tolerance_degrees": 0.1,
+    "convergence_energy": 1e-06,
+    "convergence_grms": 0.0003,
+    "convergence_gmax": 0.00045,
+    "convergence_drms": 0.0012,
+    "convergence_dmax": 0.0018
+  },
+  "steps": [
+    {
+      "cycle": 1,
+      "energy_hartree": -148.75223126649604,
+      "gradient_norm_hartree_per_bohr": 0.15847154231819247,
+      "scf_converged": true,
+      "dihedrals": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "atom_indices_zero_based": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "target_degrees": 60,
+          "canonical_target_degrees": 60.0,
+          "measured_degrees": 90.0,
+          "periodic_error_degrees": 30.0,
+          "absolute_periodic_error_degrees": 30.0,
+          "tolerance_degrees": 0.1,
+          "target_satisfied": false
+        }
+      ]
+    },
+    {
+      "cycle": 2,
+      "energy_hartree": -148.75140347910457,
+      "gradient_norm_hartree_per_bohr": 0.16177845526853887,
+      "scf_converged": true,
+      "dihedrals": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "atom_indices_zero_based": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "target_degrees": 60,
+          "canonical_target_degrees": 60.0,
+          "measured_degrees": 64.76721723603754,
+          "periodic_error_degrees": 4.767217236037538,
+          "absolute_periodic_error_degrees": 4.767217236037538,
+          "tolerance_degrees": 0.1,
+          "target_satisfied": false
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "energy_hartree": -148.75582797297733,
+      "gradient_norm_hartree_per_bohr": 0.09141385688356815,
+      "scf_converged": true,
+      "dihedrals": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "atom_indices_zero_based": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "target_degrees": 60,
+          "canonical_target_degrees": 60.0,
+          "measured_degrees": 60.0000009189464,
+          "periodic_error_degrees": 9.18946398087428e-07,
+          "absolute_periodic_error_degrees": 9.18946398087428e-07,
+          "tolerance_degrees": 0.1,
+          "target_satisfied": true
+        }
+      ]
+    },
+    {
+      "cycle": 4,
+      "energy_hartree": -148.7566593499571,
+      "gradient_norm_hartree_per_bohr": 0.0870455702412999,
+      "scf_converged": true,
+      "dihedrals": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "atom_indices_zero_based": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "target_degrees": 60,
+          "canonical_target_degrees": 60.0,
+          "measured_degrees": 59.99999814768854,
+          "periodic_error_degrees": -1.8523114633239857e-06,
+          "absolute_periodic_error_degrees": 1.8523114633239857e-06,
+          "tolerance_degrees": 0.1,
+          "target_satisfied": true
+        }
+      ]
+    },
+    {
+      "cycle": 5,
+      "energy_hartree": -148.7566646144031,
+      "gradient_norm_hartree_per_bohr": 0.0874781524121371,
+      "scf_converged": true,
+      "dihedrals": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "atom_indices_zero_based": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "target_degrees": 60,
+          "canonical_target_degrees": 60.0,
+          "measured_degrees": 59.99999811899131,
+          "periodic_error_degrees": -1.881008692805608e-06,
+          "absolute_periodic_error_degrees": 1.881008692805608e-06,
+          "tolerance_degrees": 0.1,
+          "target_satisfied": true
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "energy_hartree": -148.75666466067804,
+      "gradient_norm_hartree_per_bohr": 0.08750528830630837,
+      "scf_converged": true,
+      "dihedrals": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "atom_indices_zero_based": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "target_degrees": 60,
+          "canonical_target_degrees": 60.0,
+          "measured_degrees": 59.99999997296505,
+          "periodic_error_degrees": -2.7034950278448378e-08,
+          "absolute_periodic_error_degrees": 2.7034950278448378e-08,
+          "tolerance_degrees": 0.1,
+          "target_satisfied": true
+        }
+      ]
+    }
+  ],
+  "initial_dihedral_constraints": [
+    {
+      "atom_ids": [
+        "H-left",
+        "O-left",
+        "O-right",
+        "H-right"
+      ],
+      "atom_indices_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "target_degrees": 60,
+      "canonical_target_degrees": 60.0,
+      "measured_degrees": 90.0,
+      "periodic_error_degrees": 30.0,
+      "absolute_periodic_error_degrees": 30.0,
+      "tolerance_degrees": 0.1,
+      "target_satisfied": false
+    }
+  ],
+  "constraint_atom_indices_zero_based": [
+    1,
+    2
+  ],
+  "constraint_file_sha256": "92e2a0a525415e17c706cf08b19308fee2371bc56826e9dbad34485545a2cde3",
+  "final_dihedral_constraints": [
+    {
+      "atom_ids": [
+        "H-left",
+        "O-left",
+        "O-right",
+        "H-right"
+      ],
+      "atom_indices_zero_based": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "target_degrees": 60,
+      "canonical_target_degrees": 60.0,
+      "measured_degrees": 59.99999997296505,
+      "periodic_error_degrees": -2.7034950278448378e-08,
+      "absolute_periodic_error_degrees": 2.7034950278448378e-08,
+      "tolerance_degrees": 0.1,
+      "target_satisfied": true
+    }
+  ],
+  "dihedral_constraints_satisfied": true,
+  "max_frozen_displacement_bohr": 6.111857427506222e-09
+}

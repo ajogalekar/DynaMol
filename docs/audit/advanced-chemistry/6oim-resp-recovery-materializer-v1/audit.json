@@ -1,0 +1,86 @@
+{
+  "scope": "No native calculations; 29 synthetic software tests, real running-parent refusal, and runtime inventory verification only.",
+  "tests": 29,
+  "tests_passed": true,
+  "elapsed_seconds": 0.10238129197387025,
+  "actual_parent_refusal": {
+    "status": "refused",
+    "accepted": false,
+    "physical_acceptance": false,
+    "request_emitted": false,
+    "QM_launched": false,
+    "RESP_launched": false,
+    "checkpoint_reused": false,
+    "script_sha256": "7a7a588781b85b5ac84a951bc99267d38de1fbc05b00bcc9daa777d6e2fcad04",
+    "plan_sha256": "be0750b9c76aa93513c28eed7bfa8d0e285874dcc06df5e1122c8fd9a9349120",
+    "error_type": "ValueError",
+    "error": "Accepted terminal parent absent; no request emitted"
+  },
+  "actual_refusal_files": [
+    "result.json"
+  ],
+  "frozen_sources_verified": {
+    "cap/capped-adduct.json": {
+      "sha256": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+      "matches": true
+    },
+    "cap/capped-adduct.sdf": {
+      "sha256": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+      "matches": true
+    },
+    "cap/resp/constraints.json": {
+      "sha256": "7e19a5ae0c40cf3bec67fbce7b2cbf55b293722cf3212f16e0f53af0164ca1b7",
+      "matches": true
+    },
+    "cap/resp/stage1.in": {
+      "sha256": "f5f75223995db2898cffb91eefa2e7836cf74e1c7e4141aa13c4a9f86ecb7277",
+      "matches": true
+    },
+    "cap/resp/stage2.in": {
+      "sha256": "714b9689341195a0b73f374ce1a43367a64027704d611b4b942a8e9a2ce2cae2",
+      "matches": true
+    },
+    "cap/resp/canonical.qin": {
+      "sha256": "8b1e25408a0081e74e2b2014ae099080a2df64461225d5fa0fbba999f3fcdf66",
+      "matches": true
+    },
+    "continue_covalent_qm.py": {
+      "sha256": "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3",
+      "matches": true
+    },
+    "covalent_charge_handoff.py": {
+      "sha256": "b9548748219357d76478158a91af955fe9794885cb9f12d84a96bb6182a3d1af",
+      "matches": true
+    },
+    "covalent_resp_spike.py": {
+      "sha256": "d15a9343820f4a7958e7c2f87a2e1a5d249c49829c1c592de642c37550ec2d19",
+      "matches": true
+    },
+    "vdw_surface.py": {
+      "sha256": "319ee2e4e4dd18c99856f46e3b22ab8e8eae62acb85392ced4829c120cc26e02",
+      "matches": true
+    },
+    "qm_worker.py": {
+      "sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+      "matches": true
+    },
+    "original-handoff-plan.json": {
+      "sha256": "fdebcdacfa479a637d08f55d2dcac9e15037efab0c198b38c81aaec7be5e99ec",
+      "matches": true
+    },
+    "original-stopped-continuation.json": {
+      "sha256": "ffcbee9a22b9673849d1b24d6a803e48c8f5943a65edfb567e2f640372d3f2d2",
+      "matches": true
+    },
+    "initial-reference-comparison.json": {
+      "sha256": "b8ee3976b4130e59fc9d3fdd4e02ad0bcb3882f6ae34038006c61546862c796a",
+      "matches": true
+    }
+  },
+  "old_continuation_handoff_fitter_worker_sources_unchanged": true,
+  "physical_acceptance": false,
+  "QM_launched": false,
+  "RESP_launched": false,
+  "materializer_sha256": "7a7a588781b85b5ac84a951bc99267d38de1fbc05b00bcc9daa777d6e2fcad04",
+  "tests_sha256": "61eab82ada5e85ce5c467f6e07cc52434b10fee52d3cd5e4601f7c92912d36bd"
+}

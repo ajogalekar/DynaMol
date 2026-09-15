@@ -1,0 +1,39 @@
+package require psfgen
+resetpsf
+topology top_heme.inp
+if {1} {
+	pdbalias residue HIS HSD
+	pdbalias atom ILE CD1 CD
+	segment A {
+		pdb  pro.pdb
+	}
+	coordpdb pro.pdb A
+}
+
+if {1} {
+	segment B {
+		first NONE
+		last NONE
+		auto angles dihedrals
+		pdb  heme.pdb
+	}
+	coordpdb heme.pdb B
+}
+guesscoord
+patch PHEM A:93 B:155
+
+if {1} {
+	segment C {
+		first NONE
+		last NONE
+		auto none
+		pdb  oxy.pdb
+	}
+	coordpdb oxy.pdb C
+}
+guesscoord
+patch PLO2 C:555 B:155 A:93
+
+writepsf hoxy_v1.psf
+writepdb hoxy_v1.pdb
+

@@ -12,7 +12,7 @@ Imports retain original files, sequence evidence and relevant chemical metadata.
 
 ## Inspection and preparation
 
-`GET /datasets/{id}/inspection?ph=7` inspects without geometry optimization or native charge assignment. `POST` to the same path additionally accepts `ph` and `ligand_overrides`. Inspection reports missing atoms, sequence-supported missing residues, numbering gaps, ligand identity/state choices, warnings and blockers. Numbering gaps do not establish missing sequences.
+`GET /datasets/{id}/inspection?ph=7` inspects without geometry optimization or native charge assignment. `POST` to the same path additionally accepts `ph`, `ligand_overrides` and `ligand_actions`. Inspection reports missing atoms, sequence-supported missing residues, numbering gaps, ligand identity/state choices, warnings and blockers. Numbering gaps do not establish missing sequences.
 
 `POST /preparations` returns a job and accepts:
 
@@ -26,13 +26,18 @@ Imports retain original files, sequence evidence and relevant chemical metadata.
   "remove_waters": true,
   "remove_heterogens": false,
   "ligand_overrides": {},
+  "ligand_actions": {},
   "seed": 2026
 }
 ```
 
 Optional `name` labels the result. The interface displays an active spinner, current stage, elapsed time, logs and completion or failure. Missing-loop building requires the explicit option and available sequence evidence. Rebuilt geometry remains a model, not an experimentally resolved loop.
 
-PDBFixer repairs supported heavy atoms; OpenMM assigns protein hydrogen states at the requested pH. A bounded steric chi-angle search records its accepted changes and stereochemistry checks. These are not residue pKa calculations or exhaustive rotamer packing.
+`ligand_actions` maps a component key (`chain:resid:insertion_code:residue`) to `repair` or `remove`. Eligible ligand repairs require explicit selection and a complete chemical reference: at most eight missing heavy atoms, no more than half the ligand, with a connected observed core, sufficient noncollinear anchors and no missing ring atoms. Observed heavy atoms stay fixed. See [chemistry repair](CHEMISTRY_REPAIR.md) for the modeling checks and limits.
+
+PDBFixer repairs supported heavy atoms; OpenMM assigns protein hydrogen states at the requested pH. A newly added, independent sidechain branch can be reoriented to match its standard residue's template stereochemistry while preserving every observed atom. This is limited to newly placed atoms, is recorded in `added-atom-stereochemistry.json`, and still requires final stereochemistry and contact checks. Observed stereocenters are never silently inverted. A bounded steric chi-angle search records its accepted changes and stereochemistry checks. These are not residue pKa calculations or exhaustive rotamer packing.
+
+Internal loop modeling first preserves all observed heavy atoms. If closure geometry still fails after bounded refinement, a second local attempt can relax the immediate standard protein neighbors under restraints, with a 1 Å heavy-atom displacement limit measured from refinement entry. Ligands, ions, modified residues and protected metal-contact/crosslinked neighbors remain fixed. Modeled loops and any movable neighbors must pass final geometry and stereochemistry checks; their identities, movement and provisional status are recorded. The source dataset remains available. See [loop repair](LOOP_REPAIR.md) for construction methods, iteration limits, coordinate baselines and diagnostics.
 
 `validate_preparation(settings)` is shared by readiness and job submission. It returns normalized settings plus inspection without creating a dataset/job. Missing CCD references may populate the reference cache. LYN/CYM input protonation aliases use the same LYS/CYS heavy-atom graphs during explicit pH reassignment; `input_protonation_aliases` records this normalization. Other unnatural sidechains are never replaced by parent residues. Built-in ACE/NME caps are accepted, and a thiolate CYM is distinguished from a bonded CYX disulfide in the actual hydrogen/connectivity inventory.
 
@@ -46,7 +51,7 @@ Supported internal SEP/TPO/PTR use fixed −2 phosaa14SB states; HYP uses neutra
 
 Prepared metadata records `modified_residues`, `modified_residue_parameters` and `requires_explicit_solvent`. The `residue-parameters/` snapshot contains the pinned manifest and reference/parameter files, checked against their hashes before use and carried into solvation and trajectory outputs. The registry implementation hash is recorded because PTR requires a native-improper ordering correction during system assembly. The prepared dataset's `modified-residue-system.xml` preserves the assembled unsolvated terms; a completed MD job's `system.xml` describes the actual simulation system. Bare XML templates alone do not include the Python correction.
 
-All supported modifications currently require OpenMM and explicit TIP3P water. Genuine sequence gaps remain separate modeling requirements. In 1UA2, TPO170 is recognized in each of the four protein chains; each chain also has a 12-residue internal gap that exceeds the local six-residue loop builder. The bounded native worker test around TPO170 does not establish full-1UA2 preparation.
+All supported modifications currently require OpenMM and explicit TIP3P water. Genuine sequence gaps remain separate modeling requirements. In 1UA2, TPO170 is recognized in each of the four protein chains; each chain also has a 12-residue internal gap within the optional builder's limit of 12 standard residues per gap and 96 total. Full monomer and four-chain preparation have separate [recorded loop checks](audit/loop-repair/REVIEW.md); the earlier bounded worker test around TPO170 remains fragment-only evidence. Rebuilt loops are provisional models.
 
 ## Ligand identity and parameter bundle
 

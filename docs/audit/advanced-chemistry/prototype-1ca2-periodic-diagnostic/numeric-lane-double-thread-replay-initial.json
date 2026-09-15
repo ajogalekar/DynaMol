@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "analyzed",
+  "release_approved": false,
+  "parameter_mapping_validated_by_this_analyzer": false,
+  "scientific_model_validated_by_this_analyzer": false,
+  "energy_offset_applied_kj_mol": 0.0,
+  "failures": [],
+  "metadata": {
+    "reference": {
+      "runtime": {
+        "engine": "GROMACS",
+        "version": "2025.4",
+        "precision": "double",
+        "threads": 2,
+        "compiler": "AppleClang /usr/bin/clang++; arm64 Release; differs from bundled conda Clang19, recorded as an additional build difference"
+      },
+      "force_conventions": {
+        "identical_complete_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "same_native_core_sha256": "37c3b670d6d0c8735bf061dbc163aba8648ab0025773277ff185a30d5296a58e"
+      },
+      "energy_conventions": {
+        "identical_complete_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "same_native_core_sha256": "37c3b670d6d0c8735bf061dbc163aba8648ab0025773277ff185a30d5296a58e"
+      },
+      "evidence": {
+        "frame_npz_sha256": "11d1e9f4773a4374dd4712b4225d7a1a79f0657c3be173106bf672704db6433d",
+        "identity_scope": "Native indices are bound to the identical TPR for this same-engine repeat only. They are not a substitute for the cross-engine chemical identity map.",
+        "nsteps": 0
+      }
+    },
+    "candidate": {
+      "runtime": {
+        "engine": "GROMACS",
+        "version": "2025.4",
+        "precision": "double",
+        "threads": 1,
+        "compiler": "AppleClang /usr/bin/clang++; arm64 Release; differs from bundled conda Clang19, recorded as an additional build difference"
+      },
+      "force_conventions": {
+        "identical_complete_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "same_native_core_sha256": "37c3b670d6d0c8735bf061dbc163aba8648ab0025773277ff185a30d5296a58e"
+      },
+      "energy_conventions": {
+        "identical_complete_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "same_native_core_sha256": "37c3b670d6d0c8735bf061dbc163aba8648ab0025773277ff185a30d5296a58e"
+      },
+      "evidence": {
+        "frame_npz_sha256": "1dccf171a745cb9b5cb75babf3a46a19adb636e2552d66d14201dff26e91d411",
+        "identity_scope": "Native indices are bound to the identical TPR for this same-engine repeat only. They are not a substitute for the cross-engine chemical identity map.",
+        "nsteps": 0
+      }
+    }
+  },
+  "metadata_sha256": {
+    "reference": "6dbab4cac4b1bb626f061fd6dcd96f03d15b5429dfea1cc876cb0c7f14589e47",
+    "candidate": "920ffb672e4e9092fb4d0acbae3c3809fa019929de6b0631be42ab482eafceec"
+  },
+  "atom_ids_sha256": "8bcfed4b4ced61e10689a317be458ae73db9d2b84fc1ebe63dea52e7bcc2ec5a",
+  "identical_saved_geometry_and_box": true,
+  "array_sha256": {
+    "reference": {
+      "coords_nm": "d2041ebee93bd54367341a24e508e842812da15c51212de29b2f67ddf2b8ed6e",
+      "forces_kj_mol_nm": "102031869f9425d47007c5a80d2dad039cdffb635fd0ad89f266cddfd4744fe1",
+      "box_nm": "ceb11cb69af5e646452c3d36c788b24b426833905eaff90c7e77b2268b4e858d"
+    },
+    "candidate": {
+      "coords_nm": "d2041ebee93bd54367341a24e508e842812da15c51212de29b2f67ddf2b8ed6e",
+      "forces_kj_mol_nm": "c899c9e1f65470242cce799124b070a9c1e994f322c62c55c31a783ed2bfa29e",
+      "box_nm": "ceb11cb69af5e646452c3d36c788b24b426833905eaff90c7e77b2268b4e858d"
+    }
+  },
+  "force_metrics": {
+    "rms_vector_difference_kj_mol_nm": 3.468175252045448e-13,
+    "maximum_vector_difference_kj_mol_nm": 1.9426815345735873e-12,
+    "p99_vector_difference_kj_mol_nm": 8.901350755452936e-13,
+    "reference_rms_vector_force_kj_mol_nm": 1051.1133919280821,
+    "relative_rms_vector_difference": 3.299525321129904e-16
+  },
+  "raw_energies_kj_mol": {
+    "reference": -429191.7003860177,
+    "candidate": -429191.7003862736,
+    "candidate_minus_reference": -2.559390850365162e-07
+  },
+  "focus_group_metrics": {},
+  "comparability": {
+    "atomic_forces": true,
+    "raw_absolute_energy": true,
+    "basis": "Caller-supplied complete convention metadata; upstream source verification is mandatory."
+  },
+  "force_assessment": "not_assessed",
+  "energy_assessment": "not_assessed",
+  "purpose": "Replay the existing same-TPR native thread diagnostic through the reusable numerical lane; no new native calculation or policy calibration.",
+  "analyzer_sha256": "a0c8b194d39c7109593f5ac54dc5afd64ea0ea17778e293a27df4137b95b81e1"
+}

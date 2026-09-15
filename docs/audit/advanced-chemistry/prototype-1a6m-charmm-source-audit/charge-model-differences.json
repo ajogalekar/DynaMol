@@ -1,0 +1,326 @@
+[
+  {
+    "residue": "HEM",
+    "atom": "FE",
+    "baseline": {
+      "type": "FE",
+      "charge": 0.24
+    },
+    "updated": {
+      "type": "FE",
+      "charge": 1.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "NA",
+    "baseline": {
+      "type": "NPH",
+      "charge": -0.18
+    },
+    "updated": {
+      "type": "NPH",
+      "charge": -0.65
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "NB",
+    "baseline": {
+      "type": "NPH",
+      "charge": -0.18
+    },
+    "updated": {
+      "type": "NPH",
+      "charge": -0.65
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "NC",
+    "baseline": {
+      "type": "NPH",
+      "charge": -0.18
+    },
+    "updated": {
+      "type": "NPH",
+      "charge": -0.65
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "ND",
+    "baseline": {
+      "type": "NPH",
+      "charge": -0.18
+    },
+    "updated": {
+      "type": "NPH",
+      "charge": -0.65
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C1A",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C2A",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C3A",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C4A",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C1B",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C2B",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C3B",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C4B",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C1C",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C2C",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C3C",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C4C",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C1D",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C2D",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C3D",
+    "baseline": {
+      "type": "CPB",
+      "charge": -0.06
+    },
+    "updated": {
+      "type": "CPB",
+      "charge": -0.12
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "C4D",
+    "baseline": {
+      "type": "CPA",
+      "charge": 0.12
+    },
+    "updated": {
+      "type": "CPA",
+      "charge": 0.42
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "CHA",
+    "baseline": {
+      "type": "CPM",
+      "charge": -0.1
+    },
+    "updated": {
+      "type": "CPM",
+      "charge": -0.28
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "CHB",
+    "baseline": {
+      "type": "CPM",
+      "charge": -0.1
+    },
+    "updated": {
+      "type": "CPM",
+      "charge": -0.28
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "CHC",
+    "baseline": {
+      "type": "CPM",
+      "charge": -0.1
+    },
+    "updated": {
+      "type": "CPM",
+      "charge": -0.28
+    }
+  },
+  {
+    "residue": "HEM",
+    "atom": "CHD",
+    "baseline": {
+      "type": "CPM",
+      "charge": -0.1
+    },
+    "updated": {
+      "type": "CPM",
+      "charge": -0.28
+    }
+  },
+  {
+    "residue": "OXY",
+    "atom": "O1",
+    "baseline": {
+      "type": "OM",
+      "charge": 0.021
+    },
+    "updated": {
+      "type": "OM",
+      "charge": -0.18
+    }
+  },
+  {
+    "residue": "OXY",
+    "atom": "O2",
+    "baseline": {
+      "type": "OM",
+      "charge": -0.021
+    },
+    "updated": {
+      "type": "OM",
+      "charge": -0.32
+    }
+  }
+]

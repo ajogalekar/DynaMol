@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ct4c01142_si_001.pdf",
+    "url": "https://ndownloader.figshare.com/files/50698206",
+    "sha256": "f974227991c48a05d155e3e83b749dc7a823a477b7bd48d2a0eeeaa3b3a8b816",
+    "md5": "17c8f06e859b14f65068cbaa2d58fae5",
+    "expected_md5": "17c8f06e859b14f65068cbaa2d58fae5",
+    "bytes": 731088,
+    "article_metadata": "acs-si-27886059.json",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+  },
+  {
+    "name": "ct4c01142_si_002.zip",
+    "url": "https://ndownloader.figshare.com/files/50698209",
+    "sha256": "a64f00b51aa85103bf160b68ebfe3784c397597208d0d9c144905dbcdb473539",
+    "md5": "1b822c720cabffd38fc3ea0fbb4be673",
+    "expected_md5": "1b822c720cabffd38fc3ea0fbb4be673",
+    "bytes": 16255,
+    "article_metadata": "acs-si-27886062.json",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+  }
+]

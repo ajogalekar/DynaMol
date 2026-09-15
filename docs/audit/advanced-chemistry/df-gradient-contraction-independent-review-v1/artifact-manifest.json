@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "file": "REVIEW.md",
+      "bytes": 2607,
+      "sha256": "68588f1075c1fead1062ad01337798c95a0048134bdecd54df11bdee648dbeed"
+    },
+    {
+      "file": "author-evidence-check.json",
+      "bytes": 1506,
+      "sha256": "e5b71f11f8297440280856c50c66abd2ffa0628ad11ad29ed6c504934842a69b"
+    },
+    {
+      "file": "result.json",
+      "bytes": 17443,
+      "sha256": "1f314d56d65b6ecc48f72f69b926d99c4ebe968ee18b8470009ba619a7017a01"
+    },
+    {
+      "file": "review.py",
+      "bytes": 7779,
+      "sha256": "df333f7ced4392f3b32987b874b4988332d07cc1912f9d4de372a78e60022745"
+    },
+    {
+      "file": "reviewed-source.py",
+      "bytes": 5962,
+      "sha256": "8d9e6bbb64e9e525ac2d41cb2783f699050e32c0516e89cb821a1229b1012060"
+    }
+  ]
+}

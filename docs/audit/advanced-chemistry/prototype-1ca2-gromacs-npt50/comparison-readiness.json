@@ -1,0 +1,75 @@
+{
+  "ready_for_short_comparison": false,
+  "decision": "Extend NPT by25ps because potential energy still relaxes across consecutive10ps blocks. Density/temperature and zinc geometry are satisfactory for continuing equilibration.",
+  "last10ps_metrics": {
+    "potential_energy_kj_mol": {
+      "mean": -430355.5869430693,
+      "standard_deviation": 572.773770799886,
+      "slope_per_ps": -19.654393564382072,
+      "first5ps_mean": -430219.803125,
+      "last5ps_mean": -430488.7083333333
+    },
+    "temperature_kelvin": {
+      "mean": 300.24346708910895,
+      "standard_deviation": 1.6575586607656314,
+      "slope_per_ps": 0.14922498532323597,
+      "first5ps_mean": 299.87230582,
+      "last5ps_mean": 300.6073506862745
+    },
+    "pressure_bar": {
+      "mean": 10.64354400990099,
+      "standard_deviation": 177.58594647940623,
+      "slope_per_ps": -10.161717487012229,
+      "first5ps_mean": 26.6109609,
+      "last5ps_mean": -5.0107862745098
+    },
+    "volume_nm3": {
+      "mean": 342.135670910891,
+      "standard_deviation": 0.7557174217620081,
+      "slope_per_ps": 0.012262079091446651,
+      "first5ps_mean": 342.26047976,
+      "last5ps_mean": 342.0133092941176
+    },
+    "density_kg_m3": {
+      "mean": 1025.4136074554456,
+      "standard_deviation": 2.266502790502282,
+      "slope_per_ps": -0.03589686161911757,
+      "first5ps_mean": 1025.03659426,
+      "last5ps_mean": 1025.7832282352942
+    }
+  },
+  "consecutive10ps_blocks": [
+    {
+      "interval_ps": [
+        20,
+        30
+      ],
+      "mean_potential_kj_mol": -429445.0453125,
+      "mean_density_g_ml": 1.01704722837
+    },
+    {
+      "interval_ps": [
+        30,
+        40
+      ],
+      "mean_potential_kj_mol": -429938.6140625,
+      "mean_density_g_ml": 1.02397707397
+    },
+    {
+      "interval_ps": [
+        40,
+        50
+      ],
+      "mean_potential_kj_mol": -430354.08625,
+      "mean_density_g_ml": 1.0254718689
+    }
+  ],
+  "broad_geometry_alarms_clear": true,
+  "maximum_CA_rmsd_angstrom": 0.7443768355490021,
+  "meaning": "An explicit limited engineering review; no thermodynamic-convergence or chemical-accuracy claim.",
+  "evidence_hashes": {
+    "stage-status.json": "950f020fefe0b957c457a310d8f3c4304414da89b6df097072884c16eb2c8f88",
+    "independent-site-geometry.json": "a7991574aa740d5897313c1670dcb3819c97577030b0d1fd77fb857e56199e94",
+    "endpoint.npz": "49523c3ec4c20973118d775caffd8153515e3dbcd9bd2f2b68fec3287baa120e"
+  }
+}

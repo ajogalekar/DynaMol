@@ -10,6 +10,11 @@ OpenMM, GROMACS 2025.4, AmberTools 24.8, ProMod3 3.6.0 and the interface are inc
 Recipients do not install development tools or either MD engine separately.
 See [installation, data locations and limits](../docs/PACKAGING.md).
 
+Current builds open a standalone Mac window using AppKit and the system WebKit,
+with a Dock icon and native file dialogs. They start the same private backend
+with `--no-browser`. This differs from the previously published 0.1.1 launcher,
+which opened the default browser. See [native Mac behavior](../docs/NATIVE_MAC.md).
+
 ## Build
 
 These commands are for the prepared developer checkout. They require its

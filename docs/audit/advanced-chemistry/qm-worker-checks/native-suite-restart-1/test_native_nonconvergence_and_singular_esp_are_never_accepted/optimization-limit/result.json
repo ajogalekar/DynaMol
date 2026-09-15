@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "optimization",
+  "worker_sha256": "e7841b3fb0fa71d8ffdd2b6b49c856b5481174facbdde5fe790dd55acf06ef4d",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "8ec4f09a26226cb8bc410dedeb91d7f0ad279578c5b3b3cc4f06544478822b9e",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200
+  },
+  "optimization": {
+    "requested": true,
+    "converged": false,
+    "settings": {
+      "enabled": true,
+      "max_steps": 1,
+      "freeze_atom_ids": [],
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": [
+      {
+        "cycle": 1,
+        "energy_hartree": -74.96361400506842,
+        "gradient_norm_hartree_per_bohr": 0.07548919610216111,
+        "scf_converged": true
+      },
+      {
+        "cycle": 2,
+        "energy_hartree": -74.9657857238769,
+        "gradient_norm_hartree_per_bohr": 0.013462268061921115,
+        "scf_converged": true
+      }
+    ],
+    "constraint_atom_indices_zero_based": [],
+    "constraint_file_sha256": null
+  },
+  "error": {
+    "type": "RuntimeError",
+    "message": "Geometry optimization did not converge within the step limit"
+  },
+  "elapsed_seconds": 0.404915
+}

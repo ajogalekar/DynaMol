@@ -1,0 +1,9 @@
+{
+  "gromacs_energy": 172955.765625,
+  "openmm_energy": 172955.60959972197,
+  "delta_energy": -0.15602527803275734,
+  "maximum_force_difference": 0.06693714913717486,
+  "rms_force_difference": 0.0020574234210234046,
+  "max_force": 35956.83722129918,
+  "coords_original_float32_error_nm": 4.760742182696731e-07
+}

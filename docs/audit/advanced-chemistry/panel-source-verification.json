@@ -1,0 +1,1275 @@
+{
+  "verified_at_utc": "2026-09-13T16:06:41.175875+00:00",
+  "all_hashes_match": true,
+  "verified_file_count": 84,
+  "file_hash_checks": [
+    {
+      "path": "covalent-panel.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "metal-panel.json",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/6OIM.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/6UT0.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/5P9J.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/6J6M.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/8A4V.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/5TDI.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/6QBS.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/3LJ7.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/3LJ6.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/6AX1.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/2H5I.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/3BJM.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/5O4A.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/5LF3.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/5F19.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1MNC.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1HFC.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1GKC.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1XUC.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1BKC.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1CA2.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1T64.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1CLL.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1HET.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1A6Q.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1HL5.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1HCK.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1A6M.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1LUV.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/1OKL.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/MG.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/GDP.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/MOV.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/M1X.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/8E8.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/BA0.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/IMD.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/E64.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/PEG.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/7AS.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/HVW.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/CA.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/CL.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/OHO.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/PIX.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/C0S.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/GOL.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/ACE.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/ASJ.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/NAG.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/BJM.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/SO4.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/9K8.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/YCM.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/6V1.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/K.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/1PE.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/BO2.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/OAS.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/MAN.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/COH.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/AKR.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/EDO.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/BOG.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/ZN.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/PLH.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/NFH.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/PB3.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/INN.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/NA.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/TSN.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/EOH.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/NAD.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/MRD.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/MN.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/PO4.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/CU.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/ATP.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/HEM.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/OXY.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/HG.cif",
+      "sha256_matches": true
+    },
+    {
+      "path": "inputs/ccd/MNS.cif",
+      "sha256_matches": true
+    }
+  ],
+  "case_count": 30,
+  "cases": [
+    {
+      "panel": "covalent",
+      "id": "6OIM",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "93"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "1373"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "6UT0",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "179"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "10881"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "5P9J",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "684"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "2168"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "6J6M",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "740"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "2265"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "8A4V",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "373"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "13356"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "5TDI",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "187"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "1664"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "6QBS",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "234"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "4094"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        },
+        {
+          "connection": "covale2",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "2280"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        },
+        {
+          "connection": "covale2",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "4157"
+          ],
+          "occupancies": [
+            "1.000"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "3LJ7",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "8452"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "1563"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "3LJ6",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "8409"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "1559"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "6AX1",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "834"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "4378"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "2H5I",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "1077"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "1987"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale3",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "1982"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale3",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "1988"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "3BJM",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "12009"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "4881"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale2",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "12074"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale2",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "10844"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "5O4A",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale1",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "362"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale1",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "4487"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "5LF3",
+      "input_hash_verified": true,
+      "covalent_endpoints": [
+        {
+          "connection": "covale11",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "12902"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale11",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "48236"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale14",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "17769"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale14",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "48304"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale15",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "22647"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale15",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "48373"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale26",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "36935"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale26",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "48417"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale29",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "41730"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale29",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "48468"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale30",
+          "endpoint": "partner1",
+          "source_atom_ids": [
+            "46640"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        },
+        {
+          "connection": "covale30",
+          "endpoint": "partner2",
+          "source_atom_ids": [
+            "48535"
+          ],
+          "occupancies": [
+            "1.00"
+          ]
+        }
+      ],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "covalent",
+      "id": "5F19",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1MNC",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1HFC",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1GKC",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1XUC",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1BKC",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1CA2",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1T64",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1CLL",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1HET",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1A6Q",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1HL5",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [
+        {
+          "id": "metalc10",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "FB",
+            "label_sequence_id": null,
+            "component": "HOH",
+            "atom": "O",
+            "author_chain": "A",
+            "author_residue_id": "2063",
+            "symmetry": "1_455",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "BA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "D",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.428",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        },
+        {
+          "id": "metalc79",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "H",
+            "label_sequence_id": "26",
+            "component": "ASN",
+            "atom": "OD1",
+            "author_chain": "H",
+            "author_residue_id": "26",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "YA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "O",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.611",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        },
+        {
+          "id": "metalc80",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "H",
+            "label_sequence_id": "26",
+            "component": "ASN",
+            "atom": "O",
+            "author_chain": "H",
+            "author_residue_id": "26",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "YA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "O",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.694",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        },
+        {
+          "id": "metalc88",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "H",
+            "label_sequence_id": "102",
+            "component": "SER",
+            "atom": "O",
+            "author_chain": "H",
+            "author_residue_id": "102",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "YA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "O",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.454",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        },
+        {
+          "id": "metalc91",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "MB",
+            "label_sequence_id": null,
+            "component": "HOH",
+            "atom": "O",
+            "author_chain": "H",
+            "author_residue_id": "2081",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "YA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "O",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.442",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        },
+        {
+          "id": "metalc92",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "MB",
+            "label_sequence_id": null,
+            "component": "HOH",
+            "atom": "O",
+            "author_chain": "H",
+            "author_residue_id": "2084",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "YA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "O",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.396",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        },
+        {
+          "id": "metalc93",
+          "type": "metalc",
+          "partner1": {
+            "label_chain": "MB",
+            "label_sequence_id": null,
+            "component": "HOH",
+            "atom": "O",
+            "author_chain": "H",
+            "author_residue_id": "2085",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "partner2": {
+            "label_chain": "YA",
+            "label_sequence_id": null,
+            "component": "CA",
+            "atom": "CA",
+            "author_chain": "O",
+            "author_residue_id": "156",
+            "symmetry": "1_555",
+            "insertion_code": null,
+            "altloc": null
+          },
+          "deposited_distance_angstrom": "2.401",
+          "deposited_order": null,
+          "leaving_atom_flag": null
+        }
+      ],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1HCK",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1A6M",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1LUV",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    },
+    {
+      "panel": "metal",
+      "id": "1OKL",
+      "input_hash_verified": true,
+      "covalent_endpoints": [],
+      "outside_declared_assembly_connections": [],
+      "nonidentity_or_unknown_image_connections": [],
+      "warning": "Outside-assembly/crystal-image connections are preserved here as source evidence. They must not be silently treated as same-image molecular bonds or erased without scope provenance."
+    }
+  ],
+  "native_preparation_performed_by_curation": false
+}

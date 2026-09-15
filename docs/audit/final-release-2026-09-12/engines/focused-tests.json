@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-13T04:39:07.217023+00:00",
+  "command": ".venv/bin/python -m pytest backend/tests/test_recovery.py backend/tests/test_recovery_policy.py backend/tests/test_job_download_snapshots.py backend/tests/test_resource_submission.py backend/tests/test_pressure_test_validator.py backend/tests/test_stereo_monitor.py -q",
+  "passed": true,
+  "tests_passed": 56,
+  "warnings": 3,
+  "duration_seconds": 1.51,
+  "warning_summary": [
+    "FastAPI/Starlette test client dependency deprecations (2)",
+    "Deliberately nonfinite geometry test emits NumPy determinant warning (1)"
+  ],
+  "test_source_sha256": {
+    "backend/tests/test_recovery.py": "88be16454f08c9a6db9cc5d085f2174a401a2de0a92185c4b69c1e0f7093fee3",
+    "backend/tests/test_recovery_policy.py": "a8f78a20dc61d22c661eaa7e84f3d1e32853627d3d7dd15bdf81208b8de91bc1",
+    "backend/tests/test_job_download_snapshots.py": "735b360c566000c5adf0682ad0bacd1569c17e31ae86949c9c15c71ab214b6a7",
+    "backend/tests/test_resource_submission.py": "9bb3dc6d2c1d94407cca3f22fdc0fc57dcf8fd54e60a456f9245d6ff02aa9c3e",
+    "backend/tests/test_pressure_test_validator.py": "85c6dd1e7b32e1e73387453c35e33bd49a80a7a97c2f2ab7382f395149bb736f",
+    "backend/tests/test_stereo_monitor.py": "b4d12c59cea60116ddfc9c1f7eacc84f68ce9e59905245f65103c2a3d89d324d"
+  },
+  "after_provenance_fix": {
+    "command": ".venv/bin/python -m pytest backend/tests/test_worker_provenance.py backend/tests/test_recovery.py backend/tests/test_recovery_policy.py -q",
+    "passed": true,
+    "tests_passed": 34,
+    "duration_seconds": 1.31,
+    "note": "Recovery tests repeat earlier focused coverage; do not sum counts as unique cases."
+  }
+}

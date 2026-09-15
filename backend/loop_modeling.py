@@ -1,4 +1,4 @@
-"""Bounded private fragment construction; refinement and quality gates are separate."""
+"""Bounded private loop construction; refinement and quality gates are separate."""
 from __future__ import annotations
 
 import hashlib
@@ -157,7 +157,7 @@ def _run(command, folder, runtime, check_cancel):
             while process.poll() is None:
                 check_cancel()
                 if time.monotonic() - started > _TIMEOUT_SECONDS:
-                    raise TimeoutError('Loop fragment construction exceeded its 180 second limit.')
+                    raise TimeoutError('Loop construction exceeded its 180 second limit. No prepared model was accepted; review the recorded search stages or supply a repaired structure.')
                 time.sleep(0.1)
             check_cancel()
             return process.returncode
@@ -205,19 +205,37 @@ def generate_loop_model(topology_complete, positions_scaffold, observed_keys, fo
     with pdb.open('w') as handle:
         app.PDBFile.writeFile(context, positions * unit.nanometer, handle, keepIds=True)
     request.write_text(json.dumps(dict(input_pdb=str(pdb), chains=chains, max_res_extension=0, requested_seed=seed), indent=2) + '\n')
+    progress_file = folder / 'loop-model-progress.json'
+    last_message = None
+    def check_worker():
+        nonlocal last_message
+        check_cancel()
+        try:
+            if not progress_file.is_file() or progress_file.stat().st_size > 128 * 1024:
+                return
+            progress = json.loads(progress_file.read_text())
+            message = progress.get('message')
+            if isinstance(message, str) and len(message) <= 512 and message != last_message:
+                last_message = message
+                on_progress(message)
+        except (OSError, ValueError):
+            # A progress report is advisory; final bounded output is mandatory.
+            pass
     worker = Path(__file__).with_name('promod_loop_worker.py')
     provenance = dict(status='pending', runtime=runtime, requested_seed=seed, seed_applied=False, modeled_heavy_atoms=len(target), environment_context_mapping=mapping,
                       context_limit='Only observed residues plus missing-atom repairs enter the quantized PDB context. Unattached ligands/waters may be omitted by ProMod3; complete-complex refinement and final environment checks are required.',
-                      validation_scope='Fragment candidate only; requires fixed-heavy refinement and independent geometry/chirality gates.', files={})
+                      validation_scope='Loop candidate only; requested missing atom inventory never expands. Temporary context residues may move but only missing coordinates are transferred before fixed-heavy refinement and independent geometry/chirality gates.', files={})
     try:
         for path in sorted((Path(runtime['prefix']) / 'share/promod3').rglob('*.dat')):
             check_cancel()
             provenance.setdefault('databases', []).append(dict(path=str(path.relative_to(runtime['prefix'])), bytes=path.stat().st_size, sha256=_digest(path)))
         on_progress('Finding fragment candidates for missing loops…')
-        code = _run([str(Path(runtime['prefix']) / 'bin/python'), '-I', '-B', str(worker), str(request), str(output)], folder, runtime, check_cancel)
+        code = _run([str(Path(runtime['prefix']) / 'bin/python'), '-I', '-B', str(worker), str(request), str(output)], folder, runtime, check_worker)
         if not output.exists() or output.stat().st_size > 16 * 1024 * 1024:
             raise ValueError('Loop worker did not produce a bounded candidate report.')
         result = json.loads(output.read_text())
+        provenance['worker_report'] = result
+        provenance['native_build_attempts'] = result.get('construction', {}).get('attempts', [])
         if code:
             raise ValueError('Loop fragment construction failed: ' + str(result.get('error', f'worker exit {code}')))
         if result.get('versions') != {'promod3': _PINS['promod3'], 'ost': _PINS['openstructure']}:
@@ -233,7 +251,15 @@ def generate_loop_model(topology_complete, positions_scaffold, observed_keys, fo
         provenance.update(status='failed', error=str(exc), error_type=type(exc).__name__)
         raise
     finally:
-        for path in (pdb, request, output, worker, folder / 'loop-model-worker.log'):
+        try:
+            if progress_file.is_file() and progress_file.stat().st_size <= 128 * 1024:
+                last_progress = json.loads(progress_file.read_text())
+                provenance['last_worker_progress'] = last_progress
+                if not provenance.get('native_build_attempts'):
+                    provenance['native_build_attempts'] = last_progress.get('attempts', [])
+        except (OSError, ValueError):
+            pass
+        for path in (pdb, request, output, progress_file, worker, folder / 'loop-model-worker.log'):
             if path.is_file():
                 provenance['files'][path.name] = dict(sha256=_digest(path), bytes=path.stat().st_size)
         (folder / 'loop-model-provenance.json').write_text(json.dumps(provenance, indent=2, allow_nan=False) + '\n')

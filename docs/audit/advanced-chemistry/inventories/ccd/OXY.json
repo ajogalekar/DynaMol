@@ -1,0 +1,141 @@
+{
+  "id": "OXY",
+  "input": {
+    "path": "inputs/ccd/OXY.cif",
+    "source_url": "https://files.rcsb.org/ligands/download/OXY.cif",
+    "sha256": "a17b992972a62bc1e4bbc4294ac78c5a2d31a437e4ac0cabdbfa8a185f205f37",
+    "bytes": 3791
+  },
+  "chem_comp": [
+    {
+      "id": "OXY",
+      "name": "OXYGEN MOLECULE",
+      "type": "NON-POLYMER",
+      "pdbx_type": "HETAIN",
+      "formula": "O2",
+      "mon_nstd_parent_comp_id": null,
+      "pdbx_synonyms": null,
+      "pdbx_formal_charge": "0",
+      "pdbx_initial_date": "1999-07-08",
+      "pdbx_modified_date": "2024-09-27",
+      "pdbx_ambiguous_flag": "N",
+      "pdbx_release_status": "REL",
+      "pdbx_replaced_by": null,
+      "pdbx_replaces": "O2",
+      "formula_weight": "31.999",
+      "one_letter_code": null,
+      "three_letter_code": "OXY",
+      "pdbx_model_coordinates_details": null,
+      "pdbx_model_coordinates_missing_flag": "N",
+      "pdbx_ideal_coordinates_details": null,
+      "pdbx_ideal_coordinates_missing_flag": "N",
+      "pdbx_model_coordinates_db_code": "1HMO",
+      "pdbx_subcomponent_list": null,
+      "pdbx_processing_site": "RCSB",
+      "pdbx_pcm": "N"
+    }
+  ],
+  "atoms": [
+    {
+      "comp_id": "OXY",
+      "atom_id": "O1",
+      "alt_atom_id": "O1",
+      "type_symbol": "O",
+      "charge": "0",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_backbone_atom_flag": "N",
+      "pdbx_n_terminal_atom_flag": "N",
+      "pdbx_c_terminal_atom_flag": "N",
+      "model_Cartn_x": "27.290",
+      "model_Cartn_y": "26.888",
+      "model_Cartn_z": "33.875",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "-0.501",
+      "pdbx_component_atom_id": "O1",
+      "pdbx_component_comp_id": "OXY",
+      "pdbx_ordinal": "1"
+    },
+    {
+      "comp_id": "OXY",
+      "atom_id": "O2",
+      "alt_atom_id": "O2",
+      "type_symbol": "O",
+      "charge": "0",
+      "pdbx_align": "1",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_leaving_atom_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_backbone_atom_flag": "N",
+      "pdbx_n_terminal_atom_flag": "N",
+      "pdbx_c_terminal_atom_flag": "N",
+      "model_Cartn_x": "26.630",
+      "model_Cartn_y": "27.419",
+      "model_Cartn_z": "32.640",
+      "pdbx_model_Cartn_x_ideal": "0.000",
+      "pdbx_model_Cartn_y_ideal": "0.000",
+      "pdbx_model_Cartn_z_ideal": "0.501",
+      "pdbx_component_atom_id": "O2",
+      "pdbx_component_comp_id": "OXY",
+      "pdbx_ordinal": "2"
+    }
+  ],
+  "bonds": [
+    {
+      "comp_id": "OXY",
+      "atom_id_1": "O1",
+      "atom_id_2": "O2",
+      "value_order": "DOUB",
+      "pdbx_aromatic_flag": "N",
+      "pdbx_stereo_config": "N",
+      "pdbx_ordinal": "1"
+    }
+  ],
+  "descriptors": [
+    {
+      "comp_id": "OXY",
+      "type": "SMILES_CANONICAL",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "O=O"
+    },
+    {
+      "comp_id": "OXY",
+      "type": "SMILES",
+      "program": "CACTVS",
+      "program_version": "3.341",
+      "descriptor": "O=O"
+    },
+    {
+      "comp_id": "OXY",
+      "type": "SMILES_CANONICAL",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "O=O"
+    },
+    {
+      "comp_id": "OXY",
+      "type": "SMILES",
+      "program": "OpenEye OEToolkits",
+      "program_version": "1.5.0",
+      "descriptor": "O=O"
+    },
+    {
+      "comp_id": "OXY",
+      "type": "InChI",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "InChI=1S/O2/c1-2"
+    },
+    {
+      "comp_id": "OXY",
+      "type": "InChIKey",
+      "program": "InChI",
+      "program_version": "1.03",
+      "descriptor": "MYMOFIZGZYHOMD-UHFFFAOYSA-N"
+    }
+  ]
+}

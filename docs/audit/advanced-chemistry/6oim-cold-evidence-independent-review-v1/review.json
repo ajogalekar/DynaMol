@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "no_blocking_finding_for_scoped_no_write_recovery_core",
+  "source_sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187",
+  "tests_sha256": "436c705ea279b2d0925eb1cfb1e226ddc01f96c6903d45ce193a6c772406881d",
+  "materializer_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+  "materializer_plan_sha256": "8753021db5fe96d71fffcb29e7198b4ecf7b8668343389c9f110b81d76e43a20",
+  "independent_tests_passed": 18,
+  "parent_admission_statements_ast_exact": 68,
+  "actual_running_parent_refused_before_native_reads": true,
+  "all_five_materialized_objects_completely_bound": true,
+  "array_headers_validated_before_allocation": true,
+  "final_malformed_header_allocator_calls": 0,
+  "known_scoped_blockers": [],
+  "qm_launched": false,
+  "fits_launched": false,
+  "launch_admitted": false,
+  "positive_native_parent_endpoint_qualified": false,
+  "native_esp_resp_handoff_qualified": false,
+  "physical_acceptance": false,
+  "limitations": [
+    "Context must come from actual pinned parent revalidation, not a caller-created dictionary",
+    "No genuine accepted parent endpoint yet",
+    "Separate native ESP/RESP binding and launcher lifecycle remain unreviewed by this core verdict",
+    "Internally generated hash-bound evidence scope, not a general hostile archive security audit",
+    "64 MiB payload cap is not a process RSS cap"
+  ]
+}

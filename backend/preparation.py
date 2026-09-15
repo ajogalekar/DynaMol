@@ -126,7 +126,7 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
         # protein-containing chains may inherit polymer sequence records.
         protein_keys = protein_residue_keys(dataset_id, fixer.topology, fixer.positions)
         chain_ids = {residue.chain.id for residue in fixer.topology.residues() if residue_key(residue) in protein_keys}
-        label_to_author = {}
+        label_to_author, label_to_original = {}, {}
         if source_path.suffix.lower() in {".cif", ".mmcif", ".pdbx"}:
             try:
                 from openmm.app.internal.pdbx.reader.PdbxReader import PdbxReader
@@ -141,6 +141,8 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
                         label_to_author[label] = author
             except (KeyError, ValueError, AttributeError, IndexError):
                 pass
+            from .sequence_evidence import source_cif_chain_ids
+            label_to_original = source_cif_chain_ids(source_path, original.topology)
         original_to_canonical = {}
         pending, visited = [dataset_id], set()
         while pending and len(visited) < 20:
@@ -162,7 +164,8 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
         mapped = []
         for sequence in original.sequences:
             author = label_to_author.get(sequence.chainId, sequence.chainId)
-            chain_id = original_to_canonical.get(author, author)
+            original_id = label_to_original.get(sequence.chainId, author)
+            chain_id = original_to_canonical.get(original_id, original_id)
             if chain_id in chain_ids:
                 sequence = copy.copy(sequence)
                 sequence.chainId = chain_id
@@ -171,7 +174,7 @@ def current_fixer(dataset_id: str, sequence_source: Path | None = None):
         if source_path.suffix.lower() in {".cif", ".mmcif", ".pdbx"}:
             from .sequence_evidence import load_scheme, recover_observed_insertion_codes
             try:
-                fixer.sequence_scheme = load_scheme(source_path, label_to_author, original_to_canonical, chain_ids, mapped)
+                fixer.sequence_scheme = load_scheme(source_path, label_to_author, original_to_canonical, chain_ids, mapped, label_to_original)
                 fixer.recovered_insertion_codes = recover_observed_insertion_codes(fixer)
             except (ValueError, KeyError, TypeError) as exc:
                 fixer.sequence_scheme_error = str(exc)

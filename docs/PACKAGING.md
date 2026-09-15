@@ -13,6 +13,10 @@ the app download; neither is needed to use it.
 
 ## Install and open
 
+The published 0.1.1 installer opens a browser, as described below. The current
+checkout builds a [standalone Mac app window](NATIVE_MAC.md); its candidate and
+acceptance are separate from that published artifact.
+
 1. Download the DMG from the matching GitHub release and open it.
 2. Drag **DynaMol** onto the **Applications** shortcut in the disk-image window.
 3. Eject the disk image and open DynaMol from Applications.

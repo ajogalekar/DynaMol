@@ -1,0 +1,28 @@
+{
+  "genuine_lineage_passed": true,
+  "original_request_unchanged": true,
+  "source_frame_displacement_not_reset": 1.107893624048272,
+  "lineage": {
+    "initial_geometry_source": "completed cycle 8, not a converged endpoint",
+    "free_atom_count": 94,
+    "fixed_atom_count": 3,
+    "maximum_anchor_restore_angstrom": 5.774854342391308e-11,
+    "comparison_frame": "Original crystal cluster and omitted source protein; never restart-centered",
+    "allowed_differences": [
+      "coords_angstrom: reviewed cycle 8 plus exact three original cap anchors",
+      "max_memory_mb: 8000 to 2000",
+      "initial_checkpoint: removed for cold SCF"
+    ]
+  },
+  "source_hashes": {
+    "original": "3b6fc0c51200556bd78bf884760b77c7feeeb079d614ceee253480e9887a5cc5",
+    "recovered": "eb8445aca56e40b66eb2e2d82d95dabd44ed78069762711b7128c2f3bedc1315",
+    "request": "51f3fc98f826eb00706219e5dad76716b8d8f36b411eb4d8b84ccfcaa47b1c0c"
+  },
+  "no_terminal_no_native_read": true,
+  "failed_controller_rejected_before_native_inventory": true,
+  "reject_extra_native_inventory": true,
+  "reject_missing_native_inventory": true,
+  "reject_symlink_native_inventory": true,
+  "reject_directory_native_inventory": true
+}

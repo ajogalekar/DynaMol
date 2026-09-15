@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "Fragment database did not close the requested gap: ['A.PRO87-(YNRC)-A.LYS92', 'A.LEU172-(AKN)-A.SER176', 'A.GLU256-(LYEK)-A.LEU261']",
+  "error_type": "RuntimeError"
+}

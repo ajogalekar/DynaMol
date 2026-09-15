@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "standalone_small_array_candidate_passed",
+  "integrated": false,
+  "candidate_sha256": "8d9e6bbb64e9e525ac2d41cb2783f699050e32c0516e89cb821a1229b1012060",
+  "test_source_sha256": "798b3083997a012be4fbfe87bc6e56686957730e290769d65a5988130791a528",
+  "native_qm_calculations": 0,
+  "full_size_tensor_allocations": 0,
+  "tests_passed": 8,
+  "numerical_cases": 40,
+  "max_abs_error_vs_native": 1.4210854715202004e-14,
+  "max_abs_error_vs_scalar": 1.4210854715202004e-14,
+  "max_fraction_of_scalar_roundoff_envelope": 0.002536528504133619,
+  "test_elapsed_seconds": 0.026340291020460427,
+  "pyscf_threads": 1,
+  "semantics": "C[p,q]=sum_i sum_j A[p,i,j]*B[q,j,i]; real native float64, positive dimensions, all p/q entries; no conjugation, symmetry, truncation, approximation or unit conversion. Ordinary floating-point rounding need not be bitwise identical.",
+  "real_case_shape_only_memory_plan": {
+    "a_shape": [
+      4739,
+      194,
+      194
+    ],
+    "b_shape": [
+      4739,
+      194,
+      194
+    ],
+    "block_p": 64,
+    "block_q": 64,
+    "inner_size": 37636,
+    "left_bytes": 19269632,
+    "right_bytes": 19269632,
+    "product_bytes": 32768,
+    "finite_mask_bytes": 2408704,
+    "workspace_bytes": 40980736,
+    "output_bytes": 179664968,
+    "managed_array_bytes": 220645704
+  },
+  "original_extra_whole_tensor_copies_bytes": 2853712064,
+  "plan_scope": "Bounds five explicit NumPy arrays: output, two packed operand tiles, one product tile and one reusable finite mask. Excludes existing inputs and state, allocator/Python overhead, native BLAS workspaces, and process RSS. No actual full-size peak or elapsed-time claim.",
+  "integration_readiness": "Ready for independent code/small-array review; not ready to patch active runtime or claim full-gradient parity/RSS performance."
+}

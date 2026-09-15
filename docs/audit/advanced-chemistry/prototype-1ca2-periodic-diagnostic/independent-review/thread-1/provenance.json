@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx",
+    "mdrun",
+    "-s",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/matched-mesh/diagnostic.tpr",
+    "-deffnm",
+    "single",
+    "-ntmpi",
+    "1",
+    "-ntomp",
+    "1",
+    "-nb",
+    "cpu",
+    "-notunepme"
+  ],
+  "tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+  "runtime_seconds": 2.107936749991495
+}

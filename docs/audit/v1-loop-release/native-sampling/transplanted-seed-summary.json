@@ -1,0 +1,30 @@
+{
+  "cache": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-native-sampling-v1",
+  "native_sha256": "bc289bf8f3f1abf8017e75505d26f2349a3fe6b3f575f12759c7c27210bcc582",
+  "screen_sha256": "4bb1b91b6c05527e176486aa2b3b8d5f128a37684127466aedadd31c867acad7",
+  "cases": [
+    {
+      "name": "intact-control",
+      "candidate_count": 12,
+      "within_observed_cap_and_omega": 4,
+      "cap_omega_and_rama_pass": 4,
+      "plausible_backbone_screen_pass_count": 4
+    },
+    {
+      "name": "original-stems",
+      "candidate_count": 2,
+      "within_observed_cap_and_omega": 2,
+      "cap_omega_and_rama_pass": 1,
+      "plausible_backbone_screen_pass_count": 0
+    },
+    {
+      "name": "two-observed-context-residues",
+      "candidate_count": 44,
+      "within_observed_cap_and_omega": 7,
+      "cap_omega_and_rama_pass": 6,
+      "plausible_backbone_screen_pass_count": 0
+    }
+  ],
+  "app_ready": false,
+  "physical_model_validated": false
+}

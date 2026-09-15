@@ -1,0 +1,361 @@
+{
+  "id": "1FPU",
+  "scope": "Independent saved-PDB ligand/ion heavy-atom identity and bound-pose check; no MD.",
+  "checked_atoms": 29,
+  "all_present": true,
+  "max_displacement_angstrom": 0.0,
+  "atoms": [
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C1",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C2",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "N3",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C4",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C5",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C6",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C7",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "N8",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C9",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "N10",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C11",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C12",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "N13",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C14",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C15",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C16",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C17",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C18",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C19",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C20",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "N21",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C22",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C23",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C25",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C26",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C27",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "N28",
+        "N"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "C29",
+        "C"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    },
+    {
+      "identity": [
+        "D",
+        "2",
+        "",
+        "PRC",
+        "O29",
+        "O"
+      ],
+      "present": true,
+      "displacement_angstrom": 0.0
+    }
+  ],
+  "ligand_models": 1,
+  "conversion_passed": true,
+  "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-chemistry-fixed/1FPU/workspace/datasets/9a9bc32c5c404086/topology.pdb",
+  "prepared": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/review-chemistry-fixed/1FPU/workspace/datasets/09a58de4d2284ae3/prepared.pdb"
+}

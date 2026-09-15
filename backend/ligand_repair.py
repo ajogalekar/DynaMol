@@ -40,7 +40,12 @@ def _reference(residue, block):
         if not np.isfinite(point).all():
             raise ValueError("The CCD ideal coordinates are not finite.")
         positions.append(point)
-    mol, _, names, stereo = _graph(full, np.asarray(positions), block=block)
+    try:
+        mol, _, names, stereo = _graph(full, np.asarray(positions), block=block)
+    except ValueError as exc:
+        detail = str(exc).replace('Bound ligand stereochemistry disagrees with CCD', 'Reference coordinates disagree with CCD stereochemistry')
+        raise ValueError('The CCD reference geometry could not be validated for missing-atom repair. '
+                         + detail + ' Supply a validated complete ligand reference; the input structure was not modified.') from exc
     return mol, full, names, stereo
 
 

@@ -1,0 +1,9259 @@
+{
+  "scope": "Independent final refinement and retained chemistry check of actual completed provisional flank model; no MD, no native-loop accuracy claim.",
+  "source_job": "8f00a0998f00a099",
+  "source_dataset": "build/loop-fallback-8k5r-fullprep/datasets/5575d78b7b6b4ea7",
+  "prepared_dataset": "build/loop-fallback-8k5r-fullprep/datasets/c8caa23c91834c46",
+  "verification": {
+    "baseline": "loop-refinement-input.npz",
+    "final": "loop-refinement-final.npz",
+    "topology": "loop-refinement-topology.cif",
+    "atom_count": 5317,
+    "fixed_heavy_atoms_checked": 2471,
+    "fixed_heavy_coordinates_bitwise_equal": true,
+    "flank_residues": [
+      [
+        "A",
+        "176",
+        "",
+        "LEU"
+      ],
+      [
+        "A",
+        "180",
+        "",
+        "SER"
+      ],
+      [
+        "A",
+        "260",
+        "",
+        "GLU"
+      ],
+      [
+        "A",
+        "265",
+        "",
+        "LEU"
+      ]
+    ],
+    "flank_heavy_atoms_checked": 31,
+    "maximum_flank_displacement_nm": 0.07806105644517808,
+    "flank_displacement_limit_nm": 0.1,
+    "flank_displacement_baseline": "Saved coordinates entering refinement, after recorded sidechain sampling.",
+    "saved_pdb_maximum_component_rounding_nm": 4.999326512744595e-05,
+    "saved_pdb_component_rounding_tolerance_nm": 5e-05,
+    "retained_ligand_ion_heavy_atoms_checked": 21,
+    "retained_ligand_ion_roundoff_tolerance_nm": 1e-12,
+    "retained_ligand_ion_atoms": [
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "N1",
+          "N"
+        ],
+        "maximum_component_delta_nm": 2.220446049250313e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "N3",
+          "N"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C4",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C5",
+          "C"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C6",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C7",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C8",
+          "C"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C10",
+          "C"
+        ],
+        "maximum_component_delta_nm": 2.220446049250313e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C13",
+          "C"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C15",
+          "C"
+        ],
+        "maximum_component_delta_nm": 2.220446049250313e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C1",
+          "C"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C2",
+          "C"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C3",
+          "C"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "N2",
+          "N"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C9",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C11",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "N4",
+          "N"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C12",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C14",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "N5",
+          "N"
+        ],
+        "maximum_component_delta_nm": 8.881784197001252e-16
+      },
+      {
+        "identity": [
+          "C",
+          "401",
+          "",
+          "VQE",
+          "C16",
+          "C"
+        ],
+        "maximum_component_delta_nm": 0.0
+      }
+    ],
+    "expanded_geometry": {
+      "method": "Gross nonperiodic heavy-atom geometry screen for all modeled loop residues; not a native-loop, rotamer, Ramachandran or energy validation.",
+      "accepted": true,
+      "errors": [],
+      "warnings": [],
+      "soft_overlaps": [
+        {
+          "atoms": [
+            1499,
+            1502
+          ],
+          "distance_nm": 0.2378211961724119,
+          "vdw_distance_ratio": 0.7385751433925836,
+          "external_environment_index": null
+        },
+        {
+          "atoms": [
+            4238,
+            4241
+          ],
+          "distance_nm": 0.24624875030314267,
+          "vdw_distance_ratio": 0.7647476717488902,
+          "external_environment_index": null
+        }
+      ],
+      "gross_collisions": [],
+      "requires_minimization": true,
+      "bond_checks": [
+        {
+          "atoms": [
+            321,
+            336
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3380154796807588,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            336,
+            338
+          ],
+          "kind": "backbone",
+          "angstrom": 1.462171612584382,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            338,
+            341
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5252609340401468,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            341,
+            342
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2258737544165996,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            341,
+            343
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3398961714854565,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            343,
+            345
+          ],
+          "kind": "backbone",
+          "angstrom": 1.47484595955262,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            345,
+            347
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5399778566102786,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            345,
+            358
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5397145875045848,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            347,
+            350
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5424982871065391,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            350,
+            353
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5206407581242094,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            353,
+            354
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.22167270339559,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            353,
+            355
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.3154436393333202,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            358,
+            359
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2316721959967052,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            358,
+            360
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.332827394530835,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            360,
+            362
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4582139648852404,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            362,
+            365
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5366418429560076,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            365,
+            366
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2244459388412219,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            365,
+            367
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3441523081930964,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            367,
+            369
+          ],
+          "kind": "backbone",
+          "angstrom": 1.48336106497416,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            369,
+            371
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5371759260507434,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            369,
+            379
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5300694310208975,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            371,
+            373
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.527753342684932,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            371,
+            377
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4099413754671595,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            379,
+            380
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2247696501185095,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            379,
+            381
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.338584710034498,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            381,
+            383
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4785203232465396,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            383,
+            385
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5413260297504496,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            383,
+            399
+          ],
+          "kind": "backbone",
+          "angstrom": 1.552757522855509,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            385,
+            388
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5184003634596177,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            388,
+            389
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.410359830383958,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            388,
+            397
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4085032873369419,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            389,
+            391
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4053957742498204,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            391,
+            393
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4061991161148737,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            393,
+            395
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.406631321766564,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            395,
+            397
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.407767045985742,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            399,
+            400
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2290823228740066,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            399,
+            401
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3379510962928634,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            401,
+            403
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4584258572888613,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            403,
+            406
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5375333829696682,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            406,
+            407
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2347680274843813,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            406,
+            408
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3328201694490986,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1419,
+            1430
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.343984657695353,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1430,
+            1432
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4643231797765865,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1432,
+            1434
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.546395134786433,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1432,
+            1449
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5730342780593922,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1434,
+            1437
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5221472043497979,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1437,
+            1438
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.410701014768882,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1437,
+            1447
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4096680713863783,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1438,
+            1440
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.407424373072196,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1440,
+            1442
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4092672029500202,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1442,
+            1443
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.3560278587784085,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1442,
+            1445
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4115527198621047,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1445,
+            1447
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4098243932904517,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1449,
+            1450
+          ],
+          "kind": "backbone",
+          "angstrom": 1.222482139981804,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1449,
+            1451
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3552810783847333,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1451,
+            1453
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4855062682414881,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1453,
+            1455
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.541516224637428,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1453,
+            1463
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5770729168667554,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1455,
+            1458
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.516963828165202,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1458,
+            1459
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.2215744035081169,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1458,
+            1460
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.311522399793148,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1463,
+            1464
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2346738107534252,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1463,
+            1465
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3673536830950206,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1465,
+            1467
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5232082290306819,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1467,
+            1469
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5463421665206598,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1467,
+            1487
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5603492899911597,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1469,
+            1472
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5438058777596841,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1472,
+            1475
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5383207020384984,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1475,
+            1478
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.475444433525759,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1478,
+            1480
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.3238033906135624,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1480,
+            1481
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.3046646977899015,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1480,
+            1484
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.300469649761701,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1487,
+            1488
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2265156305669436,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1487,
+            1489
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3669248046579698,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1489,
+            1491
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5238136664596216,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1491,
+            1493
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5335123312071093,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1491,
+            1498
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5479553499531673,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1493,
+            1496
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.8211479911909423,
+          "bounds_angstrom": [
+            1.267,
+            2.2625
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1498,
+            1499
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2496317145573927,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1498,
+            1500
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3968244067572249,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2807,
+            2814
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.33274055922557,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2814,
+            2816
+          ],
+          "kind": "backbone",
+          "angstrom": 1.466522031733638,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2816,
+            2818
+          ],
+          "kind": "backbone",
+          "angstrom": 1.555144959038358,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2816,
+            2820
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.558039578974062,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2818,
+            2819
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2189792647560624,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2818,
+            2833
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3549376087517682,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2820,
+            2823
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5440273203332948,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2823,
+            2825
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.52881094511925,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2823,
+            2829
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.514428430269771,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2833,
+            2835
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4751274074743834,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2835,
+            2837
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.534120730863627,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2835,
+            2841
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5470705368430784,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2841,
+            2842
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2293965350722897,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2841,
+            2843
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3507052901322854,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2843,
+            2845
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4943691360104439,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2845,
+            2847
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5525701926505264,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2845,
+            2863
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5488208657317042,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2847,
+            2850
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.536258487100868,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2850,
+            2853
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.533936706364585,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2853,
+            2856
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5321280338249403,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2856,
+            2859
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4837228669323848,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2863,
+            2864
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2205643900204532,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2863,
+            2865
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3259009264642363,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2865,
+            2867
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4848132539144578,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2867,
+            2869
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5494852355104818,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2867,
+            2877
+          ],
+          "kind": "backbone",
+          "angstrom": 1.560273831645118,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2869,
+            2872
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5259483765894237,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2872,
+            2873
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.219045694832733,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2872,
+            2874
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.3101340016484717,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2877,
+            2878
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2261150793107192,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2877,
+            2879
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3352995506651066,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2879,
+            2881
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4539633182987992,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2881,
+            2883
+          ],
+          "kind": "backbone",
+          "angstrom": 1.49273802779853,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2881,
+            2885
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5142467627899736,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2883,
+            2884
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2328916719677654,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2883,
+            2890
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3284469099867267,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2885,
+            2888
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.401062261660129,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4130,
+            4147
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3490921615471498,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4147,
+            4149
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4956987533023416,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4149,
+            4151
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5298984289233934,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4149,
+            4153
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5373765671147313,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4151,
+            4152
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2061894017705181,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4151,
+            4162
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.2746987465711266,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4153,
+            4156
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5179501089735592,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4156,
+            4159
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5324192999106074,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4159,
+            4160
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.2513721219595446,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4159,
+            4161
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.2527771072287983,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4162,
+            4164
+          ],
+          "kind": "backbone",
+          "angstrom": 1.3978031689148311,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4164,
+            4166
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5520742209759302,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4164,
+            4179
+          ],
+          "kind": "backbone",
+          "angstrom": 1.582875637685571,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4166,
+            4169
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.531774994115572,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4169,
+            4171
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5382557740564597,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4169,
+            4175
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5421238216241793,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4179,
+            4180
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2236556382399064,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4179,
+            4181
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3681559569680013,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4181,
+            4183
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4915626541454126,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4183,
+            4185
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5410169565737333,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4183,
+            4200
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5360021970927105,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4185,
+            4188
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5266111479477031,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4188,
+            4189
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4113510357833485,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4188,
+            4198
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.409117251817925,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4189,
+            4191
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4103656919433725,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4191,
+            4193
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4102182432219887,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4193,
+            4194
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.3596197315848058,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4193,
+            4196
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.409879892857174,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4196,
+            4198
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.4067433642328744,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4200,
+            4201
+          ],
+          "kind": "backbone",
+          "angstrom": 1.229480757761667,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4200,
+            4202
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.346837302019187,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4202,
+            4204
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4818172159760397,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4204,
+            4206
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.545178872267198,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4204,
+            4215
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5487034502003991,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4206,
+            4209
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5511352578763737,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4209,
+            4212
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.545202638861072,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4212,
+            4213
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.250390941898265,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4212,
+            4214
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.250121154852606,
+          "bounds_angstrom": [
+            0.9939999999999999,
+            1.775
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4215,
+            4216
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2276078381916125,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4215,
+            4217
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.333640485108746,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4217,
+            4219
+          ],
+          "kind": "backbone",
+          "angstrom": 1.446800723570817,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4219,
+            4221
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5741506890721797,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4219,
+            4237
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5273816931947914,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4221,
+            4224
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5513387297870194,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4224,
+            4227
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5434728214705822,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4227,
+            4230
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5395861786514544,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4230,
+            4233
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.480781730675981,
+          "bounds_angstrom": [
+            1.029,
+            1.8375
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4237,
+            4238
+          ],
+          "kind": "backbone",
+          "angstrom": 1.2457724497263074,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4237,
+            4239
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3705222223571671,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4239,
+            4241
+          ],
+          "kind": "backbone",
+          "angstrom": 1.4218264282135782,
+          "bounds_angstrom": [
+            1.25,
+            1.7
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4241,
+            4243
+          ],
+          "kind": "backbone",
+          "angstrom": 1.5227486151465768,
+          "bounds_angstrom": [
+            1.3,
+            1.75
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4241,
+            4245
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5466811673098704,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4243,
+            4244
+          ],
+          "kind": "backbone",
+          "angstrom": 1.234748665820676,
+          "bounds_angstrom": [
+            1.05,
+            1.45
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4243,
+            4258
+          ],
+          "kind": "peptide_C-N",
+          "angstrom": 1.3033042438517128,
+          "bounds_angstrom": [
+            1.15,
+            1.6
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4245,
+            4248
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5552653400192176,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4248,
+            4250
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5225404015304165,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4248,
+            4254
+          ],
+          "kind": "other_heavy",
+          "angstrom": 1.5186458146286441,
+          "bounds_angstrom": [
+            1.0639999999999998,
+            1.9
+          ],
+          "accepted": true
+        }
+      ],
+      "angle_checks": [
+        {
+          "atoms": [
+            336,
+            338,
+            341
+          ],
+          "kind": "N-CA-C",
+          "degrees": 115.01988619233944,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            338,
+            341,
+            342
+          ],
+          "kind": "CA-C-O",
+          "degrees": 118.84767316187197,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            343,
+            345,
+            358
+          ],
+          "kind": "N-CA-C",
+          "degrees": 114.65864170477215,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            345,
+            358,
+            359
+          ],
+          "kind": "CA-C-O",
+          "degrees": 119.39761546678537,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            360,
+            362,
+            365
+          ],
+          "kind": "N-CA-C",
+          "degrees": 111.38181988679644,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            362,
+            365,
+            366
+          ],
+          "kind": "CA-C-O",
+          "degrees": 118.66708776640817,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            367,
+            369,
+            379
+          ],
+          "kind": "N-CA-C",
+          "degrees": 112.08487028123695,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            369,
+            379,
+            380
+          ],
+          "kind": "CA-C-O",
+          "degrees": 119.5424667174394,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            381,
+            383,
+            399
+          ],
+          "kind": "N-CA-C",
+          "degrees": 110.45826269537994,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            383,
+            399,
+            400
+          ],
+          "kind": "CA-C-O",
+          "degrees": 121.45889380501877,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            401,
+            403,
+            406
+          ],
+          "kind": "N-CA-C",
+          "degrees": 120.12876888359183,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            403,
+            406,
+            407
+          ],
+          "kind": "CA-C-O",
+          "degrees": 125.07418013689085,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1430,
+            1432,
+            1449
+          ],
+          "kind": "N-CA-C",
+          "degrees": 100.31757141621583,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1432,
+            1449,
+            1450
+          ],
+          "kind": "CA-C-O",
+          "degrees": 121.47101673219672,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1451,
+            1453,
+            1463
+          ],
+          "kind": "N-CA-C",
+          "degrees": 112.07593021343519,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1453,
+            1463,
+            1464
+          ],
+          "kind": "CA-C-O",
+          "degrees": 117.98153374858245,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1465,
+            1467,
+            1487
+          ],
+          "kind": "N-CA-C",
+          "degrees": 111.48374339228421,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1467,
+            1487,
+            1488
+          ],
+          "kind": "CA-C-O",
+          "degrees": 116.90569581611913,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1489,
+            1491,
+            1498
+          ],
+          "kind": "N-CA-C",
+          "degrees": 103.10849605713416,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1491,
+            1498,
+            1499
+          ],
+          "kind": "CA-C-O",
+          "degrees": 104.78019731686736,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2814,
+            2816,
+            2818
+          ],
+          "kind": "N-CA-C",
+          "degrees": 108.99768198461885,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2816,
+            2818,
+            2819
+          ],
+          "kind": "CA-C-O",
+          "degrees": 120.97246190926495,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2833,
+            2835,
+            2841
+          ],
+          "kind": "N-CA-C",
+          "degrees": 116.33196171932448,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2835,
+            2841,
+            2842
+          ],
+          "kind": "CA-C-O",
+          "degrees": 119.8546674283504,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2843,
+            2845,
+            2863
+          ],
+          "kind": "N-CA-C",
+          "degrees": 110.57949825843593,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2845,
+            2863,
+            2864
+          ],
+          "kind": "CA-C-O",
+          "degrees": 122.03756322165515,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2865,
+            2867,
+            2877
+          ],
+          "kind": "N-CA-C",
+          "degrees": 100.56302220483586,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2867,
+            2877,
+            2878
+          ],
+          "kind": "CA-C-O",
+          "degrees": 123.65641745659923,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2879,
+            2881,
+            2883
+          ],
+          "kind": "N-CA-C",
+          "degrees": 119.48496765511359,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2881,
+            2883,
+            2884
+          ],
+          "kind": "CA-C-O",
+          "degrees": 118.01283961084691,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4147,
+            4149,
+            4151
+          ],
+          "kind": "N-CA-C",
+          "degrees": 116.88673076484801,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4149,
+            4151,
+            4152
+          ],
+          "kind": "CA-C-O",
+          "degrees": 126.95204509294017,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4162,
+            4164,
+            4179
+          ],
+          "kind": "N-CA-C",
+          "degrees": 99.76209207934009,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4164,
+            4179,
+            4180
+          ],
+          "kind": "CA-C-O",
+          "degrees": 119.79887988148202,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4181,
+            4183,
+            4200
+          ],
+          "kind": "N-CA-C",
+          "degrees": 105.8068764669058,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4183,
+            4200,
+            4201
+          ],
+          "kind": "CA-C-O",
+          "degrees": 121.95273548902667,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4202,
+            4204,
+            4215
+          ],
+          "kind": "N-CA-C",
+          "degrees": 108.85654785867631,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4204,
+            4215,
+            4216
+          ],
+          "kind": "CA-C-O",
+          "degrees": 125.22725952140499,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4217,
+            4219,
+            4237
+          ],
+          "kind": "N-CA-C",
+          "degrees": 121.88806868979411,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4219,
+            4237,
+            4238
+          ],
+          "kind": "CA-C-O",
+          "degrees": 109.42563995407477,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4239,
+            4241,
+            4243
+          ],
+          "kind": "N-CA-C",
+          "degrees": 126.10054171462527,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4241,
+            4243,
+            4244
+          ],
+          "kind": "CA-C-O",
+          "degrees": 125.66865578780458,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            319,
+            321,
+            336
+          ],
+          "kind": "CA-C-N",
+          "degrees": 118.5281480803678,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            322,
+            321,
+            336
+          ],
+          "kind": "O-C-N",
+          "degrees": 123.91802997723657,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            321,
+            336,
+            338
+          ],
+          "kind": "C-N-CA",
+          "degrees": 123.01483377919692,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            338,
+            341,
+            343
+          ],
+          "kind": "CA-C-N",
+          "degrees": 117.30402923253823,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            342,
+            341,
+            343
+          ],
+          "kind": "O-C-N",
+          "degrees": 123.8284268273578,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            341,
+            343,
+            345
+          ],
+          "kind": "C-N-CA",
+          "degrees": 128.82792081695513,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            345,
+            358,
+            360
+          ],
+          "kind": "CA-C-N",
+          "degrees": 116.5491096957834,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            359,
+            358,
+            360
+          ],
+          "kind": "O-C-N",
+          "degrees": 124.02955243817993,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            358,
+            360,
+            362
+          ],
+          "kind": "C-N-CA",
+          "degrees": 128.75942016915096,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            362,
+            365,
+            367
+          ],
+          "kind": "CA-C-N",
+          "degrees": 119.13902761089561,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            366,
+            365,
+            367
+          ],
+          "kind": "O-C-N",
+          "degrees": 121.98510292629595,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            365,
+            367,
+            369
+          ],
+          "kind": "C-N-CA",
+          "degrees": 124.17133138577913,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            369,
+            379,
+            381
+          ],
+          "kind": "CA-C-N",
+          "degrees": 119.32887269339237,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            380,
+            379,
+            381
+          ],
+          "kind": "O-C-N",
+          "degrees": 121.08734753395277,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            379,
+            381,
+            383
+          ],
+          "kind": "C-N-CA",
+          "degrees": 122.55285592760961,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            383,
+            399,
+            401
+          ],
+          "kind": "CA-C-N",
+          "degrees": 117.4427590816191,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            400,
+            399,
+            401
+          ],
+          "kind": "O-C-N",
+          "degrees": 120.99029625141998,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            399,
+            401,
+            403
+          ],
+          "kind": "C-N-CA",
+          "degrees": 126.53649737003315,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            403,
+            406,
+            408
+          ],
+          "kind": "CA-C-N",
+          "degrees": 111.2417154640443,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            407,
+            406,
+            408
+          ],
+          "kind": "O-C-N",
+          "degrees": 123.66729709066249,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            406,
+            408,
+            410
+          ],
+          "kind": "C-N-CA",
+          "degrees": 132.1878115482607,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1417,
+            1419,
+            1430
+          ],
+          "kind": "CA-C-N",
+          "degrees": 108.80749858305714,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1420,
+            1419,
+            1430
+          ],
+          "kind": "O-C-N",
+          "degrees": 132.65313292987187,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1419,
+            1430,
+            1432
+          ],
+          "kind": "C-N-CA",
+          "degrees": 145.4938608207063,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1432,
+            1449,
+            1451
+          ],
+          "kind": "CA-C-N",
+          "degrees": 116.74794296849898,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1450,
+            1449,
+            1451
+          ],
+          "kind": "O-C-N",
+          "degrees": 121.33085452028824,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1449,
+            1451,
+            1453
+          ],
+          "kind": "C-N-CA",
+          "degrees": 132.09571083939048,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1453,
+            1463,
+            1465
+          ],
+          "kind": "CA-C-N",
+          "degrees": 119.97174904453436,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1464,
+            1463,
+            1465
+          ],
+          "kind": "O-C-N",
+          "degrees": 121.92536286351347,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1463,
+            1465,
+            1467
+          ],
+          "kind": "C-N-CA",
+          "degrees": 132.29758586071105,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1467,
+            1487,
+            1489
+          ],
+          "kind": "CA-C-N",
+          "degrees": 122.23229914271468,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1488,
+            1487,
+            1489
+          ],
+          "kind": "O-C-N",
+          "degrees": 120.70034179478934,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1487,
+            1489,
+            1491
+          ],
+          "kind": "C-N-CA",
+          "degrees": 124.08295026262599,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1491,
+            1498,
+            1500
+          ],
+          "kind": "CA-C-N",
+          "degrees": 132.26270071415777,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1499,
+            1498,
+            1500
+          ],
+          "kind": "O-C-N",
+          "degrees": 117.98085231989421,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1498,
+            1500,
+            1502
+          ],
+          "kind": "C-N-CA",
+          "degrees": 95.377276634236,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2805,
+            2807,
+            2814
+          ],
+          "kind": "CA-C-N",
+          "degrees": 116.93283851187138,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2808,
+            2807,
+            2814
+          ],
+          "kind": "O-C-N",
+          "degrees": 123.59547055416779,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2807,
+            2814,
+            2816
+          ],
+          "kind": "C-N-CA",
+          "degrees": 123.6451911770517,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2816,
+            2818,
+            2833
+          ],
+          "kind": "CA-C-N",
+          "degrees": 119.5839695603966,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2819,
+            2818,
+            2833
+          ],
+          "kind": "O-C-N",
+          "degrees": 119.09067187273469,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2818,
+            2833,
+            2835
+          ],
+          "kind": "C-N-CA",
+          "degrees": 127.53299766364395,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2835,
+            2841,
+            2843
+          ],
+          "kind": "CA-C-N",
+          "degrees": 116.92863761396782,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2842,
+            2841,
+            2843
+          ],
+          "kind": "O-C-N",
+          "degrees": 123.20885371753124,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2841,
+            2843,
+            2845
+          ],
+          "kind": "C-N-CA",
+          "degrees": 128.81477447762643,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2845,
+            2863,
+            2865
+          ],
+          "kind": "CA-C-N",
+          "degrees": 112.15683747275983,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2864,
+            2863,
+            2865
+          ],
+          "kind": "O-C-N",
+          "degrees": 125.80507891377495,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2863,
+            2865,
+            2867
+          ],
+          "kind": "C-N-CA",
+          "degrees": 138.78073164386007,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2867,
+            2877,
+            2879
+          ],
+          "kind": "CA-C-N",
+          "degrees": 110.97642782149363,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2878,
+            2877,
+            2879
+          ],
+          "kind": "O-C-N",
+          "degrees": 125.05014842818198,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2877,
+            2879,
+            2881
+          ],
+          "kind": "C-N-CA",
+          "degrees": 135.05973534697574,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2881,
+            2883,
+            2890
+          ],
+          "kind": "CA-C-N",
+          "degrees": 115.21506876721905,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2884,
+            2883,
+            2890
+          ],
+          "kind": "O-C-N",
+          "degrees": 126.77055533195427,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2883,
+            2890,
+            2892
+          ],
+          "kind": "C-N-CA",
+          "degrees": 123.35050855228819,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4128,
+            4130,
+            4147
+          ],
+          "kind": "CA-C-N",
+          "degrees": 118.1277387038315,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4131,
+            4130,
+            4147
+          ],
+          "kind": "O-C-N",
+          "degrees": 121.96671299182024,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4130,
+            4147,
+            4149
+          ],
+          "kind": "C-N-CA",
+          "degrees": 126.12089469081776,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4149,
+            4151,
+            4162
+          ],
+          "kind": "CA-C-N",
+          "degrees": 114.42219183992509,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4152,
+            4151,
+            4162
+          ],
+          "kind": "O-C-N",
+          "degrees": 118.44312775222735,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4151,
+            4162,
+            4164
+          ],
+          "kind": "C-N-CA",
+          "degrees": 134.16650464563588,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4164,
+            4179,
+            4181
+          ],
+          "kind": "CA-C-N",
+          "degrees": 120.78696113875425,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4180,
+            4179,
+            4181
+          ],
+          "kind": "O-C-N",
+          "degrees": 118.6426859351123,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4179,
+            4181,
+            4183
+          ],
+          "kind": "C-N-CA",
+          "degrees": 125.71771493404783,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4183,
+            4200,
+            4202
+          ],
+          "kind": "CA-C-N",
+          "degrees": 116.6039931950588,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4201,
+            4200,
+            4202
+          ],
+          "kind": "O-C-N",
+          "degrees": 121.44306946611054,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4200,
+            4202,
+            4204
+          ],
+          "kind": "C-N-CA",
+          "degrees": 124.10066862574409,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4204,
+            4215,
+            4217
+          ],
+          "kind": "CA-C-N",
+          "degrees": 110.43697530988378,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4216,
+            4215,
+            4217
+          ],
+          "kind": "O-C-N",
+          "degrees": 124.3259066305103,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4215,
+            4217,
+            4219
+          ],
+          "kind": "C-N-CA",
+          "degrees": 137.11357548895,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4219,
+            4237,
+            4239
+          ],
+          "kind": "CA-C-N",
+          "degrees": 127.60942218324293,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4238,
+            4237,
+            4239
+          ],
+          "kind": "O-C-N",
+          "degrees": 120.98005702674602,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4237,
+            4239,
+            4241
+          ],
+          "kind": "C-N-CA",
+          "degrees": 103.7451426315561,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4241,
+            4243,
+            4258
+          ],
+          "kind": "CA-C-N",
+          "degrees": 109.52687995222274,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4244,
+            4243,
+            4258
+          ],
+          "kind": "O-C-N",
+          "degrees": 124.53271159685416,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4243,
+            4258,
+            4260
+          ],
+          "kind": "C-N-CA",
+          "degrees": 126.06354655047801,
+          "accepted": true
+        }
+      ],
+      "omega_checks": [
+        {
+          "atoms": [
+            319,
+            321,
+            336,
+            338
+          ],
+          "residues": [
+            [
+              "A",
+              "25",
+              "",
+              "ILE"
+            ],
+            [
+              "A",
+              "26",
+              "",
+              "GLY"
+            ]
+          ],
+          "degrees": -179.8735090210382,
+          "state": "trans",
+          "deviation_degrees": 0.1264909789618116,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            338,
+            341,
+            343,
+            345
+          ],
+          "residues": [
+            [
+              "A",
+              "26",
+              "",
+              "GLY"
+            ],
+            [
+              "A",
+              "27",
+              "",
+              "GLN"
+            ]
+          ],
+          "degrees": -179.9544390898026,
+          "state": "trans",
+          "deviation_degrees": 0.04556091019739483,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            345,
+            358,
+            360,
+            362
+          ],
+          "residues": [
+            [
+              "A",
+              "27",
+              "",
+              "GLN"
+            ],
+            [
+              "A",
+              "28",
+              "",
+              "GLY"
+            ]
+          ],
+          "degrees": 179.17184512941748,
+          "state": "trans",
+          "deviation_degrees": 0.828154870582523,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            362,
+            365,
+            367,
+            369
+          ],
+          "residues": [
+            [
+              "A",
+              "28",
+              "",
+              "GLY"
+            ],
+            [
+              "A",
+              "29",
+              "",
+              "THR"
+            ]
+          ],
+          "degrees": -179.66534501505612,
+          "state": "trans",
+          "deviation_degrees": 0.3346549849438816,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            369,
+            379,
+            381,
+            383
+          ],
+          "residues": [
+            [
+              "A",
+              "29",
+              "",
+              "THR"
+            ],
+            [
+              "A",
+              "30",
+              "",
+              "PHE"
+            ]
+          ],
+          "degrees": 177.43017888323763,
+          "state": "trans",
+          "deviation_degrees": 2.5698211167623697,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            383,
+            399,
+            401,
+            403
+          ],
+          "residues": [
+            [
+              "A",
+              "30",
+              "",
+              "PHE"
+            ],
+            [
+              "A",
+              "31",
+              "",
+              "GLY"
+            ]
+          ],
+          "degrees": 178.39528569751917,
+          "state": "trans",
+          "deviation_degrees": 1.6047143024808292,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            403,
+            406,
+            408,
+            410
+          ],
+          "residues": [
+            [
+              "A",
+              "31",
+              "",
+              "GLY"
+            ],
+            [
+              "A",
+              "32",
+              "",
+              "GLU"
+            ]
+          ],
+          "degrees": -179.57398438966044,
+          "state": "trans",
+          "deviation_degrees": 0.4260156103395616,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1417,
+            1419,
+            1430,
+            1432
+          ],
+          "residues": [
+            [
+              "A",
+              "91",
+              "",
+              "PRO"
+            ],
+            [
+              "A",
+              "92",
+              "",
+              "TYR"
+            ]
+          ],
+          "degrees": -176.6126664622359,
+          "state": "trans",
+          "deviation_degrees": 3.387333537764107,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1432,
+            1449,
+            1451,
+            1453
+          ],
+          "residues": [
+            [
+              "A",
+              "92",
+              "",
+              "TYR"
+            ],
+            [
+              "A",
+              "93",
+              "",
+              "ASN"
+            ]
+          ],
+          "degrees": 176.232154958583,
+          "state": "trans",
+          "deviation_degrees": 3.76784504141699,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1453,
+            1463,
+            1465,
+            1467
+          ],
+          "residues": [
+            [
+              "A",
+              "93",
+              "",
+              "ASN"
+            ],
+            [
+              "A",
+              "94",
+              "",
+              "ARG"
+            ]
+          ],
+          "degrees": 179.41566870531983,
+          "state": "trans",
+          "deviation_degrees": 0.5843312946801689,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1467,
+            1487,
+            1489,
+            1491
+          ],
+          "residues": [
+            [
+              "A",
+              "94",
+              "",
+              "ARG"
+            ],
+            [
+              "A",
+              "95",
+              "",
+              "CYS"
+            ]
+          ],
+          "degrees": -176.56323230646012,
+          "state": "trans",
+          "deviation_degrees": 3.4367676935398777,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            1491,
+            1498,
+            1500,
+            1502
+          ],
+          "residues": [
+            [
+              "A",
+              "95",
+              "",
+              "CYS"
+            ],
+            [
+              "A",
+              "96",
+              "",
+              "LYS"
+            ]
+          ],
+          "degrees": 162.9357035039959,
+          "state": "trans",
+          "deviation_degrees": 17.06429649600409,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2805,
+            2807,
+            2814,
+            2816
+          ],
+          "residues": [
+            [
+              "A",
+              "175",
+              "",
+              "SER"
+            ],
+            [
+              "A",
+              "176",
+              "",
+              "LEU"
+            ]
+          ],
+          "degrees": 169.02198482972992,
+          "state": "trans",
+          "deviation_degrees": 10.978015170270083,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2816,
+            2818,
+            2833,
+            2835
+          ],
+          "residues": [
+            [
+              "A",
+              "176",
+              "",
+              "LEU"
+            ],
+            [
+              "A",
+              "177",
+              "",
+              "ALA"
+            ]
+          ],
+          "degrees": -175.94312680718272,
+          "state": "trans",
+          "deviation_degrees": 4.056873192817278,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2835,
+            2841,
+            2843,
+            2845
+          ],
+          "residues": [
+            [
+              "A",
+              "177",
+              "",
+              "ALA"
+            ],
+            [
+              "A",
+              "178",
+              "",
+              "LYS"
+            ]
+          ],
+          "degrees": 177.8574424729139,
+          "state": "trans",
+          "deviation_degrees": 2.1425575270860975,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2845,
+            2863,
+            2865,
+            2867
+          ],
+          "residues": [
+            [
+              "A",
+              "178",
+              "",
+              "LYS"
+            ],
+            [
+              "A",
+              "179",
+              "",
+              "ASN"
+            ]
+          ],
+          "degrees": 177.4674535994607,
+          "state": "trans",
+          "deviation_degrees": 2.532546400539303,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2867,
+            2877,
+            2879,
+            2881
+          ],
+          "residues": [
+            [
+              "A",
+              "179",
+              "",
+              "ASN"
+            ],
+            [
+              "A",
+              "180",
+              "",
+              "SER"
+            ]
+          ],
+          "degrees": -170.35686808124103,
+          "state": "trans",
+          "deviation_degrees": 9.643131918758968,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            2881,
+            2883,
+            2890,
+            2892
+          ],
+          "residues": [
+            [
+              "A",
+              "180",
+              "",
+              "SER"
+            ],
+            [
+              "A",
+              "181",
+              "",
+              "GLN"
+            ]
+          ],
+          "degrees": -174.72578986707526,
+          "state": "trans",
+          "deviation_degrees": 5.274210132924736,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4128,
+            4130,
+            4147,
+            4149
+          ],
+          "residues": [
+            [
+              "A",
+              "259",
+              "",
+              "TYR"
+            ],
+            [
+              "A",
+              "260",
+              "",
+              "GLU"
+            ]
+          ],
+          "degrees": 172.4588814108077,
+          "state": "trans",
+          "deviation_degrees": 7.541118589192308,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4149,
+            4151,
+            4162,
+            4164
+          ],
+          "residues": [
+            [
+              "A",
+              "260",
+              "",
+              "GLU"
+            ],
+            [
+              "A",
+              "261",
+              "",
+              "LEU"
+            ]
+          ],
+          "degrees": -176.5561099883981,
+          "state": "trans",
+          "deviation_degrees": 3.4438900116018942,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4164,
+            4179,
+            4181,
+            4183
+          ],
+          "residues": [
+            [
+              "A",
+              "261",
+              "",
+              "LEU"
+            ],
+            [
+              "A",
+              "262",
+              "",
+              "TYR"
+            ]
+          ],
+          "degrees": 174.09698338541926,
+          "state": "trans",
+          "deviation_degrees": 5.903016614580736,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4183,
+            4200,
+            4202,
+            4204
+          ],
+          "residues": [
+            [
+              "A",
+              "262",
+              "",
+              "TYR"
+            ],
+            [
+              "A",
+              "263",
+              "",
+              "GLU"
+            ]
+          ],
+          "degrees": 173.62660767910415,
+          "state": "trans",
+          "deviation_degrees": 6.373392320895846,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4204,
+            4215,
+            4217,
+            4219
+          ],
+          "residues": [
+            [
+              "A",
+              "263",
+              "",
+              "GLU"
+            ],
+            [
+              "A",
+              "264",
+              "",
+              "LYS"
+            ]
+          ],
+          "degrees": 177.56865765457232,
+          "state": "trans",
+          "deviation_degrees": 2.43134234542768,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4219,
+            4237,
+            4239,
+            4241
+          ],
+          "residues": [
+            [
+              "A",
+              "264",
+              "",
+              "LYS"
+            ],
+            [
+              "A",
+              "265",
+              "",
+              "LEU"
+            ]
+          ],
+          "degrees": -165.89951095945977,
+          "state": "trans",
+          "deviation_degrees": 14.100489040540225,
+          "accepted": true
+        },
+        {
+          "atoms": [
+            4241,
+            4243,
+            4258,
+            4260
+          ],
+          "residues": [
+            [
+              "A",
+              "265",
+              "",
+              "LEU"
+            ],
+            [
+              "A",
+              "266",
+              "",
+              "GLU"
+            ]
+          ],
+          "degrees": 170.36544196504832,
+          "state": "trans",
+          "deviation_degrees": 9.63455803495168,
+          "accepted": true
+        }
+      ],
+      "phi_psi": [
+        {
+          "residue": [
+            "A",
+            "26",
+            "",
+            "GLY"
+          ],
+          "phi_degrees": -67.56195127312216,
+          "psi_degrees": -20.344700199095357
+        },
+        {
+          "residue": [
+            "A",
+            "27",
+            "",
+            "GLN"
+          ],
+          "phi_degrees": 62.53535500190576,
+          "psi_degrees": -51.42478852586702
+        },
+        {
+          "residue": [
+            "A",
+            "28",
+            "",
+            "GLY"
+          ],
+          "phi_degrees": -155.48002366472176,
+          "psi_degrees": -49.293786631836426
+        },
+        {
+          "residue": [
+            "A",
+            "29",
+            "",
+            "THR"
+          ],
+          "phi_degrees": -62.02785603734218,
+          "psi_degrees": -62.73086116100739
+        },
+        {
+          "residue": [
+            "A",
+            "30",
+            "",
+            "PHE"
+          ],
+          "phi_degrees": -81.98503537370681,
+          "psi_degrees": 20.802233572890433
+        },
+        {
+          "residue": [
+            "A",
+            "31",
+            "",
+            "GLY"
+          ],
+          "phi_degrees": 65.37713279032319,
+          "psi_degrees": -161.89315635005755
+        },
+        {
+          "residue": [
+            "A",
+            "92",
+            "",
+            "TYR"
+          ],
+          "phi_degrees": 172.52916792414078,
+          "psi_degrees": -52.328694365896595
+        },
+        {
+          "residue": [
+            "A",
+            "93",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -158.2953889825911,
+          "psi_degrees": 126.72862516083623
+        },
+        {
+          "residue": [
+            "A",
+            "94",
+            "",
+            "ARG"
+          ],
+          "phi_degrees": 156.3797435177054,
+          "psi_degrees": 154.5593523741346
+        },
+        {
+          "residue": [
+            "A",
+            "95",
+            "",
+            "CYS"
+          ],
+          "phi_degrees": 44.60037944302736,
+          "psi_degrees": -152.60784309688677
+        },
+        {
+          "residue": [
+            "A",
+            "176",
+            "",
+            "LEU"
+          ],
+          "phi_degrees": -71.6545093530995,
+          "psi_degrees": 16.240370910836205
+        },
+        {
+          "residue": [
+            "A",
+            "177",
+            "",
+            "ALA"
+          ],
+          "phi_degrees": -142.07827611072756,
+          "psi_degrees": 133.33910499142513
+        },
+        {
+          "residue": [
+            "A",
+            "178",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": -179.73026586968544,
+          "psi_degrees": -61.030425133798005
+        },
+        {
+          "residue": [
+            "A",
+            "179",
+            "",
+            "ASN"
+          ],
+          "phi_degrees": -166.8627130977989,
+          "psi_degrees": 42.73227976775785
+        },
+        {
+          "residue": [
+            "A",
+            "180",
+            "",
+            "SER"
+          ],
+          "phi_degrees": -11.533176706485389,
+          "psi_degrees": -84.36172736115294
+        },
+        {
+          "residue": [
+            "A",
+            "260",
+            "",
+            "GLU"
+          ],
+          "phi_degrees": 59.41766433704319,
+          "psi_degrees": -19.168841758312293
+        },
+        {
+          "residue": [
+            "A",
+            "261",
+            "",
+            "LEU"
+          ],
+          "phi_degrees": -113.68160881314877,
+          "psi_degrees": -24.201603053428325
+        },
+        {
+          "residue": [
+            "A",
+            "262",
+            "",
+            "TYR"
+          ],
+          "phi_degrees": -71.68784241379286,
+          "psi_degrees": -54.57963443550736
+        },
+        {
+          "residue": [
+            "A",
+            "263",
+            "",
+            "GLU"
+          ],
+          "phi_degrees": -97.53520297566499,
+          "psi_degrees": 27.752170880504206
+        },
+        {
+          "residue": [
+            "A",
+            "264",
+            "",
+            "LYS"
+          ],
+          "phi_degrees": 19.581499953562478,
+          "psi_degrees": 24.999291598563296
+        },
+        {
+          "residue": [
+            "A",
+            "265",
+            "",
+            "LEU"
+          ],
+          "phi_degrees": -93.92251343651373,
+          "psi_degrees": -111.9734197318648
+        }
+      ],
+      "criteria": {
+        "backbone_bond_bounds_angstrom": {
+          "N-CA": [
+            1.25,
+            1.7
+          ],
+          "CA-C": [
+            1.3,
+            1.75
+          ],
+          "C-O": [
+            1.05,
+            1.45
+          ],
+          "peptide_C-N": [
+            1.15,
+            1.6
+          ]
+        },
+        "other_heavy_bonds": "0.70\u20131.25 times summed elemental covalent radii (C/N/O/S/P); generous gross bounds, not equilibrium lengths",
+        "backbone_angle_bounds_degrees": [
+          80,
+          150
+        ],
+        "omega_cis_or_trans_tolerance_degrees": 35,
+        "gross_contact_min_angstrom": 1.3,
+        "soft_vdw_ratio": 0.78,
+        "contact_exclusions": "self, directly bonded and 1\u20133 atom pairs; hydrogen contacts excluded"
+      },
+      "modeled_residue_keys": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "177",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "178",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "179",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "26",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "260",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "261",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "262",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "263",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "264",
+          "",
+          "LYS"
+        ],
+        [
+          "A",
+          "265",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "27",
+          "",
+          "GLN"
+        ],
+        [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "29",
+          "",
+          "THR"
+        ],
+        [
+          "A",
+          "30",
+          "",
+          "PHE"
+        ],
+        [
+          "A",
+          "31",
+          "",
+          "GLY"
+        ],
+        [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        [
+          "A",
+          "93",
+          "",
+          "ASN"
+        ],
+        [
+          "A",
+          "94",
+          "",
+          "ARG"
+        ],
+        [
+          "A",
+          "95",
+          "",
+          "CYS"
+        ]
+      ],
+      "external_environment_atoms": 0,
+      "modeled_atom_count": 329,
+      "modeled_heavy_atom_count": 167,
+      "soft_overlap_score": 0.003202912988206138
+    }
+  },
+  "serialized_geometry": {
+    "method": "Gross nonperiodic heavy-atom geometry screen for all modeled loop residues; not a native-loop, rotamer, Ramachandran or energy validation.",
+    "accepted": true,
+    "errors": [],
+    "warnings": [],
+    "soft_overlaps": [
+      {
+        "atoms": [
+          1499,
+          1502
+        ],
+        "distance_nm": 0.23782520892453776,
+        "vdw_distance_ratio": 0.7385876053557073,
+        "external_environment_index": null
+      },
+      {
+        "atoms": [
+          4238,
+          4241
+        ],
+        "distance_nm": 0.24626345648512238,
+        "vdw_distance_ratio": 0.764793343121498,
+        "external_environment_index": null
+      }
+    ],
+    "gross_collisions": [],
+    "requires_minimization": true,
+    "bond_checks": [
+      {
+        "atoms": [
+          321,
+          336
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3377006391566117,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          336,
+          338
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4625217947093925,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          338,
+          341
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5253379953308723,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          341,
+          342
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2258070810694468,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          341,
+          343
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3399186542473396,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          343,
+          345
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4751264352590276,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          345,
+          347
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5398201193645948,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          345,
+          358
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5396658728438428,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          347,
+          350
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5430418011188243,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          350,
+          353
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5204334908176576,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          353,
+          354
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.2217728921530426,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          353,
+          355
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.3155762995736904,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          358,
+          359
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2312132228009915,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          358,
+          360
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3330738914253786,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          360,
+          362
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4578978016308306,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          362,
+          365
+        ],
+        "kind": "backbone",
+        "angstrom": 1.536033853793592,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          365,
+          366
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2251799867774482,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          365,
+          367
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3446508840587597,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          367,
+          369
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4829258241732752,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          369,
+          371
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5370422895938742,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          369,
+          379
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5306972267564896,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          371,
+          373
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.527708414587028,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          371,
+          377
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4102400504878698,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          379,
+          380
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2251767219466758,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          379,
+          381
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3377477340664814,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          381,
+          383
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4792109383046095,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          383,
+          385
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5412446269168338,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          383,
+          399
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5526960423727467,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          385,
+          388
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5183244053890461,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          388,
+          389
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4108798673168497,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          388,
+          397
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4087799686253302,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          389,
+          391
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4054444136998079,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          391,
+          393
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4062503333332939,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          393,
+          395
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4065866485929712,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          395,
+          397
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.408354003793082,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          399,
+          400
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2292676681667023,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          399,
+          401
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.338568264975681,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          401,
+          403
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4578617904314535,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          403,
+          406
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5376846230615706,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          406,
+          407
+        ],
+        "kind": "backbone",
+        "angstrom": 1.235022671856677,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          406,
+          408
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3326886358035788,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1419,
+          1430
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.344128714074666,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1430,
+          1432
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4636833673988328,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1432,
+          1434
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5464533617280587,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1432,
+          1449
+        ],
+        "kind": "backbone",
+        "angstrom": 1.573316878445023,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1434,
+          1437
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.522410588507579,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1437,
+          1438
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4109929128099914,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1437,
+          1447
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.409695357160544,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1438,
+          1440
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4075737991309687,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1440,
+          1442
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4094286076279339,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1442,
+          1443
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.3557827997138758,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1442,
+          1445
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4117011015083962,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1445,
+          1447
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4099223382867572,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1449,
+          1450
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2229623869931567,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1449,
+          1451
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3549350537940985,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1451,
+          1453
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4852979499076988,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1453,
+          1455
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.541722737719076,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1453,
+          1463
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5767520413812643,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1455,
+          1458
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5175499991763037,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1458,
+          1459
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.2217274655175787,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1458,
+          1460
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.3108214981453414,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1463,
+          1464
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2350388657852107,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1463,
+          1465
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3672636907341553,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1465,
+          1467
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5229609318692339,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1467,
+          1469
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.546928246558323,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1467,
+          1487
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5603736731949827,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1469,
+          1472
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5437817203218842,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1472,
+          1475
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5379752923893104,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1475,
+          1478
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4756151259728938,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1478,
+          1480
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.3232630124053257,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1480,
+          1481
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.305129878594459,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1480,
+          1484
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.300283430641183,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1487,
+          1488
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2262646533273234,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1487,
+          1489
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3667080888031704,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1489,
+          1491
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5238874630365609,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1491,
+          1493
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5332413378199812,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1491,
+          1498
+        ],
+        "kind": "backbone",
+        "angstrom": 1.548051032750535,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1493,
+          1496
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.8214304817917106,
+        "bounds_angstrom": [
+          1.267,
+          2.2625
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1498,
+          1499
+        ],
+        "kind": "backbone",
+        "angstrom": 1.249868393071844,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1498,
+          1500
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3966463403453366,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2807,
+          2814
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3330641394921707,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2814,
+          2816
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4664825263193582,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2816,
+          2818
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5556902005219422,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2816,
+          2820
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5573901245352748,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2818,
+          2819
+        ],
+        "kind": "backbone",
+        "angstrom": 1.218813357327528,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2818,
+          2833
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3545312842455877,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2820,
+          2823
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5438665745458693,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2823,
+          2825
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5287229964908633,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2823,
+          2829
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.513936260217055,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2833,
+          2835
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4750410163788645,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2835,
+          2837
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5339612120259098,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2835,
+          2841
+        ],
+        "kind": "backbone",
+        "angstrom": 1.546694863248728,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2841,
+          2842
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2289609432361965,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2841,
+          2843
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3509237580263367,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2843,
+          2845
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4947554984009939,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2845,
+          2847
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5528518924868526,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2845,
+          2863
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5488876653908759,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2847,
+          2850
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.536426373113922,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2850,
+          2853
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5333091664762208,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2853,
+          2856
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5329468353468783,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2856,
+          2859
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.484078838876156,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2863,
+          2864
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2209713346348472,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2863,
+          2865
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3253954126976597,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2865,
+          2867
+        ],
+        "kind": "backbone",
+        "angstrom": 1.484694581387025,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2867,
+          2869
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5493240461569056,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2867,
+          2877
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5600054487084334,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2869,
+          2872
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5260937061661715,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2872,
+          2873
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.218995077922794,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2872,
+          2874
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.3103934523645944,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2877,
+          2878
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2259730829019038,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2877,
+          2879
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3351277092473204,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2879,
+          2881
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4543111771557016,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2881,
+          2883
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4931871952303901,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2881,
+          2885
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5137400701573562,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2883,
+          2884
+        ],
+        "kind": "backbone",
+        "angstrom": 1.232722596531758,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2883,
+          2890
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3283301547431645,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2885,
+          2888
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4008786528461348,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4130,
+          4147
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3490593018840937,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4147,
+          4149
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4961914984386135,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4149,
+          4151
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5298326705885203,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4149,
+          4153
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5379063690615231,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4151,
+          4152
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2067816703944392,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4151,
+          4162
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.2742358494407557,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4153,
+          4156
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5179160055813385,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4156,
+          4159
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.532410519410511,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4159,
+          4160
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.2502727702385603,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4159,
+          4161
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.2535637199600154,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4162,
+          4164
+        ],
+        "kind": "backbone",
+        "angstrom": 1.3982578446052072,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4164,
+          4166
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5516913352854624,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4164,
+          4179
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5831544460348796,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4166,
+          4169
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5311854884369847,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4169,
+          4171
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.539108183332154,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4169,
+          4175
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5421465559407757,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4179,
+          4180
+        ],
+        "kind": "backbone",
+        "angstrom": 1.223827602238161,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4179,
+          4181
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3682594783154245,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4181,
+          4183
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4917057350563523,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4183,
+          4185
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5413351355237428,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4183,
+          4200
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5360927706359404,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4185,
+          4188
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5260153996601726,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4188,
+          4189
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4117223523058662,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4188,
+          4198
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4094690489684383,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4189,
+          4191
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4100063829642755,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4191,
+          4193
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4102315412725641,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4193,
+          4194
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.3599272039340915,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4193,
+          4196
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.409468694224885,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4196,
+          4198
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.406643522716401,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4200,
+          4201
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2301569005618704,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4200,
+          4202
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.346560061787071,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4202,
+          4204
+        ],
+        "kind": "backbone",
+        "angstrom": 1.482234124556575,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4204,
+          4206
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.545318413790504,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4204,
+          4215
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5489841832633402,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4206,
+          4209
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5510473880575024,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4209,
+          4212
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5450300967942345,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4212,
+          4213
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.2500859970418028,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4212,
+          4214
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.25061145045134,
+        "bounds_angstrom": [
+          0.9939999999999999,
+          1.775
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4215,
+          4216
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2276782966233415,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4215,
+          4217
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3340981972853463,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4217,
+          4219
+        ],
+        "kind": "backbone",
+        "angstrom": 1.4465738833533537,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4219,
+          4221
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5742299704935125,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4219,
+          4237
+        ],
+        "kind": "backbone",
+        "angstrom": 1.5271614191040834,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4221,
+          4224
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5513893773002287,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4224,
+          4227
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5440213729090662,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4227,
+          4230
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5397561495249827,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4230,
+          4233
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.4806924055994886,
+        "bounds_angstrom": [
+          1.029,
+          1.8375
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4237,
+          4238
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2462796636389433,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4237,
+          4239
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.370343022750142,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4239,
+          4241
+        ],
+        "kind": "backbone",
+        "angstrom": 1.421582920550182,
+        "bounds_angstrom": [
+          1.25,
+          1.7
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4241,
+          4243
+        ],
+        "kind": "backbone",
+        "angstrom": 1.523386031181858,
+        "bounds_angstrom": [
+          1.3,
+          1.75
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4241,
+          4245
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5473861832134905,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4243,
+          4244
+        ],
+        "kind": "backbone",
+        "angstrom": 1.2346663516918241,
+        "bounds_angstrom": [
+          1.05,
+          1.45
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4243,
+          4258
+        ],
+        "kind": "peptide_C-N",
+        "angstrom": 1.3031569360595046,
+        "bounds_angstrom": [
+          1.15,
+          1.6
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4245,
+          4248
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5546588050115688,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4248,
+          4250
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5223826719980766,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4248,
+          4254
+        ],
+        "kind": "other_heavy",
+        "angstrom": 1.5182002502963838,
+        "bounds_angstrom": [
+          1.0639999999999998,
+          1.9
+        ],
+        "accepted": true
+      }
+    ],
+    "angle_checks": [
+      {
+        "atoms": [
+          336,
+          338,
+          341
+        ],
+        "kind": "N-CA-C",
+        "degrees": 115.03509530973535,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          338,
+          341,
+          342
+        ],
+        "kind": "CA-C-O",
+        "degrees": 118.90465688485318,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          343,
+          345,
+          358
+        ],
+        "kind": "N-CA-C",
+        "degrees": 114.6802737240891,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          345,
+          358,
+          359
+        ],
+        "kind": "CA-C-O",
+        "degrees": 119.42404045459395,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          360,
+          362,
+          365
+        ],
+        "kind": "N-CA-C",
+        "degrees": 111.40445428415886,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          362,
+          365,
+          366
+        ],
+        "kind": "CA-C-O",
+        "degrees": 118.68572790625505,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          367,
+          369,
+          379
+        ],
+        "kind": "N-CA-C",
+        "degrees": 112.06618498393777,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          369,
+          379,
+          380
+        ],
+        "kind": "CA-C-O",
+        "degrees": 119.4953089334634,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          381,
+          383,
+          399
+        ],
+        "kind": "N-CA-C",
+        "degrees": 110.40545448644524,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          383,
+          399,
+          400
+        ],
+        "kind": "CA-C-O",
+        "degrees": 121.45786506820477,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          401,
+          403,
+          406
+        ],
+        "kind": "N-CA-C",
+        "degrees": 120.17528826511149,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          403,
+          406,
+          407
+        ],
+        "kind": "CA-C-O",
+        "degrees": 125.03979164952631,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1430,
+          1432,
+          1449
+        ],
+        "kind": "N-CA-C",
+        "degrees": 100.31700690578977,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1432,
+          1449,
+          1450
+        ],
+        "kind": "CA-C-O",
+        "degrees": 121.44154325070427,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1451,
+          1453,
+          1463
+        ],
+        "kind": "N-CA-C",
+        "degrees": 112.08787732501482,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1453,
+          1463,
+          1464
+        ],
+        "kind": "CA-C-O",
+        "degrees": 118.01291433771186,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1465,
+          1467,
+          1487
+        ],
+        "kind": "N-CA-C",
+        "degrees": 111.53669385672387,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1467,
+          1487,
+          1488
+        ],
+        "kind": "CA-C-O",
+        "degrees": 116.87879349771106,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1489,
+          1491,
+          1498
+        ],
+        "kind": "N-CA-C",
+        "degrees": 103.1287777736047,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1491,
+          1498,
+          1499
+        ],
+        "kind": "CA-C-O",
+        "degrees": 104.77072743432623,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2814,
+          2816,
+          2818
+        ],
+        "kind": "N-CA-C",
+        "degrees": 108.97995406731393,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2816,
+          2818,
+          2819
+        ],
+        "kind": "CA-C-O",
+        "degrees": 120.93213973488265,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2833,
+          2835,
+          2841
+        ],
+        "kind": "N-CA-C",
+        "degrees": 116.34189888753905,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2835,
+          2841,
+          2842
+        ],
+        "kind": "CA-C-O",
+        "degrees": 119.85549508038274,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2843,
+          2845,
+          2863
+        ],
+        "kind": "N-CA-C",
+        "degrees": 110.5487790013641,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2845,
+          2863,
+          2864
+        ],
+        "kind": "CA-C-O",
+        "degrees": 121.98297986982061,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2865,
+          2867,
+          2877
+        ],
+        "kind": "N-CA-C",
+        "degrees": 100.59915582482938,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2867,
+          2877,
+          2878
+        ],
+        "kind": "CA-C-O",
+        "degrees": 123.64806610713615,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2879,
+          2881,
+          2883
+        ],
+        "kind": "N-CA-C",
+        "degrees": 119.45942486929856,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2881,
+          2883,
+          2884
+        ],
+        "kind": "CA-C-O",
+        "degrees": 117.99493963826552,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4147,
+          4149,
+          4151
+        ],
+        "kind": "N-CA-C",
+        "degrees": 116.84376260630914,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4149,
+          4151,
+          4152
+        ],
+        "kind": "CA-C-O",
+        "degrees": 126.88920318087084,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4162,
+          4164,
+          4179
+        ],
+        "kind": "N-CA-C",
+        "degrees": 99.72040633450001,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4164,
+          4179,
+          4180
+        ],
+        "kind": "CA-C-O",
+        "degrees": 119.79420415370193,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4181,
+          4183,
+          4200
+        ],
+        "kind": "N-CA-C",
+        "degrees": 105.82870362438786,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4183,
+          4200,
+          4201
+        ],
+        "kind": "CA-C-O",
+        "degrees": 121.93019715295706,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4202,
+          4204,
+          4215
+        ],
+        "kind": "N-CA-C",
+        "degrees": 108.82741163036636,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4204,
+          4215,
+          4216
+        ],
+        "kind": "CA-C-O",
+        "degrees": 125.20969885280505,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4217,
+          4219,
+          4237
+        ],
+        "kind": "N-CA-C",
+        "degrees": 121.88813194545956,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4219,
+          4237,
+          4238
+        ],
+        "kind": "CA-C-O",
+        "degrees": 109.43679080572784,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4239,
+          4241,
+          4243
+        ],
+        "kind": "N-CA-C",
+        "degrees": 126.09436301993478,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4241,
+          4243,
+          4244
+        ],
+        "kind": "CA-C-O",
+        "degrees": 125.64558269421894,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          319,
+          321,
+          336
+        ],
+        "kind": "CA-C-N",
+        "degrees": 118.51294228521213,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          322,
+          321,
+          336
+        ],
+        "kind": "O-C-N",
+        "degrees": 123.9321260551845,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          321,
+          336,
+          338
+        ],
+        "kind": "C-N-CA",
+        "degrees": 123.02463201837918,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          338,
+          341,
+          343
+        ],
+        "kind": "CA-C-N",
+        "degrees": 117.26261683021507,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          342,
+          341,
+          343
+        ],
+        "kind": "O-C-N",
+        "degrees": 123.81287123735832,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          341,
+          343,
+          345
+        ],
+        "kind": "C-N-CA",
+        "degrees": 128.83570145886534,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          345,
+          358,
+          360
+        ],
+        "kind": "CA-C-N",
+        "degrees": 116.53113983200397,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          359,
+          358,
+          360
+        ],
+        "kind": "O-C-N",
+        "degrees": 124.0204117285311,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          358,
+          360,
+          362
+        ],
+        "kind": "C-N-CA",
+        "degrees": 128.76050247039134,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          362,
+          365,
+          367
+        ],
+        "kind": "CA-C-N",
+        "degrees": 119.14187329498907,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          366,
+          365,
+          367
+        ],
+        "kind": "O-C-N",
+        "degrees": 121.96408820005674,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          365,
+          367,
+          369
+        ],
+        "kind": "C-N-CA",
+        "degrees": 124.16206745831782,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          369,
+          379,
+          381
+        ],
+        "kind": "CA-C-N",
+        "degrees": 119.35279549013194,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          380,
+          379,
+          381
+        ],
+        "kind": "O-C-N",
+        "degrees": 121.10973987146917,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          379,
+          381,
+          383
+        ],
+        "kind": "C-N-CA",
+        "degrees": 122.57186957990409,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          383,
+          399,
+          401
+        ],
+        "kind": "CA-C-N",
+        "degrees": 117.4597433769803,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          400,
+          399,
+          401
+        ],
+        "kind": "O-C-N",
+        "degrees": 120.97729958619897,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          399,
+          401,
+          403
+        ],
+        "kind": "C-N-CA",
+        "degrees": 126.51240273068555,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          403,
+          406,
+          408
+        ],
+        "kind": "CA-C-N",
+        "degrees": 111.24874311092245,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          407,
+          406,
+          408
+        ],
+        "kind": "O-C-N",
+        "degrees": 123.69582335182244,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          406,
+          408,
+          410
+        ],
+        "kind": "C-N-CA",
+        "degrees": 132.17951820637285,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1417,
+          1419,
+          1430
+        ],
+        "kind": "CA-C-N",
+        "degrees": 108.82990564011996,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1420,
+          1419,
+          1430
+        ],
+        "kind": "O-C-N",
+        "degrees": 132.63308516761796,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1419,
+          1430,
+          1432
+        ],
+        "kind": "C-N-CA",
+        "degrees": 145.5198814380048,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1432,
+          1449,
+          1451
+        ],
+        "kind": "CA-C-N",
+        "degrees": 116.77059426198485,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1450,
+          1449,
+          1451
+        ],
+        "kind": "O-C-N",
+        "degrees": 121.33864783848085,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1449,
+          1451,
+          1453
+        ],
+        "kind": "C-N-CA",
+        "degrees": 132.10135543535847,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1453,
+          1463,
+          1465
+        ],
+        "kind": "CA-C-N",
+        "degrees": 119.96698744462222,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1464,
+          1463,
+          1465
+        ],
+        "kind": "O-C-N",
+        "degrees": 121.89881908834005,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1463,
+          1465,
+          1467
+        ],
+        "kind": "C-N-CA",
+        "degrees": 132.34053802442787,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1467,
+          1487,
+          1489
+        ],
+        "kind": "CA-C-N",
+        "degrees": 122.22995202487606,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1488,
+          1487,
+          1489
+        ],
+        "kind": "O-C-N",
+        "degrees": 120.72635330260759,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1487,
+          1489,
+          1491
+        ],
+        "kind": "C-N-CA",
+        "degrees": 124.07113258648211,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1491,
+          1498,
+          1500
+        ],
+        "kind": "CA-C-N",
+        "degrees": 132.29187566793053,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1499,
+          1498,
+          1500
+        ],
+        "kind": "O-C-N",
+        "degrees": 117.99517188971656,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1498,
+          1500,
+          1502
+        ],
+        "kind": "C-N-CA",
+        "degrees": 95.39423904886593,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2805,
+          2807,
+          2814
+        ],
+        "kind": "CA-C-N",
+        "degrees": 116.92188065384498,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2808,
+          2807,
+          2814
+        ],
+        "kind": "O-C-N",
+        "degrees": 123.60765859775927,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2807,
+          2814,
+          2816
+        ],
+        "kind": "C-N-CA",
+        "degrees": 123.64365827914335,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2816,
+          2818,
+          2833
+        ],
+        "kind": "CA-C-N",
+        "degrees": 119.58675330454102,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2819,
+          2818,
+          2833
+        ],
+        "kind": "O-C-N",
+        "degrees": 119.1233889547149,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2818,
+          2833,
+          2835
+        ],
+        "kind": "C-N-CA",
+        "degrees": 127.5470496622606,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2835,
+          2841,
+          2843
+        ],
+        "kind": "CA-C-N",
+        "degrees": 116.90890748053768,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2842,
+          2841,
+          2843
+        ],
+        "kind": "O-C-N",
+        "degrees": 123.22667679394588,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2841,
+          2843,
+          2845
+        ],
+        "kind": "C-N-CA",
+        "degrees": 128.79623099020685,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2845,
+          2863,
+          2865
+        ],
+        "kind": "CA-C-N",
+        "degrees": 112.18052665694042,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2864,
+          2863,
+          2865
+        ],
+        "kind": "O-C-N",
+        "degrees": 125.83622548515083,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2863,
+          2865,
+          2867
+        ],
+        "kind": "C-N-CA",
+        "degrees": 138.8121744831785,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2867,
+          2877,
+          2879
+        ],
+        "kind": "CA-C-N",
+        "degrees": 110.96758805607732,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2878,
+          2877,
+          2879
+        ],
+        "kind": "O-C-N",
+        "degrees": 125.06230656495245,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2877,
+          2879,
+          2881
+        ],
+        "kind": "C-N-CA",
+        "degrees": 135.05461087345142,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2881,
+          2883,
+          2890
+        ],
+        "kind": "CA-C-N",
+        "degrees": 115.2268186211153,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2884,
+          2883,
+          2890
+        ],
+        "kind": "O-C-N",
+        "degrees": 126.77619960099528,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2883,
+          2890,
+          2892
+        ],
+        "kind": "C-N-CA",
+        "degrees": 123.34846247676019,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4128,
+          4130,
+          4147
+        ],
+        "kind": "CA-C-N",
+        "degrees": 118.12187552800145,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4131,
+          4130,
+          4147
+        ],
+        "kind": "O-C-N",
+        "degrees": 121.97277151076734,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4130,
+          4147,
+          4149
+        ],
+        "kind": "C-N-CA",
+        "degrees": 126.1245253270983,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4149,
+          4151,
+          4162
+        ],
+        "kind": "CA-C-N",
+        "degrees": 114.46164655806135,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4152,
+          4151,
+          4162
+        ],
+        "kind": "O-C-N",
+        "degrees": 118.46338716710191,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4151,
+          4162,
+          4164
+        ],
+        "kind": "C-N-CA",
+        "degrees": 134.16586436524142,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4164,
+          4179,
+          4181
+        ],
+        "kind": "CA-C-N",
+        "degrees": 120.7855625535665,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4180,
+          4179,
+          4181
+        ],
+        "kind": "O-C-N",
+        "degrees": 118.65254360950296,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4179,
+          4181,
+          4183
+        ],
+        "kind": "C-N-CA",
+        "degrees": 125.66553474835823,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4183,
+          4200,
+          4202
+        ],
+        "kind": "CA-C-N",
+        "degrees": 116.62759523840039,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4201,
+          4200,
+          4202
+        ],
+        "kind": "O-C-N",
+        "degrees": 121.4421492883072,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4200,
+          4202,
+          4204
+        ],
+        "kind": "C-N-CA",
+        "degrees": 124.12028084288238,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4204,
+          4215,
+          4217
+        ],
+        "kind": "CA-C-N",
+        "degrees": 110.449021323984,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4216,
+          4215,
+          4217
+        ],
+        "kind": "O-C-N",
+        "degrees": 124.32988417488995,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4215,
+          4217,
+          4219
+        ],
+        "kind": "C-N-CA",
+        "degrees": 137.09992395949348,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4219,
+          4237,
+          4239
+        ],
+        "kind": "CA-C-N",
+        "degrees": 127.61257475055197,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4238,
+          4237,
+          4239
+        ],
+        "kind": "O-C-N",
+        "degrees": 120.95907674602054,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4237,
+          4239,
+          4241
+        ],
+        "kind": "C-N-CA",
+        "degrees": 103.76715443350356,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4241,
+          4243,
+          4258
+        ],
+        "kind": "CA-C-N",
+        "degrees": 109.51659328401713,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4244,
+          4243,
+          4258
+        ],
+        "kind": "O-C-N",
+        "degrees": 124.56344513338584,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4243,
+          4258,
+          4260
+        ],
+        "kind": "C-N-CA",
+        "degrees": 126.05173711123412,
+        "accepted": true
+      }
+    ],
+    "omega_checks": [
+      {
+        "atoms": [
+          319,
+          321,
+          336,
+          338
+        ],
+        "residues": [
+          [
+            "A",
+            "25",
+            "",
+            "ILE"
+          ],
+          [
+            "A",
+            "26",
+            "",
+            "GLY"
+          ]
+        ],
+        "degrees": -179.87546710371876,
+        "state": "trans",
+        "deviation_degrees": 0.12453289628123798,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          338,
+          341,
+          343,
+          345
+        ],
+        "residues": [
+          [
+            "A",
+            "26",
+            "",
+            "GLY"
+          ],
+          [
+            "A",
+            "27",
+            "",
+            "GLN"
+          ]
+        ],
+        "degrees": -179.9166070079468,
+        "state": "trans",
+        "deviation_degrees": 0.08339299205320572,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          345,
+          358,
+          360,
+          362
+        ],
+        "residues": [
+          [
+            "A",
+            "27",
+            "",
+            "GLN"
+          ],
+          [
+            "A",
+            "28",
+            "",
+            "GLY"
+          ]
+        ],
+        "degrees": 179.12139249961174,
+        "state": "trans",
+        "deviation_degrees": 0.8786075003882559,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          362,
+          365,
+          367,
+          369
+        ],
+        "residues": [
+          [
+            "A",
+            "28",
+            "",
+            "GLY"
+          ],
+          [
+            "A",
+            "29",
+            "",
+            "THR"
+          ]
+        ],
+        "degrees": -179.61925630182876,
+        "state": "trans",
+        "deviation_degrees": 0.3807436981712442,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          369,
+          379,
+          381,
+          383
+        ],
+        "residues": [
+          [
+            "A",
+            "29",
+            "",
+            "THR"
+          ],
+          [
+            "A",
+            "30",
+            "",
+            "PHE"
+          ]
+        ],
+        "degrees": 177.45190189238582,
+        "state": "trans",
+        "deviation_degrees": 2.54809810761418,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          383,
+          399,
+          401,
+          403
+        ],
+        "residues": [
+          [
+            "A",
+            "30",
+            "",
+            "PHE"
+          ],
+          [
+            "A",
+            "31",
+            "",
+            "GLY"
+          ]
+        ],
+        "degrees": 178.39296130613394,
+        "state": "trans",
+        "deviation_degrees": 1.607038693866059,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          403,
+          406,
+          408,
+          410
+        ],
+        "residues": [
+          [
+            "A",
+            "31",
+            "",
+            "GLY"
+          ],
+          [
+            "A",
+            "32",
+            "",
+            "GLU"
+          ]
+        ],
+        "degrees": -179.5987572596294,
+        "state": "trans",
+        "deviation_degrees": 0.4012427403706056,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1417,
+          1419,
+          1430,
+          1432
+        ],
+        "residues": [
+          [
+            "A",
+            "91",
+            "",
+            "PRO"
+          ],
+          [
+            "A",
+            "92",
+            "",
+            "TYR"
+          ]
+        ],
+        "degrees": -176.57921915897816,
+        "state": "trans",
+        "deviation_degrees": 3.4207808410218377,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1432,
+          1449,
+          1451,
+          1453
+        ],
+        "residues": [
+          [
+            "A",
+            "92",
+            "",
+            "TYR"
+          ],
+          [
+            "A",
+            "93",
+            "",
+            "ASN"
+          ]
+        ],
+        "degrees": 176.17172678623677,
+        "state": "trans",
+        "deviation_degrees": 3.828273213763225,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1453,
+          1463,
+          1465,
+          1467
+        ],
+        "residues": [
+          [
+            "A",
+            "93",
+            "",
+            "ASN"
+          ],
+          [
+            "A",
+            "94",
+            "",
+            "ARG"
+          ]
+        ],
+        "degrees": 179.47745346385818,
+        "state": "trans",
+        "deviation_degrees": 0.5225465361418173,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1467,
+          1487,
+          1489,
+          1491
+        ],
+        "residues": [
+          [
+            "A",
+            "94",
+            "",
+            "ARG"
+          ],
+          [
+            "A",
+            "95",
+            "",
+            "CYS"
+          ]
+        ],
+        "degrees": -176.55648471316678,
+        "state": "trans",
+        "deviation_degrees": 3.443515286833218,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          1491,
+          1498,
+          1500,
+          1502
+        ],
+        "residues": [
+          [
+            "A",
+            "95",
+            "",
+            "CYS"
+          ],
+          [
+            "A",
+            "96",
+            "",
+            "LYS"
+          ]
+        ],
+        "degrees": 162.90552872772452,
+        "state": "trans",
+        "deviation_degrees": 17.094471272275484,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2805,
+          2807,
+          2814,
+          2816
+        ],
+        "residues": [
+          [
+            "A",
+            "175",
+            "",
+            "SER"
+          ],
+          [
+            "A",
+            "176",
+            "",
+            "LEU"
+          ]
+        ],
+        "degrees": 169.0441855163602,
+        "state": "trans",
+        "deviation_degrees": 10.955814483639813,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2816,
+          2818,
+          2833,
+          2835
+        ],
+        "residues": [
+          [
+            "A",
+            "176",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "177",
+            "",
+            "ALA"
+          ]
+        ],
+        "degrees": -175.94755689450045,
+        "state": "trans",
+        "deviation_degrees": 4.052443105499549,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2835,
+          2841,
+          2843,
+          2845
+        ],
+        "residues": [
+          [
+            "A",
+            "177",
+            "",
+            "ALA"
+          ],
+          [
+            "A",
+            "178",
+            "",
+            "LYS"
+          ]
+        ],
+        "degrees": 177.87464443295525,
+        "state": "trans",
+        "deviation_degrees": 2.1253555670447497,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2845,
+          2863,
+          2865,
+          2867
+        ],
+        "residues": [
+          [
+            "A",
+            "178",
+            "",
+            "LYS"
+          ],
+          [
+            "A",
+            "179",
+            "",
+            "ASN"
+          ]
+        ],
+        "degrees": 177.47502326240163,
+        "state": "trans",
+        "deviation_degrees": 2.524976737598365,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2867,
+          2877,
+          2879,
+          2881
+        ],
+        "residues": [
+          [
+            "A",
+            "179",
+            "",
+            "ASN"
+          ],
+          [
+            "A",
+            "180",
+            "",
+            "SER"
+          ]
+        ],
+        "degrees": -170.31769139642032,
+        "state": "trans",
+        "deviation_degrees": 9.682308603579685,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          2881,
+          2883,
+          2890,
+          2892
+        ],
+        "residues": [
+          [
+            "A",
+            "180",
+            "",
+            "SER"
+          ],
+          [
+            "A",
+            "181",
+            "",
+            "GLN"
+          ]
+        ],
+        "degrees": -174.71160409794717,
+        "state": "trans",
+        "deviation_degrees": 5.288395902052827,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4128,
+          4130,
+          4147,
+          4149
+        ],
+        "residues": [
+          [
+            "A",
+            "259",
+            "",
+            "TYR"
+          ],
+          [
+            "A",
+            "260",
+            "",
+            "GLU"
+          ]
+        ],
+        "degrees": 172.45418860593236,
+        "state": "trans",
+        "deviation_degrees": 7.545811394067641,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4149,
+          4151,
+          4162,
+          4164
+        ],
+        "residues": [
+          [
+            "A",
+            "260",
+            "",
+            "GLU"
+          ],
+          [
+            "A",
+            "261",
+            "",
+            "LEU"
+          ]
+        ],
+        "degrees": -176.53245120490965,
+        "state": "trans",
+        "deviation_degrees": 3.4675487950903516,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4164,
+          4179,
+          4181,
+          4183
+        ],
+        "residues": [
+          [
+            "A",
+            "261",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "262",
+            "",
+            "TYR"
+          ]
+        ],
+        "degrees": 174.12517716548408,
+        "state": "trans",
+        "deviation_degrees": 5.874822834515925,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4183,
+          4200,
+          4202,
+          4204
+        ],
+        "residues": [
+          [
+            "A",
+            "262",
+            "",
+            "TYR"
+          ],
+          [
+            "A",
+            "263",
+            "",
+            "GLU"
+          ]
+        ],
+        "degrees": 173.59383132911137,
+        "state": "trans",
+        "deviation_degrees": 6.406168670888633,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4204,
+          4215,
+          4217,
+          4219
+        ],
+        "residues": [
+          [
+            "A",
+            "263",
+            "",
+            "GLU"
+          ],
+          [
+            "A",
+            "264",
+            "",
+            "LYS"
+          ]
+        ],
+        "degrees": 177.57376225416067,
+        "state": "trans",
+        "deviation_degrees": 2.4262377458393303,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4219,
+          4237,
+          4239,
+          4241
+        ],
+        "residues": [
+          [
+            "A",
+            "264",
+            "",
+            "LYS"
+          ],
+          [
+            "A",
+            "265",
+            "",
+            "LEU"
+          ]
+        ],
+        "degrees": -165.91088935129716,
+        "state": "trans",
+        "deviation_degrees": 14.089110648702842,
+        "accepted": true
+      },
+      {
+        "atoms": [
+          4241,
+          4243,
+          4258,
+          4260
+        ],
+        "residues": [
+          [
+            "A",
+            "265",
+            "",
+            "LEU"
+          ],
+          [
+            "A",
+            "266",
+            "",
+            "GLU"
+          ]
+        ],
+        "degrees": 170.3542358113752,
+        "state": "trans",
+        "deviation_degrees": 9.64576418862481,
+        "accepted": true
+      }
+    ],
+    "phi_psi": [
+      {
+        "residue": [
+          "A",
+          "26",
+          "",
+          "GLY"
+        ],
+        "phi_degrees": -67.53205646028414,
+        "psi_degrees": -20.37973075098074
+      },
+      {
+        "residue": [
+          "A",
+          "27",
+          "",
+          "GLN"
+        ],
+        "phi_degrees": 62.49592071345283,
+        "psi_degrees": -51.39986090847351
+      },
+      {
+        "residue": [
+          "A",
+          "28",
+          "",
+          "GLY"
+        ],
+        "phi_degrees": -155.44821553525907,
+        "psi_degrees": -49.274953619508686
+      },
+      {
+        "residue": [
+          "A",
+          "29",
+          "",
+          "THR"
+        ],
+        "phi_degrees": -62.096387264140034,
+        "psi_degrees": -62.65336584234246
+      },
+      {
+        "residue": [
+          "A",
+          "30",
+          "",
+          "PHE"
+        ],
+        "phi_degrees": -82.04217861708733,
+        "psi_degrees": 20.828321750346532
+      },
+      {
+        "residue": [
+          "A",
+          "31",
+          "",
+          "GLY"
+        ],
+        "phi_degrees": 65.3823350328858,
+        "psi_degrees": -161.90971792376286
+      },
+      {
+        "residue": [
+          "A",
+          "92",
+          "",
+          "TYR"
+        ],
+        "phi_degrees": 172.49048459393006,
+        "psi_degrees": -52.370001360310894
+      },
+      {
+        "residue": [
+          "A",
+          "93",
+          "",
+          "ASN"
+        ],
+        "phi_degrees": -158.26541030832428,
+        "psi_degrees": 126.7872119301957
+      },
+      {
+        "residue": [
+          "A",
+          "94",
+          "",
+          "ARG"
+        ],
+        "phi_degrees": 156.34739035491512,
+        "psi_degrees": 154.57333102286344
+      },
+      {
+        "residue": [
+          "A",
+          "95",
+          "",
+          "CYS"
+        ],
+        "phi_degrees": 44.5664964851396,
+        "psi_degrees": -152.56355048415088
+      },
+      {
+        "residue": [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        "phi_degrees": -71.67104005029734,
+        "psi_degrees": 16.208656659310027
+      },
+      {
+        "residue": [
+          "A",
+          "177",
+          "",
+          "ALA"
+        ],
+        "phi_degrees": -142.0435617856953,
+        "psi_degrees": 133.38915882672853
+      },
+      {
+        "residue": [
+          "A",
+          "178",
+          "",
+          "LYS"
+        ],
+        "phi_degrees": -179.7898637607464,
+        "psi_degrees": -61.0770910257809
+      },
+      {
+        "residue": [
+          "A",
+          "179",
+          "",
+          "ASN"
+        ],
+        "phi_degrees": -166.80879399467145,
+        "psi_degrees": 42.69389291164525
+      },
+      {
+        "residue": [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        "phi_degrees": -11.546622674199305,
+        "psi_degrees": -84.35249428819593
+      },
+      {
+        "residue": [
+          "A",
+          "260",
+          "",
+          "GLU"
+        ],
+        "phi_degrees": 59.41600823708107,
+        "psi_degrees": -19.1742456675842
+      },
+      {
+        "residue": [
+          "A",
+          "261",
+          "",
+          "LEU"
+        ],
+        "phi_degrees": -113.6722433274216,
+        "psi_degrees": -24.237825416732385
+      },
+      {
+        "residue": [
+          "A",
+          "262",
+          "",
+          "TYR"
+        ],
+        "phi_degrees": -71.71470855228402,
+        "psi_degrees": -54.49851917664009
+      },
+      {
+        "residue": [
+          "A",
+          "263",
+          "",
+          "GLU"
+        ],
+        "phi_degrees": -97.56939614434103,
+        "psi_degrees": 27.784448114722984
+      },
+      {
+        "residue": [
+          "A",
+          "264",
+          "",
+          "LYS"
+        ],
+        "phi_degrees": 19.517272424103467,
+        "psi_degrees": 25.03350362773356
+      },
+      {
+        "residue": [
+          "A",
+          "265",
+          "",
+          "LEU"
+        ],
+        "phi_degrees": -93.9092760059334,
+        "psi_degrees": -112.030044536792
+      }
+    ],
+    "criteria": {
+      "backbone_bond_bounds_angstrom": {
+        "N-CA": [
+          1.25,
+          1.7
+        ],
+        "CA-C": [
+          1.3,
+          1.75
+        ],
+        "C-O": [
+          1.05,
+          1.45
+        ],
+        "peptide_C-N": [
+          1.15,
+          1.6
+        ]
+      },
+      "other_heavy_bonds": "0.70\u20131.25 times summed elemental covalent radii (C/N/O/S/P); generous gross bounds, not equilibrium lengths",
+      "backbone_angle_bounds_degrees": [
+        80,
+        150
+      ],
+      "omega_cis_or_trans_tolerance_degrees": 35,
+      "gross_contact_min_angstrom": 1.3,
+      "soft_vdw_ratio": 0.78,
+      "contact_exclusions": "self, directly bonded and 1\u20133 atom pairs; hydrogen contacts excluded"
+    },
+    "modeled_residue_keys": [
+      [
+        "A",
+        "176",
+        "",
+        "LEU"
+      ],
+      [
+        "A",
+        "177",
+        "",
+        "ALA"
+      ],
+      [
+        "A",
+        "178",
+        "",
+        "LYS"
+      ],
+      [
+        "A",
+        "179",
+        "",
+        "ASN"
+      ],
+      [
+        "A",
+        "180",
+        "",
+        "SER"
+      ],
+      [
+        "A",
+        "26",
+        "",
+        "GLY"
+      ],
+      [
+        "A",
+        "260",
+        "",
+        "GLU"
+      ],
+      [
+        "A",
+        "261",
+        "",
+        "LEU"
+      ],
+      [
+        "A",
+        "262",
+        "",
+        "TYR"
+      ],
+      [
+        "A",
+        "263",
+        "",
+        "GLU"
+      ],
+      [
+        "A",
+        "264",
+        "",
+        "LYS"
+      ],
+      [
+        "A",
+        "265",
+        "",
+        "LEU"
+      ],
+      [
+        "A",
+        "27",
+        "",
+        "GLN"
+      ],
+      [
+        "A",
+        "28",
+        "",
+        "GLY"
+      ],
+      [
+        "A",
+        "29",
+        "",
+        "THR"
+      ],
+      [
+        "A",
+        "30",
+        "",
+        "PHE"
+      ],
+      [
+        "A",
+        "31",
+        "",
+        "GLY"
+      ],
+      [
+        "A",
+        "92",
+        "",
+        "TYR"
+      ],
+      [
+        "A",
+        "93",
+        "",
+        "ASN"
+      ],
+      [
+        "A",
+        "94",
+        "",
+        "ARG"
+      ],
+      [
+        "A",
+        "95",
+        "",
+        "CYS"
+      ]
+    ],
+    "external_environment_atoms": 0,
+    "modeled_atom_count": 329,
+    "modeled_heavy_atom_count": 167,
+    "soft_overlap_score": 0.0031989297232004133
+  }
+}

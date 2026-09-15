@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "status": "read_only_diagnosis_complete",
+  "failed_run": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run",
+  "observed": {
+    "native_memory_mb": 5000,
+    "actual_failure_sample": {
+      "sample_unix": 1789340070.664581,
+      "maximum_process_rss_bytes": 8035172352,
+      "process_group_rss_bytes": 8035172352,
+      "free_disk_bytes": 48413687808
+    },
+    "seconds_after_quantum_start": 267.0032968521118,
+    "last_persisted_peak_field_bytes": 6344540160,
+    "peak_field_caveat": "The terminating sample is stored in the error string; peak_sampled_rss_bytes was not refreshed before failure and must not be reported as the maximum.",
+    "last_native_line": "max_memory 5000 MB (current use 2831 MB)",
+    "first_scf_converged": true,
+    "first_scf_energy_hartree": -2794.069392869077,
+    "first_gradient_or_optimization_callback_completed": false
+  },
+  "dimensions": {
+    "atoms": 94,
+    "ao_functions": 816,
+    "auxiliary_functions": 4739,
+    "occupied_orbitals": 194,
+    "electrons": 388,
+    "ao_shells": 398,
+    "largest_AO_shell_functions": 5,
+    "units": "real float64, 8 bytes per element",
+    "dimension_evidence": "816 and 398 in native log; occupations/coeff shape in saved checkpoint; 4739 both in frozen auxiliary-basis metadata and on-disk DF tensor rows"
+  },
+  "dispatch": {
+    "correct_df_gradient": true,
+    "native_log_initial_class": "pyscf.df.grad.rhf.Gradients",
+    "scanner_label_explanation": "grad/rhf.py:301-302 inherits (SCF_GradScanner, original_gradient_class); lib/misc.py:960 resets the dynamic class __module__ to the wrapper module. The printed module does not replace DF methods.",
+    "auxbasis_response_included": true,
+    "response_sources": [
+      "df/grad/rhf.py:542",
+      "df/grad/rhf.py:565-578"
+    ]
+  },
+  "buffer_sizes": [
+    {
+      "name": "One rhok_oo occupied/auxiliary tensor",
+      "shape": [
+        4739,
+        194,
+        194
+      ],
+      "bytes": 1426856032,
+      "decimal_MB": 1426.856032,
+      "GiB": 1.3288632333278656,
+      "source": "df/grad/rhf.py:175; full allocation, independent of max_memory"
+    },
+    {
+      "name": "Three coexisting original/reshape/Fortran tensors",
+      "shape": [
+        3,
+        4739,
+        194,
+        194
+      ],
+      "bytes": 4280568096,
+      "decimal_MB": 4280.568096,
+      "GiB": 3.986589699983597,
+      "source": "df/grad/rhf.py:229 and lib/numpy_helper.py:270-273; 12-double layout discriminator confirms both copies"
+    },
+    {
+      "name": "Full auxiliary metric",
+      "shape": [
+        4739,
+        4739
+      ],
+      "bytes": 179664968,
+      "decimal_MB": 179.664968,
+      "GiB": 0.16732604056596756,
+      "source": "df/grad/rhf.py:487 and :426; factorization may coexist with original metric"
+    },
+    {
+      "name": "Full auxiliary metric derivative",
+      "shape": [
+        3,
+        4739,
+        4739
+      ],
+      "bytes": 538994904,
+      "decimal_MB": 538.994904,
+      "GiB": 0.5019781216979027,
+      "source": "df/grad/rhf.py:224; independent of max_memory"
+    },
+    {
+      "name": "Full auxiliary contraction output",
+      "shape": [
+        4739,
+        4739
+      ],
+      "bytes": 179664968,
+      "decimal_MB": 179.664968,
+      "GiB": 0.16732604056596756,
+      "source": "df/grad/rhf.py:229; output allocated after operand conversion"
+    },
+    {
+      "name": "Two J/K derivative matrices",
+      "shape": [
+        2,
+        3,
+        816,
+        816
+      ],
+      "bytes": 31961088,
+      "decimal_MB": 31.961088,
+      "GiB": 0.029766082763671875,
+      "source": "df/grad/rhf.py:122-123"
+    },
+    {
+      "name": "ip1 AO derivative integral block at floor20",
+      "shape": [
+        3,
+        20,
+        816,
+        816
+      ],
+      "bytes": 319610880,
+      "decimal_MB": 319.61088,
+      "GiB": 0.29766082763671875,
+      "source": "df/grad/rhf.py:126,134; lower floor remains even when available memory is negative"
+    },
+    {
+      "name": "ip1 AO-occupied transform at floor20",
+      "shape": [
+        3,
+        20,
+        194,
+        816
+      ],
+      "bytes": 75985920,
+      "decimal_MB": 75.98592,
+      "GiB": 0.07076740264892578,
+      "source": "df/grad/rhf.py:143"
+    },
+    {
+      "name": "get_rhok block at floor20",
+      "shape": [
+        20,
+        194,
+        816
+      ],
+      "bytes": 25328640,
+      "decimal_MB": 25.32864,
+      "GiB": 0.023589134216308594,
+      "source": "df/grad/rhf.py:521"
+    },
+    {
+      "name": "Entire disk-backed rhok tensor",
+      "shape": [
+        4739,
+        816,
+        194
+      ],
+      "bytes": 6001621248,
+      "decimal_MB": 6001.621248,
+      "GiB": 5.589445352554321,
+      "source": "df/grad/rhf.py:492,511; stored in HDF5, retrieved in blocks; not all held in RAM by this function"
+    },
+    {
+      "name": "Entire disk-backed SCF DF tensor",
+      "shape": [
+        4739,
+        333336
+      ],
+      "bytes": 12637434432,
+      "decimal_MB": 12637.434432,
+      "GiB": 11.769527971744537,
+      "source": "df/df.py:167-197; this case already exceeds 5000 MB and 2000 MB allocation settings"
+    }
+  ],
+  "source_formula_scenarios": [
+    {
+      "requested_MB": 5000,
+      "assumed_current_RSS_MB": 145,
+      "remaining_MB": 4855,
+      "df_scf_tagged_dm_block_aux": 240,
+      "gradient_cho_solve_target_AOs": 78.46796399505149,
+      "gradient_ip1_target_aux": 151,
+      "gradient_rhok_oo_retrieval_target_aux": 1916
+    },
+    {
+      "requested_MB": 5000,
+      "assumed_current_RSS_MB": 1000,
+      "remaining_MB": 4000,
+      "df_scf_tagged_dm_block_aux": 225,
+      "gradient_cho_solve_target_AOs": 64.64919793619073,
+      "gradient_ip1_target_aux": 125,
+      "gradient_rhok_oo_retrieval_target_aux": 1579
+    },
+    {
+      "requested_MB": 5000,
+      "assumed_current_RSS_MB": 2000,
+      "remaining_MB": 3000,
+      "df_scf_tagged_dm_block_aux": 168,
+      "gradient_cho_solve_target_AOs": 48.486898452143045,
+      "gradient_ip1_target_aux": 93,
+      "gradient_rhok_oo_retrieval_target_aux": 1184
+    },
+    {
+      "requested_MB": 5000,
+      "assumed_current_RSS_MB": 2831,
+      "remaining_MB": 2169,
+      "df_scf_tagged_dm_block_aux": 122,
+      "gradient_cho_solve_target_AOs": 35.05602758089942,
+      "gradient_ip1_target_aux": 67,
+      "gradient_rhok_oo_retrieval_target_aux": 856
+    },
+    {
+      "requested_MB": 5000,
+      "assumed_current_RSS_MB": 4000,
+      "remaining_MB": 1000,
+      "df_scf_tagged_dm_block_aux": 56,
+      "gradient_cho_solve_target_AOs": 16.162299484047683,
+      "gradient_ip1_target_aux": 31,
+      "gradient_rhok_oo_retrieval_target_aux": 394
+    },
+    {
+      "requested_MB": 2000,
+      "assumed_current_RSS_MB": 145,
+      "remaining_MB": 1855,
+      "df_scf_tagged_dm_block_aux": 104,
+      "gradient_cho_solve_target_AOs": 29.98106554290845,
+      "gradient_ip1_target_aux": 58,
+      "gradient_rhok_oo_retrieval_target_aux": 732
+    },
+    {
+      "requested_MB": 2000,
+      "assumed_current_RSS_MB": 1000,
+      "remaining_MB": 1000,
+      "df_scf_tagged_dm_block_aux": 56,
+      "gradient_cho_solve_target_AOs": 16.162299484047683,
+      "gradient_ip1_target_aux": 31,
+      "gradient_rhok_oo_retrieval_target_aux": 394
+    },
+    {
+      "requested_MB": 2000,
+      "assumed_current_RSS_MB": 2000,
+      "remaining_MB": 0,
+      "df_scf_tagged_dm_block_aux": 4,
+      "gradient_cho_solve_target_AOs": 0.0,
+      "gradient_ip1_target_aux": 20,
+      "gradient_rhok_oo_retrieval_target_aux": 20
+    },
+    {
+      "requested_MB": 2000,
+      "assumed_current_RSS_MB": 2831,
+      "remaining_MB": -831,
+      "df_scf_tagged_dm_block_aux": 4,
+      "gradient_cho_solve_target_AOs": -13.430870871243624,
+      "gradient_ip1_target_aux": 20,
+      "gradient_rhok_oo_retrieval_target_aux": 20
+    },
+    {
+      "requested_MB": 2000,
+      "assumed_current_RSS_MB": 4000,
+      "remaining_MB": -2000,
+      "df_scf_tagged_dm_block_aux": 4,
+      "gradient_cho_solve_target_AOs": -32.324598968095366,
+      "gradient_ip1_target_aux": 20,
+      "gradient_rhok_oo_retrieval_target_aux": 20
+    }
+  ],
+  "scenario_limit": "Arithmetic scenarios hold assumed current RSS fixed for comparison; they are not a prediction of a rerun peak. Shell-balanced ranges can differ from targets; a negative AO target falls to individual shells, largest five AOs here.",
+  "unbudgeted_copy": {
+    "scope": "12-double array layout discriminator only; no contractions or quantum calculation.",
+    "subscripts": "pij,qji->pq",
+    "rhs_transpose_axes": [
+      2,
+      1,
+      0
+    ],
+    "original_shape": [
+      3,
+      2,
+      2
+    ],
+    "transposed_shape": [
+      2,
+      2,
+      3
+    ],
+    "transposed_f_contiguous": true,
+    "reshape_c_contiguous": true,
+    "reshape_shares_original": false,
+    "converted_f_contiguous": true,
+    "converted_shares_reshape": false,
+    "converted_shares_original": false,
+    "each_test_array_bytes": 96,
+    "full_case_each_array_bytes": 1426856032,
+    "interpretation": "Pinned contract line 271 evaluates a default-C reshape of reversed F-contiguous dimensions before creating an F-contiguous array. In this shape family both operations copy. During conversion the original rhok_oo, reshape copy and final copy can coexist; max_memory is not consulted."
+  },
+  "assessment": {
+    "2000MB_trial": "Plausible resource-only test: lowers SCF construction/J-K blocks and gradient block targets where not floored. It cannot lower all allocations or establish an RSS bound.",
+    "fixed_copy_spike_with_metric_derivative_bytes": 4819563000,
+    "spike_caveat": "4.819563 GB accounts only for three coexisting occupied/auxiliary arrays plus the metric derivative at one potential transient. It excludes existing state, live prior buffers, native workspaces, HDF5 caches, and allocator retention; it is not a measured peak or an additive RSS model. INFO-level log does not identify the allocation where the controller stopped the process.",
+    "stale_block_budget": "get_jk calculates rhok_oo retrieval block size at lines171-172 before allocating the full rhok_oo at175. The AO derivative ao_ranges calculated at125-127 are reused at192 after that full allocation. Current memory is not recomputed for those extra live allocations.",
+    "floor_and_fixed_terms": "Metric/factorization, rhok_oo, metric derivatives and contraction reshapes are independent of requested memory. ip1/retrieval blocks have a minimum20 auxiliary functions.",
+    "next_if_trial_fails": "Retain the 8e9 RSS cap. Review bounded equivalent contraction/layout or spilling algorithms with numerical parity before changing implementation; do not repeat memory-hint trials or omit auxiliary response."
+  },
+  "scratch_evidence": {
+    "df_tensor_file": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/scratch/tmpnigiato5",
+    "df_tensor_bytes": 12637440576,
+    "rhok_like_scratch_file": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/scratch/m9pqhyd5",
+    "rhok_like_file_bytes": 6001635584,
+    "rhok_file_read_error": "OSError('Unable to synchronously open file (bad object header version number)')",
+    "caveat": "The 5.6 GiB scratch file is consistent in size with rhok storage but its unclean HDF5 object header prevents metadata validation; no claim of completed gradient stage is based on it. No scratch was modified."
+  },
+  "calculations_performed": "No molecular integrals, SCF, gradients, optimization or new quantum process. Only file/HDF5 metadata reads, auxiliary-basis parsing, scalar byte arithmetic and a 12-double array layout discriminator.",
+  "runtime_source_edits": false,
+  "source_manifest_sha256": "422e01beb4531f9076daccc647d1849adac8a7cb7ef0501fbb597e7dc6ef3e3c"
+}

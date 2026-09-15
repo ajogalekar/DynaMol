@@ -1,0 +1,33 @@
+{
+  "variant": "baseline",
+  "source_psf_sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e",
+  "output_psf_sha256": "d773fc2e42c63243e06037aa2cdb3f65f38307ef30c99e9afef97ab3e99c2dca",
+  "system_xml_sha256": "0abc07238e9ad570231327f612573c6472e8d16a49eedc833ecbbfab1ac82c43",
+  "particle_count": 27386,
+  "force_classes": [
+    "HarmonicBondForce",
+    "HarmonicAngleForce",
+    "HarmonicBondForce",
+    "PeriodicTorsionForce",
+    "CustomTorsionForce",
+    "CMAPTorsionForce",
+    "NonbondedForce",
+    "CMMotionRemover"
+  ],
+  "constraint_count": 0,
+  "nonbonded_exceptions": 38552,
+  "total_partial_charge_e": 1.6237011735142914e-15,
+  "particle_charges_match_psf": true,
+  "all_psf_term_indices_unchanged": true,
+  "maximum_particle_mass_error_dalton": 0.0,
+  "charge_modifications": [],
+  "reader_warnings": [
+    "Repeat improper dihedral found ('CPH2', 'NR2', 'NR1', 'HR1') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+    "Repeat improper dihedral found ('CPH2', 'NR1', 'NR2', 'HR1') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+    "Repeat improper dihedral found ('CPH1', 'NR1', 'CPH1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+    "Repeat improper dihedral found ('CPH1', 'NR2', 'CPH1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+    "Repeat improper dihedral found ('CPH1', 'CPH1', 'NR1', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use",
+    "Repeat improper dihedral found ('CPH1', 'CPH1', 'NR2', 'HR3') and New param. k: 0.500000  ,thetaq: 0.000000 will use"
+  ],
+  "scope": "Complete published horse PSF mechanical definition only; no coordinates, Context, energy, QM, MD or 1A6M parameterization acceptance."
+}

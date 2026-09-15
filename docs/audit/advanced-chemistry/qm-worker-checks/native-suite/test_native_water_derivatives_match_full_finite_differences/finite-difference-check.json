@@ -1,0 +1,8 @@
+{
+  "step_bohr": 0.0001,
+  "gradient_max_error_hartree_per_bohr": 1.980008157431712e-09,
+  "hessian_max_error_hartree_per_bohr2": 7.542829194573386e-08,
+  "gradient_tolerance": 2e-06,
+  "hessian_tolerance": 2e-05,
+  "all_nine_atom_major_coordinates_checked": true
+}

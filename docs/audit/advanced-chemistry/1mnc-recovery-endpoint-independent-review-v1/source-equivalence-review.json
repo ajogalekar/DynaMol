@@ -1,0 +1,50 @@
+{
+  "original_hash": "291abdc7971a8676912fcf1bda655edd5439c75fe37535633406072e128085d0",
+  "wrapper_hash": "6ae8763596e763c4b18840f850e0fc8a7bef7bea3c018fe35bcb87bd9da99567",
+  "copied_native_reader_exactly_matches_declared_substitutions": true,
+  "unchanged_original_function_hashes": {
+    "load_context": "ba1f6431a522fc6f258c4a3539582bf7b1ce3c31b5db97a8708fef3fb1c8229e",
+    "chemistry_report": "db7a990648a8f92f7662f7eb461c8a3ca249226936c3de0c4ac8935be2aa5842"
+  },
+  "core_functions_called_directly": true,
+  "main_generates_no_conventional_request": true,
+  "author_53_test_evidence_sha256": "d3c22ebf6462283f8f7284ff653b0afdc243e942deddb7bdd484c4605a23a448",
+  "author_artifact_checks_at_review": [
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/analyze_1mnc_recovery_endpoint_v1.py",
+      "expected_sha256": "6ae8763596e763c4b18840f850e0fc8a7bef7bea3c018fe35bcb87bd9da99567",
+      "observed_sha256": "6ae8763596e763c4b18840f850e0fc8a7bef7bea3c018fe35bcb87bd9da99567",
+      "matches": true
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/test_1mnc_recovery_endpoint_v1.py",
+      "expected_sha256": "a9d75d74efb55e456569d8e02f9f1ed154f339b6b7077810524075d7efda5ce3",
+      "observed_sha256": "a9d75d74efb55e456569d8e02f9f1ed154f339b6b7077810524075d7efda5ce3",
+      "matches": true
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/1MNC-RECOVERY-ENDPOINT-ADMISSION-V1.md",
+      "expected_sha256": "7168b771853955ba6bc3ec482c4a99aebd77f2617c30052c0877e8e9f7b87cc1",
+      "observed_sha256": "7168b771853955ba6bc3ec482c4a99aebd77f2617c30052c0877e8e9f7b87cc1",
+      "matches": true
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-research/reviews/1mnc-recovery-endpoint-v1/reader-equivalence.json",
+      "expected_sha256": "95d50098494aade2b57a194d31e7207f35cc057a9ac3649d10a01defbb630717",
+      "observed_sha256": "95d50098494aade2b57a194d31e7207f35cc057a9ac3649d10a01defbb630717",
+      "matches": true
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-research/reviews/1mnc-recovery-endpoint-v1/readiness-attempt-v1/result.json",
+      "expected_sha256": "7cfe3a45981936bc3cbe705e7381710e202d1f170152aaacd18d96f26fdc3d4e",
+      "observed_sha256": "7cfe3a45981936bc3cbe705e7381710e202d1f170152aaacd18d96f26fdc3d4e",
+      "matches": true
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-research/reviews/1mnc-recovery-endpoint-v1/readiness-final-v1/result.json",
+      "expected_sha256": "35796be46225c52ed1460a121a40a83950a2cf5f0ef5605edcb3a2fd93aabcf7",
+      "observed_sha256": "35796be46225c52ed1460a121a40a83950a2cf5f0ef5605edcb3a2fd93aabcf7",
+      "matches": true
+    }
+  ]
+}

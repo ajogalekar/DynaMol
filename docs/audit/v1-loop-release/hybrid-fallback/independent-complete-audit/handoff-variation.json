@@ -1,0 +1,137 @@
+{
+  "verified_hashes": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-native-mc-v1/1UA2/source.pdb": "c58d4cce211bab37bb61ede35799dce5534408f27cbceac7fa8b5208263b8ded",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/archive-fragment.json": "ec920dfb63711b30b67e36d500407a1bcfe79d777839bb3c3fd85e9d00304861",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2026/candidate.json": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/fragment-source-ccd/native/43-56-seed-2027/candidate.json": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2026/candidate.json": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-native-v1/1UA2/torsion-source-ccd/native/43-56-seed-2027/candidate.json": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-topology.cif": "79784fdf00348d2153f25622899d521a1d95bc28466ccc7364cd84eaa0bdfa40",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-input.npz": "8bd9acd39fe9bc22dbfb78efc8e25807d7784343f42a9622b4e7b1ddfe672a0a",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/loop-refinement-parameters.json": "1614e9ad0800340a2fbc00215e971a71aebb28c414d4b87544a402eda9c1a760",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/run_complete_comparison.py": "47d8734d76fab2a717da00e96374ffc7f4cb154b86a574c1e19002d160027862",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/run_accepted_handoff.py": "85bfa949952a3e58a336033a9e7846980471766a06c47ce2a89f2d38498034e4",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/loop_search.py": "d13a15585b5aaeda7c609ccfe864efdd5a01a532cfd01abee1a82a7a859aabbf",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/context_integrity.py": "083f948b5c282dac4ce5d07118707c4e3485275b8ee6370dbe4006cc6d1db6f2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/implementation/validate_complete_candidate.py": "92047f62100180bda610414609e263a92895d7162fa92530440776170787d3d4",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/plan.json": "754610f376259366a8aa38fe2f070d4869c526abcaa72f4941e836a30c3d6237",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/summary.json": "93e520503b1a5d3628c8992377cf2b9c7e93935a326e6d5c41534ba929198d7c",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/search.json": "9f2fbae07e7789d2b14a178b369d392b7ab6b25fafc2a590dd87394f42a52751",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/progress.json": "d1d7bac7848b645ebb837bb90f58fa613d659b78a91dec086a18cfca9ec5bf87",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/archive-fragment/proposal.json": "ec920dfb63711b30b67e36d500407a1bcfe79d777839bb3c3fd85e9d00304861",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/ligands/ligand-aecaa3f182e6/ligand.xml": "e8609564fca7c8cd3ddaff519ec0df35d1a7027bd4e2d50368b9aab7d97abfe7",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/1UA2/workspace/datasets/4dcb5c25f5c14559/residue-parameters/phosaa14SB.xml": "274dc6a193fe07c8b94beebc24d442dd46d6ee55aa768bf6912bc006a25b0afc",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/data/amber14/tip3p.xml": "3f4b188dbcb6c02863230eaca231e927fb6bf3307ce947d8a50d0f46f6dd83d9",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/data/amber14/protein.ff14SB.xml": "d9f9779c09d67cd5f8bc657692f174ffab14c469dfd06d560ac1899fa7e976b8",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/archive-fragment/validation/refined.npz": "de052b2ae8b1c80396cb7b7cc75d9484e2c02fdd892c5c6d5c960e87052649e8",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/archive-fragment/validation/refined.pdb": "e33c056335c4fb609f08523fb5dc2a25ff118137071c7e3818ce3a1814d05485",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/archive-fragment/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/archive-fragment/validation/result.json": "582f5cf4ed8a11146a833e9ddc73fb55731f8d584ec9d5439b5fce10228d8327",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2026/proposal.json": "e86aacecda8ab8e4d17267ad8e8a74597352cab38d8c1bcf256b445832dd829b",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2026/validation/refined.npz": "d7c5e934735bed4f43bb51c355e424929baab610a864ea1edf4af9255d0178fd",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2026/validation/refined.pdb": "914544100769bb8835b976581e547916f02d4a2e80ea0ecdd63f8c8151d4b417",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2026/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2026/validation/result.json": "9e4634160ec74288b7c2e1b6b43c7662b886186ebd5044d9a65c3338ba7bf764",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2027/proposal.json": "fa5869e3caa861ff6e1c897d7116a008dd5f1d1911b8767d87226a57c807d44e",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2027/validation/refined.npz": "f71877c86e97b1b397398f9c40c7a016bd22035ea5cc3375dbf74bc75682471d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2027/validation/refined.pdb": "54c7d3e9b2a5c60811880a903a2be598277bfaf122e7926b97740be5cc992781",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2027/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/fragment-source-ccd-2027/validation/result.json": "b4ebcf9a0e77b6df369403ce725c0bd8e702a2a46e04a4dfffb46314cc119b56",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2026/proposal.json": "c8fea7026d51acddaf5ec0cb1ef8736e553b4929dbbc2e9442e1d0a4aa00706d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2026/validation/refined.npz": "552577ad9a8d47173ffe47ee79135ff26c3c077028716116951883ff0712577c",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2026/validation/refined.pdb": "486b638872ee74f06d6963414bfecdafd724d5e08cedcc1f48db00f725ae2403",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2026/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2026/validation/result.json": "124045b66b3e823f12290d87b8a698a8ec18d2491a0800e49645e06c54b6f8ab",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/proposal.json": "95b80ec7f7fb86225cd29aa6bcc4cdd093582d1e037cbfb966c269b0a1b2d998",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.npz": "99e31cc3175ff7d0a8d6b606e4e4b3fb2456786c15576504bc9945ae3d8ecb23",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.pdb": "637f7899a19dd59043188f3ed25733900526c01fb9c59382251d957643739182",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/native-system.xml": "b9f070712bb5d0307089e243237d9f1db0aa863b64f454c54c8f66a21ffa57d2",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/result.json": "45bb8ffac7c58704b093b4b2006f29ea2bbe55aed6a7859b703656306b7e7851",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/04-conditioned/validation/candidate-seed.npz": "00415f94455054f5a4c9c0020c1278c688202aae79623fd1508ffc5405936029",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/candidate-seed.npz": "a241e2f1dd2fc5e5f8c7c31b327f9d29098a0113432b0a75afae0bcc2168a741",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1/04-conditioned/validation/refined.npz": "6b95c2a52f32a06774e09e2540caf01e53441941e4589924a0b5417b704b8606"
+  },
+  "implementation_sha256": "04bf9b9492276e133ce471ae5e47c5a8fd5865f416463f18aae228ab5fcb1fd2",
+  "accepted_artifact": {
+    "path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.npz",
+    "sha256": "99e31cc3175ff7d0a8d6b606e4e4b3fb2456786c15576504bc9945ae3d8ecb23"
+  },
+  "five_attempts_four_rejections_then_acceptance_verified": true,
+  "actual_refined_npz_path_hash_and_attempt_directory_verified": true,
+  "progress_event_count": 15,
+  "coordinate_repeat_comparison": {
+    "candidate-seed.npz": {
+      "all": {
+        "coordinates_bitwise_equal": false,
+        "maximum_difference_A": 0.0010833916099949284,
+        "rms_difference_A": 4.7586683331456396e-05,
+        "maximum_atom": [
+          "A",
+          "43",
+          "ILE",
+          "HG23"
+        ]
+      },
+      "heavy": {
+        "coordinates_bitwise_equal": true,
+        "maximum_difference_A": 0.0,
+        "rms_difference_A": 0.0,
+        "maximum_atom": [
+          "A",
+          "13",
+          "GLU",
+          "N"
+        ]
+      },
+      "hydrogen": {
+        "coordinates_bitwise_equal": false,
+        "maximum_difference_A": 0.0010833916099949284,
+        "rms_difference_A": 6.73186642919441e-05,
+        "maximum_atom": [
+          "A",
+          "43",
+          "ILE",
+          "HG23"
+        ]
+      }
+    },
+    "refined.npz": {
+      "all": {
+        "coordinates_bitwise_equal": false,
+        "maximum_difference_A": 0.5786521611519814,
+        "rms_difference_A": 0.03358675573236197,
+        "maximum_atom": [
+          "A",
+          "53",
+          "ASP",
+          "OD1"
+        ]
+      },
+      "heavy": {
+        "coordinates_bitwise_equal": false,
+        "maximum_difference_A": 0.5786521611519814,
+        "rms_difference_A": 0.03153953707818542,
+        "maximum_atom": [
+          "A",
+          "53",
+          "ASP",
+          "OD1"
+        ]
+      },
+      "hydrogen": {
+        "coordinates_bitwise_equal": false,
+        "maximum_difference_A": 0.5000139457484287,
+        "rms_difference_A": 0.03551849970753883,
+        "maximum_atom": [
+          "A",
+          "54",
+          "GLY",
+          "HA2"
+        ]
+      }
+    }
+  },
+  "endpoint_independently_audited_by": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/handoff-audit-summary.json",
+  "scope": "Known-outcome orchestration regression and separate saved-artifact audit; not a success-rate benchmark, bitwise reproducibility claim, full preparation run or release qualification.",
+  "new_refinement_md_or_qm": false
+}

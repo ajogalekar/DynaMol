@@ -1,0 +1,115 @@
+{
+  "retrieved_at": "2026-09-13T15:55:35.304683+00:00",
+  "primary_page": "https://ambermd.org/tutorials/advanced/tutorial20/mcpbpy.php",
+  "purpose": "Published human carbonic-anhydrase Zn site reference for QM data adapter and native MCPB/RESP comparison. No generated model is accepted from download alone.",
+  "files": [
+    {
+      "name": "1OKL_small_opt.com",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_small_opt.com",
+      "bytes": 2890,
+      "sha256": "d600dc962dd9802c340dd08aae4464bfb8717a1ba4316497e3c3585cf9aba8cd"
+    },
+    {
+      "name": "1OKL_small_fc.com",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_small_fc.com",
+      "bytes": 170,
+      "sha256": "f15eb95be2020812d7607468d4877ec8f914da43a39fddd409b151c42ab971e2"
+    },
+    {
+      "name": "1OKL_small_opt.fchk",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_small_opt.fchk",
+      "bytes": 11936883,
+      "sha256": "43d33d9dde0076efd8be26ab8d7559662d87834d00e6c7fd2a1a59de1c2f6f8b"
+    },
+    {
+      "name": "1OKL_large_mk.com",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_large_mk.com",
+      "bytes": 4364,
+      "sha256": "f96ab9920dc8ae77c4023fda0bc1357a3ccb8d94f96e408f87eed93e1a07fd93"
+    },
+    {
+      "name": "1OKL_large_mk.log",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_large_mk.log",
+      "bytes": 4611486,
+      "sha256": "7cc80e8f85fd61e61599c263e4d95cb05dc52a583d4ee61b255dbbc34636b85d"
+    },
+    {
+      "name": "1OKL_standard.fingerprint",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_standard.fingerprint",
+      "bytes": 2137,
+      "sha256": "0df54ea479dd0e1c01826b328b9d4622a0a222ebbeaac41ea4bc7dcff2129adf"
+    },
+    {
+      "name": "1OKL_mcpbpy.frcmod",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_mcpbpy.frcmod",
+      "bytes": 7015,
+      "sha256": "b77e6edda8208229c876ae0e89d6d2edc2d2319e764d88f5539f97558c38047b"
+    },
+    {
+      "name": "1OKL.in",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL.in",
+      "bytes": 152,
+      "sha256": "76e9e79984dab8963a489ad45084a566e209e00b44f225f4b2d94bb34b5b46f2"
+    },
+    {
+      "name": "1OKL_fixed_H.pdb",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_fixed_H.pdb",
+      "bytes": 327969,
+      "sha256": "45686099cc474e598413530c7c4f8af0c490220e074f9e212a7f38cf679d5a27"
+    },
+    {
+      "name": "MNS.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/MNS.mol2",
+      "bytes": 3168,
+      "sha256": "6ae5fcc4cfb842b97a27d42cc738744e4db93844beeea1c3b5fedddc8c561b86"
+    },
+    {
+      "name": "ZN.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/ZN.mol2",
+      "bytes": 271,
+      "sha256": "0cd150caaf891abe08542a74f58e348d656cb085a18c9935e82018e523edd927"
+    },
+    {
+      "name": "MNS.frcmod",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/MNS.frcmod",
+      "bytes": 1038,
+      "sha256": "a6fe0bee4cf86ece4045a9d2e7992fb9049b408272d87d8fbdaddd40afced350"
+    },
+    {
+      "name": "HD1.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/HD1.mol2",
+      "bytes": 1818,
+      "sha256": "c801f7f93637bf91710d11e54a1885038dbb70f4913e890fb20f10db21ae9983"
+    },
+    {
+      "name": "HD2.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/HD2.mol2",
+      "bytes": 1818,
+      "sha256": "cb83189c7a830b7c9992bf9a1581dbfbe9efe411dd13c628034983978831ba60"
+    },
+    {
+      "name": "HE1.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/HE1.mol2",
+      "bytes": 1818,
+      "sha256": "f9eb35474b0868130a360f689cb80b88fe8659a917610ea30fb2231f19e37f2d"
+    },
+    {
+      "name": "ZN1.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/ZN1.mol2",
+      "bytes": 263,
+      "sha256": "98b0fad906cc59a3197ea57987f74fe89f66359b205932034180f3b7ef83417e"
+    },
+    {
+      "name": "MS1.mol2",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/MS1.mol2",
+      "bytes": 3085,
+      "sha256": "d95df960013bbe0615c71133128676e5ab9f19a7c234268ff13c9cb04116a644"
+    },
+    {
+      "name": "1OKL_tleap.in",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/files/mcpbpy/1OKL_tleap.in",
+      "bytes": 934,
+      "sha256": "2e31ccf45cd1d4bc68a00be174ac42936215336008c430deeb7366ec8a67c21c"
+    }
+  ]
+}

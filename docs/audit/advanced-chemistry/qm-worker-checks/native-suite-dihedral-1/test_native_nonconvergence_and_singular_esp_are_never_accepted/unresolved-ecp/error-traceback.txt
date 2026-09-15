@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 616, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 427, in calculate
+    raise ValueError('A requested ECP was not resolved; silently reverting to an all-electron model is not permitted')
+ValueError: A requested ECP was not resolved; silently reverting to an all-electron model is not permitted

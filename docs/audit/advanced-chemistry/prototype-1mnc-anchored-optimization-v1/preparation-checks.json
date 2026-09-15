@@ -1,0 +1,19 @@
+{
+  "status": "request_preparation_checks_passed",
+  "checks": {
+    "all_prepared_artifact_hashes": true,
+    "all_source_hashes_unchanged": true,
+    "original_source_and_ccd_hashes_match_cluster_report": true,
+    "all_original_atom_identity_coordinates_state_unchanged": true,
+    "only_three_verified_carbon_freezes": true,
+    "no_hessian_or_esp": true,
+    "all_source_and_prepared_files_nonempty": true
+  },
+  "native_QM_launches": 0,
+  "accepted_chemical_model": false,
+  "checked_unix": 1789332330.424105,
+  "input_sha256": "3b6fc0c51200556bd78bf884760b77c7feeeb079d614ceee253480e9887a5cc5",
+  "policy_sha256": "61c06fa5679fbaafd7db06afb225b57b021985b7976fa3e7aca8a94da3ebd93f",
+  "artifact_count": 12,
+  "source_count": 19
+}

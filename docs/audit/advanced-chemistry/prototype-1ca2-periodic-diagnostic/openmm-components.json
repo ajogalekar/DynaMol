@@ -1,0 +1,18 @@
+{
+  "True": {
+    "HarmonicBondForce": 3032.9264718759364,
+    "HarmonicAngleForce": 8989.99775506188,
+    "PeriodicTorsionForce": 13524.69743683153,
+    "NonbondedForce": 2382684.9776751013,
+    "NonbondedForceReciprocal": -2837423.961849958,
+    "CMMotionRemover": 0.0
+  },
+  "False": {
+    "HarmonicBondForce": 3032.9264718759364,
+    "HarmonicAngleForce": 8989.99775506188,
+    "PeriodicTorsionForce": 13524.69743683153,
+    "NonbondedForce": 2385079.823588366,
+    "NonbondedForceReciprocal": -2837423.961849958,
+    "CMMotionRemover": 0.0
+  }
+}

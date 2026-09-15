@@ -1,0 +1,70 @@
+{
+  "scope": "Retrospective read-only complete-environment gross contacts for actual corrected atoms; no MD.",
+  "helper_sha256": "eacba5fbbab69d078b841188f46da803e5ecbf3e1d6529504868db03413f1d35",
+  "cases": [
+    {
+      "id": "2HYY",
+      "status": "reviewed",
+      "prepared_pdb_sha256": "5831aac1f354936d864242e5d35776a642003133788ac62f50eea714fd478f9c",
+      "source_result": "docs/audit/loop-fallback/runs/root-branch-fixed/2HYY/result.json",
+      "corrections": [
+        {
+          "identity": [
+            "C",
+            "277",
+            "",
+            "THR"
+          ],
+          "center": "CB",
+          "moved_atom_names": [
+            "CG2"
+          ],
+          "moved_atom_indices": [
+            366
+          ],
+          "before_signed_volume_nm3": -0.0023244949298679204,
+          "after_signed_volume_nm3": 0.0023244949298679286
+        }
+      ],
+      "final_corrected_atom_contacts": {
+        "accepted": true,
+        "checked_corrected_heavy_atoms": 1,
+        "minimum_nonbonded_distance_angstrom": 1.3,
+        "gross_collisions": [],
+        "scope": "Corrected new heavy atoms versus the complete retained complex; self, bonds and 1\u20133 pairs excluded. Unrelated observed contacts are not tested here."
+      }
+    },
+    {
+      "id": "1FPU",
+      "status": "reviewed",
+      "prepared_pdb_sha256": "831595fc278c208377b42bf107c4087d62145e0d451a8f728853889ab56b24c1",
+      "source_result": "docs/audit/loop-fallback/runs/review-chemistry-fixed/1FPU/result.json",
+      "corrections": [
+        {
+          "identity": [
+            "B",
+            "394",
+            "",
+            "THR"
+          ],
+          "center": "CB",
+          "moved_atom_names": [
+            "CG2"
+          ],
+          "moved_atom_indices": [
+            1370
+          ],
+          "before_signed_volume_nm3": -0.0029632756940819933,
+          "after_signed_volume_nm3": 0.0029632756940819963
+        }
+      ],
+      "final_corrected_atom_contacts": {
+        "accepted": true,
+        "checked_corrected_heavy_atoms": 1,
+        "minimum_nonbonded_distance_angstrom": 1.3,
+        "gross_collisions": [],
+        "scope": "Corrected new heavy atoms versus the complete retained complex; self, bonds and 1\u20133 pairs excluded. Unrelated observed contacts are not tested here."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1385 @@
+{
+  "model": "1CA2 exact published ZAFF center6, ff14SB/TIP3P; explicit neutral bound water",
+  "scope": "Short classical mechanics exercise; not experimental accuracy, catalytic validity, or converged sampling",
+  "source_input": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-zaff-water-v3",
+  "original_atoms_retained": 4534,
+  "total_atoms": 34414,
+  "total_residues": 10384,
+  "translation_angstrom": [
+    43.8549937,
+    35.408462300000004,
+    23.9706554
+  ],
+  "translation_residual_angstrom": 7.105427357601002e-15,
+  "temperature_kelvin": 300,
+  "time_step_ps": 0.001,
+  "steps_per_seed": 5000,
+  "duration_ps_per_seed": 5.0,
+  "solvent_box_padding_angstrom": 10,
+  "restraints": false,
+  "constraints": "H bonds and rigid solvent; Zn donor heavy bonds remain dynamic",
+  "platform": "CPU",
+  "platform_properties": {
+    "Threads": "2",
+    "DeterministicForces": "true"
+  },
+  "seeds": [
+    2026,
+    2027
+  ],
+  "site_bonds": [
+    {
+      "a": 1416,
+      "b": 4032,
+      "donor": "NE2",
+      "residue": "HD4",
+      "equilibrium_angstrom": 1.978
+    },
+    {
+      "a": 1453,
+      "b": 4032,
+      "donor": "NE2",
+      "residue": "HD5",
+      "equilibrium_angstrom": 1.982
+    },
+    {
+      "a": 1796,
+      "b": 4032,
+      "donor": "ND1",
+      "residue": "HE2",
+      "equilibrium_angstrom": 1.984
+    },
+    {
+      "a": 4032,
+      "b": 4034,
+      "donor": "O",
+      "residue": "WT1",
+      "equilibrium_angstrom": 2.112
+    }
+  ],
+  "runs": [
+    {
+      "seed": 2026,
+      "finite_all_saved_frames": true,
+      "frame_count": 51,
+      "screening_bounds_angstrom": [
+        [
+          1.6,
+          2.6
+        ],
+        [
+          1.6,
+          2.6
+        ],
+        [
+          1.6,
+          2.6
+        ],
+        [
+          1.6,
+          2.8
+        ]
+      ],
+      "bounds_meaning": "Declared broad geometry alarms for this short Zn model exercise; not confidence intervals or scientific validation",
+      "Zn_geometry_within_screening_bounds": true,
+      "Zn_distance_min_angstrom": [
+        1.8432164214370075,
+        1.8297823882146431,
+        1.862209665221632,
+        1.7526613083406424
+      ],
+      "Zn_distance_max_angstrom": [
+        2.090239427725977,
+        2.0434941077910724,
+        2.0928963347469827,
+        2.1168626875514036
+      ],
+      "Zn_distance_mean_angstrom": [
+        1.9694100961658523,
+        1.94946860282951,
+        1.9942107287675825,
+        1.9345718145732689
+      ],
+      "maximum_CA_rmsd_angstrom": 0.6108419078111362,
+      "metrics": [
+        {
+          "time_ps": 0.0,
+          "potential_energy_kj_mol": -514190.98141950415,
+          "maximum_force_kj_mol_nm": 2425.3791966477984,
+          "protein_CA_aligned_rmsd_angstrom": 2.292392006907968e-14,
+          "Zn_donor_distances_angstrom": [
+            1.9717865004998192,
+            1.9461829423998838,
+            1.9976574808363954,
+            1.962360800154022
+          ]
+        },
+        {
+          "time_ps": 0.1,
+          "potential_energy_kj_mol": -464395.2316054697,
+          "maximum_force_kj_mol_nm": 5218.759240709549,
+          "protein_CA_aligned_rmsd_angstrom": 0.16129987133596171,
+          "Zn_donor_distances_angstrom": [
+            1.997393888301602,
+            1.9780434194273422,
+            1.96404386114446,
+            1.944721284286087
+          ]
+        },
+        {
+          "time_ps": 0.2,
+          "potential_energy_kj_mol": -460365.3442339795,
+          "maximum_force_kj_mol_nm": 3883.8903685945306,
+          "protein_CA_aligned_rmsd_angstrom": 0.23642929222355025,
+          "Zn_donor_distances_angstrom": [
+            2.0161041103094575,
+            1.935089311552436,
+            1.9711667267178692,
+            1.9370217464958674
+          ]
+        },
+        {
+          "time_ps": 0.3,
+          "potential_energy_kj_mol": -458227.7536547724,
+          "maximum_force_kj_mol_nm": 4076.998874512998,
+          "protein_CA_aligned_rmsd_angstrom": 0.2946631427454475,
+          "Zn_donor_distances_angstrom": [
+            2.0007682515038065,
+            1.9746536599501776,
+            1.9264537626300464,
+            1.9295852940593012
+          ]
+        },
+        {
+          "time_ps": 0.4,
+          "potential_energy_kj_mol": -455337.84815250954,
+          "maximum_force_kj_mol_nm": 4352.833146662094,
+          "protein_CA_aligned_rmsd_angstrom": 0.33868727200534826,
+          "Zn_donor_distances_angstrom": [
+            1.9321471264256866,
+            1.92817178464581,
+            1.9655778657744332,
+            1.942628611759187
+          ]
+        },
+        {
+          "time_ps": 0.5,
+          "potential_energy_kj_mol": -453134.5967079626,
+          "maximum_force_kj_mol_nm": 5286.986176150288,
+          "protein_CA_aligned_rmsd_angstrom": 0.3831960933946215,
+          "Zn_donor_distances_angstrom": [
+            1.979044561434808,
+            1.9445393423069077,
+            1.973767433168154,
+            2.1168626875514036
+          ]
+        },
+        {
+          "time_ps": 0.6,
+          "potential_energy_kj_mol": -450870.78086676355,
+          "maximum_force_kj_mol_nm": 4357.342070095718,
+          "protein_CA_aligned_rmsd_angstrom": 0.41165545635293,
+          "Zn_donor_distances_angstrom": [
+            1.9360998267229272,
+            1.9525837171068336,
+            1.9889427373291246,
+            2.0249565425585754
+          ]
+        },
+        {
+          "time_ps": 0.7000000000000001,
+          "potential_energy_kj_mol": -448053.1644909242,
+          "maximum_force_kj_mol_nm": 4527.044787906189,
+          "protein_CA_aligned_rmsd_angstrom": 0.44274655694426834,
+          "Zn_donor_distances_angstrom": [
+            1.9212333029819924,
+            1.9477661190931979,
+            1.9644816226041528,
+            1.9100040156749614
+          ]
+        },
+        {
+          "time_ps": 0.8,
+          "potential_energy_kj_mol": -446170.75354128686,
+          "maximum_force_kj_mol_nm": 4641.05428446892,
+          "protein_CA_aligned_rmsd_angstrom": 0.4712807165469557,
+          "Zn_donor_distances_angstrom": [
+            2.0519759499273786,
+            1.9686925435829206,
+            2.0165720640956133,
+            1.9056984988566081
+          ]
+        },
+        {
+          "time_ps": 0.9,
+          "potential_energy_kj_mol": -443781.61339204485,
+          "maximum_force_kj_mol_nm": 4406.287140052193,
+          "protein_CA_aligned_rmsd_angstrom": 0.48812723741289715,
+          "Zn_donor_distances_angstrom": [
+            1.9634093297212334,
+            1.9350075591208196,
+            1.924422089105384,
+            1.7733273504409681
+          ]
+        },
+        {
+          "time_ps": 1.0,
+          "potential_energy_kj_mol": -441541.22150375607,
+          "maximum_force_kj_mol_nm": 6190.7067390367465,
+          "protein_CA_aligned_rmsd_angstrom": 0.5037874055317945,
+          "Zn_donor_distances_angstrom": [
+            2.01412221601044,
+            1.941012391838883,
+            1.9918296150981298,
+            1.8815783483464463
+          ]
+        },
+        {
+          "time_ps": 1.1,
+          "potential_energy_kj_mol": -439363.5756107253,
+          "maximum_force_kj_mol_nm": 4559.361378935212,
+          "protein_CA_aligned_rmsd_angstrom": 0.5203393696662615,
+          "Zn_donor_distances_angstrom": [
+            1.9530689631137983,
+            1.9268811141044597,
+            1.987553475389736,
+            1.9325438802874002
+          ]
+        },
+        {
+          "time_ps": 1.2,
+          "potential_energy_kj_mol": -437942.0895021481,
+          "maximum_force_kj_mol_nm": 4532.078425896915,
+          "protein_CA_aligned_rmsd_angstrom": 0.5268367547257657,
+          "Zn_donor_distances_angstrom": [
+            1.9472516978264724,
+            1.8297823882146431,
+            2.0368413779023133,
+            1.963982051722814
+          ]
+        },
+        {
+          "time_ps": 1.3,
+          "potential_energy_kj_mol": -436789.42850437085,
+          "maximum_force_kj_mol_nm": 4063.605202127204,
+          "protein_CA_aligned_rmsd_angstrom": 0.5361068432913472,
+          "Zn_donor_distances_angstrom": [
+            1.9987408499272532,
+            1.9415717607584844,
+            1.9879942898233016,
+            1.8961155342347031
+          ]
+        },
+        {
+          "time_ps": 1.4000000000000001,
+          "potential_energy_kj_mol": -435286.8369397819,
+          "maximum_force_kj_mol_nm": 5467.293155822092,
+          "protein_CA_aligned_rmsd_angstrom": 0.5413635291337006,
+          "Zn_donor_distances_angstrom": [
+            1.962791002161866,
+            1.9681562210590708,
+            2.012846285659289,
+            1.9916195602471225
+          ]
+        },
+        {
+          "time_ps": 1.5,
+          "potential_energy_kj_mol": -433507.2300819746,
+          "maximum_force_kj_mol_nm": 4300.116121383344,
+          "protein_CA_aligned_rmsd_angstrom": 0.5443289651659884,
+          "Zn_donor_distances_angstrom": [
+            1.9249893320815368,
+            1.9137640044047346,
+            2.0056916218913234,
+            1.9327750182506291
+          ]
+        },
+        {
+          "time_ps": 1.6,
+          "potential_energy_kj_mol": -432993.2554051207,
+          "maximum_force_kj_mol_nm": 4724.38214926721,
+          "protein_CA_aligned_rmsd_angstrom": 0.5351763491461103,
+          "Zn_donor_distances_angstrom": [
+            1.991642257190509,
+            2.0072870150498368,
+            2.0038424227899383,
+            1.8525335744251665
+          ]
+        },
+        {
+          "time_ps": 1.7,
+          "potential_energy_kj_mol": -431284.35611034755,
+          "maximum_force_kj_mol_nm": 4548.9755767646075,
+          "protein_CA_aligned_rmsd_angstrom": 0.5470240622852246,
+          "Zn_donor_distances_angstrom": [
+            1.8432164214370075,
+            1.9367329690154096,
+            2.024683729078338,
+            1.9812723900563864
+          ]
+        },
+        {
+          "time_ps": 1.8,
+          "potential_energy_kj_mol": -430341.0539461514,
+          "maximum_force_kj_mol_nm": 4687.879132389388,
+          "protein_CA_aligned_rmsd_angstrom": 0.535693174030123,
+          "Zn_donor_distances_angstrom": [
+            1.9158840624497653,
+            1.965497054669186,
+            2.012298097581223,
+            1.9716410850367558
+          ]
+        },
+        {
+          "time_ps": 1.9000000000000001,
+          "potential_energy_kj_mol": -429266.957734052,
+          "maximum_force_kj_mol_nm": 4893.403299639063,
+          "protein_CA_aligned_rmsd_angstrom": 0.5342002492110086,
+          "Zn_donor_distances_angstrom": [
+            1.9692653919298848,
+            1.9077468979816903,
+            1.9818497720653387,
+            1.8579473086001084
+          ]
+        },
+        {
+          "time_ps": 2.0,
+          "potential_energy_kj_mol": -428152.9626517466,
+          "maximum_force_kj_mol_nm": 4201.025143084805,
+          "protein_CA_aligned_rmsd_angstrom": 0.5185375344323189,
+          "Zn_donor_distances_angstrom": [
+            2.0824100865019224,
+            2.0080547201483396,
+            2.046532396030091,
+            1.942536561549555
+          ]
+        },
+        {
+          "time_ps": 2.1,
+          "potential_energy_kj_mol": -427555.46922760643,
+          "maximum_force_kj_mol_nm": 4832.970708879753,
+          "protein_CA_aligned_rmsd_angstrom": 0.5191776592430271,
+          "Zn_donor_distances_angstrom": [
+            1.915943324195907,
+            1.95506789401085,
+            1.9914677442887658,
+            1.8502060117262096
+          ]
+        },
+        {
+          "time_ps": 2.2,
+          "potential_energy_kj_mol": -426245.44080252567,
+          "maximum_force_kj_mol_nm": 5276.500442625807,
+          "protein_CA_aligned_rmsd_angstrom": 0.5144505042316925,
+          "Zn_donor_distances_angstrom": [
+            2.045371347496538,
+            1.8964866133488205,
+            2.053136281225049,
+            1.977491956879019
+          ]
+        },
+        {
+          "time_ps": 2.3000000000000003,
+          "potential_energy_kj_mol": -425927.1427681332,
+          "maximum_force_kj_mol_nm": 5942.767555872782,
+          "protein_CA_aligned_rmsd_angstrom": 0.5083941844023068,
+          "Zn_donor_distances_angstrom": [
+            1.966443563222591,
+            1.8854733444943497,
+            1.8721436121913126,
+            2.038935433379858
+          ]
+        },
+        {
+          "time_ps": 2.4,
+          "potential_energy_kj_mol": -425421.5590497789,
+          "maximum_force_kj_mol_nm": 5842.408472296856,
+          "protein_CA_aligned_rmsd_angstrom": 0.5206093180597959,
+          "Zn_donor_distances_angstrom": [
+            2.090239427725977,
+            2.0426470483591275,
+            1.862209665221632,
+            1.9204769627741938
+          ]
+        },
+        {
+          "time_ps": 2.5,
+          "potential_energy_kj_mol": -424616.80578995263,
+          "maximum_force_kj_mol_nm": 6575.863347190475,
+          "protein_CA_aligned_rmsd_angstrom": 0.5341206572836202,
+          "Zn_donor_distances_angstrom": [
+            1.9759601307841312,
+            2.0162106781592786,
+            1.9380374151522188,
+            1.9525321466327774
+          ]
+        },
+        {
+          "time_ps": 2.6,
+          "potential_energy_kj_mol": -423671.61887897237,
+          "maximum_force_kj_mol_nm": 5493.364066905705,
+          "protein_CA_aligned_rmsd_angstrom": 0.5414544384104356,
+          "Zn_donor_distances_angstrom": [
+            1.993890615057708,
+            1.9803633885427094,
+            1.9690364833764606,
+            1.8995008684145143
+          ]
+        },
+        {
+          "time_ps": 2.7,
+          "potential_energy_kj_mol": -423044.5093244654,
+          "maximum_force_kj_mol_nm": 6349.240696628447,
+          "protein_CA_aligned_rmsd_angstrom": 0.5390208511092524,
+          "Zn_donor_distances_angstrom": [
+            1.9550630781745144,
+            2.0054006697014835,
+            2.050694737314389,
+            1.840228167977659
+          ]
+        },
+        {
+          "time_ps": 2.8000000000000003,
+          "potential_energy_kj_mol": -422149.4769638283,
+          "maximum_force_kj_mol_nm": 5686.587584617631,
+          "protein_CA_aligned_rmsd_angstrom": 0.5477589205854854,
+          "Zn_donor_distances_angstrom": [
+            1.94033118281341,
+            1.8925231582629432,
+            1.9960658713103097,
+            1.9473321190831954
+          ]
+        },
+        {
+          "time_ps": 2.9,
+          "potential_energy_kj_mol": -421676.3893729989,
+          "maximum_force_kj_mol_nm": 5592.868393447924,
+          "protein_CA_aligned_rmsd_angstrom": 0.5535590876170613,
+          "Zn_donor_distances_angstrom": [
+            2.0157131386205154,
+            1.9963320963405438,
+            2.0331462819966735,
+            1.9388231411797923
+          ]
+        },
+        {
+          "time_ps": 3.0,
+          "potential_energy_kj_mol": -421554.40667351487,
+          "maximum_force_kj_mol_nm": 5762.785355627905,
+          "protein_CA_aligned_rmsd_angstrom": 0.5454588851391258,
+          "Zn_donor_distances_angstrom": [
+            1.9323346679534612,
+            2.0434941077910724,
+            1.993213033152526,
+            1.9837510017041964
+          ]
+        },
+        {
+          "time_ps": 3.1,
+          "potential_energy_kj_mol": -421666.82758778497,
+          "maximum_force_kj_mol_nm": 6077.264364333091,
+          "protein_CA_aligned_rmsd_angstrom": 0.5416162906095834,
+          "Zn_donor_distances_angstrom": [
+            1.9984319053306416,
+            1.8802895020275028,
+            2.001431945792685,
+            1.968179714539047
+          ]
+        },
+        {
+          "time_ps": 3.2,
+          "potential_energy_kj_mol": -420547.76541385986,
+          "maximum_force_kj_mol_nm": 5931.896444261836,
+          "protein_CA_aligned_rmsd_angstrom": 0.5336209314426451,
+          "Zn_donor_distances_angstrom": [
+            1.9984032126073237,
+            1.9050334573611787,
+            2.0928963347469827,
+            1.975814868897291
+          ]
+        },
+        {
+          "time_ps": 3.3000000000000003,
+          "potential_energy_kj_mol": -419975.57179776905,
+          "maximum_force_kj_mol_nm": 6431.81587092886,
+          "protein_CA_aligned_rmsd_angstrom": 0.5454107124979138,
+          "Zn_donor_distances_angstrom": [
+            1.96822523435029,
+            1.908096232119649,
+            1.9864824389447047,
+            1.8304430860675405
+          ]
+        },
+        {
+          "time_ps": 3.4,
+          "potential_energy_kj_mol": -420326.35065333877,
+          "maximum_force_kj_mol_nm": 5715.070304612708,
+          "protein_CA_aligned_rmsd_angstrom": 0.5470254967821315,
+          "Zn_donor_distances_angstrom": [
+            2.0427387385922273,
+            2.0381286184619203,
+            1.954669957049544,
+            1.7526613083406424
+          ]
+        },
+        {
+          "time_ps": 3.5,
+          "potential_energy_kj_mol": -419540.1284962414,
+          "maximum_force_kj_mol_nm": 5186.006024311475,
+          "protein_CA_aligned_rmsd_angstrom": 0.5429670533908063,
+          "Zn_donor_distances_angstrom": [
+            1.935995788662711,
+            1.9583045286960101,
+            2.0057386990034027,
+            1.966472277371106
+          ]
+        },
+        {
+          "time_ps": 3.6,
+          "potential_energy_kj_mol": -419701.1357891983,
+          "maximum_force_kj_mol_nm": 5739.073368515112,
+          "protein_CA_aligned_rmsd_angstrom": 0.5363699151420561,
+          "Zn_donor_distances_angstrom": [
+            1.941221449888447,
+            1.9011606613173029,
+            1.9709967542814917,
+            1.9949383260736153
+          ]
+        },
+        {
+          "time_ps": 3.7,
+          "potential_energy_kj_mol": -419092.561578128,
+          "maximum_force_kj_mol_nm": 4738.261345259893,
+          "protein_CA_aligned_rmsd_angstrom": 0.5215918922139011,
+          "Zn_donor_distances_angstrom": [
+            1.983956538668622,
+            1.9963975939167753,
+            2.0164902644146356,
+            1.9628696475305578
+          ]
+        },
+        {
+          "time_ps": 3.8000000000000003,
+          "potential_energy_kj_mol": -418750.0551607975,
+          "maximum_force_kj_mol_nm": 5931.506138751634,
+          "protein_CA_aligned_rmsd_angstrom": 0.5391006257318179,
+          "Zn_donor_distances_angstrom": [
+            2.0111940377575466,
+            1.8805966410257133,
+            1.9658669305981407,
+            1.913692121241231
+          ]
+        },
+        {
+          "time_ps": 3.9,
+          "potential_energy_kj_mol": -418166.35453740327,
+          "maximum_force_kj_mol_nm": 4916.4522003550455,
+          "protein_CA_aligned_rmsd_angstrom": 0.5426823781730437,
+          "Zn_donor_distances_angstrom": [
+            1.9517190210291164,
+            1.9358617792742334,
+            2.0337173898719185,
+            2.0186680686800096
+          ]
+        },
+        {
+          "time_ps": 4.0,
+          "potential_energy_kj_mol": -418062.9971050248,
+          "maximum_force_kj_mol_nm": 5540.924755603957,
+          "protein_CA_aligned_rmsd_angstrom": 0.5553700659609918,
+          "Zn_donor_distances_angstrom": [
+            1.9204736970215528,
+            1.9740087117568572,
+            1.9692340854873713,
+            1.903428283062912
+          ]
+        },
+        {
+          "time_ps": 4.1,
+          "potential_energy_kj_mol": -418116.8362020861,
+          "maximum_force_kj_mol_nm": 4992.836331404408,
+          "protein_CA_aligned_rmsd_angstrom": 0.5716812377167251,
+          "Zn_donor_distances_angstrom": [
+            1.9712483496231503,
+            1.9396914076972425,
+            1.9575353293541349,
+            2.05839648319028
+          ]
+        },
+        {
+          "time_ps": 4.2,
+          "potential_energy_kj_mol": -417670.5178569338,
+          "maximum_force_kj_mol_nm": 4999.4405985952735,
+          "protein_CA_aligned_rmsd_angstrom": 0.5832192515637031,
+          "Zn_donor_distances_angstrom": [
+            1.9564357192681592,
+            1.9566637565235923,
+            2.0879491745610066,
+            1.8983586493297802
+          ]
+        },
+        {
+          "time_ps": 4.3,
+          "potential_energy_kj_mol": -417607.34578617883,
+          "maximum_force_kj_mol_nm": 4790.336700225122,
+          "protein_CA_aligned_rmsd_angstrom": 0.5829689309777486,
+          "Zn_donor_distances_angstrom": [
+            1.9006342219237122,
+            2.0012328541103517,
+            1.990493295465179,
+            1.8531210013446562
+          ]
+        },
+        {
+          "time_ps": 4.4,
+          "potential_energy_kj_mol": -417114.1158761198,
+          "maximum_force_kj_mol_nm": 5460.595293490139,
+          "protein_CA_aligned_rmsd_angstrom": 0.5788112614194533,
+          "Zn_donor_distances_angstrom": [
+            2.0068533879020904,
+            1.918258951209363,
+            2.069033056161601,
+            1.9835483500450326
+          ]
+        },
+        {
+          "time_ps": 4.5,
+          "potential_energy_kj_mol": -416701.12784841505,
+          "maximum_force_kj_mol_nm": 5175.69380744032,
+          "protein_CA_aligned_rmsd_angstrom": 0.5839346685442919,
+          "Zn_donor_distances_angstrom": [
+            1.9416526276946935,
+            1.887231101730145,
+            1.9871506013899112,
+            2.035929184111905
+          ]
+        },
+        {
+          "time_ps": 4.6000000000000005,
+          "potential_energy_kj_mol": -416457.1029998497,
+          "maximum_force_kj_mol_nm": 4925.954142612802,
+          "protein_CA_aligned_rmsd_angstrom": 0.6060480053752028,
+          "Zn_donor_distances_angstrom": [
+            2.042068925622745,
+            1.9902289181223207,
+            2.0829148986385175,
+            1.9596865391650191
+          ]
+        },
+        {
+          "time_ps": 4.7,
+          "potential_energy_kj_mol": -416284.4795649433,
+          "maximum_force_kj_mol_nm": 5784.663142320643,
+          "protein_CA_aligned_rmsd_angstrom": 0.6100887686595986,
+          "Zn_donor_distances_angstrom": [
+            1.872840133463771,
+            1.8698434693349613,
+            1.9546186103677579,
+            1.818460216157471
+          ]
+        },
+        {
+          "time_ps": 4.8,
+          "potential_energy_kj_mol": -417302.38177781965,
+          "maximum_force_kj_mol_nm": 5022.7830828941,
+          "protein_CA_aligned_rmsd_angstrom": 0.6080007690160834,
+          "Zn_donor_distances_angstrom": [
+            1.9614698944077416,
+            1.9162628304689222,
+            2.026174644586382,
+            1.9953782273183323
+          ]
+        },
+        {
+          "time_ps": 4.9,
+          "potential_energy_kj_mol": -416609.6278906028,
+          "maximum_force_kj_mol_nm": 4733.324295611047,
+          "protein_CA_aligned_rmsd_angstrom": 0.6082961499050262,
+          "Zn_donor_distances_angstrom": [
+            1.9060600314040892,
+            2.0025997765897032,
+            2.0306998025881784,
+            1.974562771286191
+          ]
+        },
+        {
+          "time_ps": 5.0,
+          "potential_energy_kj_mol": -417378.4168009037,
+          "maximum_force_kj_mol_nm": 4849.922377988633,
+          "protein_CA_aligned_rmsd_angstrom": 0.6108419078111362,
+          "Zn_donor_distances_angstrom": [
+            1.9236563847359294,
+            1.9917920171190113,
+            1.9764531018991631,
+            1.79756346513861
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 2027,
+      "finite_all_saved_frames": true,
+      "frame_count": 51,
+      "screening_bounds_angstrom": [
+        [
+          1.6,
+          2.6
+        ],
+        [
+          1.6,
+          2.6
+        ],
+        [
+          1.6,
+          2.6
+        ],
+        [
+          1.6,
+          2.8
+        ]
+      ],
+      "bounds_meaning": "Declared broad geometry alarms for this short Zn model exercise; not confidence intervals or scientific validation",
+      "Zn_geometry_within_screening_bounds": true,
+      "Zn_distance_min_angstrom": [
+        1.8517040401059064,
+        1.8620397915069988,
+        1.8768195597713704,
+        1.7941793490169518
+      ],
+      "Zn_distance_max_angstrom": [
+        2.0855858167808945,
+        2.0807714931449586,
+        2.098404287436419,
+        2.2371509735204715
+      ],
+      "Zn_distance_mean_angstrom": [
+        1.9597264719388383,
+        1.955550818622246,
+        1.9944509915280493,
+        1.9700808366202522
+      ],
+      "maximum_CA_rmsd_angstrom": 0.5730539583339699,
+      "metrics": [
+        {
+          "time_ps": 0.0,
+          "potential_energy_kj_mol": -514190.9879490291,
+          "maximum_force_kj_mol_nm": 2425.3791132387846,
+          "protein_CA_aligned_rmsd_angstrom": 2.292392006907968e-14,
+          "Zn_donor_distances_angstrom": [
+            1.9717865004998192,
+            1.9461829423998838,
+            1.9976574808363954,
+            1.962360800154022
+          ]
+        },
+        {
+          "time_ps": 0.1,
+          "potential_energy_kj_mol": -464132.3727630084,
+          "maximum_force_kj_mol_nm": 3281.1012610851585,
+          "protein_CA_aligned_rmsd_angstrom": 0.16037438157777864,
+          "Zn_donor_distances_angstrom": [
+            1.984011108157917,
+            1.9448536175625604,
+            2.062924006974614,
+            1.8956338115925901
+          ]
+        },
+        {
+          "time_ps": 0.2,
+          "potential_energy_kj_mol": -460690.92655174155,
+          "maximum_force_kj_mol_nm": 4537.277069285149,
+          "protein_CA_aligned_rmsd_angstrom": 0.2138354045714268,
+          "Zn_donor_distances_angstrom": [
+            1.9423210062751037,
+            1.9546643139806,
+            1.9951300195237764,
+            1.9507366616344466
+          ]
+        },
+        {
+          "time_ps": 0.3,
+          "potential_energy_kj_mol": -457841.4412477007,
+          "maximum_force_kj_mol_nm": 4427.9978814238675,
+          "protein_CA_aligned_rmsd_angstrom": 0.2756248447949592,
+          "Zn_donor_distances_angstrom": [
+            2.037956202896327,
+            1.993885502598644,
+            2.0164234068822315,
+            2.050864034035461
+          ]
+        },
+        {
+          "time_ps": 0.4,
+          "potential_energy_kj_mol": -455675.2269145838,
+          "maximum_force_kj_mol_nm": 3971.1501863292883,
+          "protein_CA_aligned_rmsd_angstrom": 0.3241485410159654,
+          "Zn_donor_distances_angstrom": [
+            1.9054402809736342,
+            1.9223984639326814,
+            2.0415274133695216,
+            1.9150105679694265
+          ]
+        },
+        {
+          "time_ps": 0.5,
+          "potential_energy_kj_mol": -452828.9289918812,
+          "maximum_force_kj_mol_nm": 4820.860658948382,
+          "protein_CA_aligned_rmsd_angstrom": 0.37018632087378955,
+          "Zn_donor_distances_angstrom": [
+            1.9564120331280581,
+            1.9659354328067753,
+            1.9836456651769143,
+            2.0405495417763246
+          ]
+        },
+        {
+          "time_ps": 0.6,
+          "potential_energy_kj_mol": -450378.84409214754,
+          "maximum_force_kj_mol_nm": 5071.456765983211,
+          "protein_CA_aligned_rmsd_angstrom": 0.4146056252169918,
+          "Zn_donor_distances_angstrom": [
+            1.9994249711912189,
+            1.976648424717255,
+            1.9749473526906653,
+            1.9585131433515395
+          ]
+        },
+        {
+          "time_ps": 0.7000000000000001,
+          "potential_energy_kj_mol": -447171.1122856365,
+          "maximum_force_kj_mol_nm": 4497.210338402481,
+          "protein_CA_aligned_rmsd_angstrom": 0.44308961152519616,
+          "Zn_donor_distances_angstrom": [
+            1.914720339555581,
+            1.9681184699527765,
+            1.8768195597713704,
+            1.939457396309033
+          ]
+        },
+        {
+          "time_ps": 0.8,
+          "potential_energy_kj_mol": -445114.6445125574,
+          "maximum_force_kj_mol_nm": 4281.785407481494,
+          "protein_CA_aligned_rmsd_angstrom": 0.46874814206316534,
+          "Zn_donor_distances_angstrom": [
+            1.9872551423331313,
+            1.971807354552749,
+            1.9070980269506894,
+            2.0380673116917336
+          ]
+        },
+        {
+          "time_ps": 0.9,
+          "potential_energy_kj_mol": -443019.3962143438,
+          "maximum_force_kj_mol_nm": 4393.839962569318,
+          "protein_CA_aligned_rmsd_angstrom": 0.48123676789119485,
+          "Zn_donor_distances_angstrom": [
+            1.938263541079914,
+            1.9826957653193744,
+            1.9331114977296309,
+            1.9366090269755325
+          ]
+        },
+        {
+          "time_ps": 1.0,
+          "potential_energy_kj_mol": -441013.41029289056,
+          "maximum_force_kj_mol_nm": 3906.718612325924,
+          "protein_CA_aligned_rmsd_angstrom": 0.5094872051821785,
+          "Zn_donor_distances_angstrom": [
+            1.8997807014096175,
+            1.9323317234898272,
+            2.0019160279863932,
+            2.0578521147388686
+          ]
+        },
+        {
+          "time_ps": 1.1,
+          "potential_energy_kj_mol": -439414.3863768593,
+          "maximum_force_kj_mol_nm": 4578.833983711301,
+          "protein_CA_aligned_rmsd_angstrom": 0.5236966827026542,
+          "Zn_donor_distances_angstrom": [
+            1.9753549879689838,
+            1.934278744094774,
+            2.0892432945900064,
+            2.0454996873890523
+          ]
+        },
+        {
+          "time_ps": 1.2,
+          "potential_energy_kj_mol": -437363.832783955,
+          "maximum_force_kj_mol_nm": 4521.527625766127,
+          "protein_CA_aligned_rmsd_angstrom": 0.539238880372801,
+          "Zn_donor_distances_angstrom": [
+            1.940760981950691,
+            1.911314338363547,
+            1.9562547762847637,
+            1.892573443046935
+          ]
+        },
+        {
+          "time_ps": 1.3,
+          "potential_energy_kj_mol": -435671.60590580833,
+          "maximum_force_kj_mol_nm": 4977.795255233762,
+          "protein_CA_aligned_rmsd_angstrom": 0.5472279487999926,
+          "Zn_donor_distances_angstrom": [
+            2.035492947040447,
+            1.9725978441492242,
+            2.0377534644375337,
+            1.990533238433798
+          ]
+        },
+        {
+          "time_ps": 1.4000000000000001,
+          "potential_energy_kj_mol": -434641.7626400545,
+          "maximum_force_kj_mol_nm": 4415.176356869021,
+          "protein_CA_aligned_rmsd_angstrom": 0.5532400539230579,
+          "Zn_donor_distances_angstrom": [
+            1.9092460560836813,
+            1.8620397915069988,
+            2.0546076686338095,
+            1.8640540561566472
+          ]
+        },
+        {
+          "time_ps": 1.5,
+          "potential_energy_kj_mol": -433048.6945154599,
+          "maximum_force_kj_mol_nm": 4884.246856297579,
+          "protein_CA_aligned_rmsd_angstrom": 0.559742623787666,
+          "Zn_donor_distances_angstrom": [
+            1.9292951713400117,
+            2.051232876804341,
+            2.08144310425905,
+            2.06531141686941
+          ]
+        },
+        {
+          "time_ps": 1.6,
+          "potential_energy_kj_mol": -431126.8938866385,
+          "maximum_force_kj_mol_nm": 4906.394083265763,
+          "protein_CA_aligned_rmsd_angstrom": 0.5603198208900201,
+          "Zn_donor_distances_angstrom": [
+            1.8828180043065659,
+            1.8647481421421825,
+            2.007507260529546,
+            1.966135536798022
+          ]
+        },
+        {
+          "time_ps": 1.7,
+          "potential_energy_kj_mol": -429889.28059649933,
+          "maximum_force_kj_mol_nm": 5337.7286498478115,
+          "protein_CA_aligned_rmsd_angstrom": 0.5508046784773248,
+          "Zn_donor_distances_angstrom": [
+            1.9713482989661544,
+            1.977756184245081,
+            1.9815291322232487,
+            1.9314266689675872
+          ]
+        },
+        {
+          "time_ps": 1.8,
+          "potential_energy_kj_mol": -428811.9464449673,
+          "maximum_force_kj_mol_nm": 5212.367707114626,
+          "protein_CA_aligned_rmsd_angstrom": 0.5162565928986831,
+          "Zn_donor_distances_angstrom": [
+            2.032025396192037,
+            1.9767323831979806,
+            2.0329817710642515,
+            2.024264676427434
+          ]
+        },
+        {
+          "time_ps": 1.9000000000000001,
+          "potential_energy_kj_mol": -427534.7845447996,
+          "maximum_force_kj_mol_nm": 4509.650105804819,
+          "protein_CA_aligned_rmsd_angstrom": 0.5036320547359383,
+          "Zn_donor_distances_angstrom": [
+            1.8517040401059064,
+            1.906551478537865,
+            1.9636758419369547,
+            2.043304901511437
+          ]
+        },
+        {
+          "time_ps": 2.0,
+          "potential_energy_kj_mol": -427133.25376257324,
+          "maximum_force_kj_mol_nm": 4521.7436169634475,
+          "protein_CA_aligned_rmsd_angstrom": 0.4914567362615749,
+          "Zn_donor_distances_angstrom": [
+            1.92625487238503,
+            2.0237730399849703,
+            1.9682740516418191,
+            2.1052686492329142
+          ]
+        },
+        {
+          "time_ps": 2.1,
+          "potential_energy_kj_mol": -426410.2107157007,
+          "maximum_force_kj_mol_nm": 4935.946017941356,
+          "protein_CA_aligned_rmsd_angstrom": 0.503865269211361,
+          "Zn_donor_distances_angstrom": [
+            1.9957323758688645,
+            1.9434819806721464,
+            1.9986710946326227,
+            1.987926927061467
+          ]
+        },
+        {
+          "time_ps": 2.2,
+          "potential_energy_kj_mol": -425595.71639952005,
+          "maximum_force_kj_mol_nm": 5059.226428697564,
+          "protein_CA_aligned_rmsd_angstrom": 0.4938008710074469,
+          "Zn_donor_distances_angstrom": [
+            2.0186270749041495,
+            1.9422900225594943,
+            1.9816088591007182,
+            1.9494236565524223
+          ]
+        },
+        {
+          "time_ps": 2.3000000000000003,
+          "potential_energy_kj_mol": -425328.6294745797,
+          "maximum_force_kj_mol_nm": 5481.458577884813,
+          "protein_CA_aligned_rmsd_angstrom": 0.5010207903770421,
+          "Zn_donor_distances_angstrom": [
+            1.9469453174003526,
+            1.9802465604847752,
+            2.0238528721029643,
+            1.9377937767733484
+          ]
+        },
+        {
+          "time_ps": 2.4,
+          "potential_energy_kj_mol": -424034.341857149,
+          "maximum_force_kj_mol_nm": 6869.40303480472,
+          "protein_CA_aligned_rmsd_angstrom": 0.5094680738181031,
+          "Zn_donor_distances_angstrom": [
+            1.9786305586901116,
+            1.9764974907409338,
+            2.0191232295789465,
+            2.0137950446873227
+          ]
+        },
+        {
+          "time_ps": 2.5,
+          "potential_energy_kj_mol": -423268.37701479346,
+          "maximum_force_kj_mol_nm": 7133.618450911013,
+          "protein_CA_aligned_rmsd_angstrom": 0.5201524122170427,
+          "Zn_donor_distances_angstrom": [
+            1.8574152695346209,
+            1.9445264679938672,
+            1.9966551783572135,
+            1.9480949823249687
+          ]
+        },
+        {
+          "time_ps": 2.6,
+          "potential_energy_kj_mol": -422720.11507735023,
+          "maximum_force_kj_mol_nm": 5656.931298104939,
+          "protein_CA_aligned_rmsd_angstrom": 0.5175055372404981,
+          "Zn_donor_distances_angstrom": [
+            1.9198103871576273,
+            1.9882990833502994,
+            2.098404287436419,
+            1.9070552295169105
+          ]
+        },
+        {
+          "time_ps": 2.7,
+          "potential_energy_kj_mol": -422531.7243915162,
+          "maximum_force_kj_mol_nm": 4847.196389472031,
+          "protein_CA_aligned_rmsd_angstrom": 0.5232342718829437,
+          "Zn_donor_distances_angstrom": [
+            1.9854455804141773,
+            2.0807714931449586,
+            1.9932144285992246,
+            1.9633367325805853
+          ]
+        },
+        {
+          "time_ps": 2.8000000000000003,
+          "potential_energy_kj_mol": -420595.23935515695,
+          "maximum_force_kj_mol_nm": 5244.235993133927,
+          "protein_CA_aligned_rmsd_angstrom": 0.5281913345889196,
+          "Zn_donor_distances_angstrom": [
+            1.924311572312313,
+            1.9593537372051533,
+            1.9522751755438283,
+            1.9397399941563862
+          ]
+        },
+        {
+          "time_ps": 2.9,
+          "potential_energy_kj_mol": -420859.9562335546,
+          "maximum_force_kj_mol_nm": 5502.598082739305,
+          "protein_CA_aligned_rmsd_angstrom": 0.5194239764458336,
+          "Zn_donor_distances_angstrom": [
+            1.9694535276692742,
+            2.0033710670952387,
+            1.9375173383920525,
+            1.9061315692303826
+          ]
+        },
+        {
+          "time_ps": 3.0,
+          "potential_energy_kj_mol": -420449.7293283922,
+          "maximum_force_kj_mol_nm": 4669.490917330704,
+          "protein_CA_aligned_rmsd_angstrom": 0.5152559118201546,
+          "Zn_donor_distances_angstrom": [
+            1.9727893126524119,
+            1.945896361693865,
+            1.9673548777493646,
+            1.9646688473298397
+          ]
+        },
+        {
+          "time_ps": 3.1,
+          "potential_energy_kj_mol": -419603.1185339428,
+          "maximum_force_kj_mol_nm": 4604.544011478331,
+          "protein_CA_aligned_rmsd_angstrom": 0.5260648985339696,
+          "Zn_donor_distances_angstrom": [
+            2.0252183959222885,
+            1.9330575657347868,
+            1.9872217197350157,
+            1.7941793490169518
+          ]
+        },
+        {
+          "time_ps": 3.2,
+          "potential_energy_kj_mol": -419505.48000863986,
+          "maximum_force_kj_mol_nm": 4722.869283848035,
+          "protein_CA_aligned_rmsd_angstrom": 0.5346149593563052,
+          "Zn_donor_distances_angstrom": [
+            1.9564450253927455,
+            2.0481070303852724,
+            2.0568149434922764,
+            1.8743724885825839
+          ]
+        },
+        {
+          "time_ps": 3.3000000000000003,
+          "potential_energy_kj_mol": -419260.6710168577,
+          "maximum_force_kj_mol_nm": 5063.500178089249,
+          "protein_CA_aligned_rmsd_angstrom": 0.539964442815702,
+          "Zn_donor_distances_angstrom": [
+            1.9148376542730492,
+            1.9178301012791577,
+            1.9826895284689823,
+            1.8995453023239148
+          ]
+        },
+        {
+          "time_ps": 3.4,
+          "potential_energy_kj_mol": -418936.0624390616,
+          "maximum_force_kj_mol_nm": 5374.756270257424,
+          "protein_CA_aligned_rmsd_angstrom": 0.5325189713085924,
+          "Zn_donor_distances_angstrom": [
+            1.9331523040627638,
+            1.948456336236944,
+            2.0110705921542547,
+            1.9182298771879007
+          ]
+        },
+        {
+          "time_ps": 3.5,
+          "potential_energy_kj_mol": -418463.8494058589,
+          "maximum_force_kj_mol_nm": 5177.197403303884,
+          "protein_CA_aligned_rmsd_angstrom": 0.544425300418996,
+          "Zn_donor_distances_angstrom": [
+            1.95500495407274,
+            2.00696170059521,
+            1.952191727685324,
+            2.000399258041423
+          ]
+        },
+        {
+          "time_ps": 3.6,
+          "potential_energy_kj_mol": -418073.9640514852,
+          "maximum_force_kj_mol_nm": 5132.434911994823,
+          "protein_CA_aligned_rmsd_angstrom": 0.5659974684776666,
+          "Zn_donor_distances_angstrom": [
+            1.9118147773453462,
+            1.9062522421183339,
+            2.0113204086548517,
+            2.0112271671508117
+          ]
+        },
+        {
+          "time_ps": 3.7,
+          "potential_energy_kj_mol": -417987.09492800786,
+          "maximum_force_kj_mol_nm": 4522.532249969752,
+          "protein_CA_aligned_rmsd_angstrom": 0.5696451370014883,
+          "Zn_donor_distances_angstrom": [
+            1.9717199484549224,
+            1.9522810680642027,
+            1.988425492331107,
+            1.8851670437702164
+          ]
+        },
+        {
+          "time_ps": 3.8000000000000003,
+          "potential_energy_kj_mol": -418115.29352383147,
+          "maximum_force_kj_mol_nm": 4819.774428370043,
+          "protein_CA_aligned_rmsd_angstrom": 0.5637941934419624,
+          "Zn_donor_distances_angstrom": [
+            2.02602565594862,
+            1.9251080582752407,
+            2.0090425337543905,
+            1.9761556632429116
+          ]
+        },
+        {
+          "time_ps": 3.9,
+          "potential_energy_kj_mol": -417970.9425268883,
+          "maximum_force_kj_mol_nm": 5349.763118964185,
+          "protein_CA_aligned_rmsd_angstrom": 0.5478349575576618,
+          "Zn_donor_distances_angstrom": [
+            1.8934106025015556,
+            1.8726197762494317,
+            1.963473532924316,
+            1.9954444684308845
+          ]
+        },
+        {
+          "time_ps": 4.0,
+          "potential_energy_kj_mol": -417249.9839386237,
+          "maximum_force_kj_mol_nm": 5397.620539633323,
+          "protein_CA_aligned_rmsd_angstrom": 0.5273514981251354,
+          "Zn_donor_distances_angstrom": [
+            1.962156599284882,
+            1.9314051046102485,
+            2.0012792925597482,
+            2.0710840865842868
+          ]
+        },
+        {
+          "time_ps": 4.1,
+          "potential_energy_kj_mol": -417116.7906288236,
+          "maximum_force_kj_mol_nm": 4932.862812991038,
+          "protein_CA_aligned_rmsd_angstrom": 0.5125969024508372,
+          "Zn_donor_distances_angstrom": [
+            1.8937285862799593,
+            1.951395613029264,
+            2.0113238111602967,
+            1.9371319442733492
+          ]
+        },
+        {
+          "time_ps": 4.2,
+          "potential_energy_kj_mol": -416689.0053641566,
+          "maximum_force_kj_mol_nm": 4527.388745647156,
+          "protein_CA_aligned_rmsd_angstrom": 0.5084336150962299,
+          "Zn_donor_distances_angstrom": [
+            1.957045378713472,
+            1.9759328834261205,
+            2.0332126743782637,
+            2.008684257018174
+          ]
+        },
+        {
+          "time_ps": 4.3,
+          "potential_energy_kj_mol": -417246.31575663015,
+          "maximum_force_kj_mol_nm": 6308.5130344633935,
+          "protein_CA_aligned_rmsd_angstrom": 0.510748017742891,
+          "Zn_donor_distances_angstrom": [
+            2.0233176932935204,
+            1.8993704361044665,
+            1.9859353828974091,
+            1.9425842365091759
+          ]
+        },
+        {
+          "time_ps": 4.4,
+          "potential_energy_kj_mol": -416314.8136296794,
+          "maximum_force_kj_mol_nm": 4833.549466661442,
+          "protein_CA_aligned_rmsd_angstrom": 0.5223598727768829,
+          "Zn_donor_distances_angstrom": [
+            1.9369865741872447,
+            1.9703328839495275,
+            1.9365991833232048,
+            1.9010077301427013
+          ]
+        },
+        {
+          "time_ps": 4.5,
+          "potential_energy_kj_mol": -415975.929395611,
+          "maximum_force_kj_mol_nm": 5304.917918749325,
+          "protein_CA_aligned_rmsd_angstrom": 0.5313254429428039,
+          "Zn_donor_distances_angstrom": [
+            2.0156909088222354,
+            1.963733808162457,
+            1.9467763246205296,
+            1.910216252721008
+          ]
+        },
+        {
+          "time_ps": 4.6000000000000005,
+          "potential_energy_kj_mol": -415697.1631352209,
+          "maximum_force_kj_mol_nm": 5351.033302066786,
+          "protein_CA_aligned_rmsd_angstrom": 0.5355173033674259,
+          "Zn_donor_distances_angstrom": [
+            2.0424276493890665,
+            1.960308676398362,
+            1.9943487345442408,
+            1.8649212532903887
+          ]
+        },
+        {
+          "time_ps": 4.7,
+          "potential_energy_kj_mol": -415620.28970423725,
+          "maximum_force_kj_mol_nm": 5499.150772015801,
+          "protein_CA_aligned_rmsd_angstrom": 0.5398439555157396,
+          "Zn_donor_distances_angstrom": [
+            1.9760096364744852,
+            1.9701133256470362,
+            2.0182562815642897,
+            2.018653360370796
+          ]
+        },
+        {
+          "time_ps": 4.8,
+          "potential_energy_kj_mol": -415067.54861589655,
+          "maximum_force_kj_mol_nm": 5018.5015618054185,
+          "protein_CA_aligned_rmsd_angstrom": 0.555530497523969,
+          "Zn_donor_distances_angstrom": [
+            1.9063728102875892,
+            1.9553775979730863,
+            1.9991314059058423,
+            2.0245650222605756
+          ]
+        },
+        {
+          "time_ps": 4.9,
+          "potential_energy_kj_mol": -415232.01425131026,
+          "maximum_force_kj_mol_nm": 5189.92564263853,
+          "protein_CA_aligned_rmsd_angstrom": 0.5727438748589697,
+          "Zn_donor_distances_angstrom": [
+            2.0855858167808945,
+            1.9172628921734953,
+            1.9278789265345369,
+            2.011409487918508
+          ]
+        },
+        {
+          "time_ps": 5.0,
+          "potential_energy_kj_mol": -415417.1589607584,
+          "maximum_force_kj_mol_nm": 4650.6847496663895,
+          "protein_CA_aligned_rmsd_angstrom": 0.5730539583339699,
+          "Zn_donor_distances_angstrom": [
+            1.9982655369496471,
+            1.9219035500410946,
+            1.9668599062551113,
+            2.2371509735204715
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "source_hashes": {
+    "solvated.prmtop": "f8e59cc6c9e86f2fba94b79c4726ec69ae42b10f9b0d89d5b803e4c6f8c43d3d",
+    "solvated.inpcrd": "7d92b607cdc40d5e8dc646015e18e666cecf2f3932f544d4fee766ad9e0c060b"
+  },
+  "elapsed_seconds": 681.455633042031,
+  "short_motion_checks_passed": true
+}

@@ -1,0 +1,58 @@
+{
+  "input_schema_passed": true,
+  "accepted_quantum_result": false,
+  "physical_acceptance": false,
+  "native_calculation_launched": false,
+  "pinned_parent_graph_checks": {
+    "cap_graph_sha256": {
+      "expected": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+      "actual": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+      "matches": true
+    },
+    "cap_sdf_sha256": {
+      "expected": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+      "actual": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+      "matches": true
+    },
+    "optimizer_input_sha256": {
+      "expected": "791c72d01c3e7cf3410f799ec8e25e91ddeb34441cb0693a24e2b6452a1dd62e",
+      "actual": "791c72d01c3e7cf3410f799ec8e25e91ddeb34441cb0693a24e2b6452a1dd62e",
+      "matches": true
+    }
+  },
+  "resolved_scf_settings": {
+    "method": "RHF",
+    "basis": "6-31g*",
+    "density_fit": true,
+    "auxbasis": "def2-universal-jkfit",
+    "charge": 0,
+    "spin": 0,
+    "threads": 2,
+    "max_memory_mb": 5000,
+    "max_wall_seconds": 21600,
+    "max_scf_cycles": 100,
+    "scf_conv_tol": 1e-10,
+    "scf_conv_tol_grad": 1e-07
+  },
+  "optimization": {
+    "enabled": true,
+    "max_steps": 100,
+    "freeze_atom_ids": [
+      "000:ACE_CH3",
+      "001:ACE_C",
+      "002:ACE_O",
+      "009:NME_N",
+      "010:NME_CH3"
+    ],
+    "dihedral_constraints": [],
+    "dihedral_tolerance_degrees": 0.1,
+    "convergence_energy": 1e-06,
+    "convergence_grms": 0.0003,
+    "convergence_gmax": 0.00045,
+    "convergence_drms": 0.0012,
+    "convergence_dmax": 0.0018
+  },
+  "proposed_input_sha256": "ac4b19505b03238fdd964c09d78b0eddf4ec1fa43f122cd6e8648bb47b5bd0e5",
+  "free_atom_count": 89,
+  "frozen_atom_count": 5
+}

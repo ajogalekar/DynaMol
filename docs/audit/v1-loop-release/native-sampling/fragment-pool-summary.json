@@ -1,0 +1,245 @@
+{
+  "cache": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-fragment-pool-v1",
+  "artifact_sha256": {
+    "native/result.json": "1b4e490363cd546238e4775ca7d598d0352c9b8423ac92a01e5e5ef3b48c5b25",
+    "native/raw-pool.json": "1a3603edcf0e668b5fa7a7ecdff93a824aaddffa071ad123f5eaee1b93dd06c9",
+    "native/preregistered-plan.json": "161f994fd08b0f06d0161cae67f1cd1ae83869b871de2deb42e4867d22755111",
+    "native/frozen-closure-plan.json": "e052b6a6f7feb1127c002d2d421e3cda1bf159cd0fd29fa71691c8abd1d2f945",
+    "reference-screen/result.json": "0635a12aeba763525425c0547ba8ffba8985806887abb0e66ea7113107a9968b",
+    "raw-reference-screen/result.json": "29aa1175a2d2f9c98c9432843cec685bdda3061f055265b84e655b68a43093a2",
+    "supervisor.json": "17c0b47a4cdd5ba8f520d85c643e995c2881711d004e69097adba12a3e62d3ed"
+  },
+  "raw_pool": {
+    "candidate_count": 40,
+    "within_original_cap_count": 0,
+    "gross_backbone_geometry_pass_count": 40,
+    "rama_pass_count": 11,
+    "original_observed_omega_basins_preserved_count": 40,
+    "combined_backbone_pass_count": 0,
+    "scope": "Raw native fragment diagnostics; no KIC or source-restored join has been introduced in these coordinates. No full-atom model acceptance."
+  },
+  "raw_contexts": [
+    {
+      "native_gap": "A.LEU172-(AKN)-A.SER176",
+      "raw_database_candidate_count": 0,
+      "retained_first_native_candidates": 0,
+      "candidate_ids": [],
+      "source_start": "176",
+      "source_end": "180"
+    },
+    {
+      "native_gap": "A.SER171-(LAKN)-A.SER176",
+      "raw_database_candidate_count": 10,
+      "retained_first_native_candidates": 8,
+      "candidate_ids": [
+        "84492c731633325882f193006443ea60ae814346c457ff13a16b050437c0b3c6",
+        "e5b0cde69b5d61f575e023e4bbe28486a0e875d888a983bba5c7b75cf7211fad",
+        "2230dbbc83e06b45925244464f010d745a11deb8e55ebffea954ee3e60bcd4ac",
+        "58813f64f1da55b05300cd182703c210660cbecc54deed92a052f1d0f63882c8",
+        "58969c4a1a3daf27508361f39ae64193a21e880e7b01b938db12f21a4a398ecf",
+        "88d0749d58d811d119493a6898c88f5e3982f0a54579b026173452accfa6328d",
+        "e4d9b1f3afc3eaf2994eebfa9a12c988baf2589f37789b62234f18213e5042e9",
+        "a241ff2cc21290b47b624053cb7a5a67e781a91000bea21a570a815b3fcdc01d"
+      ],
+      "source_start": "175",
+      "source_end": "180"
+    },
+    {
+      "native_gap": "A.LEU172-(AKNS)-A.GLN177",
+      "raw_database_candidate_count": 96,
+      "retained_first_native_candidates": 8,
+      "candidate_ids": [
+        "86c1f7d573b93ea802ec648e0b7cafec2f4af50f9224026e67e41b47877279f1",
+        "53b3f14bfecb077e2ea5e8a8b1b1c4e566e8f7a3bd09ed20a2973b2e3501b127",
+        "1217d9db6bd67cfd618bc8d913b7540f57ec448a46b522f3713fe7c5a3ee784d",
+        "25ccab5028ab218eeee5c7d12104b33ba4e45936f10bc3410c040e8d891a1dd6",
+        "a058dbb71f65cc234d7a6ce5fe6dfca0be9074becaf4aeec180d6f1c5fd73ecf",
+        "900d083b545e11312328ebca3bb9f3c65750b9203dfa39c12feb6d295d5fb6e8",
+        "29e007c3b677ef79203946067931093e5b2bd964b13f03ee1df6555fff960bda",
+        "f92b5e0c3cee6274669e557e10386eb2d99091a71af3f2d27c5b4c99e84ffe05"
+      ],
+      "source_start": "176",
+      "source_end": "181"
+    },
+    {
+      "native_gap": "A.PHE170-(SLAKN)-A.SER176",
+      "raw_database_candidate_count": 39,
+      "retained_first_native_candidates": 8,
+      "candidate_ids": [
+        "2bfb8b528cbc93ec0db71dab55b7bcea98b755e18e0931fecea57ea0a864a0c8",
+        "65618bbae223a1c01c4c18f23e419cc158d8a9213c8c8ae6e72c29ebd4eb5da6",
+        "2376eb6f9fdd8d637398bed614dce865443bf754e218949a041fe1c29d3156cc",
+        "9336497832a30b66cb856183e4049ec2d35c9bc8a93d33b8079812ea0d407e89",
+        "36f02ae4b49eef3313e9eb1c14f56af6bb0a5f311c98868ce1d89debfe219eb2",
+        "d822518c36969b900e403367e8d759b86e27fa2aa8087fcc2f6d5383eb20eec9",
+        "3e719461494c66edd9fd222b4be1641c98f365d3c377b806518df3c086cee39d",
+        "3af755666d1e732d0c0616f806025f444f4548caa91afe094b38eca6caed1ee7"
+      ],
+      "source_start": "174",
+      "source_end": "180"
+    },
+    {
+      "native_gap": "A.SER171-(LAKNS)-A.GLN177",
+      "raw_database_candidate_count": 427,
+      "retained_first_native_candidates": 8,
+      "candidate_ids": [
+        "c3557b82e0b1ac2427a577672751aed2a68cb8c7666d7d6ce6d78055ff0baa57",
+        "7cbf8c437379fa76d4866c80ee2f04ed172259321ac22a5564f6d4406d3eba22",
+        "4bb4c1d583fa4db827425d27a0b95ace8e47d6e4d97997b386f0e3802dfe14dd",
+        "bfdf815e22221e25d4696699c6f0216170a893e63c83741fab3db4d371b178b0",
+        "6aedddba3075391168e15f7e4f51cc06ea84d618bfd44a453274c0050c290f59",
+        "89b716c8d250b70b6537463bfd1dd98d80eb100fc38a50795e809e505d524f50",
+        "2618ffce21786381b9602d4bc12390fda9e09eb6171bd23b08ab32efa3a313ac",
+        "d3b67463394493a81f673b98af8442b1a646f80e01dbd75e3096f9472ed989a0"
+      ],
+      "source_start": "175",
+      "source_end": "181"
+    },
+    {
+      "native_gap": "A.LEU172-(AKNSQ)-A.PRO178",
+      "raw_database_candidate_count": 97,
+      "retained_first_native_candidates": 8,
+      "candidate_ids": [
+        "cdef79bd654b7c1e06c396b4e6b70110281e94c5fd4db40b61c5d440fe3d7002",
+        "6b62d6fe74c05bfabc7c73eba925e23bd59414a414408417bb40bf46a7d46a99",
+        "e19c4d223873d04d202bf6a0666199487a8954c7565f4938cb4fc3d8469b6cea",
+        "e4e13cc6dc4f09bd92a0744ecae79fcd764d3725b29459600b408fccba5a71f2",
+        "cd20ba78ca05c9c62ca3c3a637d61420d0abbddeafa45b30a209f25f08e9d1b4",
+        "aa635d547927bfc8a21c75235e7ae9089fb44e069d7e47ffdc5c5b4de02cfc45",
+        "44903c883fc4559cdba004b5b8d06c63ab34e1a34a0f9efea0c098ea6f084aa0",
+        "1ec717713c0153fc410b056f777500763e7de96bd7bd09427c29552fc0b00668"
+      ],
+      "source_start": "176",
+      "source_end": "182"
+    }
+  ],
+  "selected_fragments": 10,
+  "closed_8k5r_solutions": 40,
+  "closed_geometry_pass": 40,
+  "closed_observed_omega_basin_pass": 40,
+  "closed_rama_pass": 0,
+  "closed_observed_cap_pass": 0,
+  "control": {
+    "name": "intact-control",
+    "candidate_count": 12,
+    "within_observed_cap_and_omega": 4,
+    "cap_omega_and_rama_pass": 4,
+    "plausible_backbone_screen_pass_count": 4
+  },
+  "best_complete_anchor_candidate": {
+    "case": "fragment-06-2618ffce2178",
+    "trial": 1,
+    "solution": 0,
+    "maximum_observed_N_CA_C_O_displacement_angstrom": 1.8916309337803203,
+    "largest_displacements": [
+      {
+        "identity": [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "C"
+        ],
+        "displacement_angstrom": 1.8916309337803203
+      },
+      {
+        "identity": [
+          "A",
+          "176",
+          "",
+          "LEU",
+          "O"
+        ],
+        "displacement_angstrom": 1.7209822648109632
+      },
+      {
+        "identity": [
+          "A",
+          "180",
+          "",
+          "SER",
+          "N"
+        ],
+        "displacement_angstrom": 1.3476026122670688
+      },
+      {
+        "identity": [
+          "A",
+          "180",
+          "",
+          "SER",
+          "CA"
+        ],
+        "displacement_angstrom": 0.5685731847502521
+      },
+      {
+        "identity": [
+          "A",
+          "180",
+          "",
+          "SER",
+          "O"
+        ],
+        "displacement_angstrom": 0.31494408667340296
+      }
+    ],
+    "rama_outliers": [
+      [
+        "A",
+        "176",
+        "",
+        "LEU"
+      ],
+      [
+        "A",
+        "177",
+        "",
+        "ALA"
+      ],
+      [
+        "A",
+        "178",
+        "",
+        "LYS"
+      ],
+      [
+        "A",
+        "181",
+        "",
+        "GLN"
+      ]
+    ]
+  },
+  "native_resource_record": {
+    "command": [
+      "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/promod3-dfd2a559551cd2f2/bin/python",
+      "-u",
+      "docs/audit/v1-loop-release/native-sampling/compare_native_fragment_pool.py",
+      "--input",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/4469bcb4878a4134/loop-model-input.json",
+      "--worker",
+      "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-context-v1/worker.py",
+      "--source",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-final/8K5R/workspace/datasets/8899bea3019d447b/topology.pdb",
+      "--base-seed",
+      "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-coherent-native-sampling-v1/coherent-native-BACKBONE-seed.pdb",
+      "--control",
+      "/Users/ashujo/Documents/Science/DynaMol/docs/audit/preparation-fixtures/six_residues_intact.pdb",
+      "--output",
+      "/Users/ashujo/.cache/dynamol-research/v1-loop-release/8k5r-fragment-pool-v1/native"
+    ],
+    "deadline_seconds": 180,
+    "sampled_rss_limit_bytes": 4294967296,
+    "numerical_threads": 2,
+    "pid": 78950,
+    "returncode": 0,
+    "elapsed_seconds": 0.8387736250297166,
+    "peak_sampled_rss_bytes": 937836544,
+    "termination_reason": null
+  },
+  "native_adapter_errors": [],
+  "app_ready": false,
+  "physical_model_validated": false,
+  "complete_candidate_accepted": false,
+  "selected_raw_fragments_passing_reference_before_closure": 3
+}

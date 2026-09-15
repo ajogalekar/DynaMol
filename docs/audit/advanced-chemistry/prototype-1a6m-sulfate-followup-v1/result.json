@@ -1,0 +1,75 @@
+{
+  "updated_unix": 1789333725.015184,
+  "case": "1A6M",
+  "status": "unresolved_complete_additive_sulfate_source",
+  "full_preparation_ready": false,
+  "system_created": false,
+  "context_created": false,
+  "new_qm_or_md_jobs": 0,
+  "components_removed": [],
+  "required_retained_sulfates": [
+    "label B / author A155 SO4",
+    "label C / author A156 SO4"
+  ],
+  "scan_counts": [
+    {
+      "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c31b1.tar.gz",
+      "files": 52,
+      "blocks": 911,
+      "sulfate_candidates": [
+        {
+          "file": "toppar/toph19.inp",
+          "residue": "SO4",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c36_feb26.tgz",
+      "files": 121,
+      "blocks": 8406,
+      "sulfate_candidates": [
+        {
+          "file": "toppar/toph19.inp",
+          "residue": "SO4",
+          "flags": []
+        }
+      ]
+    },
+    {
+      "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c36_feb26.tgz::toppar/drude/positive_drude.tgz",
+      "files": 3,
+      "blocks": 10,
+      "sulfate_candidates": []
+    },
+    {
+      "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c36_feb26.tgz::toppar/drude/drude_toppar_2023.tgz",
+      "files": 15,
+      "blocks": 466,
+      "sulfate_candidates": [
+        {
+          "file": "drude_toppar_2023/toppar_drude_model_2023a.str",
+          "residue": "SO4",
+          "flags": [
+            "explicit_polarizability"
+          ]
+        }
+      ]
+    }
+  ],
+  "new_lead": {
+    "doi": "10.1038/s41467-026-75749-4",
+    "model_reported": "Cannon sulfate plus CUFIX with CHARMM36m / CHARMM TIP3P",
+    "repository_commit": "33c0063f78ddf67f822d699fcf03d3c0d25fd501",
+    "repository_entries": 40,
+    "parameter_files_present": false,
+    "parameter_model_accepted": false,
+    "limitation": "Article gives raw data on request; deposited repository provides coordinates and analysis code, not complete sulfate parameters or exact sulfate-protein CUFIX mapping."
+  },
+  "no_model_substitution": [
+    "CHARMM19 model",
+    "methyl sulfate / sulfate ester",
+    "Drude sulfate without its polarization model"
+  ],
+  "documentation": "VERDICT.md"
+}

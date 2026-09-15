@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 517, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 372, in calculate
+    guess=initial_density(data,mol,out,report)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 305, in initial_density
+    if orthogonality>1e-7:raise ValueError('Initial checkpoint orbitals are not orthonormal in the requested AO basis')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Initial checkpoint orbitals are not orthonormal in the requested AO basis

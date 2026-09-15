@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import io
 import json
 import shutil
 import uuid
@@ -95,13 +96,14 @@ def _source_links(dataset_id, native, protein_residues):
                 scoped = record["monomer_selection"]
         for pattern in ("source.*", "sequence-source.*", "originals/topology.*"):
             sources.extend(path for path in folder.glob(pattern) if path.suffix.lower() in {".pdb", ".cif", ".mmcif", ".pdbx"})
+    source_residue_chains = {}
     def resolve(chain, resid, insertion, name):
-        chain = aliases.get(chain, chain)
-        candidates = [r.index for r in native_residues if r.chain.id == chain and r.id == str(resid) and (r.insertionCode or "").strip() == insertion]
+        chain_ids = source_residue_chains.get((chain, str(resid), insertion, name), {aliases.get(chain, chain)})
+        candidates = [r.index for r in native_residues if r.chain.id in chain_ids and r.id == str(resid) and (r.insertionCode or "").strip() == insertion]
         if len(candidates) > 1:
             raise ValueError("An explicit source connection has ambiguous residue identities; choose a structure with unique chain/residue identifiers before extracting one chain.")
         return candidates[0] if candidates else None
-    links, seen, unresolved = [], set(), set()
+    links, seen, unresolved, symmetry_links = [], set(), set(), []
     if scoped is not None:
         # A prior extraction already scoped the original records; do not allow
         # excluded ancestor connections to re-enter subsequent derivations.
@@ -109,12 +111,31 @@ def _source_links(dataset_id, native, protein_residues):
             endpoints = [resolve(r["chain"], r["resid"], r.get("insertion_code", ""), r["name"]) for r in link["residues"]]
             if all(value is not None for value in endpoints):
                 links.append(tuple(endpoints))
-        return links, sources, unresolved
+        return links, sources, unresolved, copy.deepcopy(scoped.get("excluded_symmetry_connections", []))
     for path in sources:
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         if digest in seen:
             continue
         seen.add(digest)
+        source_residue_chains = {}
+        cif_different_images = None
+        if path.suffix.lower() in {".cif", ".mmcif", ".pdbx"}:
+            from openmm import app
+            from .sequence_evidence import source_cif_chain_ids, different_image_connection_ids, _text
+            original = app.PDBxFile(str(path))
+            label_ids = source_cif_chain_ids(path, original.topology)
+            block = gemmi.cif.read_file(str(path)).sole_block()
+            table = block.get_mmcif_category("_atom_site.")
+            cif_different_images = different_image_connection_ids(block)
+            for i, label in enumerate(table["label_asym_id"]):
+                if label not in label_ids:
+                    continue
+                author = _text(table.get("auth_asym_id", table["label_asym_id"])[i])
+                resid = _text(table.get("auth_seq_id", table.get("label_seq_id"))[i])
+                code = _text(table.get("pdbx_PDB_ins_code", [None] * len(table["id"]))[i])
+                name = _text(table.get("auth_comp_id", table["label_comp_id"])[i])
+                original_id = label_ids[label]
+                source_residue_chains.setdefault((author, resid, code, name), set()).add(aliases.get(original_id, original_id))
         structure = gemmi.read_structure(str(path))
         serial_residues = {}
         if len(structure):
@@ -136,6 +157,17 @@ def _source_links(dataset_id, native, protein_residues):
         for link in structure.connections:
             if link.type in {gemmi.ConnectionType.MetalC, gemmi.ConnectionType.Hydrog}:
                 continue
+            if (link.name in cif_different_images if cif_different_images is not None else link.asu == gemmi.Asu.Different):
+                # A crystallographic symmetry mate is not the atom carrying the
+                # same chain/residue name in the loaded asymmetric unit. Actual
+                # bonds in the supplied topology remain independently enforced.
+                symmetry_links.append({"source_sha256": digest, "source_file": path.name,
+                    "connection_id": link.name, "type": link.type.name,
+                    "relation": "different_asymmetric_units",
+                    "partners": [{"chain": p.chain_name, "resid": str(p.res_id.seqid.num),
+                        "insertion_code": p.res_id.seqid.icode.strip(), "name": p.res_id.name,
+                        "atom": p.atom_name} for p in (link.partner1, link.partner2)]})
+                continue
             partners = [link.partner1, link.partner2]
             endpoints = [resolve(p.chain_name, p.res_id.seqid.num, p.res_id.seqid.icode.strip(), p.res_id.name) for p in partners]
             # Monatomic metal LINK records denote coordination, not a covalent
@@ -147,7 +179,7 @@ def _source_links(dataset_id, native, protein_residues):
                 links.append(tuple(endpoints))
             else:
                 unresolved.update(value for value in endpoints if value is not None)
-    return links, sources, unresolved
+    return links, sources, unresolved, symmetry_links
 
 
 def _native_subset(native, trajectory, indices):
@@ -197,7 +229,7 @@ def create_monomer(dataset_id: str, request: MonomerRequest):
         return value
     def connect(first, second):
         roots[root(second)] = root(first)
-    links, source_paths, unresolved = _source_links(dataset_id, native, protein_residues)
+    links, source_paths, unresolved, symmetry_links = _source_links(dataset_id, native, protein_residues)
     residue_edges = set(tuple(sorted(pair)) for pair in links)
     for a, b in trajectory.topology.bonds:
         first, second = native_atoms[a.index], native_atoms[b.index]
@@ -276,6 +308,8 @@ def create_monomer(dataset_id: str, request: MonomerRequest):
     notes = ["One observed protein chain was selected; this is not a biological-assembly or monomer assignment.",
              "Associated molecules are retained whole when covalently attached or when any heavy atom is within 5 Å of the selected chain in the first source frame. This proximity rule does not establish biological binding.",
              "Ordinary solvent and the previous periodic box are excluded. Observed coordinating waters of retained monatomic metals are retained. Prepare the derived structure and create its solvent box again."]
+    if symmetry_links:
+        notes.append(f"The source records {len(symmetry_links)} covalent connection(s) to crystallographic symmetry mates outside the loaded asymmetric unit. These records were not treated as bonds between the displayed chains; review the crystal assembly if those contacts matter to your model.")
     excluded_chains = [item for item in list_monomers(dataset_id)["chains"] if item["index"] != chosen.index]
     associated = [_residue_record(native_residues[index]) for index in sorted(retained - selected_residues)]
     excluded = [_residue_record(residue) for residue in native_residues if residue.index not in retained and residue.index not in protein_residues]
@@ -290,6 +324,7 @@ def create_monomer(dataset_id: str, request: MonomerRequest):
                  "excluded_molecules": excluded, "association_cutoff_angstrom": 5, "keep_associated_molecules": request.keep_associated_molecules,
                  "source_frame": 0, "source_time": float(trajectory.time[0]), "source_time_unit": metadata.get("time_unit", "ps"),
                  "requires_preparation": True, "notes": notes,
+                 "excluded_symmetry_connections": symmetry_links,
                  "retained_covalent_connections": [{"residues": [_residue_record(native_residues[first]), _residue_record(native_residues[second])]} for first, second in sorted(residue_edges) if first != second and first in retained and second in retained and not ({first, second} <= protein_residues)]}
     new_id = uuid.uuid4().hex[:16]
     folder = storage.dataset_dir(new_id)
@@ -310,10 +345,10 @@ def create_monomer(dataset_id: str, request: MonomerRequest):
             if digest not in seen:
                 shutil.copy2(path, originals / (digest[:12] + path.suffix.lower()))
                 seen.add(digest)
-        result = storage.save_dataset(derived, f"{metadata['name']} · chain {chain_id}"[:100], "Selected protein chain", f"Chain {chain_id} derived from {metadata['name']}; source frame 0 retained. Prepare again before simulation.", warnings=notes, dataset_id=new_id, provenance=provenance)
         native_topology, native_positions = _native_subset(native, trajectory, indices)
-        with (folder / "topology.pdb").open("w") as handle:
-            app.PDBFile.writeFile(native_topology, native_positions, handle, keepIds=True)
+        exact = io.StringIO()
+        app.PDBFile.writeFile(native_topology, native_positions, exact, keepIds=True)
+        result = storage.save_dataset(derived, f"{metadata['name']} · chain {chain_id}"[:100], "Selected protein chain", f"Chain {chain_id} derived from {metadata['name']}; source frame 0 retained. Prepare again before simulation.", warnings=notes, dataset_id=new_id, provenance=provenance, exact_pdb=exact.getvalue())
         result.update(parent_dataset_id=dataset_id, monomer_selection=selection)
         result["chain_id_mapping"] = copy.deepcopy(metadata.get("chain_id_mapping", []))
         # Category/chemical identities are inherited atom-by-atom, independently

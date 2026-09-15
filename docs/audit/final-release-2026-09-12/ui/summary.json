@@ -1,0 +1,176 @@
+{
+  "date": "2026-09-13T05:04:26.390822+00:00",
+  "scope": "Fresh manual/automated Chrome UI through CUA, isolated local servers 8877/8878. No externally-driven Playwright suite was run. This is a major-function audit, not an exhaustive browser/device compatibility certification.",
+  "checks": [
+    {
+      "area": "Fresh scene",
+      "passed": true,
+      "observed": "Ribbons render; Element is selected by default."
+    },
+    {
+      "area": "Representations",
+      "passed": true,
+      "observed": "Ribbons, Sticks, Ball & stick and Surface render actual geometry; Element, Sequence and Chain colors were exercised."
+    },
+    {
+      "area": "Hydrogen context",
+      "passed": true,
+      "observed": "Hidden, Polar only and All change hydrogen visibility; Polar only retains the protein heavy-atom context."
+    },
+    {
+      "area": "Visibility",
+      "passed": true,
+      "observed": "Protein, ligand, retained Zn ion and explicit-water show/hide controls exercised with nonempty relevant structures; measurement overlay show/hide retains plots."
+    },
+    {
+      "area": "Camera",
+      "passed": true,
+      "observed": "Zoom in/out settle; Fit molecule, Auto rotate, direct drag rotation and scroll zoom respond."
+    },
+    {
+      "area": "Viewport",
+      "passed": true,
+      "observed": "Keyboard resize increased 280\u2192360 px; native Chrome fullscreen retains Open files and New simulation and exits correctly."
+    },
+    {
+      "area": "Playback",
+      "passed": true,
+      "observed": "Play/pause, first/last/previous/next frame, direct midpoint timeline click, 2\u00d7 speed and no-loop stop at last frame exercised on real trajectories. A measurement-chart click also seeks to the matching midpoint frame."
+    },
+    {
+      "area": "Distance",
+      "passed": true,
+      "observed": "Atom search MET1:N\u2013CA gives 1.46 \u00c5 immediately; Add Measurement automatically creates plot."
+    },
+    {
+      "area": "Direct picking",
+      "passed": true,
+      "observed": "Two actual canvas clicks picked LEU15:CA and GLN2:CA and automatically created a 5.60 \u00c5 distance plot."
+    },
+    {
+      "area": "Angle",
+      "passed": true,
+      "observed": "MET1:N\u2013CA\u2013C gives 109.82\u00b0 and auto-commits via Add Measurement."
+    },
+    {
+      "area": "Dihedral",
+      "passed": true,
+      "observed": "MET1:N\u2013CA\u2013C\u2013GLN2:N gives 158.67\u00b0 immediately; explicit Plot over time creates its trace."
+    },
+    {
+      "area": "Hydrogen bond",
+      "passed": true,
+      "observed": "Connected donor/H plus acceptor selection yields distance, angle criterion and 0.0% geometric occupancy for the deliberately distant pair."
+    },
+    {
+      "area": "Residue focus and selections",
+      "passed": true,
+      "observed": "GLY35 focus and named 7-atom selection save successfully."
+    },
+    {
+      "area": "Structural analysis",
+      "passed": true,
+      "observed": "RMSD and RMSF compute on the demo; RMSD reference frame equals 0.000 \u00c5; RMSF export has 76 residue rows."
+    },
+    {
+      "area": "Client exports",
+      "passed": true,
+      "observed": "Distance/angle pane CSV, PNG molecular snapshot, RMSF CSV and project ZIP downloads verified on disk; checksums and file structure recorded."
+    },
+    {
+      "area": "Native file chooser",
+      "passed": true,
+      "observed": "PDB topology plus genuine XTC selected in macOS chooser; stride 2 and 0.25 ps original interval import 113 atoms and 3 frames at 0, 0.5, 1 ps."
+    },
+    {
+      "area": "SMILES",
+      "passed": true,
+      "observed": "Caffeine built from SMILES and rendered as 24-atom ligand; ligand hide/show works."
+    },
+    {
+      "area": "Web fetch",
+      "passed": true,
+      "observed": "1UBQ and 1UA2 fetched in Simulate; PubChem CID 2244 fetched and rendered. Fresh datasets select Element."
+    },
+    {
+      "area": "Engine first",
+      "passed": true,
+      "observed": "OpenMM and GROMACS engine choices precede prep; GROMACS displays its native standard-protein limitations."
+    },
+    {
+      "area": "Repair options",
+      "passed": true,
+      "observed": "Build supported missing loops checkbox is selectable before prep; 1UA2 reports 12-residue internal gaps and current 12-per-gap/96-total cap."
+    },
+    {
+      "area": "Monomer",
+      "passed": true,
+      "observed": "1UA2 four chains\u2192chain A with ATP/TPO retained; Restore full structure returns all four chains."
+    },
+    {
+      "area": "Preparation monitor",
+      "passed": true,
+      "observed": "Real 1UBQ prep progresses 5/7\u21927/7 stages; view log exposes executed stages; completion loads the prepared structure."
+    },
+    {
+      "area": "Explicit water",
+      "passed": true,
+      "observed": "Selecting Explicit produces a real visible 17,395-atom box with 16,164 water atoms; completion and water visibility controls work."
+    },
+    {
+      "area": "Padding regression",
+      "passed": true,
+      "observed": "After fix, 0.7 nm shows inline 1\u20133 nm error and disables Update box/Start; 1 nm removes error and enables valid actions."
+    },
+    {
+      "area": "Pre-run tracking",
+      "passed": true,
+      "observed": "Add measurement from Simulate tracks MET1:CA\u2013GLN2:CA before starting; unfinished selection blocks Start."
+    },
+    {
+      "area": "Run UI and handoff",
+      "passed": true,
+      "observed": "Real 2 ps OpenMM run submitted through Chrome; progress/log accessible; completion automatically opens Explore with 21 saved frames and retained measured trace."
+    },
+    {
+      "area": "Run artifact integrity",
+      "passed": true,
+      "observed": "19 strict native-output checks pass on the Chrome-created run, including live/posthoc measurement identity and values."
+    },
+    {
+      "area": "Persistence and reset",
+      "passed": true,
+      "observed": "Reload preserves completed dataset, frame 21, Element color and plot; New simulation resets name, duration and transient prep/water monitors."
+    },
+    {
+      "area": "Named projects",
+      "passed": true,
+      "observed": "Saved scene opens; project export is a valid 88-entry ZIP including dataset/parameter/provenance files."
+    },
+    {
+      "area": "Help and console",
+      "passed": true,
+      "observed": "Quick guide opens/closes. Inspected console logs contain only NGL/Three.js legacy-light deprecation warnings, no application errors."
+    },
+    {
+      "area": "Water resource refusal",
+      "passed": true,
+      "observed": "Copied the freshly prepared 6A93 audit fixture into the isolated UI library; 1 nm water request refuses above 100,000 atoms. Final UI correctly says Explicit-water setup failed and retains the actionable size reason. No caps changed."
+    }
+  ],
+  "passed": true,
+  "fixed_issue": "Invalid water padding bypassed form validation and its rejected request appeared in a protein-preparation monitor. Added inline range validation, submission guards and operation-aware water error labeling. Inline guard verified in Chrome; error-label branch reviewed in source.",
+  "limitations": [
+    "No fresh physical two-finger trackpad gesture or right-button drag was synthesized. Scroll zoom and direct rotation were exercised; pinch/right-pan historical regression evidence is separate.",
+    "Native chooser was exercised with PDB+XTC, not once for every extension. All advertised formats have fresh API contract tests.",
+    "Fresh native numerical stability scope is two 10 ps engine runs plus this 2 ps UI smoke run; no convergence or biological-state claim.",
+    "The full browser walkthrough began on the initial audit bundle, then reloaded the final bundle for padding regression and workspace/results checks. This is not represented as a single uniform-build automated UI suite.",
+    "The 6A93 final-UI resource rejection uses a copied prepped audit dataset, not a second full preparation. The new failed-job header was exercised; fast request-failure operation retention was reviewed in source."
+  ],
+  "harness_notes": [
+    "DOM locator fullscreen activation lacked a trusted user gesture; native Chrome click succeeded and header visibility was visually verified.",
+    "Locator.fill on a range input did not trigger the app seek in this automation. Direct pointer midpoint seek was verified at frame 11/21 (1 ps).",
+    "Choosing Explicit automatically built water; the following Build water locator no longer existed because it had become Update box.",
+    "Inspector preview without Add Measurement requires Plot over time; Add Measurement flow auto-commits at a complete selection. Both paths exercised."
+  ]
+}

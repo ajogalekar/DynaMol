@@ -1,0 +1,20 @@
+{
+  "coordinate_normalization": "Integer 20nm box images chosen nearest original native input atom by atom; no structural deformation",
+  "maximum_roundoff_from_original_nm": 1.0681152340374922e-06,
+  "comparisons": [
+    {
+      "reader": "amber_native_reader",
+      "energy_kj_mol": 172955.60994515877,
+      "difference_from_gromacs_kj_mol": 0.06307015876518562,
+      "maximum_force_difference_kj_mol_nm": 0.4891901831706491,
+      "rms_force_difference_kj_mol_nm": 0.026029755891589623
+    },
+    {
+      "reader": "gromacs_export_reader",
+      "energy_kj_mol": 172955.60929315694,
+      "difference_from_gromacs_kj_mol": 0.062418156943749636,
+      "maximum_force_difference_kj_mol_nm": 0.4891858729447449,
+      "rms_force_difference_kj_mol_nm": 0.02602959911725861
+    }
+  ]
+}

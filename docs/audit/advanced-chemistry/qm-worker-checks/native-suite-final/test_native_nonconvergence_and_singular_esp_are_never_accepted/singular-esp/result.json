@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "esp",
+  "worker_sha256": "0095cf57e00b3fcae5cdb7d3f6b85d61a3bf09e701178eddd88048bce9fb382c",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "fa74d75c9d1cb3aff0937eeb298cb1b4a9c1ca64cc01dce096eddc4824acd2c9",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200
+  },
+  "optimization": {
+    "requested": false,
+    "converged": null,
+    "settings": {
+      "enabled": false,
+      "max_steps": 100,
+      "freeze_atom_ids": [],
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": []
+  },
+  "scf": {
+    "converged": true,
+    "cycles": 8,
+    "max_cycles": 100,
+    "conv_tol_hartree": 1e-10,
+    "conv_tol_grad": 1e-07
+  },
+  "error": {
+    "type": "ValueError",
+    "message": "An ESP point coincides with a nucleus; potential is singular"
+  },
+  "elapsed_seconds": 0.223095
+}

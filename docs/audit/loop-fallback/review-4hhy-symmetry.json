@@ -1,0 +1,24 @@
+{
+  "source": "docs/audit/loop-fallback/benchmark-inputs/4HHY.cif",
+  "scope": "Read-only original deposited coordinates and explicit symmetry operators; no bond edits",
+  "pairs": [
+    {
+      "chains": [
+        "A",
+        "C"
+      ],
+      "deposited_sg_distance_angstrom": 82.2573299104706,
+      "struct_conn_partner2_symmetry": "4_445",
+      "listed_symmetry_mate_distance_angstrom": 2.06
+    },
+    {
+      "chains": [
+        "B",
+        "D"
+      ],
+      "deposited_sg_distance_angstrom": 61.7640132277688,
+      "struct_conn_partner2_symmetry": "3_544",
+      "listed_symmetry_mate_distance_angstrom": 2.038
+    }
+  ]
+}

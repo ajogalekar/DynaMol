@@ -1,0 +1,715 @@
+[
+  {
+    "model": "CHARMM19 legacy candidate only",
+    "file": "toppar/param19.inp",
+    "sha256": "415393eb9c6b3c02bf78ea1390a48f0078373f35f0be69cea75484504e8a4f3e",
+    "matches": [
+      {
+        "line": 98,
+        "section": "BOND",
+        "text": "OC   S      400.0       1.43"
+      },
+      {
+        "line": 100,
+        "section": "BOND",
+        "text": "S    S      500.0       2.02"
+      },
+      {
+        "line": 152,
+        "section": "BOND",
+        "text": "OC   C    OC      85.0     122.5"
+      },
+      {
+        "line": 288,
+        "section": "BOND",
+        "text": "OC   S    OC      85.0     109.5! FORCE CONSTANT JST A GUESS."
+      },
+      {
+        "line": 402,
+        "section": "NONBONDED",
+        "text": "OC       2.1400    -0.6469    1.6000  "
+      }
+    ]
+  },
+  {
+    "model": "2023 Drude candidate only",
+    "file": "drude_toppar_2023/toppar_drude_model_2023a.str",
+    "sha256": "546d3fa4eec5e2f53bed2934b530e82d62e2f75aa5c1908b4f338651850330ac",
+    "matches": [
+      {
+        "line": 5218,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856   ALPHA -0.931  THOLE 1.083"
+      },
+      {
+        "line": 5219,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856   ALPHA -0.931  THOLE 1.083"
+      },
+      {
+        "line": 5273,
+        "section": "BOND",
+        "text": "ATOM O4      OD2C2B   -0.776  ALPHA -0.921  THOLE 1.083   !              H2"
+      },
+      {
+        "line": 5309,
+        "section": "BOND",
+        "text": "ATOM O3      OD2C2B   -0.856  ALPHA -0.921  THOLE 1.083   !        O4==P1==O3 (-)"
+      },
+      {
+        "line": 5310,
+        "section": "BOND",
+        "text": "ATOM O4      OD2C2B   -0.856  ALPHA -0.921  THOLE 1.083   !            |"
+      },
+      {
+        "line": 5346,
+        "section": "BOND",
+        "text": "ATOM O2     OD2C2B   -1.087  ALPHA -0.931  THOLE 1.083         !    H13--C1--H12"
+      },
+      {
+        "line": 5347,
+        "section": "BOND",
+        "text": "ATOM O3     OD2C2B   -1.087  ALPHA -0.931  THOLE 1.083         !          |"
+      },
+      {
+        "line": 5348,
+        "section": "BOND",
+        "text": "ATOM O4     OD2C2B   -1.087  ALPHA -0.931  THOLE 1.083         !         O1"
+      },
+      {
+        "line": 5373,
+        "section": "BOND",
+        "text": "ATOM O3   OD2C2B  -0.856  ALPHA -0.951  THOLE 1.083 !       /"
+      },
+      {
+        "line": 5374,
+        "section": "BOND",
+        "text": "ATOM O4   OD2C2B  -0.856  ALPHA -0.951  THOLE 1.083 !      O1"
+      },
+      {
+        "line": 5405,
+        "section": "BOND",
+        "text": "ATOM O2   OD2C2B  -1.087  ALPHA -0.951  THOLE 1.083 !       /"
+      },
+      {
+        "line": 5406,
+        "section": "BOND",
+        "text": "ATOM O3   OD2C2B  -1.087  ALPHA -0.951  THOLE 1.083 !      O1"
+      },
+      {
+        "line": 5407,
+        "section": "BOND",
+        "text": "ATOM O4   OD2C2B  -1.087  ALPHA -0.951  THOLE 1.083 !      |"
+      },
+      {
+        "line": 7843,
+        "section": "BOND",
+        "text": "ATOM S    SD1A     2.000  ALPHA -0.930  THOLE 1.098 !           OS2(-1)"
+      },
+      {
+        "line": 7844,
+        "section": "BOND",
+        "text": "ATOM OS1  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !            |"
+      },
+      {
+        "line": 7845,
+        "section": "BOND",
+        "text": "ATOM OS2  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 ! (-1) OS2--S(+2)--OS4 (-1)"
+      },
+      {
+        "line": 7846,
+        "section": "BOND",
+        "text": "ATOM OS3  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !           ||"
+      },
+      {
+        "line": 7847,
+        "section": "BOND",
+        "text": "ATOM OS4  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !           OS1"
+      },
+      {
+        "line": 7857,
+        "section": "BOND",
+        "text": "ATOM S    SD1A     1.330  ALPHA -0.930  THOLE 1.098 !           OS2(-1)"
+      },
+      {
+        "line": 7859,
+        "section": "BOND",
+        "text": "ATOM OS2  OD2C2B  -0.706  ALPHA -0.990  THOLE 1.083 ! (-1) OS2--S(+2)--OS4 (-1)"
+      },
+      {
+        "line": 7860,
+        "section": "BOND",
+        "text": "ATOM OS3  OD2C2B  -0.706  ALPHA -0.990  THOLE 1.083 !            |"
+      },
+      {
+        "line": 7861,
+        "section": "BOND",
+        "text": "ATOM OS4  OD2C2B  -0.706  ALPHA -0.990  THOLE 1.083 !           OS1"
+      },
+      {
+        "line": 7884,
+        "section": "BOND",
+        "text": "ATOM S    SD1A     1.219  ALPHA -0.930  THOLE 1.098 !           OS2(-1)"
+      },
+      {
+        "line": 7885,
+        "section": "BOND",
+        "text": "ATOM OS1  OD2C2B  -0.706  ALPHA -0.990  THOLE 1.083 !            |"
+      },
+      {
+        "line": 7886,
+        "section": "BOND",
+        "text": "ATOM OS2  OD2C2B  -0.706  ALPHA -0.990  THOLE 1.083 ! (-1) OS2--S(+2)--OS4 (-1)"
+      },
+      {
+        "line": 7887,
+        "section": "BOND",
+        "text": "ATOM OS3  OD2C2B  -0.706  ALPHA -0.990  THOLE 1.083 !            |"
+      },
+      {
+        "line": 7909,
+        "section": "BOND",
+        "text": "ATOM S    SD1A     1.504  ALPHA -0.930  THOLE 1.098 !          |"
+      },
+      {
+        "line": 7910,
+        "section": "BOND",
+        "text": "ATOM OS2  OD2C2B  -0.780  ALPHA -0.990  THOLE 1.083 !      H13-C1-H12"
+      },
+      {
+        "line": 7911,
+        "section": "BOND",
+        "text": "ATOM OS3  OD2C2B  -0.780  ALPHA -0.990  THOLE 1.083 !          |"
+      },
+      {
+        "line": 7912,
+        "section": "BOND",
+        "text": "ATOM OS4  OD2C2B  -0.780  ALPHA -0.990  THOLE 1.083 !          N-HN"
+      },
+      {
+        "line": 7934,
+        "section": "BOND",
+        "text": "ATOM S    SD1A     1.564  ALPHA -0.930  THOLE 1.098 !          |"
+      },
+      {
+        "line": 7935,
+        "section": "BOND",
+        "text": "ATOM OS2  OD2C2B  -0.780  ALPHA -0.990  THOLE 1.083 !      C21-C2-C22"
+      },
+      {
+        "line": 7936,
+        "section": "BOND",
+        "text": "ATOM OS3  OD2C2B  -0.780  ALPHA -0.990  THOLE 1.083 !          |"
+      },
+      {
+        "line": 7937,
+        "section": "BOND",
+        "text": "ATOM OS4  OD2C2B  -0.780  ALPHA -0.990  THOLE 1.083 !      C11-C1-C12"
+      }
+    ]
+  },
+  {
+    "model": "2023 Drude candidate only",
+    "file": "drude_toppar_2023/toppar_drude_main_protein_2023a.str",
+    "sha256": "083fa30a7bb00fdf0737a0bcfceb687c4939da0fb53047ab23054ca1016836ab",
+    "matches": [
+      {
+        "line": 169,
+        "section": null,
+        "text": "MASS    -1 OD2C2B   15.99940 O  ! carboxylate O, anionic (phosphate), lipids"
+      },
+      {
+        "line": 191,
+        "section": null,
+        "text": "MASS    -1 SD1A     32.06000 S  ! sulfate ion, based on PD1A, a&a"
+      },
+      {
+        "line": 3370,
+        "section": "BONDS",
+        "text": "OD2C2B   PD1A     525.00      1.500 ! DMP, cmb, 06/09, lipids"
+      },
+      {
+        "line": 3417,
+        "section": "BONDS",
+        "text": "SD1A     OD2C2B   525.00      1.493 ! SO4, a&a"
+      },
+      {
+        "line": 3418,
+        "section": "BONDS",
+        "text": "SD1A     OD30B    240.00      1.701 ! MSO4, a&a"
+      },
+      {
+        "line": 3419,
+        "section": "BONDS",
+        "text": "SD1A     ND2A2    185.00      1.700 ! NMSM, sulfamate, a&a"
+      },
+      {
+        "line": 3420,
+        "section": "BONDS",
+        "text": "SD1A     CD33C    218.00      1.823 ! MSNA, sulfonate, a&a"
+      },
+      {
+        "line": 3794,
+        "section": "ANGLES",
+        "text": "OD2C2B   PD1A     OD2C2B   120.00    125.00 ! DMP, lipids & nucleic acids"
+      },
+      {
+        "line": 3795,
+        "section": "ANGLES",
+        "text": "OD2C2B   PD1A     OD30D     98.90    113.00 ! MP_1"
+      },
+      {
+        "line": 3796,
+        "section": "ANGLES",
+        "text": "OD2C2B   PD1A     OD30B     98.90    113.00 ! DMP, lipids & nucleic acids"
+      },
+      {
+        "line": 3797,
+        "section": "ANGLES",
+        "text": "OD2C2B   PD1A     OD30BR    98.90    113.00 ! for RNA (jal)"
+      },
+      {
+        "line": 3803,
+        "section": "ANGLES",
+        "text": "OD31D    PD1A     OD2C2B    98.90    111.00                  ! MP_1 specific"
+      },
+      {
+        "line": 4301,
+        "section": "ANGLES",
+        "text": "OD2C2B   SD1A     OD2C2B    60.00    115.35 ! SO4, a&a"
+      },
+      {
+        "line": 4302,
+        "section": "ANGLES",
+        "text": "OD2C2B   SD1A     OD30B     90.00     98.44 ! MSO4, a&a"
+      },
+      {
+        "line": 4303,
+        "section": "ANGLES",
+        "text": "SD1A     OD30B    CD33C     40.00    109.00 ! MSO4, a&a"
+      },
+      {
+        "line": 4307,
+        "section": "ANGLES",
+        "text": "SD1A     ND2A2    HDP1A     48.00    118.00 ! NMSM, a&a"
+      },
+      {
+        "line": 4308,
+        "section": "ANGLES",
+        "text": "CD33C    ND2A2    SD1A      40.00    109.00 ! NMSM, a&a"
+      },
+      {
+        "line": 4310,
+        "section": "ANGLES",
+        "text": "OD2C2B   SD1A     ND2A2     50.00    113.00 ! NMSM, NESM, a&a"
+      },
+      {
+        "line": 4311,
+        "section": "ANGLES",
+        "text": "CD32C    ND2A2    SD1A      40.00    109.00 ! NESM, a&a"
+      },
+      {
+        "line": 4314,
+        "section": "ANGLES",
+        "text": "OD2C2B   SD1A     CD33C     60.00    103.55 ! MSNA, a&a"
+      },
+      {
+        "line": 4315,
+        "section": "ANGLES",
+        "text": "SD1A     CD33C    HDA3A     35.00    108.80 ! MSNA, a&a"
+      },
+      {
+        "line": 6031,
+        "section": "DIHEDRALS",
+        "text": "CD33A    OD30B    PD1A     OD2C2B       0.8520 1     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6032,
+        "section": "DIHEDRALS",
+        "text": "CD33A    OD30B    PD1A     OD2C2B       0.3200 2   180.00 ! DMP, a&a"
+      },
+      {
+        "line": 6033,
+        "section": "DIHEDRALS",
+        "text": "CD33A    OD30B    PD1A     OD2C2B       0.0732 3     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6034,
+        "section": "DIHEDRALS",
+        "text": "CD33A    OD30B    PD1A     OD2C2B       0.1860 4     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6035,
+        "section": "DIHEDRALS",
+        "text": "CD33A    OD30B    PD1A     OD2C2B       0.0002 5     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6036,
+        "section": "DIHEDRALS",
+        "text": "CD33A    OD30B    PD1A     OD2C2B       0.0151 6     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6037,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30B    PD1A     OD2C2B       0.8520 1     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6038,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30B    PD1A     OD2C2B       0.3200 2   180.00 ! DMP, a&a"
+      },
+      {
+        "line": 6039,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30B    PD1A     OD2C2B       0.0732 3     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6040,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30B    PD1A     OD2C2B       0.1860 4     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6041,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30B    PD1A     OD2C2B       0.0002 5     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6042,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30B    PD1A     OD2C2B       0.0151 6     0.00 ! DMP, a&a"
+      },
+      {
+        "line": 6061,
+        "section": "DIHEDRALS",
+        "text": "CD33C    OD30D    PD1A     OD2C2B       0.1000 3     0.00 ! MP_1"
+      },
+      {
+        "line": 6067,
+        "section": "DIHEDRALS",
+        "text": "HDP1A    OD31D    PD1A     OD2C2B       0.2000 3     0.00 ! MP_1"
+      },
+      {
+        "line": 6072,
+        "section": "DIHEDRALS",
+        "text": "OD2C2B   SD1A     CD33C    HDA3A        0.280  3     0.00"
+      },
+      {
+        "line": 6073,
+        "section": "DIHEDRALS",
+        "text": "SD1A     OD30B    CD33C    HDA3A        0.200  3     0.00"
+      },
+      {
+        "line": 6074,
+        "section": "DIHEDRALS",
+        "text": "OD2C2B   SD1A     OD30B    CD33C        0.200  3     0.00"
+      },
+      {
+        "line": 6076,
+        "section": "DIHEDRALS",
+        "text": "CD32C    ND2A2    SD1A     OD2C2B       0.500  3     0.00"
+      },
+      {
+        "line": 6077,
+        "section": "DIHEDRALS",
+        "text": "SD1A     ND2A2    CD32C    HDA2A        0.200  3     0.00"
+      },
+      {
+        "line": 6078,
+        "section": "DIHEDRALS",
+        "text": "SD1A     ND2A2    CD32C    CD33C        0.500  3     0.00"
+      },
+      {
+        "line": 6079,
+        "section": "DIHEDRALS",
+        "text": "OD2C2B   SD1A     ND2A2    HDP1A        0.200  3     0.00"
+      },
+      {
+        "line": 6083,
+        "section": "DIHEDRALS",
+        "text": "CD33C    ND2A2    SD1A     OD2C2B       0.200  3     0.00"
+      },
+      {
+        "line": 6084,
+        "section": "DIHEDRALS",
+        "text": "SD1A     ND2A2    CD33C    HDA3A        0.200  3     0.00"
+      },
+      {
+        "line": 7740,
+        "section": "NONBONDED",
+        "text": "OD2C2B   0.0   -0.1900     1.8650 ! DMP, cmb, lipids & nucleic acids"
+      },
+      {
+        "line": 7760,
+        "section": "NONBONDED",
+        "text": "SD1A     0.0   -0.2700     1.9000 ! sulfate ion, based on PD1A, a&a"
+      },
+      {
+        "line": 7851,
+        "section": "NBFIX",
+        "text": "LID     OD2C2B -0.04582  3.13500 ! phosphate anionic O, lipids & nucleic acids, Savelyev-2015"
+      },
+      {
+        "line": 7865,
+        "section": "NBFIX",
+        "text": "SODD    OD2C2B -0.04696  3.49668 ! phosphate anionic O, lipids & nucleic acids, Savelyev-2014"
+      },
+      {
+        "line": 7907,
+        "section": "NBFIX",
+        "text": "MAGD    OD2C2B -0.31211  2.59990 ! phosphate anionic O, lipids & nucleic acids"
+      },
+      {
+        "line": 8005,
+        "section": "NBFIX",
+        "text": "CLDR1   OD2C2B -0.13500  3.49000 ! from CLDR1 OD2C2A, ACET, alex, for phosphate (with lipids & na)"
+      },
+      {
+        "line": 8006,
+        "section": "NBFIX",
+        "text": "DCL2    OD2C2B -0.13000  3.49000 ! from DCL2  OD2C2A, ACET, alex                (with lipids & na)"
+      },
+      {
+        "line": 8071,
+        "section": "NBFIX",
+        "text": "CLDA1   OD2C2B -0.13500  3.49000 ! from CLDA1 OD2C2A, ACET 4check (with lipids & na)"
+      },
+      {
+        "line": 8072,
+        "section": "NBFIX",
+        "text": "DCL3    OD2C2B -0.13000  3.49000 ! from DCL3  OD2C2A, ACET, alex (with lipids & na)"
+      },
+      {
+        "line": 8132,
+        "section": "NBFIX",
+        "text": "BRDR1   OD2C2B -0.09500  4.10000 ! from BRDR1 OD2C2A, ACET, alex (with lipids & na)"
+      },
+      {
+        "line": 8133,
+        "section": "NBFIX",
+        "text": "DBR2    OD2C2B -0.01500  3.85000 ! from DBR2  OD2C2A, ACET, alex (with lipids & na)"
+      },
+      {
+        "line": 8246,
+        "section": "NBFIX",
+        "text": "OD2C2B  CD32B  1.45000"
+      },
+      {
+        "line": 8280,
+        "section": "NBFIX",
+        "text": "MAGD OD2C2B   1.44900 ! lipids and nucleic acids, phosphate anionic"
+      },
+      {
+        "line": 8305,
+        "section": "NBFIX",
+        "text": "CD32C OD2C2B  1.45000 !-1.642  -0.931 !phosphate anionic O to C5' special 1,4 term"
+      }
+    ]
+  },
+  {
+    "model": "2023 Drude candidate only",
+    "file": "drude_toppar_2023/toppar_drude_lipid_2023a.str",
+    "sha256": "283eb5987efa4d282069f8e8d22b085369570e1ff4347b44dfdc3c6853a9146d",
+    "matches": [
+      {
+        "line": 51,
+        "section": null,
+        "text": "ATOM O3   OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ / "
+      },
+      {
+        "line": 52,
+        "section": null,
+        "text": "ATOM O4   OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P1 (+) "
+      },
+      {
+        "line": 114,
+        "section": "BOND",
+        "text": "ATOM O3   OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        \\ / "
+      },
+      {
+        "line": 115,
+        "section": "BOND",
+        "text": "ATOM O4   OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !         P1 (+) "
+      },
+      {
+        "line": 261,
+        "section": "BOND",
+        "text": "ATOM OP3  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 "
+      },
+      {
+        "line": 262,
+        "section": "BOND",
+        "text": "ATOM OP4  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !           HP11 "
+      },
+      {
+        "line": 399,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 400,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 572,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 573,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 922,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 923,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 1303,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 1304,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 1717,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 1718,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 2123,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 2124,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 2322,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 2323,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 2689,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 2690,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 3079,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 3080,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 3469,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 3470,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 3854,
+        "section": "BOND",
+        "text": "ATOM O13  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !       \\ /      alpha3 "
+      },
+      {
+        "line": 3855,
+        "section": "BOND",
+        "text": "ATOM O14  OD2C2B  -0.856  ALPHA -0.931  THOLE 1.083 !        P (+) "
+      },
+      {
+        "line": 4275,
+        "section": "DIHEDRALS",
+        "text": "CD32B    OD30B    PD1A     OD2C2B      0.852    1     0.00 ! GLYP, alpha2_prime, lipid_opt_2020, C1 CD32A to CD32B"
+      },
+      {
+        "line": 4276,
+        "section": "DIHEDRALS",
+        "text": "CD32B    OD30B    PD1A     OD2C2B      0.320    2   180.00 ! GLYP"
+      },
+      {
+        "line": 4277,
+        "section": "DIHEDRALS",
+        "text": "CD32B    OD30B    PD1A     OD2C2B      0.073    3     0.00 ! GLYP"
+      },
+      {
+        "line": 4278,
+        "section": "DIHEDRALS",
+        "text": "CD32B    OD30B    PD1A     OD2C2B      0.186    4     0.00 ! GLYP"
+      },
+      {
+        "line": 4279,
+        "section": "DIHEDRALS",
+        "text": "CD32B    OD30B    PD1A     OD2C2B      0.000    5     0.00 ! GLYP"
+      },
+      {
+        "line": 4280,
+        "section": "DIHEDRALS",
+        "text": "CD32B    OD30B    PD1A     OD2C2B      0.015    6     0.00 ! GLYP"
+      },
+      {
+        "line": 4282,
+        "section": "DIHEDRALS",
+        "text": "CD32A    OD30B    PD1A     OD2C2B      0.852    1     0.00 ! GLYP, alpha3_prime, lipid_opt_2020, C1 CD32A to CD32B"
+      },
+      {
+        "line": 4283,
+        "section": "DIHEDRALS",
+        "text": "CD32A    OD30B    PD1A     OD2C2B      0.320    2   180.00 ! GLYP"
+      },
+      {
+        "line": 4284,
+        "section": "DIHEDRALS",
+        "text": "CD32A    OD30B    PD1A     OD2C2B      0.073    3     0.00 ! GLYP"
+      },
+      {
+        "line": 4285,
+        "section": "DIHEDRALS",
+        "text": "CD32A    OD30B    PD1A     OD2C2B      0.186    4     0.00 ! GLYP"
+      },
+      {
+        "line": 4286,
+        "section": "DIHEDRALS",
+        "text": "CD32A    OD30B    PD1A     OD2C2B      0.000    5     0.00 ! GLYP"
+      },
+      {
+        "line": 4287,
+        "section": "DIHEDRALS",
+        "text": "CD32A    OD30B    PD1A     OD2C2B      0.015    6     0.00 ! GLYP"
+      }
+    ]
+  }
+]

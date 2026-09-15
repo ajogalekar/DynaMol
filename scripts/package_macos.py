@@ -384,14 +384,14 @@ def build(releases: Path = RELEASES, app_only: bool = False, frontend_dir: Path 
     notices(resources / 'Notices')
     source_hashes = {str(path.relative_to(app)): sha(path) for path in sorted(app.rglob('*')) if path.is_file()}
     build_id = hashlib.sha256(json.dumps(source_hashes, sort_keys=True).encode()).hexdigest()[:16]
-    manifest = {'application': 'DynaMol', 'version': VERSION, 'target': 'macos-arm64', 'built_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'build_id': build_id, **runtime, 'source_hashes': source_hashes, 'signing': 'ad-hoc complete bundle with sealed resources; not Apple Developer signed or notarized'}
+    manifest = {'application': 'DynaMol', 'version': VERSION, 'interface': 'native-macos-webkit', 'target': 'macos-arm64', 'built_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'build_id': build_id, **runtime, 'source_hashes': source_hashes, 'signing': 'ad-hoc complete bundle with sealed resources; not Apple Developer signed or notarized'}
     (resources / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
-    info = {'CFBundleIdentifier': 'org.dynamol.desktop', 'CFBundleName': 'DynaMol', 'CFBundleDisplayName': 'DynaMol', 'CFBundleExecutable': 'DynaMol', 'CFBundlePackageType': 'APPL', 'CFBundleShortVersionString': VERSION, 'CFBundleVersion': '1', 'LSMinimumSystemVersion': '14.0', 'LSUIElement': True, 'NSHighResolutionCapable': True, 'CFBundleIconFile': 'DynaMol.icns'}
+    info = {'CFBundleIdentifier': 'org.dynamol.desktop', 'CFBundleName': 'DynaMol', 'CFBundleDisplayName': 'DynaMol', 'CFBundleExecutable': 'DynaMol', 'CFBundlePackageType': 'APPL', 'CFBundleShortVersionString': VERSION, 'CFBundleVersion': '2', 'LSMinimumSystemVersion': '14.0', 'LSUIElement': False, 'NSHighResolutionCapable': True, 'CFBundleIconFile': 'DynaMol.icns', 'NSAppTransportSecurity': {'NSAllowsLocalNetworking': True}}
     (bundle / 'Contents' / 'Info.plist').write_bytes(plistlib.dumps(info))
     iconset = STAGE / 'DynaMol.iconset'
     command('/usr/bin/xcrun', 'swift', ROOT / 'packaging' / 'macos' / 'DrawIcon.swift', iconset)
     command('/usr/bin/iconutil', '-c', 'icns', iconset, '-o', resources / 'DynaMol.icns')
-    command('/usr/bin/xcrun', 'swiftc', ROOT / 'packaging' / 'macos' / 'Launcher.swift', '-o', STAGE / 'DynaMolLauncher', '-framework', 'AppKit', '-target', 'arm64-apple-macosx14.0')
+    command('/usr/bin/xcrun', 'swiftc', ROOT / 'packaging' / 'macos' / 'Launcher.swift', '-o', STAGE / 'DynaMolLauncher', '-framework', 'AppKit', '-framework', 'WebKit', '-target', 'arm64-apple-macosx14.0')
     shutil.copyfile(STAGE / 'DynaMolLauncher', macos / 'DynaMol')
     (macos / 'DynaMol').chmod(0o755)
     signing = seal_application(bundle)

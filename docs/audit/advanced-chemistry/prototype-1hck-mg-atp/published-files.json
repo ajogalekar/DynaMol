@@ -1,0 +1,47 @@
+[
+  {
+    "path": "Parameters/ADP-B3.prepi",
+    "bytes": 3368,
+    "sha256": "1de3d0859174529ec820bbc014c18f5013885bb240d455765a9432455247666d"
+  },
+  {
+    "path": "Parameters/ATP-B3.frcmod",
+    "bytes": 1462,
+    "sha256": "88bd08307f54bdb900306dcf36b5457a258142a4693cbe8e8ac5668c62af7f3e"
+  },
+  {
+    "path": "Parameters/ATP-B3.prepi",
+    "bytes": 3666,
+    "sha256": "239a209bf337ed8694855c302fbad03d875abc34512c25f78ec4fbed73761094"
+  },
+  {
+    "path": "Parameters/ATP-HF.frcmod",
+    "bytes": 1461,
+    "sha256": "2cb455e4bbf668fcd5d7a345e63b8fd46f469e526d04bc80a4129023a95cd877"
+  },
+  {
+    "path": "Parameters/ATP-HF.prepi",
+    "bytes": 3729,
+    "sha256": "d5e430ee6ea3e2a10c3499ecd875673b07067821a8c721c8a5051f9ab1eaf92f"
+  },
+  {
+    "path": "Parameters/GDP-B3.prepi",
+    "bytes": 3463,
+    "sha256": "ace5db3e157006cb8dd6814b1bcfc0e93bf8f4bc169c68822df09fa8b9f96fa9"
+  },
+  {
+    "path": "Parameters/GTP-B3.prepi",
+    "bytes": 3751,
+    "sha256": "d2276890887fac54b28920303e2ee7811b746e39588527f4bca6ee0ad16102a5"
+  },
+  {
+    "path": "Parameters/mod.py",
+    "bytes": 20254,
+    "sha256": "f82e931e216377409941fd9c4f372ccebe339db090e02f2c0167adfa1ecf8040"
+  },
+  {
+    "path": "Parameters/useage.txt",
+    "bytes": 781,
+    "sha256": "d6709e7e9698d441a9f9164cb18114570d8cb99bd2002931db9aef537dc257dd"
+  }
+]

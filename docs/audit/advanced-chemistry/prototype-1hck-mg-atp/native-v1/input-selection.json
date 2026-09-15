@@ -1,0 +1,455 @@
+{
+  "source_sha256": "62807748b242e7e8026668edbc4242d1e46de8770e784bcfdf97b73219976d5a",
+  "source_atom_rows": 2510,
+  "selected_source_heavy_atoms": 2506,
+  "alternate_selection": "GLN131 A occupancy0.80; all four B occupancy0.20 atom records retained below",
+  "excluded_alternate_atom_records": [
+    {
+      "group_PDB": "ATOM",
+      "id": "1023",
+      "type_symbol": "C",
+      "label_atom_id": "CG",
+      "label_alt_id": "B",
+      "label_comp_id": "GLN",
+      "label_asym_id": "A",
+      "label_entity_id": "1",
+      "label_seq_id": "131",
+      "pdbx_PDB_ins_code": null,
+      "Cartn_x": "96.900",
+      "Cartn_y": "93.458",
+      "Cartn_z": "77.975",
+      "occupancy": "0.20",
+      "B_iso_or_equiv": "31.05",
+      "pdbx_formal_charge": null,
+      "auth_seq_id": "131",
+      "auth_comp_id": "GLN",
+      "auth_asym_id": "A",
+      "auth_atom_id": "CG",
+      "pdbx_PDB_model_num": "1"
+    },
+    {
+      "group_PDB": "ATOM",
+      "id": "1025",
+      "type_symbol": "C",
+      "label_atom_id": "CD",
+      "label_alt_id": "B",
+      "label_comp_id": "GLN",
+      "label_asym_id": "A",
+      "label_entity_id": "1",
+      "label_seq_id": "131",
+      "pdbx_PDB_ins_code": null,
+      "Cartn_x": "95.709",
+      "Cartn_y": "93.779",
+      "Cartn_z": "78.921",
+      "occupancy": "0.20",
+      "B_iso_or_equiv": "32.52",
+      "pdbx_formal_charge": null,
+      "auth_seq_id": "131",
+      "auth_comp_id": "GLN",
+      "auth_asym_id": "A",
+      "auth_atom_id": "CD",
+      "pdbx_PDB_model_num": "1"
+    },
+    {
+      "group_PDB": "ATOM",
+      "id": "1027",
+      "type_symbol": "O",
+      "label_atom_id": "OE1",
+      "label_alt_id": "B",
+      "label_comp_id": "GLN",
+      "label_asym_id": "A",
+      "label_entity_id": "1",
+      "label_seq_id": "131",
+      "pdbx_PDB_ins_code": null,
+      "Cartn_x": "95.169",
+      "Cartn_y": "92.913",
+      "Cartn_z": "79.615",
+      "occupancy": "0.20",
+      "B_iso_or_equiv": "34.69",
+      "pdbx_formal_charge": null,
+      "auth_seq_id": "131",
+      "auth_comp_id": "GLN",
+      "auth_asym_id": "A",
+      "auth_atom_id": "OE1",
+      "pdbx_PDB_model_num": "1"
+    },
+    {
+      "group_PDB": "ATOM",
+      "id": "1029",
+      "type_symbol": "N",
+      "label_atom_id": "NE2",
+      "label_alt_id": "B",
+      "label_comp_id": "GLN",
+      "label_asym_id": "A",
+      "label_entity_id": "1",
+      "label_seq_id": "131",
+      "pdbx_PDB_ins_code": null,
+      "Cartn_x": "95.286",
+      "Cartn_y": "95.032",
+      "Cartn_z": "78.911",
+      "occupancy": "0.20",
+      "B_iso_or_equiv": "33.74",
+      "pdbx_formal_charge": null,
+      "auth_seq_id": "131",
+      "auth_comp_id": "GLN",
+      "auth_asym_id": "A",
+      "auth_atom_id": "NE2",
+      "pdbx_PDB_model_num": "1"
+    }
+  ],
+  "all_crystal_water_oxygens_retained": 108,
+  "Mg_occupancy": 0.6,
+  "occupancy_interpretation": "explicit occupied microstate; full Mg(II) +2 model, no occupancy-scaled charge",
+  "loop_repair": {
+    "residues": "A37\u201340 LDTE",
+    "source": "previous independently accepted preparation",
+    "prepared_pdb_sha256": "0b83acb17261dbf9b81250ae2acc56d6c7c7588e006904784ed532ddfc9b9f55",
+    "provenance_sha256": "96863932c1eaaee0eddc8e3dc90ffd3e007b5969c512836c091ce0175b5143c6",
+    "maximum_observed_heavy_difference_angstrom": 0.0
+  },
+  "histidines": [
+    {
+      "author_chain": "A",
+      "author_resid": "60",
+      "variant": "HIE",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "71",
+      "variant": "HIE",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "84",
+      "variant": "HID",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "119",
+      "variant": "HIE",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "121",
+      "variant": "HID",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "125",
+      "variant": "HIE",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "161",
+      "variant": "HID",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "268",
+      "variant": "HID",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "283",
+      "variant": "HID",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    },
+    {
+      "author_chain": "A",
+      "author_resid": "295",
+      "variant": "HID",
+      "selection": "reused pH7 geometric hydrogen template; not a pKa calculation"
+    }
+  ],
+  "source_struct_conn": {
+    "id": [
+      "metalc1",
+      "metalc2",
+      "metalc3",
+      "metalc4",
+      "metalc5",
+      "metalc6"
+    ],
+    "conn_type_id": [
+      "metalc",
+      "metalc",
+      "metalc",
+      "metalc",
+      "metalc",
+      "metalc"
+    ],
+    "pdbx_leaving_atom_flag": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_PDB_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "ptnr1_label_asym_id": [
+      "A",
+      "A",
+      "C",
+      "C",
+      "C",
+      "B"
+    ],
+    "ptnr1_label_comp_id": [
+      "ASN",
+      "ASP",
+      "ATP",
+      "ATP",
+      "ATP",
+      "MG"
+    ],
+    "ptnr1_label_seq_id": [
+      "132",
+      "145",
+      false,
+      false,
+      false,
+      false
+    ],
+    "ptnr1_label_atom_id": [
+      "OD1",
+      "OD2",
+      "O1G",
+      "O2B",
+      "O1A",
+      "MG"
+    ],
+    "pdbx_ptnr1_label_alt_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr1_PDB_ins_code": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr1_standard_comp_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "ptnr1_symmetry": [
+      "1_555",
+      "1_555",
+      "1_555",
+      "1_555",
+      "1_555",
+      "1_555"
+    ],
+    "ptnr2_label_asym_id": [
+      "B",
+      "B",
+      "B",
+      "B",
+      "B",
+      "D"
+    ],
+    "ptnr2_label_comp_id": [
+      "MG",
+      "MG",
+      "MG",
+      "MG",
+      "MG",
+      "HOH"
+    ],
+    "ptnr2_label_seq_id": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "ptnr2_label_atom_id": [
+      "MG",
+      "MG",
+      "MG",
+      "MG",
+      "MG",
+      "O"
+    ],
+    "pdbx_ptnr2_label_alt_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr2_PDB_ins_code": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "ptnr1_auth_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "ptnr1_auth_comp_id": [
+      "ASN",
+      "ASP",
+      "ATP",
+      "ATP",
+      "ATP",
+      "MG"
+    ],
+    "ptnr1_auth_seq_id": [
+      "132",
+      "145",
+      "400",
+      "400",
+      "400",
+      "401"
+    ],
+    "ptnr2_auth_asym_id": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "ptnr2_auth_comp_id": [
+      "MG",
+      "MG",
+      "MG",
+      "MG",
+      "MG",
+      "HOH"
+    ],
+    "ptnr2_auth_seq_id": [
+      "401",
+      "401",
+      "401",
+      "401",
+      "401",
+      "503"
+    ],
+    "ptnr2_symmetry": [
+      "1_555",
+      "1_555",
+      "1_555",
+      "1_555",
+      "1_555",
+      "1_555"
+    ],
+    "pdbx_ptnr3_label_atom_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr3_label_seq_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr3_label_comp_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr3_label_asym_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr3_label_alt_id": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_ptnr3_PDB_ins_code": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "details": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_dist_value": [
+      "2.194",
+      "2.098",
+      "1.886",
+      "1.984",
+      "1.821",
+      "2.291"
+    ],
+    "pdbx_value_order": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pdbx_role": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "interpretation": "Explicit template state and candidate loop geometry; not experimental protonation or loop accuracy."
+}

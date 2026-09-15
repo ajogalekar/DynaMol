@@ -1,0 +1,33 @@
+# 6OIM recovery → cold conventional-HF ESP: unlaunched candidate
+
+This candidate repairs the recovery handoff, without changing the failed continuation or admitting an unfinished endpoint. It has emitted **no ESP request for the current parent**, launched no QM/ESP/RESP, and produced no fitted charges or accepted force field.
+
+The old RESP continuation stopped at `checking_parent_geometry` after its parent hit an HDF5 filesystem read timeout. Its stage inventory was empty: neither ESP nor RESP started. Its original result, claim, controller, sources, fitting inputs, and checkpoint-only native charge handoff are preserved.
+
+## Concrete candidate
+
+`materialize_6oim_recovery_esp.py` is a no-launch materializer bound to the reviewed `6oim-local-recovery-v2-memory2000/run`. Source SHA: `7a7a588781b85b5ac84a951bc99267d38de1fbc05b00bcc9daa777d6e2fcad04`.
+
+The materializer first requires the successful terminal controller, an explicitly null child PID, the exact spec/controller/input/worker hashes, original numerical thresholds, and the reviewed resource envelope. It then checks the complete native artifact inventory and hashes, accepted final SCF and optimization reports, exact expanded basis/ECP/auxiliary-basis signatures, full 94-atom order/state and nuclear inventory, finite real arrays, and consistent units. It reuses the **exact original** `check_geometry` function through AST extraction from its pinned source: source graph/atom identities, frozen cap atoms, declared stereochemistry and gross bonded-distance plausibility. These are admission checks, not a physical accuracy verdict.
+
+The preparation runtime is independently admitted by its qualification, outer artifact manifest and review hashes. Before scientific imports, the candidate verifies all inventoried runtime payloads and interpreter links. The successful inventory check took 0.58 s. The shared uv interpreter remains an explicit external dependency; this is a local research environment, not an application bundle.
+
+The proposed ESP request preserves the existing conventional RHF/6-31G* chemistry and four original surface shells (1.4, 1.6, 1.8, 2.0 at density 1.0/Å²), carries the actual admitted coordinates in Bohr, and uses two threads, 2000 MB native allocation, 14400 s native wall allowance and batch size 64. The resource change does not change the method. The request has **no `initial_checkpoint` key**. The old checkpoint's byte hash is recorded for parent artifact integrity, but its density/geometry consistency is not established and it is never reused.
+
+All new source copies, proposed inputs, scratch and outputs are under `~/.cache/dynamol-research/6oim-resp-recovery-v1`. The fourteen small staged sources have a pinned manifest. The pending runtime plan was retained; `plan-v2-prep-admitted.json` adds the independently reviewed preparation runtime pins. The actual parent currently lacks a terminal controller result, so the recorded invocation created only a refusal `result.json`.
+
+## What the downstream adapter must retain
+
+The original native RESP stage inputs and canonical initial-guess input are pinned unchanged. The fit remains one joint 94-atom adduct calculation with 18 fixed ff14SB cap/backbone charges, four existing stage-2 methyl equivalence groups, and 12 neutral cap atoms. The zero values for unfitted atoms in `canonical.qin` are native initial guesses only; they are never fitted charges or a model. The 82 retained atom charges must keep their joint fitted values after removing the neutral caps, without renormalization, independently refitting ligand/residue fragments, or substituting another charge model.
+
+The existing native v4 ff14SB canonical parameter precedence and adduct-only supplement checks remain mandatory. The original `covalent_charge_handoff.py` is deliberately unchanged and still requires its old checkpoint branch. It will refuse this new branch until a separately reviewed, recovery-aware immutable-file reader connects the cold ESP evidence to its existing native fit and charge/signature gates. The candidate's `validate_cold_esp` is a **pure contract validator**, not that file reader: the future reader must verify observed input, worker, runtime, arrays and expanded-method bytes before supplying its binding, and verify the full native nuclear inventory and ESP crosschecks. The pure validator separately tests explicit cold policy, no hidden checkpoint reuse, exact state/order/geometry/grid/method, unchanged SCF thresholds, native convergence, finite values and units.
+
+Future native fitting must preserve the existing executor's short relative file arguments (`stage1.in`, `canonical.qin`, `esp.dat`, `stage1.qout`, etc.) from a fresh local working directory. Classic RESP can truncate long filenames and exit zero without a result. A zero exit status is never sufficient: both native stage outputs and parsed finite 94-atom charges, fixed/cap/total/equivalence constraints, fitting provenance and residual checks are required. The relocated RESP runtime remains pending its independent exact fitting parity checks; the materializer does not call the Documents-dependent original fitter or launch a relocated binary.
+
+## Validation and remaining work
+
+All **29 synthetic software tests passed**, including running/failed/missing terminal parents, identity/state/type coercions, geometry/grid changes, altered methods, SCF nonconvergence, wrong units, mismatched evidence hashes, all forms of checkpoint reuse (including a null key), missing source pins, interrupted atomic publication, and refusal without a request. Synthetic passing metadata uses only a separate two-atom software fixture; no accepted biological result was fabricated or saved.
+
+The actual running-parent invocation refused before native arrays/checkpoint reads. All fourteen staged source hashes were verified, and the original worker, continuation, fitter and handoff source hashes remain unchanged. The retained audit has source copies, test log, current refusal and the two plan versions. No native calculation was run for this audit. No complete real endpoint success path has been exercised yet.
+
+Next: obtain the actual terminal parent; independently review this materializer; finish relocated RESP parity admission; materialize only after all parent checks pass; separately admit the bounded ESP launch; then implement/review the immutable cold-ESP-to-native-RESP handoff. Actual conventional ESP convergence and parent geometry binding, native fit evidence, reviewed torsion fitting and held-out geometry validation remain requirements. This candidate establishes none of the latter outcomes.

@@ -1,0 +1,50 @@
+{
+  "scope": "Gross native-log alarm search; expected deliberate cancellation messages retained and excluded from fatal-alarm criteria. Not a complete review of all warnings.",
+  "engines": {
+    "openmm": {
+      "passed": true,
+      "gross_alarms": [],
+      "minimization_notices": [],
+      "files": {
+        "worker.log": "c3826ead4c9defe741fc07c0608c1333c670e3401d546666157debd54d8f4826"
+      }
+    },
+    "gromacs": {
+      "passed": true,
+      "gross_alarms": [],
+      "minimization_notices": [
+        {
+          "file": "command-08.log",
+          "line": 20,
+          "text": "Steepest Descents converged to Fmax < 1000 in 437 steps"
+        },
+        {
+          "file": "minimize.log",
+          "line": 4486,
+          "text": "Steepest Descents converged to Fmax < 1000 in 437 steps"
+        }
+      ],
+      "files": {
+        "command-08.log": "0b15aff3c7009d556d5e66095308c83c0a3931f26ae282bc6d0e3d8501a666c1",
+        "command-09.log": "93f4ec796b70c4903b389b1159dc1b03b116b302b2b6e8d25d3380c102a26007",
+        "worker.log": "f74d128e09bb361032af6a0ad8420e1e3f7d953418c5ed3e0a8928e1d06c5c20",
+        "production.log": "df5a5201f6885fe4c7dc6b30882d42e5b7e1cbe162d1fd30da2f4c91a3c70992",
+        "command-02.log": "12f8ed90985f20080cf9748d89f578d30f9e080afbe756e18558692f1806cd16",
+        "command-03.log": "f69c47332f59b1e7584091772af6bd8d0a9ebc84257187068785291f22cbefa4",
+        "command-01.log": "1c88bac52060ae1cd85080ea0ffbeae205a4e780befd5cb1a2527c19a8d6c30b",
+        "command-14.log": "d27ed4dfe898d0f14d4be2946646f2cfc09720a657562a7e39ee436c07151e66",
+        "command-04.log": "11b8d232ceb85a19cdc4e82a6e619e3f3008ec0f57f30f2f2ca91be164aaca1b",
+        "command-10.log": "32e60cc600e66ed0c6efd1c7990e18f54fd8b4f6b0b0ddd294c73b2d6bc123e6",
+        "command-11.log": "1ab394b5434331cdf049afbf3f9aba73af696ca836f1ee242ba7f05b8320d5e5",
+        "command-05.log": "7dfea91623483d46cc58c784ad7538fb58cb7666ee2e74ffab15fb2be02543cc",
+        "minimize.log": "ed7df21b5dccb59176a8da1a13c564ef7bc7af05e44acf80dd819bd4f5aedf05",
+        "command-13.log": "f7e9e1b1d3178e5165a5789b212c0218879952112329f83b02a3f88bc4e57924",
+        "command-07.log": "914ce92f16f9b1181a7468c87fcfc7d023f94832fb670b8739007e1dd288d0b3",
+        "relax.log": "7e9fe79647ec741b41aed5bd78b9a4149a143f7202c9454b6303b0884b33a0c0",
+        "command-06.log": "25ab9aae27ca89ce7e68fb63c573f286e91acd6e03db20e4234efcd27d0f9694",
+        "command-12.log": "93acbe11ad6ed56c39387ff77a228335257eb1a66dc5e0fe73017949e20f6514"
+      }
+    }
+  },
+  "passed": true
+}

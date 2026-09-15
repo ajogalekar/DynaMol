@@ -1,0 +1,31 @@
+--- v2
++++ v3
+@@ -176,7 +176,27 @@
+     """Read only finite real native arrays of the exact requested small inventory."""
+     import numpy as np
+     with zipfile.ZipFile(io.BytesIO(blob)) as archive:
+-        require(sum(x.file_size for x in archive.infolist())<=MAX_ARTIFACT_BYTES,'Oversized uncompressed native arrays')
++        entries=archive.infolist()
++        require(len(entries)==len(expected_shapes) and {x.filename for x in entries}==
++                {name+'.npy' for name in expected_shapes},'Duplicate or unexpected native ZIP members')
++        require(sum(x.file_size for x in entries)<=MAX_ARTIFACT_BYTES,'Oversized uncompressed native arrays')
++        # NumPy otherwise allocates from the NPY header before checking whether
++        # the tiny ZIP payload actually contains that many elements.
++        for entry in entries:
++            name=entry.filename[:-4]
++            with archive.open(entry) as stream:
++                version=np.lib.format.read_magic(stream)
++                require(version in ((1,0),(2,0)),'Unsupported native NPY header version')
++                reader=np.lib.format.read_array_header_1_0 if version==(1,0) else np.lib.format.read_array_header_2_0
++                shape,fortran_order,dtype=reader(stream,max_header_size=10000)
++                require(type(shape) is tuple and all(type(x) is int and x>=0 for x in shape) and
++                        shape==expected_shapes[name] and type(fortran_order) is bool,
++                        'Native NPY header shape differs before allocation')
++                require(dtype.kind in 'if' and dtype.isnative and not dtype.hasobject and 0<dtype.itemsize<=8,
++                        'Native NPY header dtype differs before allocation')
++                bytes_required=math.prod(shape)*dtype.itemsize
++                require(bytes_required<=MAX_ARTIFACT_BYTES and entry.file_size==stream.tell()+bytes_required,
++                        'Native NPY declared payload size differs before allocation')
+     with np.load(io.BytesIO(blob),allow_pickle=False) as archive:
+         require(set(archive.files)==set(expected_shapes),'Native array inventory changed')
+         result={}

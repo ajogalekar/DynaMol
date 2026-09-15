@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-09-14T18:16:26.964803+00:00",
+  "test_suites": [
+    "backend/tests/test_loop_search.py",
+    "backend/tests/test_loop_refinement.py",
+    "backend/tests/test_promod_loop_worker.py"
+  ],
+  "pytest_exit_code": 0,
+  "pytest_observed_output": "69 passed in 0.32s",
+  "source_sha256": {
+    "/Users/ashujo/Documents/Science/DynaMol/backend/loop_search.py": "d13a15585b5aaeda7c609ccfe864efdd5a01a532cfd01abee1a82a7a859aabbf",
+    "/Users/ashujo/Documents/Science/DynaMol/backend/tests/test_loop_search.py": "49f278ffd64ee246c128049378f8544d9dfed07eff7f8fea7e37993ca5504134",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/run_complete_comparison.py": "47d8734d76fab2a717da00e96374ffc7f4cb154b86a574c1e19002d160027862",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/summarize_complete_comparison.py": "00c3a3342495bb668630bec75ad7d475d422026e5ec97671265c0e2d953f9809",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/native_mc_adapter.py": "fb3335d9eca5f8016a74a805dec4ca9faad2d2c6f3f892ddce1d4283f47ed28b",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/run_native_comparison.py": "34acc3ea3f355ab16e6a8b50be1535489cbcdf74f06f8c5ca7399e474cb52c49",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/screen_native_comparison.py": "f18520b1028444d76f85c6834bb6d5002adc98a242fea58adb6a4eba9d833b2e",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/validate_complete_candidate.py": "72ccc3f7ade2f444aa752253949649e5a6a0cc03afaf76c8bee5a248f86b9352"
+  },
+  "targeted_ast_and_whitespace_checks": true,
+  "checkpoint_backups": [
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/checkpoint-history/2026-09-14T181626-964803+0000-before-hybrid-fallback-current-checkpoint.json",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/checkpoint-history/2026-09-14T181626-964803+0000-before-hybrid-fallback-current-checkpoint.json",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/checkpoint-history/2026-09-14T181626-964803+0000-before-hybrid-fallback-LIVE-JOBS.json"
+  ]
+}

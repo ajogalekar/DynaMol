@@ -1,0 +1,2044 @@
+{
+  "updated_unix": 1789386117.140509,
+  "scope": "Live covalent-chemistry research jobs. Neither is a prepared complex or approved force field. App integration and 30-case final acceptance remain unfinished.",
+  "jobs": [
+    {
+      "name": "6OIM same-geometry conventional RHF reference",
+      "controller_pid": 37450,
+      "worker_pid": 37451,
+      "runtime": "/Users/ashujo/Documents/Science/DynaMol/.tools/qm/bin/python",
+      "started_unix_approx": 1789317873.731472,
+      "start_time_basis": "Native log creation timestamp, immediately after validated same-geometry DF checkpoint checks.",
+      "native_wall_seconds": 7200,
+      "independent_timeout_seconds": 7320,
+      "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference/progress.json",
+      "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference/result.json",
+      "native_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference/native.log",
+      "controller_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/conventional-df-initial-guess-reference.log",
+      "next_steps": [
+        "When accepted, compare exact versus DF energy/gradient at identical atoms/geometry.",
+        "Record approximation error; no physical accuracy claim from convergence alone.",
+        "Do not stop active optimizer solely because a reference wait remains."
+      ],
+      "status": "completed_numeric_reference",
+      "completed_result_sha256": "b8ee3976b4130e59fc9d3fdd4e02ad0bcb3882f6ae34038006c61546862c796a",
+      "elapsed_seconds": 3808.35350162501,
+      "independent_comparison": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-rhf-initial-comparison-independent.json",
+      "process_exited": true
+    },
+    {
+      "name": "6OIM full94-atom DF-RHF constrained geometry candidate",
+      "controller_pid": 45943,
+      "worker_pid": 45944,
+      "runtime": "/Users/ashujo/Documents/Science/DynaMol/.tools/qm-parallel/bin/python",
+      "started_unix": 1789319674.686395,
+      "native_wall_seconds": 21600,
+      "independent_timeout_seconds": 21720,
+      "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/progress.json",
+      "controller_progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/progress.json",
+      "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/result.json",
+      "native_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/native.log",
+      "controller_log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/controller.log",
+      "input": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1-input.json",
+      "next_steps": [
+        "Require actual geometry convergence, five frozen capheavy coordinates, source stereochemistry and plausible bond geometry.",
+        "After candidate inspection, obtain exact conventional HF ESP initialized from the accepted final DF checkpoint, preserving exact atom/state/basis/coordinate checks.",
+        "Run constrained native RESP using the explicitly validated heap runtime; preserve exact canonical cap/backbone charges.",
+        "After geometry/charge completion and resource review, assess the prepared dispersion-corrected full-parent reference, then varied attachment torsion geometries and held-out mechanics checks before physical acceptance."
+      ],
+      "status": "failed_checkpoint_filesystem_timeout",
+      "last_observed_progress": {
+        "phase": "optimization",
+        "accepted": false,
+        "cycle": 52,
+        "energy_hartree": -2794.069108779926,
+        "gradient_norm_hartree_per_bohr": 0.06658464842275537,
+        "scf_converged": true
+      },
+      "last_observed_unix": 1789339194.689014,
+      "process_exited": true,
+      "terminal_result_sha256": "a8bd61b38f6f0a01126be4b9c36fc77c43e836757f053f129fd950e84670014c",
+      "terminal_error": {
+        "type": "TimeoutError",
+        "message": "[Errno 60] Unable to determine if file is accessible as hdf5 (file read failed: time = Sun Sep 13 15:15:15 2026\n, filename = '/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/scf.chk', file descriptor = 6, errno = 60, error message = 'Operation timed out', buf = 0x16af2ce50, total read size = 8, bytes this sub-read = 8, offset = 0)"
+      },
+      "last_completed_cycle": 57,
+      "recovery": "New local-storage cold-SCF geometry restart being reviewed; original run remains failed."
+    },
+    {
+      "name": "6OIM local recovery from completedcycle57; cold SCF with unchanged method and constraints",
+      "status": "stopped_rss_limit_during_first_gradient",
+      "controller_pid": 34843,
+      "worker_pid": 34848,
+      "runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/bin/python",
+      "spec": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/spec.json",
+      "spec_sha256": "608f978c4212290b629a08fe61309cd49d3a22eeb43b376f6e2d939523d2f3f2",
+      "controller_source_sha256": "e3f1ac0b86d2d9d13e2796ac564439eea76a93a39e554033f93b5a36cb1eec18",
+      "input": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/prepared/input.json",
+      "input_sha256": "ac4b19505b03238fdd964c09d78b0eddf4ec1fa43f122cd6e8648bb47b5bd0e5",
+      "controller_progress": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/controller-progress.json",
+      "progress": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/optimization/progress.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/optimization/result.json",
+      "controller_result": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/controller-result.json",
+      "native_log": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1/run/optimization/native.log",
+      "started_unix": 1789339803.6612842,
+      "outer_deadline_unix": 1789361523.6612852,
+      "native_memory_mb": 5000,
+      "rss_limit_bytes": 8000000000,
+      "rss_limit_kind": "Sampled once per second; terminates on observed crossing, not an OS allocation cap",
+      "peak_sampled_rss_bytes": 8035172352,
+      "last_observed_unix": 1789341974.422288,
+      "physical_acceptance": false,
+      "full_preparation_ready": false,
+      "next_steps": [
+        "Inspect actual terminal result and PIDs; no duplicate or overwritten failedrun.",
+        "On numericalcompletion, independently validate original cap positions, atom IDs, state, stereochemistry and all bond geometry. New coldrestart does not constitute a physical forcefield.",
+        "Rebind a new localstorage conventionalHFESP/RESP continuation to this actual acceptedparent/input/runtime. Old failed continuation,request andDFTclaims remain intact.",
+        "Proceed through original torsion and completecomplexquality gates; no app acceptance from geometry or charge completion alone."
+      ],
+      "process_exited": true,
+      "terminal_error": "Owned quantum process exceeded sampled RSS limit: {\"sample_unix\": 1789340070.664581, \"maximum_process_rss_bytes\": 8035172352, \"process_group_rss_bytes\": 8035172352, \"free_disk_bytes\": 48413687808}",
+      "controller_result_sha256": "5e2cc40fe7ce49f4f3e5eaa380304a451f12bffc37dd9de6c7d5f3264ed0c999",
+      "observed_stop_rss_bytes": 8035172352
+    },
+    {
+      "name": "6OIM geometry recovery with a 2000 MB allocation budget",
+      "status": "failed_process_monitor_timeout",
+      "controller_pid": 37084,
+      "worker_pid": 37089,
+      "runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/bin/python",
+      "spec": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/spec.json",
+      "spec_sha256": "3a2077e216b79b636afa6eac354ebf75e754d0b9eb3da7582c0dece1aaf6918a",
+      "controller_source_sha256": "e3f1ac0b86d2d9d13e2796ac564439eea76a93a39e554033f93b5a36cb1eec18",
+      "input": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/prepared/input.json",
+      "input_sha256": "bf48d681b57232bf0eb416ca5f4bde948902971561850716249a1b77db28154e",
+      "controller_progress": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/controller-progress.json",
+      "progress": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/optimization/progress.json",
+      "result": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/optimization/result.json",
+      "controller_result": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/controller-result.json",
+      "native_log": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v2-memory2000/run/optimization/native.log",
+      "started_unix": 1789342244.992001,
+      "outer_deadline_unix": 1789363964.992001,
+      "native_memory_mb": 2000,
+      "rss_limit_bytes": 8000000000,
+      "rss_limit_kind": "Sampled once per second; terminates on observed crossing, not an OS allocation cap",
+      "peak_sampled_rss_bytes": 7991640064,
+      "last_observed_unix": 1789359151.455408,
+      "physical_acceptance": false,
+      "full_preparation_ready": false,
+      "next_steps": [
+        "Inspect existing native combined-product AM1-BCC/GAFF2 candidate and exact source mapping; do not repeat the completed run.",
+        "Define and compare one explicit protein charge/interface protocol in the existing neighboring-peptide assembly.",
+        "Select smaller chemically justified models for genuinely uncertain terms; check their transfer to the full adduct.",
+        "Retain full-complex GDP/Mg/water obligations and all frozen panel cases; neither coverage nor stable short MD proves physical accuracy."
+      ],
+      "process_exited": true,
+      "last_observed_progress": {
+        "phase": "optimization",
+        "accepted": false,
+        "cycle": 23,
+        "energy_hartree": -2794.0695119577804,
+        "gradient_norm_hartree_per_bohr": 0.06636347414789281,
+        "scf_converged": true
+      },
+      "last_resource_sample": {
+        "sample_unix": 1789356130.3237371,
+        "maximum_process_rss_bytes": 1946320896,
+        "process_group_rss_bytes": 1946320896,
+        "free_disk_bytes": 36530982912
+      },
+      "terminal_result_sha256": "ab835bd6145b258ea2ca359be2c785ec8a829e451dc412133f4722cb678d3c3e",
+      "failure_error": "Command '['ps', '-axo', 'pid=,pgid=,rss=,stat=,command=']' timed out after 3 seconds",
+      "failure_review": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-process-monitor-failure-v1/failure-review.json",
+      "next_evaluation_state": "Cycle 24 SCF converged in native log, but its gradient did not complete. No optimizer endpoint or new charges accepted."
+    }
+  ],
+  "independent_work": {
+    "product_graph_audit": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/frozen15-graph-v4/summary.json",
+    "result": "14/15 graph candidates constructed, including the complete peptide ligand in 2H5I; boronate remains an explicit state/model obligation. These are not preparation successes.",
+    "native_type_parameter_coverage": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/frozen15-native-coverage-v2/summary.json",
+    "native_coverage_result": "14 unique graph chemistries typed with explicit bond orders retained and native parameter assignments without ATTN or invalid zero-periodicity entries. Analogy penalties reach 780; states/charges/physical behavior are not accepted. No QM or dynamics in this screen.",
+    "tests": "18 graph and coverage contract tests passed.",
+    "next": "The 2000 MB local recovery trial is active: controller37084, worker37089. Check its actual result and RSS before further work. A new 2000 MB MMP request is prepared for serial execution. No old failed continuation should be resumed.",
+    "profile_plan": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-torsion-profile-plan.json",
+    "reference_method_review": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-reference-method-feasibility.md",
+    "profile_status": "No full-parent DFT calculation or scans launched yet. Numerically qualified provider now has reviewed durable waiting continuation after actual parent and RESP, with resource/deadline/provenance gates.",
+    "reference_provider": {
+      "status": "passed_numerical_qualification",
+      "worker": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_reference_worker.py",
+      "worker_sha256": "e74a0ee5cae3fe954b918a824b4ea466aa99f46ac5311c0696eeea73e9557225",
+      "qualification_result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-provider/qualification-v3/result.json",
+      "qualification_result_sha256": "3942dfa8799fd7853ee21ea8a88a1cc59a8c7348de33094903f1f90f5d11df09",
+      "runtime_manifest": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-provider/runtime-manifest.json",
+      "contract_tests": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-provider/resource-and-parent-contract-tests.json",
+      "method_documentation": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/COVALENT-REFERENCE-PROVIDER.md",
+      "full_parent_request_plan": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-parent-reference-request-plan.json",
+      "full_parent_job_launched": false,
+      "physical_force_field_acceptance": false,
+      "waiting_controller_launched": true
+    },
+    "charge_handoff": {
+      "status": "adapter_contract_tests_passed_pending_actual_RESP",
+      "tests": 28,
+      "adapter": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_charge_handoff.py",
+      "plan": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-charge-handoff-plan.json",
+      "actual_pending_chain_refusal": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/charge-handoff-pending-refusal-v1/result.json",
+      "actual_QM_to_native_execution_completed": false,
+      "no_synthetic_or_approximate_charge_substitution": true
+    },
+    "geometry_provider": {
+      "status": "small_neutral_calculator_and_constrained_optimizer_qualification_passed",
+      "calculator_current": {
+        "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/calculator.py",
+        "sha256": "296790c82b86aa5b4d522392f38b7fd9c0abb2b33c6e99d331d8ac995a77c28c"
+      },
+      "qualification": {
+        "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/geometry-provider-qualification-v2/result.json",
+        "sha256": "b5508536fafe005260ae20b3378750ebfef7051025462223b4a07b01969f46e0"
+      },
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/QUALIFICATION.md",
+      "runtime": "/Users/ashujo/.cache/dynamol-runtimes/covalent-geometry-v1",
+      "maximum_admitted_atoms": 32,
+      "native_thread_count": 1,
+      "finite_difference_components": 63,
+      "finite_difference_steps": 2,
+      "worst_gradient_component_error_hartree_bohr": 1.4e-08,
+      "independent_review": "Runtime/source/artifact hashes, SCC protocol, FD errors, transformations and thread controls independently reviewed without repeating quantum evaluations. Positive fixtures neutral only. Guard-only correction preserves evaluated calculator functions.",
+      "full_parent_admitted": false,
+      "physical_acceptance": false,
+      "next": "Wait actual accepted parent, completed same-geometry RESP and first full-parent DFT cost/reference gate. Only then consider a separately admitted complete94atom baseline/+30/-30 geometry experiment and matched constrained DFT comparison; no automatic 36-point scan or charge substitution.",
+      "geometry_adapter": {
+        "source": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-geometry-provider/geometric_adapter.py",
+          "sha256": "7f32d1812face4e59c229926a8a5f00f99f45c5ec964bc5df50891475cc8ce2a"
+        },
+        "native_qualification": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/geometric-adapter-qualification-v2/result.json",
+          "sha256": "89e8964ec834fdf9c3019533b784ade7f534f9befa3d373276fc5dd2b1cf749a"
+        },
+        "contract_review": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/geometric-adapter-contract-audit-v3/result.json",
+          "sha256": "858c7b57fa469685eb979d996b646efc7fc142a334f33a6b9bc11fb947107e1b"
+        },
+        "contract_tests_passed": 62,
+        "actual_process_lifecycle_cases": 8,
+        "native_small_molecule_cases": 2,
+        "native_total_seconds": 8.176945624989457,
+        "native_numerical_core_unchanged_by_supervisor_fixes": true,
+        "independent_final_review": "No blocking numerical or lifecycle findings; every recorded child leader reaped and no live group remains in eight process cases.",
+        "full_parent_admitted": false,
+        "physical_acceptance": false
+      }
+    },
+    "retained_GDP": {
+      "source_graph_matches": true,
+      "native_parameter_transport_matches": true,
+      "whole_complex_prepared": false,
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/REVIEW.md",
+      "checkpoint": {
+        "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/checkpoint.json",
+        "sha256": "1bd03f9978f4a54ac6f540b0e4b64bcace7933c4149dd265887101002f8ab924"
+      },
+      "signed_fourier_fix": {
+        "focused_tests_passed": 47,
+        "independent_review": {
+          "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/signed-torsion-independent-review-v1/result.json",
+          "sha256": "3efc9458e0c4f69706d397a1941b32bcb248cb14763463339f9ee749e99f929f"
+        },
+        "negative_GDP_terms_preserved": 8,
+        "analytic_energy_and_derivative_controls": 12,
+        "negative_controls": 7,
+        "no_parameter_or_tolerance_change": true
+      },
+      "remaining": "Experimental coordinates and all sourceGDP/Mg/waters, explicit nucleotide/ion/water applicability, loop repair, actual adduct charges/torsions and full-complex motion."
+    },
+    "evaluation_journal": {
+      "state": "standalone_helper_passed_35_synthetic_tests_and_independent_review",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm_evaluation_journal.py",
+      "source_sha256": "b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528",
+      "audit": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-evaluation-journal-audit-v2/result.json",
+      "integrated_into_worker": false,
+      "scope": "Atomic snapshots of completed SCF/gradient evaluations, explicitly unconverged/unaccepted; no checkpoint consistency or physical acceptance inference.",
+      "synthetic_tests_passed": 35,
+      "independent_review": "Strict recovery identity/schema types fixed. Four new regressions fail against the preserved old helper; malformed rehashed records rejected. No remaining blocker for standalone bookkeeping candidate."
+    },
+    "df_gradient_contraction_candidate": {
+      "status": "small_native_full_gradient_integration_independently_reviewed",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/df-gradient-contraction-candidate-v1/tiled_contract.py",
+      "source_sha256": "8d9e6bbb64e9e525ac2d41cb2783f699050e32c0516e89cb821a1229b1012060",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/df-gradient-contraction-candidate-v1/REVIEW.md",
+      "independent_review": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/df-gradient-contraction-independent-review-v1/REVIEW.md",
+      "author_tests": 8,
+      "author_small_cases": 40,
+      "independent_small_cases": 45,
+      "author_maximum_absolute_difference": 1.4210854715202004e-14,
+      "independent_maximum_absolute_difference": 1.7763568394002505e-15,
+      "shape_only_explicit_workspace_bytes": 40980736,
+      "shape_only_output_bytes": 179664968,
+      "limits": "Seven small full-gradient pairs and finite differences passed. Full94-atom memory probe and speed unqualified; active runtime unchanged.",
+      "next": "Consider only a separate immutable full94-atom fixed-geometry probe after the active large recovery ends and entry resource gates pass."
+    },
+    "evaluation_journal_worker_candidate": {
+      "status": "tiny_native_and_independent_review_passed",
+      "source": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-journal-worker-candidate-v1/qm_worker.py",
+      "source_sha256": "780b5bb968fa9d45987597be9412331d071e17ea38b2299749dc5e92be9f12b5",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/qm-journal-worker-candidate-v1/README.md",
+      "limits": "Original/candidate three-atom optimizer pairs and ten cold record replays passed. Records remain unaccepted; no checkpoint consistency claim or active worker change."
+    },
+    "df_gradient_integration_candidate_v1": {
+      "status": "seven_small_gradient_pairs_passed_independent_review",
+      "summary": {
+        "path": "/Users/ashujo/.cache/dynamol-research/df-gradient-integration-candidate-v1/summary.json",
+        "sha256": "f0225b22b0b36e6d2db486c7a2b7e90173c8ef669467dbfe84c29bd23f81ebf2"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/df-gradient-integration-candidate-v1/artifact-manifest.json",
+        "sha256": "22c8a6a53eb9ac399b8a73fc8323cbede879487bb4ebeebaa1b3fb79a311ade5"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/df-gradient-integration-independent-v1/result.json",
+        "sha256": "8f81f0c65e3e88e81ec13f024577a5c0d47d56db5ab71c8de961fea58890643f"
+      },
+      "max_pair_gradient_difference": 0.0,
+      "finite_difference_estimates": 24,
+      "native_seconds": 11.8511,
+      "scope": "Private provider small RHF/B3LYPG; no full94-atom RSS or physical accuracy qualification, active worker unchanged."
+    },
+    "evaluation_journal_native_qualification_v2": {
+      "status": "tiny_native_and_independent_review_passed",
+      "summary": {
+        "path": "/Users/ashujo/.cache/dynamol-research/qm-journal-native-qualification-v2/SUMMARY.json",
+        "sha256": "300c98f6d021fa1d4408db1e27f38696db85ec9e3853a425e48fd447c8694492"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/qm-journal-native-qualification-v2/artifact-manifest.json",
+        "sha256": "0b9aa5bea3ae0a088a5f4f3bbea43332418d977944b4b66f7133d896356ebce8"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/qm-journal-native-independent-v1/review.json",
+        "sha256": "827e83447451a09b9ed0d9c77aac5b2c838333a0caae8034a5d33116e2b1ed48"
+      },
+      "optimizer_pairs": 2,
+      "cold_replays": 10,
+      "max_replay_energy_error_hartree": 4.263256414560601e-14,
+      "max_replay_gradient_error_hartree_bohr": 1.1671192901019367e-09,
+      "enospc_committed_records": 0,
+      "native_seconds": 9.56,
+      "limits": "Children shorter than one-second RSS sampling, actual peak unknown. Three-atom scope; tiny 10GiB entry exception does not change large recovery 35GiB gate."
+    },
+    "covalent_preparation_runtime_local_v1": {
+      "status": "qualified_and_independently_reviewed",
+      "prefix": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1",
+      "qualification": {
+        "path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/qualification.json",
+        "sha256": "a4bf3f2f4e296f7333596673c23deae7755733460c95489c2ccbce0d1368617e"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-runtime-independent-review-v1/review.json",
+        "sha256": "e4913028d6c8692ec069fe79e33d82655d12b8816e1d8be545e7ea17cfc5e259"
+      },
+      "runtime_inventory_sha256": "2948f0700c2a0f308aaecdf26565ff5fc45e28513ec82d2178dbd856e34faeba",
+      "artifact_manifest_sha256": "cc5de227f9526b77c3107b38301942473bd287d0a208a23d4ccb9707b11afaf3",
+      "files": 2180,
+      "dataless_files": 0,
+      "scope": "Version-matched scientific prep packages. External uv interpreter remains; local research runtime, not portable app bundle or fitted model."
+    },
+    "resp_runtime_local_v1": {
+      "status": "four_reference_native_stage_fits_passed_independent_review",
+      "prefix": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1",
+      "executable": {
+        "path": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1/bin/resp",
+        "sha256": "2d759392c83363f4294c01bc7c8602134e51b3a58f6b350044e1becce61048a3"
+      },
+      "qualification": {
+        "path": "/Users/ashujo/.cache/dynamol-runtimes/resp-heap-local-v1/local-qualification/qualification.json",
+        "sha256": "dfe338698f80029eb15668cb44480b695e875ac0b85f37794b0e422448889851"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/resp-relocation-independent-review-v1/review.json",
+        "sha256": "92d59bc4bcdb50586aa3bcc39ca9f4cae6d8aa53f3f104be2f1514098de012a5"
+      },
+      "runtime_inventory_sha256": "80a80b1e6716aade0a42150957ee9056e56a49a16fa398e93d93212f167fb0c7",
+      "artifact_manifest_sha256": "f519f2266c1de508994292303192b14c612b9610e079f72d894879fcae7cf189",
+      "qout_reference_files_exact": 4,
+      "fixed_charges_exact": 18,
+      "peak_sampled_rss_bytes": 2076114944,
+      "native_seconds": 1.738708,
+      "retained_failures": [
+        "v1 insufficient 1GB test guard; actual stop peak unavailable",
+        "v2 RESP long filename truncation, zero exit and no results"
+      ],
+      "future_execution": "Reviewed lifecycle and ~3GB monitored profile, short relative filenames and parsed outputs. Existing fitter already uses short names; one-off qualification harness is not production supervisor. Frozen pending-review qualification is supplemented by separately pinned review.",
+      "scope": "RPATH relocation/native reference parity, not new sotorasib charges."
+    },
+    "covalent_recovery_esp_materializer_v1": {
+      "status": "37_software_tests_passed_independent_review_passed",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/6oim-resp-recovery-materializer-v1/README.md",
+      "initial_source_sha256": "7a7a588781b85b5ac84a951bc99267d38de1fbc05b00bcc9daa777d6e2fcad04",
+      "initial_prep_admitted_plan": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/plan-v2-prep-admitted.json",
+        "sha256": "be0750b9c76aa93513c28eed7bfa8d0e285874dcc06df5e1122c8fd9a9349120"
+      },
+      "actual_parent_refused_without_request": true,
+      "native_calculations": 0,
+      "remaining": "Actual terminal parent and successful materialization; native cold-ESP reader and RESP executor/handoff. Original scientific gates remain unchanged. Separate launch wrapper is qualified, no quantum launch yet.",
+      "current_source_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+      "current_plan": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/plan-v3-resp-admitted.json",
+        "sha256": "8753021db5fe96d71fffcb29e7198b4ecf7b8668343389c9f110b81d76e43a20"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-materializer-independent-review-v1/review.json",
+        "sha256": "3e7bf14aab7faa771640aa19af546d7bff4b0b9dc965ad2881755f6fa826f831"
+      }
+    },
+    "boronate_source_followup_v1": {
+      "status": "primary_sources_reviewed_no_model_admitted",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/boronate-source-followup-v1/REVIEW.md",
+      "finding": "2023 serine-model boronates and 2025 prebond bortezomib MD are leads, not a complete accepted N-terminal Thr product model. Downloaded 2023 supplement has torsion plots and no separate machine-readable model files. 5LF3 remains unresolved.",
+      "new_qm_or_model_work": false
+    },
+    "covalent_cold_evidence_core_v3": {
+      "status": "18_tests_passed_independent_review_passed",
+      "source": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/cold-evidence-core-v3/recovery_cold_evidence_core.py",
+        "sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187"
+      },
+      "independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-cold-evidence-independent-review-v1/review.json",
+        "sha256": "7089a43da91bd59b05f500807327ef5811cdabf088d812907009749e3c80b49d"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-cold-evidence-independent-review-v1/artifact-manifest.json",
+        "sha256": "5e02d61db8a938702ac42e82e20148a09ed1cf13e33458d2c52607ae995fa92d"
+      },
+      "scope": "Read-only exact reuse of 68 parent-admission statements, complete five-object binding, bounded NPY header checks before allocation. Genuine running parent refused before native reads. No accepted new endpoint, ESP or fitted model."
+    },
+    "cold_esp_launch_wrapper_v1": {
+      "status": "implementation_independently_reviewed_and_enabled_pending_actual_parent",
+      "source": {
+        "path": "/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/cold-esp-launch-v1/launch_cold_esp.py",
+        "sha256": "66127b114c0f795a892d0d0ad0b4ff4bbb1c8961f934279363a2d235d67f5980"
+      },
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/6oim-cold-esp-launch-v1/REVIEW.md",
+      "qualification": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/result.json",
+        "sha256": "59879ae5efe633fdde945109d0f0bf87130292a8fbb003a1d8db2e08bbffd5c8"
+      },
+      "artifact_manifest": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/artifact-manifest.json",
+        "sha256": "2ab394c6176fbbec757142d74e168eb41dfd99a6415e13556630510c6fa9308c"
+      },
+      "pre_enable_independent_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-independent-final-v1/review.json",
+        "sha256": "6e7f4c72b8c1d3fe285133675d223897beb3e8d691c908e4ff2cd13588a8f2f5"
+      },
+      "enablement_review": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/enablement-review.json",
+        "sha256": "33832ebcca01ce6a3fde4f21b4695ba666b25cf900d387c761923ceb25446c61"
+      },
+      "actual_parent_refusal": {
+        "path": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-cold-esp-launch-v3/actual-parent-refusal.json",
+        "sha256": "3ed4452f81b4a9383d6eeb56efcd1ff4349f14cf88bd4c3ef83894530ccdda92"
+      },
+      "software_tests": 17,
+      "tiny_process_cases": 2,
+      "quantum_launched": false,
+      "full_positive_native_path_tested": false,
+      "limits": "2threads,2000MB allocation,8e9-byte process/group sampled stops,14400s native/14520s outer,35GiB entry/8GiB running; serial large quantum jobs. New output directories only. Child -I -B and fresh pycache_prefix avoids excluded bytecode. No active runtime mutation.",
+      "next": "After genuine terminal parent passes, materialize a new complete request then run this wrapper in a new directory only if resource gates pass. Success remains pending separate full ESP science reader, never physical model acceptance."
+    }
+  },
+  "continuation": {
+    "name": "Verified parent geometry to exact HF ESP and constrained native RESP",
+    "controller_pid": 71825,
+    "started_unix": 1789321392.160741,
+    "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/progress.json",
+    "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/result.json",
+    "log": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/controller.log",
+    "optimizer_wait_seconds": 21600,
+    "exact_esp_native_wall_seconds": 14400,
+    "exact_esp_independent_timeout_seconds": 14520,
+    "resp_stage_timeout_seconds": 120,
+    "quantum_process_limit": 3,
+    "launch_lock": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/QM-LAUNCH.lock",
+    "state": "Stopped after failed parent; no downstream quantum job launched.",
+    "next_steps": [
+      "Inspect actual progress/result; never launch a duplicate completed or still-running stage.",
+      "Source identities, hashes, stereochemistry, frozen cap coordinates and gross bond distances must pass before exact ESP.",
+      "Exact ESP is conventional RHF with accepted final DF density as initial guess only; geometry approximation stays explicit.",
+      "Completed fitting remains a research candidate pending full-adduct torsion and complete complex validation."
+    ],
+    "minimum_free_disk_gib_before_exact_esp": 15,
+    "restart_evidence": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/controller-disk-gate-restart.json",
+    "cancelled_extra_waiting_controller": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v2-disk-gated/result.json",
+    "source_checkpoints": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1/source-checkpoints/manifest.json",
+    "resident_script_sha256": "c4cc79444bd8dd896d9882439ad34e6dac538cebe2fa2c10c7c69dc768f0db4b",
+    "future_source_sha256": "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3",
+    "last_observed_progress": {
+      "status": "failed",
+      "stage": "checking_parent_geometry",
+      "error_type": "ValueError",
+      "error": "Existing optimization did not succeed: {'type': 'TimeoutError', 'message': \"[Errno 60] Unable to determine if file is accessible as hdf5 (file read failed: time = Sun Sep 13 15:15:15 2026\\n, filename = '/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/scf.chk', file descriptor = 6, errno = 60, error message = 'Operation timed out', buf = 0x16af2ce50, total read size = 8, bytes this sub-read = 8, offset = 0)\"}"
+    },
+    "last_observed_unix": 1789339194.689014,
+    "status": "failed",
+    "process_exited": true,
+    "terminal_result_sha256": "ffcbee9a22b9673849d1b24d6a803e48c8f5943a65edfb567e2f640372d3f2d2"
+  },
+  "reference_continuation": {
+    "controller_pid": 18420,
+    "status": "failed",
+    "stage": "waiting_for_parent",
+    "progress": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/parent-dft-continuation-v1/progress.json",
+    "result": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/parent-dft-continuation-v1/result.json",
+    "controller_source_sha256": "8124f88d0ed844a96d3768b4077500c624b17780d5385ddbff9c38f096e57768",
+    "config_sha256": "fb3262b99cb1f2a83828a80913e78841a433fab6ebfc31ec9e42b7f39b6b9877",
+    "started_unix": 1789334276.9262102,
+    "wait_deadline_unix": 1789363076.926211,
+    "native_wall_seconds": 14400,
+    "outer_timeout_seconds": 14520,
+    "entry_disk_reserve_gib": 25,
+    "running_disk_reserve_gib": 8,
+    "threads": 2,
+    "memory_hint_mb": 8000,
+    "tests_passed": 18,
+    "review": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-continuation-review-v2/review.json",
+    "next": "Wait actual accepted parent and same-geometry RESP; pinned materializer makes one mixed-level full-parent DFT single point. No duplicate, automatic retry, torsion fit, model approval or app integration.",
+    "physical_acceptance": false,
+    "last_observed_progress": {
+      "status": "failed",
+      "stage": "stopped",
+      "error_type": "ValueError",
+      "error": "RESP continuation failed or has an unreviewed state"
+    },
+    "last_observed_unix": 1789339194.689014,
+    "state": "Stopped after failed parent; no downstream quantum job launched.",
+    "process_exited": true,
+    "terminal_result_sha256": "2e66829cfcc6085875102b767908cf917e856c33a6a8e684aea9e37b2f0f833b"
+  },
+  "local_storage_recovery": {
+    "runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1",
+    "runtime_manifest_sha256": "91a060defde8a3506861dffbb5277a4672bbfd041208c2cbbfeedb66dfe0c1b9",
+    "runtime_inventory": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/local-recovery-evidence/runtime-files.json",
+    "runtime_inventory_sha256": "683b958788605f35ce2fc9a5b7ac94edb03f5316bd0b166cfcb415ffaea1f416",
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/runtime-local-recovery-v1/REVIEW.md",
+    "supervisor_review": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/local-supervisor-independent-review-v1/review.json",
+    "supervisor_tests_passed": 54,
+    "metal_prepared_spec": "/Users/ashujo/.cache/dynamol-research/1mnc-local-recovery-v2-memory2000/spec.json",
+    "metal_spec_sha256": "ec77d2cf20f5e7b3f77408fb2ad9c03239c4e167f22d2c2c9f31030d1f43ee06",
+    "metal_state": "prepared_not_launched_hold_for_supervisor_reliability",
+    "physical_acceptance": false,
+    "latest": "The 2000 MB recovery failed in process monitoring after 23 completed evaluations; both processes exited. No converged endpoint. Literature-guided protocol revision now precedes any covalent restart.",
+    "df_gradient_memory_review": {
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/runtime-local-recovery-v1/6OIM-DF-GRADIENT-MEMORY.md",
+      "analysis": "/Users/ashujo/.cache/dynamol-research/6oim-local-recovery-v1-memory-review-v1/analysis.json",
+      "manifest_sha256": "ef71523c3f56e3839780040dad6782a2495057a5db6973a0854f8ad36825206e",
+      "native_source_files_verified": 9,
+      "small_layout_arithmetic_checks_passed": 2,
+      "potential_tensor_copy_and_metric_derivative_bytes": 4819563000,
+      "causal_limit": "Source-level potential allocation, not a sampled failing allocation stack. DF gradient and auxiliary response dispatch are correct. Lower budget reduces some blocks, not the fixed tensor copies."
+    },
+    "first_gradient_comparison": {
+      "result": "/Users/ashujo/.cache/dynamol-research/reviews/6oim-memory2000-first-gradient-v1/result.json",
+      "result_sha256": "7d6d0efc0a952590b1711988a889465e7f56a63940fa4d1eb1d82a0e881e5dd4",
+      "passed": true,
+      "energy_difference_hartree": 4.0973e-10,
+      "maximum_gradient_component_difference_hartree_per_bohr": 3.22e-08,
+      "maximum_anchor_displacement_angstrom": 1.542188e-08,
+      "meaning": "Numerical consistency of the first completed gradient at near-identical coordinates; optimization remains unconverged and physical model quality remains unvalidated."
+    }
+  },
+  "research_reassessment": {
+    "status": "literature_review_complete_protocol_revision_next",
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-literature-reassessment-v1/REVIEW.md",
+    "report_sha256": "6d210f8155269edb26cfaa1e6db7fda0bfbe4839c69b2e088638420ecf0b2f47",
+    "priority": "Use existing combined-adduct native baseline; resolve the protein charge/interface protocol and prioritize local parameter uncertainties before another large covalent QM launch.",
+    "large_covalent_restart_authorized_by_this_checkpoint": false,
+    "full_preparation_ready": false,
+    "physical_acceptance": false,
+    "next_steps": [
+      "Inspect existing native combined-product AM1-BCC/GAFF2 candidate and exact source mapping; do not repeat the completed run.",
+      "Define and compare one explicit protein charge/interface protocol in the existing neighboring-peptide assembly.",
+      "Select smaller chemically justified models for genuinely uncertain terms; check their transfer to the full adduct.",
+      "Retain full-complex GDP/Mg/water obligations and all frozen panel cases; neither coverage nor stable short MD proves physical accuracy."
+    ]
+  },
+  "focused_v1": {
+    "cases": [
+      "6OIM",
+      "5P9J",
+      "6JXT"
+    ],
+    "scope": "Known human therapeutic cysteine adducts; unknown-chemistry QM UI deferred to v2. Do not restart previous large QM jobs.",
+    "native_peptide_assembly_complete": [
+      "6OIM",
+      "5P9J",
+      "6JXT",
+      "6JX0"
+    ],
+    "protein_intermediates_complete": [
+      "6OIM",
+      "5P9J",
+      "6JX0",
+      "6JXT"
+    ],
+    "remaining": "Track A: correct coherent loop generation/refinement through12 residues per gap; frozen baseline and new bounded comparisons do not qualify the fix. Track B: complete covalent charge/torsion and Mg/GDP physical assessment, exact engine transport and frozen panel validation remain separate. Video follows loop validation.",
+    "app_ready": false,
+    "outputs": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused",
+    "complete_native_complexes": [
+      "6OIM",
+      "5P9J",
+      "6JX0",
+      "6JXT"
+    ],
+    "active_stability_jobs": [],
+    "checkpoint": "covalent-v1-focused/README.md",
+    "egfr_rejected_attempts": [
+      "6jxt-protein-v1",
+      "6jxt-protein-v2",
+      "6jxt-protein-v3",
+      "6jxt-protein-v4"
+    ],
+    "completed_stability_jobs": [
+      {
+        "case": "5P9J",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/5p9j-stability-v1",
+        "result": {
+          "stage": "short_stability_check_complete",
+          "case": "5P9J",
+          "physical_model_validated": false,
+          "app_ready": false,
+          "production_simulation": false,
+          "total_ps": 100,
+          "unrestrained_ps": 70,
+          "protocol": "10 ps 50\u2013300 K NVT ramp; 20 ps restrained NPT; 70 ps unrestrained NPT. 1 bar, 2 fs, PME, H-bond constraints. No constraint or bond restraint on the drug attachment.",
+          "seed": 2026,
+          "initial": {
+            "stage": "before minimization",
+            "time_ps": 0,
+            "potential_kj_mol": 89712032.22896746,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.8153920867006096,
+            "attachment_angstrom": 1.8497529564782436,
+            "adduct_bond_min_ratio": 0.9302600916125905,
+            "adduct_bond_max_ratio": 1.0417974944987993,
+            "ca_rmsd_angstrom": 1.1428803806860817e-14,
+            "max_force_kj_mol_nm": 29232862225.4733,
+            "elapsed_seconds": 1.3776140420231968,
+            "rss_bytes": 747520000,
+            "position_restraint_k": 1000.0
+          },
+          "minimized": {
+            "stage": "minimized",
+            "time_ps": 0,
+            "potential_kj_mol": -547316.4146419291,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.8153920867006096,
+            "attachment_angstrom": 1.8461072686835749,
+            "adduct_bond_min_ratio": 0.9619080338356517,
+            "adduct_bond_max_ratio": 1.028854643073526,
+            "ca_rmsd_angstrom": 0.16166221279042808,
+            "max_force_kj_mol_nm": 2368.089406100131,
+            "elapsed_seconds": 144.74059870903147,
+            "rss_bytes": 731267072,
+            "position_restraint_k": 1000.0
+          },
+          "final": {
+            "stage": "unrestrained NPT stability",
+            "time_ps": 100,
+            "potential_kj_mol": -458491.57187144324,
+            "temperature_k": 296.28074165600043,
+            "density_g_ml": 1.0286529997495866,
+            "attachment_angstrom": 1.869444872952021,
+            "adduct_bond_min_ratio": 0.9492188926488656,
+            "adduct_bond_max_ratio": 1.0401111723213636,
+            "ca_rmsd_angstrom": 0.8944196671309892,
+            "max_force_kj_mol_nm": 5396.778140812341,
+            "elapsed_seconds": 2576.294911791978,
+            "rss_bytes": 776486912,
+            "position_restraint_k": 0.0
+          },
+          "unrestrained_temperature_mean_k": 300.21818786701516,
+          "attachment_range_angstrom": [
+            1.7203699479226362,
+            1.9532973415436294
+          ],
+          "stereocenter_indices": [
+            [
+              1411,
+              [
+                1409,
+                1475,
+                1412
+              ]
+            ],
+            [
+              1420,
+              [
+                1419,
+                1421,
+                1456
+              ]
+            ]
+          ],
+          "stereochemistry_preserved_at_saved_frames": true,
+          "maximum_ca_rmsd_angstrom": 0.9764399580407686,
+          "input_sha256": {
+            "solvated.prmtop": "6a774dfdae635b07034c9ecb014aa8ebfa411bf83e9cc25459584ac0397de9aa",
+            "solvated.inpcrd": "2dea6e3cce41555b93a5c78c05ce57070342c440e96139b1d84096ea5d2e3f7f",
+            "source-mapping.json": "46854068c2360655d479c9b53cd141afbc65b09a63cb81dd2fb926b9cb367c96"
+          },
+          "elapsed_seconds": 2576.733856167004
+        },
+        "saved_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/5p9j-stability-v1/saved-run-audit.json",
+        "portable_restart": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/5p9j-stability-v1/portable-restart-v2",
+        "portable_restart_roundtrip_verified": true
+      },
+      {
+        "case": "6OIM",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-stability-v1",
+        "result": {
+          "stage": "short_stability_check_complete",
+          "case": "6OIM",
+          "physical_model_validated": false,
+          "app_ready": false,
+          "production_simulation": false,
+          "total_ps": 100,
+          "unrestrained_ps": 70,
+          "protocol": "10 ps 50\u2013300 K NVT ramp; 20 ps restrained NPT; 70 ps unrestrained NPT. 1 bar, 2 fs, PME, H-bond constraints. No constraint or bond restraint on the drug attachment.",
+          "seed": 2026,
+          "initial": {
+            "stage": "before minimization",
+            "time_ps": 0,
+            "potential_kj_mol": 100696040360.05737,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.7987179847367614,
+            "attachment_angstrom": 1.8054273732277366,
+            "adduct_bond_min_ratio": 0.9414544321552318,
+            "adduct_bond_max_ratio": 1.0289597156353605,
+            "ca_rmsd_angstrom": 1.3700860581421315e-14,
+            "max_force_kj_mol_nm": 33147275374902.28,
+            "elapsed_seconds": 0.8589358750032261,
+            "rss_bytes": 588693504,
+            "position_restraint_k": 1000.0,
+            "initial_metal_donor_min_angstrom": 2.1572171888801543,
+            "initial_metal_donor_max_angstrom": 2.1662652192194782
+          },
+          "minimized": {
+            "stage": "minimized",
+            "time_ps": 0,
+            "potential_kj_mol": -429163.0976954719,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.7987179847367614,
+            "attachment_angstrom": 1.8547904230685186,
+            "adduct_bond_min_ratio": 0.9732048025210226,
+            "adduct_bond_max_ratio": 1.0203081515160222,
+            "ca_rmsd_angstrom": 0.11760126233695536,
+            "max_force_kj_mol_nm": 3170.7088442444197,
+            "elapsed_seconds": 121.02829145902069,
+            "rss_bytes": 624066560,
+            "position_restraint_k": 1000.0,
+            "initial_metal_donor_min_angstrom": 1.8797558790812356,
+            "initial_metal_donor_max_angstrom": 2.069020430452377
+          },
+          "final": {
+            "stage": "unrestrained NPT stability",
+            "time_ps": 100,
+            "potential_kj_mol": -361682.7757027375,
+            "temperature_k": 301.4020991195499,
+            "density_g_ml": 1.0239112531738963,
+            "attachment_angstrom": 1.8809313378548658,
+            "adduct_bond_min_ratio": 0.9656736914031986,
+            "adduct_bond_max_ratio": 1.0525754571906174,
+            "ca_rmsd_angstrom": 0.7099900685815588,
+            "max_force_kj_mol_nm": 4882.19420290243,
+            "elapsed_seconds": 1975.0955809170264,
+            "rss_bytes": 650772480,
+            "position_restraint_k": 0.0,
+            "initial_metal_donor_min_angstrom": 1.8943032805708928,
+            "initial_metal_donor_max_angstrom": 2.1560619114072668
+          },
+          "unrestrained_temperature_mean_k": 300.30120076636103,
+          "attachment_range_angstrom": [
+            1.7416503369934917,
+            1.9423578587759147
+          ],
+          "stereocenter_indices": [
+            [
+              184,
+              [
+                182,
+                262,
+                185
+              ]
+            ],
+            [
+              192,
+              [
+                191,
+                193,
+                247
+              ]
+            ]
+          ],
+          "stereochemistry_preserved_at_saved_frames": true,
+          "initial_metal_sites": [
+            {
+              "metal_index": 2775,
+              "donors": [
+                {
+                  "index": 323,
+                  "name": "OG",
+                  "residue_index": 17,
+                  "residue_name": "SER",
+                  "initial_distance_angstrom": 2.1641947694234873
+                },
+                {
+                  "index": 2778,
+                  "name": "O2B",
+                  "residue_index": 171,
+                  "residue_name": "GDP",
+                  "initial_distance_angstrom": 2.1572171888801543
+                },
+                {
+                  "index": 2835,
+                  "name": "O",
+                  "residue_index": 183,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.161323899835468
+                },
+                {
+                  "index": 2865,
+                  "name": "O",
+                  "residue_index": 193,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.166029778188659
+                },
+                {
+                  "index": 2940,
+                  "name": "O",
+                  "residue_index": 218,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.1662652192194782
+                },
+                {
+                  "index": 2961,
+                  "name": "O",
+                  "residue_index": 225,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.1640956540781677
+                }
+              ]
+            }
+          ],
+          "maximum_ca_rmsd_angstrom": 0.853759124528274,
+          "input_sha256": {
+            "solvated.prmtop": "25e5f8af5b703b12d68cf3bbbf2ede278deedee8b620dbd7c2b60e16be620820",
+            "solvated.inpcrd": "55c9e05f94e6c169fef7380ac84b9da9360a39e324b1dbbb27f371d5869d0701",
+            "source-mapping.json": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac"
+          },
+          "elapsed_seconds": 1975.4150147500332
+        },
+        "saved_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-stability-v1/saved-run-audit.json",
+        "portable_restart": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-stability-v1/portable-restart-v2",
+        "portable_restart_roundtrip_verified": true,
+        "superseded_protocol_qualification": true,
+        "superseded_reason": "Native GDP elements were unspecified after atom-type scoping; 12 GDP H constraints were absent. Original results remain unchanged. Corrected 6oim-stability-v2 is required."
+      },
+      {
+        "case": "6JX0",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jx0-stability-v1",
+        "result": {
+          "stage": "short_stability_check_complete",
+          "case": "6JX0",
+          "physical_model_validated": false,
+          "app_ready": false,
+          "production_simulation": false,
+          "total_ps": 100,
+          "unrestrained_ps": 70,
+          "protocol": "10 ps 50\u2013300 K NVT ramp; 20 ps restrained NPT; 70 ps unrestrained NPT. 1 bar, 2 fs, PME, H-bond constraints. No constraint or bond restraint on the drug attachment.",
+          "seed": 2026,
+          "initial": {
+            "stage": "before minimization",
+            "time_ps": 0,
+            "potential_kj_mol": 22899183.20000274,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.8246753498542644,
+            "attachment_angstrom": 1.7946400753354461,
+            "adduct_bond_min_ratio": 0.9387059536909964,
+            "adduct_bond_max_ratio": 1.0434765961856995,
+            "ca_rmsd_angstrom": 1.306964134175505e-14,
+            "max_force_kj_mol_nm": 3670416944.4563694,
+            "elapsed_seconds": 1.3048132910043932,
+            "rss_bytes": 1047085056,
+            "position_restraint_k": 1000.0
+          },
+          "minimized": {
+            "stage": "minimized",
+            "time_ps": 0,
+            "potential_kj_mol": -825894.4911188105,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.8246753498542644,
+            "attachment_angstrom": 1.8426166421668964,
+            "adduct_bond_min_ratio": 0.9733138204514727,
+            "adduct_bond_max_ratio": 1.0165226191404342,
+            "ca_rmsd_angstrom": 0.17234411455149007,
+            "max_force_kj_mol_nm": 2704.712742510884,
+            "elapsed_seconds": 194.46688675001496,
+            "rss_bytes": 1078378496,
+            "position_restraint_k": 1000.0
+          },
+          "final": {
+            "stage": "unrestrained NPT stability",
+            "time_ps": 100,
+            "potential_kj_mol": -688499.4397862108,
+            "temperature_k": 300.865103443173,
+            "density_g_ml": 1.0155595879815584,
+            "attachment_angstrom": 1.8718856284738181,
+            "adduct_bond_min_ratio": 0.9546858101605168,
+            "adduct_bond_max_ratio": 1.0528951055793523,
+            "ca_rmsd_angstrom": 1.000278303457796,
+            "max_force_kj_mol_nm": 4636.31094708235,
+            "elapsed_seconds": 3540.6700884579914,
+            "rss_bytes": 1171636224,
+            "position_restraint_k": 0.0
+          },
+          "unrestrained_temperature_mean_k": 300.5105783096016,
+          "attachment_range_angstrom": [
+            1.762989216495602,
+            1.9349473698385489
+          ],
+          "stereocenter_indices": [
+            [
+              1546,
+              [
+                1544,
+                1624,
+                1547
+              ]
+            ]
+          ],
+          "stereochemistry_preserved_at_saved_frames": true,
+          "initial_metal_sites": [],
+          "maximum_ca_rmsd_angstrom": 1.1239900630822737,
+          "input_sha256": {
+            "solvated.prmtop": "b175dcbb90e129acbb398eaa224588dfddf8979efd3604bcb185c960de9c2112",
+            "solvated.inpcrd": "456ac597f883987095e5d1dd4f20aad377ef5dc5e370e31fff726e496eddb0ea",
+            "source-mapping.json": "225a5a48bcba42b53dbf1984ff99ecd988b6957698ab64cdb06a1a159c88d223"
+          },
+          "elapsed_seconds": 3541.280571957992
+        },
+        "saved_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jx0-stability-v1/saved-run-audit.json",
+        "portable_restart": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jx0-stability-v1/portable-restart-v2",
+        "portable_restart_roundtrip_verified": true
+      },
+      {
+        "case": "6OIM",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-stability-v2",
+        "result": {
+          "stage": "short_stability_check_complete",
+          "case": "6OIM",
+          "physical_model_validated": false,
+          "app_ready": false,
+          "production_simulation": false,
+          "total_ps": 100,
+          "unrestrained_ps": 70,
+          "protocol": "10 ps 50\u2013300 K NVT ramp; 20 ps restrained NPT; 70 ps unrestrained NPT. 1 bar, 2 fs, PME, H-bond constraints. No constraint or bond restraint on the drug attachment.",
+          "seed": 2026,
+          "initial": {
+            "stage": "before minimization",
+            "time_ps": 0,
+            "potential_kj_mol": 100696040519.87387,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.7988033610756409,
+            "attachment_angstrom": 1.8054273732277366,
+            "adduct_bond_min_ratio": 0.9414544321552318,
+            "adduct_bond_max_ratio": 1.0289597156353605,
+            "ca_rmsd_angstrom": 1.3700860581421315e-14,
+            "max_force_kj_mol_nm": 33147275374902.28,
+            "elapsed_seconds": 0.7325167079688981,
+            "rss_bytes": 587546624,
+            "position_restraint_k": 1000.0,
+            "initial_metal_donor_min_angstrom": 2.1572171888801543,
+            "initial_metal_donor_max_angstrom": 2.1662652192194782
+          },
+          "minimized": {
+            "stage": "minimized",
+            "time_ps": 0,
+            "potential_kj_mol": -427509.72932053887,
+            "temperature_k": 0.0,
+            "density_g_ml": 0.7988033610756409,
+            "attachment_angstrom": 1.8552236527485073,
+            "adduct_bond_min_ratio": 0.9717916357127259,
+            "adduct_bond_max_ratio": 1.0206665083791047,
+            "ca_rmsd_angstrom": 0.12011327692816401,
+            "max_force_kj_mol_nm": 3194.2686299447623,
+            "elapsed_seconds": 87.68356841697823,
+            "rss_bytes": 622542848,
+            "position_restraint_k": 1000.0,
+            "initial_metal_donor_min_angstrom": 1.8839180864504792,
+            "initial_metal_donor_max_angstrom": 2.074297591008829
+          },
+          "final": {
+            "stage": "unrestrained NPT stability",
+            "time_ps": 100,
+            "potential_kj_mol": -361868.8021333889,
+            "temperature_k": 300.6106316907194,
+            "density_g_ml": 1.0243191514416519,
+            "attachment_angstrom": 1.83026719276593,
+            "adduct_bond_min_ratio": 0.9640018677969017,
+            "adduct_bond_max_ratio": 1.0624534672994754,
+            "ca_rmsd_angstrom": 0.6820554709632319,
+            "max_force_kj_mol_nm": 5467.493910469285,
+            "elapsed_seconds": 1762.7073320829659,
+            "rss_bytes": 649052160,
+            "position_restraint_k": 0.0,
+            "initial_metal_donor_min_angstrom": 1.903038839533266,
+            "initial_metal_donor_max_angstrom": 2.2122194237601684
+          },
+          "unrestrained_temperature_mean_k": 300.37739584388146,
+          "attachment_range_angstrom": [
+            1.7616522483281258,
+            1.9560016566930425
+          ],
+          "stereocenter_indices": [
+            [
+              184,
+              [
+                182,
+                262,
+                185
+              ]
+            ],
+            [
+              192,
+              [
+                191,
+                193,
+                247
+              ]
+            ]
+          ],
+          "stereochemistry_preserved_at_saved_frames": true,
+          "initial_metal_sites": [
+            {
+              "metal_index": 2775,
+              "donors": [
+                {
+                  "index": 323,
+                  "name": "OG",
+                  "residue_index": 17,
+                  "residue_name": "SER",
+                  "initial_distance_angstrom": 2.1641947694234873
+                },
+                {
+                  "index": 2778,
+                  "name": "O2B",
+                  "residue_index": 171,
+                  "residue_name": "GDP",
+                  "initial_distance_angstrom": 2.1572171888801543
+                },
+                {
+                  "index": 2835,
+                  "name": "O",
+                  "residue_index": 183,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.161323899835468
+                },
+                {
+                  "index": 2865,
+                  "name": "O",
+                  "residue_index": 193,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.166029778188659
+                },
+                {
+                  "index": 2940,
+                  "name": "O",
+                  "residue_index": 218,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.1662652192194782
+                },
+                {
+                  "index": 2961,
+                  "name": "O",
+                  "residue_index": 225,
+                  "residue_name": "WAT",
+                  "initial_distance_angstrom": 2.1640956540781677
+                }
+              ]
+            }
+          ],
+          "maximum_ca_rmsd_angstrom": 0.7379604136322698,
+          "input_sha256": {
+            "solvated.prmtop": "d4a3c152a0a39d0c5a5dce8903178f0823a8da164d7a5bade438475c505f3f6c",
+            "solvated.inpcrd": "ae4458509ed494c5d3d9f85a70d6a9f57a1a5c6b6a67219e30cd988e39cf2521",
+            "source-mapping.json": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac"
+          },
+          "elapsed_seconds": 1762.9818247079966
+        },
+        "saved_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-stability-v2/saved-run-audit.json",
+        "portable_restart": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-stability-v2/portable-restart-v1",
+        "portable_restart_roundtrip_verified": true,
+        "corrected_element_metadata": true
+      }
+    ],
+    "active_control_preparation": [],
+    "egfr_control": {
+      "case": "6JX0",
+      "source": "https://www.rcsb.org/structure/6JX0",
+      "source_sha256": "569f419879afcec3065210391052d2535ac62df39ae1e5d09d7289fa7d9c93a7",
+      "internal_gaps": 0,
+      "protein_intermediate_complete": true,
+      "original_6JXT_failure_preserved": true,
+      "native_charge_complete": true,
+      "native_peptide_complete": true,
+      "full_complex_atoms": 53791,
+      "full_complex": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jx0-complex-v1",
+      "excluded_nonadduct_drug_copies": [
+        [
+          "C",
+          "1102",
+          "YY3"
+        ],
+        [
+          "D",
+          "1103",
+          "YY3"
+        ]
+      ],
+      "stability_complete": true,
+      "saved_trajectory_and_restart_verified": true
+    },
+    "physical_assessment_needed": [
+      "Attachment torsion potential and charge protocol",
+      "KRAS Mg\u2013GDP contact shortening in both engines",
+      "Persistent EGFR loop peptide deformation versus transient control excursions",
+      "Broader loop and frozen chemistry-panel regression",
+      "App lifecycle integration"
+    ],
+    "source_panels_still_match_frozen_sha256": true,
+    "next_steps": "Track A: Focused flank-protection tests and independent review passed. Run one new fresh preparation with immediate observed peptide neighbors protected from preliminary chi sampling. Preserve raw-source and common-reference 1 A caps, H/state identity, all retained chemistry and pinned parameters. Generate candidates from the exact new source context hash; run the complete validator and verify its bound saved outputs before returning coordinates to the real worker. Then the frozen panel including all 8K5R gaps and the second 12-residue case. Do not refine the incompatible captured reference or resample archived successful proposals in place of integration. App enablement, packaging and video remain gated. Track B: End repeated retrieval on the same routes. An explicit new primary artifact or a separately scoped documented alternative model is needed before any modified complete-complex topology; retain all required chemistry and do not silently substitute a generic charge/type set. No paid services, PatAgent, large QM restart, commit/push or publication.",
+    "peptide_gromacs_checks": {
+      "passed_cases": [
+        "5P9J",
+        "6OIM",
+        "6JX0"
+      ],
+      "failed_case": "6JXT",
+      "scope": "Three capped-peptide poses per case, actual GROMACS mixed precision and Reference readers. Full complexes not covered.",
+      "precision_diagnostic": "6jxt-export-precision-diagnostic-v1 fixes double-precision export rounding; native mixed-precision discrepancy remains.",
+      "report": "covalent-v1-focused/CROSS-ENGINE.md"
+    },
+    "mg_gdp_followup": {
+      "loaded_model_verified": true,
+      "replacement_accepted": false,
+      "published_candidate": "microMg TIP3P; nucleotide/protein-donor/ion-pair compatibility pending",
+      "source_commit": "e71379d1a88b54221018af53ca54d3c18066ba05",
+      "report": "covalent-v1-focused/MG-GDP-ASSESSMENT.md"
+    },
+    "checked_utc": "2026-09-14T22:04:34.870624+00:00",
+    "native_gromacs_continuations_complete": [
+      {
+        "case": "5P9J",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/5p9j-gromacs-continuation-v3",
+        "duration_ps": 20,
+        "saved_frames": 21,
+        "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/5p9j-gromacs-continuation-v3/result.json",
+        "physical_model_validated": false
+      },
+      {
+        "case": "6JX0",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jx0-gromacs-continuation-v1",
+        "duration_ps": 20,
+        "saved_frames": 21,
+        "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jx0-gromacs-continuation-v1/result.json",
+        "physical_model_validated": false
+      },
+      {
+        "case": "6OIM",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-gromacs-continuation-v2",
+        "duration_ps": 20,
+        "saved_frames": 21,
+        "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-gromacs-continuation-v2/result.json",
+        "physical_model_validated": false
+      }
+    ],
+    "element_metadata_correction": {
+      "source": "gdp-scoped-v6",
+      "complete_complex": "6oim-complex-v3",
+      "atoms": 27477,
+      "constraints": 26041,
+      "explicit_native_elements_verified": true,
+      "dry_model_unconstrained_mechanics_preserved": true,
+      "old_candidates_preserved": [
+        "gdp-scoped-v5",
+        "6oim-complex-v2",
+        "6oim-stability-v1",
+        "6oim-gromacs-continuation-v1"
+      ],
+      "report": "covalent-v1-focused/HANDOFF-AND-LOOPS.md"
+    },
+    "egfr_loop_candidate": {
+      "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-coherent-context-v3",
+      "local_geometry_and_stereochemistry_passed": true,
+      "maximum_observed_context_displacement_nm": 0.0789347832074045,
+      "full_environment_validated": false,
+      "retained_environment_geometry_checked": true,
+      "retained_environment_geometry_passed": true,
+      "retained_environment_report": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-retained-environment-check-v2/result.json",
+      "external_soft_overlap_count": 0,
+      "previous_clash_distance_angstrom": 2.8994208042296994,
+      "protein_intermediate": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-protein-v5",
+      "full_complex_assembled": true,
+      "full_complex": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-complex-v1",
+      "solvated_atoms": 42900,
+      "all_deposited_environment_retained": true,
+      "temporary_construction_forces_absent_from_md": true,
+      "app_ready": false,
+      "full_complex_loop_screen": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-complex-loop-check-v1/000-assembled.json",
+      "full_complex_dynamics_qualified": false,
+      "revised_warmup_last_passing_ps": 6,
+      "revised_warmup_minimized_omega_deviation_degrees": 23.3222408272307,
+      "revised_warmup_rejected_at_ps": 7,
+      "diagnostic_run": null,
+      "template_comparison": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-template-comparison-v1/result.json",
+      "completed_diagnostic_run": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3",
+      "completed_diagnostic_runs": [
+        "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3",
+        "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v4"
+      ],
+      "native_ramachandran_reference": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-refined-rama-v2/result.json",
+      "native_ramachandran_outliers": [
+        [
+          "A",
+          "751",
+          "",
+          "THR"
+        ],
+        [
+          "A",
+          "752",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "866",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "874",
+          "",
+          "GLY"
+        ]
+      ],
+      "preparation_quality_accepted_after_rama_audit": false,
+      "permitted_for_new_native_assembly": false,
+      "historical_intermediate_and_diagnostics_preserved": true
+    },
+    "egfr_preserved_loop_candidates": [
+      {
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-coherent-context-v2",
+        "local_geometry_and_stereochemistry_passed": true,
+        "maximum_observed_context_displacement_nm": 0.07892006479070363,
+        "full_environment_validated": false,
+        "full_complex_assembled": false,
+        "app_ready": false,
+        "retained_environment_geometry_checked": true,
+        "retained_environment_geometry_passed": false,
+        "retained_environment_report": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-retained-environment-check-v1/result.json",
+        "rejected_for_full_assembly": true,
+        "reason": "Rebuilt GLY A873 O is 1.02249 angstrom from retained water D1226 O. Protein-only local refinement omitted retained molecules; preserve the water and reject this candidate pending environment-aware repair."
+      }
+    ],
+    "failed_stability_jobs": [
+      {
+        "case": "6JXT",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-v1",
+        "rejected_at_ps": 1,
+        "last_passing_stage": "complete-complex minimization",
+        "failure": {
+          "type": "ValueError",
+          "error": "Full-complex loop geometry/stereochemistry failed: /Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-v1/loop-checks/001-NVT-temperature-ramp.json"
+        },
+        "diagnosis": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-v1/loop-failure-diagnosis.json",
+        "all_evidence_preserved": true
+      },
+      {
+        "case": "6JXT",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-v2",
+        "rejected_at_ps": 7,
+        "last_passing_ps": 6,
+        "failure": {
+          "type": "ValueError",
+          "error": "Full-complex loop geometry/stereochemistry failed: /Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-v2/loop-checks/007-NVT-temperature-ramp.json"
+        },
+        "reason": "ALA750\u2013THR751 omega departed 38.383 degrees from cis/trans planarity; all source criteria remain unchanged. Freeing the remodeled region alone did not resolve the concern.",
+        "all_evidence_preserved": true
+      }
+    ],
+    "peptide_planarity_diagnostic": {
+      "report": "covalent-v1-focused/PEPTIDE-PLANARITY-DIAGNOSTIC.md",
+      "saved_control_cases": [
+        "6JX0",
+        "5P9J",
+        "6OIM"
+      ],
+      "all_controls_have_isolated_static_cutoff_excursions": true,
+      "source_preparation_35_degree_limit_unchanged": true,
+      "first_7_ps_target_peptide_mean_deviation_degrees": 27.960464477539062,
+      "first_7_ps_reference_peptide_mean_deviation_degrees": 2.649784633091518,
+      "reference_is_distinct_genotype_and_conformation": true,
+      "no_failure_reclassified_as_success": true,
+      "native_frame_admission_checks_passed": 6,
+      "diagnostic_endpoint_handoff_refusals_passed": 2,
+      "evidence": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/loop-monitor-diagnostic-admission-v1",
+      "completed_run": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3",
+      "completed_frames": 100,
+      "failed_geometry_frames": [
+        6,
+        7,
+        13,
+        20,
+        21,
+        22,
+        23,
+        24,
+        28,
+        29,
+        30,
+        43,
+        45,
+        52,
+        63,
+        71,
+        85,
+        92,
+        93,
+        98
+      ],
+      "target_peptide_windows": [
+        {
+          "phase": "restrained heating",
+          "ps": [
+            1,
+            10
+          ],
+          "mean_deviation_degrees": 30.019215393066407,
+          "maximum_deviation_degrees": 50.26531982421875,
+          "samples_over_35_degrees": 2
+        },
+        {
+          "phase": "restrained NPT",
+          "ps": [
+            11,
+            30
+          ],
+          "mean_deviation_degrees": 35.03239479064941,
+          "maximum_deviation_degrees": 55.35717010498047,
+          "samples_over_35_degrees": 9
+        },
+        {
+          "phase": "unrestrained NPT",
+          "ps": [
+            31,
+            100
+          ],
+          "mean_deviation_degrees": 11.203373500279017,
+          "maximum_deviation_degrees": 35.20176696777344,
+          "samples_over_35_degrees": 1
+        }
+      ],
+      "independent_completed_crosscheck": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-completed-loop-diagnostic-v2/result.json",
+      "restraint_contribution_is_hypothesis_not_established": true,
+      "active_matched_comparison": null,
+      "summary_schedule_admission_checks": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/summary-schedule-admission-v1/result.json",
+      "completed_matched_comparison": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-warmup-comparison-v1/result.json",
+      "comparison_completed_run": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v4",
+      "comparison_failed_geometry_frames": [
+        4,
+        5,
+        14,
+        22,
+        26,
+        28,
+        33,
+        34,
+        43,
+        62,
+        87,
+        92,
+        97
+      ],
+      "comparison_target_peptide_windows": [
+        {
+          "phase": "unrestrained heating",
+          "ps": [
+            1,
+            10
+          ],
+          "mean_deviation_degrees": 27.479411315917968,
+          "maximum_deviation_degrees": 42.410675048828125,
+          "samples_over_35_degrees": 2
+        },
+        {
+          "phase": "unrestrained NPT equilibration",
+          "ps": [
+            11,
+            30
+          ],
+          "mean_deviation_degrees": 16.99911422729492,
+          "maximum_deviation_degrees": 32.50630187988281,
+          "samples_over_35_degrees": 0
+        },
+        {
+          "phase": "unrestrained NPT",
+          "ps": [
+            31,
+            100
+          ],
+          "mean_deviation_degrees": 23.13724931989397,
+          "maximum_deviation_degrees": 41.011627197265625,
+          "samples_over_35_degrees": 4
+        }
+      ],
+      "warmup_change_accepted": false,
+      "matched_comparison_conclusion": "Earlier restraint release improves target peptide mean in 11-30 ps (35.03 to 17.00 degrees) but worsens 31-100 ps (11.20 to 23.14 degrees). Total loop flags fall from 20 to 13; no default change or diagnostic handoff is accepted.",
+      "native_target_parameters": {
+        "report": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-target-native-terms-comparison-v1/result.json",
+        "comparison_case": "6JX0",
+        "selected_residues": [
+          "A:750:ALA",
+          "A:751:THR"
+        ],
+        "all_compared_terms_equal": true,
+        "counts": {
+          "atoms": 24,
+          "bonds": 25,
+          "angles": 47,
+          "proper_torsions": 137,
+          "improper_torsions": 6
+        },
+        "scope": "All native atom properties and bonded terms touching the selected residues, including neighboring endpoints. Identical parameters do not establish native coordinates, surrounding nonbonded environment, or a physically accurate loop ensemble."
+      }
+    },
+    "completed_diagnostic_jobs": [
+      {
+        "case": "6JXT",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3",
+        "total_ps": 100,
+        "diagnostic_only": true,
+        "qualified_for_handoff": false,
+        "physical_model_validated": false,
+        "app_ready": false,
+        "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3/result.json",
+        "result_sha256": "4a9e01681513e9f48eb60ed92399ea7cea0411905000a3fc126caa6d4123e6a0",
+        "all_sampled_loop_geometry_checks_passed": false,
+        "failed_geometry_frames_ps": [
+          6,
+          7,
+          13,
+          20,
+          21,
+          22,
+          23,
+          24,
+          28,
+          29,
+          30,
+          43,
+          45,
+          52,
+          63,
+          71,
+          85,
+          92,
+          93,
+          98
+        ],
+        "saved_frames_verified": 100,
+        "saved_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3/saved-run-audit.json",
+        "portable_restart": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v3/portable-restart-v1",
+        "portable_restart_roundtrip_verified": true,
+        "loop_diagnostic_crosscheck": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-completed-loop-diagnostic-v2/result.json",
+        "maximum_native_vs_dcd_angle_error_degrees": 0.0005427167906475461
+      },
+      {
+        "case": "6JXT",
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v4",
+        "total_ps": 100,
+        "diagnostic_only": true,
+        "qualified_for_handoff": false,
+        "physical_model_validated": false,
+        "app_ready": false,
+        "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v4/result.json",
+        "result_sha256": "93f25e65099c5c7bb89b152726518a4380514dd7c785b929a56ef0880d36ef3b",
+        "all_sampled_loop_geometry_checks_passed": false,
+        "failed_geometry_frames_ps": [
+          4,
+          5,
+          14,
+          22,
+          26,
+          28,
+          33,
+          34,
+          43,
+          62,
+          87,
+          92,
+          97
+        ],
+        "saved_frames_verified": 100,
+        "saved_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v4/saved-run-audit.json",
+        "portable_restart": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-stability-diagnostic-v4/portable-restart-v1",
+        "portable_restart_roundtrip_verified": true,
+        "loop_diagnostic_crosscheck": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-completed-loop-diagnostic-v3/result.json",
+        "maximum_native_vs_dcd_angle_error_degrees": 0.00042342540024264963,
+        "warmup_restraints_released_before_heating": true,
+        "final_70_ps_temperature_mean_k": 300.77827198844614
+      }
+    ],
+    "native_relaxation_experiments": [
+      {
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-native-relaxation-v1",
+        "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-native-relaxation-v1/result.json",
+        "displacements": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-native-relaxation-v1/displacement-breakdown.json",
+        "completed": true,
+        "promoted_to_preparation": false,
+        "used_for_dynamics": false,
+        "improved_target_peptide": false,
+        "target_omega_deviation_degrees": 33.41082,
+        "maximum_observed_context_movement_angstrom": 4.3909519470351555,
+        "maximum_remaining_force_kj_mol_nm": 2644.069071699945,
+        "scope": "Native unrestrained MD-minimization experiment; no claim of convergence, native loop accuracy or adherence to local-prep displacement cap."
+      }
+    ],
+    "ramachandran_refinement_diagnosis": {
+      "report": "covalent-v1-focused/RAMACHANDRAN-REFINEMENT.md",
+      "cctbx_reference": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/ramachandran-reference-v1/native-runtime.json",
+      "seed_reference": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-seed-rama-v2/result.json",
+      "refined_reference": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-refined-rama-v2/result.json",
+      "seed_outliers": [
+        [
+          "A",
+          "753",
+          "",
+          "PRO"
+        ]
+      ],
+      "refined_outliers": [
+        [
+          "A",
+          "751",
+          "",
+          "THR"
+        ],
+        [
+          "A",
+          "752",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "866",
+          "",
+          "ALA"
+        ],
+        [
+          "A",
+          "874",
+          "",
+          "GLY"
+        ]
+      ],
+      "thr751_favored_to_outlier_during_refinement": true,
+      "full_native_reference_parity_residues": 45,
+      "full_reference_parity": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/cctbx-reference-parity-v2/result.json",
+      "research_exporter_requires_native_rama_check": true,
+      "known_candidate_refused_before_export": true,
+      "admission_evidence": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/rama-export-admission-v1/result.json",
+      "app_integrated": false
+    },
+    "rejected_refinement_experiments": [
+      {
+        "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-conformation-protected-v1",
+        "completed": true,
+        "accepted": false,
+        "native_rama_roundtrip": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-protected-rama-roundtrip-v2/result.json",
+        "remaining_rama_outliers": [
+          [
+            "A",
+            "752",
+            "",
+            "SER"
+          ],
+          [
+            "A",
+            "874",
+            "",
+            "GLY"
+          ]
+        ],
+        "target_omega_deviation_degrees": 42.24156963510217,
+        "maximum_observed_context_displacement_nm": 0.08126877742999845,
+        "used_for_native_assembly_or_dynamics": false,
+        "reason": "Temporary protection keeps THR751 favored but conflicts with peptide planarity and does not eliminate SER752/GLY874 reference outliers. Do not tune thresholds or escalate restraints merely to obtain a pass."
+      }
+    ],
+    "fragment_alternative_comparison": {
+      "output": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-fragment-alternatives-v1",
+      "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-fragment-alternatives-v1/result.json",
+      "result_sha256": "2ab5a2460c27827d728e42f5b07b56534e7f9783401da5a793faf094896a84f1",
+      "coverage_audit": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-fragment-alternatives-v1/coverage-audit.json",
+      "completed_trials": 7,
+      "seed_reference_passes": 4,
+      "passing_local_candidates": 0,
+      "elapsed_seconds": 42.151547624962404,
+      "original_limits_unchanged": true,
+      "app_integrated": false,
+      "finding": "Temporary peptide-planarity construction covers rebuilt residues but omits peptide links solely between explicitly mobile observed context residues. SER752-PRO753 fails in five trials and has no construction tether. Native physical peptide terms are present; causality is not established by coverage alone."
+    },
+    "context_peptide_replay": {
+      "result": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-context-peptide-replay-v1/result.json",
+      "result_sha256": "1308e72cdfa7492f72f6263d45e1d8d30e3024ceb85911e31d845c085b310087",
+      "summary": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-context-peptide-replay-v1/summary.json",
+      "implementation_checks": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-context-peptide-replay-v1/implementation-checks.json",
+      "software_tests_passed": 27,
+      "paired_seeds": 7,
+      "refinements_completed": 14,
+      "passing_candidates": 0,
+      "elapsed_seconds": 61.16066795797087,
+      "initial_coordinates_and_hydrogens_identical_within_pairs": true,
+      "api_option": "preserve_context_peptides",
+      "default_enabled": false,
+      "app_workflow_enables_option": false,
+      "source_observed_isomer_basins_preserved": true,
+      "construction_strength_schedule_unchanged": true,
+      "conclusion": "Coverage correction is implemented and tested as a research opt-in but insufficient for preparation admission: geometry improvement can coincide with stereo or backbone-reference failures. No output is promoted."
+    },
+    "native_kic_probe": {
+      "control": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-kic-feasibility-v2/control/result.json",
+      "egfr": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-kic-feasibility-v2/egfr/result.json",
+      "carbonyl_aligned": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-kic-carbonyl-v1/egfr/result.json",
+      "preserved_adapter_failure": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6jxt-kic-feasibility-v1/result.json",
+      "control_reproduces_observed_backbone_within_angstrom": 7e-06,
+      "egfr_raw_solution_count": 8,
+      "egfr_solutions_within_original_observed_backbone_cap": 0,
+      "minimum_maximum_observed_backbone_displacement_angstrom": 2.070493139792289,
+      "worst_observed_atom": [
+        "A",
+        "749",
+        "",
+        "GLU",
+        "O"
+      ],
+      "carbonyl_aligned_solution_count": 0,
+      "scope": "One saved EGFR seed and fixed internal geometry. No full-atom candidate accepted; no impossibility claim. Native pivots must exclude stem residues. Matching N/CA/C does not enforce observed carbonyl orientation."
+    },
+    "updated_at": "2026-09-14T23:40:23.931560+00:00",
+    "work_tracks": {
+      "release": {
+        "checkpoint": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/current-checkpoint.json",
+        "gated_on_loop_fix": true,
+        "advanced_chemistry_is_release_blocker": false,
+        "status": "Fresh common preparation captured; physical parameter reload verified; preliminary loop-flank chi protection implemented, fresh replay pending",
+        "active_jobs": []
+      },
+      "advanced_chemistry": {
+        "continues_independently": true,
+        "support_unit": "Complete complex including required covalent ligand, ions, cofactors and retained environment",
+        "app_ready": false,
+        "status": "bounded source retrieval complete; candidate DMP graphs recovered, exact fitting input unresolved",
+        "active_jobs": []
+      }
+    },
+    "complete_complex_coordination_audit": {
+      "result": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/6oim-coordination-v4/result.json",
+      "sha256": "87d28be1ab178a4d51ade5cfffce4d8baf7d5f06ac64ce8cd8c0f3d900fa751a",
+      "frames": 121,
+      "on_atoms_searched_per_frame": 8746,
+      "original_six_donors_retained_at_saves": true,
+      "native_model_qualification": false,
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/README.md"
+    },
+    "micromg_applicability": {
+      "inventory": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/micromg-applicability.json",
+      "sha256": "6236804eb8de24cc3d2137fd2e4b8239fba9a379b464ccbb58817407827bd577",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/MICROMG-APPLICABILITY.md",
+      "direct_complete_complex_replacement": false,
+      "key_gap": "GDP coordinating O2B is scoped QR to O3, with no O3 override in the pinned microMg rows; shared LJ values do not justify substitution with differently charged RNA O2. Full protein/adduct pair coverage and exact water variant also differ.",
+      "next": "Bounded source/applicability assessment of published alternatives before native pair transport or complete-complex testing. Do not fit a radius to one crystal pose.",
+      "interpretation_clarification": "Published fitted-override coverage is not equivalent to mathematical default-rule coverage. Missing override alone does not establish unsupported pair physics when an explicit documented default applies. No model assigned by this audit."
+    },
+    "panteva_applicability": {
+      "inventory": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/panteva-applicability.json",
+      "sha256": "9237e5d16a5e961edf7257a6b1a0016bac1695192fdbc6e31df417a82761694b",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/PANTEVA-APPLICABILITY.md",
+      "native_types": 72,
+      "source_rule_covered_after_documented_alias_resolution": 71,
+      "missing_types": [
+        "c6"
+      ],
+      "missing_type_atoms": 4,
+      "gdp_o3_and_ser_oh_have_defined_defaults": true,
+      "openmm_c4_source_path_present": true,
+      "current_gromacs_conversion_c4_path_verified": false,
+      "water_model_change_required": "TIP4P-Ew for reproducing assessed fit",
+      "direct_complete_complex_replacement": false,
+      "all_recorded_inputs_unchanged": true,
+      "next": "Resolve c6 polarizability provenance and explicitly assess DMP/guanosine transfer to the retained GDP(-3) charges; only then build a separate TIP4P-Ew reference topology for static analytic/native C4 energy-force validation. Keep GROMACS unsupported for this candidate until an exact implementation is demonstrated."
+    },
+    "hybrid_loop_fallback": {
+      "status": "bounded hybrid feasibility comparison complete; no candidate admitted",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/COMPLETE-COMPARISON.md",
+      "summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/complete-comparison-summary.json",
+      "summary_sha256": "eb51f381b833a772e3fecea9ba73029bc28602bbd995f7804bbc64751cc6a8ad",
+      "full_artifacts": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1",
+      "completed_complete_complex_refinements": 8,
+      "complete_candidate_passes": 0,
+      "software_regression_tests_passed": 69,
+      "checks_passed": {
+        "identity": 8,
+        "retained_environment": 8,
+        "geometry": 7,
+        "stereochemistry": 8,
+        "backbone_reference": 0,
+        "observed_displacement": 8,
+        "serialized_output": 7,
+        "parameter_integrity": 8
+      },
+      "one_1ua2_native_fragment_has_no_modeled_reference_outliers": true,
+      "remaining_1ua2_fragment_failures": [
+        "newly defined ASN56 phi/psi",
+        "affected source-supported ARG57 outlier (pre-existing, not unchanged)"
+      ],
+      "app_default_enabled": false,
+      "new_md_qm": false,
+      "active_jobs": [],
+      "disgro_private_only": true,
+      "disgro_inherited_redistribution_rights_resolved": false
+    },
+    "boundary_conditioned_comparison": {
+      "status": "15 source-conditioned native attempts and12 complete-complex refinements complete; no admitted candidate",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/CONDITIONED-COMPLETE.md",
+      "native_summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/conditioned-native-summary.json",
+      "native_summary_sha256": "fe457dc7e8231b51e9806ceb99431fada4769cfd744e883cc8d4c58522d952ed",
+      "complete_summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/conditioned-complete-summary.json",
+      "complete_summary_sha256": "8b393a7ea6840169a14ec4fb292888c475e70947f75daf433d0f9ab8bec85932",
+      "native_attempts": 15,
+      "returned_candidates": 9,
+      "local_masked_control_passes": 3,
+      "local_real_case_passes": 0,
+      "complete_refinements": 12,
+      "complete_candidate_passes": 0,
+      "complete_checks_passed": {
+        "identity": 12,
+        "retained_environment": 12,
+        "geometry": 12,
+        "stereochemistry": 11,
+        "backbone_reference": 0,
+        "observed_displacement": 12,
+        "serialized_output": 11,
+        "parameter_integrity": 12
+      },
+      "real_source_boundaries_supplied": true,
+      "raw_1ua2_displacement_failures_localized_to": "ILE43 O",
+      "best_full_candidate": "torsion-source-ccd-43-56-seed-2027-mobile_flanks",
+      "best_full_remaining_reference_failure": "ARG57 is pre-existing but its defining ASN56 C moved; no exemption applied",
+      "native_jobs_active": [],
+      "app_default_enabled": false,
+      "new_md_qm": false,
+      "next_design": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/CARBONYL-LOCK-DESIGN.md",
+      "shifted_anchor_intact_control": {
+        "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/carbonyl-lock-design-v1/intact-control.json",
+        "sha256": "c39cd2fbe9b65d13d61e78553a1b4076e2510562e78e3c5a14325a076590f0ae",
+        "target_protein_search_performed": false
+      }
+    },
+    "c6_gdp_transfer_audit": {
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/c6-gdp-transfer/REPORT.md",
+      "evidence": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/c6-gdp-transfer/evidence.json",
+      "evidence_sha256": "49e56603aa51dfcf2e19af88efcd9ae08a552c03e4b7722d61e749853622da85",
+      "official_c6_mapping_found": false,
+      "gdp_base_charges_matching_guanosine": 15,
+      "matching_type_names": 14,
+      "fitted_gdp_transfer_validated": false,
+      "exact_dmp_fit_charges_recovered": false,
+      "inputs_verified_unchanged": 26,
+      "new_parameters_assigned": false,
+      "app_ready": false,
+      "active_jobs": [],
+      "next": "Recover explicit carbon-class crosswalk and original fit topology/charge artifacts before creating any modified complete-complex topology; do not substitute undocumented generic sp3 values."
+    },
+    "outer_torsion_anchor_comparison": {
+      "status": "two independently audited archived complete-complex static passes; separate accepted-coordinate handoff also audited",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/OUTER-TORSION-ANCHORS.md",
+      "summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/outer-anchor-summary.json",
+      "summary_sha256": "7139cad8f78075b05cc3ac67fcce99644b5180230aed964d8daffea9422e6849",
+      "full_artifacts": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/outer-torsion-anchors-v1",
+      "complete_refinements": 11,
+      "complete_static_passes": 2,
+      "pass_candidates": [
+        "04-conditioned",
+        "08-shifted"
+      ],
+      "complete_checks_passed": {
+        "identity": 11,
+        "retained_environment": 11,
+        "geometry": 8,
+        "stereochemistry": 11,
+        "observed_displacement": 11,
+        "serialized_output": 8,
+        "parameter_integrity": 11,
+        "backbone_reference": 2
+      },
+      "outer_observed_definitions_exactly_preserved": 852,
+      "previous_reference_selections_unchanged": 20,
+      "software_tests_passed": 27,
+      "accepted_coordinate_handoff": {
+        "status": "accepted",
+        "accepted_candidate": "torsion-source-ccd-2027",
+        "accepted_artifact": {
+          "path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/accepted-coordinate-handoff-v1/search/torsion-source-ccd-2027/validation/refined.npz",
+          "sha256": "99e31cc3175ff7d0a8d6b606e4e4b3fb2456786c15576504bc9945ae3d8ecb23"
+        },
+        "earlier_rejected_candidates": [
+          "archive-fragment",
+          "fragment-source-ccd-2026",
+          "fragment-source-ccd-2027",
+          "torsion-source-ccd-2026"
+        ],
+        "attempts_executed": 5,
+        "progress_events": 15,
+        "all_frozen_inputs_unchanged": true,
+        "final_coordinates_returned_instead_of_proposal_or_report": true,
+        "app_ready": false,
+        "full_preparation_rerun": false,
+        "new_md_or_qm": false
+      },
+      "independent_audit": {
+        "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/REPORT.md",
+        "evidence": {
+          "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/audit-summary.json": "896f4416c7f011e984e3f4bcf38573d05540840b043ffe837a604fc0dc3f8359",
+          "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/handoff-audit-summary.json": "28e68f6cb3af111ffb099e2f125ddcc957cdcace32eeb6959c39ae5df4b684cf",
+          "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/independent-complete-audit/handoff-variation.json": "47ee8dc6ccf1ca80552040338b90eaba8dca681e9d93203cf1ddb939381460d9"
+        },
+        "both_initial_endpoints_and_separate_handoff_pass": true,
+        "physical_parameters_equivalent_after_pdb_reload": true,
+        "native_refinement_bitwise_reproducible": false,
+        "variation": {
+          "candidate-seed.npz": {
+            "all": {
+              "coordinates_bitwise_equal": false,
+              "maximum_difference_A": 0.0010833916099949284,
+              "rms_difference_A": 4.7586683331456396e-05,
+              "maximum_atom": [
+                "A",
+                "43",
+                "ILE",
+                "HG23"
+              ]
+            },
+            "heavy": {
+              "coordinates_bitwise_equal": true,
+              "maximum_difference_A": 0.0,
+              "rms_difference_A": 0.0,
+              "maximum_atom": [
+                "A",
+                "13",
+                "GLU",
+                "N"
+              ]
+            },
+            "hydrogen": {
+              "coordinates_bitwise_equal": false,
+              "maximum_difference_A": 0.0010833916099949284,
+              "rms_difference_A": 6.73186642919441e-05,
+              "maximum_atom": [
+                "A",
+                "43",
+                "ILE",
+                "HG23"
+              ]
+            }
+          },
+          "refined.npz": {
+            "all": {
+              "coordinates_bitwise_equal": false,
+              "maximum_difference_A": 0.5786521611519814,
+              "rms_difference_A": 0.03358675573236197,
+              "maximum_atom": [
+                "A",
+                "53",
+                "ASP",
+                "OD1"
+              ]
+            },
+            "heavy": {
+              "coordinates_bitwise_equal": false,
+              "maximum_difference_A": 0.5786521611519814,
+              "rms_difference_A": 0.03153953707818542,
+              "maximum_atom": [
+                "A",
+                "53",
+                "ASP",
+                "OD1"
+              ]
+            },
+            "hydrogen": {
+              "coordinates_bitwise_equal": false,
+              "maximum_difference_A": 0.5000139457484287,
+              "rms_difference_A": 0.03551849970753883,
+              "maximum_atom": [
+                "A",
+                "54",
+                "GLY",
+                "HA2"
+              ]
+            }
+          }
+        }
+      },
+      "native_jobs_active": [],
+      "app_default_enabled": false,
+      "full_preparation_rerun": false,
+      "release_ready": false,
+      "new_md_qm": false,
+      "next": "Implement the reviewed fresh-source preparation seam: freeze complete source and common chemistry/state/parameter bundles; run the first fragment and every fallback through the same supervised complete validator; preserve coherent native context, outer torsion definitions and exact hydrogen parent identity; bind final coordinates/topology/parameter/provenance sidecars at publication. First exercise 1UA2 through the real worker, without archived modeled-coordinate shortcuts, then the frozen panel including all8K5R gaps and the second12-residue case. Do not run more sampling of these successful1UA2 proposals in place of integration. Keep app default off until the full gates pass; retain the1A movement cap and all chemistry/reference/geometry thresholds."
+    },
+    "fit_artifact_recovery": {
+      "status": "bounded source retrieval complete; candidate DMP graphs recovered, exact fitting input unresolved",
+      "red_db_report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/fit-artifact-recovery/red-db-followup/REPORT.md",
+      "red_db_evidence": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/fit-artifact-recovery/red-db-followup/evidence.json",
+      "red_db_evidence_sha256": "238236d4e683b5b2928fe8a86d27b51812008156ac6aa4426a180ac1f2459329",
+      "primary_followup_report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/fit-artifact-recovery/dupradeau-manuscript-followup/REPORT.md",
+      "primary_followup_evidence": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/fit-artifact-recovery/dupradeau-manuscript-followup/evidence.json",
+      "primary_followup_evidence_sha256": "1d060d4f82fa5ac26cc311cfbd18fcf04f123e2e5572e80229eedd74c14ed231",
+      "candidate_projects": [
+        "W-11",
+        "W-12",
+        "W-13",
+        "W-14"
+      ],
+      "another_orientation_variant": "F-60",
+      "exact_panteva_charge_type_input_identified": false,
+      "c6_mapping_identified": false,
+      "new_parameters_assigned": false,
+      "app_ready": false,
+      "active_jobs": [],
+      "next": "End repeated retrieval on the same routes. An explicit new primary artifact or a separately scoped documented alternative model is needed before any modified complete-complex topology; retain all required chemistry and do not silently substitute a generic charge/type set."
+    },
+    "fresh_source_integration": {
+      "status": "Fresh common preparation captured; physical parameter reload verified; preliminary loop-flank chi protection implemented, fresh replay pending",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/fresh-source-integration/REPORT.md",
+      "report_sha256": "0bed490ab0b52bccb9451588b270e20f850975feda0b4a68429e5ef9e8b24aa0",
+      "snapshot": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-preparation-snapshot-v1-attempt-02/snapshot/snapshot.json",
+      "snapshot_sha256": "b6e228bf42119ad738e86a814cf33611dce23214add4177517f7f825e575b432",
+      "raw_atoms": 2322,
+      "prepared_atoms": 4825,
+      "modeled_residues": 12,
+      "hydrogens_added": 2411,
+      "native_capture_seconds": 51.61064270901261,
+      "peak_sampled_tree_rss_bytes": 206602240,
+      "normal_ligand_am1_bcc_sqm_performed": true,
+      "MD_performed": false,
+      "captured_before_loop_refinement": true,
+      "full_candidate_accepted": false,
+      "physical_parameter_reload": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/fresh-source-integration/fresh-static-parameter-reload-v2.json",
+      "exact_parameter_match_after_undirected_bond_comparison": true,
+      "flank_reference_conflict": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/fresh-source-integration/fresh-flank-reference-conflict.json",
+      "maximum_prior_flank_sidechain_displacement_angstrom": 3.7196503902618163,
+      "correction": "Keep immediate observed peptide neighbors out of preliminary chi sampling; preserve metal protections and defer capped context movement to complete loop refinement.",
+      "software_tests": {
+        "backend_regression_passed": 228,
+        "wrapper_integrity_passed": 11,
+        "latest_comparator_plus_wrapper_passed": 20,
+        "offloaded_demo_fixture_test_unpassed": 1,
+        "new_flank_protection_tests": 6
+      },
+      "active_native_jobs": [],
+      "app_default_fallback_enabled": false,
+      "release_ready": false,
+      "first_failed_runtime_attempt_preserved": true,
+      "flank_fix_independent_review": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/preliminary-flank-protection-review-v1/review.json",
+      "flank_fix_test_file": "/Users/ashujo/Documents/Science/DynaMol/backend/tests/test_preliminary_loop_flanks.py"
+    },
+    "fresh_protected_flank_validation": {
+      "status": "fresh_1ua2_complete_static_checks_passed; frozen representative panel running",
+      "snapshot": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-preparation-protected-flanks-v1/snapshot/snapshot.json",
+      "snapshot_sha256": "753754847678e2d15550f81e3cc2d745f36795c32c3fb38672833d232fbabe4c",
+      "accepted_bundle": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-protected-loop-search-v1/search/torsion-mc-2027/complete/accepted-bundle/bundle.json",
+      "accepted_bundle_sha256": "60e5bd836ad4e4f9146442d8bdfc48295d0085449bacba2f68e0bac6b62254a6",
+      "search_result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/fresh-protected-loop-search-v1/result.json",
+      "search_result_sha256": "61845a24eda8466523b02eb3d5cb09f043e4a866597f19259e3ec61af571e8e4",
+      "raw_flank_preliminary_displacement_angstrom": 0.0,
+      "complete_static_checks": 8,
+      "candidates_evaluated": 3,
+      "selected_candidate": "torsion-mc-2027",
+      "normal_ligand_AM1_BCC_performed": true,
+      "MD_performed": false,
+      "app_publication": false,
+      "app_default_enabled": false
+    },
+    "representative_loop_panel": {
+      "status": "first sweep and bounded comparisons complete; five metal-free static passes, four unresolved, one metal deferred, five expected refusals",
+      "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/fresh-source-integration/PANEL.md",
+      "summary": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/fresh-source-integration/panel-summary.json",
+      "summary_sha256": "226c0a473d88e9379cc40b3298a4c93f6335aaa9a15930bad8a71ef0a179991d",
+      "first_sweep_seconds": 317.1194531659712,
+      "metal_containing_cases_deferred_for_v1": true,
+      "active_full_worker_handoff": null
+    },
+    "next_construction_step": "Fresh1UA2 and1M17 each passed full worker/private publication, final coordinate identity, saved parameter/validation bundle and descendant cleanup. Do not rerun these merely for another pass. Four metal-free multiple-gap cases (8K5R,2CG9,3HEG,2HYY) still fail backbone-reference gates;3HEG also movement/geometry. Closed-fragment seeded8K5R prototype exhausted4attempts and stays private; no further untargeted sampling. Metals explicitly deferred for v1. Next: implement/review generic app integration using verified full-worker seams and bundled reference/runtime handling, retain explicit unsupported-loop outcomes and honest scope; UI/engine/exact installation checks and video before target tomorrow-morning release. No release-ready claim yet.",
+    "full_worker_loop_handoff": {
+      "status": "both_fresh_12_residue_cases_passed_full_worker_and_private_dataset_publication",
+      "cases": {
+        "1UA2": {
+          "status": "completed_private_full_preparation",
+          "dataset_id": "bd9d9957360c4fd4",
+          "dataset_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1UA2/workspace/datasets/bd9d9957360c4fd4",
+          "n_atoms": 4825,
+          "prepared_pdb_sha256": "fec822739b26379c03eecc35bf881caed6873f0a9d4bf6c4b0a2d18955812ef1",
+          "accepted_bundle_sha256": "34f1dde6c877f1c90e4c35e8ed3c73846d856450826e0b006cefe57ce3eb38da",
+          "parameter_sidecars_preserved": true,
+          "bundle_copied_and_verified_in_dataset": true,
+          "app_default_enabled": false,
+          "installed_app_modified": false,
+          "MD_performed": false,
+          "elapsed_seconds": 61.55995491700014,
+          "all_owned_children_exited": true,
+          "result_file": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1UA2/full-preparation-result.json",
+          "result_sha256": "3fbcb3367da9ccc041e98bddd68f843db5db313812f2aea8e3c56722cbd0a943"
+        },
+        "1M17": {
+          "status": "completed_private_full_preparation",
+          "dataset_id": "3d99240aabd6495d",
+          "dataset_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1M17/workspace/datasets/3d99240aabd6495d",
+          "n_atoms": 5265,
+          "prepared_pdb_sha256": "2ab6192173b752c3355fa4d7385d577c35c8ab8852925ee0a70b5c748a0f395f",
+          "accepted_bundle_sha256": "301399db0fb64637b9ef9c2347d2dbf9fed1ae8a6c40c3727ae48d8fea32920a",
+          "parameter_sidecars_preserved": true,
+          "bundle_copied_and_verified_in_dataset": true,
+          "app_default_enabled": false,
+          "installed_app_modified": false,
+          "MD_performed": false,
+          "elapsed_seconds": 69.53080487501575,
+          "all_owned_children_exited": true,
+          "result_file": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1M17/full-preparation-result.json",
+          "result_sha256": "e939f7f89a73361214f341dceef4b08573748db3b7fa04e290eec108a53f0dc7"
+        }
+      },
+      "active_jobs": [],
+      "four_other_metal_free_loop_cases_unresolved": true,
+      "metal_cases_deferred_for_v1": true,
+      "app_default_enabled": false,
+      "release_ready": false
+    }
+  }
+}

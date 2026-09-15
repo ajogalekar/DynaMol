@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 386, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 327, in calculate
+    potential,check=electrostatic_potential(mol,density,points,data['esp_batch_size'],data['esp_crosscheck_points'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 182, in electrostatic_potential
+    raise ValueError('An ESP point coincides with a nucleus; potential is singular')
+ValueError: An ESP point coincides with a nucleus; potential is singular

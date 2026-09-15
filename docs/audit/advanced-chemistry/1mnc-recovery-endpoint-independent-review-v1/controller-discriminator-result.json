@@ -1,0 +1,159 @@
+{
+  "scope": "Exact AST-extracted controller validator only, with synthetic metadata. No native endpoint, checkpoint, arrays or QM.",
+  "source_sha256": "6ae8763596e763c4b18840f850e0fc8a7bef7bea3c018fe35bcb87bd9da99567",
+  "cases": [
+    {
+      "case": "missing_child_pid",
+      "admitted": true,
+      "error": null,
+      "synthetic_controller_metadata": {
+        "schema_version": 1,
+        "status": "numerically_complete_pending_geometry_review",
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": false,
+        "simulation_ready": false,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2,
+          "outer_wall_seconds": 21720
+        }
+      }
+    },
+    {
+      "case": "boolean_schema",
+      "admitted": true,
+      "error": null,
+      "synthetic_controller_metadata": {
+        "schema_version": true,
+        "status": "numerically_complete_pending_geometry_review",
+        "child_pid": null,
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": false,
+        "simulation_ready": false,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2,
+          "outer_wall_seconds": 21720
+        }
+      }
+    },
+    {
+      "case": "integer_physical_flag",
+      "admitted": true,
+      "error": null,
+      "synthetic_controller_metadata": {
+        "schema_version": 1,
+        "status": "numerically_complete_pending_geometry_review",
+        "child_pid": null,
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": 0,
+        "simulation_ready": false,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2,
+          "outer_wall_seconds": 21720
+        }
+      }
+    },
+    {
+      "case": "integer_simulation_flag",
+      "admitted": true,
+      "error": null,
+      "synthetic_controller_metadata": {
+        "schema_version": 1,
+        "status": "numerically_complete_pending_geometry_review",
+        "child_pid": null,
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": false,
+        "simulation_ready": 0,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2,
+          "outer_wall_seconds": 21720
+        }
+      }
+    },
+    {
+      "case": "float_thread_count",
+      "admitted": true,
+      "error": null,
+      "synthetic_controller_metadata": {
+        "schema_version": 1,
+        "status": "numerically_complete_pending_geometry_review",
+        "child_pid": null,
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": false,
+        "simulation_ready": false,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2.0,
+          "outer_wall_seconds": 21720
+        }
+      }
+    },
+    {
+      "case": "failed_status",
+      "admitted": false,
+      "error": "No terminal completed controller record",
+      "synthetic_controller_metadata": {
+        "schema_version": 1,
+        "status": "failed",
+        "child_pid": null,
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": false,
+        "simulation_ready": false,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2,
+          "outer_wall_seconds": 21720
+        }
+      }
+    },
+    {
+      "case": "live_child",
+      "admitted": false,
+      "error": "No terminal completed controller record",
+      "synthetic_controller_metadata": {
+        "schema_version": 1,
+        "status": "numerically_complete_pending_geometry_review",
+        "child_pid": 123,
+        "spec_sha256": "spec",
+        "controller_sha256": "controller",
+        "result_sha256": "native",
+        "physical_acceptance": false,
+        "simulation_ready": false,
+        "peak_sampled_rss_bytes": 7000000000,
+        "limits": {
+          "native_memory_mb": 2000,
+          "max_rss_bytes": 8000000000,
+          "threads": 2,
+          "outer_wall_seconds": 21720
+        }
+      }
+    }
+  ]
+}

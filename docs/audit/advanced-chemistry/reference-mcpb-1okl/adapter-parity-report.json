@@ -1,0 +1,236 @@
+{
+  "status": "passed",
+  "reference": "official Amber MCPB 1OKL tutorial",
+  "scope": "Native parameter/ESP adapter parity only; no new QM or new-site accuracy validation",
+  "reference_fchk_sha256": "43d33d9dde0076efd8be26ab8d7559662d87834d00e6c7fd2a1a59de1c2f6f8b",
+  "independent_fchk_coordinates_equal_native": true,
+  "independent_fchk_hessian_equal_native": true,
+  "published_parameter_comparisons": [
+    {
+      "kind": "bonds",
+      "name": "M1-Y4",
+      "pass": true,
+      "observed_k": 101.21024107164031,
+      "published_k": 101.2,
+      "observed_equilibrium": 1.9618696291573143,
+      "published_equilibrium": 1.9619,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "bonds",
+      "name": "Y1-M1",
+      "pass": true,
+      "observed_k": 72.72879956865121,
+      "published_k": 72.7,
+      "observed_equilibrium": 2.022940543796755,
+      "published_equilibrium": 2.0229,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "bonds",
+      "name": "Y2-M1",
+      "pass": true,
+      "observed_k": 57.64509047211422,
+      "published_k": 57.6,
+      "observed_equilibrium": 2.061035239688183,
+      "published_equilibrium": 2.061,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "bonds",
+      "name": "Y3-M1",
+      "pass": true,
+      "observed_k": 66.27505261246148,
+      "published_k": 66.3,
+      "observed_equilibrium": 2.035425203498485,
+      "published_equilibrium": 2.0354,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "CC-Y3-M1",
+      "pass": true,
+      "observed_k": 53.872975327899404,
+      "published_k": 53.87,
+      "observed_equilibrium": 131.47874701681238,
+      "published_equilibrium": 131.48,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "CR-Y1-M1",
+      "pass": true,
+      "observed_k": 48.758471787988796,
+      "published_k": 48.76,
+      "observed_equilibrium": 123.52558163673804,
+      "published_equilibrium": 123.53,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "CR-Y2-M1",
+      "pass": true,
+      "observed_k": 49.4603091291439,
+      "published_k": 49.46,
+      "observed_equilibrium": 126.21030334037327,
+      "published_equilibrium": 126.21,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "M1-Y1-CV",
+      "pass": true,
+      "observed_k": 51.32812665888044,
+      "published_k": 51.33,
+      "observed_equilibrium": 129.91299073739054,
+      "published_equilibrium": 129.91,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "M1-Y2-CV",
+      "pass": true,
+      "observed_k": 49.776531052333375,
+      "published_k": 49.78,
+      "observed_equilibrium": 126.99937319815575,
+      "published_equilibrium": 127.0,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "M1-Y3-CR",
+      "pass": true,
+      "observed_k": 54.20989024527015,
+      "published_k": 54.21,
+      "observed_equilibrium": 121.16730442981148,
+      "published_equilibrium": 121.17,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "M1-Y4-hn",
+      "pass": true,
+      "observed_k": 44.075160511494545,
+      "published_k": 44.08,
+      "observed_equilibrium": 119.67854608082928,
+      "published_equilibrium": 119.68,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "M1-Y4-sy",
+      "pass": true,
+      "observed_k": 75.33798918568206,
+      "published_k": 75.34,
+      "observed_equilibrium": 113.36901745028072,
+      "published_equilibrium": 113.37,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "Y1-M1-Y2",
+      "pass": true,
+      "observed_k": 36.667357495590295,
+      "published_k": 36.67,
+      "observed_equilibrium": 104.49702812910482,
+      "published_equilibrium": 104.5,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "Y1-M1-Y3",
+      "pass": true,
+      "observed_k": 32.4189548200521,
+      "published_k": 32.42,
+      "observed_equilibrium": 112.71207948260802,
+      "published_equilibrium": 112.71,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "Y1-M1-Y4",
+      "pass": true,
+      "observed_k": 47.921960818928575,
+      "published_k": 47.92,
+      "observed_equilibrium": 114.6896343800111,
+      "published_equilibrium": 114.69,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "Y2-M1-Y3",
+      "pass": true,
+      "observed_k": 34.854558193539255,
+      "published_k": 34.85,
+      "observed_equilibrium": 105.07773431642144,
+      "published_equilibrium": 105.08,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "Y2-M1-Y4",
+      "pass": true,
+      "observed_k": 44.498034077128445,
+      "published_k": 44.5,
+      "observed_equilibrium": 104.18832558990788,
+      "published_equilibrium": 104.19,
+      "comparison": "exact agreement at native published decimal precision"
+    },
+    {
+      "kind": "angles",
+      "name": "Y3-M1-Y4",
+      "pass": true,
+      "observed_k": 26.96056398520081,
+      "published_k": 26.96,
+      "observed_equilibrium": 114.24609908274988,
+      "published_equilibrium": 114.25,
+      "comparison": "exact agreement at native published decimal precision"
+    }
+  ],
+  "esp": {
+    "atom_count": 113,
+    "point_count": 3540,
+    "coordinate_unit": "bohr",
+    "potential_unit": "hartree per elementary charge",
+    "sha256": "89d7e8f6e92e6dafd71d77dae2e23d97fa28873726b1c3b14ebefebaba30e029",
+    "byte_identical_to_native_gaussian_extractor": true
+  },
+  "guard_checks": {
+    "wrong_hessian_shape": {
+      "rejected": true,
+      "reason": "Hessian shape (227, 228) != (228, 228)"
+    },
+    "nonfinite_hessian": {
+      "rejected": true,
+      "reason": "Hessian is not finite"
+    },
+    "duplicate_atom_identity": {
+      "rejected": true,
+      "reason": "atom_ids must be nonempty and unique"
+    },
+    "unmapped_angle_graph": {
+      "rejected": true,
+      "reason": "Angle CC-Y3-M1 lacks explicit graph bond (36, 37)"
+    }
+  },
+  "native": {
+    "implementation": "native pymsmt.mcpb.gene_final_frcmod_file",
+    "source_file": "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/lib/python3.14/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py",
+    "source_sha256": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7",
+    "B_TO_A": 0.529177249,
+    "H_TO_KCAL_MOL": 627.5095,
+    "HB2_TO_KCAL_MOL_A2": 2240.876780834858,
+    "numpy_version": "2.5.3",
+    "parameter_energy_convention": "Amber k*(x-x0)^2, not one-half*k*(x-x0)^2"
+  },
+  "reference_qm": {
+    "Number of atoms": 76,
+    "Charge": 1,
+    "Multiplicity": 1,
+    "Number of electrons": 316,
+    "Number of basis functions": 684,
+    "Pure/Cartesian d shells": 1,
+    "SCF Energy": -3816.828594100871,
+    "RMS Force": 1.530060070516309e-06
+  }
+}

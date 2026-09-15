@@ -1,0 +1,17 @@
+{
+  "source": "docs/audit/advanced-chemistry/prototype-1ca2-zaff-water-v3",
+  "exporter": "ParmEd 4.3.1",
+  "source_hashes": {
+    "prepared.prmtop": "90c1145a084fd19dbdd3e78edaec5e7286b2fb181bf0e2979bd4b35e4d40e8a4",
+    "prepared.inpcrd": "efdd37c5218195997e13683c289e7e308bff97c809909a75c27493481b60c55f"
+  },
+  "box_angstrom": [
+    200.0,
+    200.0,
+    200.0,
+    90.0,
+    90.0,
+    90.0
+  ],
+  "interpretation": "Large periodic box with 9nm cutoffs covering every intramolecular pair; no dispersion or electrostatic shift, flexible waters, no constraints"
+}

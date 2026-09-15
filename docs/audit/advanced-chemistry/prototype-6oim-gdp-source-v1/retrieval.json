@@ -1,0 +1,81 @@
+{
+  "status": "source_retrieved_not_model_accepted",
+  "sources": [
+    {
+      "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/GDP.prep",
+      "resolved_url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/GDP.prep",
+      "status": 200,
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/GDP.prep",
+      "bytes": 3526,
+      "sha256": "bc8f72b715e3d3b0839b2e3dcd9810cfd11e7a228e29a8ee2e4b55c7b602a705",
+      "retrieved_unix": 1789334122.270297,
+      "headers": {
+        "Date": "Sun, 13 Sep 2026 21:15:22 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Mon, 24 Jan 2005 10:16:15 GMT",
+        "ETag": "\"dc6-3ee697d8559c0\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "3526",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/frcmod.phos",
+      "resolved_url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/frcmod.phos",
+      "status": 200,
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/frcmod.phos",
+      "bytes": 1727,
+      "sha256": "a816fbb81c290ae0d364cf223d7c6890d2bb2620a29e7f725204035dedd16a4b",
+      "retrieved_unix": 1789334122.820811,
+      "headers": {
+        "Date": "Sun, 13 Sep 2026 21:15:22 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Tue, 22 Jul 2003 09:06:41 GMT",
+        "ETag": "\"6bf-3c3082c542a40\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "1727",
+        "Connection": "close"
+      }
+    },
+    {
+      "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/phos_inf.html",
+      "resolved_url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/cof/phos_inf.html",
+      "status": 200,
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/phos_inf.html",
+      "bytes": 3315,
+      "sha256": "8a65b47781850d2638573f425cf21a8b6a49d28a73bfa21c93531611cea86582",
+      "retrieved_unix": 1789334123.3479402,
+      "headers": {
+        "Date": "Sun, 13 Sep 2026 21:15:23 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Tue, 22 Jul 2003 09:22:48 GMT",
+        "ETag": "\"cf3-3c30865f76a00\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "3315",
+        "Connection": "close",
+        "Content-Type": "text/html"
+      }
+    },
+    {
+      "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/index.html",
+      "resolved_url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/index.html",
+      "status": 200,
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-6oim-gdp-source-v1/index.html",
+      "bytes": 31285,
+      "sha256": "100bdbe83e6202f80f462aa9957c0e886d3e3bbe4d69eea6308f1a6b3dd5f423",
+      "retrieved_unix": 1789334123.820375,
+      "headers": {
+        "Date": "Sun, 13 Sep 2026 21:15:23 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Fri, 22 Jun 2012 16:07:48 GMT",
+        "ETag": "\"7a35-4c311d557bd00\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "31285",
+        "Connection": "close",
+        "Content-Type": "text/html"
+      }
+    }
+  ],
+  "prior_index_hyperlinks": "The legacy index links point to pdrives.manchester.ac.uk/horde/gollem/cof paths that returned404 in web retrieval. The same contributor filenames are available on the maintainer personalpages host.",
+  "purpose": "Audit full retained 6OIM GDP before any complete protein assembly; no chemistry or charges substituted."
+}

@@ -1,0 +1,60 @@
+{
+  "status": "cluster_inputs_created_not_parameterized",
+  "pdb": "1MNC",
+  "source_sha256": "cc018b0440f630092ad87fbf111cf2dd78c928db20e636bbf4e1f52646f608f9",
+  "ccd_sha256": "c8befa4c41672623d4b1ff60fe252ea2ca12889e5609d71b42ae20b2714f11d4",
+  "declared_state": {
+    "Zn281": "Zn(II), closed-shell singlet",
+    "His218/222/228": "HID; NE2 unprotonated",
+    "PLH280": "hydroxamate candidate: O1 deprotonated (-1), N1 remains protonated",
+    "basis": "explicit model hypothesis, not a state inferred from neutral CCD or distances",
+    "cluster_charge": 1,
+    "spin_2S": 0
+  },
+  "ligand_heavy_stereocenters_verified": {
+    "C3": "R",
+    "C9": "S"
+  },
+  "initial_ligand_hydrogens": "MMFF94s hydrogen-only relaxation",
+  "input_mol2_charges": "formal-state bookkeeping only; these are not accepted simulation partial charges",
+  "native_coordination_edges": [
+    [
+      29,
+      119
+    ],
+    [
+      68,
+      119
+    ],
+    [
+      106,
+      119
+    ],
+    [
+      119,
+      142
+    ],
+    [
+      119,
+      143
+    ]
+  ],
+  "clusters": {
+    "small": {
+      "atom_count": 97,
+      "retained": 85,
+      "caps": 12
+    },
+    "large": {
+      "atom_count": 139,
+      "retained": 103,
+      "caps": 36
+    }
+  },
+  "excluded_from_isolated_prototype": [
+    "structural Zn282",
+    "Ca283",
+    "nonlocal protein and solvent"
+  ],
+  "not_claimed": "Full 1MNC preparation, QM convergence, site force-field accuracy or dynamics stability"
+}

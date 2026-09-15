@@ -1,0 +1,1769 @@
+{
+  "generated_at": "2026-09-13T07:30:19.929699+00:00",
+  "scope": "Preparation-only regression on15 fixed experimental structures with actual internal missing sequence; no MD, solvent generation, native-loop accuracy, equilibrium or convergence claim.",
+  "verdict": "10 prepared;5 blocked by explicit chemistry or loop-size limits;0 unexpected final workflow failures in this fixed panel.",
+  "prepared": 10,
+  "blocked": 5,
+  "unexpected_final_failures": 0,
+  "built_internal_gaps": 16,
+  "built_internal_residues": 90,
+  "built_residue_composition": {
+    "ALA": 5,
+    "ARG": 4,
+    "ASN": 4,
+    "ASP": 11,
+    "CYS": 1,
+    "GLN": 2,
+    "GLU": 7,
+    "GLY": 14,
+    "HIS": 4,
+    "ILE": 1,
+    "LEU": 6,
+    "LYS": 6,
+    "MET": 2,
+    "PHE": 2,
+    "PRO": 3,
+    "SER": 7,
+    "THR": 7,
+    "TYR": 3,
+    "VAL": 1
+  },
+  "all_final_runs_match_source_and_driver_checkpoint": true,
+  "all_final_source_inputs_unchanged": true,
+  "all_ten_final_preparations_used_fixed_heavy_refinement": true,
+  "concurrency": "Up to3 isolated preparation workers,2 CPU threads each. Reported walltimes include shared machine load and are not isolated algorithm benchmarks.",
+  "source_checkpoint": "final-source-checkpoint.json",
+  "source_checkpoint_sha256": "486d223a446fda86eaade953456c0bf44df9078f55f6b62deec7ff6fbc3e1151",
+  "verification": "root-final-verification.json",
+  "verification_sha256": "fc2df43d3dc028fa11b3353257440d2d2713bfd39b2aeb15640ba1b97e964796",
+  "frozen_manifest_sha256": "a0ebcf95c9f1ea27299ea8fe4c717e55d6fdab596c566c2869f5e775c9b2c587",
+  "cases": [
+    {
+      "id": "8K5R",
+      "target": "Human CDK9",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "KB-0742 (VQE); phosphothreonine (TPO)",
+      "source_url": "https://files.rcsb.org/download/8K5R.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/8K5R.cif",
+      "input_sha256": "1eb1ad85ceb3565f573dd787661b5609de7f6339e298a3bdd6ce26736d0702d6",
+      "internal_missing_segments": [
+        {
+          "sequence": "GQGTFG",
+          "length": 6,
+          "label_sequence_ids": [
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "residues": [
+            "GLY",
+            "GLN",
+            "GLY",
+            "THR",
+            "PHE",
+            "GLY"
+          ],
+          "author_residue_ids": [
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"
+          ]
+        },
+        {
+          "sequence": "YNRC",
+          "length": 4,
+          "label_sequence_ids": [
+            92,
+            93,
+            94,
+            95
+          ],
+          "residues": [
+            "TYR",
+            "ASN",
+            "ARG",
+            "CYS"
+          ],
+          "author_residue_ids": [
+            "92",
+            "93",
+            "94",
+            "95"
+          ]
+        },
+        {
+          "sequence": "AKN",
+          "length": 3,
+          "label_sequence_ids": [
+            177,
+            178,
+            179
+          ],
+          "residues": [
+            "ALA",
+            "LYS",
+            "ASN"
+          ],
+          "author_residue_ids": [
+            "177",
+            "178",
+            "179"
+          ]
+        },
+        {
+          "sequence": "LYEK",
+          "length": 4,
+          "label_sequence_ids": [
+            261,
+            262,
+            263,
+            264
+          ],
+          "residues": [
+            "LEU",
+            "TYR",
+            "GLU",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "261",
+            "262",
+            "263",
+            "264"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 28.07,
+      "prepared_atoms": 5317,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/root-final/8K5R/result.json",
+      "final_report_sha256": "b3951e08697b118a9ff2f69dcc7f962cfbf5a3ae0e73c12749600514d71fcdea",
+      "attempts": [
+        {
+          "run": "root-final",
+          "report": "runs/root-final/8K5R/result.json",
+          "report_sha256": "b3951e08697b118a9ff2f69dcc7f962cfbf5a3ae0e73c12749600514d71fcdea",
+          "started_at": "2026-09-13T07:18:50.859973+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 28.07,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "1UA2",
+      "target": "Human CDK7",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "ATP; phosphothreonine (TPO)",
+      "source_url": "https://files.rcsb.org/download/1UA2.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1UA2.cif",
+      "input_sha256": "aa3e69b79109dc54e5544f246fe233d963c79773c85ccf2ade52f708711b2a06",
+      "internal_missing_segments": [
+        {
+          "sequence": "KLGHRSEAKDGI",
+          "length": 12,
+          "label_sequence_ids": [
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "residues": [
+            "LYS",
+            "LEU",
+            "GLY",
+            "HIS",
+            "ARG",
+            "SER",
+            "GLU",
+            "ALA",
+            "LYS",
+            "ASP",
+            "GLY",
+            "ILE"
+          ],
+          "author_residue_ids": [
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 41.73,
+      "prepared_atoms": 4825,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/root-final/1UA2/result.json",
+      "final_report_sha256": "496de06504e09dff5cfc6922fb62e9a4d907e4218fc93e419444427a3738ec93",
+      "attempts": [
+        {
+          "run": "root-initial",
+          "report": "runs/root-initial/1UA2/result.json",
+          "report_sha256": "1026cc3926c23f3118fc9286d8ab4f5821dbb10849d0ba0650d37a1a61adba5b",
+          "started_at": "2026-09-13T06:28:26.492058+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 41.99,
+          "error": null,
+          "backend_source_unchanged_during_case": false,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "root-final",
+          "report": "runs/root-final/1UA2/result.json",
+          "report_sha256": "496de06504e09dff5cfc6922fb62e9a4d907e4218fc93e419444427a3738ec93",
+          "started_at": "2026-09-13T07:19:19.302790+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 41.73,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "1HCK",
+      "target": "Human CDK2",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "ATP; Mg\u00b2\u207a",
+      "source_url": "https://files.rcsb.org/download/1HCK.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1HCK.cif",
+      "input_sha256": "62807748b242e7e8026668edbc4242d1e46de8770e784bcfdf97b73219976d5a",
+      "internal_missing_segments": [
+        {
+          "sequence": "LDTE",
+          "length": 4,
+          "label_sequence_ids": [
+            37,
+            38,
+            39,
+            40
+          ],
+          "residues": [
+            "LEU",
+            "ASP",
+            "THR",
+            "GLU"
+          ],
+          "author_residue_ids": [
+            "37",
+            "38",
+            "39",
+            "40"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 31.45,
+      "prepared_atoms": 4895,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/review-final/1HCK/result.json",
+      "final_report_sha256": "514d55300f84ffa9aa06868cba006135df6edbc25ebb49c3507e54c68145d70b",
+      "attempts": [
+        {
+          "run": "review-initial",
+          "report": "runs/review-initial/1HCK/result.json",
+          "report_sha256": "5f80c74feb0d445a014982086d80f0d101290a9dc310b6d3e962f94a36c9d85d",
+          "started_at": "2026-09-13T06:28:59.498237+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 32.33,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-final",
+          "report": "runs/review-final/1HCK/result.json",
+          "report_sha256": "514d55300f84ffa9aa06868cba006135df6edbc25ebb49c3507e54c68145d70b",
+          "started_at": "2026-09-13T07:19:13.535933+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 31.45,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "4HJO",
+      "target": "Human EGFR",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "Erlotinib (AQ4)",
+      "source_url": "https://files.rcsb.org/download/4HJO.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/4HJO.cif",
+      "input_sha256": "c896b9aafcf7f6fc46b357fb082d5e49a47826a775b5acd56cfaaa4a41ebd4a5",
+      "internal_missing_segments": [
+        {
+          "sequence": "EGEK",
+          "length": 4,
+          "label_sequence_ids": [
+            49,
+            50,
+            51,
+            52
+          ],
+          "residues": [
+            "GLU",
+            "GLY",
+            "GLU",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "710",
+            "711",
+            "712",
+            "713"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 30.8,
+      "prepared_atoms": 4644,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/review-final/4HJO/result.json",
+      "final_report_sha256": "470b4a602edb18cfd1ac386e97fdc8eac40cf8def5ecb2cbecb64aec104033ad",
+      "attempts": [
+        {
+          "run": "review-initial",
+          "report": "runs/review-initial/4HJO/result.json",
+          "report_sha256": "f7358ec99a1f5f3d53514f23539a20e7cd46f6001175eb04ead75d7f111ba514",
+          "started_at": "2026-09-13T06:29:32.290688+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 31.37,
+          "error": null,
+          "backend_source_unchanged_during_case": false,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-final",
+          "report": "runs/review-final/4HJO/result.json",
+          "report_sha256": "470b4a602edb18cfd1ac386e97fdc8eac40cf8def5ecb2cbecb64aec104033ad",
+          "started_at": "2026-09-13T07:19:45.349339+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 30.8,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "1M17",
+      "target": "Human EGFR",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "Erlotinib (AQ4)",
+      "source_url": "https://files.rcsb.org/download/1M17.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1M17.cif",
+      "input_sha256": "849bd2548dffb7ddcb7229a05202c1e2e41019a1fd69ec39483654cf984fc4d0",
+      "internal_missing_segments": [
+        {
+          "sequence": "LPSPTDSNFYRA",
+          "length": 12,
+          "label_sequence_ids": [
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311
+          ],
+          "residues": [
+            "LEU",
+            "PRO",
+            "SER",
+            "PRO",
+            "THR",
+            "ASP",
+            "SER",
+            "ASN",
+            "PHE",
+            "TYR",
+            "ARG",
+            "ALA"
+          ],
+          "author_residue_ids": [
+            "965",
+            "966",
+            "967",
+            "968",
+            "969",
+            "970",
+            "971",
+            "972",
+            "973",
+            "974",
+            "975",
+            "976"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 59.87,
+      "prepared_atoms": 5265,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/root-final/1M17/result.json",
+      "final_report_sha256": "048683e7b5120ff4834e4afd9f37d67dba181fff5c7313ba995e6c6f98a8f01b",
+      "attempts": [
+        {
+          "run": "root-initial",
+          "report": "runs/root-initial/1M17/result.json",
+          "report_sha256": "3ed6b79ca8e4b95d48d6feeb025acd0145d76ba537235b9d25e96a0324af4ded",
+          "started_at": "2026-09-13T06:29:08.876037+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 59.15,
+          "error": null,
+          "backend_source_unchanged_during_case": false,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "root-final",
+          "report": "runs/root-final/1M17/result.json",
+          "report_sha256": "048683e7b5120ff4834e4afd9f37d67dba181fff5c7313ba995e6c6f98a8f01b",
+          "started_at": "2026-09-13T07:20:01.419161+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 59.87,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "2HYY",
+      "target": "Human ABL1",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "C",
+      "imported_chain": "C",
+      "chain_index": 2,
+      "chemistry": "Imatinib (STI)",
+      "source_url": "https://files.rcsb.org/download/2HYY.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2HYY.cif",
+      "input_sha256": "4845da16db0c39e36f8531657c955dff7e92b78be02fa55c4d50eed4425de018",
+      "internal_missing_segments": [
+        {
+          "sequence": "D",
+          "length": 1,
+          "label_sequence_ids": [
+            49
+          ],
+          "residues": [
+            "ASP"
+          ],
+          "author_residue_ids": [
+            "276"
+          ]
+        },
+        {
+          "sequence": "TGD",
+          "length": 3,
+          "label_sequence_ids": [
+            162,
+            163,
+            164
+          ],
+          "residues": [
+            "THR",
+            "GLY",
+            "ASP"
+          ],
+          "author_residue_ids": [
+            "389",
+            "390",
+            "391"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 77.18,
+      "prepared_atoms": 4370,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/root-final/2HYY/result.json",
+      "final_report_sha256": "66f6360f4b64dd40800688345ea95faf0d7990e1a5d0f4397ee5ff9e29ac3cfc",
+      "attempts": [
+        {
+          "run": "root-initial",
+          "report": "runs/root-initial/2HYY/result.json",
+          "report_sha256": "ceb7b2e20690180c7515c5ba7a27c1b93e1c26c37a8daed9ca2b3ba644cf184c",
+          "started_at": "2026-09-13T06:30:08.411543+00:00",
+          "passed": false,
+          "phase": "native preparation",
+          "elapsed_seconds": 8.78,
+          "error": "Repaired structure has inverted or near-planar standard residue stereochemistry at C:277 THR CB. The model is rejected; use an externally validated repair instead.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "root-branch-fixed",
+          "report": "runs/root-branch-fixed/2HYY/result.json",
+          "report_sha256": "dc9c3894a8ceecc4b55f1d3cf368553edee1b153bdc2e640f8c5f3b359b82740",
+          "started_at": "2026-09-13T06:45:13.154563+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 69.25,
+          "error": null,
+          "backend_source_unchanged_during_case": false,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "root-final",
+          "report": "runs/root-final/2HYY/result.json",
+          "report_sha256": "66f6360f4b64dd40800688345ea95faf0d7990e1a5d0f4397ee5ff9e29ac3cfc",
+          "started_at": "2026-09-13T07:21:01.679001+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 77.18,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "3HEG",
+      "target": "Human p38\u03b1",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "Sorafenib (BAX)",
+      "source_url": "https://files.rcsb.org/download/3HEG.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/3HEG.cif",
+      "input_sha256": "1aa0a750b9488c1a1d2f7102dddce41f8f781b70b86841920cf14b04a272e405",
+      "internal_missing_segments": [
+        {
+          "sequence": "GSGA",
+          "length": 4,
+          "label_sequence_ids": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "residues": [
+            "GLY",
+            "SER",
+            "GLY",
+            "ALA"
+          ],
+          "author_residue_ids": [
+            "31",
+            "32",
+            "33",
+            "34"
+          ]
+        },
+        {
+          "sequence": "LARHTDDEMTG",
+          "length": 11,
+          "label_sequence_ids": [
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177
+          ],
+          "residues": [
+            "LEU",
+            "ALA",
+            "ARG",
+            "HIS",
+            "THR",
+            "ASP",
+            "ASP",
+            "GLU",
+            "MET",
+            "THR",
+            "GLY"
+          ],
+          "author_residue_ids": [
+            "171",
+            "172",
+            "173",
+            "174",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "181"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 48.62,
+      "prepared_atoms": 5660,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/root-final/3HEG/result.json",
+      "final_report_sha256": "de3e163a89a5e62b514fd103dc52dc1fb336a7c9963dc86f9819e2ac27cca496",
+      "attempts": [
+        {
+          "run": "root-initial",
+          "report": "runs/root-initial/3HEG/result.json",
+          "report_sha256": "22d4baab3ce9170cad331db8aff717a2feaaed312ebbca0104201352518a47b5",
+          "started_at": "2026-09-13T06:30:17.558003+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 48.97,
+          "error": null,
+          "backend_source_unchanged_during_case": false,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "root-final",
+          "report": "runs/root-final/3HEG/result.json",
+          "report_sha256": "de3e163a89a5e62b514fd103dc52dc1fb336a7c9963dc86f9819e2ac27cca496",
+          "started_at": "2026-09-13T07:22:19.230839+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 48.62,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "6A93",
+      "target": "5-HT2A receptor fusion",
+      "organisms": [
+        "Escherichia coli",
+        "Homo sapiens"
+      ],
+      "author_chain": "B",
+      "imported_chain": "B",
+      "chain_index": 1,
+      "chemistry": "Risperidone; cholesterol; covalent PLM",
+      "source_url": "https://files.rcsb.org/download/6A93.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/6A93.cif",
+      "input_sha256": "876f16a84341d2d205817496cd9930e4dccab523f0769f78e09bdb4ca20c7410",
+      "internal_missing_segments": [
+        {
+          "sequence": "IHHSRFN",
+          "length": 7,
+          "label_sequence_ids": [
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121
+          ],
+          "residues": [
+            "ILE",
+            "HIS",
+            "HIS",
+            "SER",
+            "ARG",
+            "PHE",
+            "ASN"
+          ],
+          "author_residue_ids": [
+            "181",
+            "182",
+            "183",
+            "184",
+            "185",
+            "186",
+            "187"
+          ]
+        },
+        {
+          "sequence": "SGS",
+          "length": 3,
+          "label_sequence_ids": [
+            241,
+            242,
+            243
+          ],
+          "residues": [
+            "SER",
+            "GLY",
+            "SER"
+          ],
+          "author_residue_ids": [
+            "1042",
+            "1043",
+            "1044"
+          ]
+        }
+      ],
+      "initial_inventory_status": "failed",
+      "initial_inventory_error": "ValueError('A retained molecule has an explicit covalent source connection with a missing residue endpoint. Repair or review that connection before one-chain extraction; it will not be silently cut.')",
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "blocked",
+      "blocker_category": "specialized_covalent_model",
+      "blocker_explanation": "Covalent palmitate needs a specialized model.",
+      "final_error": "Ligand chemistry needs attention: J:3002::PLM: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+      "final_elapsed_seconds": 2.76,
+      "prepared_atoms": null,
+      "all_twenty_checks_passed": false,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/identities-final/6A93/result.json",
+      "final_report_sha256": "f70ac5dd6b1b4b538ccc3b7c0c5e0e5aa369c5903185cea5a9c3f143fffd84ab",
+      "attempts": [
+        {
+          "run": "identities-fixed-1",
+          "report": "runs/identities-fixed-1/6A93/result.json",
+          "report_sha256": "9e98a040790fe43658d36d3ffe255a12e1b396f6a1936112f5b60f93b536b6b0",
+          "started_at": "2026-09-13T06:40:51.286611+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 2.49,
+          "error": "Ligand chemistry needs attention: J:3002::PLM: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "identities-final",
+          "report": "runs/identities-final/6A93/result.json",
+          "report_sha256": "f70ac5dd6b1b4b538ccc3b7c0c5e0e5aa369c5903185cea5a9c3f143fffd84ab",
+          "started_at": "2026-09-13T07:20:47.835285+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 2.76,
+          "error": "Ligand chemistry needs attention: J:3002::PLM: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "2CG9",
+      "target": "Yeast Sba1 cochaperone",
+      "organisms": [
+        "SACCHAROMYCES CEREVISIAE"
+      ],
+      "author_chain": "X",
+      "imported_chain": "C",
+      "chain_index": 2,
+      "chemistry": "Protein only",
+      "source_url": "https://files.rcsb.org/download/2CG9.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2CG9.cif",
+      "input_sha256": "206d500f98c127adb36163b166579aa52fe000edbbe32489d29d2e7b2546ec99",
+      "internal_missing_segments": [
+        {
+          "sequence": "PHVGDEN",
+          "length": 7,
+          "label_sequence_ids": [
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "residues": [
+            "PRO",
+            "HIS",
+            "VAL",
+            "GLY",
+            "ASP",
+            "GLU",
+            "ASN"
+          ],
+          "author_residue_ids": [
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61"
+          ]
+        },
+        {
+          "sequence": "QH",
+          "length": 2,
+          "label_sequence_ids": [
+            87,
+            88
+          ],
+          "residues": [
+            "GLN",
+            "HIS"
+          ],
+          "author_residue_ids": [
+            "88",
+            "89"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": "An unresolved long backbone connection has no supported missing sequence. Supply the original PDB/mmCIF sequence records or repair the gap externally; residue identities will not be guessed.",
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 54.4,
+      "prepared_atoms": 2050,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/identities-final/2CG9/result.json",
+      "final_report_sha256": "5e4c1fa4b0fa00d9d39457e75eee8aea7fd2abefd43531a1d8f4d19b6402c4d6",
+      "attempts": [
+        {
+          "run": "identities-fixed-1",
+          "report": "runs/identities-fixed-1/2CG9/result.json",
+          "report_sha256": "ba0068859beeac2ccdae68d436a4dacaff633f3fe03cb1398dfd6e0ab2abfc30",
+          "started_at": "2026-09-13T06:40:54.091738+00:00",
+          "passed": false,
+          "phase": "native preparation",
+          "elapsed_seconds": 31.78,
+          "error": "The modeled loop did not pass geometry checks after bounded refinement: Peptide omega before ('C', '90', '', 'TYR') is undefined or more than 35\u00b0 from cis/trans. No prepared model was accepted.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "identities-staged-check",
+          "report": "runs/identities-staged-check/2CG9/result.json",
+          "report_sha256": "40b9a3f188e1f8162b433f68e9d88a6184525dba7a420d6eed5afe51b2a23e95",
+          "started_at": "2026-09-13T07:12:36.044302+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 32.57,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "identities-final",
+          "report": "runs/identities-final/2CG9/result.json",
+          "report_sha256": "5e4c1fa4b0fa00d9d39457e75eee8aea7fd2abefd43531a1d8f4d19b6402c4d6",
+          "started_at": "2026-09-13T07:20:50.962975+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 54.4,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "2BEL",
+      "target": "Human 11\u03b2-HSD1",
+      "organisms": [
+        "HOMO SAPIENS"
+      ],
+      "author_chain": "C",
+      "imported_chain": "C",
+      "chain_index": 2,
+      "chemistry": "NADP; carbenoxolone (CBO); Cl\u207b",
+      "source_url": "https://files.rcsb.org/download/2BEL.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2BEL.cif",
+      "input_sha256": "c38068dde28e02604cdf0c05a78529776f4c300450b5aa0f2d88b2e3f6bb70ca",
+      "internal_missing_segments": [
+        {
+          "sequence": "IVH",
+          "length": 3,
+          "label_sequence_ids": [
+            227,
+            228,
+            229
+          ],
+          "residues": [
+            "ILE",
+            "VAL",
+            "HIS"
+          ],
+          "author_residue_ids": [
+            "230",
+            "231",
+            "232"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": "Ligand chemistry needs attention: L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). Bound ligand stereochemistry disagrees with CCD at C14: expected R, found S. No coordinates were changed.",
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "blocked",
+      "blocker_category": "unresolved_input_chemistry",
+      "blocker_explanation": "Incomplete CBO plus CCD reference-coordinate stereochemistry conflict; no atom completion or stereoinversion accepted.",
+      "final_error": "Ligand chemistry needs attention: L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). The CCD reference geometry could not be validated for missing-atom repair. Reference coordinates disagree with CCD stereochemistry at C14: expected R, found S. No coordinates were changed. Supply a validated complete ligand reference; the input structure was not modified.",
+      "final_elapsed_seconds": 3.11,
+      "prepared_atoms": null,
+      "all_twenty_checks_passed": false,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/review-final/2BEL/result.json",
+      "final_report_sha256": "7c6fd2373b6272bf8775aebe5e0c9fe123688421bf3ee297eda44b787fe09cf1",
+      "attempts": [
+        {
+          "run": "review-initial",
+          "report": "runs/review-initial/2BEL/result.json",
+          "report_sha256": "66c73e0dfd02690deb85e3507ec3e5573ac7800a88b9c068eef6b98b8dae7ed3",
+          "started_at": "2026-09-13T06:30:04.045972+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 3.33,
+          "error": "Ligand chemistry needs attention: L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). Bound ligand stereochemistry disagrees with CCD at C14: expected R, found S. No coordinates were changed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-final",
+          "report": "runs/review-final/2BEL/result.json",
+          "report_sha256": "7c6fd2373b6272bf8775aebe5e0c9fe123688421bf3ee297eda44b787fe09cf1",
+          "started_at": "2026-09-13T07:20:16.513324+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 3.11,
+          "error": "Ligand chemistry needs attention: L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). The CCD reference geometry could not be validated for missing-atom repair. Reference coordinates disagree with CCD stereochemistry at C14: expected R, found S. No coordinates were changed. Supply a validated complete ligand reference; the input structure was not modified.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "1FPU",
+      "target": "Mouse Abl",
+      "organisms": [
+        "Mus musculus"
+      ],
+      "author_chain": "B",
+      "imported_chain": "B",
+      "chain_index": 1,
+      "chemistry": "Abl inhibitor (PRC)",
+      "source_url": "https://files.rcsb.org/download/1FPU.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1FPU.cif",
+      "input_sha256": "67298b2666f60457a21b2784a580d9a65896a055e90bae64d1afe377571f0cee",
+      "internal_missing_segments": [
+        {
+          "sequence": "LMTGD",
+          "length": 5,
+          "label_sequence_ids": [
+            165,
+            166,
+            167,
+            168,
+            169
+          ],
+          "residues": [
+            "LEU",
+            "MET",
+            "THR",
+            "GLY",
+            "ASP"
+          ],
+          "author_residue_ids": [
+            "387",
+            "388",
+            "389",
+            "390",
+            "391"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": null,
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 23.39,
+      "prepared_atoms": 4473,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/review-final/1FPU/result.json",
+      "final_report_sha256": "0c1556fa7f51d1d6107a7ae097391305a539cba4ff21ac943846a2fb617a9874",
+      "attempts": [
+        {
+          "run": "review-initial",
+          "report": "runs/review-initial/1FPU/result.json",
+          "report_sha256": "91b37b71f40771f0c78f360528d6de2324cc75dc914efc326555fb867fcf444e",
+          "started_at": "2026-09-13T06:30:07.777245+00:00",
+          "passed": false,
+          "phase": "native preparation",
+          "elapsed_seconds": 7.26,
+          "error": "Repaired structure has inverted or near-planar standard residue stereochemistry at B:394 THR CB. The model is rejected; use an externally validated repair instead.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-chemistry-fixed",
+          "report": "runs/review-chemistry-fixed/1FPU/result.json",
+          "report_sha256": "c53a19a31fda498f4fdd4b056c779892285c4d80c08a7c01f6619fb045b8d698",
+          "started_at": "2026-09-13T06:49:38.267784+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 22.07,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-final",
+          "report": "runs/review-final/1FPU/result.json",
+          "report_sha256": "0c1556fa7f51d1d6107a7ae097391305a539cba4ff21ac943846a2fb617a9874",
+          "started_at": "2026-09-13T07:20:19.971208+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 23.39,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "4HHY",
+      "target": "Human PARP1",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "B",
+      "imported_chain": "B",
+      "chain_index": 1,
+      "chemistry": "PARP inhibitor (15R); sulfate",
+      "source_url": "https://files.rcsb.org/download/4HHY.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/4HHY.cif",
+      "input_sha256": "4a748aa668010d247325fef9b490de886f83ecf04dfd21f4c340040ec8c12a32",
+      "internal_missing_segments": [
+        {
+          "sequence": "GGSDDSSK",
+          "length": 8,
+          "label_sequence_ids": [
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131
+          ],
+          "residues": [
+            "GLY",
+            "GLY",
+            "SER",
+            "ASP",
+            "ASP",
+            "SER",
+            "SER",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "119",
+            "120",
+            "121",
+            "122",
+            "123",
+            "124",
+            "125",
+            "126"
+          ]
+        }
+      ],
+      "initial_inventory_status": "failed",
+      "initial_inventory_error": "ValueError('The selected protein chain is covalently connected to another protein or nucleic-acid chain. One-chain extraction would sever that connection; retain the linked assembly or resolve it explicitly.')",
+      "prespecified_expectation": "within_loop_size_budget",
+      "final_status": "prepared",
+      "blocker_category": null,
+      "blocker_explanation": null,
+      "final_error": null,
+      "final_elapsed_seconds": 122.95,
+      "prepared_atoms": 5588,
+      "all_twenty_checks_passed": true,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/review-final/4HHY/result.json",
+      "final_report_sha256": "99d6a7e608b500425a1da78acf93a47147cc35520700873b04142b665476c06f",
+      "attempts": [
+        {
+          "run": "review-initial",
+          "report": "runs/review-initial/4HHY/result.json",
+          "report_sha256": "f84189abd137cff971c5794f3e3be7e4f63d5555f30aad62ea1a6b28d79334de",
+          "started_at": "2026-09-13T06:30:15.431701+00:00",
+          "passed": false,
+          "phase": "monomer selection",
+          "elapsed_seconds": 1.03,
+          "error": "The selected protein chain is covalently connected to another protein or nucleic-acid chain. One-chain extraction would sever that connection; retain the linked assembly or resolve it explicitly.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-symmetry-fixed",
+          "report": "runs/review-symmetry-fixed/4HHY/result.json",
+          "report_sha256": "eb1c2560395f29da56e12ea4ad022a3bb954245071da480a1be0b3a9dca5ba1c",
+          "started_at": "2026-09-13T06:40:27.872612+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 4.28,
+          "error": "Ligand chemistry needs attention: I:402::SO4: The pH heuristic lost the ligand atom identity map and it cannot be restored uniquely. Supply an explicit atom-mapped state.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-chemistry-fixed",
+          "report": "runs/review-chemistry-fixed/4HHY/result.json",
+          "report_sha256": "1483c4681752030dcf56a278557ac20a4a4c8de711d410937dfd573c36f9c0a4",
+          "started_at": "2026-09-13T06:50:00.668085+00:00",
+          "passed": false,
+          "phase": "native preparation",
+          "elapsed_seconds": 113.71,
+          "error": "Invariant Violation\n\tbad direction in linearSearch\n\tViolation occurred on line 224 in file Code/Numerics/Optimizer/BFGSOpt.h\n\tFailed Expression: status >= 0\n\tRDKIT: 2025.09.6\n\tBOOST: 1_85\n",
+          "backend_source_unchanged_during_case": false,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-hydrogen-fixed",
+          "report": "runs/review-hydrogen-fixed/4HHY/result.json",
+          "report_sha256": "8fe0da16986cdfed8a64658843910d4c9debe6fb759f761a4adb9825e894e4c3",
+          "started_at": "2026-09-13T06:53:26.010161+00:00",
+          "passed": false,
+          "phase": "native preparation",
+          "elapsed_seconds": 112.19,
+          "error": "Found multiple NonbondedForce tags with different 1-4 scales",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-scale-fixed",
+          "report": "runs/review-scale-fixed/4HHY/result.json",
+          "report_sha256": "43d356e57cbe6cde961793c6ac50ad5ff09cf4835b0ebc8b05fc71195d19c070",
+          "started_at": "2026-09-13T06:59:18.886887+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 115.36,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "review-final",
+          "report": "runs/review-final/4HHY/result.json",
+          "report_sha256": "99d6a7e608b500425a1da78acf93a47147cc35520700873b04142b665476c06f",
+          "started_at": "2026-09-13T07:20:43.725582+00:00",
+          "passed": true,
+          "phase": "complete",
+          "elapsed_seconds": 122.95,
+          "error": null,
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "2REN",
+      "target": "Human renin",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "Covalent NAG glycan",
+      "source_url": "https://files.rcsb.org/download/2REN.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2REN.cif",
+      "input_sha256": "99f950f66fbfddf9ea6f7633ba8770ecc8e105fd422fdcc74ebe3dcb4d53d41a",
+      "internal_missing_segments": [
+        {
+          "sequence": "RLY",
+          "length": 3,
+          "label_sequence_ids": [
+            53,
+            54,
+            55
+          ],
+          "residues": [
+            "ARG",
+            "LEU",
+            "TYR"
+          ],
+          "author_residue_ids": [
+            "53",
+            "54",
+            "55"
+          ]
+        },
+        {
+          "sequence": "SENSQ",
+          "length": 5,
+          "label_sequence_ids": [
+            166,
+            167,
+            168,
+            169,
+            170
+          ],
+          "residues": [
+            "SER",
+            "GLU",
+            "ASN",
+            "SER",
+            "GLN"
+          ],
+          "author_residue_ids": [
+            "166",
+            "167",
+            "168",
+            "169",
+            "170"
+          ]
+        },
+        {
+          "sequence": "QESYSSKKL",
+          "length": 9,
+          "label_sequence_ids": [
+            287,
+            288,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295
+          ],
+          "residues": [
+            "GLN",
+            "GLU",
+            "SER",
+            "TYR",
+            "SER",
+            "SER",
+            "LYS",
+            "LYS",
+            "LEU"
+          ],
+          "author_residue_ids": [
+            "287",
+            "288",
+            "289",
+            "290",
+            "291",
+            "292",
+            "293",
+            "294",
+            "295"
+          ]
+        }
+      ],
+      "initial_inventory_status": "failed",
+      "initial_inventory_error": "ValueError('A retained molecule has an explicit covalent source connection with a missing residue endpoint. Repair or review that connection before one-chain extraction; it will not be silently cut.')",
+      "prespecified_expectation": "expected_unsupported_covalent_glycan",
+      "final_status": "blocked",
+      "blocker_category": "specialized_covalent_model",
+      "blocker_explanation": "Covalent NAG glycosylation needs a specialized model.",
+      "final_error": "Ligand chemistry needs attention: B:341::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+      "final_elapsed_seconds": 1.08,
+      "prepared_atoms": null,
+      "all_twenty_checks_passed": false,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/identities-final/2REN/result.json",
+      "final_report_sha256": "e4e25dfbe9a3a83984289e046ce0bf2753f709352792d19907f4a6dd25bc323d",
+      "attempts": [
+        {
+          "run": "identities-fixed-1",
+          "report": "runs/identities-fixed-1/2REN/result.json",
+          "report_sha256": "65484b24038019cc5c52b989882dc9052eaddf580ffb204ad43f0d9ba6c65ecf",
+          "started_at": "2026-09-13T06:41:26.223546+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 0.93,
+          "error": "Ligand chemistry needs attention: B:341::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "identities-final",
+          "report": "runs/identities-final/2REN/result.json",
+          "report_sha256": "e4e25dfbe9a3a83984289e046ce0bf2753f709352792d19907f4a6dd25bc323d",
+          "started_at": "2026-09-13T07:21:45.760320+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 1.08,
+          "error": "Ligand chemistry needs attention: B:341::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "1RNE",
+      "target": "Human renin",
+      "organisms": [
+        "Homo sapiens"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "Renin inhibitor (C60); covalent NAG",
+      "source_url": "https://files.rcsb.org/download/1RNE.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/1RNE.cif",
+      "input_sha256": "946f3a9c589f09bf2b22fa4cc5d186aa200ea2315a94d9fd6eb15807c51ba303",
+      "internal_missing_segments": [
+        {
+          "sequence": "SENSQS",
+          "length": 6,
+          "label_sequence_ids": [
+            166,
+            167,
+            168,
+            169,
+            170,
+            171
+          ],
+          "residues": [
+            "SER",
+            "GLU",
+            "ASN",
+            "SER",
+            "GLN",
+            "SER"
+          ],
+          "author_residue_ids": [
+            "158",
+            "158",
+            "158",
+            "158",
+            "158",
+            "158"
+          ]
+        }
+      ],
+      "initial_inventory_status": "failed",
+      "initial_inventory_error": "ValueError('The exact starting topology does not match the source coordinates. Reload the structure before extracting a chain.')",
+      "prespecified_expectation": "expected_unsupported_covalent_glycan",
+      "final_status": "blocked",
+      "blocker_category": "specialized_covalent_model",
+      "blocker_explanation": "Covalent NAG glycosylation needs a specialized model.",
+      "final_error": "Ligand chemistry needs attention: B:345::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+      "final_elapsed_seconds": 1.26,
+      "prepared_atoms": null,
+      "all_twenty_checks_passed": false,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/identities-final/1RNE/result.json",
+      "final_report_sha256": "d42ee5d6bec6932fe86261c70bb727a80be5c34347a5096a1c7a2626f7222601",
+      "attempts": [
+        {
+          "run": "identities-fixed-1",
+          "report": "runs/identities-fixed-1/1RNE/result.json",
+          "report_sha256": "1ed399074a80d058977998d3929999b8448e0358d4c2c3c07433d860df1dc2f6",
+          "started_at": "2026-09-13T06:41:27.469128+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 1.1,
+          "error": "Ligand chemistry needs attention: B:345::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "identities-final",
+          "report": "runs/identities-final/1RNE/result.json",
+          "report_sha256": "d42ee5d6bec6932fe86261c70bb727a80be5c34347a5096a1c7a2626f7222601",
+          "started_at": "2026-09-13T07:21:47.198285+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 1.26,
+          "error": "Ligand chemistry needs attention: B:345::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    },
+    {
+      "id": "2ITY",
+      "target": "Human EGFR",
+      "organisms": [
+        "HOMO SAPIENS"
+      ],
+      "author_chain": "A",
+      "imported_chain": "A",
+      "chain_index": 0,
+      "chemistry": "Gefitinib (IRE)",
+      "source_url": "https://files.rcsb.org/download/2ITY.cif",
+      "input_path": "docs/audit/loop-fallback/benchmark-inputs/2ITY.cif",
+      "input_sha256": "6e0dbc7d08de1441850beee33f03e8b9278b915ac17c68a11bd4b32ef782a25d",
+      "internal_missing_segments": [
+        {
+          "sequence": "EKEYHAEGGK",
+          "length": 10,
+          "label_sequence_ids": [
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180
+          ],
+          "residues": [
+            "GLU",
+            "LYS",
+            "GLU",
+            "TYR",
+            "HIS",
+            "ALA",
+            "GLU",
+            "GLY",
+            "GLY",
+            "LYS"
+          ],
+          "author_residue_ids": [
+            "866",
+            "867",
+            "868",
+            "869",
+            "870",
+            "871",
+            "872",
+            "873",
+            "874",
+            "875"
+          ]
+        },
+        {
+          "sequence": "PSPTDSNFYRALM",
+          "length": 13,
+          "label_sequence_ids": [
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307
+          ],
+          "residues": [
+            "PRO",
+            "SER",
+            "PRO",
+            "THR",
+            "ASP",
+            "SER",
+            "ASN",
+            "PHE",
+            "TYR",
+            "ARG",
+            "ALA",
+            "LEU",
+            "MET"
+          ],
+          "author_residue_ids": [
+            "990",
+            "991",
+            "992",
+            "993",
+            "994",
+            "995",
+            "996",
+            "997",
+            "998",
+            "999",
+            "1000",
+            "1001",
+            "1002"
+          ]
+        }
+      ],
+      "initial_inventory_status": "inspected",
+      "initial_inventory_error": "Chain A has an internal gap of 13 residues. Local loop building supports up to 12 per gap; supply a complete model for this longer region.",
+      "prespecified_expectation": "expected_unsupported_size",
+      "final_status": "blocked",
+      "blocker_category": "gap_size_limit",
+      "blocker_explanation": "One internal gap is13 residues; the current per-gap limit is12.",
+      "final_error": "Chain A has an internal gap of 13 residues. Local loop building supports up to 12 per gap; supply a complete model for this longer region.",
+      "final_elapsed_seconds": 1.27,
+      "prepared_atoms": null,
+      "all_twenty_checks_passed": false,
+      "final_source_and_driver_match": true,
+      "final_source_input_unchanged": true,
+      "final_flank_relaxation": null,
+      "final_report": "runs/identities-final/2ITY/result.json",
+      "final_report_sha256": "01b09269181160ca105f035e61b1a98d779ecad300ee13d59bbd015d203171e6",
+      "attempts": [
+        {
+          "run": "identities-fixed-1",
+          "report": "runs/identities-fixed-1/2ITY/result.json",
+          "report_sha256": "cd3e4522901d892ba2392f0767c39c59370d420ba834fe34141deaec2d2b1606",
+          "started_at": "2026-09-13T06:41:28.901160+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 1.09,
+          "error": "Chain A has an internal gap of 13 residues. Local loop building supports up to 12 per gap; supply a complete model for this longer region.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": false,
+          "matches_final_driver": false
+        },
+        {
+          "run": "identities-final",
+          "report": "runs/identities-final/2ITY/result.json",
+          "report_sha256": "01b09269181160ca105f035e61b1a98d779ecad300ee13d59bbd015d203171e6",
+          "started_at": "2026-09-13T07:21:48.821231+00:00",
+          "passed": false,
+          "phase": "preparation eligibility",
+          "elapsed_seconds": 1.27,
+          "error": "Chain A has an internal gap of 13 residues. Local loop building supports up to 12 per gap; supply a complete model for this longer region.",
+          "backend_source_unchanged_during_case": true,
+          "matches_final_source": true,
+          "matches_final_driver": true
+        }
+      ]
+    }
+  ],
+  "additional_8k5r_seed_checks": [
+    {
+      "job_id": "8f00a0778f00a077",
+      "seed": 42,
+      "status": "completed",
+      "elapsed_seconds": 25.71,
+      "error": null,
+      "flank_max_displacement_angstrom": null,
+      "artifacts": {
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0778f00a077/status.json": "4ca874c8b0e5fb8edbd710568917056c3d1653dccc339cbb640c11aa0bc80569",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0778f00a077/config.json": "26363e1b4dcaf1c91056bde8f2d148e34c321914de64eb860ba1bd9fc7fd1e49",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0778f00a077/loop-construction.json": "fe08bdda47ff9fec432312a2a3b253244c96e980bd124501cf869bc9141a47ff"
+      },
+      "role": "earlier development checkpoint"
+    },
+    {
+      "job_id": "8f00a0888f00a088",
+      "seed": 2026,
+      "status": "failed",
+      "elapsed_seconds": 28.8,
+      "error": "Local loop-flank relaxation exceeded the 1 \u00c5 heavy-atom movement limit (1.46 \u00c5). No prepared model was accepted; supply a repaired structure.",
+      "flank_max_displacement_angstrom": 1.464546322602915,
+      "artifacts": {
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0888f00a088/status.json": "8784b4a53c86cd80a229ec424e602d56a188de51039c70b18b147a6f302dabae",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0888f00a088/config.json": "1714b391daf96ad91acfc580fcc12efcb273c899940213dc3d4647fd873954eb",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0888f00a088/loop-construction.json": "deb20363ee1ceef9e3f683072f61fbb182e2d3fc02be8e62ec84cc53c16349bd"
+      },
+      "role": "earlier development checkpoint"
+    },
+    {
+      "job_id": "8f00a0998f00a099",
+      "seed": 42,
+      "status": "completed",
+      "elapsed_seconds": 29.37,
+      "error": null,
+      "flank_max_displacement_angstrom": 0.7806105644517808,
+      "artifacts": {
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0998f00a099/status.json": "4cc4e4c8f7f91d90e9cb101102715943ddb83cd0c615389590102635c9b64fe2",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0998f00a099/config.json": "2adff568658b567081476f29775e73b2de08e8392ebc27e7ff2e80887134b12f",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a0998f00a099/loop-construction.json": "cc5946d076f12b6e76535adc58de62df2607c27d611b3f865e7e7cd8f3b1eebf"
+      },
+      "role": "additional final candidate seed check"
+    },
+    {
+      "job_id": "8f00a1008f00a100",
+      "seed": 2026,
+      "status": "completed",
+      "elapsed_seconds": 26.34,
+      "error": null,
+      "flank_max_displacement_angstrom": null,
+      "artifacts": {
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a1008f00a100/status.json": "d878dc8c9d102a018564c37747bd9d5a650152120da8e96bbd7787c8bd696461",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a1008f00a100/config.json": "2735ab40516c390da3ecc282ddeee932d95ec76877e1321b4961d73029d00a16",
+        "build/loop-fallback-8k5r-fullprep/jobs/8f00a1008f00a100/loop-construction.json": "bfa5913f4c141f2d7571b61b826f2afc2ed05126454f689b7fdcee5c4b433ed4"
+      },
+      "role": "additional final candidate seed check"
+    }
+  ],
+  "limitations": [
+    "Convenience panel selected for actual gaps, host/model-organism proteins and chemistry variety before repair outcomes; kinase-heavy and not random or representative of tens of thousands of PDB entries.",
+    "Five final blockers remain real user-facing preparation limitations; they are not successful preparations.",
+    "Only one observed protein chain with associated molecules retained was selected per entry; this does not establish the biological assembly.",
+    "Internal missing residues are modeled; unsupported terminal extensions are not built.",
+    "Two additional8K5R seed checks do not establish universal or cross-platform reproducibility.",
+    "Geometry, force-field reconstruction, finite static energy/forces and retained identities do not establish native-loop conformations or MD stability."
+  ]
+}

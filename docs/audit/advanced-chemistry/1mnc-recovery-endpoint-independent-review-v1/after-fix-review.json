@@ -1,0 +1,141 @@
+{
+  "verdict": "no_remaining_blocker_for_standalone_recovery_admission",
+  "final_wrapper_sha256": "28dcd268ea8d5aaa094bf1c777c3fb4064216583b9ab089ef46cd5efebfc167e",
+  "changed_functions": [
+    "read_recovery_endpoint",
+    "validate_controller",
+    "validate_real_arrays"
+  ],
+  "native_reader_ast_unchanged": true,
+  "controller_reproductions_after_fix": [
+    {
+      "case": "missing_child_pid",
+      "admitted": false,
+      "error": "No terminal completed controller record"
+    },
+    {
+      "case": "boolean_schema",
+      "admitted": false,
+      "error": "No terminal completed controller record"
+    },
+    {
+      "case": "integer_physical_flag",
+      "admitted": false,
+      "error": "Terminal controller flag is not explicit false: physical_acceptance"
+    },
+    {
+      "case": "integer_simulation_flag",
+      "admitted": false,
+      "error": "Terminal controller flag is not explicit false: simulation_ready"
+    },
+    {
+      "case": "float_thread_count",
+      "admitted": false,
+      "error": "Terminal resource limits differ: threads"
+    },
+    {
+      "case": "failed_status",
+      "admitted": false,
+      "error": "No terminal completed controller record"
+    },
+    {
+      "case": "live_child",
+      "admitted": false,
+      "error": "No terminal completed controller record"
+    }
+  ],
+  "complex_arrays_rejected_before_float_coercion": [
+    {
+      "key": "coords_bohr",
+      "imaginary": 0.0,
+      "rejected": true
+    },
+    {
+      "key": "coords_bohr",
+      "imaginary": 1e-10,
+      "rejected": true
+    },
+    {
+      "key": "coords_angstrom",
+      "imaginary": 0.0,
+      "rejected": true
+    },
+    {
+      "key": "coords_angstrom",
+      "imaginary": 1e-10,
+      "rejected": true
+    },
+    {
+      "key": "gradient_hartree_per_bohr",
+      "imaginary": 0.0,
+      "rejected": true
+    },
+    {
+      "key": "gradient_hartree_per_bohr",
+      "imaginary": 1e-10,
+      "rejected": true
+    },
+    {
+      "key": "atomic_numbers",
+      "imaginary": 0.0,
+      "rejected": true
+    },
+    {
+      "key": "atomic_numbers",
+      "imaginary": 1e-10,
+      "rejected": true
+    },
+    {
+      "key": "effective_nuclear_charges",
+      "imaginary": 0.0,
+      "rejected": true
+    },
+    {
+      "key": "effective_nuclear_charges",
+      "imaginary": 1e-10,
+      "rejected": true
+    }
+  ],
+  "real_float64_integer_types_admitted": true,
+  "guard_called_after_native_reader_before_return_to_chemistry": true,
+  "original_analyzer_sha256": "291abdc7971a8676912fcf1bda655edd5439c75fe37535633406072e128085d0",
+  "original_53_test_review_unchanged": true,
+  "new_author_75_test_review_sha256": "3093c28d85593c097419209bf7b1715fba754fa5348b77050278be4d3fca1b68",
+  "new_author_artifacts_verified": [
+    {
+      "file": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/analyze_1mnc_recovery_endpoint_v1.py",
+      "sha256": "28dcd268ea8d5aaa094bf1c777c3fb4064216583b9ab089ef46cd5efebfc167e"
+    },
+    {
+      "file": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/test_1mnc_recovery_endpoint_v1.py",
+      "sha256": "5ac489f35a573067748fa12a75663aeb39797a30d391659a909f95f68a576673"
+    },
+    {
+      "file": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/1MNC-RECOVERY-ENDPOINT-ADMISSION-V1.md",
+      "sha256": "c52ad2fe8e828f907d58a1f78853944a30374135a6c8573e9fa0cb0d15acda33"
+    },
+    {
+      "file": "/Users/ashujo/.cache/dynamol-research/reviews/1mnc-recovery-endpoint-v2/readiness/result.json",
+      "sha256": "309d4d6e42bc6cf7450e593695e548256b62abf2188cb88e40aa988aa3bc62d6"
+    },
+    {
+      "file": "/Users/ashujo/.cache/dynamol-research/reviews/1mnc-recovery-endpoint-v2/reader-equivalence.json",
+      "sha256": "caaa8c5905572f72306f09ef9361e44dd9f0a3606771b0fc53a015b69b1e1ca1"
+    },
+    {
+      "file": "/Users/ashujo/.cache/dynamol-research/reviews/1mnc-recovery-endpoint-v1/review.json",
+      "sha256": "d3c22ebf6462283f8f7284ff653b0afdc243e942deddb7bdd484c4605a23a448"
+    }
+  ],
+  "independent_native_endpoint_read": false,
+  "QM_launched": false,
+  "model_accuracy_validated": false,
+  "full_preparation_ready": false,
+  "limitations": [
+    "No terminal 1MNC recovery endpoint has been qualified by this review.",
+    "Original source-frame, capped-cluster chemistry and numerical thresholds remain mandatory and may reject a converged endpoint.",
+    "An exact-endpoint conventional gradient comparison remains a separate gate before Hessian/parameters.",
+    "No unconstrained minimum, full protein metal model or force-field accuracy acceptance."
+  ],
+  "canonical_synthetic_controller_metadata_admitted": true
+}

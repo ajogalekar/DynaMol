@@ -1,0 +1,88 @@
+[
+  {
+    "archive": "toppar_c31b1.tar.gz",
+    "all_five_atom_dianion_residue_candidates": [
+      {
+        "file": "toppar/toph19.inp",
+        "name": "SO4",
+        "declared_charge": "-2.0",
+        "atoms": [
+          [
+            "S",
+            "S",
+            "0.0"
+          ],
+          [
+            "O1",
+            "OC",
+            "-0.5"
+          ],
+          [
+            "O2",
+            "OC",
+            "-0.5"
+          ],
+          [
+            "O3",
+            "OC",
+            "-0.5"
+          ],
+          [
+            "O4",
+            "OC",
+            "-0.5"
+          ]
+        ]
+      }
+    ],
+    "license_or_readme_filenames": [
+      "toppar/stream/00readme",
+      "toppar/non_charmm/00readme",
+      "toppar/00readme"
+    ]
+  },
+  {
+    "archive": "toppar_c36_feb26.tgz",
+    "all_five_atom_dianion_residue_candidates": [
+      {
+        "file": "toppar/toph19.inp",
+        "name": "SO4",
+        "declared_charge": "-2.0",
+        "atoms": [
+          [
+            "S",
+            "S",
+            "0.0"
+          ],
+          [
+            "O1",
+            "OC",
+            "-0.5"
+          ],
+          [
+            "O2",
+            "OC",
+            "-0.5"
+          ],
+          [
+            "O3",
+            "OC",
+            "-0.5"
+          ],
+          [
+            "O4",
+            "OC",
+            "-0.5"
+          ]
+        ]
+      }
+    ],
+    "license_or_readme_filenames": [
+      "toppar/charmm_modifications/00readme",
+      "toppar/gbsw/00readme",
+      "toppar/non_charmm/00readme",
+      "toppar/silicates/00README",
+      "toppar/metals/CHARMM_METAL/00readme"
+    ]
+  }
+]

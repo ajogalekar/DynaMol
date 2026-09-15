@@ -1,0 +1,47 @@
+{
+  "status": "case-specific mandatory-term transport checks passed; not model accuracy or production lifecycle support",
+  "native_atoms": 5216,
+  "forces": [
+    "HarmonicBondForce",
+    "HarmonicAngleForce",
+    "PeriodicTorsionForce",
+    "CMAPTorsionForce",
+    "CustomNonbondedForce",
+    "NonbondedForce",
+    "CMMotionRemover"
+  ],
+  "common_imported_forces_unchanged": [
+    "HarmonicBondForce",
+    "HarmonicAngleForce",
+    "PeriodicTorsionForce",
+    "CMMotionRemover"
+  ],
+  "cmap": {
+    "maps": 1,
+    "size": 24,
+    "values_checked": 576,
+    "atom_order_checked": true,
+    "maximum_grid_error_kj_mol": 0.0
+  },
+  "all_native_pair_table_entries_checked": 361,
+  "pair_coefficient_maximum_errors": {
+    "acoef": 2.6020852139652106e-18,
+    "bcoef": 3.469446951953614e-18
+  },
+  "explicit_exclusion_pairs_checked": 27248,
+  "native_masses_charges_types_identity_checked": true,
+  "one_four_and_zero_exceptions_unchanged": 27248,
+  "constraints": 0,
+  "versions": {
+    "openmm": "8.6",
+    "parmed": "4.3.1"
+  },
+  "sha256": {
+    "baseline.prmtop": "3dc34aa2ece96ea44ff07cf402aac4cd0bf93d75c7852267009d0b54223093a3",
+    "published.prmtop": "bda6ae78ee73d7aeec372a0d83f1ad5253b27f61724fa449f4f70abafd41a4da",
+    "source-atom-map.json": "b90d761ed796f19ac3943240b18393b1f4d5617fa303f47dcca70f5bb64e4937",
+    "published-openmm-system.xml": "cdd2233e80b874a2969cf9c41d9843b397a38a68942e88f16cb36f9be0a1a49d"
+  },
+  "audit_sha256": "091338043e17c205b281f66cf5f7f1e7332ee3d40bb892d92efdfbf143b94343",
+  "limitations": "Does not establish scientific accuracy of Mg-protein transfer, equilibrium coordination, phase-space sampling, or bundled availability. Native same-coordinate Sander results are recorded separately."
+}

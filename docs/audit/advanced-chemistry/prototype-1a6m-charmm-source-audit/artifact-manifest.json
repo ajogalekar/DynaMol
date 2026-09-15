@@ -1,0 +1,188 @@
+{
+  "created_utc": "2026-09-13T18:40:45.009774+00:00",
+  "derived_files": [
+    {
+      "path": "1a6m-alternate-selection.json",
+      "bytes": 95399,
+      "sha256": "8ea6ba201e263cef7addd5ec0b76fb6809f2e4ac4f2583a03f4f16a39c6ce797"
+    },
+    {
+      "path": "1a6m-assembly-plan.json",
+      "bytes": 4961,
+      "sha256": "f50442b3a3397712bffd9c31b4bb5a3dc657bb3c437d598c47ce2fd2195c32a7"
+    },
+    {
+      "path": "1a6m-identity-map.json",
+      "bytes": 1251006,
+      "sha256": "a8e44a5b6c848ae6862f0cff7f4cc834e092a4b3384805034986bcacf6b2a09a"
+    },
+    {
+      "path": "ASSEMBLY-PLAN.md",
+      "bytes": 9850,
+      "sha256": "1c3a4ad45def694510a49071cbe509274437bfc5783562fff7059533d9c7f845"
+    },
+    {
+      "path": "additional-retrieval.json",
+      "bytes": 1641,
+      "sha256": "fd591475ec954a4a278a24da816e96e13b483631f3355dcc02e7a87a619591e1"
+    },
+    {
+      "path": "audit-run-final.log",
+      "bytes": 186,
+      "sha256": "9b4ccc491ad276d7b5db7eefb36d5ece0295d529353f788ab268da813ebdfe9d"
+    },
+    {
+      "path": "audit-run.log",
+      "bytes": 186,
+      "sha256": "9b4ccc491ad276d7b5db7eefb36d5ece0295d529353f788ab268da813ebdfe9d"
+    },
+    {
+      "path": "audit_assembly.py",
+      "bytes": 13484,
+      "sha256": "436f2e859616cfb5d3949b10941c5f06c207bccc5ebc64c2a58bdc305c9e7ad0"
+    },
+    {
+      "path": "charge-model-differences.json",
+      "bytes": 4937,
+      "sha256": "94a72e6aa0a7e3fc0e6a4e4a6971b321886f7de5330c7a853c444cdb77f920a9"
+    },
+    {
+      "path": "check_variant_systems.py",
+      "bytes": 3021,
+      "sha256": "9b9f4e01a205a3624f6ca346af484d0994d9080a065f0fab08e54339cad412fb"
+    },
+    {
+      "path": "improper-duplicate-audit.json",
+      "bytes": 5322,
+      "sha256": "19e283711694a3f6f1f3e5fbe267214a50bf230ffe37244c29f7fd0d1e85b607"
+    },
+    {
+      "path": "mackerell-force-fields.html",
+      "bytes": 42579,
+      "sha256": "dbe16da8db3022407672e0b2ef43eac8820109ea5573b653839648f3cf14e714"
+    },
+    {
+      "path": "published-coordinate-mapping.json",
+      "bytes": 39887,
+      "sha256": "b35d0d33db2bcb04c21cb952d5d7bd1c290334008f9e58402310013db4b5e215"
+    },
+    {
+      "path": "published-horse-baseline/audit.json",
+      "bytes": 1734,
+      "sha256": "ed24b7d96db49d2fddad2abc72c2466ce88133ca792158023da589dabb59ca72"
+    },
+    {
+      "path": "published-horse-baseline/model.psf",
+      "bytes": 3025126,
+      "sha256": "d773fc2e42c63243e06037aa2cdb3f65f38307ef30c99e9afef97ab3e99c2dca"
+    },
+    {
+      "path": "published-horse-baseline/system.xml",
+      "bytes": 8553127,
+      "sha256": "0abc07238e9ad570231327f612573c6472e8d16a49eedc833ecbbfab1ac82c43"
+    },
+    {
+      "path": "published-horse-updated-charges/audit.json",
+      "bytes": 6683,
+      "sha256": "58b4ea05f22053b3086e36f50b3d873600af27dfbcdf80a8bb3c3d61cc797478"
+    },
+    {
+      "path": "published-horse-updated-charges/model.psf",
+      "bytes": 3025127,
+      "sha256": "9d10e1ae56a173de6e11eceee0178aa1ab6d2525d51aa15cf432b138409f9166"
+    },
+    {
+      "path": "published-horse-updated-charges/system.xml",
+      "bytes": 8552822,
+      "sha256": "ca225779a84650d5f1546e2a8e39bb7eb939ffc8661af39436668f84b21a8d5f"
+    },
+    {
+      "path": "published-native-system-audit.json",
+      "bytes": 9150,
+      "sha256": "130a7d5f3737fb286fab76c262f1e119f89c8b157ec2afb96a4fc0c2cea1b4b1"
+    },
+    {
+      "path": "published-site-terms.json",
+      "bytes": 412784,
+      "sha256": "10bcd30e4171ddf4937a38940a0dcb3eb50d28289b8bbe24399df4eeb1308241"
+    },
+    {
+      "path": "published-template-mapping.json",
+      "bytes": 1106,
+      "sha256": "3b14432397499c80cc0e10f5c003acc85ed8e532d12920c9605a00a144c05970"
+    },
+    {
+      "path": "sulfate-archive-audit.json",
+      "bytes": 1653,
+      "sha256": "17ee3df02d72afe290fffcd2881d80a9baf365612c780bdc71c46edb4977d9a7"
+    },
+    {
+      "path": "toppar_c31b1.tar.gz",
+      "bytes": 531199,
+      "sha256": "0ac3cc4c88cdfa27bdb14cdbd9dc306e585fc348e395fee66b8efe60e4a96ba4"
+    },
+    {
+      "path": "toppar_c36_feb26.tgz",
+      "bytes": 13764993,
+      "sha256": "7d4d21ebdb216a48f600fadee862dc77d369a10d5753150635f35e09c3209e08"
+    },
+    {
+      "path": "variant-mechanics-comparison.json",
+      "bytes": 832,
+      "sha256": "25bcf2122d9c7695147cd7a8d6d0ebe090f9ef298a99ea8b946ad6959540b123"
+    }
+  ],
+  "immutable_sources": [
+    {
+      "path": "inputs/1A6M.cif",
+      "bytes": 358898,
+      "sha256": "25ae24d2b518a7cb7ef24aeb1eb3fc5c35707ce4e696956d11b8f9fdf9fa7218"
+    },
+    {
+      "path": "metal-panel.json",
+      "bytes": 541253,
+      "sha256": "28db88c10ce5a80dde8513d9c02542c2aa7ffda4910d8bbaef64ce9f312af694"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/horse_oxy.pdb",
+      "bytes": 198932,
+      "sha256": "3d988a014336edbb92bde0c8c65f2a9e6d4869f2d6e5256eedae3679e5ba5a8e"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/topology-charge-diff.txt",
+      "bytes": 4197,
+      "sha256": "5b9bed6c6f9790cf75e4c181270fdcabe6554b154cc7e87bbba29b767b3488e9"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/horse_oxy_only_wbi_10ns.psf",
+      "bytes": 3068637,
+      "sha256": "bb12469b7d36b4bfe83345424771f8ad917ef118c80402361d3c6eb925b1811e"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/top_heme.inp",
+      "bytes": 441830,
+      "sha256": "0d8289719825311cf18485d4b908558a92a03129751c2cde5a155ee533039b55"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/script_construction_oxy.pgn",
+      "bytes": 537,
+      "sha256": "6efe43500d38a8c605be81a90fd8a18cb0603dcce3b7a3f165cada84d6331a4a"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/par_all27.inp",
+      "bytes": 215219,
+      "sha256": "1a17325ae13d64cc863fe2dcd05935ff560f4bff5230d532ed9707f89663c8d6"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/top_heme_oxy_optimized_charges.inp",
+      "bytes": 441910,
+      "sha256": "81f46815f176ff42cb77a1c1ec5706c017748252a50a417669b2c0befb8cf6a2"
+    },
+    {
+      "path": "non-zinc-models/dryad-oxy-myoglobin/Read_Me.txt",
+      "bytes": 400,
+      "sha256": "6d81ae3aa2de17e014932915b2d54a2ce864d07f7e9b07d3da5604e23bf6fb28"
+    }
+  ],
+  "scope": "Static research-only assembly/source audit; 1A6M remains blocked by complete compatible sulfate coverage; no MD/QM/Context or production integration."
+}

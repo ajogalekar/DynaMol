@@ -1,0 +1,107 @@
+{
+  "created_at": "2026-09-13T06:36:29.100908+00:00",
+  "status": "initial runs preserved; targeted retries pending general fixes",
+  "scope": "Five allocated cases from the frozen15-case convenience panel; full preparation only, no MD. Failed cases retained. No biological or native-loop accuracy claims.",
+  "cases": [
+    {
+      "id": "1HCK",
+      "passed": true,
+      "phase": "complete",
+      "error": null,
+      "elapsed_seconds": 32.33,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true,
+        "prepared_dataset_saved": true,
+        "finite_saved_coordinates": true,
+        "full_complex_loop_geometry_passed": true,
+        "independent_observed_atom_transplant_unchanged": true,
+        "serialized_pdb_geometry_passed": true,
+        "complete_forcefield_reconstructed": true,
+        "finite_static_forcefield_energy_no_dynamics": true,
+        "ligand_conversion_validation_passed": true,
+        "no_ligand_removal": true
+      },
+      "backend_source_unchanged_during_case": true,
+      "report": "docs/audit/loop-fallback/runs/review-initial/1HCK/result.json",
+      "report_sha256": "5f80c74feb0d445a014982086d80f0d101290a9dc310b6d3e962f94a36c9d85d"
+    },
+    {
+      "id": "4HJO",
+      "passed": true,
+      "phase": "complete",
+      "error": null,
+      "elapsed_seconds": 31.37,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true,
+        "prepared_dataset_saved": true,
+        "finite_saved_coordinates": true,
+        "full_complex_loop_geometry_passed": true,
+        "independent_observed_atom_transplant_unchanged": true,
+        "serialized_pdb_geometry_passed": true,
+        "complete_forcefield_reconstructed": true,
+        "finite_static_forcefield_energy_no_dynamics": true,
+        "ligand_conversion_validation_passed": true,
+        "no_ligand_removal": true
+      },
+      "backend_source_unchanged_during_case": false,
+      "report": "docs/audit/loop-fallback/runs/review-initial/4HJO/result.json",
+      "report_sha256": "f7358ec99a1f5f3d53514f23539a20e7cd46f6001175eb04ead75d7f111ba514"
+    },
+    {
+      "id": "2BEL",
+      "passed": false,
+      "phase": "preparation eligibility",
+      "error": "Ligand chemistry needs attention: L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). Bound ligand stereochemistry disagrees with CCD at C14: expected R, found S. No coordinates were changed.",
+      "elapsed_seconds": 3.33,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true
+      },
+      "backend_source_unchanged_during_case": true,
+      "report": "docs/audit/loop-fallback/runs/review-initial/2BEL/result.json",
+      "report_sha256": "66c73e0dfd02690deb85e3507ec3e5573ac7800a88b9c068eef6b98b8dae7ed3"
+    },
+    {
+      "id": "1FPU",
+      "passed": false,
+      "phase": "native preparation",
+      "error": "Repaired structure has inverted or near-planar standard residue stereochemistry at B:394 THR CB. The model is rejected; use an externally validated repair instead.",
+      "elapsed_seconds": 7.26,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true
+      },
+      "backend_source_unchanged_during_case": true,
+      "report": "docs/audit/loop-fallback/runs/review-initial/1FPU/result.json",
+      "report_sha256": "91b37b71f40771f0c78f360528d6de2324cc75dc914efc326555fb867fcf444e"
+    },
+    {
+      "id": "4HHY",
+      "passed": false,
+      "phase": "monomer selection",
+      "error": "The selected protein chain is covalently connected to another protein or nucleic-acid chain. One-chain extraction would sever that connection; retain the linked assembly or resolve it explicitly.",
+      "elapsed_seconds": 1.03,
+      "checks": {},
+      "backend_source_unchanged_during_case": true,
+      "report": "docs/audit/loop-fallback/runs/review-initial/4HHY/result.json",
+      "report_sha256": "f84189abd137cff971c5794f3e3be7e4f63d5555f30aad62ea1a6b28d79334de"
+    }
+  ],
+  "passed": 2,
+  "failed": 3,
+  "independent_retention_check": "review-initial-retained-chemistry.json",
+  "findings": {
+    "4HHY": "Explicit covalent symmetry-mate contacts were mistaken for within-asymmetric-unit bonds at both source-link screening and OpenMM import. Monomer guard fix implemented; source-import correction pending.",
+    "1FPU": "A repaired observed THR CB fails stereochemistry; repair implementation under review, gate retained.",
+    "2BEL": "Ligand CBO is incomplete. Subsequent root diagnosis traced the initial error to validation of the CCD ideal-coordinate reference, before bound-pose repair. CCD descriptors conflict with ideal and model reference coordinates (also reproduced using observed plus ideal-missing coordinates); this is a chemical-reference/coordinate conflict, not evidence solely of a bad bound pose. A validated complete chemical/coordinate reference is needed; no reference or observed stereocenter is automatically flipped. The original initial error and result record are retained unchanged.",
+    "4HJO": "Passed actual native prep, but a backend source file changed while running; frozen-code confirmation required."
+  },
+  "monomer_tests": {
+    "passed": 12,
+    "new_cases": 3,
+    "scope": "Different-ASU record excluded with warning; same-image covalent link and actual supplied topology bond still block extraction; re-extraction retains evidence."
+  },
+  "classification_update": "2BEL wording corrected after source-level trace and independent full-graph CCD stereo checks by root; initial run counts and errors remain historical."
+}

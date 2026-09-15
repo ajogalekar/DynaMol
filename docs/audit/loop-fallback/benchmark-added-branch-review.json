@@ -1,0 +1,76 @@
+{
+  "scope": "Independent synthetic geometry review of new-branch correction. No native-loop accuracy or production stability claim; no dynamics.",
+  "helper_sha256": "c88b327a52a046db272164dc711860e9bb9717e5e8fbc9ef32fbb4c5753b6f9a",
+  "fixture_sha256": "039779d649c37c7f01f56fceebcc5bab28ec0d21ca68df877f875d04d14af1a1",
+  "cases": [
+    {
+      "case": "THR full new sidechain CA inversion",
+      "passed": true,
+      "corrections": [
+        {
+          "identity": [
+            "A",
+            "1",
+            "",
+            "THR"
+          ],
+          "center": "CA",
+          "moved_atom_names": [
+            "CB",
+            "CG2",
+            "OG1"
+          ],
+          "moved_atom_indices": [
+            2,
+            3,
+            4
+          ],
+          "before_signed_volume_nm3": -0.0024571119999999996,
+          "after_signed_volume_nm3": 0.0024571120000000017
+        }
+      ],
+      "all_bond_lengths_unchanged": true,
+      "observed_atoms_unchanged": true
+    },
+    {
+      "case": "ILE full new sidechain CA inversion",
+      "passed": true,
+      "corrections": [
+        {
+          "identity": [
+            "A",
+            "1",
+            "",
+            "ILE"
+          ],
+          "center": "CA",
+          "moved_atom_names": [
+            "CB",
+            "CG2",
+            "CG1",
+            "CD1"
+          ],
+          "moved_atom_indices": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "before_signed_volume_nm3": -0.0024868904000000026,
+          "after_signed_volume_nm3": 0.0024868904000000026
+        }
+      ],
+      "all_bond_lengths_unchanged": true,
+      "observed_atoms_unchanged": true
+    },
+    {
+      "case": "observed environment atom occupies corrected methyl position",
+      "witness_reproduced": true,
+      "before_contact_angstrom": 2.480124738668964,
+      "after_contact_angstrom": 5.003707553108401e-16,
+      "stereo_checks_pass": true,
+      "observed_atom_unchanged": true,
+      "conclusion": "A final complete-environment gross-contact gate for corrected atoms is needed; reflection and stereochemistry alone do not ensure acceptable contacts."
+    }
+  ]
+}

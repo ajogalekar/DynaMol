@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-09-13T07:04:38.843489+00:00",
+  "case": "2BEL",
+  "component": "CBO",
+  "reference_sha256": "4b9482a55ef633bf1af9db087e1846610874413a3c01826054c6ab2e3de57cf4",
+  "failure_origin": "CCD ideal-coordinate validation before bound ligand repair",
+  "new_message": "The CCD reference geometry could not be validated for missing-atom repair. Reference coordinates disagree with CCD stereochemistry at C14: expected R, found S. No coordinates were changed. Supply a validated complete ligand reference; the input structure was not modified.",
+  "independent_checks": {
+    "CCD_ideal_coordinates_C14": "S (CCD descriptor R)",
+    "CCD_model_coordinates_C14": "S (CCD descriptor R)",
+    "bound_coordinates_with_missing_atoms_from_ideal_C14": "S (CCD descriptor R)",
+    "modern_rdCIPLabeler_resolves_conflict": false
+  },
+  "decision": "Preserve source and the failure. No observed atoms, CCD stereodescriptors or ring atom names were changed to force acceptance. A validated complete chemical/coordinate reference is needed."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "analyzer_implemented_synthetic_checks_passed_awaiting_real_endpoint",
+  "synthetic_tests_passed": 37,
+  "native_QM_launched_by_analyzer": 0,
+  "real_endpoint_analyzed": false,
+  "model_accuracy_validated": false,
+  "full_preparation_ready": false,
+  "created_unix": 1789333317.0090501,
+  "artifacts": {
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/analyze_1mnc_anchored_endpoint.py": {
+      "sha256": "291abdc7971a8676912fcf1bda655edd5439c75fe37535633406072e128085d0",
+      "bytes": 32093
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/test_1mnc_endpoint_analyzer.py": {
+      "sha256": "20fece4e82a4c9d1d32e140cb270116590f4c6a7d54e927ae50960ca6bf867b3",
+      "bytes": 13627
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/1mnc-endpoint-analyzer-tests-v1.log": {
+      "sha256": "e718a9572ca5d66422ff5ea2a159607293824804d4e47e40afb7952859c74402",
+      "bytes": 99
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/1mnc-endpoint-analyzer-tests-v2.log": {
+      "sha256": "ca46b674ac15058438d3254b3e4b477b1a754a2e6afca274698b23e05a1499a9",
+      "bytes": 99
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/1mnc-endpoint-analyzer-readiness-v1/result.json": {
+      "sha256": "c93ec09f5b8c2268155fb9359840399edc9305519f4f5ece255e98e04540f466",
+      "bytes": 366
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-anchored-optimization-v1/optimization-policy.json": {
+      "sha256": "61c06fa5679fbaafd7db06afb225b57b021985b7976fa3e7aca8a94da3ebd93f",
+      "bytes": 6055
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/metal/qm-1mnc-anchored-optimization-v1/input.json": {
+      "sha256": "3b6fc0c51200556bd78bf884760b77c7feeeb079d614ceee253480e9887a5cc5",
+      "bytes": 9481
+    },
+    "/Users/ashujo/Documents/Science/DynaMol/.venv/lib/python3.12/site-packages/openmm/app/data/amber14/protein.ff14SB.xml": {
+      "sha256": "d9f9779c09d67cd5f8bc657692f174ffab14c469dfd06d560ac1899fa7e976b8",
+      "bytes": 224056
+    }
+  },
+  "readiness_result": {
+    "checked_unix": 1789333250.309715,
+    "QM_launched": false,
+    "model_accuracy_validated": false,
+    "full_preparation_ready": false,
+    "analyzer_sha256": "291abdc7971a8676912fcf1bda655edd5439c75fe37535633406072e128085d0",
+    "versions": {
+      "numpy": "2.4.6",
+      "gemmi": "0.7.5",
+      "rdkit": "2025.09.6"
+    },
+    "status": "endpoint_not_present_no_result_read"
+  }
+}

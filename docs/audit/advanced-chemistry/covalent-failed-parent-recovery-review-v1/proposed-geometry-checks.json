@@ -1,0 +1,1003 @@
+{
+  "geometry_identity_checks_passed": true,
+  "maximum_frozen_displacement_angstrom": 0.0,
+  "frozen_tolerance_angstrom": 1e-07,
+  "stereochemistry": [
+    {
+      "name": "CA",
+      "expected": "R",
+      "observed": "R",
+      "passed": true
+    },
+    {
+      "name": "MOV_C20",
+      "expected": "S",
+      "observed": "S",
+      "passed": true
+    }
+  ],
+  "bond_geometry": [
+    {
+      "atom_ids": [
+        "000:ACE_CH3",
+        "001:ACE_C"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5285264145574977,
+      "covalent_radii_ratio": 1.0056094832615117,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "001:ACE_C",
+        "003:N"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.3447305181531628,
+      "covalent_radii_ratio": 0.9147826654103148,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "003:N",
+        "004:CA"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4517744849793026,
+      "covalent_radii_ratio": 0.9876016904621107,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "004:CA",
+        "005:C"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5396614707323049,
+      "covalent_radii_ratio": 1.0129351781133584,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "004:CA",
+        "007:CB"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5320489752027842,
+      "covalent_radii_ratio": 1.0079269573702527,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "007:CB",
+        "008:SG"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.8155483468695837,
+      "covalent_radii_ratio": 1.0030653850108198,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "005:C",
+        "009:NME_N"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.3483828560475737,
+      "covalent_radii_ratio": 0.9172672490119549,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "009:NME_N",
+        "010:NME_CH3"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4589211767604173,
+      "covalent_radii_ratio": 0.9924633855513043,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "001:ACE_C",
+        "002:ACE_O"
+      ],
+      "order": 2.0,
+      "distance_angstrom": 1.2332745031013979,
+      "covalent_radii_ratio": 0.8685031711981676,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "005:C",
+        "006:O"
+      ],
+      "order": 2.0,
+      "distance_angstrom": 1.2009427085290665,
+      "covalent_radii_ratio": 0.8457343017810328,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "029:MOV_C22",
+        "028:MOV_C13"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5075047269110489,
+      "covalent_radii_ratio": 0.9917794255993743,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "051:MOV_O3",
+        "050:MOV_C26"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.3356504460173437,
+      "covalent_radii_ratio": 0.9405989056460168,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "049:MOV_C27",
+        "050:MOV_C26"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3910921960457316,
+      "covalent_radii_ratio": 0.9151922342406129,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "049:MOV_C27",
+        "048:MOV_C28"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.377491991380318,
+      "covalent_radii_ratio": 0.9062447311712619,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "050:MOV_C26",
+        "044:MOV_C6"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.4040384881754793,
+      "covalent_radii_ratio": 0.9237095316943943,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "028:MOV_C13",
+        "030:MOV_C12"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3843131095342514,
+      "covalent_radii_ratio": 0.9107323089041127,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "028:MOV_C13",
+        "027:MOV_C9"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.393114484329437,
+      "covalent_radii_ratio": 0.9165226870588401,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "030:MOV_C12",
+        "031:MOV_C11"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3823203504947281,
+      "covalent_radii_ratio": 0.9094212832202159,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "013:MOV_C19",
+        "012:MOV_C20"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5288906371365136,
+      "covalent_radii_ratio": 1.0058491033792853,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "013:MOV_C19",
+        "014:MOV_N6"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4564646061241953,
+      "covalent_radii_ratio": 0.9907922490640785,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "048:MOV_C28",
+        "047:MOV_C29"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3887028034527824,
+      "covalent_radii_ratio": 0.9136202654294621,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "044:MOV_C6",
+        "043:MOV_C3"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4805926769255346,
+      "covalent_radii_ratio": 0.9740741295562728,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "044:MOV_C6",
+        "045:MOV_C30"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3939461041025,
+      "covalent_radii_ratio": 0.9170698053305921,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "042:MOV_F1",
+        "041:MOV_C4"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.3266846259732625,
+      "covalent_radii_ratio": 0.9975072375738816,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "043:MOV_C3",
+        "041:MOV_C4"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3918755736485926,
+      "covalent_radii_ratio": 0.9157076142424951,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "043:MOV_C3",
+        "038:MOV_N1"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3229258619566133,
+      "covalent_radii_ratio": 0.8999495659568798,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "041:MOV_C4",
+        "040:MOV_C5"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.365555209854396,
+      "covalent_radii_ratio": 0.8983915854305237,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "038:MOV_N1",
+        "037:MOV_C2"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3213290990455644,
+      "covalent_radii_ratio": 0.8988633326840574,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "040:MOV_C5",
+        "039:MOV_C1"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3940465821075738,
+      "covalent_radii_ratio": 0.9171359092812985,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "037:MOV_C2",
+        "039:MOV_C1"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.4018417872578934,
+      "covalent_radii_ratio": 0.9222643337222983,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "037:MOV_C2",
+        "026:MOV_N4"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.371696617891071,
+      "covalent_radii_ratio": 0.9331269509463068,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "012:MOV_C20",
+        "021:MOV_N2"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4763043052454723,
+      "covalent_radii_ratio": 1.004288643024131,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "012:MOV_C20",
+        "011:MOV_C21"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5313842776559923,
+      "covalent_radii_ratio": 1.0074896563526266,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "039:MOV_C1",
+        "022:MOV_C7"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.4727891014188448,
+      "covalent_radii_ratio": 0.9689401983018715,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "027:MOV_C9",
+        "026:MOV_N4"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4374476640510612,
+      "covalent_radii_ratio": 0.9778555537762321,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "027:MOV_C9",
+        "033:MOV_C10"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3908873503266685,
+      "covalent_radii_ratio": 0.9150574673201767,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "031:MOV_C11",
+        "032:MOV_N5"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3147406476346646,
+      "covalent_radii_ratio": 0.8943813929487514,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "026:MOV_N4",
+        "024:MOV_C8"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.402893069165409,
+      "covalent_radii_ratio": 0.9543490266431354,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "022:MOV_C7",
+        "023:MOV_N3"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.287193267711743,
+      "covalent_radii_ratio": 0.8756416787154715,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "022:MOV_C7",
+        "021:MOV_N2"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.355891110867335,
+      "covalent_radii_ratio": 0.9223749053519287,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "024:MOV_C8",
+        "023:MOV_N3"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3672317659855195,
+      "covalent_radii_ratio": 0.9300896367248432,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "024:MOV_C8",
+        "025:MOV_O1"
+      ],
+      "order": 2.0,
+      "distance_angstrom": 1.1940746698218268,
+      "covalent_radii_ratio": 0.8408976548041034,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "021:MOV_N2",
+        "020:MOV_C17"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4595389294230852,
+      "covalent_radii_ratio": 0.9928836254578811,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "017:MOV_C24",
+        "015:MOV_C23"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.521073242763521,
+      "covalent_radii_ratio": 1.0007060807654744,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "017:MOV_C24",
+        "018:MOV_C25"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5306927971492936,
+      "covalent_radii_ratio": 1.0070347349666404,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "020:MOV_C17",
+        "019:MOV_C18"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5208100273757343,
+      "covalent_radii_ratio": 1.0005329127471936,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "014:MOV_N6",
+        "015:MOV_C23"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.35716215017486,
+      "covalent_radii_ratio": 0.9232395579420817,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "014:MOV_N6",
+        "019:MOV_C18"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.4551608274708878,
+      "covalent_radii_ratio": 0.9899053248101278,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "047:MOV_C29",
+        "045:MOV_C30"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.370744032237645,
+      "covalent_radii_ratio": 0.9018052843668717,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "045:MOV_C30",
+        "046:MOV_F2"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.3267241012716526,
+      "covalent_radii_ratio": 0.9975369182493629,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "015:MOV_C23",
+        "016:MOV_O2"
+      ],
+      "order": 2.0,
+      "distance_angstrom": 1.2058209557174375,
+      "covalent_radii_ratio": 0.849169687124956,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "032:MOV_N5",
+        "033:MOV_C10"
+      ],
+      "order": 1.5,
+      "distance_angstrom": 1.3256304407483652,
+      "covalent_radii_ratio": 0.9017894154750784,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "033:MOV_C10",
+        "034:MOV_C14"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.51959453592747,
+      "covalent_radii_ratio": 0.999733247320704,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "034:MOV_C14",
+        "035:MOV_C16"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5348884680960593,
+      "covalent_radii_ratio": 1.009795044800039,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "034:MOV_C14",
+        "036:MOV_C15"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.5333430783381756,
+      "covalent_radii_ratio": 1.0087783410119577,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "008:SG",
+        "018:MOV_C25"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.8212422238743908,
+      "covalent_radii_ratio": 1.0062111734112655,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "000:ACE_CH3",
+        "052:H53"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0841528704956647,
+      "covalent_radii_ratio": 1.0132269817716493,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "000:ACE_CH3",
+        "053:H54"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.083129774863513,
+      "covalent_radii_ratio": 1.0122708176294513,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "000:ACE_CH3",
+        "054:H55"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0813965785865758,
+      "covalent_radii_ratio": 1.0106510080248372,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "003:N",
+        "055:H56"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 0.9935915580576099,
+      "covalent_radii_ratio": 0.9741093706447156,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "004:CA",
+        "056:H57"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0804290579563627,
+      "covalent_radii_ratio": 1.0097467831367875,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "007:CB",
+        "057:H58"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.078027098728389,
+      "covalent_radii_ratio": 1.0075019614284009,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "007:CB",
+        "058:H59"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.082739496794433,
+      "covalent_radii_ratio": 1.0119060717704982,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "009:NME_N",
+        "059:H60"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 0.9951892947045488,
+      "covalent_radii_ratio": 0.9756757791221066,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "010:NME_CH3",
+        "060:H61"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.084843810365628,
+      "covalent_radii_ratio": 1.0138727199678765,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "010:NME_CH3",
+        "061:H62"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0817136644596406,
+      "covalent_radii_ratio": 1.0109473499622808,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "010:NME_CH3",
+        "062:H63"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0794864613135575,
+      "covalent_radii_ratio": 1.0088658516949136,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "011:MOV_C21",
+        "063:H64"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.082445816335599,
+      "covalent_radii_ratio": 1.0116316040519617,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "011:MOV_C21",
+        "064:H65"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0861619496781467,
+      "covalent_radii_ratio": 1.0151046258674268,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "011:MOV_C21",
+        "065:H66"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0789990430730085,
+      "covalent_radii_ratio": 1.0084103206289798,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "012:MOV_C20",
+        "066:H67"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.079867678687058,
+      "covalent_radii_ratio": 1.0092221296140729,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "013:MOV_C19",
+        "067:H68"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.087645049144214,
+      "covalent_radii_ratio": 1.0164907001347794,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "013:MOV_C19",
+        "068:H69"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0787226985331018,
+      "covalent_radii_ratio": 1.0081520547038334,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "017:MOV_C24",
+        "069:H70"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.088265777889163,
+      "covalent_radii_ratio": 1.0170708204571615,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "017:MOV_C24",
+        "070:H71"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0834141930148327,
+      "covalent_radii_ratio": 1.0125366289858249,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "018:MOV_C25",
+        "071:H72"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0795731912638873,
+      "covalent_radii_ratio": 1.0089469077232591,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "018:MOV_C25",
+        "072:H73"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0829504748580348,
+      "covalent_radii_ratio": 1.0121032475308736,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "019:MOV_C18",
+        "073:H74"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0835436334651407,
+      "covalent_radii_ratio": 1.0126576013692903,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "019:MOV_C18",
+        "074:H75"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0790368307139278,
+      "covalent_radii_ratio": 1.0084456361812408,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "020:MOV_C17",
+        "075:H76"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0800501291057578,
+      "covalent_radii_ratio": 1.0093926440240726,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "020:MOV_C17",
+        "076:H77"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0864118895393644,
+      "covalent_radii_ratio": 1.0153382145227705,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "029:MOV_C22",
+        "077:H78"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.083801066983614,
+      "covalent_radii_ratio": 1.0128981934426298,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "029:MOV_C22",
+        "078:H79"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0847951931378055,
+      "covalent_radii_ratio": 1.0138272833063602,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "029:MOV_C22",
+        "079:H80"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0824795483710752,
+      "covalent_radii_ratio": 1.011663129318762,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "030:MOV_C12",
+        "080:H81"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0739258962086793,
+      "covalent_radii_ratio": 1.0036690618772703,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "031:MOV_C11",
+        "081:H82"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0761241866549152,
+      "covalent_radii_ratio": 1.0057235389298271,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "034:MOV_C14",
+        "082:H83"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0829244481796803,
+      "covalent_radii_ratio": 1.0120789235324115,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "035:MOV_C16",
+        "083:H84"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.086233290525913,
+      "covalent_radii_ratio": 1.015171299556928,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "035:MOV_C16",
+        "084:H85"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.085087951006631,
+      "covalent_radii_ratio": 1.0141008887912437,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "035:MOV_C16",
+        "085:H86"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0835973584706622,
+      "covalent_radii_ratio": 1.0127078116548245,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "036:MOV_C15",
+        "086:H87"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.08619246412113,
+      "covalent_radii_ratio": 1.0151331440384392,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "036:MOV_C15",
+        "087:H88"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0828669096634753,
+      "covalent_radii_ratio": 1.012025149218201,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "036:MOV_C15",
+        "088:H89"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.085556368944974,
+      "covalent_radii_ratio": 1.0145386625653963,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "040:MOV_C5",
+        "089:H90"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0681351787138074,
+      "covalent_radii_ratio": 0.9982571763680442,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "047:MOV_C29",
+        "090:H91"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.072447541004139,
+      "covalent_radii_ratio": 1.0022874214991953,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "048:MOV_C28",
+        "091:H92"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0745877273451323,
+      "covalent_radii_ratio": 1.0042875956496562,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "049:MOV_C27",
+        "092:H93"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 1.0728347476056461,
+      "covalent_radii_ratio": 1.0026492968277065,
+      "passed": true
+    },
+    {
+      "atom_ids": [
+        "051:MOV_O3",
+        "093:H94"
+      ],
+      "order": 1.0,
+      "distance_angstrom": 0.95331293239062,
+      "covalent_radii_ratio": 0.9827968375161031,
+      "passed": true
+    }
+  ],
+  "physical_acceptance": false,
+  "meaning": "Declared reacted graph/order, frozen anchors, two expected CIP labels, and gross bond geometry only; not optimization convergence or chemical-model accuracy."
+}

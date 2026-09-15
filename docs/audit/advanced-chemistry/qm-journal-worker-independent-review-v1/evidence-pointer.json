@@ -1,0 +1,8 @@
+{
+  "evidence_directory": "/Users/ashujo/.cache/dynamol-research/qm-journal-worker-independent-review-v1",
+  "manifest": "/Users/ashujo/.cache/dynamol-research/qm-journal-worker-independent-review-v1/artifact-manifest.json",
+  "manifest_sha256": "8e7fe00595c14e315551c650cb371c47e834f6a4099529d7ced71cdf30f14559",
+  "artifact_count": 45,
+  "verdict": "no blocking finding; native numerical qualification remains outstanding",
+  "native_quantum_calculations": 0
+}

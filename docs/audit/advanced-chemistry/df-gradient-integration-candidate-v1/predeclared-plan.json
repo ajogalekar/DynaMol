@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "scope": "small neutral closed-shell complete DF gradients; no target/adduct or optimization",
+  "runtime": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1",
+  "runtime_inventory": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/local-recovery-evidence/runtime-files.json",
+  "runtime_inventory_sha256": "683b958788605f35ce2fc9a5b7ac94edb03f5316bd0b166cfcb415ffaea1f416",
+  "methods": [
+    "RHF",
+    "RKS"
+  ],
+  "functional": "B3LYPG",
+  "basis": "6-31g",
+  "auxbasis": "weigend",
+  "charge": 0,
+  "spin": 0,
+  "scf_conv_tol": 1e-12,
+  "scf_conv_tol_grad": 1e-08,
+  "max_scf_cycles": 80,
+  "grid_level": 3,
+  "auxbasis_response": true,
+  "rks_grid_response": true,
+  "allocation_hint_mb": 512,
+  "threads": 1,
+  "rss_cap_bytes": 1000000000,
+  "process_seconds": 120,
+  "campaign_seconds": 600,
+  "min_available_memory_bytes": 2147483648,
+  "start_disk_free_bytes": 26843545600,
+  "running_disk_free_bytes": 8589934592,
+  "fd_steps_bohr": [
+    0.001,
+    0.0005
+  ],
+  "tolerances": {
+    "gradient_parity_max_abs_hartree_per_bohr": 1e-10,
+    "gradient_parity_l2_hartree_per_bohr": 3e-10,
+    "energy_same_state_absolute_hartree": 0.0,
+    "fd_max_abs_RHF_hartree_per_bohr": 2e-06,
+    "fd_max_abs_RKS_hartree_per_bohr": 1e-05
+  },
+  "fixtures": [
+    {
+      "name": "water-distorted",
+      "elements": [
+        "O",
+        "H",
+        "H"
+      ],
+      "coords_bohr": [
+        [
+          0.07,
+          -0.03,
+          0.02
+        ],
+        [
+          1.48,
+          0.1,
+          1.12
+        ],
+        [
+          -1.4,
+          -0.13,
+          1.25
+        ]
+      ],
+      "fd_components": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "ammonia-distorted",
+      "elements": [
+        "N",
+        "H",
+        "H",
+        "H"
+      ],
+      "coords_bohr": [
+        [
+          0.03,
+          0.01,
+          -0.02
+        ],
+        [
+          1.55,
+          0.04,
+          -0.83
+        ],
+        [
+          -0.67,
+          1.38,
+          -0.78
+        ],
+        [
+          -0.88,
+          -1.42,
+          -0.7
+        ]
+      ],
+      "fd_components": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "formaldehyde-distorted",
+      "elements": [
+        "C",
+        "O",
+        "H",
+        "H"
+      ],
+      "coords_bohr": [
+        [
+          0.03,
+          0.02,
+          0.04
+        ],
+        [
+          0.1,
+          -0.04,
+          2.33
+        ],
+        [
+          1.79,
+          0.08,
+          -1.1
+        ],
+        [
+          -1.71,
+          -0.12,
+          -1.09
+        ]
+      ],
+      "fd_components": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    }
+  ],
+  "comparison": "Both gradients use the same converged native SCF state. FD energies use independent same-method SCF evaluations at +/- coordinates.",
+  "baseline_source_sha256": "a52525f269974884b28846b55d021c169d430048e0755b55557480f733128735",
+  "candidate_source_sha256": "4480bdc1df639cadd7b0e89f86caac7943fc11765291c9b6e191b92431421df0",
+  "helper_sha256": "8d9e6bbb64e9e525ac2d41cb2783f699050e32c0516e89cb821a1229b1012060",
+  "source_delta_only_one_import_and_one_contraction": true
+}

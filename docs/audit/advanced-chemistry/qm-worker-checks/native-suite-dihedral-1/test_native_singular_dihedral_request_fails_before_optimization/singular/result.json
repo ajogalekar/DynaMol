@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "input",
+  "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "604daefbba459ad04fce8ee1e553174d7f86effd61bb2889483c46fdfac72ba3",
+  "error": {
+    "type": "ValueError",
+    "message": "Singular dihedral: a defining angle is linear or nearly linear"
+  },
+  "elapsed_seconds": 0.031992
+}

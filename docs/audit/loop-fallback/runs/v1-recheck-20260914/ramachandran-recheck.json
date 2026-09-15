@@ -1,0 +1,111 @@
+{
+ "1FPU": {
+  "accepted": true,
+  "modeled_residues": 5,
+  "boundary_residues": 2,
+  "modeled_scored": 5,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [],
+  "modeled_allowed": 1,
+  "boundary_outliers": [],
+  "cctbx_version": "2025.11"
+ },
+ "1M17": {
+  "accepted": true,
+  "modeled_residues": 12,
+  "boundary_residues": 2,
+  "modeled_scored": 12,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [
+   "A:966 PRO (outlier, phi -126, psi 110)"
+  ],
+  "modeled_allowed": 2,
+  "boundary_outliers": [],
+  "cctbx_version": "2025.11"
+ },
+ "1UA2": {
+  "accepted": true,
+  "modeled_residues": 12,
+  "boundary_residues": 2,
+  "modeled_scored": 12,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [
+   "A:44 LYS (outlier, phi -33, psi 84)",
+   "A:46 GLY (outlier, phi -60, psi -128)",
+   "A:48 ARG (outlier, phi 3, psi 72)"
+  ],
+  "modeled_allowed": 4,
+  "boundary_outliers": [
+   "A:56 ASN (outlier, phi -65, psi 62)"
+  ],
+  "cctbx_version": "2025.11"
+ },
+ "2CG9": {
+  "accepted": false
+ },
+ "2HYY": {
+  "accepted": true,
+  "modeled_residues": 4,
+  "boundary_residues": 4,
+  "modeled_scored": 4,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [
+   "C:276 ASP (outlier, phi -22, psi 86)"
+  ],
+  "modeled_allowed": 0,
+  "boundary_outliers": [
+   "C:275 GLU (outlier, phi -29, psi 137)",
+   "C:392 THR (outlier, phi -162, psi -54)"
+  ],
+  "cctbx_version": "2025.11"
+ },
+ "3HEG": {
+  "accepted": false
+ },
+ "4HHY": {
+  "accepted": true,
+  "modeled_residues": 8,
+  "boundary_residues": 2,
+  "modeled_scored": 8,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [],
+  "modeled_allowed": 3,
+  "boundary_outliers": [],
+  "cctbx_version": "2025.11"
+ },
+ "4HJO": {
+  "accepted": true,
+  "modeled_residues": 4,
+  "boundary_residues": 2,
+  "modeled_scored": 4,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [],
+  "modeled_allowed": 2,
+  "boundary_outliers": [
+   "A:709 PRO (outlier, phi -70, psi -130)"
+  ],
+  "cctbx_version": "2025.11"
+ },
+ "8K5R": {
+  "accepted": true,
+  "modeled_residues": 17,
+  "boundary_residues": 8,
+  "modeled_scored": 17,
+  "modeled_unavailable": 0,
+  "modeled_outliers": [
+   "A:28 GLY (outlier, phi -155, psi -49)",
+   "A:92 TYR (outlier, phi 175, psi -53)",
+   "A:94 ARG (outlier, phi 174, psi -107)",
+   "A:178 LYS (outlier, phi 176, psi -63)",
+   "A:264 LYS (outlier, phi 50, psi -172)"
+  ],
+  "modeled_allowed": 7,
+  "boundary_outliers": [
+   "A:91 PRO (outlier, phi -63, psi -80)",
+   "A:176 LEU (outlier, phi -71, psi 21)",
+   "A:180 SER (outlier, phi 2, psi -84)",
+   "A:265 LEU (outlier, phi 124, psi -97)"
+  ],
+  "cctbx_version": "2025.11"
+ }
+}

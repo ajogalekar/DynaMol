@@ -1,0 +1,62 @@
+{
+  "status": "unresolved_absolute_periodic_energy_difference",
+  "scope": "Independent fixed-coordinate periodic diagnostics. Force and energy differences are separately retained; no arbitrary energy-offset correction or parameter edits.",
+  "unchanged_production_runs": true,
+  "openmm_reference": {
+    "platform": "Reference",
+    "energy_kj_mol": -429191.2916377305,
+    "elapsed_seconds": 1.059760083036963
+  },
+  "matrix": [
+    {
+      "native_case": "unshifted",
+      "native_energy_kj_mol": -429228.625,
+      "reference_openmm_energy_kj_mol": -429191.2916377305,
+      "energy_difference_kj_mol": -37.333362269506324,
+      "maximum_force_vector_difference_kj_mol_nm": 1.7502922382512804,
+      "rms_force_vector_difference_kj_mol_nm": 0.4189719264499983,
+      "source_hashes": {
+        "diagnostic.mdp": "ffae337394c3a69e3e4aa0fef456eb4b979fcaeeaa0a47e0542e0991b7dac3b8",
+        "diagnostic.tpr": "9847356d80e0de4b9a814ac402853b829d3ecae24235023fcc0abaaccd4dd6b8",
+        "diagnostic.trr": "9e1e823289e42aa0b0984cc81ae22fb3402c8f8a31707aa45afe86ed33fe32a1",
+        "native-initial.xvg": "b0d7b33700fb69d11d47f89c3b98c1ddacf93dd949a385ec2c2ae544eea5b631"
+      }
+    },
+    {
+      "native_case": "unshifted-tight",
+      "native_energy_kj_mol": -429261.71875,
+      "reference_openmm_energy_kj_mol": -429191.2916377305,
+      "energy_difference_kj_mol": -70.42711226950632,
+      "maximum_force_vector_difference_kj_mol_nm": 0.060504977980896865,
+      "rms_force_vector_difference_kj_mol_nm": 0.01622352594359928,
+      "source_hashes": {
+        "diagnostic.mdp": "032207b9476b4144f3c3f16ab381dbc9ab9e50fe02b5007d3f56da2a81205799",
+        "diagnostic.tpr": "e66653eaa7210d0d393b947825cff836a5b430c34ff802420f8314523840f9b9",
+        "diagnostic.trr": "40bcaad27afb5d1e37aa10856af737a41d13469960c3732067ff78c1e04e4b33",
+        "native-initial.xvg": "d4ee90bb7b441cc42eedcc9b5ece284a882e964b993423210c96634e8ad36e2c"
+      }
+    },
+    {
+      "native_case": "matched-mesh",
+      "native_energy_kj_mol": -429166.65625,
+      "reference_openmm_energy_kj_mol": -429191.2916377305,
+      "energy_difference_kj_mol": 24.635387730493676,
+      "maximum_force_vector_difference_kj_mol_nm": 0.02429920588172292,
+      "rms_force_vector_difference_kj_mol_nm": 0.00590121748068261,
+      "source_hashes": {
+        "diagnostic.mdp": "387aa115cf0dc7dc1e05fce1e40ba2283088d62ef56cc6850cb1ef6617053cd9",
+        "diagnostic.tpr": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+        "diagnostic.trr": "4f1d6853dfd9e1150f943d1a2c97532ccb9b11b0c07c365f51e0f01cd5d66895",
+        "native-initial.xvg": "066366dfea03ebe0ef67aa2bbff28007869d2b03cead59cee10c2564097e2d10"
+      }
+    }
+  ],
+  "native_full_charge_maximum_difference_e": 2.195112647207509e-09,
+  "dispersion_correction_difference_kj_mol": -0.45706573530014794,
+  "interpretation": "Matching mesh/order/Ewald coefficient greatly reduces force differences; absolute energy offsets still depend on native settings. Independent component localization places the large offset mainly in direct-space Coulomb/exclusion/self-energy rather than the reciprocal mesh contribution. Native CPU/thread static diagnostics are in progress; no numerical-cause acceptance or offset correction.",
+  "openmm_reference_hashes": {
+    "openmm-reference.json": "babda85edfca6ec7bff67ce19787fc3382ac0bffb07a78875ce6f1c52f54f758",
+    "openmm-reference.npz": "84c3b4a7430b57db031ca3b6e6823eda5a241a7b532510e63d4f760e87f39df6",
+    "openmm-tolerance-series.json": "f33e1ed9b970c2289894a4b4ca71db2398f9e0444fd572e083ffff940cf93e03"
+  }
+}

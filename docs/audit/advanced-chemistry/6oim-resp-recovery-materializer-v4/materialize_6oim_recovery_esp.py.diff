@@ -1,0 +1,54 @@
+--- v3/materialize_6oim_recovery_esp.py
++++ v4/materialize_6oim_recovery_esp.py
+@@ -95,6 +95,22 @@
+         require(observed.get(key)==expected[key],'Atom identity/order mismatch: '+key)
+     for key in ('charge','spin'):
+         require(type(observed.get(key)) is int and observed[key]==expected[key],'Electronic state mismatch: '+key)
++
++
++def validate_parent_metadata(result,resolved,method):
++    scf=result.get('scf',{})
++    require(scf.get('converged') is True and type(scf.get('max_cycles')) is int and
++            scf['max_cycles']==resolved['max_scf_cycles'] and type(scf.get('cycles')) is int and
++            0<scf['cycles']<=scf['max_cycles'] and scf.get('conv_tol_hartree')==resolved['scf_conv_tol'] and
++            scf.get('conv_tol_grad')==resolved['scf_conv_tol_grad'],'Parent SCF thresholds or cycle metadata changed')
++    require(all(result.get('units',{}).get(k)==v for k,v in {'energy':'hartree','coords_bohr':'bohr',
++            'coords_angstrom':'angstrom','gradient_hartree_per_bohr':'hartree/bohr',
++            'bohr_to_angstrom':.52917721092}.items()),'Parent units changed')
++    require(method.get('spherical_basis') is True and method.get('symmetry') is False and
++            method.get('functional_requested') is None and method.get('grid_level') is None,
++            'Parent expanded method flags changed')
++    require(type(result.get('energy_hartree')) in (int,float) and math.isfinite(result['energy_hartree']),
++            'Nonfinite parent energy')
+ 
+ 
+ def validate_preparation_runtime(admission):
+@@ -300,9 +316,6 @@
+         exec(compile(raw(source/'qm_worker.py',WORKER_SHA),str(source/'qm_worker.py'),'exec'),worker_globals)
+         resolved=worker_globals['validate_input'](request)
+         require(load(native/'resolved-input.json')==resolved,'Resolved parent input changed')
+-        require(result['scf'].get('max_cycles')==resolved['max_scf_cycles'] and
+-                result['scf'].get('conv_tol_hartree')==resolved['scf_conv_tol'] and
+-                result['scf'].get('conv_tol_grad')==resolved['scf_conv_tol_grad'],'Parent SCF thresholds changed')
+         opt=result.get('optimization',{})
+         require(opt.get('requested') is True and opt.get('converged') is True and opt.get('settings')==resolved['optimization'],
+                 'Optimization did not pass original requested settings')
+@@ -318,6 +331,7 @@
+         require(before['runtime-manifest.json']==RUNTIME_SHA and result.get('runtime_manifest',{}).get('sha256')==RUNTIME_SHA,
+                 'Parent runtime mismatch')
+         method=load(native/'resolved-method.json')
++        validate_parent_metadata(result,resolved,method)
+         require(method.get('method')=='RHF' and method.get('basis_requested','').lower()=='6-31g*' and
+                 method.get('density_fit') is True and not method.get('ecp_resolved') and
+                 request.get('auxbasis')=='def2-universal-jkfit' and
+@@ -337,10 +351,6 @@
+                 'Parent nuclei or all-electron chemistry changed')
+         require(type(result.get('explicit_electron_count')) is int and result['explicit_electron_count']==388 and
+                 type(result.get('nao')) is int and result['nao']==816,'Parent electron/AO inventory changed')
+-        require(type(result.get('energy_hartree')) in (int,float) and math.isfinite(result['energy_hartree']),
+-                'Nonfinite parent energy')
+-        require(result.get('units',{}).get('bohr_to_angstrom')==.52917721092 and
+-                result['units'].get('gradient_hartree_per_bohr')=='hartree/bohr','Parent units changed')
+         check_geometry=extract_function(source/'continue_covalent_qm.py','check_geometry',
+             {'json':json,'np':np,'Chem':Chem},CHECKER_SHA)
+         optimized,geometry=check_geometry(source/'cap',request,result,arrays)

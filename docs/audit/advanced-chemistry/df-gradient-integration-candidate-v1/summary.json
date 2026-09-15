@@ -1,0 +1,491 @@
+{
+  "status": "small_native_gradient_qualification_passed",
+  "cases": [
+    {
+      "case": "ammonia-distorted-rhf",
+      "supplement": false,
+      "method": {
+        "method": "RHF",
+        "functional": null,
+        "basis": "6-31g",
+        "auxbasis": "weigend",
+        "hybrid_coefficients": null,
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": null
+      },
+      "state": {
+        "energy_hartree": -56.13006044060735,
+        "cycles": 12,
+        "mo_energy_sha256": "3ed9a57a26395206fa035be0de25fb7bd340178def0da8e18b9014a0e2281f7e",
+        "mo_coeff_sha256": "71d6aa0bb53d8d1d6f06daca0c8003f8e8db9f64238622cc7f2f86ad2682a299",
+        "mo_occ_sha256": "301a7cca12b9b8411557cef9952cb2dd7cccf674896ddb9f7b2bf8b62b21331a",
+        "basis_sha256": "4ac6e41eae4b4c236ff8ab4d4e194cef3ef636842182a2c3726362bbaa5ebd38",
+        "nao": 15,
+        "naux": 82,
+        "nocc": 5
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": 5.7224122107513153e-08,
+      "native_wall_seconds": 0.5514768750290386,
+      "controller_wall_seconds": 0.6286620839964598,
+      "sampled_peak_rss_bytes": 116342784,
+      "self_peak_rss_bytes": 116408320,
+      "baseline_gradient_seconds": 0.04884016700088978,
+      "candidate_gradient_seconds": 0.008233833010308444,
+      "scf_calls": 9,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        82,
+        5,
+        5
+      ],
+      "rks_grid_response": null,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 0.0,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    },
+    {
+      "case": "ammonia-distorted-rks",
+      "supplement": false,
+      "method": {
+        "method": "RKS",
+        "functional": "B3LYPG",
+        "basis": "6-31g",
+        "auxbasis": "weigend",
+        "hybrid_coefficients": [
+          0.0,
+          0.2,
+          0.2
+        ],
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": 3
+      },
+      "state": {
+        "energy_hartree": -56.49327273753288,
+        "cycles": 9,
+        "mo_energy_sha256": "a260cf56c139d4a15bbca3b616cfcbc1b24c9b19fc40aa08800be118119bafb2",
+        "mo_coeff_sha256": "cd30e87ccdbf95368c9b2199d3075928b55404b3cd9673ba35f36aa34ed8bb46",
+        "mo_occ_sha256": "301a7cca12b9b8411557cef9952cb2dd7cccf674896ddb9f7b2bf8b62b21331a",
+        "basis_sha256": "4ac6e41eae4b4c236ff8ab4d4e194cef3ef636842182a2c3726362bbaa5ebd38",
+        "nao": 15,
+        "naux": 82,
+        "nocc": 5
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": 5.574192099566666e-08,
+      "native_wall_seconds": 1.6894572909804992,
+      "controller_wall_seconds": 1.7693181660142727,
+      "sampled_peak_rss_bytes": 184057856,
+      "self_peak_rss_bytes": 184057856,
+      "baseline_gradient_seconds": 0.08683112502330914,
+      "candidate_gradient_seconds": 0.04774333396926522,
+      "scf_calls": 9,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        82,
+        5,
+        5
+      ],
+      "rks_grid_response": true,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 0.0,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    },
+    {
+      "case": "formaldehyde-distorted-rhf",
+      "supplement": false,
+      "method": {
+        "method": "RHF",
+        "functional": null,
+        "basis": "6-31g",
+        "auxbasis": "weigend",
+        "hybrid_coefficients": null,
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": null
+      },
+      "state": {
+        "energy_hartree": -113.80612812769323,
+        "cycles": 18,
+        "mo_energy_sha256": "df10781a5fb497b51cba30925a23671f091140bdc7dea0d14d9624edad348ebe",
+        "mo_coeff_sha256": "76b7716f4cb29f82ef7f853d2ab3f979fe1c75af6d0de031f7e1cc00658056ab",
+        "mo_occ_sha256": "0a9292aeca732cb5cc27f38d1d931c2a5ad889172d8655fecc876c921623d8f2",
+        "basis_sha256": "b9596bdda99325c6715f0df62006d0a68d5fb66bbcb0c406125a665dd71a6da2",
+        "nao": 22,
+        "naux": 120,
+        "nocc": 8
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": 5.142374117639292e-07,
+      "native_wall_seconds": 0.5160705410526134,
+      "controller_wall_seconds": 0.5988383750081994,
+      "sampled_peak_rss_bytes": 115982336,
+      "self_peak_rss_bytes": 115949568,
+      "baseline_gradient_seconds": 0.047005291969981045,
+      "candidate_gradient_seconds": 0.016321874980349094,
+      "scf_calls": 9,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        120,
+        8,
+        8
+      ],
+      "rks_grid_response": null,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 0.0,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    },
+    {
+      "case": "formaldehyde-distorted-rks",
+      "supplement": false,
+      "method": {
+        "method": "RKS",
+        "functional": "B3LYPG",
+        "basis": "6-31g",
+        "auxbasis": "weigend",
+        "hybrid_coefficients": [
+          0.0,
+          0.2,
+          0.2
+        ],
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": 3
+      },
+      "state": {
+        "energy_hartree": -114.46009087079517,
+        "cycles": 11,
+        "mo_energy_sha256": "2ddffbe45919ddd07a72a5e5e9e5dd9ffec5c2f00141997381df4788cb396ac4",
+        "mo_coeff_sha256": "17d7bcd1e08aca4ca1d641a7a4c227a05c43aefc9612bc5d1efb2c9a560e7459",
+        "mo_occ_sha256": "0a9292aeca732cb5cc27f38d1d931c2a5ad889172d8655fecc876c921623d8f2",
+        "basis_sha256": "b9596bdda99325c6715f0df62006d0a68d5fb66bbcb0c406125a665dd71a6da2",
+        "nao": 22,
+        "naux": 120,
+        "nocc": 8
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": 4.997449263299814e-07,
+      "native_wall_seconds": 2.1316892500035465,
+      "controller_wall_seconds": 2.235429333988577,
+      "sampled_peak_rss_bytes": 223674368,
+      "self_peak_rss_bytes": 223723520,
+      "baseline_gradient_seconds": 0.09690587496152148,
+      "candidate_gradient_seconds": 0.06541937502333894,
+      "scf_calls": 9,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        120,
+        8,
+        8
+      ],
+      "rks_grid_response": true,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 0.0,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    },
+    {
+      "case": "water-distorted-rhf",
+      "supplement": false,
+      "method": {
+        "method": "RHF",
+        "functional": null,
+        "basis": "6-31g",
+        "auxbasis": "weigend",
+        "hybrid_coefficients": null,
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": null
+      },
+      "state": {
+        "energy_hartree": -75.97902315513085,
+        "cycles": 13,
+        "mo_energy_sha256": "9026e4c426667c3aece0ab0dca4df8dae75b82e826e8f6bde06272ce701458d3",
+        "mo_coeff_sha256": "acd695a7794cb13e94ed68cc77beba5cfdbdd03888498ae19f796c698ef22b86",
+        "mo_occ_sha256": "248d6ba80f6e259faf3ec7ff00ff306ada00b4d5d2a4012e86d13ae2a6b46d9a",
+        "basis_sha256": "5c42dc823759ee43bc3787df5eaa7571f5d00ca07ca39f2bfb327bce4886cd73",
+        "nao": 13,
+        "naux": 71,
+        "nocc": 5
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": 1.442574859567003e-07,
+      "native_wall_seconds": 0.6325594169902615,
+      "controller_wall_seconds": 0.7457484590122476,
+      "sampled_peak_rss_bytes": 116457472,
+      "self_peak_rss_bytes": 116391936,
+      "baseline_gradient_seconds": 0.06457341596251354,
+      "candidate_gradient_seconds": 0.005720707995351404,
+      "scf_calls": 9,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        71,
+        5,
+        5
+      ],
+      "rks_grid_response": null,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 2.710505431213761e-20,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    },
+    {
+      "case": "water-distorted-rks",
+      "supplement": false,
+      "method": {
+        "method": "RKS",
+        "functional": "B3LYPG",
+        "basis": "6-31g",
+        "auxbasis": "weigend",
+        "hybrid_coefficients": [
+          0.0,
+          0.2,
+          0.2
+        ],
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": 3
+      },
+      "state": {
+        "energy_hartree": -76.383218100147,
+        "cycles": 9,
+        "mo_energy_sha256": "8a4af03516517d73daf7e53cb3d5ebc870f99a17addf37f83021f693db3daf5f",
+        "mo_coeff_sha256": "d7f904997cca94e4c134f746d9d0fb48f0615dd4e5fe4ed825a6f45c049683a7",
+        "mo_occ_sha256": "248d6ba80f6e259faf3ec7ff00ff306ada00b4d5d2a4012e86d13ae2a6b46d9a",
+        "basis_sha256": "5c42dc823759ee43bc3787df5eaa7571f5d00ca07ca39f2bfb327bce4886cd73",
+        "nao": 13,
+        "naux": 71,
+        "nocc": 5
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": 1.4004484505392156e-07,
+      "native_wall_seconds": 1.388266958994791,
+      "controller_wall_seconds": 1.5209859579917975,
+      "sampled_peak_rss_bytes": 165789696,
+      "self_peak_rss_bytes": 165838848,
+      "baseline_gradient_seconds": 0.07004333299119025,
+      "candidate_gradient_seconds": 0.029910125012975186,
+      "scf_calls": 9,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        71,
+        5,
+        5
+      ],
+      "rks_grid_response": true,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 2.710505431213761e-20,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    },
+    {
+      "case": "formaldehyde-distorted-rks",
+      "supplement": true,
+      "method": {
+        "method": "RKS",
+        "functional": "B3LYPG",
+        "basis": "6-31g*",
+        "auxbasis": "def2-universal-jkfit",
+        "hybrid_coefficients": [
+          0.0,
+          0.2,
+          0.2
+        ],
+        "charge": 0,
+        "spin": 0,
+        "max_memory_mb": 512,
+        "scf_conv_tol": 1e-12,
+        "scf_conv_tol_grad": 1e-08,
+        "grid_level": 3
+      },
+      "state": {
+        "energy_hartree": -114.49771366993579,
+        "cycles": 12,
+        "mo_energy_sha256": "403e61f089da55519a177c005a53762ec7e8539abcf439d96b1bf44edbfc4f3e",
+        "mo_coeff_sha256": "b807936a6d7f31f724e7682b189d6ff3e10f1a21244a449e4bc9c55daf52b004",
+        "mo_occ_sha256": "74557b6f12974d30bbc7d69e74bbe6cb54efd8bf509da41ac3edda86b21afcc9",
+        "basis_sha256": "c5e016b1a6d593440dd17525aee26cbef6938432a9bd43b3475d9b60b36215ed",
+        "nao": 32,
+        "naux": 188,
+        "nocc": 8
+      },
+      "gradient_max_abs_difference": 0.0,
+      "fd_max_abs_error": null,
+      "native_wall_seconds": 0.9239399160142057,
+      "controller_wall_seconds": 1.0078402090002783,
+      "sampled_peak_rss_bytes": 367640576,
+      "self_peak_rss_bytes": 371163136,
+      "baseline_gradient_seconds": 0.16733074997318909,
+      "candidate_gradient_seconds": 0.07370320800691843,
+      "scf_calls": 1,
+      "full_gradient_calls": 2,
+      "contraction_shape": [
+        188,
+        8,
+        8
+      ],
+      "rks_grid_response": false,
+      "aux_response_nonzero": true,
+      "auxiliary_extra_force_max_abs_difference": 0.0,
+      "native_threads": [
+        {
+          "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/libomp.dylib",
+          "queries": [
+            {
+              "symbol": "omp_get_max_threads",
+              "threads": 1
+            }
+          ],
+          "sha256": "8cd3b360f4fa84036a617cbfb7fc3ef22e659f3f7e6674930b467b4f8a6cd5e4"
+        }
+      ]
+    }
+  ],
+  "case_count": 7,
+  "total_scf_evaluations": 55,
+  "total_full_gradient_evaluations": 14,
+  "total_patched_contraction_calls": 7,
+  "max_gradient_parity_difference": 0.0,
+  "finite_difference_estimates": 24,
+  "fd_max_errors_by_method_and_step": {
+    "RHF": {
+      "0.001": 5.142374117639292e-07,
+      "0.0005": 1.2856192022070445e-07
+    },
+    "RKS": {
+      "0.001": 4.997449263299814e-07,
+      "0.0005": 1.2391755710439156e-07
+    }
+  },
+  "max_self_peak_rss_bytes": 371163136,
+  "max_sampled_peak_rss_bytes": 367640576,
+  "combined_controller_wall_seconds": 11.851053500024136,
+  "conservative_elapsed_upper_bound_seconds_including_supplement_preparation": 140.6917814508779,
+  "completed_worker_pid_checks": [
+    {
+      "pid": 54812,
+      "absent_after_completion": true
+    },
+    {
+      "pid": 54822,
+      "absent_after_completion": true
+    },
+    {
+      "pid": 54835,
+      "absent_after_completion": true
+    },
+    {
+      "pid": 54842,
+      "absent_after_completion": true
+    },
+    {
+      "pid": 54788,
+      "absent_after_completion": true
+    },
+    {
+      "pid": 54791,
+      "absent_after_completion": true
+    },
+    {
+      "pid": 55245,
+      "absent_after_completion": true
+    }
+  ],
+  "runtime_or_active_worker_changed": false,
+  "full_adduct_calculations": 0,
+  "large_resource_probe": false,
+  "chemical_model_accepted": false,
+  "native_pyscf_openmp_threads": 1,
+  "other_blas_thread_control": "VECLIB_MAXIMUM_THREADS/OPENBLAS_NUM_THREADS/MKL_NUM_THREADS=1; loaded native query returned only libomp, not a separate BLAS thread getter",
+  "limitations": [
+    "Small native cases qualify numerical integration only, not 94-atom memory use or scaling.",
+    "RSS monitoring samples every 50 ms; process self high-water RSS is retained as additional evidence.",
+    "PySCF RKS VXC has an internal max(2000, ...) block-budget floor despite the 512 MB user allocation hint; measured RSS, not that hint, determines this audit resource result.",
+    "The parent-settings supplement checks full-gradient parity at native grid_response=False; finite differences were performed on the six grid-response-enabled 6-31G/Weigend cases.",
+    "Paired gradients share one converged SCF state to isolate the changed contraction. Equal central energy is by construction; displaced finite-difference energies are independent SCF evaluations.",
+    "This audit did not force timeouts or RSS-limit failures and did not benchmark large-scale timing."
+  ]
+}

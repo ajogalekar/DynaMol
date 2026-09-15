@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "Prepared, not launched: one full-parent mixed-level reference after actual accepted parent and existing RESP research candidate. No physical acceptance.",
+  "created_unix": 1789332901.28382,
+  "root": "/Users/ashujo/Documents/Science/DynaMol",
+  "plan_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-parent-reference-request-plan.json",
+  "materializer": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/materialize_covalent_reference.py",
+  "materializer_runtime": "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+  "source_manifest": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/reference-provider-sources/manifest.json",
+  "shared_runtime_manifest": "/Users/ashujo/Documents/Science/DynaMol/.tools/qm-parallel/dynamol-qm-runtime.json",
+  "resp_dir": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1",
+  "resp_controller_sha256": "c4cc79444bd8dd896d9882439ad34e6dac538cebe2fa2c10c7c69dc768f0db4b",
+  "resp_fitter": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_resp_spike.py",
+  "claims_dir": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/reference-continuation-claims",
+  "wait_seconds": 28800,
+  "poll_seconds": 15,
+  "pins": [
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-parent-reference-request-plan.json",
+      "sha256": "201841e15bf7a0b6db52a99bb07136d8765e57b210bcdcb022d5688c6b124462"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/materialize_covalent_reference.py",
+      "sha256": "cab4d6f6b828b5f43cc7129f411a1886054a7ef645f4de0e52b17eb2ad87b0e2"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+      "sha256": "f1c4ad59c4adf1e5dfb5e9f558f7b95e4d7a62387d4bb4572fcf84f42648fee3"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/covalent-reference/bin/python",
+      "sha256": "f1c4ad59c4adf1e5dfb5e9f558f7b95e4d7a62387d4bb4572fcf84f42648fee3"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/reference-provider-sources/manifest.json",
+      "sha256": "e232fd80df4418cded25d6d76d3de20d59db019186f512855b1b38fdae63a1b9"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/.tools/qm-parallel/dynamol-qm-runtime.json",
+      "sha256": "5b9a88283c49974a8ede4be085988137085324ff8f5952dd2694c0dbf35ca6a4"
+    }
+  ]
+}

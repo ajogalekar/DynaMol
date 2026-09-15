@@ -1,0 +1,656 @@
+{
+  "status": "corrected_postanalysis_only",
+  "native_reruns": false,
+  "chemical_model_validated": false,
+  "original_failed_analysis": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/paramfit-native-audit-v1/result.json",
+  "original_failed_analysis_sha256": "06cfbc18adeba3224d2ef7a6cf0fd195709984337022d8da501a74a054175392",
+  "cases": [
+    {
+      "name": "dihedral_least_squares_NMA",
+      "structures": 500,
+      "columns": 4,
+      "native_column_header": "Num, Amber+K, Quantum, Initial Amber+K",
+      "all_four_columns_finite": true,
+      "row_ids_exact_zero_through_n_minus_one": true,
+      "original_native_returncode": 0,
+      "original_analysis_error_preserved": {
+        "type": "ValueError",
+        "message": "Unexpected native energy-table format"
+      },
+      "input_targets_count": 20000,
+      "sorted_first_requested_targets_exact": true,
+      "energy_units": "kcal/mol",
+      "energy_print_decimal_places": 5,
+      "fitted_minus_target_rmse_kcal_mol": 0.0002420326424266178,
+      "fitted_minus_target_max_abs_kcal_mol": 0.0004199999999983106,
+      "fitted_minus_target_mean_kcal_mol": 0.00023254000000003572,
+      "fitted_minus_target_sum_squared_kcal2_mol2": 2.9289900000005518e-05,
+      "target_range_kcal_mol": [
+        -27.3991,
+        -22.7163
+      ],
+      "reported_fourth_column_range": [
+        0.0,
+        0.0
+      ],
+      "fourth_column_used_as_fit_or_initial_energy": false,
+      "printed_parameter_count": 30,
+      "printed_initial_to_final_parameter_changes": [
+        {
+          "parameter": "proper|O|C|N|H|1.0",
+          "field": "Kp",
+          "reference": 2.0,
+          "actual": 2.0002,
+          "signed_difference": 0.00019999999999997797,
+          "raw_signed_difference": 0.00019999999999997797
+        },
+        {
+          "parameter": "proper|O|C|N|H|2.0",
+          "field": "Kp",
+          "reference": 2.5,
+          "actual": 2.4996,
+          "signed_difference": -0.00039999999999995595,
+          "raw_signed_difference": -0.00039999999999995595
+        },
+        {
+          "parameter": "proper|C|N|CT|H1|2.0",
+          "field": "Kp",
+          "reference": 0.0,
+          "actual": 0.0001,
+          "signed_difference": 0.0001,
+          "raw_signed_difference": 0.0001
+        },
+        {
+          "parameter": "proper|HC|CT|C|O|1.0",
+          "field": "Kp",
+          "reference": 0.8,
+          "actual": 0.7997,
+          "signed_difference": -0.000300000000000078,
+          "raw_signed_difference": -0.000300000000000078
+        },
+        {
+          "parameter": "proper|HC|CT|C|O|2.0",
+          "field": "Kp",
+          "reference": 0.0,
+          "actual": 0.0002,
+          "signed_difference": 0.0002,
+          "raw_signed_difference": 0.0002
+        },
+        {
+          "parameter": "proper|H|N|CT|H1|2.0",
+          "field": "Kp",
+          "reference": 0.0,
+          "actual": 0.0001,
+          "signed_difference": 0.0001,
+          "raw_signed_difference": 0.0001
+        },
+        {
+          "parameter": "improper|C|CT|N|H|2.0",
+          "field": "Kp",
+          "reference": 1.1,
+          "actual": 1.1001,
+          "signed_difference": 9.999999999998899e-05,
+          "raw_signed_difference": 9.999999999998899e-05
+        },
+        {
+          "parameter": "proper|O|C|N|CT|2.0",
+          "field": "Kp",
+          "reference": 2.5,
+          "actual": 2.4996,
+          "signed_difference": -0.00039999999999995595,
+          "raw_signed_difference": -0.00039999999999995595
+        },
+        {
+          "parameter": "proper|CT|C|N|CT|2.0",
+          "field": "Kp",
+          "reference": 2.5,
+          "actual": 2.5002,
+          "signed_difference": 0.00019999999999997797,
+          "raw_signed_difference": 0.00019999999999997797
+        },
+        {
+          "parameter": "improper|CT|N|C|O|2.0",
+          "field": "Kp",
+          "reference": 10.5,
+          "actual": 10.5004,
+          "signed_difference": 0.0004000000000008441,
+          "raw_signed_difference": 0.0004000000000008441
+        }
+      ],
+      "historical_log_parameter_comparison": {
+        "comparable_regression": false,
+        "reason": "The preserved historical log uses a different structure count and/or fitted-parameter selection.",
+        "current_displayed_fit_dimensions": 47,
+        "historical_fit_dimensions": 20,
+        "diagnostic_parameter_differences_only": [
+          {
+            "parameter": "angle|C|N|H|",
+            "field": "Kt",
+            "reference": 51.0909,
+            "actual": 50.0,
+            "signed_difference": -1.0908999999999978,
+            "raw_signed_difference": -1.0908999999999978
+          },
+          {
+            "parameter": "angle|C|N|H|",
+            "field": "th_eq",
+            "reference": 117.0127,
+            "actual": 120.0001,
+            "signed_difference": 2.987400000000008,
+            "raw_signed_difference": 2.987400000000008
+          },
+          {
+            "parameter": "angle|O|C|N|",
+            "field": "Kt",
+            "reference": 89.2606,
+            "actual": 80.0,
+            "signed_difference": -9.260599999999997,
+            "raw_signed_difference": -9.260599999999997
+          },
+          {
+            "parameter": "angle|O|C|N|",
+            "field": "th_eq",
+            "reference": 122.1817,
+            "actual": 122.9001,
+            "signed_difference": 0.7183999999999884,
+            "raw_signed_difference": 0.7183999999999884
+          },
+          {
+            "parameter": "angle|C|N|CT|",
+            "field": "Kt",
+            "reference": 53.4051,
+            "actual": 50.0,
+            "signed_difference": -3.4050999999999974,
+            "raw_signed_difference": -3.4050999999999974
+          },
+          {
+            "parameter": "angle|C|N|CT|",
+            "field": "th_eq",
+            "reference": 122.0225,
+            "actual": 121.9001,
+            "signed_difference": -0.12239999999999895,
+            "raw_signed_difference": -0.12239999999999895
+          },
+          {
+            "parameter": "angle|CT|C|O|",
+            "field": "Kt",
+            "reference": 47.6191,
+            "actual": 80.0,
+            "signed_difference": 32.3809,
+            "raw_signed_difference": 32.3809
+          },
+          {
+            "parameter": "angle|CT|C|O|",
+            "field": "th_eq",
+            "reference": 104.9044,
+            "actual": 120.4001,
+            "signed_difference": 15.4957,
+            "raw_signed_difference": 15.4957
+          },
+          {
+            "parameter": "angle|CT|C|N|",
+            "field": "Kt",
+            "reference": 66.2022,
+            "actual": 70.0,
+            "signed_difference": 3.797799999999995,
+            "raw_signed_difference": 3.797799999999995
+          },
+          {
+            "parameter": "angle|CT|C|N|",
+            "field": "th_eq",
+            "reference": 113.1054,
+            "actual": 116.6,
+            "signed_difference": 3.4945999999999913,
+            "raw_signed_difference": 3.4945999999999913
+          },
+          {
+            "parameter": "proper|O|C|N|H|1.0",
+            "field": "Kp",
+            "reference": -1.2943,
+            "actual": 2.0002,
+            "signed_difference": 3.2945,
+            "raw_signed_difference": 3.2945
+          },
+          {
+            "parameter": "proper|O|C|N|H|1.0",
+            "field": "Phase",
+            "reference": 82.7972,
+            "actual": 0.0,
+            "signed_difference": -82.7972,
+            "raw_signed_difference": -82.7972
+          },
+          {
+            "parameter": "proper|O|C|N|H|2.0",
+            "field": "Kp",
+            "reference": 0.5539,
+            "actual": 2.4996,
+            "signed_difference": 1.9457,
+            "raw_signed_difference": 1.9457
+          },
+          {
+            "parameter": "proper|O|C|N|H|2.0",
+            "field": "Phase",
+            "reference": 76.5002,
+            "actual": -179.9999,
+            "signed_difference": 103.49990000000003,
+            "raw_signed_difference": -256.5001
+          },
+          {
+            "parameter": "proper|C|N|CT|H1|2.0",
+            "field": "Kp",
+            "reference": 0.0,
+            "actual": 0.0001,
+            "signed_difference": 0.0001,
+            "raw_signed_difference": 0.0001
+          },
+          {
+            "parameter": "proper|HC|CT|C|O|1.0",
+            "field": "Kp",
+            "reference": 0.8,
+            "actual": 0.7997,
+            "signed_difference": -0.000300000000000078,
+            "raw_signed_difference": -0.000300000000000078
+          },
+          {
+            "parameter": "proper|HC|CT|C|O|2.0",
+            "field": "Kp",
+            "reference": 0.0,
+            "actual": 0.0002,
+            "signed_difference": 0.0002,
+            "raw_signed_difference": 0.0002
+          },
+          {
+            "parameter": "proper|H|N|CT|H1|2.0",
+            "field": "Kp",
+            "reference": 0.0,
+            "actual": 0.0001,
+            "signed_difference": 0.0001,
+            "raw_signed_difference": 0.0001
+          },
+          {
+            "parameter": "improper|C|CT|N|H|2.0",
+            "field": "Kp",
+            "reference": 3.4024,
+            "actual": 1.1001,
+            "signed_difference": -2.3023,
+            "raw_signed_difference": -2.3023
+          },
+          {
+            "parameter": "proper|O|C|N|CT|2.0",
+            "field": "Kp",
+            "reference": 0.7604,
+            "actual": 2.4996,
+            "signed_difference": 1.7392,
+            "raw_signed_difference": 1.7392
+          },
+          {
+            "parameter": "proper|O|C|N|CT|2.0",
+            "field": "Phase",
+            "reference": 94.4324,
+            "actual": -179.9999,
+            "signed_difference": 85.5677,
+            "raw_signed_difference": -274.4323
+          },
+          {
+            "parameter": "proper|CT|C|N|CT|2.0",
+            "field": "Kp",
+            "reference": -4.9248,
+            "actual": 2.5002,
+            "signed_difference": 7.425000000000001,
+            "raw_signed_difference": 7.425000000000001
+          },
+          {
+            "parameter": "proper|CT|C|N|CT|2.0",
+            "field": "Phase",
+            "reference": 110.9637,
+            "actual": -179.9999,
+            "signed_difference": 69.03640000000001,
+            "raw_signed_difference": -290.9636
+          },
+          {
+            "parameter": "improper|CT|N|C|O|2.0",
+            "field": "Kp",
+            "reference": -2.6009,
+            "actual": 10.5004,
+            "signed_difference": 13.101300000000002,
+            "raw_signed_difference": 13.101300000000002
+          }
+        ]
+      },
+      "warnings": [
+        {
+          "line": 73,
+          "text": "WARNING: C -N -CT-H1 dihedral is missing 6 data points in the range 0.0000 to 3.1416 radians."
+        },
+        {
+          "line": 74,
+          "text": "WARNING: HC-CT-C -O  dihedral is missing 8 data points in the range 0.0000 to 3.1416 radians."
+        },
+        {
+          "line": 75,
+          "text": "WARNING: HC-CT-C -N  dihedral is missing 8 data points in the range 0.0000 to 3.1416 radians."
+        },
+        {
+          "line": 76,
+          "text": "WARNING: CT-C -N -H  dihedral is missing 8 data points in the range 0.0000 to 3.1416 radians."
+        },
+        {
+          "line": 77,
+          "text": "WARNING: H -N -CT-H1 dihedral is missing 5 data points in the range 0.0000 to 3.1416 radians."
+        },
+        {
+          "line": 78,
+          "text": "WARNING: O -C -N -CT dihedral is missing 9 data points in the range 0.0000 to 3.1416 radians."
+        },
+        {
+          "line": 116,
+          "text": "!  Warning- setting all dihedral terms to fit pk"
+        },
+        {
+          "line": 117,
+          "text": "!  Warning- fitting no dihedral phases"
+        },
+        {
+          "line": 157,
+          "text": "WARNING: HC-CT-C  angle has no sample structures after it, nearest sample is 0.0240 radians before."
+        },
+        {
+          "line": 158,
+          "text": "WARNING: HC-CT-HC angle has no sample structures after it, nearest sample is 0.0145 radians before."
+        },
+        {
+          "line": 159,
+          "text": "WARNING: H1-CT-H1 angle has no sample structures after it, nearest sample is 0.0271 radians before."
+        },
+        {
+          "line": 160,
+          "text": "WARNING: N -CT-H1 angle has no sample structures after it, nearest sample is 0.0061 radians before."
+        },
+        {
+          "line": 163,
+          "text": "WARNING: Insufficient angle information in sample structures."
+        },
+        {
+          "line": 171,
+          "text": "WARNING: CT-HC bond has no sample structures larger than it, nearest sample is 0.0099 A smaller."
+        },
+        {
+          "line": 172,
+          "text": "WARNING: CT-H1 bond has no sample structures larger than it, nearest sample is 0.0126 A smaller."
+        },
+        {
+          "line": 175,
+          "text": "WARNING: Insufficient bond information in sample structures."
+        }
+      ],
+      "original_evidence_hashes_verified": {
+        "Job_Control.in": "4899b97d4d369a82fb0be72f719b79834fc782d0104baee7d0716649bd7b3872",
+        "NMA.prmtop": "2df61bf6de92e088e454bd0f3658d278868ff7cfa6f4a918e389fae9423f1513",
+        "mdcrd": "ddddf7359d6f6cbc050b3419cfa128f1408315005c67b99376b83442a851a05f",
+        "amber_energy": "f4abbc27f6cce6e2b4982fdbd7385519e8b9da3153020c9ec2fc0313c3133414",
+        "native.log": "4e1ea78b879c698a74b9079c7f06cb86fa423c6099730c3be27af88fee125f06",
+        "energy.dat": "f93590e12ce99361ddef0be6dd5ed6967573b1c1f42be54293d93995adae39d8",
+        "frcmod": "078060f55e68b562f90bdd9f2ecbd31e15ad3511924fa1d46caf7cf56a044128"
+      },
+      "legacy_energy_dat_reference": {
+        "rows": 100,
+        "columns": 3,
+        "compared_as_current_fitted_reference": false,
+        "reason": "Older 100-structure artifact is incompatible with this 500-structure run."
+      },
+      "upstream_current_regression": {
+        "energy_out_column": "Quantum target (tab field3 in upstream run_test.x)",
+        "target_column_exact": true,
+        "frcmod_exact_bytes": true,
+        "caveat": "The selected energy column checks target/sorting, not the fitted energy; the independently saved frcmod supplies fitted-parameter regression evidence."
+      },
+      "additional_current_source_hashes": {
+        "saved_output/energy.out.saved": "1ec0bd42161c0b6a3a695daf5642f4f487776b6a9184b01186d4b706932f3d9f",
+        "saved_output/prog_out.saved": "222743087fc6c1cdf06d97d3864b5ac78280384d1b5bd487c69ff1725c0801f2",
+        "run_test.x": "934884be370bab51c540b09207b6b5422b7540b7cd769ba1ac7d6b19cf243789",
+        "info.txt": "ae614b3384ae7a922e1a88eca64e8570d37bf452caf4b4ef02c6c952273975a5",
+        "saved_output/energy.dat.saved": "f6523b83067694e5d5ed785c43547f7187ad2bae0234a70bce4b5b9056a6820a",
+        "saved_output/frcmod.saved": "078060f55e68b562f90bdd9f2ecbd31e15ad3511924fa1d46caf7cf56a044128"
+      }
+    },
+    {
+      "name": "simplex_perfect_fit_NMA",
+      "structures": 1000,
+      "columns": 4,
+      "native_column_header": "Num, Amber+K, Quantum, Initial Amber+K",
+      "all_four_columns_finite": true,
+      "row_ids_exact_zero_through_n_minus_one": true,
+      "original_native_returncode": 0,
+      "original_analysis_error_preserved": {
+        "type": "ValueError",
+        "message": "Unexpected native energy-table format"
+      },
+      "input_targets_count": 20000,
+      "sorted_first_requested_targets_exact": true,
+      "energy_units": "kcal/mol",
+      "energy_print_decimal_places": 5,
+      "fitted_minus_target_rmse_kcal_mol": 5.879795914824106e-05,
+      "fitted_minus_target_max_abs_kcal_mol": 0.00018000000000029104,
+      "fitted_minus_target_mean_kcal_mol": 4.0000000009143834e-08,
+      "fitted_minus_target_sum_squared_kcal2_mol2": 3.4571999999982243e-06,
+      "target_range_kcal_mol": [
+        -27.3991,
+        -20.1223
+      ],
+      "reported_fourth_column_range": [
+        -0.00017,
+        0.00018
+      ],
+      "fourth_column_used_as_fit_or_initial_energy": false,
+      "printed_parameter_count": 30,
+      "printed_initial_to_final_parameter_changes": [
+        {
+          "parameter": "proper|O|C|N|H|1.0",
+          "field": "Kp",
+          "reference": 2.0,
+          "actual": 1.9981,
+          "signed_difference": -0.0019000000000000128,
+          "raw_signed_difference": -0.0019000000000000128
+        },
+        {
+          "parameter": "proper|O|C|N|H|2.0",
+          "field": "Kp",
+          "reference": 2.5,
+          "actual": 2.5004,
+          "signed_difference": 0.00039999999999995595,
+          "raw_signed_difference": 0.00039999999999995595
+        }
+      ],
+      "historical_log_parameter_comparison": {
+        "comparable_regression": false,
+        "reason": "The preserved historical log uses a different structure count and/or fitted-parameter selection.",
+        "current_displayed_fit_dimensions": 6,
+        "historical_fit_dimensions": 19,
+        "diagnostic_parameter_differences_only": [
+          {
+            "parameter": "bond|CT|HC|",
+            "field": "Kr",
+            "reference": 340.0017,
+            "actual": 340.0,
+            "signed_difference": -0.0017000000000280124,
+            "raw_signed_difference": -0.0017000000000280124
+          },
+          {
+            "parameter": "bond|CT|H1|",
+            "field": "Kr",
+            "reference": 340.0019,
+            "actual": 340.0,
+            "signed_difference": -0.0018999999999778083,
+            "raw_signed_difference": -0.0018999999999778083
+          },
+          {
+            "parameter": "bond|N|H|",
+            "field": "Kr",
+            "reference": 433.9982,
+            "actual": 434.0,
+            "signed_difference": 0.0018000000000029104,
+            "raw_signed_difference": 0.0018000000000029104
+          },
+          {
+            "parameter": "angle|H|N|CT|",
+            "field": "Kt",
+            "reference": 50.0005,
+            "actual": 50.0,
+            "signed_difference": -0.0005000000000023874,
+            "raw_signed_difference": -0.0005000000000023874
+          },
+          {
+            "parameter": "angle|N|CT|H1|",
+            "field": "Kt",
+            "reference": 49.9997,
+            "actual": 50.0,
+            "signed_difference": 0.00030000000000285354,
+            "raw_signed_difference": 0.00030000000000285354
+          },
+          {
+            "parameter": "angle|O|C|N|",
+            "field": "Kt",
+            "reference": 80.0016,
+            "actual": 80.0,
+            "signed_difference": -0.001599999999996271,
+            "raw_signed_difference": -0.001599999999996271
+          },
+          {
+            "parameter": "proper|O|C|N|H|1.0",
+            "field": "Kp",
+            "reference": 2.0,
+            "actual": 1.9981,
+            "signed_difference": -0.0019000000000000128,
+            "raw_signed_difference": -0.0019000000000000128
+          },
+          {
+            "parameter": "proper|O|C|N|H|1.0",
+            "field": "Phase",
+            "reference": -0.001,
+            "actual": 0.0,
+            "signed_difference": 0.001,
+            "raw_signed_difference": 0.001
+          },
+          {
+            "parameter": "proper|O|C|N|H|2.0",
+            "field": "Kp",
+            "reference": 2.4999,
+            "actual": 2.5004,
+            "signed_difference": 0.000500000000000167,
+            "raw_signed_difference": 0.000500000000000167
+          },
+          {
+            "parameter": "proper|O|C|N|H|2.0",
+            "field": "Phase",
+            "reference": 180.0003,
+            "actual": 180.0001,
+            "signed_difference": -0.0002000000000066393,
+            "raw_signed_difference": -0.0002000000000066393
+          },
+          {
+            "parameter": "proper|HC|CT|C|O|1.0",
+            "field": "Phase",
+            "reference": -0.0014,
+            "actual": 0.0,
+            "signed_difference": 0.0014,
+            "raw_signed_difference": 0.0014
+          },
+          {
+            "parameter": "proper|HC|CT|C|O|3.0",
+            "field": "Phase",
+            "reference": 179.9984,
+            "actual": 180.0001,
+            "signed_difference": 0.0016999999999995907,
+            "raw_signed_difference": 0.0016999999999995907
+          },
+          {
+            "parameter": "proper|HC|CT|C|N|2.0",
+            "field": "Phase",
+            "reference": 0.8561,
+            "actual": 0.0,
+            "signed_difference": -0.8561,
+            "raw_signed_difference": -0.8561
+          },
+          {
+            "parameter": "proper|HC|CT|C|O|2.0",
+            "field": "Phase",
+            "reference": 0.8173,
+            "actual": 0.0,
+            "signed_difference": -0.8173,
+            "raw_signed_difference": -0.8173
+          },
+          {
+            "parameter": "proper|O|C|N|CT|2.0",
+            "field": "Phase",
+            "reference": 179.9997,
+            "actual": 180.0001,
+            "signed_difference": 0.0004000000000132786,
+            "raw_signed_difference": 0.0004000000000132786
+          }
+        ]
+      },
+      "warnings": [
+        {
+          "line": 74,
+          "text": "WARNING: HC-CT-C -O  dihedral is missing 7 data points in the range 0.0000 to 3.1416 radians."
+        }
+      ],
+      "original_evidence_hashes_verified": {
+        "Job_Control.in": "58e4cd7f2feb81cf642b860829720d2223629751aacaa0e01ee17cb7610c3500",
+        "prmtop": "2df61bf6de92e088e454bd0f3658d278868ff7cfa6f4a918e389fae9423f1513",
+        "mdcrd_creation/mdcrd": "ddddf7359d6f6cbc050b3419cfa128f1408315005c67b99376b83442a851a05f",
+        "mdcrd_creation/amber_energy.dat": "f4abbc27f6cce6e2b4982fdbd7385519e8b9da3153020c9ec2fc0313c3133414",
+        "native.log": "fa0709f290456cec52d25a876291c14e90ca0f83cfef7c0120729f51636171d6",
+        "energy.dat": "199fac21bf845e13ac3ec21733625b6dbd19f2fd35304da9d57f48b52e2e6351"
+      },
+      "upstream_current_regression": {
+        "energy_out_column": "Amber+K fitted energy (tab field2)",
+        "maximum_fitted_energy_difference_kcal_mol": 9.999999999976694e-05,
+        "maximum_native_ndiff_relative_error": 3.956671284092834e-06,
+        "upstream_relative_limit": 5e-06,
+        "upstream_relative_criterion_met": true
+      },
+      "frcmod_status": "Not requested by current Job_Control.in; native final parameters are preserved in native.log. No missing-output failure is inferred.",
+      "parameter_selection_input": {
+        "path": "/Users/ashujo/.cache/dynamol-native-audits/paramfit-v1/simplex_perfect_fit_NMA/prms.in",
+        "sha256": "b99a8b58f79294cca8113e1af620899343369046aba5a325bf9c63f1cea3c989",
+        "current_copy_matches_pinned_source": true,
+        "historical_pre_run_hash_available": false,
+        "note": "Original runner did not hash prms.in; current source identity and native six-dimension log corroborate selection, but do not create a missing historical hash."
+      },
+      "simplex_native_convergence": {
+        "cycles": 150,
+        "function_evaluations_at_convergence": 269,
+        "reported_fitness_calls_total": 270,
+        "criterion": 0.1,
+        "ratio": 2.0978e-06,
+        "initial_logged_sum_squares_kcal2_mol2": 3.4784e-06
+      },
+      "additional_current_source_hashes": {
+        "saved_output/energy.out.saved": "d21d27b1baa13b7cb7c3425efa11a247f5793b454b8a1504b8dbd8b8340621f5",
+        "saved_output/prog_out.saved": "cb42092e53d2c920dfe96e8fbac47a4ed314ef1fcb4268bec0b00b1e76e66074",
+        "run_test.x": "f2d9696c39f419abb8008d97aa35dd986a954e62b1431ba9e3b632a96fed40ca",
+        "info.txt": "0ee7c337845899ebfd121270bf56e1ea0ba3c7f364406f0e96372c3f95495e53",
+        "prms.in": "b99a8b58f79294cca8113e1af620899343369046aba5a325bf9c63f1cea3c989"
+      }
+    }
+  ],
+  "source_evidence": {
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/paramfit-native-audit-v1/source-manifest.json": "76cdfbc2fb4b1ee0c23f3154ac0be7155fe5e3a54288cd28e90dc103cb11e820",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/check_native_paramfit.py": "6e98bf595ef922f1a16f06fc71417e2eec11997af7928ac77607c787f20cec14",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/test/ndiff.awk": "afe2a267ffba881ee7fcbaabb3529b46487ed4bf957e27070c1dc8137eeb235a",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/test/dacdif": "23022d848dab476d5077dfbe725856e31bb52c4c602e13f18626ff06fb7b2d93",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/paramfit-native-audit-v1/source/amber24_src/AmberTools/src/paramfit/write_input.c": "5b07f789d5a83e9b510ac62f6a3d66a6150cb88cb711f70c489c78bb94a112df",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/paramfit-native-audit-v1/source/amber24_src/AmberTools/src/paramfit/eval_amber_std.c": "216b67b9bb656b641094378f857a3dbc9b9852cd92015ed5366c216a5bc2930f",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/paramfit-native-audit-v1/source/amber24_src/AmberTools/src/paramfit/fitting_control.c": "aec0db88f8b69b64e0e92306e069534217f065c83fe76c9a681057650427eebc",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/paramfit-native-audit-v1/source/amber24_src/AmberTools/src/paramfit/dihedral_fitting.c": "df19778af590d80afbe23087d2fb96aae6022b946ea603b799df38abc2a1168d"
+  },
+  "reviewer_script_sha256": "f5ee1145cd094d05dcd41ea1ff08a6b3a2a3dd6bdea8fe2aa3e1482e7df349f3",
+  "fourth_column_source_interpretation": {
+    "writer": "write_input.c::write_energy prints init_energy+K under Initial Amber+K.",
+    "sum_squares_path": "eval_amber_std.c starts individual_sum at K-target, adds Amber terms, then stores that residual in init_energy. It is not the initial Amber energy.",
+    "least_squares_path": "The native LS log reports zero fitness calls and the saved fourth column is all zero. No initial-energy curve is derived from it.",
+    "action": "Use Amber+K minus Quantum for actual fit residuals. Retain the misleading original header; do not silently reinterpret or overwrite native output."
+  },
+  "original_failed_analysis_and_executable_unchanged": true
+}

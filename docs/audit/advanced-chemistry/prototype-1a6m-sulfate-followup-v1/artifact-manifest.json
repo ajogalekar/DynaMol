@@ -1,0 +1,110 @@
+{
+  "scope": "Immutable source bytes and derived audit artifacts; no accepted sulfate model.",
+  "files": [
+    {
+      "path": "official-toppar-page.html",
+      "bytes": 13269,
+      "sha256": "43d5a76a4aca8b8ea28165bb49e230683d16038efb99e0f1bff9155ac11d8119"
+    },
+    {
+      "path": "result.json",
+      "bytes": 2327,
+      "sha256": "62cc11632600f19e1e8448f22ef33f4cbf31f19c309d19e5c7cb70cc0e03235f"
+    },
+    {
+      "path": "scan_sulfate_sources.py",
+      "bytes": 5836,
+      "sha256": "e66cac5d361f2761bde286c73e3af61fffe300eb661f1a41b69094c7d1b12534"
+    },
+    {
+      "path": "candidate-parameter-lines.json",
+      "bytes": 21851,
+      "sha256": "d2ed37f4bc9cb600401cecad740e9e38745d980727ade1c8496a3be96fa19980"
+    },
+    {
+      "path": "official-main-commit.json",
+      "bytes": 7467,
+      "sha256": "033edea1d4243297f057aa44e9e993e0f6678e69dae44a3b527b139ae1d0d99a"
+    },
+    {
+      "path": "official-repository.json",
+      "bytes": 6577,
+      "sha256": "25b45f6a5f44f4709b99376a18e02395572cb09e9bc5294a943e40d2512bd852"
+    },
+    {
+      "path": "slc26a11-repository.html",
+      "bytes": 47565,
+      "sha256": "04902dc0fc0359ebd99c5c2e1cca8f6596b2830ed635e73682db22eacb9e5cc6"
+    },
+    {
+      "path": "VERDICT.md",
+      "bytes": 5032,
+      "sha256": "492197d3a7f8b9b549dbca4da4fa12855b775e9d2e9602478c5eb031d0172d53"
+    },
+    {
+      "path": "archive-text-hits.json",
+      "bytes": 1711,
+      "sha256": "92eb700df6cc45970c92664123311caf173f93eb4af860a6df5fec999d9a6855"
+    },
+    {
+      "path": "slc26a11-pinned-repository-tree.json",
+      "bytes": 7109,
+      "sha256": "5635a4dbeb90a5148b1617a6de6af8d2a4550eda7223275abd531c039d7c27e7"
+    },
+    {
+      "path": "slc26a11-README.md",
+      "bytes": 5693,
+      "sha256": "a5df4d6333e89d59d42f700e8cadb2e4b6f1f654a4ce02b3bbd353c3d10bb970"
+    },
+    {
+      "path": "legacy-parameter-context-v2.json",
+      "bytes": 1896,
+      "sha256": "331d0d358e106560999495b63680f65209f5c035cb6b15ad2dc34cbcd6f2b9c7"
+    },
+    {
+      "path": "cufix-official.html",
+      "bytes": 38881,
+      "sha256": "d82aab05620e9f9b83a8bd3fdb8687ec6b57d829b09e4ae33221cf102bd2bf1e"
+    },
+    {
+      "path": "slc26a11-primary-article.html",
+      "bytes": 685991,
+      "sha256": "c78ca1a6e80fdca065bc232aacd24e2e83a009b9932b23bfb694b41d129b5b34"
+    },
+    {
+      "path": "structural-alias-scan-v2.json",
+      "bytes": 88449,
+      "sha256": "76d97dd596088c264ce98572d91e9a775ea018a3a19acab53ed35e007fc00e82"
+    },
+    {
+      "path": "nested-drude-sulfate.json",
+      "bytes": 1077,
+      "sha256": "3ca2f6448c4c5eb1f71d64f76d3e25eab7da4f75ca27e260bb70e22ab9122736"
+    },
+    {
+      "path": "slc26a11-commit.json",
+      "bytes": 713,
+      "sha256": "63a8683c70dabd8f4bfb759eb0173431e364abecc05e59d258c1bb8adc4aa908"
+    },
+    {
+      "path": "toppar_water_ions_cufix.str",
+      "bytes": 23586,
+      "sha256": "45bbca02dabdffa30559c3b29c3954f710cbf9da4a679de9452a72784a909e9d"
+    },
+    {
+      "path": "slc26a11-repository-tree.json",
+      "bytes": 7109,
+      "sha256": "5635a4dbeb90a5148b1617a6de6af8d2a4550eda7223275abd531c039d7c27e7"
+    },
+    {
+      "path": "structural-alias-scan.json",
+      "bytes": 84156,
+      "sha256": "f0b67f418e2764694aef05701592044bd69e52d13ae437fdbd2bb99125d81407"
+    },
+    {
+      "path": "retrieval.json",
+      "bytes": 3585,
+      "sha256": "9a7ae22a99d76b85a79337f0931a68c09402fc5541433e937669b029e5fad3db"
+    }
+  ]
+}

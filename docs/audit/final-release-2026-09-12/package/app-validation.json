@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "resources": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources",
+  "home": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate Private Home 8dddn9d7",
+  "build_id": "589ff2dddea916f5",
+  "health": {
+    "status": "ok",
+    "engines": [
+      {
+        "id": "openmm",
+        "name": "OpenMM",
+        "available": true,
+        "version": "8.6.0",
+        "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+      },
+      {
+        "id": "gromacs",
+        "name": "GROMACS",
+        "available": true,
+        "version": "2025.4-conda_forge",
+        "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+      }
+    ]
+  },
+  "initial_datasets": [
+    "demo",
+    "ubiquitin-start"
+  ],
+  "startup_progress_page": true,
+  "same_service_reused": true,
+  "shutdown_and_restart_preserved_data": true,
+  "sanitized_path": "/usr/bin:/bin",
+  "jobs": [
+    {
+      "engine": "openmm",
+      "job_id": "ecd74ce8b36542ce",
+      "status": "completed",
+      "dataset_id": "d057261e20d24a07",
+      "atoms": 1231,
+      "frames": 6,
+      "worker_source_sha256": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3"
+    },
+    {
+      "engine": "gromacs",
+      "job_id": "163201233eec494e",
+      "status": "completed",
+      "dataset_id": "46efc6d267244124",
+      "atoms": 26842,
+      "frames": 6,
+      "worker_source_sha256": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3"
+    }
+  ],
+  "limitations": "Local relocated app with paths containing spaces on the development Mac; no separate clean-machine, notarization, or Gatekeeper validation.",
+  "workspace_and_named_project_preserved_on_new_port": true,
+  "named_selection_and_analysis_settings_preserved": true,
+  "readiness_checked": true,
+  "structural_rmsd_frames": 101,
+  "both_engines_record_native_temperature": true,
+  "restart_ports": [
+    "http://127.0.0.1:58611/",
+    "http://127.0.0.1:59151/"
+  ],
+  "local_host_and_origin_validation": true
+}

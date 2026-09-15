@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "file": "before-fix-regressions/qm_evaluation_journal.py",
+      "sha256": "e260abedd8fd54f5f10a85d46a97aaaca9c4286ff8d2b6e488a04faba9364d7d",
+      "bytes": 13601
+    },
+    {
+      "file": "before-fix-regressions/test_qm_evaluation_journal.py",
+      "sha256": "12d5db6a686258a26cac2aab340f93f02411ef2ef05fcccee6b79edf001b8104",
+      "bytes": 18985
+    },
+    {
+      "file": "before-fix-regressions/tests.log",
+      "sha256": "a1df9996fbf1c91e47543f889275ddf008e45b82ddfbeb3c5e256a1b4840697e",
+      "bytes": 4631
+    },
+    {
+      "file": "qm_evaluation_journal.py",
+      "sha256": "b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528",
+      "bytes": 13753
+    },
+    {
+      "file": "result.json",
+      "sha256": "9bd61419ecfb44da68bb75132fdb1f7158bd04715ca1e52fb70dd35c5fed08d2",
+      "bytes": 1133
+    },
+    {
+      "file": "source.diff",
+      "sha256": "e445761674fcb6185bb011a9dd58c27810b542f98c4a2acd53e5847585ace0a1",
+      "bytes": 1389
+    },
+    {
+      "file": "test_qm_evaluation_journal.py",
+      "sha256": "12d5db6a686258a26cac2aab340f93f02411ef2ef05fcccee6b79edf001b8104",
+      "bytes": 18985
+    },
+    {
+      "file": "tests.log",
+      "sha256": "e3ea2fab0249e121af8f6966e7b524311d9d1dc85f21edde10ad44ad8ac28c43",
+      "bytes": 5226
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "port": 8877,
+    "server_pid": 75019,
+    "jobs": [
+      {
+        "id": "8f552f91a7f24ded",
+        "name": "Final Chrome UI audit",
+        "status": "completed",
+        "engine": "openmm"
+      },
+      {
+        "id": "f6ab2695eb684a14",
+        "name": "Explicit water preview",
+        "status": "completed",
+        "engine": "solvation"
+      },
+      {
+        "id": "611460683a7245ba",
+        "name": "1UBQ \u00b7 prepared",
+        "status": "completed",
+        "engine": "preparation"
+      }
+    ],
+    "server_stopped": true
+  },
+  {
+    "port": 8878,
+    "server_pid": 81939,
+    "jobs": [
+      {
+        "id": "3a4166fbe7994e3e",
+        "name": "Explicit water preview",
+        "status": "failed",
+        "engine": "solvation"
+      }
+    ],
+    "server_stopped": true
+  }
+]

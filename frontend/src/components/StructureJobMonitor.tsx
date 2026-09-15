@@ -15,6 +15,7 @@ interface StructureJobMonitorProps {
   complexPreparation?: boolean;
   job?: Job;
   submitting?: 'preparation' | 'solvation' | null;
+  requestOperation?: 'preparation' | 'solvation';
   loadingResult?: boolean;
   loadError?: string;
   resultInView?: boolean;
@@ -37,6 +38,7 @@ export default function StructureJobMonitor({
   complexPreparation = false,
   job: previousJob,
   submitting,
+  requestOperation = 'preparation',
   loadingResult = false,
   loadError,
   resultInView = false,
@@ -70,7 +72,8 @@ export default function StructureJobMonitor({
 
   if (!job && !submitting && !loadError) return null;
 
-  const operation = submitting ?? (job?.engine === 'solvation' ? 'solvation' : 'preparation');
+  const operation =
+    submitting ?? (job ? (job.engine === 'solvation' ? 'solvation' : 'preparation') : requestOperation);
   const water = operation === 'solvation';
   const complex = job ? job.config.complex === true : complexPreparation;
   const subject = complex ? 'Complex' : 'Protein';
@@ -97,7 +100,9 @@ export default function StructureJobMonitor({
             ? water
               ? 'Building explicit water'
               : `Preparing your ${complex ? 'complex' : 'protein'}`
-            : 'Preparation needs attention';
+            : water
+              ? 'Explicit-water setup needs attention'
+              : 'Preparation needs attention';
   const stage = submitting
     ? 'Starting a background worker. You can keep exploring the viewer.'
     : loadingResult

@@ -17,6 +17,7 @@ import uuid
 import subprocess
 import sys
 import time
+import tomllib
 import traceback
 from pathlib import Path
 
@@ -46,7 +47,8 @@ class Worker:
         self.input_state = json.loads(state_path.read_text()) if state_path.exists() else {}
         self.started = time.monotonic()
         self.previous_elapsed = self.job.get("elapsed_seconds", 0) if self.job.get("resume_requested") else 0
-        self.provenance = {"application": "DynaMol 0.1.0", "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.", "config": self.settings, "input_sha256": hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest(), "cpu_threads": config.CPU_THREADS, "versions": {name: importlib.metadata.version(name) for name in ("openmm", "mdtraj", "numpy")}, "commands": [], "preparation": [], "worker_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "source_dataset_id": self.settings["dataset_id"]}
+        application_version = tomllib.loads((config.ROOT / "pyproject.toml").read_text())["project"]["version"]
+        self.provenance = {"application": f"DynaMol {application_version}", "purpose": "Short exploratory molecular dynamics/software demonstration, not converged scientific validation.", "config": self.settings, "input_sha256": hashlib.sha256((self.folder / "input.pdb").read_bytes()).hexdigest(), "cpu_threads": config.CPU_THREADS, "versions": {name: importlib.metadata.version(name) for name in ("openmm", "mdtraj", "numpy")}, "commands": [], "preparation": [], "worker_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), "source_dataset_id": self.settings["dataset_id"]}
 
         if self.job.get("resume_requested") and (self.folder / "provenance.json").exists():
             self.provenance = json.loads((self.folder / "provenance.json").read_text())

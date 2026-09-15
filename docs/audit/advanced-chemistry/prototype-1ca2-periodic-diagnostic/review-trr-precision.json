@@ -1,0 +1,43 @@
+{
+  "verdict": "No defect found in requested modern first-frame scope. Source and independent native-layout synthetic double frame agree; precision below float32 retained.",
+  "reader_sha256": "97bbaa6ad60cbe2ca4a31c7b146966f914cedfb83b69f60476e83c6f3d262167",
+  "synthetic_sha256": "182ce056b54db2cc99bf8a74374285175e425d1048c28f2aea521272fcae43e4",
+  "exact_coordinate_box_force_roundtrip": true,
+  "synthetic_time_step_correct": true,
+  "sub_float32_coordinate_difference_nm": 6.000000496442226e-10,
+  "negative_cases": [
+    {
+      "case": "truncated_force",
+      "rejected": true,
+      "reason": "Truncated TRR array"
+    },
+    {
+      "case": "wrong_magic",
+      "rejected": true,
+      "reason": "Invalid TRR magic/string header"
+    },
+    {
+      "case": "nonfinite_last_force",
+      "rejected": true,
+      "reason": "Nonfinite TRR array"
+    }
+  ],
+  "source": [
+    {
+      "file": "trrio.cpp",
+      "sha256": "c07a81ae3a51bcbf5ad5e06219b43c17b7585d78b5d36aebb8d7150294b5558a",
+      "url": "https://github.com/gromacs/gromacs/blob/v2025.4/src/gromacs/fileio/trrio.cpp"
+    },
+    {
+      "file": "gmxfio_xdr.cpp",
+      "sha256": "a804ef043fc953345827785b058182404a8e605ccbf44c69b7c91dc226b0a51f",
+      "url": "https://github.com/gromacs/gromacs/blob/v2025.4/src/gromacs/fileio/gmxfio_xdr.cpp"
+    }
+  ],
+  "notes": [
+    "Native string layout is separate slen=strlen+1, then XDR string length and 4-byte padded content.",
+    "Ten payload byte-count integers, natoms, step, nre; time/lambda and arrays use stored real precision.",
+    "Requires box/coordinates/forces and nre0 by explicit audit scope; not a general-purpose legacy or streaming trajectory reader.",
+    "Reads entire file, so use only bounded static diagnostic TRRs."
+  ]
+}

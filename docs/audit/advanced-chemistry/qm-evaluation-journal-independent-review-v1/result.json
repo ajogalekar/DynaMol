@@ -1,0 +1,34 @@
+{
+  "status": "no_remaining_blocker_for_standalone_candidate",
+  "helper_sha256": "b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528",
+  "original_helper_sha256": "e260abedd8fd54f5f10a85d46a97aaaca9c4286ff8d2b6e488a04faba9364d7d",
+  "fix_scope": [
+    "EvaluationJournal._check_manifest exact integer schema",
+    "EvaluationJournal.records exact integer schema and strict recovered identity validation"
+  ],
+  "independent_tests": {
+    "new_narrow_regressions_passed": 4,
+    "preserved_pre_fix_specimens_rejected": 3,
+    "author_v1_artifacts_verified": 4,
+    "author_v2_artifacts_verified": 8,
+    "author_v2_full_suite_passed": 35,
+    "full_suite_not_rerun_by_reviewer": true
+  },
+  "reviewed_guarantees": [
+    "Explicit native SCF convergence True and finite complete energy/gradient arrays before recording",
+    "Exact declared units, ordered IDs/elements and integer charge/spin; input/worker/request/settings digests remain distinct",
+    "Unconverged and unaccepted optimizer/physical/checkpoint state retained, including line-search trial evaluations",
+    "Atomic no-clobber hardlink after full write and file fsync, followed by directory fsync; interrupted temporary files preserved and ignored",
+    "Recovery rejects corrupt committed artifacts rather than falling back; no checkpoint read or automatic restart authorization"
+  ],
+  "limitations": [
+    "Candidate is not integrated or validated with a live native callback.",
+    "Actual scanner state/atom ordering and same-evaluation array provenance remain integration responsibilities.",
+    "Caller-declared source hashes/settings do not attest loaded runtime or measured quantum method.",
+    "Journal records are completed evaluations, not accepted optimizer steps, converged structures or reusable SCF checkpoints.",
+    "Power-loss durability depends on local filesystem semantics; parent-directory creation and temporary-name cleanup durability are not claimed."
+  ],
+  "native_qm_launched": false,
+  "runtime_or_worker_or_helper_edited_by_reviewer": false,
+  "evidence_root": "/Users/ashujo/.cache/dynamol-research/qm-evaluation-journal-independent-review-v1"
+}

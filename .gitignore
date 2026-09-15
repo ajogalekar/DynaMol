@@ -16,3 +16,36 @@ frontend/playwright-report/
 !.env.example
 *.log
 build/
+
+# Personal sharing material and film drafts are not repository content.
+/share/
+
+# Bulk audit evidence stays local (~1.4 GB): per-run workspaces, trajectories,
+# topologies, serialized Systems, frozen structure inputs and media. Reports,
+# scripts and compact summaries stay tracked; their recorded hashes identify
+# the offloaded files.
+docs/audit/loop-fallback/runs/**/workspace/
+docs/audit/advanced-chemistry/inputs/
+docs/audit/advanced-chemistry/**/*.trr
+docs/audit/advanced-chemistry/**/*.dcd
+docs/audit/advanced-chemistry/**/*.xtc
+docs/audit/advanced-chemistry/**/*.npz
+docs/audit/advanced-chemistry/**/*.gro
+docs/audit/advanced-chemistry/**/*.top
+docs/audit/advanced-chemistry/**/*.tpr
+docs/audit/advanced-chemistry/**/*.edr
+docs/audit/advanced-chemistry/**/*.cpt
+docs/audit/advanced-chemistry/**/*.prmtop
+docs/audit/advanced-chemistry/**/*.inpcrd
+docs/audit/advanced-chemistry/**/*.psf
+docs/audit/advanced-chemistry/**/*.tgz
+docs/audit/advanced-chemistry/**/*.fchk
+docs/audit/advanced-chemistry/**/system.xml
+docs/audit/advanced-chemistry/**/*-system.xml
+docs/audit/advanced-chemistry/**/native-parameters*.json
+docs/audit/advanced-chemistry/**/gromacs-identity-native-manifest.json
+docs/audit/advanced-chemistry/**/source-atom-map.json
+docs/audit/advanced-chemistry/**/solvated.pdb
+docs/audit/advanced-chemistry/**/minimized.pdb
+docs/audit/final-release-2026-09-12/ui/*.zip
+docs/audit/**/*.pdf

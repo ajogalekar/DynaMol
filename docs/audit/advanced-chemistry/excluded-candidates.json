@@ -1,0 +1,93 @@
+{
+  "recorded_at_utc": "2026-09-13T16:04:06.209032+00:00",
+  "candidates": [
+    {
+      "id": "1CGL",
+      "source": {
+        "path": "inputs/1CGL.cif",
+        "source_url": "https://files.rcsb.org/download/1CGL.cif",
+        "sha256": "b041824ecb1a96000a1839be220aa4a72938f296f5f2a6c4fef09cbbc4003b4f",
+        "bytes": 420137
+      },
+      "reason": "Same MMP1 family represented by higher-resolution 1HFC with a complete observed backbone.",
+      "inventory": "inventories/1CGL.json"
+    },
+    {
+      "id": "1ONE",
+      "source": {
+        "path": "inputs/1ONE.cif",
+        "source_url": "https://files.rcsb.org/download/1ONE.cif",
+        "sha256": "f6770cb01c198849b78dfcab177c8e3d61a8ac54d53589f01c2defc3c5235d66",
+        "bytes": 883778
+      },
+      "reason": "Deposited equilibrium substrate/product mixture and numerous mutually overlapping cross-component covale records need dedicated source disambiguation, so not an ordinary metal-model reference.",
+      "inventory": "inventories/1ONE.json"
+    },
+    {
+      "id": "3JWE",
+      "source": {
+        "path": "inputs/3JWE.cif",
+        "source_url": "https://files.rcsb.org/download/3JWE.cif",
+        "sha256": "edb78bb81278027bc9e7546d60702d806ec1d08f2e133eacd1c2d185dca090d9",
+        "bytes": 485367
+      },
+      "reason": "MAGL represented by higher-resolution 6AX1 assembly1 with a complete observed backbone.",
+      "inventory": "inventories/3JWE.json"
+    },
+    {
+      "id": "3QJ9",
+      "source": {
+        "path": "inputs/3QJ9.cif",
+        "source_url": "https://files.rcsb.org/download/3QJ9.cif",
+        "sha256": "8825f8401d7cbf9efbcf7cf0357eb6b2ca705b53d86a720b693da0b38aa71334",
+        "bytes": 1002513
+      },
+      "reason": "No deposited covalent link; alternate FAAH structures with explicit reacted products selected.",
+      "inventory": "inventories/3QJ9.json"
+    },
+    {
+      "id": "3S3P",
+      "source": {
+        "path": "inputs/3S3P.cif",
+        "source_url": "https://files.rcsb.org/download/3S3P.cif",
+        "sha256": "276ed7c2b9af684fbab057f615cb7bd9bd6f51c0646b4d02d65e5eb3da6aae3e",
+        "bytes": 543071
+      },
+      "reason": "Multiple missing loops including a 13-residue gap introduce unrelated repair barriers; preserved as a screened candidate.",
+      "inventory": "inventories/3S3P.json"
+    },
+    {
+      "id": "3W2T",
+      "source": {
+        "path": "inputs/3W2T.cif",
+        "source_url": "https://files.rcsb.org/download/3W2T.cif",
+        "sha256": "efb9651a1829f69c288960d3d45d2a954f81861500588c41fe5231eb4a4b0c57",
+        "bytes": 1373309
+      },
+      "reason": "Additional DPP4 example would duplicate the Ser nitrile product class and introduce larger glycan inventory; 3BJM already retains DPP4 glycans.",
+      "inventory": "inventories/3W2T.json"
+    },
+    {
+      "id": "4IFG",
+      "source": {
+        "path": "inputs/4IFG.cif",
+        "source_url": "https://files.rcsb.org/download/4IFG.cif",
+        "sha256": "da3d2ad6a9293616a27eea30ecbd2ec536ed279ae5a1f194f0259ab9c8e841cb",
+        "bytes": 428808
+      },
+      "reason": "Mistaken remembered accession: organism is Toxoplasma gondii, outside benign-host scope; excluded after metadata inventory and never modeled.",
+      "inventory": "inventories/4IFG.json"
+    },
+    {
+      "id": "4ZAU",
+      "source": {
+        "path": "inputs/4ZAU.cif",
+        "source_url": "https://files.rcsb.org/download/4ZAU.cif",
+        "sha256": "cfc464565c536bd9dc0cfb9850f1e402b2d1ff29950ad630668fced7d21a4d7a",
+        "bytes": 483360
+      },
+      "reason": "No deposited covalent link and substantial multiple sequence gaps; a title mentioning osimertinib does not establish a supported reacted graph.",
+      "inventory": "inventories/4ZAU.json"
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "id": "4IFG",
+  "recorded_at_utc": "2026-09-13T15:57:55.167665+00:00",
+  "input": {
+    "path": "inputs/4IFG.cif",
+    "source_url": "https://files.rcsb.org/download/4IFG.cif",
+    "sha256": "da3d2ad6a9293616a27eea30ecbd2ec536ed279ae5a1f194f0259ab9c8e841cb",
+    "bytes": 428808
+  },
+  "title": "Crystal structure of TgCDPK1 with inhibitor bound",
+  "organisms": [
+    "Toxoplasma gondii"
+  ],
+  "resolution_angstrom": "2.1100",
+  "primary_citations": [
+    {
+      "id": "primary",
+      "title": "Crystal structure of TgCDPK1 with inhibitor bound",
+      "journal_abbrev": "To be Published",
+      "journal_volume": null,
+      "page_first": null,
+      "page_last": null,
+      "year": null,
+      "journal_id_ASTM": null,
+      "country": null,
+      "journal_id_ISSN": null,
+      "journal_id_CSD": "0353",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": null,
+      "pdbx_database_id_DOI": null
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "1",
+      "details": "author_and_software_defined_assembly",
+      "method_details": "PISA",
+      "oligomeric_details": "monomeric",
+      "oligomeric_count": "1"
+    }
+  ],
+  "assembly_generators": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D"
+    }
+  ],
+  "assembly_operators": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "entities": [
+    {
+      "id": "1",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "Calmodulin-domain protein kinase 1",
+      "formula_weight": "57333.035",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": "2.7.11.17",
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "2",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "1-{(3R)-3-[4-amino-3-(4-phenoxyphenyl)-1H-pyrazolo[3,4-d]pyrimidin-1-yl]piperidin-1-yl}prop-2-en-1-one",
+      "formula_weight": "440.497",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "3",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "UNKNOWN ATOM OR ION",
+      "formula_weight": null,
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "4",
+      "type": "water",
+      "src_method": "nat",
+      "pdbx_description": "water",
+      "formula_weight": "18.015",
+      "pdbx_number_of_molecules": "61",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    }
+  ],
+  "components": [
+    {
+      "id": "1E8",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "1-{(3R)-3-[4-amino-3-(4-phenoxyphenyl)-1H-pyrazolo[3,4-d]pyrimidin-1-yl]piperidin-1-yl}prop-2-en-1-one",
+      "pdbx_synonyms": "Imbruvica; PCI-32765",
+      "formula": "C25 H24 N6 O2",
+      "formula_weight": "440.497"
+    },
+    {
+      "id": "ALA",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2",
+      "formula_weight": "89.093"
+    },
+    {
+      "id": "ARG",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ARGININE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N4 O2 1",
+      "formula_weight": "175.209"
+    },
+    {
+      "id": "ASN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARAGINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H8 N2 O3",
+      "formula_weight": "132.118"
+    },
+    {
+      "id": "ASP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARTIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C4 H7 N O4",
+      "formula_weight": "133.103"
+    },
+    {
+      "id": "CYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "CYSTEINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2 S",
+      "formula_weight": "121.158"
+    },
+    {
+      "id": "GLN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H10 N2 O3",
+      "formula_weight": "146.144"
+    },
+    {
+      "id": "GLU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O4",
+      "formula_weight": "147.129"
+    },
+    {
+      "id": "GLY",
+      "type": "peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLYCINE",
+      "pdbx_synonyms": null,
+      "formula": "C2 H5 N O2",
+      "formula_weight": "75.067"
+    },
+    {
+      "id": "HIS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "HISTIDINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H10 N3 O2 1",
+      "formula_weight": "156.162"
+    },
+    {
+      "id": "HOH",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "WATER",
+      "pdbx_synonyms": null,
+      "formula": "H2 O",
+      "formula_weight": "18.015"
+    },
+    {
+      "id": "ILE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ISOLEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LEU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LYSINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N2 O2 1",
+      "formula_weight": "147.195"
+    },
+    {
+      "id": "MET",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "METHIONINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2 S",
+      "formula_weight": "149.211"
+    },
+    {
+      "id": "PHE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PHENYLALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O2",
+      "formula_weight": "165.189"
+    },
+    {
+      "id": "PRO",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PROLINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O2",
+      "formula_weight": "115.130"
+    },
+    {
+      "id": "SER",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "SERINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O3",
+      "formula_weight": "105.093"
+    },
+    {
+      "id": "THR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "THREONINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "TRP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TRYPTOPHAN",
+      "pdbx_synonyms": null,
+      "formula": "C11 H12 N2 O2",
+      "formula_weight": "204.225"
+    },
+    {
+      "id": "TYR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TYROSINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O3",
+      "formula_weight": "181.189"
+    },
+    {
+      "id": "UNX",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "UNKNOWN ATOM OR ION",
+      "pdbx_synonyms": null,
+      "formula": null,
+      "formula_weight": null
+    },
+    {
+      "id": "VAL",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "VALINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2",
+      "formula_weight": "117.146"
+    }
+  ],
+  "modified_residues": [],
+  "raw_connections": [],
+  "connections": [],
+  "metal_atoms": [],
+  "nonstandard_residues": [
+    {
+      "label_chain": "B",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "601",
+      "insertion_code": null,
+      "component": "1E8",
+      "observed_heavy_atom_names": [
+        "C2",
+        "C4",
+        "C5",
+        "C6",
+        "CAA",
+        "CAD",
+        "CAE",
+        "CAF",
+        "CAG",
+        "CAI",
+        "CAJ",
+        "CAK",
+        "CAL",
+        "CAM",
+        "CAN",
+        "CAO",
+        "CAP",
+        "CAQ",
+        "CAR",
+        "CAW",
+        "CAY",
+        "CAZ",
+        "CBA",
+        "CBB",
+        "CBE",
+        "N1",
+        "N3",
+        "NAB",
+        "NAU",
+        "NBF",
+        "NBG",
+        "OAC",
+        "OAV"
+      ]
+    },
+    {
+      "label_chain": "C",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "602",
+      "insertion_code": null,
+      "component": "UNX",
+      "observed_heavy_atom_names": [
+        "UNK"
+      ]
+    }
+  ],
+  "water_residue_count": 61,
+  "atom_count_model1": 3713,
+  "chains": [
+    {
+      "label_chain": "A",
+      "author_chain": "A",
+      "entity_id": "1",
+      "sequence_length": 507,
+      "observed_residues": 452,
+      "internal_gaps": [
+        {
+          "length": 5,
+          "residues": [
+            "GLU",
+            "GLN",
+            "ILE",
+            "SER",
+            "VAL"
+          ],
+          "label_sequence_ids": [
+            "314",
+            "315",
+            "316",
+            "317",
+            "318"
+          ]
+        },
+        {
+          "length": 7,
+          "residues": [
+            "PHE",
+            "ASP",
+            "LYS",
+            "ASN",
+            "GLY",
+            "TYR",
+            "ILE"
+          ],
+          "label_sequence_ids": [
+            "416",
+            "417",
+            "418",
+            "419",
+            "420",
+            "421",
+            "422"
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "inventoried"
+}

@@ -1,0 +1,612 @@
+{
+  "id": "2H5I",
+  "recorded_at_utc": "2026-09-13T15:57:55.524707+00:00",
+  "input": {
+    "path": "inputs/2H5I.cif",
+    "source_url": "https://files.rcsb.org/download/2H5I.cif",
+    "sha256": "a7dfb541e7ca1cf8acc10ce345b6978849cf8b2ed5ceecf108072cc9ceb74bad",
+    "bytes": 274911
+  },
+  "title": "Crystal structure of caspase-3 with inhibitor Ac-DEVD-Cho",
+  "organisms": [
+    "Homo sapiens"
+  ],
+  "resolution_angstrom": "1.69",
+  "primary_citations": [
+    {
+      "id": "primary",
+      "title": "Structural and kinetic analysis of caspase-3 reveals role for s5 binding site in substrate recognition",
+      "journal_abbrev": "J.Mol.Biol.",
+      "journal_volume": "360",
+      "page_first": "654",
+      "page_last": "666",
+      "year": "2006",
+      "journal_id_ASTM": "JMOBAK",
+      "country": "UK",
+      "journal_id_ISSN": "0022-2836",
+      "journal_id_CSD": "0070",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": "16781734",
+      "pdbx_database_id_DOI": "10.1016/j.jmb.2006.05.041"
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "1",
+      "details": "author_defined_assembly",
+      "method_details": null,
+      "oligomeric_details": "hexameric",
+      "oligomeric_count": "6"
+    }
+  ],
+  "assembly_generators": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1,2",
+      "asym_id_list": "A,B,C,D,E,F"
+    }
+  ],
+  "assembly_operators": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    },
+    {
+      "id": "2",
+      "type": "crystal symmetry operation",
+      "name": "3_555",
+      "symmetry_operation": "-x,y,-z",
+      "matrix[1][1]": "-1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "-1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "entities": [
+    {
+      "id": "1",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "caspase-3, p17 subunit",
+      "formula_weight": "16524.814",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": "3.4.22.-",
+      "pdbx_mutation": null,
+      "pdbx_fragment": "residues 29-174",
+      "details": null
+    },
+    {
+      "id": "2",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "caspase-3, p12 subunit",
+      "formula_weight": "11257.953",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": "3.4.22.-",
+      "pdbx_mutation": null,
+      "pdbx_fragment": "residues 184-277",
+      "details": null
+    },
+    {
+      "id": "3",
+      "type": "polymer",
+      "src_method": "syn",
+      "pdbx_description": "Ac-DEV(ASJ)",
+      "formula_weight": "488.489",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "4",
+      "type": "water",
+      "src_method": "nat",
+      "pdbx_description": "water",
+      "formula_weight": "18.015",
+      "pdbx_number_of_molecules": "224",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    }
+  ],
+  "components": [
+    {
+      "id": "ACE",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "ACETYL GROUP",
+      "pdbx_synonyms": null,
+      "formula": "C2 H4 O",
+      "formula_weight": "44.053"
+    },
+    {
+      "id": "ALA",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2",
+      "formula_weight": "89.093"
+    },
+    {
+      "id": "ARG",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ARGININE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N4 O2 1",
+      "formula_weight": "175.209"
+    },
+    {
+      "id": "ASJ",
+      "type": "peptide-like",
+      "mon_nstd_flag": null,
+      "name": "(3S)-3-amino-4-hydroxybutanoic acid",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "ASN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARAGINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H8 N2 O3",
+      "formula_weight": "132.118"
+    },
+    {
+      "id": "ASP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARTIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C4 H7 N O4",
+      "formula_weight": "133.103"
+    },
+    {
+      "id": "CYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "CYSTEINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2 S",
+      "formula_weight": "121.158"
+    },
+    {
+      "id": "GLN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H10 N2 O3",
+      "formula_weight": "146.144"
+    },
+    {
+      "id": "GLU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O4",
+      "formula_weight": "147.129"
+    },
+    {
+      "id": "GLY",
+      "type": "peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLYCINE",
+      "pdbx_synonyms": null,
+      "formula": "C2 H5 N O2",
+      "formula_weight": "75.067"
+    },
+    {
+      "id": "HIS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "HISTIDINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H10 N3 O2 1",
+      "formula_weight": "156.162"
+    },
+    {
+      "id": "HOH",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "WATER",
+      "pdbx_synonyms": null,
+      "formula": "H2 O",
+      "formula_weight": "18.015"
+    },
+    {
+      "id": "ILE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ISOLEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LEU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LYSINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N2 O2 1",
+      "formula_weight": "147.195"
+    },
+    {
+      "id": "MET",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "METHIONINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2 S",
+      "formula_weight": "149.211"
+    },
+    {
+      "id": "PHE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PHENYLALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O2",
+      "formula_weight": "165.189"
+    },
+    {
+      "id": "PRO",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PROLINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O2",
+      "formula_weight": "115.130"
+    },
+    {
+      "id": "SER",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "SERINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O3",
+      "formula_weight": "105.093"
+    },
+    {
+      "id": "THR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "THREONINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "TRP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TRYPTOPHAN",
+      "pdbx_synonyms": null,
+      "formula": "C11 H12 N2 O2",
+      "formula_weight": "204.225"
+    },
+    {
+      "id": "TYR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TYROSINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O3",
+      "formula_weight": "181.189"
+    },
+    {
+      "id": "VAL",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "VALINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2",
+      "formula_weight": "117.146"
+    }
+  ],
+  "modified_residues": [],
+  "raw_connections": [
+    {
+      "id": "covale1",
+      "conn_type_id": "covale",
+      "pdbx_leaving_atom_flag": "one",
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "A",
+      "ptnr1_label_comp_id": "CYS",
+      "ptnr1_label_seq_id": "135",
+      "ptnr1_label_atom_id": "SG",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "C",
+      "ptnr2_label_comp_id": "ASJ",
+      "ptnr2_label_seq_id": "5",
+      "ptnr2_label_atom_id": "C",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "A",
+      "ptnr1_auth_comp_id": "CYS",
+      "ptnr1_auth_seq_id": "163",
+      "ptnr2_auth_asym_id": "C",
+      "ptnr2_auth_comp_id": "ASJ",
+      "ptnr2_auth_seq_id": "5",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "1.816",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    },
+    {
+      "id": "covale2",
+      "conn_type_id": "covale",
+      "pdbx_leaving_atom_flag": "both",
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "C",
+      "ptnr1_label_comp_id": "ACE",
+      "ptnr1_label_seq_id": "1",
+      "ptnr1_label_atom_id": "C",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "C",
+      "ptnr2_label_comp_id": "ASP",
+      "ptnr2_label_seq_id": "2",
+      "ptnr2_label_atom_id": "N",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "C",
+      "ptnr1_auth_comp_id": "ACE",
+      "ptnr1_auth_seq_id": "1",
+      "ptnr2_auth_asym_id": "C",
+      "ptnr2_auth_comp_id": "ASP",
+      "ptnr2_auth_seq_id": "2",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "1.328",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    },
+    {
+      "id": "covale3",
+      "conn_type_id": "covale",
+      "pdbx_leaving_atom_flag": "both",
+      "pdbx_PDB_id": null,
+      "ptnr1_label_asym_id": "C",
+      "ptnr1_label_comp_id": "VAL",
+      "ptnr1_label_seq_id": "4",
+      "ptnr1_label_atom_id": "C",
+      "pdbx_ptnr1_label_alt_id": null,
+      "pdbx_ptnr1_PDB_ins_code": null,
+      "pdbx_ptnr1_standard_comp_id": null,
+      "ptnr1_symmetry": "1_555",
+      "ptnr2_label_asym_id": "C",
+      "ptnr2_label_comp_id": "ASJ",
+      "ptnr2_label_seq_id": "5",
+      "ptnr2_label_atom_id": "N",
+      "pdbx_ptnr2_label_alt_id": null,
+      "pdbx_ptnr2_PDB_ins_code": null,
+      "ptnr1_auth_asym_id": "C",
+      "ptnr1_auth_comp_id": "VAL",
+      "ptnr1_auth_seq_id": "4",
+      "ptnr2_auth_asym_id": "C",
+      "ptnr2_auth_comp_id": "ASJ",
+      "ptnr2_auth_seq_id": "5",
+      "ptnr2_symmetry": "1_555",
+      "pdbx_ptnr3_label_atom_id": null,
+      "pdbx_ptnr3_label_seq_id": null,
+      "pdbx_ptnr3_label_comp_id": null,
+      "pdbx_ptnr3_label_asym_id": null,
+      "pdbx_ptnr3_label_alt_id": null,
+      "pdbx_ptnr3_PDB_ins_code": null,
+      "details": null,
+      "pdbx_dist_value": "1.340",
+      "pdbx_value_order": null,
+      "pdbx_role": null
+    }
+  ],
+  "connections": [
+    {
+      "id": "covale1",
+      "type": "covale",
+      "partner1": {
+        "label_chain": "A",
+        "label_sequence_id": "135",
+        "component": "CYS",
+        "atom": "SG",
+        "author_chain": "A",
+        "author_residue_id": "163",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "C",
+        "label_sequence_id": "5",
+        "component": "ASJ",
+        "atom": "C",
+        "author_chain": "C",
+        "author_residue_id": "5",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "1.816",
+      "deposited_order": null,
+      "leaving_atom_flag": "one"
+    },
+    {
+      "id": "covale2",
+      "type": "covale",
+      "partner1": {
+        "label_chain": "C",
+        "label_sequence_id": "1",
+        "component": "ACE",
+        "atom": "C",
+        "author_chain": "C",
+        "author_residue_id": "1",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "C",
+        "label_sequence_id": "2",
+        "component": "ASP",
+        "atom": "N",
+        "author_chain": "C",
+        "author_residue_id": "2",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "1.328",
+      "deposited_order": null,
+      "leaving_atom_flag": "both"
+    },
+    {
+      "id": "covale3",
+      "type": "covale",
+      "partner1": {
+        "label_chain": "C",
+        "label_sequence_id": "4",
+        "component": "VAL",
+        "atom": "C",
+        "author_chain": "C",
+        "author_residue_id": "4",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "partner2": {
+        "label_chain": "C",
+        "label_sequence_id": "5",
+        "component": "ASJ",
+        "atom": "N",
+        "author_chain": "C",
+        "author_residue_id": "5",
+        "symmetry": "1_555",
+        "insertion_code": null,
+        "altloc": null
+      },
+      "deposited_distance_angstrom": "1.340",
+      "deposited_order": null,
+      "leaving_atom_flag": "both"
+    }
+  ],
+  "metal_atoms": [],
+  "nonstandard_residues": [
+    {
+      "label_chain": "C",
+      "label_sequence_id": "1",
+      "author_chain": "C",
+      "author_residue_id": "1",
+      "insertion_code": null,
+      "component": "ACE",
+      "observed_heavy_atom_names": [
+        "C",
+        "CH3",
+        "O"
+      ]
+    },
+    {
+      "label_chain": "C",
+      "label_sequence_id": "5",
+      "author_chain": "C",
+      "author_residue_id": "5",
+      "insertion_code": null,
+      "component": "ASJ",
+      "observed_heavy_atom_names": [
+        "C",
+        "CA",
+        "CB",
+        "CG",
+        "N",
+        "O",
+        "OD1",
+        "OD2"
+      ]
+    }
+  ],
+  "water_residue_count": 224,
+  "atom_count_model1": 2218,
+  "chains": [
+    {
+      "label_chain": "A",
+      "author_chain": "A",
+      "entity_id": "1",
+      "sequence_length": 146,
+      "observed_residues": 146,
+      "internal_gaps": []
+    },
+    {
+      "label_chain": "B",
+      "author_chain": "B",
+      "entity_id": "2",
+      "sequence_length": 95,
+      "observed_residues": 94,
+      "internal_gaps": []
+    },
+    {
+      "label_chain": "C",
+      "author_chain": "C",
+      "entity_id": "3",
+      "sequence_length": 5,
+      "observed_residues": 5,
+      "internal_gaps": []
+    }
+  ],
+  "status": "inventoried"
+}

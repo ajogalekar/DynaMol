@@ -1,0 +1,50 @@
+[
+  {
+    "file": "dryad-api.json",
+    "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.5g1k6",
+    "sha256": "21006a3df1cbc9b95248561049e7fb729f16cace36e9ca6c9fbab1abd287f473",
+    "file_saved_at_utc": "2026-09-13T17:30:56.083262+00:00"
+  },
+  {
+    "file": "dryad-files.json",
+    "url": "https://datadryad.org/api/v2/versions/282/files",
+    "sha256": "cfb3c5c5f49b0998b492d1f3b3f1424381e7893c73f476bb55e775e6da50c470",
+    "file_saved_at_utc": "2026-09-13T17:31:12.752170+00:00"
+  },
+  {
+    "file": "cucusod-tree.json",
+    "url": "https://api.github.com/repos/Mag14011/CuCuSOD1_SI_CompMethods/git/trees/main?recursive=1",
+    "sha256": "433a7ebba261093ef05064c1fce705a5909fbf8e75f39ad890841d45559342eb",
+    "file_saved_at_utc": "2026-09-13T17:30:56.316710+00:00"
+  },
+  {
+    "file": "sod-branco-list.json",
+    "url": "https://api.figshare.com/v2/articles?resource_doi=10.1021/jp056855l",
+    "sha256": "a0ed86fab770e1d5da19c884890bb8e292247b84e4e045dbbe869e14a142ddbf",
+    "file_saved_at_utc": "2026-09-13T17:35:56.949153+00:00"
+  },
+  {
+    "file": "sod-branco-si.json",
+    "url": "https://api.figshare.com/v2/articles/3063247",
+    "sha256": "bda2cc750cc49e50a9cb99ffd6c378e0efbf84af41625010601b509f4f18bbc4",
+    "file_saved_at_utc": "2026-09-13T17:36:28.483980+00:00"
+  },
+  {
+    "file": "sod-torsions-figshare-api.json",
+    "url": "https://api.figshare.com/v2/articles?resource_doi=10.1021/jp5078906",
+    "sha256": "719a208b367ac9a99234c54c9922cb25b9b751ac2992e7f6f67474bd6a5141ea",
+    "file_saved_at_utc": "2026-09-13T17:31:13.421119+00:00"
+  },
+  {
+    "file": "figshare-2233525.json",
+    "url": "https://api.figshare.com/v2/articles/2233525",
+    "sha256": "68b81982c79738f45e212dd9ca2a98ef72aeeeb261be0b8f769c4b3ec73d8e31",
+    "file_saved_at_utc": "2026-09-13T17:33:37.797639+00:00"
+  },
+  {
+    "file": "figshare-11312432.json",
+    "url": "https://api.figshare.com/v2/articles/11312432",
+    "sha256": "01272fce534177f848a9ce1d25bd217ef5924537b72f895f2911625392c9680c",
+    "file_saved_at_utc": "2026-09-13T17:33:40.117900+00:00"
+  }
+]

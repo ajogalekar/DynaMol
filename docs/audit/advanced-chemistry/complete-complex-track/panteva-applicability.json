@@ -1,0 +1,6200 @@
+{
+  "GDP_applicability": {
+    "DMP_fitted_C4_kcal_angstrom4_mol": 21.25,
+    "GDP_diphosphate_specific_fit_in_inspected_source": "not_provided",
+    "current_model": "Preserved Meagher\u2013Redman\u2013Carlson GDP(-3) native Amber99-based source model, scoped without protein parameter overrides.",
+    "default_O3_C4_kcal_angstrom4_mol": 71.125,
+    "default_O3_alpha_angstrom3": 0.569,
+    "net_charge_e": -3.000000007682894,
+    "required_decision": "Do not substitute the DMP correction for the retained GDP(-3) diphosphate without an explicit transfer assessment and binding/coordination validation.",
+    "whole_complex_transfer_validated": false
+  },
+  "all_native_nonbonded_classes": [
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 238,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 1,
+      "native_types": [
+        "N",
+        "N2",
+        "N3",
+        "NA",
+        "NB",
+        "QK",
+        "QL",
+        "QM",
+        "QN",
+        "QO"
+      ],
+      "source_alpha_values": [
+        1.09
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 287,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 2,
+      "native_types": [
+        "H",
+        "QF"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 538,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 3,
+      "native_types": [
+        "2C",
+        "3C",
+        "C8",
+        "CT",
+        "CX",
+        "QE"
+      ],
+      "source_alpha_values": [
+        1.061
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 26,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 4,
+      "native_types": [
+        "HP"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 322,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 5,
+      "native_types": [
+        "C",
+        "CA",
+        "CC",
+        "CO",
+        "CR",
+        "CV",
+        "QA",
+        "QB",
+        "QC",
+        "QD"
+      ],
+      "source_alpha_values": [
+        1.352
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 246,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 6,
+      "native_types": [
+        "O",
+        "O2",
+        "QP",
+        "QQ",
+        "QR"
+      ],
+      "source_alpha_values": [
+        0.569
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 264,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 7,
+      "native_types": [
+        "H1",
+        "QG"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 673,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 8,
+      "native_types": [
+        "HC"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 4,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 9,
+      "native_types": [
+        "S"
+      ],
+      "source_alpha_values": [
+        3.0
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 32,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 10,
+      "native_types": [
+        "OH",
+        "QS"
+      ],
+      "source_alpha_values": [
+        0.637
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 16468,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 11,
+      "native_types": [
+        "HO",
+        "HW",
+        "QJ"
+      ],
+      "source_alpha_values": [
+        0.0
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 62,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 12,
+      "native_types": [
+        "HA"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": false,
+      "atom_count": 12,
+      "missing_lookup_types": [
+        "c6"
+      ],
+      "native_lj_type_index": 13,
+      "native_types": [
+        "c3",
+        "c6"
+      ],
+      "source_alpha_values": [
+        1.061
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 14,
+      "native_types": [
+        "ss"
+      ],
+      "source_alpha_values": [
+        3.0
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 19,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 15,
+      "native_types": [
+        "c",
+        "ca",
+        "cc",
+        "cp"
+      ],
+      "source_alpha_values": [
+        1.352
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 2,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 16,
+      "native_types": [
+        "n"
+      ],
+      "source_alpha_values": [
+        1.09
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 17,
+      "native_types": [
+        "nh"
+      ],
+      "source_alpha_values": [
+        1.09
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 2,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 18,
+      "native_types": [
+        "f"
+      ],
+      "source_alpha_values": [
+        0.32
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 19,
+      "native_types": [
+        "oh"
+      ],
+      "source_alpha_values": [
+        0.637
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 20,
+      "native_types": [
+        "ho"
+      ],
+      "source_alpha_values": [
+        0.0
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 5,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 21,
+      "native_types": [
+        "ha"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 3,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 22,
+      "native_types": [
+        "nb",
+        "nd"
+      ],
+      "source_alpha_values": [
+        1.09
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 15,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 23,
+      "native_types": [
+        "hc"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 24,
+      "native_types": [
+        "h4"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 2,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 25,
+      "native_types": [
+        "o"
+      ],
+      "source_alpha_values": [
+        0.569
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 11,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 26,
+      "native_types": [
+        "h1"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 5,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 27,
+      "native_types": [
+        "H5",
+        "QI"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 4,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 28,
+      "native_types": [
+        "H4"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 29,
+      "native_types": [
+        "Mg2+"
+      ],
+      "source_alpha_values": [
+        0.048
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 2,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 30,
+      "native_types": [
+        "QU"
+      ],
+      "source_alpha_values": [
+        1.538
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 3,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 31,
+      "native_types": [
+        "QT"
+      ],
+      "source_alpha_values": [
+        0.637
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 1,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 32,
+      "native_types": [
+        "QH"
+      ],
+      "source_alpha_values": [
+        0.387
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 7,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 33,
+      "native_types": [
+        "Na+"
+      ],
+      "source_alpha_values": [
+        0.2495
+      ]
+    },
+    {
+      "all_defaults_available_and_equal": true,
+      "atom_count": 8218,
+      "missing_lookup_types": [],
+      "native_lj_type_index": 34,
+      "native_types": [
+        "OW"
+      ],
+      "source_alpha_values": [
+        1.444
+      ]
+    }
+  ],
+  "all_original_inputs_unchanged_after_audit": true,
+  "app_ready": false,
+  "case": "corrected_6OIM_KRAS_sotorasib_GDP_Mg_water_counterions",
+  "complete_complex_atom_counts": {
+    "GDP": 40,
+    "TIP3P_water": 24654,
+    "covalent_drug_residue": 82,
+    "magnesium": 1,
+    "protein": 2693,
+    "sodium_counterion": 7
+  },
+  "component_type_inventory": [
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.477,
+        0.477
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "QA",
+      "original_type_before_gdp_scoping": "C",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 37
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C6",
+          "native_index": 2798,
+          "source": {
+            "atom": "C6",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.7656999994512218,
+        0.7656999994512218
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "QB",
+      "original_type_before_gdp_scoping": "CA",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 41
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C2",
+          "native_index": 2802,
+          "source": {
+            "atom": "C2",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.12219999999999999,
+        0.1744
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "QC",
+      "original_type_before_gdp_scoping": "CB",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 42
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C5",
+          "native_index": 2797,
+          "source": {
+            "atom": "C5",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "C4",
+          "native_index": 2807,
+          "source": {
+            "atom": "C4",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.1374,
+        0.1374
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "QD",
+      "original_type_before_gdp_scoping": "CK",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 45
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C8",
+          "native_index": 2794,
+          "source": {
+            "atom": "C8",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 5,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.0191,
+        0.2022
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "QE",
+      "original_type_before_gdp_scoping": "CT",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 77
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C5*",
+          "native_index": 2785,
+          "source": {
+            "atom": "C5'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "C4*",
+          "native_index": 2788,
+          "source": {
+            "atom": "C4'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "C1*",
+          "native_index": 2791,
+          "source": {
+            "atom": "C1'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "C3*",
+          "native_index": 2808,
+          "source": {
+            "atom": "C3'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 3,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.3424,
+        0.4364
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015700000004219245,
+        "epsilon_kj_mol": 0.06568880001765333,
+        "rmin_half_angstrom": 0.5999999999731258,
+        "sigma_nm": 0.10690784617205226
+      },
+      "native_lj_type_indices": [
+        2
+      ],
+      "native_type": "QF",
+      "original_type_before_gdp_scoping": "H",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 1
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H1N",
+          "native_index": 2801,
+          "source": {
+            "atom": "H1N",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        },
+        {
+          "atom": "H21",
+          "native_index": 2804,
+          "source": {
+            "atom": "H21",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        },
+        {
+          "atom": "H22",
+          "native_index": 2805,
+          "source": {
+            "atom": "H22",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 5,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.06149999999999999,
+        0.11739999999999999
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.01570000009846142,
+        "epsilon_kj_mol": 0.0656888004119626,
+        "rmin_half_angstrom": 1.3869999991698632,
+        "sigma_nm": 0.24713530426421654
+      },
+      "native_lj_type_indices": [
+        7
+      ],
+      "native_type": "QG",
+      "original_type_before_gdp_scoping": "H1",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 4
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H50",
+          "native_index": 2786,
+          "source": {
+            "atom": "H50",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        },
+        {
+          "atom": "H51",
+          "native_index": 2787,
+          "source": {
+            "atom": "H51",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        },
+        {
+          "atom": "H40",
+          "native_index": 2789,
+          "source": {
+            "atom": "H40",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        },
+        {
+          "atom": "H30",
+          "native_index": 2809,
+          "source": {
+            "atom": "H30",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.2006,
+        0.2006
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015700000021275418,
+        "epsilon_kj_mol": 0.06568880008901636,
+        "rmin_half_angstrom": 1.286999999767076,
+        "sigma_nm": 0.22931733000782098
+      },
+      "native_lj_type_indices": [
+        32
+      ],
+      "native_type": "QH",
+      "original_type_before_gdp_scoping": "H2",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 5
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H10",
+          "native_index": 2792,
+          "source": {
+            "atom": "H10",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.164,
+        0.164
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015000000033271484,
+        "epsilon_kj_mol": 0.06276000013920789,
+        "rmin_half_angstrom": 1.3589999997480315,
+        "sigma_nm": 0.24214627154564852
+      },
+      "native_lj_type_indices": [
+        27
+      ],
+      "native_type": "QI",
+      "original_type_before_gdp_scoping": "H5",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 9
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H80",
+          "native_index": 2795,
+          "source": {
+            "atom": "H80",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.41859999999999997,
+        0.4376
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 0.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0,
+        "epsilon_kj_mol": 0.0,
+        "rmin_half_angstrom": 0,
+        "sigma_nm": 0.0
+      },
+      "native_lj_type_indices": [
+        11
+      ],
+      "native_type": "QJ",
+      "original_type_before_gdp_scoping": "HO",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.0,
+        "attribution": "Keep its C4 terms consistent with its 12-6 LJ parameters",
+        "line": 10
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H2*",
+          "native_index": 2813,
+          "source": {
+            "atom": "H2'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        },
+        {
+          "atom": "H3*",
+          "native_index": 2815,
+          "source": {
+            "atom": "H3'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": false
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        0.0492,
+        0.0492
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "QK",
+      "original_type_before_gdp_scoping": "N*",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 97
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N9",
+          "native_index": 2793,
+          "source": {
+            "atom": "N9",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.9672000021951125,
+        -0.9672000021951125
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "QL",
+      "original_type_before_gdp_scoping": "N2",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 98
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N2",
+          "native_index": 2803,
+          "source": {
+            "atom": "N2",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.47869999999999996,
+        -0.47869999999999996
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "QM",
+      "original_type_before_gdp_scoping": "NA",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 100
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N1",
+          "native_index": 2800,
+          "source": {
+            "atom": "N1",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.5709000016463345,
+        -0.5709000016463345
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "QN",
+      "original_type_before_gdp_scoping": "NB",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 101
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N7",
+          "native_index": 2796,
+          "source": {
+            "atom": "N7",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.6323000005487781,
+        -0.6323000005487781
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "QO",
+      "original_type_before_gdp_scoping": "NC",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 110
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N3",
+          "native_index": 2806,
+          "source": {
+            "atom": "N3",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.5596999994512218,
+        -0.5596999994512218
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_indices": [
+        6
+      ],
+      "native_type": "QP",
+      "original_type_before_gdp_scoping": "O",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 132
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O6",
+          "native_index": 2799,
+          "source": {
+            "atom": "O6",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.9473999989024436,
+        -0.9473999989024436
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_indices": [
+        6
+      ],
+      "native_type": "QQ",
+      "original_type_before_gdp_scoping": "O2",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 133
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O1A",
+          "native_index": 2782,
+          "source": {
+            "atom": "O1A",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "O2A",
+          "native_index": 2783,
+          "source": {
+            "atom": "O2A",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 3,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.9552000021951125,
+        -0.9552000021951125
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_indices": [
+        6
+      ],
+      "native_type": "QR",
+      "original_type_before_gdp_scoping": "O3",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 134
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O1B",
+          "native_index": 2776,
+          "source": {
+            "atom": "O1B",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "O2B",
+          "native_index": 2778,
+          "source": {
+            "atom": "O2B",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "O3B",
+          "native_index": 2779,
+          "source": {
+            "atom": "O3B",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6540999983536655,
+        -0.6139000016463344
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 79.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0333151,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.2104000002486992,
+        "epsilon_kj_mol": 0.8803136010405576,
+        "rmin_half_angstrom": 1.7209999997862238,
+        "sigma_nm": 0.3066473387458142
+      },
+      "native_lj_type_indices": [
+        10
+      ],
+      "native_type": "QS",
+      "original_type_before_gdp_scoping": "OH",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.637,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 142
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O2*",
+          "native_index": 2812,
+          "source": {
+            "atom": "O2'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "O3*",
+          "native_index": 2814,
+          "source": {
+            "atom": "O3'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 3,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6579000016463344,
+        -0.3548
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 79.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0333151,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.17000000010548533,
+        "epsilon_kj_mol": 0.7112800004413506,
+        "rmin_half_angstrom": 1.6836999998645996,
+        "sigma_nm": 0.30000123432245224
+      },
+      "native_lj_type_indices": [
+        31
+      ],
+      "native_type": "QT",
+      "original_type_before_gdp_scoping": "OS",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.637,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 143
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O3A",
+          "native_index": 2780,
+          "source": {
+            "atom": "O3A",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "O5*",
+          "native_index": 2784,
+          "source": {
+            "atom": "O5'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "O4*",
+          "native_index": 2790,
+          "source": {
+            "atom": "O4'",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        15
+      ],
+      "charge_range_e": [
+        1.3672000021951125,
+        1.4929000016463343
+      ],
+      "component": "GDP",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 192.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.08043739999999999,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "available_via_documented_GDP_alias",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20000000034854953,
+        "epsilon_kj_mol": 0.8368000014583313,
+        "rmin_half_angstrom": 2.0999999997726193,
+        "sigma_nm": 0.37417746157842785
+      },
+      "native_lj_type_indices": [
+        30
+      ],
+      "native_type": "QU",
+      "original_type_before_gdp_scoping": "P",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.538,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 169
+      },
+      "source_atom_examples": [
+        {
+          "atom": "PB",
+          "native_index": 2777,
+          "source": {
+            "atom": "PB",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        },
+        {
+          "atom": "PA",
+          "native_index": 2781,
+          "source": {
+            "atom": "PA",
+            "residue": [
+              "C",
+              "302",
+              "",
+              "GDP"
+            ],
+            "source_heavy": true
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 16436,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.417,
+        0.417
+      ],
+      "component": "TIP3P_water",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 0.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0,
+        "epsilon_kj_mol": 0.0,
+        "rmin_half_angstrom": 0,
+        "sigma_nm": 0.0
+      },
+      "native_lj_type_indices": [
+        11
+      ],
+      "native_type": "HW",
+      "original_type_before_gdp_scoping": "HW",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.0,
+        "attribution": "Water hydrogen, dummy atom or lone pair",
+        "line": 191
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H1",
+          "native_index": 2824,
+          "source": null
+        },
+        {
+          "atom": "H2",
+          "native_index": 2825,
+          "source": null
+        },
+        {
+          "atom": "H1",
+          "native_index": 2827,
+          "source": null
+        },
+        {
+          "atom": "H2",
+          "native_index": 2828,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 8218,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.834,
+        -0.834
+      ],
+      "component": "TIP3P_water",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 180.5,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0755212,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.15199999972108216,
+        "epsilon_kj_mol": 0.6359679988330078,
+        "rmin_half_angstrom": 1.768300000311453,
+        "sigma_nm": 0.315075240713007
+      },
+      "native_lj_type_indices": [
+        34
+      ],
+      "native_type": "OW",
+      "original_type_before_gdp_scoping": "OW",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.444,
+        "attribution": "From \"The Structure and Properties of Water\" by D. Eisenberg and W. Kauzmann",
+        "line": 144
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O",
+          "native_index": 2823,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "E",
+              "401",
+              "",
+              "HOH"
+            ]
+          }
+        },
+        {
+          "atom": "O",
+          "native_index": 2826,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "E",
+              "402",
+              "",
+              "HOH"
+            ]
+          }
+        },
+        {
+          "atom": "O",
+          "native_index": 2829,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "E",
+              "403",
+              "",
+              "HOH"
+            ]
+          }
+        },
+        {
+          "atom": "O",
+          "native_index": 2832,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "E",
+              "404",
+              "",
+              "HOH"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.6482760024804772,
+        0.6482760024804772
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "C",
+      "original_type_before_gdp_scoping": "C",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 37
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C",
+          "native_index": 262,
+          "source": {
+            "atom": "C",
+            "chain": "A",
+            "index": 5,
+            "name": "C",
+            "resid": "12",
+            "resname": "CYS",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.036803999989024436,
+        0.036803999989024436
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "CX",
+      "original_type_before_gdp_scoping": "CX",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 78
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CA",
+          "native_index": 184,
+          "source": {
+            "atom": "CA",
+            "chain": "A",
+            "index": 4,
+            "name": "CA",
+            "resid": "12",
+            "resname": "CYS",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.3306,
+        0.3306
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015700000004219245,
+        "epsilon_kj_mol": 0.06568880001765333,
+        "rmin_half_angstrom": 0.5999999999731258,
+        "sigma_nm": 0.10690784617205226
+      },
+      "native_lj_type_indices": [
+        2
+      ],
+      "native_type": "H",
+      "original_type_before_gdp_scoping": "H",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 1
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H",
+          "native_index": 183,
+          "source": {
+            "index": 55,
+            "name": "H56",
+            "parent_index": 3,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.10603800014268232,
+        0.10603800014268232
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.01570000009846142,
+        "epsilon_kj_mol": 0.0656888004119626,
+        "rmin_half_angstrom": 1.3869999991698632,
+        "sigma_nm": 0.24713530426421654
+      },
+      "native_lj_type_indices": [
+        7
+      ],
+      "native_type": "H1",
+      "original_type_before_gdp_scoping": "H1",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 4
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HA",
+          "native_index": 261,
+          "source": {
+            "index": 56,
+            "name": "H57",
+            "parent_index": 4,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.5630000000000001,
+        -0.5630000000000001
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "N",
+      "original_type_before_gdp_scoping": "N",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 96
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N",
+          "native_index": 182,
+          "source": {
+            "atom": "N",
+            "chain": "A",
+            "index": 3,
+            "name": "N",
+            "resid": "12",
+            "resname": "CYS",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6210019975524494,
+        -0.6210019975524494
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_indices": [
+        6
+      ],
+      "native_type": "O",
+      "original_type_before_gdp_scoping": "O",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 132
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O",
+          "native_index": 263,
+          "source": {
+            "atom": "O",
+            "chain": "A",
+            "index": 6,
+            "name": "O",
+            "resid": "12",
+            "resname": "CYS",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.6733610027274274,
+        0.8537729979201308
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.0987999999994569,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "sigma_nm": 0.33152123100281
+      },
+      "native_lj_type_indices": [
+        15
+      ],
+      "native_type": "c",
+      "original_type_before_gdp_scoping": "c",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 59
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C015",
+          "native_index": 189,
+          "source": {
+            "atom": "C23",
+            "chain": "A",
+            "index": 15,
+            "name": "MOV_C23",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C024",
+          "native_index": 237,
+          "source": {
+            "atom": "C8",
+            "chain": "A",
+            "index": 24,
+            "name": "MOV_C8",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 8,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.14592299984085433,
+        -0.02523500002743891
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.1078000000751509,
+        "epsilon_kj_mol": 0.4510352003144314,
+        "rmin_half_angstrom": 1.9069000000076504,
+        "sigma_nm": 0.3397709531257257
+      },
+      "native_lj_type_indices": [
+        13
+      ],
+      "native_type": "c3",
+      "original_type_before_gdp_scoping": "c3",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 81
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CB",
+          "native_index": 185,
+          "source": {
+            "atom": "CB",
+            "chain": "A",
+            "index": 7,
+            "name": "CB",
+            "resid": "12",
+            "resname": "CYS",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C018",
+          "native_index": 187,
+          "source": {
+            "atom": "C25",
+            "chain": "A",
+            "index": 18,
+            "name": "MOV_C25",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C017",
+          "native_index": 188,
+          "source": {
+            "atom": "C24",
+            "chain": "A",
+            "index": 17,
+            "name": "MOV_C24",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C029",
+          "native_index": 217,
+          "source": {
+            "atom": "C22",
+            "chain": "A",
+            "index": 29,
+            "name": "MOV_C22",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.07322699988475659,
+        0.22423900001646332
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": null,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": null,
+      "direct_polarizability_name_available": false,
+      "lookup_status": "missing_source_entry",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.1078000000751509,
+        "epsilon_kj_mol": 0.4510352003144314,
+        "rmin_half_angstrom": 1.9069000000076504,
+        "sigma_nm": 0.3397709531257257
+      },
+      "native_lj_type_indices": [
+        13
+      ],
+      "native_type": "c6",
+      "original_type_before_gdp_scoping": "c6",
+      "polarizability_after_documented_alias_resolution": null,
+      "source_atom_examples": [
+        {
+          "atom": "C013",
+          "native_index": 191,
+          "source": {
+            "atom": "C19",
+            "chain": "A",
+            "index": 13,
+            "name": "MOV_C19",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C012",
+          "native_index": 192,
+          "source": {
+            "atom": "C20",
+            "chain": "A",
+            "index": 12,
+            "name": "MOV_C20",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C020",
+          "native_index": 241,
+          "source": {
+            "atom": "C17",
+            "chain": "A",
+            "index": 20,
+            "name": "MOV_C17",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C019",
+          "native_index": 242,
+          "source": {
+            "atom": "C18",
+            "chain": "A",
+            "index": 19,
+            "name": "MOV_C18",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 14,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.3470370002689013,
+        0.5781390000164633
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.0987999999994569,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "sigma_nm": 0.33152123100281
+      },
+      "native_lj_type_indices": [
+        15
+      ],
+      "native_type": "ca",
+      "original_type_before_gdp_scoping": "ca",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 61
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C039",
+          "native_index": 195,
+          "source": {
+            "atom": "C1",
+            "chain": "A",
+            "index": 39,
+            "name": "MOV_C1",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C040",
+          "native_index": 196,
+          "source": {
+            "atom": "C5",
+            "chain": "A",
+            "index": 40,
+            "name": "MOV_C5",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C041",
+          "native_index": 197,
+          "source": {
+            "atom": "C4",
+            "chain": "A",
+            "index": 41,
+            "name": "MOV_C4",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C050",
+          "native_index": 201,
+          "source": {
+            "atom": "C26",
+            "chain": "A",
+            "index": 50,
+            "name": "MOV_C26",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.7723970025737695,
+        0.7723970025737695
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.0987999999994569,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "sigma_nm": 0.33152123100281
+      },
+      "native_lj_type_indices": [
+        15
+      ],
+      "native_type": "cc",
+      "original_type_before_gdp_scoping": "cc",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 62
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C022",
+          "native_index": 194,
+          "source": {
+            "atom": "C7",
+            "chain": "A",
+            "index": 22,
+            "name": "MOV_C7",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.27956699977500094,
+        0.5115130000054877
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.0987999999994569,
+        "epsilon_kj_mol": 0.4133791999977277,
+        "rmin_half_angstrom": 1.8606000000472946,
+        "sigma_nm": 0.33152123100281
+      },
+      "native_lj_type_indices": [
+        15
+      ],
+      "native_type": "cp",
+      "original_type_before_gdp_scoping": "cp",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 66
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C043",
+          "native_index": 199,
+          "source": {
+            "atom": "C3",
+            "chain": "A",
+            "index": 43,
+            "name": "MOV_C3",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "C044",
+          "native_index": 200,
+          "source": {
+            "atom": "C6",
+            "chain": "A",
+            "index": 44,
+            "name": "MOV_C6",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        9
+      ],
+      "charge_range_e": [
+        -0.13147200024146238,
+        -0.11652299984085435
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 40.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.016736,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08319999988170929,
+        "epsilon_kj_mol": 0.3481087995050717,
+        "rmin_half_angstrom": 1.7029000002230603,
+        "sigma_nm": 0.3034222854639816
+      },
+      "native_lj_type_indices": [
+        18
+      ],
+      "native_type": "f",
+      "original_type_before_gdp_scoping": "f",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.32,
+        "attribution": "From Applequist et al. JACS,94,2952(1972)",
+        "line": 187
+      },
+      "source_atom_examples": [
+        {
+          "atom": "F042",
+          "native_index": 198,
+          "source": {
+            "atom": "F1",
+            "chain": "A",
+            "index": 42,
+            "name": "MOV_F1",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "F046",
+          "native_index": 208,
+          "source": {
+            "atom": "F2",
+            "chain": "A",
+            "index": 46,
+            "name": "MOV_F2",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 11,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.05235600001097556,
+        0.09148899974207428
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.020800000019737253,
+        "epsilon_kj_mol": 0.08702720008258066,
+        "rmin_half_angstrom": 1.3593000000370454,
+        "sigma_nm": 0.24219972552023336
+      },
+      "native_lj_type_indices": [
+        26
+      ],
+      "native_type": "h1",
+      "original_type_before_gdp_scoping": "h1",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 14
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H073",
+          "native_index": 243,
+          "source": {
+            "index": 73,
+            "name": "H74",
+            "parent_index": 19,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H074",
+          "native_index": 244,
+          "source": {
+            "index": 74,
+            "name": "H75",
+            "parent_index": 19,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H075",
+          "native_index": 245,
+          "source": {
+            "index": 75,
+            "name": "H76",
+            "parent_index": 20,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H076",
+          "native_index": 246,
+          "source": {
+            "index": 76,
+            "name": "H77",
+            "parent_index": 20,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.024160999983536657,
+        0.024160999983536657
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.016099999911490314,
+        "epsilon_kj_mol": 0.06736239962967548,
+        "rmin_half_angstrom": 1.4235000007579914,
+        "sigma_nm": 0.2536388651896133
+      },
+      "native_lj_type_indices": [
+        24
+      ],
+      "native_type": "h4",
+      "original_type_before_gdp_scoping": "h4",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 17
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H081",
+          "native_index": 235,
+          "source": {
+            "index": 81,
+            "name": "H82",
+            "parent_index": 31,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 5,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.1454720002414624,
+        0.16754700010426785
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.016100000017917802,
+        "epsilon_kj_mol": 0.06736240007496809,
+        "rmin_half_angstrom": 1.4734999998201521,
+        "sigma_nm": 0.26254785220391275
+      },
+      "native_lj_type_indices": [
+        21
+      ],
+      "native_type": "ha",
+      "original_type_before_gdp_scoping": "ha",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 19
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H090",
+          "native_index": 209,
+          "source": {
+            "index": 90,
+            "name": "H91",
+            "parent_index": 47,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H091",
+          "native_index": 210,
+          "source": {
+            "index": 91,
+            "name": "H92",
+            "parent_index": 48,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H092",
+          "native_index": 211,
+          "source": {
+            "index": 92,
+            "name": "H93",
+            "parent_index": 49,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H080",
+          "native_index": 236,
+          "source": {
+            "index": 80,
+            "name": "H81",
+            "parent_index": 30,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 15,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.04232200002195113,
+        0.0774409997640254
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.020800000056554118,
+        "epsilon_kj_mol": 0.08702720023662243,
+        "rmin_half_angstrom": 1.4592999996178027,
+        "sigma_nm": 0.26001769980833955
+      },
+      "native_lj_type_indices": [
+        23
+      ],
+      "native_type": "hc",
+      "original_type_before_gdp_scoping": "hc",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 20
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H077",
+          "native_index": 218,
+          "source": {
+            "index": 77,
+            "name": "H78",
+            "parent_index": 29,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H078",
+          "native_index": 219,
+          "source": {
+            "index": 78,
+            "name": "H79",
+            "parent_index": 29,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H079",
+          "native_index": 220,
+          "source": {
+            "index": 79,
+            "name": "H80",
+            "parent_index": 29,
+            "role": "generated-hydrogen"
+          }
+        },
+        {
+          "atom": "H083",
+          "native_index": 227,
+          "source": {
+            "index": 83,
+            "name": "H84",
+            "parent_index": 35,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.43545500019207234,
+        0.43545500019207234
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 0.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.00469999999789031,
+        "epsilon_kj_mol": 0.019664799991173057,
+        "rmin_half_angstrom": 0.30190000004057294,
+        "sigma_nm": 0.05379246460854296
+      },
+      "native_lj_type_indices": [
+        20
+      ],
+      "native_type": "ho",
+      "original_type_before_gdp_scoping": "ho",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.0,
+        "attribution": "Keep its C4 terms consistent with its 12-6 LJ parameters",
+        "line": 22
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H093",
+          "native_index": 203,
+          "source": {
+            "index": 93,
+            "name": "H94",
+            "parent_index": 51,
+            "role": "generated-hydrogen"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.46024999972561087,
+        -0.37324700010426787
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16360000014484896,
+        "epsilon_kj_mol": 0.6845024006060481,
+        "rmin_half_angstrom": 1.7851999997668213,
+        "sigma_nm": 0.318086478283279
+      },
+      "native_lj_type_indices": [
+        16
+      ],
+      "native_type": "n",
+      "original_type_before_gdp_scoping": "n",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 116
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N014",
+          "native_index": 190,
+          "source": {
+            "atom": "N6",
+            "chain": "A",
+            "index": 14,
+            "name": "MOV_N6",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "N026",
+          "native_index": 214,
+          "source": {
+            "atom": "N4",
+            "chain": "A",
+            "index": 26,
+            "name": "MOV_N4",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.6886710020140158,
+        -0.6677419974426938
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.09410000013404983,
+        "epsilon_kj_mol": 0.3937144005608645,
+        "rmin_half_angstrom": 1.899299999716589,
+        "sigma_nm": 0.33841678702229117
+      },
+      "native_lj_type_indices": [
+        22
+      ],
+      "native_type": "nb",
+      "original_type_before_gdp_scoping": "nb",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 122
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N038",
+          "native_index": 212,
+          "source": {
+            "atom": "N1",
+            "chain": "A",
+            "index": 38,
+            "name": "MOV_N1",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "N032",
+          "native_index": 223,
+          "source": {
+            "atom": "N5",
+            "chain": "A",
+            "index": 32,
+            "name": "MOV_N5",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.7106959988585415,
+        -0.7106959988585415
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.09410000013404983,
+        "epsilon_kj_mol": 0.3937144005608645,
+        "rmin_half_angstrom": 1.899299999716589,
+        "sigma_nm": 0.33841678702229117
+      },
+      "native_lj_type_indices": [
+        22
+      ],
+      "native_type": "nd",
+      "original_type_before_gdp_scoping": "nd",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 124
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N023",
+          "native_index": 238,
+          "source": {
+            "atom": "N3",
+            "chain": "A",
+            "index": 23,
+            "name": "MOV_N3",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.7241499975304984,
+        -0.7241499975304984
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.2150000001190879,
+        "epsilon_kj_mol": 0.8995600004982638,
+        "rmin_half_angstrom": 1.7902999999191282,
+        "sigma_nm": 0.3189951950029202
+      },
+      "native_lj_type_indices": [
+        17
+      ],
+      "native_type": "nh",
+      "original_type_before_gdp_scoping": "nh",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 127
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N021",
+          "native_index": 193,
+          "source": {
+            "atom": "N2",
+            "chain": "A",
+            "index": 21,
+            "name": "MOV_N2",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 2,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6399370002689012,
+        -0.575556998842078
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.14630000020251083,
+        "epsilon_kj_mol": 0.6121192008473053,
+        "rmin_half_angstrom": 1.7106999997504173,
+        "sigma_nm": 0.3048120873800651
+      },
+      "native_lj_type_indices": [
+        25
+      ],
+      "native_type": "o",
+      "original_type_before_gdp_scoping": "o",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 145
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O025",
+          "native_index": 239,
+          "source": {
+            "atom": "O1",
+            "chain": "A",
+            "index": 25,
+            "name": "MOV_O1",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        },
+        {
+          "atom": "O016",
+          "native_index": 254,
+          "source": {
+            "atom": "O2",
+            "chain": "A",
+            "index": 16,
+            "name": "MOV_O2",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.48646099998353665,
+        -0.48646099998353665
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 79.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0333151,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.09300000011594518,
+        "epsilon_kj_mol": 0.3891120004851147,
+        "rmin_half_angstrom": 1.819999999703896,
+        "sigma_nm": 0.3242871333503238
+      },
+      "native_lj_type_indices": [
+        19
+      ],
+      "native_type": "oh",
+      "original_type_before_gdp_scoping": "oh",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.637,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 146
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O051",
+          "native_index": 202,
+          "source": {
+            "atom": "O3",
+            "chain": "A",
+            "index": 51,
+            "name": "MOV_O3",
+            "resid": "303",
+            "resname": "MOV",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        16
+      ],
+      "charge_range_e": [
+        -0.2772749998628054,
+        -0.2772749998628054
+      ],
+      "component": "covalent_drug_residue",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 375.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.15689999999999998,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.2823999992349523,
+        "epsilon_kj_mol": 1.1815615967990405,
+        "rmin_half_angstrom": 1.9825000003413995,
+        "sigma_nm": 0.353241341803475
+      },
+      "native_lj_type_indices": [
+        14
+      ],
+      "native_type": "ss",
+      "original_type_before_gdp_scoping": "ss",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 3.0,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 165
+      },
+      "source_atom_examples": [
+        {
+          "atom": "SG",
+          "native_index": 186,
+          "source": {
+            "atom": "SG",
+            "chain": "A",
+            "index": 8,
+            "name": "SG",
+            "resid": "12",
+            "resname": "CYS",
+            "role": "observed-adduct"
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 1,
+      "atomic_numbers": [
+        12
+      ],
+      "charge_range_e": [
+        2.0,
+        2.0
+      ],
+      "component": "magnesium",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 6.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0025104,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.010202369993913916,
+        "epsilon_kj_mol": 0.04268671605453583,
+        "rmin_half_angstrom": 1.3600000002389294,
+        "sigma_nm": 0.2423244513767447
+      },
+      "native_lj_type_indices": [
+        29
+      ],
+      "native_type": "Mg2+",
+      "original_type_before_gdp_scoping": "Mg2+",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.048,
+        "attribution": "Caculated from B3LYP/6-311++G(2d,2p) level of theory",
+        "line": 232
+      },
+      "source_atom_examples": [
+        {
+          "atom": "MG",
+          "native_index": 2775,
+          "source": {
+            "atom": "MG",
+            "residue": [
+              "B",
+              "301",
+              "",
+              "MG"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 104,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.20409999999999998,
+        0.2117
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "2C",
+      "original_type_before_gdp_scoping": "2C",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 73
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CB",
+          "native_index": 13,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 16,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "CB",
+          "native_index": 44,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 47,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 50,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.1303,
+        0.3654
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "3C",
+      "original_type_before_gdp_scoping": "3C",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 74
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CB",
+          "native_index": 30,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 105,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "6",
+              "",
+              "LEU"
+            ]
+          }
+        },
+        {
+          "atom": "CB",
+          "native_index": 121,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "7",
+              "",
+              "VAL"
+            ]
+          }
+        },
+        {
+          "atom": "CB",
+          "native_index": 137,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "8",
+              "",
+              "VAL"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 190,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.3226,
+        0.8487999978048874
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "C",
+      "original_type_before_gdp_scoping": "C",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 37
+      },
+      "source_atom_examples": [
+        {
+          "atom": "C",
+          "native_index": 7,
+          "source": {
+            "atom": "C",
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ]
+          }
+        },
+        {
+          "atom": "C",
+          "native_index": 24,
+          "source": {
+            "atom": "C",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "C",
+          "native_index": 38,
+          "source": {
+            "atom": "C",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "C",
+          "native_index": 53,
+          "source": {
+            "atom": "C",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 78,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.0538,
+        0.0486
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "C8",
+      "original_type_before_gdp_scoping": "C8",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 75
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CB",
+          "native_index": 80,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 83,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ]
+          }
+        },
+        {
+          "atom": "CD",
+          "native_index": 86,
+          "source": {
+            "atom": "CD",
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ]
+          }
+        },
+        {
+          "atom": "CE",
+          "native_index": 89,
+          "source": {
+            "atom": "CE",
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 86,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.23409999999999997,
+        0.8076000010975563
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "CA",
+      "original_type_before_gdp_scoping": "CA",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 41
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CG",
+          "native_index": 62,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        },
+        {
+          "atom": "CD1",
+          "native_index": 63,
+          "source": {
+            "atom": "CD1",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        },
+        {
+          "atom": "CE1",
+          "native_index": 65,
+          "source": {
+            "atom": "CE1",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        },
+        {
+          "atom": "CE2",
+          "native_index": 70,
+          "source": {
+            "atom": "CE2",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.0266,
+        -0.0266
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "CC",
+      "original_type_before_gdp_scoping": "CC",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 43
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CG",
+          "native_index": 482,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 1533,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 1550,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 2705,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "166",
+              "",
+              "HID"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 28,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.7993999989024436,
+        0.8053999989024436
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "CO",
+      "original_type_before_gdp_scoping": "CO",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 48
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CD",
+          "native_index": 50,
+          "source": {
+            "atom": "CD",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 535,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "30",
+              "",
+              "ASP"
+            ]
+          }
+        },
+        {
+          "atom": "CD",
+          "native_index": 550,
+          "source": {
+            "atom": "CD",
+            "residue": [
+              "A",
+              "31",
+              "",
+              "GLU"
+            ]
+          }
+        },
+        {
+          "atom": "CG",
+          "native_index": 583,
+          "source": {
+            "atom": "CG",
+            "residue": [
+              "A",
+              "33",
+              "",
+              "ASP"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.2057,
+        0.2057
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "CR",
+      "original_type_before_gdp_scoping": "CR",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 51
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CE1",
+          "native_index": 485,
+          "source": {
+            "atom": "CE1",
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CE1",
+          "native_index": 1536,
+          "source": {
+            "atom": "CE1",
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CE1",
+          "native_index": 1553,
+          "source": {
+            "atom": "CE1",
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CE1",
+          "native_index": 2708,
+          "source": {
+            "atom": "CE1",
+            "residue": [
+              "A",
+              "166",
+              "",
+              "HID"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 131,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.41209999999999997,
+        0.0192
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "CT",
+      "original_type_before_gdp_scoping": "CT",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 77
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CE",
+          "native_index": 20,
+          "source": {
+            "atom": "CE",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "CG2",
+          "native_index": 32,
+          "source": {
+            "atom": "CG2",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "CB",
+          "native_index": 59,
+          "source": {
+            "atom": "CB",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        },
+        {
+          "atom": "CD1",
+          "native_index": 107,
+          "source": {
+            "atom": "CD1",
+            "residue": [
+              "A",
+              "6",
+              "",
+              "LEU"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        0.1292,
+        0.1292
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 169.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0707096,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08600000012835884,
+        "epsilon_kj_mol": 0.35982400053705343,
+        "rmin_half_angstrom": 1.9079999997313366,
+        "sigma_nm": 0.3399669507944831
+      },
+      "native_lj_type_indices": [
+        5
+      ],
+      "native_type": "CV",
+      "original_type_before_gdp_scoping": "CV",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.352,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 53
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CD2",
+          "native_index": 488,
+          "source": {
+            "atom": "CD2",
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CD2",
+          "native_index": 1539,
+          "source": {
+            "atom": "CD2",
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CD2",
+          "native_index": 1556,
+          "source": {
+            "atom": "CD2",
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "CD2",
+          "native_index": 2711,
+          "source": {
+            "atom": "CD2",
+            "residue": [
+              "A",
+              "166",
+              "",
+              "HID"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 169,
+      "atomic_numbers": [
+        6
+      ],
+      "charge_range_e": [
+        -0.2903,
+        0.0397
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 132.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0554903,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.10939999991572774,
+        "epsilon_kj_mol": 0.4577295996474049,
+        "rmin_half_angstrom": 1.9080000000152688,
+        "sigma_nm": 0.33996695084507406
+      },
+      "native_lj_type_indices": [
+        3
+      ],
+      "native_type": "CX",
+      "original_type_before_gdp_scoping": "CX",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.061,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 78
+      },
+      "source_atom_examples": [
+        {
+          "atom": "CA",
+          "native_index": 4,
+          "source": {
+            "atom": "CA",
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ]
+          }
+        },
+        {
+          "atom": "CA",
+          "native_index": 11,
+          "source": {
+            "atom": "CA",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "CA",
+          "native_index": 28,
+          "source": {
+            "atom": "CA",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "CA",
+          "native_index": 42,
+          "source": {
+            "atom": "CA",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 283,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.16419999999999998,
+        0.4478
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015700000004219245,
+        "epsilon_kj_mol": 0.06568880001765333,
+        "rmin_half_angstrom": 0.5999999999731258,
+        "sigma_nm": 0.10690784617205226
+      },
+      "native_lj_type_indices": [
+        2
+      ],
+      "native_type": "H",
+      "original_type_before_gdp_scoping": "H",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 1
+      },
+      "source_atom_examples": [
+        {
+          "atom": "H1",
+          "native_index": 1,
+          "source": null
+        },
+        {
+          "atom": "H2",
+          "native_index": 2,
+          "source": null
+        },
+        {
+          "atom": "H3",
+          "native_index": 3,
+          "source": null
+        },
+        {
+          "atom": "H",
+          "native_index": 10,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 258,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.0043,
+        0.156
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.01570000009846142,
+        "epsilon_kj_mol": 0.0656888004119626,
+        "rmin_half_angstrom": 1.3869999991698632,
+        "sigma_nm": 0.24713530426421654
+      },
+      "native_lj_type_indices": [
+        7
+      ],
+      "native_type": "H1",
+      "original_type_before_gdp_scoping": "H1",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 4
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HA",
+          "native_index": 12,
+          "source": null
+        },
+        {
+          "atom": "HG2",
+          "native_index": 17,
+          "source": null
+        },
+        {
+          "atom": "HG3",
+          "native_index": 18,
+          "source": null
+        },
+        {
+          "atom": "HE1",
+          "native_index": 21,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.1147,
+        0.1147
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.014999999991481439,
+        "epsilon_kj_mol": 0.06275999996435834,
+        "rmin_half_angstrom": 1.408999999923481,
+        "sigma_nm": 0.25105525875831347
+      },
+      "native_lj_type_indices": [
+        28
+      ],
+      "native_type": "H4",
+      "original_type_before_gdp_scoping": "H4",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 8
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HD2",
+          "native_index": 489,
+          "source": null
+        },
+        {
+          "atom": "HD2",
+          "native_index": 1540,
+          "source": null
+        },
+        {
+          "atom": "HD2",
+          "native_index": 1557,
+          "source": null
+        },
+        {
+          "atom": "HD2",
+          "native_index": 2712,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.1392,
+        0.1392
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015000000033271484,
+        "epsilon_kj_mol": 0.06276000013920789,
+        "rmin_half_angstrom": 1.3589999997480315,
+        "sigma_nm": 0.24214627154564852
+      },
+      "native_lj_type_indices": [
+        27
+      ],
+      "native_type": "H5",
+      "original_type_before_gdp_scoping": "H5",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 9
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HE1",
+          "native_index": 486,
+          "source": null
+        },
+        {
+          "atom": "HE1",
+          "native_index": 1537,
+          "source": null
+        },
+        {
+          "atom": "HE1",
+          "native_index": 1554,
+          "source": null
+        },
+        {
+          "atom": "HE1",
+          "native_index": 2709,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 62,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.12969999999999998,
+        0.1699
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015000000064220666,
+        "epsilon_kj_mol": 0.06276000026869927,
+        "rmin_half_angstrom": 1.4589999995518992,
+        "sigma_nm": 0.2599642458735085
+      },
+      "native_lj_type_indices": [
+        12
+      ],
+      "native_type": "HA",
+      "original_type_before_gdp_scoping": "HA",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 7
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HD1",
+          "native_index": 64,
+          "source": null
+        },
+        {
+          "atom": "HE1",
+          "native_index": 66,
+          "source": null
+        },
+        {
+          "atom": "HE2",
+          "native_index": 71,
+          "source": null
+        },
+        {
+          "atom": "HD2",
+          "native_index": 73,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 673,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        -0.042499999999999996,
+        0.09999999999999999
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.01570000002623629,
+        "epsilon_kj_mol": 0.06568880010977264,
+        "rmin_half_angstrom": 1.4869999997254757,
+        "sigma_nm": 0.2649532787260222
+      },
+      "native_lj_type_indices": [
+        8
+      ],
+      "native_type": "HC",
+      "original_type_before_gdp_scoping": "HC",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 2
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HB2",
+          "native_index": 14,
+          "source": null
+        },
+        {
+          "atom": "HB3",
+          "native_index": 15,
+          "source": null
+        },
+        {
+          "atom": "HG21",
+          "native_index": 33,
+          "source": null
+        },
+        {
+          "atom": "HG22",
+          "native_index": 34,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 30,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.3992,
+        0.42749999999999994
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 0.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0,
+        "epsilon_kj_mol": 0.0,
+        "rmin_half_angstrom": 0,
+        "sigma_nm": 0.0
+      },
+      "native_lj_type_indices": [
+        11
+      ],
+      "native_type": "HO",
+      "original_type_before_gdp_scoping": "HO",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.0,
+        "attribution": "Keep its C4 terms consistent with its 12-6 LJ parameters",
+        "line": 10
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HG1",
+          "native_index": 37,
+          "source": null
+        },
+        {
+          "atom": "HH",
+          "native_index": 69,
+          "source": null
+        },
+        {
+          "atom": "HG",
+          "native_index": 324,
+          "source": null
+        },
+        {
+          "atom": "HG1",
+          "native_index": 367,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 26,
+      "atomic_numbers": [
+        1
+      ],
+      "charge_range_e": [
+        0.0895,
+        0.1135
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 48.375,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0202401,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.015700000062726108,
+        "epsilon_kj_mol": 0.06568880026244604,
+        "rmin_half_angstrom": 1.099999999494113,
+        "sigma_nm": 0.1959977179007358
+      },
+      "native_lj_type_indices": [
+        4
+      ],
+      "native_type": "HP",
+      "original_type_before_gdp_scoping": "HP",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.387,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 12
+      },
+      "source_atom_examples": [
+        {
+          "atom": "HA2",
+          "native_index": 5,
+          "source": null
+        },
+        {
+          "atom": "HA3",
+          "native_index": 6,
+          "source": null
+        },
+        {
+          "atom": "HE2",
+          "native_index": 90,
+          "source": null
+        },
+        {
+          "atom": "HE3",
+          "native_index": 91,
+          "source": null
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 181,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.9406999994512218,
+        -0.25479999999999997
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "N",
+      "original_type_before_gdp_scoping": "N",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 96
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N",
+          "native_index": 9,
+          "source": {
+            "atom": "N",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "N",
+          "native_index": 26,
+          "source": {
+            "atom": "N",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "N",
+          "native_index": 40,
+          "source": {
+            "atom": "N",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        },
+        {
+          "atom": "N",
+          "native_index": 55,
+          "source": {
+            "atom": "N",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 30,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.8626999994512219,
+        -0.5295
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "N2",
+      "original_type_before_gdp_scoping": "N2",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 98
+      },
+      "source_atom_examples": [
+        {
+          "atom": "NE",
+          "native_index": 707,
+          "source": {
+            "atom": "NE",
+            "residue": [
+              "A",
+              "41",
+              "",
+              "ARG"
+            ]
+          }
+        },
+        {
+          "atom": "NH1",
+          "native_index": 710,
+          "source": {
+            "atom": "NH1",
+            "residue": [
+              "A",
+              "41",
+              "",
+              "ARG"
+            ]
+          }
+        },
+        {
+          "atom": "NH2",
+          "native_index": 713,
+          "source": {
+            "atom": "NH2",
+            "residue": [
+              "A",
+              "41",
+              "",
+              "ARG"
+            ]
+          }
+        },
+        {
+          "atom": "NE",
+          "native_index": 1117,
+          "source": {
+            "atom": "NE",
+            "residue": [
+              "A",
+              "68",
+              "",
+              "ARG"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 13,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.38539999999999996,
+        0.2943
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "N3",
+      "original_type_before_gdp_scoping": "N3",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 99
+      },
+      "source_atom_examples": [
+        {
+          "atom": "N",
+          "native_index": 0,
+          "source": {
+            "atom": "N",
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ]
+          }
+        },
+        {
+          "atom": "NZ",
+          "native_index": 92,
+          "source": {
+            "atom": "NZ",
+            "residue": [
+              "A",
+              "5",
+              "",
+              "LYS"
+            ]
+          }
+        },
+        {
+          "atom": "NZ",
+          "native_index": 310,
+          "source": {
+            "atom": "NZ",
+            "residue": [
+              "A",
+              "16",
+              "",
+              "LYS"
+            ]
+          }
+        },
+        {
+          "atom": "NZ",
+          "native_index": 734,
+          "source": {
+            "atom": "NZ",
+            "residue": [
+              "A",
+              "42",
+              "",
+              "LYS"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.3811,
+        -0.3811
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "NA",
+      "original_type_before_gdp_scoping": "NA",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 100
+      },
+      "source_atom_examples": [
+        {
+          "atom": "ND1",
+          "native_index": 483,
+          "source": {
+            "atom": "ND1",
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "ND1",
+          "native_index": 1534,
+          "source": {
+            "atom": "ND1",
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "ND1",
+          "native_index": 1551,
+          "source": {
+            "atom": "ND1",
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "ND1",
+          "native_index": 2706,
+          "source": {
+            "atom": "ND1",
+            "residue": [
+              "A",
+              "166",
+              "",
+              "HID"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        7
+      ],
+      "charge_range_e": [
+        -0.5726999994512219,
+        -0.5726999994512219
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 136.25,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.057006999999999995,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_indices": [
+        1
+      ],
+      "native_type": "NB",
+      "original_type_before_gdp_scoping": "NB",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 1.09,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 101
+      },
+      "source_atom_examples": [
+        {
+          "atom": "NE2",
+          "native_index": 487,
+          "source": {
+            "atom": "NE2",
+            "residue": [
+              "A",
+              "27",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "NE2",
+          "native_index": 1538,
+          "source": {
+            "atom": "NE2",
+            "residue": [
+              "A",
+              "94",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "NE2",
+          "native_index": 1555,
+          "source": {
+            "atom": "NE2",
+            "residue": [
+              "A",
+              "95",
+              "",
+              "HID"
+            ]
+          }
+        },
+        {
+          "atom": "NE2",
+          "native_index": 2710,
+          "source": {
+            "atom": "NE2",
+            "residue": [
+              "A",
+              "166",
+              "",
+              "HID"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 181,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6086000010975563,
+        -0.5679000016463344
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_indices": [
+        6
+      ],
+      "native_type": "O",
+      "original_type_before_gdp_scoping": "O",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 132
+      },
+      "source_atom_examples": [
+        {
+          "atom": "O",
+          "native_index": 8,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "A",
+              "0",
+              "",
+              "GLY"
+            ]
+          }
+        },
+        {
+          "atom": "O",
+          "native_index": 25,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "O",
+          "native_index": 39,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "O",
+          "native_index": 54,
+          "source": {
+            "atom": "O",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 58,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.8252000021951126,
+        -0.8013999989024437
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 71.125,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0297587,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_indices": [
+        6
+      ],
+      "native_type": "O2",
+      "original_type_before_gdp_scoping": "O2",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.569,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 133
+      },
+      "source_atom_examples": [
+        {
+          "atom": "OE1",
+          "native_index": 51,
+          "source": {
+            "atom": "OE1",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        },
+        {
+          "atom": "OE2",
+          "native_index": 52,
+          "source": {
+            "atom": "OE2",
+            "residue": [
+              "A",
+              "3",
+              "",
+              "GLU"
+            ]
+          }
+        },
+        {
+          "atom": "OD1",
+          "native_index": 536,
+          "source": {
+            "atom": "OD1",
+            "residue": [
+              "A",
+              "30",
+              "",
+              "ASP"
+            ]
+          }
+        },
+        {
+          "atom": "OD2",
+          "native_index": 537,
+          "source": {
+            "atom": "OD2",
+            "residue": [
+              "A",
+              "30",
+              "",
+              "ASP"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 30,
+      "atomic_numbers": [
+        8
+      ],
+      "charge_range_e": [
+        -0.6760999983536655,
+        -0.5579000016463345
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 79.625,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.0333151,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.2104000002486992,
+        "epsilon_kj_mol": 0.8803136010405576,
+        "rmin_half_angstrom": 1.7209999997862238,
+        "sigma_nm": 0.3066473387458142
+      },
+      "native_lj_type_indices": [
+        10
+      ],
+      "native_type": "OH",
+      "original_type_before_gdp_scoping": "OH",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.637,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 142
+      },
+      "source_atom_examples": [
+        {
+          "atom": "OG1",
+          "native_index": 36,
+          "source": {
+            "atom": "OG1",
+            "residue": [
+              "A",
+              "2",
+              "",
+              "THR"
+            ]
+          }
+        },
+        {
+          "atom": "OH",
+          "native_index": 68,
+          "source": {
+            "atom": "OH",
+            "residue": [
+              "A",
+              "4",
+              "",
+              "TYR"
+            ]
+          }
+        },
+        {
+          "atom": "OG",
+          "native_index": 323,
+          "source": {
+            "atom": "OG",
+            "residue": [
+              "A",
+              "17",
+              "",
+              "SER"
+            ]
+          }
+        },
+        {
+          "atom": "OG1",
+          "native_index": 366,
+          "source": {
+            "atom": "OG1",
+            "residue": [
+              "A",
+              "20",
+              "",
+              "THR"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 4,
+      "atomic_numbers": [
+        16
+      ],
+      "charge_range_e": [
+        -0.2737,
+        -0.2737
+      ],
+      "component": "protein",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 375.0,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.15689999999999998,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.25,
+        "epsilon_kj_mol": 1.046,
+        "rmin_half_angstrom": 1.9999999999999998,
+        "sigma_nm": 0.35635948725613564
+      },
+      "native_lj_type_indices": [
+        9
+      ],
+      "native_type": "S",
+      "original_type_before_gdp_scoping": "S",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 3.0,
+        "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+        "line": 158
+      },
+      "source_atom_examples": [
+        {
+          "atom": "SD",
+          "native_index": 19,
+          "source": {
+            "atom": "SD",
+            "residue": [
+              "A",
+              "1",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "SD",
+          "native_index": 1097,
+          "source": {
+            "atom": "SD",
+            "residue": [
+              "A",
+              "67",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "SD",
+          "native_index": 1188,
+          "source": {
+            "atom": "SD",
+            "residue": [
+              "A",
+              "72",
+              "",
+              "MET"
+            ]
+          }
+        },
+        {
+          "atom": "SD",
+          "native_index": 1830,
+          "source": {
+            "atom": "SD",
+            "residue": [
+              "A",
+              "111",
+              "",
+              "MET"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "C4_scope": "Unassigned base-rule arithmetic for a TIP4P-Ew Mg candidate; not a fitted site override or a validated transfer.",
+      "atom_count": 7,
+      "atomic_numbers": [
+        11
+      ],
+      "charge_range_e": [
+        1.0,
+        1.0
+      ],
+      "component": "sodium_counterion",
+      "default_Mg_selected_center_contribution_C4_kcal_angstrom4_mol": 31.1875,
+      "default_Mg_selected_center_contribution_C4_kj_nm4_mol": 0.013048849999999999,
+      "direct_polarizability_name_available": true,
+      "lookup_status": "available_directly",
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08743930023230065,
+        "epsilon_kj_mol": 0.36584603217194595,
+        "rmin_half_angstrom": 1.3689999995130433,
+        "sigma_nm": 0.24392806894005906
+      },
+      "native_lj_type_indices": [
+        33
+      ],
+      "native_type": "Na+",
+      "original_type_before_gdp_scoping": "Na+",
+      "polarizability_after_documented_alias_resolution": {
+        "alpha_angstrom3": 0.2495,
+        "attribution": "From Sangster and Atwood J. Phys. C: Solid State Phys.11,1541(1978)",
+        "line": 203
+      },
+      "source_atom_examples": [
+        {
+          "atom": "Na+",
+          "native_index": 2816,
+          "source": null
+        },
+        {
+          "atom": "Na+",
+          "native_index": 2817,
+          "source": null
+        },
+        {
+          "atom": "Na+",
+          "native_index": 2818,
+          "source": null
+        },
+        {
+          "atom": "Na+",
+          "native_index": 2819,
+          "source": null
+        }
+      ]
+    }
+  ],
+  "engine_representation": {
+    "GROMACS": {
+      "User_nonbonded_tables_supported_in_this_version": false,
+      "current_native_conversion_supported": false,
+      "general_impossibility_claim": false,
+      "inspected_ParmEd_writer_version": "4.3.1",
+      "inspected_version": "2025.4",
+      "inspected_writer_has_C4_path": false,
+      "official_source_tag": "v2025.4",
+      "representation_requirement": "A verified engine extension or supported exact additional pair-force implementation, preserving the C4 table, exclusions, periodic forces and virial. Ordinary C6/C12 .top conversion is insufficient.",
+      "stale_manual_caveat": "Reference-manual table overview still describes User tables; the tagged 2025.4 option documentation marks them unsupported and preprocessing rejects them.",
+      "standard_nonbond_params_preserve_independent_C4": false
+    },
+    "OpenMM": {
+      "C4_kcal_A4_to_kJ_nm4": 0.0004184,
+      "C4_parser_path_exists": true,
+      "custom_force": "-c/r^4; c=ccoef(type1, type2)",
+      "exceptions": "NonbondedForce exceptions copied as CustomNonbondedForce exclusions",
+      "execution_test_in_this_assessment": false,
+      "inspected_research_version": "8.5.1",
+      "pair_matrix_indexing": "NONBONDED_PARM_INDEX with native nonbonded type indices",
+      "periodic_C4": "CutoffPeriodic plus long-range correction; not C4 PME",
+      "required_prmtop_flag": "LENNARD_JONES_CCOEF",
+      "validation_needed": "Analytic pair energy/force and complete-topology mapping/exclusion/virtual-site/cutoff/tail/virial parity checks before MD."
+    }
+  },
+  "input_hashes": {
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/figshare-item.json": "904efa3fdc9dc064826d9de5d188af29e5348881e286f73e8990a3ca1720bc1f",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/gromacs-mdp-options.rst": "49f9136b06c99b507018e3ede93d88e82f11dffc0b565db14e6e1710ed627faf",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/gromacs-readir.cpp": "a32d477ac66f319dafe586921288940e7fb35f80f9d97cdf8e7f0aae2cf739ef",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/paper.pdf": "5965ca3f43699d5ae5a9a237233ea336e52211cf7d9e186ee39ff25dbb29d923",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/paper.txt": "ced625f40d234acb3d00f48ad87f09d4eb7dc3ecb1fbc32fcc8f766652c9dcfe",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/si-retrieval.json": "aa914aaf08cc1de16fb342d29cdfb388f691772a8de75def558e59d2e1ed4bb9",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/supporting-information.pdf": "f25f3e1d064ecbf858b42490680d6605b41a10d9d663b4c36d1ffd59f229bf9b",
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/supporting-information.txt": "cfdaf4307eec06f14cd775f6f29c666196595380999ab3a67ad59d361b55defb",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/result.json": "eec2b3051309dd061877b6ff66359a3376dc27718e713f169ce7e7dea4a80a68",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/solvated.prmtop": "d4a3c152a0a39d0c5a5dce8903178f0823a8da164d7a5bade438475c505f3f6c",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/source-mapping.json": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac",
+    "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-scoped-v6/result.json": "ecb3f7c128b4b7355b1c1b98280f0f9485938a86cf39237844a01dc28379bdbd",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/internal/amber_file_parser.py": "2aa0d7ca0108a0e9d28fbfe3137add3944953857f1270e14b68d0422358ffcbc",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/parmed/amber/_amberparm.py": "be23837b91fdda1c12165ea5a29000a157ef2a56086ca92e334540ddd5adc70d",
+    "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/parmed/gromacs/gromacstop.py": "9919b95f65b7f8cf4a94b429c6c4828a681b19e86a4e9087d469b43814038e9f",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/inventory_panteva.py": "3d2922dc13709138d3f65afb880c3eb9b1aed10f97aff18c2a19ea984408714b",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-panel.json": "5fdb1dba8cfa43e90c3396c87bde1cdc2a1a8a7091ec813cb120255ad70a613a",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/metal-panel.json": "28db88c10ce5a80dde8513d9c02542c2aa7ffda4910d8bbaef64ce9f312af694",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/LICENSE": "0b6851083326f7a65b52050b7ef4359ce3a06bb220eeb3ec0eb61810dffa5f34",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/conda-meta/ambertools-24.8-cuda_None_nompi_py314h5cdaa45_104.json": "0f5523c1b4eaafe7c888f608b1edfdf9c1248ce3bdef0fd1c32504797cbe399b",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/conda-meta/parmed-4.3.1-py314h4dda2b3_1.json": "70e23c66b17e953c5a1eb4be6d258ec16678681c082d08f2735558435f357a2f",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/cmd/leaprc.water.tip4pew": "a9806b4c41cb3d813af5afc483c692b47136e1ec7c500f3689fafe8909075ac0",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/lib/tip4pewbox.off": "d1cec1e8a670ddb7f2cccb94b07a851187057cf6f6dae9dc321f6ec6c25dbaa2",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.ions1lm_1264_tip4pew": "6968e90a3f7de01ddb34594b856bbb098fb0f340440137668fc7844650e5ff4b",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.ions234lm_1264_tip4pew": "25100d8830ea790fa1b28bd8d27ca4bf6fe5996708edb57e8412c6ccfd597f04",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.ionsjc_tip4pew": "a5d1fa1c20e63dcdf2d830f2b3a2ae0952011ad95dc775982a9f5fe41986baa1",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.tip4pew": "609cde69b276022f130fcdd320e5b542c8b290c98d73088ec93e834884797d1a",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/lj_1264_pol.dat": "9a64b54fc4ba6b683bb9ea1bd51b5f6d36793cce53d3a5e54838c719722c7429",
+    "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/lib/python3.14/site-packages/parmed/tools/add1264.py": "c6641c06422cf39e83997800ffa6bcc2dc50a889b4992017dac43bdffd6c0a6a"
+  },
+  "licensing_evidence": {
+    "Amber_code": "GPL-3.0 with component exceptions; source code license is distinct from parameter-data notice.",
+    "Amber_parameter_files": "Installed AmberTools LICENSE explicitly places dat/leap force-field parameter files in the public domain.",
+    "SI_license_from_current_Figshare_API": {
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "value": 10
+    },
+    "main_paper": "ACS copyright 2015; no unrestricted article-copying grant established in this audit.",
+    "paper_or_SI_copied_into_project": false,
+    "redistribution_route": "Use the separately public-domain Amber parameter files with citations and provenance. Do not relabel the CC BY-NC SI or ACS article as unrestricted open-source content."
+  },
+  "limits": [
+    "Source/type inventory only; no parameter changes or physical validation.",
+    "Default polarizability coverage is not validation of GDP, Ser17 or the covalent adduct.",
+    "One missing source polarizability (c6); do not assign zero or borrow c3 silently.",
+    "Research OpenMM parser inspected; packaged application path has not been modified or verified for this candidate.",
+    "Current complete model and both frozen panels remain unchanged."
+  ],
+  "native_C4_term_present": false,
+  "native_unique_type_count": 72,
+  "new_md_or_qm": false,
+  "next_bounded_step": "Resolve c6 polarizability provenance and explicitly assess DMP/guanosine transfer to the retained GDP(-3) charges; only then build a separate TIP4P-Ew reference topology for static analytic/native C4 energy-force validation. Keep GROMACS unsupported for this candidate until an exact implementation is demonstrated.",
+  "package_provenance": {
+    "build": "cuda_None_nompi_py314h5cdaa45_104",
+    "license": "GPL-3.0-or-later AND LGPL-3.0-or-later AND BSD-3-Clause AND MIT",
+    "name": "ambertools",
+    "sha256": "918d52bac61ff09996e302c38c436fd524b34203543ffe6c774d4c9bf04de3d0",
+    "url": "https://conda.anaconda.org/conda-forge/osx-arm64/ambertools-24.8-cuda_None_nompi_py314h5cdaa45_104.conda",
+    "version": "24.8"
+  },
+  "parameter_file_package_manifest_checks": {
+    "jc_sodium": true,
+    "lm_1264_sodium": true,
+    "mg_tip4pew_1264": true,
+    "polarizabilities": true,
+    "water_leaprc": true,
+    "water_parameters": true,
+    "water_template": true
+  },
+  "parameters_assigned_or_changed": false,
+  "physical_model_validated": false,
+  "published_model": {
+    "Mg_lj_from_Amber_TIP4PEw_1264_file": {
+      "epsilon_kcal_mol": 0.02236885,
+      "line": 52,
+      "rmin_half_angstrom": 1.436
+    },
+    "Mg_water_C4_kcal_angstrom4_mol": 180.5,
+    "base_TIP3P_Mg_water_C4_in_Amber_for_comparison_only": 132.9,
+    "default_C4_rule": "C4(Mg,j)=C4(Mg,water)*alpha(j)/alpha(water)",
+    "doi": "10.1021/acs.jpcb.5b10423",
+    "fitted_sites": [
+      {
+        "alpha_angstrom3": 0.17,
+        "amber_parameter_key": "OPMG",
+        "assigned_to_native_atoms": false,
+        "attribution": "From Panteva et al. JPCB, 2015, 119, 15460",
+        "line": 137,
+        "modified_C4_kcal_angstrom4_mol": 21.25,
+        "modified_C4_kj_nm4_mol": 0.008891,
+        "original_C4_kcal_angstrom4_mol": 71.125,
+        "pair_epsilon_cal_mol": 68.53801,
+        "pair_rmin_angstrom": 3.0972,
+        "site": "dimethyl_phosphate_nonbridging_O",
+        "source": "paper Table 2 and SI Table S1"
+      },
+      {
+        "alpha_angstrom3": 1.91,
+        "amber_parameter_key": "NAMG",
+        "assigned_to_native_atoms": false,
+        "attribution": "From Panteva et al. JPCB, 2015, 119, 15460",
+        "line": 102,
+        "modified_C4_kcal_angstrom4_mol": 238.75,
+        "modified_C4_kj_nm4_mol": 0.099893,
+        "original_C4_kcal_angstrom4_mol": 136.25,
+        "pair_epsilon_cal_mol": 61.66607,
+        "pair_rmin_angstrom": 3.26,
+        "site": "adenosine_N7",
+        "source": "paper Table 2 and SI Table S1"
+      },
+      {
+        "alpha_angstrom3": 1.925,
+        "amber_parameter_key": "NGMG",
+        "assigned_to_native_atoms": false,
+        "attribution": "From Panteva et al. JPCB, 2015, 119, 15460",
+        "line": 103,
+        "modified_C4_kcal_angstrom4_mol": 240.625,
+        "modified_C4_kj_nm4_mol": 0.10067749999999999,
+        "original_C4_kcal_angstrom4_mol": 136.25,
+        "pair_epsilon_cal_mol": 61.66607,
+        "pair_rmin_angstrom": 3.26,
+        "site": "guanosine_N7",
+        "source": "paper Table 2 and SI Table S1"
+      }
+    ],
+    "modified_TIP3P_site_coefficients_in_this_source": "not_provided_or_validated",
+    "potential": "A/r^12 - B/r^6 - C4/r^4 + Coulomb",
+    "primary_paper_url": "https://theory.rutgers.edu/resources/pdfs/Panteva_JChemPhysB_2015_v119_p15460.pdf",
+    "si_doi": "10.1021/acs.jpcb.5b10423.s001",
+    "si_download": "https://ndownloader.figshare.com/files/3731416",
+    "validation_scope": "DMP nonbridging phosphate and adenosine/guanosine N7 binding, with TIP4P-Ew; RNA application. Not complete KRAS-GDP-protein-covalent-adduct validation.",
+    "water_reference_alpha_angstrom3": 1.444
+  },
+  "retained_coordination_site": {
+    "GDP_N7": {
+      "atom": "N7",
+      "bonded_atom_names": [
+        "C8",
+        "C5"
+      ],
+      "charge_e": -0.5709000016463345,
+      "native_index": 2796,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.16999999991766696,
+        "epsilon_kj_mol": 0.7112799996555186,
+        "rmin_half_angstrom": 1.8240000001431578,
+        "sigma_nm": 0.3249998524031036
+      },
+      "native_lj_type_index": 1,
+      "native_type": "QN",
+      "original_type": "NB",
+      "residue": "GDP",
+      "source": {
+        "atom": "N7",
+        "residue": [
+          "C",
+          "302",
+          "",
+          "GDP"
+        ],
+        "source_heavy": true
+      }
+    },
+    "GDP_O2B": {
+      "atom": "O2B",
+      "bonded_atom_names": [
+        "PB"
+      ],
+      "charge_e": -0.9552000021951125,
+      "native_index": 2778,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.20999999984182244,
+        "epsilon_kj_mol": 0.8786399993381852,
+        "rmin_half_angstrom": 1.661200000277935,
+        "sigma_nm": 0.2959921901644687
+      },
+      "native_lj_type_index": 6,
+      "native_type": "QR",
+      "original_type": "O3",
+      "residue": "GDP",
+      "source": {
+        "atom": "O2B",
+        "residue": [
+          "C",
+          "302",
+          "",
+          "GDP"
+        ],
+        "source_heavy": true
+      }
+    },
+    "Mg": {
+      "atom": "MG",
+      "bonded_atom_names": [],
+      "charge_e": 2.0,
+      "native_index": 2775,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.010202369993913916,
+        "epsilon_kj_mol": 0.04268671605453583,
+        "rmin_half_angstrom": 1.3600000002389294,
+        "sigma_nm": 0.2423244513767447
+      },
+      "native_lj_type_index": 29,
+      "native_type": "Mg2+",
+      "original_type": "Mg2+",
+      "residue": "MG",
+      "source": {
+        "atom": "MG",
+        "residue": [
+          "B",
+          "301",
+          "",
+          "MG"
+        ]
+      }
+    },
+    "SER17_OG": {
+      "atom": "OG",
+      "bonded_atom_names": [
+        "CB",
+        "HG"
+      ],
+      "charge_e": -0.6546000010975562,
+      "native_index": 323,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.2104000002486992,
+        "epsilon_kj_mol": 0.8803136010405576,
+        "rmin_half_angstrom": 1.7209999997862238,
+        "sigma_nm": 0.3066473387458142
+      },
+      "native_lj_type_index": 10,
+      "native_type": "OH",
+      "original_type": "OH",
+      "residue": "SER",
+      "source": {
+        "atom": "OG",
+        "residue": [
+          "A",
+          "17",
+          "",
+          "SER"
+        ]
+      }
+    },
+    "water_405": {
+      "atom": "O",
+      "bonded_atom_names": [
+        "H1",
+        "H2"
+      ],
+      "charge_e": -0.834,
+      "native_index": 2835,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.15199999972108216,
+        "epsilon_kj_mol": 0.6359679988330078,
+        "rmin_half_angstrom": 1.768300000311453,
+        "sigma_nm": 0.315075240713007
+      },
+      "native_lj_type_index": 34,
+      "native_type": "OW",
+      "original_type": "OW",
+      "residue": "WAT",
+      "source": {
+        "atom": "O",
+        "residue": [
+          "E",
+          "405",
+          "",
+          "HOH"
+        ]
+      }
+    },
+    "water_415": {
+      "atom": "O",
+      "bonded_atom_names": [
+        "H1",
+        "H2"
+      ],
+      "charge_e": -0.834,
+      "native_index": 2865,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.15199999972108216,
+        "epsilon_kj_mol": 0.6359679988330078,
+        "rmin_half_angstrom": 1.768300000311453,
+        "sigma_nm": 0.315075240713007
+      },
+      "native_lj_type_index": 34,
+      "native_type": "OW",
+      "original_type": "OW",
+      "residue": "WAT",
+      "source": {
+        "atom": "O",
+        "residue": [
+          "E",
+          "415",
+          "",
+          "HOH"
+        ]
+      }
+    },
+    "water_440": {
+      "atom": "O",
+      "bonded_atom_names": [
+        "H1",
+        "H2"
+      ],
+      "charge_e": -0.834,
+      "native_index": 2940,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.15199999972108216,
+        "epsilon_kj_mol": 0.6359679988330078,
+        "rmin_half_angstrom": 1.768300000311453,
+        "sigma_nm": 0.315075240713007
+      },
+      "native_lj_type_index": 34,
+      "native_type": "OW",
+      "original_type": "OW",
+      "residue": "WAT",
+      "source": {
+        "atom": "O",
+        "residue": [
+          "E",
+          "440",
+          "",
+          "HOH"
+        ]
+      }
+    },
+    "water_447": {
+      "atom": "O",
+      "bonded_atom_names": [
+        "H1",
+        "H2"
+      ],
+      "charge_e": -0.834,
+      "native_index": 2961,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.15199999972108216,
+        "epsilon_kj_mol": 0.6359679988330078,
+        "rmin_half_angstrom": 1.768300000311453,
+        "sigma_nm": 0.315075240713007
+      },
+      "native_lj_type_index": 34,
+      "native_type": "OW",
+      "original_type": "OW",
+      "residue": "WAT",
+      "source": {
+        "atom": "O",
+        "residue": [
+          "E",
+          "447",
+          "",
+          "HOH"
+        ]
+      }
+    }
+  },
+  "schema_version": 1,
+  "site_specific_type_separation": [
+    {
+      "assignment_made": false,
+      "candidate_site": "GDP_nonbridging_phosphate_analogy_only",
+      "chemical_applicability_validated": false,
+      "native_indices": [
+        2776,
+        2778,
+        2779,
+        2782,
+        2783
+      ],
+      "other_atoms_affected_if_class_modified": 241,
+      "published_analogue_key": "OPMG",
+      "separate_nonbonded_type_index_needed_for_selective_pair": true,
+      "shared_native_lj_type_indices": [
+        6
+      ],
+      "shared_native_types": [
+        "O",
+        "O2",
+        "QP",
+        "QQ",
+        "QR"
+      ]
+    },
+    {
+      "assignment_made": false,
+      "candidate_site": "GDP_guanosine_N7_analogy_only",
+      "chemical_applicability_validated": false,
+      "native_indices": [
+        2796
+      ],
+      "other_atoms_affected_if_class_modified": 237,
+      "published_analogue_key": "NGMG",
+      "separate_nonbonded_type_index_needed_for_selective_pair": true,
+      "shared_native_lj_type_indices": [
+        1
+      ],
+      "shared_native_types": [
+        "N",
+        "N2",
+        "N3",
+        "NA",
+        "NB",
+        "QK",
+        "QL",
+        "QM",
+        "QN",
+        "QO"
+      ]
+    }
+  ],
+  "sodium_applicability": {
+    "Mg_only_selected_center_default_C4_kcal_angstrom4_mol": 31.1875,
+    "Na_as_second_1264_center_would_add_reverse_C4_kcal_angstrom4_mol": 0.2991689750692521,
+    "TIP4PEw_Joung_Cheatham_source": {
+      "epsilon_kcal_mol": 0.1684375,
+      "line": 15,
+      "rmin_half_angstrom": 1.226
+    },
+    "TIP4PEw_Li_Merz_1264_alternative_not_selected": {
+      "epsilon_kcal_mol": 0.02759452,
+      "line": 22,
+      "rmin_half_angstrom": 1.459
+    },
+    "count": 7,
+    "counterion_policy_selected": false,
+    "current": {
+      "atom": "Na+",
+      "bonded_atom_names": [],
+      "charge_e": 1.0,
+      "native_index": 2816,
+      "native_lj": {
+        "epsilon_kcal_mol": 0.08743930023230065,
+        "epsilon_kj_mol": 0.36584603217194595,
+        "rmin_half_angstrom": 1.3689999995130433,
+        "sigma_nm": 0.24392806894005906
+      },
+      "native_lj_type_index": 33,
+      "native_type": "Na+",
+      "original_type": "Na+",
+      "residue": "Na+",
+      "source": null
+    },
+    "note": "SI cites Joung-Cheatham NaCl. Keep a consistent source water/ion set; selecting Na as a second 12-6-4 center is a separate model choice, not implied by Mg selection."
+  },
+  "source_files": {
+    "amber_add1264": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/lib/python3.14/site-packages/parmed/tools/add1264.py",
+      "sha256": "c6641c06422cf39e83997800ffa6bcc2dc50a889b4992017dac43bdffd6c0a6a"
+    },
+    "amber_license": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/LICENSE",
+      "sha256": "0b6851083326f7a65b52050b7ef4359ce3a06bb220eeb3ec0eb61810dffa5f34"
+    },
+    "amber_package": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/conda-meta/ambertools-24.8-cuda_None_nompi_py314h5cdaa45_104.json",
+      "sha256": "0f5523c1b4eaafe7c888f608b1edfdf9c1248ce3bdef0fd1c32504797cbe399b"
+    },
+    "assembly": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/result.json",
+      "sha256": "eec2b3051309dd061877b6ff66359a3376dc27718e713f169ce7e7dea4a80a68"
+    },
+    "gdp_model": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-scoped-v6/result.json",
+      "sha256": "ecb3f7c128b4b7355b1c1b98280f0f9485938a86cf39237844a01dc28379bdbd"
+    },
+    "jc_sodium": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.ionsjc_tip4pew",
+      "sha256": "a5d1fa1c20e63dcdf2d830f2b3a2ae0952011ad95dc775982a9f5fe41986baa1"
+    },
+    "lm_1264_sodium": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.ions1lm_1264_tip4pew",
+      "sha256": "6968e90a3f7de01ddb34594b856bbb098fb0f340440137668fc7844650e5ff4b"
+    },
+    "mapping": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/source-mapping.json",
+      "sha256": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac"
+    },
+    "mg_tip4pew_1264": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.ions234lm_1264_tip4pew",
+      "sha256": "25100d8830ea790fa1b28bd8d27ca4bf6fe5996708edb57e8412c6ccfd597f04"
+    },
+    "paper_text": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/paper.txt",
+      "sha256": "ced625f40d234acb3d00f48ad87f09d4eb7dc3ecb1fbc32fcc8f766652c9dcfe"
+    },
+    "parmed_package": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/conda-meta/parmed-4.3.1-py314h4dda2b3_1.json",
+      "sha256": "70e23c66b17e953c5a1eb4be6d258ec16678681c082d08f2735558435f357a2f"
+    },
+    "polarizabilities": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/lj_1264_pol.dat",
+      "sha256": "9a64b54fc4ba6b683bb9ea1bd51b5f6d36793cce53d3a5e54838c719722c7429"
+    },
+    "research_openmm_parser": {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/openmm/app/internal/amber_file_parser.py",
+      "sha256": "2aa0d7ca0108a0e9d28fbfe3137add3944953857f1270e14b68d0422358ffcbc"
+    },
+    "research_parmed_amber": {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/parmed/amber/_amberparm.py",
+      "sha256": "be23837b91fdda1c12165ea5a29000a157ef2a56086ca92e334540ddd5adc70d"
+    },
+    "research_parmed_gromacs_writer": {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/covalent-v1-focused/lib/python3.12/site-packages/parmed/gromacs/gromacstop.py",
+      "sha256": "9919b95f65b7f8cf4a94b429c6c4828a681b19e86a4e9087d469b43814038e9f"
+    },
+    "script": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/inventory_panteva.py",
+      "sha256": "3d2922dc13709138d3f65afb880c3eb9b1aed10f97aff18c2a19ea984408714b"
+    },
+    "si_metadata": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/figshare-item.json",
+      "sha256": "904efa3fdc9dc064826d9de5d188af29e5348881e286f73e8990a3ca1720bc1f"
+    },
+    "si_retrieval": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/si-retrieval.json",
+      "sha256": "aa914aaf08cc1de16fb342d29cdfb388f691772a8de75def558e59d2e1ed4bb9"
+    },
+    "supporting_text": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/supporting-information.txt",
+      "sha256": "cfdaf4307eec06f14cd775f6f29c666196595380999ab3a67ad59d361b55defb"
+    },
+    "water_leaprc": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/cmd/leaprc.water.tip4pew",
+      "sha256": "a9806b4c41cb3d813af5afc483c692b47136e1ec7c500f3689fafe8909075ac0"
+    },
+    "water_parameters": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/frcmod.tip4pew",
+      "sha256": "609cde69b276022f130fcdd320e5b542c8b290c98d73088ec93e834884797d1a"
+    },
+    "water_template": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/lib/tip4pewbox.off",
+      "sha256": "d1cec1e8a670ddb7f2cccb94b07a851187057cf6f6dae9dc321f6ec6c25dbaa2"
+    }
+  },
+  "source_rule_coverage": {
+    "GDP_aliases_explicitly_resolved_for_inspection_only": {
+      "QA": "C",
+      "QB": "CA",
+      "QC": "CB",
+      "QD": "CK",
+      "QE": "CT",
+      "QF": "H",
+      "QG": "H1",
+      "QH": "H2",
+      "QI": "H5",
+      "QJ": "HO",
+      "QK": "N*",
+      "QL": "N2",
+      "QM": "NA",
+      "QN": "NB",
+      "QO": "NC",
+      "QP": "O",
+      "QQ": "O2",
+      "QR": "O3",
+      "QS": "OH",
+      "QT": "OS",
+      "QU": "P"
+    },
+    "direct_name_types": 50,
+    "missing_specific_fitted_override_does_not_mean_missing_default_rule": true,
+    "missing_type_atom_count": 4,
+    "missing_types": [
+      "c6"
+    ],
+    "no_element_or_similar_type_guess": true,
+    "types_after_documented_alias_resolution": 71
+  },
+  "stage": "panteva_modified_12_6_4_complete_complex_applicability",
+  "water_applicability": {
+    "current_atoms_per_water": 3,
+    "current_extra_point_count": 0,
+    "current_family": "TIP3P",
+    "current_family_is_directly_compatible": false,
+    "current_water_count": 8218,
+    "required_change": "Rebuild/retype all retained and bulk waters with correct virtual sites, charges and geometry; Mg C4/radius replacement alone cannot reproduce this model.",
+    "required_source_family": "TIP4P-Ew",
+    "source_O_extra_point_distance_angstrom": 0.125,
+    "source_atoms_per_water": 4,
+    "source_water_atoms": [
+      {
+        "atomic_number": 8,
+        "charge_e": 0.0,
+        "name": "O",
+        "type": "OW"
+      },
+      {
+        "atomic_number": 1,
+        "charge_e": 0.52422,
+        "name": "H1",
+        "type": "HW"
+      },
+      {
+        "atomic_number": 1,
+        "charge_e": 0.52422,
+        "name": "H2",
+        "type": "HW"
+      },
+      {
+        "atomic_number": 0,
+        "charge_e": -1.04844,
+        "name": "EPW",
+        "type": "EP"
+      }
+    ],
+    "source_water_lj": {
+      "EP": {
+        "epsilon_kcal_mol": 0.0,
+        "line": 23,
+        "rmin_half_angstrom": 1.0
+      },
+      "HW": {
+        "epsilon_kcal_mol": 0.0,
+        "line": 22,
+        "rmin_half_angstrom": 0.0
+      },
+      "OW": {
+        "epsilon_kcal_mol": 0.16275,
+        "line": 21,
+        "rmin_half_angstrom": 1.775931
+      }
+    }
+  }
+}

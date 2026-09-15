@@ -1,0 +1,92 @@
+[
+  {
+    "path": "official-repository.json",
+    "url": "https://api.github.com/repos/Lemkul-Lab/toppar_c36_releases",
+    "bytes": 6577,
+    "sha256": "25b45f6a5f44f4709b99376a18e02395572cb09e9bc5294a943e40d2512bd852",
+    "retrieved_unix": 1789333117.794729
+  },
+  {
+    "path": "official-main-commit.json",
+    "url": "https://api.github.com/repos/Lemkul-Lab/toppar_c36_releases/commits/main",
+    "bytes": 7467,
+    "sha256": "033edea1d4243297f057aa44e9e993e0f6678e69dae44a3b527b139ae1d0d99a",
+    "retrieved_unix": 1789333118.077536
+  },
+  {
+    "path": "official-toppar-page.html",
+    "url": "https://www.charmm-gui.org/?doc=toppar",
+    "bytes": 13269,
+    "sha256": "43d5a76a4aca8b8ea28165bb49e230683d16038efb99e0f1bff9155ac11d8119",
+    "retrieved_unix": 1789333118.432838
+  },
+  {
+    "path": "slc26a11-primary-article.html",
+    "url": "https://www.nature.com/articles/s41467-026-75749-4",
+    "bytes": 685991,
+    "sha256": "c78ca1a6e80fdca065bc232aacd24e2e83a009b9932b23bfb694b41d129b5b34",
+    "retrieved_unix": 1789333199.400075
+  },
+  {
+    "path": "slc26a11-repository.html",
+    "url": "https://jugit.fz-juelich.de/computational-neurophysiology/SLC26A11-ion-binding",
+    "bytes": 47565,
+    "sha256": "04902dc0fc0359ebd99c5c2e1cca8f6596b2830ed635e73682db22eacb9e5cc6",
+    "retrieved_unix": 1789333272.97083
+  },
+  {
+    "path": "slc26a11-repository-tree.json",
+    "url": "https://jugit.fz-juelich.de/api/v4/projects/computational-neurophysiology%2FSLC26A11-ion-binding/repository/tree?recursive=true&per_page=100",
+    "bytes": 7109,
+    "sha256": "5635a4dbeb90a5148b1617a6de6af8d2a4550eda7223275abd531c039d7c27e7",
+    "retrieved_unix": 1789333273.565137
+  },
+  {
+    "path": "slc26a11-commit.json",
+    "url": "https://jugit.fz-juelich.de/api/v4/projects/13383/repository/commits/main",
+    "bytes": 713,
+    "sha256": "63a8683c70dabd8f4bfb759eb0173431e364abecc05e59d258c1bb8adc4aa908",
+    "retrieved_unix": 1789333345.19439
+  },
+  {
+    "path": "slc26a11-README.md",
+    "url": "https://jugit.fz-juelich.de/api/v4/projects/13383/repository/files/README.md/raw?ref=main",
+    "bytes": 5693,
+    "sha256": "a5df4d6333e89d59d42f700e8cadb2e4b6f1f654a4ce02b3bbd353c3d10bb970",
+    "retrieved_unix": 1789333345.855105
+  },
+  {
+    "path": "cufix-official.html",
+    "url": "https://bionano.physics.illinois.edu/CUFIX",
+    "bytes": 38881,
+    "sha256": "d82aab05620e9f9b83a8bd3fdb8687ec6b57d829b09e4ae33221cf102bd2bf1e",
+    "retrieved_unix": 1789333346.724066
+  },
+  {
+    "path": "toppar_water_ions_cufix.str",
+    "url": "https://bionano.physics.illinois.edu/sites/default/files/cufix_files/toppar_water_ions_cufix.str",
+    "bytes": 23586,
+    "sha256": "45bbca02dabdffa30559c3b29c3954f710cbf9da4a679de9452a72784a909e9d",
+    "retrieved_unix": 1789333369.9721248
+  },
+  {
+    "path": "slc26a11-pinned-repository-tree.json",
+    "url": "https://jugit.fz-juelich.de/api/v4/projects/13383/repository/tree?recursive=true&per_page=100&ref=33c0063f78ddf67f822d699fcf03d3c0d25fd501",
+    "bytes": 7109,
+    "sha256": "5635a4dbeb90a5148b1617a6de6af8d2a4550eda7223275abd531c039d7c27e7",
+    "retrieved_unix": 1789333575.130101,
+    "pagination": {
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Gitlab-Meta": "{\"correlation_id\":\"01M2E9F5APZQW7XR91CNQFT2CW\",\"version\":\"1\"}",
+      "X-Next-Page": "",
+      "X-Page": "1",
+      "X-Per-Page": "100",
+      "X-Prev-Page": "",
+      "X-Request-Id": "01M2E9F5APZQW7XR91CNQFT2CW",
+      "X-Runtime": "0.052469",
+      "X-Total": "40",
+      "X-Total-Pages": "1"
+    }
+  }
+]

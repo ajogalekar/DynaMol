@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "file": "mock-audit/ast-review.json",
+      "sha256": "cd5026d231600a4cb57baa3c347df998d9b68d1b00935e7643e5b735bec66fe4",
+      "bytes": 609
+    },
+    {
+      "file": "mock-audit/result.json",
+      "sha256": "11df85c6368c08d4bc1e5d9948979fc1919b7e3ee89a91ef5555e0ea7e740ded",
+      "bytes": 880
+    },
+    {
+      "file": "mock-audit/source.diff",
+      "sha256": "bb7410ec6e04cfa8a804cf64bf16faae8eb03c4f22eccd76d3bc8cfdf0694ca8",
+      "bytes": 8486
+    },
+    {
+      "file": "mock-audit/synthetic-evaluation/README.txt",
+      "sha256": "dd5fbdf2a92ee1d59da1db1df4a21b5f16f30d9ccf394d55464d18f0c312e6e0",
+      "bytes": 85
+    },
+    {
+      "file": "mock-audit/synthetic-evaluation/evaluation-journal/evaluation-000001.json",
+      "sha256": "386b797f9318d6d2304fc555cb66d42c776ec028113e313282b2866f40db918a",
+      "bytes": 1094
+    },
+    {
+      "file": "mock-audit/synthetic-evaluation/evaluation-journal/manifest.json",
+      "sha256": "cf3bd1e38ac456cae2e934dad940356444090dc2ad72baad755e067e65235f7f",
+      "bytes": 2966
+    },
+    {
+      "file": "mock-audit/synthetic-evaluation/input.json",
+      "sha256": "e10e3a1c83558dd94a4b956523310cbd84c24df2c2fadf35c0af77e977aeba60",
+      "bytes": 463
+    },
+    {
+      "file": "mock-audit/synthetic-evaluation/report.json",
+      "sha256": "5aefaa00fc9ef1c631dec349853dbfdc6359f7d936d00fd122be8f66694d5e3a",
+      "bytes": 1115
+    },
+    {
+      "file": "mock-audit/tests.log",
+      "sha256": "3a0c3714efacc9398da3025f62f87881e9fbeaf413d41ea65648578cfed48bcb",
+      "bytes": 3209
+    },
+    {
+      "file": "qm_worker.py",
+      "sha256": "780b5bb968fa9d45987597be9412331d071e17ea38b2299749dc5e92be9f12b5",
+      "bytes": 47668
+    },
+    {
+      "file": "qm_evaluation_journal.py",
+      "sha256": "b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528",
+      "bytes": 13753
+    },
+    {
+      "file": "test_integration.py",
+      "sha256": "c48217ad08dd4f9a32ec9def1d70d3082ec8a9a9b45fd1968dace33a7a4a3b82",
+      "bytes": 17066
+    },
+    {
+      "file": "run_mock_audit.py",
+      "sha256": "e4bb0d7ec88588a8529ddbb3e0df122d25b1ecb55d5b0617200550d3bd0247bd",
+      "bytes": 5130
+    },
+    {
+      "file": "README.md",
+      "sha256": "c00ced47a5faae77a497caf4fd11c2daee1e0adbdb63798c1ea6869d72564b09",
+      "bytes": 2823
+    }
+  ]
+}

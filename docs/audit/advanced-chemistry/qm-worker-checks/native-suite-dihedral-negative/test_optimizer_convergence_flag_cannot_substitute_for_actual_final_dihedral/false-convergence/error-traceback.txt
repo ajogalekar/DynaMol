@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 616, in run
+    calculate(data,out,report)
+  File "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py", line 511, in calculate
+    raise RuntimeError('Final actual dihedral does not satisfy the requested periodic target tolerance')
+RuntimeError: Final actual dihedral does not satisfy the requested periodic target tolerance

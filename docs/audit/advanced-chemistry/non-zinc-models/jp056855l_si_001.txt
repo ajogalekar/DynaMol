@@ -1,0 +1,814 @@
+                                             MOLECULAR DYNAMICS SIMULATIONS OF THE CU, ZN –
+
+                                                                                               SUPEROXIDE DISMUTASE ENZYME
+
+
+                 Ricardo J. F. Branco, Pedro Alexandrino Fernandes and Maria João Ramos∗
+
+
+
+
+                                                                                                                   SUPPORTING INFORMATION
+
+
+                                    3.5                                                                                                                                              14.0
+
+                                    3.0                                                                                                                                              12.0
+
+                                    2.5                                                                                                                                              10.0
+                      E(kcal/mol)
+
+
+
+
+                                                                                                                                                                       E(kcal/mol)
+
+
+
+
+                                    2.0                                                                                                                                               8.0                                                                                NHis-Cu-NHis
+                                                                                                                                            Cu-Ne2His
+                                    1.5                                                                                                                                               6.0                                                                                NHis-Zn-NHis
+                                                                                                                                            Zn-Nd1His
+                                    1.0                                                                                                                                               4.0                                                                                NHis-Zn-OAsp
+                                                                                                                                            Zn-O1Asp
+                                    0.5                                                                                                                                               2.0
+
+                                    0.0                                                                                                                                               0.0
+                                           1.8              1.9                  2.0                2.1                    2.2               2.3                                            90                    110            130           150            170
+                                                                            M-L dis tance (A)                                                                                                                                  L-M-L angle (º)
+
+
+
+
+                 Figure 1: Potential energy curves calculated with a model of the active site with 35 and 37 atoms for the
+                 copper and zinc site respectively.
+
+
+
+                                                                                          His-Cu                                                                                                                                                     Asp-Zn
+
+                0.8                                                                                                                                                                                         1.0
+                0.6                                                                                                                                                                                         0.8
+                0.4                                                                                                                                                                                         0.6
+                                                                                                                                                        Mulliken
+point charge
+
+
+
+
+                                                                                                                                                                                            point charge
+
+
+
+
+                                                                                                                                                                                                            0.4
+                0.2                                                                                                                                                                                                                                                                         Mulliken
+                                                                                                                                                        CHELPG                                              0.2
+                0.0                                                                                                                                                                                         0.0                                                                             CHELPG
+                                                                                                                                                        RESP
+               -0.2                                                                                                                                                                                        -0.2
+                                                                                                                                                        Comba et al.                                                                                                                        RESP
+               -0.4                                                                                                                                                                                        -0.4
+               -0.6                                                                                                                                                                                        -0.6
+               -0.8                                                                                                                                                                                        -0.8
+                                                                                                                                                                                                           -1.0
+                                    C(a)
+
+                                             H(a)
+
+                                                     C(b)
+
+                                                            H(b)
+
+                                                                   H(b)
+
+                                                                          C(g)
+
+                                                                                  N(d1)
+
+                                                                                           C(d2)
+
+                                                                                                   H(d2)
+
+                                                                                                           N(e2)
+
+                                                                                                                   H(e2)
+
+                                                                                                                            C(e1)
+
+                                                                                                                                    H(e1)
+                       NH
+
+
+
+
+                                                                                                                                                   Cu
+                                                                                                                                            CO
+
+
+
+
+                                                                                                                                                                                                                  NH    C(a)    H(a)   C(b)   H(b)   H(b)   C(g)    O1   O2   CO    Zn
+                                                                                 Atom type                                                                                                                                                       Atom type
+
+
+
+
+                                                 ∗
+                                                     Corresponding author
+                                                 e-mail: mjramos@fc.up.pt
+                                                 phone: (+351) 22 608 28 26
+
+
+                                                                                                                                                                                                                                                                                        1
+                                                                           His-Zn                                                                                                                                                     Cu-His-Zn
+
+                    0.6                                                                                                                                                             0.4
+                    0.4                                                                                                                                                             0.2
+
+
+
+
+                                                                                                                                                                     point charge
+                    0.2
+     point charge
+                                                                                                                                                   Mulliken                         0.0                                                                                                                           Mulliken
+                    0.0
+                                                                                                                                                   CHELPG                           -0.2                                                                                                                          CHELPG
+                    -0.2
+                                                                                                                                                   RESP                             -0.4                                                                                                                          RESP
+                    -0.4
+                    -0.6                                                                                                                                                            -0.6
+                    -0.8                                                                                                                                                            -0.8
+                                C(a)
+
+                                       H(a)
+
+                                               C(b)
+
+                                                      H(b)
+
+                                                             H(b)
+
+                                                                    C(g)
+
+                                                                               N(d1)
+
+                                                                                        C(d2)
+
+                                                                                                H(d2)
+
+                                                                                                        N(e2)
+
+                                                                                                                 H(e2)
+
+                                                                                                                         C(e1)
+
+                                                                                                                                 H(e1)
+                           NH
+
+
+
+
+                                                                                                                                         CO
+
+
+
+
+                                                                                                                                                                                                C(a)
+
+                                                                                                                                                                                                         H(a)
+
+                                                                                                                                                                                                                C(b)
+
+                                                                                                                                                                                                                       H(b)
+
+                                                                                                                                                                                                                              H(b)
+
+                                                                                                                                                                                                                                     C(g)
+
+                                                                                                                                                                                                                                             N(d1)
+
+                                                                                                                                                                                                                                                     C(d2)
+
+                                                                                                                                                                                                                                                             H(d2)
+
+                                                                                                                                                                                                                                                                      N(e2)
+
+                                                                                                                                                                                                                                                                              H(e2)
+
+                                                                                                                                                                                                                                                                                       C(e1)
+
+                                                                                                                                                                                                                                                                                               H(e1)
+                                                                                                                                                                                           NH
+
+
+
+
+                                                                                                                                                                                                                                                                                                           CO
+                                                                     Atom type                                                                                                                                                       Atom type
+
+
+
+
+                    Figure 2: Atomic charges histogram for parameterized residues calculated with three different methods.
+                    Charges in parenthesis are taken from the Amber force field.
+
+
+                    Table 1: Atomic charges calculated with three different methods (Mulliken, CHELPG, RESP). Charges
+
+                                                              for atoms in square bracket are taken from the AMBER force field.
+
+ Atom                                                    His-Cu (HIC)                                                                                         His-Cu (HIF)                                                                               His-Zn (HIX)
+                                                                                                        CHELPG                                                                                                                                                                                         CHELPG
+                                Mulliken                        CHELPG                                   -RESP                           Mulliken                CHELPG                          RESP                         Mulliken                               CHELPG                             -RESP
+  NH                                  0.15                           0.04                                       [-0.14]                              0.16                            0.03              [-0.14]                               0.13                         0.01                                  [-0.14]
+  C(α)                                        -0.45                                    -0.09                         0.25                            -0.42                          -0.12                 0.26                              -0.40                                     -0.05                       0.22
+  H(α)                                        0.18                                     0.07                       -0.06                              0.17                            0.07               -0.01                                0.16                                     0.05                       -0.02
+  C(β)                                        -0.32                                    -0.05                      -0.09                              -0.31                           0.01               -0.12                               -0.34                                     0.08                        0.08
+  H(β)                                        0.20                                     0.10                          0.10                            0.19                            0.04                 0.06                               0.23                                     0.06                        0.00
+  H(β)                                        0.18                                     0.06                          0.10                            0.17                            0.06                 0.06                               0.15                                     -0.04                       0.00
+  C(γ)                                        0.27                                     0.15                          0.09                            0.31                            0.09                 0.16                               0.27                                     0.12                        0.04
+ N(δ1)                                        -0.63                                    -0.13                      -0.16                              -0.71                          -0.30               -0.23                               -0.64                                     -0.19                      -0.07
+ C(δ2)                                        0.37                                     -0.03                         0.08                            0.37                            0.07               -0.16                                0.35                                     0.08                        0.02
+ H(δ2)                                        0.23                                     0.16                          0.14                            0.22                            0.11                 0.23                               0.22                                     0.09                        0.13
+ N(ε2)                                        -0.67                                    -0.17                      -0.29                              -0.62                          -0.07                 0.01                              -0.68                                     -0.23                      -0.23
+H(ε2/δ1∗)                                     0.37                                     0.34                          0.37                          0.37*                            0.36*               0.38*                                0.36                                     0.35                        0.35
+ C(ε1)                                        0.07                                     -0.22                      -0.11                              0.05                           -0.13               -0.27                                0.06                                     -0.21                      -0.23
+ H(ε1)                                        0.22                                      0.21                         0.18                            0.21                            0.16                 0.16                               0.21                                     0.20                        0.25
+  CO                                          0.17                                     -0.04                    [0.03]                               0.15                            0.05              [0.03]                                0.17                                     0.01                      [0.03]
+   Cu                                         0.60                                     0.30                          0.27
+ Atom                                                 Cu-His-Zn (HIG)                                                                     Atom                                             Asp-Zn (ASZ)
+                                                                                                        CHELPG                                                                                                                CHELPG
+                                Mulliken                        CHELPG                                   -RESP                                                  Mulliken                        CHELPG                         -RESP
+  NH                                          0.15                   -0.02                                      [-0.14]                       NH                               0.14                             -0.06                [-0.22]
+  C(α)                                        -0.42                                    0.17                          0.27                 C(α)                          -0.42                                    0.06                       0.40
+  H(α)                                        0.14                                     -0.04                      -0.09                   H(α)                                 0.14                              0.02                       -0.05
+  C(β)                                        -0.30                                    -0.13                         0.15                 C(β)                          -0.29                                   -0.20                       -0.33
+  H(β)                                        0.15                                     0.08                          0.00                 H(β)                                 0.17                              0.06                       0.06
+  H(β)                                        0.14                                     0.02                          0.00                 H(β)                                 0.13                              0.03                       0.06
+  C(γ)                                        0.26                                     0.07                       -0.16                       C(γ)                             0.54                              0.82                       0.85
+ N(δ1)                                        -0.65                                    -0.15                      -0.27                       O1                        -0.59                                   -0.68                       -0.59
+ C(δ2)                                        0.32                                     0.12                          0.29                     O2                        -0.49                                   -0.64                       -0.72
+ H(δ2)                                        0.22                                     0.08                          0.02                     CO                               0.16                              0.01                [-0.05]
+ N(ε2)                                        -0.64                                    -0.28                      -0.37                       Zn                               0.69                              0.41                       0.30
+ H(ε2)                                 -                                   -                                     -
+ C(ε1)                                        0.03                                     -0.13                      -0.02
+ H(ε1)                                        0.17                                     0.11                          0.16
+  CO                                          0.18                                     -0.07                    [0.03]
+
+
+
+
+                                                                                                                                                                                                                                                                                                       2
+                             Dis tance H44Cu                                           Distance H46Cu
+
+        2.4                                                       2.4
+
+        2.2                                                       2.2
+
+        2.0                                                       2.0
+
+        1.8                                                       1.8
+                                                              A                                                        A
+                                                              B                                                        B
+        1.6                                                       1.6
+
+        1.4                                                       1.4
+
+        1.2                                                       1.2
+
+        1.0                                                       1.0
+              0       500        1000          1500    2000             0       500        1000         1500    2000
+                                 ps                                                        ps
+
+
+
+
+                             Distance H61Cu                                            Distance H118Cu
+
+        2.4                                                       2.4
+
+        2.2                                                       2.2
+
+        2.0                                                       2.0
+
+        1.8                                                       1.8
+                                                              A                                                        A
+                                                              B                                                        B
+        1.6                                                       1.6
+
+        1.4                                                       1.4
+
+        1.2                                                       1.2
+
+        1.0                                                       1.0
+              0       500        1000          1500    2000             0       500        1000         1500    2000
+                                 ps                                                        ps
+
+
+
+
+                             Dis tance H61Zn                                           Distance H69Zn
+
+        2.4
+                                                                  2.4
+        2.2                                                       2.2
+        2.0                                                       2.0
+
+        1.8                                                       1.8                                                  A
+                                                              A
+                                                              B   1.6                                                  B
+        1.6
+
+        1.4                                                       1.4
+
+        1.2
+                                                                  1.2
+                                                                  1.0
+        1.0
+              0       500        1000          1500    2000             0       500       1000      1500       2000
+                                 ps                                                        ps
+
+
+
+
+                             Distance H78Zn                                            Distance D81Zn
+
+
+        2.4                                                       2.2
+
+        2.2                                                       2.0
+        2.0
+                                                                  1.8
+        1.8                                                   A                                                        A
+                                                                  1.6
+        1.6                                                   B                                                        B
+                                                                  1.4
+        1.4
+        1.2                                                       1.2
+
+        1.0                                                       1.0
+              0       500       1000      1500        2000              0       500       1000      1500       2000
+                                 ps                                                        ps
+
+
+
+
+Figure 3: Distance fluctuation between each ligand and the respective metal during the MD trajectory.
+
+
+                             Angle H44Cu46                                             Angle H44Cu61
+
+        160.0                                                     120.0
+
+        140.0
+                                                                  100.0
+        120.0
+                                                                   80.0
+        100.0
+                                                              A                                                        A
+         80.0                                                      60.0
+                                                              B                                                        B
+         60.0
+                                                                   40.0
+         40.0
+                                                                   20.0
+         20.0
+
+          0.0                                                       0.0
+                  0    500        1000         1500   2000                  0    500        1000        1500   2000
+                                  ps                                                        ps
+
+
+
+
+                                                                                                                           3
+                           Angle H44Cu118                                      Angle H46Cu61
+
+         120.0                                               120.0
+
+
+         100.0                                               100.0
+
+
+         80.0                                                 80.0
+
+                                                         A                                                   A
+         60.0                                                 60.0
+                                                         B                                                   B
+
+         40.0                                                 40.0
+
+
+         20.0                                                 20.0
+
+
+           0.0                                                 0.0
+                 0   500       1000        1500   2000               0   500       1000        1500   2000
+                               ps                                                   ps
+
+
+
+
+                           Angle H46Cu118                                      Angle H61Cu118
+
+         140.0                                               160.0
+
+         120.0                                               140.0
+
+                                                             120.0
+         100.0
+                                                             100.0
+         80.0
+                                                         A                                                   A
+                                                             80.0
+                                                         B                                                   B
+         60.0
+                                                             60.0
+         40.0
+                                                             40.0
+
+         20.0                                                20.0
+
+           0.0                                                 0.0
+                 0   500       1000        1500   2000               0   500       1000        1500   2000
+                               ps                                                  ps
+
+
+
+
+                           Angle H61Zn69                                       Angle H61Zn78
+
+         140.0                                               140.0
+
+         120.0                                               120.0
+
+         100.0                                               100.0
+
+         80.0                                                80.0
+                                                         A                                                   A
+                                                         B                                                   B
+         60.0                                                60.0
+
+         40.0                                                40.0
+
+         20.0                                                20.0
+
+           0.0                                                 0.0
+                 0   500       1000        1500   2000               0   500       1000        1500   2000
+                                ps                                                 ps
+
+
+
+
+                           Angle H61Zn81                                       Angle H69Zn78
+
+         140.0                                               140.0
+
+         120.0                                               120.0
+
+         100.0                                               100.0
+
+         80.0                                                80.0
+                                                         A                                                   A
+                                                         B                                                   B
+         60.0                                                60.0
+
+         40.0                                                40.0
+
+         20.0                                                20.0
+
+           0.0                                                 0.0
+                 0   500       1000        1500   2000               0   500       1000        1500   2000
+                                ps                                                 ps
+
+
+
+
+                           Angle H69Zn81                                       Angle H78Zn81
+
+         140.0                                               140.0
+
+         120.0                                               120.0
+
+         100.0                                               100.0
+
+         80.0                                                80.0
+                                                         A                                                   A
+                                                         B                                                   B
+         60.0                                                60.0
+
+         40.0                                                40.0
+
+         20.0                                                20.0
+
+           0.0                                                 0.0
+                 0   500       1000        1500   2000               0   500       1000        1500   2000
+                                ps                                                  ps
+
+
+
+
+Figure 4: Angle fluctuation between different pairs of ligands and the respective metal during the MD
+trajectory.
+
+
+
+                                                                                                                 4
+         Table 2: Distances between the closest water molecules and copper ion on available
+                                 crystallographic structures of Cu, Zn-SOD.
+
+
+
+
+                                                          Oxidation state 1st H2O d(O-Cu)Ǻ   2nd H2O d(O-Cu)Ǻ
+                                             Resolution
+                                                (Ǻ)
+PDB code               Species
+2APS-A                                         1.90            Ox          NOT FOUND               4.59
+           Actinobacillus pleuropneumoniae
+   B                                                           Ox             3.13            NOT FOUND
+1XTL-A                                                         ox          NOT FOUND             4.91
+   B                                                           ox          NOT FOUND             5.67
+                   Bacillus subtilis            2.00
+   C                                                           ox          NOT FOUND             3.74
+   D                                                           ox          NOT FOUND             4.60
+1XTM-A                                                         ox             3.20            NOT FOUND
+                   Bacillus subtilis            1.60
+   B                                                           ox             2.81            NOT FOUND
+1CB4-A                                                         ox             2.19            NOT FOUND
+                     Bos taurus                 2.30
+   B                                                           ox             2.39            NOT FOUND
+1CBJ-A                                                         red            3.50               5.31
+                     Bos taurus                 1.65
+   B                                                           ox             2.55               4.83
+1Q0E-A                                                         red         NOT FOUND             4.01
+                     Bos taurus                 1.15
+   B                                                           red            2.56               2.73
+1SDA-O                                                         red         NOT FOUND             4.92
+   Y                                                           red         NOT FOUND             4.72
+                     Bos taurus                 2.50
+   B                                                           red         NOT FOUND             4.58
+   G                                                           red         NOT FOUND             8.80
+1SXA-A                                                         red            2.93               3.15
+                     Bos taurus                 1.90
+   B                                                           red            2.46               4.72
+1SXB-A                                                         red            3.03               3.43
+                     Bos taurus                 1.90
+   B                                                           red            2.65               4.73
+1SXC-A                                                         red            2.98               4.90
+                     Bos taurus                 1.90
+   B                                                           red            2.54               4.72
+ 1SXN                                                          ox             2.64               2.88
+                     Bos taurus                 1.90
+   B                                                           ox             2.57               4.93
+ 1SXS                                                          ox          NOT FOUND             4.83
+                     Bos taurus                 2.00
+   B                                                           ox          NOT FOUND             4.91
+ 1SXZ                                                          ox          NOT FOUND             4.76
+                     Bos taurus                 2.05
+   B                                                           ox          NOT FOUND             3.50
+2SOD-O                                                         ox             3.20            NOT FOUND
+   Y                                                           ox             2.49            NOT FOUND
+                     Bos taurus                 2.00
+   B                                                           ox          NOT FOUND             3.90
+   G                                                           ox          NOT FOUND             3.83
+ 3SOD                Bos taurus                 2.10           ox          NOT FOUND          NOT FOUND
+ 1ESO              Escherichia coli             2.00           ox          NOT FOUND             4.35
+1AZV-A                                                         ox          NOT FOUND             4.21
+                    Homo sapiens                1.90
+   B                                                           ox          NOT FOUND             4.66
+ 1BA9               Homo sapiens               NMR             red         NOT FOUND          NOT FOUND
+ 1DSW               Homo sapiens               NMR             ox          NOT FOUND          NOT FOUND
+1FUN-A              Homo sapiens               2.85            ox          NOT FOUND             3.96
+   F                                                           ox          NOT FOUND             5.00
+   B                                                           ox          NOT FOUND             5.45
+   G                                                           ox          NOT FOUND             5.50
+
+
+                                                                                                    5
+   C                           ox    NOT FOUND   NOT FOUND
+   H                           ox    NOT FOUND      5.46
+   D                           ox    NOT FOUND   NOT FOUND
+   I                           ox    NOT FOUND   NOT FOUND
+   E                           ox    NOT FOUND   NOT FOUND
+   J                           ox    NOT FOUND      5.36
+1HL5-A                         ox       2.65        4.73
+   B                           ox       2.47        4.56
+   C                           ox       2.52        4.68
+   D                           ox       2.70        4.73
+   E                           ox       2.66        4.68
+   F                           ox       2.72        4.64
+   G                           ox       1.96        2.01
+   H                           ox       2.74        4.70
+   I                           ox       2.87        3.55
+         Homo sapiens   1.80
+   J                           ox       2.63        4.72
+   K                           ox       2.65        4.54
+   L                           ox       3.15        4.93
+   M                           ox       2.62        4.64
+   N                           ox       2.65        4.74
+   O                           ox    NOT FOUND      4.61
+   P                           ox    NOT FOUND   NOT FOUND
+   Q                           ox       2.74        4.79
+   S                           ox    NOT FOUND   NOT FOUND
+ 1L3N    Homo sapiens   NMR    red   NOT FOUND   NOT FOUND
+ 1MFM    Homo sapiens   1.02   ox       3.67        3.95
+1N18-A                         red      3.36        4.20
+   B                           red      3.65        5.51
+   C                           red   NOT FOUND      4.48
+   D                           red      3.31        5.15
+   E                           red      3.47        3.61
+         Homo sapiens   2.00
+   F                           red      3.63        5.42
+   G                           red      3.88        5.47
+   H                           red      3.26        5.20
+   I                           red   NOT FOUND      4.07
+   J                           red      3.34        5.26
+1N19-A                         red   NOT FOUND      4.44
+         Homo sapiens   1.86
+   B                           red      3.81     NOT FOUND
+1PTZ-A                         red      3.31     NOT FOUND
+         Homo sapiens   1.80
+   B                           red      3.59     NOT FOUND
+1PU0-A                         red   NOT FOUND      4.42
+   B                           red      3.71     NOT FOUND
+   C                           red   NOT FOUND      4.19
+   D                           red      3.66     NOT FOUND
+         Homo sapiens
+   E                    1.70   red      3.78     NOT FOUND
+   F                           red      3.69     NOT FOUND
+   G                           red      3.53     NOT FOUND
+   H                           red   NOT FOUND      4.19
+   I                           red   NOT FOUND   NOT FOUND
+   J                           red      3.69     NOT FOUND
+1RK7-A   Homo sapiens   NMR          NOT FOUND   NOT FOUND
+1SOS-A   Homo sapiens   2.50   ox    NOT FOUND      4.02
+
+
+                                                    6
+    F                                        ox   NOT FOUND      4.12
+    B                                        ox   NOT FOUND      4.38
+    G                                        ox   NOT FOUND   NOT FOUND
+    C                                        ox   NOT FOUND   NOT FOUND
+    H                                        ox   NOT FOUND      4.75
+    D                                        ox   NOT FOUND   NOT FOUND
+    I                                        ox      3.15     NOT FOUND
+    E                                        ox   NOT FOUND      4.39
+    J                                        ox   NOT FOUND      4.82
+1SPD-A                                       ox   NOT FOUND   NOT FOUND
+               Homo sapiens           2.40
+    B                                        ox   NOT FOUND   NOT FOUND
+1UXL-A                                       ox   NOT FOUND      4.41
+    B                                        ox   NOT FOUND      4.02
+    C                                        ox   NOT FOUND      4.41
+    D                                        ox   NOT FOUND      4.68
+    E          Homo sapiens                  ox   NOT FOUND      4.43
+                                      1.60
+    F                                        ox   NOT FOUND      4.45
+    G                                        ox      3.22     NOT FOUND
+    H                                        ox   NOT FOUND      4.53
+    I                                        ox      3.91     NOT FOUND
+    J                                        ox      3.42     NOT FOUND
+1UXM-A                                       ox      1.86     NOT FOUND
+    B                                        ox      2.21     NOT FOUND
+    C                                        ox      2.44     NOT FOUND
+    D                                        ox      2.14     NOT FOUND
+    E                                        ox      2.35     NOT FOUND
+    F                                        ox      2.03     NOT FOUND
+               Homo sapiens           1.90
+    G                                        ox      2.43     NOT FOUND
+    H                                        ox      2.62     NOT FOUND
+    I                                        ox      2.28     NOT FOUND
+    J                                        ox      2.28     NOT FOUND
+    K                                        ox      2.35     NOT FOUND
+    L                                        ox      2.47     NOT FOUND
+  4SOD         Homo sapiens           N/A         NOT FOUND   NOT FOUND
+2C9U-A                                       ox      3.40     NOT FOUND
+               Homo sapiens           1.24
+    F                                        ox      2.88     NOT FOUND
+2C9V-A                                       ox      2.36     NOT FOUND
+               Homo sapiens           1.07
+    F                                        ox      2.47     NOT FOUND
+  1BZO    Photobacterium leiognathi   2.10   ox      3.47     NOT FOUND
+  1IB5    Photobacterium leiognathi   2.45   ox      3.01     NOT FOUND
+  1IBB    Photobacterium leiognathi   2.10   ox      3.61     NOT FOUND
+  1IBD    Photobacterium leiognathi   2.00   ox      3.80     NOT FOUND
+  1IBF    Photobacterium leiognathi   2.20   ox      3.57     NOT FOUND
+  1IBH    Photobacterium leiognathi   2.00   ox      3.40     NOT FOUND
+  1OAJ    Photobacterium leiognathi   1.73   ox      3.26     NOT FOUND
+  1OAL    Photobacterium leiognathi   1.50   ox      3.70     NOT FOUND
+ 1YAI-A                                      ox      2.91     NOT FOUND
+    B     Photobacterium leiognathi   1.90   ox      3.22     NOT FOUND
+    C                                        ox      2.47     NOT FOUND
+  1B4L    Saccharomyces cerevisiae    1.80   ox      3.16     NOT FOUND
+  1B4T    Saccharomyces cerevisiae    1.80   ox      2.68     NOT FOUND
+  1F18    Saccharomyces cerevisiae    1.70   ox      3.50     NOT FOUND
+
+
+                                                                 7
+ 1F1A      Saccharomyces cerevisiae      1.80           ox           2.30          NOT FOUND
+ 1F1D      Saccharomyces cerevisiae      2.10           ox        NOT FOUND        NOT FOUND
+1F1G-A                                                  ox           3.82          NOT FOUND
+   B                                                    ox           3.80          NOT FOUND
+   C                                                    ox           3.93          NOT FOUND
+           Saccharomyces cerevisiae      1.35
+   D                                                    ox           3.81          NOT FOUND
+   E                                                    ox           3.84          NOT FOUND
+   F                                                    ox           3.88          NOT FOUND
+ 1JCV      Saccharomyces cerevisiae      1.55           red          3.69          NOT FOUND
+1SDY-A                                                  ox           1.86          NOT FOUND
+   B                                                    ox           2.06          NOT FOUND
+           Saccharomyces cerevisiae      2.50
+   C                                                    ox           1.83          NOT FOUND
+   D                                                    ox           2.37          NOT FOUND
+ 1YAZ      Saccharomyces cerevisiae      1.70           ox        NOT FOUND           4.75
+ 1YSO      Saccharomyces cerevisiae      1.73           red          3.16          NOT FOUND
+ 2JCW      Saccharomyces cerevisiae      1.70           red          3.88          NOT FOUND
+1EQW-A                                                  ox        NOT FOUND        NOT FOUND
+   B                                                    ox           3.17          NOT FOUND
+            Salmonella typhimurium       2.30
+   C                                                    ox        NOT FOUND        NOT FOUND
+   D                                                    ox        NOT FOUND        NOT FOUND
+1TO4-A                                                  ox           2.67          NOT FOUND
+   B                                                    ox           2.75          NOT FOUND
+             Schistosoma mansoni         1.55
+   C                                                    ox           3.24          NOT FOUND
+   D                                                    ox           2.85          NOT FOUND
+1TO5-A                                                  ox           3.23          NOT FOUND
+   B                                                    ox           3.34          NOT FOUND
+             Schistosoma mansoni         2.20
+   C                                                    ox           3.39          NOT FOUND
+   D                                                    ox           3.24          NOT FOUND
+1SRD-A                                                  ox        NOT FOUND           5.15
+   B                                                    ox        NOT FOUND           4.83
+               Spinacia oleracea         2.00
+   C                                                    ox        NOT FOUND           4.82
+   D                                                    ox        NOT FOUND           5.45
+1XSO-A                                                  ox           2.26          NOT FOUND
+                Xenopus laevis           1.49
+   B                                                    ox           2.40          NOT FOUND
+ Mean                                                                2.99             4.59
+StDev ±                                                              0.58             0.79
+
+
+     Additionally, Figure 2 shows many of the same results in a much more pleasurable way.
+
+
+
+
+                                                                                        8
+                                                                Hyd rat io n Shel l o f C u 2 +
+
+
+
+
+    4.5
+
+
+
+
+          1CBJ
+    4.0
+
+
+
+
+                                   2nd
+                 1SXA, 1SXC
+    3.5
+
+
+
+
+    3.0
+
+
+
+
+    2.5
+
+
+
+
+                                   1st
+    2.0
+
+
+
+
+                                                                   P DB S t r uct ur e s
+
+
+
+
+Figure 5: Distance O-Cu between the oxygen atom of the water molecule and the copper ion, in all 3D structures obtained from the PDB
+
+
+
+
+                                                                                                                                       9
+19
+

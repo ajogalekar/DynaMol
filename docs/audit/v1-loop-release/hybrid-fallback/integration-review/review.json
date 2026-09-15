@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "integration_seams_identified_not_default_admission",
+  "scope": "bounded read-only source review; no scientific jobs, imports, app edits or acceptance of archived results",
+  "sources": [
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/preparation_worker.py",
+      "sha256": "1cbcce4f7a2f6b985c589c3b85586e4c72e28f65b03e0324335427373b8d71a8"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/promod_loop_worker.py",
+      "sha256": "157c4f977837d5af3068b28bffbd0e1555743efeec9f601423d9209963898193"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/loop_modeling.py",
+      "sha256": "a539066c060d96a2d5250dc942d32b718bc6fa4cf133d1e25b2aaab6c765f166"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/loop_refinement.py",
+      "sha256": "f6d681ac57005c7981ed6ef54d64701dee21999667db213a585a8013ab5b8b23"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/loop_search.py",
+      "sha256": "d13a15585b5aaeda7c609ccfe864efdd5a01a532cfd01abee1a82a7a859aabbf"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/prepared_system.py",
+      "sha256": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/ligands.py",
+      "sha256": "6c0e14a37dd314718b69390a145757cf9488c20b0e5c249de728b4f1cfe3a695"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/backend/worker.py",
+      "sha256": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/validate_complete_candidate.py",
+      "sha256": "92047f62100180bda610414609e263a92895d7162fa92530440776170787d3d4"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/context_integrity.py",
+      "sha256": "083f948b5c282dac4ce5d07118707c4e3485275b8ee6370dbe4006cc6d1db6f2"
+    },
+    {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/v1-loop-release/hybrid-fallback/native_mc_adapter.py",
+      "sha256": "af65d382c8c74ace1847e0cb448bf85492ad2f45f9dc65c6d8719ca06bcfe993"
+    }
+  ],
+  "report_sha256": "204e520dee5c9945759a4765775a19dc86245f002a1e80602a55e315e2229a16",
+  "recommended_seam": "PreparationWorker after immutable heavy scaffold, around complete candidate assembly/validation; final publication outside search",
+  "default_app_ready": false,
+  "scientific_jobs_run": false,
+  "code_edits": false
+}

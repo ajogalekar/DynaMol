@@ -1,0 +1,174 @@
+{
+  "artifacts": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 7114,
+      "sha256": "d7c334da38545429be83792f7e7c8b658e73c9164f1d1237e7b105ebb45e40b7"
+    },
+    {
+      "path": "author-final-REVIEW.md",
+      "bytes": 5843,
+      "sha256": "7e4d7bd8473bbf7225c93453231e674954efbdf7ef420c7dc22745ec618826d3"
+    },
+    {
+      "path": "author-final-artifact-manifest.json",
+      "bytes": 1511,
+      "sha256": "e9ac65926cecbf1c29c74c4e98a7134ef8135441a26b7815164e10fe1e175c88"
+    },
+    {
+      "path": "author-final-verification.json",
+      "bytes": 184,
+      "sha256": "6c68ef6606d881b8fa5bc640e96ebda21d0bbc78291b05d64bd244b32d7cc28f"
+    },
+    {
+      "path": "candidate-v1/actual-parent-refusal.json",
+      "bytes": 428,
+      "sha256": "ca5880c24c98cfd63f8d40550fa4d001acd811f08a6f5114a0d34b659cfc8716"
+    },
+    {
+      "path": "candidate-v1/bytecode-read-stop.json",
+      "bytes": 502,
+      "sha256": "b87ad587af69bfcc9b914f9757cfed8282a2d76c22e66dc2a547eca0718c373e"
+    },
+    {
+      "path": "candidate-v1/check_actual_refusal.py",
+      "bytes": 1204,
+      "sha256": "f322376b1425f619e164300089749e7d8e66d55fc79ca9b4c4e33e13e281bd35"
+    },
+    {
+      "path": "candidate-v1/materialize_6oim_recovery_esp.py",
+      "bytes": 28562,
+      "sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2"
+    },
+    {
+      "path": "candidate-v1/read_6oim_cold_resp_evidence.py",
+      "bytes": 25984,
+      "sha256": "b94c08c2ccc9c92e81842c5a3eab5c5a4cbda079eda951e7b799c7ee727f4bff"
+    },
+    {
+      "path": "candidate-v1/recovery_cold_evidence_core.py",
+      "bytes": 12678,
+      "sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187"
+    },
+    {
+      "path": "candidate-v1/test_materialize_6oim_recovery_esp.py",
+      "bytes": 17971,
+      "sha256": "cac71b1fea9b29e62a3f4909504aa83af64362fed1a7d8e16b37c95795a1b914"
+    },
+    {
+      "path": "candidate-v1/test_read_6oim_cold_resp_evidence.py",
+      "bytes": 23325,
+      "sha256": "36ef7bdfc543377db1629560393275c7ae25c1082df9a7ea9f70e227e563b0d9"
+    },
+    {
+      "path": "candidate-v1/tests.log",
+      "bytes": 3525,
+      "sha256": "4f066daf3c1f081424fa85a30cd85a20b7098cefcb360c0978c45379a47875ee"
+    },
+    {
+      "path": "candidate-v2/REVIEW.md",
+      "bytes": 5865,
+      "sha256": "4be894916f30fe32d6acf763c5c29bdeb138832f10a0bf2ec555d51179a89ab2"
+    },
+    {
+      "path": "candidate-v2/actual-parent-refusal.json",
+      "bytes": 416,
+      "sha256": "8583b939cdb3119378ef1d93a7da64dea8d2de180622f423825c956e0837e437"
+    },
+    {
+      "path": "candidate-v2/artifact-manifest.json",
+      "bytes": 1511,
+      "sha256": "97ee259ab4c50abc83f449e6bc5be9f25ab53bbcbff9a75f372fa9d776e4ddcb"
+    },
+    {
+      "path": "candidate-v2/audit.json",
+      "bytes": 1011,
+      "sha256": "6398cd8697c06505c209c4b613e2ff69f314ec41ab684264a24dfd27d9fd8015"
+    },
+    {
+      "path": "candidate-v2/check_actual_refusal.py",
+      "bytes": 1204,
+      "sha256": "f322376b1425f619e164300089749e7d8e66d55fc79ca9b4c4e33e13e281bd35"
+    },
+    {
+      "path": "candidate-v2/materialize_6oim_recovery_esp.py",
+      "bytes": 28562,
+      "sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2"
+    },
+    {
+      "path": "candidate-v2/read_6oim_cold_resp_evidence.py",
+      "bytes": 26076,
+      "sha256": "955fe3cdba694142464c738c014ee9f5b66f29303908e449127df373e54e5325"
+    },
+    {
+      "path": "candidate-v2/recovery_cold_evidence_core.py",
+      "bytes": 12678,
+      "sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187"
+    },
+    {
+      "path": "candidate-v2/resources-only.diff",
+      "bytes": 858,
+      "sha256": "1782b3d9a180d329ab079f4d25f1a99413b2bbe3e23c26fc6936471fb5f9d3c4"
+    },
+    {
+      "path": "candidate-v2/test_materialize_6oim_recovery_esp.py",
+      "bytes": 17971,
+      "sha256": "cac71b1fea9b29e62a3f4909504aa83af64362fed1a7d8e16b37c95795a1b914"
+    },
+    {
+      "path": "candidate-v2/test_read_6oim_cold_resp_evidence.py",
+      "bytes": 24915,
+      "sha256": "5b0bd7fae0f0cf0abbf34fd8b1aa5bd2607b2e13e7f8af02c8d419be8cdf7793"
+    },
+    {
+      "path": "candidate-v2/tests.log",
+      "bytes": 3681,
+      "sha256": "1a61ca09a90f3fa5bff775a395c48a37c66e416bbbb04a92537c517c74e87650"
+    },
+    {
+      "path": "independent-v1-tests.json",
+      "bytes": 4282,
+      "sha256": "ffa3eaed47981392f2ce2b3cb06bb6e12fefa0171813ac3735548df9ed22bc7d"
+    },
+    {
+      "path": "independent-v2-tests.json",
+      "bytes": 4465,
+      "sha256": "e1bb74645d92415ced40f516fce1421aae39d98a0e10ed3afb836212f1ee0e55"
+    },
+    {
+      "path": "observed-failed-parent-controller.json",
+      "bytes": 1212,
+      "sha256": "ab835bd6145b258ea2ca359be2c785ec8a829e451dc412133f4722cb678d3c3e"
+    },
+    {
+      "path": "pending-refusal-precondition-stopped.json",
+      "bytes": 316,
+      "sha256": "c4db4122b2a1fc1330701df94d83281396e64fec5c7232620caec0f449ce2ae8"
+    },
+    {
+      "path": "review-checks-before-parent-terminal.py",
+      "bytes": 4670,
+      "sha256": "831f4a3d5405159b31466dbaf5be2d94df70c013684e7135e3ad70ad80fb9c59"
+    },
+    {
+      "path": "review-checks.json",
+      "bytes": 1649,
+      "sha256": "645dcb29a58027983788e42eaab6fe3dd035d7fd7a6e9286213985451a89951a"
+    },
+    {
+      "path": "review.json",
+      "bytes": 1598,
+      "sha256": "46bc2ef9117ea88484a4730f332708ab021e4d7c70bb0b7d0af74149bdf23ee9"
+    },
+    {
+      "path": "review_checks.py",
+      "bytes": 4915,
+      "sha256": "3d2a0c86e4ccf4a175e5359cd25f0dea3602909d5883a1decd5c58e33ec63c31"
+    },
+    {
+      "path": "v2-delta.json",
+      "bytes": 432,
+      "sha256": "7f80f063a984bd7f23828220e6528a4b8b8fc212d1e98bb03766613c6e60bcc4"
+    }
+  ]
+}

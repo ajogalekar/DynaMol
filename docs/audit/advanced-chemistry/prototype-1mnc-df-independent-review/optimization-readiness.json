@@ -1,0 +1,69 @@
+{
+  "status": "model_boundary_choice_required_before_constrained_request",
+  "launch_ready": false,
+  "native_request": "Original MCPB small-model Gaussian/GAMESS optimization is unconstrained; no cap-freeze list is inherited.",
+  "verified_cap_carbons_at_original_CA": [
+    {
+      "atom_id": "cap:small:15:CH3",
+      "source_atom_id": "A:218::HID:CA",
+      "coords_angstrom": [
+        4.14,
+        27.893,
+        18.067
+      ]
+    },
+    {
+      "atom_id": "cap:small:54:CH3",
+      "source_atom_id": "A:222::HID:CA",
+      "coords_angstrom": [
+        6.266,
+        34.295,
+        20.187
+      ]
+    },
+    {
+      "atom_id": "cap:small:92:CH3",
+      "source_atom_id": "A:228::HID:CA",
+      "coords_angstrom": [
+        -0.516,
+        35.447,
+        15.745
+      ]
+    }
+  ],
+  "remaining_native_cap_atoms": [
+    "cap:small:13:H1",
+    "cap:small:16:H2",
+    "cap:small:17:H3",
+    "cap:small:52:H1",
+    "cap:small:55:H2",
+    "cap:small:56:H3",
+    "cap:small:90:H1",
+    "cap:small:93:H2",
+    "cap:small:94:H3"
+  ],
+  "candidate_only_not_selected": "Freezing only the three cap carbons would preserve their source CA positions while allowing methyl H relaxation, but is a new constrained-cluster approximation. Freezing all twelve cap atoms adds a different constraint and would preserve unrelaxed native H guesses. Neither policy is silently selected.",
+  "specified_model": {
+    "Zn281": "Zn(II), closed-shell singlet",
+    "His218/222/228": "HID; NE2 unprotonated",
+    "PLH280": "hydroxamate candidate: O1 deprotonated (-1), N1 remains protonated",
+    "basis": "explicit model hypothesis, not a state inferred from neutral CCD or distances",
+    "cluster_charge": 1,
+    "spin_2S": 0
+  },
+  "required_decisions": [
+    "Select and document unconstrained versus exact cap-freeze policy; do not infer it from native input.",
+    "Define geometry/coordination/stereochemistry and cap-displacement diagnostics before optimization; convergence alone is not model acceptance.",
+    "Specify accepted treatment of missing nonlocal protein/electrostatic environment and full-PLH relaxation for this isolated model.",
+    "Choose and freeze numerical convergence/resource limits and subsequent exact-gradient verification; the measured initial-geometry DF error is not an endpoint guarantee."
+  ],
+  "later_unfinished_stages": [
+    "Converged, checked optimized geometry",
+    "Hessian and parameter extraction/diagnostics",
+    "Larger-cluster ESP/RESP",
+    "Other structural Zn and Ca models",
+    "Full-complex parameter mapping and native energy/force validation",
+    "Unrestrained motion evaluation"
+  ],
+  "optimization_or_hessian_launched_by_review": false
+}

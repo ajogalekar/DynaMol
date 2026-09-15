@@ -1,0 +1,20 @@
+{
+  "runtime_manifest_sha256": "91a060defde8a3506861dffbb5277a4672bbfd041208c2cbbfeedb66dfe0c1b9",
+  "runtime_file_inventory_sha256": "683b958788605f35ce2fc9a5b7ac94edb03f5316bd0b166cfcb415ffaea1f416",
+  "pyscf_version": "2.14.0",
+  "numpy_version": "2.5.3",
+  "source_files": [
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/df/grad/rhf.py",
+      "sha256": "a52525f269974884b28846b55d021c169d430048e0755b55557480f733128735",
+      "retained_copy": "/Users/ashujo/.cache/dynamol-research/df-gradient-contraction-candidate-v1/reference-sources/df-gradient-rhf.py",
+      "matches_frozen_runtime_inventory": true
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/lib/python3.12/site-packages/pyscf/lib/numpy_helper.py",
+      "sha256": "5019bf81945ec5b8dee863623cf8d8fe9e68b64a416009413f74635bc6673ad2",
+      "retained_copy": "/Users/ashujo/.cache/dynamol-research/df-gradient-contraction-candidate-v1/reference-sources/numpy_helper.py",
+      "matches_frozen_runtime_inventory": true
+    }
+  ]
+}

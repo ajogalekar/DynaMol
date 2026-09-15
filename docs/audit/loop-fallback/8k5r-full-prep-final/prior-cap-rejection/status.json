@@ -1,0 +1,73 @@
+{
+  "id": "8f00a0888f00a088",
+  "name": "8K5R \u00b7 chain A \u00b7 prepared",
+  "engine": "preparation",
+  "status": "failed",
+  "stage": "Preparation failed",
+  "progress": 85.71428571428571,
+  "completed_steps": 6,
+  "total_steps": 7,
+  "elapsed_seconds": 28.8,
+  "logs": [
+    "Inspecting original sequence evidence and current first-frame coordinates.",
+    "Explicitly removed 0 existing hydrogens before pH reassignment, 0 water heavy atoms, and 0 other heavy atoms.",
+    "Building 4 sequence-supported loop(s), 17 residues. Trying bounded local reconstruction methods; modeled geometry will be checked before saving.",
+    "Finding fragment candidates for missing loops\u2026",
+    "Searching with one neighboring residue of context (3 gaps remaining)\u2026",
+    "Added 137 heavy/terminal atoms across existing residues and 4 rebuilt internal segment(s).",
+    "Resolving ligand chemistry while preserving bound heavy-atom coordinates.",
+    "antechamber: ligand-6a0d5c5feaa3",
+    "parmchk2: ligand-6a0d5c5feaa3",
+    "tleap: ligand-6a0d5c5feaa3",
+    "Bounded steric chi sampling accepted 3 lower-overlap angle changes across 200 examined residues.",
+    "Added 2679 hydrogens at requested pH 7; actual residue states and bonded-H inventories are recorded.",
+    "Local relaxation stage complete.",
+    "Relaxing modeled atoms with observed heavy atoms fixed; if needed, one bounded attempt may relax immediate protein flanks under restraints (at most 1,000 iterations per attempt).",
+    "ERROR: Local loop-flank relaxation exceeded the 1 \u00c5 heavy-atom movement limit (1.46 \u00c5). No prepared model was accepted; supply a repaired structure."
+  ],
+  "config": {
+    "name": "8K5R \u00b7 chain A \u00b7 prepared",
+    "ph": 7.0,
+    "add_missing_atoms": true,
+    "build_missing_residues": true,
+    "optimize_sidechains": true,
+    "remove_waters": true,
+    "remove_heterogens": false,
+    "ligand_overrides": {},
+    "seed": 2026,
+    "dataset_id": "5575d78b7b6b4ea7",
+    "ligand_actions": {},
+    "complex": true,
+    "modified_residues": [
+      {
+        "chain": "A",
+        "resid": "186",
+        "insertion_code": "",
+        "residue": "TPO",
+        "name": "Phosphothreonine",
+        "parent_residue": "THR",
+        "template": "TPO",
+        "formal_charge": -2,
+        "forcefield": "phosaa14SB",
+        "ph": 7.0,
+        "protonation_note": "Fixed dianionic phosphate (-2 e) from the published phosaa14SB TPO template. Requested pH 7 does not calculate or change its protonation state; review bound-state chemistry.",
+        "missing_heavy_atoms": [],
+        "external_bonds": [
+          [
+            "N",
+            "C"
+          ],
+          [
+            "C",
+            "N"
+          ]
+        ],
+        "supported": true
+      }
+    ],
+    "operation": "prepare"
+  },
+  "created_at": "2026-09-13T06:05:49.811930+00:00",
+  "worker_pid": null,
+  "error": "Local loop-flank relaxation exceeded the 1 \u00c5 heavy-atom movement limit (1.46 \u00c5). No prepared model was accepted; supply a repaired structure."
+}

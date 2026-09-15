@@ -1,0 +1,10 @@
+[
+  {
+    "archive_member": "toppar/drude/drude_toppar_2023.tgz",
+    "archive_sha256": "fe1c3204a5775781ccabacb1ed6c6c2026deb52cd0c43216f89108d879036f1a",
+    "source_file": "drude_toppar_2023/toppar_drude_model_2023a.str",
+    "source_sha256": "546d3fa4eec5e2f53bed2934b530e82d62e2f75aa5c1908b4f338651850330ac",
+    "body": "\n\nRESI SO4          -2.000 ! Sulfate ion\nGROUP\nATOM S    SD1A     2.000  ALPHA -0.930  THOLE 1.098 !           OS2(-1)\nATOM OS1  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !            |\nATOM OS2  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 ! (-1) OS2--S(+2)--OS4 (-1)\nATOM OS3  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !           ||\nATOM OS4  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !           OS1\n\nBOND S  OS1  S  OS2  S  OS3  S  OS4\nIC   OS1   S     OS2   OS3         0.0000    0.00    0.00    0.00   0.0000\nIC   OS2   OS1   *S    OS3         0.0000    0.00   90.00    0.00   0.0000\nIC   OS2   OS1   *S    OS4         0.0000    0.00  180.00    0.00   0.0000\nPATCH FIRST NONE LAST NONE\n",
+    "explicit_polarizability": true
+  }
+]

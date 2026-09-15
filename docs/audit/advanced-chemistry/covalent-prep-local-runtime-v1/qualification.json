@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "qualified_for_scoped_preparation",
+  "runtime": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1",
+  "python_executable": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1/bin/python",
+  "required_sys_prefix": "/Users/ashujo/.cache/dynamol-runtimes/covalent-prep-local-v1",
+  "python_version": "3.12.13",
+  "resolved_interpreter": "/Users/ashujo/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/bin/python3.12",
+  "resolved_interpreter_sha256": "f1c4ad59c4adf1e5dfb5e9f558f7b95e4d7a62387d4bb4572fcf84f42648fee3",
+  "package_versions": {
+    "numpy": "2.4.6",
+    "rdkit": "2025.9.6",
+    "parmed": "4.3.1",
+    "pillow": "12.3.0"
+  },
+  "inventory_path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/runtime-files.json",
+  "inventory_sha256": "2948f0700c2a0f308aaecdf26565ff5fc45e28513ec82d2178dbd856e34faeba",
+  "inventory_file_count": 2180,
+  "inventory_symlink_count": 3,
+  "inventory_total_bytes": 173660795,
+  "scientific_source_payload_declarations_match": true,
+  "original_payload_files_rehydrated_and_rehashed": false,
+  "original_METADATA_and_WHEEL_byte_identical": true,
+  "entrypoint_record_differences": 3,
+  "local_record_hashes_and_sizes_verified": true,
+  "all_original_metadata_obtained": true,
+  "package_record_comparison_path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/record-comparison.json",
+  "package_record_comparison_sha256": "30fbb6471a348206a2f768ad35f09b97c7f0786332e7f3f863bb31ea25165596",
+  "checks_path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/checks.json",
+  "checks_sha256": "43e3cb50b2b4d0789473a439075670ed7bb35c281cb110e8e3e0078c29639e07",
+  "import_observations_path": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/import-observations.json",
+  "import_observations_sha256": "cda168cd55be53b0c5647745d50c78599b148a14d52bd4f36a3b113a2d727212",
+  "imported_package_file_count": 223,
+  "loaded_user_native_library_count": 92,
+  "loaded_paths_outside_Documents": true,
+  "no_dataless_runtime_files": true,
+  "check_geometry_original_source_sha256": "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3",
+  "check_geometry_ast_sha256": "d3586ad68e5d5a696ae522d1b62136f65af0d1005a14948e3e864f52f784b1cc",
+  "canonical_cap_source_sha256": {
+    "capped-adduct.json": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+    "capped-adduct.sdf": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+    "resp/constraints.json": "7e19a5ae0c40cf3bec67fbce7b2cbf55b293722cf3212f16e0f53af0164ca1b7"
+  },
+  "operations_qualified": [
+    "RDKit SMILES/SDF parsing, sanitization, identity, formal charge and stereochemistry checks",
+    "Exact frozen original check_geometry function on canonical source geometry with explicitly synthetic in-memory accepted/converged flags",
+    "Six geometry rejection branches",
+    "ParmEd small MOL2 and Amber restart parsing",
+    "Pillow small image roundtrip"
+  ],
+  "not_qualified": [
+    "Actual accepted quantum endpoint or optimizer convergence",
+    "RESP fitting or executable compatibility",
+    "Force-field correctness/transferability",
+    "General preparation of arbitrary complexes",
+    "Portable distribution of the shared external uv interpreter"
+  ],
+  "actual_accepted_parent_endpoint": false,
+  "quantum_evaluations": 0,
+  "fitting_operations": 0,
+  "runtime_package_files_modified": false,
+  "requires_root_review_before_materializer_launch": true,
+  "admission_requirements": [
+    "Use the exact stable interpreter prefix and verify interpreter/runtime inventory hashes.",
+    "Verify this artifact and the referenced checks/import/source/cap hashes before using the materializer.",
+    "Retain independent actual-parent acceptance, input/result/request binding, geometry and RESP-provider gates; these runtime tests satisfy none of those outcome gates."
+  ]
+}

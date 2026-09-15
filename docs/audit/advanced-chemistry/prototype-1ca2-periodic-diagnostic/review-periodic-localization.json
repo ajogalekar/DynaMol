@@ -1,0 +1,190 @@
+{
+  "created_utc": "2026-09-13T18:18:05.284905+00:00",
+  "scope": "Three fresh nsteps=0 static evaluations of the exact same pre-existing TPR; no MD/QM, model edits, arbitrary offsets, or backend changes.",
+  "absolute_periodic_energy_parity_validated": false,
+  "finding": "Thread-sensitive direct-space Coulomb energy dominates this numerical discrepancy. A reciprocal-mesh-only explanation is contradicted by the component and thread comparisons. The exact residual cause has not been isolated to a particular accumulation operation.",
+  "tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+  "openmm_reference_energy_kj_mol": -429191.2916377305,
+  "cases": [
+    {
+      "case": "SIMD, 2 threads (original)",
+      "coulomb_sr_kj_mol": -565328.5,
+      "coulomb_reciprocal_kj_mol": 3961.899902,
+      "potential_kj_mol": -429166.65625,
+      "potential_minus_openmm_reference_kj_mol": 24.635387730493676,
+      "max_abs_coordinate_difference_from_original_nm": 0.0,
+      "max_abs_box_difference_from_original_nm": 0.0,
+      "max_abs_coordinate_difference_from_openmm_nm": 0.0,
+      "force_rms_vector_difference_from_openmm_kj_mol_nm": 0.00590121748068261,
+      "force_max_vector_difference_from_openmm_kj_mol_nm": 0.02429920588172292,
+      "force_rms_vector_difference_from_original_kj_mol_nm": 0.0,
+      "trajectory": "matched-mesh/diagnostic.trr",
+      "trajectory_sha256": "4f1d6853dfd9e1150f943d1a2c97532ccb9b11b0c07c365f51e0f01cd5d66895",
+      "energy_file": "matched-mesh/native-initial.xvg",
+      "energy_file_sha256": "066366dfea03ebe0ef67aa2bbff28007869d2b03cead59cee10c2564097e2d10"
+    },
+    {
+      "case": "SIMD, 1 thread",
+      "coulomb_sr_kj_mol": -565370.0625,
+      "coulomb_reciprocal_kj_mol": 3961.695801,
+      "potential_kj_mol": -429208.375,
+      "potential_minus_openmm_reference_kj_mol": -17.083362269506324,
+      "max_abs_coordinate_difference_from_original_nm": 0.0,
+      "max_abs_box_difference_from_original_nm": 0.0,
+      "max_abs_coordinate_difference_from_openmm_nm": 0.0,
+      "force_rms_vector_difference_from_openmm_kj_mol_nm": 0.005899021468043002,
+      "force_max_vector_difference_from_openmm_kj_mol_nm": 0.024278534778175948,
+      "force_rms_vector_difference_from_original_kj_mol_nm": 0.00017457361413037857,
+      "trajectory": "independent-review/thread-1/single.trr",
+      "trajectory_sha256": "515b76f8f0ae1e37a02e7250106fa7ab1d489234881186f143fbf4dd0ffcd57f",
+      "energy_file": "independent-review/thread-1/energy.xvg",
+      "energy_file_sha256": "746e2fc2d72792f94f9049ebd1b3495d20bcbd544638a4914b06eeab4fa9fc45"
+    },
+    {
+      "case": "SIMD, 2 threads (repeat)",
+      "coulomb_sr_kj_mol": -565328.5,
+      "coulomb_reciprocal_kj_mol": 3961.899902,
+      "potential_kj_mol": -429166.65625,
+      "potential_minus_openmm_reference_kj_mol": 24.635387730493676,
+      "max_abs_coordinate_difference_from_original_nm": 0.0,
+      "max_abs_box_difference_from_original_nm": 0.0,
+      "max_abs_coordinate_difference_from_openmm_nm": 0.0,
+      "force_rms_vector_difference_from_openmm_kj_mol_nm": 0.005900454083581062,
+      "force_max_vector_difference_from_openmm_kj_mol_nm": 0.024294919340349844,
+      "force_rms_vector_difference_from_original_kj_mol_nm": 0.0001645556451216666,
+      "trajectory": "independent-review/thread-2-repeat/repeat.trr",
+      "trajectory_sha256": "32dd2dd1008edd2d434c5e45d46701de823f2e6a7761b8637221f02089612fc4",
+      "energy_file": "independent-review/thread-2-repeat/energy.xvg",
+      "energy_file_sha256": "4dd9f99de5fac5d576790df23ae2a0eeffef580efd48d698fefa021da4f0dde7"
+    },
+    {
+      "case": "Plain C, 2 threads",
+      "coulomb_sr_kj_mol": -565326.5,
+      "coulomb_reciprocal_kj_mol": 3961.901367,
+      "potential_kj_mol": -429164.71875,
+      "potential_minus_openmm_reference_kj_mol": 26.572887730493676,
+      "max_abs_coordinate_difference_from_original_nm": 0.0,
+      "max_abs_box_difference_from_original_nm": 0.0,
+      "max_abs_coordinate_difference_from_openmm_nm": 0.0,
+      "force_rms_vector_difference_from_openmm_kj_mol_nm": 0.00589468209954466,
+      "force_max_vector_difference_from_openmm_kj_mol_nm": 0.02256321157371261,
+      "force_rms_vector_difference_from_original_kj_mol_nm": 0.0012901680573263463,
+      "trajectory": "independent-review/scalar-thread-2/scalar.trr",
+      "trajectory_sha256": "a9c84935de130008d88f7167104f1ab2766cfda0d6d847907604fd0380acf56f",
+      "energy_file": "independent-review/scalar-thread-2/selected-energy.xvg",
+      "energy_file_sha256": "dde886effe2f161261e7e3ed167f8520281c9458052ef7b8920900bb869029bc"
+    }
+  ],
+  "reciprocal_bookkeeping_estimate": {
+    "N": 34414,
+    "charge_sum": -1.012380435294613e-05,
+    "squared_charge_sum": 11020.033199656813,
+    "Eself_kj_mol": 2841386.045346052,
+    "raw_OpenMM_recip": 3962.08349609375,
+    "saved_Gmx_recip": 3961.899902,
+    "raw_recip_difference": -0.18359409365803003
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme-solve.cpp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/long_range_correction.cpp",
+      "file": "long_range_correction.cpp",
+      "sha256": "3f5d34590faf492a17d4934bf26cb160ac9822fc012cbc9ccf4739e79869d328",
+      "bytes": 9380,
+      "retrieved_at": "2026-09-13T18:09:27.820663+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/mdlib/forcerec.cpp",
+      "file": "forcerec.cpp",
+      "sha256": "6a46d53b0c76a34068aff7289ca0bbdd501d6775b9df4b89a2b511a7c5e317b9",
+      "bytes": 43529,
+      "retrieved_at": "2026-09-13T18:09:27.997862+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/mdlib/calc_verletbuf.cpp",
+      "file": "calc_verletbuf.cpp",
+      "sha256": "dbead1da3f47da136858584dc47949c6f332453ee70172ccda7299c352da02b4",
+      "bytes": 74493,
+      "retrieved_at": "2026-09-13T18:09:28.197625+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "pme_solve.cpp",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme_solve.cpp",
+      "sha256": "81278bec38096b457d566352e8fc02608e77a772118d72fd964a97e3f5476005",
+      "bytes": 30729,
+      "retrieved_at": "2026-09-13T18:10:28.194597+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "pme_gather.cpp",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme_gather.cpp",
+      "sha256": "41bf471e497cc2f784deed815fb46f51d63e920984d39a3f8a3acf46acefa66a",
+      "bytes": 16726,
+      "retrieved_at": "2026-09-13T18:10:28.385342+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "pme_internal.h",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/pme_internal.h",
+      "sha256": "927fbf407d7496518632f86c2e8c714c8a2a4971749c185a05f474d844c55daa",
+      "bytes": 18349,
+      "retrieved_at": "2026-09-13T18:10:28.551420+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "ewald_utils.cpp",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/ewald/ewald_utils.cpp",
+      "sha256": "b28e959d68ba6d9b6b327ff9bf37e58b86f74fabc36b84b9d5dfb79449de5e52",
+      "bytes": 3071,
+      "retrieved_at": "2026-09-13T18:10:28.722026+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "nbnxm_setup.cpp",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/nbnxm_setup.cpp",
+      "sha256": "da3ff1cc3e8e2ab943fae2623fe516697591addc7baf9afd281e8fc51d2448cd",
+      "bytes": 25837,
+      "retrieved_at": "2026-09-13T18:13:30.812743+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "simd_energy_accumulator.h",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_energy_accumulator.h",
+      "sha256": "c4fd891a9ab1460746fb9b2612af843e9df66ab8874f5ad432800c90517967e3",
+      "bytes": 20443,
+      "retrieved_at": "2026-09-13T18:13:30.992412+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "simd_energy_accumulator.cpp",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_energy_accumulator.cpp",
+      "sha256": "ae6a3379dedf169aacf596007b26cdee262892a30a1989c260220d19bb676ce6",
+      "bytes": 7297,
+      "retrieved_at": "2026-09-13T18:13:31.165875+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "simd_kernel.h",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_kernel.h",
+      "sha256": "72a0fbc1344757e6817d1e91e980c9f29371557be6b79a58212e6f9541072858",
+      "bytes": 21902,
+      "retrieved_at": "2026-09-13T18:13:31.335701+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    },
+    {
+      "file": "simd_coulomb_functions.h",
+      "url": "https://raw.githubusercontent.com/gromacs/gromacs/v2025.4/src/gromacs/nbnxm/simd_coulomb_functions.h",
+      "sha256": "72c324079e4d7e337142f44196a27d98c7d3260e1b6c831c98cde4184abb957f",
+      "bytes": 15453,
+      "retrieved_at": "2026-09-13T18:13:31.512798+00:00",
+      "license": "LGPL-2.1-or-later per source header"
+    }
+  ],
+  "next_discriminator": "If further absolute-energy parity is required, repeat these static inputs using a pinned double-precision GROMACS build with the same settings and compare direct-space components and forces. This has not been run."
+}

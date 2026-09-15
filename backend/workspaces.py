@@ -128,7 +128,7 @@ def _validate_state(state: dict, dataset: dict | None = None, physical_path: Pat
     result["camera"] = camera
     for field, allowed, default in (
         ("representation", {"cartoon", "ball+stick", "licorice", "surface"}, "cartoon"),
-        ("color_scheme", {"chain", "residue", "element"}, "residue"),
+        ("color_scheme", {"chain", "residue", "element"}, "element"),
         ("measure_kind", {"distance", "angle", "dihedral", "hbond"}, "distance"),
     ):
         value = state.get(field, default)

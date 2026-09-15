@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "status": "completed",
+  "phase": "completed",
+  "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "1a571b97caaa8f700ba0312bd831328867ffe0b4a755dd24a6df0b37f0b2d85b",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "runtime_manifest": {
+    "present": false
+  },
+  "optimization": {
+    "requested": false,
+    "converged": null,
+    "settings": {
+      "enabled": false,
+      "max_steps": 100,
+      "freeze_atom_ids": [],
+      "dihedral_constraints": [],
+      "dihedral_tolerance_degrees": 0.1,
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": []
+  },
+  "scf": {
+    "converged": true,
+    "cycles": 8,
+    "max_cycles": 100,
+    "conv_tol_hartree": 1e-10,
+    "conv_tol_grad": 1e-07
+  },
+  "energy_hartree": -74.96361400530564,
+  "atom_ids": [
+    "water/O",
+    "water/H1",
+    "water/H2"
+  ],
+  "elements": [
+    "O",
+    "H",
+    "H"
+  ],
+  "requested_threads": 2,
+  "actual_pyscf_threads": 1,
+  "charge": 0,
+  "spin_2S": 0,
+  "explicit_electron_count": 10,
+  "density_electron_count": 9.999999999999998,
+  "nao": 7,
+  "method": {
+    "method": "RHF",
+    "basis_requested": "sto-3g",
+    "ecp_requested": null,
+    "basis_sha256": "20ecc80f30bc2f269c85b01c4996643bb068087722a2c54829a5ce6d549c9849",
+    "ecp_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "spherical_basis": true,
+    "symmetry": false,
+    "density_fit": false,
+    "functional_requested": null,
+    "grid_level": null,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "resolved_method_file": "resolved-method.json",
+  "resolved_method_file_sha256": "e5bf669d0b3fc54081fa9bb437010635ec8e438667aebbfdc2de433abad41289",
+  "arrays_file": "arrays.npz",
+  "arrays_sha256": "a2715fca18ce4de35153e11c58bce16d1a198fcce6efa72be612f59cab38c73b",
+  "checkpoint_file": "scf.chk",
+  "checkpoint_sha256": "e7921c713bc6c0bbaffe619628f8bc117be0a36e5867df3c9907d86f13c65a7d",
+  "arrays": {
+    "coords_bohr": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "coords_angstrom": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "atomic_numbers": {
+      "shape": [
+        3
+      ],
+      "dtype": "int64"
+    },
+    "effective_nuclear_charges": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "gradient_hartree_per_bohr": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "units": {
+    "energy": "hartree",
+    "coords_bohr": "bohr",
+    "coords_angstrom": "angstrom",
+    "gradient_hartree_per_bohr": "hartree/bohr",
+    "hessian_hartree_per_bohr2": "hartree/bohr^2",
+    "esp_points_bohr": "bohr",
+    "esp_hartree_per_e": "hartree/e",
+    "effective_nuclear_charges": "e",
+    "bohr_to_angstrom": 0.52917721092,
+    "bohr_constant_source": "pyscf.lib.param.BOHR"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "pyscf": "2.14.0",
+    "numpy": "2.5.3",
+    "geometric": "1.1.1",
+    "libxc": "7.0.0"
+  },
+  "elapsed_seconds": 0.574244
+}

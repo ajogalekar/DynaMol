@@ -1,0 +1,16 @@
+[
+  {
+    "reader": "amber_native_reader",
+    "energy_kj_mol": 15807776520.556595,
+    "difference_from_gromacs_kj_mol": 15807603565.00972,
+    "maximum_force_difference_kj_mol_nm": 18384296.47861938,
+    "rms_force_difference_kj_mol_nm": 1453040.5882479334
+  },
+  {
+    "reader": "gromacs_export_reader",
+    "energy_kj_mol": 15807776520.55589,
+    "difference_from_gromacs_kj_mol": 15807603565.009014,
+    "maximum_force_difference_kj_mol_nm": 18384296.4786235,
+    "rms_force_difference_kj_mol_nm": 1453040.5882482047
+  }
+]

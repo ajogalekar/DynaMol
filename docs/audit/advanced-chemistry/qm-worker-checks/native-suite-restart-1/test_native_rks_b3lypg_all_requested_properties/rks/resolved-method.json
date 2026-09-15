@@ -1,0 +1,46 @@
+{
+  "method": "RKS",
+  "basis_requested": "sto-3g",
+  "basis_resolved": {
+    "H": [
+      [
+        0,
+        [
+          3.42525091,
+          0.15432897
+        ],
+        [
+          0.62391373,
+          0.53532814
+        ],
+        [
+          0.1688554,
+          0.44463454
+        ]
+      ]
+    ]
+  },
+  "ecp_requested": null,
+  "ecp_resolved": {},
+  "basis_sha256": "a9bd21428d4e28fabbd987f0080ae0d16defeee0d1d15654e8ffd9b13d137118",
+  "ecp_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "spherical_basis": true,
+  "symmetry": false,
+  "density_fit": false,
+  "functional_requested": "B3LYPG",
+  "grid_level": 3,
+  "functional_resolved": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      [
+        402,
+        1
+      ]
+    ]
+  ],
+  "functional_resolved_sha256": "40781254e07d3bf318edfbc83beb321baa06bc9a7734e841177ca6baba147fe8"
+}

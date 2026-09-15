@@ -1,0 +1,204 @@
+{
+  "status": "unconverged_restart_geometry_review_complete",
+  "accepted_quantum_result": false,
+  "physical_acceptance": false,
+  "qm_launched": false,
+  "source_files_sha256": {
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/input.json": "791c72d01c3e7cf3410f799ec8e25e91ddeb34441cb0693a24e2b6452a1dd62e",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/resolved-input.json": "827eb36453d8aefe9d6774242f6250e2aa35c534280243fee7bdfcc96a3418ce",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/result.json": "a8bd61b38f6f0a01126be4b9c36fc77c43e836757f053f129fd950e84670014c",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/native.log": "f7452ca421521ef2ca3cc12ae2ec50d951ec9f8bf8142a99ab969c718c00c322",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/error-traceback.txt": "eda1d48d9156088ac2d0c6bb5ddf8bd56c1b7c8d454871f036e1d28260c48870",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/constraints.txt": "e2cb8f98fb2a780df3dadd34007927dc447ed45397c71b12bd9e29979c7d869e",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/initial-checkpoint/result.json": "9c686bf29bdaff182e9e269eee54e600afaba69e097bf817938a0e5d1bb2ca6c",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/controller.log": "1fda8394a6e88c248605dab17df4c4c04460186f6c14b5e6c26de8d619c02462",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/progress.json": "ac1dfe4406a4cbec7d8136c06505a047ce357e601dee8c07c3521ca1ccc65d9d",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/capped-adduct.json": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/capped-adduct.sdf": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+    "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/qm-parallel/lib/python3.12/site-packages/pyscf/geomopt/geometric_solver.py": "b622fe771962991d3fcf1d6f02f0e8653ce7cb98c0c85a43c212f7f6e630a94a"
+  },
+  "source_files_modified": false,
+  "rdkit_version_for_declared_stereo_checks": "2025.09.6",
+  "all_native_frames_checked": 58,
+  "first_frame_vs_source_max_component_difference_angstrom": 0.0,
+  "recommended_seed": "PySCF cycle 57 / geomeTRIC step 56, with five explicitly restored original frozen anchors",
+  "last_completed_energy_hartree": -2794.069392868668,
+  "last_completed_gradient_norm_hartree_per_bohr": 0.06657133813471844,
+  "last_geometric_step_line": "Step   56 : Displace = 3.525e-02/1.043e-01 (rms/max) Trust = 3.000e-01 (=) Grad_T = 2.205e-04/6.889e-04 (rms/max) E (change) = -2794.0693928687 (-6.040e-05) Quality = 1.135",
+  "remaining_convergence_failures_from_native_log": {
+    "energy_change_abs_hartree": {
+      "observed_rounded": 6.04e-05,
+      "threshold": 1e-06
+    },
+    "max_tangent_gradient_hartree_per_bohr": {
+      "observed_rounded": 0.0006889,
+      "threshold": 0.00045
+    },
+    "rms_displacement_angstrom": {
+      "observed_rounded": 0.03525,
+      "threshold": 0.0012
+    },
+    "max_displacement_angstrom": {
+      "observed_rounded": 0.1043,
+      "threshold": 0.0018
+    }
+  },
+  "temporary_native_trajectory_directory": "/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/tmp72tvhhle",
+  "temporary_native_trajectory_directory_present": false,
+  "trajectory_recovery_provenance": "PySCF numbered full-precision New geometry blocks, not a surviving native XYZ file. Pinned adapter source shows mol.set_geom_ preserving ordered atoms before each evaluation.",
+  "failed_checkpoint": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/scf.chk",
+    "size_bytes": 7641160,
+    "mtime_ns": 1789337438592561244,
+    "usable_checkpoint_not_established": true,
+    "read_probe": "Read-only 25-second original-runtime probe timed out without data; import/file-read stage not resolved. Further probes stopped per root instruction.",
+    "import_into_new_run": false,
+    "reason": "Failed worker result is unaccepted. No fabricated accepted checkpoint wrapper; fresh cold SCF required."
+  },
+  "initial_checkpoint_provenance": {
+    "accepted_as_initial_guess": true,
+    "source_result_sha256": "9c686bf29bdaff182e9e269eee54e600afaba69e097bf817938a0e5d1bb2ca6c",
+    "source_checkpoint_sha256": "40c754ed965023fac5fe81dc82f908478ba64cf4c17f89b9af77c214194d74a1",
+    "source_arrays_sha256": "931c9ec84a46d6853eb31ee5d7c330802c8b16f65d9596810f8d2dac67855669",
+    "source_resolved_method_sha256": "37a9a585ef4248d6dc6351c3c3776f064404ced891eb56c593bfd7b683fd40f7",
+    "source_worker_sha256": "0095cf57e00b3fcae5cdb7d3f6b85d61a3bf09e701178eddd88048bce9fb382c",
+    "source_energy_hartree": -2793.985517081721,
+    "energy_provenance": "Checkpoint e_tot matches the pinned accepted result; source energy is not recomputed here.",
+    "source_density_fit": true,
+    "requested_density_fit": true,
+    "maximum_coordinate_difference_bohr": 0.0,
+    "coordinate_tolerance_bohr": 1e-10,
+    "orbital_orthogonality_max_error": 1.3818773230340977e-12,
+    "density_electron_count": 388.00000000000006,
+    "copied_folder": "initial-checkpoint",
+    "source_files_modified": false,
+    "meaning": "Same-state same-geometry initial density only; requested SCF must independently converge.",
+    "requested_method_initial_scf_converged": true
+  },
+  "frozen_anchor_corrections": [
+    {
+      "atom_id": "000:ACE_CH3",
+      "recovered_angstrom": [
+        -1.862000001001,
+        -6.09599999857,
+        4.150999995693
+      ],
+      "restored_original_angstrom": [
+        -1.862,
+        -6.096,
+        4.151
+      ],
+      "correction_angstrom": [
+        1.0009999495963484e-09,
+        -1.4300001183187305e-09,
+        4.307000089909252e-09
+      ],
+      "norm_angstrom": 4.647273503029683e-09,
+      "interpretation": "Numerical native constraint residual, not merely 12-decimal text rounding. Explicit restoration to original exact frozen anchor."
+    },
+    {
+      "atom_id": "001:ACE_C",
+      "recovered_angstrom": [
+        -2.667999999727,
+        -4.86500000161,
+        3.736999996223
+      ],
+      "restored_original_angstrom": [
+        -2.668,
+        -4.865,
+        3.737
+      ],
+      "correction_angstrom": [
+        -2.730002890416472e-10,
+        1.6100001332119973e-09,
+        3.777000046056855e-09
+      ],
+      "norm_angstrom": 4.114894765929374e-09,
+      "interpretation": "Numerical native constraint residual, not merely 12-decimal text rounding. Explicit restoration to original exact frozen anchor."
+    },
+    {
+      "atom_id": "002:ACE_O",
+      "recovered_angstrom": [
+        -2.413999999986,
+        -3.744000003825,
+        4.18400001494
+      ],
+      "restored_original_angstrom": [
+        -2.414,
+        -3.744,
+        4.184
+      ],
+      "correction_angstrom": [
+        -1.4000356429733074e-11,
+        3.824999872392709e-09,
+        -1.4939999459784303e-08
+      ],
+      "norm_angstrom": 1.542188068596498e-08,
+      "interpretation": "Numerical native constraint residual, not merely 12-decimal text rounding. Explicit restoration to original exact frozen anchor."
+    },
+    {
+      "atom_id": "009:NME_N",
+      "recovered_angstrom": [
+        -5.324000002347,
+        -2.12300000796,
+        3.680000006412
+      ],
+      "restored_original_angstrom": [
+        -5.324,
+        -2.123,
+        3.68
+      ],
+      "correction_angstrom": [
+        2.346999927738125e-09,
+        7.959999770434933e-09,
+        -6.411999819988523e-09
+      ],
+      "norm_angstrom": 1.0487313607290468e-08,
+      "interpretation": "Numerical native constraint residual, not merely 12-decimal text rounding. Explicit restoration to original exact frozen anchor."
+    },
+    {
+      "atom_id": "010:NME_CH3",
+      "recovered_angstrom": [
+        -6.143000003425,
+        -1.422000001234,
+        4.662999991199
+      ],
+      "restored_original_angstrom": [
+        -6.143,
+        -1.422,
+        4.663
+      ],
+      "correction_angstrom": [
+        3.424999839296561e-09,
+        1.2340000132837758e-09,
+        8.800999928837427e-09
+      ],
+      "norm_angstrom": 9.524231185736843e-09,
+      "interpretation": "Numerical native constraint residual, not merely 12-decimal text rounding. Explicit restoration to original exact frozen anchor."
+    }
+  ],
+  "proposal_path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-failed-parent-recovery-review-v1/proposed-cold-restart-input.json",
+  "proposal_sha256": "ac4b19505b03238fdd964c09d78b0eddf4ec1fa43f122cd6e8648bb47b5bd0e5",
+  "input_difference_summary": {
+    "only_changed_top_level_keys": [
+      "coords_angstrom",
+      "max_memory_mb",
+      "initial_checkpoint"
+    ],
+    "coords_angstrom": "89 free atoms at cycle-57 logged positions; five anchors exactly restored to original input positions",
+    "initial_checkpoint": "removed",
+    "max_memory_mb": {
+      "old": 8000,
+      "new": 5000
+    },
+    "all_other_settings": "exactly unchanged, including atom IDs/elements, charge/spin, method, basis, auxiliary basis, frozen IDs and all convergence thresholds"
+  },
+  "original_threshold_units": {
+    "energy": "Hartree",
+    "gradients": "Hartree/Bohr",
+    "displacements": "Angstrom"
+  },
+  "new_optimization_requires": "Independent cold SCF and native optimization convergence at the original thresholds, then final geometry/identity checks and fresh bound result/arrays; downstream RESP and DFT must bind that new accepted parent.",
+  "scope": "Recoverable input geometry and provenance only; does not validate a force field or chemically accurate dynamics."
+}

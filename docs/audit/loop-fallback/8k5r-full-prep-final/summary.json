@@ -1,0 +1,98 @@
+{
+  "purpose": "Two full preparation runs of the user-reported 8K5R chain A complex using the final general loop workflow; preparation only, no molecular dynamics or native-loop accuracy claim.",
+  "source_sha256": {
+    "backend/promod_loop_worker.py": "96c8c30a6691b15d61b8b715b39595004be64ed29f6f4120bcab77c818b7f618",
+    "backend/loop_modeling.py": "a539066c060d96a2d5250dc942d32b718bc6fa4cf133d1e25b2aaab6c765f166",
+    "backend/loop_refinement.py": "6d57e88ee151b03e18a9210bb3ed9ede4d80416a113cc58d6b8913a43ef6e9aa",
+    "backend/preparation_worker.py": "1cbcce4f7a2f6b985c589c3b85586e4c72e28f65b03e0324335427373b8d71a8"
+  },
+  "trials": [
+    {
+      "seed": 42,
+      "job": "8f00a0998f00a099",
+      "isolated_job_directory": "/Users/ashujo/Documents/Science/DynaMol/build/loop-fallback-8k5r-fullprep/jobs/8f00a0998f00a099",
+      "saved_dataset": "c8caa23c91834c46",
+      "status": "completed",
+      "elapsed_seconds": 29.37,
+      "accepted_geometry": true,
+      "flanks": [
+        [
+          "A",
+          "176",
+          "",
+          "LEU"
+        ],
+        [
+          "A",
+          "180",
+          "",
+          "SER"
+        ],
+        [
+          "A",
+          "260",
+          "",
+          "GLU"
+        ],
+        [
+          "A",
+          "265",
+          "",
+          "LEU"
+        ]
+      ],
+      "maximum_flank_displacement_angstrom": 0.7806105644517808,
+      "total_refinement_iteration_budget": 2000,
+      "files_sha256": {
+        "loop-model-worker.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "loop-refinement-parameters.json": "4c9583393904bbe17afb92bc92052ab59d73eb7d5e5d21e18d29b1bf7bcf9c4a",
+        "preparation.json": "3f80291494d21726565eae71f2f1208edd2b14c53c3203ebf91573cf3b91fe0f",
+        "loop-refinement-topology.cif": "f667cd44d682fddb03322024e73d3c520154dd05827bd918eb3d5fd1012621cb",
+        "loop-construction.json": "cc5946d076f12b6e76535adc58de62df2607c27d611b3f865e7e7cd8f3b1eebf",
+        "loop-refinement-input.npz": "3ec5aaab093427e814e038e6d25a37deec6023798dd25e57ffcce5f059e0e389",
+        "config.json": "2adff568658b567081476f29775e73b2de08e8392ebc27e7ff2e80887134b12f",
+        "metadata.json": "5049ad2f4a2b4858b8553f5ebd1714f652347550341778acf473b7f3a4899f0b",
+        "loop-refinement-final.npz": "98a45793d36d8bf7f69294a9bbf909f238a02093c00ea215b8e3cef5075a1b27",
+        "loop-model-provenance.json": "620b8fd271d50aa587c0770f2b81c513f5a357189a59f76a094357c232a9d522",
+        "status.json": "4cc4e4c8f7f91d90e9cb101102715943ddb83cd0c615389590102635c9b64fe2",
+        "loop-model-output.json": "696d964adb1adcfbfb0b29b83e0e6be35f8e9ed72afd311da976f0abc8571b73"
+      }
+    },
+    {
+      "seed": 2026,
+      "job": "8f00a1008f00a100",
+      "isolated_job_directory": "/Users/ashujo/Documents/Science/DynaMol/build/loop-fallback-8k5r-fullprep/jobs/8f00a1008f00a100",
+      "saved_dataset": "a350c645dabd41c1",
+      "status": "completed",
+      "elapsed_seconds": 26.34,
+      "accepted_geometry": true,
+      "flanks": [],
+      "maximum_flank_displacement_angstrom": 0,
+      "total_refinement_iteration_budget": 1000,
+      "files_sha256": {
+        "loop-model-worker.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "loop-refinement-parameters.json": "d23af213232206d77589e5f25df4a5da5f7786ee239764d88e76eaccd89277e3",
+        "preparation.json": "3ba95d6808e65a97013859cc2b14337cc37b787676d3e77cda0fe8f466e98132",
+        "loop-refinement-topology.cif": "9e5dae7ef912e780a3a40f7a878717026c5b422eacb88e4cac70ed205b9bfbad",
+        "loop-construction.json": "bfa5913f4c141f2d7571b61b826f2afc2ed05126454f689b7fdcee5c4b433ed4",
+        "loop-refinement-input.npz": "c83d802409c0b242275e699a88153602b0aa7452e402bd5e6f37c1ef3edb162f",
+        "config.json": "2735ab40516c390da3ecc282ddeee932d95ec76877e1321b4961d73029d00a16",
+        "metadata.json": "92ee27f8582b47a69d9f9082f38b6f62d2afeb6b9f6cbe4e557289ed6e6887e8",
+        "loop-refinement-final.npz": "7a0011a436f67235434297b96accb544dc5459ffd08a9dbcb3c18b1838954c4d",
+        "loop-model-provenance.json": "cfdd1f4bbbb69c2beb880bba6f3e69414bf3f9c970a83cf308d78af2036a59c1",
+        "status.json": "d878dc8c9d102a018564c37747bd9d5a650152120da8e96bbd7787c8bd696461",
+        "loop-model-output.json": "ede0002d51fa6cf685ac297af5d957fa8b95e3f156712ae7141ff7d8abb333b6"
+      }
+    }
+  ],
+  "prior_rejected_attempt": {
+    "job": "8f00a0888f00a088",
+    "reason": "Previous harmonic-only fallback passed geometry but moved a flank N atom 1.4645 \u00c5, beyond the unchanged 1 \u00c5 limit. It was rejected. The final candidate adds a temporary radial displacement penalty beginning at 0.75 \u00c5; positions are never clipped."
+  },
+  "limitations": [
+    "Two stochastic preparation trials are a regression check, not a guarantee for every input or missing-loop conformation.",
+    "Recorded flank movement is relative to coordinates entering loop refinement after earlier sidechain sampling.",
+    "The full preparation pipeline is not claimed to be bitwise deterministic across runs; the loop minimizer uses CPU DeterministicForces=true.",
+    "Cloned isolated job status retained its earlier created_at field; elapsed_seconds records each actual final run duration."
+  ]
+}

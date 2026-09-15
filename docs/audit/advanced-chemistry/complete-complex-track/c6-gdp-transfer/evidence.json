@@ -1,0 +1,1076 @@
+{
+  "schema_version": 1,
+  "stage": "read_only_c6_gdp_source_transfer_assessment",
+  "case": "corrected_6OIM_KRAS_sotorasib_GDP_Mg_water_counterions",
+  "complete_complex_atom_counts": {
+    "GDP": 40,
+    "TIP3P_water": 24654,
+    "covalent_drug_residue": 82,
+    "magnesium": 1,
+    "protein": 2693,
+    "sodium_counterion": 7
+  },
+  "source_hashes": {
+    "native_topology": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/solvated.prmtop",
+      "sha256": "d4a3c152a0a39d0c5a5dce8903178f0823a8da164d7a5bade438475c505f3f6c"
+    },
+    "mapping": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/source-mapping.json",
+      "sha256": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac"
+    },
+    "assembly": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/result.json",
+      "sha256": "eec2b3051309dd061877b6ff66359a3376dc27718e713f169ce7e7dea4a80a68"
+    },
+    "gdp_scoping": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-scoped-v6/result.json",
+      "sha256": "ecb3f7c128b4b7355b1c1b98280f0f9485938a86cf39237844a01dc28379bdbd"
+    },
+    "gdp_source_prep": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-source/GDP.prep",
+      "sha256": "bc8f72b715e3d3b0839b2e3dcd9810cfd11e7a228e29a8ee2e4b55c7b602a705"
+    },
+    "prior_inventory": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/panteva-applicability.json",
+      "sha256": "9237e5d16a5e961edf7257a6b1a0016bac1695192fdbc6e31df417a82761694b"
+    },
+    "installed_pol": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/lj_1264_pol.dat",
+      "sha256": "9a64b54fc4ba6b683bb9ea1bd51b5f6d36793cce53d3a5e54838c719722c7429"
+    },
+    "installed_gaff2": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/parm/gaff2.dat",
+      "sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be"
+    },
+    "installed_nucleic": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/lib/nucleic12.lib",
+      "sha256": "3696ab28f793503817213abaa8ebaeddd2b9b17097292040011a0c61623d369e"
+    },
+    "installed_ff14sb_loader": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/dat/leap/cmd/oldff/leaprc.ff14SB",
+      "sha256": "96a982b543463abd2904ac5cee2bf0e2a4852d6861c6c541d75c2b091cf4977f"
+    },
+    "installed_add1264": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/lib/python3.14/site-packages/parmed/tools/add1264.py",
+      "sha256": "c6641c06422cf39e83997800ffa6bcc2dc50a889b4992017dac43bdffd6c0a6a"
+    },
+    "installed_license": {
+      "path": "/Users/ashujo/Library/Application Support/DynaMol/Runtimes/ambertools-b96b42253d7d46c5/LICENSE",
+      "sha256": "0b6851083326f7a65b52050b7ef4359ce3a06bb220eeb3ec0eb61810dffa5f34"
+    },
+    "paper": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/paper.pdf",
+      "sha256": "5965ca3f43699d5ae5a9a237233ea336e52211cf7d9e186ee39ff25dbb29d923"
+    },
+    "paper_text": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/paper.txt",
+      "sha256": "ced625f40d234acb3d00f48ad87f09d4eb7dc3ecb1fbc32fcc8f766652c9dcfe"
+    },
+    "SI": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/supporting-information.pdf",
+      "sha256": "f25f3e1d064ecbf858b42490680d6605b41a10d9d663b4c36d1ffd59f229bf9b"
+    },
+    "SI_text": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/panteva-applicability-v1/supporting-information.txt",
+      "sha256": "cfdaf4307eec06f14cd775f6f29c666196595380999ab3a67ad59d361b55defb"
+    },
+    "retrieval": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/retrieval.json",
+      "sha256": "123030ddec7f03ada3f87727fe52f427ad3f62dd384a4f8246425ce1078749e5"
+    },
+    "official_pol": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/lj_1264_pol.dat",
+      "sha256": "9a64b54fc4ba6b683bb9ea1bd51b5f6d36793cce53d3a5e54838c719722c7429"
+    },
+    "official_gaff2": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/gaff2.dat",
+      "sha256": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f"
+    },
+    "official_nucleic": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/nucleic12.lib",
+      "sha256": "3696ab28f793503817213abaa8ebaeddd2b9b17097292040011a0c61623d369e"
+    },
+    "official_ff14sb_loader": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/leaprc.ff14SB",
+      "sha256": "96a982b543463abd2904ac5cee2bf0e2a4852d6861c6c541d75c2b091cf4977f"
+    },
+    "official_tutorial": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/amber-tutorial.html",
+      "sha256": "ac9331fe036a7f32b4f1ccc83d1a67c4f3040d2c5dbb5675804cbcb7d70984c4"
+    },
+    "official_license": {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/LICENSE",
+      "sha256": "9e1895fa716bb04dba60760fcf98bae06f79ce393dcdfeb42cbc64b5838843a4"
+    },
+    "metal_panel": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/metal-panel.json",
+      "sha256": "28db88c10ce5a80dde8513d9c02542c2aa7ffda4910d8bbaef64ce9f312af694"
+    },
+    "covalent_panel": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-panel.json",
+      "sha256": "5fdb1dba8cfa43e90c3396c87bde1cdc2a1a8a7091ec813cb120255ad70a613a"
+    },
+    "implementation": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/c6-gdp-transfer/inspect_transfer.py",
+      "sha256": "4d8cfb22b5ef02a2f86cf19fc62ba49d1dac6f407e08370be2b4ade471612221"
+    }
+  },
+  "official_upstream": {
+    "retrieved_utc": "2026-09-14T18:51:24.929826+00:00",
+    "amberclassic_commit": "8e55e97ada48b96eefaec2e6a3fa849018aaeea5",
+    "files": [
+      {
+        "url": "https://api.github.com/repos/Amber-MD/AmberClassic/commits/main",
+        "resolved_url": "https://api.github.com/repos/Amber-MD/AmberClassic/commits/main",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/amberclassic-commit.json",
+        "sha256": "b76f7d845edb8d668fbfaabed544712e69f3147ac92af47d3ebd97300d94678d",
+        "bytes": 4351,
+        "error": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/parm/lj_1264_pol.dat",
+        "resolved_url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/parm/lj_1264_pol.dat",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/lj_1264_pol.dat",
+        "sha256": "9a64b54fc4ba6b683bb9ea1bd51b5f6d36793cce53d3a5e54838c719722c7429",
+        "bytes": 17912,
+        "error": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/parm/gaff2.dat",
+        "resolved_url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/parm/gaff2.dat",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/gaff2.dat",
+        "sha256": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f",
+        "bytes": 880048,
+        "error": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/lib/nucleic12.lib",
+        "resolved_url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/lib/nucleic12.lib",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/nucleic12.lib",
+        "sha256": "3696ab28f793503817213abaa8ebaeddd2b9b17097292040011a0c61623d369e",
+        "bytes": 155532,
+        "error": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/cmd/oldff/leaprc.ff14SB",
+        "resolved_url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/dat/leap/cmd/oldff/leaprc.ff14SB",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/leaprc.ff14SB",
+        "sha256": "96a982b543463abd2904ac5cee2bf0e2a4852d6861c6c541d75c2b091cf4977f",
+        "bytes": 5282,
+        "error": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/LICENSE",
+        "resolved_url": "https://raw.githubusercontent.com/Amber-MD/AmberClassic/8e55e97ada48b96eefaec2e6a3fa849018aaeea5/LICENSE",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/LICENSE",
+        "sha256": "9e1895fa716bb04dba60760fcf98bae06f79ce393dcdfeb42cbc64b5838843a4",
+        "bytes": 18811,
+        "error": null
+      },
+      {
+        "url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/34696/10262_ftp.pdf",
+        "resolved_url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/34696/10262_ftp.pdf",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/meagher-2003.pdf",
+        "sha256": "c6f92fc22d44f87f8989cc7ac0ee5268e79d3c2e6b08ccf4346cbf65b95311a3",
+        "bytes": 1959,
+        "error": null
+      },
+      {
+        "url": "https://ambermd.org/tutorials/advanced/tutorial20/12_6_4.php",
+        "resolved_url": "https://ambermd.org/tutorials/advanced/tutorial20/12_6_4.php",
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/amber-tutorial.html",
+        "sha256": "ac9331fe036a7f32b4f1ccc83d1a67c4f3040d2c5dbb5675804cbcb7d70984c4",
+        "bytes": 17080,
+        "error": null
+      }
+    ]
+  },
+  "official_parameter_data_versions": {
+    "installed_gaff2": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+    "current_official_gaff2": "AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)",
+    "polarizability_file_unchanged": true,
+    "nucleic_template_file_unchanged": true
+  },
+  "c6": {
+    "atom_count": 4,
+    "atoms": [
+      {
+        "native_index": 191,
+        "name": "C013",
+        "charge_e": 0.08727499986280546,
+        "source_identity": {
+          "index": 13,
+          "name": "MOV_C19",
+          "chain": "A",
+          "resid": "303",
+          "resname": "MOV",
+          "atom": "C19",
+          "role": "observed-adduct"
+        },
+        "atomic_number": 6,
+        "native_nonbonded_type_index": 13,
+        "bond_partners": [
+          {
+            "index": 190,
+            "name": "N014",
+            "type": "n",
+            "atomic_number": 7
+          },
+          {
+            "index": 192,
+            "name": "C012",
+            "type": "c6",
+            "atomic_number": 6
+          },
+          {
+            "index": 252,
+            "name": "H067",
+            "type": "h1",
+            "atomic_number": 1
+          },
+          {
+            "index": 253,
+            "name": "H068",
+            "type": "h1",
+            "atomic_number": 1
+          }
+        ],
+        "smallest_heavy_cycle_indices": [
+          191,
+          190,
+          242,
+          241,
+          193,
+          192
+        ],
+        "smallest_heavy_cycle_size": 6,
+        "read_only_connectivity_scope": "Native bond graph only; no bond orders inferred or new valence assignment.",
+        "documented_polarizability_mapping_available": false,
+        "assigned_alpha": null
+      },
+      {
+        "native_index": 192,
+        "name": "C012",
+        "charge_e": 0.22423900001646332,
+        "source_identity": {
+          "index": 12,
+          "name": "MOV_C20",
+          "chain": "A",
+          "resid": "303",
+          "resname": "MOV",
+          "atom": "C20",
+          "role": "observed-adduct"
+        },
+        "atomic_number": 6,
+        "native_nonbonded_type_index": 13,
+        "bond_partners": [
+          {
+            "index": 191,
+            "name": "C013",
+            "type": "c6",
+            "atomic_number": 6
+          },
+          {
+            "index": 193,
+            "name": "N021",
+            "type": "nh",
+            "atomic_number": 7
+          },
+          {
+            "index": 247,
+            "name": "C011",
+            "type": "c3",
+            "atomic_number": 6
+          },
+          {
+            "index": 251,
+            "name": "H066",
+            "type": "h1",
+            "atomic_number": 1
+          }
+        ],
+        "smallest_heavy_cycle_indices": [
+          192,
+          191,
+          190,
+          242,
+          241,
+          193
+        ],
+        "smallest_heavy_cycle_size": 6,
+        "read_only_connectivity_scope": "Native bond graph only; no bond orders inferred or new valence assignment.",
+        "documented_polarizability_mapping_available": false,
+        "assigned_alpha": null
+      },
+      {
+        "native_index": 241,
+        "name": "C020",
+        "charge_e": 0.1954409997640254,
+        "source_identity": {
+          "index": 20,
+          "name": "MOV_C17",
+          "chain": "A",
+          "resid": "303",
+          "resname": "MOV",
+          "atom": "C17",
+          "role": "observed-adduct"
+        },
+        "atomic_number": 6,
+        "native_nonbonded_type_index": 13,
+        "bond_partners": [
+          {
+            "index": 193,
+            "name": "N021",
+            "type": "nh",
+            "atomic_number": 7
+          },
+          {
+            "index": 242,
+            "name": "C019",
+            "type": "c6",
+            "atomic_number": 6
+          },
+          {
+            "index": 245,
+            "name": "H075",
+            "type": "h1",
+            "atomic_number": 1
+          },
+          {
+            "index": 246,
+            "name": "H076",
+            "type": "h1",
+            "atomic_number": 1
+          }
+        ],
+        "smallest_heavy_cycle_indices": [
+          241,
+          193,
+          192,
+          191,
+          190,
+          242
+        ],
+        "smallest_heavy_cycle_size": 6,
+        "read_only_connectivity_scope": "Native bond graph only; no bond orders inferred or new valence assignment.",
+        "documented_polarizability_mapping_available": false,
+        "assigned_alpha": null
+      },
+      {
+        "native_index": 242,
+        "name": "C019",
+        "charge_e": 0.07322699988475659,
+        "source_identity": {
+          "index": 19,
+          "name": "MOV_C18",
+          "chain": "A",
+          "resid": "303",
+          "resname": "MOV",
+          "atom": "C18",
+          "role": "observed-adduct"
+        },
+        "atomic_number": 6,
+        "native_nonbonded_type_index": 13,
+        "bond_partners": [
+          {
+            "index": 190,
+            "name": "N014",
+            "type": "n",
+            "atomic_number": 7
+          },
+          {
+            "index": 241,
+            "name": "C020",
+            "type": "c6",
+            "atomic_number": 6
+          },
+          {
+            "index": 243,
+            "name": "H073",
+            "type": "h1",
+            "atomic_number": 1
+          },
+          {
+            "index": 244,
+            "name": "H074",
+            "type": "h1",
+            "atomic_number": 1
+          }
+        ],
+        "smallest_heavy_cycle_indices": [
+          242,
+          190,
+          191,
+          192,
+          193,
+          241
+        ],
+        "smallest_heavy_cycle_size": 6,
+        "read_only_connectivity_scope": "Native bond graph only; no bond orders inferred or new valence assignment.",
+        "documented_polarizability_mapping_available": false,
+        "assigned_alpha": null
+      }
+    ],
+    "direct_installed_lookup": false,
+    "direct_current_official_lookup": false,
+    "installed_mass_definition": {
+      "mass": 12.01,
+      "mass_table_third_column": 0.36,
+      "definition": "Sp3 carbons in six-memberred rings",
+      "source_line": 19
+    },
+    "official_mass_definition": {
+      "mass": 12.01,
+      "mass_table_third_column": 0.36,
+      "definition": "Sp3 carbons in six-memberred rings",
+      "source_line": 19
+    },
+    "source_code_behavior": "Exact-key lookup raises LJ12_6_4Error for any missing shared-class atom type; no c6 alias, hybridization, element, or equal-LJ fallback.",
+    "source_code_lines": [
+      173,
+      190
+    ],
+    "carbon_crosschecks": {
+      "c3": {
+        "GAFF2": {
+          "mass": 12.01,
+          "mass_table_third_column": 0.878,
+          "definition": "Sp3 C",
+          "source_line": 6
+        },
+        "C4_source_alpha": {
+          "alpha_angstrom3": 1.061,
+          "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+          "line": 81
+        }
+      },
+      "c5": {
+        "GAFF2": {
+          "mass": 12.01,
+          "mass_table_third_column": 0.36,
+          "definition": "Sp3 carbons in five-memberred rings",
+          "source_line": 18
+        },
+        "C4_source_alpha": null
+      },
+      "c6": {
+        "GAFF2": {
+          "mass": 12.01,
+          "mass_table_third_column": 0.36,
+          "definition": "Sp3 carbons in six-memberred rings",
+          "source_line": 19
+        },
+        "C4_source_alpha": null
+      },
+      "cx": {
+        "GAFF2": {
+          "mass": 12.01,
+          "mass_table_third_column": 0.36,
+          "definition": "Sp3 carbons in triangle systems",
+          "source_line": 16
+        },
+        "C4_source_alpha": {
+          "alpha_angstrom3": 1.352,
+          "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+          "line": 70
+        }
+      },
+      "cy": {
+        "GAFF2": {
+          "mass": 12.01,
+          "mass_table_third_column": 0.36,
+          "definition": "Sp3 carbons in square systems",
+          "source_line": 17
+        },
+        "C4_source_alpha": {
+          "alpha_angstrom3": 1.352,
+          "attribution": "Referenced or adopted from Miller JACS,112,8533(1990)",
+          "line": 71
+        }
+      }
+    },
+    "status": "explicit_source_mapping_not_found",
+    "interpretation": "c6 is documented sp3 six-membered-ring carbon, but choosing another type's alpha would be a new crosswalk decision. GAFF2 mass-table numbers and C4-table alpha values differ; no replacement inferred.",
+    "parameters_assigned": false
+  },
+  "GDP": {
+    "atom_count": 40,
+    "charge_e": -3.000000007682894,
+    "retained_model": "Preserved Meagher\u2013Redman\u2013Carlson GDP(-3) native Amber99-based source model, scoped without protein parameter overrides.",
+    "base_reference": "Amber ff14SB loader selects nucleic12.lib; GN is neutral guanosine. Current file matches installed source. Exact paper input topology was not recovered.",
+    "base_comparison": [
+      {
+        "native_index": 2793,
+        "GDP_atom": "N9",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "N9",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QK",
+        "GDP_original_type": "N*",
+        "GDP_charge_e": 0.0492,
+        "GN_atom": "N9",
+        "GN_type": "N*",
+        "GN_charge_e": 0.0492,
+        "GN_source_line": 6070,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.09,
+        "GN_default_alpha": 1.09
+      },
+      {
+        "native_index": 2794,
+        "GDP_atom": "C8",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "C8",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QD",
+        "GDP_original_type": "CK",
+        "GDP_charge_e": 0.1374,
+        "GN_atom": "C8",
+        "GN_type": "CP",
+        "GN_charge_e": 0.1374,
+        "GN_source_line": 6071,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": false,
+        "GDP_default_alpha": 1.352,
+        "GN_default_alpha": 1.352
+      },
+      {
+        "native_index": 2795,
+        "GDP_atom": "H80",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "H80",
+          "source_heavy": false
+        },
+        "GDP_scoped_type": "QI",
+        "GDP_original_type": "H5",
+        "GDP_charge_e": 0.164,
+        "GN_atom": "H8",
+        "GN_type": "H5",
+        "GN_charge_e": 0.164,
+        "GN_source_line": 6072,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 0.387,
+        "GN_default_alpha": 0.387
+      },
+      {
+        "native_index": 2796,
+        "GDP_atom": "N7",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "N7",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QN",
+        "GDP_original_type": "NB",
+        "GDP_charge_e": -0.5709000016463345,
+        "GN_atom": "N7",
+        "GN_type": "NB",
+        "GN_charge_e": -0.5709,
+        "GN_source_line": 6073,
+        "charge_difference_e": -1.6463345131612073e-09,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.09,
+        "GN_default_alpha": 1.09
+      },
+      {
+        "native_index": 2797,
+        "GDP_atom": "C5",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "C5",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QC",
+        "GDP_original_type": "CB",
+        "GDP_charge_e": 0.1744,
+        "GN_atom": "C5",
+        "GN_type": "CB",
+        "GN_charge_e": 0.1744,
+        "GN_source_line": 6074,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.352,
+        "GN_default_alpha": 1.352
+      },
+      {
+        "native_index": 2798,
+        "GDP_atom": "C6",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "C6",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QA",
+        "GDP_original_type": "C",
+        "GDP_charge_e": 0.477,
+        "GN_atom": "C6",
+        "GN_type": "C",
+        "GN_charge_e": 0.477,
+        "GN_source_line": 6075,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.352,
+        "GN_default_alpha": 1.352
+      },
+      {
+        "native_index": 2799,
+        "GDP_atom": "O6",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O6",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QP",
+        "GDP_original_type": "O",
+        "GDP_charge_e": -0.5596999994512218,
+        "GN_atom": "O6",
+        "GN_type": "O",
+        "GN_charge_e": -0.5597,
+        "GN_source_line": 6076,
+        "charge_difference_e": 5.487781340463016e-10,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 0.569,
+        "GN_default_alpha": 0.569
+      },
+      {
+        "native_index": 2800,
+        "GDP_atom": "N1",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "N1",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QM",
+        "GDP_original_type": "NA",
+        "GDP_charge_e": -0.47869999999999996,
+        "GN_atom": "N1",
+        "GN_type": "NA",
+        "GN_charge_e": -0.4787,
+        "GN_source_line": 6077,
+        "charge_difference_e": 5.551115123125783e-17,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.09,
+        "GN_default_alpha": 1.09
+      },
+      {
+        "native_index": 2801,
+        "GDP_atom": "H1N",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "H1N",
+          "source_heavy": false
+        },
+        "GDP_scoped_type": "QF",
+        "GDP_original_type": "H",
+        "GDP_charge_e": 0.3424,
+        "GN_atom": "H1",
+        "GN_type": "H",
+        "GN_charge_e": 0.3424,
+        "GN_source_line": 6078,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 0.387,
+        "GN_default_alpha": 0.387
+      },
+      {
+        "native_index": 2802,
+        "GDP_atom": "C2",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "C2",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QB",
+        "GDP_original_type": "CA",
+        "GDP_charge_e": 0.7656999994512218,
+        "GN_atom": "C2",
+        "GN_type": "CA",
+        "GN_charge_e": 0.7657,
+        "GN_source_line": 6079,
+        "charge_difference_e": -5.487782450686041e-10,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.352,
+        "GN_default_alpha": 1.352
+      },
+      {
+        "native_index": 2803,
+        "GDP_atom": "N2",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "N2",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QL",
+        "GDP_original_type": "N2",
+        "GDP_charge_e": -0.9672000021951125,
+        "GN_atom": "N2",
+        "GN_type": "N2",
+        "GN_charge_e": -0.9672,
+        "GN_source_line": 6080,
+        "charge_difference_e": -2.1951125361852064e-09,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.09,
+        "GN_default_alpha": 1.09
+      },
+      {
+        "native_index": 2804,
+        "GDP_atom": "H21",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "H21",
+          "source_heavy": false
+        },
+        "GDP_scoped_type": "QF",
+        "GDP_original_type": "H",
+        "GDP_charge_e": 0.4364,
+        "GN_atom": "H21",
+        "GN_type": "H",
+        "GN_charge_e": 0.4364,
+        "GN_source_line": 6081,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 0.387,
+        "GN_default_alpha": 0.387
+      },
+      {
+        "native_index": 2805,
+        "GDP_atom": "H22",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "H22",
+          "source_heavy": false
+        },
+        "GDP_scoped_type": "QF",
+        "GDP_original_type": "H",
+        "GDP_charge_e": 0.4364,
+        "GN_atom": "H22",
+        "GN_type": "H",
+        "GN_charge_e": 0.4364,
+        "GN_source_line": 6082,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 0.387,
+        "GN_default_alpha": 0.387
+      },
+      {
+        "native_index": 2806,
+        "GDP_atom": "N3",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "N3",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QO",
+        "GDP_original_type": "NC",
+        "GDP_charge_e": -0.6323000005487781,
+        "GN_atom": "N3",
+        "GN_type": "NC",
+        "GN_charge_e": -0.6323,
+        "GN_source_line": 6083,
+        "charge_difference_e": -5.487781340463016e-10,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.09,
+        "GN_default_alpha": 1.09
+      },
+      {
+        "native_index": 2807,
+        "GDP_atom": "C4",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "C4",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QC",
+        "GDP_original_type": "CB",
+        "GDP_charge_e": 0.12219999999999999,
+        "GN_atom": "C4",
+        "GN_type": "CB",
+        "GN_charge_e": 0.1222,
+        "GN_source_line": 6084,
+        "charge_difference_e": -1.3877787807814457e-17,
+        "types_identical_after_recorded_scoping": true,
+        "GDP_default_alpha": 1.352,
+        "GN_default_alpha": 1.352
+      }
+    ],
+    "all_15_base_charges_match_within_5e_9_e": true,
+    "base_type_mismatches": [
+      {
+        "native_index": 2794,
+        "GDP_atom": "C8",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "C8",
+          "source_heavy": true
+        },
+        "GDP_scoped_type": "QD",
+        "GDP_original_type": "CK",
+        "GDP_charge_e": 0.1374,
+        "GN_atom": "C8",
+        "GN_type": "CP",
+        "GN_charge_e": 0.1374,
+        "GN_source_line": 6071,
+        "charge_difference_e": 0.0,
+        "types_identical_after_recorded_scoping": false,
+        "GDP_default_alpha": 1.352,
+        "GN_default_alpha": 1.352
+      }
+    ],
+    "purine_N7_transfer": "Local NB type/charge and surrounding base-charge agreement support a candidate transfer assessment, not validation of fitted binding thermodynamics for GDP(-3) or the complete protein site.",
+    "phosphate_atoms": [
+      {
+        "native_index": 2782,
+        "name": "O1A",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O1A",
+          "source_heavy": true
+        },
+        "scoped_type": "QQ",
+        "original_type": "O2",
+        "charge_e": -0.9473999989024436,
+        "bond_partners": [
+          "PA"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2783,
+        "name": "O2A",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O2A",
+          "source_heavy": true
+        },
+        "scoped_type": "QQ",
+        "original_type": "O2",
+        "charge_e": -0.9473999989024436,
+        "bond_partners": [
+          "PA"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2776,
+        "name": "O1B",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O1B",
+          "source_heavy": true
+        },
+        "scoped_type": "QR",
+        "original_type": "O3",
+        "charge_e": -0.9552000021951125,
+        "bond_partners": [
+          "PB"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2778,
+        "name": "O2B",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O2B",
+          "source_heavy": true
+        },
+        "scoped_type": "QR",
+        "original_type": "O3",
+        "charge_e": -0.9552000021951125,
+        "bond_partners": [
+          "PB"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2779,
+        "name": "O3B",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O3B",
+          "source_heavy": true
+        },
+        "scoped_type": "QR",
+        "original_type": "O3",
+        "charge_e": -0.9552000021951125,
+        "bond_partners": [
+          "PB"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      }
+    ],
+    "DMP_transfer": "Unestablished: DMP phosphodiester fit uses Dupradeau parameters; actual GDP uses Meagher diphosphate(-3) and O2/O3 site charges. Exact DMP atom/charge artifact not recovered; a donor-charge difference is not guessed.",
+    "documented_default_rule_coverage": true,
+    "GDP_specific_fitted_validation_found": false,
+    "tutorial_selection_scope": "Example B is 1D23 DNA with TIP4P-Ew. G*/DG* N7 naming pattern would match GDP N7, but OP* does not match any of the five actual GDP nonbridging oxygen names. Pattern matches do not prove chemical transfer."
+  },
+  "retrieval_limits": [
+    {
+      "url": "https://pubs.acs.org/doi/pdf/10.1021/ja00179a044",
+      "result": "Publisher full PDF unavailable; do not claim direct inspection of Miller full text."
+    },
+    {
+      "url": "https://www.rsc.org/suppdata/cp/c0/c0cp00111b/c0cp00111b.pdf",
+      "result": "Web tool HTTP429; exact DMP dataset/charges not recovered."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2918240/",
+      "result": "Browser challenge; not bypassed."
+    },
+    {
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/c6-gdp-transfer-v1/meagher-2003.pdf",
+      "result": "Downloaded response is HTML, not PDF; excluded as a full-text scientific source. Publisher metadata and indexed author-repository abstract only."
+    }
+  ],
+  "licenses": {
+    "installed_Amber_dat_leap": "Public-domain grant already verified in installed LICENSE; no article/SI/code license inferred from it.",
+    "new_AmberClassic_root_license": "Root LICENSE discusses GPL msander code, not an independent new parameter-data clearance. Authoritative previous installed-data provenance retained.",
+    "new_papers_or_SI_copied_to_project": false
+  },
+  "claim_boundaries": [
+    "No full c6 mapping resolution achieved by name or LJ similarity.",
+    "Defined GDP O2/O3/NB defaults remain distinct from Panteva fitted site corrections.",
+    "Guanosine base-charge agreement is positive partial evidence, not an exact whole-GDP model match.",
+    "TIP4P-Ew conversion and exact native C4/GROMACS representation gaps remain unchanged."
+  ],
+  "next_bounded_step": "Obtain an explicitly sourced c6-to-polarizability crosswalk and the exact DMP/guanosine fit topology/charge artifacts; compare against retained GDP before any fitted override or complete-system C4 static test.",
+  "parameters_assigned_or_changed": false,
+  "topology_changed": false,
+  "new_md_or_qm": false,
+  "app_ready": false,
+  "physical_model_validated": false,
+  "all_scientific_inputs_unchanged": true,
+  "checkpoint_read": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/LIVE-JOBS.json",
+    "sha256_at_report_time": "0e195e25965d43cea20cf8df5d3c3d51663d2e7639c48fcb4a5003ff73fe3e0f",
+    "shared_checkpoint_may_be_updated_by_root": true
+  }
+}

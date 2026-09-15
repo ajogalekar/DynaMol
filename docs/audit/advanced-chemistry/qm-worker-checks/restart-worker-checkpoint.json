@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-09-13T16:58:24.243290+00:00",
+  "status": "31 tests passed",
+  "files": {
+    "backend/qm_worker.py": "e7841b3fb0fa71d8ffdd2b6b49c856b5481174facbdde5fe790dd55acf06ef4d",
+    "backend/tests/test_qm_worker.py": "0151b665faf7af0558447fe0403e838eb1229e6cbbcada3003e2559ec6d055e2",
+    "docs/audit/advanced-chemistry/qm-worker-checks/native-restart-tests.log": "186ed8bff473ab0f9c39dfe5b7c9040514a24d2d9df29006ae0dc35e064edbba",
+    "docs/audit/advanced-chemistry/qm-worker-checks/native-restart-tests.xml": "2da8ea8998060a1fe8d8acd692493537fe5b357bc927141c530c4380fe7cc007"
+  },
+  "native_evidence_directory": "native-suite-restart-1",
+  "scope": "Tiny numerical and same-state checkpoint implementation controls; not metal/covalent model accuracy."
+}

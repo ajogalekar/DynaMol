@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-09-13T05:12:23.165996+00:00",
+  "resources": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources",
+  "private_home": "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate Private Home 8dddn9d7",
+  "build_id": "589ff2dddea916f5",
+  "dmg_sha256": "29adffe128d249f7040abcf05c65a6206a70da2d59c9375393b6c0d63b196e7a",
+  "steps": [
+    {
+      "name": "runtime",
+      "command": [
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources/app/packaging/macos/validate_runtime.py",
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources",
+        "--home",
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate Private Home 8dddn9d7"
+      ],
+      "limit_seconds": 240,
+      "started_utc": "2026-09-13T05:12:23.166262+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 62.91
+    },
+    {
+      "name": "app",
+      "command": [
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources/python/bin/python3.12",
+        "-I",
+        "-B",
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources/app/packaging/macos/validate_app.py",
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate DMG ckq9wfu6/Applications/DynaMol.app/Contents/Resources",
+        "/private/var/folders/cv/_3qd6yhx7lqdggx4cs3hlg5c0000gn/T/DynaMol Final Candidate Private Home 8dddn9d7"
+      ],
+      "limit_seconds": 180,
+      "started_utc": "2026-09-13T05:13:26.074669+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 111.9
+    }
+  ],
+  "finished_utc": "2026-09-13T05:15:17.979251+00:00",
+  "passed": true
+}

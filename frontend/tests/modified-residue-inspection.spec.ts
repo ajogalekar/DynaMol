@@ -49,7 +49,7 @@ test('1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuin
       studio.locator('.ligand-preparation-card').nth(i).locator('summary'),
     ).toContainText('ATP');
   }
-  await expect(studio.locator('.inspection-summary')).toContainText('4 chain gaps');
+  await expect(studio.locator('.inspection-summary')).toContainText('4 backbone breaks');
   await expect(studio.locator('.modified-residue-list')).toContainText(
     'Ligand removal preserves modified protein residues',
   );
@@ -59,9 +59,10 @@ test('1UA2 distinguishes covalent TPO residues from ATP ligands and keeps genuin
     .check();
   await expect(studio.locator('.ligand-preparation-intro')).toContainText('removal selected');
   await expect(studio.locator('.modified-residue-card')).toHaveCount(4);
+  // Loop building stays selectable when ligands are removed; the gaps are protein gaps.
   await expect(
     studio.getByRole('checkbox', { name: 'Build supported missing loops / residues', exact: true }),
-  ).toBeDisabled();
+  ).toBeEnabled();
   await studio
     .getByRole('checkbox', { name: 'Remove ligands and other non-protein residues', exact: true })
     .uncheck();

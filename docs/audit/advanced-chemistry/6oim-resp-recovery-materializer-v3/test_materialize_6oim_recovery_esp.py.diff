@@ -1,0 +1,18 @@
+--- v2/test_materialize_6oim_recovery_esp.py
++++ v3/test_materialize_6oim_recovery_esp.py
+@@ -149,6 +149,15 @@
+             args=list(synthetic());args[6][key][0][1]=False
+             with self.subTest(key=key),self.assertRaises(ValueError):m.validate_cold_esp(*args)
+ 
++    def test_boolean_actual_request_coordinate_rejects_even_equal_to_zero(self):
++        for key in ['coords_bohr','esp_points_bohr']:
++            args=list(synthetic());args[0][key][0][1]=False
++            with self.subTest(key=key),self.assertRaises(ValueError):m.validate_cold_esp(*args)
++
++    def test_float_actual_request_scf_count_rejects_even_equal_to_parent_integer(self):
++        args=list(synthetic());args[2]['max_scf_cycles']=100;args[0]['max_scf_cycles']=100.0
++        with self.assertRaisesRegex(ValueError,'integer setting'):m.validate_cold_esp(*args)
++
+ 
+ class AdmissionTests(unittest.TestCase):
+     def setUp(self):

@@ -1,0 +1,252 @@
+{
+  "date": "2026-09-13",
+  "assessment_scope": "software/method feasibility, not scientific certification",
+  "status": "isolated_adapter_prototype; no new model enabled in released app",
+  "recommended_first_family": "explicit-state closed-shell Zn(II), site-specific fixed-coordination bonded MCPB Seminario plus RESP",
+  "runtime": {
+    "ambertools": "24.8",
+    "mcpb_script": "2024",
+    "amber_python": "3.14.7",
+    "application_openmm": "8.6.0",
+    "parmed": "4.3.1",
+    "qm_provider_target": "private PySCF 2.14.0; root owns installation/numerical checks"
+  },
+  "source_files": [
+    {
+      "path": "backend/ions.py",
+      "sha256": "9b6980e506e6229a3f8cec5d5402e17243b4e7cf1fb420c5f957a5c9d9452d68"
+    },
+    {
+      "path": "backend/complex_topology.py",
+      "sha256": "88d97e6465089a2d8ed59d35c077bce5085e32160dda2f5c37a4fb91f0249542"
+    },
+    {
+      "path": "backend/preparation_worker.py",
+      "sha256": "1cbcce4f7a2f6b985c589c3b85586e4c72e28f65b03e0324335427373b8d71a8"
+    },
+    {
+      "path": ".tools/ambertools/bin/MCPB.py",
+      "sha256": "d74a0cb5c3e5ec2152db7c38de7269336e105a1e04c848360ea07abeaeeb4ef9"
+    },
+    {
+      "path": ".tools/ambertools/lib/python3.14/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py",
+      "sha256": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7"
+    },
+    {
+      "path": ".tools/ambertools/lib/python3.14/site-packages/pymsmt/mcpb/resp_fitting.py",
+      "sha256": "102fe266f4a2a2f47a0af2904f28970f5fc1a14f9e7d329deabb4784463258a6"
+    },
+    {
+      "path": ".tools/ambertools/lib/python3.14/site-packages/pymsmt/mol/gauio.py",
+      "sha256": "f3dbc3eb7801460241e4e44e4c779166bc896812c116f86b927bd269ec1fdfe5"
+    },
+    {
+      "path": ".tools/ambertools/lib/python3.14/site-packages/pymsmt/mol/constants.py",
+      "sha256": "f393ec014df4a093e91d91164ff5e91682e431c32f198225a2720d321ad73a5f"
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "mcpb_workflow",
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/mcpbpy.php",
+      "evidence_used": "Official reference workflow and preserved 1OKL example files; small optimized cluster Hessian plus large-cluster RESP.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "mcpb_paper",
+      "url": "https://doi.org/10.1021/acs.jcim.5b00674",
+      "evidence_used": "Native parameterization architecture; not automatic site validity.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "zaff",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2941202/",
+      "evidence_used": "Bonded Zn parameter family and limitations of specific reference chemistry.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "1264_model",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4306492/",
+      "evidence_used": "Charge-induced-dipole C4 physical term; hydration parameterization and fixed-bonded scope.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "1264_transfer",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8339297/",
+      "evidence_used": "Transferability depends on interacting donor parameters; hydration success alone insufficient.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "dummy_zinc",
+      "url": "https://openmm.github.io/openmm-cookbook/latest/notebooks/tutorials/Histone_methyltransferase_simulation_with_multisite_Zn2_structural_ions.html",
+      "evidence_used": "Actual structural multisite Zn implementation, extra particles and explicit residues.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "parmed_conversion",
+      "url": "https://parmed.github.io/ParmEd/html/openmmobj/parmed.openmm.load_topology.html",
+      "evidence_used": "Custom force reconstruction limits matter for 12-6-4 conversion.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "pyscf_platforms",
+      "url": "https://pyscf.org/user/install.html",
+      "evidence_used": "Mac/Linux and WSL; no native Windows supported installation.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "pyscf_hessian",
+      "url": "https://pyscf.org/_modules/pyscf/df/hessian/rks.html",
+      "evidence_used": "Analytic density-fitted RKS Hessian implementation.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "pyscf_b3lyp",
+      "url": "https://pyscf.org/_modules/pyscf/dft/libxc.html",
+      "evidence_used": "Explicit B3LYPG avoids configurable B3LYP/VWN5 alias ambiguity.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "psi4_platforms",
+      "url": "https://psicode.org/installs/v1102/",
+      "evidence_used": "Native Windows and Apple Silicon releases.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "psi4_methods",
+      "url": "https://psicode.org/psi4manual/master/introduction.html",
+      "evidence_used": "DFT method table E/G; numerical Hessian may require many gradient calls.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "metallicious_usage",
+      "url": "https://metallicious.readthedocs.io/en/latest/usage.html",
+      "evidence_used": "Template approach and default dependencies; not a validated drop-in metalloprotease workflow.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "metallicious_paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11500408/",
+      "evidence_used": "Reported supramolecular benchmark scope.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "1mnc_primary",
+      "url": "https://doi.org/10.1038/nsb0294-119",
+      "evidence_used": "Human MMP8 source; exact atoms/state evidence preserved independently in panel.",
+      "retrieved_date": "2026-09-13"
+    },
+    {
+      "id": "macos_fortran_static_loader",
+      "url": "https://gcc.gnu.org/pipermail/gcc-bugs/2025-May/914852.html",
+      "evidence_used": "Independent reported reproducer matches intermittent dyld error for ~2GB static arrays; dynamic allocation proposed upstream. Local RESP __common measured separately.",
+      "retrieved_date": "2026-09-13"
+    }
+  ],
+  "reference_download_manifest": "reference-mcpb-1okl/sources.json",
+  "license_download_manifests": [
+    "license-source-notes/duartegroup-metallicious.json",
+    "license-source-notes/nwchemgit-nwchem.json",
+    "license-source-notes/psi4-psi4.json",
+    "license-source-notes/pyscf-pyscf.json"
+  ],
+  "first_site": {
+    "pdb": "1MNC",
+    "path": "inputs/1MNC.cif",
+    "sha256": "cc018b0440f630092ad87fbf111cf2dd78c928db20e636bbf4e1f52646f608f9",
+    "state": "proposed input; PLH bound protonation not assigned by this review; each Zn/Ca site independently modeled"
+  },
+  "mandatory_validation_layers": [
+    "identity/protonation/oxidation/coordination graph",
+    "QM finite/converged/appropriate stationary point",
+    "native published adapter reference parity",
+    "held-out local distortions/modes/model fit",
+    "native Amber/OpenMM/GROMACS energies and forces",
+    "bounded unrestrained motion and graph preservation, repeated seeds"
+  ],
+  "not_claimed": [
+    "all metal-containing proteins supported",
+    "QM or empirical model physically accurate from parser agreement",
+    "restraint-maintained coordination is validation",
+    "short MD establishes production stability",
+    "bonded force field models catalysis, exchange or redox"
+  ],
+  "actual_results": {
+    "seminario_published_terms": 18,
+    "resp_array_format_byte_identical": true,
+    "resp_current_native_all113charges_exact": true,
+    "resp_historical_published82charges_max_error_e": 0.173776,
+    "resp_historical_published_parity": "unresolved mismatch",
+    "native_resp_static_common_bytes": 2074737104,
+    "native_resp_launch_reliability": "intermittent pre-main dyld failure; root owns rebuild",
+    "1mnc_small_atoms": 97,
+    "1mnc_large_atoms": 139,
+    "1mnc_status": "declared-state isolated cluster input; no QM or accepted FF"
+  },
+  "prototype_artifacts": [
+    {
+      "path": "mcpb_array_adapter.py",
+      "sha256": "d8cd8177588639af0965a45fcb1a143f5a002f00801133547e9eec5d276c5194"
+    },
+    {
+      "path": "verify_mcpb_array_reference.py",
+      "sha256": "0dfc956491f8f923853849840e98781574cdbbf79af82af2e4909dfd3805f413"
+    },
+    {
+      "path": "verify_mcpb_resp_reference.py",
+      "sha256": "e393a3e67b4b77155a92812de7ab280fce811d63cd37f0cc09f6218cc08ee51f"
+    },
+    {
+      "path": "build_1mnc_cluster_inputs.py",
+      "sha256": "6bb9785ecaaa35d274421b373610be4769fe278c9a85525eb82d39af6c4cb32c"
+    },
+    {
+      "path": "reference-mcpb-1okl/adapter-parity-report.json",
+      "sha256": "150f7b28ff8c856a144162ee55680fcc175134162b413f11dc7f8b9febefb9c3"
+    },
+    {
+      "path": "reference-mcpb-1okl/resp-parity-report.json",
+      "sha256": "21b7fd04f8733e7b5be2ffb2e363e63d1c47b7717b9df38ac74f77c69e7458c1"
+    },
+    {
+      "path": "prototype-1mnc-inputs/cluster-input-report.json",
+      "sha256": "3d64978ea5bd426b953304e97746ef098088c81b56869c211fc656c49551d1a0"
+    }
+  ],
+  "reference_basis_correction": {
+    "native_gaussian": {
+      "shells": "40 Cartesian d and one spherical f; explicit FCHK shell_types +2 and -3",
+      "ao_count": 684
+    },
+    "pyscf_spherical_6_31g_star_ao_count": 644,
+    "pyscf_cartesian_6_31g_star_ao_count": 687,
+    "conclusion": "Screening PySCF model distinct from native Gaussian mixed 6D/7F model. No projected SCF/derivative implementation verified."
+  },
+  "resp_heap_candidate": {
+    "path": "build/advanced-chemistry/resp-runtime/heap-v2/resp",
+    "evidence": "build/advanced-chemistry/resp-runtime/heap-v2-checks/validation.json",
+    "two_stage_fits": 10,
+    "native_launches": 20,
+    "all_113_charges_unchanged": true
+  },
+  "zaff_full_native_prototype": {
+    "case": "1CA2",
+    "path": "prototype-1ca2-zaff-water-v3",
+    "native_atom_count": 4534,
+    "original_heavy_atoms_retained": 2207,
+    "full_mechanical_parameter_match": true,
+    "same_hamiltonian_native_convention_diagnostic": "prototype-1ca2-zaff-water-v3/sander-native-phase-diagnostic.json",
+    "raw_comparison_retained_as_failed": true,
+    "motion_report": "prototype-1ca2-zaff-motion/motion-report.json",
+    "app_integration": false
+  },
+  "structural_mmp_reference": {
+    "pdb": "2USN",
+    "path": "reference-zaff/1mnc-structural-reference-map.json",
+    "zaff_center": 9,
+    "target": "1MNC structural Zn282",
+    "fit_heavy_atoms": 38,
+    "rmsd_angstrom": 0.242099665082334,
+    "accepted_final_site_transfer": false
+  }
+}

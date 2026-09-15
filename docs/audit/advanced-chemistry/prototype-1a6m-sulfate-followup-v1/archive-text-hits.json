@@ -1,0 +1,72 @@
+[
+  {
+    "member": "toppar/stream/lipid/toppar_all36_lipid_model.str",
+    "sha256": "7da8786c767440d6fd6c88c17b2b6fee34d1b39277d700a6567b6a09bfadfbb7",
+    "matches": [
+      [
+        227,
+        "RESI MSO4        -1.00 ! Methylsulfate"
+      ]
+    ]
+  },
+  {
+    "member": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+    "sha256": "d86f881d8a4f4418b51a1b17689b6fa983ff1e1ec690e34d531563c398825f9c",
+    "matches": [
+      [
+        3410,
+        "RESI MSO4          -1.00 ! CH3O4S, Methylsulfate"
+      ]
+    ]
+  },
+  {
+    "member": "toppar/top_all36_cgenff_v4.6.rtf",
+    "sha256": "e65b135e6fe721a77f89e097318ede9e33d3af19cfb9599788d99ce489f4f81e",
+    "matches": [
+      [
+        3409,
+        "RESI MSO4          -1.00 ! CH3O4S, Methylsulfate"
+      ]
+    ]
+  },
+  {
+    "member": "toppar/toph19.inp",
+    "sha256": "7ca525789507a9e7198021458caedc9eefa0a77e1c1d1035825eb1e21a312792",
+    "matches": [
+      [
+        1221,
+        "RESI SO4  -2.0"
+      ]
+    ]
+  },
+  {
+    "member": "toppar/top_all36_cgenff.rtf",
+    "sha256": "18b0f76e4d9fba1918e321327984850b1bb216403a2fe21e251d038f84b48069",
+    "matches": [
+      [
+        3420,
+        "RESI MSO4          -1.00 ! CH3O4S, Methylsulfate"
+      ]
+    ]
+  },
+  {
+    "member": "toppar/ace/acepar19.inp",
+    "sha256": "9d280abafc7f52e4a1e7f6edfd86be6043deafb384e9403f81bccc9485a103ce",
+    "matches": [
+      [
+        32,
+        "SSO4     5.0260"
+      ]
+    ]
+  },
+  {
+    "member": "toppar/ace/acepar22_prot.inp",
+    "sha256": "1df8b175f63756698662b56e458db385b4e4df48b9d40757cf7ed27edc9ceaec",
+    "matches": [
+      [
+        55,
+        "SSO4     5.0260 ! SO4 sulfate S volume, from results on param19"
+      ]
+    ]
+  }
+]

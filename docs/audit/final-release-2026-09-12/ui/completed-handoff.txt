@@ -1,0 +1,208 @@
+- banner:
+  - link "DynaMol home":
+    - /url: "#"
+    - text: DynaMol
+    - generic: MOLECULES IN MOTION
+    - generic: α
+  - navigation "Workspace":
+    - button "Explore":
+      - text: Explore
+    - button "Simulate" [active]:
+      - text: Simulate
+  - generic: Local workspace
+  - button "Open quick guide":
+  - generic: v0.1
+- generic: Workspace
+- button "Final Chrome UI audit":
+  - text: Final Chrome UI audit
+- generic: TRAJECTORY
+- status "Saved locally"
+- button "Projects":
+  - text: Projects
+- button "Open files":
+  - text: Open files
+- button "New simulation":
+  - text: New simulation
+- main:
+  - complementary:
+    - text: SCENE
+    - generic: "01"
+    - heading "Final Chrome UI audit" [level=2]
+    - paragraph: 5464 residues · 17,395 atoms
+    - button "Structure details":
+      - text: Structure details
+    - heading "Named selections" [level=3]
+    - generic: "0"
+    - textbox "Selection name":
+      - /placeholder: Name these atoms…
+    - button "Save named selection" [disabled]:
+    - paragraph: Pick atoms or focus a residue, then save a selection.
+    - heading "Representation" [level=3]
+    - button "Ribbons":
+      - generic: Ribbons
+    - button "Ball & stick":
+      - generic: Ball & stick
+    - button "Sticks":
+      - generic: Sticks
+    - button "Surface":
+      - generic: Surface
+    - generic: Color by
+    - combobox "Color molecules by":
+      - option "Sequence"
+      - option "Chain"
+      - option "Element" [selected]
+    - heading "Visibility" [level=3]
+    - button "Hide protein & nucleic acids" [pressed]:
+      - text: Protein & nucleic acids
+      - generic: 1,231 atoms
+    - button "Hide ligands" [pressed]:
+      - text: Ligands
+      - generic: 0 atoms
+    - button "Hide water" [pressed]:
+      - text: Water
+      - generic: 16,164 atoms
+    - button "Hide ions" [pressed]:
+      - text: Ions
+      - generic: 0 atoms
+    - generic: H
+    - generic: Hydrogens
+    - button "Hidden"
+    - button "Polar only"
+    - button "All"
+    - heading "Go to a residue" [level=3]
+    - textbox "Find a residue":
+      - /placeholder: e.g. 35, GLY35, A:35
+      - text: GLY35
+    - button "Focus residue":
+    - generic: PRIVATE BY DESIGN
+    - paragraph:
+      - text: Your files. Your computer.
+      - text: An open source workspace.
+    - button "Meet DynaMol":
+      - text: Meet DynaMol
+  - generic: THE MOLECULAR CANVAS
+  - generic: Final Chrome UI audit in motion
+  - button "Toggle measurement inspector":
+  - img "Interactive 3D molecular structure of Final Chrome UI audit. Drag to rotate, scroll or pinch to zoom, right-drag to pan, double-click an atom to focus."
+  - generic "MET1:CA ↔ GLN2:CA · saved frame 21. The numeric value comes from saved-frame analysis; connecting lines follow the displayed coordinates.":
+    - generic: distance
+    - strong: 3.91 Å
+  - generic "Periodic coordinates play at saved frames. Smooth interpolation requires verified unwrapped display coordinates to avoid artificial jumps across the unit cell.": Periodic trajectory · saved-frame playback
+  - button "Hide measurements" [pressed]:
+  - button "Zoom in":
+  - button "Zoom out":
+  - button "Fit molecule":
+  - button "Auto rotate":
+  - button "Save snapshot":
+  - button "Full screen":
+  - text: Drag to rotate
+  - text: Scroll or pinch to zoom
+  - text: Right drag to pan
+  - generic: "Y"
+  - strong: X
+  - emphasis: Z
+  - separator "Resize protein view":
+    - generic: Drag to resize view
+  - button "First frame":
+  - button "Previous frame":
+  - button "Play trajectory":
+  - button "Next frame":
+  - button "Last frame":
+  - generic: "2.00"
+  - generic: ps / 2.00 ps
+  - combobox "Playback speed":
+    - option "0.25×"
+    - option "0.5×"
+    - option "1×" [selected]
+    - option "2×"
+    - option "4×"
+  - button "Loop playback" [pressed]:
+  - slider "Trajectory frame": "20"
+  - generic: FRAME 21 / 21
+  - text: Saved-frame playback
+  - text: 21 saved frames
+  - generic: Time in picoseconds
+  - region "Trajectory measurements":
+    - text: MOTION, MEASURED
+    - generic: Click the plot to jump to a frame
+    - button "Export measurement CSV":
+    - button "Measure":
+      - text: Measure
+    - button "MET1:CA ↔ GLN2:CA": MET1:CA ↔ GLN2:CA
+    - button "Hide MET1:CA ↔ GLN2:CA in view" [pressed]:
+    - button "Remove MET1:CA ↔ GLN2:CA":
+    - strong: 3.91Å
+    - generic: Current frame
+    - img "MET1:CA ↔ GLN2:CA, plotted across 21 saved frames":
+      - generic: "3.70"
+      - generic: "3.85"
+      - generic: "4.00"
+      - generic: "0.00"
+      - generic: "0.50"
+      - generic: "1.00"
+      - generic: "1.50"
+      - generic: "2.00"
+    - generic: Time (ps)
+    - text: Mean
+    - generic: 3.85 Å
+    - text: Range
+    - generic: 3.74–3.96 Å
+    - generic: Saved-frame analysis · periodic boundaries
+  - generic "Structural analysis RMSD · RMSF · saved selections":
+    - text: Structural analysis
+    - generic: RMSD · RMSF · saved selections
+  - option "RMSD · change over time" [selected]
+  - option "RMSF · local fluctuations"
+  - option "Protein Cα" [selected]
+  - option "Protein backbone"
+  - option "Protein heavy atoms"
+  - option "All solute heavy atoms"
+  - option "Current selected atoms (0)" [disabled]
+  - option "Fit protein Cα" [selected]
+  - option "Fit protein backbone"
+  - option "Fit measured atoms"
+  - option "No fitting"
+  - option "Make molecules whole" [selected]
+  - option "Saved Cartesian coordinates"
+  - complementary:
+    - text: INSPECT & MEASURE
+    - button "Close measurement inspector":
+    - generic: θ
+    - heading "A closer look." [level=2]
+    - paragraph: Turn a moment of molecular motion into a measurable insight.
+    - heading "What would you like to follow?" [level=3]
+    - button "A — B Distance":
+      - generic: A — B
+      - text: Distance
+    - button "A — B — C Angle":
+      - generic: A — B — C
+      - text: Angle
+    - button "A — B — C — D Dihedral":
+      - generic: A — B — C — D
+      - text: Dihedral
+    - button "D — H ··· A Hydrogen bond":
+      - generic: D — H ··· A
+      - text: Hydrogen bond
+    - paragraph: Pick any two atoms to follow their separation.
+    - button "Pick atoms in the scene":
+      - text: Pick atoms in the scene
+    - generic: A
+    - paragraph: Select atom 1
+    - generic: B
+    - paragraph: Select atom 2
+    - textbox "Find an atom":
+      - /placeholder: Or find an atom by name…
+    - button "Plot over time" [disabled]:
+      - text: Plot over time
+    - text: Find your focus
+    - paragraph: Pick a residue from the scene panel to fly straight to it. Press F to bring the whole molecule back.
+    - text: Analysis uses saved coordinates.
+    - text: Periodic boundaries are respected.
+- contentinfo:
+  - text: Ready to explore
+  - emphasis
+  - text: 17,395 atoms
+  - text: OpenMM + GROMACS
+  - button "Keyboard shortcuts ?":
+    - text: Keyboard shortcuts
+    - generic: "?"

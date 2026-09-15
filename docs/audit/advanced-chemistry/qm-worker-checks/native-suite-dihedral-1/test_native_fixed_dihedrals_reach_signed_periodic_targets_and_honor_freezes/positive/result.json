@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "status": "completed",
+  "phase": "completed",
+  "worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "39654e92f0f969425559ece201bc3ab21c12ef2e947bd0377c4cb538d7fc1c27",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "runtime_manifest": {
+    "present": false
+  },
+  "optimization": {
+    "requested": true,
+    "converged": true,
+    "settings": {
+      "enabled": true,
+      "max_steps": 60,
+      "freeze_atom_ids": [
+        "O-left",
+        "O-right"
+      ],
+      "dihedral_constraints": [
+        {
+          "atom_ids": [
+            "H-left",
+            "O-left",
+            "O-right",
+            "H-right"
+          ],
+          "target_degrees": 60
+        }
+      ],
+      "dihedral_tolerance_degrees": 0.1,
+      "convergence_energy": 1e-06,
+      "convergence_grms": 0.0003,
+      "convergence_gmax": 0.00045,
+      "convergence_drms": 0.0012,
+      "convergence_dmax": 0.0018
+    },
+    "steps": [
+      {
+        "cycle": 1,
+        "energy_hartree": -148.75223126649604,
+        "gradient_norm_hartree_per_bohr": 0.15847154231819247,
+        "scf_converged": true,
+        "dihedrals": [
+          {
+            "atom_ids": [
+              "H-left",
+              "O-left",
+              "O-right",
+              "H-right"
+            ],
+            "atom_indices_zero_based": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "target_degrees": 60,
+            "canonical_target_degrees": 60.0,
+            "measured_degrees": 90.0,
+            "periodic_error_degrees": 30.0,
+            "absolute_periodic_error_degrees": 30.0,
+            "tolerance_degrees": 0.1,
+            "target_satisfied": false
+          }
+        ]
+      },
+      {
+        "cycle": 2,
+        "energy_hartree": -148.75140347910457,
+        "gradient_norm_hartree_per_bohr": 0.16177845526853887,
+        "scf_converged": true,
+        "dihedrals": [
+          {
+            "atom_ids": [
+              "H-left",
+              "O-left",
+              "O-right",
+              "H-right"
+            ],
+            "atom_indices_zero_based": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "target_degrees": 60,
+            "canonical_target_degrees": 60.0,
+            "measured_degrees": 64.76721723603754,
+            "periodic_error_degrees": 4.767217236037538,
+            "absolute_periodic_error_degrees": 4.767217236037538,
+            "tolerance_degrees": 0.1,
+            "target_satisfied": false
+          }
+        ]
+      },
+      {
+        "cycle": 3,
+        "energy_hartree": -148.75582797297733,
+        "gradient_norm_hartree_per_bohr": 0.09141385688356815,
+        "scf_converged": true,
+        "dihedrals": [
+          {
+            "atom_ids": [
+              "H-left",
+              "O-left",
+              "O-right",
+              "H-right"
+            ],
+            "atom_indices_zero_based": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "target_degrees": 60,
+            "canonical_target_degrees": 60.0,
+            "measured_degrees": 60.0000009189464,
+            "periodic_error_degrees": 9.18946398087428e-07,
+            "absolute_periodic_error_degrees": 9.18946398087428e-07,
+            "tolerance_degrees": 0.1,
+            "target_satisfied": true
+          }
+        ]
+      },
+      {
+        "cycle": 4,
+        "energy_hartree": -148.7566593499571,
+        "gradient_norm_hartree_per_bohr": 0.0870455702412999,
+        "scf_converged": true,
+        "dihedrals": [
+          {
+            "atom_ids": [
+              "H-left",
+              "O-left",
+              "O-right",
+              "H-right"
+            ],
+            "atom_indices_zero_based": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "target_degrees": 60,
+            "canonical_target_degrees": 60.0,
+            "measured_degrees": 59.99999814768854,
+            "periodic_error_degrees": -1.8523114633239857e-06,
+            "absolute_periodic_error_degrees": 1.8523114633239857e-06,
+            "tolerance_degrees": 0.1,
+            "target_satisfied": true
+          }
+        ]
+      },
+      {
+        "cycle": 5,
+        "energy_hartree": -148.7566646144031,
+        "gradient_norm_hartree_per_bohr": 0.0874781524121371,
+        "scf_converged": true,
+        "dihedrals": [
+          {
+            "atom_ids": [
+              "H-left",
+              "O-left",
+              "O-right",
+              "H-right"
+            ],
+            "atom_indices_zero_based": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "target_degrees": 60,
+            "canonical_target_degrees": 60.0,
+            "measured_degrees": 59.99999811899131,
+            "periodic_error_degrees": -1.881008692805608e-06,
+            "absolute_periodic_error_degrees": 1.881008692805608e-06,
+            "tolerance_degrees": 0.1,
+            "target_satisfied": true
+          }
+        ]
+      },
+      {
+        "cycle": 6,
+        "energy_hartree": -148.75666466067804,
+        "gradient_norm_hartree_per_bohr": 0.08750528830630837,
+        "scf_converged": true,
+        "dihedrals": [
+          {
+            "atom_ids": [
+              "H-left",
+              "O-left",
+              "O-right",
+              "H-right"
+            ],
+            "atom_indices_zero_based": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "target_degrees": 60,
+            "canonical_target_degrees": 60.0,
+            "measured_degrees": 59.99999997296505,
+            "periodic_error_degrees": -2.7034950278448378e-08,
+            "absolute_periodic_error_degrees": 2.7034950278448378e-08,
+            "tolerance_degrees": 0.1,
+            "target_satisfied": true
+          }
+        ]
+      }
+    ],
+    "initial_dihedral_constraints": [
+      {
+        "atom_ids": [
+          "H-left",
+          "O-left",
+          "O-right",
+          "H-right"
+        ],
+        "atom_indices_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "target_degrees": 60,
+        "canonical_target_degrees": 60.0,
+        "measured_degrees": 90.0,
+        "periodic_error_degrees": 30.0,
+        "absolute_periodic_error_degrees": 30.0,
+        "tolerance_degrees": 0.1,
+        "target_satisfied": false
+      }
+    ],
+    "constraint_atom_indices_zero_based": [
+      1,
+      2
+    ],
+    "constraint_file_sha256": "92e2a0a525415e17c706cf08b19308fee2371bc56826e9dbad34485545a2cde3",
+    "final_dihedral_constraints": [
+      {
+        "atom_ids": [
+          "H-left",
+          "O-left",
+          "O-right",
+          "H-right"
+        ],
+        "atom_indices_zero_based": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "target_degrees": 60,
+        "canonical_target_degrees": 60.0,
+        "measured_degrees": 59.99999997296505,
+        "periodic_error_degrees": -2.7034950278448378e-08,
+        "absolute_periodic_error_degrees": 2.7034950278448378e-08,
+        "tolerance_degrees": 0.1,
+        "target_satisfied": true
+      }
+    ],
+    "dihedral_constraints_satisfied": true,
+    "max_frozen_displacement_bohr": 6.111857427506222e-09
+  },
+  "scf": {
+    "converged": true,
+    "cycles": 10,
+    "max_cycles": 100,
+    "conv_tol_hartree": 1e-10,
+    "conv_tol_grad": 1e-07
+  },
+  "energy_hartree": -148.75666466067796,
+  "atom_ids": [
+    "H-left",
+    "O-left",
+    "O-right",
+    "H-right"
+  ],
+  "elements": [
+    "H",
+    "O",
+    "O",
+    "H"
+  ],
+  "requested_threads": 2,
+  "actual_pyscf_threads": 1,
+  "charge": 0,
+  "spin_2S": 0,
+  "explicit_electron_count": 18,
+  "density_electron_count": 18.0,
+  "nao": 12,
+  "method": {
+    "method": "RHF",
+    "basis_requested": "sto-3g",
+    "ecp_requested": null,
+    "basis_sha256": "20ecc80f30bc2f269c85b01c4996643bb068087722a2c54829a5ce6d549c9849",
+    "ecp_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "spherical_basis": true,
+    "symmetry": false,
+    "density_fit": false,
+    "functional_requested": null,
+    "grid_level": null,
+    "requested_threads": 2,
+    "actual_pyscf_threads": 1
+  },
+  "resolved_method_file": "resolved-method.json",
+  "resolved_method_file_sha256": "e5bf669d0b3fc54081fa9bb437010635ec8e438667aebbfdc2de433abad41289",
+  "arrays_file": "arrays.npz",
+  "arrays_sha256": "15641ab36c7272e54016855ae0e6a2d66b95e2baf898423315a03c4312da540c",
+  "checkpoint_file": "scf.chk",
+  "checkpoint_sha256": "29babed7b8ad7cfbe70246ec944dca39f6f695efa3b2d6d00479f9341c7d9281",
+  "arrays": {
+    "coords_bohr": {
+      "shape": [
+        4,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "coords_angstrom": {
+      "shape": [
+        4,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "atomic_numbers": {
+      "shape": [
+        4
+      ],
+      "dtype": "int64"
+    },
+    "effective_nuclear_charges": {
+      "shape": [
+        4
+      ],
+      "dtype": "float64"
+    },
+    "gradient_hartree_per_bohr": {
+      "shape": [
+        4,
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "units": {
+    "energy": "hartree",
+    "coords_bohr": "bohr",
+    "coords_angstrom": "angstrom",
+    "gradient_hartree_per_bohr": "hartree/bohr",
+    "hessian_hartree_per_bohr2": "hartree/bohr^2",
+    "esp_points_bohr": "bohr",
+    "esp_hartree_per_e": "hartree/e",
+    "effective_nuclear_charges": "e",
+    "bohr_to_angstrom": 0.52917721092,
+    "bohr_constant_source": "pyscf.lib.param.BOHR"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "pyscf": "2.14.0",
+    "numpy": "2.5.3",
+    "geometric": "1.1.1",
+    "libxc": "7.0.0"
+  },
+  "elapsed_seconds": 1.122201
+}

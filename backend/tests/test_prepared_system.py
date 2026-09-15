@@ -172,3 +172,114 @@ def test_real_solvation_job_and_output_preserve_parameter_bundle(isolated_data, 
     assert "ligands/LIG/parameters.xml" in worker.provenance["outputs"]
     assert "ligands/LIG/native.log" in worker.provenance["outputs"]
     assert (storage.dataset_dir(output["id"]) / "ligands/LIG/native.log").is_file()
+
+
+def pinned_base_files(folder, solvent='explicit'):
+    """Copy real parameter bytes; do not alter the runtime distribution."""
+    from openmm import app
+
+    roots = ['amber14/protein.ff14SB.xml',
+             'implicit/gbn2.xml' if solvent == 'implicit' else 'amber14/tip3p.xml']
+    data = Path(app.__file__).parent / 'data'
+    copied = {}
+    for name in roots:
+        path = Path(folder).resolve() / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(data / name, path)
+        copied[name] = path
+    return copied
+
+
+def static_protein_topology(forcefield, include_water):
+    """Small complete topology, without coordinates, Context, minimization or MD.
+
+    Three alanines exercise protein bonded/nonbonded terms. Explicit water
+    exercises the solvent root rather than merely loading an unused XML file.
+    Terminal atom names/bonds come from the installed standard templates.
+    """
+    from openmm import app
+
+    top = app.Topology()
+    chain = top.addChain('P')
+    previous = None
+    for i, template_name in enumerate(('NALA', 'ALA', 'CALA'), 1):
+        residue = top.addResidue('ALA', chain, str(i))
+        template = forcefield._templates[template_name]
+        atoms = [top.addAtom(a.name, a.element, residue) for a in template.atoms]
+        named = {atom.name: atom for atom in atoms}
+        for first, second in template.bonds:
+            top.addBond(atoms[first], atoms[second])
+        if previous is not None:
+            top.addBond(previous, named['N'])
+        previous = named['C']
+    if include_water:
+        residue = top.addResidue('HOH', top.addChain('W'), '1')
+        oxygen = top.addAtom('O', app.element.oxygen, residue)
+        for name in ('H1', 'H2'):
+            top.addBond(oxygen, top.addAtom(name, app.element.hydrogen, residue))
+    return top
+
+
+@pytest.mark.parametrize('solvent', ['explicit', 'implicit'])
+def test_pinned_base_paths_reproduce_default_static_system_without_runtime_fallback(tmp_path, monkeypatch, solvent):
+    from openmm import app, XmlSerializer
+    import openmm.app.forcefield as native_forcefield
+
+    default, default_files = load_prepared_forcefield(tmp_path, None, solvent=solvent)
+    topology = static_protein_topology(default, include_water=solvent == 'explicit')
+    paths = pinned_base_files(tmp_path / 'snapshot', solvent)
+    before = {name: path.read_bytes() for name, path in paths.items()}
+    # The copied absolute roots must work even when named runtime lookup cannot.
+    # This catches accidentally accepting the mapping but loading defaults.
+    monkeypatch.setattr(native_forcefield, '_getDataDirectories', lambda: [])
+    pinned, pinned_files = load_prepared_forcefield(
+        tmp_path, None, solvent=solvent, base_parameter_paths=dict(reversed(list(paths.items()))))
+    options = dict(nonbondedMethod=app.NoCutoff, rigidWater=False, removeCMMotion=False)
+    default_system = default.createSystem(topology, **options)
+    pinned_system = pinned.createSystem(topology, **options)
+    assert pinned_files == default_files
+    assert pinned_system.getNumParticles() == topology.getNumAtoms()
+    assert XmlSerializer.serialize(pinned_system) == XmlSerializer.serialize(default_system)
+    assert {name: path.read_bytes() for name, path in paths.items()} == before
+
+
+@pytest.mark.parametrize('change', [
+    lambda paths: {name: value for name, value in paths.items() if name != 'amber14/protein.ff14SB.xml'},
+    lambda paths: {name: value for name, value in paths.items() if name != 'amber14/tip3p.xml'},
+    lambda paths: dict(paths, **{'implicit/gbn2.xml': paths['amber14/tip3p.xml']}),
+    lambda paths: {Path(name).name: value for name, value in paths.items()},
+    lambda paths: {name.upper(): value for name, value in paths.items()},
+    lambda paths: list(paths.items()),
+])
+def test_pinned_base_mapping_requires_exact_root_names(tmp_path, change):
+    paths = pinned_base_files(tmp_path / 'snapshot')
+    with pytest.raises(ValueError, match='exactly.*named protein and solvent'):
+        load_prepared_forcefield(tmp_path, None, base_parameter_paths=change(paths))
+
+
+def test_pinned_solvent_root_must_match_selected_model(tmp_path):
+    explicit_paths = pinned_base_files(tmp_path / 'explicit')
+    implicit_paths = pinned_base_files(tmp_path / 'implicit', 'implicit')
+    with pytest.raises(ValueError, match='exactly.*named protein and solvent'):
+        load_prepared_forcefield(tmp_path, None, solvent='implicit', base_parameter_paths=explicit_paths)
+    with pytest.raises(ValueError, match='exactly.*named protein and solvent'):
+        load_prepared_forcefield(tmp_path, None, solvent='explicit', base_parameter_paths=implicit_paths)
+
+
+@pytest.mark.parametrize('root_name', ['amber14/protein.ff14SB.xml', 'amber14/tip3p.xml'])
+@pytest.mark.parametrize('kind', ['missing', 'directory', 'symlink', 'dangling_symlink', 'symlink_parent'])
+def test_pinned_base_roots_require_regular_files_without_symlinks(tmp_path, root_name, kind):
+    paths = pinned_base_files(tmp_path / 'snapshot')
+    invalid = tmp_path.resolve() / ('invalid-' + kind)
+    if kind == 'directory':
+        invalid.mkdir()
+    elif kind == 'symlink':
+        invalid.symlink_to(paths[root_name])
+    elif kind == 'dangling_symlink':
+        invalid.symlink_to(tmp_path.resolve() / 'absent.xml')
+    elif kind == 'symlink_parent':
+        invalid.symlink_to(paths[root_name].parent, target_is_directory=True)
+        invalid = invalid / paths[root_name].name
+    paths[root_name] = invalid
+    with pytest.raises(ValueError, match='existing regular files without symlinks'):
+        load_prepared_forcefield(tmp_path, None, base_parameter_paths=paths)

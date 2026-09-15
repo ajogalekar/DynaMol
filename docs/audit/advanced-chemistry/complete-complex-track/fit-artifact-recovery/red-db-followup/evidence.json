@@ -1,0 +1,669 @@
+{
+  "schema": "dynamol.reddb-dmp-recovery-assessment.v1",
+  "created_utc": "2026-09-14T20:02:37.495562+00:00",
+  "scope": "Bounded public source recovery and read-only charge/graph comparison.",
+  "lookup_budget": {
+    "used": 2,
+    "maximum": 3,
+    "third_lookup_unneeded": true,
+    "guanosine_lookup_performed": false
+  },
+  "source_manifest": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/fit-artifact-recovery/red-db-followup/artifact-inventory.json",
+    "sha256": "aee8c5d8422792a9bd6a17105f98ee2e32eeef3e1c264030ecb752d6cf1f4c94"
+  },
+  "inspection_script": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/fit-artifact-recovery/red-db-followup/inspect_public_artifacts.py",
+    "sha256": "a16d256878272a9a242ac4b928a2faa503d5ce76417cae4f86025103be0ba37a"
+  },
+  "prior_gdp_assessment": {
+    "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/c6-gdp-transfer/evidence.json",
+    "sha256": "49e56603aa51dfcf2e19af88efcd9ae08a552c03e4b7722d61e749853622da85"
+  },
+  "diagnostic_corrections": [
+    {
+      "failure": "Initial summary assertion searched floating-point JSON values as exact text substrings.",
+      "evidence": "Native Amber charge values contain normalization rounding, e.g. O1A \u22120.9473999989024436 e.",
+      "correction": "Use explicitly named phosphate atoms and numerical comparison rounded to the original four-decimal source precision.",
+      "scientific_input_changed": false
+    }
+  ],
+  "projects": [
+    {
+      "project": "W-11",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-11/",
+      "metadata": {
+        "Firstname": "Francois-Yves",
+        "Lastname": "Dupradeau",
+        "Institute": "UFR de pharmacie, UPJV",
+        "City": "Amiens",
+        "Country": "FRANCE",
+        "Author(s)": "F.-Y. Dupradeau, A. Pigache, T. Zaffran, C. Savineau, R. Lelong, N. Grivel, D. Lelong, W. Rosanski and P. Cieplak",
+        "Journal": "Phys. Chem. Chem. Phys.",
+        "Year": "2010",
+        "Volume": "12",
+        "Page(s)": "7821-7839",
+        "Upload": "07-11-2005 15:39",
+        "Update": "27-09-2011 17:31"
+      },
+      "metadata_time_zone_as_stated": "Paris time (Day-Month-Year)",
+      "submission_author_identity": {
+        "first_name": "Francois-Yves",
+        "last_name": "Dupradeau",
+        "note": "Named on live public project page."
+      },
+      "publication_linkage": {
+        "database_cites": "Dupradeau et al., Phys. Chem. Chem. Phys. 2010, 12, 7821\u20137839",
+        "doi_resolved_from_prior_primary_paper": "10.1039/C0CP00111B",
+        "is_panteva_reference_51": true,
+        "does_panteva_name_this_project": false,
+        "does_project_name_panteva": false,
+        "exact_panteva_model_identified": false
+      },
+      "source_method": {
+        "molecule": "dimethylphosphate, gauche/gauche conformer",
+        "formal_total_charge_e": -1,
+        "method": "HF/6-31G*; Connolly surface; two-stage RESP",
+        "optimization_and_mep_program": "GAMESS-US",
+        "molecular_orientation": "program reorientation algorithm; one source conformer/orientation",
+        "fit_strengths_source": {
+          "stage_1_qwt": 0.0005,
+          "stage_2_qwt": 0.001
+        },
+        "fit_strengths_assigned": false
+      },
+      "integrity": {
+        "atoms": 13,
+        "bonds": 12,
+        "total_charge_e": -1.0,
+        "finite_coordinates_and_charges": true,
+        "atom_count_matches_resp": true,
+        "net_charge_matches_resp": true,
+        "net_charge_residual_e": 0.0,
+        "charge_residual_interpretation": "Four-decimal MOL2 charges sum to the reported value; no renormalization performed. The \u22120.0002 e residual for W-13/14 is compatible with output rounding, not proof of a different intended integer charge.",
+        "mol2_types_are_element_labels": [
+          "C",
+          "H",
+          "O",
+          "P"
+        ],
+        "all_mol2_bond_orders_single": true,
+        "complete_force_field_type_and_parameter_bundle": false
+      },
+      "nonbridging_oxygen_graph": [
+        {
+          "atom_id": 7,
+          "name": "O4",
+          "charge_e": -0.7956,
+          "neighbor": "P3"
+        },
+        {
+          "atom_id": 8,
+          "name": "O5",
+          "charge_e": -0.7956,
+          "neighbor": "P3"
+        }
+      ],
+      "bridging_oxygen_graph": [
+        {
+          "atom_id": 5,
+          "name": "O2",
+          "charge_e": -0.4744,
+          "neighbors": [
+            "C1",
+            "P3"
+          ]
+        },
+        {
+          "atom_id": 9,
+          "name": "O6",
+          "charge_e": -0.4769,
+          "neighbors": [
+            "P3",
+            "C7"
+          ]
+        }
+      ],
+      "resp_stage_1_equivalence_records": [
+        {
+          "atomic_number": 8,
+          "equivalence": 7,
+          "atom_id": 8
+        }
+      ],
+      "placeholder_files": [
+        "script1.ff",
+        "script2.ff",
+        "script3.ff",
+        "script4.ff",
+        "script5.ff"
+      ],
+      "listed_converter_missing_from_archive": false,
+      "redistribution_status": "Public download verified; page says projects free but displays rights-reserved footer. No explicit redistribution license recovered from these archives.",
+      "mol2_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/inspected-members/tripos1.mol2",
+        "sha256": "ac5d52d0501c4999fca081a5e180d6a1f0ff9852412a70bc244e3ae4ea426987"
+      },
+      "archive_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-11/W-11.tar.bz2",
+        "sha256": "b05fb6963e24c23c857fd0ee100e9d15abc4fb76c65ef1caa1697732e3c61875"
+      }
+    },
+    {
+      "project": "W-12",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-12/",
+      "metadata": {
+        "Firstname": "Francois-Yves",
+        "Lastname": "Dupradeau",
+        "Institute": "UFR de pharmacie, UPJV",
+        "City": "Amiens",
+        "Country": "FRANCE",
+        "Author(s)": "F.-Y. Dupradeau, A. Pigache, T. Zaffran, C. Savineau, R. Lelong, N. Grivel, D. Lelong, W. Rosanski and P. Cieplak",
+        "Journal": "Phys. Chem. Chem. Phys.",
+        "Year": "2010",
+        "Volume": "12",
+        "Page(s)": "7821-7839",
+        "Upload": "07-11-2005 16:04",
+        "Update": "27-09-2011 17:36"
+      },
+      "metadata_time_zone_as_stated": "Paris time (Day-Month-Year)",
+      "submission_author_identity": {
+        "first_name": "Francois-Yves",
+        "last_name": "Dupradeau",
+        "note": "Named on live public project page."
+      },
+      "publication_linkage": {
+        "database_cites": "Dupradeau et al., Phys. Chem. Chem. Phys. 2010, 12, 7821\u20137839",
+        "doi_resolved_from_prior_primary_paper": "10.1039/C0CP00111B",
+        "is_panteva_reference_51": true,
+        "does_panteva_name_this_project": false,
+        "does_project_name_panteva": false,
+        "exact_panteva_model_identified": false
+      },
+      "source_method": {
+        "molecule": "dimethylphosphate, gauche/gauche conformer",
+        "formal_total_charge_e": -1,
+        "method": "HF/6-31G*; Connolly surface; two-stage RESP",
+        "optimization_and_mep_program": "GAMESS-US",
+        "molecular_orientation": "program reorientation algorithm; one source conformer/orientation",
+        "fit_strengths_source": {
+          "stage_1_qwt": 0.0005,
+          "stage_2_qwt": 0.001
+        },
+        "fit_strengths_assigned": false
+      },
+      "integrity": {
+        "atoms": 13,
+        "bonds": 12,
+        "total_charge_e": -1.0,
+        "finite_coordinates_and_charges": true,
+        "atom_count_matches_resp": true,
+        "net_charge_matches_resp": true,
+        "net_charge_residual_e": 0.0,
+        "charge_residual_interpretation": "Four-decimal MOL2 charges sum to the reported value; no renormalization performed. The \u22120.0002 e residual for W-13/14 is compatible with output rounding, not proof of a different intended integer charge.",
+        "mol2_types_are_element_labels": [
+          "C",
+          "H",
+          "O",
+          "P"
+        ],
+        "all_mol2_bond_orders_single": true,
+        "complete_force_field_type_and_parameter_bundle": false
+      },
+      "nonbridging_oxygen_graph": [
+        {
+          "atom_id": 7,
+          "name": "O4",
+          "charge_e": -0.7956,
+          "neighbor": "P3"
+        },
+        {
+          "atom_id": 8,
+          "name": "O5",
+          "charge_e": -0.7956,
+          "neighbor": "P3"
+        }
+      ],
+      "bridging_oxygen_graph": [
+        {
+          "atom_id": 5,
+          "name": "O2",
+          "charge_e": -0.4769,
+          "neighbors": [
+            "C1",
+            "P3"
+          ]
+        },
+        {
+          "atom_id": 9,
+          "name": "O6",
+          "charge_e": -0.4744,
+          "neighbors": [
+            "P3",
+            "C7"
+          ]
+        }
+      ],
+      "resp_stage_1_equivalence_records": [
+        {
+          "atomic_number": 8,
+          "equivalence": 7,
+          "atom_id": 8
+        }
+      ],
+      "placeholder_files": [
+        "script1.ff",
+        "script2.ff",
+        "script3.ff",
+        "script4.ff",
+        "script5.ff"
+      ],
+      "listed_converter_missing_from_archive": false,
+      "redistribution_status": "Public download verified; page says projects free but displays rights-reserved footer. No explicit redistribution license recovered from these archives.",
+      "mol2_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/inspected-members/tripos1.mol2",
+        "sha256": "fe075ef4f3278b76ca391d9614d09f035252447a16412abb9147a672b1956148"
+      },
+      "archive_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-12/W-12.tar.bz2",
+        "sha256": "187981719d19253b1eba263aebe05ab0a5e014f0e40714194d94e2491dfd24bf"
+      }
+    },
+    {
+      "project": "W-13",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-13/",
+      "metadata": {
+        "Firstname": "",
+        "Lastname": "",
+        "Institute": "",
+        "City": "",
+        "Country": "",
+        "Author(s)": "F.-Y. Dupradeau, A. Pigache, T. Zaffran, C. Savineau, R. Lelong, N. Grivel, D. Lelong, W. Rosanski and P. Cieplak",
+        "Journal": "Phys. Chem. Chem. Phys.",
+        "Year": "2010",
+        "Volume": "12",
+        "Page(s)": "7821-7839",
+        "Upload": "07-11-2005 16:16",
+        "Update": "15-03-2013 10:34"
+      },
+      "metadata_time_zone_as_stated": "Paris time (Day-Month-Year)",
+      "submission_author_identity": {
+        "first_name": "",
+        "last_name": "",
+        "note": "Blank live-page submission identity for W-13; do not infer the submitter from publication authors."
+      },
+      "publication_linkage": {
+        "database_cites": "Dupradeau et al., Phys. Chem. Chem. Phys. 2010, 12, 7821\u20137839",
+        "doi_resolved_from_prior_primary_paper": "10.1039/C0CP00111B",
+        "is_panteva_reference_51": true,
+        "does_panteva_name_this_project": false,
+        "does_project_name_panteva": false,
+        "exact_panteva_model_identified": false
+      },
+      "source_method": {
+        "molecule": "dimethylphosphate, gauche/gauche conformer",
+        "formal_total_charge_e": -1,
+        "method": "HF/6-31G*; Connolly surface; two-stage RESP",
+        "optimization_and_mep_program": "Gaussian 1998",
+        "molecular_orientation": "program reorientation algorithm; one source conformer/orientation",
+        "fit_strengths_source": {
+          "stage_1_qwt": 0.0005,
+          "stage_2_qwt": 0.001
+        },
+        "fit_strengths_assigned": false
+      },
+      "integrity": {
+        "atoms": 13,
+        "bonds": 12,
+        "total_charge_e": -1.0002,
+        "finite_coordinates_and_charges": true,
+        "atom_count_matches_resp": true,
+        "net_charge_matches_resp": false,
+        "net_charge_residual_e": -0.0002,
+        "charge_residual_interpretation": "Four-decimal MOL2 charges sum to the reported value; no renormalization performed. The \u22120.0002 e residual for W-13/14 is compatible with output rounding, not proof of a different intended integer charge.",
+        "mol2_types_are_element_labels": [
+          "C",
+          "H",
+          "O",
+          "P"
+        ],
+        "all_mol2_bond_orders_single": true,
+        "complete_force_field_type_and_parameter_bundle": false
+      },
+      "nonbridging_oxygen_graph": [
+        {
+          "atom_id": 7,
+          "name": "O4",
+          "charge_e": -0.7952,
+          "neighbor": "P3"
+        },
+        {
+          "atom_id": 8,
+          "name": "O5",
+          "charge_e": -0.7952,
+          "neighbor": "P3"
+        }
+      ],
+      "bridging_oxygen_graph": [
+        {
+          "atom_id": 5,
+          "name": "O2",
+          "charge_e": -0.4746,
+          "neighbors": [
+            "C1",
+            "P3"
+          ]
+        },
+        {
+          "atom_id": 9,
+          "name": "O6",
+          "charge_e": -0.4774,
+          "neighbors": [
+            "P3",
+            "C7"
+          ]
+        }
+      ],
+      "resp_stage_1_equivalence_records": [
+        {
+          "atomic_number": 8,
+          "equivalence": 7,
+          "atom_id": 8
+        }
+      ],
+      "placeholder_files": [
+        "script2.ff",
+        "script3.ff",
+        "script4.ff",
+        "script5.ff"
+      ],
+      "listed_converter_missing_from_archive": true,
+      "redistribution_status": "Public download verified; page says projects free but displays rights-reserved footer. No explicit redistribution license recovered from these archives.",
+      "mol2_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/inspected-members/tripos1.mol2",
+        "sha256": "c2f07b5f92449af53128817b35cdbf6480dc51765d088077bce07833f11accaa"
+      },
+      "archive_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-13/W-13.tar.bz2",
+        "sha256": "dcdb95f8e402b3d179df8c69e280ab12a4595e17df3f1c3a048defe08971f937"
+      }
+    },
+    {
+      "project": "W-14",
+      "summary_url": "https://upjv.q4md-forcefieldtools.org/REDDB/projects/W-14/",
+      "metadata": {
+        "Firstname": "Francois-Yves",
+        "Lastname": "Dupradeau",
+        "Institute": "UFR de pharmacie, UPJV",
+        "City": "Amiens",
+        "Country": "FRANCE",
+        "Author(s)": "F.-Y. Dupradeau, A. Pigache, T. Zaffran, C. Savineau, R. Lelong, N. Grivel, D. Lelong, W. Rosanski and P. Cieplak",
+        "Journal": "Phys. Chem. Chem. Phys.",
+        "Year": "2010",
+        "Volume": "12",
+        "Page(s)": "7821-7839",
+        "Upload": "07-11-2005 16:18",
+        "Update": "27-09-2011 17:38"
+      },
+      "metadata_time_zone_as_stated": "Paris time (Day-Month-Year)",
+      "submission_author_identity": {
+        "first_name": "Francois-Yves",
+        "last_name": "Dupradeau",
+        "note": "Named on live public project page."
+      },
+      "publication_linkage": {
+        "database_cites": "Dupradeau et al., Phys. Chem. Chem. Phys. 2010, 12, 7821\u20137839",
+        "doi_resolved_from_prior_primary_paper": "10.1039/C0CP00111B",
+        "is_panteva_reference_51": true,
+        "does_panteva_name_this_project": false,
+        "does_project_name_panteva": false,
+        "exact_panteva_model_identified": false
+      },
+      "source_method": {
+        "molecule": "dimethylphosphate, gauche/gauche conformer",
+        "formal_total_charge_e": -1,
+        "method": "HF/6-31G*; Connolly surface; two-stage RESP",
+        "optimization_and_mep_program": "Gaussian 1998",
+        "molecular_orientation": "program reorientation algorithm; one source conformer/orientation",
+        "fit_strengths_source": {
+          "stage_1_qwt": 0.0005,
+          "stage_2_qwt": 0.001
+        },
+        "fit_strengths_assigned": false
+      },
+      "integrity": {
+        "atoms": 13,
+        "bonds": 12,
+        "total_charge_e": -1.0002,
+        "finite_coordinates_and_charges": true,
+        "atom_count_matches_resp": true,
+        "net_charge_matches_resp": false,
+        "net_charge_residual_e": -0.0002,
+        "charge_residual_interpretation": "Four-decimal MOL2 charges sum to the reported value; no renormalization performed. The \u22120.0002 e residual for W-13/14 is compatible with output rounding, not proof of a different intended integer charge.",
+        "mol2_types_are_element_labels": [
+          "C",
+          "H",
+          "O",
+          "P"
+        ],
+        "all_mol2_bond_orders_single": true,
+        "complete_force_field_type_and_parameter_bundle": false
+      },
+      "nonbridging_oxygen_graph": [
+        {
+          "atom_id": 7,
+          "name": "O4",
+          "charge_e": -0.7952,
+          "neighbor": "P3"
+        },
+        {
+          "atom_id": 8,
+          "name": "O5",
+          "charge_e": -0.7952,
+          "neighbor": "P3"
+        }
+      ],
+      "bridging_oxygen_graph": [
+        {
+          "atom_id": 5,
+          "name": "O2",
+          "charge_e": -0.4774,
+          "neighbors": [
+            "C1",
+            "P3"
+          ]
+        },
+        {
+          "atom_id": 9,
+          "name": "O6",
+          "charge_e": -0.4746,
+          "neighbors": [
+            "P3",
+            "C7"
+          ]
+        }
+      ],
+      "resp_stage_1_equivalence_records": [
+        {
+          "atomic_number": 8,
+          "equivalence": 7,
+          "atom_id": 8
+        }
+      ],
+      "placeholder_files": [
+        "script1.ff",
+        "script2.ff",
+        "script3.ff",
+        "script4.ff",
+        "script5.ff"
+      ],
+      "listed_converter_missing_from_archive": false,
+      "redistribution_status": "Public download verified; page says projects free but displays rights-reserved footer. No explicit redistribution license recovered from these archives.",
+      "mol2_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/inspected-members/tripos1.mol2",
+        "sha256": "90f45ffbd569290339b28686e0530d1f2dbd8701785d3a6e480f3190bc940bdf"
+      },
+      "archive_file": {
+        "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-red-db-v1/W-14/W-14.tar.bz2",
+        "sha256": "3f259ece2fbf08ebbce187f80229ebae04d0b7d4ccf3fc46d4013a75e5cdb58d"
+      }
+    }
+  ],
+  "gdp_transfer_comparison": {
+    "actual_gdp_charge_model": "Meagher\u2013Redman\u2013Carlson GDP(\u22123), Amber99 based, preserved in corrected 6OIM",
+    "native_nonbridging_oxygen_charge_groups_e": {
+      "O1A/O2A": -0.9474,
+      "O1B/O2B/O3B": -0.9552
+    },
+    "actual_mg_donor": "GDP O2B, original type O3, scoped type QR",
+    "native_gdp_mg_donor_charge_e": -0.9552,
+    "native_gdp_phosphate_atoms": [
+      {
+        "native_index": 2782,
+        "name": "O1A",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O1A",
+          "source_heavy": true
+        },
+        "scoped_type": "QQ",
+        "original_type": "O2",
+        "charge_e": -0.9473999989024436,
+        "bond_partners": [
+          "PA"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2783,
+        "name": "O2A",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O2A",
+          "source_heavy": true
+        },
+        "scoped_type": "QQ",
+        "original_type": "O2",
+        "charge_e": -0.9473999989024436,
+        "bond_partners": [
+          "PA"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2776,
+        "name": "O1B",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O1B",
+          "source_heavy": true
+        },
+        "scoped_type": "QR",
+        "original_type": "O3",
+        "charge_e": -0.9552000021951125,
+        "bond_partners": [
+          "PB"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2778,
+        "name": "O2B",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O2B",
+          "source_heavy": true
+        },
+        "scoped_type": "QR",
+        "original_type": "O3",
+        "charge_e": -0.9552000021951125,
+        "bond_partners": [
+          "PB"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      },
+      {
+        "native_index": 2779,
+        "name": "O3B",
+        "source_identity": {
+          "residue": [
+            "C",
+            "302",
+            "",
+            "GDP"
+          ],
+          "atom": "O3B",
+          "source_heavy": true
+        },
+        "scoped_type": "QR",
+        "original_type": "O3",
+        "charge_e": -0.9552000021951125,
+        "bond_partners": [
+          "PB"
+        ],
+        "documented_default_alpha": 0.569,
+        "tutorial_OP_glob_matches_atom_name": false,
+        "DMP_fitted_correction_transfer_validated": false,
+        "fitted_correction_assigned": false
+      }
+    ],
+    "recovered_dmp_nonbridging_charge_options_e": [
+      -0.7956,
+      -0.7952
+    ],
+    "gdp_mg_donor_minus_dmp_charge_options_e": [
+      -0.1596,
+      -0.16
+    ],
+    "interpretation": "The recovered candidate DMP charges differ from native GDP. A charge difference alone neither proves failure nor validates transfer of the fitted correction. No exact Panteva source project or full force-field topology was identified."
+  },
+  "remaining_gaps": [
+    "Which exact DMP charge/orientation project, or other derivative, was used in Panteva 2015?",
+    "What force-field atom types, bonded terms, and nonbonded terms completed the DMP simulation topology?",
+    "Published or independent evidence for applying its fitted Mg correction to the preserved GDP(\u22123) charge model.",
+    "Documented GAFF2 c6 polarizability crosswalk remains unrecovered by this DMP-only follow-up.",
+    "Explicit redistribution terms for any recovered data intended to be bundled."
+  ],
+  "not_performed": [
+    "parameter assignment",
+    "QM",
+    "MD",
+    "topology modification",
+    "application integration",
+    "authentication bypass",
+    "author contact"
+  ],
+  "next_bounded_step": "Source-only review of Dupradeau 2010 manuscript/SI for the W-11\u2013W-14 orientation comparison and any exact DMP library identifiers; accept an exact Panteva identity only if a primary author artifact explicitly selects the charge/type bundle. Otherwise retain as candidates and require complete-system research validation before support."
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:59254/",
+  "build_id": "589ff2dddea916f5",
+  "checks": [
+    "Packaged UI rendered real bundled trajectory with enabled snapshot/playback",
+    "Element color selected by default",
+    "Ball & stick rendered N/O element colors",
+    "New simulation opened with both engine installed indicators",
+    "Loop option visible before preparation",
+    "Final water padding guidance present"
+  ],
+  "logs": [
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T05:16:59.259Z",
+      "url": "http://127.0.0.1:59254/assets/index-WHMjHI86.js"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.WebGLRenderer: The property .useLegacyLights has been deprecated. Migrate your lighting according to the following guide: https://discourse.threejs.org/t/updates-to-lighting-in-three-js-r155/53733.",
+      "timestamp": "2026-09-13T05:16:59.347Z",
+      "url": "http://127.0.0.1:59254/assets/index-WHMjHI86.js"
+    }
+  ]
+}

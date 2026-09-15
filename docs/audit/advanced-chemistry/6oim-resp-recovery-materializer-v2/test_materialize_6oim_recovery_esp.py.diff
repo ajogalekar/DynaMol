@@ -1,0 +1,29 @@
+--- v1/test_materialize_6oim_recovery_esp.py
++++ v2/test_materialize_6oim_recovery_esp.py
+@@ -198,11 +198,25 @@
+     def test_pending_runtime_requires_explicit_independent_admission(self):
+         with self.assertRaisesRegex(ValueError,'pending'):m.validate_preparation_runtime({'root_reviewed':False})
+ 
++    def test_pending_resp_provider_refuses_without_reading_artifacts(self):
++        with self.assertRaisesRegex(ValueError,'pending'):m.validate_resp_runtime({'root_reviewed':False})
++
++    def test_resp_admission_requires_independent_review_and_exact_inventory(self):
++        admission={'root_reviewed':True,'prefix':str(m.RESP_PREFIX),**m.RESP_PINS}
++        for key in m.RESP_PINS:
++            altered=copy.deepcopy(admission);altered[key]='0'*64
++            with self.subTest(key=key),self.assertRaisesRegex(ValueError,'Unreviewed RESP'):m.validate_resp_runtime(altered)
++
++    def test_old_resp_runtime_prefix_refuses(self):
++        with self.assertRaisesRegex(ValueError,'pending'):
++            m.validate_resp_runtime({'root_reviewed':True,'prefix':'/old/documents/resp',**m.RESP_PINS})
++
+     def test_omitted_frozen_source_pin_refuses_before_native_inputs(self):
+         parent=self.root/'parent';parent.mkdir();(parent/'controller-result.json').write_text(json.dumps(controller()))
+         plan=self.root/'plan.json';plan.write_text(json.dumps({'parent':str(parent),'checkpoint_policy':m.COLD,
+             'sources':str(m.CACHE/'prepared/sources'),'source_pins':{}}))
+-        with patch.object(m,'PARENT',parent),patch.object(m,'validate_preparation_runtime',return_value={}):
++        with patch.object(m,'PARENT',parent),patch.object(m,'validate_preparation_runtime',return_value={}),\
++             patch.object(m,'validate_resp_runtime',return_value={}):
+             result=m.materialize(plan,self.root/'out')
+         self.assertEqual(result['status'],'refused');self.assertIn('frozen chemistry sources',result['error'])
+         self.assertFalse(result['request_emitted']);self.assertEqual({p.name for p in (self.root/'out').iterdir()},{'result.json'})

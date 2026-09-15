@@ -1,0 +1,71 @@
+{
+  "scope": "General SO4 ligand-state and zero-added-hydrogen preparation defects found in the frozen 4HHY full-preparation case. No MD performed; no claim of microscopic protonation prediction or universal sulfate force-field validity.",
+  "diagnosis": {
+    "source_ccd_url": "https://files.rcsb.org/ligands/download/SO4.cif",
+    "source_ccd_sha256": "89409c769690c31746c8c43e5f02fb212ecf65542ea5b26f58d18532677fa893",
+    "formal_charge_reference": "https://www.rcsb.org/ligand/SO4",
+    "mapped_source_smiles": "[S:1](=[O:2])(=[O:3])([O-:4])[O-:5]",
+    "ph": 7,
+    "dimorphite_result": "O[S:1](O)(=[O:2])=[O:3]",
+    "source_formal_charge": -2,
+    "proposed_formal_charge": 0,
+    "missing_proposed_maps": [
+      4,
+      5
+    ],
+    "reason_not_to_restore_symmetric_maps": "The output is a neutralized sulfuric-acid graph at pH 7, not merely an unlabeled sulfate graph; recovering maps alone would propagate the wrong declared source state."
+  },
+  "fix": {
+    "state_policy": "For component SO4 at pH 6\u20138, retain the already-matching CCD sulfate dianion graph as an explicit fixed reference-state choice. Preserve all atom identities, bonds, charges and coordinates; do not invoke the pH heuristic or recover maps. A user-mapped override takes precedence. Other graphs or pH values require an explicit state.",
+    "policy_limit": "The 6\u20138 interval is a conservative application policy, not a prediction of bound sulfate/bisulfate populations.",
+    "zero_hydrogen_policy": "If RDKit adds no hydrogen atoms, return the labeled copy with all original coordinates. There are no movable coordinates, so skip the all-fixed force field minimizer that raised a BFGS invariant violation.",
+    "unused_global_14_scale_policy": "Only when no proper torsion parameter types and no shortest bond-graph-distance-three atom pairs exist, populate otherwise unused generic XML defaults from ParmEd AmberParameterSet (SCEE 1.2, SCNB 2). Preserve all actual interaction parameters. Record graph proof and before/after defaults, and require unchanged native energy/force validation."
+  },
+  "test_evidence": [
+    {
+      "command": ".venv/bin/python -m pytest -q backend/tests/test_sulfate_state.py backend/tests/test_chemistry_support.py backend/tests/test_ligand_terminal_imine_stereo.py",
+      "passed": 58,
+      "before_zero_hydrogen_fix": true
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q backend/tests/test_sulfate_state.py backend/tests/test_ligands.py -k 'sulfate or hydrogen'",
+      "passed": 15,
+      "deselected": 11,
+      "coverage": "Reference-state preservation at pH 6,7,8; range/graph rejection; override precedence; ordinary heuristic path for another component; sulfate and non-sulfate zero-H optimizer bypass; normal H-only relaxation retains heavy atoms."
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q backend/tests/test_sulfate_state.py backend/tests/test_ligands.py -k 'sulfate or hydrogen or global_14 or torsion_parameters or graph_14'",
+      "passed": 19,
+      "deselected": 11,
+      "coverage": "Also proves no scale normalization for an actual shortest-distance-three graph or existing proper torsion parameters."
+    }
+  ],
+  "attempts": [
+    {
+      "path": "runs/review-symmetry-fixed/4HHY/result.json",
+      "outcome": "Eligibility failed because the ordinary pH heuristic lost symmetric sulfate oxygen maps."
+    },
+    {
+      "path": "runs/review-chemistry-fixed/4HHY/result.json",
+      "outcome": "State eligibility passed and 15R native ligand conversion passed; full preparation failed at RDKit all-fixed hydrogen relaxation for sulfate. This failure is retained, not reclassified as a pass."
+    },
+    {
+      "path": "runs/review-hydrogen-fixed/4HHY/result.json",
+      "outcome": "Sulfate and 15R native Amber conversions both passed; full preparation failed when the isolated sulfate XML used generic global 1\u20134 scales 1/1, conflicting with Amber protein and 15R scales. No prepared result was published."
+    },
+    {
+      "path": "runs/review-scale-fixed/4HHY/result.json",
+      "outcome": "Passed full preparation in 115.36 seconds with stable backend source. Both native Amber conversions passed, the 8-residue loop and serialized PDB geometry passed, the full mixed force field reconstructed, and static energy was finite. All 48 source ligand heavy atoms are present with exactly zero saved-PDB coordinate displacement."
+    }
+  ],
+  "backend_files": {
+    "backend/ligands.py": "6c0e14a37dd314718b69390a145757cf9488c20b0e5c249de728b4f1cfe3a695",
+    "backend/tests/test_sulfate_state.py": "ba6374f26d629329c63c55de5f988b17f57cfe0c0b987bc1d68f945f13df7999"
+  },
+  "final_focused_tests": {
+    "passed": 65,
+    "command": ".venv/bin/python -m pytest -q backend/tests/test_sulfate_state.py backend/tests/test_chemistry_support.py backend/tests/test_ligand_terminal_imine_stereo.py backend/tests/test_ligands.py::test_hydrogen_only_relaxation_preserves_bound_heavy_atoms",
+    "warnings": "Three existing duplicate author residue-number warnings from a separate 3PTB fixture."
+  },
+  "prepared_result_sha256": "046f306d86729f0229bf26b1fd9919de6b09a9f9c5ed1831a755f9221750ac70"
+}

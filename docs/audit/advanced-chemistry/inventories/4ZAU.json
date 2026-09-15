@@ -1,0 +1,489 @@
+{
+  "id": "4ZAU",
+  "recorded_at_utc": "2026-09-13T15:57:55.167745+00:00",
+  "input": {
+    "path": "inputs/4ZAU.cif",
+    "source_url": "https://files.rcsb.org/download/4ZAU.cif",
+    "sha256": "cfc464565c536bd9dc0cfb9850f1e402b2d1ff29950ad630668fced7d21a4d7a",
+    "bytes": 483360
+  },
+  "title": "AZD9291 complex with wild type EGFR",
+  "organisms": [
+    "Homo sapiens"
+  ],
+  "resolution_angstrom": "2.80",
+  "primary_citations": [
+    {
+      "abstract": null,
+      "abstract_id_CAS": null,
+      "book_id_ISBN": null,
+      "book_publisher": null,
+      "book_publisher_city": null,
+      "book_title": null,
+      "coordinate_linkage": null,
+      "country": "US",
+      "database_id_Medline": null,
+      "details": null,
+      "id": "primary",
+      "journal_abbrev": "J.Struct.Biol.",
+      "journal_id_ASTM": "JSBIEM",
+      "journal_id_CSD": "0803",
+      "journal_id_ISSN": "1095-8657",
+      "journal_full": null,
+      "journal_issue": null,
+      "journal_volume": "192",
+      "language": null,
+      "page_first": "539",
+      "page_last": "544",
+      "title": "Binding mode of the breakthrough inhibitor AZD9291 to epidermal growth factor receptor revealed.",
+      "year": "2015",
+      "database_id_CSD": null,
+      "pdbx_database_id_DOI": "10.1016/j.jsb.2015.10.018",
+      "pdbx_database_id_PubMed": "26522274",
+      "unpublished_flag": null
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "1",
+      "details": "author_and_software_defined_assembly",
+      "method_details": "PISA",
+      "oligomeric_details": "monomeric",
+      "oligomeric_count": "1"
+    }
+  ],
+  "assembly_generators": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C"
+    }
+  ],
+  "assembly_operators": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "entities": [
+    {
+      "id": "1",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "Epidermal growth factor receptor",
+      "formula_weight": "37563.457",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": "2.7.10.1",
+      "pdbx_mutation": null,
+      "pdbx_fragment": "unp residues 696-1022",
+      "details": null
+    },
+    {
+      "id": "2",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "N-(2-{[2-(dimethylamino)ethyl](methyl)amino}-4-methoxy-5-{[4-(1-methyl-1H-indol-3-yl)pyrimidin-2-yl]amino}phenyl)prop-2-enamide",
+      "formula_weight": "499.607",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "3",
+      "type": "water",
+      "src_method": "nat",
+      "pdbx_description": "water",
+      "formula_weight": "18.015",
+      "pdbx_number_of_molecules": "4",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    }
+  ],
+  "components": [
+    {
+      "id": "ALA",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2",
+      "formula_weight": "89.093"
+    },
+    {
+      "id": "ARG",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ARGININE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N4 O2 1",
+      "formula_weight": "175.209"
+    },
+    {
+      "id": "ASN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARAGINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H8 N2 O3",
+      "formula_weight": "132.118"
+    },
+    {
+      "id": "ASP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARTIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C4 H7 N O4",
+      "formula_weight": "133.103"
+    },
+    {
+      "id": "CYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "CYSTEINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2 S",
+      "formula_weight": "121.158"
+    },
+    {
+      "id": "GLN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H10 N2 O3",
+      "formula_weight": "146.144"
+    },
+    {
+      "id": "GLU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O4",
+      "formula_weight": "147.129"
+    },
+    {
+      "id": "GLY",
+      "type": "peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLYCINE",
+      "pdbx_synonyms": null,
+      "formula": "C2 H5 N O2",
+      "formula_weight": "75.067"
+    },
+    {
+      "id": "HIS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "HISTIDINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H10 N3 O2 1",
+      "formula_weight": "156.162"
+    },
+    {
+      "id": "HOH",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "WATER",
+      "pdbx_synonyms": null,
+      "formula": "H2 O",
+      "formula_weight": "18.015"
+    },
+    {
+      "id": "ILE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ISOLEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LEU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LYSINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N2 O2 1",
+      "formula_weight": "147.195"
+    },
+    {
+      "id": "MET",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "METHIONINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2 S",
+      "formula_weight": "149.211"
+    },
+    {
+      "id": "PHE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PHENYLALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O2",
+      "formula_weight": "165.189"
+    },
+    {
+      "id": "PRO",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PROLINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O2",
+      "formula_weight": "115.130"
+    },
+    {
+      "id": "SER",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "SERINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O3",
+      "formula_weight": "105.093"
+    },
+    {
+      "id": "THR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "THREONINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "TRP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TRYPTOPHAN",
+      "pdbx_synonyms": null,
+      "formula": "C11 H12 N2 O2",
+      "formula_weight": "204.225"
+    },
+    {
+      "id": "TYR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TYROSINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O3",
+      "formula_weight": "181.189"
+    },
+    {
+      "id": "VAL",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "VALINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2",
+      "formula_weight": "117.146"
+    },
+    {
+      "id": "YY3",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "N-(2-{[2-(dimethylamino)ethyl](methyl)amino}-4-methoxy-5-{[4-(1-methyl-1H-indol-3-yl)pyrimidin-2-yl]amino}phenyl)prop-2-enamide",
+      "pdbx_synonyms": "Osimertinib; AZD 9291",
+      "formula": "C28 H33 N7 O2",
+      "formula_weight": "499.607"
+    }
+  ],
+  "modified_residues": [],
+  "raw_connections": [],
+  "connections": [],
+  "metal_atoms": [],
+  "nonstandard_residues": [
+    {
+      "label_chain": "B",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "1101",
+      "insertion_code": null,
+      "component": "YY3",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "N",
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5",
+        "N6",
+        "O",
+        "O1"
+      ]
+    }
+  ],
+  "water_residue_count": 4,
+  "atom_count_model1": 2218,
+  "chains": [
+    {
+      "label_chain": "A",
+      "author_chain": "A",
+      "entity_id": "1",
+      "sequence_length": 330,
+      "observed_residues": 283,
+      "internal_gaps": [
+        {
+          "length": 9,
+          "residues": [
+            "LEU",
+            "ARG",
+            "GLU",
+            "ALA",
+            "THR",
+            "SER",
+            "PRO",
+            "LYS",
+            "ALA"
+          ],
+          "label_sequence_ids": [
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63"
+          ]
+        },
+        {
+          "length": 3,
+          "residues": [
+            "GLY",
+            "ALA",
+            "GLU"
+          ],
+          "label_sequence_ids": [
+            "171",
+            "172",
+            "173"
+          ]
+        },
+        {
+          "length": 2,
+          "residues": [
+            "GLY",
+            "GLY"
+          ],
+          "label_sequence_ids": [
+            "181",
+            "182"
+          ]
+        },
+        {
+          "length": 23,
+          "residues": [
+            "GLU",
+            "ARG",
+            "MET",
+            "HIS",
+            "LEU",
+            "PRO",
+            "SER",
+            "PRO",
+            "THR",
+            "ASP",
+            "SER",
+            "ASN",
+            "PHE",
+            "TYR",
+            "ARG",
+            "ALA",
+            "LEU",
+            "MET",
+            "ASP",
+            "GLU",
+            "GLU",
+            "ASP",
+            "MET"
+          ],
+          "label_sequence_ids": [
+            "293",
+            "294",
+            "295",
+            "296",
+            "297",
+            "298",
+            "299",
+            "300",
+            "301",
+            "302",
+            "303",
+            "304",
+            "305",
+            "306",
+            "307",
+            "308",
+            "309",
+            "310",
+            "311",
+            "312",
+            "313",
+            "314",
+            "315"
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "inventoried"
+}

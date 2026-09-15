@@ -1,0 +1,168 @@
+{
+  "scope": "Read-only compatibility check against20saved complete-complex results; no re-refinement or reclassification",
+  "results": [
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/archive-fragment/validation/result.json",
+      "result_sha256": "1412e7478829bcc5753f540b7ad5be556b7d4fd78a83865deac1ac1eff1e4d7d",
+      "reference_sha256": "9cc636a3f652052299fa62e78e6949d07d071693bb38d7c398986aae7ced5ee9",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/disgro-representative/validation/result.json",
+      "result_sha256": "2058c817906cb6637953961de3fcf8bc47cd9484ff3b4ea8b6424a87ff858fef",
+      "reference_sha256": "00e5c403e460808f9cf043a85cef94a8e78acec571dd80ceaab67cab77f1cd98",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/fragment_mc-2026/validation/result.json",
+      "result_sha256": "2e98c7339a68acb26d1adf0d0e1b0a9b926573f30c75eee64bda007ea07cd647",
+      "reference_sha256": "98d616a28b8098fef8c11e5f15f9fea213a518ba9606abe6ba9adb30559a1342",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/fragment_mc-2027/validation/result.json",
+      "result_sha256": "9ecbda23891d1970dbacfbe9830259cc46b9f24b2788345a0931d2a18f0774f7",
+      "reference_sha256": "687e17bf8c1a3e1c3d63514c95f0acce6f77dc7c7c0415ae7321bc172c268cfe",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/torsion_mc-2026/validation/result.json",
+      "result_sha256": "2c48bfbc5adf891c5ef9464e5d1e0c0ed8afd991ce505a28bcca9935f16ee656",
+      "reference_sha256": "ab1f8ab20df014492ea2a763b8c6a2719e72a201bfb7ad5a8ff0c0b8c76c0a62",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/1UA2/search/torsion_mc-2027/validation/result.json",
+      "result_sha256": "5d10325976a141e100b8466161a3701676ad7d35cf9bb517e23fafc189ce32d9",
+      "reference_sha256": "aaa5ad08c31e78188bb5b451a02c682b2292dd31d45448f10e879bc570cbc5e8",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/8K5R/search/archive-fragment/validation/result.json",
+      "result_sha256": "f9870830e1fafd4c79afa456762704c91702100da42245b4d7c36c880b3ec58c",
+      "reference_sha256": "a52411c15760b2d68c7d8ed9d82c6cafcee30d205b08cbe89655ff20a356fd7c",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/hybrid-complete-validation-v1/8K5R/search/disgro-representative/validation/result.json",
+      "result_sha256": "aca14326cf8ce1996383a2b1a5b8cb0736cf0d50bb5c9b52d7ee67a192b1ad9b",
+      "reference_sha256": "b8a29cde6959340fd65b3aa26655f6bf5ba3e17b0d2d1b7aec96190c3d67bc05",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2026-fixed_observed/validation/result.json",
+      "result_sha256": "6ee58d43b357a7709645ad175ec5c67a9d4ad19ec5d57929882a6673818be540",
+      "reference_sha256": "e5b50920324d3d14598df92aa78fd6395e9bd7f7b948a7e836bb6fbe745ae4ab",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2026-mobile_flanks/validation/result.json",
+      "result_sha256": "09377aa915f238b34eb4d382b2440d3dbd42ef38968cc82b4297446d2175ed01",
+      "reference_sha256": "c2029adae17c04edb239548b84922ae967cba0c5045d0d77d8f471c8e032e50d",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2027-fixed_observed/validation/result.json",
+      "result_sha256": "94bc26e9140ae3a808cdd3410878552a9256134a21af4c26cbf79233469d9be2",
+      "reference_sha256": "1bad0e8af9bf09e377fa49b2c28f68ecd3807da498505d9d6af4bdea86ac7e44",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/fragment-source-ccd-43-56-seed-2027-mobile_flanks/validation/result.json",
+      "result_sha256": "23f01b3392d3a446592bb07da29931ae7d0391b016a5a23384304ca780ae1365",
+      "reference_sha256": "2c90180bf5e4490986f742805c69ec69e538c548a6ae63d653c5ade3dd54306d",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2026-fixed_observed/validation/result.json",
+      "result_sha256": "a6e54efceea7f61522fd4c8f9bd349f2299c23d7b59328cd6c2a8d50ee757a36",
+      "reference_sha256": "7c4ddd96453d8a1b573fb850531dc5b6e7f53fc6c33a244787ff2d382cf56511",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2026-mobile_flanks/validation/result.json",
+      "result_sha256": "7529e9f4feb21a32a555ba3beede7cbde320a3987db67e981893eb6ba0242582",
+      "reference_sha256": "5ad0806199a15318b256c4f05f8b1aa42672508c227ad6b613a3dd74a5d3ef23",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2027-fixed_observed/validation/result.json",
+      "result_sha256": "affc9508f6676b9373e292b85270e7d61c4bfb321a0815ec4dba3c07a37410f2",
+      "reference_sha256": "6e90eebe8f46ce59b5d3b246c3df466d9d086e07a9e62045ce0d3e3f1af27341",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-ccd-43-56-seed-2027-mobile_flanks/validation/result.json",
+      "result_sha256": "3ce15966541269e185eca4ec86c45d8f84bbb559debe353cd86a3939af90f415",
+      "reference_sha256": "7bad3bea29724e8036251f933e0138c11316f68293d195564b6fd40961ae52f0",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2026-fixed_observed/validation/result.json",
+      "result_sha256": "9275245baf5b3e6c40b544cc80dc2a2f02a2502425e85d9971e494f2356650b4",
+      "reference_sha256": "7df54a03a492293947335abafaefd4f17e4879a935c88c2c58732115351ef158",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2026-mobile_flanks/validation/result.json",
+      "result_sha256": "409868fbea298a8c7e11610bdaa002d94ff79f68c6a73839fa92b9011bc62bed",
+      "reference_sha256": "c97f8863cd44fd6a009057abd76e960cf6ec0af4b1a1f1e487f6962b7f84ef87",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2027-fixed_observed/validation/result.json",
+      "result_sha256": "d440030365277f4c678167c38b535440d89b6881891f67169a1c662bb8c0b311",
+      "reference_sha256": "67092bd95f82f163372aac6d51a6856a4425f103cf6bfc06e222f9b50541bee3",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/boundary-conditioned-complete-v1/torsion-source-dirty-43-56-seed-2027-mobile_flanks/validation/result.json",
+      "result_sha256": "0ab879b3f7e8dc27b6103050567114c83dfcc782e703626a1aa529a29d2f38b2",
+      "reference_sha256": "9b06aae267d8f616f096f9a66fc56befa891c460099d45edab85479c23d7ae69",
+      "reference_selection_identical": true,
+      "removed": [],
+      "added": []
+    }
+  ],
+  "all_previous_reference_selections_identical": true,
+  "helper_sha256": "083f948b5c282dac4ce5d07118707c4e3485275b8ee6370dbe4006cc6d1db6f2",
+  "new_md_qm": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "no_blocking_finding_for_scoped_cold_ESP_reader_and_native_charge_parsers",
+  "source_sha256": "955fe3cdba694142464c738c014ee9f5b66f29303908e449127df373e54e5325",
+  "tests_sha256": "5b0bd7fae0f0cf0abbf34fd8b1aa5bd2607b2e13e7f8af02c8d419be8cdf7793",
+  "core_sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187",
+  "materializer_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+  "author_manifest_sha256": "e9ac65926cecbf1c29c74c4e98a7134ef8135441a26b7815164e10fe1e175c88",
+  "independent_tests_passed": 25,
+  "producer_metadata_mismatch_reproduced_and_fixed": true,
+  "actual_failed_parent_refused_before_downstream_reads": true,
+  "actual_parent_controller_sha256": "ab835bd6145b258ea2ca359be2c785ec8a829e451dc412133f4722cb678d3c3e",
+  "original_joint_charge_validator_unchanged": true,
+  "retained_charge_count_from_synthetic_fixture": 82,
+  "fixed_charge_count": 18,
+  "removed_neutral_cap_count": 12,
+  "known_scoped_blockers": [],
+  "new_native_QM_ESP_RESP_or_MD_calculation": false,
+  "actual_positive_native_endpoint_qualified": false,
+  "RESP_execution_provenance_admitted": false,
+  "full_native_charge_handoff_qualified": false,
+  "physical_acceptance": false,
+  "simulation_ready": false,
+  "limits": [
+    "Reader and pure parser scope; stable-cache fitting executor/stage receipts remain pending",
+    "No successful actual parent/ESP endpoint or physical model is supplied by these software tests",
+    "Native diagnostic checks are format/finite checks without a new fit-quality threshold"
+  ]
+}

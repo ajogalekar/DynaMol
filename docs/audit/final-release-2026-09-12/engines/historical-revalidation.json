@@ -1,0 +1,82 @@
+{
+  "validation_date": "2026-09-13T04:39:35.245608+00:00",
+  "scope": "Read-only revalidation of historical five-system outputs; no new dynamics performed. This does not substitute for fresh current-source runs.",
+  "cases": [
+    {
+      "name": "Pim-1 kinase",
+      "pdbId": "1XQZ",
+      "jobId": "1f0e521a1f4d4f85",
+      "datasetId": "7909ef07cc224ad7",
+      "baseURL": "http://127.0.0.1:8793",
+      "dataRoot": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs",
+      "validation_returncode": 0,
+      "output": "docs/audit/final-release-2026-09-12/engines/historical-1XQZ.json",
+      "passed": true,
+      "checks": 16,
+      "failed": [],
+      "duration_ps": 100.0,
+      "sha256": "2b55b3a251e66916516e26440480c9df1f7756e31b8b94081dd721eebe7b0c84"
+    },
+    {
+      "name": "Trypsin protease",
+      "pdbId": "3PTB",
+      "jobId": "21bf66d8a51744da",
+      "datasetId": "b0d233348dcf4344",
+      "baseURL": "http://127.0.0.1:8792",
+      "dataRoot": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm",
+      "validation_returncode": 0,
+      "output": "docs/audit/final-release-2026-09-12/engines/historical-3PTB.json",
+      "passed": true,
+      "checks": 21,
+      "failed": [],
+      "duration_ps": 100.0,
+      "sha256": "bb3c07e7c2adf236c4fc073111c9ac5c33025bc9b235589cdf141cb7ea8369b2"
+    },
+    {
+      "name": "PTP1B phosphatase",
+      "pdbId": "1SUG",
+      "jobId": "4ee199dd7b4e4c1b",
+      "datasetId": "e2dad7ca2c7f46a6",
+      "baseURL": "http://127.0.0.1:8793",
+      "dataRoot": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs",
+      "validation_returncode": 0,
+      "output": "docs/audit/final-release-2026-09-12/engines/historical-1SUG.json",
+      "passed": true,
+      "checks": 16,
+      "failed": [],
+      "duration_ps": 100.0,
+      "sha256": "f1122fb1dfc4cdd3fbbaa48b9be40ccb3a03b04db80b997db1144c37c71d1ec2"
+    },
+    {
+      "name": "KcsA ion channel",
+      "pdbId": "1K4C",
+      "jobId": "491f0e8e7dc04c6c",
+      "datasetId": "6dc9ed17492b49a8",
+      "baseURL": "http://127.0.0.1:8792",
+      "dataRoot": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-openmm",
+      "validation_returncode": 0,
+      "output": "docs/audit/final-release-2026-09-12/engines/historical-1K4C.json",
+      "passed": true,
+      "checks": 21,
+      "failed": [],
+      "duration_ps": 100.0,
+      "sha256": "ebf71af3c514e6ac8a12fa14fc8f55349d0e020007495a40ceff024262d19dad"
+    },
+    {
+      "name": "\u03b4-opioid receptor GPCR",
+      "pdbId": "4N6H",
+      "jobId": "0b89d27dadc34148",
+      "datasetId": "ab629697dd2449c7",
+      "baseURL": "http://127.0.0.1:8794",
+      "dataRoot": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gpcr-large",
+      "validation_returncode": 0,
+      "output": "docs/audit/final-release-2026-09-12/engines/historical-4N6H.json",
+      "passed": true,
+      "checks": 21,
+      "failed": [],
+      "duration_ps": 100.0,
+      "sha256": "164679070ada8f679c1e7be3a50004231bb3fd2bb58128645d3a3a9ea0f866da"
+    }
+  ],
+  "passed": true
+}

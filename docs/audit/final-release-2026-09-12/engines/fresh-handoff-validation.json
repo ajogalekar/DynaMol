@@ -1,0 +1,54 @@
+{
+  "scope": "Fresh native 10 ps explicit-water runs; result opening/download via real HTTP routes in an isolated in-process client. Browser mode transition is covered separately.",
+  "engines": {
+    "openmm": {
+      "artifact_validation_returncode": 0,
+      "checks": {
+        "completed_output_opens": true,
+        "metadata_frame_times_match": true,
+        "measurement_definitions_retained": true,
+        "backbone-distance_posthoc_matches_live": true,
+        "backbone-angle_posthoc_matches_live": true,
+        "backbone-dihedral_posthoc_matches_live": true,
+        "download_zip_integrity": true,
+        "download_config.json": true,
+        "download_provenance.json": true,
+        "download_energies.csv": true,
+        "download_trajectory.xtc": true,
+        "current_app_version": true
+      },
+      "download": {
+        "bytes": 24641764,
+        "sha256": "22881ee3005d804e1636f85fa850cf721ee62890af7e775340cd44768e6ac6a2",
+        "files": 72
+      },
+      "application": "DynaMol 0.1.1",
+      "passed": true
+    },
+    "gromacs": {
+      "artifact_validation_returncode": 0,
+      "checks": {
+        "completed_output_opens": true,
+        "metadata_frame_times_match": true,
+        "measurement_definitions_retained": true,
+        "backbone-distance_posthoc_matches_live": true,
+        "backbone-angle_posthoc_matches_live": true,
+        "backbone-dihedral_posthoc_matches_live": true,
+        "download_zip_integrity": true,
+        "download_config.json": true,
+        "download_provenance.json": true,
+        "download_energies.csv": true,
+        "download_production.xtc": true,
+        "current_app_version": true
+      },
+      "download": {
+        "bytes": 11883160,
+        "sha256": "70090493119168239513687ef74839b5f425e0c873e7d62919f5e8f8eb1f45c5",
+        "files": 59
+      },
+      "application": "DynaMol 0.1.1",
+      "passed": true
+    }
+  },
+  "passed": true
+}

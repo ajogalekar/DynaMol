@@ -1,0 +1,22 @@
+[
+  {
+    "file": "PMC9774195.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9774195/fullTextXML",
+    "sha256": "40d946df96cea265dd523f502dbf6512d02e180a51db6d1dfc8d3eb640af2faf",
+    "bytes": 170882,
+    "file_saved_at_utc": "2026-09-13T17:42:51.863180+00:00",
+    "license_text": "Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license ( https://creativecommons.org/licenses/by/4.0/ )."
+  },
+  {
+    "file": "PMC11350471.xml",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11350471/fullTextXML",
+    "sha256": "25db0f6630841a55286d6c17253a0cf845bb0b748bc6ec27e5bfd35423028427",
+    "bytes": 150503,
+    "file_saved_at_utc": "2026-09-13T17:44:21.415563+00:00",
+    "license_text": "https://creativecommons.org/licenses/by/3.0/ This article is licensed under a  Creative Commons Attribution 3.0 Unported Licence . You can use material from this article in other publications without requesting further permissions from the RSC, provided that the correct acknowledgement is given."
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5971455/fullTextXML",
+    "error": "HTTP404; public primary PMC web result retained as citation, no local full text claimed"
+  }
+]

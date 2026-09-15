@@ -1,0 +1,287 @@
+{
+  "created_at": "2026-09-13T07:23:29.572102+00:00",
+  "scope": "Five allocated entries from the frozen 15-case real-source convenience panel. Full protein/retained-complex preparation only; no MD or solvent generation. All outcomes and previous attempts retained. Finite static energies/forces and geometry checks do not establish dynamical stability, native loop structure or general chemical coverage.",
+  "source_checkpoint": "final-source-checkpoint.json",
+  "cases": [
+    {
+      "id": "1HCK",
+      "passed": true,
+      "phase": "complete",
+      "elapsed_seconds": 31.45,
+      "source_gap_lengths": [
+        4
+      ],
+      "source_unchanged": true,
+      "backend_matches_final_freeze": true,
+      "backend_unchanged_during_case": true,
+      "driver_matches_final_freeze": true,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true,
+        "prepared_dataset_saved": true,
+        "finite_saved_coordinates": true,
+        "full_complex_loop_geometry_passed": true,
+        "independent_observed_atom_transplant_unchanged": true,
+        "refinement_artifact_hashes_match": true,
+        "final_refinement_identities_and_bonds_preserved": true,
+        "final_refinement_fixed_heavy_atoms_unchanged": true,
+        "final_refinement_flank_displacements_bounded": true,
+        "final_refinement_expanded_geometry_passed": true,
+        "serialized_pdb_matches_final_refinement": true,
+        "retained_ligand_ion_heavy_identities_and_coordinates_preserved": true,
+        "serialized_pdb_geometry_passed": true,
+        "complete_forcefield_reconstructed": true,
+        "finite_static_forcefield_energy_no_dynamics": true,
+        "finite_static_forcefield_forces_no_dynamics": true,
+        "all_inspected_ligands_parameterized": true,
+        "ligand_conversion_validation_passed": true,
+        "no_ligand_removal": true
+      },
+      "report": "docs/audit/loop-fallback/runs/review-final/1HCK/result.json",
+      "report_sha256": "514d55300f84ffa9aa06868cba006135df6edbc25ebb49c3507e54c68145d70b",
+      "error": null,
+      "refinement": {
+        "fixed_heavy_atoms_checked": 2399,
+        "fixed_heavy_coordinates_bitwise_equal": true,
+        "flank_residues": [],
+        "maximum_flank_displacement_nm": 0.0,
+        "retained_ligand_ion_heavy_atoms_checked": 32
+      },
+      "ligands": [
+        {
+          "component_id": "ATP",
+          "formal_charge": -4,
+          "heavy_atoms": 31,
+          "conversion_passed": true
+        }
+      ],
+      "ions": [
+        {
+          "key": "B:401::MG",
+          "residue": "MG",
+          "element": "Mg",
+          "formal_charge": 2,
+          "model": "Amber TIP3P 12-6 nonbonded ion; not a bonded coordination, charge-transfer or oxidation-state model."
+        }
+      ],
+      "static_force_components": {
+        "maximum_absolute_kj_mol_nm": 8690.606904266691,
+        "rms_kj_mol_nm": 378.79886935324214,
+        "scope": "Finite derivatives at saved coordinates; no dynamics, stability or convergence claim."
+      }
+    },
+    {
+      "id": "4HJO",
+      "passed": true,
+      "phase": "complete",
+      "elapsed_seconds": 30.8,
+      "source_gap_lengths": [
+        4
+      ],
+      "source_unchanged": true,
+      "backend_matches_final_freeze": true,
+      "backend_unchanged_during_case": true,
+      "driver_matches_final_freeze": true,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true,
+        "prepared_dataset_saved": true,
+        "finite_saved_coordinates": true,
+        "full_complex_loop_geometry_passed": true,
+        "independent_observed_atom_transplant_unchanged": true,
+        "refinement_artifact_hashes_match": true,
+        "final_refinement_identities_and_bonds_preserved": true,
+        "final_refinement_fixed_heavy_atoms_unchanged": true,
+        "final_refinement_flank_displacements_bounded": true,
+        "final_refinement_expanded_geometry_passed": true,
+        "serialized_pdb_matches_final_refinement": true,
+        "retained_ligand_ion_heavy_identities_and_coordinates_preserved": true,
+        "serialized_pdb_geometry_passed": true,
+        "complete_forcefield_reconstructed": true,
+        "finite_static_forcefield_energy_no_dynamics": true,
+        "finite_static_forcefield_forces_no_dynamics": true,
+        "all_inspected_ligands_parameterized": true,
+        "ligand_conversion_validation_passed": true,
+        "no_ligand_removal": true
+      },
+      "report": "docs/audit/loop-fallback/runs/review-final/4HJO/result.json",
+      "report_sha256": "470b4a602edb18cfd1ac386e97fdc8eac40cf8def5ecb2cbecb64aec104033ad",
+      "error": null,
+      "refinement": {
+        "fixed_heavy_atoms_checked": 2262,
+        "fixed_heavy_coordinates_bitwise_equal": true,
+        "flank_residues": [],
+        "maximum_flank_displacement_nm": 0.0,
+        "retained_ligand_ion_heavy_atoms_checked": 29
+      },
+      "ligands": [
+        {
+          "component_id": "AQ4",
+          "formal_charge": 0,
+          "heavy_atoms": 29,
+          "conversion_passed": true
+        }
+      ],
+      "ions": [],
+      "static_force_components": {
+        "maximum_absolute_kj_mol_nm": 8192.165611917348,
+        "rms_kj_mol_nm": 360.74826372934257,
+        "scope": "Finite derivatives at saved coordinates; no dynamics, stability or convergence claim."
+      }
+    },
+    {
+      "id": "2BEL",
+      "passed": false,
+      "phase": "preparation eligibility",
+      "elapsed_seconds": 3.11,
+      "source_gap_lengths": [
+        3
+      ],
+      "source_unchanged": true,
+      "backend_matches_final_freeze": true,
+      "backend_unchanged_during_case": true,
+      "driver_matches_final_freeze": true,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true
+      },
+      "report": "docs/audit/loop-fallback/runs/review-final/2BEL/result.json",
+      "report_sha256": "7c6fd2373b6272bf8775aebe5e0c9fe123688421bf3ee297eda44b787fe09cf1",
+      "error": "Ligand chemistry needs attention: L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). The CCD reference geometry could not be validated for missing-atom repair. Reference coordinates disagree with CCD stereochemistry at C14: expected R, found S. No coordinates were changed. Supply a validated complete ligand reference; the input structure was not modified.",
+      "refinement": null,
+      "ligands": [],
+      "ions": [],
+      "static_force_components": null
+    },
+    {
+      "id": "1FPU",
+      "passed": true,
+      "phase": "complete",
+      "elapsed_seconds": 23.39,
+      "source_gap_lengths": [
+        5
+      ],
+      "source_unchanged": true,
+      "backend_matches_final_freeze": true,
+      "backend_unchanged_during_case": true,
+      "driver_matches_final_freeze": true,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true,
+        "prepared_dataset_saved": true,
+        "finite_saved_coordinates": true,
+        "full_complex_loop_geometry_passed": true,
+        "independent_observed_atom_transplant_unchanged": true,
+        "refinement_artifact_hashes_match": true,
+        "final_refinement_identities_and_bonds_preserved": true,
+        "final_refinement_fixed_heavy_atoms_unchanged": true,
+        "final_refinement_flank_displacements_bounded": true,
+        "final_refinement_expanded_geometry_passed": true,
+        "serialized_pdb_matches_final_refinement": true,
+        "retained_ligand_ion_heavy_identities_and_coordinates_preserved": true,
+        "serialized_pdb_geometry_passed": true,
+        "complete_forcefield_reconstructed": true,
+        "finite_static_forcefield_energy_no_dynamics": true,
+        "finite_static_forcefield_forces_no_dynamics": true,
+        "all_inspected_ligands_parameterized": true,
+        "ligand_conversion_validation_passed": true,
+        "no_ligand_removal": true
+      },
+      "report": "docs/audit/loop-fallback/runs/review-final/1FPU/result.json",
+      "report_sha256": "0c1556fa7f51d1d6107a7ae097391305a539cba4ff21ac943846a2fb617a9874",
+      "error": null,
+      "refinement": {
+        "fixed_heavy_atoms_checked": 2233,
+        "fixed_heavy_coordinates_bitwise_equal": true,
+        "flank_residues": [],
+        "maximum_flank_displacement_nm": 0.0,
+        "retained_ligand_ion_heavy_atoms_checked": 29
+      },
+      "ligands": [
+        {
+          "component_id": "PRC",
+          "formal_charge": 0,
+          "heavy_atoms": 29,
+          "conversion_passed": true
+        }
+      ],
+      "ions": [],
+      "static_force_components": {
+        "maximum_absolute_kj_mol_nm": 635230.007438807,
+        "rms_kj_mol_nm": 10613.36578370664,
+        "scope": "Finite derivatives at saved coordinates; no dynamics, stability or convergence claim."
+      }
+    },
+    {
+      "id": "4HHY",
+      "passed": true,
+      "phase": "complete",
+      "elapsed_seconds": 122.95,
+      "source_gap_lengths": [
+        8
+      ],
+      "source_unchanged": true,
+      "backend_matches_final_freeze": true,
+      "backend_unchanged_during_case": true,
+      "driver_matches_final_freeze": true,
+      "checks": {
+        "internal_gaps_detected": true,
+        "source_gap_lengths_preserved": true,
+        "prepared_dataset_saved": true,
+        "finite_saved_coordinates": true,
+        "full_complex_loop_geometry_passed": true,
+        "independent_observed_atom_transplant_unchanged": true,
+        "refinement_artifact_hashes_match": true,
+        "final_refinement_identities_and_bonds_preserved": true,
+        "final_refinement_fixed_heavy_atoms_unchanged": true,
+        "final_refinement_flank_displacements_bounded": true,
+        "final_refinement_expanded_geometry_passed": true,
+        "serialized_pdb_matches_final_refinement": true,
+        "retained_ligand_ion_heavy_identities_and_coordinates_preserved": true,
+        "serialized_pdb_geometry_passed": true,
+        "complete_forcefield_reconstructed": true,
+        "finite_static_forcefield_energy_no_dynamics": true,
+        "finite_static_forcefield_forces_no_dynamics": true,
+        "all_inspected_ligands_parameterized": true,
+        "ligand_conversion_validation_passed": true,
+        "no_ligand_removal": true
+      },
+      "report": "docs/audit/loop-fallback/runs/review-final/4HHY/result.json",
+      "report_sha256": "99d6a7e608b500425a1da78acf93a47147cc35520700873b04142b665476c06f",
+      "error": null,
+      "refinement": {
+        "fixed_heavy_atoms_checked": 2733,
+        "fixed_heavy_coordinates_bitwise_equal": true,
+        "flank_residues": [],
+        "maximum_flank_displacement_nm": 0.0,
+        "retained_ligand_ion_heavy_atoms_checked": 48
+      },
+      "ligands": [
+        {
+          "component_id": "15R",
+          "formal_charge": 0,
+          "heavy_atoms": 43,
+          "conversion_passed": true
+        },
+        {
+          "component_id": "SO4",
+          "formal_charge": -2,
+          "heavy_atoms": 5,
+          "conversion_passed": true
+        }
+      ],
+      "ions": [],
+      "static_force_components": {
+        "maximum_absolute_kj_mol_nm": 31551.310134139647,
+        "rms_kj_mol_nm": 653.8549673641028,
+        "scope": "Finite derivatives at saved coordinates; no dynamics, stability or convergence claim."
+      }
+    }
+  ],
+  "passed": 4,
+  "blocked": 1,
+  "blocked_classification": {
+    "2BEL": "Incomplete CBO ligand requires repair, but the CCD ideal-coordinate reference conflicts with its declared stereochemistry. No automatic reference/observed coordinate inversion or ligand removal. Supply a validated complete reference."
+  },
+  "implementation_changes_since_freeze": false
+}

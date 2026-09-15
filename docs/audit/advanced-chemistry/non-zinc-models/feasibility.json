@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-09-13T17:43:49.018475+00:00",
+  "scope": "bounded primary-source and exact-file applicability audit; no new preparation, MD or QM",
+  "report": "FEASIBILITY.md",
+  "frozen_cases": [
+    {
+      "id": "1A6M",
+      "status": "published_candidate_not_validated",
+      "force_field_scope": "CHARMM22 protein / CHARMM27 lipid legacy combined package; CHARMM TIP3P; Coulomb 1-4 scale 1.0; explicit CHARMM LJ-14 rules",
+      "chemical_state_scope": "His93 NE2 / porphyrin Fe / end-on O2; formal Fe oxidation and quantum spin not explicitly declared by deposited classical files",
+      "license": "CC0-1.0 declared by Dryad dataset",
+      "blockers": [
+        "Saved PSF and script use baseline charges while a separate file supplies updated charges",
+        "SO4 template missing from this package; retain both source sulfates",
+        "Physical site and conversion validation not performed"
+      ],
+      "validated_for_dynamol": false
+    },
+    {
+      "id": "1HL5",
+      "status": "exact_bridged_state_package_not_verified",
+      "force_field_scope": "Closest torsion-tested model: AMBER-compatible, later reused with AMBER99SB-ILDN / TIP3P; standard Amber exceptions must be bound to exact native files",
+      "chemical_state_scope": "Verified 2014 model is reduced Cu(I)/Zn(II), with protonated nonbridging Zn-His. Does not match frozen shared His63 contacts.",
+      "license": "ACS SI CC BY-NC 4.0; CuCu GitHub license unspecified",
+      "blockers": [
+        "No complete force-field library for the preserved bridge and bound water retrieved",
+        "2006 Cu-His-Zn charge table is evidence, not a complete ready-to-load package",
+        "CuCu source files use Cu in the Zn site"
+      ],
+      "validated_for_dynamol": false
+    },
+    {
+      "id": "1LUV",
+      "status": "coupled_site_package_not_verified",
+      "force_field_scope": "Observed alternatives use CHARMM36m / CHARMM TIP3P / general MN3P, or Amber99SB / TIP3P / Bradbrook Mn2+",
+      "chemical_state_scope": "Frozen CCD Mn(II), atom formal charge absent; three His, Asp and water. Mn(III) and Mn(II) have distinct spin/protonation scope.",
+      "license": "CHARMM source stream retrieved; independent redistribution license not verified",
+      "blockers": [
+        "Single-ion hydration models do not validate coupled protein coordination",
+        "Matched native site terms/charges/spin/water protonation not verified"
+      ],
+      "validated_for_dynamol": false
+    },
+    {
+      "id": "1A6Q",
+      "status": "matched_qm_evidence_only_no_classical_package",
+      "force_field_scope": "2026 matched-site DFT clusters have no retrieved classical force field; other PPM1A MD uses CHARMM36/TIP3P but Mg replacing Ca",
+      "chemical_state_scope": "Two Mn(II) sites, bridging Asp60 and water880, Gly61 carbonyl, retained phosphate; high-spin individual ions in DFT paper, coupled spin/protonation still to establish",
+      "license": "2026 DFT article CC BY 4.0",
+      "blockers": [
+        "No matched full classical term/charge package or reusable full QM output retrieved",
+        "Different-metal models cannot validate the native Mn/Mn complex"
+      ],
+      "validated_for_dynamol": false
+    }
+  ],
+  "newly_validated_cases": 0,
+  "retrieved_published_model_candidates": 1,
+  "source_inspection": "source-inspection.json",
+  "original_sources_immutable": true,
+  "primary_artifacts": {
+    "oxy_heme": "dryad-oxy-myoglobin/",
+    "sod_reduced": "jp5078906_si_001.pdf",
+    "sod_prior": "jp056855l_si_001.pdf",
+    "sod_reuse": "jz9b02868_si_001.pdf",
+    "cucu_explicit_mismatch": "cucu-mismatch/",
+    "general_mn_explicit_mismatch": "charmm-ions-won-extracted-0.str",
+    "ppm_matched_qm_evidence": "PMC13297126.xml"
+  }
+}

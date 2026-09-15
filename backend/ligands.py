@@ -366,10 +366,38 @@ def _mapped_variant(mol, smiles):
 def _select_state(mol, names, component_id, ph, override):
     original = Chem.MolToSmiles(mol, isomericSmiles=True)
     warning = "Ligand protonation is a fixed model choice; it is not a binding-site pKa calculation or a tautomer ranking."
+    reference_state = None
     if override:
         selected = _mapped_variant(mol, override)
         method = "Explicit user SMILES protonation/tautomer state"
         candidates = [Chem.MolToSmiles(selected, isomericSmiles=True)]
+    elif component_id == "SO4":
+        # Dimorphite's normalization turns isolated sulfate into sulfuric acid,
+        # removing two oxygen maps without restoring the dianion at pH 7.
+        # Preserve the exact named CCD state instead of guessing those maps or
+        # transferring the inappropriate neutralization result to bound atoms.
+        if not 6 <= ph <= 8:
+            raise ValueError("Automatic sulfate preparation retains the CCD SO4 dianion only at pH 6–8. Supply an explicit atom-mapped sulfate/bisulfate state at this pH; no protonation state was changed.")
+        sulfur = [a for a in mol.GetAtoms() if a.GetSymbol() == 'S']
+        oxygens = [a for a in mol.GetAtoms() if a.GetSymbol() == 'O']
+        valid = (mol.GetNumAtoms() == 5 and mol.GetNumBonds() == 4
+                 and len(sulfur) == 1 and len(oxygens) == 4
+                 and sulfur[0].GetDegree() == 4 and sulfur[0].GetFormalCharge() == 0
+                 and Chem.GetFormalCharge(mol) == -2
+                 and all(a.GetTotalNumHs() == 0 and a.GetNumRadicalElectrons() == 0 for a in mol.GetAtoms()))
+        if valid:
+            valid = all(a.GetDegree() == 1 and a.GetNeighbors()[0].GetIdx() == sulfur[0].GetIdx()
+                        and (a.GetFormalCharge(), next(iter(a.GetBonds())).GetBondType())
+                        in {(-1, Chem.BondType.SINGLE), (0, Chem.BondType.DOUBLE)} for a in oxygens)
+        if not valid:
+            raise ValueError("The supplied SO4 graph does not match the CCD sulfate dianion reference state. Supply an explicit chemically defined ligand state; no source charges or atom identities were changed.")
+        selected = Chem.Mol(mol)
+        method = "Retained wwPDB CCD SO4 sulfate dianion (−2), fixed reference-state policy at pH 6–8; no pH heuristic or atom-map recovery applied"
+        candidates = [original]
+        reference_state = {"component_id": "SO4", "url": "https://www.rcsb.org/ligand/SO4",
+                           "formal_charge": -2, "automatic_ph_range": [6, 8],
+                           "original_graph_retained": True, "ph_heuristic_applied": False}
+        warning += " The existing sulfate dianion is retained as a named near-neutral reference state; local sulfate/bisulfate populations are not predicted."
     elif component_id == "GNP" and 6 <= ph <= 8:
         selected = Chem.Mol(mol)
         terminal_oxygens = []
@@ -436,7 +464,8 @@ def _select_state(mol, names, component_id, ph, override):
     return selected, {"original_smiles": original, "original_formal_charge": Chem.GetFormalCharge(mol),
                       "selected_smiles": Chem.MolToSmiles(selected, isomericSmiles=True),
                       "formal_charge": Chem.GetFormalCharge(selected), "candidate_smiles": candidates,
-                      "protonation_method": method, "ph": ph, "warnings": [warning]}
+                      "protonation_method": method, "ph": ph, "warnings": [warning],
+                      **({"reference_state": reference_state} if reference_state else {})}
 
 
 def _restore_protonation_maps(original, proposed):
@@ -715,6 +744,10 @@ def _add_hydrogens(model):
     coordinates = mol.GetConformer().GetPositions().copy()
     for i, atom in enumerate(mol.GetAtoms()):
         atom.SetProp('_TriposAtomName', model.names[i] if i < len(model.names) else f"H{i - len(model.names) + 1}")
+    # With no newly placed H there are no movable coordinates. RDKit's BFGS
+    # optimizer can fail on an all-fixed force field (for example sulfate).
+    if mol.GetNumAtoms() == model.mol.GetNumAtoms():
+        return mol, "No hydrogens added for the selected ligand state; original coordinates retained; relaxation unnecessary"
     # Relax only newly placed H. Bound ligand heavy coordinates are fixed.
     if AllChem.MMFFHasAllMoleculeParams(mol):
         parameters = AllChem.MMFFGetMoleculeProperties(mol, mmffVariant="MMFF94s")
@@ -799,6 +832,35 @@ def _normalize_native_charge(folder, target):
     storage.atomic_json(folder / 'charge-rounding.json', report)
 
 
+def _unused_gaff14_defaults(structure, parameters):
+    """Use Amber's compatible XML defaults only when no 1–4 pair can exist."""
+    if parameters.dihedral_types:
+        return None
+    neighbors = [set() for _ in structure.atoms]
+    for bond in structure.bonds:
+        neighbors[bond.atom1.idx].add(bond.atom2.idx)
+        neighbors[bond.atom2.idx].add(bond.atom1.idx)
+    for start in range(len(neighbors)):
+        seen, frontier = {start}, {start}
+        for distance in range(1, 4):
+            frontier = {neighbor for index in frontier for neighbor in neighbors[index]} - seen
+            if distance == 3 and frontier:
+                return None
+            seen.update(frontier)
+    # Generic ParameterSet.from_structure defaults to 1/1 if there are no
+    # torsions from which to recover Amber scaling. These global XML fields
+    # still must agree with the protein even when unused by this ligand.
+    from parmed.amber import AmberParameterSet
+    amber = AmberParameterSet()
+    original = {"scee": parameters.default_scee, "scnb": parameters.default_scnb}
+    parameters.default_scee, parameters.default_scnb = amber.default_scee, amber.default_scnb
+    return {"method": "Amber global XML 1–4 defaults for a ligand with no proper torsion types and no atom pairs at shortest bond-graph distance three; no interaction uses the changed defaults.",
+            "shortest_distance_three_pairs": 0, "proper_torsion_types": 0,
+            "original_generic_defaults": original,
+            "amber_defaults": {"scee": parameters.default_scee, "scnb": parameters.default_scnb},
+            "native_energy_force_validation_required": True}
+
+
 def _parameterize(mol, folder, namespace, on_progress, check_cancel):
     import parmed
     from parmed.parameters import ParameterSet
@@ -874,6 +936,9 @@ def _parameterize(mol, folder, namespace, on_progress, check_cancel):
             params.improper_periodic_types[key] = copy.copy(dihedral.type)
     template = ResidueTemplate.from_residue(structure.residues[0])
     params.residues[namespace] = template
+    scale_compatibility = _unused_gaff14_defaults(structure, params)
+    if scale_compatibility:
+        storage.atomic_json(folder / 'nonbonded-scale-compatibility.json', scale_compatibility)
     converted = OpenMMParameterSet.from_parameterset(params, remediate_residues=False, unique_atom_types=True)
     xml_path = folder / 'ligand.xml'
     converted.write(str(xml_path), improper_dihedrals_ordering='amber')
@@ -907,6 +972,9 @@ def _validate_parameter_conversion(folder, xml_path):
               'energy_tolerance_kj_mol': 1e-4, 'force_tolerance_kj_mol_nm': 1e-3,
               'atom_mapping': {'method': 'Verified native atom names, elements and bonds; symmetric graph permutations are not used.',
                                'atoms': atom_map}, 'conformations': []}
+    compatibility = folder / 'nonbonded-scale-compatibility.json'
+    if compatibility.is_file():
+        report['unused_global_14_scale_compatibility'] = json.loads(compatibility.read_text())
     for index in range(3):
         displacement = 0 if index == 0 else np.random.default_rng(2026 + index).normal(0, .0003, xyz.shape)
         values = []

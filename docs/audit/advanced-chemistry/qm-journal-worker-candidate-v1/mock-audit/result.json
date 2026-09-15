@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "mock_integration_passed",
+  "test_count": 20,
+  "test_exit_code": 0,
+  "candidate_worker_sha256": "780b5bb968fa9d45987597be9412331d071e17ea38b2299749dc5e92be9f12b5",
+  "original_worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "journal_helper_sha256": "b3a0543b5b2394373e7a787ad01ecd77865cc507f85bec8ec99efe6efed26528",
+  "journal_helper_byte_identical_to_reviewed_35_test_version": true,
+  "test_source_sha256": "c48217ad08dd4f9a32ec9def1d70d3082ec8a9a9b45fd1968dace33a7a4a3b82",
+  "production_worker_changed": false,
+  "native_qm_calculations": 0,
+  "native_qualification": "not_performed",
+  "active_integration": false,
+  "accepted": false,
+  "physical_acceptance": false,
+  "scope": "Completed callback observer only; candidate ready for independent review before later small native qualification"
+}

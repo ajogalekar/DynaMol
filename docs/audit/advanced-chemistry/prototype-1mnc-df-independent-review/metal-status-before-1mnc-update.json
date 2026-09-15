@@ -1,0 +1,45 @@
+{
+  "updated_unix": 1789329717.574257,
+  "scope": "Metal-site development checkpoint; exact neutral-water ZAFF6 1CA2 prototype only. Other metal families remain separately reviewed; advanced chemistry is not app-ready.",
+  "active_simulations": [],
+  "completed_motion": {
+    "NPT_warmup_ps": 75,
+    "GROMACS_NVT_ps": 20,
+    "OpenMM_NVT_ps": 20,
+    "common_source_density_g_ml": 1.0245457266289093,
+    "same_physical_start_and_box_verified": true,
+    "finite_unrestrained_motion_and_broad_coordination_checks_passed": true,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-warmed-comparison.json",
+    "sha256": "701aa2cab32c972ee3325d1124d5b4e955014ca00b9f7c43bd2bbdb67899bae2"
+  },
+  "unresolved": {
+    "absolute_periodic_energy_difference": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/periodic-comparison-matrix.json",
+    "current_state": "The large mixed-runtime thread effect collapses in the isolated double build. Raw absolute difference remains -0.408748287 kJ/mol; the independently identified dispersion-component difference is -0.457011501, leaving +0.048263213 unassigned. No applied offset or exact periodic-parity claim. Compiler differences are explicit.",
+    "completed_discriminator": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/double-precision-discriminator.json",
+    "independent_residual_review": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/review-double-residual.json"
+  },
+  "retained_initial_smoke": "Two OpenMM5ps plus one GROMACS5ps at initial low density0.814g/mL remain unchanged and explicitly labeled as initial smoke tests.",
+  "completed_numerical_diagnostics": {
+    "kind": "Pinned native double-precision GROMACS2025.4; two nsteps=0 cases only",
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/double-precision-discriminator.json",
+    "sha256": "c7491529507cfbae13d4e7708d882918f46f7d617e617e9e452326735ab86b19",
+    "independent_review": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/review-double-residual.json",
+    "independent_review_sha256": "6213c0a5560f7511d6226c3aed1232e1b6099e59e058b30d09bc45d5a55fa6eb",
+    "same_tpr_coordinates_and_box_exact": true,
+    "native_thread_energy_difference_kj_mol": -2.559390850365162e-07,
+    "raw_energy_difference_from_openmm_reference_kj_mol": -0.40874828718369827,
+    "full_force_rms_vector_difference_kj_mol_nm": 0.0012434450005620024,
+    "installed_engine_replaced": false
+  },
+  "validation_contract_work": {
+    "status": "completed",
+    "owner": "desktop_package_review",
+    "scope": "General Amber-to-GROMACS periodic contract and isolated read-only comparison analysis/negative fixtures. Exact parameter fidelity, raw forces, numerical runtime precision and energy/volume conventions remain separate.",
+    "production_changes": false,
+    "contract": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/PERIODIC-VALIDATION.md",
+    "machine_readable_contract": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/periodic-validation-contract.json",
+    "contract_sha256": "8a777a7d278cc6e0f64f9a27d0d5c929e37efa25a2a8884ee99ac9c963ebb1ea",
+    "negative_fixture_tests_passed": 19,
+    "native_replay_matches_saved_metrics": true
+  }
+}

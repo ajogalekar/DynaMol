@@ -94,9 +94,12 @@ rotamer, missing loop, coordination model, or converged simulation.
 Inspection of the original 1UA2 dataset recognizes all four TPO170 residues and
 their peptide links, separately from its four ATP ligands. Each protein chain also
 has a genuine 12-residue internal sequence gap between residues 43 and 56. These
-gaps exceed the current six-residue local builder and still require external loop
-modeling before full-structure preparation. No phosphate removal or artificial
-bond across a missing loop is used to bypass this requirement.
+gaps are within the current optional builder's limit of 12 standard residues per
+internal gap and 96 total. Subsequent full monomer and four-chain preparation
+checks rebuilt 12 and 48 residues while retaining ATP/TPO; see the
+[loop validation record](audit/loop-repair/REVIEW.md). These are provisional
+starting models, not verified native loops. No phosphate removal or artificial
+bond across an unbuilt gap bypasses the preparation requirements.
 
 A documented 13-residue fragment, 1UA2 chain A residues 164–176, passed the actual
 background preparation, explicit-solvation and OpenMM worker pipeline. All 11 TPO

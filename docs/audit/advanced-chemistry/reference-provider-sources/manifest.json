@@ -1,0 +1,29 @@
+{
+  "downloaded_unix": 1789328756.8522508,
+  "sources": [
+    {
+      "filename": "psi4-v1.9.1-dzvp.gbs",
+      "url": "https://raw.githubusercontent.com/psi4/psi4/v1.9.1/psi4/share/psi4/basis/dzvp.gbs",
+      "sha256": "629b5f1d8b7eb52ab43dd84e7c0c5e3e4d0f25cff8ed858edf407788d79a968c",
+      "bytes": 79976
+    },
+    {
+      "filename": "psi4-v1.9.1-libxc_functionals.py",
+      "url": "https://raw.githubusercontent.com/psi4/psi4/v1.9.1/psi4/driver/procrouting/dft/libxc_functionals.py",
+      "sha256": "d853e07122b964396a35cbe24431470e75fbb7cc349c98b4409e99a39b20da0c",
+      "bytes": 13425
+    },
+    {
+      "filename": "simple-dftd3-v1.6.0-parameters.toml",
+      "url": "https://raw.githubusercontent.com/dftd3/simple-dftd3/v1.6.0/assets/parameters.toml",
+      "sha256": "b1d9d1b9882dcad5361a99c34745ad44f8a274d80c907d9d0187255e4323d645",
+      "bytes": 32719
+    },
+    {
+      "filename": "simple-dftd3-v1.6.0-test_pyscf.py",
+      "url": "https://raw.githubusercontent.com/dftd3/simple-dftd3/v1.6.0/python/dftd3/test_pyscf.py",
+      "sha256": "cc0d6a7efd717aa4e0c0c909b5b5e2193ef71d83aa4a5c062a1f21071cd70f6b",
+      "bytes": 18575
+    }
+  ]
+}

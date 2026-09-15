@@ -1,0 +1,21 @@
+{
+  "snapshot_sha256": "a659bed8deadc4c27482657fa3efe3c171d603cf9c1e172f94db3499c7f31a34",
+  "source_atom_map_sha256": "72f8dafad3ddfbc7c18351a052816b0d51d4558ebcd69a1fdaf6e35a460e0f2f",
+  "source_structure_sha256": "8e6392a25c03fe10addfd11baabc0c4190129ab2f005e62d05fe768b2f8f3280",
+  "atom_count": 4534,
+  "coordinates_bitwise_equal_after_roundtrip": true,
+  "mechanics_accepted": true,
+  "simulation_ready": false,
+  "mapping_sha256": "c0c1edc902a680280adc95dcfac694ced71caef46cc17de73a609c9e8afcb7f5",
+  "display_indices": [
+    0,
+    4533
+  ],
+  "mapped_native_indices": [
+    0,
+    4533
+  ],
+  "selected_distance_identical": true,
+  "scope": "Independent native/display transport check, not chemical source-map accuracy or physical model validation.",
+  "accepted": true
+}

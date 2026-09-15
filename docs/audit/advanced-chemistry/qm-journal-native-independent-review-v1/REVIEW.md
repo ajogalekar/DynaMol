@@ -1,0 +1,15 @@
+# Independent review: tiny native journal qualification
+
+No blocker was found for the standalone journal worker candidate's **three-atom implementation scope**. This review performed no native calculations and changed no frozen source, runtime, controller, input or result.
+
+The reviewed package is `~/.cache/dynamol-research/qm-journal-native-qualification-v2`, package-manifest SHA `aa9e15d38e9a45f60a4258e3b153f4058797b595beec99df7ac672f9c699176e`, outer artifact-manifest SHA `0b9aa5bea3ae0a088a5f4f3bbea43332418d977944b4b66f7133d896356ebce8`. All 200 outer artifacts were independently rehashed. The original worker, candidate worker and journal helper match their previously reviewed source pins exactly.
+
+The preserved calculations exercise constrained gas-phase water with DF RHF/STO-3G and DF B3LYPG/STO-3G, with one Cartesian oxygen anchor. For each exact-input original/candidate pair, all final arrays and energy match exactly; all five callback cycles agree in energy and gradient norm. Each journal contains five distinct geometries. The journal metadata, identity, method fingerprint, coordinate and gradient hashes, callback references and unit conventions were independently checked.
+
+All ten saved records were compared independently with their already-computed original-worker single-point replays. The replay request uses the exact recorded coordinates, disables optimization and contains no checkpoint reuse. Every saved replay geometry is exactly equal to its record. Maximum energy difference is 4.263256414560601e-14 Hartree; maximum gradient-component difference is 1.1671192901019367e-9 Hartree/Bohr. These checks substantiate the geometry/energy/full-gradient association; no replay was launched during this review.
+
+The first-record ENOSPC injection failed at publication, retained a complete temporary record, committed no evaluation, and produced no accepted native arrays or successful callback reference. All committed records—even in numerically completed runs—remain explicitly `UNCONVERGED`, `accepted=false`, `optimization_converged=false`, `physical_acceptance=false`, and `checkpoint_reuse_authorized=false`. The same-geometry SCF checkpoint validity remains `NOT_ESTABLISHED`.
+
+The author accurately limits the memory evidence: all 15 children lasted less than one second (maximum 0.816 s), while RSS sampling occurred once each second. The samples capture startup and do not establish true process peaks below the configured 1 GB stop threshold. This is not a large-system memory qualification. The earlier disk-preflight refusal remains retained.
+
+Readiness is limited to this standalone observer implementation and its tested persistence failure. There is no claim of full-parent numerical qualification, complete disk-failure coverage, changed SCF checkpoint semantics, force-field correctness, molecular model accuracy, or live application integration. Those remain separate decisions. The source adapter's existing 20 mocked integration tests and earlier exact AST review are not replaced by these tiny native checks.

@@ -1,0 +1,13 @@
+{
+  "original_worker_sha256": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+  "new_top_level_functions": [
+    "_create_evaluation_journal"
+  ],
+  "added_original_worker_statements": [
+    "record_evaluation = _create_evaluation_journal(data, elements, initial_bohr, mean_field, out, report, lib.param.BOHR)",
+    "evaluation_record = record_evaluation(env)",
+    "if evaluation_record is not None:\n    step['evaluation_record'] = evaluation_record"
+  ],
+  "original_ast_identical_after_removing_only_observer_and_hooks": true,
+  "numerical_method_and_acceptance_code_changes": false
+}

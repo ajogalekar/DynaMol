@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "file": "qm_evaluation_journal.py",
+      "bytes": 13601,
+      "sha256": "e260abedd8fd54f5f10a85d46a97aaaca9c4286ff8d2b6e488a04faba9364d7d"
+    },
+    {
+      "file": "result.json",
+      "bytes": 2521,
+      "sha256": "5b4d27d5e848c1ac55ba814d1c7d4c8acede6c747d4ee933f3bfe346b003285a"
+    },
+    {
+      "file": "test_qm_evaluation_journal.py",
+      "bytes": 17441,
+      "sha256": "ae849edbd2c94f5a66aa16fb8012ca11d027ccbec64246c576ab08512fb111e1"
+    },
+    {
+      "file": "tests.log",
+      "bytes": 4514,
+      "sha256": "b324d00bffae9e115ea13d8dc0d687fb4d64e1c74852c8b2fcf00d2e915b188d"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+--- before/qm_evaluation_journal.py
++++ after/qm_evaluation_journal.py
+@@ -222,7 +222,7 @@
+         if actual != self.binding or fingerprint(actual) != self.manifest_sha256:
+             raise ValueError("Journal manifest binding mismatch")
+         if (actual.get("kind") != "qm_evaluation_journal_binding"
+-                or actual.get("schema_version") != 1
++                or type(actual.get("schema_version")) is not int or actual["schema_version"] != 1
+                 or not _unaccepted(actual)
+                 or fingerprint(actual["requested_method_and_settings"]) !=
+                 actual["requested_method_fingerprint_sha256"]):
+@@ -269,7 +269,9 @@
+             record = _read(path)
+             if not isinstance(record, dict) or set(record) != RECORD_KEYS:
+                 raise ValueError("Invalid evaluation schema")
+-            if (record["schema_version"] != 1 or record["kind"] != "completed_scf_gradient_evaluation"
++            _identity(record["identity"])
++            if (type(record["schema_version"]) is not int or record["schema_version"] != 1
++                    or record["kind"] != "completed_scf_gradient_evaluation"
+                     or record["scf_converged"] is not True
+                     or type(record["cycle"]) is not int or not 1 <= record["cycle"] <= 999999
+                     or path.name != f"evaluation-{record['cycle']:06d}.json"

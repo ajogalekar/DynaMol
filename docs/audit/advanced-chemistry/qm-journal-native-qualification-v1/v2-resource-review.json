@@ -1,0 +1,23 @@
+{
+  "root": "/Users/ashujo/.cache/dynamol-research/qm-journal-native-qualification-v2",
+  "package_manifest_sha256": "aa9e15d38e9a45f60a4258e3b153f4058797b595beec99df7ac672f9c699176e",
+  "review": {
+    "status": "prepared_v2_after_reviewed_tiny_disk_exception",
+    "created_unix": 1789349532.881983,
+    "tests": {
+      "passed": 23,
+      "elapsed_seconds": 0.02,
+      "command": "PYTHONDONTWRITEBYTECODE=1 /Users/ashujo/.cache/dynamol-runtimes/qm-parallel-local-v1/bin/python -m unittest -v test_qualify"
+    },
+    "native_work_not_yet_started": true,
+    "retained_preflight_failure": {
+      "path": "/Users/ashujo/.cache/dynamol-research/qm-journal-native-qualification-v1/run/result.json",
+      "sha256": "71ee3c41c5641d9b496bea70f6b7dc7996c6028bdec620c289edd264da691eee"
+    },
+    "reviewed_changes": [
+      "Entry reserve35GiB to10GiB for <=3atom qualification only; running8GiB unchanged.",
+      "Add sampled+boundary total256MiB/perfile64MiB/2048file audit budget.",
+      "All chemistry inputs,tolerances,original/candidate/helper/runtime pins,RSS and time bounds unchanged."
+    ]
+  }
+}

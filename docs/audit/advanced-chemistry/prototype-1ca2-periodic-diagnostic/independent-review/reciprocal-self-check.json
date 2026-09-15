@@ -1,0 +1,9 @@
+{
+  "N": 34414,
+  "charge_sum": -1.012380435294613e-05,
+  "squared_charge_sum": 11020.033199656813,
+  "Eself_kj_mol": 2841386.045346052,
+  "raw_OpenMM_recip": 3962.08349609375,
+  "saved_Gmx_recip": 3961.899902,
+  "raw_recip_difference": -0.18359409365803003
+}

@@ -1,0 +1,695 @@
+<html>
+<title>MacKerell Lab</title>
+<head>
+<link rel="icon" type="image/png" href="./img/logo-umd.png">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<meta http-equiv="content-type" content="text/html">
+<meta name="keywords" content="Alex MacKerell,Alexander D. MacKerell, Alexander D. MacKerell Jr.,MacKerell,molecular dynamics,molecular dynamics simulations,simulations,computer-aided drug design,molecular modeling">
+</head>
+
+<!--// THIS HEADER GOES ON EVERY PAGE //-->
+<table width=900 align="center" cellpadding=0>
+<tr>
+
+<center>
+   <img src="./img/banner_molecule_surface_text5.jpg" usemap="#header">
+   <map name="#header">
+        <area shape="rect" coords="0,0,400,100" href="http://www.pharmacy.umaryland.edu/about/depts/psc/" target="_blank">
+   </map>
+
+<!--// navigation links //-->
+   <div id="horizontal">
+
+<ul>
+    <li><a href="./index.shtml">Home</a></li>
+    <li><a href="#">Research</a>
+    <ul>
+        <li><a href="./research.shtml">Overview</a></li>
+        <li><a href="./publications.shtml">Publications</a></li>
+        <li><a href="./software.shtml">Software</a></li>
+        <li><a href="./gallery.shtml">Cover Art Gallery</a></li>
+    </ul>
+    </li>
+    <li><a href="#">About Us</a>
+    <ul>
+        <li><a href="./people.shtml">Group Members</a></li>
+        <li><a href="./group_pictures.shtml">Group Pictures</a></li>
+        <li><a href="./contact.shtml">Contact</a></li>
+    </ul>
+    </li>
+    <li><a href="#">CHARMM</a>
+    <ul>
+        <li><a href="charmm_ff.shtml">CHARMM Force Fields</a></li>
+        <li><a href="ff_dev.shtml">Force Field Development Resources</a></li>
+        <li><a href="forum.shtml">CHARMM Forum</a></li>
+        <li><a href="tutorials.shtml">CHARMM Tutorials</a></li>
+    </ul>
+    </li>
+    <li><a href="#">External Links</a>
+    <ul>
+        <li><a href="http://cadd.umaryland.edu" target="_blank">CADD Center</a></li>
+        <li><a href="http://www.pharmacy.umaryland.edu/about/depts/psc/" target="_blank">Dept. of Pharmaceutical Sciences</a></li>
+        <li><a href="http://www.pharmacy.umaryland.edu/" target="_blank">School of Pharmacy</a></li>
+        <li><a href="http://www.umaryland.edu/" target="_blank">University of Maryland</a></li>
+    </ul>
+    </li>
+    <li><a href="http://mackerell.umaryland.edu/pmwiki/pmwiki.php" target="_blank">Lab Wiki</a></li>
+</ul>
+
+</div>
+
+
+</center>
+
+</tr>
+</table>
+
+<!--// END OF HEADER //-->
+
+<!--// START CONTENT //-->
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h1>CHARMM Force Field Files</h1>
+
+<p id="back-top">
+    <a href="#top"><span></span>Back to Top</a>
+</p>
+
+<p class="sansserif"><b>Quick Links:</b><br>
+<a href="#charmm">CHARMM Additive and Drude Force Field Files</a><br>
+<a href="./charmm_drude_ff.shtml">CHARMM Drude Force Field Files</a><br>
+<a href="#gromacs">CHARMM36 Files for GROMACS</a><br>
+<a href="#anton">CHARMM36 Files for Anton</a><br>
+<a href="#refs">References</a></p>
+
+<p class="sansserif">Empirical force field parametrization efforts are coordinated with the program CHARMM, which was originally developed in the laboratory of Professor Martin Karplus, Department of Chemistry, Harvard University.</p>
+
+<p class="sansserif">The gzipped tar files below contain the topology and parameter files along with toppar stream files available in various releases of CHARMM. Recent versions include the toppar stream files for the Drude polarizable force field.</p>
+
+<p class="sansserif">Selected topology and parameter files for the AMBER, OPLS and BMS force fields are now included, allowing for modeling studies with CHARMM using these force fields.  In addition, parameters for a number of more recent water models are available. See the non_charmm subdirectory.</p>
+
+<p class="sansserif">An overview of the parameter optimization approaches to extend the CHARMM and Drude force fields may be found in the publications associated with CGenFF and with the FFParam parametrization Gui and workflow. See <a href="http://dx.doi.org/10.1002/jcc.21367">[DOI]</a>, <a href="http://dx.doi.org/10.1002/jcc.26138" target="_blank">[DOI]</a>, and <a href="http://dx.doi.org/10.1021/acs.jpcb.4c01314">[DOI].</a></p>
+
+</td>
+</tr>
+
+</table>
+
+<br>
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<a name="charmm"></a><h2>Additive and Drude Polarizable Force Field Files</h2>
+
+<p class="sansserif">Toppar files for the CHARMM additive force field along with those for the Drude polarizable force field are in the toppar_c36*.tgz files accessible below. The Drude toppar files are in the drude subdirectory. See 00toppar_file_format.txt, included in the .tgz file, for details including an example on how to read the files into CHARMM.</p>
+</td>
+</tr>
+</table>
+
+<br><br>
+
+
+<table width="900" border=1 align="center">
+
+<tr>
+ <td>
+    <p class="sansserif">The February 2026 update of the c36 toppar files includes v5.0 of CGenFF (top_all36_cgenff.rtf and par_all36_cgenff.prm) which is compatable with v5.0 of the CGenFF program. To facilitate back compatability with v4.6 of the CGenFF program the files top_all36_cgenff_v4.6.rtf and par_all36_cgenff_v4.6.prm have been added. See toppar_all.history for additional information. The 2023 update of the Drude force files is included in the drude subdirectory. See 00readme_2023_release.txt for details of the Drude update and note that the Drude force field is actively undergoing refinement.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_feb26.tgz" title="CHARMM_ff_params_files/toppar_c36_feb26.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_feb26.tgz');">toppar_c36_feb26.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2024 update of the c36 toppar files
+includes minor additions and corrections as described in
+toppar_all.history. In addition, the 2023 update of the Drude force files is include in the drude subdirectory. See 00readme_2023_release.txt for details of the Drude update.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul24.tgz" title="CHARMM_ff_params_files/toppar_c36_jul24.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul24.tgz');">toppar_c36_jul24.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2022 update of the c36 toppar files
+includes minor additions and corrections as described in
+toppar_all.history.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul22.tgz" title="CHARMM_ff_params_files/toppar_c36_jul22.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul22.tgz');">toppar_c36_jul22.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2021 update of the c36 toppar files
+includes a number of minor additions and corrections as described in
+toppar_all.history. A significant change was the addition of topologies and parameters for non-standard
+amino acids based on a combination of C36 and CGenFF parameters. This leads to a significant increase in 
+the number of model compounds explicity optimized in CGenFF. In addition, lipid parameters optimized
+for use with LJ PME are now available.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul21.tgz" title="CHARMM_ff_params_files/toppar_c36_jul21.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul21.tgz');">toppar_c36_jul21.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2020 update of the c36 toppar files
+includes a number of minor additions and corrections as described in
+toppar_all.history. A significant change was moving the modified RNA model compound residues into
+CGenFF thereby increasing its coverage along with the addition of amide base, boronic acid and 
+flavin residues and parameters.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul20.tgz" title="CHARMM_ff_params_files/toppar_c36_jul20.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul20.tgz');">toppar_c36_jul20.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2019 update of the c36 toppar files
+includes a number of minor additions and corrections as described in
+toppar_all.history. Notable are the addition of topologies and parameter
+for lignins, the addition of NBFIX terms for macromolecule-ion interactions and extensions of CGenFF.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul19.tgz" title="CHARMM_ff_params_files/toppar_c36_jul19.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul19.tgz');">toppar_c36_jul19.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2018 update of the c36 toppar files
+includes a number of minor additions and corrections as described in
+toppar_all.history. Notable are addition of new PNA and LNA parameters, 
+NBFIX terms for selected ions and ether-based lipids. </p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul18.tgz" title="CHARMM_ff_params_files/toppar_c36_jul18.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul18.tgz');">toppar_c36_jul18.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2017 update of the c36 toppar files
+includes a number of minor additions and corrections as described in
+toppar_all.history. In addition, the drude subdirectory includes the
+latest release of the Drude polarizable force field. Significant
+additions and modifications to the additive carbohydrate and lipid
+toppar stream files were introduced by the Wonpil Im lab to include a
+broad set of molecules that comprise biological membranes. We note the
+availability of the modified C36 protein parameter
+set, <b>par_all36m_prot.prm</b>, that corrects oversampling of the
+alphaL conformation and gives improved sampling of disordered states
+of peptides.  These parameters, in conjunction with
+top_all36_prot.rtf, should be used for all simulations involving
+peptides and proteins, including of folded proteins.  </p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul17.tgz" title="CHARMM_ff_params_files/toppar_c36_jul17.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul17.tgz');">toppar_c36_jul17.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The July 2016 update of the c36 toppar files includes changing the MASS atom type number specifications to "MASS -1" associated with code developments in CHARMM that allow atom type numbers to be assigned as they are read.  This is compatible with version C39 onward and does not impact the default PSF format (the XPLOR format) that may be read into NAMD and other programs.  A version of the toppar files, toppar_c36_jul16_mass_orig.tgz, with the old mass numbers is available for back compatibility.  In addition, note the modified C36 protein parameter set, <b>par_all36m_prot.prm</b>, that corrects oversampling of the alphaL conformation and gives improved sampling of disordered states of peptides.  These parameters, in conjunction with top_all36_prot.rtf, should be used for all simulations involving peptides and proteins.  </p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul16.tgz" title="CHARMM_ff_params_files/toppar_c36_jul16.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul16.tgz');">toppar_c36_jul16.tgz</a></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_jul16_mass_orig.tgz" title="CHARMM_ff_params_files/toppar_c36_jul16_mass_orig.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_jul16_mass_orig.tgz');">toppar_c36_jul16_mass_orig.tgz</a></p>
+
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The February 2016 update of the c36 toppar files involves extensions of the force field to include modified RNA bases and nucleotides that occur in tRNA and other systems, a modified C36 protein parameter set that corrects oversampling of the alphaL conformation and gives improved sampling of disordered states of peptides and the addition of sulfamate to the carbohydrate parameters to allow simulations of heparin and related glycans.  </p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_feb16.tgz" title="CHARMM_ff_params_files/toppar_c36_feb16.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_feb16.tgz');">toppar_c36_feb16.tgz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">The August 2015 update of the c36 toppar files involves extensions of the force field to include selected posttranslational modifications, additional lipids and carbohydrates and a comprehensive set of ion parameters (stream/misc/toppar_ions_won.str).</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_aug15.tgz" title="CHARMM_ff_params_files/toppar_c36_aug15.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_aug15.tgz');">toppar_c36_aug15.tgz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Note that the replacement of toppar_c36_dec13.tgz with toppar_c36_aug14.tgz involved moving the toppar stream files into subdirectories for each class of biomolecules, addition of stream files for different water models in the non_charmm subdirectory, patches for ionized cysteine and serine and an update of the lipid toppar stream files to maintain consistency with those supported by the CHARMM-Gui.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c36_aug14.tgz" title="CHARMM_ff_params_files/toppar_c36_aug14.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c36_aug14.tgz');">toppar_c36_aug14.tgz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+	 <p class="sansserif">This link points to the version of the all-atom CGenFF additive parameter set that is compatible with <a href="https://cgenff.paramchem.org/">cgenff.paramchem.org</a>. Older versions can be obtained from the <a href="~kenno/cgenff/download.shtml#latest" target="_blank">CGenFF download page</a>, which also hosts the change logs. See <a href="#refs">the references section</a> for more info.</p>
+ </td>
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_all36a_cgenff.tgz" title="CHARMM_ff_params_files/toppar_c35b2_c36a2.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_all36a_cgenff.tgz');">toppar_all36a_cgenff.tgz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Toppar files with c35b2, c36a2 release of CHARMM.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c35b2_c36a2.tgz" title="CHARMM_ff_params_files/toppar_c35b2_c36a2.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c35b2_ce6a2.tgz');">toppar_c35b2_c36a2.tgz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Toppar files for CHARMM36 all-atom carbohydrate force field.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_carb_apr12.tgz"title="CHARMM_ff_params_files/toppar_carb_apr12.tgz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_carb_apr12.tgz');">toppar_carb_apr12.tgz</a></p> <p class="sansserif"></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Toppar files with c32b1 release of CHARMM. Includes the CMAP extension to the CHARMM22 protein force field and various extensions of the force fields.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c32b1.tar.gz" title="CHARMM_ff_params_files/toppar_c32b1.tar.gz" onclick="javascript:pageTracker._trackPageview('/_download/toppar_c32b1.tar.gz');">toppar_c32b1.tar.gz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Toppar files with c31b1 release of CHARMM.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_c31b1.tar.gz" title="CHARMM_ff_params_files/toppar_c31b1.tar.gz" onclick="javascript:pageTracker._trackPageview('/download/toppar_c31b1.tar.gz');">toppar_c31b1.tar.gz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Toppar files for trifluoroethanol including example inputs.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_tfe.tar.gz" title="CHARMM_ff_params_files/toppar_tfe.tar.gz"  onclick="javascript:pageTracker._trackPageview('/download/toppar_tfe.tar.gz');">toppar_tfe.tar.gz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Supplemental material for Lopes, P.E.M., Murashov, V., Tazi, M., Demchuk, E. and MacKerell, Jr., A.D. "Development of an Empirical Force Field for Silica. Application to the Quartz-Water Interface," <i>Journal of Physcial Chemistry B</i> 110: 2782-2792, 2006.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/jpcb_110_2782_06_supp_mat.tar.gz" title="CHARMM_ff_params_files/jpcb_110_2782_06_supp_mat.tar.gz" onclick="javascript:pageTracker._trackPageview('/download/jpcb_110_2782_06_supp_mat.tar.gz');">jpcb_110_2782_06_supp_mat.tar.gz</a></p>
+ </td>
+</tr>
+
+<tr>
+ <td>
+    <p class="sansserif">Toppar files for ethers:</p>
+    <p class="sansserif">Vorobyov, I., Anisimov, V.M., Greene, S., Venable, R.M., Moser, A., Pastor, R.W., and MacKerell, Jr., A.D.. "Additive and Classical Drude Polarizable Force Fields for Linear and Cyclic Ethers," <i>Journal of Chemical Theory and Computation</i> 3: 1120-1133, 2007.</p>
+<p class="sansserif">and</p>
+<p class="sansserif"> Lee, H., Venable, R.M., MacKerell, Jr., A.D., and Pastor, R.W. "Molecular dynamics studies of polyethylene oxide and polyethylene glycol: Hydrodynamic radius and shape anisotropy," <i>Biophysical Journal</i> 95: 1590-1599, 2008.</p>
+ </td>
+
+ <td>
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/toppar_ether.tgz" title="CHARMM_ff_params_files/toppar_ether.tgz" onclick="javascript:pageTracker._trackPageview('/download/toppar_ether.tgz');">toppar_ether.tgz</a></p>
+ </td>
+</tr>
+</table>
+
+<br><br>
+
+
+<table width="900" align="center">
+<tr>
+ <td>
+    <a name="gromacs"></a><h2>CHARMM36 Files for GROMACS</h2>
+    <p class="sansserif">CHARMM36 force field in GROMACS format, including <a href="~kenno/cgenff">CGenFF</a> versions 4.6 and 5.0 and the CHARMM36m protein force field revision. Updated February 2026.</p>
+
+
+    <p class="sansserif">The current version of the CHARMM36 port for GROMACS dated February 2026, corresponding to the CHARMM toppar release of the same date. Multiple versions of the files are now available. The releases contain both version 4.6 of CGenFF and the more recent version 5.0 based on an extended training set published in 2025. Version 5.0 is considered the default. In addition, both the standard and LJPME versions of the CHARMM36 biological force field are included, yielding a total of 4 packages that can be considered. Note that the two CGenFF versions are included as the CGenFF parameter file version must match that of the version of the CGenFF program used to generate the small molecule toppar file. The LJPME version of CHARMM36 includes parameters specifically optimized for the treatment of lipids using LJPME. However, note that all the classes of biomolecules can be simulated with LJPME and it is recommended that this version be used in conjunction with LJPME and PME for electrostatics with a 9 Ang. real space cutoff offering an ~25% savings in computational demand. LJPME is available in CHARMM, OpenMM and GROMACS. A number of minor additions have been made to CHARMM36. See the toppar_all.history file at https://github.com/Lemkul-Lab/toppar_c36_releases </p> 
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-feb2026_cgenff-5.0.ff.tgz"title="CHARMM_ff_params_files/charmm36-feb2026_cgenff-5.0.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-feb2026_cgenff-5.0.ff.tgz');">charmm36-feb2026_cgenff-5.0.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-feb2026_ljpme_cgenff-5.0.ff.tgz"title="CHARMM_ff_params_files/charmm36-feb2026_ljpme_cgenff-5.0.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-feb2026_ljpme_cgenff-5.0.ff.tgz');">charmm36-feb2026_ljpme_cgenff-5.0.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-feb2026_cgenff-4.6.ff.tgz"title="CHARMM_ff_params_files/charmm36-feb2026_cgenff-4.6.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-feb2026_cgenff-4.6.ff.tgz');">charmm36-feb2026_cgenff-4.6.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-feb2026_ljpme_cgenff-4.6.ff.tgz"title="CHARMM_ff_params_files/charmm36-feb2026_ljpme_cgenff-4.6.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-feb2026_ljpme_cgenff-4.6.ff.tgz');">charmm36-feb2026_ljpme_cgenff-4.6.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><b>Old force field releases:</b></p>
+
+    <p class="sansserif">The version of the CHARMM36 port for GROMACS dated July 2022, corresponding to the CHARMM toppar release of the same date. It contains the same topologies and parameters as the July 2021 update (including the option to use LJ-PME with lipids, given in the second port listed below) and adds some new parameters, and modified amino acids, among other items. See the "toppar_history" file in the CHARMM toppar distribution above for details. Files updated 12/8/2022 to fix typos related to TIP4P-Ew water parameters and an issue related to cholesterol NBFIXes.</p> 
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-jul2022.ff.tgz"title="CHARMM_ff_params_files/charmm36-jul2022.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-jul2022.ff.tgz');">charmm36-jul2022.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36_ljpme-jul2022.ff.tgz"title="CHARMM_ff_params_files/charmm36_ljpme-jul2022.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36_ljpme-jul2022.ff.tgz');">charmm36_ljpme-jul2022.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif">A significant addition to the July 2021 toppar update was the presence of second set of files that include lipid parameters optimized to be used with the LJ long-range dispersion correction (ljpme, Yu et al., doi: 10.1021/acs.jctc.0c01326). Note that ljpme may be used with the remainder of the additive CHARMM force field along with the lipids. Additional changes since July 2020 include new non-standard amino acids, and extensions to CGenFF version 4.6.</p>
+
+    <p class="sansserif">The July 2021 update to the port includes the ability to use scaled water-protein interactions as was done in the CHARMM36m validation (with &epsilon; = -0.1 kcal/mol on H atoms); water-water interactions are at normal strength via the use of NBFIX. This feature is invoked by using the following keyword in the .mdp file:</p>
+
+    <pre>define = -DUSE_MODIFIED_TIP3P_EPS</pre>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-jul2021.ff.tgz"title="CHARMM_ff_params_files/charmm36-jul2021.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-jul2021.ff.tgz');">charmm36-jul2021.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36_ljpme-jul2021.ff.tgz"title="CHARMM_ff_params_files/charmm36_ljpme-jul2021.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36_ljpme-jul2021.ff.tgz');">charmm36_ljpme-jul2021.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif">The C36m parameter set is recommended for all protein simulations, but the ability to toggle between old and new parameter sets may be useful in the case of force field comparisons. Thus, users can choose between C36 and C36m for protein simulations via the GROMACS "define" mechanism:</p>
+
+    <pre>define = -DUSE_OLD_C36</pre>
+
+    <p class="sansserif">This feature is ONLY available in versions listed below.</p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-feb2021.ff.tgz"title="CHARMM_ff_params_files/charmm36-feb2021.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-feb2021.ff.tgz');">charmm36-feb2021.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-jul2020.ff.tgz"title="CHARMM_ff_params_files/charmm36-jul2020.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-jul2020.ff.tgz');">charmm36-jul2020.ff.tgz</a> <b>Please note:</b> Missing some Ca<sup>2+</sup> NBFIXes!<br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-mar2019.ff.tgz"title="CHARMM_ff_params_files/charmm36-mar2019.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-mar2019.ff.tgz');">charmm36-mar2019.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36-jul2017.ff.tgz"title="CHARMM_ff_params_files/charmm36-jul2017.ff.tgz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36-jul2017.ff.tgz');">charmm36-jul2017.ff.tgz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+    <p class="sansserif">A Python program to convert ParamChem CGenFF toppar stream file from CHARMM to GROMACS format. The comments section in the beginning of the program provides usage information. <b>PLEASE NOTE</b> that all scripts support lone pairs on halogens, however the current topology construction (type 2fd) is only compatible with GROMACS 2020 and newer.</p>
+
+    <table>
+        <tr>
+            <td width=300><p class="sansserif"><b>Script</b></p></td>
+            <td><p class="sansserif"><b>Dependencies</b></p></td>
+        </tr>
+        <tr>
+            <td>
+                <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/cgenff_charmm2gmx_py2.py"title="CHARMM_ff_params_files/cgenff_charmm2gmx_py2.py"onclick="javascript:pageTracker._trackPageview('/_download/cgenff_charmm2gmx_py2_nx1.py');">cgenff_charmm2gmx_py2_nx1.py</a></p>
+            </td>
+            <td>
+                <p class="sansserif">Python 2.x, NetworkX 1.11</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/cgenff_charmm2gmx_py3_nx1.py"title="CHARMM_ff_params_files/cgenff_charmm2gmx_py3.py"onclick="javascript:pageTracker._trackPageview('/_download/cgenff_charmm2gmx_py3_nx1.py');">cgenff_charmm2gmx_py3_nx1.py</a></p>
+            </td>
+            <td>
+                <p class="sansserif">Python 3.x, NetworkX 1.11</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/cgenff_charmm2gmx_py3_nx2.py"title="CHARMM_ff_params_files/cgenff_charmm2gmx_py3.py"onclick="javascript:pageTracker._trackPageview('/_download/cgenff_charmm2gmx_py3_nx2.py');">cgenff_charmm2gmx_py3_nx2.py</a></p>
+            </td>
+            <td>
+                <p class="sansserif">Python 3.x, NetworkX 2.3</p>
+            </td>
+        </tr>
+
+    </table>
+
+ </td>
+</tr>
+</table>
+
+<br><br>
+
+
+<table width="900" align="center">
+<tr>
+  <td>
+     <a name="anton"></a><h2>CHARMM36 Files for Anton</h2>
+     <p class="sansserif"> The vippar utility contains updated CHARMM36 force field for running MD simulations on Anton. However, the default vippar charmm36_lipid directory uses the c36c model (JPCB, 2011, 166, 203) for cholesterol. This model uses CGenFF atom types and contains NBFix terms that, when too numerous, cause Anton error messages. It is highly suggested to use the following CHARMM36 lipid force field where cholesterol toppology and parameters are rolled back to the original c36 model (Biochemistry, 2004, 43, 15318) while all other lipids are kept the same.</p>
+
+     <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/charmm36_lipids_c36chl1.tar.gz"title="CHARMM_ff_params_files/charmm36_lipids_c36chl1.tar.gz"onclick="javascript:pageTracker._trackPageview('/_download/charmm36_lipids_c36chl1.tar.gz');">charmm36_lipids_c36chl1.tar.gz</a><br/></p>
+<p class="paragraph_style_5"></p>
+
+     <p class="sansserif">A Python program to convert ParamChem CGenFF toppar stream file from CHARMM to vippar format. The comments section in the beginning of the program provides usage information.</p>
+
+     <p class="sansserif"><a href="download.php?filename=CHARMM_ff_params_files/cgenff_charmm2anton.py"title="CHARMM_ff_params_files/cgenff_charmm2anton.py"onclick="javascript:pageTracker._trackPageview('/_download/cgenff_charmm2anton.py');">cgenff_charmm2anton.py</a></p>
+
+  </td>
+</tr>
+</table>
+
+<br><br> 
+
+<table width="900" align="center">
+<tr>
+<td>
+<a name="refs"></a><h2>References for the all-atom additive CHARMM force fields </h2>
+
+<h2>CHARMM General FF (CGenFF)</h2>
+
+<ul>
+    <li>Vanommeslaeghe, K. Hatcher, E. Acharya, C. Kundu, S. Zhong, S. Shim, J. E. Darian, E. Guvench, O. Lopes, P. Vorobyov, I. and MacKerell, Jr. A.D. "CHARMM General Force Field (CGenFF): A force field for drug-like molecules compatible with the CHARMM all-atom additive biological force fields," Journal of Computational Chemistry 31: 671-90, 2010, PMC2888302 <a href="http://dx.doi.org/10.1002/jcc.21367">[DOI]</a></li>
+
+    <li>Vanommeslaeghe, K., and MacKerell Jr., A.D., "Automation of the CHARMM General Force Field (CGenFF) I: bond perception and atom typing," Journal of Chemical Informationa and Modeling, 52: 3144-3154, 2012, PMC3528824 <a href="http://dx.doi.org/10.1021/ci300363c">[DOI]</a></li>
+
+    <li>Vanommeslaeghe, K., Raman, E.P., and MacKerell Jr., A.D., "Automation of the CHARMM General Force Field (CGenFF) II: Assignment of bonded parameters and partial atomic charges, Journal of Chemical Informationa and Modeling, 52: 3155-3168, 2012, PMC3528813 <a href="http://dx.doi.org/10.1021/ci3003649">[DOI]</a> </li>
+
+    <li>Yu, W., He, X., Vanommeslaeghe, K. and MacKerell, A.D., Jr., "Extension of the CHARMM General Force Field to Sulfonyl-Containing Compounds and Its Utility in Biomolecular Simulations," Journal of Computational Chemistry, 33: 2451-2468, 2012, PMC3477297 <a href="http://dx.doi.org/10.1002/jcc.23067">[DOI]</a></li>
+
+    <li>Soteras Gutierrez, I., Lin, F.-Y., Vanommeslaeghe, K., Lemkul, J.A., Armacost, K.A., Brooks, Cl., III,  and MacKerell, A.D., Jr., "Parametrization of Halogen Bonds in the CHARMM General Force Field: Improved treatment of ligand-protein interactions," Bioorganic &amp; Medicinal Chemistry, In Press, 2016, <a href="http://dx.doi.org/10.1016/j.bmc.2016.06.034">[DOI]</a></li>
+</ul>
+
+<p class="sansserif">The force field can automatically be applied to an arbitrary organic molecule using the CGenFF program, which can be conveniently be accessed through the <a href="https://cgenff.paramchem.org/" target="_blank">cgenff.paramchem.org</a> web interface. <a href="~kenno/cgenff/program.shtml" target="_blank">Click here for usage information</a>. The resulting parameters and charges are accompanied by penalty scores. If these penalty scores are high, it is recommended to re-optimize the parameters, as described in the above reference and <a href="~kenno/cgenff/download.shtml#tutor" target="_blank">the tutorial</a>.</p>
+
+<p class="sansserif">The CGenFF topology and parameter files are included with the full release of the CHARMM additive toppar files. Before downloading and using CGenFF please read <a href="warning.shtml" title="Warning" target="_blank">this warning</a>!</p>
+
+<p class="sansserif">Frequent users of the CGenFF program may wish to obtain a binary license. The procedure for obtaining a free-of-charge not-for-profit license is initiated by <a href="https://cgenff.paramchem.org/commonFiles/contactUs.php">e-mailing us</a>; it may take up to a few weeks and will require someone with signature authority at your institution to sign a license agreement that needs to be sent back to us.</p> 
+
+<p class="sansserif">For-profit users may obtain the CGenFF program from <a href="http://www.silcsbio.com/">SilcsBio, LLC</a>.</p>
+</td>
+</tr>
+</table>
+
+<br><br>
+
+<table width="900" align="center">
+<tr>
+<td>
+<h2>Proteins</h2>
+
+<p class="sansserif">
+
+<p class="sansserif"><b>C36m Protein </b></p>
+
+<ul>
+     <li>Huang, J., Rauscher, S., Nawrocki, G., Ran, T., Feig, M, de Groot, B.L., Grubmuller, H., and MacKerell, A.D., Jr., "CHARMM36m: An Improved Force Field for Folded and Intrinsically Disordered Proteins," Nature Methods, 14:71-73, 2016, PMC5199616,<a href="http://dx.doi.org/10.1038/nmeth.4067">[DOI]</a></li>
+</ul>
+
+<p class="sansserif"><b>C36 Protein </b></p>
+
+<ul>
+    <li> Best, R.B., Zhu, X., Shim, J., Lopes, P.E.M., Mittal, J., Feig, M., and MacKerell Jr., A.D. "Optimization of the additive CHARMM all-atom protein force field targeting improved sampling of the backbone phi, psi and side-chain chi1 and chi2 dihedral angles," <i>Journal of Chemical Theory and Computation</i>, 8: 3257-3273, 2012, PMC3549273 <a href="http://dx.doi.org/10.1021/ct300400x" target="_blank">[DOI]</a> </li>
+</ul>
+
+<p class="sansserif"><b>C22/CMAP </b></p>
+
+<ul>
+    <li>MacKerell, Jr., A. D., Bashford, D., Bellott, M., Dunbrack Jr., R.L., Evanseck, J.D., Field, M.J., Fischer, S., Gao, J., Guo, H., Ha, S., Joseph-McCarthy, D., Kuchnir, L., Kuczera, K., Lau, F.T.K., Mattos, C., Michnick, S., Ngo, T., Nguyen, D.T., Prodhom, B., Reiher, III, W.E., Roux, B., Schlenkrich, M., Smith, J.C., Stote, R., Straub, J., Watanabe, M., Wiorkiewicz-Kuczera, J., Yin, D., ad Karplus, M.  "All-atom empirical potential for molecular modeling and dynamics studies of proteins," <i>Journal of Physical Chemistry B</i> 102: 3586-3616, 1998 <a href="http://dx.doi.org/10.1021/jp973084f" target="_blank">[DOI]</a></li>
+     <li> MacKerell, Jr., A.D., Feig, M., and Brooks, III, C.L. "Extending the treatment of backbone energetics in protein force fields: limitations of gas-phase quantum mechanics in reproducing protein conformational distributions in molecular dynamics simulations," <i>Journal of Computational Chemistry</i>, 25: 1400-1415, 2004. <a href="http://dx.doi.org/10.1002/jcc.20065" target="_blank">[DOI]</a></li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+ 
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h2>Nucleic Acids</h2>
+
+<p class="sansserif"><b>C36 DNA</b></p>
+
+<ul>
+    <li> Hart, K., Foloppe, N., Baker, C.M., Denning, E.J., Nilsson, L. and MacKerell, A.D., Jr., "Optimization of the CHARMM additive force field for DNA: Improved treatment of the BI/BII conformational equilibrium," Journal of Chemical Theory and Computation, 8: 348-362, 2012,  <a href="http://dx.doi.org/10.1021/ct200723y" target="_blank">[DOI]</a> PMC3285246</li>
+</ul>
+
+<p class="sansserif"><b>C36 RNA</b></p>
+
+<ul>
+    <li> Denning, E.J. Priyakumar, U.D. Nilsson, L. and MacKerell, Jr. A.D. "Impact of 2'-hydroxyl sampling on the conformational properties of RNA: Update of the CHARMM all-atom additive force field for RNA," Journal of Computational Chemistry 32: 1929-1943, 2011, <a href="http://dx.doi.org/10.1002/jcc.21777" target="_blank">[DOI]</a></li>
+</ul>
+
+<p class="sansserif"><b>C27 RNA and DNA</b></p>
+
+<ul>
+    <li>Foloppe, N. and MacKerell, Jr., A.D. "All-Atom Empirical Force Field for Nucleic Acids: 1) Parameter Optimization Based on Small Molecule and Condensed Phase Macromolecular Target Data," Journal of Computational Chemistry 21: 86-104, 2000,  <a href="http://dx.doi.org/10.1002/(SICI)1096-987X(20000130)21:2<86::AID-JCC2>3.0.CO;2-G" target="_blank">[DOI]</a></li>
+</ul>
+
+<p class="sansserif">The supplemental material of  Foloppe and MacKerell is actually the full, unabridged version and can be obtained from <a href="http://journals.wiley.com/jcc/" title="http://journals.wiley.com/jcc/" target="_blank">http://journals.wiley.com/jcc/</a>. As the published manuscript is an abbreviated version, it is strongly suggested that the full version be obtained in order to get all the details of the parameter optimization procedure.</p>
+
+<ul>
+    <li>MacKerell, Jr., A.D. and Banavali, N. "All-Atom Empirical Force Field for Nucleic Acids: 2) Application to Molecular Dynamics Simulations of DNA and RNA in Solution," Journal of Computational Chemistry 21: 105-120, 2000. <a href="http://dx.doi.org/10.1002/(SICI)1096-987X(20000130)21:2<105::AID-JCC3>3.0.CO;2-P" target="_blank">[DOI]</a>  Also see <a href="http://journals.wiley.com/jcc/" title="http://journals.wiley.com/jcc/" target="_blank">http://journals.wiley.com/jcc/</a> for the supplemental material or view versions of Supplemental Material Figure 6a and Figure 6b here.  </li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h2>Lipids</h2>
+
+<p class="sansserif"><b>C36 lipids</b></p>
+
+<ul>
+    <li>Klauda, J.B., Venable, R.M., Freites, J.A., O'Connor, J.W., Tobias, D.J., Mondragon-Ramirez, C., Vorobyov, I., MacKerell, Jr., A.D., and Pastor, R.W. "Update of the CHARMM All-Atom Additive Force Field for Lipids: Validation on Six Lipid Types," Journal of Physical Chemistry B, 114: 7830-7843, 2010, <a href="http://dx.doi.org/10.1021/jp101759q" target="_blank">[DOI]</a></li>
+</ul>
+
+<p class="sansserif"><b>C22 and C27 lipids</b></p>
+
+<ul>
+    <li>Schlenkrich, M., Brickmann, J. MacKerell, Jr., A.D. and Karplus, M. "An Empirical Potential Energy Function for Phospholipids: Criteria for Parameter Optimization and Applications," in <i>Biological Membranes: A Molecular Perspective from Computation and Experiment</i> K.M. Merz, Jr. and B. Roux, Eds. Birkhauser, Boston, 1996.<br /></li>
+
+    <li>Feller., S.E., Yin, D., Pastor, R.W. and MacKerell, Jr., A.D. "Molecular Dynamics Simulation of Unsaturated Lipids at Low Hydration: Parametrization and Comparison with Diffraction Studies," <i>Biophysical Journal</i> 73: 2269-2279, 1997.</li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h2>Carbohydrates</h2>
+
+<ul>
+    <li> Guvench, O., Mallajosyula, S.S. Raman, E.P., Hatcher, E. Vanommeslaeghe, K., Foster, T.J., Jamison II, F.W., and MacKerell, A.D., Jr. "CHARMM additive all-atom force field for carbohydrate derivatives and their utility in polysaccharide and carbohydrate-protein modeling," Journal of Chemical Theory and Computing, 7: 3162-3180, 2011, <a href="http://dx.doi.org/10.1021/ct200328p" target="_blank">[DOI]</a>, PMC3224046</li>
+
+    <li> Mallajosyula, S.S., Guvench, O., Hatcher, E., MacKerell, A.D., Jr., "CHARMM Additive All-Atom Force Field for Phosphate and Sulfate Linked to Carbohydrates," Journal of Chemical Theory and Computation, 8: 759-776, 2012, <a href="http://dx.doi.org/10.1021/ct200792v" target="_blank">[DOI]</a>, PMC3367516</li>
+
+    <li> Raman, P. Guvench, O. MacKerell, Jr. A.D. "CHARMM Additive All-Atom Force Field for Glycosidic Linkages in Carbohydrates Involving Furanoses," Journal of Physical Chemistry B 114: 12981-12994, 2010, <a href="http://dx.doi.org/ 10.1021/jp105758h" target="_blank">[DOI]</a>, PMC2958709</li>
+    <li> Guvench, O. Hatcher, E.R. Venable, R.M. Pastor, R.W. and MacKerell Jr., A.D. "Additive Empirical CHARMM Force Field for glycosyl linked hexopyranoses," Journal of Chemical Theory and Computation 5: 2353-2370, 2009, <a href="http://dx.doi.org/10.1021/ct900242e" target="_blank">[DOI]</a>, PMC2757763</li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h2>Empirical Force Field Reviews</h2>
+
+<ul>
+    <li>MacKerell, Jr., A.D. "Empirical Force Fields for Biological Macromolecules: Overview and Issues," <i>Journal of Computational Chemistry</i> 25: 1584-1604, 2004, <a href="http://dx.doi.org/10.1002/jcc.20082" target="_blank">[DOI]</a></li>
+    <li>  Lopes, P.E.M., Guvench, O., and MacKerell, A.D., Jr., Current Status of Protein Force Fields for Molecular Dynamics, In Molecular Modeling of Proteins, 2nd edition, A. Kukol, Editor, Humana Press. Chapter 3, pp. 47 -72, 2014, <a href="http://dx.doi.org/10.1007/978-1-4939-1465-4_3" target="_blank">[DOI]</a>, (Methods in Molecular Biology, 1215: 47-72, 2014).</li>
+    <li> Guvench, O. and MacKerell, Jr. A.D. "Comparison of protein force fields for molecular dynamics simulations," In Molecular Modeling of Proteins, A. Kukol, Ed. Humana Press, Humana Press. 2008 (Methods Mol Biol. 2008;443:63-88. PMID: 18446282)</li>                
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h2>Methods</h2>
+
+<ul>
+    <li>Yin, D. and MacKerell, Jr., A.D. "Combined <i>Ab initio</i>/Empirical Approach for the Optimization of Lennard-Jones Parameters," <i>Journal of Computational Chemistry</i> 19: 334-348, 1998.</li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+
+<table width="900" align="center">
+<tr>
+<td>
+
+<h2>Count and Map of Downloads</h2>
+<ul>
+    <li><a href="gmap.php" target="_blank">Map of Downloads</a></li>
+    <li> <a href="dlcount.php" target="_blank">Count of Downloads</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+
+    
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9907803-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<br><br>
+
+<table border=0 align="center">
+<tr> <td align="center"><a href="http://cadd.umaryland.edu" target="_blank"><img border="0" src="./img/cadd.jpg"></a></td>
+</tr>
+</table>
+
+</body>
+</html>

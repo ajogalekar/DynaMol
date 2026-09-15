@@ -1,0 +1,87 @@
+--- top_heme.inp
+
++++ top_heme_oxy_optimized_charges.inp
+
+@@ -1457,40 +1457,40 @@
+
+ ATOM ZN   ZN      2.00
+ PATCHING FIRST NONE LAST NONE   
+ 
+-RESI HEM        -2.00 ! 6-liganded planar heme
++RESI HEM        -1.50  ! 6-liganded planar heme (updated optimized charges for oxyHeme)
+ GROUP   
+-ATOM FE   FE      0.24 !       O2A   O1A             O2D  O1D
+-ATOM NA   NPH    -0.18 !         \\ //                 \\ //
+-ATOM NB   NPH    -0.18 !          CGA                   CGD
+-ATOM NC   NPH    -0.18 !           |                     |
+-ATOM ND   NPH    -0.18 !    HBA1--CBA--HBA2  HA   HBD1--CBD--HBD2
+-ATOM C1A  CPA     0.12 !           |          |          |
+-ATOM C2A  CPB    -0.06 !    HAA1--CAA-HAA2  _CHA_ HAD1--CAD--HAD2
+-ATOM C3A  CPB    -0.06 !           |       /     \       |
+-ATOM C4A  CPA     0.12 !          C2A---C1A       C4D---C3D
+-ATOM C1B  CPA     0.12 !           |     |         |     |
+-ATOM C2B  CPB    -0.06 !HMA1\      |     |         |     |      /HMD1
+-ATOM C3B  CPB    -0.06 !HMA2-CMA--C3A    NA       ND    C2D--CMD-HMD2
+-ATOM C4B  CPA     0.12 !HMA3/       \   / \       / \   /       \HMD3
+-ATOM C1C  CPA     0.12 !             C4A   \     /   C1D
+-ATOM C2C  CPB    -0.06 !            /       \   /       \
+-ATOM C3C  CPB    -0.06 !      HB--CHB        FE         CHD--HD
+-ATOM C4C  CPA     0.12 !            \       /   \       /
+-ATOM C1D  CPA     0.12 !             C1B   /     \   C4C        HAC
+-ATOM C2D  CPB    -0.06 !HMB1\       /   \ /       \ /   \       /
+-ATOM C3D  CPB    -0.06 !HMB2-CMB--C2B    NB       NC    C3C--CAC
+-ATOM C4D  CPA     0.12 !HMB3/      |     |         |     |     \\  /HBC1
++ATOM FE   FE      1.42 !       O2A   O1A             O2D  O1D
++ATOM NA   NPH    -0.65 !         \\ //                 \\ //
++ATOM NB   NPH    -0.65 !          CGA                   CGD
++ATOM NC   NPH    -0.65 !           |                     |
++ATOM ND   NPH    -0.65 !    HBA1--CBA--HBA2  HA   HBD1--CBD--HBD2
++ATOM C1A  CPA     0.42 !           |          |          |
++ATOM C2A  CPB    -0.12 !    HAA1--CAA-HAA2  _CHA_ HAD1--CAD--HAD2
++ATOM C3A  CPB    -0.12 !           |       /     \       |
++ATOM C4A  CPA     0.42 !          C2A---C1A       C4D---C3D
++ATOM C1B  CPA     0.42 !           |     |         |     |
++ATOM C2B  CPB    -0.12 !HMA1\      |     |         |     |      /HMD1
++ATOM C3B  CPB    -0.12 !HMA2-CMA--C3A    NA       ND    C2D--CMD-HMD2
++ATOM C4B  CPA     0.42 !HMA3/       \   / \       / \   /       \HMD3
++ATOM C1C  CPA     0.42 !             C4A   \     /   C1D
++ATOM C2C  CPB    -0.12 !            /       \   /       \
++ATOM C3C  CPB    -0.12 !      HB--CHB        FE         CHD--HD
++ATOM C4C  CPA     0.42 !            \       /   \       /
++ATOM C1D  CPA     0.42 !             C1B   /     \   C4C        HAC
++ATOM C2D  CPB    -0.12 !HMB1\       /   \ /       \ /   \       /
++ATOM C3D  CPB    -0.12 !HMB2-CMB--C2B    NB       NC    C3C--CAC
++ATOM C4D  CPA     0.42 !HMB3/      |     |         |     |     \\  /HBC1
+ GROUP                  !           |     |         |     |      CBC
+-ATOM CHA  CPM    -0.10 !          C3B---C4B       C1C---C2C        \HBC2
++ATOM CHA  CPM    -0.28 !          C3B---C4B       C1C---C2C        \HBC2
+ ATOM HA   HA      0.10 !           |       \_CHC_/       |
+ GROUP                  !          CAB         |         CMC--HMC3
+-ATOM CHB  CPM    -0.10 !         //  \        HC       /  | 
++ATOM CHB  CPM    -0.28 !         //  \        HC       /  | 
+ ATOM HB   HA      0.10 !        CBB  HAB           HMC1  HMC2
+ GROUP                  !       /   \
+-ATOM CHC  CPM    -0.10 !    HBB1  HBB2
++ATOM CHC  CPM    -0.28 !    HBB1  HBB2
+ ATOM HC   HA      0.10 !
+ GROUP   
+-ATOM CHD  CPM    -0.10
++ATOM CHD  CPM    -0.28
+ ATOM HD   HA      0.10
+ GROUP   
+ ATOM CMA  CT3    -0.27
+@@ -1936,10 +1936,10 @@
+
+ ACCEPTOR ND1   
+ IC CE1  CD2  *NE2 HE2   0.0000  0.0000  180.0000  0.0000  0.0000
+ 
+-RESI OXY           0.00 ! O2 ligand for heme
++RESI OXY          -0.50 ! O2 ligand for heme ((updated optimized charges for oxyHeme)
+ GROUP                
+-ATOM O1   OM      0.021
+-ATOM O2   OM     -0.021
++ATOM O1   OM     -0.18
++ATOM O2   OM     -0.32
+ BOND O1 O2   
+ PATCHING FIRS NONE LAST NONE   
+ 

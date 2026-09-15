@@ -1,0 +1,75 @@
+{
+  "source": "toppar/param19.inp",
+  "sha256": "415393eb9c6b3c02bf78ea1390a48f0078373f35f0be69cea75484504e8a4f3e",
+  "reason": "Preserves original section aliases, wildcard S* nonbonded assignment and E14FAC 0.4; previous text-hit labels were a search screen, not a parsed parameter inventory.",
+  "lines": [
+    {
+      "line": 98,
+      "text": "OC   S      400.0       1.43"
+    },
+    {
+      "line": 101,
+      "text": "THETAS"
+    },
+    {
+      "line": 288,
+      "text": "OC   S    OC      85.0     109.5! FORCE CONSTANT JST A GUESS."
+    },
+    {
+      "line": 382,
+      "text": "NONBONDED  NBXMOD 5  ATOM CDIEL SHIFT VATOM VDISTANCE VSHIFT -"
+    },
+    {
+      "line": 383,
+      "text": "     CUTNB 8.0  CTOFNB 7.5  CTONNB 6.5  EPS 1.0  E14FAC 0.4  WMIN 1.5"
+    },
+    {
+      "line": 385,
+      "text": "!                  Emin       Rmin"
+    },
+    {
+      "line": 386,
+      "text": "!                  (kcal/mol) (A)"
+    },
+    {
+      "line": 402,
+      "text": "OC       2.1400    -0.6469    1.6000  "
+    },
+    {
+      "line": 408,
+      "text": "S*       0.3400    -0.0430       1.890 ! includes S and SH1E"
+    },
+    {
+      "line": 413,
+      "text": "NBFIX"
+    },
+    {
+      "line": 417,
+      "text": "!\tWe're gonna NBFIX the TIP3P water-water interactions"
+    },
+    {
+      "line": 418,
+      "text": "!\there to make them more like Jorgensen's.  The vdW parameters"
+    },
+    {
+      "line": 419,
+      "text": "!\tspecified above will be in effect, therefore, for ONLY"
+    },
+    {
+      "line": 420,
+      "text": "!\tprotein (read, protein OR nucleic acid)-water interactions."
+    },
+    {
+      "line": 424,
+      "text": "OT   OT      -0.152073  3.5365  ! TIPS3P VDW INTERACTION"
+    },
+    {
+      "line": 425,
+      "text": "HT   HT      -0.04598   0.4490"
+    },
+    {
+      "line": 426,
+      "text": "HT   OT      -0.08363   1.9927"
+    }
+  ]
+}

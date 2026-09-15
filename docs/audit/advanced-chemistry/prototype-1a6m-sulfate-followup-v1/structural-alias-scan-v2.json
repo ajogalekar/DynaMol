@@ -1,0 +1,3333 @@
+[
+  {
+    "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c31b1.tar.gz",
+    "sha256": "0ac3cc4c88cdfa27bdb14cdbd9dc306e585fc348e395fee66b8efe60e4a96ba4",
+    "text_files_scanned": 52,
+    "residue_patch_blocks_scanned": 911,
+    "sulfur_oxygen_candidates": [
+      {
+        "file": "toppar/top_all27_lipid.rtf",
+        "line": 825,
+        "kind": "RESI",
+        "residue": "SDS",
+        "declared_charge": "-1.00",
+        "atom_count": 42,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 12,
+          "H": 25
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/toph19.inp",
+        "line": 1221,
+        "kind": "RESI",
+        "residue": "SO4",
+        "declared_charge": "-2.0",
+        "atom_count": 5,
+        "element_counts": {
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": true,
+        "atoms": [
+          {
+            "name": "S",
+            "type": "S",
+            "charge": 0.0,
+            "elements": [
+              "S"
+            ]
+          },
+          {
+            "name": "O1",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "O2",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "O3",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "O4",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          }
+        ],
+        "bonds": [
+          [
+            "S",
+            "O1"
+          ],
+          [
+            "S",
+            "O2"
+          ],
+          [
+            "S",
+            "O3"
+          ],
+          [
+            "S",
+            "O4"
+          ]
+        ],
+        "body": "RESI SO4  -2.0\nGROUP\nATOM S    S     0.0\nATOM O1   OC   -0.5\nATOM O2   OC   -0.5\nATOM O3   OC   -0.5\nATOM O4   OC   -0.5\nBOND S O1    S O2    S O3    S O4\nACCE O1  S\nACCE O2  S\nACCE O3  S\nACCE O4  S\nPATC FIRS NONE LAST NONE\n",
+        "source_sha256": "850aeb115f3a90369465a2fdc053668d3032f49a2d5272d00f6cfde9317b6ab2"
+      },
+      {
+        "file": "toppar/top_all27_na_lipid.rtf",
+        "line": 1731,
+        "kind": "RESI",
+        "residue": "SDS",
+        "declared_charge": "-1.00",
+        "atom_count": 42,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 12,
+          "H": 25
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all27_prot_lipid.rtf",
+        "line": 2456,
+        "kind": "RESI",
+        "residue": "SDS",
+        "declared_charge": "-1.00",
+        "atom_count": 42,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 12,
+          "H": 25
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/toppar_all27_lipid_model.str",
+        "line": 224,
+        "kind": "RESI",
+        "residue": "MSO4",
+        "declared_charge": "-1.00",
+        "atom_count": 9,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 1,
+          "H": 3
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      }
+    ],
+    "scope": "Candidate search only; alias, extra-point, composition and explicit-polarizability screen. No model acceptance."
+  },
+  {
+    "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c36_feb26.tgz",
+    "sha256": "7d4d21ebdb216a48f600fadee862dc77d369a10d5753150635f35e09c3209e08",
+    "text_files_scanned": 121,
+    "residue_patch_blocks_scanned": 8406,
+    "sulfur_oxygen_candidates": [
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_cofactors.str",
+        "line": 3281,
+        "kind": "RESI",
+        "residue": "COB",
+        "declared_charge": "-3.000",
+        "atom_count": 42,
+        "element_counts": {
+          "O": 7,
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 21
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_cofactors.str",
+        "line": 3536,
+        "kind": "RESI",
+        "residue": "F43T",
+        "declared_charge": "-4.000",
+        "atom_count": 112,
+        "element_counts": {
+          "AMBIGUOUS": 48,
+          "O": 13,
+          "OTHER": 2,
+          "H": 48,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_cofactors.str",
+        "line": 3706,
+        "kind": "RESI",
+        "residue": "F43A",
+        "declared_charge": "-4.000",
+        "atom_count": 119,
+        "element_counts": {
+          "AMBIGUOUS": 51,
+          "O": 14,
+          "H": 51,
+          "OTHER": 2,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_na_combined.str",
+        "line": 1484,
+        "kind": "RESI",
+        "residue": "SAM",
+        "declared_charge": "1.00",
+        "atom_count": 50,
+        "element_counts": {
+          "AMBIGUOUS": 21,
+          "H": 23,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_na_combined.str",
+        "line": 1637,
+        "kind": "PRES",
+        "residue": "PSAM",
+        "declared_charge": "1.76",
+        "atom_count": 33,
+        "element_counts": {
+          "AMBIGUOUS": 9,
+          "H": 19,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 2255,
+        "kind": "RESI",
+        "residue": "143",
+        "declared_charge": "0.000",
+        "atom_count": 27,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "H": 11,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 2436,
+        "kind": "RESI",
+        "residue": "4HH",
+        "declared_charge": "-1.000",
+        "atom_count": 52,
+        "element_counts": {
+          "AMBIGUOUS": 18,
+          "H": 25,
+          "O": 8,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 2587,
+        "kind": "RESI",
+        "residue": "5CS",
+        "declared_charge": "0.000",
+        "atom_count": 29,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "H": 13,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 2854,
+        "kind": "RESI",
+        "residue": "ALS",
+        "declared_charge": "-1.000",
+        "atom_count": 15,
+        "element_counts": {
+          "AMBIGUOUS": 4,
+          "H": 4,
+          "O": 6,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 3254,
+        "kind": "RESI",
+        "residue": "CGV",
+        "declared_charge": "-1.000",
+        "atom_count": 17,
+        "element_counts": {
+          "AMBIGUOUS": 6,
+          "H": 6,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 3371,
+        "kind": "RESI",
+        "residue": "CML",
+        "declared_charge": "-2.000",
+        "atom_count": 21,
+        "element_counts": {
+          "AMBIGUOUS": 8,
+          "H": 7,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 3634,
+        "kind": "RESI",
+        "residue": "CSU",
+        "declared_charge": "-1.000",
+        "atom_count": 14,
+        "element_counts": {
+          "AMBIGUOUS": 4,
+          "H": 4,
+          "S": 2,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 3722,
+        "kind": "RESI",
+        "residue": "CYD",
+        "declared_charge": "0.000",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "H": 14,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 3812,
+        "kind": "RESI",
+        "residue": "CYF",
+        "declared_charge": "-1.000",
+        "atom_count": 54,
+        "element_counts": {
+          "AMBIGUOUS": 27,
+          "H": 19,
+          "S": 1,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 3982,
+        "kind": "RESI",
+        "residue": "CYG",
+        "declared_charge": "0.000",
+        "atom_count": 27,
+        "element_counts": {
+          "AMBIGUOUS": 10,
+          "H": 12,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 4064,
+        "kind": "RESI",
+        "residue": "CYQP",
+        "declared_charge": "-1.000",
+        "atom_count": 18,
+        "element_counts": {
+          "AMBIGUOUS": 6,
+          "H": 7,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 4392,
+        "kind": "RESI",
+        "residue": "FZN",
+        "declared_charge": "-2.000",
+        "atom_count": 80,
+        "element_counts": {
+          "AMBIGUOUS": 31,
+          "H": 33,
+          "OTHER": 1,
+          "S": 1,
+          "O": 14
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 4872,
+        "kind": "RESI",
+        "residue": "HTI",
+        "declared_charge": "0.000",
+        "atom_count": 26,
+        "element_counts": {
+          "AMBIGUOUS": 9,
+          "H": 12,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 6158,
+        "kind": "RESI",
+        "residue": "MCS",
+        "declared_charge": "-1.000",
+        "atom_count": 18,
+        "element_counts": {
+          "AMBIGUOUS": 7,
+          "H": 6,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 6539,
+        "kind": "RESI",
+        "residue": "QPA",
+        "declared_charge": "-2.000",
+        "atom_count": 24,
+        "element_counts": {
+          "AMBIGUOUS": 8,
+          "H": 8,
+          "S": 1,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 6803,
+        "kind": "RESI",
+        "residue": "SEB",
+        "declared_charge": "0.000",
+        "atom_count": 27,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "H": 11,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 7844,
+        "kind": "RESI",
+        "residue": "TYS",
+        "declared_charge": "-1.000",
+        "atom_count": 24,
+        "element_counts": {
+          "AMBIGUOUS": 10,
+          "H": 8,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 26881,
+        "kind": "RESI",
+        "residue": "CYQ",
+        "declared_charge": "-2.000",
+        "atom_count": 17,
+        "element_counts": {
+          "AMBIGUOUS": 6,
+          "H": 6,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 27544,
+        "kind": "RESI",
+        "residue": "LYX",
+        "declared_charge": "-3.000",
+        "atom_count": 108,
+        "element_counts": {
+          "AMBIGUOUS": 42,
+          "H": 47,
+          "O": 18,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 28310,
+        "kind": "RESI",
+        "residue": "OCS",
+        "declared_charge": "-1.000",
+        "atom_count": 13,
+        "element_counts": {
+          "AMBIGUOUS": 4,
+          "H": 4,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 28355,
+        "kind": "RESI",
+        "residue": "OSE",
+        "declared_charge": "-1.000",
+        "atom_count": 14,
+        "element_counts": {
+          "AMBIGUOUS": 4,
+          "H": 4,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 33948,
+        "kind": "RESI",
+        "residue": "SM210",
+        "declared_charge": "-1.000",
+        "atom_count": 25,
+        "element_counts": {
+          "AMBIGUOUS": 8,
+          "H": 11,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/prot/toppar_all36_prot_modify_res.str",
+        "line": 34252,
+        "kind": "RESI",
+        "residue": "SM228",
+        "declared_charge": "-2.000",
+        "atom_count": 26,
+        "element_counts": {
+          "AMBIGUOUS": 9,
+          "H": 11,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_model.str",
+        "line": 1647,
+        "kind": "PRES",
+        "residue": "SH_A",
+        "declared_charge": "-1.00",
+        "atom_count": 11,
+        "element_counts": {
+          "AMBIGUOUS": 2,
+          "H": 3,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_model.str",
+        "line": 1684,
+        "kind": "PRES",
+        "residue": "SH_B",
+        "declared_charge": "-1.00",
+        "atom_count": 11,
+        "element_counts": {
+          "AMBIGUOUS": 2,
+          "H": 3,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_model.str",
+        "line": 1721,
+        "kind": "PRES",
+        "residue": "CHSHA",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "AMBIGUOUS": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_model.str",
+        "line": 1761,
+        "kind": "PRES",
+        "residue": "CHSHB",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "AMBIGUOUS": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_model.str",
+        "line": 1799,
+        "kind": "PRES",
+        "residue": "SHOM",
+        "declared_charge": "-0.80",
+        "atom_count": 10,
+        "element_counts": {
+          "AMBIGUOUS": 2,
+          "H": 3,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 7665,
+        "kind": "RESI",
+        "residue": "AHTG",
+        "declared_charge": "0.000",
+        "atom_count": 45,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "H": 26,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 7792,
+        "kind": "RESI",
+        "residue": "BHTG",
+        "declared_charge": "0.000",
+        "atom_count": 45,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "H": 26,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 7920,
+        "kind": "RESI",
+        "residue": "AOTG",
+        "declared_charge": "0.000",
+        "atom_count": 48,
+        "element_counts": {
+          "AMBIGUOUS": 14,
+          "H": 28,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 8056,
+        "kind": "RESI",
+        "residue": "BOTG",
+        "declared_charge": "0.000",
+        "atom_count": 48,
+        "element_counts": {
+          "AMBIGUOUS": 14,
+          "H": 28,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 8192,
+        "kind": "RESI",
+        "residue": "AOTM",
+        "declared_charge": "0.000",
+        "atom_count": 69,
+        "element_counts": {
+          "AMBIGUOUS": 20,
+          "H": 38,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 8383,
+        "kind": "RESI",
+        "residue": "BOTM",
+        "declared_charge": "0.000",
+        "atom_count": 69,
+        "element_counts": {
+          "AMBIGUOUS": 20,
+          "H": 38,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 8576,
+        "kind": "RESI",
+        "residue": "ANTM",
+        "declared_charge": "0.000",
+        "atom_count": 72,
+        "element_counts": {
+          "AMBIGUOUS": 21,
+          "H": 40,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 8775,
+        "kind": "RESI",
+        "residue": "BNTM",
+        "declared_charge": "0.000",
+        "atom_count": 72,
+        "element_counts": {
+          "AMBIGUOUS": 21,
+          "H": 40,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 8975,
+        "kind": "RESI",
+        "residue": "ADTM",
+        "declared_charge": "0.000",
+        "atom_count": 75,
+        "element_counts": {
+          "AMBIGUOUS": 22,
+          "H": 42,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 9185,
+        "kind": "RESI",
+        "residue": "BDTM",
+        "declared_charge": "0.000",
+        "atom_count": 75,
+        "element_counts": {
+          "AMBIGUOUS": 22,
+          "H": 42,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 9396,
+        "kind": "RESI",
+        "residue": "AUDTM",
+        "declared_charge": "0.000",
+        "atom_count": 78,
+        "element_counts": {
+          "AMBIGUOUS": 23,
+          "H": 44,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 9613,
+        "kind": "RESI",
+        "residue": "BUDTM",
+        "declared_charge": "0.000",
+        "atom_count": 78,
+        "element_counts": {
+          "AMBIGUOUS": 23,
+          "H": 44,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 9830,
+        "kind": "RESI",
+        "residue": "ADDTM",
+        "declared_charge": "0.000",
+        "atom_count": 81,
+        "element_counts": {
+          "AMBIGUOUS": 24,
+          "H": 46,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_glycolipid.str",
+        "line": 10055,
+        "kind": "RESI",
+        "residue": "BDDTM",
+        "declared_charge": "0.000",
+        "atom_count": 81,
+        "element_counts": {
+          "AMBIGUOUS": 24,
+          "H": 46,
+          "O": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_imlab.str",
+        "line": 21422,
+        "kind": "PRES",
+        "residue": "1TSUFF",
+        "declared_charge": "-1.00",
+        "atom_count": 8,
+        "element_counts": {
+          "AMBIGUOUS": 1,
+          "H": 2,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_imlab.str",
+        "line": 21444,
+        "kind": "PRES",
+        "residue": "3ASUFF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "AMBIGUOUS": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_imlab.str",
+        "line": 21463,
+        "kind": "PRES",
+        "residue": "4ASUFF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "AMBIGUOUS": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/carb/toppar_all36_carb_imlab.str",
+        "line": 21484,
+        "kind": "PRES",
+        "residue": "6TSUFF",
+        "declared_charge": "-1.00",
+        "atom_count": 8,
+        "element_counts": {
+          "AMBIGUOUS": 1,
+          "H": 2,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_reactive_rna.str",
+        "line": 493,
+        "kind": "PRES",
+        "residue": "PTSR",
+        "declared_charge": "-2.81",
+        "atom_count": 12,
+        "element_counts": {
+          "O": 5,
+          "AMBIGUOUS": 6,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_reactive_rna.str",
+        "line": 519,
+        "kind": "PRES",
+        "residue": "PTSS",
+        "declared_charge": "-2.81",
+        "atom_count": 12,
+        "element_counts": {
+          "O": 5,
+          "AMBIGUOUS": 6,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_reactive_rna.str",
+        "line": 545,
+        "kind": "PRES",
+        "residue": "PTSD",
+        "declared_charge": "-2.81",
+        "atom_count": 12,
+        "element_counts": {
+          "O": 4,
+          "AMBIGUOUS": 6,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_reactive_rna.str",
+        "line": 577,
+        "kind": "PRES",
+        "residue": "PXR",
+        "declared_charge": "-2.54",
+        "atom_count": 12,
+        "element_counts": {
+          "O": 5,
+          "AMBIGUOUS": 6,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_reactive_rna.str",
+        "line": 602,
+        "kind": "PRES",
+        "residue": "PXS",
+        "declared_charge": "-2.54",
+        "atom_count": 12,
+        "element_counts": {
+          "O": 5,
+          "AMBIGUOUS": 6,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_reactive_rna.str",
+        "line": 627,
+        "kind": "PRES",
+        "residue": "PXD",
+        "declared_charge": "-2.54",
+        "atom_count": 12,
+        "element_counts": {
+          "O": 4,
+          "AMBIGUOUS": 6,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 134,
+        "kind": "RESI",
+        "residue": "2SU",
+        "declared_charge": "-1.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 12,
+          "S": 1,
+          "H": 10,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 222,
+        "kind": "RESI",
+        "residue": "MSU",
+        "declared_charge": "-1.00",
+        "atom_count": 33,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 12,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 317,
+        "kind": "RESI",
+        "residue": "4SU",
+        "declared_charge": "-1.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 12,
+          "O": 7,
+          "H": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 407,
+        "kind": "RESI",
+        "residue": "52U",
+        "declared_charge": "-1.00",
+        "atom_count": 33,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 12,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 1752,
+        "kind": "RESI",
+        "residue": "SAU",
+        "declared_charge": "0.00",
+        "atom_count": 36,
+        "element_counts": {
+          "AMBIGUOUS": 14,
+          "S": 1,
+          "H": 14,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 1973,
+        "kind": "RESI",
+        "residue": "U8U",
+        "declared_charge": "0.00",
+        "atom_count": 39,
+        "element_counts": {
+          "AMBIGUOUS": 15,
+          "S": 1,
+          "H": 16,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 2443,
+        "kind": "RESI",
+        "residue": "SCU",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "AMBIGUOUS": 16,
+          "S": 1,
+          "H": 15,
+          "O": 9
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 2846,
+        "kind": "RESI",
+        "residue": "ISU",
+        "declared_charge": "0.00",
+        "atom_count": 49,
+        "element_counts": {
+          "AMBIGUOUS": 19,
+          "S": 1,
+          "H": 22,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 3321,
+        "kind": "RESI",
+        "residue": "70U",
+        "declared_charge": "-1.00",
+        "atom_count": 39,
+        "element_counts": {
+          "AMBIGUOUS": 15,
+          "S": 1,
+          "H": 14,
+          "O": 9
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 4372,
+        "kind": "RESI",
+        "residue": "5TU",
+        "declared_charge": "-1.00",
+        "atom_count": 45,
+        "element_counts": {
+          "AMBIGUOUS": 16,
+          "O": 11,
+          "H": 17,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 4503,
+        "kind": "RESI",
+        "residue": "STU",
+        "declared_charge": "-1.00",
+        "atom_count": 45,
+        "element_counts": {
+          "AMBIGUOUS": 16,
+          "S": 2,
+          "H": 17,
+          "O": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 4634,
+        "kind": "RESI",
+        "residue": "GAU",
+        "declared_charge": "0.00",
+        "atom_count": 65,
+        "element_counts": {
+          "AMBIGUOUS": 25,
+          "S": 1,
+          "O": 7,
+          "H": 32
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 4807,
+        "kind": "RESI",
+        "residue": "GCU",
+        "declared_charge": "-1.00",
+        "atom_count": 67,
+        "element_counts": {
+          "AMBIGUOUS": 26,
+          "S": 1,
+          "O": 9,
+          "H": 31
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 5086,
+        "kind": "RESI",
+        "residue": "2SC",
+        "declared_charge": "-1.00",
+        "atom_count": 31,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 11,
+          "O": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 8103,
+        "kind": "RESI",
+        "residue": "SMA",
+        "declared_charge": "-1.00",
+        "atom_count": 40,
+        "element_counts": {
+          "AMBIGUOUS": 18,
+          "H": 15,
+          "S": 1,
+          "O": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 8793,
+        "kind": "RESI",
+        "residue": "MIA",
+        "declared_charge": "-1.00",
+        "atom_count": 50,
+        "element_counts": {
+          "AMBIGUOUS": 22,
+          "H": 21,
+          "S": 1,
+          "O": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 8929,
+        "kind": "RESI",
+        "residue": "SIA",
+        "declared_charge": "-1.00",
+        "atom_count": 51,
+        "element_counts": {
+          "AMBIGUOUS": 22,
+          "H": 21,
+          "S": 1,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 9216,
+        "kind": "RESI",
+        "residue": "26A",
+        "declared_charge": "-2.00",
+        "atom_count": 56,
+        "element_counts": {
+          "AMBIGUOUS": 24,
+          "H": 21,
+          "S": 1,
+          "O": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 9655,
+        "kind": "RESI",
+        "residue": "12A",
+        "declared_charge": "-2.00",
+        "atom_count": 53,
+        "element_counts": {
+          "AMBIGUOUS": 23,
+          "H": 19,
+          "S": 1,
+          "O": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 16574,
+        "kind": "RESI",
+        "residue": "B5TU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "O": 5,
+          "H": 13,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 16656,
+        "kind": "RESI",
+        "residue": "BSTU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "S": 2,
+          "H": 13,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 18335,
+        "kind": "RESI",
+        "residue": "B26A",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "AMBIGUOUS": 19,
+          "H": 17,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified_for_new_psf_gen_code_2022.str",
+        "line": 18633,
+        "kind": "RESI",
+        "residue": "B12A",
+        "declared_charge": "-1.00",
+        "atom_count": 38,
+        "element_counts": {
+          "AMBIGUOUS": 18,
+          "H": 15,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 134,
+        "kind": "RESI",
+        "residue": "2SU",
+        "declared_charge": "-1.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 12,
+          "S": 1,
+          "H": 10,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 222,
+        "kind": "RESI",
+        "residue": "MSU",
+        "declared_charge": "-1.00",
+        "atom_count": 33,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 12,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 317,
+        "kind": "RESI",
+        "residue": "4SU",
+        "declared_charge": "-1.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 12,
+          "O": 7,
+          "H": 10,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 407,
+        "kind": "RESI",
+        "residue": "52U",
+        "declared_charge": "-1.00",
+        "atom_count": 33,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 12,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 1752,
+        "kind": "RESI",
+        "residue": "SAU",
+        "declared_charge": "0.00",
+        "atom_count": 36,
+        "element_counts": {
+          "AMBIGUOUS": 14,
+          "S": 1,
+          "H": 14,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 1973,
+        "kind": "RESI",
+        "residue": "U8U",
+        "declared_charge": "0.00",
+        "atom_count": 39,
+        "element_counts": {
+          "AMBIGUOUS": 15,
+          "S": 1,
+          "H": 16,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 2443,
+        "kind": "RESI",
+        "residue": "SCU",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "AMBIGUOUS": 16,
+          "S": 1,
+          "H": 15,
+          "O": 9
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 2846,
+        "kind": "RESI",
+        "residue": "ISU",
+        "declared_charge": "0.00",
+        "atom_count": 49,
+        "element_counts": {
+          "AMBIGUOUS": 19,
+          "S": 1,
+          "H": 22,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 3321,
+        "kind": "RESI",
+        "residue": "70U",
+        "declared_charge": "-1.00",
+        "atom_count": 39,
+        "element_counts": {
+          "AMBIGUOUS": 15,
+          "S": 1,
+          "H": 14,
+          "O": 9
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 4372,
+        "kind": "RESI",
+        "residue": "5TU",
+        "declared_charge": "-1.00",
+        "atom_count": 45,
+        "element_counts": {
+          "AMBIGUOUS": 16,
+          "O": 11,
+          "H": 17,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 4503,
+        "kind": "RESI",
+        "residue": "STU",
+        "declared_charge": "-1.00",
+        "atom_count": 45,
+        "element_counts": {
+          "AMBIGUOUS": 16,
+          "S": 2,
+          "H": 17,
+          "O": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 4634,
+        "kind": "RESI",
+        "residue": "GAU",
+        "declared_charge": "0.00",
+        "atom_count": 65,
+        "element_counts": {
+          "AMBIGUOUS": 25,
+          "S": 1,
+          "O": 7,
+          "H": 32
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 4807,
+        "kind": "RESI",
+        "residue": "GCU",
+        "declared_charge": "-1.00",
+        "atom_count": 67,
+        "element_counts": {
+          "AMBIGUOUS": 26,
+          "S": 1,
+          "O": 9,
+          "H": 31
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 5086,
+        "kind": "RESI",
+        "residue": "2SC",
+        "declared_charge": "-1.00",
+        "atom_count": 31,
+        "element_counts": {
+          "AMBIGUOUS": 13,
+          "S": 1,
+          "H": 11,
+          "O": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 8103,
+        "kind": "RESI",
+        "residue": "SMA",
+        "declared_charge": "-1.00",
+        "atom_count": 40,
+        "element_counts": {
+          "AMBIGUOUS": 18,
+          "H": 15,
+          "S": 1,
+          "O": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 8793,
+        "kind": "RESI",
+        "residue": "MIA",
+        "declared_charge": "-1.00",
+        "atom_count": 50,
+        "element_counts": {
+          "AMBIGUOUS": 22,
+          "H": 21,
+          "S": 1,
+          "O": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 8929,
+        "kind": "RESI",
+        "residue": "SIA",
+        "declared_charge": "-1.00",
+        "atom_count": 51,
+        "element_counts": {
+          "AMBIGUOUS": 22,
+          "H": 21,
+          "S": 1,
+          "O": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 9216,
+        "kind": "RESI",
+        "residue": "26A",
+        "declared_charge": "-2.00",
+        "atom_count": 56,
+        "element_counts": {
+          "AMBIGUOUS": 24,
+          "H": 21,
+          "S": 1,
+          "O": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 9655,
+        "kind": "RESI",
+        "residue": "12A",
+        "declared_charge": "-2.00",
+        "atom_count": 53,
+        "element_counts": {
+          "AMBIGUOUS": 23,
+          "H": 19,
+          "S": 1,
+          "O": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 16573,
+        "kind": "RESI",
+        "residue": "B5TU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "O": 5,
+          "H": 13,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 16655,
+        "kind": "RESI",
+        "residue": "BSTU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "AMBIGUOUS": 11,
+          "S": 2,
+          "H": 13,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 18334,
+        "kind": "RESI",
+        "residue": "B26A",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "AMBIGUOUS": 19,
+          "H": 17,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/na/toppar_all36_na_rna_modified.str",
+        "line": 18632,
+        "kind": "RESI",
+        "residue": "B12A",
+        "declared_charge": "-1.00",
+        "atom_count": 38,
+        "element_counts": {
+          "AMBIGUOUS": 18,
+          "H": 15,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/lipid/toppar_all36_lipid_prot.str",
+        "line": 839,
+        "kind": "RESI",
+        "residue": "CYSL",
+        "declared_charge": "0.00",
+        "atom_count": 164,
+        "element_counts": {
+          "AMBIGUOUS": 55,
+          "H": 102,
+          "O": 6,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/lipid/toppar_all36_lipid_model.str",
+        "line": 227,
+        "kind": "RESI",
+        "residue": "MSO4",
+        "declared_charge": "-1.00",
+        "atom_count": 9,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "AMBIGUOUS": 1,
+          "H": 3
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/lipid/toppar_all36_lipid_detergent.str",
+        "line": 19,
+        "kind": "RESI",
+        "residue": "SDS",
+        "declared_charge": "-1.00",
+        "atom_count": 42,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "AMBIGUOUS": 12,
+          "H": 25
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/lipid/toppar_all36_lipid_detergent.str",
+        "line": 17217,
+        "kind": "RESI",
+        "residue": "CHAPS",
+        "declared_charge": "0.00",
+        "atom_count": 100,
+        "element_counts": {
+          "AMBIGUOUS": 34,
+          "H": 58,
+          "O": 7,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/lipid/toppar_all36_lipid_detergent.str",
+        "line": 17497,
+        "kind": "RESI",
+        "residue": "CHAPSO",
+        "declared_charge": "0.00",
+        "atom_count": 101,
+        "element_counts": {
+          "AMBIGUOUS": 34,
+          "H": 58,
+          "O": 8,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/stream/lipid/toppar_all36_lipid_detergent.str",
+        "line": 18034,
+        "kind": "RESI",
+        "residue": "THDPPC",
+        "declared_charge": "0.00",
+        "atom_count": 134,
+        "element_counts": {
+          "AMBIGUOUS": 43,
+          "H": 82,
+          "S": 1,
+          "O": 8
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 3410,
+        "kind": "RESI",
+        "residue": "MSO4",
+        "declared_charge": "-1.00",
+        "atom_count": 9,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 1,
+          "H": 3
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 11049,
+        "kind": "RESI",
+        "residue": "SAH",
+        "declared_charge": "0.00",
+        "atom_count": 46,
+        "element_counts": {
+          "N": 6,
+          "H": 20,
+          "C": 14,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 30044,
+        "kind": "RESI",
+        "residue": "NACT",
+        "declared_charge": "-1.000",
+        "atom_count": 18,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 4,
+          "H": 8,
+          "N": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 30089,
+        "kind": "PRES",
+        "residue": "TAUR",
+        "declared_charge": "-1.00",
+        "atom_count": 14,
+        "element_counts": {
+          "C": 3,
+          "O": 4,
+          "N": 1,
+          "H": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 33012,
+        "kind": "RESI",
+        "residue": "GTPG",
+        "declared_charge": "-4.00",
+        "atom_count": 44,
+        "element_counts": {
+          "C": 10,
+          "H": 12,
+          "O": 13,
+          "N": 5,
+          "P": 3,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 33126,
+        "kind": "RESI",
+        "residue": "GTGN",
+        "declared_charge": "0.00",
+        "atom_count": 48,
+        "element_counts": {
+          "C": 10,
+          "H": 16,
+          "O": 13,
+          "N": 5,
+          "P": 3,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 33249,
+        "kind": "RESI",
+        "residue": "GTSS",
+        "declared_charge": "-4.00",
+        "atom_count": 44,
+        "element_counts": {
+          "C": 10,
+          "H": 12,
+          "O": 12,
+          "N": 5,
+          "P": 3,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 33363,
+        "kind": "RESI",
+        "residue": "GTNS",
+        "declared_charge": "0.00",
+        "atom_count": 47,
+        "element_counts": {
+          "C": 10,
+          "H": 15,
+          "O": 12,
+          "N": 5,
+          "P": 3,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 35839,
+        "kind": "RESI",
+        "residue": "B5TU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "N": 3,
+          "C": 8,
+          "O": 5,
+          "H": 13,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 35921,
+        "kind": "RESI",
+        "residue": "BSTU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "N": 3,
+          "C": 8,
+          "S": 2,
+          "H": 13,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 37600,
+        "kind": "RESI",
+        "residue": "B26A",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "N": 6,
+          "C": 13,
+          "H": 17,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 37898,
+        "kind": "RESI",
+        "residue": "B12A",
+        "declared_charge": "-1.00",
+        "atom_count": 38,
+        "element_counts": {
+          "N": 6,
+          "C": 12,
+          "H": 15,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 45994,
+        "kind": "RESI",
+        "residue": "SM028",
+        "declared_charge": "-1.000",
+        "atom_count": 13,
+        "element_counts": {
+          "H": 5,
+          "C": 2,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 46854,
+        "kind": "RESI",
+        "residue": "SM049",
+        "declared_charge": "-2.000",
+        "atom_count": 19,
+        "element_counts": {
+          "H": 8,
+          "C": 6,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 50761,
+        "kind": "RESI",
+        "residue": "SM144",
+        "declared_charge": "-2.000",
+        "atom_count": 22,
+        "element_counts": {
+          "H": 9,
+          "C": 5,
+          "S": 1,
+          "O": 6,
+          "P": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/charmm_modifications/top_all36_cgenff_NSBF.rtf",
+        "line": 52618,
+        "kind": "RESI",
+        "residue": "SM182",
+        "declared_charge": "-1.000",
+        "atom_count": 22,
+        "element_counts": {
+          "H": 9,
+          "C": 8,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 3409,
+        "kind": "RESI",
+        "residue": "MSO4",
+        "declared_charge": "-1.00",
+        "atom_count": 9,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 1,
+          "H": 3
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 11048,
+        "kind": "RESI",
+        "residue": "SAH",
+        "declared_charge": "0.00",
+        "atom_count": 46,
+        "element_counts": {
+          "N": 6,
+          "H": 20,
+          "C": 14,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 30043,
+        "kind": "RESI",
+        "residue": "NACT",
+        "declared_charge": "-1.000",
+        "atom_count": 18,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 4,
+          "H": 8,
+          "N": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 30088,
+        "kind": "PRES",
+        "residue": "TAUR",
+        "declared_charge": "-1.00",
+        "atom_count": 14,
+        "element_counts": {
+          "C": 3,
+          "O": 4,
+          "N": 1,
+          "H": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 33011,
+        "kind": "RESI",
+        "residue": "GTPG",
+        "declared_charge": "-4.00",
+        "atom_count": 44,
+        "element_counts": {
+          "C": 10,
+          "H": 12,
+          "O": 13,
+          "N": 5,
+          "P": 3,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 33125,
+        "kind": "RESI",
+        "residue": "GTGN",
+        "declared_charge": "0.00",
+        "atom_count": 48,
+        "element_counts": {
+          "C": 10,
+          "H": 16,
+          "O": 13,
+          "N": 5,
+          "P": 3,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 33248,
+        "kind": "RESI",
+        "residue": "GTSS",
+        "declared_charge": "-4.00",
+        "atom_count": 44,
+        "element_counts": {
+          "C": 10,
+          "H": 12,
+          "O": 12,
+          "N": 5,
+          "P": 3,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 33362,
+        "kind": "RESI",
+        "residue": "GTNS",
+        "declared_charge": "0.00",
+        "atom_count": 47,
+        "element_counts": {
+          "C": 10,
+          "H": 15,
+          "O": 12,
+          "N": 5,
+          "P": 3,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 35838,
+        "kind": "RESI",
+        "residue": "B5TU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "N": 3,
+          "C": 8,
+          "O": 5,
+          "H": 13,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 35920,
+        "kind": "RESI",
+        "residue": "BSTU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "N": 3,
+          "C": 8,
+          "S": 2,
+          "H": 13,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 37599,
+        "kind": "RESI",
+        "residue": "B26A",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "N": 6,
+          "C": 13,
+          "H": 17,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 37897,
+        "kind": "RESI",
+        "residue": "B12A",
+        "declared_charge": "-1.00",
+        "atom_count": 38,
+        "element_counts": {
+          "N": 6,
+          "C": 12,
+          "H": 15,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 45993,
+        "kind": "RESI",
+        "residue": "SM028",
+        "declared_charge": "-1.000",
+        "atom_count": 13,
+        "element_counts": {
+          "H": 5,
+          "C": 2,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 46853,
+        "kind": "RESI",
+        "residue": "SM049",
+        "declared_charge": "-2.000",
+        "atom_count": 19,
+        "element_counts": {
+          "H": 8,
+          "C": 6,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 50760,
+        "kind": "RESI",
+        "residue": "SM144",
+        "declared_charge": "-2.000",
+        "atom_count": 22,
+        "element_counts": {
+          "H": 9,
+          "C": 5,
+          "S": 1,
+          "O": 6,
+          "P": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff_v4.6.rtf",
+        "line": 52617,
+        "kind": "RESI",
+        "residue": "SM182",
+        "declared_charge": "-1.000",
+        "atom_count": 22,
+        "element_counts": {
+          "H": 9,
+          "C": 8,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/toph19.inp",
+        "line": 1221,
+        "kind": "RESI",
+        "residue": "SO4",
+        "declared_charge": "-2.0",
+        "atom_count": 5,
+        "element_counts": {
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": true,
+        "atoms": [
+          {
+            "name": "S",
+            "type": "S",
+            "charge": 0.0,
+            "elements": [
+              "S"
+            ]
+          },
+          {
+            "name": "O1",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "O2",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "O3",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "O4",
+            "type": "OC",
+            "charge": -0.5,
+            "elements": [
+              "O"
+            ]
+          }
+        ],
+        "bonds": [
+          [
+            "S",
+            "O1"
+          ],
+          [
+            "S",
+            "O2"
+          ],
+          [
+            "S",
+            "O3"
+          ],
+          [
+            "S",
+            "O4"
+          ]
+        ],
+        "body": "RESI SO4  -2.0\nGROUP\nATOM S    S     0.0\nATOM O1   OC   -0.5\nATOM O2   OC   -0.5\nATOM O3   OC   -0.5\nATOM O4   OC   -0.5\nBOND S O1    S O2    S O3    S O4\nACCE O1  S\nACCE O2  S\nACCE O3  S\nACCE O4  S\nPATC FIRS NONE LAST NONE\n",
+        "source_sha256": "7ca525789507a9e7198021458caedc9eefa0a77e1c1d1035825eb1e21a312792"
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 3420,
+        "kind": "RESI",
+        "residue": "MSO4",
+        "declared_charge": "-1.00",
+        "atom_count": 9,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 1,
+          "H": 3
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 11059,
+        "kind": "RESI",
+        "residue": "SAH",
+        "declared_charge": "0.00",
+        "atom_count": 46,
+        "element_counts": {
+          "N": 6,
+          "H": 20,
+          "C": 14,
+          "S": 1,
+          "O": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 30054,
+        "kind": "RESI",
+        "residue": "NACT",
+        "declared_charge": "-1.000",
+        "atom_count": 18,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 4,
+          "H": 8,
+          "N": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 30099,
+        "kind": "PRES",
+        "residue": "TAUR",
+        "declared_charge": "-1.00",
+        "atom_count": 14,
+        "element_counts": {
+          "C": 3,
+          "O": 4,
+          "N": 1,
+          "H": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 33022,
+        "kind": "RESI",
+        "residue": "GTPG",
+        "declared_charge": "-4.00",
+        "atom_count": 44,
+        "element_counts": {
+          "C": 10,
+          "H": 12,
+          "O": 13,
+          "N": 5,
+          "P": 3,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 33136,
+        "kind": "RESI",
+        "residue": "GTGN",
+        "declared_charge": "0.00",
+        "atom_count": 48,
+        "element_counts": {
+          "C": 10,
+          "H": 16,
+          "O": 13,
+          "N": 5,
+          "P": 3,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 33259,
+        "kind": "RESI",
+        "residue": "GTSS",
+        "declared_charge": "-4.00",
+        "atom_count": 44,
+        "element_counts": {
+          "C": 10,
+          "H": 12,
+          "O": 12,
+          "N": 5,
+          "P": 3,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 33373,
+        "kind": "RESI",
+        "residue": "GTNS",
+        "declared_charge": "0.00",
+        "atom_count": 47,
+        "element_counts": {
+          "C": 10,
+          "H": 15,
+          "O": 12,
+          "N": 5,
+          "P": 3,
+          "S": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 35849,
+        "kind": "RESI",
+        "residue": "B5TU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "N": 3,
+          "C": 8,
+          "O": 5,
+          "H": 13,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 35931,
+        "kind": "RESI",
+        "residue": "BSTU",
+        "declared_charge": "0.00",
+        "atom_count": 30,
+        "element_counts": {
+          "N": 3,
+          "C": 8,
+          "S": 2,
+          "H": 13,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 37610,
+        "kind": "RESI",
+        "residue": "B26A",
+        "declared_charge": "-1.00",
+        "atom_count": 41,
+        "element_counts": {
+          "N": 6,
+          "C": 13,
+          "H": 17,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 37908,
+        "kind": "RESI",
+        "residue": "B12A",
+        "declared_charge": "-1.00",
+        "atom_count": 38,
+        "element_counts": {
+          "N": 6,
+          "C": 12,
+          "H": 15,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 46004,
+        "kind": "RESI",
+        "residue": "SM028",
+        "declared_charge": "-1.000",
+        "atom_count": 13,
+        "element_counts": {
+          "H": 5,
+          "C": 2,
+          "O": 5,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 46864,
+        "kind": "RESI",
+        "residue": "SM049",
+        "declared_charge": "-2.000",
+        "atom_count": 19,
+        "element_counts": {
+          "H": 8,
+          "C": 6,
+          "S": 1,
+          "O": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 50771,
+        "kind": "RESI",
+        "residue": "SM144",
+        "declared_charge": "-2.000",
+        "atom_count": 22,
+        "element_counts": {
+          "H": 9,
+          "C": 5,
+          "S": 1,
+          "O": 6,
+          "P": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 52628,
+        "kind": "RESI",
+        "residue": "SM182",
+        "declared_charge": "-1.000",
+        "atom_count": 22,
+        "element_counts": {
+          "H": 9,
+          "C": 8,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 65671,
+        "kind": "RESI",
+        "residue": "23004E",
+        "declared_charge": "-1.000",
+        "atom_count": 19,
+        "element_counts": {
+          "C": 7,
+          "O": 4,
+          "S": 1,
+          "H": 7
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 65721,
+        "kind": "RESI",
+        "residue": "23004F",
+        "declared_charge": "0.000",
+        "atom_count": 25,
+        "element_counts": {
+          "C": 6,
+          "N": 4,
+          "S": 1,
+          "O": 4,
+          "H": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 66991,
+        "kind": "RESI",
+        "residue": "23004Z",
+        "declared_charge": "0.000",
+        "atom_count": 28,
+        "element_counts": {
+          "O": 4,
+          "C": 9,
+          "S": 1,
+          "N": 1,
+          "H": 13
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 67647,
+        "kind": "RESI",
+        "residue": "230059",
+        "declared_charge": "0.000",
+        "atom_count": 21,
+        "element_counts": {
+          "C": 5,
+          "S": 2,
+          "O": 4,
+          "H": 10
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 67805,
+        "kind": "RESI",
+        "residue": "23005C",
+        "declared_charge": "-1.000",
+        "atom_count": 16,
+        "element_counts": {
+          "C": 6,
+          "N": 1,
+          "O": 4,
+          "S": 1,
+          "H": 4
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 69169,
+        "kind": "RESI",
+        "residue": "23005Z",
+        "declared_charge": "-1.000",
+        "atom_count": 16,
+        "element_counts": {
+          "O": 4,
+          "S": 1,
+          "C": 6,
+          "F": 1,
+          "N": 2,
+          "H": 2
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 71746,
+        "kind": "RESI",
+        "residue": "230073",
+        "declared_charge": "0.000",
+        "atom_count": 20,
+        "element_counts": {
+          "H": 5,
+          "C": 7,
+          "O": 5,
+          "S": 2,
+          "N": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 73474,
+        "kind": "RESI",
+        "residue": "23007T",
+        "declared_charge": "0.000",
+        "atom_count": 18,
+        "element_counts": {
+          "O": 6,
+          "S": 3,
+          "C": 3,
+          "H": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 75113,
+        "kind": "RESI",
+        "residue": "23008J",
+        "declared_charge": "-1.000",
+        "atom_count": 16,
+        "element_counts": {
+          "O": 5,
+          "S": 2,
+          "C": 4,
+          "H": 5
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 76409,
+        "kind": "RESI",
+        "residue": "230092",
+        "declared_charge": "-1.000",
+        "atom_count": 20,
+        "element_counts": {
+          "O": 4,
+          "C": 6,
+          "H": 9,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 100889,
+        "kind": "RESI",
+        "residue": "2300JD",
+        "declared_charge": "0.000",
+        "atom_count": 23,
+        "element_counts": {
+          "H": 11,
+          "N": 1,
+          "C": 6,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 110926,
+        "kind": "RESI",
+        "residue": "2300NR",
+        "declared_charge": "-1.000",
+        "atom_count": 20,
+        "element_counts": {
+          "O": 4,
+          "S": 1,
+          "N": 5,
+          "C": 4,
+          "H": 6
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 113891,
+        "kind": "RESI",
+        "residue": "2300P3",
+        "declared_charge": "-1.000",
+        "atom_count": 25,
+        "element_counts": {
+          "C": 8,
+          "O": 5,
+          "S": 1,
+          "H": 11
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 128641,
+        "kind": "RESI",
+        "residue": "2300V7",
+        "declared_charge": "0.000",
+        "atom_count": 25,
+        "element_counts": {
+          "H": 12,
+          "O": 4,
+          "C": 8,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 132706,
+        "kind": "RESI",
+        "residue": "2300WW",
+        "declared_charge": "0.000",
+        "atom_count": 23,
+        "element_counts": {
+          "H": 11,
+          "C": 6,
+          "N": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 133457,
+        "kind": "RESI",
+        "residue": "2300X7",
+        "declared_charge": "0.000",
+        "atom_count": 30,
+        "element_counts": {
+          "H": 15,
+          "O": 4,
+          "C": 9,
+          "N": 1,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_cgenff.rtf",
+        "line": 145687,
+        "kind": "RESI",
+        "residue": "23012I",
+        "declared_charge": "0.000",
+        "atom_count": 23,
+        "element_counts": {
+          "C": 6,
+          "O": 4,
+          "N": 1,
+          "S": 1,
+          "H": 11
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5728,
+        "kind": "PRES",
+        "residue": "1ASUF",
+        "declared_charge": "-0.80",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5749,
+        "kind": "PRES",
+        "residue": "1BSUF",
+        "declared_charge": "-0.80",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5770,
+        "kind": "PRES",
+        "residue": "2ASUF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5791,
+        "kind": "PRES",
+        "residue": "2BSUF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5812,
+        "kind": "PRES",
+        "residue": "3ASUF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5833,
+        "kind": "PRES",
+        "residue": "3BSUF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5855,
+        "kind": "PRES",
+        "residue": "4ASUF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5877,
+        "kind": "PRES",
+        "residue": "4BSUF",
+        "declared_charge": "-1.00",
+        "atom_count": 7,
+        "element_counts": {
+          "C": 1,
+          "H": 1,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      },
+      {
+        "file": "toppar/top_all36_carb.rtf",
+        "line": 5898,
+        "kind": "PRES",
+        "residue": "6TSUF",
+        "declared_charge": "-1.00",
+        "atom_count": 8,
+        "element_counts": {
+          "C": 1,
+          "H": 2,
+          "O": 4,
+          "S": 1
+        },
+        "flags": [],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      }
+    ],
+    "scope": "Candidate search only; alias, extra-point, composition and explicit-polarizability screen. No model acceptance."
+  },
+  {
+    "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c36_feb26.tgz::toppar/drude/positive_drude.tgz",
+    "sha256": "ceac56e57692b18389b5135a9c6c0f4a5dd49e3919328f8097ed68b2ef5cf98f",
+    "text_files_scanned": 3,
+    "residue_patch_blocks_scanned": 10,
+    "sulfur_oxygen_candidates": [],
+    "scope": "Candidate search only; alias, extra-point, composition and explicit-polarizability screen. No model acceptance."
+  },
+  {
+    "archive": "docs/audit/advanced-chemistry/prototype-1a6m-charmm-source-audit/toppar_c36_feb26.tgz::toppar/drude/drude_toppar_2023.tgz",
+    "sha256": "fe1c3204a5775781ccabacb1ed6c6c2026deb52cd0c43216f89108d879036f1a",
+    "text_files_scanned": 15,
+    "residue_patch_blocks_scanned": 466,
+    "sulfur_oxygen_candidates": [
+      {
+        "file": "drude_toppar_2023/toppar_drude_model_2023a.str",
+        "line": 7841,
+        "kind": "RESI",
+        "residue": "SO4",
+        "declared_charge": "-2.000",
+        "atom_count": 5,
+        "element_counts": {
+          "S": 1,
+          "O": 4
+        },
+        "flags": [
+          "explicit_polarizability"
+        ],
+        "sulfate_only_atoms_including_possible_extra_points": true,
+        "atoms": [
+          {
+            "name": "S",
+            "type": "SD1A",
+            "charge": 2.0,
+            "elements": [
+              "S"
+            ]
+          },
+          {
+            "name": "OS1",
+            "type": "OD2C2B",
+            "charge": -1.0,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "OS2",
+            "type": "OD2C2B",
+            "charge": -1.0,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "OS3",
+            "type": "OD2C2B",
+            "charge": -1.0,
+            "elements": [
+              "O"
+            ]
+          },
+          {
+            "name": "OS4",
+            "type": "OD2C2B",
+            "charge": -1.0,
+            "elements": [
+              "O"
+            ]
+          }
+        ],
+        "bonds": [
+          [
+            "S",
+            "OS1"
+          ],
+          [
+            "S",
+            "OS2"
+          ],
+          [
+            "S",
+            "OS3"
+          ],
+          [
+            "S",
+            "OS4"
+          ]
+        ],
+        "body": "RESI SO4          -2.000 ! Sulfate ion\nGROUP\nATOM S    SD1A     2.000  ALPHA -0.930  THOLE 1.098 !           OS2(-1)\nATOM OS1  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !            |\nATOM OS2  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 ! (-1) OS2--S(+2)--OS4 (-1)\nATOM OS3  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !           ||\nATOM OS4  OD2C2B  -1.000  ALPHA -0.990  THOLE 1.083 !           OS1\n\nBOND S  OS1  S  OS2  S  OS3  S  OS4\nIC   OS1   S     OS2   OS3         0.0000    0.00    0.00    0.00   0.0000\nIC   OS2   OS1   *S    OS3         0.0000    0.00   90.00    0.00   0.0000\nIC   OS2   OS1   *S    OS4         0.0000    0.00  180.00    0.00   0.0000\nPATCH FIRST NONE LAST NONE\n",
+        "source_sha256": "546d3fa4eec5e2f53bed2934b530e82d62e2f75aa5c1908b4f338651850330ac"
+      },
+      {
+        "file": "drude_toppar_2023/toppar_drude_model_2023a.str",
+        "line": 7855,
+        "kind": "RESI",
+        "residue": "MSO4",
+        "declared_charge": "-1.000",
+        "atom_count": 9,
+        "element_counts": {
+          "S": 1,
+          "O": 4,
+          "C": 1,
+          "H": 3
+        },
+        "flags": [
+          "explicit_polarizability"
+        ],
+        "sulfate_only_atoms_including_possible_extra_points": false
+      }
+    ],
+    "scope": "Candidate search only; alias, extra-point, composition and explicit-polarizability screen. No model acceptance."
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "created_at": "2026-09-13T04:41:47.289329+00:00",
+  "python": "3.12.13",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "openmm": "8.6.0",
+    "rdkit": "2025.9.6",
+    "pdbfixer": "1.12.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6",
+    "parmed": "4.3.1",
+    "gemmi": "0.7.5",
+    "dimorphite-dl": "2.0.2",
+    "scipy": "1.18.1"
+  },
+  "amber": {
+    "ambertools_version": "24.8",
+    "ambertools_build": "cuda_None_nompi_py314h5cdaa45_104",
+    "gaff2_title": "AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)",
+    "gaff2_sha256": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+    "bcc_parameters_sha256": "05f034901d058ad9331325b6ee3fafa25c75b1ce4f52839fe85032eb92941276"
+  },
+  "loop_runtime": {
+    "available": true,
+    "prefix": "/Users/ashujo/Documents/Science/DynaMol/.tools/promod3",
+    "versions": {
+      "promod3": "3.6.0",
+      "openstructure": "2.11.1",
+      "openmm": "8.5.1"
+    },
+    "metadata": [
+      {
+        "path": "conda-meta/promod3-3.6.0-py312h1f8763b_0.json",
+        "sha256": "0913474235236e709119ea28f002afc0c58c22c28d56516cf8228d714f22b2e7",
+        "build": "py312h1f8763b_0"
+      },
+      {
+        "path": "conda-meta/openstructure-2.11.1-py312h58d82da_3.json",
+        "sha256": "71b54ad7f621d5cc5fdae3109f637c264e2c71d3361778294be60ebb956721b0",
+        "build": "py312h58d82da_3"
+      },
+      {
+        "path": "conda-meta/openmm-8.5.1-py312h4f6c760_0_khronos.json",
+        "sha256": "1771b740693db45b489af070d33720ec4c9ada4cb18ba8db695fd71602b49a6d",
+        "build": "py312h4f6c760_0_khronos"
+      }
+    ]
+  },
+  "seed": 2026,
+  "threads": 2,
+  "input_mode": "Retained RCSB CIF and fixed-seed synthetic/CCD ideal fixtures; known regression examples, no held-out scientific benchmark.",
+  "source_sha256": {
+    "backend/preparation.py": "bad14d01a3f239ee0cd4a99f96031536892bf918083c422cb6e4c739097f02af",
+    "backend/preparation_worker.py": "c5aa1c7773cf7fca2a9cc2402bcd035ab8feaa0530befef12bcbfe521501b146",
+    "backend/ligands.py": "b4b38ec8b599200df5af7eaba3cfe079a7ea78c84f4619758e4dd1cfae85c61f",
+    "backend/ligand_repair.py": "d6f1b19a7b04121829e4af6bf6eedae0a7d73ccdcb8dc11cf6286e6d315ff914",
+    "backend/ions.py": "9b6980e506e6229a3f8cec5d5402e17243b4e7cf1fb420c5f957a5c9d9452d68",
+    "backend/modified_residues.py": "1b8cac6ee1f7ef6fd07be1ad04f04ac79782885339ceed6a845b4dbb85da0320",
+    "backend/loop_modeling.py": "507660a4ff80d91cfd96f7930c55ca2c67a02d76ad16309091d6b8ca44494356",
+    "backend/promod_loop_worker.py": "a99a10958b0b2b44096599cecb24226a68f3268f3409e215cd47251a73d51001",
+    "backend/loop_refinement.py": "27e81f379d8bf9f69388685cf51b20c51435bb2fc0524fdef2517fb9e01759be",
+    "backend/loop_geometry.py": "aaf36c0c4fd3f699e074e13f2770fe24a02eccdbf7266aba6a136da25f073973",
+    "backend/forcefield_identity.py": "a0faccc47b8573d9e7011a6b8e49b5469997eaefaf287630d045547e24ca0979",
+    "backend/prepared_system.py": "e2ac47f4683006e8fbca4083ec003a6c5562ac27869cbc778686a9e150076fca",
+    "backend/sources.py": "c91e3191131740c4b63bc9c5c551534e3b167c94ad8f151eb8a7fa46eeacb42f",
+    "backend/monomers.py": "c0eaa63550a4d7aca2b27529419db0ac0e3e17dcfc8cc1a1fe70813db194dfc5",
+    "scripts/check_chemistry_matrix.py": "06f3341a36c772df156f978fdd342cc22985d635dd6d62b3a1770f17e34f2acb",
+    "scripts/check_chemistry_boundaries.py": "48d382a988c65132704dbc5910f2fd9dfc6caa6def598c5ad665e8f26dcebd41"
+  }
+}

@@ -1,0 +1,37 @@
+--- v3/test_materialize_6oim_recovery_esp.py
++++ v4/test_materialize_6oim_recovery_esp.py
+@@ -159,6 +159,34 @@
+         with self.assertRaisesRegex(ValueError,'integer setting'):m.validate_cold_esp(*args)
+ 
+ 
++class ParentMetadataTests(unittest.TestCase):
++    def metadata(self):
++        _,result,_,method,*_=synthetic()
++        result['units'].update(coords_angstrom='angstrom',gradient_hartree_per_bohr='hartree/bohr')
++        resolved={'max_scf_cycles':100,'scf_conv_tol':1e-10,'scf_conv_tol_grad':1e-7}
++        return result,resolved,method
++
++    def test_synthetic_parent_metadata_only(self):m.validate_parent_metadata(*self.metadata())
++
++    def test_parent_scf_cycle_and_units_mismatch_reject(self):
++        for key,value in [('cycles',0),('cycles',101),('cycles',5.0),('cycles',True),('max_cycles',100.0),
++                          ('conv_tol_hartree',1e-6),('conv_tol_grad',1e-4)]:
++            args=self.metadata();args[0]['scf'][key]=value
++            with self.subTest(key=key,value=value),self.assertRaises(ValueError):m.validate_parent_metadata(*args)
++        for key in ['energy','coords_bohr','coords_angstrom','gradient_hartree_per_bohr','bohr_to_angstrom']:
++            args=self.metadata();args[0]['units'][key]='wrong'
++            with self.subTest(unit=key),self.assertRaises(ValueError):m.validate_parent_metadata(*args)
++
++    def test_parent_method_flags_or_nonfinite_energy_reject(self):
++        for key,value in [('spherical_basis',1),('spherical_basis',False),('symmetry',0),('symmetry',True),
++                          ('functional_requested','B3LYP'),('grid_level',3)]:
++            args=self.metadata();args[2][key]=value
++            with self.subTest(key=key),self.assertRaises(ValueError):m.validate_parent_metadata(*args)
++        for value in [True,float('nan'),float('inf')]:
++            args=self.metadata();args[0]['energy_hartree']=value
++            with self.subTest(energy=value),self.assertRaises(ValueError):m.validate_parent_metadata(*args)
++
++
+ class AdmissionTests(unittest.TestCase):
+     def setUp(self):
+         scratch=m.CACHE/'software-test-scratch';scratch.mkdir(parents=True,exist_ok=True)

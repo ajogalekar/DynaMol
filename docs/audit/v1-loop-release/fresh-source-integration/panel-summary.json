@@ -1,0 +1,785 @@
+{
+  "updated_at": "2026-09-15T00:38:19.649655+00:00",
+  "panel_size": 15,
+  "release_eligible_metal_free_repair_cases": 9,
+  "complete_static_passes": 6,
+  "unresolved_metal_free_repair_cases": 3,
+  "deferred_metal_cases": 1,
+  "expected_unsupported_input_checks": 5,
+  "first_sweep_wall_seconds": 317.1194531659712,
+  "all_full_preparation_publication_gates_complete": false,
+  "app_fallback_enabled": false,
+  "release_ready": false,
+  "cases": {
+    "8K5R": {
+      "status": "unresolved_complete_loop_checks",
+      "gap_lengths": [
+        6,
+        4,
+        3,
+        4
+      ],
+      "initial_status": "failed",
+      "initial_seconds": 26.616956542013213,
+      "full_app_publication": false,
+      "latest_complete_attempts": [
+        {
+          "name": "fragment-context-1-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-1-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        }
+      ]
+    },
+    "1UA2": {
+      "status": "complete_static_checks_passed",
+      "gap_lengths": [
+        12
+      ],
+      "initial_status": "static_checks_passed",
+      "initial_seconds": null,
+      "full_app_publication": false
+    },
+    "1HCK": {
+      "status": "deferred_metal_case",
+      "gap_lengths": [
+        4
+      ],
+      "initial_status": "failed",
+      "initial_seconds": 32.00147879199358,
+      "full_app_publication": false
+    },
+    "4HJO": {
+      "status": "complete_static_checks_passed",
+      "gap_lengths": [
+        4
+      ],
+      "initial_status": "static_checks_passed",
+      "initial_seconds": 36.40952570800437,
+      "full_app_publication": false
+    },
+    "1M17": {
+      "status": "complete_static_checks_passed",
+      "gap_lengths": [
+        12
+      ],
+      "initial_status": "static_checks_passed",
+      "initial_seconds": 74.25092183297966,
+      "full_app_publication": false
+    },
+    "2HYY": {
+      "status": "complete_static_checks_and_fresh_private_full_worker_passed",
+      "gap_lengths": [
+        1,
+        3
+      ],
+      "initial_status": "failed",
+      "initial_seconds": 72.24921712494688,
+      "full_app_publication": false,
+      "latest_complete_attempts": [
+        {
+          "name": "fragment-context-1-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-1-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        }
+      ],
+      "fresh_full_worker": {
+        "status": "completed_private_full_preparation",
+        "dataset_id": "62cb93b0909949b8",
+        "dataset_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-abl-v1/workspace/datasets/62cb93b0909949b8",
+        "n_atoms": 4370,
+        "prepared_pdb_sha256": "0757e63bd53a7a36270fd1e17e81635456a2f11f9bebe9526037868935856d29",
+        "accepted_bundle_sha256": "2a356dccb5a2fb8c4d078603c92fa954c6f54b0fbcf73c21af8dcade85ca81a6",
+        "parameter_sidecars_preserved": true,
+        "bundle_copied_and_verified_in_dataset": true,
+        "app_default_enabled": false,
+        "installed_app_modified": false,
+        "MD_performed": false,
+        "elapsed_seconds": 78.28769429196836,
+        "all_owned_children_exited": true,
+        "result_file": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-abl-v1/full-preparation-result.json",
+        "result_sha256": "2de44d6ed50c728fe36bea5fca633381eb457829d604ec1be3d70e8bf0837a6a",
+        "manual_rank_selection": false,
+        "normal_fresh_ligand_AM1_BCC_SQM_performed": true
+      }
+    },
+    "3HEG": {
+      "status": "unresolved_complete_loop_checks",
+      "gap_lengths": [
+        4,
+        11
+      ],
+      "initial_status": "failed",
+      "initial_seconds": 50.804936666972935,
+      "full_app_publication": false,
+      "latest_complete_attempts": [
+        {
+          "name": "fragment-context-1-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": false,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "observed_displacement",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": false,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "observed_displacement",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-1-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": false,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": false,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "geometry",
+            "backbone_reference",
+            "observed_displacement",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": false,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": false,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "geometry",
+            "backbone_reference",
+            "observed_displacement",
+            "serialized_output"
+          ]
+        }
+      ]
+    },
+    "6A93": {
+      "status": "expected_unsupported_input",
+      "gap_lengths": [
+        7,
+        3
+      ],
+      "initial_status": "preparation_failed",
+      "initial_seconds": 8.723955666006077,
+      "full_app_publication": false,
+      "reason": "J:3002::PLM: Covalently linked ligand residues need a specialized force-field model; no molecule was removed."
+    },
+    "2CG9": {
+      "status": "unresolved_complete_loop_checks",
+      "gap_lengths": [
+        7,
+        2
+      ],
+      "initial_status": "failed",
+      "initial_seconds": 8.105277041962836,
+      "full_app_publication": false,
+      "latest_complete_attempts": [
+        {
+          "name": "fragment-context-1-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-42",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-1-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        },
+        {
+          "name": "fragment-context-2-2027",
+          "status": "rejected",
+          "checks": {
+            "identity": true,
+            "retained_environment": true,
+            "geometry": true,
+            "stereochemistry": true,
+            "backbone_reference": false,
+            "observed_displacement": true,
+            "serialized_output": false,
+            "parameter_integrity": true
+          },
+          "reasons": [
+            "backbone_reference",
+            "serialized_output"
+          ]
+        }
+      ]
+    },
+    "2BEL": {
+      "status": "expected_unsupported_input",
+      "gap_lengths": [
+        3
+      ],
+      "initial_status": "preparation_failed",
+      "initial_seconds": 5.655031249974854,
+      "full_app_publication": false,
+      "reason": "L:1273::CBO: CCD heavy-atom identity mismatch (missing ['C31', 'C32', 'O32', 'O33'], extra []). The CCD reference geometry could not be validated for missing-atom repair. Reference coordinates disagree with CCD stereochemistry at C14: expected R, found S. No coordinates were changed. Supply a validated complete ligand reference; the input structure was not modified."
+    },
+    "1FPU": {
+      "status": "complete_static_checks_passed",
+      "gap_lengths": [
+        5
+      ],
+      "initial_status": "static_checks_passed",
+      "initial_seconds": 27.271487374964636,
+      "full_app_publication": false
+    },
+    "4HHY": {
+      "status": "complete_static_checks_passed",
+      "gap_lengths": [
+        8
+      ],
+      "initial_status": "static_checks_passed",
+      "initial_seconds": 163.17869550001342,
+      "full_app_publication": false
+    },
+    "2REN": {
+      "status": "expected_unsupported_input",
+      "gap_lengths": [
+        3,
+        5,
+        9
+      ],
+      "initial_status": "preparation_failed",
+      "initial_seconds": 8.900082707987167,
+      "full_app_publication": false,
+      "reason": "B:341::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed."
+    },
+    "1RNE": {
+      "status": "expected_unsupported_input",
+      "gap_lengths": [
+        6
+      ],
+      "initial_status": "preparation_failed",
+      "initial_seconds": 6.952212249976583,
+      "full_app_publication": false,
+      "reason": "B:345::NAG: Covalently linked ligand residues need a specialized force-field model; no molecule was removed."
+    },
+    "2ITY": {
+      "status": "expected_unsupported_input",
+      "gap_lengths": [
+        10,
+        13
+      ],
+      "initial_status": "preparation_failed",
+      "initial_seconds": 1.1827740829903632,
+      "full_app_publication": false,
+      "reason": "Chain A has an internal gap of 13 residues. Local loop building supports up to 12 per gap; supply a complete model for this longer region."
+    }
+  },
+  "evidence": {
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/frozen-panel-fresh-validation-v1/results.json": "74d650dcee36f21b5e85276634fe31f852cbefe0599346de1f39d61b95aa250d",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/panel-native-handling-replay-v1/results.json": "6cf0c783aaba386eb04a4430b32e3d8792c4322dca865b6fd7749aa6c13e9f56",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/panel-bounded-context-replay-v1/results.json": "7e319b549ba86019176ba304708da48f6f8140bad9b73691ec07efa148aadd05",
+    "/Users/ashujo/.cache/dynamol-research/v1-loop-release/panel-accepted-bundle-check-v1/results.json": "ca65a7111ee3c65308053a07c1124b333568a974daff7e57c4bd19b8067474ae"
+  },
+  "software_tests": {
+    "native_worker_search_supervision": 62,
+    "latest_native_worker_context": 75,
+    "qualified_seed_refinement_selected_suite": 54,
+    "fragment_peptide_policy_selected_suite": 71,
+    "qualified_seed_caller_context_selected_suite": 74
+  },
+  "running_job": null,
+  "full_worker_handoff": {
+    "1UA2": {
+      "status": "completed_private_full_preparation",
+      "dataset_id": "bd9d9957360c4fd4",
+      "dataset_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1UA2/workspace/datasets/bd9d9957360c4fd4",
+      "n_atoms": 4825,
+      "prepared_pdb_sha256": "fec822739b26379c03eecc35bf881caed6873f0a9d4bf6c4b0a2d18955812ef1",
+      "accepted_bundle_sha256": "34f1dde6c877f1c90e4c35e8ed3c73846d856450826e0b006cefe57ce3eb38da",
+      "parameter_sidecars_preserved": true,
+      "bundle_copied_and_verified_in_dataset": true,
+      "app_default_enabled": false,
+      "installed_app_modified": false,
+      "MD_performed": false,
+      "elapsed_seconds": 61.55995491700014,
+      "all_owned_children_exited": true,
+      "result_file": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1UA2/full-preparation-result.json",
+      "result_sha256": "3fbcb3367da9ccc041e98bddd68f843db5db313812f2aea8e3c56722cbd0a943"
+    },
+    "1M17": {
+      "status": "completed_private_full_preparation",
+      "dataset_id": "3d99240aabd6495d",
+      "dataset_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1M17/workspace/datasets/3d99240aabd6495d",
+      "n_atoms": 5265,
+      "prepared_pdb_sha256": "2ab6192173b752c3355fa4d7385d577c35c8ab8852925ee0a70b5c748a0f395f",
+      "accepted_bundle_sha256": "301399db0fb64637b9ef9c2347d2dbf9fed1ae8a6c40c3727ae48d8fea32920a",
+      "parameter_sidecars_preserved": true,
+      "bundle_copied_and_verified_in_dataset": true,
+      "app_default_enabled": false,
+      "installed_app_modified": false,
+      "MD_performed": false,
+      "elapsed_seconds": 69.53080487501575,
+      "all_owned_children_exited": true,
+      "result_file": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-handoff-v1/1M17/full-preparation-result.json",
+      "result_sha256": "e939f7f89a73361214f341dceef4b08573748db3b7fa04e290eec108a53f0dc7"
+    },
+    "2HYY": {
+      "status": "completed_private_full_preparation",
+      "dataset_id": "62cb93b0909949b8",
+      "dataset_path": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-abl-v1/workspace/datasets/62cb93b0909949b8",
+      "n_atoms": 4370,
+      "prepared_pdb_sha256": "0757e63bd53a7a36270fd1e17e81635456a2f11f9bebe9526037868935856d29",
+      "accepted_bundle_sha256": "2a356dccb5a2fb8c4d078603c92fa954c6f54b0fbcf73c21af8dcade85ca81a6",
+      "parameter_sidecars_preserved": true,
+      "bundle_copied_and_verified_in_dataset": true,
+      "app_default_enabled": false,
+      "installed_app_modified": false,
+      "MD_performed": false,
+      "elapsed_seconds": 78.28769429196836,
+      "all_owned_children_exited": true,
+      "result_file": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/full-worker-abl-v1/full-preparation-result.json",
+      "result_sha256": "2de44d6ed50c728fe36bea5fca633381eb457829d604ec1be3d70e8bf0837a6a",
+      "manual_rank_selection": false,
+      "normal_fresh_ligand_AM1_BCC_SQM_performed": true
+    }
+  },
+  "first_sweep_complete_static_passes": 5,
+  "first_sweep_unresolved_metal_free_cases": 4,
+  "automatic_qualified_followups": {
+    "2HYY": {
+      "status": "static_checks_passed",
+      "stage": "complete_validation",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/abl-automatic-full-validation-v1/result.json",
+      "sha256": "3ac954131943cc0bf7fb7ab78bf9771269119af91e6e4018f19dd07fd9f9d400",
+      "decision": {
+        "status": "static_checks_passed",
+        "snapshot_sha256": "67a13780c6460d688af2a4a21b63053aa72419261b20660a73fe38c33329dddb",
+        "proposal_sha256": "3e416179419f9826f99831650eea3719e1c233944b4dabbdfddf89ab616ae3a2",
+        "original_source_context_sha256": "e79fbae3201820dfb147cbde99272e412eb484bdceb0f3329b94d4d50df72a21",
+        "common_cif_maximum_rounding_nm": 8.396357936051125e-06,
+        "native_parameter_check": {
+          "harmonic_bond_parameter_multisets_equal": true,
+          "bond_terms": 4430,
+          "other_system_fields_and_terms_exactly_equal": true,
+          "all_atom_indexed_parameters_equal": true
+        },
+        "newly_defined_reference_keys": [
+          [
+            "C",
+            "275",
+            "",
+            "GLU"
+          ],
+          [
+            "C",
+            "276",
+            "",
+            "ASP"
+          ],
+          [
+            "C",
+            "277",
+            "",
+            "THR"
+          ],
+          [
+            "C",
+            "388",
+            "",
+            "MET"
+          ],
+          [
+            "C",
+            "389",
+            "",
+            "THR"
+          ],
+          [
+            "C",
+            "390",
+            "",
+            "GLY"
+          ],
+          [
+            "C",
+            "391",
+            "",
+            "ASP"
+          ],
+          [
+            "C",
+            "392",
+            "",
+            "THR"
+          ]
+        ],
+        "all_required_checks": {
+          "identity": true,
+          "retained_environment": true,
+          "geometry": true,
+          "stereochemistry": true,
+          "backbone_reference": true,
+          "observed_displacement": true,
+          "serialized_output": true,
+          "parameter_integrity": true
+        },
+        "loop_candidate_accepted": true,
+        "original_source_flank_cap_passed": true,
+        "preserve_seed_torsions": true,
+        "app_default_enabled": false,
+        "full_preparation_published": false,
+        "physical_model_validated": false,
+        "accepted_bundle": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/abl-automatic-full-validation-v1/search/qualified-fragment/complete/accepted-bundle/bundle.json",
+        "accepted_bundle_sha256": "ab9c426f3c328b03c186ddd02d36d6ad2b685867e4ae873efd7ad742ac527e6a"
+      },
+      "app_default_enabled": false
+    },
+    "8K5R": {
+      "status": "unavailable",
+      "stage": "coherent_seed_selection",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/cdk9-automatic-qualified-v1/result.json",
+      "sha256": "1ee1a3b0698fd99d4b07541ae74859d45e1ba8e77440d81756fc7b12639bf0e3",
+      "decision": null,
+      "app_default_enabled": false
+    },
+    "2CG9": {
+      "status": "rejected",
+      "stage": "complete_validation",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/sba1-automatic-qualified-v1/result.json",
+      "sha256": "48d9ecba1b80558a9617eec7bc8dc8bb880b06eb28c923f358173822ef658ea4",
+      "decision": {
+        "status": "rejected",
+        "snapshot_sha256": "9fc238730de3662aef38d7f14a53bc960e96330098b7003cdf3b48a50b61d210",
+        "proposal_sha256": "85ebdeb7eb420b75af9ee0d8e32a7e1c34737cde07e85dce1f15cd3c5e93f03e",
+        "original_source_context_sha256": "fcf4abd66a3bc541d0c1b126496702ed9bbf2b114ac9fb760e9c7ec66e320976",
+        "common_cif_maximum_rounding_nm": 8.265833711512768e-06,
+        "native_parameter_check": {
+          "harmonic_bond_parameter_multisets_equal": true,
+          "bond_terms": 2079,
+          "other_system_fields_and_terms_exactly_equal": true,
+          "all_atom_indexed_parameters_equal": true
+        },
+        "newly_defined_reference_keys": [
+          [
+            "C",
+            "54",
+            "",
+            "LYS"
+          ],
+          [
+            "C",
+            "55",
+            "",
+            "PRO"
+          ],
+          [
+            "C",
+            "56",
+            "",
+            "HIS"
+          ],
+          [
+            "C",
+            "57",
+            "",
+            "VAL"
+          ],
+          [
+            "C",
+            "58",
+            "",
+            "GLY"
+          ],
+          [
+            "C",
+            "59",
+            "",
+            "ASP"
+          ],
+          [
+            "C",
+            "60",
+            "",
+            "GLU"
+          ],
+          [
+            "C",
+            "61",
+            "",
+            "ASN"
+          ],
+          [
+            "C",
+            "62",
+            "",
+            "VAL"
+          ],
+          [
+            "C",
+            "87",
+            "",
+            "GLY"
+          ],
+          [
+            "C",
+            "88",
+            "",
+            "GLN"
+          ],
+          [
+            "C",
+            "89",
+            "",
+            "HIS"
+          ],
+          [
+            "C",
+            "90",
+            "",
+            "TYR"
+          ]
+        ],
+        "all_required_checks": {
+          "identity": true,
+          "retained_environment": true,
+          "geometry": false,
+          "stereochemistry": true,
+          "backbone_reference": true,
+          "observed_displacement": true,
+          "serialized_output": false,
+          "parameter_integrity": true
+        },
+        "loop_candidate_accepted": false,
+        "original_source_flank_cap_passed": true,
+        "preserve_seed_torsions": true,
+        "app_default_enabled": false,
+        "full_preparation_published": false,
+        "physical_model_validated": false
+      },
+      "app_default_enabled": false
+    },
+    "3HEG": {
+      "status": "failed",
+      "stage": "complete_validation",
+      "result": "/Users/ashujo/.cache/dynamol-research/v1-loop-release/p38-automatic-qualified-v1/result.json",
+      "sha256": "d5f8e5bc6fbc8d6543a10f58196f080fc264c51d8ecae16e4bc2412bb97f242e",
+      "decision": {
+        "status": "failed",
+        "error_type": "OpenMMException",
+        "error": "Particle coordinate is NaN.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#nan",
+        "full_preparation_published": false,
+        "app_default_enabled": false
+      },
+      "app_default_enabled": false
+    }
+  }
+}

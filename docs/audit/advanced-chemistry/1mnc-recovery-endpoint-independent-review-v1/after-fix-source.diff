@@ -1,0 +1,44 @@
+--- before.py
++++ after.py
+@@ -135,17 +135,28 @@
+ 
+ 
+ def validate_controller(controller, native_hash):
+-    check(controller.get('schema_version') == 1
++    check(type(controller.get('schema_version')) is int and controller['schema_version'] == 1
+           and controller.get('status') == 'numerically_complete_pending_geometry_review'
+-          and controller.get('child_pid') is None, 'No terminal completed controller record')
+-    for key,expected in [('spec_sha256',SPEC_HASH),('controller_sha256',CONTROLLER_HASH),('result_sha256',native_hash),
+-                         ('physical_acceptance',False),('simulation_ready',False)]:
++          and 'child_pid' in controller and controller['child_pid'] is None,
++          'No terminal completed controller record')
++    for key in ['physical_acceptance','simulation_ready']:
++        check(controller.get(key) is False, 'Terminal controller flag is not explicit false: '+key)
++    for key,expected in [('spec_sha256',SPEC_HASH),('controller_sha256',CONTROLLER_HASH),('result_sha256',native_hash)]:
+         check(key in controller and controller[key] == expected, 'Terminal controller metadata differs: '+key)
+     limits=controller.get('limits',{})
+     for key,expected in [('native_memory_mb',2000),('max_rss_bytes',8_000_000_000),('threads',2),('outer_wall_seconds',21720)]:
+-        check(limits.get(key) == expected, 'Terminal resource limits differ: '+key)
++        check(type(limits.get(key)) is int and limits[key] == expected, 'Terminal resource limits differ: '+key)
+     peak=controller.get('peak_sampled_rss_bytes')
+     check(type(peak) is int and 0 < peak <= 8_000_000_000, 'Missing or excessive observed resource peak')
++
++
++def validate_real_arrays(arrays):
++    # The pinned worker emits real arrays. Do not let the original generic
++    # numeric reader's complex dtype acceptance reach a float coercion.
++    for name,value in arrays.items():
++        dtype = np.asarray(value).dtype
++        check(np.issubdtype(dtype,np.integer) or np.issubdtype(dtype,np.floating),
++              'Endpoint array is not real integer/floating data: '+name)
+ 
+ 
+ def read_native_endpoint(ctx, folder):
+@@ -234,6 +245,7 @@
+         check(sha(path) == digest, 'Captured execution source changed: '+str(path))
+     endpoint=read_native_endpoint(ctx,folder)
+     check(endpoint is not None, 'Terminal native result missing')
++    validate_real_arrays(endpoint['arrays'])
+     check(endpoint['result'].get('initial_checkpoint') is None, 'Unexpected checkpoint reuse')
+     expected_resolved = load(ctx['base']/'validated-input.json')
+     expected_resolved.pop('initial_checkpoint')

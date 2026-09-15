@@ -1,0 +1,10 @@
+{
+  "artifacts": {
+    "README.md": "4dbd8b903f4288823c521ded017e6cc104fea5af3eb1d93993c404f402ddeb73",
+    "review.json": "43320151f94a81a00f3f7064025c76f0da3984abb85b8e64642f01369208e6e7",
+    "dihedral_least_squares_NMA-printed-parameters.json": "846c593371fd9ef64084e6533223876059571b79df61f3dfc6cc014f949189af",
+    "simplex_perfect_fit_NMA-printed-parameters.json": "ccb3e68e80bd52e4e00be59743b6d057c6b6fbfd0329c0a9a983fe495d920c77"
+  },
+  "original_analysis_still_unchanged": true,
+  "native_reruns": false
+}

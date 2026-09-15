@@ -68,6 +68,18 @@ def test_autosave_restores_complete_scene_and_detects_changed_atom_order(workspa
     assert "atom order" in result["warning"]
 
 
+def test_fresh_workspace_defaults_to_elements_and_preserves_explicit_color(workspace):
+    dataset, state, _, _ = workspace
+    workspaces.save_workspace({"state": {**state, "color_scheme": "chain"}})
+    assert workspaces.get_workspace()["state"]["color_scheme"] == "chain"
+    # A fresh scene should not inherit the previous scene's colors or selections.
+    workspaces.save_workspace({"state": {"version": 1, "dataset_id": dataset["id"]}})
+    fresh = workspaces.get_workspace()["state"]
+    assert fresh["color_scheme"] == "element"
+    assert fresh["selected_atoms"] == []
+    assert fresh["measurements"] == []
+
+
 @pytest.mark.parametrize("change", [
     {"selected_atoms": [100]}, {"frame": 3}, {"camera": [0] * 16}, {"camera": [float("nan")] * 16},
     {"visibility": {"hydrogens": "polar"}}, {"named_selections": [{"id": "../escape", "name": "X", "atoms": [0]}]},

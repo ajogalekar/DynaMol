@@ -1,0 +1,231 @@
+{
+  "passed": true,
+  "scope": "Fresh 10 ps explicit-water ubiquitin NVT runs in each engine, with worker interruption and cooperative stop/resume. Software, numerical health and artifact continuity audit; no equilibration, convergence, biological stability, or bitwise reproducibility claim.",
+  "started_at": "2026-09-13T04:42:54.383736+00:00",
+  "seed": 20260912,
+  "engines": {
+    "openmm": {
+      "job_id": "78deca65a05442e8",
+      "config": {
+        "dataset_id": "d1c978cbeb8c4a6c",
+        "engine": "openmm",
+        "name": "Final audit openmm 10 ps",
+        "duration_ps": 10.0,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 100,
+        "friction_ps": 1,
+        "seed": 20260912,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 500,
+        "padding_nm": 1,
+        "measurements": [
+          {
+            "id": "backbone-distance",
+            "kind": "distance",
+            "atoms": [
+              79,
+              196
+            ],
+            "label": "C-alpha separation",
+            "color": null,
+            "trackDuringRun": null
+          },
+          {
+            "id": "backbone-angle",
+            "kind": "angle",
+            "atoms": [
+              155,
+              156,
+              157
+            ],
+            "label": "Backbone N-CA-C",
+            "color": null,
+            "trackDuringRun": null
+          },
+          {
+            "id": "backbone-dihedral",
+            "kind": "dihedral",
+            "atoms": [
+              155,
+              156,
+              157,
+              163
+            ],
+            "label": "Backbone psi",
+            "color": null,
+            "trackDuringRun": null
+          }
+        ]
+      },
+      "interrupted_checkpoint_step": 500,
+      "diagnostics_available_while_running": true,
+      "live_diagnostics_before_resume": true,
+      "tampered_system_rejected": true,
+      "different_runtime_rejected": true,
+      "cooperative_stop_checkpoint_step": 1100,
+      "status": "completed",
+      "saved_frames": 51,
+      "atoms": 17242,
+      "final_time_ps": 10.0,
+      "unique_strictly_increasing_times": true,
+      "saved_prefix_unchanged": true,
+      "finite_energy_temperature_coordinates": true,
+      "energy_rows": 51,
+      "restart_provenance": [
+        {
+          "requested_at": "2026-09-13T04:44:16.039357+00:00",
+          "previous_status": "interrupted",
+          "checkpoint_sha256": "f14242c5d51b3f21cfa970ae25ad484d350a072ebf8673c6057e57ee4e61c69c",
+          "checkpoint_step": 500,
+          "previous_elapsed_seconds": 81.26,
+          "original_configuration_retained": true
+        },
+        {
+          "requested_at": "2026-09-13T04:44:27.591083+00:00",
+          "previous_status": "cancelled",
+          "checkpoint_sha256": "5d529c249e480e3d587748373361c486f7261b213bd3f6219e2dafe83d508cb3",
+          "checkpoint_step": 1100,
+          "previous_elapsed_seconds": 92.44,
+          "original_configuration_retained": true
+        }
+      ],
+      "outputs_sha256": {
+        "energies.csv": "dd24b5cc662c4907a0b1801534ba9dd9a32c33dc2f67243e13f26d3f99cae1e9",
+        "provenance.json": "1f009162f43a45109f2dafef7e068b7bc214107665e68edbfc4aad7ee6113420"
+      },
+      "elapsed_seconds": 161.9,
+      "dataset_id": "d66464e192e9461f",
+      "completed_steps": 5000
+    },
+    "gromacs": {
+      "job_id": "1729bd5d545a41f0",
+      "config": {
+        "dataset_id": "d1c978cbeb8c4a6c",
+        "engine": "gromacs",
+        "name": "Final audit gromacs 10 ps",
+        "duration_ps": 10.0,
+        "temperature_k": 300,
+        "timestep_fs": 2,
+        "report_interval": 100,
+        "friction_ps": 1,
+        "seed": 20260912,
+        "solvent": "explicit",
+        "minimize": true,
+        "equilibration_steps": 500,
+        "padding_nm": 1,
+        "measurements": [
+          {
+            "id": "backbone-distance",
+            "kind": "distance",
+            "atoms": [
+              79,
+              196
+            ],
+            "label": "C-alpha separation",
+            "color": null,
+            "trackDuringRun": null
+          },
+          {
+            "id": "backbone-angle",
+            "kind": "angle",
+            "atoms": [
+              155,
+              156,
+              157
+            ],
+            "label": "Backbone N-CA-C",
+            "color": null,
+            "trackDuringRun": null
+          },
+          {
+            "id": "backbone-dihedral",
+            "kind": "dihedral",
+            "atoms": [
+              155,
+              156,
+              157,
+              163
+            ],
+            "label": "Backbone psi",
+            "color": null,
+            "trackDuringRun": null
+          }
+        ]
+      },
+      "interrupted_checkpoint_step": 800,
+      "diagnostics_available_while_running": true,
+      "orphaned_native_child_stopped_before_resume": true,
+      "live_diagnostics_before_resume": true,
+      "tampered_system_rejected": true,
+      "different_runtime_rejected": true,
+      "cooperative_stop_checkpoint_step": 1300,
+      "verified_retained_prefix_frames": 10,
+      "status": "completed",
+      "saved_frames": 51,
+      "atoms": 26842,
+      "final_time_ps": 10.0,
+      "unique_strictly_increasing_times": true,
+      "saved_prefix_unchanged": true,
+      "finite_energy_temperature_coordinates": true,
+      "energy_rows": 51,
+      "restart_provenance": [
+        {
+          "requested_at": "2026-09-13T04:46:02.263031+00:00",
+          "previous_status": "interrupted",
+          "checkpoint_sha256": "851e4ce385d54d9b1330c618ecd040b47d2977764a0ae3b8821eb7345edce32f",
+          "checkpoint_step": null,
+          "previous_elapsed_seconds": 24.64,
+          "original_configuration_retained": true
+        },
+        {
+          "requested_at": "2026-09-13T04:46:07.708014+00:00",
+          "previous_status": "cancelled",
+          "checkpoint_sha256": "f5da70d36021ec223bc51bf2d79609453d391b6917a0f6c47d7aff2f205a937e",
+          "checkpoint_step": null,
+          "previous_elapsed_seconds": 29.81,
+          "original_configuration_retained": true
+        }
+      ],
+      "outputs_sha256": {
+        "energies.csv": "b2f7e1345900bfa37d1449421257672c2a911ef2023ab1703db8782afc781904",
+        "provenance.json": "0f84b9085856e567372a3187d406cae0428a07cb140decf67b60a7d2d8190933"
+      },
+      "elapsed_seconds": 62.12,
+      "dataset_id": "c9d07cef272e4122",
+      "completed_steps": 5000
+    }
+  },
+  "input_sha256": "4dbdcb45ad33cd58fb4fd6cbbb4ab599f06b2e382dc9538694eee3ad5f51cba9",
+  "runtime": {
+    "python": "/Users/ashujo/Documents/Science/DynaMol/.venv/bin/python",
+    "path": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "gromacs": "/Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx",
+    "health": {
+      "status": "ok",
+      "engines": [
+        {
+          "id": "openmm",
+          "name": "OpenMM",
+          "available": true,
+          "version": "8.6.0",
+          "message": "CPU engine ready \u00b7 Amber ff14SB + GBn2 or TIP3P \u00b7 standard proteins"
+        },
+        {
+          "id": "gromacs",
+          "name": "GROMACS",
+          "available": true,
+          "version": "2025.4-conda_forge",
+          "message": "CPU engine ready \u00b7 Amber99SB-ILDN / TIP3P \u00b7 explicit water"
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    "backend/worker.py": "146454b2c96e62a0b8b296ac5c2ed63bae22ac74c70879fa540677cd91d7cca3",
+    "backend/jobs.py": "8f5abe1a5e54e6d750c3e531a4ad967a9e32ca5394dc38da62e939a9bb79a85d",
+    "backend/recovery.py": "5ed37bc6f9bf427887e4a0a8be673dab0218ca8fca676ab79e57e2a5cf8a81ad",
+    "backend/live_measurements.py": "8c259cb84791a11e2abe6e828e77217890a76347c7d9962842e0130c10cfdfff"
+  }
+}

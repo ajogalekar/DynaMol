@@ -1,0 +1,74 @@
+{
+  "ready_for_short_comparison": true,
+  "total_NPT_warmup_ps": 75,
+  "decision": "Proceed to short20ps unrestrained NVT engine specimens using this exact saved configuration and box. The final10ps energy trend is nearly flat after the earlier sustained relaxation; thermal/density fluctuations are bounded. This does not establish thermodynamic convergence.",
+  "last10ps_metrics": {
+    "potential_energy_kj_mol": {
+      "mean": -430113.31497524754,
+      "standard_deviation": 495.0021645024052,
+      "slope_per_ps": 2.9598136284431313,
+      "first5ps_mean": -430170.71125,
+      "last5ps_mean": -430057.04411764705
+    },
+    "temperature_kelvin": {
+      "mean": 300.8817513168317,
+      "standard_deviation": 1.3013271888543376,
+      "slope_per_ps": 0.12469137891670679,
+      "first5ps_mean": 300.43470092,
+      "last5ps_mean": 301.3200360196078
+    },
+    "pressure_bar": {
+      "mean": 16.275722316831683,
+      "standard_deviation": 174.26913028431863,
+      "slope_per_ps": -9.181093445893993,
+      "first5ps_mean": 40.51840878,
+      "last5ps_mean": -7.491617352941174
+    },
+    "volume_nm3": {
+      "mean": 342.53068946534654,
+      "standard_deviation": 0.5779836414230287,
+      "slope_per_ps": 0.06801723750728865,
+      "first5ps_mean": 342.26774532,
+      "last5ps_mean": 342.7884778431373
+    },
+    "density_kg_m3": {
+      "mean": 1024.2289773465345,
+      "standard_deviation": 1.727092333868949,
+      "slope_per_ps": -0.20367949935940333,
+      "first5ps_mean": 1025.0152099400002,
+      "last5ps_mean": 1023.4581610784313
+    }
+  },
+  "additional_stage_10ps_energy_means_kj_mol": [
+    -430656.259375,
+    -430353.9934375
+  ],
+  "final_density_g_ml": 1.0245457266289093,
+  "mobile_dof": 70866.0,
+  "geometry": {
+    "broad_geometry_alarms_clear": true,
+    "Zn_min_angstrom": [
+      1.845739610687227,
+      1.8416403125666494,
+      1.89976296671065,
+      1.7635160360143267
+    ],
+    "Zn_max_angstrom": [
+      2.1316278899507934,
+      2.123301388380405,
+      2.0670633265885714,
+      2.0818448656225983
+    ],
+    "maximum_CA_rmsd_angstrom": 0.7777805295302911
+  },
+  "limitations": [
+    "One solvated source conformation; finite correlated samples; sample standard deviations are not confidence intervals.",
+    "GROMACS v-rescale and OpenMM LangevinMiddle have different stochastic dynamics; separately documented velocities/seeds.",
+    "No position restraints during warmup or comparison. Bonded-site retention is a numerical/coordination check, not independent chemical-accuracy evidence."
+  ],
+  "evidence_hashes": {
+    "stage-status.json": "3cfc4c10c9dd1c3809dbfc5136440af80e09e83b9f7a0572a52119dd47a92dfb",
+    "independent-site-geometry.json": "f1c0ce27a4e66e629eed52e45e0477ef6d913c83ff6b5b439126e29386d8d43a",
+    "endpoint.npz": "bcb48bb2ff13614ebe502278960a9b91066e444f19b71fd86eb41457f2d82a7a"
+  }
+}

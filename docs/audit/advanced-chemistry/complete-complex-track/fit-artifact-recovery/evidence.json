@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "stage": "bounded_fit_artifact_recovery",
+  "recorded_utc": "2026-09-14T19:51:50.693550+00:00",
+  "limits": {
+    "targeted_search_queries_maximum": 8,
+    "targeted_search_queries_used": 8,
+    "elapsed_limit_minutes": 10,
+    "scope": "Targeted search-query count excludes ordinary retrieval of discovered source pages and public archive metadata. No search form was submitted after reaching the eight-query limit."
+  },
+  "queries": [
+    "\"Kenneth J. Miller\" \"Additivity\" polarizability pdf rpi",
+    "site:q4md-forcefieldtools.org \"dimethyl\" \"phosphate\"",
+    "site:theory.rutgers.edu \"Panteva\" parameters download DMP",
+    "site:github.com \"c6\" \"lj_1264_pol\"",
+    "\"Additivity Methods in Molecular Polarizability\" filetype:pdf -researchgate -electronicsandbooks",
+    "\"Miller\" \"8533\" \"CTE\" polarizability",
+    "\"DMP\" \"Dupradeau\" mol2",
+    "\"dimethyl phosphate\" \"R.E.DD.B.\""
+  ],
+  "prior_evidence_sha256": {
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/c6-gdp-transfer/REPORT.md": "a499f1bb408a5b0f02a90bfc687218ae3e6bf6842b7f00eae38b0e239c4742fb",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/c6-gdp-transfer/evidence.json": "49e56603aa51dfcf2e19af88efcd9ae08a552c03e4b7722d61e749853622da85",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/PANTEVA-APPLICABILITY.md": "97615012f87809357ccab965548426a1fa788a248872490ae3d4fa4bbed77a02",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/complete-complex-track/panteva-applicability.json": "9237e5d16a5e961edf7257a6b1a0016bac1695192fdbc6e31df417a82761694b"
+  },
+  "retained_scientific_sources": {
+    "native_topology": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/solvated.prmtop",
+      "sha256": "d4a3c152a0a39d0c5a5dce8903178f0823a8da164d7a5bade438475c505f3f6c"
+    },
+    "mapping": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/source-mapping.json",
+      "sha256": "6723008e991777b723257622430aa6592e33fc6e90ad4b40894cc8f2033f26ac"
+    },
+    "assembly": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/6oim-complex-v3/result.json",
+      "sha256": "eec2b3051309dd061877b6ff66359a3376dc27718e713f169ce7e7dea4a80a68"
+    },
+    "gdp_scoping": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-scoped-v6/result.json",
+      "sha256": "ecb3f7c128b4b7355b1c1b98280f0f9485938a86cf39237844a01dc28379bdbd"
+    },
+    "gdp_source_prep": {
+      "path": "/Users/ashujo/.cache/dynamol-research/covalent-v1-focused/gdp-source/GDP.prep",
+      "sha256": "bc8f72b715e3d3b0839b2e3dcd9810cfd11e7a228e29a8ee2e4b55c7b602a705"
+    },
+    "metal_panel": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/metal-panel.json",
+      "sha256": "28db88c10ce5a80dde8513d9c02542c2aa7ffda4910d8bbaef64ce9f312af694"
+    },
+    "covalent_panel": {
+      "path": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent-panel.json",
+      "sha256": "5fdb1dba8cfa43e90c3396c87bde1cdc2a1a8a7091ec813cb120255ad70a613a"
+    }
+  },
+  "source_files": {
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/retrieval-final.json": {
+      "sha256": "7720c678115b6fed07e92bf2235f2fd7a62c48ece2a72d4dd48f132321662d69",
+      "bytes": 1156
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/red-db-projects.html": {
+      "sha256": "b5999b9df437d431dcd44f13c39546666301f61658f1f86aff6e3bf6ced6d702",
+      "bytes": 8401
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/red-db-institutional.html": {
+      "sha256": "00d7d2d713d98a8f9850692005786510e25bce203651737b56d90dc4ec899f7b",
+      "bytes": 18272
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/retrieval-projects.json": {
+      "sha256": "9478e093d7b95cd302c5c23856a7943ff3133906db994f90784afb691fcb0087",
+      "bytes": 547
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/retrieval-initial.json": {
+      "sha256": "19246ddbc08afb96da6e15176cd89bb260c084570bc8f7c82b6e09a0f67da190",
+      "bytes": 1086
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/york-publication.html": {
+      "sha256": "0326c6e4eb066db263567762a9ac54503e3c97b450525233434f33670b8bbce5",
+      "bytes": 19061
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/retrieval-download.json": {
+      "sha256": "7e7dbcdb2f2c78c50d6c601c88a8a8314361859fe18175f60628eea6f165df0d",
+      "bytes": 217
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/miller-oa-metadata.json": {
+      "sha256": "0bcf7641ce9221ff04f26ab46cb7fc19bbfe0ace72b6eb197f5cc4781da9f889",
+      "bytes": 10410
+    },
+    "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/red-db-download.html": {
+      "sha256": "0790719a47c07ebcc7194014c554cde2fda72e734c0e6b429dcb4b2606683ce3",
+      "bytes": 5432
+    }
+  },
+  "retrievals": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2918240/fullTextXML",
+      "filename": "red-tools.xml",
+      "started_utc": "2026-09-14T19:48:21.478539+00:00",
+      "success": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://q4md-forcefieldtools.org/REDDB/index.php",
+      "filename": "red-db-index.html",
+      "started_utc": "2026-09-14T19:48:22.446965+00:00",
+      "success": false,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'q4md-forcefieldtools.org'. (_ssl.c:1082)>"
+    },
+    {
+      "url": "https://theory.rutgers.edu/publications_page.php?publication_id=25",
+      "filename": "york-publication.html",
+      "started_utc": "2026-09-14T19:48:22.962365+00:00",
+      "resolved_url": "https://theory.rutgers.edu/publications_page.php?publication_id=25",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "0326c6e4eb066db263567762a9ac54503e3c97b450525233434f33670b8bbce5",
+      "bytes": 19061,
+      "success": true
+    },
+    {
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/index.php",
+      "filename": "red-db-institutional.html",
+      "started_utc": "2026-09-14T19:49:06.372815+00:00",
+      "resolved_url": "https://upjv.q4md-forcefieldtools.org/REDDB/index.php",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "00d7d2d713d98a8f9850692005786510e25bce203651737b56d90dc4ec899f7b",
+      "bytes": 18272,
+      "success": true
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC2918240",
+      "filename": "red-tools-oa.xml",
+      "started_utc": "2026-09-14T19:49:06.373176+00:00",
+      "success": false,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://api.openalex.org/works/https://doi.org/10.1021/ja00179a044",
+      "filename": "miller-oa-metadata.json",
+      "started_utc": "2026-09-14T19:49:06.558367+00:00",
+      "resolved_url": "https://api.openalex.org/works/https://doi.org/10.1021/ja00179a044",
+      "http_status": 200,
+      "content_type": "application/json",
+      "sha256": "0bcf7641ce9221ff04f26ab46cb7fc19bbfe0ace72b6eb197f5cc4781da9f889",
+      "bytes": 10410,
+      "success": true
+    },
+    {
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/listproject.php",
+      "discovered_in": "red-db-institutional.html",
+      "purpose": "Follow visible List projects link; no authentication or search submission",
+      "resolved_url": "https://upjv.q4md-forcefieldtools.org/REDDB/listproject.php",
+      "status": 200,
+      "path": "/Users/ashujo/.cache/dynamol-research/complete-complex-track/fit-artifact-recovery-v1/red-db-projects.html",
+      "sha256": "b5999b9df437d431dcd44f13c39546666301f61658f1f86aff6e3bf6ced6d702",
+      "bytes": 8401,
+      "success": true
+    },
+    {
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/download.php",
+      "discovered_in": "red-db-institutional.html",
+      "sha256": "0790719a47c07ebcc7194014c554cde2fda72e734c0e6b429dcb4b2606683ce3",
+      "bytes": 5432
+    }
+  ],
+  "web_tool_errors": [
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2918240/fullTextXML",
+      "result": "Web reader reported nonretryable URL-open failure; independent ordinary HTTPS retrieval returned404."
+    },
+    {
+      "url": "https://q4md-forcefieldtools.org/REDDB/index.php",
+      "result": "Web reader timed out; ordinary HTTPS retrieval failed certificate hostname verification. Verification was not disabled."
+    }
+  ],
+  "new_primary_route": {
+    "database": "RESP ESP charge DDataBase (R.E.DD.B.)",
+    "institutional_base": "https://upjv.q4md-forcefieldtools.org/REDDB/",
+    "host_discovery": "Indexed author-hosted q4md document used the upjv subdomain; retrieved database links and author branding independently confirm that host.",
+    "TLS_verification_enabled": true,
+    "index_accessible_without_authentication": true,
+    "list_projects_accessible": true,
+    "public_search_download_form_accessible": true,
+    "index_sha256": "00d7d2d713d98a8f9850692005786510e25bce203651737b56d90dc4ec899f7b",
+    "first_listing_scope": "First default page only:10 fragment projects. Not a complete project search and not evidence that DMP is absent.",
+    "next_observed_request": {
+      "method": "POST",
+      "url": "https://upjv.q4md-forcefieldtools.org/REDDB/download.php",
+      "fields": {
+        "choice": "bymolname",
+        "enter": "dimethyl phosphate",
+        "ok": "OK"
+      },
+      "executed": false
+    },
+    "dataset_license_established": false,
+    "license_note": "Footer labels projects free and links to GNU philosophy; no project-specific redistribution license or exact Panteva fit provenance was established."
+  },
+  "Miller": {
+    "doi": "10.1021/ja00179a044",
+    "original_table_recovered": false,
+    "metadata_discovery_only": {
+      "source": "OpenAlex",
+      "source_is_not_primary_scientific_evidence": true,
+      "open_access": {
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "any_repository_has_fulltext": false
+      },
+      "best_oa_location": null,
+      "locations": [
+        {
+          "id": "doi:10.1021/ja00179a044",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1021/ja00179a044",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S111155417",
+            "display_name": "Journal of the American Chemical Society",
+            "issn_l": "0002-7863",
+            "issn": [
+              "0002-7863",
+              "1520-5126",
+              "1943-2984"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320006",
+            "host_organization_name": "American Chemical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320006"
+            ],
+            "host_organization_lineage_names": [
+              "American Chemical Society"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Journal of the American Chemical Society",
+          "raw_type": "journal-article"
+        }
+      ]
+    },
+    "institutional_author_archive_found": false,
+    "search_result_mirror_limit": "Search results surfaced an unrelated scanned-journal mirror; no institution/author provenance or table extraction was established, and it was not used for a c6 mapping.",
+    "documented_c6_crosswalk_recovered": false,
+    "alpha_assigned": null
+  },
+  "DMP": {
+    "exact_charge_or_topology_artifact_recovered": false,
+    "database_candidate_project_identified": false,
+    "new_accessible_primary_database_route_identified": true,
+    "exact_link_to_Panteva_fit_established": false,
+    "numerical_DMP_GDP_charge_comparison_performed": false,
+    "reason_to_stop_this_pass": "Eight targeted search queries completed. A newly accessible public database form is recorded for the next bounded lookup, rather than exceeding this pass's query cap."
+  },
+  "Panteva_author_page": {
+    "url": "https://theory.rutgers.edu/publications_page.php?publication_id=25",
+    "sha256": "0326c6e4eb066db263567762a9ac54503e3c97b450525233434f33670b8bbce5",
+    "linked_article_or_parameter_like_urls": [
+      "resources/pdfs/Panteva_JChemPhysB_2015_v119_p15460.pdf"
+    ],
+    "finding": "Visible full-article and paper-PDF links; no named DMP topology/charge bundle was found on this publication page."
+  },
+  "next_bounded_step": "Submit the observed public R.E.DD.B. molecule-name form once for dimethyl phosphate. Inspect returned project metadata, charge/model version, files and rights; do not equate a matching molecule/project with the exact Panteva2015 fit without a provenance link.",
+  "not_a_stop_of_overall_advanced_track": true,
+  "new_md_or_qm": false,
+  "parameters_assigned_or_changed": false,
+  "topology_changed": false,
+  "app_or_shared_checkpoint_changed": false,
+  "paid_services_used": false,
+  "authentication_bypassed": false,
+  "messages_to_authors_sent": false,
+  "app_ready": false,
+  "physical_model_validated": false,
+  "all_retained_scientific_sources_unchanged": true
+}

@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "assessment_date": "2026-09-13",
+  "scope": "Method applicability map, not successful preparation results; no chemistry removed to obtain a passing case",
+  "panel_sha256": "28db88c10ce5a80dde8513d9c02542c2aa7ffda4910d8bbaef64ce9f312af694",
+  "cases": [
+    {
+      "id": "1MNC",
+      "label": "MMP8\u2013hydroxamate",
+      "source_sha256": "cc018b0440f630092ad87fbf111cf2dd78c928db20e636bbf4e1f52646f608f9",
+      "approach": "New closed-shell catalytic Zn cluster; separate structural Zn and Ca models",
+      "published_or_installed_candidate": "Five-coordinate hydroxamate Zn is outside four-coordinate ZAFF. Structural His/His/His/Asp site is a center9 candidate after contextual mapping.",
+      "state_or_transfer_decisions": "Explicit hydroxamate deprotonation and donor His tautomers; Ca retained and separately checked.",
+      "actual_status": "Native 97/139-atom catalytic MCPB inputs exist; fixed-geometry QM screening is separate from site acceptance.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1HFC",
+      "label": "MMP1\u2013hydroxamate",
+      "source_sha256": "1850acc058c985c9856d7df443037ed15f5f17d8b74c03c6bfed312abcd5c896",
+      "approach": "Same chemistry family as 1MNC; validate each complete site",
+      "published_or_installed_candidate": "ZAFF9 may fit structural 3His/Asp Zn; no direct ZAFF for five-coordinate catalytic Zn.",
+      "state_or_transfer_decisions": "PLH hydroxamate state; two distinct Zn sites plus Ca; no untested transfer from 1MNC.",
+      "actual_status": "Requires catalytic model and validation of every retained metal.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1GKC",
+      "label": "MMP9\u2013hydroxamate",
+      "source_sha256": "09e9c2542e121198f5562e570317fbb1d8033bd852ebaf3c21db01c0b1110d8c",
+      "approach": "Hydroxamate catalytic Zn plus structural Zn and multiple Ca sites",
+      "published_or_installed_candidate": "ZAFF9 structural candidate only; new five-coordinate NFH catalytic model.",
+      "state_or_transfer_decisions": "NFH protonation and exact donor graph; all five Ca sites and relevant waters.",
+      "actual_status": "Requires full multi-site workflow.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1XUC",
+      "label": "MMP13\u2013non-zinc-binding inhibitor",
+      "source_sha256": "23b5a48127ec731e605185846aa864c225fac31f57d61c42e0433f2014f29445",
+      "approach": "Published four-coordinate Zn-water family candidate plus structural Zn",
+      "published_or_installed_candidate": "ZAFF6/7 catalytic water/hydroxide alternative; ZAFF9 structural candidate.",
+      "state_or_transfer_decisions": "Metal-bound water versus hydroxide; local His mapping and two Ca sites; inhibitor retained.",
+      "actual_status": "Closest MMP candidate for a published-model path, pending actual mapping and full tests.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1BKC",
+      "label": "ADAM17\u2013hydroxamate",
+      "source_sha256": "aa766374288285f27be2c14969c6edc60601f0d76584f084493cabdb24f4222e",
+      "approach": "Site-specific five-coordinate Zn-hydroxamate",
+      "published_or_installed_candidate": "Outside ZAFF four-coordinate scope; native MCPB/PySCF candidate.",
+      "state_or_transfer_decisions": "INN hydroxamate state and three His tautomers.",
+      "actual_status": "Needs new fitted site, parameter checks and full complex motion.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1CA2",
+      "label": "Carbonic anhydrase II",
+      "source_sha256": "8e6392a25c03fe10addfd11baabc0c4190129ab2f005e62d05fe768b2f8f3280",
+      "approach": "Exact published four-coordinate Zn-HHH-water prototype",
+      "published_or_installed_candidate": "ZAFF6: HD4=His94, HD5=His96, HE2=His119, WT1=water263, ZN6=Zn262; alternate center7 hydroxide.",
+      "state_or_transfer_decisions": "Water state is a declared benchmark hypothesis; source has no pH field. Distinct histidines mapped by source backbone contacts.",
+      "actual_status": "Complete 4534-atom dry native model retains 2207 source heavy atoms; parameter comparison passed; motion and independent energy precision check ongoing.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1T64",
+      "label": "HDAC8\u2013trichostatin A",
+      "source_sha256": "e41f7e4a457d6cbedd726abe6a94285491f8bef653a7e13e165a603d2f6e766f",
+      "approach": "Separate acidic/hydroxamate HDAC Zn family",
+      "published_or_installed_candidate": "No matching standard ZAFF template established. Requires explicit graph/state review before QM.",
+      "state_or_transfer_decisions": "Two Asp donors, His and TSN contacts; deposited six contacts include N1 requiring chemical interpretation. Two Ca and two Na retained.",
+      "actual_status": "Do not force a 3His model onto this site.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1CLL",
+      "label": "Calmodulin",
+      "source_sha256": "a8be375d00d2d5d47ffacae491f775167d1c0488ab8485cabd269410e596d3aa",
+      "approach": "Explicitly named Ca nonbonded model with coordination validation",
+      "published_or_installed_candidate": "Installed water-model-matched Amber 12-6 baseline; 12-6-4 is a distinct candidate requiring exact C4 propagation.",
+      "state_or_transfer_decisions": "Four Ca sites; carboxylate and water identities retained. Hydration fitting alone is not a protein-site validation.",
+      "actual_status": "Separate nonbonded Ca family, outside bonded Zn proof.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1HET",
+      "label": "Horse liver alcohol dehydrogenase",
+      "source_sha256": "a53b59f8d43e86838a0a8045dbc2dd77d3e627504970f4fbe37d35cfe9fef557",
+      "approach": "Distinct catalytic and structural Zn sites in the full dimer",
+      "published_or_installed_candidate": "ZAFF1 is a structural four-Cys candidate; catalytic two-Cys/His/two-water site outside four-coordinate ZAFF. Native NADH/NAD+ libraries available.",
+      "state_or_transfer_decisions": "Deposited title reports NADH hydroxide adduct but component NAD alone does not define the cofactor state. Preserve all four Zn and both cofactors.",
+      "actual_status": "Resolve cofactor/catalytic state; published structural template alone cannot pass whole case.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1A6Q",
+      "label": "PPM1A phosphatase",
+      "source_sha256": "3057f31ae88a26769a5e5a584c3c3aebeee815c8b276129c06b05c9235219f9a",
+      "approach": "Coupled open-shell Mn phosphatase center",
+      "published_or_installed_candidate": "Installed Mn hydration parameters are only a baseline; no matched coupled-site model verified.",
+      "state_or_transfer_decisions": "Mn oxidation, high-spin/coupled spin, bridging water protonation, phosphate state and both Mn sites.",
+      "actual_status": "Current spin-zero QM worker cannot fit this model; explicit open-shell provider/method work required.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1HL5",
+      "label": "Cu/Zn superoxide dismutase",
+      "source_sha256": "948db2ef0d8b3b7a3db65377ee604cae0cd315cfa83612ac7d2b8f2adaccba40",
+      "approach": "Joint Cu/Zn site with bridging histidine",
+      "published_or_installed_candidate": "Independent neutral-His ZAFF9 plus bare Cu is not a valid joint model.",
+      "state_or_transfer_decisions": "Cu redox/spin, His63 imidazolate bridge, water state; full dimer.",
+      "actual_status": "Requires joint redox/state-specific model, not separable site substitution.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1HCK",
+      "label": "CDK2\u2013ATP/Mg",
+      "source_sha256": "62807748b242e7e8026668edbc4242d1e46de8770e784bcfdf97b73219976d5a",
+      "approach": "Mg/ATP protein site using explicit nucleotide and ion model",
+      "published_or_installed_candidate": "Published Carlson ATP phosphate family is a candidate; named TIP3P Mg baseline. Nucleotide 12-6-4 corrections documented for TIP4PEW must not silently transfer.",
+      "state_or_transfer_decisions": "ATP charge/protonation, three phosphate donors, Mg occupancy and bound water.",
+      "actual_status": "Prior standard preparation does not establish advanced coordination fidelity; test full complex and retained site.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1A6M",
+      "label": "Oxy-myoglobin",
+      "source_sha256": "25ae24d2b518a7cb7ef24aeb1eb3fc5c35707ce4e696956d11b8f9fdf9fa7218",
+      "approach": "Oxygenated His-ligated heme model",
+      "published_or_installed_candidate": "Installed old heme-His and P450 dioxy templates are not a verified oxy-myoglobin match. P450 dioxy uses proximal Cys and is not a drop-in.",
+      "state_or_transfer_decisions": "Fe/O2 electronic state, proximal His and distal environment; oxygen and sulfate retained.",
+      "actual_status": "Need an actual published matched oxy-His heme model or new validated open-shell treatment.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1LUV",
+      "label": "Human MnSOD H30V",
+      "source_sha256": "d9ee98c7d0b85aedf2fa38b3244eea06d720c40054346d8d48a0d8263aefe521",
+      "approach": "Open-shell MnSOD family",
+      "published_or_installed_candidate": "No validated complete matched model established from installed templates.",
+      "state_or_transfer_decisions": "Mn oxidation/spin and bound solvent; declared oligomer retained.",
+      "actual_status": "Outside current closed-shell Zn QM worker; distinct model/provider validation required.",
+      "full_panel_case_pass": false
+    },
+    {
+      "id": "1OKL",
+      "label": "Carbonic anhydrase II\u2013dansylamide",
+      "source_sha256": "3cd22e41fd417a930d5ac23322e8a1cc667302d8765733fa983ca5d977b7d674",
+      "approach": "Published native MCPB Zn-sulfonamide reference plus separate retained Hg",
+      "published_or_installed_candidate": "Native 18 Seminario terms and ESP extraction reproduced; current native RESP parity passed, historical published charges differ.",
+      "state_or_transfer_decisions": "MNS anion; Hg at Cys205 and its source contacts cannot be deleted to claim full case success.",
+      "actual_status": "Zn adapter reference only; complete panel case still requires a defensible Hg model.",
+      "full_panel_case_pass": false
+    }
+  ],
+  "published_sources": [
+    {
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/ZAFF.php",
+      "scope": "Four-coordinate Zn template scope, contextual histidine assignment and water limitations"
+    },
+    {
+      "url": "https://ambermd.org/AmberModels_ions.php",
+      "scope": "Named water-specific ion models; 12-6-4 distinctions and donor correction scope"
+    },
+    {
+      "url": "https://ambermd.org/AmberModels_contrib.php",
+      "scope": "Contributor model provenance and applicability"
+    },
+    {
+      "url": "https://ambermd.org/tutorials/advanced/tutorial20/mcpbpy.php",
+      "scope": "Native site parameterization and 1OKL Zn reference"
+    },
+    {
+      "url": "https://personalpages.manchester.ac.uk/staff/Richard.Bryce/amber/index.html",
+      "scope": "Candidate cofactor parameter catalogue; individual model files still need exact matching"
+    }
+  ],
+  "installed_candidate_library_hashes": [
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NADH_2xNa+_8A_Oct_TIP3P.prmtop",
+      "sha256": "6cd2cdc050278374b5cb9b084d5c4518d1bb741d8bad942f2f9b336e60604476"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/leap_NADH_prmtop.log",
+      "sha256": "7840dd3ee497149bc5e8656402f2fed4e9f957a43165ffc11954eb2e7ef4990c"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/0README",
+      "sha256": "4374ef99713d5520686b1b972055267f72638e361a3ed43fb5b27270f9d39c37"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/frcmod.NAD+",
+      "sha256": "9e742ee3ec44f8ffb493699c4650588d07a3d8ad1e2f47d663ee37fee9c3be7a"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NAD+_vac.prmtop",
+      "sha256": "98b1f9fe05bd9cfa262946df83a176e45c02a0e1f71aff5aaa1f75438f19bc44"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/frcmod.NADH",
+      "sha256": "344e84aed19be46b09fd1b18a6faa9fcf26e9d37666e3671e2b720a362849078"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NAD+.lib",
+      "sha256": "d9da1c5fa5ff3d3a48f6b3700cd1e746b57ffbedebc33772733d112894b88907"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NADH_2xNa+_8A_Oct_TIP3P.prmcrd",
+      "sha256": "b9b01c3c7ae6305812e1ce05de21456d058bbe778650e73a180d954b70763b0b"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NADH.lib",
+      "sha256": "fdb6c588faab4061be68d11e7fb0d43f80812538094c3bd3fbaec2870f331312"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NAD+_vac.prmcrd",
+      "sha256": "c7d1fa7f73399f67d19423c2e3fb691904955488800f2abb21af42011bd62aa7"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NADH_vac.prmcrd",
+      "sha256": "35afdb25034dc07422f03295ef632382576d80cffe6cc6245caae0a84565c062"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NAD+_1xNa+_8A_Oct_TIP3P.prmcrd",
+      "sha256": "1dc4478a6a26929103d1c1309db87c0686cc3eba82351bc7681715303b85c816"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NADH_vac.prmtop",
+      "sha256": "8809c8198f49bc5e1265664c6ab44ae6b9e6b9e88f70bc01d5da4713590f5a5a"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/NAD+_1xNa+_8A_Oct_TIP3P.prmtop",
+      "sha256": "e83d6d23018a9bec6f6d30a75ae3715b385e41fee024bdab0f68695db96e59a0"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/NADH_and_NAD+/leap_NAD+_prmtop.log",
+      "sha256": "52273851061ce23af912fad1041f653cd467de4b5a1a31e98d3de3ea1d63642d"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/heme/frcmod.hemall",
+      "sha256": "33cd8620c3e36ba150633cc28608e6d2dbf4aa9411e23c7d817ce638a9fb1e42"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/heme/0README",
+      "sha256": "5b1ca6b3f4c6e8be80884f31da68349763fd2e5169ca772b503bede4ba282db3"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/heme/heme_all.in",
+      "sha256": "1240972761ccf0b0894366188280f5df8b42f083c29a19a2ebccb4cad7a83bf7"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/heme/heme_uni.in",
+      "sha256": "7fa1ea535e20a13df8bde3c3de04805ce497b25d3328abcb4a2c9dd6967c2546"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/heme/frcmod.hemuni",
+      "sha256": "1446da2c0a430c6414575ea1a1f0b6deb3ca742bb7d8b7a094012eeecdbdc0e1"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/CPDI/CYP.mol2",
+      "sha256": "908223f7b6fa7e4ca4615af956f8eb7bccd20cfbecc57d4dfcb0cf16c0fb8587"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/CPDI/HEM.mol2",
+      "sha256": "7b29a6b22d5f465bdbd9bdfd3a8fdad6321d34f70d53dcc883bce778e464cdd5"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/DIOXY/CYP.mol2",
+      "sha256": "036b6a4ebfbaa09a5f21fae640f69157232bb144a9ddc2ea3cdff6123c195db2"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/DIOXY/HEM.mol2",
+      "sha256": "53d00f44e6909448837557246abedc4588015149df7d7f99c7875628d443f2c3"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/IC6/CYP.mol2",
+      "sha256": "866d0cfab2c652a9306acce700774ebe1943bd521141063ed8fc047b76df2565"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/IC6/HEM.mol2",
+      "sha256": "9ddc699b004f974dee885ff21eae5a9132fbaa771dfb887f09a6aec5fe473f5f"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/CPDI/CPDI.frcmod",
+      "sha256": "2463f71fa571aec5d8bfef4ba7ce0ffad728552dd8992272615f07875c16b550"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/DIOXY/DIOXY.frcmod",
+      "sha256": "9ea8c857aee1ccbd06b12d99c296db950cd096e7971d1236f421cebeb152b9d8"
+    },
+    {
+      "path": ".tools/ambertools/dat/contrib/Shahrokh_heme/IC6/IC6.frcmod",
+      "sha256": "2ab0aa90ced427d99a4797f90104e0d4854dd5a848dfff7c89e68612e6b27d7d"
+    }
+  ]
+}

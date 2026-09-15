@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-09-13T17:22:01.547266+00:00",
+  "checks": "63 affected tests pass; real 1CA2 atom-map roundtrip and GROMACS native mechanics pass. Research-only stage retained.",
+  "files": {
+    "backend/advanced_parameters.py": "a3f01a24c93615247993871d82eac43c7bc6eb0556b46005eeb87cf37192980f",
+    "backend/native_atom_mapping.py": "546829061f0cc7afadcb21c3199c6ea103efd010ec1ada95e6affb1160adae92",
+    "backend/bonded_site_validation.py": "0c64b6b6957398879a3819288ba849a5985aa000b2c60e72e86be9c516284d0c",
+    "backend/tests/test_advanced_parameters.py": "a894fe493b0b5c0d64cbbb0430c313ac0ab27a1f518f52efffcdf1aeecdd0d50",
+    "backend/tests/test_native_atom_mapping.py": "a23e6a2002f0105850fbab6fd0e39979bcba4a7a7d0b6b39967382dc397df08b",
+    "backend/tests/test_bonded_site_validation.py": "3acf5033b0342a13a70ff1c9263856c65c6b8f9393f7111b424fbb572ede13b3",
+    "docs/audit/advanced-chemistry/identity-and-mechanics-review-tests.log": "726c225254b3af30b53c0b1c2b1f912ff8fe89f18e6dbff07cc4161fca66e3c8",
+    "docs/audit/advanced-chemistry/identity-review-1ca2-roundtrip.json": "76a02e9a41bc0b359a58815eb3a76cc6239dbf3f01c04d5b1d5ba3126fa4c70f",
+    "docs/audit/advanced-chemistry/prototype-1ca2-gromacs-static/gromacs-reader-native-mechanics-null-terms-reviewed.json": "377efa66b01cd23ab2796400602adddcaeea05ae924c2df8dce67d937d38221d"
+  }
+}

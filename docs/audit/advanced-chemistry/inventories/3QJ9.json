@@ -1,0 +1,829 @@
+{
+  "id": "3QJ9",
+  "recorded_at_utc": "2026-09-13T15:57:55.309390+00:00",
+  "input": {
+    "path": "inputs/3QJ9.cif",
+    "source_url": "https://files.rcsb.org/download/3QJ9.cif",
+    "sha256": "8825f8401d7cbf9efbcf7cf0357eb6b2ca705b53d86a720b693da0b38aa71334",
+    "bytes": 1002513
+  },
+  "title": "Crystal structure of fatty acid amide hydrolase with small molecule inhibitor",
+  "organisms": [
+    "Rattus norvegicus"
+  ],
+  "resolution_angstrom": "2.3000",
+  "primary_citations": [
+    {
+      "id": "primary",
+      "title": "Discovery and molecular basis of potent noncovalent inhibitors of fatty acid amide hydrolase (FAAH).",
+      "journal_abbrev": "Proc.Natl.Acad.Sci.USA",
+      "journal_volume": "108",
+      "page_first": "7379",
+      "page_last": "7384",
+      "year": "2011",
+      "journal_id_ASTM": "PNASA6",
+      "country": "US",
+      "journal_id_ISSN": "0027-8424",
+      "journal_id_CSD": "0040",
+      "book_publisher": null,
+      "pdbx_database_id_PubMed": "21502526",
+      "pdbx_database_id_DOI": "10.1073/pnas.1016167108"
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "1",
+      "details": "author_and_software_defined_assembly",
+      "method_details": "PISA",
+      "oligomeric_details": "dimeric",
+      "oligomeric_count": "2"
+    }
+  ],
+  "assembly_generators": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,AA,BA,CA,DA"
+    }
+  ],
+  "assembly_operators": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "entities": [
+    {
+      "id": "1",
+      "type": "polymer",
+      "src_method": "man",
+      "pdbx_description": "Fatty-acid amide hydrolase 1",
+      "formula_weight": "64593.180",
+      "pdbx_number_of_molecules": "2",
+      "pdbx_ec": "3.5.1.99",
+      "pdbx_mutation": null,
+      "pdbx_fragment": "Residues 32-579",
+      "details": null
+    },
+    {
+      "id": "2",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "1-{(3S)-1-[4-(1-benzofuran-2-yl)pyrimidin-2-yl]piperidin-3-yl}-3-ethyl-1,3-dihydro-2H-benzimidazol-2-one",
+      "formula_weight": "439.509",
+      "pdbx_number_of_molecules": "2",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "3",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "1,2-ETHANEDIOL",
+      "formula_weight": "62.068",
+      "pdbx_number_of_molecules": "21",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "4",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "GLYCEROL",
+      "formula_weight": "92.094",
+      "pdbx_number_of_molecules": "2",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "5",
+      "type": "non-polymer",
+      "src_method": "syn",
+      "pdbx_description": "TRIETHYLENE GLYCOL",
+      "formula_weight": "150.173",
+      "pdbx_number_of_molecules": "1",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    },
+    {
+      "id": "6",
+      "type": "water",
+      "src_method": "nat",
+      "pdbx_description": "water",
+      "formula_weight": "18.015",
+      "pdbx_number_of_molecules": "696",
+      "pdbx_ec": null,
+      "pdbx_mutation": null,
+      "pdbx_fragment": null,
+      "details": null
+    }
+  ],
+  "components": [
+    {
+      "id": "ALA",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2",
+      "formula_weight": "89.093"
+    },
+    {
+      "id": "ARG",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ARGININE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N4 O2 1",
+      "formula_weight": "175.209"
+    },
+    {
+      "id": "ASN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARAGINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H8 N2 O3",
+      "formula_weight": "132.118"
+    },
+    {
+      "id": "ASP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ASPARTIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C4 H7 N O4",
+      "formula_weight": "133.103"
+    },
+    {
+      "id": "CYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "CYSTEINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O2 S",
+      "formula_weight": "121.158"
+    },
+    {
+      "id": "EDO",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "1,2-ETHANEDIOL",
+      "pdbx_synonyms": "ETHYLENE GLYCOL",
+      "formula": "C2 H6 O2",
+      "formula_weight": "62.068"
+    },
+    {
+      "id": "GLN",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H10 N2 O3",
+      "formula_weight": "146.144"
+    },
+    {
+      "id": "GLU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLUTAMIC ACID",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O4",
+      "formula_weight": "147.129"
+    },
+    {
+      "id": "GLY",
+      "type": "peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "GLYCINE",
+      "pdbx_synonyms": null,
+      "formula": "C2 H5 N O2",
+      "formula_weight": "75.067"
+    },
+    {
+      "id": "GOL",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "GLYCEROL",
+      "pdbx_synonyms": "GLYCERIN; PROPANE-1,2,3-TRIOL",
+      "formula": "C3 H8 O3",
+      "formula_weight": "92.094"
+    },
+    {
+      "id": "HIS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "HISTIDINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H10 N3 O2 1",
+      "formula_weight": "156.162"
+    },
+    {
+      "id": "HOH",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "WATER",
+      "pdbx_synonyms": null,
+      "formula": "H2 O",
+      "formula_weight": "18.015"
+    },
+    {
+      "id": "ILE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "ISOLEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LEU",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LEUCINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H13 N O2",
+      "formula_weight": "131.173"
+    },
+    {
+      "id": "LYS",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "LYSINE",
+      "pdbx_synonyms": null,
+      "formula": "C6 H15 N2 O2 1",
+      "formula_weight": "147.195"
+    },
+    {
+      "id": "MET",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "METHIONINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2 S",
+      "formula_weight": "149.211"
+    },
+    {
+      "id": "PGE",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "TRIETHYLENE GLYCOL",
+      "pdbx_synonyms": null,
+      "formula": "C6 H14 O4",
+      "formula_weight": "150.173"
+    },
+    {
+      "id": "PHE",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PHENYLALANINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O2",
+      "formula_weight": "165.189"
+    },
+    {
+      "id": "PRO",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "PROLINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H9 N O2",
+      "formula_weight": "115.130"
+    },
+    {
+      "id": "QJ9",
+      "type": "non-polymer",
+      "mon_nstd_flag": null,
+      "name": "1-{(3S)-1-[4-(1-benzofuran-2-yl)pyrimidin-2-yl]piperidin-3-yl}-3-ethyl-1,3-dihydro-2H-benzimidazol-2-one",
+      "pdbx_synonyms": null,
+      "formula": "C26 H25 N5 O2",
+      "formula_weight": "439.509"
+    },
+    {
+      "id": "SER",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "SERINE",
+      "pdbx_synonyms": null,
+      "formula": "C3 H7 N O3",
+      "formula_weight": "105.093"
+    },
+    {
+      "id": "THR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "THREONINE",
+      "pdbx_synonyms": null,
+      "formula": "C4 H9 N O3",
+      "formula_weight": "119.119"
+    },
+    {
+      "id": "TRP",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TRYPTOPHAN",
+      "pdbx_synonyms": null,
+      "formula": "C11 H12 N2 O2",
+      "formula_weight": "204.225"
+    },
+    {
+      "id": "TYR",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "TYROSINE",
+      "pdbx_synonyms": null,
+      "formula": "C9 H11 N O3",
+      "formula_weight": "181.189"
+    },
+    {
+      "id": "VAL",
+      "type": "L-peptide linking",
+      "mon_nstd_flag": "y",
+      "name": "VALINE",
+      "pdbx_synonyms": null,
+      "formula": "C5 H11 N O2",
+      "formula_weight": "117.146"
+    }
+  ],
+  "modified_residues": [],
+  "raw_connections": [],
+  "connections": [],
+  "metal_atoms": [],
+  "nonstandard_residues": [
+    {
+      "label_chain": "C",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "600",
+      "insertion_code": null,
+      "component": "QJ9",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "D",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "580",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "E",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "581",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "F",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "582",
+      "insertion_code": null,
+      "component": "GOL",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "C3",
+        "O1",
+        "O2",
+        "O3"
+      ]
+    },
+    {
+      "label_chain": "G",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "583",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "H",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "584",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "I",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "585",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "J",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "586",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "K",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "587",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "L",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "588",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "M",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "589",
+      "insertion_code": null,
+      "component": "PGE",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ]
+    },
+    {
+      "label_chain": "N",
+      "label_sequence_id": null,
+      "author_chain": "A",
+      "author_residue_id": "590",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "O",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "600",
+      "insertion_code": null,
+      "component": "QJ9",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "P",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "580",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "Q",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "581",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "R",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "582",
+      "insertion_code": null,
+      "component": "GOL",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "C3",
+        "O1",
+        "O2",
+        "O3"
+      ]
+    },
+    {
+      "label_chain": "S",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "583",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "T",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "584",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "U",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "585",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "V",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "586",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "W",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "587",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "X",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "588",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "Y",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "589",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "Z",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "590",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "AA",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "591",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    },
+    {
+      "label_chain": "BA",
+      "label_sequence_id": null,
+      "author_chain": "B",
+      "author_residue_id": "592",
+      "insertion_code": null,
+      "component": "EDO",
+      "observed_heavy_atom_names": [
+        "C1",
+        "C2",
+        "O1",
+        "O2"
+      ]
+    }
+  ],
+  "water_residue_count": 696,
+  "atom_count_model1": 9341,
+  "chains": [
+    {
+      "label_chain": "A",
+      "author_chain": "A",
+      "entity_id": "1",
+      "sequence_length": 587,
+      "observed_residues": 549,
+      "internal_gaps": []
+    },
+    {
+      "label_chain": "B",
+      "author_chain": "B",
+      "entity_id": "1",
+      "sequence_length": 587,
+      "observed_residues": 544,
+      "internal_gaps": []
+    }
+  ],
+  "status": "inventoried"
+}

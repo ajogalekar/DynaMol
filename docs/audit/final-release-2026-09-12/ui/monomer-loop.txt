@@ -1,0 +1,298 @@
+- banner:
+  - link "DynaMol home":
+    - /url: "#"
+    - text: DynaMol
+    - generic: MOLECULES IN MOTION
+    - generic: α
+  - navigation "Workspace":
+    - button "Explore":
+      - text: Explore
+    - button "Simulate":
+      - text: Simulate
+  - generic: Local workspace
+  - button "Open quick guide":
+  - generic: v0.1
+- generic: Workspace
+- button "1UA2 · chain A":
+  - text: 1UA2 · chain A
+- generic: STRUCTURE
+- status "Saved locally"
+- button "Projects":
+  - text: Projects
+- button "Open files":
+  - text: Open files
+- main:
+  - complementary:
+    - text: SCENE
+    - generic: "01"
+    - heading "1UA2 · chain A" [level=2]
+    - paragraph: 288 residues · 2,322 atoms
+    - button "Structure details":
+      - text: Structure details
+    - heading "Named selections" [level=3]
+    - generic: "0"
+    - textbox "Selection name":
+      - /placeholder: Name these atoms…
+    - button "Save named selection" [disabled]:
+    - paragraph: Pick atoms or focus a residue, then save a selection.
+    - heading "Representation" [level=3]
+    - button "Ribbons":
+      - generic: Ribbons
+    - button "Ball & stick":
+      - generic: Ball & stick
+    - button "Sticks":
+      - generic: Sticks
+    - button "Surface":
+      - generic: Surface
+    - generic: Color by
+    - combobox "Color molecules by":
+      - option "Sequence"
+      - option "Chain"
+      - option "Element" [selected]
+    - heading "Visibility" [level=3]
+    - button "Hide protein & nucleic acids" [pressed]:
+      - text: Protein & nucleic acids
+      - generic: 2,291 atoms
+    - button "Hide ligands" [pressed]:
+      - text: Ligands
+      - generic: 31 atoms
+    - button "Show water":
+      - text: Water
+      - generic: 0 atoms
+    - button "Hide ions" [pressed]:
+      - text: Ions
+      - generic: 0 atoms
+    - generic: H
+    - generic: Hydrogens
+    - button "Hidden"
+    - button "Polar only"
+    - button "All"
+    - heading "Go to a residue" [level=3]
+    - textbox "Find a residue":
+      - /placeholder: e.g. 35, GLY35, A:35
+    - button "Focus residue":
+    - generic: PRIVATE BY DESIGN
+    - paragraph:
+      - text: Your files. Your computer.
+      - text: An open source workspace.
+    - button "Meet DynaMol":
+      - text: Meet DynaMol
+  - generic: THE MOLECULAR CANVAS
+  - generic: 1UA2 · chain A
+  - button "Toggle measurement inspector":
+  - img "Interactive 3D molecular structure of 1UA2 · chain A. Drag to rotate, scroll or pinch to zoom, right-drag to pan, double-click an atom to focus."
+  - button "Show measurements" [disabled]:
+  - button "Zoom in":
+  - button "Zoom out":
+  - button "Fit molecule":
+  - button "Auto rotate":
+  - button "Save snapshot":
+  - button "Full screen":
+  - text: Drag to rotate
+  - text: Scroll or pinch to zoom
+  - text: Right drag to pan
+  - generic: "Y"
+  - strong: X
+  - emphasis: Z
+  - separator "Resize protein view":
+    - generic: Drag to resize view
+  - button "First frame":
+  - button "Previous frame":
+  - button "Play trajectory" [disabled]:
+  - button "Next frame":
+  - button "Last frame":
+  - generic: "0.00"
+  - generic: ps / 0.00 ps
+  - combobox "Playback speed":
+    - option "0.25×"
+    - option "0.5×"
+    - option "1×" [selected]
+    - option "2×"
+    - option "4×"
+  - button "Loop playback" [pressed]:
+  - slider "Trajectory frame" [disabled]: "0"
+  - generic: FRAME 1 / 1
+  - text: Smooth interpolation
+  - text: 1 saved frames
+  - region "Trajectory measurements":
+    - text: MOTION, MEASURED
+    - button "Export measurement CSV" [disabled]:
+    - button "Measure":
+      - text: Measure
+    - strong: Follow a molecular interaction.
+    - paragraph: Pick atoms in the scene to plot a distance, angle, dihedral, or hydrogen bond over time.
+    - button "Add a measurement":
+      - text: Add a measurement
+  - generic "Structural analysis RMSD · RMSF · saved selections":
+    - text: Structural analysis
+    - generic: RMSD · RMSF · saved selections
+  - option "RMSD · change over time" [selected]
+  - option "RMSF · local fluctuations"
+  - option "Protein Cα" [selected]
+  - option "Protein backbone"
+  - option "Protein heavy atoms"
+  - option "All solute heavy atoms"
+  - option "Current selected atoms (0)" [disabled]
+  - option "Fit protein Cα" [selected]
+  - option "Fit protein backbone"
+  - option "Fit measured atoms"
+  - option "No fitting"
+  - option "Make molecules whole" [selected]
+  - option "Saved Cartesian coordinates"
+- contentinfo:
+  - text: Ready to explore
+  - emphasis
+  - text: 2,322 atoms
+  - text: OpenMM + GROMACS
+  - button "Keyboard shortcuts ?":
+    - text: Keyboard shortcuts
+    - generic: "?"
+- dialog "Set molecules in motion.":
+  - banner:
+    - text: SIMULATION STUDIO
+    - heading "Set molecules in motion." [level=2]
+    - button "Close simulation studio":
+  - paragraph: A few good defaults. All the controls when you need them.
+  - generic: "01"
+  - heading "Choose your engine" [level=3]
+  - text: Runs locally
+  - button "OpenMM" [pressed]:
+    - strong: OpenMM
+    - generic: Protein & complex preparation
+    - generic: Installed · 8.6.0
+  - button "GROMACS":
+    - strong: GROMACS
+    - generic: Native setup for standard proteins
+    - generic: Installed · 2025.4-conda_forge
+  - paragraph: Prepare with Amber ff14SB below. Recorded protonation states, supported ligand parameters and the water preview are retained by OpenMM.
+  - region "Structure loading and protein preparation":
+    - generic: "02"
+    - heading "Start with a structure" [level=3]
+    - generic: Loads in the live view
+    - tablist "Structure source":
+      - tab "Upload":
+        - text: Upload
+      - tab "Fetch" [selected]:
+        - text: Fetch
+      - tab "SMILES":
+        - text: SMILES
+    - text: Database
+    - combobox "Structure database":
+      - option "RCSB Protein Data Bank" [selected]
+      - option "PubChem small molecules"
+    - textbox "PDB accession":
+      - /placeholder: PDB ID, e.g. 1UBQ
+      - text: 1UA2
+    - button "Fetch":
+      - text: Fetch
+    - paragraph: Fetches the deposited structure and sequence records used to identify missing residues.
+    - generic: In view · starting structure
+    - strong: 1UA2 · chain A
+    - generic: 2,322 atoms · 288 residues
+    - status:
+      - generic: Chain A selected
+      - generic: One protein chain is loaded. Review missing regions and prepare this structure.
+      - generic: 1 associated molecules retained · 51 other molecules omitted
+      - generic "Selection details"
+      - button "Restore full structure"
+    - heading "Protein + ligand preparation" [level=3]
+    - generic: OpenMM · review & repair
+    - region "Missing atoms & residues":
+      - heading "Missing atoms & residues" [level=4]
+      - checkbox "Add missing heavy atoms" [checked]
+      - text: Add missing heavy atoms
+      - checkbox "Build supported missing loops / residues" [checked] [active]
+      - text: Build supported missing loops / residues
+      - generic: 59 missing residues · 1 backbone breaks
+      - text: Missing sequence regions
+      - generic: Chain A · 12 residues at terminus
+      - generic: MET–ALA–LEU–ASP–VAL–LYS–SER–ARG–ALA–LYS–ARG–TYR · reported · prepare the observed terminus
+      - generic: Chain A · 12 residues
+      - generic: LYS–LEU–GLY–HIS–ARG–SER–GLU–ALA–LYS–ASP–GLY–ILE · longer loop · provisional starting model
+      - generic: Chain A · 35 residues at terminus
+      - generic: CYS–PRO–VAL–GLU–THR–LEU–LYS–GLU–GLN–SER–ASN–PRO–ALA–LEU–ALA–ILE–LYS–ARG–LYS–ARG–THR–GLU–ALA–LEU–GLU–GLN–GLY–GLY–LEU–PRO–LYS–LYS–LEU–ILE–PHE · reported · prepare the observed terminus
+      - generic: Backbone C–N separation is 11.40 Å; this connection requires repair before force-field preparation.
+      - paragraph: "Current computational limits: 12 residues per internal gap and 96 residues total."
+      - paragraph: Use the original sequence to build a provisional starting model. Longer loops take more work. Geometry is checked; loop conformations remain uncertain.
+    - generic "Modified protein residues":
+      - generic: 1 modified protein residues
+      - generic: Kept in the protein with their chemical identity.
+      - generic "TPO · A:170 Protein template":
+        - generic: TPO · A:170
+        - strong: Protein template
+      - paragraph: Ligand removal preserves modified protein residues. Unsupported residues require an exact amino-acid template.
+    - generic "Ligand preparation choices":
+      - generic: 1 molecules · 1 retained
+      - generic: Observed atoms stay in place. Choose how to handle incomplete molecules before preparing.
+      - generic "› ATP · E:381 -4 charge":
+        - text: ›
+        - generic: ATP · E:381
+        - strong: "-4 charge"
+      - option "Keep observed molecule" [selected]
+      - option "Build missing atoms from chemical reference" [disabled]
+      - option "Remove this molecule from prepared structure"
+    - generic "Preparation readiness":
+      - generic: Checking structure and settings…
+      - button "Recheck readiness":
+    - text: Target pH
+    - spinbutton "Preparation pH": "7"
+    - button "Prep complex" [disabled]:
+      - text: Prep complex
+    - paragraph: Rebuild protein hydrogens for the selected pH, repair missing heavy atoms, and sample side-chain clashes. Ligands receive GAFF2 / AM1-BCC parameters for explicit-water OpenMM runs. Ionization uses recorded defaults, not a site-specific pKₐ calculation.
+    - button "Preparation options":
+      - text: Preparation options
+  - region "Water & environment":
+    - generic: "03"
+    - heading "Water & environment" [level=3]
+    - text: Solvent environment
+    - combobox "Solvent environment":
+      - option "Implicit water · faster exploration" [selected]
+      - option "Explicit water · periodic box"
+    - generic: Build a water box
+    - generic: Prepare the structure above to create a visible solvent box.
+    - button "Build water" [disabled]:
+      - text: Build water
+    - text: Box padding
+    - spinbutton "Box padding nm" [disabled]: "1"
+    - generic: nm
+  - generic: "04"
+  - heading "Make it your simulation" [level=3]
+  - text: Simulation name
+  - textbox "Simulation name": My molecular journey
+  - text: Duration
+  - spinbutton "Duration ps": "10"
+  - generic: ps
+  - text: Temperature
+  - spinbutton "Temperature K": "300"
+  - generic: K
+  - paragraph: Amber ff14SB · Langevin dynamics. Implicit uses GBn2; explicit uses TIP3P. NVT exploration. Prepare protein–ligand complexes above, then build water and minimize before dynamics.
+  - region "Track during simulation":
+    - button "Track during simulation Optional":
+      - generic: Track during simulation
+      - generic: Optional
+  - button "Advanced controls Optional":
+    - text: Advanced controls
+    - generic: Optional
+  - text: 5,000 production steps
+  - generic: ~101 saved frames
+  - paragraph: Starts from the first frame. Initial relaxation precedes production. Native checkpoints are saved automatically during production; Resume retains the original configuration. Short runs do not establish convergence.
+  - generic "Simulation readiness":
+    - generic: Before you continue
+    - button "Recheck readiness":
+    - list:
+      - listitem: This complex has no verified ligand parameters. Run protein and ligand preparation before adding water or starting MD; no molecules were removed.
+    - strong: 2,322
+    - text: atoms
+    - strong: "101"
+    - text: saved frames
+    - strong: 85 MiB
+    - text: estimated disk
+    - strong: 69.2 GiB
+    - text: free
+    - generic "Model and preparation details"
+  - button "Start simulation" [disabled]:
+    - text: Start simulation
+  - paragraph: Keep exploring while your simulation runs in the background.
+  - heading "Background activity" [level=3]
+  - generic: "0"
+  - generic: Your runs will appear here, with live progress and logs.

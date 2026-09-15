@@ -1,0 +1,241 @@
+{
+  "job_id": "4ee199dd7b4e4c1b",
+  "data_root": "/Users/ashujo/Documents/Science/DynaMol/data/integration-checks/five-system-gromacs",
+  "checks": {
+    "completed": {
+      "passed": true,
+      "status": "completed",
+      "completed_steps": 50000,
+      "error": null
+    },
+    "physical_trajectory": {
+      "passed": true,
+      "dataset_id": "e2dad7ca2c7f46a6",
+      "atoms": 65556,
+      "frames": 101,
+      "final_time_ps": 100.0
+    },
+    "coordinates_evolve": {
+      "passed": true,
+      "maximum_displacement_nm": 14.031243324279785
+    },
+    "solvent_box": {
+      "passed": true,
+      "explicit": true,
+      "has_box": true,
+      "fixed_volume": true
+    },
+    "display_payload": {
+      "passed": true
+    },
+    "protein_heavy_bonds": {
+      "passed": true,
+      "bonds": 2490,
+      "frames": 101,
+      "maximum_angstrom": 1.9958217144012451,
+      "maximum_frame": 45,
+      "maximum_pair": [
+        3695,
+        3698
+      ],
+      "minimum_angstrom": 1.1413127183914185,
+      "threshold_angstrom": 3.0,
+      "note": "Gross bond-length screen with minimum-image distances; not a force-field or structural-quality validation."
+    },
+    "residue_stereochemistry": {
+      "passed": true,
+      "centers_per_frame": 313,
+      "frames": 101,
+      "failures": []
+    },
+    "native_trajectory": {
+      "passed": true,
+      "max_coordinate_difference_nm": 0.0,
+      "tolerance_nm": 1e-07,
+      "frames": 101,
+      "atoms": 65556
+    },
+    "native_box": {
+      "passed": true
+    },
+    "energy_diagnostics": {
+      "passed": true,
+      "rows": 101,
+      "min_potential_kj_mol": -842893.25,
+      "max_potential_kj_mol": -839155.4375
+    },
+    "gross_temperature_screen": {
+      "passed": true,
+      "target_k": 300.0,
+      "mean_k": 299.9797592673267,
+      "min_k": 297.492401,
+      "max_k": 302.707581,
+      "note": "Broad numerical alarm only; no claim of equilibration or expected distribution."
+    },
+    "live_measurement_coverage": {
+      "passed": true,
+      "errors": []
+    },
+    "measurement:backbone-distance": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": false,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "measurement:backbone-angle": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": false,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "measurement:backbone-dihedral": {
+      "passed": true,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0.0001,
+      "valid_frames": 101,
+      "undefined_frames": 0,
+      "circular": true,
+      "identities_match": true,
+      "times_match": true,
+      "undefined_reasons_match": true
+    },
+    "recorded_artifact_hashes": {
+      "passed": true,
+      "checked": 54,
+      "mismatches": []
+    }
+  },
+  "evidence": {
+    "jobs/4ee199dd7b4e4c1b/status.json": {
+      "sha256": "266208ee6a4439850f9b48cf910926b3ca8888f82ec84313065c9aaf2261c7fa",
+      "bytes": 7223
+    },
+    "jobs/4ee199dd7b4e4c1b/config.json": {
+      "sha256": "4ba9cafe2668fab245424d94648545dbe74d3eff2798864010f3698c4c6aa452",
+      "bytes": 1078
+    },
+    "jobs/4ee199dd7b4e4c1b/provenance.json": {
+      "sha256": "46060258a3a948605cdd402819c1b83c939372d3766777e2db160abb325486aa",
+      "bytes": 12903
+    },
+    "datasets/e2dad7ca2c7f46a6/metadata.json": {
+      "sha256": "0a97e705d9331fba63cecf814248163e3fca78f4b67d8dd04fc951b8bc62543c",
+      "bytes": 14913445
+    },
+    "datasets/e2dad7ca2c7f46a6/physical.npz": {
+      "sha256": "14df2cf42b729503d902c545e9a43d1e65f15a951097c28f9375e7d7604467f2",
+      "bytes": 51153988
+    },
+    "datasets/e2dad7ca2c7f46a6/topology.pdb": {
+      "sha256": "e6b35aea44d220522805f9e87395a9d21fcf8f4d1e674ce99d1539a7a1887077",
+      "bytes": 5310195
+    },
+    "jobs/4ee199dd7b4e4c1b/production.xtc": {
+      "sha256": "5093cf2c9c3aa8c342de0ee1bce484d91f89cb8e932e7f654ec72ffc2ef51f59",
+      "bytes": 24102092
+    },
+    "jobs/4ee199dd7b4e4c1b/system.gro": {
+      "sha256": "bd8ae4917ace7acb4b9a9f74319ba686901425acec85b489d18b31f4b6c1c8a9",
+      "bytes": 2950074
+    },
+    "jobs/4ee199dd7b4e4c1b/energies.csv": {
+      "sha256": "5d58e5596a945f55b7b7025960cab141a9898685d331fa7cb92e006b9521a4d5",
+      "bytes": 4839
+    },
+    "jobs/4ee199dd7b4e4c1b/measurements.json": {
+      "sha256": "354f58f902873d7c88650b868b56aeb0048d681f9846870fd45a82a7d6b60e47",
+      "bytes": 18539
+    },
+    "jobs/4ee199dd7b4e4c1b/measurement-identity.json": {
+      "sha256": "70e92e0411479ec63448b2d57fcb56777f6fc3507f16848b999ad69917c8a517",
+      "bytes": 279
+    },
+    "jobs/4ee199dd7b4e4c1b/input-state.json": {
+      "sha256": "bbd24ea691707f76bee5ed2f8a14009082f4ec238efabf444b5ee2047fbf433c",
+      "bytes": 188
+    }
+  },
+  "scope": "Saved-artifact consistency and gross numerical health for exploratory NVT software pressure testing; no equilibration, convergence, biological stability, or pose-accuracy claim.",
+  "limits": [
+    "Temperature bands and bond limits are gross alarms, not statistical convergence tests.",
+    "NVT temperature fluctuations and total-energy changes are expected; NVE energy conservation is not tested.",
+    "Live/posthoc comparison uses the app's geometry implementation; its independent analytic controls are tested separately."
+  ],
+  "engine": "gromacs",
+  "config": {
+    "dataset_id": "eb4e9d2461e2432d",
+    "engine": "gromacs",
+    "name": "1SUG \u00b7 100 ps GROMACS pressure test",
+    "duration_ps": 100.0,
+    "temperature_k": 300.0,
+    "timestep_fs": 2.0,
+    "report_interval": 500,
+    "friction_ps": 1.0,
+    "seed": 20260913,
+    "solvent": "explicit",
+    "minimize": true,
+    "equilibration_steps": 5000,
+    "padding_nm": 1.0,
+    "measurements": [
+      {
+        "id": "backbone-distance",
+        "kind": "distance",
+        "atoms": [
+          623,
+          1831
+        ],
+        "label": "Backbone CA span",
+        "color": "#74dfc5",
+        "trackDuringRun": null
+      },
+      {
+        "id": "backbone-angle",
+        "kind": "angle",
+        "atoms": [
+          1225,
+          1233,
+          1242
+        ],
+        "label": "Three consecutive CA angle",
+        "color": "#f5b66f",
+        "trackDuringRun": null
+      },
+      {
+        "id": "backbone-dihedral",
+        "kind": "dihedral",
+        "atoms": [
+          1225,
+          1233,
+          1242,
+          1248
+        ],
+        "label": "Four consecutive CA dihedral",
+        "color": "#8aa4ff",
+        "trackDuringRun": null
+      }
+    ]
+  },
+  "elapsed_seconds": 943.65,
+  "versions": {
+    "openmm": "8.6.0",
+    "mdtraj": "1.11.1.post2",
+    "numpy": "2.4.6"
+  },
+  "cpu_threads": 4,
+  "expected": {
+    "production_steps": 50000,
+    "frames": 101,
+    "final_time_ps": 100.0
+  },
+  "passed": true
+}

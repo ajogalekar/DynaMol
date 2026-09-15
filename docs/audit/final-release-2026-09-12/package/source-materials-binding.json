@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "scope": "Exact application payload to frozen third-party source collection binding. This is not application release acceptance, reproducible-build proof, or legal certification.",
+  "passed": true,
+  "application_build_id": "589ff2dddea916f5",
+  "source_commit": null,
+  "baseline_source_commit": "da200d2e2abbbe89e12be0bec5ec7a7a2741a569",
+  "source_snapshot_basis": "Manifest-verified application source matches frozen working tree; changes beyond the baseline commit are not claimed committed.",
+  "packaged_source_changes_from_baseline": [
+    "README.md",
+    "backend/tests/test_workspaces.py",
+    "backend/worker.py",
+    "backend/workspaces.py",
+    "docs/CHEMISTRY_SUPPORT.md",
+    "docs/MODIFIED_RESIDUES.md",
+    "docs/PREPARATION_CONTRACT.md",
+    "frontend-source/src/App.tsx",
+    "frontend-source/src/components/MolecularViewer.tsx",
+    "frontend-source/src/components/SimulationPanel.tsx",
+    "frontend-source/src/components/StructureJobMonitor.tsx"
+  ],
+  "baseline_tracked_files_matching": 885,
+  "source_assets": [
+    {
+      "name": "DynaMol-0.1.0-source-materials.tar.gz",
+      "bytes": 1247938611,
+      "sha256": "50c63be58fafcf63a7334a9d74a72b13a460d663c2faaf1efc38cff877365929",
+      "below_2_gib": true,
+      "current_bytes_and_sha256_match": true
+    },
+    {
+      "name": "DynaMol-0.1.1-loop-runtime-source-supplement.tar.gz",
+      "bytes": 1199118865,
+      "sha256": "3d04b3d4bbde43472e159677fd6154c846b3e240a18d4a0bfcb01635bf197521",
+      "below_2_gib": true,
+      "current_bytes_and_sha256_match": true
+    }
+  ],
+  "combined_source_verification_evidence": {
+    "file": "build/releases/DynaMol-0.1.1-source-materials-verification.json",
+    "sha256": "ee4397bdf99530c0aea0ed8e919683636ede75c75539b6883b3e9aa88af493b4"
+  },
+  "candidate_dmg": {
+    "file": "DynaMol-0.1.1-macos-arm64-candidate.dmg",
+    "bytes": 1692901364,
+    "sha256": "29adffe128d249f7040abcf05c65a6206a70da2d59c9375393b6c0d63b196e7a"
+  },
+  "collection_id": "dynamol-three-runtime-sources-20260912",
+  "source_index_sha256": "de7db9a3518757da251793c1f984428138da91eede747b719a31858850f0eae7",
+  "application_manifest_sha256": "f4c09de3ee4ee78db44180348aab66a6aa0d0d50a2c6101dbc31e092168da51a",
+  "source_inventory_sha256": "b8f75edaeb82add0539a9b95aa606d034320f0707927b60d8d82c8c902b8a6d5",
+  "final_inventory_sha256": "eb9250e272bc78da1b8ebfe0c8e33dd78ccff8b93d2f028b4231110ad3e635e3",
+  "engine_archives": [
+    {
+      "name": "ambertools",
+      "archive": "ambertools-24.8-macos-arm64.tar.gz",
+      "bytes": 348176540,
+      "sha256": "b96b42253d7d46c56e76485f8d61f98a1d6d17db4667165940ffeedb3119b663",
+      "passed": true
+    },
+    {
+      "name": "gromacs",
+      "archive": "gromacs-2025.4-macos-arm64.tar.gz",
+      "bytes": 17254700,
+      "sha256": "8f81ce171eb213c1aede327eed56d9b30cd3ab0f46aece44ec7275b976e6e1c0",
+      "passed": true
+    },
+    {
+      "name": "promod3",
+      "archive": "promod3-3.6.0-macos-arm64.tar.gz",
+      "bytes": 1078524200,
+      "sha256": "dfd2a559551cd2f2c2286a34769cb5419d0aaa0bab6751ca5f1946e8e813a260",
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Expected final build and strict sealing report",
+      "passed": true
+    },
+    {
+      "name": "Frozen canonical index copied into bundle",
+      "passed": true
+    },
+    {
+      "name": "Frozen source INDEX.json",
+      "passed": true
+    },
+    {
+      "name": "Frozen source README.md",
+      "passed": true
+    },
+    {
+      "name": "Frozen source VERIFICATION.json",
+      "passed": true
+    },
+    {
+      "name": "Exactly the indexed three runtime archives",
+      "passed": true
+    },
+    {
+      "name": "Engine archive ambertools",
+      "passed": true
+    },
+    {
+      "name": "Engine archive gromacs",
+      "passed": true
+    },
+    {
+      "name": "Engine archive promod3",
+      "passed": true
+    },
+    {
+      "name": "Exact native dependency records",
+      "passed": true,
+      "records": 252
+    },
+    {
+      "name": "Exact python dependency records",
+      "passed": true,
+      "records": 54
+    },
+    {
+      "name": "Exact frontend dependency records",
+      "passed": true,
+      "records": 284
+    },
+    {
+      "name": "Dependency lock",
+      "passed": true
+    },
+    {
+      "name": "Native recipes, patches and notices",
+      "passed": true,
+      "files": 3077,
+      "mismatches": []
+    },
+    {
+      "name": "Selected Python native binaries and conditional SciPy runtimes",
+      "passed": true,
+      "files": 31,
+      "byte_identical": 21,
+      "signature_only_allowances": 10,
+      "mismatches": []
+    },
+    {
+      "name": "Packaged source matches manifest",
+      "passed": true,
+      "files": 1052,
+      "mismatches": []
+    },
+    {
+      "name": "Packaged application source matches frozen working tree snapshot",
+      "passed": true,
+      "files": 908,
+      "mismatches": []
+    },
+    {
+      "name": "Prior combined source verification is valid for this index",
+      "passed": true
+    },
+    {
+      "name": "Existing base and supplement archive bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "Exact accepted candidate DMG binding",
+      "passed": true
+    },
+    {
+      "name": "Collector script bound to companion and app",
+      "passed": true
+    },
+    {
+      "name": "Bootstrap bound to packaged source",
+      "passed": true
+    }
+  ],
+  "python_native_signature_only_allowances": [
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/_lprmsd.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "ee86840ab6ec2fb2be28b7d63d5abdffd048410e3d0ba87d46e35eafae929871",
+      "final_signed_sha256": "e08d144e0302088d57770829db76d36979040760092d254ff09fd34f1f3d0ae5",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/_rmsd.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "2d072ffd9c004114e92000fee0fbc918ee6870fcedd4c89663695259f4df5246",
+      "final_signed_sha256": "1dd53d1f4ed3aa956ee1bff4e4e08c3bc24df57e9a479dcf3bd88a3a8baa1e1c",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/formats/dcd.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "a7c8fec8095082e9bbc958b94a8efa9d117e2e95a3ffdb11de3aeadbe86f8d74",
+      "final_signed_sha256": "9e69093a710e7ae9c93dbcc128c9191cbfffa14b4b99ef7e4674952515b0ba2d",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/formats/dtr.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "a0d8d167e64377ec5cb4abb472e34c74754cf7bcac4339794c5697ac7cad8cc4",
+      "final_signed_sha256": "5fe55aa5f88e1f542232bf30697093e845ce18bac24d288a4c752859d95ac57b",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/formats/trr.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "27fcdffad086f24d15b4f24aa9a0f0ab10c4574ab16e076392a8bbec6a9f66fb",
+      "final_signed_sha256": "d46cd379edf46ec2ac02d93d7060330cb00ab09e1712aaec80d0859bce08019d",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/formats/xtc.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "03496429f8be845889e57b9caa1f9686ba9da39be8766534a4a5e35356cf2810",
+      "final_signed_sha256": "0a647eb570472cac5f82465c750425ef625785714b1822e50ad8ebefc35c4683",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/geometry/_geometry.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "16fdccb079df3a356f95c64a0f38f2d70716bece935eb42639429a0e2a8abc1d",
+      "final_signed_sha256": "617a3bc19bf06f46eb985d80da93b7d5984a96e424d6e49a738c5bb7d9161edd",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/geometry/drid.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "d25589e40b848361b625c041bc431dbd862ee6bf42dec8cd6f42c6586be6c51d",
+      "final_signed_sha256": "ff5aff7f0638320a68a2f1e9c4407fb6f91ec5812cac9e29be27850337fb08eb",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/geometry/neighborlist.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "1e971a823c7b4117f5ebfa9dfe1e99d4cf9b356a3c1e3cf9f9f64bab68ebcbcb",
+      "final_signed_sha256": "ff1d8a9eee9d98e9b33cd2c57641093fa70665bf2adff6d6803be8313449e456",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    },
+    {
+      "path": "python/lib/python3.12/site-packages/mdtraj/geometry/neighbors.cpython-312-darwin.so",
+      "indexed_unsigned_sha256": "87ec4e511a7184bbe73c81fcc46be41f8f84bc2b741937ff8b97438d2ce1b56a",
+      "final_signed_sha256": "290ef695edbe669690c7193a765ceabe0c1d4e4255f808d05d60520d2717e8a6",
+      "all_architecture_sections_and_dylib_load_commands_unchanged": true
+    }
+  ],
+  "signature_repair_evidence": {
+    "file": "build/signature-repair-candidate/signature-validation.json",
+    "sha256": "130ce01f3bff3ee1c0e523364672bbecf3cd95174616f68817b85c06dee087c6",
+    "section_parser_file": "build/signature-repair-candidate/validate_native_signatures.py",
+    "section_parser_sha256": "5a0e42247cfd593a6a127f96398b90c263525a34f094fd9026a73cdd49ddcb98",
+    "limit": "Whole-file identity is not claimed for ad-hoc signed copies; all recorded architecture sections and library load commands are compared."
+  },
+  "final_signature_report": {
+    "file": "app-signature.json",
+    "sha256": "9c5f54fd5debb3b7c0af5ae1f8f4a102b887429c51e337b8f90c4e5850198e74",
+    "strict_deep_verification_passed": true
+  },
+  "generated_native_source_records": [
+    "materials/native/promod3/openmm-8.5.1-py312h4f6c760_0_khronos/shipped-version.py"
+  ],
+  "generated_or_untracked_packaged_source": [
+    "backend/tests/test_worker_provenance.py",
+    "docs/audit/final-release-2026-09-12/chemistry/REPORT.md",
+    "docs/audit/final-release-2026-09-12/chemistry/artifacts-sha256.json",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-boundaries.json",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-inputs/ADP.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-inputs/ATP.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-inputs/FAD.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-inputs/HEM.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-inputs/NAD.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/chemistry-matrix.json",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-inputs/1UA2.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-inputs/6A93.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-inputs/6DBK.cif",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-inspection.json",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-inspection.log",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-preparation.json",
+    "docs/audit/final-release-2026-09-12/chemistry/complex-preparation.log",
+    "docs/audit/final-release-2026-09-12/chemistry/environment.json",
+    "docs/audit/final-release-2026-09-12/chemistry/matrix.log",
+    "docs/audit/final-release-2026-09-12/chemistry/run_complexes.py",
+    "docs/audit/final-release-2026-09-12/chemistry/run_matrix.py",
+    "docs/audit/final-release-2026-09-12/chemistry/summarize.py",
+    "docs/audit/final-release-2026-09-12/chemistry/summary.json",
+    "docs/audit/final-release-2026-09-12/corpus-search.json",
+    "docs/audit/final-release-2026-09-12/engines/REPORT.md",
+    "docs/audit/final-release-2026-09-12/engines/focused-tests.json",
+    "docs/audit/final-release-2026-09-12/engines/fresh-gromacs-validation.json",
+    "docs/audit/final-release-2026-09-12/engines/fresh-handoff-validation.json",
+    "docs/audit/final-release-2026-09-12/engines/fresh-openmm-validation.json",
+    "docs/audit/final-release-2026-09-12/engines/historical-1K4C.json",
+    "docs/audit/final-release-2026-09-12/engines/historical-1SUG.json",
+    "docs/audit/final-release-2026-09-12/engines/historical-1XQZ.json",
+    "docs/audit/final-release-2026-09-12/engines/historical-3PTB.json",
+    "docs/audit/final-release-2026-09-12/engines/historical-4N6H.json",
+    "docs/audit/final-release-2026-09-12/engines/historical-revalidation.json",
+    "docs/audit/final-release-2026-09-12/engines/native-log-screen.json",
+    "docs/audit/final-release-2026-09-12/engines/native-recovery.json",
+    "docs/audit/final-release-2026-09-12/engines/run_native_audit.py",
+    "docs/audit/final-release-2026-09-12/engines/runtime-probe.json",
+    "docs/audit/final-release-2026-09-12/engines/summary.json",
+    "docs/audit/final-release-2026-09-12/engines/validate_fresh.py",
+    "docs/audit/final-release-2026-09-12/manifest.postflight.json",
+    "docs/audit/final-release-2026-09-12/manifest.preflight.json",
+    "docs/audit/final-release-2026-09-12/regression/README.md",
+    "docs/audit/final-release-2026-09-12/regression/api-final.json",
+    "docs/audit/final-release-2026-09-12/regression/api-final.txt",
+    "docs/audit/final-release-2026-09-12/regression/api-initial.json",
+    "docs/audit/final-release-2026-09-12/regression/api-initial.txt",
+    "docs/audit/final-release-2026-09-12/regression/api_contract_audit.py",
+    "docs/audit/final-release-2026-09-12/regression/backend-final.txt",
+    "docs/audit/final-release-2026-09-12/regression/backend-final.xml",
+    "docs/audit/final-release-2026-09-12/regression/backend-initial.txt",
+    "docs/audit/final-release-2026-09-12/regression/backend-initial.xml",
+    "docs/audit/final-release-2026-09-12/regression/native-deferred.txt",
+    "docs/audit/final-release-2026-09-12/regression/native-deferred.xml",
+    "docs/audit/final-release-2026-09-12/regression/release-source-sanity.json",
+    "docs/audit/final-release-2026-09-12/regression/runtime.json",
+    "docs/audit/final-release-2026-09-12/regression/source-final.json",
+    "docs/audit/final-release-2026-09-12/regression/source-initial.json",
+    "docs/audit/final-release-2026-09-12/regression/verification.json",
+    "docs/audit/final-release-2026-09-12/review.postflight.json",
+    "docs/audit/final-release-2026-09-12/review.preflight.json",
+    "docs/audit/final-release-2026-09-12/source-changes.patch",
+    "docs/audit/final-release-2026-09-12/source-final.json",
+    "docs/audit/final-release-2026-09-12/ui/01-initial.png",
+    "docs/audit/final-release-2026-09-12/ui/02-sticks-element.png",
+    "docs/audit/final-release-2026-09-12/ui/03-ball-stick.png",
+    "docs/audit/final-release-2026-09-12/ui/04-polar-hydrogens.png",
+    "docs/audit/final-release-2026-09-12/ui/05-all-hydrogens.png",
+    "docs/audit/final-release-2026-09-12/ui/06-surface.png",
+    "docs/audit/final-release-2026-09-12/ui/07-chain.png",
+    "docs/audit/final-release-2026-09-12/ui/08-zoom-in.png",
+    "docs/audit/final-release-2026-09-12/ui/09-zoom-out.png",
+    "docs/audit/final-release-2026-09-12/ui/10-protein-hidden.png",
+    "docs/audit/final-release-2026-09-12/ui/11-fullscreen.png",
+    "docs/audit/final-release-2026-09-12/ui/12-fullscreen-native.png",
+    "docs/audit/final-release-2026-09-12/ui/13-playing.png",
+    "docs/audit/final-release-2026-09-12/ui/14-distance-auto.png",
+    "docs/audit/final-release-2026-09-12/ui/15-canvas-picked.png",
+    "docs/audit/final-release-2026-09-12/ui/16-rmsf.png",
+    "docs/audit/final-release-2026-09-12/ui/17-preparing.png",
+    "docs/audit/final-release-2026-09-12/ui/18-water-live-run.png",
+    "docs/audit/final-release-2026-09-12/ui/19-water-box.png",
+    "docs/audit/final-release-2026-09-12/ui/20-xtc-import.png",
+    "docs/audit/final-release-2026-09-12/ui/21-ligand-hidden.png",
+    "docs/audit/final-release-2026-09-12/ui/22-caffeine-element.png",
+    "docs/audit/final-release-2026-09-12/ui/23-completed-handoff.png",
+    "docs/audit/final-release-2026-09-12/ui/24-padding-validation.png",
+    "docs/audit/final-release-2026-09-12/ui/25-monomer-loop.png",
+    "docs/audit/final-release-2026-09-12/ui/26-timeline-rotate.png",
+    "docs/audit/final-release-2026-09-12/ui/27-wheel-zoom.png",
+    "docs/audit/final-release-2026-09-12/ui/28-restored-multimer.png",
+    "docs/audit/final-release-2026-09-12/ui/29-ion-hidden.png",
+    "docs/audit/final-release-2026-09-12/ui/30-water-limit-error.png",
+    "docs/audit/final-release-2026-09-12/ui/DynaMol-Ubiquitin \u00b7 in motion-frame-1.png",
+    "docs/audit/final-release-2026-09-12/ui/DynaMol-Ubiquitin \u00b7 in motion-rmsf.csv",
+    "docs/audit/final-release-2026-09-12/ui/REPORT.md",
+    "docs/audit/final-release-2026-09-12/ui/browser-logs.json",
+    "docs/audit/final-release-2026-09-12/ui/build-final.log",
+    "docs/audit/final-release-2026-09-12/ui/completed-handoff.txt",
+    "docs/audit/final-release-2026-09-12/ui/dynamol-angle-0-4-6.csv",
+    "docs/audit/final-release-2026-09-12/ui/export-validation.json",
+    "docs/audit/final-release-2026-09-12/ui/monomer-loop.txt",
+    "docs/audit/final-release-2026-09-12/ui/native-ui-run-validation.json",
+    "docs/audit/final-release-2026-09-12/ui/summary.json",
+    "docs/audit/final-release-2026-09-12/ui/water-limit-error.txt",
+    "docs/audit/modified-residues/native/leap.log",
+    "docs/audit/preparation-continuity-checks.log",
+    "docs/audit/preparation-geometry-checks.log",
+    "docs/audit/preparation-gromacs-probes/acidic-acid-plain/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/acidic-acid-variants/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/acidic-acid-variants_hmap/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/acidic-neutral-plain/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/acidic-neutral-variants/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/acidic-neutral-variants_hmap/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/histidine-acid-plain/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/histidine-acid-variants/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/histidine-acid-variants_hmap/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/histidine-neutral-plain/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/histidine-neutral-variants/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/histidine-neutral-variants_hmap/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/lysine-basic-plain/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/lysine-basic-variants/pdb2gmx.log",
+    "docs/audit/preparation-gromacs-probes/lysine-basic-variants_hmap/pdb2gmx.log",
+    "docs/audit/preparation-pipeline-checks.log",
+    "docs/audit/preparation-positive-loop.log",
+    "docs/audit/preparation-solvent-checks.log",
+    "docs/audit/preparation-source-checks.log",
+    "docs/audit/preparation-worker-evidence/0847ab0231b942a0/worker.log",
+    "docs/audit/preparation-worker-evidence/0fa99c41cbfa4058/worker.log",
+    "docs/audit/preparation-worker-evidence/2fc464f42a7b42db/worker.log",
+    "docs/audit/preparation-worker-evidence/36c7e8a6c5c64685/worker.log",
+    "docs/audit/preparation-worker-evidence/3b7e31cc8bbf4d10/worker.log",
+    "docs/audit/preparation-worker-evidence/3e42a64c72734742/worker.log",
+    "docs/audit/preparation-worker-evidence/470a68640ea94d89/worker.log",
+    "docs/audit/preparation-worker-evidence/4b8a57be4ad24d2e/worker.log",
+    "docs/audit/preparation-worker-evidence/834a5edbbc814600/worker.log",
+    "docs/audit/preparation-worker-evidence/876eb6401cfb422b/worker.log",
+    "docs/audit/preparation-worker-evidence/dfafc6cf4b0649aa/worker.log",
+    "docs/audit/preparation-worker-evidence/e477130f8075492a/worker.log",
+    "docs/audit/preparation-worker-evidence/eafbd2696b2f4a8c/worker.log",
+    "docs/audit/preparation-worker-evidence/f31d407dcc2a4bc7/worker.log",
+    "docs/audit/release-readiness/chemistry-boundaries.log",
+    "docs/audit/release-readiness/chemistry-run.initial.log",
+    "docs/audit/release-readiness/chemistry-run.log",
+    "frontend/dist/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2",
+    "frontend/dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+    "frontend/dist/assets/index-Cghd6AnZ.css",
+    "frontend/dist/assets/index-WHMjHI86.js",
+    "frontend/dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2",
+    "frontend/dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2",
+    "frontend/dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+    "frontend/dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+    "frontend/dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+    "frontend/dist/favicon.svg",
+    "frontend/dist/index.html"
+  ],
+  "limits": [
+    "Source archive collection does not establish bit-identical native rebuilds.",
+    "SciPy vendored compiler runtime source provenance remains conditional; the GCC 13.4.0 supplement matches reported compiler version only.",
+    "The frozen collection input manifest is a staged-native input, not this application manifest. Exact archive and native-content checks in this separate receipt establish the binding."
+  ],
+  "harness_sha256": "b8419e15666a2db10e1e71a568477e18a4a1a3375afb9f58686e929bc0fd7092"
+}

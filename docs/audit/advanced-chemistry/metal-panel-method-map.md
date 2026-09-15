@@ -1,0 +1,25 @@
+# Fixed metal panel: method applicability
+
+This is a feasibility map, not a pass-rate table. All 15 frozen cases remain in scope, and every retained metal, cofactor and relevant solvent needs its own model evidence. The application does not gain broad metal support from these prototypes.
+
+| Case | Implementable route or boundary | Decisions still required |
+|---|---|---|
+| 1MNC | New closed-shell catalytic Zn cluster; separate structural Zn and Ca models. Five-coordinate hydroxamate Zn is outside four-coordinate ZAFF. Structural His/His/His/Asp site is a center9 candidate after contextual mapping. | Explicit hydroxamate deprotonation and donor His tautomers; Ca retained and separately checked. |
+| 1HFC | Same chemistry family as 1MNC; validate each complete site. ZAFF9 may fit structural 3His/Asp Zn; no direct ZAFF for five-coordinate catalytic Zn. | PLH hydroxamate state; two distinct Zn sites plus Ca; no untested transfer from 1MNC. |
+| 1GKC | Hydroxamate catalytic Zn plus structural Zn and multiple Ca sites. ZAFF9 structural candidate only; new five-coordinate NFH catalytic model. | NFH protonation and exact donor graph; all five Ca sites and relevant waters. |
+| 1XUC | Published four-coordinate Zn-water family candidate plus structural Zn. ZAFF6/7 catalytic water/hydroxide alternative; ZAFF9 structural candidate. | Metal-bound water versus hydroxide; local His mapping and two Ca sites; inhibitor retained. |
+| 1BKC | Site-specific five-coordinate Zn-hydroxamate. Outside ZAFF four-coordinate scope; native MCPB/PySCF candidate. | INN hydroxamate state and three His tautomers. |
+| 1CA2 | Exact published four-coordinate Zn-HHH-water prototype. ZAFF6: HD4=His94, HD5=His96, HE2=His119, WT1=water263, ZN6=Zn262; alternate center7 hydroxide. | Water state is a declared benchmark hypothesis; source has no pH field. Distinct histidines mapped by source backbone contacts. |
+| 1T64 | Separate acidic/hydroxamate HDAC Zn family. No matching standard ZAFF template established. Requires explicit graph/state review before QM. | Two Asp donors, His and TSN contacts; deposited six contacts include N1 requiring chemical interpretation. Two Ca and two Na retained. |
+| 1CLL | Explicitly named Ca nonbonded model with coordination validation. Installed water-model-matched Amber 12-6 baseline; 12-6-4 is a distinct candidate requiring exact C4 propagation. | Four Ca sites; carboxylate and water identities retained. Hydration fitting alone is not a protein-site validation. |
+| 1HET | Distinct catalytic and structural Zn sites in the full dimer. ZAFF1 is a structural four-Cys candidate; catalytic two-Cys/His/two-water site outside four-coordinate ZAFF. Native NADH/NAD+ libraries available. | Deposited title reports NADH hydroxide adduct but component NAD alone does not define the cofactor state. Preserve all four Zn and both cofactors. |
+| 1A6Q | Coupled open-shell Mn phosphatase center. Installed Mn hydration parameters are only a baseline; no matched coupled-site model verified. | Mn oxidation, high-spin/coupled spin, bridging water protonation, phosphate state and both Mn sites. |
+| 1HL5 | Joint Cu/Zn site with bridging histidine. Independent neutral-His ZAFF9 plus bare Cu is not a valid joint model. | Cu redox/spin, His63 imidazolate bridge, water state; full dimer. |
+| 1HCK | Mg/ATP protein site using explicit nucleotide and ion model. Published Carlson ATP phosphate family is a candidate; named TIP3P Mg baseline. Nucleotide 12-6-4 corrections documented for TIP4PEW must not silently transfer. | ATP charge/protonation, three phosphate donors, Mg occupancy and bound water. |
+| 1A6M | Oxygenated His-ligated heme model. Installed old heme-His and P450 dioxy templates are not a verified oxy-myoglobin match. P450 dioxy uses proximal Cys and is not a drop-in. | Fe/O2 electronic state, proximal His and distal environment; oxygen and sulfate retained. |
+| 1LUV | Open-shell MnSOD family. No validated complete matched model established from installed templates. | Mn oxidation/spin and bound solvent; declared oligomer retained. |
+| 1OKL | Published native MCPB Zn-sulfonamide reference plus separate retained Hg. Native 18 Seminario terms and ESP extraction reproduced; current native RESP parity passed, historical published charges differ. | MNS anion; Hg at Cys205 and its source contacts cannot be deleted to claim full case success. |
+
+1CA2 is the closest exact published-template milestone. MMP catalytic hydroxamate sites require a separate five-coordinate model; their structural Zn sites may use an explicitly matched ZAFF family. Ca/Mg, coupled Cu/Zn, Mn and oxy-heme must not be presented as successes of the closed-shell Zn workflow. See `metal-panel-method-map.json` for source hashes, exact current status and installed library evidence.
+
+Sources: [official ZAFF tutorial](https://ambermd.org/tutorials/advanced/tutorial20/ZAFF.php), [Amber ion models](https://ambermd.org/AmberModels_ions.php), [contributed Amber models](https://ambermd.org/AmberModels_contrib.php), [native MCPB workflow](https://ambermd.org/tutorials/advanced/tutorial20/mcpbpy.php).

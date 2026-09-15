@@ -1,0 +1,1220 @@
+[
+  {
+    "cycle": 1,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 2.6412205755832474e-13,
+    "maximum_frozen_displacement_angstrom": 0.0,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 2,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.283063041541027e-13,
+    "maximum_frozen_displacement_angstrom": 1.860217180024332e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 3,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.385203559806541e-13,
+    "maximum_frozen_displacement_angstrom": 9.831852355622605e-09,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 4,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.105427357601002e-13,
+    "maximum_frozen_displacement_angstrom": 3.357204878818536e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 5,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 6.892264536872972e-13,
+    "maximum_frozen_displacement_angstrom": 1.0389816559460055e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 6,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.087663789206999e-13,
+    "maximum_frozen_displacement_angstrom": 3.1326031924363606e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 7,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.585043704239069e-13,
+    "maximum_frozen_displacement_angstrom": 8.16795958310371e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 8,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.126799150825036e-13,
+    "maximum_frozen_displacement_angstrom": 2.52545781105462e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 9,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.469580509678053e-13,
+    "maximum_frozen_displacement_angstrom": 1.2421711739884149e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 10,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.549516567451064e-13,
+    "maximum_frozen_displacement_angstrom": 2.9437705429675532e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 11,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 6.989964163039986e-13,
+    "maximum_frozen_displacement_angstrom": 2.3876892055576176e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 12,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.471800955727304e-13,
+    "maximum_frozen_displacement_angstrom": 1.827406223182996e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 13,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.251976796851523e-13,
+    "maximum_frozen_displacement_angstrom": 2.088097299689238e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 14,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.385203559806541e-13,
+    "maximum_frozen_displacement_angstrom": 1.2229609589190616e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 15,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.420730696594546e-13,
+    "maximum_frozen_displacement_angstrom": 2.3575332975813257e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 16,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.451816941284051e-13,
+    "maximum_frozen_displacement_angstrom": 3.544788756135538e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 17,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.300826609935029e-13,
+    "maximum_frozen_displacement_angstrom": 1.7814230624292906e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 18,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.531197887544749e-13,
+    "maximum_frozen_displacement_angstrom": 3.2839838465636943e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 19,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.265299473147024e-13,
+    "maximum_frozen_displacement_angstrom": 4.8185628431146916e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 20,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.291944825738028e-13,
+    "maximum_frozen_displacement_angstrom": 5.084293901533352e-09,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 21,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.283063041541027e-13,
+    "maximum_frozen_displacement_angstrom": 5.619794019670753e-09,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 22,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.354117315117037e-13,
+    "maximum_frozen_displacement_angstrom": 1.642621946414748e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 23,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 6.901146321069973e-13,
+    "maximum_frozen_displacement_angstrom": 1.3196411518041188e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 24,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.069900220812997e-13,
+    "maximum_frozen_displacement_angstrom": 2.373016337571389e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 25,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.127631818093505e-13,
+    "maximum_frozen_displacement_angstrom": 3.414292241047191e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 26,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.109868249699502e-13,
+    "maximum_frozen_displacement_angstrom": 1.0262370319590014e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 27,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.442935157087049e-13,
+    "maximum_frozen_displacement_angstrom": 2.3210972423506395e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 28,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.327471962526033e-13,
+    "maximum_frozen_displacement_angstrom": 3.225364771762779e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 29,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.300826609935029e-13,
+    "maximum_frozen_displacement_angstrom": 4.061480715459386e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 30,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.460698725481052e-13,
+    "maximum_frozen_displacement_angstrom": 2.087785456975837e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 31,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.154277170684509e-13,
+    "maximum_frozen_displacement_angstrom": 6.876726650701154e-09,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 32,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.380762667708041e-13,
+    "maximum_frozen_displacement_angstrom": 2.838946225394623e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 33,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.416289804496046e-13,
+    "maximum_frozen_displacement_angstrom": 2.8833827660295332e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 34,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.140954494389007e-13,
+    "maximum_frozen_displacement_angstrom": 9.15768731327699e-09,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 35,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.176481631177012e-13,
+    "maximum_frozen_displacement_angstrom": 1.671123584643321e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 36,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.460698725481052e-13,
+    "maximum_frozen_displacement_angstrom": 1.9394545221029972e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 37,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.025491299827991e-13,
+    "maximum_frozen_displacement_angstrom": 3.4504811226948436e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 38,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.034373084024992e-13,
+    "maximum_frozen_displacement_angstrom": 3.372531743493826e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 39,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.351341757555474e-13,
+    "maximum_frozen_displacement_angstrom": 2.1836204694620767e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 40,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.265299473147024e-13,
+    "maximum_frozen_displacement_angstrom": 1.3258305062576461e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 41,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.340794638821535e-13,
+    "maximum_frozen_displacement_angstrom": 1.9296826256585174e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 42,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.327471962526033e-13,
+    "maximum_frozen_displacement_angstrom": 1.2890186536501551e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 43,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 6.841194277740215e-13,
+    "maximum_frozen_displacement_angstrom": 3.2908589507018926e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 44,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.171485627566199e-13,
+    "maximum_frozen_displacement_angstrom": 1.0479934855304547e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 45,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.209788321915767e-13,
+    "maximum_frozen_displacement_angstrom": 5.613532660145386e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 46,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 6.989964163039986e-13,
+    "maximum_frozen_displacement_angstrom": 3.3804475327575505e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 47,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.496225862269057e-13,
+    "maximum_frozen_displacement_angstrom": 5.903682523237585e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 48,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.123190925995004e-13,
+    "maximum_frozen_displacement_angstrom": 3.793149398531896e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 49,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.318590178329032e-13,
+    "maximum_frozen_displacement_angstrom": 3.2410056727057416e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 50,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.460698725481052e-13,
+    "maximum_frozen_displacement_angstrom": 6.836158761514382e-09,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 51,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.283063041541027e-13,
+    "maximum_frozen_displacement_angstrom": 4.583992940807832e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 52,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.167599846980011e-13,
+    "maximum_frozen_displacement_angstrom": 3.623049340085835e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 53,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.283063041541027e-13,
+    "maximum_frozen_displacement_angstrom": 4.211500796827727e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 54,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.485123632022805e-13,
+    "maximum_frozen_displacement_angstrom": 2.8021300762695322e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 55,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.149836278586008e-13,
+    "maximum_frozen_displacement_angstrom": 1.9813161550327935e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 56,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.132072710192006e-13,
+    "maximum_frozen_displacement_angstrom": 2.1967622824616863e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 57,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 7.451816941284051e-13,
+    "maximum_frozen_displacement_angstrom": 1.542188068596498e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  },
+  {
+    "cycle": 58,
+    "all_94_numbered_atoms_and_element_order_match": true,
+    "unit_roundtrip_max_component_difference_angstrom": 6.927791673660977e-13,
+    "maximum_frozen_displacement_angstrom": 1.7027005836499056e-08,
+    "stereochemistry": [
+      {
+        "name": "CA",
+        "expected": "R",
+        "observed": "R",
+        "passed": true
+      },
+      {
+        "name": "MOV_C20",
+        "expected": "S",
+        "observed": "S",
+        "passed": true
+      }
+    ],
+    "geometry_identity_checks_passed": true
+  }
+]

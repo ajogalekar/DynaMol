@@ -1,0 +1,53 @@
+{
+  "method": "Independent AmberTools Sander API vacuum (igb6,ntb0,cut999\u00c5) versus OpenMM Reference AmberPrmtopFile NoCutoff, no constraints; bound coordinates and two0.003\u00c5 perturbations.",
+  "scope": "Checks engine implementation and unit conversion of the same classical Hamiltonian, not its chemical accuracy.",
+  "energy_tolerance_kj_mol": 0.001,
+  "force_tolerance_kj_mol_nm": 0.01,
+  "electrostatic_convention": {
+    "amber_legacy_charge_scale": 18.2223,
+    "amber_coulomb_kj_mol_nm_e2": 138.93064771413603,
+    "openmm_coulomb_kj_mol_nm_e2": 138.93545764438198,
+    "energy_scale_ratio": 0.9999653801101065,
+    "method": "Diagnostic copy only: particle charges and1\u20134 products scaled to match Amber legacy electrostatic convention. Both raw and convention-matched errors recorded; saved production parameters untouched."
+  },
+  "input_sha256": {
+    "prepared.prmtop": "90c1145a084fd19dbdd3e78edaec5e7286b2fb181bf0e2979bd4b35e4d40e8a4",
+    "prepared.inpcrd": "efdd37c5218195997e13683c289e7e308bff97c809909a75c27493481b60c55f"
+  },
+  "conformations": [
+    {
+      "pose": "bound",
+      "sander_energy_kj_mol": 172956.42863684436,
+      "openmm_energy_kj_mol": 172955.60001842905,
+      "energy_difference_kj_mol": -0.8286184153112117,
+      "maximum_force_difference_kj_mol_nm": 0.07383802055574051,
+      "raw_constants_agree_within_tolerance": false,
+      "matched_constant_energy_difference_kj_mol": 0.0020423383393790573,
+      "matched_constant_maximum_force_difference_kj_mol_nm": 0.008277328794065397,
+      "passed": false
+    },
+    {
+      "pose": "perturb-2027",
+      "sander_energy_kj_mol": 173511.89950960397,
+      "openmm_energy_kj_mol": 173511.0710817419,
+      "energy_difference_kj_mol": -0.8284278620849364,
+      "maximum_force_difference_kj_mol_nm": 0.07368688240421761,
+      "raw_constants_agree_within_tolerance": false,
+      "matched_constant_energy_difference_kj_mol": 0.002087055239826441,
+      "matched_constant_maximum_force_difference_kj_mol_nm": 0.00829528572376148,
+      "passed": false
+    },
+    {
+      "pose": "perturb-2028",
+      "sander_energy_kj_mol": 173077.1048928519,
+      "openmm_energy_kj_mol": 173076.27591911636,
+      "energy_difference_kj_mol": -0.8289737355371471,
+      "maximum_force_difference_kj_mol_nm": 0.07411475344906648,
+      "raw_constants_agree_within_tolerance": false,
+      "matched_constant_energy_difference_kj_mol": 0.0020620154100470245,
+      "matched_constant_maximum_force_difference_kj_mol_nm": 0.008164824367668189,
+      "passed": false
+    }
+  ],
+  "passed": false
+}

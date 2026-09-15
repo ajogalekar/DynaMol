@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "standalone_candidate_pending_independent_review",
+  "source_sha256": "b94c08c2ccc9c92e81842c5a3eab5c5a4cbda079eda951e7b799c7ee727f4bff",
+  "test_sha256": "36ef7bdfc543377db1629560393275c7ae25c1082df9a7ea9f70e227e563b0d9",
+  "core_sha256": "e160aee512211df052261b1ef11b4277e81fd192cf71369dbd5c5f466674e187",
+  "materializer_sha256": "698c6d6727e365860e3d00debbf060c216425e31f6f7e1a6ac7d55eb0237fab2",
+  "test_count": 24,
+  "test_seconds": 0.479,
+  "test_exit_code": 0,
+  "actual_parent_refused_before_downstream": true,
+  "native_QM_ESP_RESP_launched": false,
+  "physical_acceptance": false,
+  "simulation_ready": false,
+  "RESP_execution_admitted": false,
+  "next_step": "Reviewed stable-cache RESP executor and bound terminal stage receipts; then native charge handoff."
+}

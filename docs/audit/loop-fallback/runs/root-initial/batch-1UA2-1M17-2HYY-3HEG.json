@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1UA2",
+    "returncode": 0,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-initial/1UA2/result.json"
+  },
+  {
+    "id": "1M17",
+    "returncode": 0,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-initial/1M17/result.json"
+  },
+  {
+    "id": "2HYY",
+    "returncode": 1,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-initial/2HYY/result.json"
+  },
+  {
+    "id": "3HEG",
+    "returncode": 0,
+    "report": "/Users/ashujo/Documents/Science/DynaMol/docs/audit/loop-fallback/runs/root-initial/3HEG/result.json"
+  }
+]

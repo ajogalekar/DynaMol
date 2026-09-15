@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+protein = loadpdb protein-input.pdb
+saveamberparm protein protein-reference.prmtop protein-reference.inpcrd
+addAtomTypes { { "OY" "O" "sp3" } { "O3" "O" "sp2" } }
+loadAmberPrep /Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1hck-mg-atp/published/Parameters/ATP-B3.prepi
+loadAmberParams /Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1hck-mg-atp/published/Parameters/ATP-B3.frcmod
+mol = loadpdb prepared-input.pdb
+check mol
+savepdb mol baseline-native.pdb
+saveamberparm mol baseline.prmtop baseline.inpcrd
+quit

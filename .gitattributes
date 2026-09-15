@@ -20,3 +20,6 @@ docs/audit/five-system-pressure-test/*.cif -text -whitespace
 docs/audit/five-system-pressure-test/*.pdb -text -whitespace
 # Matplotlib SVG paths contain intentional trailing spaces.
 docs/audit/five-system-pressure-test/*.svg -text -whitespace
+
+# Keep the frozen loop-panel structure inputs byte-identical to their recorded hashes.
+docs/audit/loop-fallback/benchmark-inputs/*.cif -text -whitespace

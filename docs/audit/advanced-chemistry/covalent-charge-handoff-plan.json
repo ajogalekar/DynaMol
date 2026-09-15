@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "case": "6OIM",
+  "scope": "Research charge transport and native assembly only. No physical parameter acceptance or simulation readiness. Source artifacts pinned before parent charge completion.",
+  "cap": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent",
+  "parent": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization",
+  "interface": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4",
+  "continuation": "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp-continuation-v1",
+  "cap_graph_sha256": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+  "cap_sdf_sha256": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+  "optimizer_input_sha256": "791c72d01c3e7cf3410f799ec8e25e91ddeb34441cb0693a24e2b6452a1dd62e",
+  "allowed_continuation_sha256": [
+    "c4cc79444bd8dd896d9882439ad34e6dac538cebe2fa2c10c7c69dc768f0db4b",
+    "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3"
+  ],
+  "resp_executable_sha256": "1bde6a28988bfb9d08caee06e54d4f1b086808d154861bc9e0fd48cb3935ac3b",
+  "fitter_source_sha256": "d15a9343820f4a7958e7c2f87a2e1a5d249c49829c1c592de642c37550ec2d19",
+  "pinned_artifacts": {
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/capped-adduct.json": "1d5b3a4331e7a653050f9417ff3e59038f854213d1a7c5d35befb76dae56955c",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/capped-adduct.sdf": "42cc8201c8d9a928e54903808ebeb74ac53787fdfab24566759de38f5873ed6a",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/resp/constraints.json": "7e19a5ae0c40cf3bec67fbce7b2cbf55b293722cf3212f16e0f53af0164ca1b7",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/df-optimization-parallel-v1/optimization/input.json": "791c72d01c3e7cf3410f799ec8e25e91ddeb34441cb0693a24e2b6452a1dd62e",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4/hybrid.mol2": "8ad3fe18b645e8ea4aa38e9d1ab8c8f8e0a6bad471f32689417d358c0ee19f5f",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4/hybrid.prmtop": "f0a19dc96b0bf84785be8bdead2fad42cbc6f3ca63a3234e8bcf90a0676df544",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4/gaff-adduct.frcmod": "b2e965849c933c5a927e149235913e8ccc291d55104b9227e79e0774178861f1",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4/reference.prmtop": "f8012f1dd0f09c836ac7c2be33c83bd91a84330b942c5cdfd9a240dc80a29301",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4/result.json": "4f9ca4948254d786991ddc6ddd5f2dfcf9fd78799bab0ad7f0906ed736a58088",
+    "/Users/ashujo/Documents/Science/DynaMol/build/advanced-chemistry/covalent/interface-native-scope-v4/backbone-reference-validation.json": "3ec74965dca61825c3248a593e5b9258948761662cb9531f278a7f4383825151",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/continue_covalent_qm.py": "e3810f144cb85035f391262bd6a0520f2450b235828dc2d171a9ddead36058c3",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_resp_spike.py": "d15a9343820f4a7958e7c2f87a2e1a5d249c49829c1c592de642c37550ec2d19",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_interface_spike.py": "71b6fc3f24b31f5822f6571af9c7c6829a6214ece96cc080f065612c1c673a42",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/covalent_polymer_interface_spike.py": "b82b2e379cf223b509bb1d30307c610da85af70319e3546ef50241e27d1f8f90",
+    "/Users/ashujo/Documents/Science/DynaMol/backend/qm_worker.py": "ddb67a1f8e9be6ed05c3c95e9864e20b79f0233604e27926e30e5ffc09295bc1",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/bin/tleap": "f1c526e0a24ad1fefc6c82be1279aa33eff5f9557d577c2236aa81437dfb52ac",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/gaff2.dat": "14ad62c8e532c47e2e400e2ca6ad8052b33bda4c4b9bc6f49b6a528e527512be",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/parm10.dat": "dc0c02d28fb7ee4f04d0a5edee3cd62968ba5e9bdb69e0f728bf01d242d7d062",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/parm/frcmod.ff14SB": "d7240947ca454e49fa2419343cff0090c1e9c02f39618e826d99fc5f1b29dc73",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/amino12.lib": "dcd92afbb7ee4c8a737f1ad47eb714618b6c186759c902cd5c06c22a5378df77",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/aminont12.lib": "a7a267adbe63c3559283204ffd135b37e14dac0f33a7eae76f94cba80a56b58c",
+    "/Users/ashujo/Documents/Science/DynaMol/.tools/ambertools/dat/leap/lib/aminoct12.lib": "4f45d160211ae20450ee59632012cba3ada60a5129de410da1bfbfd7f9a9a5f7"
+  },
+  "native_assembly_policy": {
+    "maximum_cpu_threads": 2,
+    "cap_and_backbone_fixed_charge_count": 18,
+    "neutral_cap_atoms_removed": 12,
+    "joint_adduct_charge_vector": "Preserve exactly by stable source atom identity; never independently refit ligand or residue, substitute AM1-BCC, or renormalize after removing neutral caps.",
+    "parameter_precedence": "Pinned native ff14SB canonical terms and v4 adduct-only supplement; protein parmchk2 output is not loaded.",
+    "physical_parameter_acceptance": false
+  }
+}

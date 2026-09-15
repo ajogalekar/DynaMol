@@ -1,0 +1,61 @@
+{
+  "corpus": "/Users/ashujo/plugins/bio-agent-stack/wrappers/pat-agent/corpus/blog.jsonl",
+  "matches": 73,
+  "query": "tautomers reproducibility validation molecular structure",
+  "results": [
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2025-05-06",
+      "score": 44.0,
+      "snippet": "…ntroduction One factor often overlooked when applying machine learning (ML) in small-molecule drug discovery is the influence of tautomers on model predictions. Drug-like molecules, especially those containing heterocycles and conjugated pi systems, can exist in several different tautomeric forms. These forms feature varying bond orders between the atoms. Consequently, the molecular representation used in an ML model varies. This remains true regardless of whether we’re using molecular fingerprints, topological de…",
+      "tags": [
+        "Tautomers"
+      ],
+      "title": "The Trouble With Tautomers",
+      "url": "https://patwalters.github.io/The-Trouble-With-Tautomers/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2026-04-12",
+      "score": 37.0,
+      "snippet": "…ruggles with novel ligands and binding pockets. | | 2025-09-20 | Just Because You Published It Doesn’t Mean It’s Right | GitHub | Reproducibility, Publication, Benchmarking | Critiques aqueous solubility modeling papers that use misleadingly \"easy\" benchmarks and advocates for higher quality, certified datasets. | | 2025-09-15 | Time For a New Adventure | GitHub | Career | Announces the author's new role as Chief Scientist at OpenADMET and outlines the initiative's mission to improve drug metabolism and toxicity pr…",
+      "tags": [
+        "Index"
+      ],
+      "title": "Practical Cheminformatics Index",
+      "url": "https://patwalters.github.io/Practical-Cheminformatics-Index/"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-05-22T18:07:00.000-07:00",
+      "score": 32.0,
+      "snippet": "…erative AI can and can’t do. To understand exactly what’s involved, it might be instructive to walk through a typical generative molecular design workflow and point out a few things. First, these programs are far from autonomous. Even when presented with a well-defined problem, generative algorithms produce a tremendous amount of nonsense. Second, domain expertise is essential when sifting through the molecules produced by a generative algorithm. Without a significant medicinal chemistry background, one can’t…",
+      "tags": [],
+      "title": "Generative Molecular Design Isn't As Easy As People Make It Look",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/05/generative-molecular-design-isnt-as.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2024-01-02T15:54:00.000-08:00",
+      "score": 30.0,
+      "snippet": "…long, so I've split it into three parts, with parts II and III to be posted in the next couple of weeks. I. Docking, protein structure prediction, and benchmarking II. Large Language Models, active learning, federated learning, generative models, and explainable AI III. Review articles 2023 was a bit of a mixed bag for AI in drug discovery. Several groups reported that the deep learning methods for protein-ligand docking weren’t quite what they were initially cracked up to be. AlphaFold2 became pervasive, a…",
+      "tags": [],
+      "title": " AI in Drug Discovery 2023 - A Highly Opinionated Literature Review (Part I)",
+      "url": "https://practicalcheminformatics.blogspot.com/2024/01/ai-in-drug-discovery-2023-highly.html"
+    },
+    {
+      "authorship": "pat-authored",
+      "byline": "Pat Walters",
+      "published": "2023-02-01T06:23:00.000-08:00",
+      "score": 30.0,
+      "snippet": "While it's great that we're now seeing papers describing the experimental validation of generative algorithms for molecular design, we need to consider the significance of these findings and put them into the appropriate context. Over the last five years, we've seen an explosion in the number of papers describing methods for generative molecular design. The 2018 paper by Gómez-Bombarelli, which launched the field, has already been cited more than 2,100 times. For those unfamiliar with the area, generative molecul…",
+      "tags": [],
+      "title": " Generative Molecular Design - We Need to Raise the Bar",
+      "url": "https://practicalcheminformatics.blogspot.com/2023/02/generative-molecular-design-we-need-to.html"
+    }
+  ]
+}

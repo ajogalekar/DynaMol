@@ -1,0 +1,23 @@
+{
+  "scope": "Independent read-only residual accounting of the completed pinned DP static evaluations; no new dynamics or native runs.",
+  "source_native_summary": "build/advanced-chemistry/gromacs-double-v1/double-static-comparison.json",
+  "source_native_summary_sha256": "b60f21bc9b7ad6c1e552688f77908abf38cc4595ddec3460f0600f33e5376b77",
+  "input_tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+  "native_double_two_threads_minus_openmm_reference_kj_mol": -0.40874828718369827,
+  "openmm_recorded_dispersion_correction_kj_mol": -2394.8459132649004,
+  "gromacs_double_recorded_dispersion_correction_kj_mol": -2395.302924765479,
+  "native_minus_openmm_recorded_dispersion_component_kj_mol": -0.45701150057857376,
+  "remaining_energy_budget_after_component_accounting_kj_mol": 0.04826321339487549,
+  "accounting_is_not_an_applied_offset": true,
+  "thread_energy_delta_kj_mol": -2.559390850365162e-07,
+  "thread_force_rms_vector_delta_kj_mol_nm": 3.468175252045448e-13,
+  "native_reference_force_rms_vector_delta_kj_mol_nm": 0.0012434450005620024,
+  "native_reference_force_max_vector_delta_kj_mol_nm": 0.007062158682990017,
+  "exact_same_coordinates_and_box": true,
+  "compiler_confound": "AppleClang /usr/bin/clang++; arm64 Release; differs from bundled conda Clang19, recorded as an additional build difference",
+  "source": {
+    "url": "https://github.com/gromacs/gromacs/blob/v2025.4/src/gromacs/mdlib/dispersioncorrection.cpp",
+    "sha256": "cb2e6b10e1bc26826bd4c9526e1d3a5824df67ead95a8838d02cf38d3b0f31cd"
+  },
+  "conclusion": "Large mixed-build/thread energy instability is absent in pinned double build. Recorded tail component accounts for most raw DP energy residual; +0.048263213kJ/mol remains unassigned. This is not model accuracy or universal periodic parity acceptance."
+}

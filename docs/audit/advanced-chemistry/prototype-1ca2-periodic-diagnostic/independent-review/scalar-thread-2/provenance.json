@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Users/ashujo/Documents/Science/DynaMol/.gromacs/bin/gmx",
+    "mdrun",
+    "-s",
+    "/Users/ashujo/Documents/Science/DynaMol/docs/audit/advanced-chemistry/prototype-1ca2-periodic-diagnostic/matched-mesh/diagnostic.tpr",
+    "-deffnm",
+    "scalar",
+    "-ntmpi",
+    "1",
+    "-ntomp",
+    "2",
+    "-nb",
+    "cpu",
+    "-notunepme"
+  ],
+  "environment_override": {
+    "GMX_NBNXN_PLAINC_1X1": "1"
+  },
+  "tpr_sha256": "5aa9285424526503ae95aebc3c786baf5c318ea86fbbdac3a12fe276b2ac3ac2",
+  "returncode": 0,
+  "elapsed_s": 2.106478691101074,
+  "scope": "same TPR; nsteps=0 static diagnostic, no dynamics",
+  "energy_returncode": 0
+}

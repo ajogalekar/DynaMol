@@ -1,0 +1,9 @@
+{
+  "evidence_directory": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1",
+  "manifest": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/artifact-manifest.json",
+  "manifest_sha256": "cc5de227f9526b77c3107b38301942473bd287d0a208a23d4ccb9707b11afaf3",
+  "artifact_count": 28,
+  "qualification": "/Users/ashujo/.cache/dynamol-research/covalent-prep-local-runtime-v1/qualification.json",
+  "qualification_sha256": "a4bf3f2f4e296f7333596673c23deae7755733460c95489c2ccbce0d1368617e",
+  "status": "qualified for scoped preparation operations; root review required for materializer admission"
+}

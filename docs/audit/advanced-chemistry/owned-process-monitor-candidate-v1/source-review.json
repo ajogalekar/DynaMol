@@ -1,0 +1,15 @@
+{
+  "status": "unlaunched_candidate",
+  "original_sha256": "e3f1ac0b86d2d9d13e2796ac564439eea76a93a39e554033f93b5a36cb1eec18",
+  "candidate_sha256": "7309b87e10a8eb19ed9bf56aa5651b5ac5a943c3290da7e391f8dcb873dbd5de",
+  "changed_functions": [
+    "_group_is_alive",
+    "resource_sample"
+  ],
+  "added_functions": [
+    "_native_owned_group_rows"
+  ],
+  "all_other_functions_AST_identical": true,
+  "science_workers_modified": false,
+  "resource_thresholds_changed": false
+}

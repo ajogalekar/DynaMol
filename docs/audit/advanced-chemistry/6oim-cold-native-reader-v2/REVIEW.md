@@ -1,0 +1,29 @@
+# Cold ESP and native RESP evidence reader candidate, v2
+
+This is a new, read-only recovery branch. It does not change the old checkpoint-based continuation, handoff, production backend, active jobs, or runtime. No quantum calculation, ESP calculation, RESP fit, simulation, or native parameter assembly was launched for this work. Independent review is pending in this frozen author report.
+
+The completed-ESP entry point is `read_completed_esp(plan_path, job)`. It first revalidates the actual terminal parent through the unchanged reviewed core. An active or failed parent refuses before downstream receipt or native ESP reads. It requires all five final materializer artifacts, complete field-level source and downstream binding, the independently admitted launcher and enablement evidence, clean terminal process receipt, and all nine immutable native outputs. It then checks exact atom/nuclear/state inventory, complete expanded conventional HF method and basis, exact accepted-parent geometry and ESP surface, converged SCF, units, array metadata, density electron count, native integral crosschecks, and final unchanged hashes. Checkpoint bytes are bound only as output artifacts; no checkpoint density is imported or reused. The public result remains `accepted=false`, `physical_acceptance=false`, and `simulation_ready=false`.
+
+The separate native RESP parser takes already-read bytes. It checks actual completed output/table/statistics formats, finite charge vectors, nuclear order, initial charges, stage freezing/equivalence, reported hyperbolic-restraint settings, and finite complete ESP diagnostics. Each stage binds its input, initial vector, and ESP bytes by hash. Exit code zero or a qout file alone is insufficient. ESP text uses the exact original formatter and original precision tolerances.
+
+The pure charge candidate applies the exact original `validate_charges` function from the pinned handoff, with complete source/constraint digest checks outside it. It retains all 94 jointly fitted charges, the 18 canonical cap/backbone values, and the original methyl policy. It removes exactly the 12 neutral temporary-cap atoms by identity, transporting the remaining 82 charge values unchanged. There is no zero fill, independent fragment refit, charge renormalization, alternate electrostatic method, graph substitution, or native mechanical parameter rewrite.
+
+**This is not yet an admitted RESP execution-to-force-field handoff.** The parser and charge candidate explicitly return `execution_provenance_admitted=false`. They must not be used to claim that raw native outputs came from a reviewed execution. The next bounded task is a separate stable-cache fitting executor using the already reviewed generic supervisor, short relative native filenames, a fresh directory for each stage, pinned relocated RESP runtime, parsed completed outputs, and independently checked terminal receipts. Only that later branch may connect these parsers to actual native charge handoff. The old native ff14SB parameter-precedence, graph/stereo/identity, energy/force signature gates and later torsion/held-out validation remain mandatory and unchanged.
+
+## Validation
+
+- 25 focused no-QM tests passed in 0.513 seconds. Invented two-atom native-format fixtures exercise association, strict metadata, receipt, and rejection behavior. Their synthetic logs/checkpoints explicitly say that no calculation occurred.
+- Both already-computed, hash-verified synthetic 94-atom RESP qualification stages were parsed read-only. No fit was repeated. These are software fixtures and are never used as charges for the actual biological complex or a native topology.
+- Negative checks cover unfinished/failed controller states, missing child-null and cleanup state, changed source/input/output hashes, changed method and nuclei even after local rehash, integer/Boolean coercions, incorrect resources/times, partial native outputs, RESP open errors despite nominal outputs, changed charge/IVARY/qwt tables, and changed two-stage ESP/input binding.
+- The actual parent admission refused in 0.018 seconds: `Parent is running, failed or nonterminal`. An instrumented downstream admission hook was never reached. No request or native job directory was created.
+- Launcher/core/materializer pins remained unchanged. A test run initially paused on a stale Documents bytecode read even with `-B`; it subsequently completed successfully before an attempted termination. The final recorded run uses local-cache sources with `-I -B` and a fresh `pycache_prefix`. No native process was stopped.
+
+## Practical limits
+
+Native ESP positive admission awaits a genuinely accepted terminal parent and completed ESP job. This package does not establish force-field accuracy, torsion quality, fit quality across conformations, or transferability to other molecular systems. RESP printed statistics and finite ESP diagnostics are recorded; no unreviewed unit conversion or arbitrary fit-quality threshold was added. Resource receipts establish sampled bounds and successful cleanup, not a continuous peak-RSS measurement. No release/UI integration is included.
+
+Stable source and evidence directory: `/Users/ashujo/.cache/dynamol-research/6oim-resp-recovery-v1/prepared/cold-native-reader-v2`.
+
+## v2 correction
+
+Independent review found that the v1 resources comparison omitted the frozen worker’s `memory_limit_kind` field. The v1 synthetic fixture omitted it too, masking a real positive-path refusal. v2 adds the exact producer field and corrects that fixture. A new test evaluates only the pinned worker’s actual resources assignment/update statements with scalar mock values, compares their complete payload, and rejects a missing-field result. All numerical and receipt guards are otherwise unchanged. The unadmitted v1 package and 24-test evidence are preserved.

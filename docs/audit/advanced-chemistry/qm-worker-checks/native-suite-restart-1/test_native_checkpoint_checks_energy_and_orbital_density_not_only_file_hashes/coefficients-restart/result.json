@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "failed",
+  "phase": "initial_checkpoint",
+  "worker_sha256": "e7841b3fb0fa71d8ffdd2b6b49c856b5481174facbdde5fe790dd55acf06ef4d",
+  "meaning_of_accepted": "Requested numerical calculation converged and passed stated checks; not force-field or chemical-model validation.",
+  "input_sha256": "ea841b77600afd0f95e77a927713fc9828c2cacc6bfe7d96129cd7779b6343c8",
+  "resources": {
+    "threads": 2,
+    "max_memory_mb": 8000,
+    "memory_limit_kind": "PySCF allocation setting, not an operating-system hard limit",
+    "max_wall_seconds": 7200
+  },
+  "error": {
+    "type": "ValueError",
+    "message": "Initial checkpoint orbitals are not orthonormal in the requested AO basis"
+  },
+  "elapsed_seconds": 0.296427
+}
