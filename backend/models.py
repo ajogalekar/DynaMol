@@ -2,6 +2,8 @@ import math
 from typing import Annotated, Literal
 from pydantic import BaseModel, Field, model_validator
 
+from . import config
+
 LigandOverrides = dict[Annotated[str, Field(min_length=1, max_length=100)], Annotated[str, Field(min_length=1, max_length=10000)]]
 
 
@@ -30,7 +32,7 @@ class SimulationConfig(BaseModel):
     dataset_id: str = Field(min_length=1, max_length=80, pattern=r"^[A-Za-z0-9_-]+$")
     engine: Literal["openmm", "gromacs"] = "openmm"
     name: str = Field(default="My simulation", min_length=1, max_length=100)
-    duration_ps: float = Field(default=10, gt=0, le=1000, allow_inf_nan=False)
+    duration_ps: float = Field(default=10, gt=0, le=config.MAX_DURATION_PS, allow_inf_nan=False)
     temperature_k: float = Field(default=300, ge=50, le=500, allow_inf_nan=False)
     timestep_fs: float = Field(default=2, ge=0.1, le=2, allow_inf_nan=False)
     report_interval: int = Field(default=50, ge=1, le=100000)
@@ -47,10 +49,10 @@ class SimulationConfig(BaseModel):
         if len({measurement.id for measurement in self.measurements}) != len(self.measurements):
             raise ValueError("Live measurement IDs must be unique.")
         steps = round(self.duration_ps * 1000 / self.timestep_fs)
-        if steps < 1 or steps > 2_000_000:
-            raise ValueError("Choose a duration and timestep giving 1 to 2,000,000 production steps.")
-        if math.ceil(steps / self.report_interval) + 1 > 10_000:
-            raise ValueError("Increase the frame interval: this local version stores at most 10,000 frames.")
+        if steps < 1 or steps > config.MAX_STEPS:
+            raise ValueError(f"Choose a duration and timestep giving 1 to {config.MAX_STEPS:,} production steps.")
+        if math.ceil(steps / self.report_interval) + 1 > config.MAX_FRAMES:
+            raise ValueError(f"Increase the frame interval: this local version stores at most {config.MAX_FRAMES:,} frames.")
         if self.engine == "gromacs" and self.solvent != "explicit":
             raise ValueError("The GROMACS workflow supports explicit TIP3P solvent only.")
         return self

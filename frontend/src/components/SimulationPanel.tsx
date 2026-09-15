@@ -190,6 +190,11 @@ export default function SimulationPanel({
       setSolvent('explicit');
     }
   }, [dataset?.id]);
+  // A stale submission/validation error must clear as soon as the user edits any
+  // run setting, so a corrected value can be submitted without a page refresh.
+  useEffect(() => {
+    setError('');
+  }, [name, duration, temp, solvent, step, interval, seed, friction, equil, padding, minimize, engine]);
   // Reconnect to a background preparation when the studio is reopened.
   useEffect(() => {
     if (pending || !dataset) return;
@@ -641,7 +646,7 @@ export default function SimulationPanel({
                   <input
                     type="number"
                     min="0.002"
-                    max="1000"
+                    max="10000"
                     step="any"
                     value={duration}
                     onChange={(e) => setDuration(Number(e.target.value))}

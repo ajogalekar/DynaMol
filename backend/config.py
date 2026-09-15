@@ -10,6 +10,12 @@ MAX_UPLOAD_BYTES = 250 * 1024 * 1024
 MAX_ATOMS = int(os.environ.get("DYNAMOL_MAX_ATOMS", "100000"))
 if not 1 <= MAX_ATOMS <= 200_000:
     raise ValueError("DYNAMOL_MAX_ATOMS must be between 1 and 200000; the default is 100000.")
+MAX_DURATION_PS = float(os.environ.get("DYNAMOL_MAX_DURATION_PS", "10000"))
+if not 0 < MAX_DURATION_PS <= 1_000_000:
+    raise ValueError("DYNAMOL_MAX_DURATION_PS must be between 0 and 1000000; the default is 10000 (10 ns).")
+MAX_STEPS = int(os.environ.get("DYNAMOL_MAX_STEPS", "10000000"))
+if not 1 <= MAX_STEPS <= 2_000_000_000:
+    raise ValueError("DYNAMOL_MAX_STEPS must be between 1 and 2000000000; the default is 10000000.")
 MAX_FRAMES = 10_000
 MAX_COORD_BYTES = 256 * 1024 * 1024
 CPU_THREADS = max(1, min(4, int(os.environ.get("DYNAMOL_CPU_THREADS", "2"))))
