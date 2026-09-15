@@ -4,9 +4,9 @@
 
 ![DynaMol molecular workspace](docs/dynamol-desktop.png)
 
-DynaMol is a free, open-source desktop app for drug-discovery and computational-chemistry scientists who want to set up and run a simulation without first assembling a toolchain. Fetch a structure from the Protein Data Bank or open your own, prepare it, run it with **OpenMM or GROMACS**, and study the trajectory in an interactive 3D viewer.
+DynaMol is a free, open-source desktop app for drug-discovery and computational chemistry scientists who want to set up and run a simulation without first assembling a toolchain. Fetch a structure from the Protein Data Bank or open your own, prepare it, run it with **OpenMM or GROMACS**, and study the trajectory in an interactive 3D viewer.
 
-**Both MD engines come bundled — you never install OpenMM or GROMACS yourself, and never touch a command line.** The single Mac download also includes Python, AmberTools and the loop- and ligand-preparation tools, so there is no separate MD installation, package manager, compiler, cloud account, or API key. Everything runs locally: your structures and simulations stay on your machine, and the only optional network calls fetch public data from the RCSB PDB or PubChem when you ask for a structure or ligand.
+**Both MD engines come bundled — you don't have to install OpenMM or GROMACS yourself or touch a command line.** The single Mac download also includes Python, AmberTools and the loop- and ligand-preparation tools, so there is no separate MD installation, package manager, compiler, cloud account, or API key. Everything runs locally: your structures and simulations stay on your machine, and the only optional network calls fetch public data from the RCSB PDB or PubChem when you ask for a structure or ligand.
 
 ## What DynaMol does
 
@@ -20,9 +20,9 @@ DynaMol is a free, open-source desktop app for drug-discovery and computational-
 
 **v1 covers** standard-protein and supported noncovalent protein–ligand systems, on CPU, up to a bundled 100,000-atom limit — built for local, exploratory preparation, simulation and analysis. See the full [simulation scope](#simulation-scope).
 
-**Out of scope in v1** — GPU acceleration; membranes and membrane proteins (channel and GPCR runs are water-only); covalent ligands and metal-site coordination models (these are recognized and clearly blocked, never silently altered); nucleic-acid systems; and docking, binding-affinity, free-energy, or pKₐ prediction. Rebuilt loops are provisional starting models, not experimentally resolved structures. DynaMol is a preparation-and-simulation workbench, not a scoring or convergence engine.
+**Out of scope in v1** — GPU acceleration; membranes and membrane proteins (channel and GPCR runs are water-only); covalent ligands and metal-site coordination models (these are recognized and clearly blocked, never silently altered); nucleic-acid systems; and docking, binding-affinity, free-energy, or pKₐ prediction. Rebuilt loops are provisional starting models, not experimentally resolved structures.
 
-**Coming in v2** — **GPU-accelerated dynamics** (OpenMM, and GROMACS where available) for larger systems and longer trajectories; higher atom limits and membrane building; the stricter, backbone-reference-validated loop-repair workflow already staged in this repository; and continued work toward covalent and metal-containing complexes. This is a roadmap, not a delivery guarantee.
+**Coming in v2** — **GPU-accelerated dynamics** (OpenMM, and GROMACS where available) for larger systems and longer trajectories; higher atom limits and membrane building; the stricter, backbone-reference-validated loop-repair workflow already staged in this repository; and continued work toward covalent and metal-containing complexes.
 
 ## Start exploring
 
@@ -32,7 +32,7 @@ The current checkout also builds a [standalone Mac window](docs/NATIVE_MAC.md), 
 
 1. Download and open `DynaMol-1.0.0-macos-arm64.dmg`.
 2. Drag **DynaMol** into **Applications**.
-3. Open **DynaMol** from Applications. First launch shows progress while unpacking the included engines, then opens the interface in your default browser.
+3. Open **DynaMol** from Applications; you will have to say "Open anyway" in your Security settings (see below). First launch shows progress while unpacking the included engines, then opens the interface in your default browser.
 
 **OpenMM, GROMACS, Python and the preparation tools are included.** No Terminal commands, separate MD installation or package manager is needed. New structure fetches still require internet.
 
