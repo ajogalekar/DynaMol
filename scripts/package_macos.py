@@ -367,8 +367,17 @@ def build(releases: Path = RELEASES, app_only: bool = False, frontend_dir: Path 
     for folder in ('backend', 'examples'):
         shutil.copytree(ROOT / folder, app / folder, symlinks=False, ignore=ignore_copy)
     shutil.copytree(frontend, app / 'frontend' / 'dist')
-    # Include the cited audit evidence and screenshots alongside the guides.
-    shutil.copytree(ROOT / 'docs', app / 'docs', ignore=ignore_copy)
+    # Bundle the user-facing guides and release notes, but not docs/audit: that
+    # is a large local evidence corpus (trajectories, serialized systems,
+    # screenshots) kept out of the repository and out of the shipped app. Its
+    # reports remain on GitHub and are cited by hash. Keeping it here inflated
+    # the DMG past the 2 GiB release-asset limit.
+    def ignore_docs(directory, names):
+        ignored = list(ignore_copy(directory, names))
+        if Path(directory).resolve() == (ROOT / 'docs').resolve():
+            ignored.append('audit')
+        return ignored
+    shutil.copytree(ROOT / 'docs', app / 'docs', ignore=ignore_docs)
     for name in ('pyproject.toml', 'uv.lock', 'LICENSE', 'README.md', 'THIRD_PARTY.md'):
         shutil.copy2(ROOT / name, app / name)
     # The app source is included alongside the binaries; user datasets/jobs are

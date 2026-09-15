@@ -8,11 +8,11 @@ DynaMol is free and open source (**v1.0.0**), built with React, NGL, FastAPI, MD
 
 ## Start exploring
 
-**v1.0.0** is the current source release: it carries the September preparation fixes and the [loop-repair evidence and limits](docs/LOOP_REPAIR.md). The **0.1.1 Mac installer** remains the current application download; a v1.0.0 installer will be attached to the [v1.0.0 release](https://github.com/ajogalekar/DynaMol/releases/tag/v1.0.0) after its own packaging and acceptance run. Use the published installer from the [v0.1.1 release](https://github.com/ajogalekar/DynaMol/releases/tag/v0.1.1) on Apple Silicon with macOS 14 or newer, or [run from source](#run-from-source) for the v1.0.0 code.
+**v1.0.0** is the current release. Download **DynaMol-1.0.0-macos-arm64.dmg** from the [v1.0.0 release](https://github.com/ajogalekar/DynaMol/releases/tag/v1.0.0) on Apple Silicon with macOS 14 or newer, or [run from source](#run-from-source). It carries the September preparation fixes and the [loop-repair evidence and limits](docs/LOOP_REPAIR.md).
 
 The current checkout also builds a [standalone Mac window](docs/NATIVE_MAC.md), with a Dock icon, native file dialogs and the same bundled engines. That candidate is separate from the published browser-opening installer above. Prerelease downloads use explicit version links; GitHub's `latest/download` shortcut does not select prereleases.
 
-1. Download and open `DynaMol-0.1.1-macos-arm64.dmg`.
+1. Download and open `DynaMol-1.0.0-macos-arm64.dmg`.
 2. Drag **DynaMol** into **Applications**.
 3. Open **DynaMol** from Applications. First launch shows progress while unpacking the included engines, then opens the interface in your default browser.
 
@@ -20,7 +20,7 @@ The current checkout also builds a [standalone Mac window](docs/NATIVE_MAC.md), 
 
 This release has an **ad-hoc integrity signature, without Developer ID signing or notarization**. If macOS blocks it after the first opening attempt, Apple's [per-app opening instructions](https://support.apple.com/en-us/102445) describe **System Settings → Privacy & Security → Open Anyway**. Institutional device policies may prevent this. No paid Apple Developer enrollment is needed.
 
-Your work is saved in `~/Library/Application Support/DynaMol`; replacing the app keeps that data. See [installation details and limits](docs/PACKAGING.md) and the [release notes](docs/releases/v1.0.0.md). Intel Mac, Windows and Linux do not yet have tested application downloads.
+Your work is saved in `~/Library/Application Support/DynaMol`; replacing the app keeps that data. See [installation details and limits](docs/PACKAGING.md) and the [release notes](docs/releases/v1.0.0.md). Replacing the app keeps your data in `~/Library/Application Support/DynaMol`; quit DynaMol before installing over an older copy. Intel Mac, Windows and Linux do not yet have tested application downloads.
 
 ### Run from source
 
