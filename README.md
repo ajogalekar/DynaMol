@@ -1,10 +1,28 @@
 # DynaMol
 
-**Molecules in motion.** A local, open source molecular dynamics workbench: create a trajectory, explore it in 3D, and follow the interactions that matter.
+**Molecules in motion.** Prepare a protein or a protein–ligand complex, run a molecular dynamics simulation, and watch how the structure moves and interacts — on your own Mac, with nothing to set up.
 
 ![DynaMol molecular workspace](docs/dynamol-desktop.png)
 
-DynaMol is free and open source (**v1.0.0**), built with React, NGL, FastAPI, MDTraj, OpenMM, GROMACS, PDBFixer, ProMod3, RDKit, and AmberTools. It runs on your own computer. Uploaded coordinates and simulations stay local. Optional Fetch contacts RCSB or PubChem; ligand inspection can also retrieve public Chemical Component Dictionary (CCD) records from RCSB using component identifiers. The application needs no cloud account or API key. The Mac download includes the engines, fonts and starter trajectory.
+DynaMol is a free, open-source desktop app for drug-discovery and computational-chemistry scientists who want to set up and run a simulation without first assembling a toolchain. Fetch a structure from the Protein Data Bank or open your own, prepare it, run it with **OpenMM or GROMACS**, and study the trajectory in an interactive 3D viewer.
+
+**Both MD engines come bundled — you never install OpenMM or GROMACS yourself, and never touch a command line.** The single Mac download also includes Python, AmberTools and the loop- and ligand-preparation tools, so there is no separate MD installation, package manager, compiler, cloud account, or API key. Everything runs locally: your structures and simulations stay on your machine, and the only optional network calls fetch public data from the RCSB PDB or PubChem when you ask for a structure or ligand.
+
+## What DynaMol does
+
+- **Get a structure** — fetch by PDB ID from RCSB, or open a local PDB/mmCIF; pull ligand chemistry from the PDB Chemical Component Dictionary or PubChem.
+- **Prepare it for simulation** — add missing atoms and short missing loops, assign protonation at a chosen pH, keep supported modified residues, parameterize organic ligands (GAFF2 / AM1-BCC), and place common ions — with every choice shown before you commit.
+- **Run molecular dynamics** — OpenMM or GROMACS, implicit or explicit water, with sensible bounded defaults. No force-field setup, scripting, or terminal work.
+- **Explore the trajectory** — play it back in 3D, measure distances, angles, dihedrals and hydrogen-bond geometry, track RMSD/RMSF, and save named scenes and projects.
+- **Stay self-contained** — one download with **both MD engines included**; your work never leaves your Mac.
+
+## Scope and roadmap
+
+**v1 covers** standard-protein and supported noncovalent protein–ligand systems, on CPU, up to a bundled 100,000-atom limit — built for local, exploratory preparation, simulation and analysis. See the full [simulation scope](#simulation-scope).
+
+**Out of scope in v1** — GPU acceleration; membranes and membrane proteins (channel and GPCR runs are water-only); covalent ligands and metal-site coordination models (these are recognized and clearly blocked, never silently altered); nucleic-acid systems; and docking, binding-affinity, free-energy, or pKₐ prediction. Rebuilt loops are provisional starting models, not experimentally resolved structures. DynaMol is a preparation-and-simulation workbench, not a scoring or convergence engine.
+
+**Coming in v2** — **GPU-accelerated dynamics** (OpenMM, and GROMACS where available) for larger systems and longer trajectories; higher atom limits and membrane building; the stricter, backbone-reference-validated loop-repair workflow already staged in this repository; and continued work toward covalent and metal-containing complexes. This is a roadmap, not a delivery guarantee.
 
 ## Start exploring
 
@@ -175,4 +193,4 @@ Good next contributions: bounded trajectory streaming, verified continuous perio
 
 ## Credits and license
 
-DynaMol application code is [MIT licensed](LICENSE). Dependencies retain their own licenses; see [third-party notices](THIRD_PARTY.md). The starter structure is [RCSB PDB 1UBQ](https://www.rcsb.org/structure/1UBQ), from Vijay-Kumar, Bugg & Cook, *Journal of Molecular Biology* (1987), [doi:10.1016/0022-2836(87)90679-6](https://doi.org/10.1016/0022-2836(87)90679-6).
+DynaMol is built on OpenMM, GROMACS, AmberTools, ProMod3, PDBFixer, RDKit and MDTraj, with an NGL/React interface and a FastAPI backend. The application code is [MIT licensed](LICENSE); each dependency retains its own license — see [third-party notices](THIRD_PARTY.md). The starter structure is [RCSB PDB 1UBQ](https://www.rcsb.org/structure/1UBQ), from Vijay-Kumar, Bugg & Cook, *Journal of Molecular Biology* (1987), [doi:10.1016/0022-2836(87)90679-6](https://doi.org/10.1016/0022-2836(87)90679-6).
