@@ -299,21 +299,30 @@ class Worker:
             simulation.context.setPositions(modeller.positions)
             before_min_xyz = np.asarray(modeller.positions.value_in_unit(unit.nanometer))
             self.check_stereochemistry(modeller.topology, before_min_xyz, 'Before minimization')
+            # Permanent chirality guard. The force field has no explicit term
+            # keeping a Calpha/Cbeta stereocenter left-handed; chirality is held
+            # only by the local bonded geometry. Where a strained prepared
+            # geometry (a residue beside a low-confidence rebuilt loop) distorts
+            # that geometry, the force field's own local minimum can be the
+            # inverted (D) center -- free minimization drives it there and the
+            # first MD steps racemize it. This gentle flat-bottom restraint is
+            # part of the minimization and dynamics force field: it is exactly
+            # zero while a center keeps its correct sign and at least 40% of its
+            # ideal signed-volume magnitude and rises only as a center nears
+            # planarity, so it never biases the many healthy centers and only
+            # resists racemization of the few strained ones. Because it is
+            # permanent there is no release into which a held center could invert.
+            guard, guarded = self._stereo_monitor.chirality_guard_force(before_min_xyz)
+            if guarded:
+                system.addForce(guard)
+                simulation.context.reinitialize(preserveState=True)
+                self.record_preparation(f"Added a permanent flat-bottom chirality restraint over {len(guarded)} standard-residue stereocenters "
+                                        "(zero force while a center keeps its sign and >= 40% of its ideal signed volume; it resists only the "
+                                        "approach to planarity). It is part of the minimization and dynamics force field and prevents strained "
+                                        "rebuilt-loop geometry from racemizing a center; healthy centers are unaffected.")
             if settings["minimize"]:
                 self.update(stage="Energy minimization", message="Minimizing up to 1,000 iterations (tolerance 10 kJ/mol/nm).")
-                # Protect standard-residue stereocenters so gradient minimization
-                # can relieve clashes without pushing any center through a planar
-                # intermediate into its mirror image. Temporary; removed before
-                # dynamics so it never affects the physics.
-                protection, protected = self._stereo_monitor.protection_force(before_min_xyz)
-                protect_index = system.addForce(protection) if protected else None
-                if protect_index is not None:
-                    simulation.context.reinitialize(preserveState=True)
                 simulation.minimizeEnergy(tolerance=10 * unit.kilojoule_per_mole / unit.nanometer, maxIterations=1000)
-                if protect_index is not None:
-                    system.removeForce(protect_index)
-                    simulation.context.reinitialize(preserveState=True)
-                    self.record_preparation(f"Protected {len(protected)} standard-residue stereocenters with temporary flat-bottom chirality restraints during minimization; these restraints are not part of the dynamics force field.")
                 minimized = simulation.context.getState(getPositions=True)
                 self.check_stereochemistry(simulation.topology, minimized.getPositions(asNumpy=True).value_in_unit(unit.nanometer), 'After minimization')
             simulation.context.setVelocitiesToTemperature(settings["temperature_k"] * unit.kelvin, settings["seed"])
