@@ -168,3 +168,18 @@ def test_repaired_loop_minimization_gate_matches_readiness_and_submission(requir
         with pytest.raises(ValueError, match="Enable energy minimization"):
             jobs.submit_job(settings)
     assert jobs.list_jobs() == []
+
+
+def test_recommends_explicit_solvent_by_size_for_protein_only(monkeypatch):
+    from backend.preparation_worker import recommends_explicit_solvent
+    monkeypatch.setattr(config, "RECOMMEND_EXPLICIT_ATOMS", 4000)
+    # Large protein-only system: prefer explicit (implicit GBn2 is O(N^2) on CPU).
+    assert recommends_explicit_solvent(4000, requires_explicit=False) is True
+    assert recommends_explicit_solvent(50000, requires_explicit=False) is True
+    # Small protein-only system: keep the implicit default.
+    assert recommends_explicit_solvent(3999, requires_explicit=False) is False
+    # Never override a hard explicit requirement (ligand / ion / modified residue).
+    assert recommends_explicit_solvent(50000, requires_explicit=True) is False
+    # Threshold is the env-configurable constant.
+    monkeypatch.setattr(config, "RECOMMEND_EXPLICIT_ATOMS", 100000)
+    assert recommends_explicit_solvent(5000, requires_explicit=False) is False

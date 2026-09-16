@@ -279,6 +279,19 @@ def require_valid_stereochemistry(report, stage):
         raise ValueError(f"{stage} has inverted or near-planar standard residue stereochemistry at {first['chain']}:{first['resid']} {first['residue']} {first['center']}. The model is rejected; use an externally validated repair instead.")
 
 
+def recommends_explicit_solvent(atom_count, requires_explicit):
+    """Advisory preference for explicit TIP3P/PME over implicit GBn2 by size.
+
+    GBn2 implicit solvent uses no nonbonded cutoff (all-pairs, O(N^2)) and is slow
+    on CPU for large proteins; explicit PME is O(N) and more accurate. Above
+    ``config.RECOMMEND_EXPLICIT_ATOMS`` prepared atoms, recommend explicit for a
+    protein-only system. This is advisory only — implicit stays selectable — so it
+    never applies where explicit is already required (ligands, ions, modified
+    residues carry ``requires_explicit``).
+    """
+    return not requires_explicit and atom_count >= config.RECOMMEND_EXPLICIT_ATOMS
+
+
 def restore_modeled_loop_sidechains(topology, positions, templates, observed_keys, environment_positions=()):
     """Correct only wholly new non-Pro loop sidechains in proper local frames.
 
@@ -845,6 +858,16 @@ class PreparationWorker(Worker):
             preparation.update(modified_residues=modified, modified_residue_parameters=modified_forcefield_provenance(), requires_explicit_solvent=True)
         if ligand_parameters:
             preparation["ligand_parameters"] = ligand_parameters
+        # Prefer explicit TIP3P/PME for large protein-only systems. GBn2 implicit
+        # solvent uses no nonbonded cutoff (all-pairs, O(N^2)) and is slow on CPU
+        # for big proteins; explicit PME is O(N) and more accurate. Advisory only:
+        # implicit stays selectable (unlike requires_explicit_solvent).
+        if recommends_explicit_solvent(len(output_atoms), bool(preparation.get("requires_explicit_solvent"))):
+            preparation["recommend_explicit_solvent"] = True
+            preparation["solvent_recommendation"] = (
+                f"This prepared protein has {len(output_atoms):,} atoms. Implicit GBn2 solvent has no "
+                "nonbonded cutoff (all-pairs, O(N²)) and is slow on CPU at this size; explicit TIP3P/PME "
+                "(O(N), and more accurate) is recommended. Implicit remains available.")
         preparation["ligand_actions"] = options.get("ligand_actions", {})
         if source_identity_plan is not None:
             preparation["sequence_mapping"] = {"method": "Exact mmCIF _pdbx_poly_seq_scheme positions; author numbering gaps are not interpreted as missing sequence", "restored_inserted_residues": restored_identities, "recovered_observed_insertion_codes": fixer.recovered_insertion_codes, "observed_residue_identities_preserved": True}

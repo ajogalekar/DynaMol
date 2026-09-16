@@ -46,6 +46,8 @@ export interface Dataset {
     job_id?: string;
     modified_residues?: ModifiedResidueInspection[];
     requires_explicit_solvent?: boolean;
+    recommend_explicit_solvent?: boolean;
+    solvent_recommendation?: string;
     ligand_parameters?: {
       forcefield: string;
       charge_method: string;

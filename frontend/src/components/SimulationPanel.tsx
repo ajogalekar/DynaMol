@@ -169,6 +169,8 @@ export default function SimulationPanel({
   const complexPrepared = !!dataset?.preparation?.ligand_parameters;
   const modifiedPrepared = !!dataset?.preparation?.modified_residues?.length;
   const requiresExplicit = complexPrepared || !!dataset?.preparation?.requires_explicit_solvent;
+  // Soft: default large protein-only systems to explicit (implicit stays selectable).
+  const recommendExplicit = !requiresExplicit && !!dataset?.preparation?.recommend_explicit_solvent;
   const paddingError =
     !Number.isFinite(padding) || padding < 1 || padding > 3
       ? 'Enter a box padding between 1 and 3 nm.'
@@ -186,7 +188,7 @@ export default function SimulationPanel({
     } else if (dataset?.solvation) {
       setSolvent('explicit');
       setPadding(dataset.solvation.padding_nm);
-    } else if (requiresExplicit) {
+    } else if (requiresExplicit || recommendExplicit) {
       setSolvent('explicit');
     }
   }, [dataset?.id]);
@@ -233,7 +235,9 @@ export default function SimulationPanel({
             onWaterVisibility(true);
           } else
             setSolvent(
-              next.preparation?.ligand_parameters || next.preparation?.requires_explicit_solvent
+              next.preparation?.ligand_parameters ||
+                next.preparation?.requires_explicit_solvent ||
+                next.preparation?.recommend_explicit_solvent
                 ? 'explicit'
                 : 'implicit',
             );
@@ -557,6 +561,12 @@ export default function SimulationPanel({
                   <option value="explicit">Explicit water · periodic box</option>
                 </select>
               </label>
+              {engine === 'openmm' && recommendExplicit && solvent === 'implicit' && (
+                <p className="form-note">
+                  {dataset?.preparation?.solvent_recommendation ??
+                    'Explicit solvent (TIP3P/PME) is recommended for a protein this large; implicit GBn2 is slow on CPU at this size.'}
+                </p>
+              )}
               {engine === 'openmm' && (
                 <div className="solvent-preview-card">
                   <Droplets size={17} />

@@ -19,5 +19,9 @@ if not 1 <= MAX_STEPS <= 2_000_000_000:
 MAX_FRAMES = 10_000
 MAX_COORD_BYTES = 256 * 1024 * 1024
 CPU_THREADS = max(1, min(4, int(os.environ.get("DYNAMOL_CPU_THREADS", "2"))))
+# Above this prepared-atom count, GBn2 implicit solvent (NoCutoff, O(N^2)) is slow
+# on CPU; preparation recommends explicit TIP3P/PME (O(N), also more accurate) for
+# such protein-only systems. Advisory only: implicit stays selectable.
+RECOMMEND_EXPLICIT_ATOMS = int(os.environ.get("DYNAMOL_RECOMMEND_EXPLICIT_ATOMS", "4000"))
 for directory in (DATASETS_DIR, JOBS_DIR):
     directory.mkdir(parents=True, exist_ok=True)
