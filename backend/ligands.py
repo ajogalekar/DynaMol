@@ -24,7 +24,7 @@ import urllib.request
 import numpy as np
 from openmm import app, unit
 from rdkit import Chem
-from rdkit.Chem import AllChem
+from rdkit.Chem import AllChem, rdCIPLabeler
 
 from . import config, storage
 from .sources import STANDARD_RESIDUES
@@ -204,6 +204,24 @@ def _set_conformer(mol, positions):
     mol.AddConformer(conformer)
 
 
+def _assign_cip_labels(mol):
+    """Assign accurate CIP (R/S) descriptors from already-perceived stereo tags.
+
+    The caller has just run ``AssignStereochemistryFrom3D``, which sets both the
+    atom chiral tags and bond E/Z from geometry. We then apply ``rdCIPLabeler``,
+    RDKit's full CIP-algorithm implementation, to read accurate ``_CIPCode``
+    values off those tags. We deliberately do NOT call legacy
+    ``AssignStereochemistry`` here: its simplified priority rules mislabel
+    fused-ring steroid centres (e.g. it reports R for the correctly deposited S
+    at C13 of an estrane such as R1881) and its ``cleanIt`` pass strips valid
+    chiral tags on other ring-junction centres (e.g. steroid C8), leaving them
+    "unresolved". Either behaviour spuriously rejects a valid bound pose against
+    the CCD reference; ``rdCIPLabeler`` on the geometry-derived tags agrees with
+    the CCD.
+    """
+    rdCIPLabeler.AssignCIPLabels(mol)
+
+
 def _graph(residue, coordinates, chemistry=None, block=None):
     atoms = [atom for atom in residue.atoms() if atom.element != app.element.hydrogen]
     names = [atom.name for atom in atoms]
@@ -281,7 +299,7 @@ def _graph(residue, coordinates, chemistry=None, block=None):
         raise ValueError("Each ligand must be one connected, closed-shell chemical graph.")
     _set_conformer(mol, coordinates[[atom.index for atom in atoms]])
     Chem.AssignStereochemistryFrom3D(mol, replaceExistingTags=True)
-    Chem.AssignStereochemistry(mol, cleanIt=True, force=True)
+    _assign_cip_labels(mol)
     for name, expected in expected_stereo.items():
         atom = mol.GetAtomWithIdx(names.index(name))
         actual = atom.GetProp("_CIPCode") if atom.HasProp("_CIPCode") else None
@@ -290,8 +308,14 @@ def _graph(residue, coordinates, chemistry=None, block=None):
     unverified_bond_stereo = []
     for (a, b), expected in expected_bonds.items():
         bond = mol.GetBondBetweenAtoms(a, b)
-        actual = bond.GetStereo()
-        if actual != {'E': Chem.BondStereo.STEREOE, 'Z': Chem.BondStereo.STEREOZ}[expected]:
+        # Compare CIP E/Z descriptors. rdCIPLabeler (run in _assign_cip_labels)
+        # sets an accurate CIP "E"/"Z" _CIPCode on each stereo bond. bond.GetStereo()
+        # is referenced to whichever stereo atoms RDKit picked (it returns
+        # STEREOCIS/STEREOTRANS, not CIP STEREOE/STEREOZ), so it cannot be
+        # compared against the CCD's CIP descriptor -- doing so falsely rejects
+        # correct geometry (e.g. geldanamycin C2-C3, rapamycin C17-C18).
+        actual = bond.GetProp('_CIPCode') if bond.HasProp('_CIPCode') else None
+        if actual != expected:
             # CCD can describe C=NH orientation using a hydrogen/lone-pair
             # convention absent from this heavy-atom graph. RDKit requires
             # two heavy neighbors at each end for double-bond stereo:
@@ -303,7 +327,7 @@ def _graph(residue, coordinates, chemistry=None, block=None):
                               and sorted(atom.GetSymbol() for atom in ends) == ['C', 'N']
                               and any(atom.GetSymbol() == 'N' and atom.GetDegree() == 1
                                       and atom.GetFormalCharge() == 0 and atom.GetTotalNumHs() == 1 for atom in ends))
-            if actual == Chem.BondStereo.STEREONONE and terminal_imine:
+            if actual is None and terminal_imine:
                 unverified_bond_stereo.append({'atoms': [names[a], names[b]], 'ccd_descriptor': expected,
                                               'status': 'unverified',
                                               'reason': 'Terminal C=NH has only one heavy-atom neighbor at nitrogen; its CCD E/Z descriptor cannot be verified from the retained heavy-atom geometry.'})
