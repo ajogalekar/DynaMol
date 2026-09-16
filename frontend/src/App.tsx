@@ -1183,12 +1183,12 @@ export default function App() {
           <b>α</b>
         </a>
         <nav className="main-nav" aria-label="Workspace">
-          <button className={modal !== 'simulation' ? 'active' : ''} onClick={() => setModal(null)}>
-            <Box size={16} /> Explore
-          </button>
           <button className={modal === 'simulation' ? 'active' : ''} onClick={openStudio}>
             <FlaskConical size={16} /> Simulate
             {running.length > 0 && <span className="nav-count">{running.length}</span>}
+          </button>
+          <button className={modal !== 'simulation' ? 'active' : ''} onClick={() => setModal(null)}>
+            <Box size={16} /> Explore
           </button>
         </nav>
         <div className="header-right">
