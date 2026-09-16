@@ -155,7 +155,7 @@ The [chemistry support matrix](docs/CHEMISTRY_SUPPORT.md) records checks across 
 
 The hydrogen-bond tool reports a **custom geometric criterion**: donor–acceptor ≤ 3.5 Å and donor–H–acceptor ≥ 150°, with explicit hydrogen connectivity required. This is not proof of chemical donor/acceptor eligibility or equivalence to other packages' default definitions.
 
-See the [complex preparation review](docs/complex-preparation-review.md), [protein preparation review](docs/preparation-review.md), and [scientific review](docs/scientific-review.md) for validation status and limitations, and [backend notes](backend/README.md) for exact behavior. A completed preparation or short MD test is not evidence of an experimentally correct protonation state, ligand binding, or equilibrium sampling. The first bundled demo has an explicitly recorded preparation-randomness limitation; new jobs seed preparation as well as dynamics.
+See the [robustness validation across 60 diverse PDB structures](docs/ROBUSTNESS_VALIDATION.md), [complex preparation review](docs/complex-preparation-review.md), [protein preparation review](docs/preparation-review.md), and [scientific review](docs/scientific-review.md) for validation status and limitations, and [backend notes](backend/README.md) for exact behavior. A completed preparation or short MD test is not evidence of an experimentally correct protonation state, ligand binding, or equilibrium sampling. The first bundled demo has an explicitly recorded preparation-randomness limitation; new jobs seed preparation as well as dynamics.
 
 ## Develop and contribute
 
