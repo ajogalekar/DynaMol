@@ -4,6 +4,12 @@
 
 ![DynaMol molecular workspace](docs/dynamol-desktop.png)
 
+## Download for macOS
+
+### [⬇ Download DynaMol 1.0.0 — macOS (Apple Silicon)](https://github.com/ajogalekar/DynaMol/releases/download/v1.0.0/DynaMol-1.0.0-macos-arm64.dmg)
+
+**Signed with an Apple Developer ID and notarized by Apple** — it opens like any other Mac app, with no security workarounds. Requires Apple Silicon and macOS 14 or newer. Prefer source? [Run from source](#run-from-source).
+
 DynaMol is a free, open-source desktop app for drug-discovery and computational chemistry scientists who want to set up and run a simulation without first assembling a toolchain. Fetch a structure from the Protein Data Bank or open your own, prepare it, run it with **OpenMM or GROMACS**, and study the trajectory in an interactive 3D viewer.
 
 **Both MD engines come bundled — you don't have to install OpenMM or GROMACS yourself or touch a command line.** The single Mac download also includes Python, AmberTools and the loop- and ligand-preparation tools, so there is no separate MD installation, package manager, compiler, cloud account, or API key. Everything runs locally: your structures and simulations stay on your machine, and the only optional network calls fetch public data from the RCSB PDB or PubChem when you ask for a structure or ligand.
@@ -26,17 +32,17 @@ DynaMol is a free, open-source desktop app for drug-discovery and computational 
 
 ## Start exploring
 
-**v1.0.0** is the current release. Download **DynaMol-1.0.0-macos-arm64.dmg** from the [v1.0.0 release](https://github.com/ajogalekar/DynaMol/releases/tag/v1.0.0) on Apple Silicon with macOS 14 or newer, or [run from source](#run-from-source). It carries the September preparation fixes and the [loop-repair evidence and limits](docs/LOOP_REPAIR.md).
+**v1.0.0** is the current release — **Developer ID–signed and notarized by Apple**. [Download **DynaMol-1.0.0-macos-arm64.dmg**](https://github.com/ajogalekar/DynaMol/releases/download/v1.0.0/DynaMol-1.0.0-macos-arm64.dmg) (Apple Silicon, macOS 14+), or [run from source](#run-from-source). It carries the September preparation fixes and the [loop-repair evidence and limits](docs/LOOP_REPAIR.md).
 
 The current checkout also builds a [standalone Mac window](docs/NATIVE_MAC.md), with a Dock icon, native file dialogs and the same bundled engines. That candidate is separate from the published browser-opening installer above. Prerelease downloads use explicit version links; GitHub's `latest/download` shortcut does not select prereleases.
 
 1. Download and open `DynaMol-1.0.0-macos-arm64.dmg`.
 2. Drag **DynaMol** into **Applications**.
-3. Open **DynaMol** from Applications; you will have to say "Open anyway" in your Security settings (see below). First launch shows progress while unpacking the included engines, then opens the interface in your default browser.
+3. Open **DynaMol** from Applications. Because it is notarized, it opens normally — macOS shows only the standard one-time "downloaded from the Internet" confirmation. First launch unpacks the included engines (once), then opens the interface.
 
 **OpenMM, GROMACS, Python and the preparation tools are included.** No Terminal commands, separate MD installation or package manager is needed. New structure fetches still require internet.
 
-This release has an **ad-hoc integrity signature, without Developer ID signing or notarization**. If macOS blocks it after the first opening attempt, Apple's [per-app opening instructions](https://support.apple.com/en-us/102445) describe **System Settings → Privacy & Security → Open Anyway**. Institutional device policies may prevent this. No paid Apple Developer enrollment is needed.
+DynaMol is **signed with an Apple Developer ID and notarized by Apple**, so macOS opens it without Gatekeeper warnings or workarounds. Everything runs locally; only new structure fetches use the internet.
 
 Your work is saved in `~/Library/Application Support/DynaMol`; replacing the app keeps that data. See [installation details and limits](docs/PACKAGING.md) and the [release notes](docs/releases/v1.0.0.md). Replacing the app keeps your data in `~/Library/Application Support/DynaMol`; quit DynaMol before installing over an older copy. Intel Mac, Windows and Linux do not yet have tested application downloads.
 
