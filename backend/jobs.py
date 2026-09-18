@@ -190,7 +190,7 @@ def validate_simulation(settings: SimulationConfig) -> dict:
         if unmatched:
             raise ValueError("The saved complex parameters do not cover these residues: " + ", ".join(sorted({residue.name for residue in unmatched})) + ". Prepare the complex again; no molecules were removed.")
     if any(gap["structural_break"] for gap in backbone_gaps(input_structure.topology, input_structure.positions)):
-        raise ValueError("A long backbone C–N connection indicates an unresolved structural gap. Inspect and repair the protein before simulation; an artificial stretched peptide bond will not be simulated.")
+        raise ValueError("A long backbone C–N connection means the protein chain has an unresolved gap. In preparation, turn on 'Build supported missing loops / residues' to model internal gaps up to 12 residues; terminal or longer gaps can't be modeled — use 'Use one monomer' to work with an intact chain, or supply a complete structure. DynaMol will not simulate an artificial stretched peptide bond.")
     if not preparation_state and not solvation_state:
         # Close spatial endpoints do not erase residues declared by the source.
         from .preparation import current_fixer, find_missing_residues_preserving_identity

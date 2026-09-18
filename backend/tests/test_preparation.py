@@ -51,7 +51,7 @@ def test_known_internal_gap_requires_explicit_building(monkeypatch):
     inspection = preparation.inspect_preparation(dataset["id"])
     assert inspection["missing_residues"][0]["residues"] == ["ILE"]
     assert inspection["missing_residues"][0]["buildable"]
-    with pytest.raises(ValueError, match="Unresolved internal sequence gaps"):
+    with pytest.raises(ValueError, match="Build supported missing loops"):
         preparation.submit_preparation({"dataset_id": dataset["id"]})
     calls = []
     monkeypatch.setattr(preparation, "_submit", lambda settings, operation: calls.append((settings, operation)) or {"status": "queued"})

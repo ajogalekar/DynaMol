@@ -34,18 +34,23 @@ def loop_policy() -> dict:
 
 
 def validate_loop_selection(internal: list[dict], enabled: bool) -> None:
-    """Shared submission/worker limit; only explicit, sequence-supported repair."""
-    if internal and not enabled:
-        raise ValueError("Unresolved internal sequence gaps would create artificial peptide connections. Enable missing-loop building before protein preparation.")
+    """Shared submission/worker limit; only explicit, sequence-supported repair.
+
+    Definitive "cannot repair here" verdicts come first, so a user is never told to
+    enable loop building for a gap that building could never fix. Those gaps must be
+    resolved outside DynaMol (a complete experimental or predicted model).
+    """
     for entry in internal:
         names = entry["residues"]
         if any(name not in STANDARD_PROTEINS for name in names):
             raise ValueError(unsupported_missing_residue_message(entry["chain"], names))
         if len(names) > MAX_LOOP_LENGTH:
-            raise ValueError(f"Chain {entry['chain']} has an internal gap of {len(names)} residues. Local loop building supports up to {MAX_LOOP_LENGTH} per gap; supply a complete model for this longer region.")
+            raise ValueError(f"Chain {entry['chain']} has a {len(names)}-residue internal gap, beyond the {MAX_LOOP_LENGTH}-residue loop DynaMol can model. This gap can't be repaired here: supply a complete structure (experimental or predicted) with the loop resolved, or rebuild it externally and reload. If another chain is intact, 'Use one monomer' can prepare that one instead.")
     total = sum(len(entry["residues"]) for entry in internal)
     if total > MAX_REBUILT_RESIDUES:
-        raise ValueError(f"This structure needs {total} modeled internal residues, exceeding the local work budget of {MAX_REBUILT_RESIDUES}. Select fewer chains or supply a complete model.")
+        raise ValueError(f"This structure needs {total} modeled internal residues, beyond DynaMol's {MAX_REBUILT_RESIDUES}-residue loop-building budget. Prepare fewer chains with 'Use one monomer', supply a complete structure, or repair the loops externally, then reload.")
+    if internal and not enabled:
+        raise ValueError(f"This structure has {len(internal)} internal missing loop(s). Turn on 'Build supported missing loops / residues' to model them (provisional starting coordinates), or use 'Use one monomer' to prepare an intact chain. An internal gap left unbuilt would form an artificial stretched peptide bond, so it can't be simulated as-is.")
 
 
 def _json(path: Path) -> dict:
@@ -426,7 +431,7 @@ def validate_preparation(settings: dict) -> tuple[dict, dict]:
         from .loop_modeling import loop_runtime_status
         runtime = loop_runtime_status()
         if not runtime["available"]:
-            raise ValueError(runtime.get("error", "Loop modeling is unavailable.") + " Install the current complete DynaMol bundle, or configure its private ProMod3 runtime for a source checkout.")
+            raise ValueError(config.setup_guidance("Loop modeling", "`bash scripts/install_loop_tools.sh`", runtime.get("error", "")))
     # Numbering alone is not missing-sequence evidence; long links with no mapped gap cannot be invented.
     mapped_pairs = set()
     fixer, _ = current_fixer(settings["dataset_id"])

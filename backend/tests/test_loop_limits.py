@@ -59,7 +59,7 @@ def test_inspection_and_submission_agree_at_per_loop_boundary(data, count, eligi
     if eligible:
         preparation.validate_preparation(settings)
     else:
-        with pytest.raises(ValueError, match="up to 12 per gap"):
+        with pytest.raises(ValueError, match="can't be repaired here"):
             preparation.validate_preparation(settings)
     assert not list(config.JOBS_DIR.iterdir())
 
@@ -68,7 +68,7 @@ def test_four_monomers_with_twelve_residue_loops_can_prepare(data):
     dataset = imported_gap(data, 12, "ABCD")
     _, inspection = preparation.validate_preparation({"dataset_id": dataset["id"], "build_missing_residues": True})
     assert [gap["count"] for gap in inspection["missing_residues"]] == [12] * 4
-    with pytest.raises(ValueError, match="Enable missing-loop building"):
+    with pytest.raises(ValueError, match="Build supported missing loops"):
         preparation.validate_preparation({"dataset_id": dataset["id"]})
 
 
@@ -86,7 +86,7 @@ def test_missing_loop_runtime_is_reported_before_queuing(data, monkeypatch):
 
 def test_total_work_budget_is_distinct_from_gap_length():
     loops = [{"chain": str(i), "residues": ["ALA"] * 12} for i in range(9)]
-    with pytest.raises(ValueError, match="local work budget"):
+    with pytest.raises(ValueError, match="loop-building budget"):
         preparation.validate_loop_selection(loops, True)
 
 
@@ -110,6 +110,6 @@ def test_worker_rechecks_length_when_submission_is_bypassed(data):
     shutil.copy2(preparation.exact_input_path(dataset["id"]), worker.folder / "input.pdb")
     worker.settings = preparation._validated({"dataset_id": dataset["id"], "build_missing_residues": True})
     worker.update = lambda **kwargs: None
-    with pytest.raises(ValueError, match="up to 12 per gap"):
+    with pytest.raises(ValueError, match="can't be repaired here"):
         worker.prepare()
     assert not (worker.folder / "prepared.pdb").exists()

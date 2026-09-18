@@ -68,7 +68,7 @@ def ambertools_home():
         if all((folder / "bin" / name).is_file() and os.access(folder / "bin" / name, os.X_OK)
                for name in ("antechamber", "parmchk2", "tleap", "sqm")):
             return folder.resolve()
-    raise ValueError("Ligand parameters need AmberTools. Run scripts/install_ligand_tools.sh, or set DYNAMOL_AMBERTOOLS to a complete AmberTools installation.")
+    raise ValueError("Ligand parameters need AmberTools (or set DYNAMOL_AMBERTOOLS to a complete AmberTools installation).")
 
 
 def ligand_runtime_status():
@@ -78,7 +78,8 @@ def ligand_runtime_status():
             importlib.metadata.version(package)
         return {"available": True, "path": str(folder), "method": "GAFF2 / AM1-BCC"}
     except (ValueError, importlib.metadata.PackageNotFoundError) as exc:
-        return {"available": False, "message": str(exc), "method": "GAFF2 / AM1-BCC"}
+        message = config.setup_guidance("Ligand parameterization", "`bash scripts/install_ligand_tools.sh`", str(exc))
+        return {"available": False, "message": message, "method": "GAFF2 / AM1-BCC"}
 
 
 def _source_cif(dataset_id):

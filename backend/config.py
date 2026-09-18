@@ -25,3 +25,24 @@ CPU_THREADS = max(1, min(4, int(os.environ.get("DYNAMOL_CPU_THREADS", "2"))))
 RECOMMEND_EXPLICIT_ATOMS = int(os.environ.get("DYNAMOL_RECOMMEND_EXPLICIT_ATOMS", "4000"))
 for directory in (DATASETS_DIR, JOBS_DIR):
     directory.mkdir(parents=True, exist_ok=True)
+
+
+def is_app_bundle() -> bool:
+    """True when running inside the packaged macOS .app rather than a source checkout."""
+    return any(part.endswith(".app") for part in ROOT.parts)
+
+
+def setup_guidance(component: str, source_command: str, detail: str = "") -> str:
+    """User-facing recovery text for a missing bundled engine/runtime.
+
+    Installed-app users can never act on source-checkout instructions, so tailor the
+    message: reinstall for the .app (first launch re-unpacks the engines), the install
+    script for a source checkout. Keeps the diagnostic detail only where it is useful.
+    """
+    if is_app_bundle():
+        return (f"{component} isn't set up in this copy of DynaMol. Quit DynaMol, download "
+                "the latest version, and drag it into Applications to replace this copy, then "
+                "reopen it. The first launch finishes setting up the bundled engines, which "
+                "can take a minute or two.")
+    prefix = detail.strip().rstrip(".") + ". " if detail.strip() else ""
+    return f"{prefix}Run {source_command} from your DynaMol source checkout, then restart the app."

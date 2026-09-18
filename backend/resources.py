@@ -58,7 +58,7 @@ def resource_estimate(metadata, settings, mode, *, input_path=None):
 def resource_blockers(resources, mode):
     blockers = []
     if mode == "simulation" and resources["estimated_atoms"] > config.MAX_ATOMS:
-        blockers.append(f"The estimated system exceeds the {config.MAX_ATOMS:,}-atom limit. Reduce solvent padding or choose a smaller prepared system.")
+        blockers.append(f"The estimated system exceeds the {config.MAX_ATOMS:,}-atom limit. Reduce solvent padding, prepare a single chain with 'Use one monomer', or choose a smaller structure.")
     if resources["coordinate_bytes"] > config.MAX_COORD_BYTES:
         blockers.append(f"The requested saved frames exceed the {config.MAX_COORD_BYTES // (1024 ** 2)} MiB coordinate limit. Increase the save interval or shorten the run.")
     if resources["disk_estimate_bytes"] + 256 * 1024 ** 2 > resources["free_disk_bytes"]:
